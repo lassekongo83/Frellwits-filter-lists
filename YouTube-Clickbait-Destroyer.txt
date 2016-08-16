@@ -52,3 +52,10 @@ youtube.com##li[class^="yt-shelf-grid-item"]:has(a[title*="top 4"])
 youtube.com##li[class^="yt-shelf-grid-item"]:has(a[title*="top 3"])
 ! Compilations are pretty boring as well.
 youtube.com##li[class^="yt-shelf-grid-item"]:has(a[title*="Compilation"])
+
+! Here we block some common clickbait channels from showing up in your recommendations.
+youtube.com##:xpath(//a[text()='Be Amazed']/ancestor::li[@class="yt-shelf-grid-item"])
+youtube.com##:xpath(//a[text()='MindGeek']/ancestor::li[@class="yt-shelf-grid-item"])
+youtube.com##:xpath(//a[text()='The Funniest Vines']/ancestor::li[@class="yt-shelf-grid-item"])
+youtube.com##:xpath(//a[text()='TheWhyGuy']/ancestor::li[@class="yt-shelf-grid-item"])
+youtube.com##:xpath(//a[text()='BoyFunnyGuys']/ancestor::li[@class="yt-shelf-grid-item"])
