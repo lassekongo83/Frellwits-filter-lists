@@ -283,3 +283,17 @@ youtube.com##:xpath(//*[text()[contains(., 'AlotVines')]]/ancestor::ytd-compact-
 
 ! OTHER STUFF
 youtube.com##ytd-search-pyv-renderer:has(#ad-badge)
+
+! OLD YOUTUBE DESIGN SUPPORT
+
+! Filter by video title.
+youtube.com##li.yt-shelf-grid-item:has(a[title*="Road Rage"])
+youtube.com##li[class^="video-list-item"]:has(a[title*="Road Rage"])
+youtube.com##li.yt-shelf-grid-item:has(a[title*="Compilation"])
+youtube.com##li[class^="video-list-item"]:has(a[title*="Compilation"])
+
+! Filter by individual channel based on their ytid. These channels are known for using a lot of clickbait in their titles.
+
+! BuzzFeedVideo
+youtube.com##li.yt-shelf-grid-item:has(a[data-ytid="UCpko_-a4wgz2u_DgDgd9fqA")
+youtube.com##li[class^="video-list-item"]:has(span[data-ytid="UCpko_-a4wgz2u_DgDgd9fqA"])
