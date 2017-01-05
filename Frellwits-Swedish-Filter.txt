@@ -1,0 +1,47 @@
+! Title: Frellwit's Swedish Filter
+! Expires: 30 days (update frequency)
+! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
+! Description: (Swedish) Ett filter till uBlock Origin som plockar bort sponsrade artiklar och annat otyg så som dela-knappar med mera.
+
+! ICA
+ica.se##.lazyNoscriptActive
+
+! SVT
+svt.se##li.nyh_contactbox-item:has(div[class*="facebook"])
+svt.se##li.nyh_contactbox-item:has(div[class*="twitter"])
+svt.se##li.nyh_contactbox-item:has(div[class*="instagram"])
+svt.se##section.nyh_share
+
+! DN
+dn.se##.js-ad-sidebar
+dn.se##.nativeads-page
+dn.se##.sponsored-teaser
+dn.se##.ad
+||dn.se/ajax/track/render?trackingToken^
+||content.dn.se/analys/dep/wwwdnse.body.min.*.js
+||content.dn.se/analys/dep/wwwdnse.head.min.*.js
+||dn-static.se/dnse/match-ad.*.min.js^
+||auth.dn.se/check-paywall.*
+
+! GP
+gp.se###stampenCookieInformationContainer
+gp.se##.unit:has(.fusionAd)
+gp.se##.unit__333333:has(span[data-connect-scope="stampen.native"])
+gp.se##.news-package:has(.ml-ad-button)
+||gp.se/jsresources/
+||gp.se/cmlink/
+
+! SVD
+svd.se##.AdWrapper
+svd.se##.Container--ad
+svd.se##.Grid-item:has(figure[data-postmessage-origins*="www.aftonbladet.se"])
+svd.se##div[data-controller="newslettersubscription"]
+svd.se##.Teaser-adLabel
+svd.se##div[class^="Grid-item"]:has(div[class*="AdLabel"])
+
+! EXPRESSEN
+expressen.se##.slot:has(div[class*="native-ad"])
+
+! AFTONBLADET
+aftonbladet.se##article:has(.abAdStreamer)
+aftonbladet.se###rabattkodWidget
