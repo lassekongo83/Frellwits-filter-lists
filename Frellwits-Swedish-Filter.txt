@@ -21,12 +21,13 @@ dn.se##.nativeads-page
 dn.se##.sponsored-teaser
 dn.se##.ad
 ||dn.se/ajax/track/render?trackingToken^
-||content.dn.se/analys/dep/wwwdnse.body.min.*.js
-||content.dn.se/analys/dep/wwwdnse.head.min.*.js
 ||dn-static.se/dnse/match-ad.*.min.js^
 ||auth.dn.se/check-paywall.*
 ||campaigner.dn.se
 ||fusion.dn.se
+/analys/dep/wwwdnse.body.min.*.js$domain=dn.se
+/analys/dep/wwwdnse.head.min.*.js$domain=dn.se
+/fusion-loader-dn.*.min.js$domain=dn.se
 
 ! DI
 di.se##article:has(a[href^="/sponsrat/"])
@@ -126,6 +127,12 @@ kuriren.nu##section.etage.editorial:has(.lohtsEtage)
 kuriren.nu##div[class^="fcol"]:has(.ad-stripe)
 kuriren.nu##div[id*="adcontent"]
 *.adnuntius.*
+
+! NYHETER24
+/messaging.js$domain=nyheter24.se
+/campaigns/$domain=nyheter24.se
+nyheter24.se##article.true_native_block:has(.tn-author-block)
+nyheter24.se##script:inject(abort-on-property-write.js, _sp_)
 
 ! FILMTIPSET
 ||images.filmtipset.se/update/annons-med-pil.png
