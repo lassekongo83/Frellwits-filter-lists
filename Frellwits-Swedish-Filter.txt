@@ -3,6 +3,23 @@
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: (Swedish) Ett filter till uBlock Origin som plockar bort sponsrade artiklar, "fake paywalls", viss tracking, dela knappar, med mera.
 
+! Icke önskvärda domäner
+||bonnieradnetwork.se^$third-party
+||citypaketet.se^$third-party
+||burt.io^$third-party
+||dep-x.com^$third-party
+||heybot.com^$third-party
+||worldoftulo.com^$third-party
+||sprinklecontent.com^$third-party
+||mediekompaniet.com^$third-party
+||tidningsnatet.se^$third-party
+||emediate.*^$third-party
+||destination.se^$third-party
+||finkammat.se^$third-party
+||lohts.se^$third-party
+||sifomedia.*
+*.adnuntius.*
+
 ! ICA
 ica.se##.lazyNoscriptActive
 
@@ -24,23 +41,17 @@ dn.se##.ad
 ||dn.se/ajax/track/render?trackingToken^
 ||dn-static.se/dnse/match-ad.*.min.js^
 ||auth.dn.se/check-paywall.*
-||campaigner.dn.se
-||fusion.dn.se
+||campaigner.*.se$domain=dn.se|di.se
+||fusion.*.se$domain=dn.se|di.se
+||login.*.se$domain=dn.se|di.se
 /analys/dep/wwwdnse.body.min.*.js$domain=dn.se|di.se
 /analys/dep/wwwdnse.head.min.*.js$domain=dn.se|di.se
 /fusion-loader-dn.*.min.js$domain=dn.se|di.se
 di.se##article:has(a[href^="/sponsrat/"])
 di.se##article:has(a[href^="/sponsrad/"])
 di.se##section[data-ad-settings]
-||login.di.se
-||fusion.di.se
 
 ! STAMPEN
-||burt.io^$third-party
-||dep-x.com^$third-party
-||heybot.com^$third-party
-||worldoftulo.com^$third-party
-||sprinklecontent.com^$third-party
 bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se###stampenCookieInformationContainer
 bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se##.unit:has(.fusionAd)
 bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se##div[class^="unit_"]:has(span[data-connect-scope="stampen.native"])
@@ -71,13 +82,6 @@ aftonbladet.se###rabattkodWidget
 
 ! NORRBOTTENSKURIREN/NSD
 ||flowonline.tv$domain=kuriren.nu|nsd.se|unt.se
-||destination.se$domain=kuriren.nu|nsd.se|unt.se
-||finkammat.se$domain=kuriren.nu|nsd.se|unt.se
-||lohts.se$domain=kuriren.nu|nsd.se|unt.se
-||emediate.*$domain=kuriren.nu|nsd.se|unt.se
-||mediekompaniet.*$domain=kuriren.nu|nsd.se|unt.se
-||tidningsnatet.*$domain=kuriren.nu|nsd.se|unt.se
-||sifomedia.*$domain=nsd.se|kuriren.nu|unt.se
 nsd.se,kuriren.nu,unt.se###nativelink
 nsd.se,kuriren.nu,unt.se##header > a[href*="annonser"]
 nsd.se,kuriren.nu,unt.se##[class*="Carousel"]
@@ -88,7 +92,6 @@ nsd.se,kuriren.nu,unt.se##a[href="/klippet"]
 nsd.se,kuriren.nu,unt.se##section.etage.editorial:has(.lohtsEtage)
 nsd.se,kuriren.nu,unt.se##div[class^="fcol"]:has(.ad-stripe)
 nsd.se,kuriren.nu,unt.se##div[id*="adcontent"]
-*.adnuntius.*
 
 ! NYHETER24
 /messaging.js$domain=nyheter24.se
