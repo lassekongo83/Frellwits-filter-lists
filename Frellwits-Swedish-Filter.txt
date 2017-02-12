@@ -7,6 +7,7 @@
 ! Icke önskvärda domäner
 ||bonnieradnetwork.se^$third-party
 ||citypaketet.se^$third-party
+||citygate.se^$third-party
 ||burt.io^$third-party
 ||dep-x.com^$third-party
 ||heybot.com^$third-party
@@ -27,6 +28,7 @@ ica.se##.lazyNoscriptActive
 ! IDG
 idg.se##script:inject(abort-on-property-write.js, cmsad.insert)
 idg.se##.teaserContainer:has(.cms-marking)
+idg.se##div.wide-msg:has(i.fa-facebook-official)
 
 ! SVT
 svt.se##li.nyh_contactbox-item:has(div[class*="facebook"])
@@ -34,7 +36,27 @@ svt.se##li.nyh_contactbox-item:has(div[class*="twitter"])
 svt.se##li.nyh_contactbox-item:has(div[class*="instagram"])
 svt.se##section.nyh_share
 
-! DN/DI
+! STAMPEN
+bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se###stampenCookieInformationContainer
+bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se##.unit:has(.fusionAd)
+bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se##div[class^="unit_"]:has(span[data-connect-scope="stampen.native"])
+bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se##.news-package:has(.ml-ad-button)
+bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se##.share-fixed-desktop
+bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se##div.news-package:if(span:has-text(/^Lokala annonser/))
+bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se##.unit:has(.native-teaser)
+
+! SCHIBSTED (Aftonbladet, SVD, omni)
+svd.se##.AdWrapper
+svd.se##.Container--ad
+svd.se##.Grid-item:has(figure[data-postmessage-origins*="www.aftonbladet.se"])
+svd.se##div[data-controller="newslettersubscription"]
+svd.se##.Teaser-adLabel
+svd.se##div[class^="Grid-item"]:has(div[class*="AdLabel"])
+aftonbladet.se##article:has(.abAdStreamer)
+aftonbladet.se###rabattkodWidget
+omni.se##article.article--sponsored
+
+! BONNIER (DN, DI, Sydsvenskan, Expressen)
 dn.se##.js-ad-sidebar
 dn.se##.nativeads-page
 dn.se##.sponsored-teaser
@@ -51,35 +73,10 @@ dn.se##.ad
 di.se##article:has(a[href^="/sponsrat/"])
 di.se##article:has(a[href^="/sponsrad/"])
 di.se##section[data-ad-settings]
-
-! STAMPEN
-bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se###stampenCookieInformationContainer
-bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se##.unit:has(.fusionAd)
-bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se##div[class^="unit_"]:has(span[data-connect-scope="stampen.native"])
-bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se##.news-package:has(.ml-ad-button)
-bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se##.share-fixed-desktop
-bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se##div.news-package:if(span:has-text(/^Lokala annonser/))
-bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se##.unit:has(.native-teaser)
-
-! SVD
-svd.se##.AdWrapper
-svd.se##.Container--ad
-svd.se##.Grid-item:has(figure[data-postmessage-origins*="www.aftonbladet.se"])
-svd.se##div[data-controller="newslettersubscription"]
-svd.se##.Teaser-adLabel
-svd.se##div[class^="Grid-item"]:has(div[class*="AdLabel"])
-
-! SYDSVENSKAN
+expressen.se##.slot:has(div[class*="native-ad"])
 sydsvenskan.se##div[data-category="native-teaser"]
 sydsvenskan.se##script:inject(abort-on-property-write.js, populateDatalayer)
 sydsvenskan.se##.subject-deck--eight-to-five
-
-! EXPRESSEN
-expressen.se##.slot:has(div[class*="native-ad"])
-
-! AFTONBLADET
-aftonbladet.se##article:has(.abAdStreamer)
-aftonbladet.se###rabattkodWidget
 
 ! NORRBOTTENSKURIREN/NSD
 ||flowonline.tv$domain=kuriren.nu|nsd.se|unt.se
@@ -104,3 +101,8 @@ nyheter24.se##script:inject(abort-on-property-write.js, _sp_)
 ||images.filmtipset.se/update/annons-med-pil.png
 filmtipset.se###acceptCookiesDiv
 filmtipset.se##:xpath(//div[@id="toggle_all_prices"]/parent::td[1]/parent::tr[1])
+
+! ÖVRIGT
+allehanda.se##div.client-dialogue-plus
+bubb.la##:xpath(//h2[@class="ad"]/parent::div[1])
+friatider.se##img[src*="336x150"]
