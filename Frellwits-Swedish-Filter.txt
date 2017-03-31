@@ -4,7 +4,8 @@
 ! Description: (Swedish) Ett filter till uBlock Origin som plockar bort sponsrade artiklar, "fake paywalls", viss tracking, dela knappar, med mera.
 ! License: http://unlicense.org/
 
-! Icke önskvärda domäner
+! Tredje part some innehåller tracking och annonser med mera
+||e-magin.se$third-party
 ||bonnieradnetwork.se^$third-party
 ||citypaketet.se^$third-party
 ||citygate.se^$third-party
@@ -22,6 +23,7 @@
 ||reco.se^$third-party
 ||sifomedia.*
 *.adnuntius.*
+*biowebb-data.*
 
 ! ICA
 ica.se##.lazyNoscriptActive
@@ -96,10 +98,7 @@ sydsvenskan.se,hd.se##script:inject(abort-on-property-write.js, populateDatalaye
 sydsvenskan.se,hd.se##.subject-deck--eight-to-five
 
 ! TEKNOMEDIA
-*biowebb-data.*$domain=kuriren.nu|nsd.se|unt.se|helagotland.se|pt.se|mvt.se|nt.se|corren.se|affarsliv.com
 *webbannons.ntm.eu$domain=kuriren.nu|nsd.se|unt.se|helagotland.se|pt.se|mvt.se|nt.se|corren.se|affarsliv.com
-||e-magin.se$domain=kuriren.nu|nsd.se|unt.se|helagotland.se|pt.se|mvt.se|nt.se|corren.se|affarsliv.com
-||flowonline.tv$domain=kuriren.nu|nsd.se|unt.se|helagotland.se|pt.se|mvt.se|nt.se|corren.se|affarsliv.com
 nsd.se,kuriren.nu,unt.se,helagotland.se,pt.se,mvt.se,nt.se,corren.se,affarsliv.com###nativelink
 nsd.se,kuriren.nu,unt.se,helagotland.se,pt.se,mvt.se,nt.se,corren.se,affarsliv.com##header > a[href*="annonser"]
 nsd.se,kuriren.nu,unt.se,helagotland.se,pt.se,mvt.se,nt.se,corren.se,affarsliv.com##[class*="Carousel"]
@@ -116,6 +115,8 @@ nsd.se,kuriren.nu,unt.se,helagotland.se,pt.se,mvt.se,nt.se,corren.se,affarsliv.c
 
 ! SÖRMLANDS MEDIA
 ||infomaker.io^$image,domain=ekuriren.se|kkuriren.se|sn.se
+/?file=lokusmotor*$domain=ekuriren.se|kkuriren.se|sn.se
+/familjeannons*$domain=ekuriren.se|kkuriren.se|sn.se
 ekuriren.se,kkuriren.se,sn.se##.article--ad
 ekuriren.se,kkuriren.se,sn.se##.ad
 ekuriren.se,kkuriren.se,sn.se##div[class^="ew-bottom-ad"]
