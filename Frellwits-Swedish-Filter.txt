@@ -27,8 +27,11 @@
 ||sifomedia.*
 ||lokus.se^$third-party
 ||mosaiq.io^$third-party
-/?file=lokusjobb_sn$subdocument
-/?file=lokusmotor_sn$subdocument
+||boka.holiday^$third-party
+||tourn.se^$third-party
+||tourn.co^$third-party
+/?file=lokusjobb*$subdocument
+/?file=lokusmotor*$subdocument
 *.adnuntius.*
 
 ! IDG
@@ -67,6 +70,7 @@ svd.se##.Grid-item:has(figure[data-postmessage-origins*="www.aftonbladet.se"])
 svd.se##div[data-controller="newslettersubscription"]
 svd.se##.Teaser-adLabel
 svd.se##div[class^="Grid-item"]:has(div[class*="AdLabel"])
+svd.se##.Grid-item:has(div[class^="js-nativeAd"])
 aftonbladet.se##article:has(.abAdStreamer)
 aftonbladet.se###rabattkodWidget
 ||google-analytics.com/ga.js$script,important,redirect=google-analytics.com/ga.js,domain=aftonbladet.se
@@ -93,6 +97,7 @@ di.se##article:has(a[href^="/sponsrad/"])
 di.se##article.di_teaser--native
 di.se##section[data-ad-settings]
 di.se##aside.di_share-buttons
+di.se##article.di_teaser:has(span[class*="sponsor"])
 expressen.se##.slot:has(div[class*="native-ad"])
 expressen.se##.b-ad__wrapper
 expressen.se##.slot:if(header:has-text(/^Erbjudande från/))
@@ -109,6 +114,7 @@ tv4.se##div[class^="article-aside-"]:has(div[class*="aside-ad"])
 
 ! TEKNOMEDIA
 *webbannons.ntm.eu$domain=kuriren.nu|nsd.se|unt.se|helagotland.se|pt.se|mvt.se|nt.se|corren.se|affarsliv.com|folkbladet.se
+/villapriser/*$subdocument,domain=kuriren.nu|nsd.se|unt.se|helagotland.se|pt.se|mvt.se|nt.se|corren.se|affarsliv.com|folkbladet.se
 nsd.se,folkbladet.se,kuriren.nu,unt.se,helagotland.se,pt.se,mvt.se,nt.se,corren.se,affarsliv.com###nativelink
 nsd.se,folkbladet.se,kuriren.nu,unt.se,helagotland.se,pt.se,mvt.se,nt.se,corren.se,affarsliv.com##header > a[href*="annonser"]
 nsd.se,folkbladet.se,kuriren.nu,unt.se,helagotland.se,pt.se,mvt.se,nt.se,corren.se,affarsliv.com##[class*="Carousel"]
@@ -178,6 +184,7 @@ filmtipset.se###acceptCookiesDiv
 filmtipset.se##:xpath(//div[@id="toggle_all_prices"]/parent::td[1]/parent::tr[1])
 nordichardware.se##.wpb_text_column:has(.surfamodul-blocktitle)
 nordichardware.se##.td_block_wrap:if(span:has-text(/^Sponsrat/))
+nordichardware.se##.td_block_social_counter
 ica.se##.lazyNoscriptActive
 bubb.la##:xpath(//h2[@class="ad"]/parent::div[1])
 friatider.se##img[src*="336x150"]
