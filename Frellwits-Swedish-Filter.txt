@@ -23,6 +23,7 @@
 ||lohts.se^$third-party
 ||reco.se^$third-party
 ||prisjakt.nu^$third-party
+||pji.nu^$third-party
 ||biowebb-data.*.amazonaws*
 ||sifomedia.*
 ||lokus.se^$third-party
@@ -31,6 +32,9 @@
 ||tourn.se^$third-party
 ||tourn.co^$third-party
 ||sociuslive.com^$third-party
+||fakturino.se^$third-party
+||insplanet.com^$third-party
+||ecsanalytics.com^$third-party
 /?file=lokusjobb*$subdocument
 /?file=lokusmotor*$subdocument
 *.adnuntius.*
@@ -102,6 +106,7 @@ di.se##section[data-ad-settings]
 di.se##aside.di_share-buttons
 di.se##article.di_teaser:has(span[class*="sponsor"])
 di.se##.di_article-body-commercial-link
+di.se##.di_panorama-wrapper
 expressen.se##.slot:has(div[class*="native-ad"])
 expressen.se##.b-ad__wrapper
 expressen.se##.slot:if(header:has-text(/^Erbjudande från/))
@@ -165,6 +170,7 @@ nyteknik.se,dagensmedia.se,affarsvarlden.se,lag-avtal.se,arbetarskydd.se##sectio
 ! NYHETER24
 /messaging.js$domain=nyheter24.se
 /campaigns/$domain=nyheter24.se
+/*&action=adblock&part_id=*$domain=nyheter24.se|youplay.se
 nyheter24.se##article.true_native_block:has(.tn-author-block)
 nyheter24.se##script:inject(abort-on-property-write.js, _sp_)
 
@@ -206,6 +212,9 @@ newsvoice.se##a[href*="irradia.se"]
 newsvoice.se##div.wpb_raw_code:has(img[width="300"][height="200"])
 fz.se##script:inject(abort-on-property-read.js, Main.Ads.Adblock.getInstance)
 fz.se##.content-widget:if(div.fpnih-meta:has-text(Sponsrat))
+sweclockers.com##.prisjaktPopular
+sweclockers.com##.monsterSide
+sweclockers.com###wdgtMainMonsterJobs
 /*banner*.jpg$domain=markbladet.se
 /gilla-mb_plugg.png$domain=markbladet.se
 markbladet.se##.ad
