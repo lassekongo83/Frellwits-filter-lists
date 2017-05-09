@@ -195,6 +195,20 @@ metro.se##.m-teaser:has(div[class*="label--ad"])
 metro.se##.m-socials
 metro.se##.m-article__socials
 
+! GAMEREACTOR
+gamereactor.*###eventad
+gamereactor.*##div[style*="width:300px;height:600px;"]
+gamereactor.*##.cocacola
+gamereactor.*##div[class^="ad300"]
+gamereactor.*###ad_video
+gamereactor.*##.ad_video
+gamereactor.*###bigVideoAd
+gamereactor.*##a[href*="/adclick.php"]
+gamereactor.*###pagebackground:style(background-image: none !important)
+/prerolls/*$domain=gamereactor.se|gamereactor.dk|gamereactor.no
+/ad-video-log.php^,domain=gamereactor.se|gamereactor.dk|gamereactor.no
+||openx.gamereactor.dk/multi.php?$script,important
+
 ! ÖVRIGT
 ||images.filmtipset.se/update/annons-med-pil.png
 filmtipset.se###acceptCookiesDiv
@@ -202,10 +216,6 @@ filmtipset.se##:xpath(//div[@id="toggle_all_prices"]/parent::td[1]/parent::tr[1]
 nordichardware.se##.wpb_text_column:has(.surfamodul-blocktitle)
 nordichardware.se##.td_block_wrap:if(span:has-text(/^Sponsrat/))
 nordichardware.se##.td_block_social_counter
-gamereactor.*###eventad
-gamereactor.*##div[style*="width:300px;height:600px;"]
-gamereactor.*##.cocacola
-gamereactor.*##div[class^="ad300"]
 ica.se##.lazyNoscriptActive
 bubb.la##:xpath(//h2[@class="ad"]/parent::div[1])
 friatider.se##img[src*="336x150"]
