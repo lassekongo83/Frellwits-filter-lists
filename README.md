@@ -7,4 +7,4 @@ Various filter lists for your adblock extension.
 
 **deviantJUNKfilter.txt** = A filter for deviantart.com. Blocks over 1000 of users that upload junk or stuff in the wrong categories. (Warning: This list is highly personal and may not suit everyone.)
 
-**Frellwits-Swedish-Filter.txt** = (Swedish) Ett filter till uBlock Origin som plockar bort sponsrade artiklar från nyhetsidor samt annat otyg så som dela-knappar, viss tracking, med mera.
+**Frellwits-Swedish-Filter.txt** = A filter for uBlock Origin for regional Swedish ads, tracking, social media, annoyances, sponsored articles etc.
