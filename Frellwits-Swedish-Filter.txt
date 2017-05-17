@@ -1,43 +1,45 @@
 ! Title: Frellwit's Swedish Filter
 ! Expires: 7 days (update frequency)
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
-! Description: (Swedish) Ett filter till uBlock Origin som plockar bort sponsrade artiklar, "fake paywalls", viss tracking, dela knappar, med mera.
+! Description: A filter for uBlock Origin for regional Swedish ads, tracking, social media, annoyances, sponsored articles etc.
 ! License: http://unlicense.org/
 
-! Tredje part som innehåller tracking och annonser med mera
+! General third party ads, tracking, annoyances
+||apsislead.com^$third-party
 ||boende.se^$third-party
-||e-magin.se^$third-party
+||boka.holiday^$third-party
 ||bonnieradnetwork.se^$third-party
-||citypaketet.se^$third-party
-||citygate.se^$third-party
 ||burt.io^$third-party
+||citygate.se^$third-party
+||citypaketet.se^$third-party
 ||dep-x.com^$third-party
-||heybot.com^$third-party
-||worldoftulo.com^$third-party
-||sprinklecontent.com^$third-party
-||mediekompaniet.com^$third-party
-||tidningsnatet.se^$third-party
-||emediate.*^$third-party
 ||destination.se^$third-party
+||e-magin.se^$third-party
+||ecsanalytics.com^$third-party
+||emediate.*^$third-party
+||fakturino.se^$third-party
 ||finkammat.se^$third-party
+||heybot.com^$third-party
+||insplanet.com^$third-party
 ||lohts.se^$third-party
-||reco.se^$third-party
-||prisjakt.nu^$third-party
+||lokus.se^$third-party
+||mediekompaniet.com^$third-party
+||mosaiq.io^$third-party
+||myvisitors.se^$third-party
 ||pji.nu^$third-party
+||prisjakt.nu^$third-party
+||reco.se^$third-party
+||royapp.com^$third-party
+||sociuslive.com^$third-party
+||sprinklecontent.com^$third-party
+||tidningsnatet.se^$third-party
+||tourn.co^$third-party
+||tourn.se^$third-party
+||worldoftulo.com^$third-party
+
+! General ads and tracking rules
 ||biowebb-data.*.amazonaws*
 ||sifomedia.*
-||lokus.se^$third-party
-||mosaiq.io^$third-party
-||boka.holiday^$third-party
-||tourn.se^$third-party
-||tourn.co^$third-party
-||sociuslive.com^$third-party
-||fakturino.se^$third-party
-||insplanet.com^$third-party
-||ecsanalytics.com^$third-party
-||royapp.com^$third-party
-||apsislead.com^$third-party
-||myvisitors.se^$third-party
 /?file=lokusjobb*$subdocument
 /?file=lokusmotor*$subdocument
 *.adnuntius.*
@@ -148,7 +150,6 @@ nsd.se,folkbladet.se,kuriren.nu,unt.se,helagotland.se,pt.se,mvt.se,nt.se,corren.
 
 ! SÖRMLANDS MEDIA
 ||static.sm.infomaker.io^$image,domain=ekuriren.se|kkuriren.se|sn.se
-/?file=lokusmotor*$domain=ekuriren.se|kkuriren.se|sn.se
 /familjeannons*$domain=ekuriren.se|kkuriren.se|sn.se
 ekuriren.se,kkuriren.se,sn.se##.article--ad
 ekuriren.se,kkuriren.se,sn.se##.ad
@@ -162,7 +163,6 @@ barometern.se,bt.se,sydostran.se,blt.se,kristianstadsbladet.se,smp.se,trelleborg
 allehanda.se,arbetarbladet.se,bblat.se,avestatidning.com,dalademokraten.se,dt.se,fagersta-posten.se,gd.se,ltz.se,lt.se,na.se,norrteljetidning.se,nynashamnsposten.se,salaallehanda.com,st.nu,tidningenharjedalen.se,vlt.se,op.se##div.client-dialogue-plus
 
 ! ALMA TALENT
-||myvisitors.se$script,domain=nyteknik.se|dagensmedia.se|affarsvarlden.se|lag-avtal.se|arbetarskydd.se
 ||expo.hi-media.se/talentum/$subdocument,domain=nyteknik.se|dagensmedia.se|affarsvarlden.se|lag-avtal.se|arbetarskydd.se
 ||allatjanstebilar.se$domain=nyteknik.se|dagensmedia.se|affarsvarlden.se|lag-avtal.se|arbetarskydd.se
 /m/w?placement=*$subdocument,domain=nyteknik.se|dagensmedia.se|affarsvarlden.se|lag-avtal.se|arbetarskydd.se
