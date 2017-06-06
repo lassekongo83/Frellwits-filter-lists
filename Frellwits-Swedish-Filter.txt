@@ -51,6 +51,9 @@
 /?file=lokusmotor*$subdocument
 *.adnuntius.*
 
+! Twitter
+||twitter.com^$script,domain=fotosidan.se|dagensanalys.se|bohuslaningen.se|gp.se|hallandsposten.se|hn.se|stromstadstidning.se|ttela.se
+
 ! IDG
 ||cmatch.idg.se^$script
 /pis.gif$domain=idg.se
@@ -67,7 +70,6 @@ svt.se##section.nyh_share
 
 ! STAMPEN
 /ad_service/$domain=bohuslaningen.se|gp.se|hallandsposten.se|hn.se|stromstadstidning.se|ttela.se
-||twitter.com$domain=bohuslaningen.se|gp.se|hallandsposten.se|hn.se|stromstadstidning.se|ttela.se
 bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se###stampenCookieInformationContainer
 bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##.unit:has(.fusionAd)
 bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##div[class^="unit_"]:has(span[data-connect-scope="stampen.native"])
@@ -238,9 +240,6 @@ gamereactor.*###pagebackground:style(background-image: none !important)
 gamereactor.*##script:inject(abort-on-property-write.js, detectAdblockUser)
 gamereactor.*###sky2_1
 
-! Twitter
-||twitter.com/widgets.js$domain=fotosidan.se|dagensanalys.se
-
 ! ALLTFORFORALDRAR
 mammasidan.se,minbebis.com,alltforforaldrar.se##.panorama:if(.add-text:has-text(Annons))
 mammasidan.se,minbebis.com,alltforforaldrar.se##.panorama:if(.add-text:has-text(annons))
@@ -261,6 +260,9 @@ mammasidan.se,minbebis.com,alltforforaldrar.se##.middle-banner
 /campaign/*$xmlhttprequest,domain=alltforforaldrar.se|minbebis.com|mammasidan.se
 
 ! ÖVRIGT
+/*banner*.png$domain=etc.se|markbladet.se
+/*banner*.jpg$domain=etc.se|markbladet.se
+/*banner*.gif$domain=etc.se|markbladet.se
 ||images.filmtipset.se/update/annons-med-pil.png
 filmtipset.se###acceptCookiesDiv
 filmtipset.se##:xpath(//div[@id="toggle_all_prices"]/parent::td[1]/parent::tr[1])
@@ -270,8 +272,6 @@ nordichardware.se##.td_block_social_counter
 ica.se##.lazyNoscriptActive
 bubb.la##:xpath(//h2[@class="ad"]/parent::div[1])
 friatider.se##img[src*="336x150"]
-/*banner*.png$domain=etc.se
-/*banner*.jpg$domain=etc.se
 etc.se##.banner-wrap
 newsvoice.se##aside.widget:if(.block-title:has-text(ANNONSER))
 newsvoice.se##aside.widget:if(.block-title:has-text(NEWSVOICE REKOMMENDERAR))
@@ -283,7 +283,6 @@ fz.se##.content-widget:if(div.fpnih-meta:has-text(Sponsrat))
 sweclockers.com##.prisjaktPopular
 sweclockers.com##.monsterSide
 sweclockers.com###wdgtMainMonsterJobs
-/*banner*.jpg$domain=markbladet.se
 /gilla-mb_plugg.png$domain=markbladet.se
 markbladet.se##.ad
 markbladet.se###small_yellowbox
