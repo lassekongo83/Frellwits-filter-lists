@@ -5,6 +5,7 @@
 ! License: http://unlicense.org/
 
 ! General third party ads, tracking, annoyances
+||0x63646e.com^$third-party
 ||adwayplus.se^$third-party
 ||apsislead.com^$third-party
 ||boende.se^$third-party
@@ -37,16 +38,19 @@
 ||reco.se^$third-party
 ||royapp.com^$third-party
 ||seenthis.se^$third-party
+||sleeknote.com^$third-party
 ||sociuslive.com^$third-party
 ||sprinklecontent.com^$third-party
 ||tidningsnatet.se^$third-party
 ||tourn.co^$third-party
 ||tourn.se^$third-party
+||webpower.eu^$third-party
 ||worldoftulo.com^$third-party
 
 ! General ads and tracking rules
 ||biowebb-data.*.amazonaws*
 ||sifomedia.*
+/mp_emediate/inc/annons.html
 /?file=lokusjobb*$subdocument
 /?file=lokusmotor*$subdocument
 *.adnuntius.*
@@ -145,6 +149,7 @@ koket.se##.endorsed
 koket.se##.native
 koket.se##li.slide:has(.external_advertiser)
 /bn-01d-fusion.js$domain=koket.se
+@@||wurfl.io/wurfl.js$domain=fotbollskanalen.se
 
 ! TEKNOMEDIA
 *webbannons.ntm.eu$domain=kuriren.nu|nsd.se|unt.se|helagotland.se|pt.se|mvt.se|nt.se|corren.se|affarsliv.com|folkbladet.se
@@ -307,3 +312,40 @@ fotosidan.se##script:inject(abort-on-property-write.js, blockDetected)
 ||obj.fotosidan.se/obj/pa/*$image
 dagensanalys.se##article.listitem:has(.label_sponsored)
 realtid.se##.block-realtid-native
+battrestadsdel.se###HideBanner
+battrestadsdel.se###sociala-medier-box
+battrestadsdel.se###top-banner
+battrestadsdel.se##.apd-text
+battrestadsdel.se##.apds_main
+battrestadsdel.se##.entry-priomaker
+battrestadsdel.se###my-mega-menu-widget:has-text(Sponsrade Artiklar)
+swedroid.se##.social
+swedroid.se##.puff:if(h1:has-text(Android på Prisjakt))
+swedroid.se##.puff:if(h1:has-text(Sponsrat))
+swedroid.se##table[style="width:1190px; height:76px"]
+swedroid.se##.ad
+swedroid.se##.aeChart:has(a[href*="prisjakt.nu"])
+swedroid.se##h3:has-text(Prisjaktspriser)
+swedroid.se##.widget-single:if(h3:has-text(Android på Prisjakt))
+hippson.se##.sponsorpuff
+magasin55.se##.td_module_wrap:has(a[href$="/annons/"])
+/veckansluncher.gif$domain=alingsastidning.se
+autonytt.se##.sponsrad-artikel
+||nordiskemedier.dk/banner/
+/banner.js^$domain=motormagasinet.se
+/cookie-consent-*.js^$domain=motormagasinet.se
+/trckr/bnr/*$xmlhttprequest,domain=motormagasinet.se
+motormagasinet.se##script:inject(overlay-buster.js)
+motormagasinet.se##script:inject(setTimeout-defuser.js, newsletterPopup)
+motormagasinet.se##.remodal-bg.remodal-is-opening:style(filter: none !important;)
+motormagasinet.se##.remodal-bg.remodal-is-opened:style(filter: none !important;)
+motormagasinet.se###junglebogen
+motormagasinet.se##[id^="dfp-a1p"]
+motormagasinet.se##.rotating-junglebogen
+mobil.se##li.teaser:has(.Advertorials)
+mobil.se##.section-advertorials
+/mobil_takeover/js/script.js$domain=mobil.se
+mobil.se##div.takeover
+mobil.se##.title-image-list:if(h2:has-text(Sponsrad artikel))
+mobil.se##body:style(overlay: auto !important;)
+mobil.se##.ad
