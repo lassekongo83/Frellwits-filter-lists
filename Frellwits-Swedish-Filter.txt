@@ -15,6 +15,7 @@
 ||burt.io^$third-party
 ||citygate.se^$third-party,domain=~familj.se
 ||citypaketet.se^$third-party
+||compricer.se^$third-party
 ||cxpublic.com^$third-party
 ||dep-x.com^$third-party
 ||destination.se^$third-party
@@ -35,6 +36,7 @@
 ||nbes.eu^$third-party
 ||nbes.nu^$third-party
 ||nbes.se^$third-party
+||pensiono.se^$third-party
 ||pji.nu^$third-party,domain=~prisjakt.nu
 ||prisjakt.nu^$third-party
 ||reco.se^$third-party
@@ -59,7 +61,7 @@
 *.adnuntius.*
 
 ! Twitter
-||twitter.com^$script,domain=fotosidan.se|dagensanalys.se|bohuslaningen.se|gp.se|hallandsposten.se|hn.se|stromstadstidning.se|ttela.se
+||twitter.com^$third-party,domain=svd.se|fotosidan.se|dagensanalys.se|bohuslaningen.se|gp.se|hallandsposten.se|hn.se|stromstadstidning.se|ttela.se
 
 ! IDG
 ||cmatch.idg.se^$script
@@ -89,6 +91,7 @@ bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##.b
 bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##script:inject(abort-on-property-read.js, siteScripts.initAds)
 
 ! SCHIBSTED (Aftonbladet, SVD, omni)
+svd.se##.Ad
 svd.se##.AdWrapper
 svd.se##.Container--ad
 svd.se##.Grid-item:has(figure[data-postmessage-origins*="www.aftonbladet.se"])
@@ -103,7 +106,12 @@ aftonbladet.se##.abTheme-infeedad
 ||ooul.tv/contrib/se-aftonbladet/aab/aftonbladet_plugin.js$script,redirect=noopjs,domain=aftonbladet.se
 ||ooul.tv/nocache/se-aftonbladet/aab/aftonbladet_config.js$script,redirect=noopjs,domain=aftonbladet.se
 ||google-analytics.com/ga.js$script,important,redirect=google-analytics.com/ga.js,domain=aftonbladet.se
+/sptAutoTracker.min.js^$domain=aftonbladet.se
+/ab-uri-min.js&ab-xiti/ab-xiti-min.js^$domain=aftonbladet.se
+||aftonbladet.se/tv/temp.mp4$media
+/rabattkod/$image,domain=aftonbladet.se
 omni.se##article.article--sponsored
+/ads?stage=$xmlhttprequest,domain=omni.se
 tv.nu##a[href*="adform.net"]
 
 ! BONNIER (DN, DI, Sydsvenskan, Expressen)
