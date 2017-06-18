@@ -40,6 +40,7 @@
 ||pji.nu^$third-party,domain=~prisjakt.nu
 ||prisjakt.nu^$third-party
 ||reco.se^$third-party
+||reseguiden.se^$third-party
 ||royapp.com^$third-party
 ||seenthis.se^$third-party
 ||sleeknote.com^$third-party
@@ -48,6 +49,8 @@
 ||tidningsnatet.se^$third-party
 ||tourn.co^$third-party
 ||tourn.se^$third-party
+||tns-sifo.se^$third-party
+||tvdags.se^$third-party
 ||webpower.eu^$third-party
 ||worldoftulo.com^$third-party
 ||zummycloud.com^$third-party
@@ -61,7 +64,7 @@
 *.adnuntius.*
 
 ! Twitter
-||twitter.com^$third-party,domain=svd.se|fotosidan.se|dagensanalys.se|bohuslaningen.se|gp.se|hallandsposten.se|hn.se|stromstadstidning.se|ttela.se
+||twitter.com^$third-party,domain=svd.se|fotosidan.se|dagensanalys.se|bohuslaningen.se|gp.se|hallandsposten.se|hn.se|stromstadstidning.se|ttela.se|nwt.se|sla.se|mariestadstidningen.se
 
 ! IDG
 ||cmatch.idg.se^$script
@@ -230,6 +233,15 @@ nyheter24.se##script:inject(abort-on-property-write.js, _sp_)
 nyheter24.se##article.true_native_block:has(.tn-author-block)
 nyheter24.se##.polar-native
 
+! NWT
+||24liveblog.com^$third-party,domain=nwt.se|sla.se|mariestadstidningen.se
+||24liveplus.com^$third-party,domain=nwt.se|sla.se|mariestadstidningen.se
+||connect.24liveplus.com^$websocket,domain=nwt.se|sla.se|mariestadstidningen.se
+||24liveplus.com^$third-party,domain=nwt.se|sla.se|mariestadstidningen.se
+/popup.min.js^$domain=nwt.se|sla.se|mariestadstidningen.se
+/*&action=client_side_impression*$domain=youplay.se|nwt.se|sla.se|mariestadstidningen.se
+||worldssl.net/static/js/core.js^$domain=nwt.se|sla.se|mariestadstidningen.se
+
 ! BREAKIT
 breakit.se##.spnsr-widget
 breakit.se##.supportersSlideContainer
@@ -367,3 +379,8 @@ vk.se,folkbladet.nu##:xpath(//div[text()[contains(., 'Annons')]]/parent::div)
 vk.se,folkbladet.nu##[src*="/img/ads/"]:xpath(../../../../../..)
 /lunchguiden.png$domain=vk.se|folkbladet.nu
 vk.se,folkbladet.nu##[href*="mega.vk.se/lunchguiden]:xpath(../..)
+vf.se##.ajax-ad-info
+vf.se##.text-ad-info
+vf.se##.article__top-ad
+vf.se##.cookie__info
+vf.se##a[href="#bio"]
