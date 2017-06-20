@@ -67,7 +67,7 @@
 *.adnuntius.*
 
 ! Twitter
-||twitter.com^$third-party,domain=svd.se|fotosidan.se|dagensanalys.se|bohuslaningen.se|gp.se|hallandsposten.se|hn.se|stromstadstidning.se|ttela.se|nwt.se|sla.se|mariestadstidningen.se|24kalmar.se|24nybro.se|24emmaboda.se|svd.se
+||twitter.com^$third-party,domain=svd.se|fotosidan.se|dagensanalys.se|bohuslaningen.se|gp.se|hallandsposten.se|hn.se|stromstadstidning.se|ttela.se|nwt.se|sla.se|mariestadstidningen.se|24kalmar.se|24nybro.se|24emmaboda.se|svd.se|ng.se|fragbite.se
 
 ! IDG
 ||cmatch.idg.se^$script
@@ -224,17 +224,30 @@ nyteknik.se,dagensmedia.se,affarsvarlden.se,lag-avtal.se,arbetarskydd.se##.ad-co
 nyteknik.se,dagensmedia.se,affarsvarlden.se,lag-avtal.se,arbetarskydd.se##.ad-panorama
 nyteknik.se,dagensmedia.se,affarsvarlden.se,lag-avtal.se,arbetarskydd.se##section.sponsored-articles-inline
 
-! NYHETER24
+! NYHETER24GRUPPEN
 ||stat.nyheter24.se
-/splash_iframe.html^$domain=nyheter24.se
+/splash_iframe.html^$domain=nyheter24.se|fragbite.se|kwiss.me|tyda.se|synonymer.cc|filmtipset.se
 /splash_iframe_modette.html^$domain=nyheter24.se
+/splashy.html^$domain=hamsterpaj.net
+/splash_iframe/$domain=dayviews.com
 /messaging.js$domain=nyheter24.se
 /campaigns/$domain=nyheter24.se
 /EAS_tag.js^$domain=nyheter24.se
-/*&action=adblock&part_id=*$domain=nyheter24.se|youplay.se
-nyheter24.se##script:inject(abort-on-property-write.js, _sp_)
+/*&action=adblock&part_id=*$domain=nyheter24.se|youplay.se|fragbite.se|kwiss.me|tyda.se|synonymer.cc|itgirls.se|hamsterpaj.net|dayviews.com
+/*&action=client_side_impression&*$domain=nyheter24.se|youplay.se|fragbite.se|kwiss.me|tyda.se|synonymer.cc|itgirls.se|hamsterpaj.net|dayviews.com
+nyheter24.se,fragbite.se,kwiss.me,tyda.se,synonymer.cc,hamsterpaj.net,dayviews.com##script:inject(abort-on-property-write.js, _sp_)
 nyheter24.se##article.true_native_block:has(.tn-author-block)
 nyheter24.se##.polar-native
+filmtipset.se###acceptCookiesDiv
+filmtipset.se##:xpath(//div[@id="toggle_all_prices"]/parent::td[1]/parent::tr[1])
+/n24.js?*$domain=filmtipset.se
+/annons-med-pil*.png$image,domain=filmtipset.se
+dayviews.com###panorama_ad
+dayviews.com##[class^="content_ad"]
+dayviews.com##[class$="-ad"]
+kwiss.me##.frontpage_top_image:if(span:has-text(Sponsrat av))
+kwiss.me##.square-item:has(.qz-quiz-sponsored)
+kwiss.me##.qz-related-quizes-item:if(span:has-text(Sponsrat av))
 
 ! NWT
 ||24liveblog.com^$third-party,domain=nwt.se|sla.se|mariestadstidningen.se
@@ -301,9 +314,6 @@ mammasidan.se,minbebis.com,alltforforaldrar.se##.middle-banner
 /*banner*.png$domain=etc.se|markbladet.se
 /*banner*.jpg$domain=etc.se|markbladet.se
 /*banner*.gif$domain=etc.se|markbladet.se
-||images.filmtipset.se/update/annons-med-pil.png
-filmtipset.se###acceptCookiesDiv
-filmtipset.se##:xpath(//div[@id="toggle_all_prices"]/parent::td[1]/parent::tr[1])
 nordichardware.se##div.td_block_text_with_title:if(h4 > span:has-text(Från Surfa))
 nordichardware.se##.wpb_text_column:has(.surfamodul-blocktitle)
 nordichardware.se##.td_block_wrap:if(span:has-text(/^Sponsrat/))
@@ -392,3 +402,6 @@ vf.se##.article__top-ad
 vf.se##.cookie__info
 vf.se##a[href="#bio"]
 24kalmar.se,24nybro.se,24emmaboda.se##.article-partner-promotion
+ng.se##.sponsored-article-blurb-wrap
+ng.se##.panel-pane:if(.pane-title:has-text(SAMARBETEN))
+/nodecounter/*?token=*$image,domain=ng.se
