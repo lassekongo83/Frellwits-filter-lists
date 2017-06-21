@@ -64,6 +64,8 @@
 /?file=lokusjobb*$subdocument
 /?file=lokusmotor*$subdocument
 /sifo_msr.js^$script
+/*&action=client_side_impression&*
+/*&action=adblock&part_id=*
 *.adnuntius.*
 
 ! Twitter
@@ -76,12 +78,6 @@ idg.se##div[data-cms-ad]
 idg.se##.wide-msg-fb
 idg.se##.pryltorget
 idg.se##.sparticle
-
-! SVT
-svt.se##li.nyh_contactbox-item:has(div[class*="facebook"])
-svt.se##li.nyh_contactbox-item:has(div[class*="twitter"])
-svt.se##li.nyh_contactbox-item:has(div[class*="instagram"])
-svt.se##section.nyh_share
 
 ! STAMPEN
 /ad_service/$domain=bohuslaningen.se|gp.se|hallandsposten.se|hn.se|stromstadstidning.se|ttela.se
@@ -233,8 +229,6 @@ nyteknik.se,dagensmedia.se,affarsvarlden.se,lag-avtal.se,arbetarskydd.se##sectio
 /messaging.js$domain=nyheter24.se
 /campaigns/$domain=nyheter24.se
 /EAS_tag.js^$domain=nyheter24.se
-/*&action=adblock&part_id=*$domain=nyheter24.se|youplay.se|fragbite.se|kwiss.me|tyda.se|synonymer.cc|itgirls.se|hamsterpaj.net|dayviews.com
-/*&action=client_side_impression&*$domain=nyheter24.se|youplay.se|fragbite.se|kwiss.me|tyda.se|synonymer.cc|itgirls.se|hamsterpaj.net|dayviews.com
 nyheter24.se,fragbite.se,kwiss.me,tyda.se,synonymer.cc,hamsterpaj.net,dayviews.com##script:inject(abort-on-property-write.js, _sp_)
 nyheter24.se##article.true_native_block:has(.tn-author-block)
 nyheter24.se##.polar-native
@@ -255,23 +249,7 @@ kwiss.me##.qz-related-quizes-item:if(span:has-text(Sponsrat av))
 ||connect.24liveplus.com^$websocket,domain=nwt.se|sla.se|mariestadstidningen.se
 ||24liveplus.com^$third-party,domain=nwt.se|sla.se|mariestadstidningen.se
 /popup.min.js^$domain=nwt.se|sla.se|mariestadstidningen.se
-/*&action=client_side_impression*$domain=youplay.se|nwt.se|sla.se|mariestadstidningen.se
 ||worldssl.net/static/js/core.js^$domain=nwt.se|sla.se|mariestadstidningen.se
-
-! BREAKIT
-breakit.se##.spnsr-widget
-breakit.se##.supportersSlideContainer
-breakit.se##.monstermodule
-breakit.se##.sponsored
-breakit.se##div[class*="sponsored"]
-
-! METRO
-metro.se##div[class*="o-advert"]
-metro.se##.o-preview--ad
-metro.se##.o-preview--collab
-metro.se##.m-teaser:has(div[class*="label--ad"])
-metro.se##.m-socials
-metro.se##.m-article__socials
 
 ! GAMEREACTOR
 gamereactor.*###eventad
@@ -407,3 +385,18 @@ ng.se##.panel-pane:if(.pane-title:has-text(SAMARBETEN))
 /nodecounter/*?token=*$image,domain=ng.se
 politism.se##[id^="native_ad"]
 politism.se##.post-teaser:if(.nstory:has-text(Sponsrat innehåll))
+breakit.se##.spnsr-widget
+breakit.se##.supportersSlideContainer
+breakit.se##.monstermodule
+breakit.se##.sponsored
+breakit.se##div[class*="sponsored"]
+metro.se##div[class*="o-advert"]
+metro.se##.o-preview--ad
+metro.se##.o-preview--collab
+metro.se##.m-teaser:has(div[class*="label--ad"])
+metro.se##.m-socials
+metro.se##.m-article__socials
+svt.se##li.nyh_contactbox-item:has(div[class*="facebook"])
+svt.se##li.nyh_contactbox-item:has(div[class*="twitter"])
+svt.se##li.nyh_contactbox-item:has(div[class*="instagram"])
+svt.se##section.nyh_share
