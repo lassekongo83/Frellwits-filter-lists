@@ -73,16 +73,23 @@
 ! Glimr tracking
 /glimr.min.js$script,domain=dn.se|di.se
 
+! Override EasyPrivacy and EasyList whitelists
+||google-analytics.com/ga.js$script,important,redirect=google-analytics.com/ga.js,domain=aftonbladet.se
+||google-analytics.com/analytics.js$script,redirect=google-analytics.com/analytics.js,important,domain=tradera.com
+! Experimental
+||googletagmanager.com/gtm.js?id=$script,redirect=noopjs,domain=tradera.com,important
+
 ! Twitter
 ||twitter.com^$third-party,domain=svd.se|fotosidan.se|dagensanalys.se|bohuslaningen.se|gp.se|hallandsposten.se|hn.se|stromstadstidning.se|ttela.se|nwt.se|sla.se|mariestadstidningen.se|24kalmar.se|24nybro.se|24emmaboda.se|svd.se|ng.se|fragbite.se
 
 ! IDG
 ||cmatch.idg.se^$script
-/pis.gif$domain=idg.se
+||ai.idg.se
 idg.se##div[data-cms-ad]
 idg.se##.wide-msg-fb
 idg.se##.pryltorget
 idg.se##.sparticle
+idg.se##.prisjaktCompare
 
 ! STAMPEN
 /ad_service/$domain=bohuslaningen.se|gp.se|hallandsposten.se|hn.se|stromstadstidning.se|ttela.se
@@ -115,7 +122,6 @@ aftonbladet.se##article:has(.sponsored-banner)
 aftonbladet.se##.abTheme-infeedad
 ||ooul.tv/contrib/se-aftonbladet/aab/aftonbladet_plugin.js$script,redirect=noopjs,domain=aftonbladet.se
 ||ooul.tv/nocache/se-aftonbladet/aab/aftonbladet_config.js$script,redirect=noopjs,domain=aftonbladet.se
-||google-analytics.com/ga.js$script,important,redirect=google-analytics.com/ga.js,domain=aftonbladet.se
 /sptAutoTracker.min.js^$domain=aftonbladet.se
 /ab-uri-min.js&ab-xiti/ab-xiti-min.js^$domain=aftonbladet.se
 ||aftonbladet.se/tv/temp.mp4$media
@@ -172,8 +178,9 @@ koket.se##.native
 koket.se##li.slide:has(.external_advertiser)
 /bn-01d-fusion.js$domain=koket.se
 @@||wurfl.io/wurfl.js$domain=fotbollskanalen.se
-&type=load_offers^$xmlhttprequest,domain=illvet.se
-||bcm.interactives.dk/script/se/ill/site$script,domain=illvet.se
+&type=load_offers^$xmlhttprequest,domain=illvet.se|pctidningen.se
+||bcm.interactives.dk/script/se/ill/site$script,domain=illvet.se|pctidningen.se
+illvet.se,pctidningen.se##.top-banner
 
 ! TEKNOMEDIA
 *webbannons.ntm.eu$domain=kuriren.nu|nsd.se|unt.se|helagotland.se|pt.se|mvt.se|nt.se|corren.se|affarsliv.com|folkbladet.se
@@ -427,3 +434,5 @@ existenz.se##p:has(a[href^="http://ads."])
 $object,object-subrequest,domain=existenz.se
 ||existenz.se/img/prq.gif
 ||existenz.se/inc/combined.js^
+va.se##.popup-wrapper
+va.se##.sponsored-article
