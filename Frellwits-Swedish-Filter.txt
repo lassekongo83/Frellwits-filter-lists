@@ -159,6 +159,7 @@ di.se##.ad_container
 expressen.se##.slot:has(div[class*="native-ad"])
 expressen.se##.b-ad__wrapper
 expressen.se##.slot:if(header:has-text(/^Erbjudande från/))
+expressen.se##.slot:if(header:has-text(/^Erbjundande från/))
 expressen.se##.b-adv-teaser-divider:if(h3:has-text(/^Erbjudande från/))
 expressen.se##.slot:has(a[href*="rabattkoder.expressen.se"])
 ||expressen.ooul.tv/contrib/se-expressen/aab/expressen_plugin.js$script,redirect=noopjs,domain=expressen.se
@@ -305,6 +306,13 @@ mammasidan.se,minbebis.com,alltforforaldrar.se##.middle-banner
 ||alltforforaldrar.se/sites/all/themes/aurora/js/vendor/bootstrap/modal.js
 /campaign/*$xmlhttprequest,domain=alltforforaldrar.se|minbebis.com|mammasidan.se
 
+! FRIA
+fria.nu,goteborgsfria.se,friatidningen.se,landetsfria.se,stockholmsfria.se,sesam.nu##[class*="annonser"]
+fria.nu,goteborgsfria.se,friatidningen.se,landetsfria.se,stockholmsfria.se,sesam.nu###cboxOverlay
+fria.nu,goteborgsfria.se,friatidningen.se,landetsfria.se,stockholmsfria.se,sesam.nu###cboxWrapper
+/statistics.php^$xmlhttprequest,domain=fria.nu|goteborgsfria.se|friatidningen.se|landetsfria.se|stockholmsfria.se|sesam.nu
+/twitter_count.php^$xmlhttprequest,domain=fria.nu|goteborgsfria.se|friatidningen.se|landetsfria.se|stockholmsfria.se|sesam.nu
+
 ! ÖVRIGT
 /*banner*.png$domain=etc.se|markbladet.se
 /*banner*.jpg$domain=etc.se|markbladet.se
@@ -317,6 +325,9 @@ ica.se##.lazyNoscriptActive
 bubb.la##:xpath(//h2[@class="ad"]/parent::div[1])
 friatider.se##img[src*="336x150"]
 etc.se##.banner-wrap
+etc.se##script:inject(abort-on-property-write.js, rand2)
+etc.se##script:inject(abort-on-property-write.js, rand)
+etc.se##script:inject(abort-on-property-write.js, Drupal)
 newsvoice.se##aside.widget:if(.block-title:has-text(ANNONSER))
 newsvoice.se##aside.widget:if(.block-title:has-text(NEWSVOICE REKOMMENDERAR))
 newsvoice.se##a[href*="irradia.se"]
