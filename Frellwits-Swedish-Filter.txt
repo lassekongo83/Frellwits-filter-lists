@@ -46,6 +46,7 @@
 ||reco.se^$third-party
 ||reseguiden.se^$third-party
 ||royapp.com^$third-party
+||seekly.se^$third-party
 ||seenthis.se^$third-party
 ||sleeknote.com^$third-party
 ||sociuslive.com^$third-party
@@ -94,16 +95,12 @@ idg.se##.prisjaktCompare
 ! STAMPEN
 /ad_service/$domain=bohuslaningen.se|gp.se|hallandsposten.se|hn.se|stromstadstidning.se|ttela.se
 bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se###stampenCookieInformationContainer
-bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##.unit:has(.fusionAd)
-bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##div[class^="unit_"]:has(span[data-connect-scope="stampen.native"])
-bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##.news-package:has(.ml-ad-button)
 bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##.share-fixed-desktop
 bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##div.news-package:if(span:has-text(/^Lokala annonser/))
-bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##.unit:has(.native-teaser)
 bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##.ad
 bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##.boende-widget-wrapper
-bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##.lokus-engine:if(span:has-text(ANNONS))
-bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##script:inject(abort-on-property-read.js, siteScripts.initAds)
+bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##.seekly
+bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##.lokus-engine
 bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##script:inject(abort-on-property-read.js, headerScripts.checkAdBlockers)
 bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##script:inject(abort-on-property-read.js, adblockcookieExpire)
 
@@ -111,14 +108,12 @@ bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##sc
 svd.se##.Ad
 svd.se##.AdWrapper
 svd.se##.Container--ad
-svd.se##.Grid-item:has(figure[data-postmessage-origins*="www.aftonbladet.se"])
+svd.se##.FlexEmbed
 svd.se##div[data-controller="newslettersubscription"]
 svd.se##.Teaser-adLabel
-svd.se##div[class^="Grid-item"]:has(div[class*="AdLabel"])
-svd.se##.Grid-item:has(div[class^="js-nativeAd"])
-aftonbladet.se##article:has(.abAdStreamer)
+svd.se##.Teaser--fullAdLabel
+aftonbladet.se##.abBoxNative
 aftonbladet.se###rabattkodWidget
-aftonbladet.se##article:has(.sponsored-banner)
 aftonbladet.se##.abTheme-infeedad
 ||ooul.tv/contrib/se-aftonbladet/aab/aftonbladet_plugin.js$script,redirect=noopjs,domain=aftonbladet.se
 ||ooul.tv/nocache/se-aftonbladet/aab/aftonbladet_config.js$script,redirect=noopjs,domain=aftonbladet.se
@@ -147,17 +142,14 @@ dn.se##div.DNP_theme--reco
 /analys/dep/wwwdnse.head.min.*.js$domain=dn.se|di.se
 /fusion-loader-dn.*.min.js$domain=dn.se|di.se
 /advertisement*.js$script,important,domain=dn.se|di.se
-di.se##article:has(a[href^="/sponsrat/"])
-di.se##article:has(a[href^="/sponsrad/"])
 di.se##article.di_teaser--native
 di.se##section[data-ad-settings]
 di.se##aside.di_share-buttons
-di.se##article.di_teaser:has(span[class*="sponsor"])
 di.se##.di_article-body-commercial-link
 di.se##.di_panorama-wrapper
 di.se##.ad_container
 expressen.se###rich-media-ads
-expressen.se##.slot:has(div[class*="native-ad"])
+expressen.se##.b-native-ad-teaser
 expressen.se##.b-ad__wrapper
 expressen.se##.slot:if(header:has-text(/^Erbjudande från/))
 expressen.se##.slot:if(header:has-text(/^Erbjundande från/))
