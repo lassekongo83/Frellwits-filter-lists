@@ -62,6 +62,7 @@
 ||zummycloud.com^$third-party
 
 ! General ads and tracking rules
+||lemonwhale.com*/adevent/$xmlhttprequest
 ||biowebb-data.*.amazonaws*
 ||sifomedia.*
 /mp_emediate/inc/annons.html
@@ -165,8 +166,7 @@ sydsvenskan.se,hd.se##div[data-category="native-teaser"]
 sydsvenskan.se,hd.se##.subject-deck--eight-to-five
 tv4.se##.program-header-sponsors
 tv4.se##.social-block-ad
-tv4.se##.primepage-aside-ad
-tv4.se##div[class^="article-aside-"]:has(div[class*="aside-ad"])
+tv4.se##[class*="aside-ad"]
 ||damoh.tv4play.se^$xmlhttprequest,redirect=nooptext,domain=tv4.se|tv4play.se
 koket.se##.endorsed
 koket.se##.native
@@ -193,6 +193,7 @@ nsd.se,folkbladet.se,kuriren.nu,unt.se,helagotland.se,pt.se,mvt.se,nt.se,corren.
 nsd.se,folkbladet.se,kuriren.nu,unt.se,helagotland.se,pt.se,mvt.se,nt.se,corren.se,affarsliv.com##.ad-stripe
 nsd.se,folkbladet.se,kuriren.nu,unt.se,helagotland.se,pt.se,mvt.se,nt.se,corren.se,affarsliv.com##div > article.blurb:has(a[href^="/native/"])
 nsd.se,folkbladet.se,kuriren.nu,unt.se,helagotland.se,pt.se,mvt.se,nt.se,corren.se,affarsliv.com##.lunchguide
+nsd.se,kuriren.nu,unt.se,helagotland.se,pt.se,mvt.se,nt.se,corren.se,affarsliv.com##script:inject(abort-on-property-read.js, adn.renderComposedAds)
 
 ! SÖRMLANDS MEDIA
 ||static.sm.infomaker.io^$image,domain=ekuriren.se|kkuriren.se|sn.se
@@ -223,13 +224,13 @@ vastgotabladet.se,falkopingstidning.se,skaraborgslanstidning.se,skovdenyheter.se
 ||allatjanstebilar.se$domain=nyteknik.se|dagensmedia.se|affarsvarlden.se|lag-avtal.se|arbetarskydd.se
 /m/w?placement=*$subdocument,domain=nyteknik.se|dagensmedia.se|affarsvarlden.se|lag-avtal.se|arbetarskydd.se
 /annonstorget/$domain=nyteknik.se|dagensmedia.se|affarsvarlden.se|lag-avtal.se|arbetarskydd.se
-nyteknik.se,dagensmedia.se,affarsvarlden.se,lag-avtal.se,arbetarskydd.se##div.teaser-container:has(article.ad-teaser)
-nyteknik.se,dagensmedia.se,affarsvarlden.se,lag-avtal.se,arbetarskydd.se##div.section:has(h2.native-right)
-nyteknik.se,dagensmedia.se,affarsvarlden.se,lag-avtal.se,arbetarskydd.se##section.section:has(h2.native-right)
-nyteknik.se,dagensmedia.se,affarsvarlden.se,lag-avtal.se,arbetarskydd.se##:xpath(//span[text()[contains(., 'ANNONS')]]/parent::div)
 nyteknik.se,dagensmedia.se,affarsvarlden.se,lag-avtal.se,arbetarskydd.se##.ad-container
 nyteknik.se,dagensmedia.se,affarsvarlden.se,lag-avtal.se,arbetarskydd.se##.ad-panorama
 nyteknik.se,dagensmedia.se,affarsvarlden.se,lag-avtal.se,arbetarskydd.se##section.sponsored-articles-inline
+nyteknik.se,dagensmedia.se,affarsvarlden.se,lag-avtal.se,arbetarskydd.se##.ad-teaser
+nyteknik.se,dagensmedia.se,affarsvarlden.se,lag-avtal.se,arbetarskydd.se##.disable-ad-marks
+nyteknik.se,dagensmedia.se,affarsvarlden.se,lag-avtal.se,arbetarskydd.se##.section:has(h2.native-right)
+nyteknik.se,dagensmedia.se,affarsvarlden.se,lag-avtal.se,arbetarskydd.se##.social-teasers
 
 ! NYHETER24GRUPPEN
 ||stat.nyheter24.se
@@ -341,11 +342,13 @@ etc.se##.banner-wrap
 etc.se##script:inject(abort-on-property-write.js, rand2)
 etc.se##script:inject(abort-on-property-write.js, rand)
 etc.se##script:inject(abort-on-property-write.js, Drupal)
-newsvoice.se##aside.widget:if(.block-title:has-text(ANNONSER))
-newsvoice.se##aside.widget:if(.block-title:has-text(NEWSVOICE REKOMMENDERAR))
+newsvoice.se##aside.widget:if(span:has-text(ANNONSER))
+newsvoice.se##aside.widget:if(h4:has-text(NEWSVOICE REKOMMENDERAR))
 newsvoice.se##a[href*="irradia.se"]
 newsvoice.se##div.wpb_raw_code:has(img[width="300"][height="200"])
-moviezine.se##.first:if(.badge:has-text(Sponsrat))
+moviezine.se##.inner_featured:if(.badge:has-text(Sponsrat))
+moviezine.se##.inner_featured:if(.badge:has-text(SPONSRAT))
+moviezine.se##[name="article-advertisment"]
 fz.se##script:inject(abort-on-property-read.js, Main.Ads.Adblock.getInstance)
 fz.se##.bnr
 fz.se##.content-widget:if(div.fpnih-meta:has-text(Sponsrat))
