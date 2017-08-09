@@ -36,7 +36,7 @@
 ||lokus.se^$third-party,domain=~familj.se
 ||mediekompaniet.com^$third-party
 ||millistream.com^$third-party
-||mosaiq.io^$third-party
+||mosaiq.io^$third-party,domain=~mobil.dagensps.se
 ||myvisitors.se^$third-party
 ||nbes.eu^$third-party
 ||nbes.nu^$third-party
@@ -54,6 +54,7 @@
 ||sociuslive.com^$third-party
 ||sprinklecontent.com^$third-party
 ||tidningsnatet.se^$third-party
+||tipser.com^$third-party
 ||tourn.co^$third-party
 ||tourn.se^$third-party
 ||tns-sifo.se^$third-party
@@ -502,3 +503,7 @@ kimura.se##a[href*="unibet.com"]
 market.se##[id^="fusion_ad"]
 market.se###rollup
 market.se##article[about^="/annons/"]
+dagensps.se##.masonry-tile-wrapper:if(span.category:has-text(Sponsrat innehåll))
+/usrmatchinit?fsn_dspid=pub&redirect*$subdocument,script,domain=dagensps.se
+||fusion.dagensps.se/redirscrpt.js$first-party
+dagensps.se##script:inject(abort-on-property-write.js, FloadCmatchIfr)
