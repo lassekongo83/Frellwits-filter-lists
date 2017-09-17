@@ -122,6 +122,7 @@ svd.se##.Teaser--fullAdLabel
 aftonbladet.se##.abTheme-ad
 aftonbladet.se##.abTheme-adSportbladet
 aftonbladet.se##.abTheme-infeedad
+aftonbladet.se##article:has(a[data-sponsored="true"])
 ||ooul.tv/*/se-aftonbladet/aab/aftonbladet_$script,redirect=noopjs,domain=aftonbladet.se
 /sptAutoTracker.min.js^$domain=aftonbladet.se
 /ab-uri-min.js&ab-xiti/ab-xiti-min.js^$domain=aftonbladet.se
@@ -351,11 +352,16 @@ viafree.se,viafree.no,viafree.dk,viafree.fi##.ad-click-through
 
 ! Some Norwegian sites. (If this gets too big I'll probably create a seperate filter.)
 ||acdn.adnxs.com/ast/ast.js$script,important,domain=vg.no
-vg.no,e24.no##script:inject(abort-on-property-write.js, __AB__)
+vg.no,e24.no,gamer.no,tek.no,digi.no##script:inject(abort-on-property-write.js, __AB__)
 vg.no,e24.no##.ad
+vg.no##.partner-studio
 vg.no##.betting-widgets
 vg.no##.inline-ad-text
 e24.no##.content-marketing-container
+/bannere/$image,domain=tek.no|gamer.no
+/Bannere/$image,domain=tek.no|gamer.no
+gamer.no,tek.no,digi.no##.products-carousel
+gamer.no,tek.no,digi.no##.annonselenker
 
 ! ÖVRIGT
 /*banner*.png$domain=etc.se|markbladet.se
