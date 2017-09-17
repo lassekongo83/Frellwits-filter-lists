@@ -81,6 +81,9 @@
 ! Glimr tracking
 /glimr.min.js$script,domain=dn.se|di.se
 
+! CSP filters where it doesn't seem to break any functionality
+||$csp=script-src 'self' 'unsafe-inline',domain=nyteknik.se|dagensmedia.se|affarsvarlden.se|lag-avtal.se|arbetarskydd.se
+
 ! Override EasyPrivacy and EasyList whitelists
 ||google-analytics.com/ga.js$script,important,redirect=google-analytics.com/ga.js,domain=aftonbladet.se
 ||google-analytics.com/analytics.js$script,redirect=google-analytics.com/analytics.js,important,domain=tradera.com
@@ -252,6 +255,7 @@ nyteknik.se,dagensmedia.se,affarsvarlden.se,lag-avtal.se,arbetarskydd.se##.ad-te
 nyteknik.se,dagensmedia.se,affarsvarlden.se,lag-avtal.se,arbetarskydd.se##.disable-ad-marks
 nyteknik.se,dagensmedia.se,affarsvarlden.se,lag-avtal.se,arbetarskydd.se##.section:has(h2.native-right)
 nyteknik.se,dagensmedia.se,affarsvarlden.se,lag-avtal.se,arbetarskydd.se##.social-teasers
+nyteknik.se###tws1
 
 ! NYHETER24GRUPPEN
 ||stat.nyheter24.se
