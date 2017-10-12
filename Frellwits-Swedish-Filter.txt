@@ -426,6 +426,9 @@ familjeliv.se##.ad_right
 familjeliv.se##a[href*="/kampanj/"]
 familjeliv.se##.flm-kampanj
 familjeliv.se##[data-container=".article-wrapper"]:if(.articleSuperTitle:has-text(i samarbete med))
+familjeliv.se##:xpath(//span[text()[contains(., 'Sponsrat')]]/ancestor::div[contains(concat(' ', @class, ' '), ' blogPostWrapper ')]/parent::div/parent::div)
+$object,object-subrequest,domain=familjeliv.se
+||familjeliv.se^$csp=script-src 'self' 'unsafe-inline' 'unsafe-eval' *.googleapis.com *.cloudflare.com
 /affiliate/$image,domain=minfil.org
 ||tradera.net^$third-party,domain=hitta.se
 /partnerintegration*$domain=hitta.se
