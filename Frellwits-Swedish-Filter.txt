@@ -8,6 +8,7 @@
 ||0x63646e.com^$third-party
 ||adeprimo.se^$third-party
 ||adonstudio.com^$third-party
+||adnuntius.com^$third-party
 ||adservicemedia.dk^$third-party
 ||adwayplus.se^$third-party
 ||apsislead.com^$third-party
@@ -74,6 +75,7 @@
 ! General ads and tracking rules
 ||lemonwhale.com*/adevent/$xmlhttprequest
 ||biowebb-data.*.amazonaws*
+||pixel.playbuzz.com^$xmlhttprequest
 ||sifomedia.*
 /mp_emediate/inc/annons.html
 /?file=lokusjobb*$subdocument
@@ -81,10 +83,11 @@
 /sifo_msr.js^$script
 /*&action=client_side_impression&*
 /*&action=adblock&part_id=*
-*.adnuntius.*
+/monetization/ads-module/
+/monetization/pixel-sdk/
 
 ! Glimr tracking
-/glimr.min.js$script,domain=dn.se|di.se
+/glimr.min.js$script,domain=dn.se|di.se|lajkat.se
 
 ! CSP filters where it doesn't seem to break any functionality
 ||$csp=script-src 'self' 'unsafe-inline' 'unsafe-eval',domain=nyteknik.se|dagensmedia.se|affarsvarlden.se|lag-avtal.se|arbetarskydd.se|etc.se
@@ -606,3 +609,8 @@ body.se##body:style(background: none !important;)
 infoo.se##.content_wide_ads
 infoo.se##.line.orange
 pcgamer.se##div.wpb_text_column.wpb_content_element:if(h3:has-text(Sponsrade))
+lajkat.se##.ab-responsive-ads-wrapper
+/js/adxads.js$domain=lajkat.se
+/js/sifo.js$domain=lajkat.se
+/js/facebook_pixel.js$domain=lajkat.se
+/ab_appnexus_ads/$domain=lajkat.se
