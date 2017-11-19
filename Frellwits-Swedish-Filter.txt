@@ -89,6 +89,9 @@
 /monetization/ads-module/
 /monetization/pixel-sdk/
 
+! Suspicious requests
+/mdt.min.js$domain=aftonbladet.se|dn.se
+
 ! Glimr tracking
 /glimr.min.js$script,domain=dn.se|di.se|lajkat.se
 
@@ -150,7 +153,6 @@ aftonbladet.se##article:has(a[data-sponsored="true"])
 aftonbladet.se###MegaAd
 aftonbladet.se##html,body:style(overflow: auto !important;)
 aftonbladet.se##script:inject(abort-current-inline-script.js, preLoadAds)
-/mdt.min.js$domain=aftonbladet.se
 ! https://www.sweclockers.com/forum/post/17105435
 ||aftonbladet.se/hyper-assets/freewall.*.js$script
 @@||aftonbladet.se^$generichide
@@ -175,6 +177,7 @@ dn.se##.account-information__tooltip
 dn.se##.js-bottom-bar
 dn.se##script:inject(setTimeout-defuser.js, bait)
 dn.se##.personal-carousel
+dn.se##body > iframe[style]
 /personalized/$xmlhttprequest,domain=dn.se
 ||dn.se/ajax/track/render?trackingToken^
 ||dn-static.se/dnse/match-ad.*.min.js^
@@ -360,12 +363,13 @@ gamereactor.*###bigVideoAd
 gamereactor.*##a[href*="/adclick.php"]
 gamereactor.*###pagebackground:style(background-image: none !important)
 /prerolls/*$domain=gamereactor.se|gamereactor.dk|gamereactor.no|gamereactor.fi|gamereactor.eu|gamereactor.de|gamereactor.it|gamereactor.es|gamereactor.pt|gamereactor.fr|gamereactor.nl
-/ad-video-log.php^,domain=gamereactor.se|gamereactor.dk|gamereactor.no|gamereactor.fi|gamereactor.eu|gamereactor.de|gamereactor.it|gamereactor.es|gamereactor.pt|gamereactor.fr|gamereactor.nl
+/ad-video-log.php$domain=gamereactor.se|gamereactor.dk|gamereactor.no|gamereactor.fi|gamereactor.eu|gamereactor.de|gamereactor.it|gamereactor.es|gamereactor.pt|gamereactor.fr|gamereactor.nl
 ||openx.gamereactor.dk/multi.php?$script,important
 gamereactor.*##script:inject(abort-on-property-write.js, detectAdblockUser)
 gamereactor.*###sky2_1
-||gamereactor.*/lay/ad-video-stats.js
+||gamereactor.*/lay/ad-video-stats.js$script,important
 /gapro.js$important,domain=gamereactor.se|gamereactor.dk|gamereactor.no|gamereactor.fi|gamereactor.eu|gamereactor.de|gamereactor.it|gamereactor.es|gamereactor.pt|gamereactor.fr|gamereactor.nl|jwpcdn.com
+||gamereactor.*/lay/js/manageBanners.js$script,important
 
 ! ALLTFORFORALDRAR
 mammasidan.se,minbebis.com,alltforforaldrar.se##.panorama:if(.add-text:has-text(Annons))
@@ -547,6 +551,7 @@ ng.se##.panel-pane:if(.pane-title:has-text(SAMARBETEN))
 /nodecounter/*?token=*$image,domain=ng.se
 politism.se##[id^="native_ad"]
 politism.se##.post-teaser:if(.nstory:has-text(Sponsrat innehåll))
+||breakit.se/library/js/app.*AdManager.js*$script
 breakit.se##.spnsr-widget
 breakit.se##.supportersSlideContainer
 breakit.se##.monstermodule
