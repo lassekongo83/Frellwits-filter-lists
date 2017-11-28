@@ -97,6 +97,9 @@
 ! Glimr tracking
 /glimr.min.js$script,domain=dn.se|di.se|lajkat.se
 
+! Facebook junk
+/facebook_sdk.js$script,domain=radioplay.se
+
 ! CSP filters where it doesn't seem to break any functionality
 ||$csp=script-src 'self' 'unsafe-inline' 'unsafe-eval',domain=nyteknik.se|dagensmedia.se|affarsvarlden.se|lag-avtal.se|arbetarskydd.se|etc.se
 
@@ -664,3 +667,4 @@ branschkoll.se##.ads
 hemnet.se##.recent-news__item:if(.recent-news__category:has-text(Sponsrad))
 hemnet.se##.article-news__link:has(.news-article--sponsored)
 /sticky-ads.*.js$script,domain=hemnet.se
+||amqp-ws-proxy.radioplay.se^$websocket
