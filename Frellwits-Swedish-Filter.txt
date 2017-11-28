@@ -100,6 +100,9 @@
 ! Facebook junk
 /facebook_sdk.js$script,domain=radioplay.se
 
+! Adonnews
+||cloudfront.net/channel.js^$script,domain=bohuslaningen.se|gp.se|hallandsposten.se|hn.se|stromstadstidning.se|ttela.se|vastgotabladet.se|falkopingstidning.se|skaraborgslanstidning.se|skovdenyheter.se
+
 ! CSP filters where it doesn't seem to break any functionality
 ||$csp=script-src 'self' 'unsafe-inline' 'unsafe-eval',domain=nyteknik.se|dagensmedia.se|affarsvarlden.se|lag-avtal.se|arbetarskydd.se|etc.se
 
@@ -123,7 +126,6 @@ idg.se##script:inject(abort-on-property-read.js, PREBID_TIMEOUT)
 
 ! STAMPEN
 ||cloudfront.net/LoadSlotLocator.js^$script,domain=bohuslaningen.se|gp.se|hallandsposten.se|hn.se|stromstadstidning.se|ttela.se
-||cloudfront.net/channel.js^$script,domain=bohuslaningen.se|gp.se|hallandsposten.se|hn.se|stromstadstidning.se|ttela.se
 /ad_service/$domain=bohuslaningen.se|gp.se|hallandsposten.se|hn.se|stromstadstidning.se|ttela.se
 bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se###stampenCookieInformationContainer
 bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##.share-fixed-desktop
