@@ -39,6 +39,7 @@
 ||hpevoices.com^$third-party
 ||insplanet.com^$third-party
 ||investerarbrevet.se^$third-party
+||kekocity2.com^$third-party
 ||kortio.se^$third-party
 ||lohts.se^$third-party
 ||lokus.se^$third-party,domain=~familj.se
@@ -630,6 +631,9 @@ norran.se##.js-cookie-information-bar
 kimura.se##.ad
 kimura.se##.sidebar-section:has(.sidebar_ad)
 kimura.se##a[href*="unibet.com"]
+kimura.se##a[href*="/kampanjer."]
+kimura.se###firsttopbanner
+/lazyad-loader.min.js*$script,domain=kimura.se
 market.se##[id^="fusion_ad"]
 market.se###rollup
 market.se##article[about^="/annons/"]
@@ -687,3 +691,8 @@ magasinetparagraf.se##script:inject(abort-current-inline-script.js, _stq)
 sokmotorkonsult.se##.feature:has(a[href*="/sponsrade-lankar"])
 naturvetenskap.org##.footer_ad:style(height: 1px !important;)
 /ad-blocking-advisor/$image,domain=naturvetenskap.org
+||milansverige.se^$csp=script-src 'self' 'unsafe-inline' 'unsafe-eval' *.googleapis.com *.tvmatchen.nu *.wp.com
+/deadblocker-front.js$script,domain=milansverige.se
+milansverige.se##.widget_text:has(a[href^="https://ads."])
+milansverige.se##.widget_text:has(a[href^="http://ads."])
+@@||kurslitteratur.se^$generichide
