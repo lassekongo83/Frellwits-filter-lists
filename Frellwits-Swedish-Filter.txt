@@ -199,15 +199,8 @@ dn.se##script:inject(abort-on-property-write.js, BlockAdBlock)
 dn.se##.personal-carousel
 dn.se##body > iframe[style]
 /personalized/$xmlhttprequest,domain=dn.se
-||dn.se/ajax/track/render?trackingToken^
-||dn-static.se/dnse/match-ad.*.min.js^
 ||auth.dn.se/check-paywall*$script
-||campaigner.*.se$domain=dn.se|di.se
-||fusion.*.se$domain=dn.se|di.se
-||login.*.se$domain=dn.se|di.se
-/analys/dep/wwwdnse.*.min.*.js$domain=dn.se|di.se
-/fusion-loader-dn.*.min.js$domain=dn.se|di.se
-/advertisement*.js$script,important,domain=dn.se|di.se
+/advertisement*.js$script,important,domain=dn.se
 di.se##article.di_teaser--native
 di.se##section[data-ad-settings]
 di.se##aside.di_share-buttons
@@ -236,10 +229,9 @@ expressen.se##.slot:has(a[href*="rabattkoder.expressen.se"])
 /socket.io$websocket,domain=expressen.se
 /rantekartan/*$subdocument,domain=expressen.se
 sydsvenskan.se,hd.se##div[data-category="native-teaser"]
-sydsvenskan.se,hd.se##.subject-deck--eight-to-five
 /native?noBurtProfiles=1$xmlhttprequest,domain=hd.se|sydsvenskan.se
 /check-paywall$script,domain=hd.se|sydsvenskan.se
-/ads-*.js$script,domain=hd.se|sydsvenskan.se
+/ads-*.js$script,domain=hd.se|sydsvenskan.se|8till5.se
 tv4.se##.program-header-sponsors
 tv4.se##.social-block-ad
 tv4.se##[class*="aside-ad"]
