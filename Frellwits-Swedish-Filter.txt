@@ -145,16 +145,13 @@
 /mdt.min.js$domain=aftonbladet.se|dn.se|svtplay.se
 
 ! Glimr tracking
-/glimr.min.js$script,domain=dn.se|di.se|lajkat.se
+/glimr.min.js^$script,domain=dn.se|di.se|lajkat.se|politism.se
 
 ! Facebook junk
 /facebook_sdk.js$script,domain=radioplay.se
 
 ! Adonnews
 ||cloudfront.net/channel.js^$script,domain=bohuslaningen.se|gp.se|hallandsposten.se|hn.se|stromstadstidning.se|ttela.se|vastgotabladet.se|falkopingstidning.se|skaraborgslanstidning.se|skovdenyheter.se
-
-! CSP filters where it doesn't seem to break any functionality
-||$csp=script-src 'self' 'unsafe-inline' 'unsafe-eval',domain=nyteknik.se|dagensmedia.se|affarsvarlden.se|lag-avtal.se|arbetarskydd.se|etc.se
 
 ! Override EasyPrivacy and EasyList whitelists
 ||google-analytics.com/ga.js$script,important,redirect=google-analytics.com/ga.js,domain=aftonbladet.se
@@ -518,7 +515,6 @@ nordichardware.se##div.td_block_text_with_title:if(h4 > span:has-text(Från Surf
 nordichardware.se##.wpb_text_column:has(.surfamodul-blocktitle)
 nordichardware.se##.td_block_wrap:if(span:has-text(/^Sponsrat/))
 nordichardware.se##.td_block_social_counter
-ica.se##.lazyNoscriptActive
 bubb.la##:xpath(//h2[@class="ad"]/parent::div[1])
 friatider.se##img[src*="336x150"]
 etc.se##.banner-wrap
@@ -755,3 +751,4 @@ entreprenor.se###warning
 flamman.se##.TakeOverBanner
 flamman.se##.Banner
 /takeover.gif$image,domain=flamman.se
+||akamai.net/swordfishinc.download.akamai.com/*$script,domain=arla.se
