@@ -171,9 +171,11 @@ aftonbladet.se##article:has(a[data-sponsored="true"])
 aftonbladet.se###MegaAd
 aftonbladet.se##html,body:style(overflow: auto !important;)
 aftonbladet.se##script:inject(abort-current-inline-script.js, preLoadAds)
-@@/hyper-assets/preload.*$script,domain=aftonbladet.se
-@@/hyper-assets/app.*$script,domain=aftonbladet.se
-/hyper-assets/$script,domain=aftonbladet.se
+/hyper-assets/*$script,domain=aftonbladet.se
+@@/hyper-assets/app*$script,domain=aftonbladet.se
+@@/hyper-assets/preload*$script,domain=aftonbladet.se
+@@||aftonbladet.se^$generichide
+aftonbladet.se##[id^="innerabAdArea-"]
 aftonbladet.se##.abAdArea
 aftonbladet.se##[id^="abAdArea"]
 omni.se##article.article--sponsored
