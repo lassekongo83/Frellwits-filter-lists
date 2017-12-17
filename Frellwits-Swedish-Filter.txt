@@ -117,6 +117,7 @@
 /entryclick;_
 /logger/logger?
 /trafikfonden/*
+/citygate/payingcompanies$xmlhttprequest
 ||lemonwhale.com*/adevent/*$xmlhttprequest
 ||biowebb-data.*.amazonaws*
 ||pixel.playbuzz.com^$xmlhttprequest
@@ -149,6 +150,9 @@
 ! Whitelists
 @@/js/advertisement.$script,domain=devote.se|brollopstorget.se
 @@/adserver.$script,domain=fotosidan.se
+@@/js/ads.js$first-party,domain=kuriren.nu|nsd.se|unt.se|helagotland.se|pt.se|mvt.se|nt.se|corren.se|affarsliv.com|folkbladet.se
+@@/js/advert.$script,domain=nwt.se|sla.se|mariestadstidningen.se
+@@/wp-content/*/adframe.js$first-party,script,domain=vastgotabladet.se|falkopingstidning.se|skaraborgslanstidning.se|skovdenyheter.se
 
 ! Unknown and/or unnecessary requests
 /mdt.min.js$domain=aftonbladet.se|dn.se|svtplay.se
@@ -363,6 +367,8 @@ affarsliv.se,barometern.se,bt.se,sydostran.se,blt.se,kristianstadsbladet.se,smp.
 ||connect.24liveplus.com^$websocket,domain=nwt.se|sla.se|mariestadstidningen.se
 ||24liveplus.com^$third-party,domain=nwt.se|sla.se|mariestadstidningen.se
 /popup.min.js^$domain=nwt.se|sla.se|mariestadstidningen.se
+||cloudfront.net/widgets/adds.js^$script,domain=nwt.se|sla.se|mariestadstidningen.se
+||cloudfront.net/widgets/adds.css^$stylesheet,domain=nwt.se|sla.se|mariestadstidningen.se
 nwt.se,sla.se,mariestadstidningen.se##.mfp-wrap
 nwt.se,sla.se,mariestadstidningen.se##.mfp-bg
 nwt.se,sla.se,mariestadstidningen.se##html:style(overflow: auto !important;)
@@ -768,7 +774,6 @@ flamman.se##.Banner
 ||akamai.net/swordfishinc.download.akamai.com/*$script,domain=arla.se
 devote.se##article:if(div[class]:has-text(Samarbete))
 devote.se##[class^="col-"]:has(.burt-unit-metadata)
-devote.se##script:inject(abort-on-property-read.js, devote.adblock)
 $object,object-subrequest,domain=devote.se
 kurera.se##.annonswrapper
 kurera.se##.g:has(span.ads)
