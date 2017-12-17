@@ -33,6 +33,7 @@
 ||bytelab.dk^$third-party
 ||careerbuilder.se^$third-party
 ||casinotoplists.com^$third-party
+||cision.com^$third-party
 ||citygate.se^$third-party,domain=~familj.se
 ||citypaketet.se^$third-party
 ||compricer.se^$third-party
@@ -96,6 +97,7 @@
 ||tns-sifo.se^$third-party
 ||tvdags.se^$third-party
 ||upsales.com^$third-party
+||webbcensus.com^$third-party
 ||webpower.eu^$third-party
 ||zummycloud.com^$third-party
 
@@ -124,6 +126,7 @@
 /?file=lokusjobb*$subdocument
 /?file=lokusmotor*$subdocument
 /sifo_msr.js^$script
+/sifo_analytics.js^$script
 /*&action=client_side_impression&*
 /*&action=adblock&part_id=*
 /monetization/ads-module/*
@@ -140,9 +143,16 @@
 ! Generic Element Hiding Rules
 ##a[title="LeoVegas"]
 ##.nyhet_wrapper_annons
+##.adtoma_container
+##.eu_coookie_toolbar
+
+! Whitelists
+@@/js/advertisement.$script,domain=devote.se|brollopstorget.se
+@@/adserver.$script,domain=fotosidan.se
 
 ! Unknown and/or unnecessary requests
 /mdt.min.js$domain=aftonbladet.se|dn.se|svtplay.se
+||site.com/xtcore.js$script
 
 ! Glimr tracking
 /glimr.min.js^$script,domain=dn.se|di.se|lajkat.se|politism.se
@@ -161,8 +171,8 @@
 
 ! IDG
 ||cmatch.idg.se^$script
-||ai.idg.se
-||ax.idg.se
+||ai.idg.se^
+||ax.idg.se^
 ||idg.se/assets/scripts/prebid*.js$script,first-party
 /pis.gif$image,domain=idg.se
 idg.se##div[data-cms-ad]
@@ -306,6 +316,11 @@ illvet.se,pctidningen.se##.top-banner
 va.se##.popup-wrapper
 va.se##.sponsored-article
 va.se##.sponsored-module
+dagensmedicin.se##.widget-carousel--sponsored
+resume.se##.teaser-sponsored
+||qbrick.com^$third-party,domain=resume.se
+vafinans.se##.box:if(.newsLeadWords:has-text(Sponsrat innehåll))
+vafinans.se##.brandStoryGreyBackground2
 
 ! TEKNOMEDIA
 *webbannons.ntm.eu$domain=kuriren.nu|nsd.se|unt.se|helagotland.se|pt.se|mvt.se|nt.se|corren.se|affarsliv.com|folkbladet.se
@@ -337,11 +352,26 @@ ekuriren.se,kkuriren.se,sn.se##div[class^="ew-bottom-ad"]
 ekuriren.se,kkuriren.se,sn.se##.match-ad-article
 ekuriren.se,kkuriren.se,sn.se##.teaser--native-ad
 
-! GOTA MEDIA
+! GOTA MEDIA/MK WEBB/NWT
 affarsliv.se,barometern.se,bt.se,sydostran.se,blt.se,kristianstadsbladet.se,smp.se,trelleborgsallehanda.se,ut.se,ystadsallehanda.se,olandsbladet.se,ostrasmaland.se##div[id*="marknadsguiden"]
 affarsliv.se,barometern.se,bt.se,sydostran.se,blt.se,kristianstadsbladet.se,smp.se,trelleborgsallehanda.se,ut.se,ystadsallehanda.se,olandsbladet.se,ostrasmaland.se##script:inject(abort-on-property-write.js, adTags)
 affarsliv.se,barometern.se,bt.se,sydostran.se,blt.se,kristianstadsbladet.se,smp.se,trelleborgsallehanda.se,ut.se,ystadsallehanda.se,olandsbladet.se,ostrasmaland.se##script:inject(abort-on-property-write.js, cX.callQueue)
 |http://om/1.js$domain=affarsliv.se|barometern.se|bt.se|sydostran.se|blt.se|kristianstadsbladet.se|smp.se|trelleborgsallehanda.se|ut.se|ystadsallehanda.se|olandsbladet.se|ostrasmaland.se
+||24liveblog.com^$third-party,domain=nwt.se|sla.se|mariestadstidningen.se
+||24liveplus.com^$third-party,domain=nwt.se|sla.se|mariestadstidningen.se
+||connect.24liveplus.com^$websocket,domain=nwt.se|sla.se|mariestadstidningen.se
+||24liveplus.com^$third-party,domain=nwt.se|sla.se|mariestadstidningen.se
+/popup.min.js^$domain=nwt.se|sla.se|mariestadstidningen.se
+nwt.se,sla.se,mariestadstidningen.se##.mfp-wrap
+nwt.se,sla.se,mariestadstidningen.se##.mfp-bg
+nwt.se,sla.se,mariestadstidningen.se##html:style(overflow: auto !important;)
+nwt.se,sla.se,mariestadstidningen.se##.ad
+|http://kampanj.*$domain=nwt.se|sla.se|mariestadstidningen.se
+/siforesponsivemeasure.js$domain=nwt.se|sla.se|mariestadstidningen.se
+! https://github.com/lassekongo83/Frellwits-filter-lists/issues/5
+@@||cxense.com^$script,domain=nwt.se|sla.se|mariestadstidningen.se
+skd.se,laholmstidning.se,nsk.se##div.skd-crsl-wrap:matches-css-before(content: Annons)
+/sponsrat-frequency.js^$script,domain=skd.se|laholmstidning.se|nsk.se
 
 ! MITTMEDIA
 allehanda.se,arbetarbladet.se,bblat.se,avestatidning.com,dalademokraten.se,dt.se,fagersta-posten.se,gd.se,ltz.se,lt.se,na.se,norrteljetidning.se,nynashamnsposten.se,salaallehanda.com,st.nu,tidningenharjedalen.se,vlt.se,op.se##div.client-dialogue-plus
@@ -405,21 +435,6 @@ kwiss.me##.qz-related-quizes-item:if(span:has-text(Sponsrat av))
 fragbite.se##.module:if(h4:has-text(Sponsrat inlägg))
 fragbite.se##.spreadItemCollection:if(.category:has-text(Sponsrat innehåll))
 @@||fragbite.se/js/adsense.js
-
-! NWT
-||24liveblog.com^$third-party,domain=nwt.se|sla.se|mariestadstidningen.se
-||24liveplus.com^$third-party,domain=nwt.se|sla.se|mariestadstidningen.se
-||connect.24liveplus.com^$websocket,domain=nwt.se|sla.se|mariestadstidningen.se
-||24liveplus.com^$third-party,domain=nwt.se|sla.se|mariestadstidningen.se
-/popup.min.js^$domain=nwt.se|sla.se|mariestadstidningen.se
-nwt.se,sla.se,mariestadstidningen.se##.mfp-wrap
-nwt.se,sla.se,mariestadstidningen.se##.mfp-bg
-nwt.se,sla.se,mariestadstidningen.se##html:style(overflow: auto !important;)
-nwt.se,sla.se,mariestadstidningen.se##.ad
-|http://kampanj.*$domain=nwt.se|sla.se|mariestadstidningen.se
-/siforesponsivemeasure.js$domain=nwt.se|sla.se|mariestadstidningen.se
-! https://github.com/lassekongo83/Frellwits-filter-lists/issues/5
-@@||cxense.com^$script,domain=nwt.se|sla.se|mariestadstidningen.se
 
 ! GAMEREACTOR
 gamereactor.*###eventad
@@ -511,6 +526,7 @@ tv2.no##script:inject(abort-current-inline-script.js, adblockDetector)
 /*banner*.png$domain=etc.se|markbladet.se
 /*banner*.jpg$domain=etc.se|markbladet.se
 /*banner*.gif$domain=etc.se|markbladet.se
+/banner*/*$image,domain=internetmedicin.se|dagenstv.com
 nordichardware.se##div.td_block_text_with_title:if(h4 > span:has-text(Från Surfa))
 nordichardware.se##.wpb_text_column:has(.surfamodul-blocktitle)
 nordichardware.se##.td_block_wrap:if(span:has-text(/^Sponsrat/))
@@ -556,12 +572,11 @@ hitta.se##.partner-box
 ||pixel-profile-cloud.eniro.com/type/pixel^$image
 /eniro.pixel.script.js$domain=eniro.se
 ||akamai.net^$script,domain=eniro.se|eniro.no|eniro.dk
-/entag.js$script,domain=eniro.se
-skd.se,laholmstidning.se,nsk.se##div.skd-crsl-wrap:matches-css-before(content: Annons)
-/sponsrat-frequency.js^$script,domain=skd.se|laholmstidning.se|nsk.se
+/entag.js$script,domain=eniro.se|proff.se|proff.no|proff.dk
+/cx-emediate-userprofile-se.*.js$script,domain=eniro.se
+eniro.se##script:inject(abort-current-inline-script.js, $, WebAnalytics)
 fotosidan.se##a[href^="http://ads."]
 fotosidan.se##.ads
-fotosidan.se##script:inject(abort-on-property-write.js, blockDetected)
 ||obj.fotosidan.se/obj/pa/*$image
 dagensanalys.se##article.listitem:has(.label_sponsored)
 dagensanalys.se##article.listitem:has(a[href$="/sponsrad/"])
@@ -666,8 +681,6 @@ missatsamtal.se##.comment:has(.nosnaj)
 missatsamtal.se##.nosnaj:has(#top-nosnaj)
 missatsamtal.se##.nosnaj:has(#bottom-nosnaj)
 skaraborgsbygden.se##.ad
-resume.se##.teaser-sponsored
-||qbrick.com^$third-party,domain=resume.se
 tvdags.se##.article-list__item:has(.sponsor)
 privataaffarer.se##.teaser:has(img[src*="/native/"])
 privataaffarer.se##a[href*="/bit.ly/"]
@@ -752,3 +765,21 @@ flamman.se##.TakeOverBanner
 flamman.se##.Banner
 /takeover.gif$image,domain=flamman.se
 ||akamai.net/swordfishinc.download.akamai.com/*$script,domain=arla.se
+devote.se##article:if(div[class]:has-text(Samarbete))
+devote.se##[class^="col-"]:has(.burt-unit-metadata)
+devote.se##script:inject(abort-on-property-read.js, devote.adblock)
+$object,object-subrequest,domain=devote.se
+kurera.se##.annonswrapper
+kurera.se##.g:has(span.ads)
+babyhjalp.se##.ads
+/QX-AD.js^$script,domain=qx.se|qruiser.com
+brollopstorget.se##.ad_right
+javligtgott.se##.category-samarbeten
+/blogcounter.js^$script,domain=javligtgott.se
+runnersworld.se##.sponsored
+sportbibeln.se###share-area
+sysidan.se##.adscolumn
+/evqNewsBot.js^$script,domain=evertiq.se
+/evqReadBot.js^$script,domain=evertiq.se
+evertiq.se##.bnr
+evertiq.se##.bnrWrapper
