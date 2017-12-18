@@ -99,6 +99,7 @@
 ||upsales.com^$third-party
 ||webbcensus.com^$third-party
 ||webpower.eu^$third-party
+||websking.com^$third-party
 ||zummycloud.com^$third-party
 
 ! General ads and tracking rules
@@ -137,6 +138,8 @@
 ||videoplaza.tv/proxy/tracker?
 ||youplay.se/track?
 ||jifo.co/i/analytics/ga.js$script
+||nordiskemedier.dk/banner/*
+/blogs/log_pageview/$script
 
 ! Scams and malicious content
 ! https://kontakt.svt.se/guide/varning-for-bluff-annonser-pa-google?category=aktuellt-just-nu
@@ -556,6 +559,7 @@ newsvoice.se##div.wpb_raw_code:has(img[width="300"][height="200"])
 moviezine.se##.inner_featured:if(.badge:has-text(Sponsrat))
 moviezine.se##.inner_featured:if(.badge:has-text(SPONSRAT))
 moviezine.se##[name="article-advertisment"]
+moviezine.se##.ads
 ||tm.tradetracker.net/tag?$script,important,domain=moviezine.se
 fz.se##script:inject(abort-on-property-read.js, Main.Ads.Adblock.getInstance)
 fz.se##.bnr
@@ -614,10 +618,10 @@ autonytt.se##.sponsrad-artikel
 autonytt.se##.start-leaderboard
 autonytt.se##.leaderboard
 autonytt.se##a:if(.label:has-text(Sponsrad))
-||nordiskemedier.dk/banner/*
 /banner.js^$domain=motormagasinet.se
 /cookie-consent-*.js^$domain=motormagasinet.se
 /trckr/bnr/*$xmlhttprequest,domain=motormagasinet.se
+/trckr/*$xmlhttprequest,domain=motormagasinet.se
 motormagasinet.se##script:inject(overlay-buster.js)
 motormagasinet.se##script:inject(setTimeout-defuser.js, newsletterPopup)
 motormagasinet.se##.remodal-bg.remodal-is-opening:style(filter: none !important;)
@@ -632,6 +636,7 @@ mobil.se##div.takeover
 mobil.se##.title-image-list:if(h2:has-text(Sponsrad artikel))
 mobil.se##body:style(overlay: auto !important;)
 mobil.se##.ad
+mobil.se##.section-jobb-section-advertorials
 /lunchguiden*.png$domain=vk.se|folkbladet.nu
 vk.se,folkbladet.nu##.ad
 vk.se,folkbladet.nu##:xpath(//div[text()[contains(., 'Annons')]]/parent::div)
