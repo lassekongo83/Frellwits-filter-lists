@@ -52,6 +52,7 @@
 ||fakturino.se^$third-party
 ||finkammat.se^$third-party
 ||glimr.io^$third-party
+||hapyak.com^$third-party
 ||heybot.com^$third-party
 ||hmads.se^$third-party
 ||hpevoices.com^$third-party
@@ -129,6 +130,7 @@
 /?file=lokusmotor*$subdocument
 /sifo_msr.js^$script
 /sifo_analytics.js^$script
+/js/sifo.js^$script
 /*&action=client_side_impression&*
 /*&action=adblock&part_id=*
 /monetization/ads-module/*
@@ -143,7 +145,14 @@
 
 ! Scams and malicious content
 ! https://kontakt.svt.se/guide/varning-for-bluff-annonser-pa-google?category=aktuellt-just-nu
-||breakingsnews.info^$document
+.info/svt-se-nyheter/$document
+.info/dagens-nyheter/$document
+.info/tv4-nyheter/$document
+.info/nyheter24/$document
+.info/sr-nyheter/$document
+.info/tt-nyheter/$document
+.info/malmoe-nyheter/$document
+/sweden/swedish/hjo-tidning.html$document
 
 ! Generic Element Hiding Rules
 ##a[title="LeoVegas"]
@@ -494,6 +503,7 @@ baaam.se,elle.se,elledecoration.se,ellematovin.se,femina.se,cafe.se,svenskdam.se
 baaam.se,elle.se,elledecoration.se,ellematovin.se,femina.se,cafe.se,svenskdam.se,allas.se,allers.se,antikochauktion.se,aretrunt.se,allakorsord.se,chic.se,dromhemochtradgard.se,frida.se,hant.se,hemmets.se,mabra.com,matmagasinet.se,residencemagazine.se##script:inject(abort-on-property-write.js, adblockDetector)
 baaam.se,elle.se,elledecoration.se,ellematovin.se,femina.se,cafe.se,svenskdam.se,allas.se,allers.se,antikochauktion.se,aretrunt.se,allakorsord.se,chic.se,dromhemochtradgard.se,frida.se,hant.se,hemmets.se,mabra.com,matmagasinet.se,residencemagazine.se##script:inject(abort-on-property-write.js, socializerVars)
 baaam.se,elle.se,elledecoration.se,ellematovin.se,femina.se,cafe.se,svenskdam.se,allas.se,allers.se,antikochauktion.se,aretrunt.se,allakorsord.se,chic.se,dromhemochtradgard.se,frida.se,hant.se,hemmets.se,mabra.com,matmagasinet.se,residencemagazine.se##script:inject(abort-on-property-write.js, newsletterHtml)
+baaam.se,elle.se,elledecoration.se,ellematovin.se,femina.se,cafe.se,svenskdam.se,allas.se,allers.se,antikochauktion.se,aretrunt.se,allakorsord.se,chic.se,dromhemochtradgard.se,frida.se,hant.se,hemmets.se,mabra.com,matmagasinet.se,residencemagazine.se##article[id^="post-"]:has(a[href$="/annons/"])
 /iab/iab.js$script,domain=baaam.se|elle.se|elledecoration.se|ellematovin.se|femina.se|cafe.se|svenskdam.se|allas.se|allers.se|antikochauktion.se|aretrunt.se|allakorsord.se|chic.se|dromhemochtradgard.se|frida.se|hant.se|hemmets.se|mabra.com|matmagasinet.se|residencemagazine.se
 /js/sticky-mobile-ad.js*$script,domain=baaam.se|elle.se|elledecoration.se|ellematovin.se|femina.se|cafe.se|svenskdam.se|allas.se|allers.se|antikochauktion.se|aretrunt.se|allakorsord.se|chic.se|dromhemochtradgard.se|frida.se|hant.se|hemmets.se|mabra.com|matmagasinet.se|residencemagazine.se
 /se-wordpress-google-analytics/src/js/wp-tagmanager.js$script,domain=baaam.se|elle.se|elledecoration.se|ellematovin.se|femina.se|cafe.se|svenskdam.se|allas.se|allers.se|antikochauktion.se|aretrunt.se|allakorsord.se|chic.se|dromhemochtradgard.se|frida.se|hant.se|hemmets.se|mabra.com|matmagasinet.se|residencemagazine.se
@@ -620,15 +630,15 @@ autonytt.se##.leaderboard
 autonytt.se##a:if(.label:has-text(Sponsrad))
 /banner.js^$domain=motormagasinet.se
 /cookie-consent-*.js^$domain=motormagasinet.se
-/trckr/bnr/*$xmlhttprequest,domain=motormagasinet.se
-/trckr/*$xmlhttprequest,domain=motormagasinet.se
+/trckr/bnr/*$xmlhttprequest,domain=motormagasinet.se|food-supply.se
+/trckr/*$xmlhttprequest,domain=motormagasinet.se|food-supply.se
 motormagasinet.se##script:inject(overlay-buster.js)
 motormagasinet.se##script:inject(setTimeout-defuser.js, newsletterPopup)
 motormagasinet.se##.remodal-bg.remodal-is-opening:style(filter: none !important;)
 motormagasinet.se##.remodal-bg.remodal-is-opened:style(filter: none !important;)
-motormagasinet.se###junglebogen
+motormagasinet.se,food-supply.se###junglebogen
 motormagasinet.se##[id^="dfp-a1p"]
-motormagasinet.se##.rotating-junglebogen
+motormagasinet.se,food-supply.se##.rotating-junglebogen
 mobil.se##li.teaser:has(.Advertorials)
 mobil.se##.section-advertorials
 /mobil_takeover/js/script.js$domain=mobil.se
@@ -797,3 +807,11 @@ sysidan.se##.adscolumn
 /evqReadBot.js^$script,domain=evertiq.se
 evertiq.se##.bnr
 evertiq.se##.bnrWrapper
+/fusion.js$script,domain=tidningenhembakat.se
+/cinnaroll-fusion.min.js^$script,domain=tidningenhembakat.se
+/hapyak.js$script,domain=viktvaktarna.se
+vardagspuls.se##.fs-overlay-wrapper
+/campaigns/*$xmlhttprequest,domain=kokaihop.se
+/listByType?*adSettings^$xmlhttprequest,domain=kokaihop.se
+kokaihop.se##.kng-cookie-info-bar
+ja.se,skogsaktuellt.se,entreprenadaktuellt.se##.banner
