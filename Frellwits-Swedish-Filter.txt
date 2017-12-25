@@ -155,6 +155,7 @@
 .info/sr-nyheter/$document
 .info/tt-nyheter/$document
 .info/malmoe-nyheter/$document
+.info/soedermanlands-nyheter/$document
 /sweden/swedish/hjo-tidning.html$document
 
 ! Generic Element Hiding Rules
@@ -183,7 +184,7 @@
 /facebook_sdk.js$script,domain=radioplay.se
 
 ! Adonnews
-||cloudfront.net/channel.js^$script,domain=bohuslaningen.se|gp.se|hallandsposten.se|hn.se|stromstadstidning.se|ttela.se|vastgotabladet.se|falkopingstidning.se|skaraborgslanstidning.se|skovdenyheter.se
+||cloudfront.net/channel.js^$script,domain=bohuslaningen.se|gp.se|hallandsposten.se|hn.se|stromstadstidning.se|ttela.se|vastgotabladet.se|falkopingstidning.se|skaraborgslanstidning.se|skovdenyheter.se|vn.se
 
 ! Hotjar
 expressen.se##script:inject(abort-current-inline-script.js, _hjSettings)
@@ -434,15 +435,15 @@ allehanda.se,arbetarbladet.se,bblat.se,avestatidning.com,dalademokraten.se,fager
 /strossle-start-page-ad$xmlhttprequest,domain=allehanda.se|arbetarbladet.se|bblat.se|avestatidning.com|dalademokraten.se|fagersta-posten.se|gd.se|ltz.se|lt.se|na.se|norrteljetidning.se|nynashamnsposten.se|salaallehanda.com|st.nu|tidningenharjedalen.se|vlt.se|op.se
 
 ! HERENCO
-/LoadIframePlugin.js^$domain=vastgotabladet.se|falkopingstidning.se|skaraborgslanstidning.se|skovdenyheter.se
-/LoadSlotLocator.js^$domain=vastgotabladet.se|falkopingstidning.se|skaraborgslanstidning.se|skovdenyheter.se
-/ajax.php?action=fetch_from_google_analytics^$xmlhttprequest,domain=vastgotabladet.se|falkopingstidning.se|skaraborgslanstidning.se|skovdenyheter.se
-/ajax.php?action=get_share_data^$xmlhttprequest,domain=vastgotabladet.se|falkopingstidning.se|skaraborgslanstidning.se|skovdenyheter.se
-/count.js$domain=vastgotabladet.se|falkopingstidning.se|skaraborgslanstidning.se|skovdenyheter.se
-/ajax.php?action=get_slideshow_ad_in$xmlhttprequest,domain=vastgotabladet.se|falkopingstidning.se|skaraborgslanstidning.se|skovdenyheter.se
-vastgotabladet.se,falkopingstidning.se,skaraborgslanstidning.se,skovdenyheter.se##div[id^="adonnews"]
-vastgotabladet.se,falkopingstidning.se,skaraborgslanstidning.se,skovdenyheter.se###premium-nag-screen
-vastgotabladet.se,falkopingstidning.se,skaraborgslanstidning.se,skovdenyheter.se##div.slideshow-in.active:has(.ad-wrapper)
+/LoadIframePlugin.js^$domain=vastgotabladet.se|falkopingstidning.se|skaraborgslanstidning.se|skovdenyheter.se|vn.se
+/LoadSlotLocator.js^$domain=vastgotabladet.se|falkopingstidning.se|skaraborgslanstidning.se|skovdenyheter.se|vn.se
+/ajax.php?action=fetch_from_google_analytics^$xmlhttprequest,domain=vastgotabladet.se|falkopingstidning.se|skaraborgslanstidning.se|skovdenyheter.se|vn.se
+/ajax.php?action=get_share_data^$xmlhttprequest,domain=vastgotabladet.se|falkopingstidning.se|skaraborgslanstidning.se|skovdenyheter.se|vn.se
+/count.js$domain=vastgotabladet.se|falkopingstidning.se|skaraborgslanstidning.se|skovdenyheter.se|vn.se
+/ajax.php?action=get_slideshow_ad_in$xmlhttprequest,domain=vastgotabladet.se|falkopingstidning.se|skaraborgslanstidning.se|skovdenyheter.se|vn.se
+vastgotabladet.se,falkopingstidning.se,skaraborgslanstidning.se,skovdenyheter.se,vn.se##div[id^="adonnews"]
+vastgotabladet.se,falkopingstidning.se,skaraborgslanstidning.se,skovdenyheter.se,vn.se###premium-nag-screen
+vastgotabladet.se,falkopingstidning.se,skaraborgslanstidning.se,skovdenyheter.se,vn.se##div.slideshow-in.active:has(.ad-wrapper)
 
 ! ALMA TALENT
 ||expo.hi-media.se/talentum/$subdocument,domain=nyteknik.se|dagensmedia.se|affarsvarlden.se|lag-avtal.se|arbetarskydd.se
@@ -853,3 +854,5 @@ mmanytt.se##a[href*="://kampanjer."]
 guldkanalen.se,dansbandskanalen.se##.wppaslink
 ||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$script,redirect=noopjs,domain=dplay.se
 ||edgesuite.net/flash/analytics/*$object,domain=dplay.se
+news55.se##.footer_popup
+news55.se##.news-feed-article[data-n55-theme="n55-theme--native-articles"]
