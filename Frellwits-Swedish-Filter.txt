@@ -165,8 +165,8 @@
 ##.eu_coookie_toolbar
 
 ! Whitelists
-@@/js/advertisement.$script,domain=devote.se|brollopstorget.se
-@@/adserver.$script,domain=fotosidan.se
+@@/js/advertisement.$first-party,script,domain=devote.se|brollopstorget.se
+@@/adserver.$first-party,script,domain=fotosidan.se
 @@/js/ads.js$first-party,domain=kuriren.nu|nsd.se|unt.se|helagotland.se|pt.se|mvt.se|nt.se|corren.se|affarsliv.com|folkbladet.se|24kalmar.se|24nybro.se|24emmaboda.se|24halmstad.se|24helsingborg.se|24blekinge.se|24malmo.se|24kristianstad.se|24trelleborg.se|24ystad.se|24uppsala.se|swedroid.se
 @@/js/advert.$script,domain=nwt.se|sla.se|mariestadstidningen.se
 @@/wp-content/*/adframe.js$first-party,script,domain=vastgotabladet.se|falkopingstidning.se|skaraborgslanstidning.se|skovdenyheter.se
@@ -187,7 +187,7 @@
 ||cloudfront.net/channel.js^$script,domain=bohuslaningen.se|gp.se|hallandsposten.se|hn.se|stromstadstidning.se|ttela.se|vastgotabladet.se|falkopingstidning.se|skaraborgslanstidning.se|skovdenyheter.se|vn.se
 
 ! Hotjar
-expressen.se##script:inject(abort-current-inline-script.js, _hjSettings)
+bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##script:inject(abort-current-inline-script.js, _hjSettings)
 
 ! Override EasyPrivacy and EasyList whitelists
 ||google-analytics.com/ga.js$script,important,redirect=google-analytics.com/ga.js,domain=aftonbladet.se
@@ -401,6 +401,11 @@ ekuriren.se,kkuriren.se,sn.se##.ad
 ekuriren.se,kkuriren.se,sn.se##div[class^="ew-bottom-ad"]
 ekuriren.se,kkuriren.se,sn.se##.match-ad-article
 ekuriren.se,kkuriren.se,sn.se##.teaser--native-ad
+ekuriren.se,kkuriren.se,sn.se##.native-ad-top
+ekuriren.se,kkuriren.se,sn.se###cookie-info
+@@||ekuriren.se^$generichide
+@@||kkuriren.se^$generichide
+@@||sn.se^$generichide
 
 ! GOTA MEDIA/MK WEBB/NWT
 affarsliv.se,barometern.se,bt.se,sydostran.se,blt.se,kristianstadsbladet.se,smp.se,trelleborgsallehanda.se,ut.se,ystadsallehanda.se,olandsbladet.se,ostrasmaland.se##div[id*="marknadsguiden"]
