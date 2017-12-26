@@ -118,6 +118,7 @@
 /logger/logger?
 /trafikfonden/*
 /citygate/payingcompanies$xmlhttprequest
+/webbresurser/banner/*
 ||lemonwhale.com*/adevent/*$xmlhttprequest
 ||biowebb-data.*.amazonaws*
 ||pixel.playbuzz.com^$xmlhttprequest
@@ -167,7 +168,7 @@
 ! Whitelists
 @@/js/advertisement.$first-party,script,domain=devote.se|brollopstorget.se
 @@/adserver.$first-party,script,domain=fotosidan.se
-@@/js/ads.js$first-party,domain=kuriren.nu|nsd.se|unt.se|helagotland.se|pt.se|mvt.se|nt.se|corren.se|affarsliv.com|folkbladet.se|24kalmar.se|24nybro.se|24emmaboda.se|24halmstad.se|24helsingborg.se|24blekinge.se|24malmo.se|24kristianstad.se|24trelleborg.se|24ystad.se|24uppsala.se|swedroid.se
+@@/js/ads.js$first-party,domain=kuriren.nu|nsd.se|unt.se|helagotland.se|pt.se|mvt.se|nt.se|corren.se|affarsliv.com|folkbladet.se|24kalmar.se|24nybro.se|24emmaboda.se|24halmstad.se|24helsingborg.se|24blekinge.se|24malmo.se|24kristianstad.se|24trelleborg.se|24ystad.se|24uppsala.se|swedroid.se|vibilagare.se
 @@/js/advert.$script,domain=nwt.se|sla.se|mariestadstidningen.se
 @@/wp-content/*/adframe.js$first-party,script,domain=vastgotabladet.se|falkopingstidning.se|skaraborgslanstidning.se|skovdenyheter.se
 @@/js/ad.js$first-party,domain=sweclockers.com
@@ -851,13 +852,19 @@ flashback.org###top-banner-row
 flashback.org###bottom-banner-container
 flashback.org###right-banner-container
 flashback.org##.post-banner-container
+||flashback.se/img/banners/
 mmanytt.se##.bannerTop
 mmanytt.se##.bannerHigh
 mmanytt.se##.bannerWide
 mmanytt.se##[class*="sponsrat-inlagg"]
 mmanytt.se##a[href*="://kampanjer."]
 guldkanalen.se,dansbandskanalen.se##.wppaslink
-||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$script,redirect=noopjs,domain=dplay.se
+||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$script,important,redirect=noopjs,domain=dplay.se
 ||edgesuite.net/flash/analytics/*$object,domain=dplay.se
 news55.se##.footer_popup
 news55.se##.news-feed-article[data-n55-theme="n55-theme--native-articles"]
+vibilagare.se##.banner
+businessclass.se##.reveal-modal-bg
+businessclass.se###bcpop
+businessclass.se##script:inject(abort-current-inline-script.js, $, AdBlockDetector)
+letsdeal.se##script:inject(overlay-buster.js)
