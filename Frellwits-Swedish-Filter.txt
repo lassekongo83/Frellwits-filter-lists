@@ -96,6 +96,7 @@
 ||tourn.se^$third-party
 ||tns-sifo.se^$third-party
 ||tvdags.se^$third-party
+||ubembed.com^$third-party
 ||upsales.com^$third-party
 ||webbcensus.com^$third-party
 ||webpower.eu^$third-party
@@ -169,7 +170,7 @@
 
 ! Whitelists
 @@/js/advertisement.$first-party,script,domain=devote.se|brollopstorget.se
-@@/adserver.$first-party,script,domain=fotosidan.se
+@@/adserver.$first-party,script,domain=fotosidan.se|utsidan.se
 @@/js/ads.js$first-party,domain=kuriren.nu|nsd.se|unt.se|helagotland.se|pt.se|mvt.se|nt.se|corren.se|affarsliv.com|folkbladet.se|24kalmar.se|24nybro.se|24emmaboda.se|24halmstad.se|24helsingborg.se|24blekinge.se|24malmo.se|24kristianstad.se|24trelleborg.se|24ystad.se|24uppsala.se|swedroid.se|vibilagare.se
 @@/js/advert.$script,domain=nwt.se|sla.se|mariestadstidningen.se
 @@/wp-content/*/adframe.js$first-party,script,domain=vastgotabladet.se|falkopingstidning.se|skaraborgslanstidning.se|skovdenyheter.se
@@ -181,7 +182,7 @@
 ||site.com/xtcore.js$script
 
 ! Glimr tracking
-/glimr.min.js^$script,domain=dn.se|di.se|lajkat.se|politism.se|blocket.se
+/glimr.min.js^$script,domain=dn.se|di.se|lajkat.se|politism.se|blocket.se|viivilla.se
 
 ! Facebook junk
 /facebook_sdk.js$script,domain=radioplay.se
@@ -365,7 +366,7 @@ vafinans.se##.box:if(.newsLeadWords:has-text(Sponsrat innehåll))
 vafinans.se##.brandStoryGreyBackground2
 /bmbBurt.js^$script,domain=skonahem.com|101ideer.se|tara.se|styleby.nu|topphalsa.se|veckorevyn.com|lantliv.com|amelia.se
 /bmbFusionUtils.js^$script,domain=skonahem.com|101ideer.se|tara.se|styleby.nu|topphalsa.se|veckorevyn.com|lantliv.com|amelia.se
-skonahem.com,101ideer.se,tara.se,styleby.nu,topphalsa.se,veckorevyn.com,lantliv.com,amelia.se##article.teaser:if(.teaser-label:has-text(Annonssamarbete))
+skonahem.com,101ideer.se,tara.se,styleby.nu,topphalsa.se,veckorevyn.com,lantliv.com,amelia.se,damernasvarld.se##article.teaser:if(.teaser-label:has-text(Annonssamarbete))
 privataaffarer.se##.teaser:has(img[src*="/native/"])
 privataaffarer.se##a[href*="/bit.ly/"]
 /fusion.js$script,domain=tidningenhembakat.se
@@ -584,7 +585,7 @@ tv2.no##.tv2-ad
 tv2.no##script:inject(abort-current-inline-script.js, adblockDetector)
 
 ! ÖVRIGT
-/*banner*.*$image,domain=etc.se|markbladet.se
+/*banner*.*$image,domain=etc.se|markbladet.se|tkj.se
 /banner*/*$image,domain=internetmedicin.se|dagenstv.com
 nordichardware.se##div.td_block_text_with_title:if(h4 > span:has-text(Från Surfa))
 nordichardware.se##.wpb_text_column:has(.surfamodul-blocktitle)
@@ -596,9 +597,6 @@ friatider.se##img[src*="336x150"]
 etc.se##.banner-wrap
 etc.se##.article-type-annons
 etc.se##img[alt="Annons"]
-etc.se##script:inject(abort-on-property-write.js, rand2)
-etc.se##script:inject(abort-on-property-write.js, rand)
-etc.se##script:inject(abort-on-property-write.js, Drupal)
 newsvoice.se##aside.widget:if(span:has-text(ANNONSER))
 newsvoice.se##aside.widget:if(h4:has-text(NEWSVOICE REKOMMENDERAR))
 newsvoice.se##a[href*="irradia.se"]
@@ -868,3 +866,25 @@ businessclass.se###bcpop
 businessclass.se##script:inject(abort-current-inline-script.js, $, AdBlockDetector)
 letsdeal.se##script:inject(overlay-buster.js)
 /spons/*$image,domain=swehack.org
+utsidan.se##.sponsored
+viivilla.se##.teaserblockdata:has(.teaser-sponsored-text)
+viivilla.se##.sp-article:has(.commercial-label)
+viivilla.se##div.row.item:has(.overlay-sponsor)
+viivilla.se###product-area
+/fusionadloader.min.js^$script,domain=viivilla.se
+/iframeadvloader.min.js^$script,domain=viivilla.se
+/adv_utils.min.js^$script,domain=viivilla.se
+||allabolag.se/Assets/wallpaper/ad.html
+/sf_tracking.js^$script,domain=stayfriends.se
+/ga.js^$script,first-party,domain=stayfriends.se
+spray.se###top_banner
+spray.se###side_banners
+/adsLoader.*.js$script,first-party,domain=booli.se
+||booli.se/ladda-annons
+/telemetry/measure$xmlhttprequest,first-party,domain=momondo.se
+byggahus.se##.block-revive-ad
+byggahus.se##.block-partner-article
+byggahus.se##a[href^="/partner/"]
+/ub-ads/*$script,first-party,domain=isabellalowengrip.se
+metromode.se##.slick-item:has(.c-article__ad.advert)
+metromode.se##.js-blox-article:has(.c-article__ad.advert)
