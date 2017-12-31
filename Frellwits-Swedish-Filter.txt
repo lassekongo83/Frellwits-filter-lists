@@ -170,6 +170,8 @@
 
 ! Whitelists
 @@/js/advertisement.$first-party,script,domain=devote.se|brollopstorget.se
+@@/js/advertisement*.js$first-party,script,domain=expressen.se
+@@/scripts/advertisement-*.js^$first-party,script,domain=mittkok.expressen.se
 @@/adserver.$first-party,script,domain=fotosidan.se|utsidan.se
 @@/js/ads.js$first-party,domain=kuriren.nu|nsd.se|unt.se|helagotland.se|pt.se|mvt.se|nt.se|corren.se|affarsliv.com|folkbladet.se|24kalmar.se|24nybro.se|24emmaboda.se|24halmstad.se|24helsingborg.se|24blekinge.se|24malmo.se|24kristianstad.se|24trelleborg.se|24ystad.se|24uppsala.se|swedroid.se|vibilagare.se
 @@/js/advert.$script,domain=nwt.se|sla.se|mariestadstidningen.se
@@ -178,7 +180,7 @@
 @@/js/ad.php^$first-party,domain=99.se
 
 ! Unknown and/or unnecessary requests
-/mdt.min.js$domain=aftonbladet.se|dn.se|svtplay.se
+/mdt.min.js$domain=aftonbladet.se|dn.se|svtplay.se|expressen.se
 ||site.com/xtcore.js$script
 
 ! Glimr tracking
@@ -770,6 +772,7 @@ thelocal.se##.orange-panel
 hbl.fi,vastranyland.fi,ostnyland.fi###okCookie
 hbl.fi,vastranyland.fi,ostnyland.fi##.type-advertorial
 ||ksfmedia.simulator.palmu.fi/*/*.js$script,domain=hbl.fi|vastranyland.fi|ostnyland.fi
+||munchkin.marketo.net/munchkin.js$script,important,domain=hbl.fi|vastranyland.fi|ostnyland.fi
 /*annons*.png$domain=nvp.se
 /banners/*$domain=nvp.se
 nvp.se##[id*="Banner_PageList"]
