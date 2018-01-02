@@ -89,6 +89,7 @@
 ||sleeknote.com^$third-party
 ||sociuslive.com^$third-party
 ||sprinklecontent.com^$third-party
+||strossle.it^$third-party
 ||suntcontent.se^$third-party
 ||tidningsnatet.se^$third-party
 ||tipser.com^$third-party
@@ -107,6 +108,7 @@
 .nu/annons/
 .se/adx.js
 .se/annons/
+.se/*/nativeadvertising/
 /_graphics/annons/*
 /annons.aspx?
 /annons_hor.
@@ -149,6 +151,9 @@
 ||cdn.tinypass.com/api/tinypass-gtp.min.js$script
 ||experience.tinypass.com^$xmlhttprequest,script
 ||amazonaws.com/adn-tag/*$script
+||d9v72urx9pbbc.cloudfront.net/channel.js^$script
+/cdn-cgi/pe/bag2?*pagead2.googlesyndication.com$xmlhttprequest
+/cdn-cgi/pe/bag2?*doubleclick.net$xmlhttprequest
 
 ! Scams and malicious content
 ! https://kontakt.svt.se/guide/varning-for-bluff-annonser-pa-google?category=aktuellt-just-nu
@@ -176,7 +181,7 @@
 @@/adserver.$first-party,script,domain=fotosidan.se|utsidan.se
 @@/js/ads.js$first-party,domain=bike.se|klassiker.nu|husbilhusvagn.se|mopedgaraget.se|foretagande.se|kuriren.nu|nsd.se|unt.se|helagotland.se|pt.se|mvt.se|nt.se|corren.se|affarsliv.com|folkbladet.se|24kalmar.se|24nybro.se|24emmaboda.se|24halmstad.se|24helsingborg.se|24blekinge.se|24malmo.se|24kristianstad.se|24trelleborg.se|24ystad.se|24uppsala.se|swedroid.se|vibilagare.se
 @@/js/advert.$script,domain=nwt.se|sla.se|mariestadstidningen.se
-@@/wp-content/*/adframe.js$first-party,script,domain=vastgotabladet.se|falkopingstidning.se|skaraborgslanstidning.se|skovdenyheter.se
+@@/wp-content/*/adframe.js$first-party,script,domain=vastgotabladet.se|falkopingstidning.se|skaraborgslanstidning.se|skovdenyheter.se|jnytt.se|vn.se|smt.se|smalandsdagblad.se|jp.se|vetlandaposten.se|tranastidning.se|smalanningen.se
 @@/js/ad.js$first-party,domain=sweclockers.com
 @@/js/ad.php^$first-party,domain=99.se
 @@/js/ads/advert.min.js$script,first-party,domain=spelo.se
@@ -191,9 +196,6 @@
 
 ! Facebook junk
 /facebook_sdk.js$script,domain=radioplay.se
-
-! Adonnews
-||cloudfront.net/channel.js^$script,domain=bohuslaningen.se|gp.se|hallandsposten.se|hn.se|stromstadstidning.se|ttela.se|vastgotabladet.se|falkopingstidning.se|skaraborgslanstidning.se|skovdenyheter.se|vn.se
 
 ! Override EasyPrivacy and EasyList whitelists
 ||google-analytics.com/ga.js$script,important,redirect=google-analytics.com/ga.js,domain=aftonbladet.se
@@ -449,16 +451,15 @@ allehanda.se,arbetarbladet.se,bblat.se,avestatidning.com,dalademokraten.se,fager
 allehanda.se,arbetarbladet.se,bblat.se,avestatidning.com,dalademokraten.se,fagersta-posten.se,gd.se,ltz.se,lt.se,na.se,norrteljetidning.se,nynashamnsposten.se,salaallehanda.com,st.nu,tidningenharjedalen.se,vlt.se,op.se##script:inject(abort-on-property-read.js, base.nextSibling)
 /strossle-start-page-ad$xmlhttprequest,domain=allehanda.se|arbetarbladet.se|bblat.se|avestatidning.com|dalademokraten.se|fagersta-posten.se|gd.se|ltz.se|lt.se|na.se|norrteljetidning.se|nynashamnsposten.se|salaallehanda.com|st.nu|tidningenharjedalen.se|vlt.se|op.se
 
-! HERENCO
-/LoadIframePlugin.js^$domain=vastgotabladet.se|falkopingstidning.se|skaraborgslanstidning.se|skovdenyheter.se|vn.se
-/LoadSlotLocator.js^$domain=vastgotabladet.se|falkopingstidning.se|skaraborgslanstidning.se|skovdenyheter.se|vn.se
-/ajax.php?action=fetch_from_google_analytics^$xmlhttprequest,domain=vastgotabladet.se|falkopingstidning.se|skaraborgslanstidning.se|skovdenyheter.se|vn.se
-/ajax.php?action=get_share_data^$xmlhttprequest,domain=vastgotabladet.se|falkopingstidning.se|skaraborgslanstidning.se|skovdenyheter.se|vn.se
-/count.js$domain=vastgotabladet.se|falkopingstidning.se|skaraborgslanstidning.se|skovdenyheter.se|vn.se
-/ajax.php?action=get_slideshow_ad_in$xmlhttprequest,domain=vastgotabladet.se|falkopingstidning.se|skaraborgslanstidning.se|skovdenyheter.se|vn.se
-vastgotabladet.se,falkopingstidning.se,skaraborgslanstidning.se,skovdenyheter.se,vn.se##div[id^="adonnews"]
-vastgotabladet.se,falkopingstidning.se,skaraborgslanstidning.se,skovdenyheter.se,vn.se###premium-nag-screen
-vastgotabladet.se,falkopingstidning.se,skaraborgslanstidning.se,skovdenyheter.se,vn.se##div.slideshow-in.active:has(.ad-wrapper)
+! HERENCO/HALL MEDIA
+/LoadIframePlugin.js^$domain=vastgotabladet.se|falkopingstidning.se|skaraborgslanstidning.se|skovdenyheter.se|vn.se|jnytt.se|smt.se|smalandsdagblad.se|jp.se|vetlandaposten.se|tranastidning.se|smalanningen.se
+/LoadSlotLocator.js^$domain=vastgotabladet.se|falkopingstidning.se|skaraborgslanstidning.se|skovdenyheter.se|vn.se|jnytt.se|smt.se|smalandsdagblad.se|jp.se|vetlandaposten.se|tranastidning.se|smalanningen.se
+/ajax.php?action=fetch_from_google_analytics^$xmlhttprequest,domain=vastgotabladet.se|falkopingstidning.se|skaraborgslanstidning.se|skovdenyheter.se|vn.se|jnytt.se|smt.se|smalandsdagblad.se|jp.se|vetlandaposten.se|tranastidning.se|smalanningen.se
+/ajax.php?action=get_share_data^$xmlhttprequest,domain=vastgotabladet.se|falkopingstidning.se|skaraborgslanstidning.se|skovdenyheter.se|vn.se|jnytt.se|smt.se|smalandsdagblad.se|jp.se|vetlandaposten.se|tranastidning.se|smalanningen.se
+/ajax.php?action=get_slideshow_ad_in$xmlhttprequest,domain=vastgotabladet.se|falkopingstidning.se|skaraborgslanstidning.se|skovdenyheter.se|vn.se|jnytt.se|smt.se|smalandsdagblad.se|jp.se|vetlandaposten.se|tranastidning.se|smalanningen.se
+vastgotabladet.se,falkopingstidning.se,skaraborgslanstidning.se,skovdenyheter.se,vn.se,jnytt.se,smt.se,smalandsdagblad.se,jp.se,vetlandaposten.se,tranastidning.se,smalanningen.se##div[id^="adonnews"]
+vastgotabladet.se,falkopingstidning.se,skaraborgslanstidning.se,skovdenyheter.se,vn.se,jnytt.se,smt.se,smalandsdagblad.se,jp.se,vetlandaposten.se,tranastidning.se,smalanningen.se###premium-nag-screen
+vastgotabladet.se,falkopingstidning.se,skaraborgslanstidning.se,skovdenyheter.se,vn.se,jnytt.se,smt.se,smalandsdagblad.se,jp.se,vetlandaposten.se,tranastidning.se,smalanningen.se##div.slideshow-in.active:has(.ad-wrapper)
 
 ! ALMA TALENT
 ||allatjanstebilar.se$domain=nyteknik.se|dagensmedia.se|affarsvarlden.se|lag-avtal.se|arbetarskydd.se
@@ -552,6 +553,32 @@ baaam.se,elle.se,elledecoration.se,ellematovin.se,femina.se,cafe.se,svenskdam.se
 /iab/iab.js$script,domain=baaam.se|elle.se|elledecoration.se|ellematovin.se|femina.se|cafe.se|svenskdam.se|allas.se|allers.se|antikochauktion.se|aretrunt.se|allakorsord.se|chic.se|dromhemochtradgard.se|frida.se|hant.se|hemmets.se|mabra.com|matmagasinet.se|residencemagazine.se
 /js/sticky-mobile-ad.js*$script,domain=baaam.se|elle.se|elledecoration.se|ellematovin.se|femina.se|cafe.se|svenskdam.se|allas.se|allers.se|antikochauktion.se|aretrunt.se|allakorsord.se|chic.se|dromhemochtradgard.se|frida.se|hant.se|hemmets.se|mabra.com|matmagasinet.se|residencemagazine.se
 /se-wordpress-google-analytics/src/js/wp-tagmanager.js$script,domain=baaam.se|elle.se|elledecoration.se|ellematovin.se|femina.se|cafe.se|svenskdam.se|allas.se|allers.se|antikochauktion.se|aretrunt.se|allakorsord.se|chic.se|dromhemochtradgard.se|frida.se|hant.se|hemmets.se|mabra.com|matmagasinet.se|residencemagazine.se
+
+! EGMONT PUBLISHING
+@@||akaskidor.se^$generichide
+@@||utemagasinet.se^$generichide
+@@||livetombord.se^$generichide
+@@||svenskgolf.se^$generichide
+@@||kingmagazine.se^$generichide
+@@||vagabond.se^$generichide
+@@||tidningenhalsa.se^$generichide
+@@||mestmotor.se^$generichide
+/headerbidding.js$script,domain=livetombord.se
+kingmagazine.se,vagabond.se##.latest-article-native
+vagabond.se##.most-read-article:if(span:has-text(PARTNER))
+mestmotor.se##.ad
+mestmotor.se##.advertisement
+mestmotor.se##a[data-spotlight-id]
+mestmotor.se##.overlay
+mestmotor.se##html,body:style(overflow: auto !important;)
+mestmotor.se##article[class*="sponsra"]
+hemtrevligt.se##.partner-article
+hemtrevligt.se##.partner-navbar
+hemtrevligt.se,livetombord.se,mestmotor.se##.row--native
+hemtrevligt.se,livetombord.se,mestmotor.se##.navbar-native
+akaskidor.se,svenskgolf.se##:xpath(//div[text()[contains(., 'ANNONS')]]/ancestor::div[contains(concat(' ', @class, ' '), ' row--native ')]/parent::div)
+akaskidor.se##.ad-wallpaper-panorama-container
+body.se##body:style(background: none !important;)
 
 ! FRIA
 fria.nu,goteborgsfria.se,friatidningen.se,landetsfria.se,stockholmsfria.se,sesam.nu##[class*="annonser"]
@@ -784,16 +811,6 @@ hbl.fi,vastranyland.fi,ostnyland.fi##.type-advertorial
 nvp.se##[id*="Banner_PageList"]
 /caption_banner.gif$domain=nvp.se
 tasteline.com##li.article:if(.category:has-text(Samarbete))
-kingmagazine.se##.latest-article-native
-hemtrevligt.se,livetombord.se,mestmotor.se##.row--native
-hemtrevligt.se,livetombord.se,mestmotor.se##.navbar-native
-mestmotor.se##.ad
-mestmotor.se##.advertisement
-mestmotor.se##a[data-spotlight-id]
-mestmotor.se##.overlay
-mestmotor.se##html,body:style(overflow: auto !important;)
-mestmotor.se##article[class*="sponsra"]
-body.se##body:style(background: none !important;)
 infoo.se##.content_wide_ads
 infoo.se##.line.orange
 pcgamer.se##div.wpb_text_column.wpb_content_element:if(h3:has-text(Sponsrade))
@@ -901,3 +918,6 @@ foretagande.se##div.latestItemBody:has(a[href^="/artiklar-i-samarbete/"])
 medievarlden.se##.post-teaser--friend
 medievarlden.se##.newslettermodal
 medievarlden.se##html,body:style(overflow: auto !important;)
+||hockeymagasinet.com/footer/ad$xmlhttprequest
+kungalvsposten.se,molndalsposten.se,lokaltidningensto.se,kungsbackaposten.se##.wp-slot-layout-article-native
+kungalvsposten.se,molndalsposten.se,lokaltidningensto.se,kungsbackaposten.se##div[style="font-size: 15px; font-family: PT Serif; font-weight: normal;"]:if(p:has-text(ANNONS))
