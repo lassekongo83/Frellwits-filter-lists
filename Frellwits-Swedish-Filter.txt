@@ -158,6 +158,8 @@
 /cdn-cgi/pe/bag2?*pagead2.googlesyndication.com$xmlhttprequest
 /cdn-cgi/pe/bag2?*doubleclick.net$xmlhttprequest
 ||media.jw-it.se/b/$image
+/SifoResponsiveMeasure.js$script
+/siforesponsivemeasure.js$script
 
 ! Scams and malicious content
 ! https://kontakt.svt.se/guide/varning-for-bluff-annonser-pa-google?category=aktuellt-just-nu
@@ -180,7 +182,7 @@
 
 ! Whitelists
 @@/js/advertisement.$first-party,script,domain=devote.se|brollopstorget.se|feber.se
-@@/js/advertisement*.js$first-party,script,domain=expressen.se
+@@/js/advertisement*.js$first-party,script,domain=expressen.se|familjeliv.se
 @@/scripts/advertisement-*.js^$first-party,script,domain=mittkok.expressen.se
 @@/adserver.$first-party,script,domain=fotosidan.se|utsidan.se
 @@/js/ads.js$first-party,domain=bike.se|klassiker.nu|husbilhusvagn.se|mopedgaraget.se|foretagande.se|kuriren.nu|nsd.se|unt.se|helagotland.se|pt.se|mvt.se|nt.se|corren.se|affarsliv.com|folkbladet.se|24kalmar.se|24nybro.se|24emmaboda.se|24halmstad.se|24helsingborg.se|24blekinge.se|24malmo.se|24kristianstad.se|24trelleborg.se|24ystad.se|24uppsala.se|swedroid.se|vibilagare.se
@@ -442,7 +444,6 @@ nwt.se,sla.se,mariestadstidningen.se###cookieChoiceInfo
 @@||sla.se^$generichide
 @@||mariestadstidningen.se^$generichide
 |http://kampanj.*$domain=nwt.se|sla.se|mariestadstidningen.se
-/siforesponsivemeasure.js$domain=nwt.se|sla.se|mariestadstidningen.se
 skd.se,laholmstidning.se,nsk.se##div.skd-crsl-wrap:matches-css-before(content: Annons)
 /sponsrat-frequency.js^$script,domain=skd.se|laholmstidning.se|nsk.se
 
@@ -664,7 +665,7 @@ familjeliv.se##[data-container=".article-wrapper"]:if(.articleSuperTitle:has-tex
 familjeliv.se##:xpath(//span[text()[contains(., 'Sponsrat')]]/ancestor::div[contains(concat(' ', @class, ' '), ' blogPostWrapper ')]/parent::div/parent::div)
 $object,object-subrequest,domain=familjeliv.se
 /affiliate/*$image,domain=minfil.org
-||tradera.net^$third-party,domain=hitta.se
+||api.hitta.se/statistics$xmlhttprequest
 /partnerintegration*$domain=hitta.se
 hitta.se##.partner-box
 ||pixel-profile-cloud.eniro.com/type/pixel^$image
@@ -704,7 +705,6 @@ autonytt.se##.leaderboard
 autonytt.se##a:if(.label:has-text(Sponsrad))
 /banner.js^$domain=motormagasinet.se
 /cookie-consent-*.js^$domain=motormagasinet.se
-/trckr/bnr/*$xmlhttprequest,domain=motormagasinet.se|food-supply.se
 /trckr/*$xmlhttprequest,domain=motormagasinet.se|food-supply.se
 motormagasinet.se##script:inject(overlay-buster.js)
 motormagasinet.se##script:inject(setTimeout-defuser.js, newsletterPopup)
@@ -771,7 +771,6 @@ funfunfun.se##a[href*="bannerid="]
 existenz.se##p:has(a[href^="http://ads."])
 $object,object-subrequest,domain=existenz.se
 ||existenz.se/img/prq.gif
-||existenz.se/inc/combined.js^
 missatsamtal.se##script:inject(abort-on-property-write.js, _gaq)
 ||gnuheter.com/creeper/image$image
 missatsamtal.se##.comment:has(.nosnaj)
@@ -780,6 +779,9 @@ missatsamtal.se##.nosnaj:has(#bottom-nosnaj)
 skaraborgsbygden.se##.ad
 tvdags.se##.article-list__item:has(.sponsor)
 norran.se##.js-cookie-information-bar
+@@||norran.se^$generichide
+norran.se##.banner
+norran.se##.adtech-ad
 kimura.se##.ad
 kimura.se##.sidebar-section:has(.sidebar_ad)
 kimura.se##a[href*="unibet.com"]
