@@ -162,6 +162,7 @@
 /siforesponsivemeasure.js$script
 ||mtst.io/js/mtst.js$script
 /iab/iab.js$script
+/emediate-responsive-wp-plugin/*
 
 ! Scams and malicious content
 ! https://kontakt.svt.se/guide/varning-for-bluff-annonser-pa-google?category=aktuellt-just-nu
@@ -194,6 +195,7 @@
 @@/js/ad.php^$first-party,domain=99.se
 @@/js/ads/advert.min.js$script,first-party,domain=spelo.se
 @@/adframe.js$script,first-party,domain=diskant.se|diskantforum.se
+@@/ads.js^$script,first-party,domain=koket.se
 
 ! Unknown and/or unnecessary requests
 /mdt.min.js$domain=aftonbladet.se|dn.se|svtplay.se|expressen.se
@@ -368,7 +370,6 @@ koket.se##li.slide:has(.external_advertiser)
 koket.se##.external_advertiser
 koket.se###react-newsletter-overlay
 /bn-01d-fusion.js$domain=koket.se
-@@||wurfl.io/wurfl.js$domain=fotbollskanalen.se
 fotbollskanalen.se##div[class*="top-item__link"][onclick="trackClickThenOpen();"]
 &type=load_offers^$xmlhttprequest,domain=illvet.se|pctidningen.se
 ||bcm.interactives.dk/script/se/ill/site$script,domain=illvet.se|pctidningen.se
@@ -409,7 +410,7 @@ nsd.se,folkbladet.se,kuriren.nu,unt.se,helagotland.se,pt.se,mvt.se,nt.se,corren.
 nsd.se,folkbladet.se,kuriren.nu,unt.se,helagotland.se,pt.se,mvt.se,nt.se,corren.se,affarsliv.com##.ad-stripe
 nsd.se,folkbladet.se,kuriren.nu,unt.se,helagotland.se,pt.se,mvt.se,nt.se,corren.se,affarsliv.com##div > article.blurb:has(a[href^="/native/"])
 nsd.se,folkbladet.se,kuriren.nu,unt.se,helagotland.se,pt.se,mvt.se,nt.se,corren.se,affarsliv.com##.lunchguide
-nsd.se,kuriren.nu,unt.se,helagotland.se,pt.se,mvt.se,nt.se,corren.se,affarsliv.com##script:inject(abort-current-inline-script.js, window.adn)
+! nsd.se,folkbladet.se,kuriren.nu,unt.se,helagotland.se,pt.se,mvt.se,nt.se,corren.se,affarsliv.com##^script:has-text(adn.renderComposedAds)
 
 ! SÖRMLANDS MEDIA
 ||static.sm.infomaker.io^$image,domain=ekuriren.se|kkuriren.se|sn.se
@@ -445,9 +446,11 @@ nwt.se,sla.se,mariestadstidningen.se###cookieChoiceInfo
 @@||nwt.se^$generichide
 @@||sla.se^$generichide
 @@||mariestadstidningen.se^$generichide
+@@||cxpublic.com^$image,domain=nwt.se|sla.se|mariestadstidningen.se
 |http://kampanj.*$domain=nwt.se|sla.se|mariestadstidningen.se
 skd.se,laholmstidning.se,nsk.se##div.skd-crsl-wrap:matches-css-before(content: Annons)
 /sponsrat-frequency.js^$script,domain=skd.se|laholmstidning.se|nsk.se
+skd.se,laholmstidning.se,nsk.se##script:inject(abort-current-inline-script.js, ERWP, fif)
 
 ! MITTMEDIA
 allehanda.se,arbetarbladet.se,bblat.se,avestatidning.com,dalademokraten.se,dt.se,fagersta-posten.se,gd.se,ltz.se,lt.se,na.se,norrteljetidning.se,nynashamnsposten.se,salaallehanda.com,st.nu,tidningenharjedalen.se,vlt.se,op.se##div.client-dialogue-plus
@@ -524,7 +527,7 @@ gamereactor.*###pagebackground:style(background-image: none !important)
 /prerolls/*$domain=gamereactor.se|gamereactor.dk|gamereactor.no|gamereactor.fi|gamereactor.eu|gamereactor.de|gamereactor.it|gamereactor.es|gamereactor.pt|gamereactor.fr|gamereactor.nl
 /ad-video-log.php$domain=gamereactor.se|gamereactor.dk|gamereactor.no|gamereactor.fi|gamereactor.eu|gamereactor.de|gamereactor.it|gamereactor.es|gamereactor.pt|gamereactor.fr|gamereactor.nl
 ||openx.gamereactor.dk/multi.php?$script,important
-gamereactor.*##script:inject(abort-on-property-write.js, detectAdblockUser)
+gamereactor.*##script:inject(abort-current-inline-script.js, detectAdblockUser)
 gamereactor.*###sky2_1
 ||gamereactor.*/lay/ad-video-stats.js$script,important
 /gapro.js$important,domain=gamereactor.se|gamereactor.dk|gamereactor.no|gamereactor.fi|gamereactor.eu|gamereactor.de|gamereactor.it|gamereactor.es|gamereactor.pt|gamereactor.fr|gamereactor.nl|jwpcdn.com
