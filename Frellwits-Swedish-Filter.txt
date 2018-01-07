@@ -175,6 +175,7 @@
 .info/malmoe-nyheter/$document
 .info/soedermanlands-nyheter/$document
 .info/expressen-se-nyheter/$document
+.info/dn-nyheter/$document
 /sweden/swedish/hjo-tidning.html$document
 
 ! Generic Element Hiding Rules
@@ -513,6 +514,11 @@ kwiss.me##.qz-related-quizes-item:if(span:has-text(Sponsrat av))
 fragbite.se##.module:if(h4:has-text(Sponsrat inlägg))
 fragbite.se##.spreadItemCollection:if(.category:has-text(Sponsrat innehåll))
 @@||fragbite.se/js/adsense.js
+||blogg.se/public/js/metrics.js^$script
+||newstats.blogg.se/logger.js^$script
+||newstats.blogg.se/collector.js$script
+/BlogPortal/js/stats/blogstat.js$script
+||bloggportalen.se/BlogPortal/view/Statistics^$image
 
 ! GAMEREACTOR
 gamereactor.*###eventad
@@ -738,6 +744,7 @@ vf.se##a[href="#bio"]
 24kalmar.se,24nybro.se,24emmaboda.se,24halmstad.se,24helsingborg.se,24blekinge.se,24malmo.se,24kristianstad.se,24trelleborg.se,24ystad.se,24uppsala.se##.ads
 ng.se##.sponsored-article-blurb-wrap
 ng.se##.panel-pane:if(.pane-title:has-text(SAMARBETEN))
+@@||ng.se^$generichide
 /nodecounter/*?token=*$image,domain=ng.se
 ||breakit.se/library/js/app.*AdManager.js*$script
 breakit.se##.spnsr-widget
@@ -937,3 +944,7 @@ smartsenior.se##.ss-modal
 matklubben.se##.notification.cookies
 @@||fiskejournalen.se^$generichide
 fiskejournalen.se##.blogindex-layout-large-post:has(.native-wrapper)
+/_banners/*$image,domain=kolozzeum.com
+@@||freeride.nu/js/ads.js^$script,domain=happyride.se|freeride.se
+happyride.se###a-panorama
+happyride.se###a-sidebar1
