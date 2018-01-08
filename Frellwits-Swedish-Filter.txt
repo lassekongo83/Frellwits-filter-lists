@@ -191,7 +191,7 @@
 @@/js/advertisement*.js$first-party,script,domain=expressen.se|familjeliv.se
 @@/scripts/advertisement-*.js^$first-party,script,domain=mittkok.expressen.se
 @@/adserver.$first-party,script,domain=fotosidan.se|utsidan.se
-@@/js/ads.js$first-party,domain=bike.se|klassiker.nu|husbilhusvagn.se|mopedgaraget.se|foretagande.se|kuriren.nu|nsd.se|vt.se|unt.se|helagotland.se|pt.se|mvt.se|nt.se|corren.se|affarsliv.com|folkbladet.se|24kalmar.se|24nybro.se|24emmaboda.se|24halmstad.se|24helsingborg.se|24blekinge.se|24malmo.se|24kristianstad.se|24trelleborg.se|24ystad.se|24uppsala.se|swedroid.se|vibilagare.se|skonahem.com|101ideer.se|tara.se|styleby.nu|topphalsa.se|veckorevyn.com|lantliv.com|amelia.se
+@@/js/ads.js$first-party,domain=bike.se|klassiker.nu|husbilhusvagn.se|mopedgaraget.se|foretagande.se|kuriren.nu|nsd.se|vt.se|unt.se|helagotland.se|pt.se|mvt.se|nt.se|corren.se|affarsliv.com|folkbladet.se|24kalmar.se|24nybro.se|24emmaboda.se|24halmstad.se|24helsingborg.se|24blekinge.se|24malmo.se|24kristianstad.se|24trelleborg.se|24ystad.se|24uppsala.se|swedroid.se|vibilagare.se|skonahem.com|101ideer.se|tara.se|styleby.nu|topphalsa.se|veckorevyn.com|lantliv.com|amelia.se|naturvetenskap.org
 @@/js/advert.$script,domain=nwt.se|sla.se|mariestadstidningen.se
 @@/wp-content/*/adframe.js$first-party,script,domain=vastgotabladet.se|falkopingstidning.se|skaraborgslanstidning.se|skovdenyheter.se|jnytt.se|vn.se|smt.se|smalandsdagblad.se|jp.se|vetlandaposten.se|tranastidning.se|smalanningen.se
 @@/js/ad.js$first-party,domain=sweclockers.com
@@ -201,7 +201,7 @@
 @@/ads.js^$script,first-party,domain=koket.se
 @@/assets/showAds.js^$script,first-party,domain=skonahem.com|101ideer.se|tara.se|styleby.nu|topphalsa.se|veckorevyn.com|lantliv.com|amelia.se
 @@/js/showads.js^$script,first-party,domain=skonahem.com|101ideer.se|tara.se|styleby.nu|topphalsa.se|veckorevyn.com|lantliv.com|amelia.se
-@@/advertisement.js$script,first-party,domain=saljplatsen.se|emocore.se
+@@/advertisement.js$script,first-party,domain=saljplatsen.se|emocore.se|kit.se
 
 ! Unknown and/or unnecessary requests
 /mdt.min.js$domain=aftonbladet.se|dn.se|svtplay.se|expressen.se
@@ -216,8 +216,7 @@
 ! Override EasyPrivacy and EasyList whitelists
 ||google-analytics.com/ga.js$script,important,redirect=google-analytics.com/ga.js,domain=aftonbladet.se
 ||google-analytics.com/analytics.js$script,redirect=google-analytics.com/analytics.js,important,domain=tradera.com
-! Experimental
-||googletagmanager.com/gtm.js?id=$script,redirect=noopjs,domain=tradera.com,important
+||googletagmanager.com/gtm.js?id=$script,redirect=googletagmanager.com/gtm.js,domain=tradera.com,important
 
 ! IDG
 ||cmatch.idg.se^$script
@@ -848,10 +847,10 @@ hemnet.se##.article-news__link:has(.news-article--sponsored)
 fokus.se##[class^="right-ads"]
 fokus.se##img[onload*="banner"]
 magasinetparagraf.se##script:inject(abort-current-inline-script.js, _stq)
+magasinetparagraf.se###large_banner
 /banners.js$script,domain=magasinetparagraf.se
 sokmotorkonsult.se##.feature:has(a[href*="/sponsrade-lankar"])
 naturvetenskap.org##.footer_ad:style(height: 1px !important;)
-/ad-blocking-advisor/*$image,domain=naturvetenskap.org
 ||milansverige.se^$csp=script-src 'self' 'unsafe-inline' 'unsafe-eval' *.googleapis.com *.tvmatchen.nu *.wp.com
 /deadblocker-front.js$script,domain=milansverige.se
 milansverige.se##.widget_text:has(a[href^="https://ads."])
@@ -861,6 +860,7 @@ milansverige.se##.widget_text:has(a[href^="http://ads."])
 funbeat.se##.l-adv-interstitial
 chef.se##.Blurb--native
 chef.se##.Ad
+||akamai.net/swordfishinc.download.akamai.com*$script,domain=chef.se
 dagenssamhalle.se##.notice
 dagenssamhalle.se##.node-native
 /native_teaser_active/*$image,domain=dagenssamhalle.se
@@ -884,6 +884,7 @@ javligtgott.se##.category-samarbeten
 /blogcounter.js^$script,domain=javligtgott.se
 runnersworld.se##.sponsored
 sportbibeln.se###share-area
+@@||sportbibeln.se^$generichide
 sysidan.se##.adscolumn
 /evqNewsBot.js^$script,domain=evertiq.se
 /evqReadBot.js^$script,domain=evertiq.se
@@ -924,6 +925,7 @@ viivilla.se###product-area
 /iframeadvloader.min.js^$script,domain=viivilla.se
 /adv_utils.min.js^$script,domain=viivilla.se
 ||allabolag.se/Assets/wallpaper/ad.html
+allabolag.se##article:has(.advert__mark)
 /sf_tracking.js^$script,domain=stayfriends.se
 /ga.js^$script,first-party,domain=stayfriends.se
 spray.se###top_banner
@@ -959,3 +961,5 @@ viseniorer.se##.topheaderinfo
 ||fuska.se/media/js/td.js$script
 ||fuska.se/cdn-cgi/pe/bag2^$xmlhttprequest
 voodoofilm.org##.content-news:has(span[id*="Sponsored"])
+@@||assets-cdn.mytaste.org/js/ads.js$script
+mytaste.se##div[id*="panorama_"]
