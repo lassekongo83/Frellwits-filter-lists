@@ -189,11 +189,11 @@
 ##.eu_coookie_toolbar
 
 ! Whitelists
-@@/js/advertisement.$first-party,script,domain=devote.se|brollopstorget.se|feber.se
+@@/js/advertisement.$first-party,script,domain=devote.se|brollopstorget.se|feber.se|tjock.se
 @@/js/advertisement*.js$first-party,script,domain=expressen.se|familjeliv.se
 @@/scripts/advertisement-*.js^$first-party,script,domain=mittkok.expressen.se
 @@/adserver.$first-party,script,domain=fotosidan.se|utsidan.se
-@@/js/ads.js$first-party,domain=bike.se|klassiker.nu|husbilhusvagn.se|mopedgaraget.se|foretagande.se|kuriren.nu|nsd.se|vt.se|unt.se|helagotland.se|pt.se|mvt.se|nt.se|corren.se|affarsliv.com|folkbladet.se|24kalmar.se|24nybro.se|24emmaboda.se|24halmstad.se|24helsingborg.se|24blekinge.se|24malmo.se|24kristianstad.se|24trelleborg.se|24ystad.se|24uppsala.se|swedroid.se|vibilagare.se|skonahem.com|101ideer.se|tara.se|styleby.nu|topphalsa.se|veckorevyn.com|lantliv.com|amelia.se|naturvetenskap.org
+@@/js/ads.js$first-party,domain=bike.se|klassiker.nu|husbilhusvagn.se|mopedgaraget.se|foretagande.se|kuriren.nu|nsd.se|vt.se|unt.se|helagotland.se|pt.se|mvt.se|nt.se|corren.se|affarsliv.com|folkbladet.se|24kalmar.se|24nybro.se|24emmaboda.se|24halmstad.se|24helsingborg.se|24blekinge.se|24malmo.se|24kristianstad.se|24trelleborg.se|24ystad.se|24uppsala.se|swedroid.se|vibilagare.se|skonahem.com|101ideer.se|tara.se|styleby.nu|topphalsa.se|veckorevyn.com|lantliv.com|amelia.se|naturvetenskap.org|alltforforaldrar.se
 @@/js/advert.$script,domain=nwt.se|sla.se|mariestadstidningen.se
 @@/wp-content/*/adframe.js$first-party,script,domain=vastgotabladet.se|falkopingstidning.se|skaraborgslanstidning.se|skovdenyheter.se|jnytt.se|vn.se|smt.se|smalandsdagblad.se|jp.se|vetlandaposten.se|tranastidning.se|smalanningen.se
 @@/js/ad.js$first-party,domain=sweclockers.com
@@ -204,9 +204,10 @@
 @@/assets/showAds.js^$script,first-party,domain=skonahem.com|101ideer.se|tara.se|styleby.nu|topphalsa.se|veckorevyn.com|lantliv.com|amelia.se
 @@/js/showads.js^$script,first-party,domain=skonahem.com|101ideer.se|tara.se|styleby.nu|topphalsa.se|veckorevyn.com|lantliv.com|amelia.se
 @@/advertisement.js$script,first-party,domain=saljplatsen.se|emocore.se|kit.se
+@@/adsense.js$script,first-party,domain=nyheter24.se|dayviews.com
 
 ! Unknown and/or unnecessary requests
-/mdt.min.js$domain=aftonbladet.se|dn.se|svtplay.se|expressen.se
+/mdt.min.js$script,domain=aftonbladet.se|dn.se|svtplay.se|expressen.se
 ||site.com/xtcore.js$script
 
 ! Glimr tracking
@@ -566,6 +567,9 @@ mammasidan.se,minbebis.com,alltforforaldrar.se##.middle-banner
 ||alltforforaldrar.se/extra/dp/dp.js
 ||alltforforaldrar.se/sites/all/themes/aurora/js/vendor/bootstrap/modal.js
 /campaign/*$xmlhttprequest,domain=alltforforaldrar.se|minbebis.com|mammasidan.se
+||d11j2g8hmtmh4u.cloudfront.net/tags/*$script,domain=mammasidan.se|minbebis.com|alltforforaldrar.se
+/modules/statistics/statistics.php$xmlhttprequest,domain=mammasidan.se|minbebis.com|alltforforaldrar.se
+/isbanner/ib.js$script,domain=mammasidan.se|minbebis.com|alltforforaldrar.se
 
 ! ALLER MEDIA
 baaam.se,elle.se,elledecoration.se,ellematovin.se,femina.se,cafe.se,svenskdam.se,allas.se,allers.se,antikochauktion.se,aretrunt.se,allakorsord.se,chic.se,dromhemochtradgard.se,frida.se,hant.se,hemmets.se,mabra.com,matmagasinet.se,residencemagazine.se##section.block-large-post:has(.native-sponsored-splash)
@@ -579,6 +583,7 @@ baaam.se,elle.se,elledecoration.se,ellematovin.se,femina.se,cafe.se,svenskdam.se
 /se-wordpress-google-analytics/src/js/wp-tagmanager.js$script,domain=baaam.se|elle.se|elledecoration.se|ellematovin.se|femina.se|cafe.se|svenskdam.se|allas.se|allers.se|antikochauktion.se|aretrunt.se|allakorsord.se|chic.se|dromhemochtradgard.se|frida.se|hant.se|hemmets.se|mabra.com|matmagasinet.se|residencemagazine.se
 
 ! EGMONT PUBLISHING
+@@||hemtrevligt.se^$generichide
 @@||akaskidor.se^$generichide
 @@||utemagasinet.se^$generichide
 @@||livetombord.se^$generichide
@@ -732,6 +737,8 @@ motormagasinet.se##.remodal-bg.remodal-is-opened:style(filter: none !important;)
 motormagasinet.se,food-supply.se###junglebogen
 motormagasinet.se##[id^="dfp-a1p"]
 motormagasinet.se,food-supply.se##.rotating-junglebogen
+/javax.faces.resource/js/banner.js.html^$script,domain=motormagasinet.se|food-supply.se
+||food-supply.se/bnrscr^$subdocument
 mobil.se##li.teaser:has(.Advertorials)
 mobil.se##.section-advertorials
 /mobil_takeover/js/script.js$domain=mobil.se
