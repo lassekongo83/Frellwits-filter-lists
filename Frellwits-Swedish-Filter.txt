@@ -310,6 +310,11 @@ blocket.se###li_panorama
 blocket.se###vi_panorama
 politism.se##[id^="native_ad"]
 politism.se##.post-teaser:if(.nstory:has-text(Sponsrat innehåll))
+/at-internet-desktop.js$script,domain=klart.se
+@@||klart.se^$generichide
+klart.se##.ad-wrapper
+klart.se##script:inject(abort-on-property-read.js, blockAdBlock)
+||klart.se/assets/blockadblock-*.js$script
 
 ! BONNIER (DN, DI, Sydsvenskan, Expressen)
 dn.se##.js-ad-sidebar
@@ -646,6 +651,7 @@ e24.no##.content-marketing-container
 /Bannere/*$image,domain=tek.no|gamer.no
 gamer.no,tek.no,digi.no##.products-carousel
 gamer.no,tek.no,digi.no##.annonselenker
+||ish.tumedia.no/ish_tracker.gif^$image
 tv2.no##.tv2-ad
 tv2.no##script:inject(abort-current-inline-script.js, adblockDetector)
 
