@@ -113,6 +113,7 @@
 .se/*/nativeadvertising/
 .se/banner.stat?
 .se/sponsored/$image
+.se/advert$subdocument
 /_graphics/annons/*
 /annons.aspx?
 /annons_hor.
@@ -737,14 +738,14 @@ autonytt.se##a:if(.label:has-text(Sponsrad))
 /banner.js^$domain=motormagasinet.se
 /cookie-consent-*.js^$domain=motormagasinet.se
 /trckr/*$xmlhttprequest,domain=motormagasinet.se|food-supply.se
-motormagasinet.se##script:inject(overlay-buster.js)
-motormagasinet.se##script:inject(setTimeout-defuser.js, newsletterPopup)
-motormagasinet.se##.remodal-bg.remodal-is-opening:style(filter: none !important;)
-motormagasinet.se##.remodal-bg.remodal-is-opened:style(filter: none !important;)
+motormagasinet.se,skyddosakerhet.se##script:inject(overlay-buster.js)
+motormagasinet.se,skyddosakerhet.se##script:inject(setTimeout-defuser.js, newsletterPopup)
+motormagasinet.se,skyddosakerhet.se##.remodal-bg.remodal-is-opening:style(filter: none !important;)
+motormagasinet.se,skyddosakerhet.se##.remodal-bg.remodal-is-opened:style(filter: none !important;)
 motormagasinet.se,food-supply.se###junglebogen
 motormagasinet.se##[id^="dfp-a1p"]
 motormagasinet.se,food-supply.se##.rotating-junglebogen
-/javax.faces.resource/js/banner.js.html^$script,domain=motormagasinet.se|food-supply.se
+/javax.faces.resource/js/banner.js.html^$script,domain=motormagasinet.se|food-supply.se|skyddosakerhet.se
 ||food-supply.se/bnrscr^$subdocument
 mobil.se##li.teaser:has(.Advertorials)
 mobil.se##.section-advertorials
@@ -999,3 +1000,9 @@ newsner.com##.inline-share-buttons
 njus.me##.article-list__item > .sponsoredArticle
 /campaigns/addArticleImpression/*$xmlhttprequest,domain=njus.me
 ||njus.me/files/analytics.js$script
+||stats.zotabox.com^$xmlhttprequest,domain=rapport24.com
+||cdn2.editmysite.com/js/wsnbn/snowday262.js$script,domain=rapport24.com
+||promote.weebly.com^$xmlhttprequest,subdocument,script,domain=rapport24.com
+/files/banners/*$image,domain=byggnadsarbetaren.se
+/js/smart-app-banner.$script,domain=svenskafans.com
+/js/sticky*.$script,domain=svenskafans.com
