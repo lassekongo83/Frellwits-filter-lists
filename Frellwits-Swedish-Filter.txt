@@ -228,6 +228,7 @@
 ||google-analytics.com/ga.js$script,important,redirect=google-analytics.com/ga.js,domain=aftonbladet.se
 ||google-analytics.com/analytics.js$script,redirect=google-analytics.com/analytics.js,important,domain=tradera.com
 ||googletagmanager.com/gtm.js?id=$script,redirect=googletagmanager.com/gtm.js,domain=tradera.com,important
+/wp-content/plugins/google-analytics-for-wordpress/*$first-party,important,script,domain=nyhetsbyran.org
 
 ! IDG
 ||cmatch.idg.se^$script
@@ -880,6 +881,14 @@ hemnet.se##.article-news__link:has(.news-article--sponsored)
 /*Fokus_360x300px_animate*.gif$image,domain=fokus.se
 fokus.se##[class^="right-ads"]
 fokus.se##img[onload*="banner"]
+fokus.se###cookie-box
+fokus.se##.social-sharing
+||analytics.ci-360.se^$script,xmlhttprequest,domain=fokus.se
+||auth.ci-360.se/check-paywall*$script,domain=fokus.se
+/js/abd.js$script,domain=fokus.se
+/js/personalization.js$script,domain=fokus.se
+/js/paywall.js$script,domain=fokus.se
+@@||fokus.se^$generichide
 magasinetparagraf.se##script:inject(abort-current-inline-script.js, _stq)
 magasinetparagraf.se###large_banner
 /banners.js$script,domain=magasinetparagraf.se
