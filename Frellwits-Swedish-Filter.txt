@@ -5,6 +5,7 @@
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, social media, annoyances, sponsored articles etc.
 ! License: GPLv3
 
+
 ! General third party ads, tracking, annoyances
 ||0x63646e.com^$third-party
 ||adaptlogic.com^$third-party
@@ -175,6 +176,10 @@
 ||msecnd.net/script/raptor-*.js$script
 ||creatives.ancoraplatform.com/ptphb*.js$script
 ||dspk.kindredplc.com/renderImage.aspx^$image
+||monkey.tunnl.com/identify^$subdocument
+||video-static.tunnl.com/js/blocker.min.js$script
+||session.tibaco.net/scripts/tws.js$script
+||gamedistribution.com/libs/gd/analytics.js^$script
 
 ! Scams and malicious content
 ! https://kontakt.svt.se/guide/varning-for-bluff-annonser-pa-google?category=aktuellt-just-nu
@@ -212,9 +217,11 @@
 @@/ads.js^$script,first-party,domain=koket.se
 @@/assets/showAds.js^$script,first-party,domain=skonahem.com|101ideer.se|tara.se|styleby.nu|topphalsa.se|veckorevyn.com|lantliv.com|amelia.se
 @@/js/showads.js^$script,first-party,domain=skonahem.com|101ideer.se|tara.se|styleby.nu|topphalsa.se|veckorevyn.com|lantliv.com|amelia.se
-@@/advertisement.js$script,first-party,domain=saljplatsen.se|emocore.se|kit.se|blocket.se
+@@/advertisement.js$script,first-party,domain=saljplatsen.se|emocore.se|kit.se|blocket.se|spela.se
 @@/adsense.js$script,first-party,domain=nyheter24.se|dayviews.com
 @@/js/ads.js^$xmlhttprequest,domain=news55.se
+@@||video-static.tunnl.com/js/ads.js^$script
+@@||html5-static.tunnl.com/adframe.js^$script
 
 ! Unknown and/or unnecessary requests
 /mdt.min.js$script,domain=aftonbladet.se|dn.se|svtplay.se|expressen.se
@@ -1040,3 +1047,8 @@ nickelodeon.se##.ad-container
 ||btg.mtvnservices.com/aria/projectX/projectX.html$script,domain=nickelodeon.se
 /static-assets/*/*coda*.min.js$script,domain=nickelodeon.se
 /plugins/ad-inserter-pro/*$script,domain=rocknytt.net
+spela.se##.advert
+nyckelspel.se##.banner
+@@||funnygames.se^$generichide
+funnygames.se##.cc_banner-wrapper
+funnygames.se###katon-slot
