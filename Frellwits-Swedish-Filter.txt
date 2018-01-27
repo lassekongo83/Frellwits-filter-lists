@@ -33,6 +33,7 @@
 ||bytelab.dk^$third-party
 ||careerbuilder.se^$third-party
 ||casinotoplists.com^$third-party
+||cintnetworks.com^$third-party
 ||cision.com^$third-party
 ||citygate.se^$third-party,domain=~familj.se
 ||citypaketet.se^$third-party
@@ -76,6 +77,7 @@
 ||nbes.nu^$third-party
 ||nbes.se^$third-party
 ||nichehuset.dk^$third-party
+||panera.io^$third-party
 ||pensiono.se^$third-party
 ||prisjakt.nu^$third-party
 ||prospecteye.com^$third-party
@@ -179,6 +181,7 @@
 ||video-static.tunnl.com/js/blocker.min.js$script
 ||session.tibaco.net/scripts/tws.js$script
 ||gamedistribution.com/libs/gd/analytics.js^$script
+||sitegainer.com/jsinsert/*/sitegainer*.js^$script,third-party
 
 ! Scams and malicious content
 ! https://kontakt.svt.se/guide/varning-for-bluff-annonser-pa-google?category=aktuellt-just-nu
@@ -214,8 +217,8 @@
 @@/js/ads/advert.min.js$script,first-party,domain=spelo.se
 @@/adframe.js$script,first-party,domain=diskant.se|diskantforum.se
 @@/ads.js^$script,first-party,domain=koket.se
-@@/assets/showAds.js^$script,first-party,domain=skonahem.com|101ideer.se|tara.se|styleby.nu|topphalsa.se|veckorevyn.com|lantliv.com|amelia.se
-@@/js/showads.js^$script,first-party,domain=skonahem.com|101ideer.se|tara.se|styleby.nu|topphalsa.se|veckorevyn.com|lantliv.com|amelia.se
+@@/assets/showAds.js^$script,first-party,domain=skonahem.com|101ideer.se|tara.se|styleby.nu|topphalsa.se|veckorevyn.com|lantliv.com|amelia.se|alltomtradgard.se
+@@/js/showads.js^$script,first-party,domain=skonahem.com|101ideer.se|tara.se|styleby.nu|topphalsa.se|veckorevyn.com|lantliv.com|amelia.se|alltomtradgard.se
 @@/advertisement.js$script,first-party,domain=saljplatsen.se|emocore.se|kit.se|blocket.se|spela.se
 @@/adsense.js$script,first-party,domain=nyheter24.se|dayviews.com
 @@/js/ads.js^$xmlhttprequest,domain=news55.se
@@ -419,7 +422,9 @@ vafinans.se##.box:if(.newsLeadWords:has-text(Sponsrat innehåll))
 vafinans.se##.brandStoryGreyBackground2
 /bmbBurt.js^$script,domain=skonahem.com|101ideer.se|tara.se|styleby.nu|topphalsa.se|veckorevyn.com|lantliv.com|amelia.se
 /bmbFusionUtils.js^$script,domain=skonahem.com|101ideer.se|tara.se|styleby.nu|topphalsa.se|veckorevyn.com|lantliv.com|amelia.se
-skonahem.com,101ideer.se,tara.se,styleby.nu,topphalsa.se,veckorevyn.com,lantliv.com,amelia.se,damernasvarld.se##article.teaser:if(.teaser-label:has-text(Annonssamarbete))
+/bmbDfpUtils.js^$script,domain=skonahem.com|101ideer.se|tara.se|styleby.nu|topphalsa.se|veckorevyn.com|lantliv.com|amelia.se
+/bmb-related-teasers$xmlhttprequest,domain=skonahem.com|101ideer.se|tara.se|styleby.nu|topphalsa.se|veckorevyn.com|lantliv.com|amelia.se
+alltomtradgard.se##.teaser-native
 privataaffarer.se##.teaser:has(img[src*="/native/"])
 privataaffarer.se##a[href*="/bit.ly/"]
 /fusion.js$script,domain=tidningenhembakat.se
@@ -572,7 +577,14 @@ gamereactor.*###sky2_1
 /gapro.js$important,domain=gamereactor.se|gamereactor.dk|gamereactor.no|gamereactor.fi|gamereactor.eu|gamereactor.de|gamereactor.it|gamereactor.es|gamereactor.pt|gamereactor.fr|gamereactor.nl|jwpcdn.com
 ||gamereactor.*/lay/js/manageBanners.js$script,important
 
-! ALLTFORFORALDRAR
+! FAMILJELIV
+familjeliv.se##.adtoma_container
+familjeliv.se##.ad_right
+familjeliv.se##a[href*="/kampanj/"]
+familjeliv.se##.flm-kampanj
+familjeliv.se##[data-container=".article-wrapper"]:if(.articleSuperTitle:has-text(i samarbete med))
+familjeliv.se##:xpath(//span[text()[contains(., 'Sponsrat')]]/ancestor::div[contains(concat(' ', @class, ' '), ' blogPostWrapper ')]/parent::div/parent::div)
+$object,object-subrequest,domain=familjeliv.se
 mammasidan.se,minbebis.com,alltforforaldrar.se##.panorama:if(.add-text:has-text(Annons))
 mammasidan.se,minbebis.com,alltforforaldrar.se##.panorama:if(.add-text:has-text(annons))
 mammasidan.se,minbebis.com,alltforforaldrar.se##div.section:if(.add-text:has-text(Annons))
@@ -675,7 +687,7 @@ tv2.no##.tv2-ad
 tv2.no##script:inject(abort-current-inline-script.js, adblockDetector)
 
 ! ÖVRIGT
-/*banner*.*$image,domain=etc.se|markbladet.se|tkj.se
+.*/*banner*.*$image,domain=etc.se|markbladet.se|tkj.se
 /banner*/*$image,domain=internetmedicin.se|dagenstv.com
 nordichardware.se##div.td_block_text_with_title:if(h4 > span:has-text(Från Surfa))
 nordichardware.se##.wpb_text_column:has(.surfamodul-blocktitle)
@@ -709,13 +721,6 @@ sweclockers.com##.banner
 markbladet.se##.ad
 markbladet.se###small_yellowbox
 markbladet.se###fixed
-familjeliv.se##.adtoma_container
-familjeliv.se##.ad_right
-familjeliv.se##a[href*="/kampanj/"]
-familjeliv.se##.flm-kampanj
-familjeliv.se##[data-container=".article-wrapper"]:if(.articleSuperTitle:has-text(i samarbete med))
-familjeliv.se##:xpath(//span[text()[contains(., 'Sponsrat')]]/ancestor::div[contains(concat(' ', @class, ' '), ' blogPostWrapper ')]/parent::div/parent::div)
-$object,object-subrequest,domain=familjeliv.se
 /affiliate/*$image,domain=minfil.org
 ||api.hitta.se/statistics$xmlhttprequest
 /partnerintegration*$domain=hitta.se
@@ -839,6 +844,7 @@ norran.se##.js-cookie-information-bar
 @@||norran.se^$generichide
 norran.se##.banner
 norran.se##.adtech-ad
+||norran.se/pwk.php$script
 kimura.se##.ad
 kimura.se##.sidebar-section:has(.sidebar_ad)
 kimura.se##a[href*="unibet.com"]
@@ -1051,3 +1057,6 @@ nyckelspel.se##.banner
 @@||funnygames.se^$generichide
 funnygames.se##.cc_banner-wrapper
 funnygames.se###katon-slot
+svartgul.se###panorama
+svartgul.se##a[href*=".adsrv.eacdn.com"]
+jogg.se,skid.se,cykl.se,svettig.se##.panoramaAd
