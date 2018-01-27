@@ -5,6 +5,7 @@
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, social media, annoyances, sponsored articles etc.
 ! License: GPLv3
 
+
 ! General third party ads, tracking, annoyances
 ||0x63646e.com^$third-party
 ||adaptlogic.com^$third-party
@@ -196,7 +197,7 @@
 .info/expressen-se-nyheter/$document
 .info/dn-nyheter/$document
 /sweden/swedish/hjo-tidning.html$document
-.*/*.php?dys=$document
+.*/*/*.php?*=aftonbladet-live-tv$document
 
 ! Generic Element Hiding Rules
 ##a[title="LeoVegas"]
@@ -880,7 +881,7 @@ hbl.fi,vastranyland.fi,ostnyland.fi##.type-advertorial
 ||ksfmedia.simulator.palmu.fi/*/*.js$script,domain=hbl.fi|vastranyland.fi|ostnyland.fi
 ||munchkin.marketo.net/munchkin.js$script,important,domain=hbl.fi|vastranyland.fi|ostnyland.fi
 /*annons*.png$domain=nvp.se
-/banners/*$domain=nvp.se
+/banners/*$domain=nvp.se|uppsalanyheter.se
 nvp.se##[id*="Banner_PageList"]
 /caption_banner.gif$domain=nvp.se
 tasteline.com##li.article:if(.category:has-text(Samarbete))
@@ -1060,3 +1061,7 @@ funnygames.se###katon-slot
 svartgul.se###panorama
 svartgul.se##a[href*=".adsrv.eacdn.com"]
 jogg.se,skid.se,cykl.se,svettig.se##.panoramaAd
+uppsalanyheter.se###banner-top-block
+uppsalanyheter.se##.banneritem
+skillingaryd.nu##.ad
+skillingaryd.nu###more-banners
