@@ -21,6 +21,7 @@
 ||adwayplus.se^$third-party
 ||apsislead.com^$third-party
 ||anki.com^$third-party
+||ascontentcloud.com^$third-party
 ||atemda.com^$third-party
 ||audience.systems^$third-party
 ||bettersales.se^$subdocument,third-party
@@ -202,6 +203,12 @@
 ##.adtoma_container
 ##.eu_coookie_toolbar
 
+! HTML filtering (Firefox 57+ and uBO 1.14.23b3+ only)
+! https://bugzilla.mozilla.org/show_bug.cgi?id=528448 and https://github.com/lassekongo83/Frellwits-filter-lists/issues/7
+!#if !ext_firefox
+! *##^img[src="https://mediacreeper.com/image"]
+!endif
+
 ! Whitelists
 @@/js/advertisement.$first-party,script,domain=devote.se|brollopstorget.se|feber.se|tjock.se
 @@/js/advertisement*.js$first-party,script,domain=expressen.se|familjeliv.se
@@ -331,6 +338,9 @@ politism.se##.post-teaser:if(.nstory:has-text(Sponsrat innehåll))
 @@||klart.se^$generichide
 klart.se##.ad-wrapper
 klart.se##script:inject(abort-on-property-read.js, blockAdBlock)
+klart.se##.cookie-disclaimer
+klart.se##.sponsor-message
+klart.se##a.content-link:has(.content-box-ad)
 ||klart.se/assets/blockadblock-*.js$script
 
 ! BONNIER (DN, DI, Sydsvenskan, Expressen)
@@ -461,6 +471,8 @@ ekuriren.se,kkuriren.se,sn.se##.match-ad-article
 ekuriren.se,kkuriren.se,sn.se##.teaser--native-ad
 ekuriren.se,kkuriren.se,sn.se##.native-ad-top
 ekuriren.se,kkuriren.se,sn.se###cookie-info
+ekuriren.se,kkuriren.se,sn.se###lokusmotor
+ekuriren.se,kkuriren.se,sn.se###lokusJobb
 @@||ekuriren.se^$generichide
 @@||kkuriren.se^$generichide
 @@||sn.se^$generichide
@@ -564,6 +576,7 @@ gamereactor.*##div[class^="ad300"]
 gamereactor.*###ad_video
 gamereactor.*##.ad_video
 gamereactor.*###bigVideoAd
+gamereactor.*###fbnotification
 gamereactor.*##a[href*="/adclick.php"]
 gamereactor.*###pagebackground:style(background-image: none !important)
 /prerolls/*$domain=gamereactor.se|gamereactor.dk|gamereactor.no|gamereactor.fi|gamereactor.eu|gamereactor.de|gamereactor.it|gamereactor.es|gamereactor.pt|gamereactor.fr|gamereactor.nl
@@ -571,9 +584,10 @@ gamereactor.*###pagebackground:style(background-image: none !important)
 ||openx.gamereactor.dk/multi.php?$script,important
 gamereactor.*##script:inject(abort-current-inline-script.js, detectAdblockUser)
 gamereactor.*###sky2_1
-||gamereactor.*/lay/ad-video-stats.js$script,important
-/gapro.js$important,domain=gamereactor.se|gamereactor.dk|gamereactor.no|gamereactor.fi|gamereactor.eu|gamereactor.de|gamereactor.it|gamereactor.es|gamereactor.pt|gamereactor.fr|gamereactor.nl|jwpcdn.com
-||gamereactor.*/lay/js/manageBanners.js$script,important
+||gamereactor.*/lay/ad-video-stats.js^$script,important
+||gamereactor.*/lay/js/manageBanners.js^$script,important
+||gamereactor.*/lay/js/adblock_desktop.js^$script,important
+||gamereactor.*/lay/js/banners_config.js^$script,important
 
 ! FAMILJELIV
 familjeliv.se##.adtoma_container
@@ -626,11 +640,15 @@ baaam.se,elle.se,elledecoration.se,ellematovin.se,femina.se,cafe.se,svenskdam.se
 @@||vagabond.se^$generichide
 @@||tidningenhalsa.se^$generichide
 @@||mestmotor.se^$generichide
+/js/marbles/marbles.js$script,first-party,domain=mestmotor.se|vagabond.se|kingmagazine.se|hemtrevligt.se|akaskidor.se|svenskgolf.se|tidningenhalsa.se|livetombord.se|utemagasinet.se
 /headerbidding.js$script,domain=livetombord.se
 kingmagazine.se,vagabond.se##.latest-article-native
 vagabond.se##.most-read-article:if(span:has-text(PARTNER))
+mestmotor.se,vagabond.se,kingmagazine.se,hemtrevligt.se,akaskidor.se,svenskgolf.se,tidningenhalsa.se,livetombord.se,utemagasinet.se##.alert-cookies
+mestmotor.se,vagabond.se,kingmagazine.se,hemtrevligt.se,akaskidor.se,svenskgolf.se,tidningenhalsa.se,livetombord.se,utemagasinet.se###facebookSlideIn
 mestmotor.se##.ad
 mestmotor.se##.advertisement
+mestmotor.se##.panel-native
 mestmotor.se##a[data-spotlight-id]
 mestmotor.se##.overlay
 mestmotor.se##html,body:style(overflow: auto !important;)
@@ -640,9 +658,10 @@ hemtrevligt.se##.partner-article
 hemtrevligt.se##.partner-navbar
 hemtrevligt.se,livetombord.se,mestmotor.se##.row--native
 hemtrevligt.se,livetombord.se,mestmotor.se##.navbar-native
-akaskidor.se,svenskgolf.se##:xpath(//div[text()[contains(., 'ANNONS')]]/ancestor::div[contains(concat(' ', @class, ' '), ' row--native ')]/parent::div)
-akaskidor.se##.ad-wallpaper-panorama-container
-body.se##body:style(background: none !important;)
+akaskidor.se,svenskgolf.se,tidningenhalsa.se##:xpath(//div[text()[contains(., 'ANNONS')]]/ancestor::div[contains(concat(' ', @class, ' '), ' row--native ')]/parent::div)
+akaskidor.se,svenskgolf.se##.ad-wallpaper-panorama-container
+akaskidor.se,svenskgolf.se##.ad-wallpaper-wrapper
+akaskidor.se,svenskgolf.se,body.se##body:style(background-image: none !important;)
 
 ! FRIA
 fria.nu,goteborgsfria.se,friatidningen.se,landetsfria.se,stockholmsfria.se,sesam.nu##[class*="annonser"]
