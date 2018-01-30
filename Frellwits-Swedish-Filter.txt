@@ -67,6 +67,7 @@
 ||kekocity2.com^$third-party
 ||kortio.se^$third-party
 ||leadenhancer.com^$third-party
+||leiki.com^$third-party
 ||lohts.se^$third-party
 ||lokus.se^$third-party,domain=~familj.se
 ||mediekompaniet.com^$third-party
@@ -385,7 +386,7 @@ expressen.se##.slot:if(header:has-text(/^Erbjundande från/))
 expressen.se##.b-adv-teaser-divider:if(h3:has-text(/^Erbjudande från/))
 expressen.se##.slot:has(a[href*="rabattkoder.expressen.se"])
 /_widget/destination*$subdocument,domain=expressen.se
-/closest-native/*$xmlhttprequest,domain=expressen.se
+/closest-native*/*$xmlhttprequest,domain=expressen.se
 ! https://github.com/lassekongo83/Frellwits-filter-lists/issues/4
 ! ||expressen.ooul.tv/*/se-expressen/aab/expressen_$script,redirect=noopjs,domain=expressen.se
 /_livetvpreview/*$domain=expressen.se
@@ -794,7 +795,9 @@ mobil.se##li.teaser:has(.Advertorials)
 mobil.se##.section-advertorials
 /mobil_takeover/js/script.js$domain=mobil.se
 mobil.se##div.takeover
-mobil.se##.title-image-list:if(h2:has-text(Sponsrad artikel))
+mobil.se##.teaser:has(.Partner)
+mobil.se##li.section-partner
+mobil.se##.title-image-list:if(.pane-title:has-text(Sponsrad artikel))
 mobil.se##body:style(overlay: auto !important;)
 mobil.se##.ad
 mobil.se##.section-jobb-section-advertorials
@@ -845,8 +848,7 @@ mitti.se,alltomstockholm.se##.teaser-large-container:has(.native-ad-mark)
 altinget.se##script:inject(setTimeout-defuser.js, show_popup)
 existenz.se###backgroundad
 ?bannerid=$image,domain=existenz.se
-existenz.se##a[href*="bannerid"]
-funfunfun.se##a[href*="bannerid="]
+existenz.se,funfunfun.se##a[href*="bannerid"]
 existenz.se##p:has(a[href^="http://ads."])
 $object,object-subrequest,domain=existenz.se
 ||existenz.se/img/prq.gif
@@ -882,7 +884,8 @@ dagensps.se##.mosaiq-license-sponsored
 dagensps.se##.mosaiq-poster
 ||fusion.dagensps.se^$script
 dagensps.se##script:inject(abort-on-property-write.js, FloadCmatchIfr)
-atl.nu,land.se##[class*="--native"]
+||petrk.com^$third-party,image,domain=dagensps.se
+atl.nu,land.se,landlantbruk.se##[class*="--native"]
 ||vaken.se^$inline-script
 /banner*$image,domain=vaken.se
 vaken.se##.banner
