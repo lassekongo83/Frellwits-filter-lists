@@ -10,9 +10,10 @@
 ||adaptlogic.com^$third-party
 ||adcell.io^$third-party
 ||adeprimo.se^$third-party
+||adnuntius.com^$third-party
 ||adonstudio.com^$third-party
 ||adoperator.com^$third-party
-||adnuntius.com^$third-party
+||adrecord.com^$third-party
 ||adservicemedia.dk^$third-party
 ||adten.eu^$third-party
 ||adtlgc.com^$third-party
@@ -137,7 +138,8 @@
 ||lemonwhale.com*/adevent/*$xmlhttprequest
 ||biowebb-data.*.amazonaws*
 ||pixel.playbuzz.com^$xmlhttprequest
-||sifomedia.*
+|http://sifomedia.*
+|https://sifomedia.*
 ||herokuapp.com/visit?*$image
 /mp_emediate/inc/annons.html
 /?file=lokusjobb*$subdocument
@@ -560,6 +562,7 @@ kwiss.me##.square-item:has(.qz-quiz-sponsored)
 kwiss.me##.qz-related-quizes-item:if(span:has-text(Sponsrat av))
 fragbite.se##.module:if(h4:has-text(Sponsrat inlägg))
 fragbite.se##.spreadItemCollection:if(.category:has-text(Sponsrat innehåll))
+fragbite.se##.zooKeeper
 @@||fragbite.se/js/adsense.js
 ||blogg.se/public/js/metrics.js^$script
 ||newstats.blogg.se/logger.js^$script
@@ -588,7 +591,7 @@ gamereactor.*###sky2_1
 ||gamereactor.*/lay/js/adblock_desktop.js^$script,important
 ||gamereactor.*/lay/js/banners_config.js^$script,important
 
-! FAMILJELIV
+! LIFE OF SVEA
 familjeliv.se##.adtoma_container
 familjeliv.se##.ad_right
 familjeliv.se##a[href*="/kampanj/"]
@@ -607,15 +610,19 @@ mammasidan.se,minbebis.com,alltforforaldrar.se##.art-small:if(.preamble-category
 mammasidan.se,minbebis.com,alltforforaldrar.se##h2:has-text(Sprinkle)
 mammasidan.se,minbebis.com,alltforforaldrar.se###top-banner
 mammasidan.se,minbebis.com,alltforforaldrar.se##.middle-banner
-||cloudfront.net/alltforforaldrar*.js$domain=alltforforaldrar.se
-||cloudfront.net/mammasidan*.js$domain=mammasidan.se
-||cloudfront.net/minbebis*.js$domain=minbebis.se
 ||alltforforaldrar.se/extra/dp/dp.js
 ||alltforforaldrar.se/sites/all/themes/aurora/js/vendor/bootstrap/modal.js
 /campaign/*$xmlhttprequest,domain=alltforforaldrar.se|minbebis.com|mammasidan.se
-||d11j2g8hmtmh4u.cloudfront.net/tags/*$script,domain=mammasidan.se|minbebis.com|alltforforaldrar.se
+||d11j2g8hmtmh4u.cloudfront.net^$script,domain=mammasidan.se|minbebis.com|alltforforaldrar.se|blimamma.se|kalasdags.se|babyhjalp.se
+@@||d11j2g8hmtmh4u.cloudfront.net/jquery.$script,domain=mammasidan.se|minbebis.com|alltforforaldrar.se|blimamma.se|kalasdags.se|babyhjalp.se
 /modules/statistics/statistics.php$xmlhttprequest,domain=mammasidan.se|minbebis.com|alltforforaldrar.se
 /isbanner/ib.js$script,domain=mammasidan.se|minbebis.com|alltforforaldrar.se
+! @@||babyvarlden.se^$generichide
+/plugins/sandviks-weblog/*$script,domain=babyvarlden.se
+brollopstorget.se##.ad_right
+devote.se##article:if(div[class]:has-text(Samarbete))
+devote.se##[class^="col-"]:has(.burt-unit-metadata)
+$object,object-subrequest,domain=devote.se
 
 ! ALLER MEDIA
 baaam.se,elle.se,elledecoration.se,ellematovin.se,femina.se,cafe.se,svenskdam.se,allas.se,allers.se,antikochauktion.se,aretrunt.se,allakorsord.se,chic.se,dromhemochtradgard.se,frida.se,hant.se,hemmets.se,mabra.com,matmagasinet.se,residencemagazine.se##section.block-large-post:has(.native-sponsored-splash)
@@ -950,14 +957,10 @@ flamman.se##.TakeOverBanner
 flamman.se##.Banner
 /takeover.gif$image,domain=flamman.se
 ||akamai.net/swordfishinc.download.akamai.com/*$script,domain=arla.se
-devote.se##article:if(div[class]:has-text(Samarbete))
-devote.se##[class^="col-"]:has(.burt-unit-metadata)
-$object,object-subrequest,domain=devote.se
 kurera.se##.annonswrapper
 kurera.se##.g:has(span.ads)
 babyhjalp.se##.ads
 /QX-AD.js^$script,domain=qx.se|qruiser.com
-brollopstorget.se##.ad_right
 javligtgott.se##.category-samarbeten
 /blogcounter.js^$script,domain=javligtgott.se
 runnersworld.se##.sponsored
@@ -1088,3 +1091,6 @@ skillingaryd.nu###more-banners
 ||unitedsverige.se^$csp=script-src 'self' 'unsafe-inline' 'unsafe-eval' *.googleapis.com
 forumbilder.se##a[target="_blank"] > img[src^="/Content/images"]
 cornucopia.cornubot.se,peak-oil.se,apg29.nu,zaramis.se,horoskop.nu,blogspot.se,nyhetswebben.se,emanuelkarlsten.se,uvell.se,supermiljobloggen.se,swedishprepper.com,genusdebatten.se,vaken.se,solrosuppropet.se,toklandet.wordpress.com,experimentlandet.blogg.se,allmogen.org,lindelof.nu,sempermiles.se,opendata.se,hoforsbloggen.se,lindqvist.com,vargfakta.se,forenadebolag.se,xn--blljus-jua.se,frihetssmedjan.se##^img[src*="mediacreeper.com/image"]
+/js/advanced.js^$script,domain=datormagazin.se
+/admin-ajax.php?action=advanced-ads-tracking-track$xmlhttprequest,domain=datormagazin.se
+hypeline.se##.homecontent:has(.sponsrad_ruta)
