@@ -208,12 +208,6 @@
 ##.adtoma_container
 ##.eu_coookie_toolbar
 
-! HTML filtering (Firefox 57+ and uBO 1.14.23b3+ only)
-! https://bugzilla.mozilla.org/show_bug.cgi?id=528448 and https://github.com/lassekongo83/Frellwits-filter-lists/issues/7
-!#if !ext_firefox
-! *##^img[src="https://mediacreeper.com/image"]
-!endif
-
 ! Whitelists
 @@/js/advertisement.$first-party,script,domain=devote.se|brollopstorget.se|feber.se|tjock.se
 @@/js/advertisement*.js$first-party,script,domain=expressen.se|familjeliv.se
@@ -293,6 +287,7 @@ svd.se###AdSplashOverlayWindow
 @@||acdn.adnxs.com/ast/ast.js$xmlhttprequest,domain=svd.se
 ||svd.se/api/topics/root/selections/native-article$xmlhttprequest,first-party
 /infopeek.min.js$domain=svd.se
+/pulse_flash_ad*.swf$object,domain=svd.se
 aftonbladet.se##.abTheme-ad
 aftonbladet.se##.abTheme-adSportbladet
 aftonbladet.se##.abTheme-infeedad
@@ -462,7 +457,7 @@ nsd.se,folkbladet.se,kuriren.nu,unt.se,helagotland.se,pt.se,mvt.se,nt.se,corren.
 nsd.se,folkbladet.se,kuriren.nu,unt.se,helagotland.se,pt.se,mvt.se,nt.se,corren.se,affarsliv.com,vt.se,norrbottensaffarer.se##.ad-stripe
 nsd.se,folkbladet.se,kuriren.nu,unt.se,helagotland.se,pt.se,mvt.se,nt.se,corren.se,affarsliv.com,vt.se,norrbottensaffarer.se##div > article.blurb:has(a[href^="/native/"])
 nsd.se,folkbladet.se,kuriren.nu,unt.se,helagotland.se,pt.se,mvt.se,nt.se,corren.se,affarsliv.com,vt.se,norrbottensaffarer.se##.lunchguide
-! nsd.se,folkbladet.se,kuriren.nu,unt.se,helagotland.se,pt.se,mvt.se,nt.se,corren.se,affarsliv.com,vt.se,norrbottensaffarer.se##^script:has-text(adn.renderComposedAds)
+nsd.se,folkbladet.se,kuriren.nu,unt.se,helagotland.se,pt.se,mvt.se,nt.se,corren.se,affarsliv.com,vt.se,norrbottensaffarer.se##^script:has-text(adn.renderComposedAds)
 norrbottensaffarer.se###naaddbox
 
 ! SÖRMLANDS MEDIA
@@ -1092,3 +1087,4 @@ skillingaryd.nu###more-banners
 ||allatvkanaler.se/js/js_*.js$script
 ||unitedsverige.se^$csp=script-src 'self' 'unsafe-inline' 'unsafe-eval' *.googleapis.com
 forumbilder.se##a[target="_blank"] > img[src^="/Content/images"]
+cornucopia.cornubot.se,peak-oil.se,apg29.nu,zaramis.se,horoskop.nu,blogspot.se,nyhetswebben.se,emanuelkarlsten.se,uvell.se,supermiljobloggen.se,swedishprepper.com,genusdebatten.se,vaken.se,solrosuppropet.se,toklandet.wordpress.com,experimentlandet.blogg.se,allmogen.org,lindelof.nu,sempermiles.se,opendata.se,hoforsbloggen.se,lindqvist.com,vargfakta.se,forenadebolag.se,xn--blljus-jua.se,frihetssmedjan.se##^img[src*="mediacreeper.com/image"]
