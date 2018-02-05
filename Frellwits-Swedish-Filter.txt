@@ -215,7 +215,7 @@
 @@/js/advertisement*.js$first-party,script,domain=expressen.se|familjeliv.se
 @@/scripts/advertisement-*.js^$first-party,script,domain=mittkok.expressen.se
 @@/adserver.$first-party,script,domain=fotosidan.se|utsidan.se
-@@/js/ads.js$first-party,domain=bike.se|klassiker.nu|husbilhusvagn.se|mopedgaraget.se|foretagande.se|kuriren.nu|nsd.se|vt.se|unt.se|helagotland.se|pt.se|mvt.se|nt.se|corren.se|affarsliv.com|folkbladet.se|norrbottensaffarer.se|24kalmar.se|24nybro.se|24emmaboda.se|24halmstad.se|24helsingborg.se|24blekinge.se|24malmo.se|24kristianstad.se|24trelleborg.se|24ystad.se|24uppsala.se|swedroid.se|vibilagare.se|skonahem.com|101ideer.se|tara.se|styleby.nu|topphalsa.se|veckorevyn.com|lantliv.com|amelia.se|naturvetenskap.org|alltforforaldrar.se|deliquate.se|radio.se|ljudochbild.se
+@@/js/ads.js$first-party,domain=bike.se|klassiker.nu|husbilhusvagn.se|mopedgaraget.se|foretagande.se|kuriren.nu|nsd.se|vt.se|unt.se|helagotland.se|pt.se|mvt.se|nt.se|corren.se|affarsliv.com|folkbladet.se|norrbottensaffarer.se|24kalmar.se|24nybro.se|24emmaboda.se|24halmstad.se|24helsingborg.se|24blekinge.se|24malmo.se|24kristianstad.se|24trelleborg.se|24ystad.se|24uppsala.se|swedroid.se|vibilagare.se|skonahem.com|101ideer.se|tara.se|styleby.nu|topphalsa.se|veckorevyn.com|lantliv.com|amelia.se|naturvetenskap.org|alltforforaldrar.se|deliquate.se|radio.se|ljudochbild.se|ilikeradio.se
 @@/js/advert.$script,domain=nwt.se|sla.se|mariestadstidningen.se
 @@/wp-content/*/adframe.js$first-party,script,domain=vastgotabladet.se|falkopingstidning.se|skaraborgslanstidning.se|skovdenyheter.se|jnytt.se|vn.se|smt.se|smalandsdagblad.se|jp.se|vetlandaposten.se|tranastidning.se|smalanningen.se
 @@/js/ad.js$first-party,domain=sweclockers.com
@@ -679,19 +679,16 @@ fria.nu,goteborgsfria.se,friatidningen.se,landetsfria.se,stockholmsfria.se,sesam
 
 ! MTG/VIASAT
 viasatsport.se,viasatsport.fi,tv3sport.dk,viasport.no##div.libellus.is-visible
+@@||viasatsport-jic-vod-hls.secure.footprint.net/*_Textad_*$xmlhttprequest,domain=viasatsport.se
 ||fwmrm.net^$image,important,domain=viasatsport.se|viasatsport.fi|tv3sport.dk|viasport.no|viafree.se|viafree.no|viafree.dk|viafree.fi
-! A xhr redirection would be prefered, but it's not supported in Firefox
 @@||fwmrm.net/ad/*$xmlhttprequest,domain=viasatsport.se|viasatsport.fi|tv3sport.dk|viasport.no|viafree.se|viafree.no|viafree.dk|viafree.fi
 @@||fwmrm.net/*MTG$script,domain=viasatsport.se|viasatsport.fi|tv3sport.dk|viasport.no|viafree.se|viafree.no|viafree.dk|viafree.fi
-||freewheel-mtgx-tv.akamaized.net^$media,domain=viasatsport.se|viasatsport.fi|tv3sport.dk|viasport.no|viafree.se|viafree.no|viafree.dk|viafree.fi
-||freewheel-mtgx-tv.akamaized.net/static/*/Viafree_Paus_frekvens*.jpg$image,domain=viafree.se|viafree.no|viafree.dk|viafree.fi
+||freewheel-mtgx-tv.akamaized.net^$media,image,domain=viasatsport.se|viasatsport.fi|tv3sport.dk|viasport.no|viafree.se|viafree.no|viafree.dk|viafree.fi
+||client-stream-events.mtg-api.com/client-stream-events/event/viafree/*$xmlhttprequest,domain=viafree.se|viafree.no|viafree.dk|viafree.fi
 viafree.se,viafree.no,viafree.dk,viafree.fi##.pause-ad
 viafree.se,viafree.no,viafree.dk,viafree.fi##.ad-click-through
 ||viasport-assets.mtg-api.com/*/prod/comScore-*.js$script
 ||fwmrm.net/p/MTG_Live/LinkTag2.js$script,important,domain=viasatsport.se|viasatsport.fi|tv3sport.dk|viasport.no|viafree.se|viafree.no|viafree.dk|viafree.fi
-@@||playapi.mtgx.tv/*/adinfo?*$xmlhttprequest,domain=ilikeradio.se
-@@/cookieconsent.min.js$script,domain=ilikeradio.se
-||beat.unison.mtgradio.se^$websocket,xmlhttprequest,domain=ilikeradio.se
 
 ! Some Norwegian sites. (If this gets too big I'll probably create a seperate filter.)
 ||acdn.adnxs.com/ast/ast.js$script,important,domain=vg.no
@@ -1072,7 +1069,6 @@ nickelodeon.se##.ad-container
 ||btg.mtvnservices.com/aria/bentojs.js^$script,domain=nickelodeon.se
 ||btg.mtvnservices.com/aria/coda.html^$script,domain=nickelodeon.se
 ||btg.mtvnservices.com/aria/projectX/projectX.html$script,domain=nickelodeon.se
-/static-assets/*/*coda*.min.js$script,domain=nickelodeon.se
 /plugins/ad-inserter-pro/*$script,domain=rocknytt.net
 spela.se##.advert
 nyckelspel.se##.banner
