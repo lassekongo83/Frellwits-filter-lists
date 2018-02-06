@@ -42,6 +42,7 @@
 ||citypaketet.se^$third-party
 ||compricer.se^$third-party
 ||cxpublic.com^$third-party
+||datomik.com^$third-party
 ||de17a.com^$third-party
 ||dep-x.com^$third-party
 ||destination.se^$third-party
@@ -147,8 +148,8 @@
 /sifo_msr.js^$script
 /sifo_analytics.js^$script
 /js/sifo.js^$script
-/*&action=client_side_impression&*
-/*&action=adblock&part_id=*
+||youplay.se/*&action=client_side_impression&*
+||youplay.se/*&action=adblock&part_id=*
 /monetization/ads-module/*
 /monetization/pixel-sdk/*
 ||oas.*.se/om/1.js^$script
@@ -188,6 +189,8 @@
 ||gamedistribution.com/libs/gd/analytics.js^$script
 ||sitegainer.com/jsinsert/*/sitegainer*.js^$script,third-party
 /ab_appnexus_ads/*$script
+||d24rtvkqjwgutp.cloudfront.net/cookie.html
+||d24rtvkqjwgutp.cloudfront.net/*yb.js$script
 
 ! Scams and malicious content
 ! https://kontakt.svt.se/guide/varning-for-bluff-annonser-pa-google?category=aktuellt-just-nu
@@ -438,8 +441,10 @@ privataaffarer.se##.teaser:has(img[src*="/native/"])
 privataaffarer.se##a[href*="/bit.ly/"]
 /fusion.js$script,domain=tidningenhembakat.se
 /cinnaroll-fusion.min.js^$script,domain=tidningenhembakat.se
+tradera.com##react-adslot
 
 ! TEKNOMEDIA
+||ntm.eu/om/img/cx/Matchad_*$subdocument,domain=kuriren.nu|nsd.se|unt.se|helagotland.se|pt.se|mvt.se|nt.se|corren.se|affarsliv.com|folkbladet.se|vt.se|norrbottensaffarer.se
 *webbannons.ntm.eu$domain=kuriren.nu|nsd.se|unt.se|helagotland.se|pt.se|mvt.se|nt.se|corren.se|affarsliv.com|folkbladet.se|vt.se|norrbottensaffarer.se
 /villapriser/*$subdocument,domain=kuriren.nu|nsd.se|unt.se|helagotland.se|pt.se|mvt.se|nt.se|corren.se|affarsliv.com|folkbladet.se|vt.se|norrbottensaffarer.se
 /adn-setup.js$script,important,domain=kuriren.nu|nsd.se|unt.se|helagotland.se|pt.se|mvt.se|nt.se|corren.se|affarsliv.com|folkbladet.se|vt.se|norrbottensaffarer.se
@@ -459,7 +464,7 @@ nsd.se,folkbladet.se,kuriren.nu,unt.se,helagotland.se,pt.se,mvt.se,nt.se,corren.
 nsd.se,folkbladet.se,kuriren.nu,unt.se,helagotland.se,pt.se,mvt.se,nt.se,corren.se,affarsliv.com,vt.se,norrbottensaffarer.se##.ad-stripe
 nsd.se,folkbladet.se,kuriren.nu,unt.se,helagotland.se,pt.se,mvt.se,nt.se,corren.se,affarsliv.com,vt.se,norrbottensaffarer.se##div > article.blurb:has(a[href^="/native/"])
 nsd.se,folkbladet.se,kuriren.nu,unt.se,helagotland.se,pt.se,mvt.se,nt.se,corren.se,affarsliv.com,vt.se,norrbottensaffarer.se##.lunchguide
-nsd.se,folkbladet.se,kuriren.nu,unt.se,helagotland.se,pt.se,mvt.se,nt.se,corren.se,affarsliv.com,vt.se,norrbottensaffarer.se##^script:has-text(adn.renderComposedAds)
+nsd.se,folkbladet.se,kuriren.nu,unt.se,helagotland.se,pt.se,mvt.se,nt.se,corren.se,affarsliv.com,vt.se,norrbottensaffarer.se##script:inject(abort-current-inline-script.js, adn, renderComposedAds)
 norrbottensaffarer.se###naaddbox
 
 ! SÖRMLANDS MEDIA
@@ -507,6 +512,7 @@ allehanda.se,arbetarbladet.se,bblat.se,avestatidning.com,dalademokraten.se,fager
 allehanda.se,arbetarbladet.se,bblat.se,avestatidning.com,dalademokraten.se,fagersta-posten.se,gd.se,ltz.se,lt.se,na.se,norrteljetidning.se,nynashamnsposten.se,salaallehanda.com,st.nu,tidningenharjedalen.se,vlt.se,op.se##script:inject(abort-on-property-read.js, base.nextSibling)
 /strossle-start-page-ad$xmlhttprequest,domain=allehanda.se|arbetarbladet.se|bblat.se|avestatidning.com|dalademokraten.se|fagersta-posten.se|gd.se|ltz.se|lt.se|na.se|norrteljetidning.se|nynashamnsposten.se|salaallehanda.com|st.nu|tidningenharjedalen.se|vlt.se|op.se
 ||ues.mmcloud.se/api/*/events$xmlhttprequest,domain=allehanda.se|arbetarbladet.se|bblat.se|avestatidning.com|dalademokraten.se|fagersta-posten.se|gd.se|ltz.se|lt.se|na.se|norrteljetidning.se|nynashamnsposten.se|salaallehanda.com|st.nu|tidningenharjedalen.se|vlt.se|op.se
+/assets/leeads_takeover/*$script,domain=allehanda.se|arbetarbladet.se|bblat.se|avestatidning.com|dalademokraten.se|fagersta-posten.se|gd.se|ltz.se|lt.se|na.se|norrteljetidning.se|nynashamnsposten.se|salaallehanda.com|st.nu|tidningenharjedalen.se|vlt.se|op.se
 ! The following filters should really only apply to mittmedia sites, but the $domain option only works on the subdocument's hostname
 ||s.infogram.com/t.js$script,domain=infogram.com
 /cdn-cgi/apps/head/*$script,domain=mmcloud.se
