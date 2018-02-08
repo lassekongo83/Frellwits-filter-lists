@@ -365,6 +365,8 @@ dn.se##body > iframe[style]
 /personalized/*$xmlhttprequest,domain=dn.se
 ||auth.dn.se/check-paywall$script
 /advertisement*.js$script,important,domain=dn.se
+||cfcdn.screen9.com/players/*/libs/streamsense.min.js$script,important,domain=dn.se
+||di.se/ditv/Content/Scripts/burt/burt-main.js$script
 di.se##article.di_teaser--native
 di.se##section[data-ad-settings]
 di.se##aside.di_share-buttons
@@ -484,7 +486,6 @@ ekuriren.se,kkuriren.se,sn.se###lokusJobb
 affarsliv.se,barometern.se,bt.se,sydostran.se,blt.se,kristianstadsbladet.se,smp.se,trelleborgsallehanda.se,ut.se,ystadsallehanda.se,olandsbladet.se,ostrasmaland.se##div[id*="marknadsguiden"]
 affarsliv.se,barometern.se,bt.se,sydostran.se,blt.se,kristianstadsbladet.se,smp.se,trelleborgsallehanda.se,ut.se,ystadsallehanda.se,olandsbladet.se,ostrasmaland.se##script:inject(abort-on-property-write.js, adTags)
 affarsliv.se,barometern.se,bt.se,sydostran.se,blt.se,kristianstadsbladet.se,smp.se,trelleborgsallehanda.se,ut.se,ystadsallehanda.se,olandsbladet.se,ostrasmaland.se##script:inject(abort-on-property-write.js, cX.callQueue)
-|http://om/1.js$domain=affarsliv.se|barometern.se|bt.se|sydostran.se|blt.se|kristianstadsbladet.se|smp.se|trelleborgsallehanda.se|ut.se|ystadsallehanda.se|olandsbladet.se|ostrasmaland.se
 ||cloudfront.net/widgets/adds.js^$script,domain=nwt.se|sla.se|mariestadstidningen.se
 ||cloudfront.net/widgets/adds.css^$stylesheet,domain=nwt.se|sla.se|mariestadstidningen.se
 nwt.se,sla.se,mariestadstidningen.se##.mfp-wrap
@@ -510,6 +511,7 @@ allehanda.se,arbetarbladet.se,bblat.se,avestatidning.com,dalademokraten.se,fager
 /strossle-start-page-ad$xmlhttprequest,domain=allehanda.se|arbetarbladet.se|bblat.se|avestatidning.com|dalademokraten.se|fagersta-posten.se|gd.se|ltz.se|lt.se|na.se|norrteljetidning.se|nynashamnsposten.se|salaallehanda.com|st.nu|tidningenharjedalen.se|vlt.se|op.se
 ||ues.mmcloud.se/api/*/events$xmlhttprequest,domain=allehanda.se|arbetarbladet.se|bblat.se|avestatidning.com|dalademokraten.se|fagersta-posten.se|gd.se|ltz.se|lt.se|na.se|norrteljetidning.se|nynashamnsposten.se|salaallehanda.com|st.nu|tidningenharjedalen.se|vlt.se|op.se
 /assets/leeads_takeover/*$script,domain=allehanda.se|arbetarbladet.se|bblat.se|avestatidning.com|dalademokraten.se|fagersta-posten.se|gd.se|ltz.se|lt.se|na.se|norrteljetidning.se|nynashamnsposten.se|salaallehanda.com|st.nu|tidningenharjedalen.se|vlt.se|op.se
+/assets/triggerbee/*$script,domain=allehanda.se|arbetarbladet.se|bblat.se|avestatidning.com|dalademokraten.se|fagersta-posten.se|gd.se|ltz.se|lt.se|na.se|norrteljetidning.se|nynashamnsposten.se|salaallehanda.com|st.nu|tidningenharjedalen.se|vlt.se|op.se
 ! The following filters should really only apply to mittmedia sites, but the $domain option only works on the subdocument's hostname
 ||s.infogram.com/t.js$script,domain=infogram.com
 /cdn-cgi/apps/head/*$script,domain=mmcloud.se
@@ -719,6 +721,8 @@ moviezine.se##.ads
 fz.se##script:inject(abort-on-property-read.js, Main.Ads.Adblock.getInstance)
 fz.se##.bnr
 fz.se##.content-widget:if(div.fpnih-meta:has-text(Sponsrat))
+/artikel/rpc/prisjakt$xmlhttprequest,domain=fz.se|sweclockers.com
+/rpc/bbml/prisjakt$xmlhttprequest,domain=99.se
 sweclockers.com##.prisjaktPopular
 sweclockers.com##.monsterSide
 sweclockers.com###wdgtMainMonsterJobs
@@ -822,8 +826,6 @@ svt.se##li.nyh_contactbox-item:has(div[class*="instagram"])
 svt.se##section.nyh_share
 svt.se##.SocialMediaShareButton
 svt.se###nyh_cookie-message
-svtplay.se#@##svtCookieInformationContainer
-svtplay.se#@#.no-cookies
 svtplay.se##.play_cookie-information
 ratsit.se##.campaign-bar
 ratsit.se##[class^="ad-"]
@@ -869,7 +871,7 @@ market.se###newsletter-rollup
 dagensps.se##.masonry-tile-wrapper:if(span.category:has-text(Sponsrat innehåll))
 dagensps.se##.mosaiq-license-sponsored
 dagensps.se##.mosaiq-poster
-||fusion.dagensps.se^$script
+||fusion.dagensps.se^$script,image
 dagensps.se##script:inject(abort-on-property-write.js, FloadCmatchIfr)
 ||petrk.com^$third-party,image,domain=dagensps.se
 atl.nu,land.se,landlantbruk.se##[class*="--native"]
@@ -1077,3 +1079,4 @@ cornucopia.cornubot.se,peak-oil.se,apg29.nu,zaramis.se,horoskop.nu,blogspot.se,n
 /admin-ajax.php?action=advanced-ads-tracking-track$xmlhttprequest,domain=datormagazin.se
 hypeline.se##.homecontent:has(.sponsrad_ruta)
 /bsa-pro-scripteo/*$domain=samnytt.se
+dagenstv.com###bt
