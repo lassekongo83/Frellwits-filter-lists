@@ -255,6 +255,9 @@
 /plugins/se-wordpress-native-article/*$script,stylesheet,domain=baaam.se|elle.se|elledecoration.se|ellematovin.se|femina.se|cafe.se|svenskdam.se|allas.se|allers.se|antikochauktion.se|aretrunt.se|allakorsord.se|chic.se|dromhemochtradgard.se|frida.se|hant.se|hemmets.se|mabra.com|matmagasinet.se|residencemagazine.se
 /plugins/se-wordpress-cookie-notice/*$script,stylesheet,domain=baaam.se|elle.se|elledecoration.se|ellematovin.se|femina.se|cafe.se|svenskdam.se|allas.se|allers.se|antikochauktion.se|aretrunt.se|allakorsord.se|chic.se|dromhemochtradgard.se|frida.se|hant.se|hemmets.se|mabra.com|matmagasinet.se|residencemagazine.se
 
+! HTML filters (Firefox 57+ only)
+cornucopia.cornubot.se,peak-oil.se,apg29.nu,zaramis.se,horoskop.nu,blogspot.se,nyhetswebben.se,emanuelkarlsten.se,uvell.se,supermiljobloggen.se,swedishprepper.com,genusdebatten.se,vaken.se,solrosuppropet.se,toklandet.wordpress.com,experimentlandet.blogg.se,allmogen.org,lindelof.nu,sempermiles.se,opendata.se,hoforsbloggen.se,lindqvist.com,vargfakta.se,forenadebolag.se,xn--blljus-jua.se,frihetssmedjan.se##^img[src*="mediacreeper.com/image"]
+
 ! IDG
 ||cmatch.idg.se^$script
 ||ai.idg.se^
@@ -1088,9 +1091,14 @@ skillingaryd.nu###more-banners
 ||allatvkanaler.se/js/js_*.js$script
 ||unitedsverige.se^$csp=script-src 'self' 'unsafe-inline' 'unsafe-eval' *.googleapis.com
 forumbilder.se##a[target="_blank"] > img[src^="/Content/images"]
-cornucopia.cornubot.se,peak-oil.se,apg29.nu,zaramis.se,horoskop.nu,blogspot.se,nyhetswebben.se,emanuelkarlsten.se,uvell.se,supermiljobloggen.se,swedishprepper.com,genusdebatten.se,vaken.se,solrosuppropet.se,toklandet.wordpress.com,experimentlandet.blogg.se,allmogen.org,lindelof.nu,sempermiles.se,opendata.se,hoforsbloggen.se,lindqvist.com,vargfakta.se,forenadebolag.se,xn--blljus-jua.se,frihetssmedjan.se##^img[src*="mediacreeper.com/image"]
 /js/advanced.js^$script,domain=datormagazin.se
 /admin-ajax.php?action=advanced-ads-tracking-track$xmlhttprequest,domain=datormagazin.se
 hypeline.se##.homecontent:has(.sponsrad_ruta)
 dagenstv.com###bt
 rumhemma.se###top
+@@||eurosport.se^$generichide
+||conviva.com^$script,xmlhttprequest,domain=eurosport.se
+eurosport.se###notification__cookie
+eurosport.se##.eso_video__share
+||ssl.p.jwpcdn.com/player/v/*/jwpsrv.js$script,important,domain=eurosport.se
+||du4rq1xqh3i1k.cloudfront.net/d$xmlhttprequest,domain=eurosport.se
