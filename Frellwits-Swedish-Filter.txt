@@ -248,6 +248,11 @@
 ||googletagmanager.com/gtm.js?id=$script,redirect=googletagmanager.com/gtm.js,domain=tradera.com,important
 /wp-content/plugins/google-analytics-for-wordpress/*$first-party,important,script,domain=nyhetsbyran.org|katerinamagasin.se
 
+! Unwanted Wordpress plugins
+/plugins/ad-inserter-pro/*$script,stylesheet,domain=rocknytt.net
+/plugins/bsa-pro-scripteo/*$script,stylesheet,domain=samnytt.se|popmuzik.se|magasinetparagraf.se
+/plugins/wp-banner-manager/*$script,stylesheet,domain=branschkoll.se
+
 ! IDG
 ||cmatch.idg.se^$script
 ||ai.idg.se^
@@ -695,7 +700,8 @@ viafree.se,viafree.no,viafree.dk,viafree.fi##.ad-click-through
 ||fwmrm.net/p/MTG_Live/LinkTag2.js$script,important,domain=viasatsport.se|viasatsport.fi|tv3sport.dk|viasport.no|viafree.se|viafree.no|viafree.dk|viafree.fi
 
 ! ÖVRIGT
-.*/*banner*.*$image,domain=etc.se|markbladet.se|tkj.se
+.*/*annons*.*$image,domain=kurera.se
+.*/*banner*.*$image,domain=etc.se|markbladet.se|tkj.se|kurera.se|guldkanalen.se|dansbandskanalen.se
 /banner*/*$image,domain=internetmedicin.se|dagenstv.com
 nordichardware.se##div.td_block_text_with_title:if(h4 > span:has-text(Från Surfa))
 nordichardware.se##.wpb_text_column:has(.surfamodul-blocktitle)
@@ -839,7 +845,7 @@ existenz.se###backgroundad
 ?bannerid=$image,domain=existenz.se
 existenz.se,funfunfun.se##a[href*="bannerid"]
 existenz.se##p:has(a[href^="http://ads."])
-||existenz.se^$$object,object-subrequest
+||existenz.se^$object,object-subrequest
 ||existenz.se/img/prq.gif
 missatsamtal.se##script:inject(abort-on-property-write.js, _gaq)
 ||gnuheter.com/creeper/image$image
@@ -898,7 +904,10 @@ infoo.se##.content_wide_ads
 infoo.se##.line.orange
 pcgamer.se##div.wpb_text_column.wpb_content_element:if(h3:has-text(Sponsrade))
 kit.se##.isNative
+kit.se##.box--newsletter
+||brain.kit.se^$xmlhttprequest
 ||branschkoll.se/wp-content/uploads/wpbm-banners/$image
+||branschkoll.se/pagespeed_static/js_defer.*.js$script
 branschkoll.se##.advert-widget
 branschkoll.se##.ads
 hemnet.se##.recent-news__item:if(.recent-news__category:has-text(Sponsrad))
@@ -936,6 +945,7 @@ dagenssamhalle.se##.node-native
 /native_teaser_active/*$image,domain=dagenssamhalle.se
 entreprenor.se##.content-adds
 entreprenor.se###warning
+||entreprenor.se/static/js/mtiFontTrackingCode.js$script
 /banners.js$script,domain=entreprenor.se
 /view.analytics.js$script,domain=kodboken.se
 flamman.se##.TakeOverBanner
@@ -946,9 +956,11 @@ kurera.se##.g:has(span.ads)
 babyhjalp.se##.ads
 /QX-AD.js^$script,domain=qx.se|qruiser.com
 javligtgott.se##.category-samarbeten
+/blogcounter/image?$image,domain=javligtgott.se
 /blogcounter.js^$script,domain=javligtgott.se
 runnersworld.se##.sponsored
 sportbibeln.se###share-area
+sportbibeln.se##.inline-share-buttons
 @@||sportbibeln.se^$generichide
 sysidan.se##.adscolumn
 /evqNewsBot.js^$script,domain=evertiq.se
@@ -1057,7 +1069,6 @@ nickelodeon.se##.ad-container
 ||btg.mtvnservices.com/aria/bentojs.js^$script,domain=nickelodeon.se
 ||btg.mtvnservices.com/aria/coda.html^$script,domain=nickelodeon.se
 ||btg.mtvnservices.com/aria/projectX/projectX.html$script,domain=nickelodeon.se
-/plugins/ad-inserter-pro/*$script,domain=rocknytt.net
 spela.se##.advert
 nyckelspel.se##.banner
 @@||funnygames.se^$generichide
@@ -1078,5 +1089,4 @@ cornucopia.cornubot.se,peak-oil.se,apg29.nu,zaramis.se,horoskop.nu,blogspot.se,n
 /js/advanced.js^$script,domain=datormagazin.se
 /admin-ajax.php?action=advanced-ads-tracking-track$xmlhttprequest,domain=datormagazin.se
 hypeline.se##.homecontent:has(.sponsrad_ruta)
-/bsa-pro-scripteo/*$domain=samnytt.se
 dagenstv.com###bt
