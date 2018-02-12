@@ -255,9 +255,6 @@
 /plugins/se-wordpress-native-article/*$script,stylesheet,domain=baaam.se|elle.se|elledecoration.se|ellematovin.se|femina.se|cafe.se|svenskdam.se|allas.se|allers.se|antikochauktion.se|aretrunt.se|allakorsord.se|chic.se|dromhemochtradgard.se|frida.se|hant.se|hemmets.se|mabra.com|matmagasinet.se|residencemagazine.se
 /plugins/se-wordpress-cookie-notice/*$script,stylesheet,domain=baaam.se|elle.se|elledecoration.se|ellematovin.se|femina.se|cafe.se|svenskdam.se|allas.se|allers.se|antikochauktion.se|aretrunt.se|allakorsord.se|chic.se|dromhemochtradgard.se|frida.se|hant.se|hemmets.se|mabra.com|matmagasinet.se|residencemagazine.se
 
-! HTML filters (Firefox 57+ only)
-cornucopia.cornubot.se,peak-oil.se,apg29.nu,zaramis.se,horoskop.nu,blogspot.se,nyhetswebben.se,emanuelkarlsten.se,uvell.se,supermiljobloggen.se,swedishprepper.com,genusdebatten.se,vaken.se,solrosuppropet.se,toklandet.wordpress.com,experimentlandet.blogg.se,allmogen.org,lindelof.nu,sempermiles.se,opendata.se,hoforsbloggen.se,lindqvist.com,vargfakta.se,forenadebolag.se,xn--blljus-jua.se,frihetssmedjan.se##^img[src*="mediacreeper.com/image"]
-
 ! IDG
 ||cmatch.idg.se^$script
 ||ai.idg.se^
@@ -371,11 +368,12 @@ dn.se##script:inject(setTimeout-defuser.js, BlockAdBlock)
 dn.se##script:inject(abort-on-property-write.js, BlockAdBlock)
 @@||dn.se^$generichide
 dn.se##.personal-carousel
-dn.se##body > iframe[style]
+dn.se##body > iframe[style^="display"]
 /personalized/*$xmlhttprequest,domain=dn.se
 ||auth.dn.se/check-paywall$script
 /advertisement*.js$script,important,domain=dn.se
 ||cfcdn.screen9.com/players/*/libs/streamsense.min.js$script,important,domain=dn.se
+||trackjs.com^$third-party,domain=dn.se
 ||di.se/ditv/Content/Scripts/burt/burt-main.js$script
 di.se##article.di_teaser--native
 di.se##section[data-ad-settings]
@@ -425,7 +423,6 @@ tv4.se##[class*="aside-ad"]
 ||ad.doubleclick.net/ddm/*$image,important,domain=tv4.se|tv4play.se|fotbollskanalen.se|koket.se
 ||tv4play.se/hic_qos?adv_partner&*$script,redirect=noopjs
 ||bonnier-html-player.b17g.services/bumpers/*$media,redirect=noopmp3-0.1s,domain=tv4play.se
-/bwtest.jpg$xmlhttprequest,important,domain=tv4.se|tv4play.se|fotbollskanalen.se|koket.se
 koket.se##.endorsed
 koket.se##.native
 koket.se##li.slide:has(.external_advertiser)
@@ -1092,6 +1089,7 @@ skillingaryd.nu###more-banners
 ||allatvkanaler.se/js/js_*.js$script
 ||unitedsverige.se^$csp=script-src 'self' 'unsafe-inline' 'unsafe-eval' *.googleapis.com
 forumbilder.se##a[target="_blank"] > img[src^="/Content/images"]
+cornucopia.cornubot.se,peak-oil.se,apg29.nu,zaramis.se,horoskop.nu,blogspot.se,nyhetswebben.se,emanuelkarlsten.se,uvell.se,supermiljobloggen.se,swedishprepper.com,genusdebatten.se,vaken.se,solrosuppropet.se,toklandet.wordpress.com,experimentlandet.blogg.se,allmogen.org,lindelof.nu,sempermiles.se,opendata.se,hoforsbloggen.se,lindqvist.com,vargfakta.se,forenadebolag.se,xn--blljus-jua.se,frihetssmedjan.se##^img[src*="mediacreeper.com/image"]
 /js/advanced.js^$script,domain=datormagazin.se
 /admin-ajax.php?action=advanced-ads-tracking-track$xmlhttprequest,domain=datormagazin.se
 hypeline.se##.homecontent:has(.sponsrad_ruta)
