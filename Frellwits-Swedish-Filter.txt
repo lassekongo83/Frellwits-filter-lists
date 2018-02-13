@@ -231,6 +231,8 @@
 @@/advertisement.js$script,first-party,domain=saljplatsen.se|emocore.se|kit.se|blocket.se|spela.se
 @@/adsense.js$script,first-party,domain=nyheter24.se|dayviews.com
 @@/js/ads.js^$xmlhttprequest,domain=news55.se
+@@/show_ads.js$script,first-party,domain=happypancake.com
+@@/js/advert.js$script,first-party,domain=burlovsnyheter.se
 
 ! Unknown and/or unnecessary requests/bloat
 /mdt.min.js$script,domain=aftonbladet.se|dn.se|svtplay.se|expressen.se
@@ -328,6 +330,7 @@ aftonbladet.se##.abAdArea
 aftonbladet.se##[id^="abAdArea"]
 aftonbladet.se##.ab-responsive-ads-wrapper
 aftonbladet.se##.social-shares
+/pulse-sdk-html*.min.js$script,domain=aftonbladet.se
 omni.se##article.article--sponsored
 /ads?stage=$xmlhttprequest,domain=omni.se
 tv.nu##a[href*="adform.net"]
@@ -632,7 +635,6 @@ mammasidan.se,minbebis.com,alltforforaldrar.se##.middle-banner
 @@||d11j2g8hmtmh4u.cloudfront.net/jquery.$script,domain=mammasidan.se|minbebis.com|alltforforaldrar.se|blimamma.se|kalasdags.se|babyhjalp.se
 /modules/statistics/statistics.php$xmlhttprequest,domain=mammasidan.se|minbebis.com|alltforforaldrar.se
 /isbanner/ib.js$script,domain=mammasidan.se|minbebis.com|alltforforaldrar.se
-! @@||babyvarlden.se^$generichide
 /plugins/sandviks-weblog/*$script,domain=babyvarlden.se
 brollopstorget.se##.ad_right
 devote.se##article:if(div[class]:has-text(Samarbete))
@@ -709,7 +711,7 @@ viafree.se,viafree.no,viafree.dk,viafree.fi##.ad-click-through
 .*/*annons*.$image,domain=kurera.se|rumhemma.se
 .*/*banner*.$image,domain=etc.se|markbladet.se|tkj.se|kurera.se|guldkanalen.se|dansbandskanalen.se|rumhemma.se
 .*/*280x240*.$image,domain=rumhemma.se
-/banner*/*$image,domain=internetmedicin.se|dagenstv.com
+/banner*/*$image,domain=internetmedicin.se|dagenstv.com|etn.se
 nordichardware.se##div.td_block_text_with_title:if(h4 > span:has-text(Från Surfa))
 nordichardware.se##.wpb_text_column:has(.surfamodul-blocktitle)
 nordichardware.se##.td_block_wrap:if(span:has-text(/^Sponsrat/))
@@ -1094,6 +1096,8 @@ skillingaryd.nu###more-banners
 forumbilder.se##a[target="_blank"] > img[src^="/Content/images"]
 /js/advanced.js^$script,domain=datormagazin.se
 /admin-ajax.php?action=advanced-ads-tracking-track$xmlhttprequest,domain=datormagazin.se
+datormagazin.se##script:inject(abort-current-inline-script.js, advadsGATracking)
+datormagazin.se##script:inject(abort-current-inline-script.js, advanced_ads_ready)
 hypeline.se##.homecontent:has(.sponsrad_ruta)
 dagenstv.com###bt
 rumhemma.se###top
@@ -1103,3 +1107,7 @@ eurosport.se###notification__cookie
 eurosport.se##.eso_video__share
 ||ssl.p.jwpcdn.com/player/v/*/jwpsrv.js$script,important,domain=eurosport.se
 ||du4rq1xqh3i1k.cloudfront.net/d$xmlhttprequest,domain=eurosport.se
+pconline.se##:xpath(//h3[text()[contains(., 'Annonser')]]/parent::div)
+pconline.se##:xpath(//div[@class="sponsorruta"]/parent::div)
+/resolute-child/js/script.js$script,domain=burlovsnyheter.se
+etn.se##.banneritem
