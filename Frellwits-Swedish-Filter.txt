@@ -188,7 +188,6 @@
 ||session.tibaco.net/scripts/tws.js$script
 ||gamedistribution.com/libs/gd/analytics.js^$script
 ||sitegainer.com/jsinsert/*/sitegainer*.js^$script,third-party
-/ab_appnexus_ads/*$script
 ||d24rtvkqjwgutp.cloudfront.net/cookie.html
 ||d24rtvkqjwgutp.cloudfront.net/*yb.js$script
 
@@ -256,6 +255,8 @@
 /plugins/wp-banner-manager/*$script,stylesheet,domain=branschkoll.se
 /plugins/se-wordpress-native-article/*$script,stylesheet,domain=baaam.se|elle.se|elledecoration.se|ellematovin.se|femina.se|cafe.se|svenskdam.se|allas.se|allers.se|antikochauktion.se|aretrunt.se|allakorsord.se|chic.se|dromhemochtradgard.se|frida.se|hant.se|hemmets.se|mabra.com|matmagasinet.se|residencemagazine.se
 /plugins/se-wordpress-cookie-notice/*$script,stylesheet,domain=baaam.se|elle.se|elledecoration.se|ellematovin.se|femina.se|cafe.se|svenskdam.se|allas.se|allers.se|antikochauktion.se|aretrunt.se|allakorsord.se|chic.se|dromhemochtradgard.se|frida.se|hant.se|hemmets.se|mabra.com|matmagasinet.se|residencemagazine.se
+/plugins/ab_appnexus_ads/*$script
+/plugins/ab_stats_params/*$domain=lajkat.se
 
 ! HTML filters (Firefox 57+ only)
 cornucopia.cornubot.se,peak-oil.se,apg29.nu,zaramis.se,horoskop.nu,blogspot.se,nyhetswebben.se,emanuelkarlsten.se,uvell.se,supermiljobloggen.se,swedishprepper.com,genusdebatten.se,vaken.se,solrosuppropet.se,toklandet.wordpress.com,experimentlandet.blogg.se,allmogen.org,lindelof.nu,sempermiles.se,opendata.se,hoforsbloggen.se,lindqvist.com,vargfakta.se,forenadebolag.se,xn--blljus-jua.se,frihetssmedjan.se##^img[src*="mediacreeper.com/image"]
@@ -665,7 +666,7 @@ baaam.se,elle.se,elledecoration.se,ellematovin.se,femina.se,cafe.se,svenskdam.se
 @@||mestmotor.se^$generichide
 /js/marbles/marbles.js$script,first-party,domain=mestmotor.se|vagabond.se|kingmagazine.se|hemtrevligt.se|akaskidor.se|svenskgolf.se|tidningenhalsa.se|livetombord.se|utemagasinet.se
 /headerbidding.js$script,domain=livetombord.se
-kingmagazine.se,vagabond.se##.latest-article-native
+kingmagazine.se,vagabond.se,hemtrevligt.se,akaskidor.se,utemagasinet.se,livetombord.se,svenskgolf.se,tidningenhalsa.se,mestmotor.se##.latest-article-native
 vagabond.se##.most-read-article:if(span:has-text(PARTNER))
 mestmotor.se,vagabond.se,kingmagazine.se,hemtrevligt.se,akaskidor.se,svenskgolf.se,tidningenhalsa.se,livetombord.se,utemagasinet.se##.alert-cookies
 mestmotor.se,vagabond.se,kingmagazine.se,hemtrevligt.se,akaskidor.se,svenskgolf.se,tidningenhalsa.se,livetombord.se,utemagasinet.se###facebookSlideIn
@@ -676,6 +677,7 @@ mestmotor.se##a[data-spotlight-id]
 mestmotor.se##.overlay
 mestmotor.se##html,body:style(overflow: auto !important;)
 mestmotor.se##article[class*="sponsra"]
+mestmotor.se##a[onclick^="ANALYTICS.trackEvent('Spotlight'"]
 mestmotor.se##script:inject(abort-current-inline-script.js, setNptTechAdblockerCookie)
 hemtrevligt.se##.partner-article
 hemtrevligt.se##.partner-navbar
@@ -693,10 +695,12 @@ fria.nu,goteborgsfria.se,friatidningen.se,landetsfria.se,stockholmsfria.se,sesam
 /statistics.php^$xmlhttprequest,domain=fria.nu|goteborgsfria.se|friatidningen.se|landetsfria.se|stockholmsfria.se|sesam.nu
 /twitter_count.php^$xmlhttprequest,domain=fria.nu|goteborgsfria.se|friatidningen.se|landetsfria.se|stockholmsfria.se|sesam.nu
 /google_tag.script.js^$script,domain=fria.nu|goteborgsfria.se|friatidningen.se|landetsfria.se|stockholmsfria.se|sesam.nu
+/gplus.php^$script,domain=fria.nu|goteborgsfria.se|friatidningen.se|landetsfria.se|stockholmsfria.se|sesam.nu
 
 ! MTG/VIASAT
 viasatsport.se,viasatsport.fi,tv3sport.dk,viasport.no##div.libellus.is-visible
 @@||viasatsport-jic-vod-hls.secure.footprint.net/*_Textad_$xmlhttprequest,domain=viasatsport.se
+@@||i-viaplay-com.akamaized.net/*_textad_$image,domain=viasatsport.se
 ||fwmrm.net^$image,important,domain=viasatsport.se|viasatsport.fi|tv3sport.dk|viasport.no|viafree.se|viafree.no|viafree.dk|viafree.fi
 @@||fwmrm.net/ad/$xmlhttprequest,domain=viasatsport.se|viasatsport.fi|tv3sport.dk|viasport.no|viafree.se|viafree.no|viafree.dk|viafree.fi
 @@||fwmrm.net/*MTG$script,domain=viasatsport.se|viasatsport.fi|tv3sport.dk|viasport.no|viafree.se|viafree.no|viafree.dk|viafree.fi
