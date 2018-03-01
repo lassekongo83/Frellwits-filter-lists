@@ -193,6 +193,8 @@
 ||sitegainer.com/jsinsert/*/sitegainer*.js^$script,third-party
 ||d24rtvkqjwgutp.cloudfront.net/cookie.html
 ||d24rtvkqjwgutp.cloudfront.net/*yb.js$script
+/wp-content/static/unruly.js^$script
+||newsharecounts.*.amazonaws.com/nsc.js$script
 
 ! Scams and malicious content
 ! https://kontakt.svt.se/guide/varning-for-bluff-annonser-pa-google?category=aktuellt-just-nu
@@ -263,6 +265,8 @@
 /plugins/ab_stats_params/*$domain=lajkat.se
 /plugins/icegram/*$domain=dagensanalys.se
 /plugins/blog-analytics/*$domain=dagensanalys.se
+/plugins/cookie-law-info/js/cookielawinfo.js^$script
+/plugins/convertplug/*$script,stylesheet,domain=samnytt.se
 
 ! JWplayer analytics/ad scripts
 ||ssl.p.jwpcdn.com/player/v/*/jwpsrv.js$script,important,domain=eurosport.se|aftonbladet.se|gamereactor.se
@@ -394,6 +398,7 @@ dn.se##body > iframe[style^="display"]
 ||trackjs.com^$third-party,domain=dn.se
 ||di.se/ditv/Content/Scripts/burt/burt-main.js$script
 ||di.se/part/ads/$xmlhttprequest
+/Scripts/burt/*$script,domain=di.se
 di.se##article.di_teaser--native
 di.se##section[data-ad-settings]
 di.se##aside.di_share-buttons
@@ -416,6 +421,7 @@ expressen.se##.slot:if(header:has-text(/^Erbjudande från/))
 expressen.se##.slot:if(header:has-text(/^Erbjundande från/))
 expressen.se##.b-adv-teaser-divider:if(h3:has-text(/^Erbjudande från/))
 expressen.se##.slot:has(a[href*="rabattkoder.expressen.se"])
+expressen.se##.widget--collaboration
 mittkok.expressen.se##script:inject(abort-current-inline-script.js, adblock)
 mittkok.expressen.se##script:inject(abort-current-inline-script.js, burtSegments)
 mittkok.expressen.se##script:inject(abort-current-inline-script.js, ExpressenAnalytics, push)
@@ -490,6 +496,7 @@ nsd.se,folkbladet.se,kuriren.nu,unt.se,helagotland.se,pt.se,mvt.se,nt.se,corren.
 nsd.se,folkbladet.se,kuriren.nu,unt.se,helagotland.se,pt.se,mvt.se,nt.se,corren.se,affarsliv.com,vt.se,norrbottensaffarer.se,eposten.se,affarslivgotland.se,klackspark.com##.banner-column
 nsd.se,folkbladet.se,kuriren.nu,unt.se,helagotland.se,pt.se,mvt.se,nt.se,corren.se,affarsliv.com,vt.se,norrbottensaffarer.se,eposten.se,affarslivgotland.se,klackspark.com##script:inject(abort-current-inline-script.js, adn, renderComposedAds)
 norrbottensaffarer.se###naaddbox
+||amqp-ws-proxy.radioplay.se^$websocket
 
 ! SÖRMLANDS MEDIA
 ||static.sm.infomaker.io^$image,domain=ekuriren.se|kkuriren.se|sn.se
@@ -664,6 +671,7 @@ baaam.se,elle.se,elledecoration.se,ellematovin.se,femina.se,cafe.se,svenskdam.se
 /js/sticky-mobile-ad.js$script,domain=baaam.se|elle.se|elledecoration.se|ellematovin.se|femina.se|cafe.se|svenskdam.se|allas.se|allers.se|antikochauktion.se|aretrunt.se|allakorsord.se|chic.se|dromhemochtradgard.se|frida.se|hant.se|hemmets.se|mabra.com|matmagasinet.se|residencemagazine.se
 /se-wordpress-google-analytics/src/js/wp-tagmanager.js$script,domain=baaam.se|elle.se|elledecoration.se|ellematovin.se|femina.se|cafe.se|svenskdam.se|allas.se|allers.se|antikochauktion.se|aretrunt.se|allakorsord.se|chic.se|dromhemochtradgard.se|frida.se|hant.se|hemmets.se|mabra.com|matmagasinet.se|residencemagazine.se
 /apester-javascript-sdk.min.js$script,domain=baaam.se|elle.se|elledecoration.se|ellematovin.se|femina.se|cafe.se|svenskdam.se|allas.se|allers.se|antikochauktion.se|aretrunt.se|allakorsord.se|chic.se|dromhemochtradgard.se|frida.se|hant.se|hemmets.se|mabra.com|matmagasinet.se|residencemagazine.se
+elle.se##.
 
 ! EGMONT PUBLISHING
 @@||hemtrevligt.se^$generichide
@@ -939,7 +947,6 @@ branschkoll.se##.ads
 hemnet.se##.recent-news__item:if(.recent-news__category:has-text(Sponsrad))
 hemnet.se##.article-news__link:has(.news-article--sponsored)
 /sticky-ads.*.js$script,domain=hemnet.se
-||amqp-ws-proxy.radioplay.se^$websocket
 /*Fokus_360x300px_animate*.gif$image,domain=fokus.se
 fokus.se##[class^="right-ads"]
 fokus.se##img[onload*="banner"]
@@ -1085,6 +1092,7 @@ njus.me##.article-list__item > .sponsoredArticle
 ||stats.zotabox.com^$xmlhttprequest,domain=rapport24.com
 ||cdn2.editmysite.com/js/wsnbn/snowday262.js$script,domain=rapport24.com
 ||promote.weebly.com^$xmlhttprequest,subdocument,script,domain=rapport24.com
+||static.zbcdn2.net^$script,domain=rapport24.com
 /files/banners/*$image,domain=byggnadsarbetaren.se
 /js/smart-app-banner.$script,domain=svenskafans.com
 /js/sticky*.$script,domain=svenskafans.com
@@ -1139,3 +1147,7 @@ landleyskok.se##.banner-leaderboard
 professionalsecrets.se##div[data-campaign="newsletter"]
 /a?callback=pfMod.saveAdSettings$script,domain=zeinaskitchen.se
 kissies.se##article[id^="post-"]:has(img[class*="wp-image"][height="62"])
+dagensvimmerby.se##.insideAd
+dagensvimmerby.se##.annonsKolumn
+dagensvimmerby.se##.panoramaAnnons
+||amazonaws.com/spotlife.js$script,domain=spotlife.se
