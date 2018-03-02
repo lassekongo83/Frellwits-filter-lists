@@ -233,7 +233,7 @@
 @@/assets/showAds.js^$script,first-party,domain=skonahem.com|101ideer.se|tara.se|styleby.nu|topphalsa.se|veckorevyn.com|lantliv.com|amelia.se|alltomtradgard.se|godsochgardar.se|gardochtorp.se|hemochantik.se
 @@/js/showads.js^$script,first-party,domain=skonahem.com|101ideer.se|tara.se|styleby.nu|topphalsa.se|veckorevyn.com|lantliv.com|amelia.se|alltomtradgard.se|alltommat.se
 @@/advertisement.js$script,first-party,domain=saljplatsen.se|emocore.se|kit.se|blocket.se|spela.se
-@@/adsense.js$script,first-party,domain=nyheter24.se|dayviews.com
+@@/adsense.js$script,first-party,domain=nyheter24.se|dayviews.com|fragbite.se|kwiss.me
 @@/js/ads.js^$xmlhttprequest,domain=news55.se
 @@/show_ads.js$script,first-party,domain=happypancake.com
 @@/js/advert.js$script,first-party,domain=burlovsnyheter.se
@@ -267,6 +267,8 @@
 /plugins/blog-analytics/*$domain=dagensanalys.se
 /plugins/cookie-law-info/js/cookielawinfo.js^$script
 /plugins/convertplug/*$script,stylesheet,domain=samnytt.se
+/plugins/ad-blocking-advisor/*$stylesheet,domain=naturvetenskap.org
+/plugins/uk-cookie-consent/*$script,stylesheet
 
 ! JWplayer analytics/ad scripts
 ||ssl.p.jwpcdn.com/player/v/*/jwpsrv.js$script,important,domain=eurosport.se|aftonbladet.se|gamereactor.se
@@ -479,6 +481,8 @@ privataaffarer.se##a[href*="/bit.ly/"]
 tradera.com##react-adslot
 /bmbDfpUtils.min.js$script,domain=feber.se|tjock.se
 feber.se##script:inject(set-constant.js, showReklam, false)
+feber.se,tjock.se##.art_ad
+feber.se,tjock.se##.art_ad_sign
 
 ! NTM
 ||ntm.eu/om/img/cx/Matchad$subdocument,domain=kuriren.nu|nsd.se|unt.se|helagotland.se|pt.se|mvt.se|nt.se|corren.se|affarsliv.com|folkbladet.se|vt.se|norrbottensaffarer.se|affarslivgotland.se|eposten.se
@@ -501,23 +505,27 @@ norrbottensaffarer.se###naaddbox
 ! SÖRMLANDS MEDIA
 ||static.sm.infomaker.io^$image,domain=ekuriren.se|kkuriren.se|sn.se
 /familjeannons$domain=ekuriren.se|kkuriren.se|sn.se
+/?file=bostadsnurra$subdocument,domain=ekuriren.se|kkuriren.se|sn.se
 ekuriren.se,kkuriren.se,sn.se##.article--ad
 ekuriren.se,kkuriren.se,sn.se##.ad
 ekuriren.se,kkuriren.se,sn.se##div[class^="ew-bottom-ad"]
+ekuriren.se,kkuriren.se,sn.se##.match-ad
 ekuriren.se,kkuriren.se,sn.se##.match-ad-article
 ekuriren.se,kkuriren.se,sn.se##.teaser--native-ad
 ekuriren.se,kkuriren.se,sn.se##.native-ad-top
 ekuriren.se,kkuriren.se,sn.se###cookie-info
 ekuriren.se,kkuriren.se,sn.se###lokusmotor
 ekuriren.se,kkuriren.se,sn.se###lokusJobb
+ekuriren.se,kkuriren.se,sn.se###bostad
+ekuriren.se,kkuriren.se,sn.se###citygate-family-widgetframe
 @@||ekuriren.se^$generichide
 @@||kkuriren.se^$generichide
 @@||sn.se^$generichide
 
 ! GOTA MEDIA/MK WEBB/NWT
-affarsliv.se,barometern.se,bt.se,sydostran.se,blt.se,kristianstadsbladet.se,smp.se,trelleborgsallehanda.se,ut.se,ystadsallehanda.se,olandsbladet.se,ostrasmaland.se##div[id*="marknadsguiden"]
-affarsliv.se,barometern.se,bt.se,sydostran.se,blt.se,kristianstadsbladet.se,smp.se,trelleborgsallehanda.se,ut.se,ystadsallehanda.se,olandsbladet.se,ostrasmaland.se##script:inject(abort-on-property-write.js, adTags)
-affarsliv.se,barometern.se,bt.se,sydostran.se,blt.se,kristianstadsbladet.se,smp.se,trelleborgsallehanda.se,ut.se,ystadsallehanda.se,olandsbladet.se,ostrasmaland.se##script:inject(abort-on-property-write.js, cX.callQueue)
+barometern.se,bt.se,sydostran.se,blt.se,kristianstadsbladet.se,smp.se,trelleborgsallehanda.se,ut.se,ystadsallehanda.se,olandsbladet.se,ostrasmaland.se,7ha.se##div[id*="marknadsguiden"]
+barometern.se,bt.se,sydostran.se,blt.se,kristianstadsbladet.se,smp.se,trelleborgsallehanda.se,ut.se,ystadsallehanda.se,olandsbladet.se,ostrasmaland.se,7ha.se##script:inject(abort-on-property-write.js, adTags)
+barometern.se,bt.se,sydostran.se,blt.se,kristianstadsbladet.se,smp.se,trelleborgsallehanda.se,ut.se,ystadsallehanda.se,olandsbladet.se,ostrasmaland.se,7ha.se##script:inject(abort-on-property-write.js, cX.callQueue)
 ||cloudfront.net/widgets/adds.js^$script,domain=nwt.se|sla.se|mariestadstidningen.se
 ||cloudfront.net/widgets/adds.css^$stylesheet,domain=nwt.se|sla.se|mariestadstidningen.se
 nwt.se,sla.se,mariestadstidningen.se##.mfp-wrap
@@ -559,7 +567,6 @@ vastgotabladet.se,falkopingstidning.se,skaraborgslanstidning.se,skovdenyheter.se
 vastgotabladet.se,falkopingstidning.se,skaraborgslanstidning.se,skovdenyheter.se,vn.se,jnytt.se,smt.se,smalandsdagblad.se,jp.se,vetlandaposten.se,tranastidning.se,smalanningen.se##div.slideshow-in.active:has(.ad-wrapper)
 
 ! ALMA TALENT
-||allatjanstebilar.se$domain=nyteknik.se|dagensmedia.se|affarsvarlden.se|lag-avtal.se|arbetarskydd.se
 /annonstorget/*$domain=nyteknik.se|dagensmedia.se|affarsvarlden.se|lag-avtal.se|arbetarskydd.se
 nyteknik.se,dagensmedia.se,affarsvarlden.se,lag-avtal.se,arbetarskydd.se##.ad-container
 nyteknik.se,dagensmedia.se,affarsvarlden.se,lag-avtal.se,arbetarskydd.se##.ad-panorama
@@ -600,7 +607,6 @@ kwiss.me##.qz-related-quizes-item:if(span:has-text(Sponsrat av))
 fragbite.se##.module:if(h4:has-text(Sponsrat inlägg))
 fragbite.se##.spreadItemCollection:if(.category:has-text(Sponsrat innehåll))
 fragbite.se##.zooKeeper
-@@||fragbite.se/js/adsense.js
 ||blogg.se/public/js/metrics.js^$script
 ||newstats.blogg.se/logger.js^$script
 ||newstats.blogg.se/collector.js$script
@@ -961,7 +967,6 @@ magasinetparagraf.se##script:inject(abort-current-inline-script.js, _stq)
 magasinetparagraf.se###large_banner
 /banners.js$script,domain=magasinetparagraf.se
 sokmotorkonsult.se##.feature:has(a[href*="/sponsrade-lankar"])
-naturvetenskap.org##.footer_ad:style(height: 1px !important;)
 ||milansverige.se^$csp=script-src 'self' 'unsafe-inline' 'unsafe-eval' *.googleapis.com *.tvmatchen.nu *.wp.com
 /deadblocker-front.js$script,domain=milansverige.se
 milansverige.se##.widget_text:has(a[href^="https://ads."])
