@@ -108,6 +108,7 @@
 ||trn.ninja^$third-party
 ||trugaze.io^$third-party
 ||tvdags.se^$third-party
+||twingly.com^$third-party
 ||ubembed.com^$third-party
 ||upsales.com^$third-party
 ||webbcensus.com^$third-party
@@ -171,6 +172,7 @@
 /cdn-cgi/pe/bag2?*pagead2.googlesyndication.com$xmlhttprequest
 /cdn-cgi/pe/bag2?*doubleclick.net$xmlhttprequest
 /cdn-cgi/pe/bag2?*adform.net$xmlhttprequest
+/cdn-cgi/pe/bag2?*googletagmanager.com$xmlhttprequest
 ||media.jw-it.se/b/$image
 /SifoResponsiveMeasure.js$script
 /siforesponsivemeasure.js$script
@@ -238,6 +240,7 @@
 @@/show_ads.js$script,first-party,domain=happypancake.com
 @@/js/advert.js$script,first-party,domain=burlovsnyheter.se
 @@/ads/ads-*.js$script,first-party,domain=gettyimages.se
+@@/js/advertising.min.js$script,first-party,domain=tekniksmart.se
 
 ! Unknown and/or unnecessary requests/bloat
 /mdt.min.js$script,domain=aftonbladet.se|dn.se|svtplay.se|expressen.se
@@ -269,6 +272,7 @@
 /plugins/convertplug/*$script,stylesheet,domain=samnytt.se
 /plugins/ad-blocking-advisor/*$stylesheet,domain=naturvetenskap.org
 /plugins/uk-cookie-consent/*$script,stylesheet
+/plugins/better-adsmanager/*$script,stylesheet
 
 ! JWplayer analytics/ad scripts
 ||ssl.p.jwpcdn.com/player/v/*/jwpsrv.js$script,important,domain=eurosport.se|aftonbladet.se|gamereactor.se
@@ -330,10 +334,12 @@ aftonbladet.se##article:has(a[data-sponsored="true"])
 aftonbladet.se##a[data-test-id="inline-teaser"]:if(div[class]:has-text(ANNONS))
 aftonbladet.se##.abThemeBgTeaser:has(a[href*="kampanjer.aftonbladet.se"])
 aftonbladet.se##.abBtnShare
+aftonbladet.se##.share-icons
 ||ooul.tv/*/se-aftonbladet/aab/aftonbladet_$script,redirect=noopjs,domain=aftonbladet.se
 /sptAutoTracker.min.js^$domain=aftonbladet.se
 /ab-uri-min.js&ab-xiti/ab-xiti-min.js^$domain=aftonbladet.se
 ||aftonbladet.se/tv/temp.mp4$media
+||herokuapp.com^$third-party,domain=aftonbladet.se
 /rabattkod/*$image,domain=aftonbladet.se
 aftonbladet.se###MegaAd
 aftonbladet.se##html,body:style(overflow: auto !important;)
@@ -1128,6 +1134,7 @@ forumbilder.se##a[target="_blank"] > img[src^="/Content/images"]
 /admin-ajax.php?action=advanced-ads-tracking-track$xmlhttprequest,domain=datormagazin.se
 datormagazin.se##script:inject(abort-current-inline-script.js, advadsGATracking)
 datormagazin.se##script:inject(abort-current-inline-script.js, advanced_ads_ready)
+datormagazin.se##.category-annons
 hypeline.se##.homecontent:has(.sponsrad_ruta)
 dagenstv.com###bt
 rumhemma.se###top
@@ -1156,3 +1163,4 @@ dagensvimmerby.se##.annonsKolumn
 dagensvimmerby.se##.panoramaAnnons
 ||amazonaws.com/spotlife.js$script,domain=spotlife.se
 dagensopinion.se##a[href^="/annons-"]
+||tm.tradetracker.net/tag?$script,important,domain=enkelteknik.se
