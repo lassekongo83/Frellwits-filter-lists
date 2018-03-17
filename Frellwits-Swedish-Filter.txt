@@ -398,9 +398,6 @@ dn.se##aside.js-social-toolbar
 dn.se##div.DNP_theme--reco
 dn.se##.account-information__tooltip
 dn.se##.js-bottom-bar
-dn.se##script:inject(setTimeout-defuser.js, bait)
-dn.se##script:inject(setTimeout-defuser.js, BlockAdBlock)
-dn.se##script:inject(abort-on-property-write.js, BlockAdBlock)
 @@||dn.se^$generichide
 dn.se##.personal-carousel
 dn.se##body > iframe[style^="display"]
@@ -478,6 +475,7 @@ va.se##.sponsored-article
 va.se##.sponsored-module
 dagensmedicin.se##.widget-carousel--sponsored
 resume.se##.teaser-sponsored
+resume.se##.teaser-regular:if(.tag:has-text(sponsring))
 ||qbrick.com^$third-party,domain=resume.se
 vafinans.se##.box:if(.newsLeadWords:has-text(Sponsrat innehåll))
 vafinans.se##.brandStoryGreyBackground2
@@ -588,6 +586,7 @@ nyteknik.se,dagensmedia.se,affarsvarlden.se,lag-avtal.se,arbetarskydd.se##.secti
 nyteknik.se,dagensmedia.se,affarsvarlden.se,lag-avtal.se,arbetarskydd.se##.social-teasers
 nyteknik.se,dagensmedia.se,affarsvarlden.se,lag-avtal.se,arbetarskydd.se##.section-content-block:if(.section-heading:has-text(Sponsrat))
 nyteknik.se,dagensmedia.se,affarsvarlden.se,lag-avtal.se,arbetarskydd.se##.section-content-block:if(.section-heading:has-text(Comsol))
+nyteknik.se,dagensmedia.se,affarsvarlden.se,lag-avtal.se,arbetarskydd.se##article[class^="teaser"]:if(.title:has-text(SPONSRAT INNEHÅLL:))
 nyteknik.se###tws1
 
 ! NYHETER24GRUPPEN
@@ -630,6 +629,7 @@ fragbite.se##.zooKeeper
 
 ! GAMEREACTOR
 gamereactor.*###eventad
+gamereactor.*##.sponsor
 gamereactor.*##div[style*="width:300px;height:600px;"]
 gamereactor.*##.cocacola
 gamereactor.*##div[class^="ad300"]
@@ -653,7 +653,8 @@ gamereactor.*###sky2_1
 familjeliv.se##.ad_right
 familjeliv.se##a[href*="/kampanj/"]
 familjeliv.se##.flm-kampanj
-familjeliv.se##[data-container=".article-wrapper"]:if(.articleSuperTitle:has-text(i samarbete med))
+familjeliv.se##.articleTeaser:if(.articleSuperTitle:has-text(I samarbete med))
+familjeliv.se##a[data-track]:if(.supertitle:has-text(I samarbete med))
 familjeliv.se##:xpath(//span[text()[contains(., 'Sponsrat')]]/ancestor::div[contains(concat(' ', @class, ' '), ' blogPostWrapper ')]/parent::div/parent::div)
 ||familjeliv.se^$object,object-subrequest
 mammasidan.se,minbebis.com,alltforforaldrar.se##.panorama:if(.add-text:has-text(Annons))
