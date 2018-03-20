@@ -7,7 +7,7 @@ Various filter lists for your adblock extension.
 
 A filter for uBlock Origin for regional Swedish ads, tracking, social media, annoyances, sponsored articles etc. This is Sweden's regional filter in [uBlock Origin](https://github.com/gorhill/uBlock) (uBO) located in: **Dashboard -> 3rd party-filters -> Regions, language -> SWE: Frellwit's Swedish Filter**
 
-uBO enables the region/language-filter that corresponds to the locale of your web browser. This means that **SWE: Frellwit's Swedish Filter** will be enabled by default if your browser has Swedish locale installed, and that you have to enable the filter manually as describe above otherwise.
+uBO enables the region/language-filter that corresponds to the locale of your web browser. This means that **SWE: Frellwit's Swedish Filter** will be enabled by default if your browser has Swedish locale installed, and that you have to enable the filter manually as described above otherwise.
 
 #### deviantJUNKfilter.txt
 
