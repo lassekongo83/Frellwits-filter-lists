@@ -11,7 +11,4 @@ uBO enables the region/language-filter that corresponds to the locale of your we
 
 #### deviantJUNKfilter.txt
 
-A filter for deviantart.com. Blocks over 1000 of users that upload junk or stuff in the wrong categories. (Warning: This list is highly personal and may not suit everyone.) ([Raw link](https://raw.githubusercontent.com/lassekongo83/Frellwits-filter-lists/master/deviantJUNKfilter.txt))
-
-## How to subscribe
-Copy the raw link above for the filter list you want to subscribe to. [How to import external filter lists](https://github.com/gorhill/uBlock/wiki/Filter-lists-from-around-the-web) in uBlock Origin.
+A filter for deviantart.com. Blocks over 1000 of users that upload junk or stuff in the wrong categories. (Warning: This list is highly personal and may not suit everyone.) ([Raw link](https://raw.githubusercontent.com/lassekongo83/Frellwits-filter-lists/master/deviantJUNKfilter.txt)) Copy the raw link adress if you want to subscribe to this list. [How to import external filter lists in uBO](https://github.com/gorhill/uBlock/wiki/Filter-lists-from-around-the-web)
