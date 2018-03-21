@@ -16,4 +16,5 @@ A filter for deviantart.com. Blocks over 1000 of users that upload junk or stuff
 ## Special thanks
 
 https://github.com/ryanbr for the rules from [Fanboy's Swedish filter](https://github.com/ryanbr/fanboy-adblock/blob/master/firefox-regional/fanboy-adblocklist-swe.txt).
+
 https://github.com/gorhill for creating [uBlock Origin](https://github.com/gorhill/uBlock).
