@@ -202,7 +202,6 @@
 ||t.raptorsmartadvisor.com^$image
 
 ! Scams and malicious content
-! https://kontakt.svt.se/guide/varning-for-bluff-annonser-pa-google?category=aktuellt-just-nu
 .info/svt-se-nyheter/$document
 .info/dagens-nyheter/$document
 .info/tv4-nyheter/$document
@@ -256,9 +255,9 @@
 ! Facebook junk
 /facebook_sdk.js$script,domain=radioplay.se|njus.me
 /js/facebook_pixel.js$script,domain=lajkat.se
-||connect.facebook.com/*/fbevents.js$third-party,domain=~facebook.net|~fb.com
-||connect.facebook.net/*/fbevents.js$third-party,domain=~facebook.com|~fb.com
 ||facebook.com/tr?*&noscript=1$image,domain=~facebook.com|~fb.com
+||facebook.com/tr?*=PixelInitialized$image,domain=~facebook.com|~fb.com
+||connect.facebook.net/*/fbds.js$third-party,domain=~facebook.com|~fb.com
 
 ! Override EasyPrivacy and EasyList whitelists
 ||google-analytics.com/ga.js$script,important,redirect=google-analytics.com/ga.js,domain=aftonbladet.se
@@ -729,6 +728,7 @@ mestmotor.se##.overlay
 mestmotor.se##html,body:style(overflow: auto !important;)
 mestmotor.se##article[class*="sponsra"]
 mestmotor.se##a[onclick^="ANALYTICS.trackEvent('Spotlight'"]
+mestmotor.se##.article-social
 mestmotor.se##script:inject(abort-current-inline-script.js, setNptTechAdblockerCookie)
 hemtrevligt.se##.partner-article
 hemtrevligt.se##.partner-navbar
