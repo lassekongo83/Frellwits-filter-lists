@@ -235,6 +235,7 @@
 @@/js/ad.php^$first-party,domain=99.se
 @@/js/ads/advert.min.js$script,first-party,domain=spelo.se
 @@/adframe.js$script,first-party,domain=diskant.se|diskantforum.se
+@@/*_adframe.js$script,first-party,domain=fssweden.se
 @@/ads.js^$script,first-party,domain=koket.se
 @@/assets/showAds.js^$script,first-party,domain=skonahem.com|101ideer.se|tara.se|styleby.nu|topphalsa.se|veckorevyn.com|lantliv.com|amelia.se|alltomtradgard.se|godsochgardar.se|gardochtorp.se|hemochantik.se
 @@/js/showads.js^$script,first-party,domain=skonahem.com|101ideer.se|tara.se|styleby.nu|topphalsa.se|veckorevyn.com|lantliv.com|amelia.se|alltomtradgard.se|alltommat.se
@@ -282,6 +283,7 @@
 /plugins/ad-blocking-advisor/*$stylesheet,domain=naturvetenskap.org
 /plugins/uk-cookie-consent/*$script,stylesheet
 /plugins/better-adsmanager/*$script,stylesheet
+/plugins/sticky-facebook-banner/*$script,domain=sportbibeln.se
 
 ! JWplayer analytics/ad scripts
 ||ssl.p.jwpcdn.com^*/jwpsrv.js$script,important,domain=eurosport.se|aftonbladet.se|gamereactor.se|svd.se|muscles.se
@@ -347,9 +349,6 @@ aftonbladet.se##.abThemeBgTeaser:has(a[href*="kampanjer.aftonbladet.se"])
 aftonbladet.se##.abBtnShare
 aftonbladet.se##.share-icons
 ||ooul.tv/*/se-aftonbladet/aab/aftonbladet_$script,redirect=noopjs,domain=aftonbladet.se
-/sptAutoTracker.min.js^$domain=aftonbladet.se
-/ab-uri-min.js&ab-xiti/ab-xiti-min.js^$domain=aftonbladet.se
-||aftonbladet.se/tv/temp.mp4$media
 ||herokuapp.com^$third-party,domain=aftonbladet.se
 /rabattkod/*$image,domain=aftonbladet.se
 aftonbladet.se###MegaAd
@@ -364,6 +363,8 @@ aftonbladet.se##.abAdArea
 aftonbladet.se##[id^="abAdArea"]
 aftonbladet.se##.ab-responsive-ads-wrapper
 aftonbladet.se##.social-shares
+! aftonbladet.se##*:style(filter: none !important; -webkit-filter: none !important;)
+! aftonbladet.se##:xpath(//h1[text()[contains(., 'Tack för att du läser Aftonbladet!')]]/parent::div[contains(concat(' ', @class, ' '), ' abThemeSolidPage ')])
 ||smartplugin.youbora.com/*/sp.min.js$script,domain=aftonbladet.se|svd.se
 /pulse-sdk-html*.min.js$script,domain=aftonbladet.se|svd.se
 omni.se##article.article--sponsored
@@ -1070,7 +1071,7 @@ vardagspuls.se##.ad
 /campaigns/*$xmlhttprequest,domain=kokaihop.se
 /listByType?*adSettings^$xmlhttprequest,domain=kokaihop.se
 kokaihop.se##.kng-cookie-info-bar
-ja.se,skogsaktuellt.se,entreprenadaktuellt.se##.banner
+ja.se,skogsaktuellt.se,entreprenadaktuellt.se,e.se,maskinstationerna.se##.banner
 flashback.org###top-banner-row
 flashback.org###bottom-banner-container
 flashback.org###right-banner-container
