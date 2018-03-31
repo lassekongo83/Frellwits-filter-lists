@@ -60,7 +60,7 @@
 ||emediate.se^$third-party
 ||fakturino.se^$third-party
 ||finkammat.se^$third-party
-||gigya.com^$third-party
+||gigya.com^$third-party,domain=~pgatour.com
 ||glimr.io^$third-party
 ||googlnalytics.com^$third-party
 ||happygreen.se^$third-party
@@ -188,15 +188,15 @@
 ||episerver.net/*/epi-util/find.js$script
 ||diu127fbe6pn6.cloudfront.net^*/ga-universal.html$subdocument
 ||sdk.pulse.schibsted.com^$script
-||d11rmv9we9fli4.cloudfront.net/js/gigya/gigya.js^$script
-||cdn.livechatinc.com/tracking.js$script
-||creatives.ancoraplatform.com/ptphb*.js$script
+||d11rmv9we9fli4.cloudfront.net/js/gigya/gigya.$script
+||cdn.livechatinc.com/tracking.$script
+||creatives.ancoraplatform.com/ptphb*.$script
 ||dspk.kindredplc.com/renderImage.aspx^$image
 ||monkey.tunnl.com/identify^$subdocument
 ||video-static.tunnl.com/js/blocker.min.js$script
 ||session.tibaco.net/scripts/tws.js$script
-||gamedistribution.com/libs/gd/analytics.js^$script
-||sitegainer.com/jsinsert/*/sitegainer*.js^$script,third-party
+||gamedistribution.com/libs/gd/analytics.$script
+||sitegainer.com/jsinsert/*/sitegainer*.$script,third-party
 ||d24rtvkqjwgutp.cloudfront.net/cookie.html
 ||d24rtvkqjwgutp.cloudfront.net/*yb.js$script
 /wp-content/static/unruly.js^$script
@@ -213,6 +213,7 @@
 ||gnuheter.com/creeper/image$image
 ||back.famebloggers.com/bloggerfy/tracker$script,subdocument
 ||bloggplatsen.se/xtcore$script
+||site.com/xtcore.$script
 
 ! Scams and malicious content
 .info/svt-se-nyheter/$document
@@ -235,7 +236,7 @@
 ##.adtoma_container
 ##.eu_coookie_toolbar
 
-! Whitelists
+! Site specific whitelists
 @@/js/advertisement.$first-party,script,domain=devote.se|brollopstorget.se|feber.se|tjock.se
 @@/js/advertisement*.js$first-party,script,domain=expressen.se|familjeliv.se
 @@/scripts/advertisement-*.js^$first-party,script,domain=mittkok.expressen.se
@@ -260,12 +261,11 @@
 @@/js/advertising.min.js$script,first-party,domain=tekniksmart.se
 @@/js/adsbygoogle.js^$script,first-party,domain=feber.se|tjock.se
 
-! Unknown and/or unnecessary requests/bloat
+! Common site specific blocking
 /mdt.min.js$script,domain=aftonbladet.se|dn.se|svtplay.se|expressen.se
-||site.com/xtcore.js$script
-
-! Glimr tracking
 /glimr.min.js^$script,domain=dn.se|di.se|lajkat.se|politism.se|blocket.se|viivilla.se|aftonbladet.se
+||ooul.tv^*/aab/$script,redirect=noopjs,domain=aftonbladet.se
+||herokuapp.com^$third-party,domain=aftonbladet.se
 
 ! Facebook junk
 /facebook_sdk.js$script,domain=radioplay.se|njus.me
@@ -348,7 +348,7 @@ svd.se##.Teaser-adLabel
 svd.se##.Teaser--fullAdLabel
 svd.se###AdSplashOverlayWindow
 svd.se##.ContentLayout-extraColumnAd
-||svd.se/api/topics/root/selections/native-article$xmlhttprequest,first-party
+||svd.se^*/native-article$xmlhttprequest,first-party
 /infopeek.min.js$domain=svd.se
 /pulse_flash_ad*.swf$object,domain=svd.se
 aftonbladet.se##.abTheme-ad
@@ -364,8 +364,6 @@ aftonbladet.se,lajkat.se##.ab-responsive-ads-wrapper
 aftonbladet.se##.social-shares
 aftonbladet.se##.abBtnShare
 aftonbladet.se##.share-icons
-||ooul.tv/*/se-aftonbladet/aab/aftonbladet_$script,redirect=noopjs,domain=aftonbladet.se
-||herokuapp.com^$third-party,domain=aftonbladet.se
 /rabattkod/*$image,domain=aftonbladet.se
 aftonbladet.se##html,body:style(overflow: auto !important;)
 aftonbladet.se##script:inject(abort-current-inline-script.js, preLoadAds, loadAd)
