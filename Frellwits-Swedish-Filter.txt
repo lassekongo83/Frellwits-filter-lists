@@ -12,21 +12,15 @@
 ||adaptlogic.com^$third-party
 ||adcell.io^$third-party
 ||adeprimo.se^$third-party
-||adnuntius.com^$third-party
 ||adonstudio.com^$third-party
-||adoperator.com^$third-party
 ||adrecord.com^$third-party
 ||adservicemedia.dk^$third-party
 ||adten.eu^$third-party
-||adtlgc.com^$third-party
-||adtomafusion.com^$third-party
-||adtoox.com^$third-party
 ||adtooxcloud.com^$third-party
 ||adwayplus.se^$third-party
 ||apsislead.com^$third-party
 ||anki.com^$third-party
 ||ascontentcloud.com^$third-party
-||atemda.com^$third-party
 ||audience.systems^$third-party
 ||bellmetric.net^$third-party
 ||bettersales.se^$subdocument,third-party
@@ -34,30 +28,20 @@
 ||boende.se^$third-party
 ||boka.holiday^$third-party
 ||bonad.io^$third-party
-||bonnieradnetwork.se^$third-party
 ||brandmetrics.com^$third-party
-||burt.io^$third-party
 ||bytelab.dk^$third-party
 ||careerbuilder.se^$third-party
 ||casinotoplists.com^$third-party
 ||cintnetworks.com^$third-party
 ||cision.com^$third-party
 ||citygate.se^$third-party,~image,domain=~familj.se
-||citypaketet.se^$third-party
 ||compricer.se^$third-party
 ||cxpublic.com^$third-party
 ||datomik.com^$third-party
-||de17a.com^$third-party
-||dep-x.com^$third-party
 ||destination.se^$third-party
 ||e-magin.se^$third-party
 ||eacla.com^$third-party
-||easyresearch.se^$third-party
-||ecsanalytics.com^$third-party
 ||edynpub.com^$third-party
-||emediate.eu^$third-party
-||emediate.dk^$third-party
-||emediate.se^$third-party
 ||fakturino.se^$third-party
 ||finkammat.se^$third-party
 ||gigya.com^$third-party,domain=~pgatour.com
@@ -82,7 +66,6 @@
 ||mraffiliate.com^$third-party
 ||mtpc.se^$third-party
 ||mydatabankapp.com^$third-party
-||myvisitors.se^$third-party
 ||nbes.eu^$third-party
 ||nbes.nu^$third-party
 ||nbes.se^$third-party
@@ -90,9 +73,7 @@
 ||panera.io^$third-party
 ||pensiono.se^$third-party
 ||prisjakt.nu^$third-party
-||prospecteye.com^$third-party
 ||proxyas.com^$third-party
-||research-int.se^$third-party
 ||reco.se^$third-party
 ||reseguiden.se^$third-party
 ||royapp.com^$third-party
@@ -103,12 +84,9 @@
 ||sleeknote.com^$third-party
 ||sociuslive.com^$third-party
 ||sprinklecontent.com^$third-party
-||strossle.it^$third-party
 ||suntcontent.se^$third-party
 ||telemetric.dk^$third-party
-||tidningsnatet.se^$third-party
 ||tipser.com^$third-party
-||tns-sifo.se^$third-party
 ||tourn.co^$third-party
 ||tourn.se^$third-party
 ||trn.ninja^$third-party
@@ -266,6 +244,7 @@
 /glimr.min.js^$script,domain=dn.se|di.se|lajkat.se|politism.se|blocket.se|viivilla.se|aftonbladet.se
 ||ooul.tv^*/aab/$script,redirect=noopjs,domain=aftonbladet.se
 ||herokuapp.com^$third-party,domain=aftonbladet.se
+||youbora.com^$third-party,domain=aftonbladet.se|svd.se
 
 ! Facebook junk
 /facebook_sdk.js$script,domain=radioplay.se|njus.me
@@ -311,9 +290,8 @@ cornucopia.cornubot.se,peak-oil.se,apg29.nu,zaramis.se,horoskop.nu,blogspot.se,n
 
 ! IDG
 ||cmatch.idg.se^$script
-||ai.idg.se^
 ||ax.idg.se^
-||idg.se/assets/scripts/prebid*.js$script,first-party
+||idg.se^*/prebid*.$script,first-party
 /pis.gif$image,domain=idg.se
 idg.se##div[data-cms-ad]
 idg.se##.wide-msg-fb
@@ -373,7 +351,6 @@ aftonbladet.se##script:inject(setTimeout-defuser.js, (), 1000)
 @@/hyper-assets/app.$script,domain=aftonbladet.se
 @@/hyper-assets/preload.$script,domain=aftonbladet.se
 @@||aftonbladet.se^$generichide
-||smartplugin.youbora.com/*/sp.min.js$script,domain=aftonbladet.se|svd.se
 /pulse-sdk-html*.min.js$script,domain=aftonbladet.se|svd.se
 omni.se##article.article--sponsored
 ||omni-ads.omni.news^
@@ -381,12 +358,12 @@ tv.nu##a[href*="adform.net"]
 ||logger.tv.nu^$script
 lajkat.se##.abLajkatPromotedContent
 /js/adxads.js$domain=lajkat.se
-/bundles/production/*/pbads/*$script,domain=playbuzz.com|lajkat.se
 /campaigns.js$script,domain=blocket.se
 /utag*.js$script,domain=blocket.se
 /appnexus.js$script,domain=blocket.se
 ||blocket.se/inverted_classifieds.html
 ||blocket.com/fif.html?
+||blocket.com/boost.html^$subdocument
 /none.gif$image,domain=blocket.se
 blocket.se###index_panorama
 blocket.se###li_panorama
@@ -424,9 +401,7 @@ dn.se##body > iframe[style^="display"]
 ||trackjs.com^$third-party,domain=dn.se
 ||di.se^*/burt-main.js$script
 ||di.se/part/ads/$xmlhttprequest
-di.se##script:inject(nano-setInterval-booster.js)
 di.se##script:inject(abort-current-inline-script.js, checkAdBlockEnabled)
-/Scripts/burt/*$script,domain=di.se
 ||personalized.di.se^$xmlhttprequest
 di.se##article.di_teaser--native
 di.se##section[data-ad-settings]
