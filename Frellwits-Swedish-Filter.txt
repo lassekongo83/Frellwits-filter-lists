@@ -17,6 +17,7 @@
 ||adservicemedia.dk^$third-party
 ||adten.eu^$third-party
 ||adtooxcloud.com^$third-party
+||adviralmedia.com^$third-party
 ||adwayplus.se^$third-party
 ||apsislead.com^$third-party
 ||anki.com^$third-party
@@ -191,6 +192,10 @@
 ||back.famebloggers.com/bloggerfy/tracker$script,subdocument
 ||bloggplatsen.se/xtcore$script
 ||site.com/xtcore.$script
+||adviral.s3.amazonaws.com/sponsored/
+||btikon.se/analytics.$xmlhttprequest
+||btikon.se/btstats.$script
+||static.influencersofsweden.se/js/inos.$script
 
 ! Scams and malicious content
 .info/svt-se-nyheter/$document
@@ -250,7 +255,7 @@
 ||ooul.tv^*/aab/$script,redirect=noopjs,domain=aftonbladet.se
 ||herokuapp.com^$third-party,domain=aftonbladet.se
 ||youbora.com^$third-party,domain=aftonbladet.se|svd.se
-||apprl.com/embed/productwidget$subdocument,domain=metromode.se|majaelisabeth.com
+||apprl.com/embed/$subdocument,domain=metromode.se|majaelisabeth.com|trendenser.se
 
 ! Facebook junk
 /facebook_sdk.js$script,domain=radioplay.se|njus.me
@@ -264,6 +269,7 @@
 ||google-analytics.com/analytics.js$script,redirect=google-analytics.com/analytics.js,important,domain=tradera.com
 ||googletagmanager.com/gtm.js?id=$script,redirect=googletagmanager.com/gtm.js,domain=tradera.com,important
 /wp-content/plugins/google-analytics-for-wordpress/*$first-party,important,script,domain=nyhetsbyran.org|katerinamagasin.se
+||tm.tradetracker.net/tag?$script,important,domain=moviezine.se|agneswinqvist.se
 
 ! Unwanted Wordpress plugins
 /plugins/ad-inserter-pro/*$script,stylesheet,domain=rocknytt.net
@@ -630,11 +636,12 @@ fragbite.se##.module:if(h4:has-text(Sponsrat inlägg))
 fragbite.se##.spreadItemCollection:if(.category:has-text(Sponsrat innehåll))
 fragbite.se##.zooKeeper
 ||dynamic.fragbite.se/gfx/campaign/$image
-||blogg.se/public/js/metrics.js^$script
-||newstats.blogg.se/logger.js^$script
-||newstats.blogg.se/collector.js$script
-/BlogPortal/js/stats/blogstat.js$script
-||bloggportalen.se/BlogPortal/view/Statistics^$image
+||blogg.se/public/js/metrics.$script
+||newstats.blogg.se/logger.$script
+||newstats.blogg.se/collector.$script
+||stats.blogg.se^
+/BlogPortal/js/stats/blogstat.$script
+||bloggportalen.se/BlogPortal/view/Statistics$image
 
 ! GAMEREACTOR
 gamereactor.se###eventad
@@ -822,7 +829,6 @@ moviezine.se##.inner_featured:if(.badge:has-text(Sponsrat))
 moviezine.se##.inner_featured:if(.badge:has-text(SPONSRAT))
 moviezine.se##[name="article-advertisment"]
 moviezine.se##.ads
-||tm.tradetracker.net/tag?$script,important,domain=moviezine.se
 fz.se##script:inject(abort-on-property-read.js, Main.Ads.Adblock.getInstance)
 fz.se##.bnr
 fz.se##.content-widget:if(div.fpnih-meta:has-text(Sponsrat))
@@ -1243,3 +1249,4 @@ minsolresa.se,resatillsolen.se##aside#text-5
 /js/external.php^$script,domain=hockeysnack.com
 /pagespeed_static/1.$image,domain=hockeysnack.com
 gotlandswebben.se##.header-ads-wrapper
+@@||saraabrahamsson.se^$generichide
