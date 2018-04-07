@@ -136,9 +136,7 @@
 /sifo_msr.js^$script
 /sifo_analytics.js^$script
 /js/sifo.js^$script
-||youplay.se/*&action=client_side_impression
-||youplay.se/*&action=adblock
-||youplay.se/*&action=ad_requested
+||delivery.youplay.se/report?$image
 /monetization/ads-module/*
 /monetization/pixel-sdk/*
 ||oas.*.se/om/$script
@@ -359,7 +357,7 @@ aftonbladet.se##.share-icons
 aftonbladet.se##html,body:style(overflow: auto !important;)
 aftonbladet.se##script:inject(abort-current-inline-script.js, preLoadAds, loadAd)
 aftonbladet.se##script:inject(abort-current-inline-script.js, preLoadAds, setup)
-aftonbladet.se##script:inject(setTimeout-defuser.js, (), 1000)
+aftonbladet.se##script:inject(setTimeout-defuser.js, onerror, 1000)
 /hyper-assets/*$script,domain=aftonbladet.se
 @@/hyper-assets/app.$script,domain=aftonbladet.se
 @@/hyper-assets/preload.$script,domain=aftonbladet.se
@@ -410,10 +408,11 @@ dn.se##body > iframe[style^="display"]
 /personalized/*$xmlhttprequest,domain=dn.se
 ||auth.dn.se/check-paywall$script
 /advertisement*.js$script,important,domain=dn.se
-||cfcdn.screen9.com^*/streamsense.min.js$script,important,domain=dn.se
+||cfcdn.screen9.com^*/streamsense.$script,important,domain=dn.se
 ||trackjs.com^$third-party,domain=dn.se
-||di.se^*/burt-main.js$script
+||di.se^*/burt-main.$script
 ||di.se/part/ads/$xmlhttprequest
+/Scripts/burt/*$script,domain=di.se
 di.se##script:inject(abort-current-inline-script.js, checkAdBlockEnabled)
 ||personalized.di.se^$xmlhttprequest
 di.se##article.di_teaser--native
@@ -588,6 +587,7 @@ allehanda.se,arbetarbladet.se,bblat.se,avestatidning.com,dalademokraten.se,fager
 vastgotabladet.se,falkopingstidning.se,skaraborgslanstidning.se,skovdenyheter.se,vn.se,jnytt.se,smt.se,smalandsdagblad.se,jp.se,vetlandaposten.se,tranastidning.se,smalanningen.se##div[id^="adonnews"]
 vastgotabladet.se,falkopingstidning.se,skaraborgslanstidning.se,skovdenyheter.se,vn.se,jnytt.se,smt.se,smalandsdagblad.se,jp.se,vetlandaposten.se,tranastidning.se,smalanningen.se###premium-nag-screen
 vastgotabladet.se,falkopingstidning.se,skaraborgslanstidning.se,skovdenyheter.se,vn.se,jnytt.se,smt.se,smalandsdagblad.se,jp.se,vetlandaposten.se,tranastidning.se,smalanningen.se##div.slideshow-in.active:has(.ad-wrapper)
+vastgotabladet.se,falkopingstidning.se,skaraborgslanstidning.se,skovdenyheter.se,vn.se,jnytt.se,smt.se,smalandsdagblad.se,jp.se,vetlandaposten.se,tranastidning.se,smalanningen.se##script:inject(noeval.js)
 
 ! ALMA TALENT
 /annonstorget/*$domain=nyteknik.se|dagensmedia.se|affarsvarlden.se|lag-avtal.se|arbetarskydd.se
