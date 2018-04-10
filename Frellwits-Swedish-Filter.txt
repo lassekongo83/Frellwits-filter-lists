@@ -213,6 +213,7 @@
 .info/svt-se-nyheter/$document
 .info/dagens-nyheter/$document
 .info/tv4-nyheter/$document
+.info/nyheter-tv4/$document
 .info/nyheter24/$document
 .info/sr-nyheter/$document
 .info/tt-nyheter/$document
@@ -238,24 +239,25 @@
 @@/js/advertisement*.js$first-party,script,domain=expressen.se|familjeliv.se
 @@/scripts/advertisement-*.js^$first-party,script,domain=mittkok.expressen.se
 @@/adserver.$first-party,script,domain=fotosidan.se|utsidan.se
-@@/js/ads.js$first-party,domain=alltomtradgard.se|bike.se|klassiker.nu|husbilhusvagn.se|mopedgaraget.se|foretagande.se|kuriren.nu|nsd.se|vt.se|unt.se|helagotland.se|pt.se|mvt.se|nt.se|corren.se|affarsliv.com|folkbladet.se|norrbottensaffarer.se|24kalmar.se|24nybro.se|24emmaboda.se|24halmstad.se|24helsingborg.se|24blekinge.se|24malmo.se|24kristianstad.se|24trelleborg.se|24ystad.se|24uppsala.se|swedroid.se|vibilagare.se|skonahem.com|101ideer.se|tara.se|styleby.nu|topphalsa.se|veckorevyn.com|lantliv.com|amelia.se|naturvetenskap.org|alltforforaldrar.se|deliquate.se|radio.se|ljudochbild.se|ilikeradio.se|godsochgardar.se|gardochtorp.se|hemochantik.se|affarslivgotland.se|eposten.se|klackspark.com|uppsalatidningen.se|johannatoftby.se|mama.nu|damernasvarld.se|madeleineilmrud.se
+@@/js/ads.js$first-party,domain=alltomtradgard.se|bike.se|klassiker.nu|husbilhusvagn.se|mopedgaraget.se|foretagande.se|kuriren.nu|nsd.se|vt.se|unt.se|helagotland.se|pt.se|mvt.se|nt.se|corren.se|affarsliv.com|folkbladet.se|norrbottensaffarer.se|24kalmar.se|24nybro.se|24emmaboda.se|24halmstad.se|24helsingborg.se|24blekinge.se|24malmo.se|24kristianstad.se|24trelleborg.se|24ystad.se|24uppsala.se|swedroid.se|vibilagare.se|skonahem.com|101ideer.se|tara.se|styleby.nu|topphalsa.se|veckorevyn.com|lantliv.com|amelia.se|naturvetenskap.org|alltforforaldrar.se|deliquate.se|radio.se|ljudochbild.se|ilikeradio.se|godsochgardar.se|gardochtorp.se|hemochantik.se|affarslivgotland.se|eposten.se|klackspark.com|uppsalatidningen.se|johannatoftby.se|mama.nu|damernasvarld.se|madeleineilmrud.se|villavarmt.se
 @@/js/advert.$script,domain=nwt.se|sla.se|mariestadstidningen.se
 @@/wp-content/*/adframe.js$first-party,script,domain=vastgotabladet.se|falkopingstidning.se|skaraborgslanstidning.se|skovdenyheter.se|jnytt.se|vn.se|smt.se|smalandsdagblad.se|jp.se|vetlandaposten.se|tranastidning.se|smalanningen.se
 @@/js/ad.js$first-party,domain=sweclockers.com
 @@/js/ad.php^$first-party,domain=99.se|skogstok.se
+@@/ad.php^$script,first-party,domain=temperatur.nu
 @@/js/ads/advert.min.js$script,first-party,domain=spelo.se
 @@/adframe.js$script,first-party,domain=diskant.se|diskantforum.se
 @@/*_adframe.js$script,first-party,domain=fssweden.se
 @@/ads.js^$script,first-party,domain=koket.se
 @@/assets/showAds.js^$script,first-party,domain=skonahem.com|101ideer.se|tara.se|styleby.nu|topphalsa.se|veckorevyn.com|lantliv.com|amelia.se|alltomtradgard.se|godsochgardar.se|gardochtorp.se|hemochantik.se|johannatoftby.se|mama.nu|damernasvarld.se|madeleineilmrud.se
 @@/js/showads.js^$script,first-party,domain=skonahem.com|101ideer.se|tara.se|styleby.nu|topphalsa.se|veckorevyn.com|lantliv.com|amelia.se|alltomtradgard.se|alltommat.se
-@@/advertisement.js$script,first-party,domain=saljplatsen.se|emocore.se|kit.se|blocket.se|spela.se
+@@/advertisement.js$script,first-party,domain=saljplatsen.se|emocore.se|kit.se|blocket.se|spela.se|kaninsajten.se
 @@/adsense.js$script,first-party,domain=nyheter24.se|dayviews.com|fragbite.se|kwiss.me
 @@/js/ads.js^$xmlhttprequest,domain=news55.se
 @@/show_ads.js$script,first-party,domain=happypancake.com
 @@/js/advert.js$script,first-party,domain=burlovsnyheter.se
 @@/ads/ads-*.js$script,first-party,domain=gettyimages.se
-@@/js/advertising.min.js$script,first-party,domain=tekniksmart.se
+@@/js/advertising.$script,first-party,domain=tekniksmart.se|elbilsnytt.se
 @@/js/adsbygoogle.js^$script,first-party,domain=feber.se|tjock.se
 
 ! Common site specific blocking
@@ -308,6 +310,9 @@
 /plugins/content-hub-wp-plugin/assets/js/hub-time-spent.$script
 /plugins/sw_ad_inserter/*$script,stylesheet
 /wp-content/uploads/*/advanced.$script,domain=skanesport.se|datormagazin.se
+/plugins/wppas/*$script,stylesheet,domain=elbilsnytt.se
+/plugins/cookie-notice/*$script,stylesheet
+/plugins/metro-affiliate/*$script,domain=metromode.se
 
 ! JWplayer analytics/ad scripts
 ||ssl.p.jwpcdn.com^*/jwpsrv.js$script,important,domain=eurosport.se|aftonbladet.se|gamereactor.se|svd.se|muscles.se
@@ -1211,7 +1216,7 @@ uppsalanyheter.se##.banneritem
 skillingaryd.nu##.ad
 skillingaryd.nu###more-banners
 ||realtime.co^$websocket,domain=pomu.se
-||allatvkanaler.se/js/js_*.js$script
+||allatvkanaler.se/js/js*.js$script
 ||unitedsverige.se^$csp=script-src 'self' 'unsafe-inline' 'unsafe-eval' *.googleapis.com
 forumbilder.se##a[target="_blank"] > img[src^="/Content/images"]
 /admin-ajax.php?action=advanced-ads-tracking-track$xmlhttprequest,domain=datormagazin.se
@@ -1280,3 +1285,5 @@ claudiagalliconcha.se,paulas.me,cissiochfreddan.se##.ad
 ||reseguiden.se^*/alexandra.ads.$script
 ||reseguiden.se^*/alexandra.banners.$script
 themoviefreak.se##script:inject(remove-attr.js, oncontextmenu)
+radionytt.se###toppannons
+/modules/mod_ijoomla_adagency_zone/*$script,domain=villavarmt.se
