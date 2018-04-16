@@ -212,6 +212,7 @@
 /bmb-related-teasers$xmlhttprequest
 ||es.loppi.se/api/imp$xmlhttprequest
 ||kayak.xno.se^$script
+||service.survio.se^*/registerhit?$image
 
 ! Scams and malicious content
 .info/svt-se-nyheter/$document
@@ -279,6 +280,7 @@
 ||herokuapp.com^$third-party,domain=aftonbladet.se
 ||youbora.com^$third-party,domain=aftonbladet.se|svd.se
 ||apprl.com/embed/$subdocument,domain=metromode.se|majaelisabeth.com|trendenser.se
+||pji.nu^$third-party,domain=nordichardware.se|minhembio.com|idg.se
 
 ! Facebook junk
 /facebook_sdk.js$script,domain=radioplay.se|njus.me
@@ -371,6 +373,9 @@ svd.se##.Teaser-adLabel
 svd.se##.Teaser--fullAdLabel
 svd.se###AdSplashOverlayWindow
 svd.se##.ContentLayout-extraColumnAd
+!svd.se#@#script:inject(abort-on-property-write.js, SvD)
+!svd.se##script:inject(addEventListener-defuser.js, error)
+!svd.se##script:inject(addEventListener-defuser.js, load)
 ||svd.se^*/native-article$xmlhttprequest,first-party
 /infopeek.min.js$domain=svd.se
 /pulse_flash_ad*.swf$object,domain=svd.se
@@ -393,6 +398,7 @@ aftonbladet.se##script:inject(abort-current-inline-script.js, preLoadAds, loadAd
 aftonbladet.se##script:inject(abort-current-inline-script.js, preLoadAds, setup)
 aftonbladet.se##script:inject(setTimeout-defuser.js, onerror, 1000)
 @@||aftonbladet.se^$generichide
+@@||ad*.vg.no/check.js$script,domain=bloggar.aftonbladet.se
 /pulse-sdk-html*.min.js$script,domain=aftonbladet.se|svd.se
 omni.se##article.article--sponsored
 ||omni-ads.omni.news^
@@ -838,7 +844,6 @@ thereselindgren.se,gynning.net,ellinorlofgren.se,majaelisabeth.com,annsoderlund.
 majaelisabeth.com##.apprl-title
 
 ! ÖVRIGT
-||pji.nu^$third-party,domain=nordichardware.se|minhembio.com
 nordichardware.se##div.td_block_text_with_title:if(h4 > span:has-text(Från Surfa))
 nordichardware.se##.wpb_text_column:has(.surfamodul-blocktitle)
 nordichardware.se##.td_block_wrap:if(span:has-text(/^Sponsrat/))
