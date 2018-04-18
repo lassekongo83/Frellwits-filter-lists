@@ -248,7 +248,7 @@
 
 ! Site specific whitelists
 @@/js/advertisement.$first-party,script,domain=devote.se|brollopstorget.se|feber.se|tjock.se
-@@/js/advertisement*.js$first-party,script,domain=expressen.se|familjeliv.se
+@@/js/advertisement*.js$first-party,script,domain=expressen.se|familjeliv.se|skyddsombud24.se
 @@/scripts/advertisement-*.js^$first-party,script,domain=mittkok.expressen.se
 @@/adserver.$first-party,script,domain=fotosidan.se|utsidan.se
 @@/js/ads.js$first-party,domain=alltomtradgard.se|bike.se|klassiker.nu|husbilhusvagn.se|mopedgaraget.se|foretagande.se|kuriren.nu|nsd.se|vt.se|unt.se|helagotland.se|pt.se|mvt.se|nt.se|corren.se|affarsliv.com|folkbladet.se|norrbottensaffarer.se|24kalmar.se|24nybro.se|24emmaboda.se|24halmstad.se|24helsingborg.se|24blekinge.se|24malmo.se|24kristianstad.se|24trelleborg.se|24ystad.se|24uppsala.se|swedroid.se|vibilagare.se|skonahem.com|101ideer.se|tara.se|styleby.nu|topphalsa.se|veckorevyn.com|lantliv.com|amelia.se|naturvetenskap.org|alltforforaldrar.se|deliquate.se|radio.se|ljudochbild.se|ilikeradio.se|godsochgardar.se|gardochtorp.se|hemochantik.se|affarslivgotland.se|eposten.se|klackspark.com|uppsalatidningen.se|johannatoftby.se|mama.nu|damernasvarld.se|madeleineilmrud.se|villavarmt.se|magdalenagraaf.se
@@ -317,7 +317,7 @@
 /plugins/blog-analytics/*$domain=dagensanalys.se
 /plugins/cookie-law-info/js/cookielawinfo.js^$script
 /plugins/convertplug/*$script,stylesheet,domain=samnytt.se
-/plugins/ad-blocking-advisor/*$stylesheet,domain=naturvetenskap.org
+/plugins/ad-blocking-advisor/*$script,stylesheet,domain=naturvetenskap.org|deliquate.se
 /plugins/uk-cookie-consent/*$script,stylesheet
 /plugins/better-adsmanager/*$script,stylesheet
 /plugins/sticky-facebook-banner/*$script,domain=sportbibeln.se|newsner.com|humorbibeln.se
@@ -332,6 +332,8 @@
 /wp-content/plugins/easy-social-share-buttons$script,stylesheet
 /plugins/sdcookie-warning/*$script,stylesheet
 /plugins/se-wordpress-cookie-notice/*
+/plugins/easy-eu-cookie-law/*
+/plugins/wysija-newsletters/*
 
 ! JWplayer analytics/ad scripts
 ||ssl.p.jwpcdn.com^*/jwpsrv.js$script,important,domain=eurosport.se|aftonbladet.se|gamereactor.se|svd.se|muscles.se
@@ -1203,10 +1205,9 @@ mytaste.se##div[id*="panorama_"]
 newsner.com,humorbibeln.se###wsfb-container
 newsner.com,humorbibeln.se###share-buttons
 newsner.com,humorbibeln.se##.inline-share-buttons
-newsner.com,humorbibeln.se##script:inject(abort-on-property-write.js, advadsTracker)
+newsner.com,humorbibeln.se,hightechguiden.se##script:inject(abort-on-property-write.js, advadsTracker)
 newsner.com,humorbibeln.se##script:inject(abort-on-property-write.js, advads_passive_ads)
 @@||humorbibeln.se^$generichide
-/ad-blocking-advisor.js$script,domain=deliquate.se
 njus.me##.article-list-item--sponsored
 /campaigns/addArticleImpression/*$xmlhttprequest,domain=njus.me
 ||njus.me/files/analytics.js$script
@@ -1318,3 +1319,8 @@ svensktidskrift.se###bannercolumn
 skogsforum.se##.masthead
 skogsforum.se##.col-right
 skogsforum.se##a[href^="https://goo.gl/"]
+/integrated_ads/*$script,domain=garaget.org
+garaget.org###gorgad-horizontal-top
+||noterat.nu/wp-content/uploads/*.js?ver$script
+@@||hightechguiden.se^$generichide
+hightechguiden.se##script:inject(abort-on-property-write.js, document.oncontextmenu)
