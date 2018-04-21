@@ -28,6 +28,7 @@
 ||audience.systems^$third-party
 ||bellmetric.net^$third-party
 ||bettersales.se^$subdocument,third-party
+||bettingstugan.se^$third-party
 ||blocket.se^$third-party
 ||bloglovin.com/widget/$third-party
 ||boende.se^$third-party
@@ -253,6 +254,7 @@
 ##.swp-ad-strossle
 ##.sw-popular__article--ad
 ###cookie_approve_banner
+##a[href$=".se/go/betsafe"]
 
 ! Site specific whitelists
 @@/js/advertisement.$first-party,script,domain=devote.se|brollopstorget.se|feber.se|tjock.se
@@ -318,7 +320,7 @@
 ||google-analytics.com/ga.js$script,important,redirect=google-analytics.com/ga.js,domain=aftonbladet.se
 ||google-analytics.com/analytics.js$script,redirect=google-analytics.com/analytics.js,important,domain=tradera.com
 ||googletagmanager.com/gtm.js?id=$script,redirect=googletagmanager.com/gtm.js,domain=tradera.com,important
-/wp-content/plugins/google-analytics-for-wordpress/*$first-party,important,script,domain=nyhetsbyran.org|katerinamagasin.se|vegokak.se
+/wp-content/plugins/google-analytics-for-wordpress/*$first-party,important,script,domain=nyhetsbyran.org|katerinamagasin.se|vegokak.se|sportpanelen.se
 /wp-content/plugins/google-analytics-premium/*$first-party,important,script,domain=newsner.com|humorbibeln.se
 ||tm.tradetracker.net/tag?$script,important,domain=moviezine.se|agneswinqvist.se|enkelteknik.se
 
@@ -868,6 +870,17 @@ gynning.net##[id^="post-"]:if(h3:has-text(I SAMARBETE MED))
 thereselindgren.se,gynning.net,ellinorlofgren.se,majaelisabeth.com,annsoderlund.com,sannafischer.se,teresagrundin.se,sannalundell.se,frureinhold.se,fridaselkirkblogg.se,akerstromsblog.com,emmagreen.se,pennyparnevik.com,hormonerhemorrojder.se,fokis.se,pingishadenius.com,fredagskocken.se,magnusnorman.com##[id^="post-"]:has(.sponsored-notification)
 majaelisabeth.com##.apprl-title
 
+! TOURN
+/urls/count.json$script,domain=kenzas.se
+/lib/js/sticky.$script,stylesheet,domain=kenzas.se
+||lightwidget.com^$third-party,domain=femme.se
+kissies.se##article[id^="post-"]:has(img[class*="wp-image"][height="62"])
+kissies.se##article[id^="post-"]:if(strong:has-text(Sponsrat av))
+kenzas.se##article[data-text*="In collaboration with"]
+alexandrabring.se,biancaingrosso.se##article[id^="post-"]:if(em:has-text(I samarbete med))
+alexandrabring.se##.PW_instagram_widget
+victoriatornegren.se##article[id^="post-"]:if(.entry-subtitle:has-text(I samarbete med))
+
 ! ÖVRIGT
 nordichardware.se##div.td_block_text_with_title:if(h4 > span:has-text(Från Surfa))
 nordichardware.se##.wpb_text_column:has(.surfamodul-blocktitle)
@@ -1278,8 +1291,6 @@ landleyskok.se##.banner-leaderboard
 landleyskok.se##.category-sponsrat-inlagg
 professionalsecrets.se##div[data-campaign="newsletter"]
 /a?callback=pfMod.saveAdSettings$script,domain=zeinaskitchen.se
-kissies.se##article[id^="post-"]:has(img[class*="wp-image"][height="62"])
-kissies.se##article[id^="post-"]:if(strong:has-text(Sponsrat av))
 dagensvimmerby.se##.insideAd
 dagensvimmerby.se##.annonsKolumn
 dagensvimmerby.se##.panoramaAnnons
@@ -1335,3 +1346,6 @@ garaget.org###gorgad-horizontal-top
 hightechguiden.se##script:inject(abort-on-property-write.js, document.oncontextmenu)
 /pum/pum-site-scripts.$script,domain=tkj.se
 professionalsecrets.se##script:inject(abort-current-inline-script.js, $, fancybox)
+sportpanelen.se##.stream-item-above-post:has(a[href*="/ads."])
+sportpanelen.se###text-html-widget-3
+sportpanelen.se###tie-block_1832
