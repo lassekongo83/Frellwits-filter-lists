@@ -56,7 +56,7 @@ KNOWNOPTIONS = ("collapse", "csp", "document", "elemhide",
                 "font", "genericblock", "generichide", "image", "match-case",
                 "object", "media", "object-subrequest", "other", "ping", "popup", 
                 "script", "stylesheet", "subdocument", "third-party", "first-party", 
-		"websocket", "webrtc", "xmlhttprequest", "important", "redirect=googletagmanager.com/gtm.js", 
+                "websocket", "webrtc", "xmlhttprequest", "important", "redirect=googletagmanager.com/gtm.js", 
                 "redirect=google-analytics.com/ga.js", "redirect=google-analytics.com/analytics.js", 
                 "redirect=noopjs", "redirect=nooptext", "redirect=noopmp3-0.1s", "redirect=noopmp4-1s")
 
