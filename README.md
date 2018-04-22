@@ -1,5 +1,5 @@
 # Frellwit's filter lists
-Various filter lists for your adblock extension. 
+Various filter lists for [uBlock Origin](https://github.com/gorhill/uBlock).
 
 ## Available lists
 
