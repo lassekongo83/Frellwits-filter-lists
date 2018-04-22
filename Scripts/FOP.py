@@ -57,8 +57,8 @@ KNOWNOPTIONS = ("collapse", "csp", "document", "elemhide",
                 "object", "media", "object-subrequest", "other", "ping", "popup", 
                 "script", "stylesheet", "subdocument", "third-party", "first-party", 
 		"websocket", "webrtc", "xmlhttprequest", "important", "redirect=googletagmanager.com/gtm.js", 
-		"redirect=google-analytics.com/ga.js", "redirect=google-analytics.com/analytics.js", 
-		"redirect=noopjs", "redirect=nooptext", "redirect=noopmp3-0.1s", "redirect=noopmp4-1s")
+                "redirect=google-analytics.com/ga.js", "redirect=google-analytics.com/analytics.js", 
+                "redirect=noopjs", "redirect=nooptext", "redirect=noopmp3-0.1s", "redirect=noopmp4-1s")
 
 # List the supported revision control system commands
 REPODEF = collections.namedtuple("repodef", "name, directory, locationoption, repodirectoryoption, checkchanges, difference, commit, pull, push")
