@@ -1,4 +1,4 @@
-Issues can be opened in English, Swedish, Norwegian or Danish.
+Issues can be opened in Swedish, English, Norwegian or Danish.
 
 Replace the bracketed [...] placeholders with your own information.
 
