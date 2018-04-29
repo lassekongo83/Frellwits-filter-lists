@@ -1,0 +1,82 @@
+% Scriptlet filters for more advanced stuff
+
+% Scams, badware, cryptojacking, general abuse
+cornucopia.cornubot.se,peak-oil.se,apg29.nu,zaramis.se,horoskop.nu,blogspot.se,nyhetswebben.se,emanuelkarlsten.se,uvell.se,supermiljobloggen.se,swedishprepper.com,genusdebatten.se,vaken.se,solrosuppropet.se,toklandet.wordpress.com,experimentlandet.blogg.se,allmogen.org,lindelof.nu,sempermiles.se,opendata.se,hoforsbloggen.se,lindqvist.com,vargfakta.se,forenadebolag.se,xn--blljus-jua.se,frihetssmedjan.se,sysadmindagen.se,tjuvlyssnat.se,b19.se##script:inject(remove-attr.js, onerror)
+
+% IDG
+idg.se##script:inject(abort-on-property-read.js, pbjs.addAdUnits)
+idg.se##script:inject(abort-on-property-read.js, PREBID_TIMEOUT)
+
+% STAMPEN
+bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##script:inject(abort-current-inline-script.js, headerScripts, checkAdBlockers)
+bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##script:inject(abort-current-inline-script.js, adblockcookieExpire)
+bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##script:inject(abort-on-property-read.js, siteScripts.initAds)
+
+% SCHIBSTED
+aftonbladet.se##script:inject(abort-current-inline-script.js, preLoadAds, loadAd)
+aftonbladet.se##script:inject(abort-current-inline-script.js, preLoadAds, setup)
+aftonbladet.se##script:inject(setTimeout-defuser.js, onerror, 1000)
+% Possibly a better fix. Needs more testing.
+% svd.se#@#script:inject(abort-on-property-write.js, SvD)
+% svd.se##script:inject(addEventListener-defuser.js, error)
+% svd.se##script:inject(addEventListener-defuser.js, load)
+klart.se##script:inject(abort-on-property-read.js, blockAdBlock)
+
+% BONNIER
+dn.se##script:inject(setTimeout-defuser.js, bait)
+dn.se##script:inject(setTimeout-defuser.js, BlockAdBlock)
+dn.se##script:inject(abort-on-property-write.js, BlockAdBlock)
+di.se##script:inject(abort-current-inline-script.js, checkAdBlockEnabled)
+mittkok.expressen.se##script:inject(abort-current-inline-script.js, adblock)
+mittkok.expressen.se##script:inject(abort-current-inline-script.js, burtSegments)
+mittkok.expressen.se##script:inject(abort-current-inline-script.js, ExpressenAnalytics, push)
+feber.se##script:inject(set-constant.js, showReklam, false)
+
+% NTM
+affarsliv.com,affarslivgotland.se,corren.se,eposten.se,folkbladet.se,helagotland.se,klackspark.com,kuriren.nu,mvt.se,norrbottensaffarer.se,nsd.se,nt.se,pt.se,unt.se,vt.se##script:inject(abort-current-inline-script.js, adn, renderComposedAds)
+
+% GOTA MEDIA/MK WEBB/NWT
+7ha.se,barometern.se,blt.se,bt.se,kristianstadsbladet.se,olandsbladet.se,ostrasmaland.se,smp.se,sydostran.se,trelleborgsallehanda.se,ut.se,ystadsallehanda.se##script:inject(abort-on-property-write.js, adTags)
+7ha.se,barometern.se,blt.se,bt.se,kristianstadsbladet.se,olandsbladet.se,ostrasmaland.se,smp.se,sydostran.se,trelleborgsallehanda.se,ut.se,ystadsallehanda.se##script:inject(abort-on-property-write.js, cX.callQueue)
+skd.se,laholmstidning.se,nsk.se##script:inject(abort-current-inline-script.js, ERWP, fif)
+vf.se##script:inject(set-constant.js, adblock, false)
+
+% MITTMEDIA
+allehanda.se,arbetarbladet.se,avestatidning.com,bblat.se,dalademokraten.se,fagersta-posten.se,gd.se,lt.se,ltz.se,na.se,norrteljetidning.se,nynashamnsposten.se,op.se,salaallehanda.com,st.nu,tidningenharjedalen.se,vlt.se##script:inject(abort-on-property-read.js, adsQueue.push)
+allehanda.se,arbetarbladet.se,avestatidning.com,bblat.se,dalademokraten.se,fagersta-posten.se,gd.se,lt.se,ltz.se,na.se,norrteljetidning.se,nynashamnsposten.se,op.se,salaallehanda.com,st.nu,tidningenharjedalen.se,vlt.se##script:inject(abort-on-property-read.js, oas_tag)
+
+% NYHETER24GRUPPEN
+dayviews.com##script:inject(abort-on-property-read.js, _sp_)
+
+% GAMEREACTOR
+gamereactor.se##script:inject(abort-current-inline-script.js, detectAdblockUser)
+
+% ALLER MEDIA
+allakorsord.se,allas.se,allers.se,antikochauktion.se,aretrunt.se,baaam.se,cafe.se,dromhemochtradgard.se,elle.se,elledecoration.se,ellematovin.se,femina.se,frida.se,hant.se,hemmets.se,mabra.com,matmagasinet.se,residencemagazine.se,svenskdam.se##script:inject(abort-on-property-read.js, pbjsChunk)
+allakorsord.se,allas.se,allers.se,antikochauktion.se,aretrunt.se,baaam.se,cafe.se,dromhemochtradgard.se,elle.se,elledecoration.se,ellematovin.se,femina.se,frida.se,hant.se,hemmets.se,mabra.com,matmagasinet.se,residencemagazine.se,svenskdam.se##script:inject(abort-on-property-write.js, adblockDetector)
+allakorsord.se,allas.se,allers.se,antikochauktion.se,aretrunt.se,baaam.se,cafe.se,dromhemochtradgard.se,elle.se,elledecoration.se,ellematovin.se,femina.se,frida.se,hant.se,hemmets.se,mabra.com,matmagasinet.se,residencemagazine.se,svenskdam.se##script:inject(abort-on-property-write.js, newsletterHtml)
+allakorsord.se,allas.se,allers.se,antikochauktion.se,aretrunt.se,baaam.se,cafe.se,dromhemochtradgard.se,elle.se,elledecoration.se,ellematovin.se,femina.se,frida.se,hant.se,hemmets.se,mabra.com,matmagasinet.se,residencemagazine.se,svenskdam.se##script:inject(abort-on-property-write.js, socializerVars)
+
+% EGMONT PUBLISHING
+mestmotor.se##script:inject(abort-current-inline-script.js, setNptTechAdblockerCookie)
+
+% UNSORTED
+fz.se##script:inject(abort-on-property-read.js, Main.Ads.Adblock.getInstance)
+eniro.se##script:inject(abort-current-inline-script.js, $, WebAnalytics)
+motormagasinet.se,skyddosakerhet.se,dagenshandel.se##script:inject(abort-current-inline-script.js, openNewsletterPopup)
+altinget.se##script:inject(setTimeout-defuser.js, show_popup)
+missatsamtal.se##script:inject(abort-on-property-write.js, _gaq)
+dagensps.se##script:inject(abort-on-property-write.js, FloadCmatchIfr)
+magasinetparagraf.se##script:inject(abort-current-inline-script.js, _stq)
+evertiq.se##script:inject(addEventListener-defuser.js, /^(click|mouseover|)/, t)
+businessclass.se##script:inject(abort-current-inline-script.js, $, AdBlockDetector)
+letsdeal.se##script:inject(overlay-buster.js)
+newsner.com,humorbibeln.se,hightechguiden.se##script:inject(abort-on-property-write.js, advadsTracker)
+newsner.com,humorbibeln.se##script:inject(abort-on-property-write.js, advads_passive_ads)
+datormagazin.se##script:inject(abort-current-inline-script.js, advadsGATracking)
+datormagazin.se,skanesport.se##script:inject(abort-current-inline-script.js, advanced_ads_ready)
+skanesport.se##script:inject(abort-current-inline-script.js, advanced_ads_adsense_UID)
+ica.se##script:inject(abort-current-inline-script.js, $, .recipe-ad.multiple-sponsors)
+themoviefreak.se##script:inject(remove-attr.js, oncontextmenu)
+hightechguiden.se##script:inject(abort-on-property-write.js, document.oncontextmenu)
+professionalsecrets.se##script:inject(abort-current-inline-script.js, $, fancybox)

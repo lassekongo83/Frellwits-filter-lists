@@ -48,8 +48,7 @@ BLANKPATTERN = re.compile(r"^\s*$")
 COMMITPATTERN = re.compile(r"^(A|M|P)\:\s(\((.+)\)\s)?(.*)$")
 
 # List the files that should not be sorted, either because they have a special sorting system or because they are not filter files
-IGNORE = ("CC-BY-SA.txt", "easytest.txt", "GPL.txt", "MPL.txt",
-          "enhancedstats-addon.txt", "fanboy-tracking", "firefox-regional", "other")
+IGNORE = ("LICENSE", "README.md", "ISSUE_TEMPLATE.md", "emoji-filter.txt", "deviantJUNKfilter.txt", "Swedish", "Scripts", ".git")
 
 # List all Adblock Plus/uBO options (excepting domain, which is handled separately), as of version 1.3.9
 KNOWNOPTIONS = ("collapse", "csp", "document", "elemhide",
@@ -62,9 +61,6 @@ KNOWNOPTIONS = ("collapse", "csp", "document", "elemhide",
 
 # List the supported revision control system commands
 REPODEF = collections.namedtuple("repodef", "name, directory, locationoption, repodirectoryoption, checkchanges, difference, commit, pull, push")
-GIT = REPODEF(["git"], "./.git/", "--work-tree=", "--git-dir=", ["status", "-s", "--untracked-files=no"], ["diff"], ["commit", "-a", "-m"], ["pull"], ["push"])
-HG = REPODEF(["hg"], "./.hg/", "-R", None, ["stat", "-q"], ["diff"], ["commit", "-m"], ["pull"], ["push"])
-REPOTYPES = (GIT, HG)
 
 def start ():
     """ Print a greeting message and run FOP in the directories
@@ -96,10 +92,7 @@ def main (location):
 
     # Set the repository type based on hidden directories
     repository = None
-    for repotype in REPOTYPES:
-        if os.path.isdir(os.path.join(location, repotype.directory)):
-            repository = repotype
-            break
+
     # If this is a repository, record the initial changes; if this fails, give up trying to use the repository
     if repository:
         try:
@@ -142,8 +135,8 @@ def main (location):
                     pass
 
     # If in a repository, offer to commit any changes
-    if repository:
-        commit(repository, basecommand, originaldifference)
+    """ if repository:
+        commit(repository, basecommand, originaldifference) """
 
 def fopsort (filename):
     """ Sort the sections of the file and save any modifications."""
@@ -305,65 +298,22 @@ def elementtidy (domains, separator, selector):
         ac = untag.group(5)
         selector = selector.replace("{before}{untag}{after}".format(before = bc, untag = untagname, after = ac), "{before}{after}".format(before = bc, after = ac), 1)
     # Make the remaining tags lower case wherever possible
-    for tag in each(SELECTORPATTERN, selector):
+    """ for tag in each(SELECTORPATTERN, selector):
         tagname = tag.group(1)
         if tagname in selectoronlystrings or not tagname in selectorwithoutstrings: continue
         if re.search(UNICODESELECTOR, selectorwithoutstrings) != None: break
         ac = tag.group(3)
         if ac == None:
             ac = tag.group(4)
-        selector = selector.replace("{tag}{after}".format(tag = tagname, after = ac), "{tag}{after}".format(tag = tagname.lower(), after = ac), 1)
+        selector = selector.replace("{tag}{after}".format(tag = tagname, after = ac), "{tag}{after}".format(tag = tagname.lower(), after = ac), 1) """
     # Make pseudo classes lower case where possible
-    for pseudo in each(PSEUDOPATTERN, selector):
+    """ for pseudo in each(PSEUDOPATTERN, selector):
         pseudoclass = pseudo.group(1)
         if pseudoclass in selectoronlystrings or not pseudoclass in selectorwithoutstrings: continue
         ac = pseudo.group(3)
-        selector = selector.replace("{pclass}{after}".format(pclass = pseudoclass, after = ac), "{pclass}{after}".format(pclass = pseudoclass.lower(), after = ac), 1)
+        selector = selector.replace("{pclass}{after}".format(pclass = pseudoclass, after = ac), "{pclass}{after}".format(pclass = pseudoclass.lower(), after = ac), 1) """
     # Remove the markers from the beginning and end of the selector and return the complete rule
     return "{domain}{separator}{selector}".format(domain = domains, separator = separator, selector = selector[1:-1])
-
-def commit (repository, basecommand, userchanges):
-    """ Commit changes to a repository using the commands provided."""
-    difference = subprocess.check_output(basecommand + repository.difference)
-    if not difference:
-        print("\nNo changes have been recorded by the repository.")
-        return
-    print("\nThe following changes have been recorded by the repository:")
-    try:
-        print(difference.decode("utf-8"))
-    except UnicodeEncodeError:
-        print("\nERROR: DIFF CONTAINED UNKNOWN CHARACTER(S). Showing unformatted diff instead:\n");
-        print(difference)
-
-    try:
-        # Persistently request a suitable comment
-        while True:
-            comment = input("Please enter a valid commit comment or quit:\n")
-            if checkcomment(comment, userchanges):
-                break
-    # Allow users to abort the commit process if they do not approve of the changes
-    except (KeyboardInterrupt, SystemExit):
-        print("\nCommit aborted.")
-        return
-
-    print("Comment \"{comment}\" accepted.".format(comment = comment))
-    try:
-        # Commit the changes
-        command = basecommand + repository.commit + [comment]
-        subprocess.Popen(command).communicate()
-        print("\nConnecting to server. Please enter your password if required.")
-        # Update the server repository as required by the revision control system
-        for command in repository[7:]:
-            command = basecommand + command
-            subprocess.Popen(command).communicate()
-            print()
-    except(subprocess.CalledProcessError):
-        print("Unexpected error with the command \"{command}\".".format(command = command))
-        raise subprocess.CalledProcessError("Aborting FOP.")
-    except(OSError):
-        print("Unexpected error with the command \"{command}\".".format(command = command))
-        raise OSError("Aborting FOP.")
-    print("Completed commit process successfully.")
 
 def isglobalelement (domains):
     """ Check whether all domains are negations."""

@@ -1,9 +1,13 @@
-Placeholder folder for now.
+The source files before being combined into the main Swedish list. Subscribing to these files individually is not recommended.
 
-TODO:
+#### network-filters.txt
 
-1. Seperate the filter into different files for each filter type.
+Here goes anything related to blocking, redirecting, or whitelisting network requests.
 
-2. Create a script to minify the files into the main filter.
+#### cosmetic-filters.txt
 
-3. Add `!#include` for the extended uBO filters.
+CSS filters and element hiding.
+
+#### scriptlet-filters.txt
+
+uBO extended scriptlet filters for more advanced stuff.
