@@ -11,7 +11,7 @@ Jag accepterar inga donationer, *enbart bra pull requests som plockar bort mer s
 
 Denna listan är skriven specifikt för uBlock Origin, därför finns det ingen garanti på att den kommer fungera i någon annan blockerare än just uBlock Origin.
 
-För att ta nytta av uBlock Origins högre effektivitet, så är det inte rekommenderat att använda andra blockerare samtidigt (som till exempel Adblock Plus eller Ghostery). uBlock Origin kommer att blockera lika bra eller bättre än andra populära annonsblockerare. Andra blockerare kan också förhindra att uBlock Origins funktioner ej fungerar korrekt.
+För att dra nytta av uBlock Origins högre effektivitet, så är det inte rekommenderat att använda andra blockerare samtidigt (som till exempel Adblock Plus eller Ghostery). uBlock Origin kommer att blockera lika bra eller bättre än andra populära annonsblockerare. Andra blockerare kan också förhindra att uBlock Origins funktioner ej fungerar korrekt.
 
 Listan är testat tillsammans med uBlock Origins orginalinställningar. Då används dessa listor: *EasyList, EasyPrivacy, Peter Lowe's Ad server list, Malware Domain List, Malware domains och uBlock Origins egna listor.*
 Listan bör även fungera bra tillsammans med *Fanboy's* alla listor. Det finns en alltid en liten möjlighet att vissa konflikter kan uppstå tillsammans med andra listor.
