@@ -4,12 +4,13 @@ Note: This is information for Swedish visitors to this repo regarding the Swedis
 
 ### Information till användare
 
-**Frellwit's Swedish Filter** finns främst till för att plocka bort annonser, spårning, irritationer, lurendrejerier, bloat på **svenska** webbsidor.
+**Frellwit's Swedish Filter** finns främst till för att plocka bort annonser, spårning, irritationer, lurendrejerier och bloat på **svenska** webbsidor.
 
 **Listan har ingen politisk eller ekonomisk motivation bakom sig.**
 Jag accepterar inga donationer, *enbart bra pull requests som plockar bort mer skräp från webben.* :-)
 
 Denna listan är skriven specifikt för uBlock Origin, därför finns det ingen garanti på att den kommer fungera i någon annan blockerare än just uBlock Origin.
+
 För att ta nytta av uBlock Origins högre effektivitet, så är det inte rekommenderat att använda andra blockerare samtidigt (som till exempel Adblock Plus eller Ghostery). uBlock Origin kommer att blockera lika bra eller bättre än andra populära annonsblockerare. Andra blockerare kan också förhindra att uBlock Origins funktioner ej fungerar korrekt.
 
 Listan är testat tillsammans med uBlock Origins orginalinställningar. Då används dessa listor: *EasyList, EasyPrivacy, Peter Lowe's Ad server list, Malware Domain List, Malware domains och uBlock Origins egna listor.*
@@ -52,6 +53,6 @@ Lurendrejerier och skadliga saker som försöker:
 
 **Listan plockar ej bort allt av det ovannämda.** Jag försöker få listan till att plocka bort det som går och det jag hinner med, men vissa saker kan slinka förbi i alla fall. Upptäcks något jag har missat på någon svensk webbsida så öppna en ny issue här på GitHub och följ [problemmallen](https://github.com/lassekongo83/Frellwits-filter-lists/blob/master/ISSUE_TEMPLATE.md).
 
-Jag försöker aldrig medvetet förstöra funktionaliteten eller censurera någon webbsida. Filtren skrivs så gott det går enligt min förmåga och vad som hinns med. **Målet är att sidorna ska fungera så normalt som möjligt, fast utan ovannämda punkter.** Fungerar något inte korrekt så kan du öppna en ny issue här på GitHub så tar jag hand om det så fort jag hinner. (Glöm dock ej att följa [problemmallen](https://github.com/lassekongo83/Frellwits-filter-lists/blob/master/ISSUE_TEMPLATE.md))
+Jag försöker aldrig medvetet förstöra funktionaliteten eller censurera någon webbsida. Filtren skrivs så gott det går enligt min förmåga och vad som hinns med. **Målet är att sidorna ska fungera så normalt som möjligt, fast utan reklam, spårning, annoyances och bloat.** Fungerar något inte korrekt så kan du öppna en ny issue här på GitHub så tar jag hand om det så fort jag hinner. (Glöm dock ej att följa [problemmallen](https://github.com/lassekongo83/Frellwits-filter-lists/blob/master/ISSUE_TEMPLATE.md)).
 
 Vill du bidra med filter så kan du skicka en pull request. Tänk på att följa ovannämda punkter.
