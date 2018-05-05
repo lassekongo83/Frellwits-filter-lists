@@ -1,6 +1,6 @@
 Issues can be opened in Swedish, English, Norwegian or Danish.
 
-Important: Add all links in new issues and comments within these `backticks`. If the URL is clickable it's easier to track the issue for those who may have an interest in countering the filters being added. Though there's no guarantee that won't happen anyways.
+**Important:** Add all links in new issues and comments within these `backticks`. If the URL is clickable it's easier to track the issue for those who may have an interest in countering the filters being added. Though there's no guarantee that won't happen anyways.
 
 Replace the bracketed [...] placeholders with your own information.
 
