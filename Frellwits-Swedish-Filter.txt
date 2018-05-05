@@ -297,6 +297,9 @@
 ##.cookie-banner-section
 ##.cookie-container
 ###cookie-line
+##.cookies-info
+##.cookie-holder
+##.cookiebar
 ##.notification--cookie
 ###catapult-cookie-bar
 ##.adtoma_container
@@ -329,13 +332,14 @@
 @@/js/advert.$script,domain=mariestadstidningen.se|nwt.se|sla.se
 @@/js/advert.js$first-party,script,domain=burlovsnyheter.se
 @@/js/advertisement*.$first-party,script,domain=brollopstorget.se|devote.se|expressen.se|familjeliv.se|feber.se|skyddsombud24.se|tjock.se
-@@/js/advertising.$first-party,script,domain=byggnadsarbetaren.se|elbilsnytt.se|tekniksmart.se
+@@/js/advertising.$first-party,script,domain=byggnadsarbetaren.se|elbilsnytt.se
 @@/js/showads.js^$first-party,script,domain=101ideer.se|alltomtradgard.se|amelia.se|lantliv.com|skonahem.com|styleby.nu|tara.se|topphalsa.se|veckorevyn.com
 @@/scripts/advertisement*.$first-party,script,domain=expressen.se
 @@/show_ads.js$first-party,script,domain=happypancake.com
 @@/wp-content/*/adframe.js$first-party,script,domain=falkopingstidning.se|jnytt.se|jp.se|skaraborgslanstidning.se|skovdenyheter.se|smalandsdagblad.se|smalanningen.se|smt.se|tranastidning.se|vastgotabladet.se|vetlandaposten.se|vn.se
 @@||assets-cdn.mytaste.org/js/ads.js$script
 @@||freeride.nu/js/ads.js^$script,domain=freeride.se|happyride.se
+@@||kxcdn.com/wp-content/plugins/better-adsmanager/js/advertising.$script,domain=tekniksmart.se
 
 ! Unbreak
 avanza.se#@#a[title="LeoVegas"]
@@ -362,7 +366,7 @@ avanza.se#@#a[title="LeoVegas"]
 ||apprl.com/embed/$subdocument,domain=majaelisabeth.com|metromode.se|trendenser.se
 ||herokuapp.com^$third-party,domain=aftonbladet.se
 ||ooul.tv^*/aab/$redirect=noopjs,script,domain=aftonbladet.se
-||pji.nu^$third-party,domain=idg.se|minhembio.com|nordichardware.se
+||pji.nu^$third-party,domain=idg.se|minhembio.com|nordichardware.se|99.se|fz.se|sweclockers.com
 ||youbora.com^$third-party,domain=aftonbladet.se|svd.se
 
 ! Facebook junk
@@ -493,7 +497,7 @@ aftonbladet.se##script:inject(abort-current-inline-script.js, preLoadAds, setup)
 aftonbladet.se##script:inject(setTimeout-defuser.js, onerror, 1000)
 @@||aftonbladet.se^$generichide
 @@||ad*.vg.no/check.js$script,domain=bloggar.aftonbladet.se
-/pulse-sdk-html*.min.js$script,domain=aftonbladet.se|svd.se
+||schibsted.io/oo/$script,domain=aftonbladet.se|svd.se
 omni.se##article.article--sponsored
 ||omni-ads.omni.news^
 tv.nu##a[href*="adform.net"]
@@ -567,6 +571,7 @@ di.se##.di_start__insider-ad
 di.se##.di_panorama__isAdLabel
 expressen.se###rich-media-ads
 expressen.se##.native-ad-teaser
+expressen.se##.teaser--sponsored
 expressen.se##.teaser:if(.vignette:has-text(Erbjudande från))
 expressen.se##.slot:if(header:has-text(Erbjudande från))
 expressen.se##a[href*="/annons"]
@@ -613,6 +618,7 @@ koket.se##.external_advertiser
 koket.se###react-newsletter-overlay
 /bn-01d-fusion.js$domain=koket.se
 fotbollskanalen.se##div[class*="top-item__link"][onclick="trackClickThenOpen();"]
+fotbollskanalen.se##.article-share
 &type=load_offers^$xmlhttprequest,domain=illvet.se|pctidningen.se
 va.se##.popup-wrapper
 va.se##.sponsored-article
@@ -783,6 +789,7 @@ gamereactor.se###pagebackground:style(background-image: none !important)
 ||openx.gamereactor.dk/multi.php?$script,important
 gamereactor.se##script:inject(abort-current-inline-script.js, detectAdblockUser)
 gamereactor.se###sky2_1
+gamereactor.se###facebooknotification
 ||gamereactor.se/lay/ad-video-stats.js^$script,important
 ||gamereactor.se/lay/js/manageBanners.js^$script,important
 ||gamereactor.se/lay/js/adblock_desktop.js^$script,important
@@ -974,10 +981,10 @@ moviezine.se##.inner_article:if(.badge:has-text(SPONSRAT))
 moviezine.se##.inner_featured:if(.badge:has-text(Sponsrat))
 moviezine.se##.inner_featured:if(.badge:has-text(SPONSRAT))
 moviezine.se##[name="article-advertisment"]
-fz.se##script:inject(abort-on-property-read.js, Main.Ads.Adblock.getInstance)
+||aka-cdn.adtech.de^*/DAC.js$script,redirect=noopjs,domain=fz.se
 fz.se##.content-widget:if(div.fpnih-meta:has-text(Sponsrat))
-/artikel/rpc/prisjakt$xmlhttprequest,domain=fz.se|sweclockers.com
-/rpc/bbml/prisjakt$xmlhttprequest,domain=99.se
+fz.se##.article-facebook
+/rpc*/prisjakt$xmlhttprequest,domain=99.se|fz.se|sweclockers.com
 99.se##[id^="bbPrisjakt"]
 99.se##.nitem:has(a[href="/arkiv/kategori/annons"])
 sweclockers.com##.prisjaktPopular
