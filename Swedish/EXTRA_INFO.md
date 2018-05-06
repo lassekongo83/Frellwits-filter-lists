@@ -8,14 +8,14 @@ Note: This is information for Swedish visitors to this repo regarding the Swedis
 
 Många förfrågningar och tjänster som blockeras kan även förekomma på utländska webbsidor vilket inte bör vara något problem då förfrågningarna har blockerats pågrund av en av anledningarna som [nämnts nedan](https://github.com/lassekongo83/Frellwits-filter-lists/blob/master/Swedish/EXTRA_INFO.md#vad-listan-har-som-mål-att-ta-bort). Alla dessa förfrågningar förekommer eller har någon gång förekommit på en svensk webbsida.
 
-**Listan har ingen politisk eller ekonomisk motivation bakom sig.**
-Jag accepterar inga donationer.
+**Listan har ingen ekonomisk eller politisk motivation bakom sig.**
+Jag accepterar inga donationer. Jag censurerar inga åsikter.
 
 Denna listan är skriven specifikt för uBlock Origin, därför finns det ingen garanti på att den kommer fungera i någon annan blockerare än just uBlock Origin.
 
 För att dra nytta av uBlock Origins bättre effektivitet, så är det inte rekommenderat att använda andra blockerare samtidigt (som till exempel Adblock Plus eller Ghostery). uBlock Origin kommer att blockera lika bra eller bättre än andra populära annonsblockerare. Andra blockerare kan också förhindra att uBlock Origins funktioner ej fungerar korrekt.
 
-Listan är testat tillsammans med uBlock Origins orginalinställningar. Då används dessa listor: `EasyList`, `EasyPrivacy`, `Peter Lowe's Ad server list`, `Malware Domain List`, `Malware domains` och `uBlock Filters`.
+Listan är testat tillsammans med uBlock Origins orginalinställningar. Då används dessa listor: `EasyList`, `EasyPrivacy`, `Peter Lowe's Ad server list`, `Malware Domain List`, `Malware domains` och `uBlock Filters`. *(Dubbletter kan ibland förekomma vilket inte nödvändigtvis är något problem. Hittar du nån dubblett så kan du tipsa mig om den så att jag kan ta bort den.)*
 Listan bör även fungera bra tillsammans med `Fanboy's` alla listor. Det finns dock alltid en liten möjlighet att vissa konflikter kan uppstå tillsammans med andra listor.
 
 Finns det något i listan du inte håller med om, eller vill vitlista så kan du antagligen: 
