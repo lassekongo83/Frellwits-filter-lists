@@ -4,7 +4,9 @@ Note: This is information for Swedish visitors to this repo regarding the Swedis
 
 ### Information till användare
 
-**Frellwit's Swedish Filter** finns främst till för att plocka bort annonser, spårning, irritationer, lurendrejerier och bloat på **svenska** webbsidor.
+**Frellwit's Swedish Filter** finns främst till för att plocka bort annonser, spårning, irritationer, lurendrejerier och bloat på **svenska** webbsidor. 
+
+Många förfrågningar och tjänster som blockeras kan även förekomma på utländska webbsidor vilket inte bör vara något problem då förfrågningarna har blockerats pågrund av en av anledningarna som [nämnts nedan](https://github.com/lassekongo83/Frellwits-filter-lists/blob/master/Swedish/EXTRA_INFO.md#vad-listan-har-som-mål-att-ta-bort). Alla dessa förfrågningar förekommer eller har någon gång förekommit på en svensk webbsida.
 
 **Listan har ingen politisk eller ekonomisk motivation bakom sig.**
 Jag accepterar inga donationer.
