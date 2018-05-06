@@ -7,16 +7,20 @@ Note: This is information for Swedish visitors to this repo regarding the Swedis
 **Frellwit's Swedish Filter** finns främst till för att plocka bort annonser, spårning, irritationer, lurendrejerier och bloat på **svenska** webbsidor.
 
 **Listan har ingen politisk eller ekonomisk motivation bakom sig.**
-Jag accepterar inga donationer, *enbart bra pull requests som plockar bort mer skräp från webben.* :-)
+Jag accepterar inga donationer.
 
 Denna listan är skriven specifikt för uBlock Origin, därför finns det ingen garanti på att den kommer fungera i någon annan blockerare än just uBlock Origin.
 
-För att dra nytta av uBlock Origins högre effektivitet, så är det inte rekommenderat att använda andra blockerare samtidigt (som till exempel Adblock Plus eller Ghostery). uBlock Origin kommer att blockera lika bra eller bättre än andra populära annonsblockerare. Andra blockerare kan också förhindra att uBlock Origins funktioner ej fungerar korrekt.
+För att dra nytta av uBlock Origins bättre effektivitet, så är det inte rekommenderat att använda andra blockerare samtidigt (som till exempel Adblock Plus eller Ghostery). uBlock Origin kommer att blockera lika bra eller bättre än andra populära annonsblockerare. Andra blockerare kan också förhindra att uBlock Origins funktioner ej fungerar korrekt.
 
-Listan är testat tillsammans med uBlock Origins orginalinställningar. Då används dessa listor: *EasyList, EasyPrivacy, Peter Lowe's Ad server list, Malware Domain List, Malware domains och uBlock Origins egna listor.*
-Listan bör även fungera bra tillsammans med *Fanboy's* alla listor. Det finns en alltid en liten möjlighet att vissa konflikter kan uppstå tillsammans med andra listor.
+Listan är testat tillsammans med uBlock Origins orginalinställningar. Då används dessa listor: `EasyList`, `EasyPrivacy`, `Peter Lowe's Ad server list`, `Malware Domain List`, `Malware domains` och `uBlock Filters`.
+Listan bör även fungera bra tillsammans med `Fanboy's` alla listor. Det finns dock alltid en liten möjlighet att vissa konflikter kan uppstå tillsammans med andra listor.
 
-Finns det något i listan du inte håller med om, eller vill vitlista så kan du antagligen klicka på uBlock Origins stora power-knapp, skriva ett eget filter som vitlistar, eller deaktivera listan i uBlock Origins *inställingar > Tredjepartfilter > Regioner & Språk > SWE: Frellwit's Swedish Filter.*
+Finns det något i listan du inte håller med om, eller vill vitlista så kan du antagligen: 
+- [Deaktivera uBlock Origin](https://github.com/gorhill/uBlock/wiki/Quick-guide:-popup-user-interface#the-large-power-button) på sidan det gäller. Alternativt [deaktivera kosmetisk filtrering](https://github.com/gorhill/uBlock/wiki/Per-site-switches#no-cosmetic-filtering).
+- Deaktivera listan i uBlock Origins `inställingar > Tredjepartfilter > Regioner & Språk > SWE: Frellwit's Swedish Filter`.
+- Skriva ett eget filter som vitlistar.
+- Öppna en ny issue här på GitHub som tydligt beskriver var och varför. (Jag accepterar ej vitlistning av någon annons eller spårning.)
 
 ### Vad listan har som mål att ta bort
 
@@ -24,7 +28,7 @@ Betald marknadsföring i form av:
 - Bilder.
 - Ljud & video.
 - Text.
-- Influencer-samarbeten.
+- Influencer-samarbeten. (Ej video.)
 
 Spårning som:
 - Samlar in information om vad/vem/var besökaren är.
