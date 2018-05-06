@@ -23,7 +23,7 @@ Finns det något i listan du inte håller med om, eller vill vitlista så kan du
 
 ### Information till kollaboratörer
 
-Många förfrågningar och tjänster som blockeras kan även förekomma på utländska webbsidor vilket inte bör vara något problem då förfrågningarna har blockerats pågrund av en av anledningarna som [nämnts nedan](https://github.com/lassekongo83/Frellwits-filter-lists/blob/master/Swedish/EXTRA_INFO.md#vad-listan-har-som-mål-att-ta-bort). Alla dessa förfrågningar förekommer eller har någon gång förekommit på en svensk webbsida. Det finns heller inga nackdelar med dubbletter som finns med i de andra listorna förutom att listan blir snyggare och renare utan dessa. Hittar du nån dubblett så kan du tipsa mig om du vill.
+Många förfrågningar och tjänster som blockeras kan även förekomma på utländska webbsidor vilket inte bör vara något problem då förfrågningarna har blockerats pågrund av en av anledningarna som [nämnts nedan](https://github.com/lassekongo83/Frellwits-filter-lists/blob/master/Swedish/EXTRA_INFO.md#vad-listan-har-som-mål-att-ta-bort). Alla dessa förfrågningar förekommer eller har någon gång förekommit på en svensk webbsida. Det finns heller inga nackdelar med dubbletter som finns med i de andra listorna i uBOs standardinställningar. Listan blir enbart snyggare och renare utan dessa. Hittar du nån dubblett så kan du tipsa mig om du vill.
 
 Vill du bidra med filter så kan du skicka en pull request. Tänk på att följa de punkter som nämns nedan.
 
@@ -62,4 +62,4 @@ Lurendrejerier och skadliga saker som försöker:
 
 **Listan plockar ej bort allt av det ovannämnda.** Jag försöker få listan till att plocka bort det som går och det jag hinner med, men vissa saker kan slinka förbi i alla fall. Upptäcks något jag har missat på någon svensk webbsida så öppna en ny issue här på GitHub och följ [problemmallen](https://github.com/lassekongo83/Frellwits-filter-lists/blob/master/ISSUE_TEMPLATE.md).
 
-Jag försöker aldrig medvetet förstöra funktionaliteten eller censurera någon webbsida. Filtren skrivs så gott det går enligt min förmåga och vad som hinns med. **Målet är att sidorna ska fungera så normalt som möjligt, fast utan reklam, spårning, annoyances och bloat.** Fungerar något inte korrekt så kan du öppna en ny issue här på GitHub så tar jag hand om det så fort jag hinner. (Glöm dock ej att följa [problemmallen](https://github.com/lassekongo83/Frellwits-filter-lists/blob/master/ISSUE_TEMPLATE.md)).
+Jag försöker aldrig medvetet förstöra funktionaliteten eller censurera någon webbsida. Filtren skrivs så gott det går enligt min förmåga och vad som hinns med. **Målet är att sidorna ska fungera så normalt som möjligt, fast utan reklam, spårning, irritationer och bloat.** Fungerar något inte korrekt så kan du öppna en ny issue här på GitHub så tar jag hand om det så fort jag hinner. (Glöm dock ej att följa [problemmallen](https://github.com/lassekongo83/Frellwits-filter-lists/blob/master/ISSUE_TEMPLATE.md)).
