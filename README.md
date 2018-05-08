@@ -1,5 +1,5 @@
 # Frellwit's filter lists
-Various filter lists for [uBlock Origin](https://github.com/gorhill/uBlock).
+Various filter lists for [uBlock Origin](https://github.com/gorhill/uBlock) and [Nano Adblocker](https://github.com/NanoAdblocker/NanoCore).
 
 ## Available lists
 
