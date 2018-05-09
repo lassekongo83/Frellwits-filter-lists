@@ -21,12 +21,6 @@ Finns det något i listan du inte håller med om, eller vill vitlista så kan du
 - Skriva ett eget filter som vitlistar, alternativt skapa en fork av hela projektet som gör de saker du vill.
 - Öppna en ny issue här på GitHub som tydligt beskriver var och varför. (Jag accepterar ej vitlistning av annonser eller spårning.)
 
-### Information till kollaboratörer
-
-Många förfrågningar och tjänster som blockeras kan även förekomma på utländska webbsidor vilket inte bör vara något problem då förfrågningarna har blockerats pågrund av en av anledningarna som [nämnts nedan](https://github.com/lassekongo83/Frellwits-filter-lists/blob/master/Swedish/EXTRA_INFO.md#vad-listan-har-som-mål-att-ta-bort). Alla dessa förfrågningar förekommer eller har någon gång förekommit på en svensk webbsida. Det finns heller inga nackdelar med dubbletter som finns med i de andra listorna i uBOs standardinställningar. Listan blir enbart snyggare och renare utan dessa. Hittar du nån dubblett så kan du tipsa mig om du vill.
-
-Vill du bidra med filter så kan du skicka en pull request. Tänk på att följa de punkter som nämns nedan.
-
 ### Vad listan har som mål att ta bort
 
 Betald marknadsföring i form av: 
@@ -62,4 +56,20 @@ Lurendrejerier och skadliga saker som försöker:
 
 **Listan plockar ej bort allt av det ovannämnda.** Jag försöker få listan till att plocka bort det som går och det jag hinner med, men vissa saker kan slinka förbi i alla fall. Upptäcks något jag har missat på någon svensk webbsida så öppna en ny issue här på GitHub och följ [problemmallen](https://github.com/lassekongo83/Frellwits-filter-lists/blob/master/ISSUE_TEMPLATE.md).
 
-Jag försöker aldrig medvetet förstöra funktionaliteten eller censurera någon webbsida. Filtren skrivs så gott det går enligt min förmåga och vad som hinns med. **Målet är att sidorna ska fungera så normalt som möjligt, fast utan reklam, spårning, irritationer och bloat.** Fungerar något inte korrekt så kan du öppna en ny issue här på GitHub så tar jag hand om det så fort jag hinner. (Glöm dock ej att följa [problemmallen](https://github.com/lassekongo83/Frellwits-filter-lists/blob/master/ISSUE_TEMPLATE.md)).
+Jag försöker aldrig medvetet censurera eller att förstöra funktionaliteten på någon webbsida. Ibland kan [strikta filter](https://github.com/gorhill/uBlock/wiki/Strict-blocking) blockera en webbsida om inget filteralternativ som till exempel `$third-party` eller `$script` har angetts. Ett strikt filter kan visa sig om du ser en varningstriangel och information om vilken lista sidan är blockerad i. Du som besökare kan enkelt med ett knapptryck temporärt eller permanent kringå filtret som blockerar sidan. 
+
+De webbsidor som har varningstrianglar har det oftast av en anledning. Det kan bero på att sidan distribuerar skadlig programvara eller att sidan försöker lura besökaren på pengar. Där med ska det enbart ses som en varning och inte som censur om webbsidan är blockerad med ett strikt filter. Det är fortfarande du som bestämmer om du vill visa webbsidan eller ej. Vill du inte ha strikt filtrering aktiverat så kan du gå in i uBlock Origins inställningar > `Mina regler` och lägga till `no-strict-blocking: * true`, tryck sedan på `Spara` och `Skicka`.
+
+Filtren skrivs så gott det går enligt min förmåga och vad som hinns med. **Målet är att sidorna ska fungera så normalt som möjligt, fast utan reklam, spårning, irritationer och bloat.** Om något inte fungerar korrekt så kan du öppna en ny issue här på GitHub så tar jag hand om det så fort jag hinner. (Glöm dock ej att följa [problemmallen](https://github.com/lassekongo83/Frellwits-filter-lists/blob/master/ISSUE_TEMPLATE.md)).
+
+### Information till kollaboratörer
+
+Vill du bidra med filter så kan du skicka en pull request. Tänk på att följa de punkter som nämns ovan. 
+
+**Lite extra information om du vill bidra:**
+- Även i pull requests vill jag ha tydliga exempel med URLs och skrämdumpar om så behövs.
+- Varje pull request kommer att granskas. Jag kan välja att neka den eller att modifiera den.
+- Länkar till premium-alternativ (och liknande) som inte täcker över innehåll eller avbryter besökaren ska inte plockas bort.
+- Dubbletter kan förekomma i andra listor. Dessa plockas bort efter hand om det inte finns någon annan anledning till att de finns där.
+
+Många förfrågningar och tjänster som blockeras kan även förekomma på utländska webbsidor. Förfrågningarna har blockerats pågrund av en av anledningarna som [nämnts ovan](https://github.com/lassekongo83/Frellwits-filter-lists/blob/master/Swedish/EXTRA_INFO.md#vad-listan-har-som-mål-att-ta-bort). Alla dessa förfrågningar förekommer eller har någon gång förekommit på en svensk webbsida.
