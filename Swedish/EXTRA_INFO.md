@@ -1,7 +1,5 @@
 Note: This is information for Swedish visitors to this repo regarding the Swedish filter list(s). It's written in Swedish for now.
 
-**Don't use the issue tracker here on GitHub for discussions or irrelevant messages!**
-
 ### Information till användare
 
 **Frellwit's Swedish Filter** finns främst till för att plocka bort annonser, spårning, irritationer, lurendrejerier och bloat på **svenska** webbsidor. Listan bör redan vara automatiskt aktiverad i uBlock Origin om din webbläsare är på svenska.
