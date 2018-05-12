@@ -152,6 +152,7 @@
 /a?callback=pfmod.saveadsettings
 /ad/getNouw.$script
 /ajax.php?action=get_cookies_policy$xmlhttprequest
+/ajax.php?action=get_policy&site=cookie-information$xmlhttprequest
 /annons.aspx?
 /annons_hor.
 /annons_ver.
@@ -412,6 +413,7 @@ avanza.se#@#a[title="LeoVegas"]
 /plugins/icegram/*$domain=dagensanalys.se
 /plugins/likebtn-like-button/*$script
 /plugins/metro-affiliate/*$script,domain=metromode.se
+/plugins/pause-adblocker/*$script,stylesheet,image,domain=hightechguiden.se
 /plugins/sdcookie-warning/*$script,stylesheet
 /plugins/se-wordpress-cookie-notice/*
 /plugins/se-wordpress-native-article/*$script,stylesheet
@@ -588,6 +590,7 @@ expressen.se##[class^="open-in-app"]
 expressen.se##.teaser:has(a[href^="https://rabattkoder."])
 expressen.se##.slot:has(a[href^="https://rabattkoder."])
 expressen.se##.section-widget:has(a[href^="https://rabattkoder."])
+expressen.se##.match-betting
 mittkok.expressen.se##.newsletter__slide
 mittkok.expressen.se###modal-newsletter-popup
 mittkok.expressen.se##.widget-social-media
@@ -715,6 +718,8 @@ vf.se##script:inject(set-constant.js, adblock, false)
 allehanda.se,arbetarbladet.se,avestatidning.com,bblat.se,dalademokraten.se,dt.se,fagersta-posten.se,gd.se,lt.se,ltz.se,na.se,norrteljetidning.se,nynashamnsposten.se,op.se,salaallehanda.com,st.nu,tidningenharjedalen.se,vlt.se##div.client-dialogue-plus
 allehanda.se,arbetarbladet.se,avestatidning.com,bblat.se,dalademokraten.se,fagersta-posten.se,gd.se,lt.se,ltz.se,na.se,norrteljetidning.se,nynashamnsposten.se,op.se,salaallehanda.com,st.nu,tidningenharjedalen.se,vlt.se##script:inject(abort-on-property-read.js, adsQueue.push)
 allehanda.se,arbetarbladet.se,avestatidning.com,bblat.se,dalademokraten.se,fagersta-posten.se,gd.se,lt.se,ltz.se,na.se,norrteljetidning.se,nynashamnsposten.se,op.se,salaallehanda.com,st.nu,tidningenharjedalen.se,vlt.se##script:inject(abort-on-property-read.js, oas_tag)
+! Annoying temporary survey
+allehanda.se,arbetarbladet.se,avestatidning.com,bblat.se,dalademokraten.se,fagersta-posten.se,gd.se,lt.se,ltz.se,na.se,norrteljetidning.se,nynashamnsposten.se,op.se,salaallehanda.com,st.nu,tidningenharjedalen.se,vlt.se##script:inject(set-constant.js, nps_dialogue_enabled, false)
 /assets/leeads_takeover/*$script,domain=allehanda.se|arbetarbladet.se|avestatidning.com|bblat.se|dalademokraten.se|fagersta-posten.se|gd.se|lt.se|ltz.se|na.se|norrteljetidning.se|nynashamnsposten.se|op.se|salaallehanda.com|st.nu|tidningenharjedalen.se|vlt.se
 /assets/triggerbee/*$script,domain=allehanda.se|arbetarbladet.se|avestatidning.com|bblat.se|dalademokraten.se|fagersta-posten.se|gd.se|lt.se|ltz.se|na.se|norrteljetidning.se|nynashamnsposten.se|op.se|salaallehanda.com|st.nu|tidningenharjedalen.se|vlt.se
 /strossle-start-page-ad$xmlhttprequest,domain=allehanda.se|arbetarbladet.se|avestatidning.com|bblat.se|dalademokraten.se|fagersta-posten.se|gd.se|lt.se|ltz.se|na.se|norrteljetidning.se|nynashamnsposten.se|op.se|salaallehanda.com|st.nu|tidningenharjedalen.se|vlt.se
@@ -876,6 +881,7 @@ mestmotor.se##html,body:style(overflow: auto !important;)
 mestmotor.se##article[class*="sponsra"]
 mestmotor.se##a[onclick^="ANALYTICS.trackEvent('Spotlight'"]
 mestmotor.se##.article-social
+mestmotor.se##.article-wayke-module
 mestmotor.se##script:inject(abort-current-inline-script.js, setNptTechAdblockerCookie)
 hemtrevligt.se##.partner-article
 hemtrevligt.se##.partner-navbar
@@ -1395,6 +1401,7 @@ jaktsidan.se##[data-role="sidebarAd"]
 ||edgeflyfishing.com^$image,domain=jaktsidan.se
 mp.se###cookies
 skrattnet.se##.region-sidebar-second
+/content/admbl/*$image,domain=skrattnet.se
 lajvo.se###panoramaTop
 lajvo.se##.share-button
 ||lajvo.se/addImpression$xmlhttprequest
@@ -1408,6 +1415,7 @@ garaget.org###gorgad-horizontal-top
 ||noterat.nu/wp-content/uploads/*.js?ver$script
 @@||hightechguiden.se^$generichide
 hightechguiden.se##script:inject(abort-on-property-write.js, document.oncontextmenu)
+hightechguiden.se##script:inject(abort-on-property-read.js, noNeedToBlock)
 /pum/pum-site-scripts.$script,domain=tkj.se
 professionalsecrets.se##script:inject(abort-current-inline-script.js, $, fancybox)
 sportpanelen.se##.stream-item-above-post:has(a[href*="/ads."])
@@ -1420,6 +1428,8 @@ hugorosas.se##.tag-sponsored_post
 tekniksmart.se##.adcontainer
 industrinyheter.se,dagensnaringsliv.se##.insider-ads
 industrinyheter.se,dagensnaringsliv.se###mainadvertorial
+industrinyheter.se,dagensnaringsliv.se###dfptag-skyscraper
+industrinyheter.se,dagensnaringsliv.se###dfptag-superpanorama
 schoolido.se##.so-cookie__area
 blankspot.se##div.red-section.action-banner-2.sticky:style(position: initial !important;)
 muscles.se##.newsletter-signup--popup
