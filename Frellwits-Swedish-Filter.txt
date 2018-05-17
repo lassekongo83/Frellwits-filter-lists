@@ -100,7 +100,6 @@
 ||nbes.nu^$third-party
 ||nbes.se^$third-party
 ||nichehuset.dk^$third-party
-||onesignal.com^$third-party
 ||optnmnstr.com^$third-party
 ||panera.io^$third-party
 ||pensiono.se^$third-party
@@ -428,6 +427,7 @@ avanza.se#@#a[title="LeoVegas"]
 /plugins/sdcookie-warning/*$script,stylesheet
 /plugins/se-wordpress-cookie-notice/*
 /plugins/se-wordpress-native-article/*$script,stylesheet
+/plugins/sociallocker-next-premium/*$domain=travprat.se
 /plugins/statebuilt-facebook-page-like-popup/*
 /plugins/sticky-facebook-banner/*$script,domain=humorbibeln.se|newsner.com|sportbibeln.se
 /plugins/sw_ad_inserter/*$script,stylesheet
@@ -481,6 +481,7 @@ bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##.o
 bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##.seekly
 bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##script:inject(abort-current-inline-script.js, headerScripts, checkAdBlockers)
 bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##script:inject(abort-current-inline-script.js, adblockcookieExpire)
+bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##script:inject(abort-on-property-read.js, _cInfo)
 ! May have some minor side effects like breaking the infinite scroll.
 bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##script:inject(abort-on-property-read.js, siteScripts.initAds)
 
@@ -518,7 +519,7 @@ aftonbladet.se##script:inject(abort-current-inline-script.js, preLoadAds, loadAd
 aftonbladet.se##script:inject(abort-current-inline-script.js, preLoadAds, setup)
 aftonbladet.se##script:inject(setTimeout-defuser.js, onerror, 1000)
 @@||aftonbladet.se^$generichide
-@@||ad*.vg.no/check.js$script,domain=bloggar.aftonbladet.se
+@@||ad*.vg.no/check.js$script,domain=aftonbladet.se
 ||schibsted.io/oo/$script,domain=aftonbladet.se|svd.se
 omni.se##article.article--sponsored
 ||omni-ads.omni.news^
@@ -620,6 +621,7 @@ mittkok.expressen.se##script:inject(abort-current-inline-script.js, ExpressenAna
 sydsvenskan.se,hd.se##div[data-category="native-teaser"]
 /native?noBurtProfiles=1$xmlhttprequest,domain=hd.se|sydsvenskan.se
 /ads-*.js$script,domain=hd.se|sydsvenskan.se|8till5.se
+/ajax/native$xmlhttprequest,domain=8till5.se
 tv4.se##.program-header-sponsors
 tv4.se##.social-block-ad
 tv4.se##[class*="aside-ad"]
@@ -1320,6 +1322,7 @@ voodoofilm.org##.content-news:has(span[id*="Sponsored"])
 mytaste.se##div[id*="panorama_"]
 mytaste.se##.site-header__panorama
 mytaste.se##[class^="affiliate-container"]
+mytaste.se##body:not(.kcolbda) .site-wrapper[data-state=default], body:not(.kcolbda) .site-wrapper[data-state=panorama]:style(padding-top: 50px !important;)
 mytaste.se##script:inject(addEventListener-defuser.js, click, (t))
 @@||newsner.com^$generichide
 newsner.com,humorbibeln.se###wsfb-container
@@ -1395,7 +1398,7 @@ ica.se##.recipe-ad
 listor.se##.belowad
 listor.se##article:has(a[href*="/annons/"])
 accentmagasin.se##.widget-container:if(.widget-title:has-text(Annons))
-||vk.com/js/api/share.js^$third-party,domain=samnytt.se
+||vk.com^$third-party,domain=samnytt.se
 @@||samnytt.se^$generichide
 samnytt.se##.nc_socialPanel
 merinfo.se##.articles-article-wrapper:if(span:has-text(Sponsrad))
@@ -1478,3 +1481,5 @@ megafonen.nu##.box:if(h5 > span.title:has-text(Annons))
 /banner-rotate.php$subdocument,domain=fastighetsnytt.se
 fastighetsnytt.se##.promobox
 kissies.se##.post:if(strong:has-text(i samarbete med))
+@@||boffo.se^$generichide
+travprat.se##script:inject(abort-on-property-write.js, bizpanda)
