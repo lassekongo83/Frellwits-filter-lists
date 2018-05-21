@@ -118,6 +118,7 @@
 ||sleeknote.com^$third-party
 ||sociuslive.com^$third-party
 ||sprinklecontent.com^$third-party
+||sprinkletxt.com^$third-party
 ||suntcontent.se^$third-party
 ||telemetric.dk^$third-party
 ||tipser.com^$third-party
@@ -209,6 +210,7 @@
 ||adviral.s3.amazonaws.com/sponsored/
 ||amazonaws.com/adn-tag/$script
 ||amazonaws.com/metapic-cdn/*/metapic.$script,stylesheet
+||ana.tunnl.com^
 ||apis.google.com/js/plusone.js$third-party
 ||back.famebloggers.com/bloggerfy/tracker$script,subdocument
 ||bcm.interactives.dk/script/$script
@@ -606,7 +608,7 @@ expressen.se##.teaser:if(.vignette:has-text(Erbjudande från))
 expressen.se##.slot:if(header:has-text(Erbjudande från))
 expressen.se##a[href*="/annons"]
 expressen.se##.widget--collaboration
-expressen.se##[class^="open-in-app"]
+expressen.se,dn.se##[class^="open-in-app"]
 expressen.se##.teaser:has(a[href^="https://rabattkoder."])
 expressen.se##.slot:has(a[href^="https://rabattkoder."])
 expressen.se##.section-widget:has(a[href^="https://rabattkoder."])
@@ -654,7 +656,6 @@ koket.se##.external_advertiser
 koket.se###react-newsletter-overlay
 /bn-01d-fusion.js$domain=koket.se
 fotbollskanalen.se##div[class*="top-item__link"][onclick="trackClickThenOpen();"]
-fotbollskanalen.se##.article-share
 &type=load_offers^$xmlhttprequest,domain=illvet.se|pctidningen.se
 va.se##.popup-wrapper
 va.se##.sponsored-article
@@ -690,7 +691,6 @@ affarsliv.com,affarslivgotland.se,corren.se,eposten.se,folkbladet.se,helagotland
 affarsliv.com,affarslivgotland.se,corren.se,eposten.se,folkbladet.se,helagotland.se,kuriren.nu,mvt.se,norrbottensaffarer.se,nsd.se,nt.se,pt.se,unt.se,vt.se##.lunchguide
 affarsliv.com,affarslivgotland.se,corren.se,eposten.se,folkbladet.se,helagotland.se,kuriren.nu,mvt.se,norrbottensaffarer.se,nsd.se,nt.se,pt.se,unt.se,vt.se##img[data-original*="destination.se"]
 affarsliv.com,affarslivgotland.se,corren.se,eposten.se,folkbladet.se,helagotland.se,klackspark.com,kuriren.nu,mvt.se,norrbottensaffarer.se,nsd.se,nt.se,pt.se,unt.se,vt.se##script:inject(abort-current-inline-script.js, adn, renderComposedAds)
-
 ||amqp-ws-proxy.radioplay.se^$websocket
 
 ! SÖRMLANDS MEDIA
@@ -812,6 +812,10 @@ fragbite.se##.zooKeeper
 ||stats.blogg.se^
 /BlogPortal/js/stats/blogstat.$script
 ||bloggportalen.se/BlogPortal/view/Statistics$image
+!#if !env_mobile
+nyheter24.se##li.has-image:has(a[href^="/shopping/"])
+kwiss.me##.qz-main-slider-item-initial2:has(.qz-quiz-sponsored)
+!#endif
 
 ! GAMEREACTOR
 gamereactor.se###eventad
@@ -825,6 +829,7 @@ gamereactor.se###bigVideoAd
 gamereactor.se###fbnotification
 gamereactor.se##a[href*="/adclick.php"]
 gamereactor.se###pagebackground:style(background-image: none !important)
+gamereactor.se##.ad_smartphbig
 /prerolls/*$domain=gamereactor.se
 ||openx.gamereactor.dk/multi.php?$script,important
 gamereactor.se##script:inject(abort-current-inline-script.js, detectAdblockUser)
@@ -835,6 +840,9 @@ gamereactor.se###facebooknotification
 ||gamereactor.se/lay/js/adblock_desktop.js^$script,important
 ||gamereactor.se/lay/js/banners_config.js^$script,important
 ||gamereactor.se/media/eventad/$image
+!#if !env_mobile
+/adblock_mobile.$script,important,domain=gamereactor.se
+!#endif
 
 ! LIFE OF SVEA
 familjeliv.se##a[href*="/kampanj/"]
@@ -1009,6 +1017,7 @@ rumhemma.se,festivalrykten.se###top
 partilletidning.se,mammasidan.se,minbebis.com,alltforforaldrar.se##.middle-banner
 mestmotor.se,muscles.se##.overlay
 ratsit.se,bilsport.se,funnygames.se##.cc_banner-wrapper
+fotbollskanalen.se,mitti.se,alltomstockholm.se##.article-share
 
 ! ÖVRIGT
 nordichardware.se##div.td_block_text_with_title:if(h4 > span:has-text(Från Surfa))
@@ -1175,9 +1184,7 @@ market.se##[id^="fusion_ad"]
 market.se###rollup
 market.se##article[about^="/annons/"]
 market.se###newsletter-rollup
-dagensps.se##.masonry-tile-wrapper:if(span.category:has-text(Sponsrat innehåll))
-dagensps.se##.mosaiq-license-sponsored
-dagensps.se##.mosaiq-poster
+dagensps.se##.xtss-above-post
 ||fusion.dagensps.se^$script,image
 dagensps.se##script:inject(abort-on-property-write.js, FloadCmatchIfr)
 ||petrk.com^$third-party,image,domain=dagensps.se
@@ -1359,6 +1366,11 @@ jogg.se,skid.se,cykl.se,svettig.se##.panoramaAd
 uppsalanyheter.se###banner-top-block
 skillingaryd.nu###more-banners
 ||realtime.co^$websocket,domain=pomu.se
+@@||pomu.se^$generichide
+pomu.se,video-static.tunnl.com##script:inject(set-constant.js, canRunAds, true)
+pomu.se###BannerCentral1
+pomu.se##.Banners-lateral
+pomu.se##.cc-banner
 ||allatvkanaler.se/js/js*.js$script
 ||unitedsverige.se^$csp=script-src 'self' 'unsafe-inline' 'unsafe-eval' *.googleapis.com
 forumbilder.se##a[target="_blank"] > img[src^="/Content/images"]
