@@ -186,6 +186,8 @@
 /entryclick;_
 /eu_cookie_alert/*$script,stylesheet
 /iab/iab.js$script
+/js/acceptCookies.$script
+/js/cookie-consent.$script
 /js/fullpageads.js$script
 /js/iepngfix_tilebg.$script
 /js/mtiFontTrackingCode.$script
@@ -391,6 +393,7 @@ avanza.se#@#a[title="LeoVegas"]
 ||herokuapp.com^$third-party,domain=aftonbladet.se
 ||pji.nu^$third-party,domain=idg.se|minhembio.com|nordichardware.se|99.se|fz.se|sweclockers.com|mobil.se
 ||youbora.com^$third-party,domain=aftonbladet.se|svd.se
+||zotabox.com^$third-party,domain=rapport24.com
 
 ! Facebook junk
 /facebook_sdk.js$script,domain=njus.me|radioplay.se
@@ -893,6 +896,10 @@ allakorsord.se,allas.se,allers.se,antikochauktion.se,aretrunt.se,baaam.se,cafe.s
 /apester-javascript-sdk.min.js$script,domain=allakorsord.se|allas.se|allers.se|antikochauktion.se|aretrunt.se|baaam.se|cafe.se|dromhemochtradgard.se|elle.se|elledecoration.se|ellematovin.se|femina.se|frida.se|hant.se|hemmets.se|mabra.com|matmagasinet.se|residencemagazine.se|svenskdam.se
 /js/sticky-mobile-ad.js$script,domain=allakorsord.se|allas.se|allers.se|antikochauktion.se|aretrunt.se|baaam.se|cafe.se|dromhemochtradgard.se|elle.se|elledecoration.se|ellematovin.se|femina.se|frida.se|hant.se|hemmets.se|mabra.com|matmagasinet.se|residencemagazine.se|svenskdam.se
 /se-wordpress-google-analytics/src/js/wp-tagmanager.js$script,domain=allakorsord.se|allas.se|allers.se|antikochauktion.se|aretrunt.se|baaam.se|cafe.se|dromhemochtradgard.se|elle.se|elledecoration.se|ellematovin.se|femina.se|frida.se|hant.se|hemmets.se|mabra.com|matmagasinet.se|residencemagazine.se|svenskdam.se
+sportfiskeforum.se###fj-topad
+@@||fiskejournalen.se^$generichide
+fiskejournalen.se##.blogindex-layout-large-post:has(.native-wrapper)
+sportfiskeforum.se,fiskejournalen.se##script:inject(abort-current-inline-script.js, m3_r, Math.floor)
 
 ! EGMONT PUBLISHING
 @@||hemtrevligt.se^$generichide
@@ -1271,6 +1278,9 @@ vardagspuls.se##.fs-overlay-wrapper
 vardagspuls.se##.block-socialchannels
 /listByType?*adSettings^$xmlhttprequest,domain=kokaihop.se
 kokaihop.se##.kng-cookie-info-bar
+kokaihop.se##html,body:style(overflow: auto !important;)
+kokaihop.se##.modal
+kokaihop.se##.modal-backdrop
 flashback.org###top-banner-row
 flashback.org###bottom-banner-container
 flashback.org###right-banner-container
@@ -1328,16 +1338,16 @@ kungalvsposten.se,molndalsposten.se,lokaltidningensto.se,kungsbackaposten.se##.w
 kungalvsposten.se,molndalsposten.se,lokaltidningensto.se,kungsbackaposten.se##div[style="font-size: 15px; font-family: PT Serif; font-weight: normal;"]:if(p:has-text(ANNONS))
 smartsenior.se##.ss-modal
 matklubben.se##.notification.cookies
-@@||fiskejournalen.se^$generichide
-fiskejournalen.se##.blogindex-layout-large-post:has(.native-wrapper)
 /_banners/*$image,domain=kolozzeum.com
 happyride.se###a-panorama
 happyride.se###a-sidebar1
 /antiblock.$script,stylesheet,first-party,domain=vmj.se|viseniorer.se|danskaspraket.se|digitalavykort.se
 vmj.se,danskaspraket.se,digitalavykort.se##.topdiv
 viseniorer.se##.topheaderinfo
+vmj.se,danskaspraket.se,digitalavykort.se,viseniorer.se##.cc-cookies
 ||fuska.se/media/js/td.js$script
 ||fuska.se/cdn-cgi/pe/bag2^$xmlhttprequest
+fuska.se###top1
 voodoofilm.org##.content-news:has(span[id*="Sponsored"])
 mytaste.se##div[id*="panorama_"]
 mytaste.se##.site-header__panorama
@@ -1356,6 +1366,7 @@ njus.me##.article-list-item--sponsored
 ||cdn2.editmysite.com^*/snowday*.$script,domain=rapport24.com
 ||promote.weebly.com^$xmlhttprequest,subdocument,script,domain=rapport24.com
 ||static.zbcdn2.net^$script,domain=rapport24.com
+rapport24.com##.kb-container
 ||byggnadsarbetaren.se^*/ad-byline.png$image
 byggnadsarbetaren.se##.siteAlerts
 byggnadsarbetaren.se##[class^="siteAds"]
@@ -1368,6 +1379,7 @@ popmuzik.se##div[id^="bsa-block-"]
 funnygames.se###katon-slot
 jogg.se,skid.se,cykl.se,svettig.se##.panoramaAd
 uppsalanyheter.se###banner-top-block
+uppsalanyheter.se##script:inject(abort-current-inline-script.js, uri, Math.random)
 skillingaryd.nu###more-banners
 ||realtime.co^$websocket,domain=pomu.se
 @@||pomu.se^$generichide
@@ -1381,8 +1393,14 @@ forumbilder.se##a[target="_blank"] > img[src^="/Content/images"]
 /admin-ajax.php?action=advanced-ads-tracking-track$xmlhttprequest,domain=datormagazin.se
 datormagazin.se##script:inject(abort-current-inline-script.js, advadsGATracking)
 datormagazin.se,skanesport.se##script:inject(abort-current-inline-script.js, advanced_ads_ready)
+datormagazin.se##catapult-cookie-bar
+datormagazin.se##.widget_advads_ad_widget
+@@||datormagazin.se^$generichide
 skanesport.se##script:inject(abort-current-inline-script.js, advanced_ads_adsense_UID)
 skanesport.se##[id^="skane-slider"]
+skanesport.se###cookie-notice
+skanesport.se###check-also-box.show-check-also
+@@||skanesport.se^$generichide
 hypeline.se##.homecontent:has(.sponsrad_ruta)
 dagenstv.com###bt
 @@||eurosport.se^$generichide
