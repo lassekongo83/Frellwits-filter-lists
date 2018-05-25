@@ -295,7 +295,9 @@
 ||track.cpa.tpgrn.com^
 ||inxy.run^
 ! https://www.aftonbladet.se/nyheter/a/vm1BOw/anders-46-lurades-av-falsk-trafiksajt--nu-stams-foretagaren
+! https://www.svt.se/nyheter/konsument/tusentals-bilister-lurade-av-sajt-som-tar-betalt-for-gratis-tjanster
 ||trafikenheten.se^
+||transportverket.com^
 ! https://www.reddit.com/r/sweden/comments/8gamb7/massutskick_om_att_gå_ur_svenska_kyrkan_är_det/
 ||skattamindre.se^
 ||mindreskatt.se^
@@ -470,6 +472,7 @@ cornucopia.cornubot.se,peak-oil.se,apg29.nu,zaramis.se,horoskop.nu,blogspot.se,n
 ||cmatch.idg.se^$script
 ||ax.idg.se^
 ||idg.se^*/prebid*.$script,first-party
+||idg.se/idg-consent.min.js$script
 /pis.gif$image,domain=idg.se
 idg.se##div[data-cms-ad]
 idg.se##.wide-msg-fb
@@ -576,6 +579,7 @@ dn.se##script:inject(abort-on-property-write.js, BlockAdBlock)
 @@||dn.se^$generichide
 dn.se##.personal-carousel
 dn.se##body > iframe[style^="display"]
+dn.se##.gdpr-header-container
 /personalized/*$xmlhttprequest,domain=dn.se
 ||auth.dn.se/check-paywall$script
 /advertisement*.js$script,important,domain=dn.se
@@ -589,6 +593,7 @@ di.se##script:inject(abort-current-inline-script.js, checkAdBlockEnabled)
 ||digital-personalized.di.se^$xmlhttprequest
 ||digital.di.se/api/sponsor/$xmlhttprequest
 /pulse-sdk-html5/*$object,object-subrequest,domain=di.se
+di.se##.gdpr-policy-bar.toaster
 di.se##.mc__overlay--show
 di.se##.footer__cookie-info
 di.se##article.di_teaser--native
@@ -606,6 +611,7 @@ di.se##a[href^="/brandstudio/"]
 di.se##.article-teaser__text-inline:has(a[href^="/brandstudio/"])
 di.se##.di_start__insider-ad
 di.se##.di_panorama__isAdLabel
+expressen.se##.terms-dialog
 expressen.se###rich-media-ads
 expressen.se##.native-ad-teaser
 expressen.se##.teaser--sponsored
@@ -619,6 +625,7 @@ expressen.se##.slot:has(a[href^="https://rabattkoder."])
 expressen.se##.section-widget:has(a[href^="https://rabattkoder."])
 expressen.se##.match-betting
 expressen.se##.discount-ad
+mittkok.expressen.se##.gdpr-banner
 mittkok.expressen.se##.newsletter__slide
 mittkok.expressen.se###modal-newsletter-popup
 mittkok.expressen.se##.widget-social-media
@@ -633,6 +640,7 @@ mittkok.expressen.se##script:inject(abort-current-inline-script.js, ExpressenAna
 /_livetvpreview/*$media,domain=expressen.se
 /rantekartan/*$subdocument,domain=expressen.se
 sydsvenskan.se,hd.se##div[data-category="native-teaser"]
+sydsvenskan.se,hd.se##.gdpr
 /native?noBurtProfiles=1$xmlhttprequest,domain=hd.se|sydsvenskan.se
 /ads-*.js$script,domain=hd.se|sydsvenskan.se|8till5.se
 /ajax/native$xmlhttprequest,domain=8till5.se
@@ -654,6 +662,7 @@ tv4.se##.social-buttons
 ! https://github.com/lassekongo83/Frellwits-filter-lists/issues/18
 tv4play.se##script:inject(addEventListener-defuser.js, load, a)
 tv4play.se###skin-cover
+tv4play.se##.js-cookie-banner
 koket.se##.endorsed
 koket.se##.native
 koket.se##li.slide:has(.external_advertiser)
@@ -685,6 +694,7 @@ tradera.com##div[data-component-cookie-notification]
 feber.se##script:inject(set-constant.js, showReklam, false)
 feber.se,tjock.se##.art_ad
 feber.se,tjock.se##.art_ad_sign
+feber.se,tjock.se##script:inject(abort-current-inline-script.js, $, GDPR)
 
 ! NTM
 /_ad.js$important,script,domain=affarsliv.com|affarslivgotland.se|corren.se|eposten.se|folkbladet.se|gotland.net|helagotland.se|klackspark.com|kuriren.nu|mvt.se|norrbottensaffarer.se|nsd.se|nt.se|pt.se|unt.se|uppsala.com|uppsalatidningen.se|vt.se
