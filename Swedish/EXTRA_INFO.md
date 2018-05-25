@@ -38,7 +38,7 @@ Irritationer som:
 - Avbryter besökaren.
 - Förhindrar besökaren från att använda sin webbläsare eller sitt operativsystem normalt.
 - Mjuka betalväggar som slutar fungera så fort kakor eller JavaScript slås av.
-- Cookie och GDPR meddelanden. Vi som använder detta filtret undviker annonser och spårning så gott det går. Dessa meddelanden kan därför ses som irrelevanta och störande. Skyll ej på webbsidan om du inte ser något meddelande om GDPR med detta filtret påslaget.
+- Cookie och GDPR meddelanden. Filtret har som uppgift att undvika annonser och spårning så gott det går. Dessa meddelanden kan därför ses som irrelevanta och störande. Skyll ej på webbsidan om du inte ser något meddelande om GDPR med detta filtret påslaget.
 
 Lurendrejerier och skadliga saker som försöker:
 - Lura besökaren på pengar.
