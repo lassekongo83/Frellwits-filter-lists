@@ -1,0 +1,200 @@
+! Title: Frellwit's personal filters
+! Expires: 3 days (update frequency)
+! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
+! Description: This is where I keep some of my personal filters. (These may break stuff.)
+! License: GPLv3
+
+! Default battle.net forums sending too many image requests
+||battle.net/forums/static/images/backgrounds/background*.$image
+||worldofwarcraft.com/character/*avatar.$image
+battle.net##.Navbar-cookieCompliance
+
+! IMGUR
+@@||s.imgur.com/min/advertising.js$script,first-party
+||zrk.imgur.com^
+||s.imgur.com/js/promoted/
+||s.imgur.com/min/px.js
+/runSlots.$script,domain=imgur.com
+imgur.com###wrapper-pop_sky
+imgur.com##.social-icon
+imgur.com##script:inject(addEventListener-defuser.js, mousemove)
+imgur.com##a.post-action-tags-tag:style(background: none !important;)
+!#if !env_firefox
+imgur.com##script:inject(abort-on-property-read.js, PREBID_TIMEOUT)
+imgur.com##script:inject(abort-on-property-read.js, runSlots)
+imgur.com##script:inject(abort-on-property-read.js, __nspid)
+imgur.com##script:inject(abort-on-property-read.js, fetchBids)
+imgur.com##script:inject(abort-current-inline-script.js, widgetFactory, produceCtaBanner)
+imgur.com##script:inject(abort-on-property-read.js, _comscore)
+imgur.com##script:inject(abort-on-property-read.js, _qevents)
+imgur.com##script:inject(abort-on-property-read.js, fbq)
+!#endif
+!#if env_firefox
+imgur.com##^script:has-text(var __nspid)
+imgur.com##^script:has-text(apstag)
+imgur.com##^script:has-text(window.runSlots)
+imgur.com##^script:has-text(Imgur.Util.getGoogleTracker)
+imgur.com##^script:has-text(d,s,id)
+imgur.com##^script:has-text(_comscore.push)
+imgur.com##^script:has-text(var _qevents)
+imgur.com##^script:has-text(f,b,e,v,n,t,s)
+!#endif
+
+! NEOWIN
+neowin.net##article.news-item:has(a[href*="neowin-deals"])
+neowin.net##article.news-item:has(span.sponsored)
+neowin.net###ipsLayout_sidebar > div:nth-of-type(1)
+neowin.net###ipsLayout_sidebar > div:nth-of-type(3)
+/forum/topic*/?preview=1*$xmlhttprequest,domain=neowin.net
+neowin.net##li.ipsDataItem:has(a[href$="/sponsored/"])
+neowin.net##div[data-ns="leaderboard"]
+
+! DEVIANTART
+deviantart.com###block-notice
+deviantart.com##.small.ad-container
+deviantart.com###page-1-results > .ad-container
+deviantart.com###oh-menu-upgrade
+deviantart.com###oh-menu-promo
+||st.deviantart.net/promotions/*/bogo-widget*.$image
+||st.deviantart.net/minish/block-notice/*
+||st.deviantart.net/css/dapx_jc.js$script
+/gogo_upsell.js$domain=deviantart.com
+deviantart.com##.gogo-upsell
+/jms/lib/analytics.js$domain=deviantart.com
+deviantart.com##.mc-ad-chrome
+deviantart.com###elnino-modal
+! Restyle deviantart
+||st.deviantart.net/minish/gruzecontrol/cruiser.gif
+||http://st.deviantart.net/minish/gruzecontrol/bubbletop-gruze.gif
+deviantart.com##div#gmi-GMFrame_BluesBar:style(background: linear-gradient(#e1e8e0, #d2ded1) !important)
+deviantart.com##body.gruze .catbar:style(background: linear-gradient(#c0d0bb, #aec2aa) !important)
+
+! REDDIT
+||reddit.com/static/pixel.png
+||reddit.com/api/request_promo
+||redditmedia.com/ads/
+reddit.com##div[class*="sponsor"]
+||checkout.google.com/files/digital/ga_post.js$domain=reddit.com
+||measurementapi.com/serve?$domain=reddit.com
+reddit.com##a[href="#snow"]
+reddit.com##.comment > .child:hover:style(border-color: red !important;)
+reddit.com##a[href*="youtube.com"]:style(color: red !important;)
+reddit.com##a[href*="twitch.tv"]:style(color: red !important;)
+reddit.com##a[href*="youtu.be"]:style(color: red !important;)
+reddit.com##a[href*="facebook.com"]:style(color: orange !important;)
+reddit.com##.with-listing-chooser *> a.title[href^="/r/"]:style(color: green !important;)
+reddit.com##.with-listing-chooser *> a.title:visited[href^="/r/"]:style(color: #551a8b !important;)
+||redditstatic.com/recommended-link.$script,xmlhttprequest
+||reddit.com/api/request_recommended_link
+reddit.com##body:style(cursor: default !important)
+reddit.com##a:style(cursor: pointer !important)
+! Breaks save thread
+! reddit.com##script:inject(abort-on-property-read.js, window.googletag)
+||e.reddit.com^
+/log/error.json$xmlhttprequest,domain=reddit.com
+reddit.com##script:inject(abort-on-property-write.js, adSlots)
+/user/*/about.json$xmlhttprequest,domain=reddit.com
+reddit.com##p > a[href="#pixel"]
+reddit.com##.give-gold-button
+! Block reddit users
+reddit.com##div.thing[data-author="udda_boktips"]
+
+! Google and Youtube
+developers.google.com##.devsite-notification-eu-cookie.devsite-notification-promo
+google.se##:xpath(//h2[text()[contains(., 'Annons från Google')]]/ancestor::div[@id="topstuff"])
+google.se##.flt-actionblock:has(#flt-sponsored-link)
+youtube.com##img[src*="%2Fwww.facebook.com"]
+youtube.com##.ytp-ce-expanding-overlay-content:has(a[href*="patreon.com"])
+youtube.com##div.ytp-cards-teaser:if(span:has-text(/^Partner with AdRev/))
+youtube.com##div[aria-label="Marknadsföring"]
+youtube.com##:xpath(//div[text()[contains(., 'to buy this')]]/ancestor::div[contains(concat(' ', @class, ' '), ' annotation ')])
+youtube.com##:xpath(//div[text()[contains(., 'to buy this')]]/ancestor::div[contains(concat(' ', @class, ' '), ' annotation ')]/preceding-sibling::div[contains(concat(' ', @class, ' '), ' annotation-shape ')])
+youtube.com##a[class^="ytp-videowall-still"][aria-label*="MUST WATCH"]
+youtube.com###secondary-links
+youtube.com##.item-section:has(a[href="/feed/trending"])
+youtube.com##li.video-list-item:if(span:has-text(/^Rekommendationer/))
+
+! WOWHEAD
+wowhead.com##.blocks:has(div[id^="ad-"])
+wowhead.com##.vertical-bg:has(div[id^="ad-"])
+wowhead.com##.block-group:has(a[class^="mini-feature"])
+wowhead.com##.block-content:has(.banner-ad)
+wowhead.com##.blocks:has(.mini-feature)
+wowhead.com##.header-social
+wowhead.com##.type-coupon-codes
+wowhead.com##.coupon-codes
+wowhead.com##div#npc-model-container
+||mb.zam.com^
+wowhead.com##.blocks:has(.block-pair)
+wowhead.com##script:inject(abort-current-inline-script.js, WAS, addComScoreTracking)
+
+! MMO Champion and Curse
+||media.mmo-champion.com^*/twitter.$script
+mmo-champion.com##div[id*="cdm-zone-"]
+mmo-champion.com##.cms_widget_post_bit:has(a[title^="http"])
+mmo-champion.com##li.threadbit:has(a[href*="-http-"])
+||static.mmo-champion.com/images/tranquilizing/bg.jpg
+||static.mmo-champion.com/images/tranquilizing/bg_repeat.jpg
+||media.mmo-champion.com/images/news/*/december/christmas*.jpg
+||media.curse.com^*/BSAds.$script
+mmo-champion.com##fb-root
+mmo-champion.com##.show-ads
+mmo-champion.com###ad_global_above_footer
+mmo-champion.com##.recent-ad
+mmo-champion.com###ad-horizontal-header
+mmo-champion.com##body:style(background-color: DarkOliveGreen !important; background-image: none !important)
+mmo-champion.com###tos-banner
+||static.mmo-champion.com/images/tranquilizing/bg_repeat.jpg
+mmo-champion.com##script:inject(abort-on-property-write.js, document.cookie.indexOf)
+mmo-champion.com##script:inject(abort-on-property-read.js, window.factorem)
+/cdmfactorem*.$script,domain=mmo-champion.com|curse.com
+||direct.urbad.net/tmp/collect.php
+mmo-champion.com##a[href^="http://bit.ly/"]
+||mmo-champion.com^$csp=default-src 'self' 'unsafe-inline' 'unsafe-eval' *.youtube.com youtube.com *.mmo-champion.com *.cursecdn.com cursecdn.com *.imgur.com *.wowdb.com
+mmo-champion.com###adhh
+mmo-champion.com##script:inject(abort-current-inline-script.js, observerB)
+
+! IMDB
+imdb.com###social-share-widget
+imdb.com##.aux-content-widget-2:has(a[href*="facebook.com"])
+imdb.com##.mini-article:has(a[href*="facebook.com"])
+imdb.com##.aux-content-widget-2:has(#facebookWrapper)
+imdb.com##.mini-article:has(#facebookWrapper)
+imdb.com##:xpath(//h3[text()[contains(., 'Around The Web')]]/ancestor::div[contains(concat(' ', @class, ' '), ' mini-article ')])
+imdb.com##script:inject(abort-on-property-read.js, doWithAds)
+
+! For Firefox Android
+!#if env_mobile
+imgur.com##.getTheApp
+imgur.com##.FloatingOIA-link
+imgur.com##.AppBanner-text
+imgur.com##^script:has-text(GoogleAnalyticsObject)
+imgur.com##^script:has-text(ad-manager)
+reddit.com##a[href*=".app.link/"]
+reddit.com##.EUCookieNotice
+reddit.com##^script:has-text(xpromoInterstitial)
+reddit.com##^#adblock-test
+!#endif
+
+! Misc
+loading.se##script:inject(abort-on-property-read.js, OAS_url)
+loading.se##script:inject(abort-on-property-write.js, fbAsyncInit)
+loading.se##tr.forum_forum_tbr:has(img[src="/gfx/forumicons/22.gif"])
+loading.se##tr.forum_forum_tbr:has(img[src="/gfx/forumicons/21.gif"])
+loading.se##tr.forum_forum_tbr:has(img[src="/gfx/forumicons/20.gif"])
+yahoo.com##.viewingpane:has(.now-playing)
+openstreetmap.org###banner
+gamefaqs.com##div.message_mpu
+gamefaqs.com##td.msg:has(div.promo)
+pastebin.com##.promo-bar
+pastebin.com##script:inject(abort-on-property-write.js, abdd)
+pastebin.com###abrpm
+||pastebin.com/i/bb_bg.png$image
+pastebin.com###abrpm2 > div
+warcraftlogs.com##script:inject(setTimeout-defuser.js, ad)
+jsfiddle.net##script:inject(setTimeout-defuser.js, ads)
+/googleAnalytics.$script,domain=nrk.no
+stackoverflow.com,askubuntu.com,stackexchange.com,superuser.com###js-gdpr-consent-banner
+theverge.com##.m-privacy-consent
+icy-veins.com###cookie_notice
+wowdb.com##.cc_banner
