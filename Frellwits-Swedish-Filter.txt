@@ -414,6 +414,7 @@ avanza.se#@#a[title="LeoVegas"]
 ||pji.nu^$third-party,domain=idg.se|minhembio.com|nordichardware.se|99.se|fz.se|sweclockers.com|mobil.se|viivilla.se|feber.se
 ||youbora.com^$third-party,domain=aftonbladet.se|svd.se
 ||zotabox.com^$third-party,domain=rapport24.com
+||d2wy8f7a9ursnm.cloudfront.net/bugsnag$script,domain=expressen.se
 
 ! Facebook junk
 /facebook_sdk.js$script,domain=njus.me|radioplay.se
@@ -431,7 +432,7 @@ avanza.se#@#a[title="LeoVegas"]
 ||googletagmanager.com/gtm.js?id=$important,redirect=googletagmanager.com/gtm.js,script,domain=tradera.com
 ||tm.tradetracker.net/tag?$important,script,domain=agneswinqvist.se|enkelteknik.se|moviezine.se
 
-! Unwanted Wordpress plugins
+! Unwanted Wordpress plugins and bloat
 /plugins/ab_appnexus_ads/*$script
 /plugins/ad-blocking-advisor/*$script,stylesheet,image,domain=deliquate.se|naturvetenskap.org|juliusguldbog.se
 /plugins/ad-inserter-pro/*$script,stylesheet,domain=rocknytt.net
@@ -476,6 +477,8 @@ avanza.se#@#a[title="LeoVegas"]
 /wp-content/plugins/easy-social-share-buttons$script,stylesheet
 /wp-content/uploads/*/advanced.$script,domain=datormagazin.se|skanesport.se
 /wp-content/themes/*/assets/js/cookie.$script
+/wp-content/plugins/addthis/*$script,stylesheet
+/wp-admin/admin-ajax.php?action=addthis_global_options$script,domain=expressen.se
 
 ! JWplayer analytics/ad scripts
 ||ssl.p.jwpcdn.com^*/jwpsrv.js$script,important,domain=eurosport.se|aftonbladet.se|gamereactor.se|svd.se|muscles.se
@@ -639,12 +642,14 @@ di.se##a[href^="/brandstudio/"]
 di.se##.article-teaser__text-inline:has(a[href^="/brandstudio/"])
 di.se##.di_start__insider-ad
 di.se##.di_panorama__isAdLabel
+digital.di.se##script:inject(abort-current-inline-script.js, diConf)
 expressen.se##.terms-dialog
 expressen.se###rich-media-ads
 expressen.se##.native-ad-teaser
 expressen.se##.teaser--sponsored
 expressen.se##.teaser:if(.vignette:has-text(Erbjudande från))
 expressen.se##.slot:if(header:has-text(Erbjudande från))
+expressen.se##.slot:if(.b-title:has-text(Erbjudande från))
 expressen.se##a[href*="/annons"]
 expressen.se##.widget--collaboration
 expressen.se,dn.se##[class^="open-in-app"]
@@ -656,6 +661,8 @@ expressen.se##.discount-ad
 expressen.se##.b-native-ad-teaser
 expressen.se##.gdpr-banner
 expressen.se##.widget-ad-marker
+expressen.se##.b-adblock-sidebar-container
+expressen.se##.b-ad2
 mittkok.expressen.se##.newsletter__slide
 mittkok.expressen.se###modal-newsletter-popup
 mittkok.expressen.se##.widget-social-media
@@ -1617,3 +1624,4 @@ spela.se##script:inject(abort-current-inline-script.js, trackEvidonEvent)
 justwannahavefun.se##.legible:if(.sub-title:has-text(Sponsrat av))
 krickelins.se##article[id^="post-"]:has(a[href$="/sponsrade-inlagg/"])
 bonjourvintage.se##.category-om-samarbeten
+fotbolltransfers.com##div[class^="ad"]
