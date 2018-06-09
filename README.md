@@ -10,10 +10,10 @@ Various filter lists for [uBlock Origin](https://github.com/gorhill/uBlock) and 
 | **[emoji-filter.txt](https://raw.githubusercontent.com/lassekongo83/Frellwits-filter-lists/master/emoji-filter.txt)** ([Subscribe][I Don't Care About Emojis Subscribe]) | A.k.a "I Don't Care About Emojis." This filter aims to remove emoji realted scripts, stylesheets, fonts, and images.
 | **[a.txt](https://raw.githubusercontent.com/lassekongo83/Frellwits-filter-lists/master/a.txt)** ([Subscribe][Frellwit's personal filters Subscribe]) | This is where I keep some of my personal filters. (These may break stuff.)
 
-[Frellwit's Swedish Filter Subscribe]: https://subscribe.adblockplus.org/?location=https://raw.githubusercontent.com/lassekongo83/Frellwits-filter-lists/master/Frellwits-Swedish-Filter.txt&title=Frellwit%60s%20Swedish%20Filter
+[Frellwit's Swedish Filter Subscribe]: https://subscribe.adblockplus.org/?location=https://raw.githubusercontent.com/lassekongo83/Frellwits-filter-lists/master/Frellwits-Swedish-Filter.txt&title=Frellwit%27s%20Swedish%20Filter
 [deviantJUNK Filter Subscribe]: https://subscribe.adblockplus.org/?location=https://raw.githubusercontent.com/lassekongo83/Frellwits-filter-lists/master/deviantJUNKfilter.txt&title=deviantJUNK%20Filter
-[I Don't Care About Emojis Subscribe]: https://subscribe.adblockplus.org/?location=https://raw.githubusercontent.com/lassekongo83/Frellwits-filter-lists/master/emoji-filter.txt&title=I%20Don%60t%20Care%20About%20Emojis
-[Frellwit's personal filters Subscribe]: https://subscribe.adblockplus.org/?location=https://raw.githubusercontent.com/lassekongo83/Frellwits-filter-lists/master/a.txt&title=Frellwit%60s%20personal%20filters
+[I Don't Care About Emojis Subscribe]: https://subscribe.adblockplus.org/?location=https://raw.githubusercontent.com/lassekongo83/Frellwits-filter-lists/master/emoji-filter.txt&title=I%20Don%27t%20Care%20About%20Emojis
+[Frellwit's personal filters Subscribe]: https://subscribe.adblockplus.org/?location=https://raw.githubusercontent.com/lassekongo83/Frellwits-filter-lists/master/a.txt&title=Frellwit%27s%20personal%20filters
 
 #### How to subscribe
 
