@@ -13,7 +13,7 @@ Various filter lists for [uBlock Origin](https://github.com/gorhill/uBlock) and 
 [Frellwit's Swedish Filter Subscribe]: https://subscribe.adblockplus.org/?location=https://raw.githubusercontent.com/lassekongo83/Frellwits-filter-lists/master/Frellwits-Swedish-Filter.txt&title=Frellwit%20Swedish%20Filter
 [deviantJUNK Filter Subscribe]: https://subscribe.adblockplus.org/?location=https://raw.githubusercontent.com/lassekongo83/Frellwits-filter-lists/master/deviantJUNKfilter.txt&title=deviantJUNK%20Filter
 [I Don't Care About Emojis Subscribe]: https://subscribe.adblockplus.org/?location=https://raw.githubusercontent.com/lassekongo83/Frellwits-filter-lists/master/emoji-filter.txt&title=I%20Dont%20Care%20About%20Emojis
-[Frellwit's personal filters Subscribe]: https://subscribe.adblockplus.org/?location=https://raw.githubusercontent.com/lassekongo83/Frellwits-filter-lists/master/Frellwits-Swedish-Filter.txt&title=Frellwit%20personal%20filters
+[Frellwit's personal filters Subscribe]: https://subscribe.adblockplus.org/?location=https://raw.githubusercontent.com/lassekongo83/Frellwits-filter-lists/master/a.txt&title=Frellwit%20personal%20filters
 
 #### How to subscribe
 
