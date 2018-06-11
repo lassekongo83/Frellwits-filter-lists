@@ -17,7 +17,7 @@ Various filter lists for [uBlock Origin](https://github.com/gorhill/uBlock) and 
 
 #### How to subscribe
 
-Copy the link address above if you want to subscribe to a list and [follow the guide on how to import external lists in uBlock Origin.](https://github.com/gorhill/uBlock/wiki/Filter-lists-from-around-the-web)
+Left-click on the subscribe link *or* copy the link address above and [follow the guide on how to import external lists in uBlock Origin.](https://github.com/gorhill/uBlock/wiki/Filter-lists-from-around-the-web)
 
 ## Special thanks
 
