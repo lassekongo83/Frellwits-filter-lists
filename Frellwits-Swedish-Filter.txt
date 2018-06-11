@@ -392,6 +392,7 @@
 ! Unbreak
 avanza.se#@#a[title="LeoVegas"]
 @@||opinionstage.com^$domain=99.se|fz.se|sweclockers.com
+24blekinge.se,24emmaboda.se,24halmstad.se,24helsingborg.se,24kalmar.se,24kristianstad.se,24malmo.se,24nybro.se,24trelleborg.se,24uppsala.se,24ystad.se##script:inject(set-constant.js, lwhb, noopFunc)
 
 ! Common site specific blocking
 .*/*280x240*.$image,domain=rumhemma.se
@@ -755,7 +756,8 @@ affarsliv.com,affarslivgotland.se,corren.se,eposten.se,folkbladet.se,helagotland
 affarsliv.com,affarslivgotland.se,corren.se,eposten.se,folkbladet.se,helagotland.se,kuriren.nu,mvt.se,norrbottensaffarer.se,nsd.se,nt.se,pt.se,unt.se,vt.se##.lunchguide
 affarsliv.com,affarslivgotland.se,corren.se,eposten.se,folkbladet.se,helagotland.se,kuriren.nu,mvt.se,norrbottensaffarer.se,nsd.se,nt.se,pt.se,unt.se,vt.se##img[data-original*="destination.se"]
 affarsliv.com,affarslivgotland.se,corren.se,eposten.se,folkbladet.se,helagotland.se,klackspark.com,kuriren.nu,mvt.se,norrbottensaffarer.se,nsd.se,nt.se,pt.se,unt.se,vt.se##script:inject(abort-current-inline-script.js, adn, renderComposedAds)
-||amqp-ws-proxy.radioplay.se^$websocket
+||webimages.lokus.se^$image,important,domain=affarsliv.com|affarslivgotland.se|corren.se|eposten.se|folkbladet.se|helagotland.se|kuriren.nu|mvt.se|norrbottensaffarer.se|nsd.se|nt.se|pt.se|unt.se|vt.se
+||widget.boende.se^$script,domain=affarsliv.com|affarslivgotland.se|corren.se|eposten.se|folkbladet.se|helagotland.se|kuriren.nu|mvt.se|norrbottensaffarer.se|nsd.se|nt.se|pt.se|unt.se|vt.se
 
 ! SÖRMLANDS MEDIA
 ||static.sm.infomaker.io^$image,domain=ekuriren.se|kkuriren.se|sn.se
@@ -1080,7 +1082,7 @@ chef.se,svd.se##.Ad
 affarsvarlden.se,arbetarskydd.se,dagensmedia.se,lag-avtal.se,nickelodeon.se,nyteknik.se,thelocal.se##.ad-container
 dn.se,klart.se,norran.se##.ad-wrapper
 brollopstorget.se,familjeliv.se##.ad_right
-24blekinge.se,24emmaboda.se,24halmstad.se,24helsingborg.se,24kalmar.se,24kristianstad.se,24malmo.se,24nybro.se,24trelleborg.se,24uppsala.se,24ystad.se,babyhjalp.se,branschkoll.se,fotosidan.se,moviezine.se##.ads
+24blekinge.se,24emmaboda.se,24halmstad.se,24helsingborg.se,24kalmar.se,24kristianstad.se,24malmo.se,24nybro.se,24trelleborg.se,24uppsala.se,24ystad.se,babyhjalp.se,branschkoll.se,fotosidan.se,moviezine.se,affarsliv.com,affarslivgotland.se,corren.se,eposten.se,folkbladet.se,helagotland.se,klackspark.com,kuriren.nu,mvt.se,norrbottensaffarer.se,nsd.se,nt.se,pt.se,unt.se,vt.se##.ads
 24blekinge.se,24emmaboda.se,24halmstad.se,24helsingborg.se,24kalmar.se,24kristianstad.se,24malmo.se,24nybro.se,24trelleborg.se,24uppsala.se,24ystad.se###cookie-bar
 mestmotor.se,nyheter24.se##.advertisement
 agriprim.se,bike.se,e.se,entreprenadaktuellt.se,husbilhusvagn.se,ja.se,klassiker.nu,maskinstationerna.se,mopedgaraget.se,norran.se,nyckelspel.se,skogsaktuellt.se,spelo.se,sweclockers.com,vaken.se,vibilagare.se,lovelylife.se##.banner
@@ -1100,6 +1102,7 @@ ratsit.se,bilsport.se,funnygames.se##.cc_banner-wrapper
 fotbollskanalen.se,mitti.se,alltomstockholm.se##.article-share
 svd.se,falkopingstidning.se,jnytt.se,jp.se,skaraborgslanstidning.se,skovdenyheter.se,smalandsdagblad.se,smalanningen.se,smt.se,tranastidning.se,vastgotabladet.se,vetlandaposten.se,vn.se,affarsliv.com,affarslivgotland.se,corren.se,eposten.se,folkbladet.se,helagotland.se,klackspark.com,kuriren.nu,mvt.se,norrbottensaffarer.se,nsd.se,nt.se,pt.se,unt.se,vt.se###smartbanner.android
 ekuriren.se,kkuriren.se,sn.se###android-smart-appbanner
+finansliv.se,vinochmatguiden.se##.newsletter
 
 ! ÖVRIGT
 nordichardware.se##div.td_block_text_with_title:if(h4 > span:has-text(Från Surfa))
@@ -1203,8 +1206,10 @@ mobil.se###gdpr
 /lunchguiden*.$image,domain=vk.se|folkbladet.nu
 ||terms.vkmedia.se/agreements/$xmlhttprequest
 vk.se,folkbladet.nu##:xpath(//div[text()[contains(., 'Annons')]]/parent::div)
-24kalmar.se,24nybro.se,24emmaboda.se,24halmstad.se,24helsingborg.se,24blekinge.se,24malmo.se,24kristianstad.se,24trelleborg.se,24ystad.se,24uppsala.se##.article-partner-promotion
-24kalmar.se,24nybro.se,24emmaboda.se,24halmstad.se,24helsingborg.se,24blekinge.se,24malmo.se,24kristianstad.se,24trelleborg.se,24ystad.se,24uppsala.se##.mailform-overlay
+24blekinge.se,24emmaboda.se,24halmstad.se,24helsingborg.se,24kalmar.se,24kristianstad.se,24malmo.se,24nybro.se,24trelleborg.se,24uppsala.se,24ystad.se##article.native
+24blekinge.se,24emmaboda.se,24halmstad.se,24helsingborg.se,24kalmar.se,24kristianstad.se,24malmo.se,24nybro.se,24trelleborg.se,24uppsala.se,24ystad.se##.article--native
+24blekinge.se,24emmaboda.se,24halmstad.se,24helsingborg.se,24kalmar.se,24kristianstad.se,24malmo.se,24nybro.se,24trelleborg.se,24uppsala.se,24ystad.se##.article-partner-promotion
+24blekinge.se,24emmaboda.se,24halmstad.se,24helsingborg.se,24kalmar.se,24kristianstad.se,24malmo.se,24nybro.se,24trelleborg.se,24uppsala.se,24ystad.se##.mailform-overlay
 ng.se##.sponsored-article-blurb-wrap
 ng.se##.panel-pane:if(.pane-title:has-text(SAMARBETEN))
 ng.se##script:inject(abort-on-property-read.js, ADTECH)
@@ -1632,10 +1637,11 @@ svegot.se##[itemtype="https://schema.org/WPAdBlock"]
 svegot.se##script:inject(addEventListener-defuser.js, scroll, (a))
 finansliv.se##script:inject(abort-on-property-write.js, nwlettersignupcheck)
 finansliv.se##script:inject(abort-on-property-read.js, OA_show)
-finansliv.se##.newsletter
 ||evidon.com^$third-party,domain=spela.se
 spela.se##script:inject(abort-current-inline-script.js, trackEvidonEvent)
 justwannahavefun.se##.legible:if(.sub-title:has-text(Sponsrat av))
 krickelins.se##article[id^="post-"]:has(a[href$="/sponsrade-inlagg/"])
 bonjourvintage.se##.category-om-samarbeten
 fotbolltransfers.com##div[class^="ad"]
+free.se##.buyAndSellPreamble
+||amqp-ws-proxy.radioplay.se^$websocket
