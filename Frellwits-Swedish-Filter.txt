@@ -396,8 +396,8 @@ avanza.se#@#a[title="LeoVegas"]
 
 ! Common site specific blocking
 .*/*280x240*.$image,domain=rumhemma.se
-.*/*annons*.$image,domain=guldkanalen.se|kurera.se|nvp.se|rumhemma.se|tekniksmart.se|megafonen.nu
-.*/*banner*.$image,domain=dansbandskanalen.se|etc.se|evertiq.se|guldkanalen.se|kurera.se|markbladet.se|rockkocken.se|rumhemma.se|skrattnet.se|tkj.se|vaken.se|sportpanelen.se
+.*/*annons*.$image,domain=guldkanalen.se|kurera.se|nvp.se|rumhemma.se|tekniksmart.se|megafonen.nu|newsvoice.se
+.*/*banner*.$image,domain=dansbandskanalen.se|etc.se|evertiq.se|guldkanalen.se|kurera.se|markbladet.se|rockkocken.se|rumhemma.se|skrattnet.se|tkj.se|vaken.se|sportpanelen.se|newsvoice.se
 .*/*banner*.$script,domain=dagenshandel.se|entreprenor.se|food-supply.se|magasinetparagraf.se|motormagasinet.se|skyddosakerhet.se
 /ajax_statistics_count/*$xmlhttprequest,domain=industrinyheter.se|dagensnaringsliv.se
 /analytics/*$domain=tkj.se
@@ -673,6 +673,7 @@ expressen.se##.gdpr-banner
 expressen.se##.widget-ad-marker
 expressen.se##.b-adblock-sidebar-container
 expressen.se##.b-ad2
+expressen.se##script:inject(addEventListener-defuser.js, error, adsBlocked)
 mittkok.expressen.se##.newsletter__slide
 mittkok.expressen.se###modal-newsletter-popup
 mittkok.expressen.se##.widget-social-media
@@ -681,6 +682,7 @@ mittkok.expressen.se##script:inject(abort-current-inline-script.js, adblock)
 mittkok.expressen.se##script:inject(abort-current-inline-script.js, burtSegments)
 mittkok.expressen.se##script:inject(abort-current-inline-script.js, ExpressenAnalytics, push)
 ||precis.expressen.se/recommendations$xmlhttprequest
+||jtp.expressen.se/notify/clip-started.$image
 /_widget/destination$subdocument,domain=expressen.se
 /closest-native*/*$xmlhttprequest,domain=expressen.se
 ||expressen.se/videos/fstrat$media
@@ -941,6 +943,7 @@ devote.se,familjeliv.se##div[style*="min-height: 244px;"][id][style*="display: i
 ! ALLER MEDIA
 allakorsord.se,allas.se,allers.se,antikochauktion.se,aretrunt.se,baaam.se,cafe.se,dromhemochtradgard.se,elle.se,elledecoration.se,ellematovin.se,femina.se,frida.se,hant.se,hemmets.se,mabra.com,matmagasinet.se,residencemagazine.se,svenskdam.se###black-studio-tinymce-7
 allakorsord.se,allas.se,allers.se,antikochauktion.se,aretrunt.se,baaam.se,cafe.se,dromhemochtradgard.se,elle.se,elledecoration.se,ellematovin.se,femina.se,frida.se,hant.se,hemmets.se,mabra.com,matmagasinet.se,residencemagazine.se,svenskdam.se##article[id^="post-"]:has(a[href$="/annons/"])
+allakorsord.se,allas.se,allers.se,antikochauktion.se,aretrunt.se,baaam.se,cafe.se,dromhemochtradgard.se,elle.se,elledecoration.se,ellematovin.se,femina.se,frida.se,hant.se,hemmets.se,mabra.com,matmagasinet.se,residencemagazine.se,svenskdam.se##.c-newsletter
 allakorsord.se,allas.se,allers.se,antikochauktion.se,aretrunt.se,baaam.se,cafe.se,dromhemochtradgard.se,elle.se,elledecoration.se,ellematovin.se,femina.se,frida.se,hant.se,hemmets.se,mabra.com,matmagasinet.se,residencemagazine.se,svenskdam.se##script:inject(abort-on-property-read.js, pbjsChunk)
 allakorsord.se,allas.se,allers.se,antikochauktion.se,aretrunt.se,baaam.se,cafe.se,dromhemochtradgard.se,elle.se,elledecoration.se,ellematovin.se,femina.se,frida.se,hant.se,hemmets.se,mabra.com,matmagasinet.se,residencemagazine.se,svenskdam.se##script:inject(abort-on-property-write.js, adblockDetector)
 allakorsord.se,allas.se,allers.se,antikochauktion.se,aretrunt.se,baaam.se,cafe.se,dromhemochtradgard.se,elle.se,elledecoration.se,ellematovin.se,femina.se,frida.se,hant.se,hemmets.se,mabra.com,matmagasinet.se,residencemagazine.se,svenskdam.se##script:inject(abort-on-property-write.js, newsletterHtml)
@@ -950,7 +953,9 @@ allakorsord.se,allas.se,allers.se,antikochauktion.se,aretrunt.se,baaam.se,cafe.s
 allakorsord.se,allas.se,allers.se,antikochauktion.se,aretrunt.se,baaam.se,cafe.se,dromhemochtradgard.se,elle.se,elledecoration.se,ellematovin.se,femina.se,frida.se,hant.se,hemmets.se,mabra.com,matmagasinet.se,residencemagazine.se,svenskdam.se##section.block-minor-post:has(.native-sponsored-splash)
 /apester-javascript-sdk.min.js$script,domain=allakorsord.se|allas.se|allers.se|antikochauktion.se|aretrunt.se|baaam.se|cafe.se|dromhemochtradgard.se|elle.se|elledecoration.se|ellematovin.se|femina.se|frida.se|hant.se|hemmets.se|mabra.com|matmagasinet.se|residencemagazine.se|svenskdam.se
 /js/sticky-mobile-ad.js$script,domain=allakorsord.se|allas.se|allers.se|antikochauktion.se|aretrunt.se|baaam.se|cafe.se|dromhemochtradgard.se|elle.se|elledecoration.se|ellematovin.se|femina.se|frida.se|hant.se|hemmets.se|mabra.com|matmagasinet.se|residencemagazine.se|svenskdam.se
+/plugins/se-wordpress-newsletters/*$domain=allakorsord.se|allas.se|allers.se|antikochauktion.se|aretrunt.se|baaam.se|cafe.se|dromhemochtradgard.se|elle.se|elledecoration.se|ellematovin.se|femina.se|frida.se|hant.se|hemmets.se|mabra.com|matmagasinet.se|residencemagazine.se|svenskdam.se
 /se-wordpress-google-analytics/src/js/wp-tagmanager.js$script,domain=allakorsord.se|allas.se|allers.se|antikochauktion.se|aretrunt.se|baaam.se|cafe.se|dromhemochtradgard.se|elle.se|elledecoration.se|ellematovin.se|femina.se|frida.se|hant.se|hemmets.se|mabra.com|matmagasinet.se|residencemagazine.se|svenskdam.se
+||printfriendly.com^$third-party,domain=allakorsord.se|allas.se|allers.se|antikochauktion.se|aretrunt.se|baaam.se|cafe.se|dromhemochtradgard.se|elle.se|elledecoration.se|ellematovin.se|femina.se|frida.se|hant.se|hemmets.se|mabra.com|matmagasinet.se|residencemagazine.se|svenskdam.se
 sportfiskeforum.se###fj-topad
 @@||fiskejournalen.se^$generichide
 fiskejournalen.se##.blogindex-layout-large-post:has(.native-wrapper)
@@ -1072,7 +1077,7 @@ alexandrabring.se,biancaingrosso.se##article[id^="post-"]:if(em:has-text(I samar
 saraabrahamsson.se##script:inject(addEventListener-defuser.js, contextmenu)
 nouw.com,alicestenlof.com,clarahenry.se,elinskoglund.com,fannystaaf.se,linnahlborg.se,lovisawallin.se,moamattsson.se,saraabrahamsson.se###ConsentBanner
 nouw.com##.Container_blogPost:if(em:has-text(HELA DETTA INLÄGG ÄR ETT REKLAMSAMARBETE))
-nouw.com##[title="Ad space"]
+nouw.com,alicestenlof.com,clarahenry.se,elinskoglund.com,fannystaaf.se,linnahlborg.se,lovisawallin.se,moamattsson.se,saraabrahamsson.se##[title="Ad space"]
 
 ! Common cosmetic filters that shouldn't be generic
 businessclass.se,spela.se##.advert
@@ -1114,9 +1119,11 @@ nordichardware.se##.pspy_info
 @@||nordichardware.se^$generichide
 bubb.la##:xpath(//h2[@class="ad"]/parent::div[1])
 friatider.se##img[src*="336x150"]
+friatider.se##script:inject(abort-current-inline-script.js, Drupal, settings)
 etc.se##.banner-wrap
 etc.se##.article-type-annons
 etc.se##img[alt="Annons"]
+||play.etc.se/sw.js$script
 newsvoice.se##:xpath(//strong[text()[contains(., 'ANNONSER')]]/parent::font/parent::div)
 newsvoice.se##aside.widget:if(span:has-text(ANNONSER))
 newsvoice.se##aside.widget:if(h4:has-text(NEWSVOICE REKOMMENDERAR))
@@ -1223,7 +1230,7 @@ ng.se##script:inject(abort-on-property-read.js, ADTECH)
 ||breakit.se^*/*AdManager.$script
 ||breakit.solidtango.com^$subdocument
 ||breakit.se/api/insight/event$xmlhttprequest
-||breakit.se^*/lib/accl$script
+||breakit.se/accl$script
 breakit.se##.spnsr-widget
 breakit.se##.supportersSlideContainer
 breakit.se##.monstermodule
