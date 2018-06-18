@@ -109,6 +109,7 @@
 ||panera.io^$third-party
 ||pensiono.se^$third-party
 ||platform.linkedin.com^$third-party
+||portalhc.com^$third-party
 ||prisjakt.nu^$third-party
 ||proxyas.com^$third-party
 ||pushcrew.com^$third-party
@@ -261,6 +262,7 @@
 ||jssdk.privacy.schibsted.com/privacy-notifier.$script
 ||kayak.xno.se^$script
 ||kuriren.eu/app/$subdocument
+||laikabook.se/ib/banner$subdocument
 ||lemonwhale.com*/adevent/$xmlhttprequest
 ||media.jw-it.se/b/$image
 ||monkey.tunnl.com/identify^$subdocument
@@ -347,6 +349,7 @@
 ###cookieAlert
 ##.cookieConsent
 ###CookieNotice
+##.cookie-overlay
 ###eu-cookie-bar
 ##.widget_eu_cookie_law_widget
 ###js__cookie-disclaimer
@@ -376,9 +379,9 @@
 @@/adsense.js$first-party,script,domain=dayviews.com|fragbite.se|kwiss.me|nyheter24.se|tyda.se|synonymer.cc|modette.se
 @@/adserver.$first-party,script,domain=fotosidan.se|utsidan.se
 @@/advertisement.js$first-party,script,domain=blocket.se|emocore.se|kaninsajten.se|kit.se|saljplatsen.se|spela.se
-@@/assets/showAds.js^$first-party,script,domain=101ideer.se|alltommat.se|alltomtradgard.se|amelia.se|damernasvarld.se|gardochtorp.se|godsochgardar.se|hemochantik.se|johannatoftby.se|lantliv.com|madeleineilmrud.se|magdalenagraaf.se|mama.nu|skonahem.com|styleby.nu|tara.se|topphalsa.se|veckorevyn.com
+@@/assets/showAds.js^$first-party,script,domain=101ideer.se|alltommat.se|alltomtradgard.se|amelia.se|damernasvarld.se|gardochtorp.se|godsochgardar.se|hemochantik.se|johannatoftby.se|lantliv.com|madeleineilmrud.se|magdalenagraaf.se|mama.nu|skonahem.com|styleby.nu|tara.se|topphalsa.se|veckorevyn.com|tidningenhembakat.se
 @@/js/ad.js$first-party,domain=sweclockers.com
-@@/js/ads.js$first-party,domain=101ideer.se|24blekinge.se|24emmaboda.se|24falkenberg.se|24halmstad.se|24helsingborg.se|24kalmar.se|24kristianstad.se|24malmo.se|24nybro.se|24trelleborg.se|24uppsala.se|24ystad.se|affarsliv.com|affarslivgotland.se|alltforforaldrar.se|alltommat.se|alltomtradgard.se|amelia.se|bike.se|corren.se|damernasvarld.se|deliquate.se|eposten.se|folkbladet.se|foretagande.se|gardochtorp.se|godsochgardar.se|helagotland.se|hemochantik.se|husbilhusvagn.se|ilikeradio.se|johannatoftby.se|klackspark.com|klassiker.nu|kuriren.nu|lantliv.com|ljudochbild.se|madeleineilmrud.se|magdalenagraaf.se|mama.nu|mopedgaraget.se|mvt.se|naturvetenskap.org|norrbottensaffarer.se|nsd.se|nt.se|pt.se|radio.se|skonahem.com|styleby.nu|swedroid.se|tara.se|topphalsa.se|tvmatchen.nu|unt.se|uppsalatidningen.se|veckorevyn.com|vibilagare.se|villavarmt.se|vt.se
+@@/js/ads.js$first-party,domain=101ideer.se|24blekinge.se|24emmaboda.se|24falkenberg.se|24halmstad.se|24helsingborg.se|24kalmar.se|24kristianstad.se|24malmo.se|24nybro.se|24trelleborg.se|24uppsala.se|24ystad.se|affarsliv.com|affarslivgotland.se|alltforforaldrar.se|alltommat.se|alltomtradgard.se|amelia.se|bike.se|corren.se|damernasvarld.se|deliquate.se|eposten.se|folkbladet.se|foretagande.se|gardochtorp.se|godsochgardar.se|helagotland.se|hemochantik.se|husbilhusvagn.se|ilikeradio.se|johannatoftby.se|klackspark.com|klassiker.nu|kuriren.nu|lantliv.com|ljudochbild.se|madeleineilmrud.se|magdalenagraaf.se|mama.nu|mopedgaraget.se|mvt.se|naturvetenskap.org|norrbottensaffarer.se|nsd.se|nt.se|pt.se|radio.se|skonahem.com|styleby.nu|swedroid.se|tara.se|topphalsa.se|tvmatchen.nu|unt.se|uppsalatidningen.se|veckorevyn.com|vibilagare.se|villavarmt.se|vt.se|privataaffarer.se|tidningenhembakat.se
 @@/js/ads/advert.min.js$first-party,script,domain=spelo.se
 @@/js/adsbygoogle.js^$first-party,script,domain=feber.se|tjock.se
 @@/js/advert.$script,domain=mariestadstidningen.se|nwt.se|sla.se
@@ -741,12 +744,11 @@ dagensmedicin.se##.widget-carousel--sponsored
 resume.se##.teaser-sponsored
 resume.se##.teaser-regular:if(.tag:has-text(sponsring))
 ||qbrick.com^$third-party,domain=resume.se
-vafinans.se##.box:if(.newsLeadWords:has-text(Sponsrat innehåll))
-vafinans.se##.brandStoryGreyBackground2
-mama.nu,skonahem.com,101ideer.se,tara.se,styleby.nu,topphalsa.se,veckorevyn.com,lantliv.com,amelia.se,alltomtradgard.se,alltommat.se##a.teaser[href*="/annonssamarbete/"]
-mama.nu,skonahem.com,101ideer.se,tara.se,styleby.nu,topphalsa.se,veckorevyn.com,lantliv.com,amelia.se,alltomtradgard.se,alltommat.se##a.teaser:if(.teaser-label:has-text(Annonssamarbete))
-alltomtradgard.se##.teaser-native
-privataaffarer.se##.teaser:has(img[src*="/native/"])
+vafinans.se##:xpath(//div[contains(concat(' ', @class, ' '), ' brandStoryGreyBackground2 ')]/parent::div/parent::div/parent::div[contains(concat(' ', @class, ' '), ' row ')])
+vafinans.se###balken_top
+mama.nu,skonahem.com,101ideer.se,tara.se,styleby.nu,topphalsa.se,veckorevyn.com,lantliv.com,amelia.se,alltomtradgard.se,alltommat.se,privataaffarer.se##a.teaser[href*="/annonssamarbete/"]
+mama.nu,skonahem.com,101ideer.se,tara.se,styleby.nu,topphalsa.se,veckorevyn.com,lantliv.com,amelia.se,alltomtradgard.se,alltommat.se,privataaffarer.se##a.teaser:has-text(Annonssamarbete)
+mama.nu,skonahem.com,101ideer.se,tara.se,styleby.nu,topphalsa.se,veckorevyn.com,lantliv.com,amelia.se,alltomtradgard.se,alltommat.se,privataaffarer.se##.teaser-native
 privataaffarer.se##a[href*="/bit.ly/"]
 /fusion.js$script,domain=tidningenhembakat.se
 /cinnaroll-fusion.min.js^$script,domain=tidningenhembakat.se
@@ -763,6 +765,7 @@ feber.se,tjock.se##script:inject(abort-current-inline-script.js, $, GDPR)
 /inc/statistic.aspx?$subdocument,domain=affarsliv.com|affarslivgotland.se|corren.se|eposten.se|folkbladet.se|helagotland.se|kuriren.nu|mvt.se|norrbottensaffarer.se|nsd.se|nt.se|pt.se|unt.se|vt.se
 /villapriser/*$subdocument,domain=affarsliv.com|affarslivgotland.se|corren.se|eposten.se|folkbladet.se|helagotland.se|kuriren.nu|mvt.se|norrbottensaffarer.se|nsd.se|nt.se|pt.se|unt.se|vt.se
 ||ntm.eu/om/img/cx/Matchad$subdocument,domain=affarsliv.com|affarslivgotland.se|corren.se|eposten.se|folkbladet.se|helagotland.se|kuriren.nu|mvt.se|norrbottensaffarer.se|nsd.se|nt.se|pt.se|unt.se|vt.se
+/adn_consent_override.$stylesheet,domain=affarsliv.com|affarslivgotland.se|corren.se|eposten.se|folkbladet.se|gotland.net|helagotland.se|klackspark.com|kuriren.nu|mvt.se|norrbottensaffarer.se|nsd.se|nt.se|pt.se|unt.se|uppsala.com|uppsalatidningen.se|vt.se
 norrbottensaffarer.se###naaddbox
 affarsliv.com,affarslivgotland.se,corren.se,eposten.se,folkbladet.se,helagotland.se,klackspark.com,kuriren.nu,mvt.se,norrbottensaffarer.se,nsd.se,nt.se,pt.se,unt.se,vt.se##.banner-column
 affarsliv.com,affarslivgotland.se,corren.se,eposten.se,folkbladet.se,helagotland.se,kuriren.nu,mvt.se,norrbottensaffarer.se,nsd.se,nt.se,pt.se,unt.se,vt.se##.destination-border-color
