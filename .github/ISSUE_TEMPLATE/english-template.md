@@ -1,6 +1,6 @@
 ---
-name: ''
-about: ''
+name: English template
+about: Use this template to report unblocked content or incorrectly removed content
 
 ---
 
