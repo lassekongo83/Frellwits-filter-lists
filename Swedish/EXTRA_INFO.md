@@ -53,7 +53,7 @@ Lurendrejerier och skadliga saker som försöker:
 - Stora länkar till sociala medier.
 - Onödiga saker som tar upp väldigt mycket skärmutrymme. (Enorma vertikala banners som tipsar om nyhetsbrev till exempel.)
 
-**Listan plockar ej bort allt av det ovannämnda.** Jag försöker få listan till att plocka bort det som går och det jag hinner med, men vissa saker kan slinka förbi i alla fall. Upptäcks något jag har missat på någon svensk webbsida så öppna en ny issue här på GitHub och följ [problemmallen](https://github.com/lassekongo83/Frellwits-filter-lists/blob/master/ISSUE_TEMPLATE.md).
+**Listan plockar ej bort allt av det ovannämnda.** Jag försöker få listan till att plocka bort det som går och det jag hinner med, men vissa saker kan slinka förbi i alla fall. Upptäcks något jag har missat på någon svensk webbsida så öppna en ny issue här på GitHub och följ problemmallen.
 
 Jag försöker aldrig medvetet censurera eller att förstöra funktionaliteten på någon webbsida. Ibland kan [strikta filter](https://github.com/gorhill/uBlock/wiki/Strict-blocking) blockera en webbsida om inget filteralternativ som till exempel `$third-party` eller `$script` har angetts. Ett strikt filter kan visa sig om du ser en varningstriangel och information om vilken lista sidan är blockerad i. Du som besökare kan enkelt med ett knapptryck temporärt eller permanent kringå filtret som blockerar sidan. 
 
