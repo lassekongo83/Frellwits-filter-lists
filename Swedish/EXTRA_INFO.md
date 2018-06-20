@@ -59,7 +59,7 @@ Jag försöker aldrig medvetet censurera eller att förstöra funktionaliteten p
 
 De webbsidor som har varningstrianglar har det oftast av en anledning. Det kan bero på att sidan distribuerar skadlig programvara eller att sidan försöker lura besökaren på pengar. Där med ska det enbart ses som en varning och inte som censur om webbsidan är blockerad med ett strikt filter. Det är fortfarande du som bestämmer om du vill visa webbsidan eller ej. Vill du inte ha strikt filtrering aktiverat så kan du gå in i uBlock Origins inställningar > `Mina regler` och lägga till `no-strict-blocking: * true`, tryck sedan på `Spara` och `Skicka`.
 
-Filtren skrivs så gott det går enligt min förmåga och vad som hinns med. **Målet är att sidorna ska fungera så normalt som möjligt, fast utan reklam, spårning, irritationer och bloat.** Om något inte fungerar korrekt så kan du öppna en ny issue här på GitHub så tar jag hand om det så fort jag hinner. (Glöm dock ej att följa [problemmallen](https://github.com/lassekongo83/Frellwits-filter-lists/blob/master/ISSUE_TEMPLATE.md)).
+Filtren skrivs så gott det går enligt min förmåga och vad som hinns med. **Målet är att sidorna ska fungera så normalt som möjligt, fast utan reklam, spårning, irritationer och bloat.** Om något inte fungerar korrekt så kan du öppna en ny issue här på GitHub så tar jag hand om det så fort jag hinner. (Glöm dock ej att följa problemmallen).
 
 ### Information till kollaboratörer
 
