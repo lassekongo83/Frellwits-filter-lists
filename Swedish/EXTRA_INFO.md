@@ -2,7 +2,7 @@ Note: This is information for Swedish visitors to this repo regarding the Swedis
 
 ### Information till användare
 
-**Frellwit's Swedish Filter** finns främst till för att plocka bort annonser, spårning, irritationer, lurendrejerier och bloat på **svenska** webbsidor. Listan bör redan vara automatiskt aktiverad i uBlock Origin om din webbläsare är på svenska. Denna lista används också av webbläsaren [Brave](https://brave.com) för regional blockering i Sverige.
+**Frellwit's Swedish Filter** finns främst till för att plocka bort annonser, spårning, irritationer, lurendrejerier och bloat på **svenska** webbsidor. Listan bör redan vara automatiskt aktiverad i uBlock Origin om din webbläsare är på svenska. Denna lista används också av webbläsaren [Brave](https://brave.com) för regional blockering i Sverige. **OBS:** Då jag inte officiellt stödjer Brave så kan det hända att vissa lösningar inte kommer att fungera i den webbläsaren.
 
 **Listan har ingen ekonomisk eller politisk motivation bakom sig.**
 Jag accepterar inga donationer. Jag censurerar inga åsikter.
