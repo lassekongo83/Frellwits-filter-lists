@@ -463,8 +463,9 @@ ng.se,alltomstockholm.se,mitti.se,bloggbevakning.se##script:inject(abort-on-prop
 /plugins/convertplug/*$script,stylesheet
 /plugins/cookie-bar/*$script,stylesheet,domain=bloggbevakning.se
 /plugins/cookie_consent/*$script
-/plugins/cookie-law-info/js/cookielawinfo.js^$script
+/plugins/cookie-law-info/*$script,stylesheet
 /plugins/cookie-notice/*$script,stylesheet
+/plugins/cresta-social-share-counter-pro/*$script,stylesheet
 /plugins/doubleclick-wp/*
 /plugins/easy-eu-cookie-law/*
 /plugins/eu-cookie-law/*$script,stylesheet
@@ -502,6 +503,7 @@ ng.se,alltomstockholm.se,mitti.se,bloggbevakning.se##script:inject(abort-on-prop
 /wp-content/uploads/*/advanced.$script,domain=datormagazin.se|skanesport.se
 /wp-content/themes/*/assets/js/cookie.$script
 /wp-content/plugins/addthis/*$script,stylesheet
+/wp-content/uploads/*.js?ver$script,domain=noterat.nu|nyadagbladet.se
 /wp-admin/admin-ajax.php?action=addthis_global_options$script,domain=expressen.se
 
 ! JWplayer analytics/ad scripts
@@ -1590,6 +1592,7 @@ listor.se##article:has(a[href*="/annons/"])
 listor.se##.swp_social_panelSide
 accentmagasin.se##.widget-container:if(.widget-title:has-text(Annons))
 ||vk.com^$third-party,domain=samnytt.se
+||newsharecounts.com^$third-party,domain=samnytt.se
 @@||samnytt.se^$generichide
 samnytt.se##script:inject(abort-on-property-read.js, advanced_ads_ready)
 samnytt.se##.nc_socialPanel
@@ -1638,7 +1641,6 @@ garaget.org##:xpath(//p[contains(concat(' ', @class, ' '), ' discrete ')][text()
 garaget.org##.small.discrete:has-text(Annons:)
 @@||remus.garaget.org/www/delivery/$script,xmlhttprequest,first-party
 ||remus.garaget.org^$image
-||noterat.nu/wp-content/uploads/*.js?ver$script
 @@||hightechguiden.se^$generichide
 hightechguiden.se##script:inject(abort-on-property-write.js, document.oncontextmenu)
 hightechguiden.se##script:inject(abort-on-property-read.js, noNeedToBlock)
@@ -1703,6 +1705,7 @@ justwannahavefun.se##.legible:if(.sub-title:has-text(Sponsrat av))
 krickelins.se##article[id^="post-"]:has(a[href$="/sponsrade-inlagg/"])
 bonjourvintage.se##.category-om-samarbeten
 fotbolltransfers.com##div[class^="ad"]
+fotbolltransfers.com##.smallNewsLink:if(.smallNewsCategory:has-text(Sponsrad))
 free.se##.buyAndSellPreamble
 ||amqp-ws-proxy.radioplay.se^$websocket
 /mod.js$xmlhttprequest,domain=internetmedicin.se
@@ -1718,3 +1721,4 @@ piraja.se###parallax
 /*jquery.blockUI.$script,domain=fssweden.se
 bloggbevakning.se###ad
 ||aff.bstatic.com^$domain=travelgrip.se
+nyadagbladet.se##script:inject(abort-on-property-read.js, cli_show_cookiebar)
