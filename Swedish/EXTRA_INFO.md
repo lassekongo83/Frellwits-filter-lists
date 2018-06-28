@@ -48,7 +48,7 @@ Lurendrejerier och skadliga saker som försöker:
 - Ej behövs för att webbsidan ska fungera och kunna visas normalt.
 - Ej behövs längre eftersom filtret redan plockat bort övriga beroenden i form av annonser, spårning, irritationer med mera.
 - Markant slöar ner webbsidan utan någon bra anledning.
-- Stora länkar till sociala medier.
+- Stora länkar till sociala medier eller sociala funktioner som kräver mängder med JavaScript för att visa en "gilla"-knapp eller liknande.
 - Onödiga saker som tar upp väldigt mycket skärmutrymme. (Enorma vertikala banners som tipsar om nyhetsbrev till exempel.)
 
 **Listan plockar ej bort allt av det ovannämnda.** Jag försöker få listan till att plocka bort det som går och det jag hinner med, men vissa saker kan slinka förbi i alla fall. Upptäcks något jag har missat på någon svensk webbsida så öppna en ny issue här på GitHub och följ problemmallen.
