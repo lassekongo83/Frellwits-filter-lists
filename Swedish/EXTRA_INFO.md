@@ -2,16 +2,14 @@ Note: This is information for Swedish visitors to this repo regarding the Swedis
 
 ### Information till användare
 
-**Frellwit's Swedish Filter** finns främst till för att plocka bort annonser, spårning, irritationer, lurendrejerier och bloat på **svenska** webbsidor. Listan bör redan vara automatiskt aktiverad i uBlock Origin om din webbläsare är på svenska. Denna lista används också av webbläsaren [Brave](https://brave.com) för regional blockering i Sverige. **OBS:** Då jag inte officiellt stödjer Brave så kan det hända att vissa lösningar inte kommer att fungera i den webbläsaren.
+**Frellwit's Swedish Filter** finns främst till för att plocka bort annonser, spårning, irritationer, lurendrejerier och bloat på **svenska** webbsidor. Listan bör redan vara automatiskt aktiverad i uBlock Origin om din webbläsare är på svenska. Denna lista används också av webbläsaren [Brave](https://brave.com) för regional blockering i Sverige. **OBS:** Jag stödjer inte officiellt Brave, så kan det hända att vissa lösningar inte kommer att fungera korrekt i den webbläsaren. Denna listan är skriven specifikt för uBlock Origin, därför finns det ingen garanti på att den kommer fungera i någon annan blockerare.
 
 **Listan har ingen ekonomisk eller politisk motivation bakom sig.**
 Jag accepterar inga donationer. Jag censurerar inga åsikter.
 
-Denna listan är skriven specifikt för uBlock Origin, därför finns det ingen garanti på att den kommer fungera i någon annan blockerare än just uBlock Origin.
-
 För att dra nytta av uBlock Origins bättre effektivitet, så är det inte rekommenderat att använda andra blockerare samtidigt (som till exempel Adblock Plus eller Ghostery). uBlock Origin kommer att blockera lika bra eller bättre än andra populära annonsblockerare. Andra blockerare kan också förhindra att uBlock Origins funktioner ej fungerar korrekt.
 
-Listan är testat tillsammans med uBlock Origins orginalinställningar. Då används dessa listor: `EasyList`, `EasyPrivacy`, `Peter Lowe's Ad server list`, `Malware Domain List`, `Malware domains` och `uBlock Filters`. Listan bör även fungera bra tillsammans med `Fanboy's` alla listor. Det finns dock alltid en liten möjlighet att vissa konflikter kan uppstå tillsammans med andra listor.
+Listan är testad tillsammans med uBlock Origins orginalinställningar. Då används dessa listor: `EasyList`, `EasyPrivacy`, `Peter Lowe's Ad server list`, `Malware Domain List`, `Malware domains` och `uBlock Filters`. Listan bör även fungera bra tillsammans med `Fanboy's` alla listor. Det finns dock alltid en liten möjlighet att vissa konflikter kan uppstå tillsammans med andra listor.
 
 Finns det något i listan du inte håller med om, eller vill vitlista så kan du antagligen: 
 - [Deaktivera uBlock Origin](https://github.com/gorhill/uBlock/wiki/Quick-guide:-popup-user-interface#the-large-power-button) på sidan det gäller. Alternativt [deaktivera kosmetisk filtrering](https://github.com/gorhill/uBlock/wiki/Per-site-switches#no-cosmetic-filtering).
@@ -70,5 +68,7 @@ Vill du bidra med filter så kan du skicka en pull request. Tänk på att följa
 - Varje pull request kommer att granskas. Jag kan välja att neka den eller att modifiera den.
 - Länkar till premium-alternativ (och liknande) som inte täcker över innehåll eller avbryter besökaren ska inte plockas bort.
 - Dubbletter kan förekomma i andra listor. Dessa plockas bort efter hand om det inte finns någon annan anledning till att de finns där.
+- Kontrollera dina filter med [redundancy check](https://arestwo.org/famlam/redundantRuleChecker.html). Det verktyget kan hjälpa till med att hitta dubletter och felaktigt skrivna filter.
+- Försök att undvika globala blockeringar om du är osäker på om det kan komma att förstöra funktionaliteten på andra sidor. Använd då helst `$domain` och/eller `$first-party` / `$~third-party`.
 
 Många förfrågningar och tjänster som blockeras kan även förekomma på utländska webbsidor. Förfrågningarna har blockerats pågrund av en av anledningarna som [nämnts ovan](https://github.com/lassekongo83/Frellwits-filter-lists/blob/master/Swedish/EXTRA_INFO.md#vad-listan-har-som-mål-att-ta-bort). Alla dessa förfrågningar förekommer eller har någon gång förekommit på en svensk webbsida.
