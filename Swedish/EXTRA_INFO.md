@@ -35,7 +35,7 @@ Irritationer som:
 - Täcker över delar av innehåll.
 - Avbryter besökaren.
 - Förhindrar besökaren från att använda sin webbläsare eller sitt operativsystem normalt.
-- Mjuka betalväggar som slutar fungera så fort kakor eller JavaScript slås av.
+- Mjuka betalväggar som slutar fungera så fort något blockeras eller modifieras av user-agent.
 - Cookie och GDPR meddelanden. Filtret har som uppgift att undvika annonser och spårning så gott det går. Dessa meddelanden kan därför ses som irrelevanta och störande. Skyll ej på webbsidan om du inte ser något meddelande om GDPR med detta filtret påslaget.
 
 Lurendrejerier och skadliga saker som försöker:
