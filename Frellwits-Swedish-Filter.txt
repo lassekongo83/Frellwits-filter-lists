@@ -284,6 +284,7 @@
 ||tibaco.net/scripts/tws.js$script
 ||site.com/xtcore.$script
 ||sitegainer.com/jsinsert/*/sitegainer*.$script,third-party
+||snapwidget.com/images/snapwidget_ad$image
 ||static.influencersofsweden.se/js/inos.$script
 ||susnet.se/susnetstat.js$script
 ||t.raptorsmartadvisor.com^$image
@@ -648,6 +649,7 @@ dn.se##.social-media__section
 dn.se##.personal-carousel
 dn.se##body > iframe[style^="display"]
 dn.se##.gdpr-header-container
+dn.se##script:inject(addEventListener-defuser.js, error, ())
 dn.se##script:inject(addEventListener-defuser.js, splusCheckPaywall)
 /*?isPaywallBlocked$image,domain=dn.se
 /personalized/*$xmlhttprequest,domain=dn.se
@@ -900,8 +902,10 @@ fragbite.se##.module:if(h4:has-text(Sponsrat inlägg))
 fragbite.se##.spreadItemCollection:if(.category:has-text(Sponsrat innehåll))
 fragbite.se##.spreadItemCollection:if(.category:has-text(Sponsrat inlägg))
 fragbite.se##.zooKeeper
-fragbite.se##.polar-native
+fragbite.se##.cookieBar
+fragbite.se,modette.se##.polar-native
 modette.se##article.article-true-native
+modette.se##.lazyload_bar.show:if(span:has-text(Sponsrat))
 ||dynamic.fragbite.se/gfx/campaign/$image
 ||blogg.se/public/js/metrics.$script
 ||newstats.blogg.se/collector.$script
@@ -927,14 +931,15 @@ gamereactor.se###pagebackground:style(background-image: none !important)
 gamereactor.se##.ad_smartphbig
 /prerolls/*$domain=gamereactor.se
 ||openx.gamereactor.dk/multi.php?$script,important
-gamereactor.se##script:inject(abort-current-inline-script.js, detectAdblockUser)
+gamereactor.se##script:inject(set-constant.js, detectAdblockUser, noopFunc)
 gamereactor.se###sky2_1
 gamereactor.se###facebooknotification
 gamereactor.se###ad_mobiletopinsidetext
-||gamereactor.se/lay/ad-video-stats.js^$script,important
-||gamereactor.se/lay/js/manageBanners.js^$script,important
-||gamereactor.se/lay/js/adblock_desktop.js^$script,important
-||gamereactor.se/lay/js/banners_config.js^$script,important
+||gamereactor.se/lay/ad-video-stats.$script,important
+||gamereactor.se/lay/js/manageBanners.$script,important
+||gamereactor.se/lay/js/adblock_desktop.$script,important
+||gamereactor.se/lay/js/banners_config.$script,important
+||gamereactor.se/lay/js/background.$script,important
 ||gamereactor.se/media/eventad/$image
 /adblock_mobile.$script,important,domain=gamereactor.se
 
@@ -944,6 +949,9 @@ familjeliv.se##.flm-kampanj
 familjeliv.se##.articleTeaser:if(.articleSuperTitle:has-text(I samarbete med))
 familjeliv.se##a[data-track]:if(.supertitle:has-text(I samarbete med))
 familjeliv.se##:xpath(//span[text()[contains(., 'Sponsrat')]]/ancestor::div[contains(concat(' ', @class, ' '), ' blogPostWrapper ')]/parent::div/parent::div)
+familjeliv.se##script:inject(abort-current-inline-script.js, mfl, Fusion)
+familjeliv.se##script:inject(abort-current-inline-script.js, mfl, loadAdformAd)
+familjeliv.se##script:inject(abort-current-inline-script.js, Fusion, dmpSegment)
 ||familjeliv.se^$object,object-subrequest
 mammasidan.se,minbebis.com,alltforforaldrar.se##.panorama:if(.add-text:has-text(Annons))
 mammasidan.se,minbebis.com,alltforforaldrar.se##.panorama:if(.add-text:has-text(annons))
@@ -956,6 +964,8 @@ mammasidan.se,minbebis.com,alltforforaldrar.se##.art-small:if(.preamble-category
 mammasidan.se,minbebis.com,alltforforaldrar.se##h2:has-text(Sprinkle)
 mammasidan.se,minbebis.com,alltforforaldrar.se##script:inject(abort-on-property-write.js, cookieConsentURL)
 mammasidan.se,minbebis.com,alltforforaldrar.se##[id*="blogg_panorama"]
+mammasidan.se,minbebis.com,alltforforaldrar.se##a[href^="/native/"]
+mammasidan.se,minbebis.com,alltforforaldrar.se###partnerMenuContainer
 /themes/aurora/cookies/*$script,stylesheet,image,domain=mammasidan.se|minbebis.com|alltforforaldrar.se
 ||alltforforaldrar.se/extra/dp/dp.js
 ||alltforforaldrar.se/sites/all/themes/aurora/js/vendor/bootstrap/modal.js
