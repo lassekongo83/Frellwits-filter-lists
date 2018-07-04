@@ -389,15 +389,14 @@
 @@/js/adsbygoogle.js^$first-party,script,domain=feber.se|tjock.se
 @@/js/advert.$script,domain=mariestadstidningen.se|nwt.se|sla.se
 @@/js/advert.js$first-party,script,domain=burlovsnyheter.se
-@@/js/advertisement*.$first-party,script,domain=brollopstorget.se|devote.se|expressen.se|familjeliv.se|feber.se|skyddsombud24.se|tjock.se
-@@/js/advertising.$first-party,script,domain=byggnadsarbetaren.se|elbilsnytt.se|vilaser.se|svegot.se
+@@/js/advertisement*.$first-party,script,domain=brollopstorget.se|devote.se|expressen.se|familjeliv.se|feber.se|skyddsombud24.se|tjock.se|dagensmedia.nu
+@@/js/advertising.$first-party,script,domain=byggnadsarbetaren.se|elbilsnytt.se|vilaser.se|svegot.se|tekniksmart.se
 @@/js/showads.js^$first-party,script,domain=101ideer.se|alltomtradgard.se|amelia.se|lantliv.com|skonahem.com|styleby.nu|tara.se|topphalsa.se|veckorevyn.com
 @@/scripts/advertisement*.$first-party,script,domain=expressen.se
 @@/show_ads.js$first-party,script,domain=happypancake.com
 @@/wp-content/*/adframe.js$first-party,script,domain=falkopingstidning.se|jnytt.se|jp.se|skaraborgslanstidning.se|skovdenyheter.se|smalandsdagblad.se|smalanningen.se|smt.se|tranastidning.se|vastgotabladet.se|vetlandaposten.se|vn.se
 @@||assets-cdn.mytaste.org/js/ads.js$script
 @@||freeride.nu/js/ads.js^$script,domain=freeride.se|happyride.se
-@@||kxcdn.com/wp-content/plugins/better-adsmanager/js/advertising.$script,domain=tekniksmart.se
 
 ! Unbreak
 avanza.se#@#a[title="LeoVegas"]
@@ -422,9 +421,10 @@ avanza.se#@#a[title="LeoVegas"]
 /lazyad-loader.$script,domain=kimura.se|tvmatchen.nu
 /LoadSlotLocator.$script,domain=bohuslaningen.se|falkopingstidning.se|gp.se|hallandsposten.se|hn.se|jnytt.se|jp.se|skaraborgslanstidning.se|skovdenyheter.se|smalandsdagblad.se|smalanningen.se|smt.se|stromstadstidning.se|tranastidning.se|ttela.se|vastgotabladet.se|vetlandaposten.se|vn.se
 /newsletter/*$domain=zalando.se
-/panorama.js$script,domain=blogg.se|bloggkommentatorerna.se|ladydahmer.nu|nickesfilmblogg.se|themoviefreak.se|webblogg.se
+/panorama.js$script,domain=blogg.se|bloggkommentatorerna.se|ladydahmer.nu|nickesfilmblogg.se|themoviefreak.se|webblogg.se|svenskayoutubers.se
 /SitesterSurvey*.$script,domain=wwf.se
 /statistics.php$xmlhttprequest,domain=alltforforaldrar.se|fria.nu|friatidningen.se|goteborgsfria.se|landetsfria.se|mammasidan.se|market.se|minbebis.com|sesam.nu|stockholmsfria.se|industrinyheter.se|dagensnaringsliv.se
+/xtcore.$script,domain=kiaindex.se
 ||apprl.com/embed/$subdocument,domain=majaelisabeth.com|metromode.se|trendenser.se|forni.se|petratungarden.se
 ||herokuapp.com^$third-party,domain=aftonbladet.se
 ||pji.nu^$third-party,domain=idg.se|minhembio.com|nordichardware.se|99.se|fz.se|sweclockers.com|mobil.se|viivilla.se|feber.se|kamerabild.se
@@ -483,6 +483,7 @@ ng.se,alltomstockholm.se,mitti.se,bloggbevakning.se##script:inject(abort-on-prop
 /plugins/mailpoet/*$script,domain=opulens.se
 /plugins/metro-affiliate/*$script,domain=metromode.se
 /plugins/mitti-cookie-disclaimer/*$script,domain=mitti.se|alltomstockholm.se
+/plugins/monarch/*$domain=undertian.com
 /plugins/newsner-lead-tracking/*$script
 /plugins/pause-adblocker/*$script,stylesheet,image,domain=hightechguiden.se
 /plugins/pixelyoursite-pro/*
@@ -608,7 +609,7 @@ omni.se##article.article--sponsored
 ||omni-ads.omni.news^
 tv.nu##a[href*="adform.net"]
 tv.nu##.ad-mega--container
-tv.nu##._1A_r6:has-text(Vi använder oss av Cookies)
+tv.nu##div[class^="_"]:has(a[href^="/min-sida/guide/personuppgifter"])
 ||logger.tv.nu^$script
 /campaigns.js$script,domain=blocket.se
 /utag*.js$script,domain=blocket.se
@@ -1710,8 +1711,8 @@ fastighetsnytt.se##.promobox
 kissies.se##.post:if(strong:has-text(i samarbete med))
 @@||boffo.se^$generichide
 travprat.se##script:inject(abort-on-property-write.js, bizpanda)
-linnherbertsson.se##.post:if(strong:has-text(Betalt samarbete med))
-linnherbertsson.se##script:inject(abort-current-inline-script.js, adgroupid, Math.random)
+linnherbertsson.se##.content:has(.sponsored-container)
+linnherbertsson.se##[id^="content-ad"]
 ||cornucopia.cornubot.se/js/cookie*.$script
 svegot.se##[itemtype="https://schema.org/WPAdBlock"]
 svegot.se##script:inject(addEventListener-defuser.js, scroll, (a))
@@ -1741,3 +1742,5 @@ bloggbevakning.se###ad
 ||aff.bstatic.com^$domain=travelgrip.se
 nyadagbladet.se##script:inject(abort-on-property-read.js, cli_show_cookiebar)
 deliquate.se##.ajax_loader
+svenskayoutubers.se##body.with-panorama:style(padding-top: 0 !important;)
+iabsverige.se###load
