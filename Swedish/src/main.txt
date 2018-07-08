@@ -135,6 +135,7 @@
 ||upsales.com^$third-party
 ||yandex.st/share/share.$third-party
 ||yastatic.net/share/$third-party
+||vk.com^$third-party
 ||webbcensus.com^$third-party
 ||webpower.eu^$third-party
 ||websking.com^$third-party
@@ -489,6 +490,7 @@ ng.se,alltomstockholm.se,mitti.se,bloggbevakning.se,cornucopia.cornubot.se##scri
 /plugins/thirstyaffiliates/*$script
 /plugins/uk-cookie-consent/*$script,stylesheet
 /plugins/wf-cookie-consent/*$script,stylesheet
+/plugins/wp-auto-affiliate-links/*$script,stylesheet
 /plugins/wp-banner-manager/*$script,stylesheet,domain=branschkoll.se
 /plugins/wp-embed-facebook/*$script,stylesheet,domain=faktiskt.se
 /plugins/wppas/*$script,stylesheet,domain=elbilsnytt.se
@@ -717,7 +719,6 @@ sydsvenskan.se,hd.se##div[data-category="native-teaser"]
 /native?noBurtProfiles=1$xmlhttprequest,domain=hd.se|sydsvenskan.se
 /ads-*.js$script,domain=hd.se|sydsvenskan.se|8till5.se
 /ajax/native$xmlhttprequest,domain=8till5.se
-8till5.se##.gdpr
 8till5.se##.newsletter-form
 tv4.se##.program-header-sponsors
 tv4.se##.social-block-ad
@@ -1131,7 +1132,7 @@ etn.se,uppsalanyheter.se##.banneritem
 evertiq.se,fz.se##.bnr
 datormagazin.se,mmanytt.se##.category-annons
 humorbibeln.se,newsner.com,sportbibeln.se##.inline-share-buttons
-breakit.se,runnersworld.se,utsidan.se##.sponsored
+breakit.se,runnersworld.se,utsidan.se,hockeymagasinet.com##.sponsored
 ekuriren.se,expressen.se,kkuriren.se,sn.se##.teaser--native-ad
 digitalfotoforalla.se,illvet.se,pctidningen.se##.top-banner
 javligtgott.se,starbys.se##.category-samarbeten
@@ -1145,7 +1146,7 @@ svd.se,falkopingstidning.se,jnytt.se,jp.se,skaraborgslanstidning.se,skovdenyhete
 ekuriren.se,kkuriren.se,sn.se###android-smart-appbanner
 finansliv.se,vinochmatguiden.se##.newsletter
 mobil.se,kamerabild.se###gdpr
-sydsvenskan.se,hd.se,vimedbarn.se##.gdpr
+8till5.se,sydsvenskan.se,hd.se,vimedbarn.se##.gdpr
 pomu.se,wwf.se##.cc-banner
 
 ! ÖVRIGT
@@ -1247,15 +1248,10 @@ motormagasinet.se,food-supply.se,skyddosakerhet.se###junglebogen
 motormagasinet.se##[id^="dfp-a1p"]
 motormagasinet.se,food-supply.se##.rotating-junglebogen
 ||food-supply.se/bnrscr^$subdocument
-mobil.se##li.teaser:has(.Advertorials)
-mobil.se##.section-advertorials
-/mobil_takeover/js/script.js$domain=mobil.se
-mobil.se##div.takeover
-mobil.se##.teaser:has(.Partner)
-mobil.se##li.section-partner
-mobil.se##.title-image-list:if(.pane-title:has-text(Sponsrad artikel))
-mobil.se##body:style(overlay: auto !important;)
-mobil.se##.section-jobb-section-advertorials
+mobil.se##script:inject(set-constant.js, Sidpyssel.prototype.fixaStoran, noopFunc)
+mobil.se##li.partner
+mobil.se##.aside-puff > li:has-text(SPONSRAD)
+mobil.se##[data-domid^="sprjr"]
 ||mobil.se/facebook/$xmlhttprequest
 /lunchguiden*.$image,domain=vk.se|folkbladet.nu
 ||terms.vkmedia.se/agreements/$xmlhttprequest
@@ -1323,6 +1319,7 @@ tvdags.se##.article-list__item:has(.sponsor)
 ||tvdags.se/json/stats$xmlhttprequest
 norran.se##.js-cookie-information-bar
 @@||norran.se^$generichide
+||annonsportalen.norran.se^$subdocument
 norran.se##.adtech-ad
 norran.se##.social-share__button
 kimura.se##.sidebar-section:has(.sidebar_ad)
@@ -1341,6 +1338,7 @@ dagensps.se##.xtss-above-post
 ||fusion.dagensps.se^$script,image
 dagensps.se##script:inject(abort-on-property-write.js, FloadCmatchIfr)
 dagensps.se##script:inject(abort-current-inline-script.js, ADTECH, enqueueAd)
+dagensps.se##.category-ps-partner
 ||petrk.com^$third-party,image,domain=dagensps.se
 /locker.js$script,domain=atl.nu|land.se|landlantbruk.se
 atl.nu,land.se,landlantbruk.se##[class*="--native"]
@@ -1489,7 +1487,6 @@ medievarlden.se##.noda-ad
 medievarlden.se##html,body:style(overflow: auto !important;)
 ||hockeymagasinet.com/footer/ad$xmlhttprequest
 hockeymagasinet.com##app-gdpr-alert
-hockeymagasinet.com##.sponsored
 kungalvsposten.se,molndalsposten.se,lokaltidningensto.se,kungsbackaposten.se##.wp-slot-layout-article-native
 kungalvsposten.se,molndalsposten.se,lokaltidningensto.se,kungsbackaposten.se##div[style="font-size: 15px; font-family: PT Serif; font-weight: normal;"]:if(p:has-text(ANNONS))
 smartsenior.se##.ss-modal
@@ -1601,7 +1598,6 @@ listor.se##.belowad
 listor.se##article:has(a[href*="/annons/"])
 listor.se##.swp_social_panelSide
 accentmagasin.se##.widget-container:if(.widget-title:has-text(Annons))
-||vk.com^$third-party,domain=samnytt.se
 ||newsharecounts.com^$third-party,domain=samnytt.se
 @@||samnytt.se^$generichide
 samnytt.se##script:inject(abort-on-property-read.js, advanced_ads_ready)
@@ -1738,3 +1734,4 @@ svenskayoutubers.se##body.with-panorama:style(padding-top: 0 !important;)
 iabsverige.se###load
 lesscarbs.se##.category-annonssamarbete
 ||stegforhalsa.se^*/ad.js$script
+||stajlplejs.com/annons.asp$subdocument
