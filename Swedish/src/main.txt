@@ -82,6 +82,7 @@
 ||leiki.com^$third-party
 ||likebtn.com^$third-party
 ||lokus.se^$third-party,~image,domain=~familj.se
+||lystra.se^$third-party
 ||lwadm.com^$third-party
 ||mailchimp.com^$third-party
 ||mailerlite.com^$third-party
@@ -372,7 +373,7 @@
 @@/advertisement.js$~third-party,script,domain=blocket.se|emocore.se|kaninsajten.se|kit.se|saljplatsen.se|spela.se
 @@/assets/showAds.js^$~third-party,script,domain=101ideer.se|alltommat.se|alltomtradgard.se|amelia.se|damernasvarld.se|gardochtorp.se|godsochgardar.se|hemochantik.se|johannatoftby.se|lantliv.com|madeleineilmrud.se|magdalenagraaf.se|mama.nu|skonahem.com|styleby.nu|tara.se|topphalsa.se|veckorevyn.com|tidningenhembakat.se
 @@/js/ad.js$~third-party,domain=sweclockers.com
-@@/js/ads.js$~third-party,domain=101ideer.se|24blekinge.se|24emmaboda.se|24falkenberg.se|24halmstad.se|24helsingborg.se|24kalmar.se|24kristianstad.se|24malmo.se|24nybro.se|24trelleborg.se|24uppsala.se|24ystad.se|affarsliv.com|affarslivgotland.se|alltforforaldrar.se|alltommat.se|alltomtradgard.se|amelia.se|bike.se|corren.se|damernasvarld.se|deliquate.se|eposten.se|folkbladet.se|foretagande.se|gardochtorp.se|godsochgardar.se|helagotland.se|hemochantik.se|husbilhusvagn.se|ilikeradio.se|johannatoftby.se|klackspark.com|klassiker.nu|kuriren.nu|lantliv.com|ljudochbild.se|madeleineilmrud.se|magdalenagraaf.se|mama.nu|mopedgaraget.se|mvt.se|naturvetenskap.org|norrbottensaffarer.se|nsd.se|nt.se|pt.se|radio.se|skonahem.com|styleby.nu|swedroid.se|tara.se|topphalsa.se|tvmatchen.nu|unt.se|uppsalatidningen.se|veckorevyn.com|vibilagare.se|villavarmt.se|vt.se|privataaffarer.se|tidningenhembakat.se
+@@/js/ads.js$~third-party,domain=101ideer.se|affarsliv.com|affarslivgotland.se|alltforforaldrar.se|alltommat.se|alltomtradgard.se|amelia.se|bike.se|corren.se|damernasvarld.se|deliquate.se|eposten.se|folkbladet.se|foretagande.se|gardochtorp.se|godsochgardar.se|helagotland.se|hemochantik.se|husbilhusvagn.se|ilikeradio.se|johannatoftby.se|klackspark.com|klassiker.nu|kuriren.nu|lantliv.com|ljudochbild.se|madeleineilmrud.se|magdalenagraaf.se|mama.nu|mopedgaraget.se|mvt.se|naturvetenskap.org|norrbottensaffarer.se|nsd.se|nt.se|pt.se|radio.se|skonahem.com|styleby.nu|swedroid.se|tara.se|topphalsa.se|tvmatchen.nu|unt.se|uppsalatidningen.se|veckorevyn.com|vibilagare.se|villavarmt.se|vt.se|privataaffarer.se|tidningenhembakat.se
 @@/js/ads/advert.min.js$~third-party,script,domain=spelo.se
 @@/js/adsbygoogle.js^$~third-party,script,domain=feber.se|tjock.se
 @@/js/advert.$script,domain=mariestadstidningen.se|nwt.se|sla.se
@@ -422,7 +423,7 @@ avanza.se#@#a[title="LeoVegas"]
 ||d2wy8f7a9ursnm.cloudfront.net/bugsnag$script,domain=expressen.se
 
 ! Common scriptlets
-ng.se,alltomstockholm.se,mitti.se,bloggbevakning.se##script:inject(abort-on-property-read.js, ADTECH)
+ng.se,alltomstockholm.se,mitti.se,bloggbevakning.se,cornucopia.cornubot.se##script:inject(abort-on-property-read.js, ADTECH)
 
 ! Facebook junk
 /facebook_sdk.js$script,domain=njus.me|radioplay.se
@@ -439,7 +440,7 @@ ng.se,alltomstockholm.se,mitti.se,bloggbevakning.se##script:inject(abort-on-prop
 ||google-analytics.com/ga.js$important,redirect=google-analytics.com/ga.js,script,domain=aftonbladet.se
 ||googletagmanager.com/gtm.js?id=$important,redirect=googletagmanager.com/gtm.js,script,domain=tradera.com
 ||tm.tradetracker.net/tag?$important,script,domain=agneswinqvist.se|enkelteknik.se|moviezine.se|everydayexplorers.org
-||amazonaws.com/pages/*/ad_loader*.$script,important,domain=jkpgnews.se|linkopingnews.se|norrkopingnews.se
+||amazonaws.com^*/ad_loader*.$script,important,domain=jkpgnews.se|linkopingnews.se|norrkopingnews.se|affarsliv.com|affarslivgotland.se|corren.se|eposten.se|folkbladet.se|gotland.net|helagotland.se|klackspark.com|kuriren.nu|mvt.se|norrbottensaffarer.se|nsd.se|nt.se|pt.se|unt.se|uppsala.com|uppsalatidningen.se|vt.se
 
 ! Unwanted Wordpress plugins and bloat
 /plugins/ab_appnexus_ads/*$script
@@ -743,6 +744,7 @@ koket.se##li.slide:has(.external_advertiser)
 koket.se##.external_advertiser
 koket.se###react-newsletter-overlay
 koket.se##.kf-mosaic-widget:has(.mosaic__custom-sponsor-holder)
+||richrelevance.com^$third-party,domain=koket.se
 /bn-01d-fusion.js$domain=koket.se
 fotbollskanalen.se##div[class*="top-item__link"][onclick="trackClickThenOpen();"]
 &type=load_offers^$xmlhttprequest,domain=illvet.se|pctidningen.se
@@ -1614,7 +1616,8 @@ gotlandswebben.se##.header-ads-wrapper
 kamerabild.se##.partner
 kamerabild.se##script:inject(set-constant.js, Annons, noopFunc)
 firstfoto.se,cyclingplus.se,halsafitness.se,fitnessformen.se,macguiden.net##.this-is-an-ad
-cyclingplus.se##.headerbar:has-text(Hantering av personuppgifter)
+cyclingplus.se##article:if(.single-subtitle:has-text(Annonssamarbete))
+halsafitness.se,cyclingplus.se##.headerbar-container
 /dohi-gdpr/*$domain=firstfoto.se|cyclingplus.se|halsafitness.se|fitnessformen.se|macguiden.net
 halsafitness.se##.post-wrap:if(h3:has-text(Annonssamarbete))
 andreahedenstedt.se##article.post:has(.sw-sf-sponsor)

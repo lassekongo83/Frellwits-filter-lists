@@ -60,13 +60,13 @@ allehanda.se,arbetarbladet.se,avestatidning.com,bblat.se,dalademokraten.se,dt.se
 allehanda.se,arbetarbladet.se,avestatidning.com,bblat.se,dalademokraten.se,dt.se,fagersta-posten.se,gd.se,lt.se,ltz.se,na.se,norrteljetidning.se,nynashamnsposten.se,op.se,salaallehanda.com,st.nu,tidningenharjedalen.se,vlt.se##script:inject(set-constant.js, nps_dialogue_enabled, false)
 allmogen.org,apg29.nu,b19.se,blogspot.se,cornucopia.cornubot.se,emanuelkarlsten.se,experimentlandet.blogg.se,forenadebolag.se,frihetssmedjan.se,genusdebatten.se,hoforsbloggen.se,horoskop.nu,lindelof.nu,lindqvist.com,nyhetswebben.se,opendata.se,peak-oil.se,sempermiles.se,solrosuppropet.se,supermiljobloggen.se,swedishprepper.com,sysadmindagen.se,tjuvlyssnat.se,toklandet.wordpress.com,uvell.se,vaken.se,vargfakta.se,xn--blljus-jua.se,zaramis.se##script:inject(remove-attr.js, onerror)
 alltforforaldrar.se,mammasidan.se,minbebis.com##.art-small:if(.preamble-category:has-text(Annons))
-alltforforaldrar.se,mammasidan.se,minbebis.com##.panorama:if(.add-text:has-text(annons))
 alltforforaldrar.se,mammasidan.se,minbebis.com##.panorama:if(.add-text:has-text(Annons))
+alltforforaldrar.se,mammasidan.se,minbebis.com##.panorama:if(.add-text:has-text(annons))
 alltforforaldrar.se,mammasidan.se,minbebis.com##.unslider-wrap:if(.preamble-category:has-text(Annons))
 alltforforaldrar.se,mammasidan.se,minbebis.com##div.section:if(.add-text:has-text(Annons))
 alltforforaldrar.se,mammasidan.se,minbebis.com##h2:has-text(Sprinkle)
 alltforforaldrar.se,mammasidan.se,minbebis.com##script:inject(abort-on-property-write.js, cookieConsentURL)
-alltomstockholm.se,bloggbevakning.se,mitti.se,ng.se##script:inject(abort-on-property-read.js, ADTECH)
+alltomstockholm.se,bloggbevakning.se,cornucopia.cornubot.se,mitti.se,ng.se##script:inject(abort-on-property-read.js, ADTECH)
 alltomstockholm.se,mitti.se##.teaser-large-container:has(.native-ad-mark)
 alltomstockholm.se,mitti.se##[class*="native_"]:has(.native-ad-mark-image)
 altinget.se##script:inject(setTimeout-defuser.js, show_popup)
@@ -85,7 +85,7 @@ bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##sc
 breakit.se##article.puff:has(.advert)
 bubb.la##:xpath(//h2[@class="ad"]/parent::div[1])
 businessclass.se##script:inject(abort-current-inline-script.js, $, AdBlockDetector)
-cyclingplus.se##.headerbar:has-text(Hantering av personuppgifter)
+cyclingplus.se##article:if(.single-subtitle:has-text(Annonssamarbete))
 dagensanalys.se##article.listitem:has(.label_sponsored)
 dagensanalys.se##article.listitem:has(a[href$="/sponsrad/"])
 dagenshandel.se,motormagasinet.se,skyddosakerhet.se##script:inject(abort-current-inline-script.js, openNewsletterPopup)
@@ -296,7 +296,7 @@ viivilla.se##.teaserblockdata:has(.teaser-sponsored-text)
 viivilla.se##div.row.item:has(.overlay-sponsor)
 voodoofilm.org##.content-news:has(span[id*="Sponsored"])
 ||ad.doubleclick.net/ddm/*$image,important,domain=fotbollskanalen.se|koket.se|tv4.se|tv4play.se
-||amazonaws.com/pages/*/ad_loader*.$important,script,domain=jkpgnews.se|linkopingnews.se|norrkopingnews.se
+||amazonaws.com^*/ad_loader*.$important,script,domain=affarsliv.com|affarslivgotland.se|corren.se|eposten.se|folkbladet.se|gotland.net|helagotland.se|jkpgnews.se|klackspark.com|kuriren.nu|linkopingnews.se|mvt.se|norrbottensaffarer.se|norrkopingnews.se|nsd.se|nt.se|pt.se|unt.se|uppsala.com|uppsalatidningen.se|vt.se
 ||b17g.net^*/play/log$redirect=nooptext,xmlhttprequest,domain=fotbollskanalen.se|koket.se|tv4.se|tv4play.se
 ||bonnier-html-player.b17g.services/bumpers/$media,redirect=noopmp4-1s,domain=fotbollskanalen.se|koket.se|tv4.se|tv4play.se
 ||fwmrm.net^$image,important,domain=viafree.se
