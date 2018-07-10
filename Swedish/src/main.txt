@@ -375,9 +375,9 @@
 @@/adsense.js$~third-party,script,domain=dayviews.com|fragbite.se|kwiss.me|nyheter24.se|tyda.se|synonymer.cc|modette.se
 @@/adserver.$~third-party,script,domain=fotosidan.se|utsidan.se
 @@/advertisement.js$~third-party,script,domain=blocket.se|emocore.se|kaninsajten.se|kit.se|saljplatsen.se|spela.se
-@@/assets/showAds.js^$~third-party,script,domain=101ideer.se|alltommat.se|alltomtradgard.se|amelia.se|damernasvarld.se|gardochtorp.se|godsochgardar.se|hemochantik.se|johannatoftby.se|lantliv.com|madeleineilmrud.se|magdalenagraaf.se|mama.nu|skonahem.com|styleby.nu|tara.se|topphalsa.se|veckorevyn.com|tidningenhembakat.se|teknikensvarld.se
+@@/assets/showAds.js^$~third-party,script,domain=101ideer.se|alltommat.se|alltomtradgard.se|amelia.se|damernasvarld.se|gardochtorp.se|godsochgardar.se|hemochantik.se|johannatoftby.se|lantliv.com|madeleineilmrud.se|magdalenagraaf.se|mama.nu|skonahem.com|styleby.nu|tara.se|topphalsa.se|veckorevyn.com|tidningenhembakat.se|teknikensvarld.se|viforaldrar.se
 @@/js/ad.js$~third-party,domain=sweclockers.com
-@@/js/ads.js$~third-party,domain=101ideer.se|affarsliv.com|affarslivgotland.se|alltforforaldrar.se|alltommat.se|alltomtradgard.se|amelia.se|bike.se|corren.se|damernasvarld.se|deliquate.se|eposten.se|folkbladet.se|foretagande.se|gardochtorp.se|godsochgardar.se|helagotland.se|hemochantik.se|husbilhusvagn.se|ilikeradio.se|johannatoftby.se|klackspark.com|klassiker.nu|kuriren.nu|lantliv.com|ljudochbild.se|madeleineilmrud.se|magdalenagraaf.se|mama.nu|mopedgaraget.se|mvt.se|naturvetenskap.org|norrbottensaffarer.se|nsd.se|nt.se|pt.se|radio.se|skonahem.com|styleby.nu|swedroid.se|tara.se|topphalsa.se|tvmatchen.nu|unt.se|uppsalatidningen.se|veckorevyn.com|vibilagare.se|villavarmt.se|vt.se|privataaffarer.se|tidningenhembakat.se|teknikensvarld.se|alltsomsker.nu|smartleasing.se
+@@/js/ads.js$~third-party,domain=101ideer.se|affarsliv.com|affarslivgotland.se|alltforforaldrar.se|alltommat.se|alltomtradgard.se|amelia.se|bike.se|corren.se|damernasvarld.se|deliquate.se|eposten.se|folkbladet.se|foretagande.se|gardochtorp.se|godsochgardar.se|helagotland.se|hemochantik.se|husbilhusvagn.se|ilikeradio.se|johannatoftby.se|klackspark.com|klassiker.nu|kuriren.nu|lantliv.com|ljudochbild.se|madeleineilmrud.se|magdalenagraaf.se|mama.nu|mopedgaraget.se|mvt.se|naturvetenskap.org|norrbottensaffarer.se|nsd.se|nt.se|pt.se|radio.se|skonahem.com|styleby.nu|swedroid.se|tara.se|topphalsa.se|tvmatchen.nu|unt.se|uppsalatidningen.se|veckorevyn.com|vibilagare.se|villavarmt.se|vt.se|privataaffarer.se|tidningenhembakat.se|teknikensvarld.se|alltsomsker.nu|smartleasing.se|viforaldrar.se
 @@/js/ads/advert.min.js$~third-party,script,domain=spelo.se
 @@/js/adsbygoogle.js^$~third-party,script,domain=feber.se|tjock.se
 @@/js/advert.$script,domain=mariestadstidningen.se|nwt.se|sla.se
@@ -508,7 +508,7 @@ ng.se,alltomstockholm.se,mitti.se,bloggbevakning.se,cornucopia.cornubot.se##scri
 /wp-admin/admin-ajax.php?action=addthis_global_options$script,domain=expressen.se
 
 ! JWplayer analytics/ad scripts
-||ssl.p.jwpcdn.com^*/jwpsrv.js$script,important,domain=eurosport.se|aftonbladet.se|gamereactor.se|svd.se|muscles.se
+||ssl.p.jwpcdn.com^*/jwpsrv.js$script,important,domain=eurosport.se|aftonbladet.se|gamereactor.se|svd.se|muscles.se|tv.nu
 ||ssl.p.jwpcdn.com^*/vast.js$script,important,domain=eurosport.se|aftonbladet.se|gamereactor.se|svd.se
 ||ssl.p.jwpcdn.com^*/freewheel.js$script,important,domain=eurosport.se
 ||ssl.p.jwpcdn.com^*/gapro.js$script,important,domain=gamereactor.se
@@ -600,12 +600,12 @@ aftonbladet.se##script:inject(setTimeout-defuser.js, onerror, 1000)
 @@||aftonbladet.se^$generichide
 @@||ad*.vg.no/check.js$script,domain=aftonbladet.se
 /privacy/notification?$xmlhttprequest,domain=aftonbladet.se
-||schibsted.io/oo/$script,domain=aftonbladet.se|svd.se
 omni.se##article.article--sponsored
 ||omni-ads.omni.news^
 tv.nu##a[href*="adform.net"]
 tv.nu##.ad-mega--container
 tv.nu##div[class^="_"]:has(a[href^="/min-sida/guide/personuppgifter"])
+tv.nu##.gdpr-bar-wrapper
 ||logger.tv.nu^$script
 /campaigns.js$script,domain=blocket.se
 /utag*.js$script,domain=blocket.se
@@ -1732,7 +1732,6 @@ bloggbevakning.se###ad
 ||aff.bstatic.com^$domain=travelgrip.se
 nyadagbladet.se##script:inject(abort-on-property-read.js, cli_show_cookiebar)
 deliquate.se##.ajax_loader
-svenskayoutubers.se##body.with-panorama:style(padding-top: 0 !important;)
 iabsverige.se###load
 lesscarbs.se##.category-annonssamarbete
 ||stegforhalsa.se^*/ad.js$script
@@ -1743,3 +1742,4 @@ marsta.nu##.outsider
 pingpong.se##.l-preloader
 /mod_adblockdetector/*$domain=hamnen.se
 lakartidningen.se##.advelementnewsrow
+bloggkommentatorerna.se,ladydahmer.nu,nickesfilmblogg.se,svenskayoutubers.se,themoviefreak.se##body.with-panorama:style(padding-top: 0 !important;)
