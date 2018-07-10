@@ -187,6 +187,7 @@
 /emediate-responsive-wp-plugin/*
 /entryclick;_
 /eu_cookie_alert/*$script,stylesheet
+/sh404sefsocial/*$script
 /iab/iab.js$script
 /js/acceptCookies.$script
 /js/cookie-consent.$script
@@ -269,6 +270,7 @@
 ||s3.amazonaws.com/cc.silktide.com/cookieconsent.$script
 ||sdk.pulse.schibsted.com^$script
 ||service.survio.se^*/registerhit?$image
+||solidtango.com^*/player_statistics$image
 ||tibaco.net/scripts/tws.js$script
 ||site.com/xtcore.$script
 ||sitegainer.com/jsinsert/*/sitegainer*.$script,third-party
@@ -328,6 +330,7 @@
 ##.cookie-consent
 ###cookie-line
 ##.cookies-info
+##.cookie-info
 ##.cookies-info-static
 ##.cookie-policy
 ##.cookie-holder
@@ -341,6 +344,7 @@
 ##.cookieConsent
 ###CookieNotice
 ##.cookie-overlay
+###cookiejar
 ###eu-cookie-bar
 ##.widget_eu_cookie_law_widget
 ###js__cookie-disclaimer
@@ -370,9 +374,9 @@
 @@/adsense.js$~third-party,script,domain=dayviews.com|fragbite.se|kwiss.me|nyheter24.se|tyda.se|synonymer.cc|modette.se
 @@/adserver.$~third-party,script,domain=fotosidan.se|utsidan.se
 @@/advertisement.js$~third-party,script,domain=blocket.se|emocore.se|kaninsajten.se|kit.se|saljplatsen.se|spela.se
-@@/assets/showAds.js^$~third-party,script,domain=101ideer.se|alltommat.se|alltomtradgard.se|amelia.se|damernasvarld.se|gardochtorp.se|godsochgardar.se|hemochantik.se|johannatoftby.se|lantliv.com|madeleineilmrud.se|magdalenagraaf.se|mama.nu|skonahem.com|styleby.nu|tara.se|topphalsa.se|veckorevyn.com|tidningenhembakat.se
+@@/assets/showAds.js^$~third-party,script,domain=101ideer.se|alltommat.se|alltomtradgard.se|amelia.se|damernasvarld.se|gardochtorp.se|godsochgardar.se|hemochantik.se|johannatoftby.se|lantliv.com|madeleineilmrud.se|magdalenagraaf.se|mama.nu|skonahem.com|styleby.nu|tara.se|topphalsa.se|veckorevyn.com|tidningenhembakat.se|teknikensvarld.se
 @@/js/ad.js$~third-party,domain=sweclockers.com
-@@/js/ads.js$~third-party,domain=101ideer.se|affarsliv.com|affarslivgotland.se|alltforforaldrar.se|alltommat.se|alltomtradgard.se|amelia.se|bike.se|corren.se|damernasvarld.se|deliquate.se|eposten.se|folkbladet.se|foretagande.se|gardochtorp.se|godsochgardar.se|helagotland.se|hemochantik.se|husbilhusvagn.se|ilikeradio.se|johannatoftby.se|klackspark.com|klassiker.nu|kuriren.nu|lantliv.com|ljudochbild.se|madeleineilmrud.se|magdalenagraaf.se|mama.nu|mopedgaraget.se|mvt.se|naturvetenskap.org|norrbottensaffarer.se|nsd.se|nt.se|pt.se|radio.se|skonahem.com|styleby.nu|swedroid.se|tara.se|topphalsa.se|tvmatchen.nu|unt.se|uppsalatidningen.se|veckorevyn.com|vibilagare.se|villavarmt.se|vt.se|privataaffarer.se|tidningenhembakat.se
+@@/js/ads.js$~third-party,domain=101ideer.se|affarsliv.com|affarslivgotland.se|alltforforaldrar.se|alltommat.se|alltomtradgard.se|amelia.se|bike.se|corren.se|damernasvarld.se|deliquate.se|eposten.se|folkbladet.se|foretagande.se|gardochtorp.se|godsochgardar.se|helagotland.se|hemochantik.se|husbilhusvagn.se|ilikeradio.se|johannatoftby.se|klackspark.com|klassiker.nu|kuriren.nu|lantliv.com|ljudochbild.se|madeleineilmrud.se|magdalenagraaf.se|mama.nu|mopedgaraget.se|mvt.se|naturvetenskap.org|norrbottensaffarer.se|nsd.se|nt.se|pt.se|radio.se|skonahem.com|styleby.nu|swedroid.se|tara.se|topphalsa.se|tvmatchen.nu|unt.se|uppsalatidningen.se|veckorevyn.com|vibilagare.se|villavarmt.se|vt.se|privataaffarer.se|tidningenhembakat.se|teknikensvarld.se
 @@/js/ads/advert.min.js$~third-party,script,domain=spelo.se
 @@/js/adsbygoogle.js^$~third-party,script,domain=feber.se|tjock.se
 @@/js/advert.$script,domain=mariestadstidningen.se|nwt.se|sla.se
@@ -394,11 +398,12 @@ avanza.se#@#a[title="LeoVegas"]
 ! Common site specific blocking
 .*/*280x240*.$image,domain=rumhemma.se
 .*/*annons*.$image,domain=guldkanalen.se|kurera.se|nvp.se|rumhemma.se|tekniksmart.se|megafonen.nu|newsvoice.se|lesscarbs.se
-.*/*banner*.$image,domain=dansbandskanalen.se|etc.se|evertiq.se|guldkanalen.se|kurera.se|markbladet.se|rockkocken.se|rumhemma.se|skrattnet.se|tkj.se|vaken.se|sportpanelen.se|newsvoice.se|sportbloggare.com
+.*/*banner*.$image,domain=dansbandskanalen.se|etc.se|evertiq.se|guldkanalen.se|kurera.se|markbladet.se|rockkocken.se|rumhemma.se|skrattnet.se|tkj.se|vaken.se|sportpanelen.se|newsvoice.se|sportbloggare.com|marsta.nu|lakartidningen.se
 .*/*banner*.$script,domain=dagenshandel.se|entreprenor.se|food-supply.se|magasinetparagraf.se|motormagasinet.se|skyddosakerhet.se
 /ajax_statistics_count/*$xmlhttprequest,domain=industrinyheter.se|dagensnaringsliv.se
 /analytics/*$domain=tkj.se
-/banner*/*$image,subdocument,domain=agriprim.se|byggnadsarbetaren.se|dagenstv.com|e.se|entreprenadaktuellt.se|etn.se|flashback.se|golfbladet.se|internetmedicin.se|ja.se|lfc.nu|maskinstationerna.se|metalcentral.net|muss.se|nvp.se|skogsaktuellt.se|sporttv.nu|storvretaibk.se|uppsalanyheter.se|vinochmatguiden.se|free.se|spelsnack.se
+/banner*/*$image,subdocument,domain=agriprim.se|byggnadsarbetaren.se|dagenstv.com|e.se|entreprenadaktuellt.se|etn.se|flashback.se|golfbladet.se|internetmedicin.se|ja.se|lfc.nu|maskinstationerna.se|metalcentral.net|muss.se|nvp.se|skogsaktuellt.se|sporttv.nu|storvretaibk.se|uppsalanyheter.se|vinochmatguiden.se|free.se|spelsnack.se|lakartidningen.se
+/banner/ads/*$image,domain=bildelsbasen.se
 /campaign*/*$script,xmlhttprequest,domain=alltforforaldrar.se|kokaihop.se|mammasidan.se|minbebis.com|njus.me|nyheter24.se
 /cookieconsent.$script,domain=wwf.se
 /_glimr*.$script,domain=tv.nu
@@ -627,6 +632,7 @@ klart.se##.gdpr-onboarding-container
 ||klart.se/assets/blockadblock$script
 ||user-permissions.api.schibsted.media/privacy/$domain=klart.se
 ||cis.schibsted.com/api/*/identify$domain=klart.se
+||metric-mobil.aftonbladet.se^$image
 
 ! BONNIER
 dn.se##.js-ad-sidebar
@@ -1729,3 +1735,9 @@ iabsverige.se###load
 lesscarbs.se##.category-annonssamarbete
 ||stegforhalsa.se^*/ad.js$script
 ||stajlplejs.com/annons.asp$subdocument
+/hjv-google-analytics-startpage$script,domain=1177.se
+/verksamt-adrum.js$script,domain=verksamt.se
+marsta.nu##.outsider
+pingpong.se##.l-preloader
+/mod_adblockdetector/*$domain=hamnen.se
+lakartidningen.se##.advelementnewsrow
