@@ -1,3 +1,14 @@
 ! This file is a part of Frellwits-Swedish-Filter.txt and contains filters specifically for uBO/Nano Adblocker
 ! There's no need to subscribe to this file
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
+!#if env_firefox
+dn.se##^script[id="js-ad-data"]
+aftonbladet.se##^script:has-text(preLoadAds)
+svd.se##^script:has-text(the apntag object)
+svd.se##^script:has-text(SvD.ads)
+expressen.se##^#rich-media-ads
+expressen.se##^script:has-text(window.Exp.bamData)
+expressen.se##^script[id="ads-script"]
+expressen.se##^script:has-text(adsScript)
+expressen.se##^script:has-text(window.ExpressenAnalytics)
+!#endif
