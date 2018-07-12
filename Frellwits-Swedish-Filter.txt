@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Title: Frellwit's Swedish Filter
 ! Expires: 3 days (update frequency)
-! Last modified: 2018-07-11 08:26:07 CEST
+! Last modified: 2018-07-12 21:05:15 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -53,6 +53,7 @@
 ##.cookiebar
 ##.cookieConsent
 ##.CookieNotice
+##.cookies-area
 ##.cookies-info
 ##.cookies-info-static
 ##.eu_coookie_toolbar
@@ -101,6 +102,7 @@
 /_widget/destination$subdocument,domain=expressen.se
 /a?callback=pfmod.saveadsettings
 /AC_RunActiveContent.js$script,domain=dagenstv.com
+/accl$script,domain=breakit.se
 /ad/getNouw.$script
 /ad_service/*$domain=bohuslaningen.se|gp.se|hallandsposten.se|hn.se|stromstadstidning.se|ttela.se
 /admin-ajax.php?action=advanced-ads-tracking-track$xmlhttprequest,domain=datormagazin.se
@@ -186,7 +188,6 @@
 /gilla-mb_plugg.png$domain=markbladet.se
 /glimr.min.js^$script,domain=affarsliv.com|affarslivgotland.se|aftonbladet.se|blocket.se|corren.se|di.se|dn.se|eposten.se|folkbladet.se|gotland.net|helagotland.se|klackspark.com|kuriren.nu|mvt.se|norrbottensaffarer.se|nsd.se|nt.se|politism.se|pt.se|unt.se|uppsala.com|uppsalatidningen.se|viivilla.se|vt.se
 /google_tag.script.js^$script,domain=fria.nu|friatidningen.se|goteborgsfria.se|landetsfria.se|sesam.nu|stockholmsfria.se
-/google_tag/*$domain=moderaterna.se
 /gplus.php^$script,domain=fria.nu|friatidningen.se|goteborgsfria.se|landetsfria.se|sesam.nu|stockholmsfria.se
 /hapyak.js$script,domain=viktvaktarna.se
 /headerbidding.js$script,domain=livetombord.se
@@ -267,6 +268,7 @@
 /plugins/cresta-social-share-counter-pro/*$script,stylesheet
 /plugins/doubleclick-wp/*
 /plugins/easy-eu-cookie-law/*
+/plugins/easy-wp-cookie-popup/*$script,stylesheet
 /plugins/eu-cookie-law/*$script,stylesheet
 /plugins/facebook-conversion-pixel/*
 /plugins/facebook-pagelike-widget/*$script
@@ -397,6 +399,7 @@
 @@/js/advertisement*.$script,~third-party,domain=brollopstorget.se|dagensmedia.nu|devote.se|expressen.se|familjeliv.se|feber.se|skyddsombud24.se|tjock.se
 @@/js/advertising.$script,~third-party,domain=byggnadsarbetaren.se|elbilsnytt.se|svegot.se|tekniksmart.se|vilaser.se
 @@/js/showads.js^$script,~third-party,domain=101ideer.se|alltomtradgard.se|amelia.se|lantliv.com|skonahem.com|styleby.nu|tara.se|topphalsa.se|veckorevyn.com
+@@/scripts/ads.js$~third-party,domain=bloggar.expressen.se
 @@/scripts/advertisement*.$script,~third-party,domain=expressen.se
 @@/show_ads.js$script,~third-party,domain=happypancake.com
 @@/wp-content/*/adframe.js$script,~third-party,domain=falkopingstidning.se|jnytt.se|jp.se|skaraborgslanstidning.se|skovdenyheter.se|smalandsdagblad.se|smalanningen.se|smt.se|tranastidning.se|vastgotabladet.se|vetlandaposten.se|vn.se
@@ -541,12 +544,10 @@ bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##.r
 bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##.seekly
 bonjourvintage.se##.category-om-samarbeten
 branschkoll.se##.advert-widget
-breakit.se##.monstermodule
 breakit.se##.spnsr-widget
 breakit.se##.supportersSlideContainer
 breakit.se##.videoAd
 breakit.se##div[class*="sponsored"]
-breakit.se,hockeymagasinet.com,runnersworld.se,utsidan.se##.sponsored
 brollopstorget.se,familjeliv.se##.ad_right
 businessclass.se###bcpop
 businessclass.se##.reveal-modal-bg
@@ -558,6 +559,7 @@ byggahus.se##.messagePartner
 byggahus.se##a[href^="/partner/"]
 byggnadsarbetaren.se##.siteAlerts
 byggnadsarbetaren.se##[class^="siteAds"]
+centerpartiet.se##.sol-cookie-message
 chef.se##.Blurb--native
 chef.se,svd.se##.Ad
 cyclingplus.se,firstfoto.se,fitnessformen.se,halsafitness.se,macguiden.net##.this-is-an-ad
@@ -746,6 +748,7 @@ hippson.se##.sponsorpuff
 hitta.se##.curious-location-promo__container
 hitta.se##.partner-box
 hockeymagasinet.com##app-gdpr-alert
+hockeymagasinet.com,runnersworld.se,utsidan.se##.sponsored
 hugorosas.se##.tag-sponsored_post
 hugorosas.se##article.category-samarbete
 humorbibeln.se,newsner.com,sportbibeln.se###share-buttons
@@ -800,6 +803,7 @@ lakartidningen.se##.advelementnewsrow
 landleyskok.se##.banner-leaderboard
 landleyskok.se##.category-sponsrat-inlagg
 lesscarbs.se##.category-annonssamarbete
+liberalerna.se###cc-notice
 linnherbertsson.se##[id^="content-ad"]
 listor.se##.belowad
 listor.se##.swp_social_panelSide
@@ -831,10 +835,10 @@ mestmotor.se##.article-social
 mestmotor.se##.article-wayke-module
 mestmotor.se##.panel-native
 mestmotor.se##a[data-spotlight-id]
-mestmotor.se##a[onclick^="ANALYTICS.trackEvent('Spotlight'"]
 mestmotor.se##article[class*="sponsra"]
 mestmotor.se,muscles.se##.overlay
 mestmotor.se,nyheter24.se##.advertisement
+mestmotor.se,vagabond.se##a[onclick^="ANALYTICS.trackEvent('Spotlight'"]
 metro.se##.m-article__socials
 metro.se##.m-socials
 metro.se##.o-preview--ad
@@ -855,6 +859,7 @@ mmanytt.se##[class*="sponsrat-inlagg"]
 mmanytt.se##a[href*="://kampanjer."]
 mobil.se##[data-domid^="sprjr"]
 mobil.se##li.partner
+moderaterna.se##.sliding-popup-bottom
 modette.se##article.article-true-native
 motormagasinet.se##[id^="dfp-a1p"]
 moviezine.se##[name="article-advertisment"]
@@ -1062,9 +1067,6 @@ viseniorer.se##.topheaderinfo
 ||brandmetrics.com^$third-party
 ||branschkoll.se/pagespeed_static/js_defer.*.js$script
 ||branschkoll.se^*/wpbm-banners/$image
-||breakit.se/accl$script
-||breakit.se/api/insight/event$xmlhttprequest
-||breakit.se^*/*AdManager.$script
 ||breakit.solidtango.com^$subdocument
 ||btg.mtvnservices.com/aria/bentojs.js^$script,domain=nickelodeon.se
 ||btg.mtvnservices.com/aria/coda.html^$script,domain=nickelodeon.se
@@ -1266,6 +1268,8 @@ viseniorer.se##.topheaderinfo
 ||proxyas.com^$third-party
 ||pushcrew.com^$third-party
 ||qbrick.com^$third-party,domain=resume.se
+||qualifio.com^$third-party
+||qualifioapp.com^$third-party
 ||rabble-res.cloudinary.com^$image,domain=bohuslaningen.se|gp.se|hallandsposten.se|hn.se|stromstadstidning.se|ttela.se
 ||realtime.co^$websocket,domain=pomu.se
 ||reco.se^$third-party
