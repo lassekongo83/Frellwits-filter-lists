@@ -492,11 +492,13 @@ ng.se,alltomstockholm.se,mitti.se,bloggbevakning.se,cornucopia.cornubot.se##scri
 /plugins/se-wordpress-cookie-notice/*
 /plugins/se-wordpress-native-article/*$script,stylesheet
 /plugins/sociallocker-next-premium/*$domain=travprat.se
+/plugins/social-warfare/*$script,domain=mkse.com
 /plugins/statebuilt-facebook-page-like-popup/*
 /plugins/sticky-facebook-banner/*$script,domain=humorbibeln.se|newsner.com|sportbibeln.se
 /plugins/sw_ad_inserter/*$script,stylesheet
 /plugins/sw_cookie_consent/*$script,stylesheet
 /plugins/thirstyaffiliates/*$script
+/plugins/thrive-leads/*
 /plugins/uk-cookie-consent/*$script,stylesheet
 /plugins/wf-cookie-consent/*$script,stylesheet
 /plugins/wp-auto-affiliate-links/*$script,stylesheet
@@ -504,11 +506,12 @@ ng.se,alltomstockholm.se,mitti.se,bloggbevakning.se,cornucopia.cornubot.se##scri
 /plugins/wp-embed-facebook/*$script,stylesheet,domain=faktiskt.se
 /plugins/wppas/*$script,stylesheet,domain=elbilsnytt.se
 /plugins/wysija-newsletters/*
-/wp-content/plugins/easy-social-share-buttons$script,stylesheet
+/plugins/x-email-mailchimp/*$script
+/wp-content/plugins/easy-social-share-buttons$script
 /wp-content/uploads/*/advanced.$script,domain=datormagazin.se|skanesport.se
 /wp-content/themes/*/assets/js/cookie.$script
 /wp-content/plugins/addthis/*$script,stylesheet
-/wp-content/uploads/*.js?ver$script,domain=noterat.nu|nyadagbladet.se
+/wp-content/uploads/*.js?ver$script,domain=noterat.nu|nyadagbladet.se|mkse.com
 /wp-admin/admin-ajax.php?action=addthis_global_options$script,domain=expressen.se
 
 ! JWplayer analytics/ad scripts
@@ -1738,6 +1741,7 @@ piraja.se###parallax
 bloggbevakning.se###ad
 ||aff.bstatic.com^$domain=travelgrip.se
 nyadagbladet.se##script:inject(abort-on-property-read.js, cli_show_cookiebar)
+nyadagbladet.se###adpadding
 deliquate.se##.ajax_loader
 iabsverige.se###load
 lesscarbs.se##.category-annonssamarbete
@@ -1755,3 +1759,6 @@ isabellalowengrip.se##.popup-block
 moderaterna.se##.sliding-popup-bottom
 centerpartiet.se##.sol-cookie-message
 liberalerna.se###cc-notice
+mkse.com,nyadagbladet.se##script:inject(abort-current-inline-script.js, anOptions)
+mkse.com###upprev_box
+mkse.com###custom_html-2

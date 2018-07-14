@@ -19,6 +19,10 @@ Various filter lists for [uBlock Origin](https://github.com/gorhill/uBlock) and 
 
 Left-click on the subscribe link *or* copy the link address above and [follow the guide on how to import external lists in uBlock Origin.](https://github.com/gorhill/uBlock/wiki/Filter-lists-from-around-the-web)
 
+## Useful tools that I use
+
+[Reduntand Rule Checker](https://arestwo.org/famlam/redundantRuleChecker.html) by Famlam.
+
 ## Special thanks
 
 https://github.com/ryanbr for the rules from [Fanboy's Swedish filter](https://github.com/ryanbr/fanboy-adblock/blob/master/firefox-regional/fanboy-adblocklist-swe.txt).
