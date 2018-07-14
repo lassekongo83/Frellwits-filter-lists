@@ -21,7 +21,7 @@ Left-click on the subscribe link *or* copy the link address above and [follow th
 
 ## Useful tools that I use
 
-[Reduntand Rule Checker](https://arestwo.org/famlam/redundantRuleChecker.html) by Famlam.
+[Redundant Rule Checker](https://arestwo.org/famlam/redundantRuleChecker.html) by Famlam.
 
 ## Special thanks
 
