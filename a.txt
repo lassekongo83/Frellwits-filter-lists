@@ -28,6 +28,7 @@ imgur.com##script:inject(abort-current-inline-script.js, widgetFactory, produceC
 imgur.com##script:inject(abort-on-property-read.js, _comscore)
 imgur.com##script:inject(abort-on-property-read.js, _qevents)
 imgur.com##script:inject(abort-on-property-read.js, fbq)
+imgur.com##script:inject(abort-current-inline-script.js, loaderFrameWindow)
 !#endif
 !#if env_firefox
 imgur.com##^script:has-text(var __nspid)
@@ -38,6 +39,7 @@ imgur.com##^script:has-text(d,s,id)
 imgur.com##^script:has-text(_comscore.push)
 imgur.com##^script:has-text(var _qevents)
 imgur.com##^script:has-text(f,b,e,v,n,t,s)
+imgur.com##^script:has-text(loaderFrameWindow)
 !#endif
 
 ! NEOWIN
@@ -188,11 +190,10 @@ quora.com##*:style(filter: none !important;)
 !#endif
 
 ! Misc
-loading.se##script:inject(abort-on-property-read.js, OAS_url)
-loading.se##script:inject(abort-on-property-write.js, fbAsyncInit)
-loading.se##tr.forum_forum_tbr:has(img[src="/gfx/forumicons/22.gif"])
-loading.se##tr.forum_forum_tbr:has(img[src="/gfx/forumicons/21.gif"])
-loading.se##tr.forum_forum_tbr:has(img[src="/gfx/forumicons/20.gif"])
+||/do/avtc?$image,important,domain=ixquick.com|ixquick.eu|startpage.com
+||/do/showimage?$image,important,domain=ixquick.com|ixquick.eu|startpage.com
+||/english/web/$image,important,domain=ixquick.com|ixquick.eu|startpage.com
+||/tix2/$image,important,domain=ixquick.com|ixquick.eu|startpa
 yahoo.com##.viewingpane:has(.now-playing)
 openstreetmap.org###banner
 gamefaqs.com##div.message_mpu
@@ -206,8 +207,21 @@ warcraftlogs.com##script:inject(setTimeout-defuser.js, ad)
 jsfiddle.net##script:inject(setTimeout-defuser.js, ads)
 /googleAnalytics.$script,domain=nrk.no
 stackoverflow.com,askubuntu.com,stackexchange.com,superuser.com###js-gdpr-consent-banner
+stackoverflow.com,askubuntu.com,stackexchange.com,superuser.com##.old-hero._fixed
 theverge.com##.m-privacy-consent
 icy-veins.com###cookie_notice
 wowdb.com##.cc_banner
 quora.com##script:inject(setTimeout-defuser.js, [native code], 2000)
 quora.com##script:inject(setTimeout-defuser.js, trackTimeOnSite)
+webhallen.com###background
+css-tricks.com##.end-of-article-ads
+smhi.se##.polopolyNotification
+gp.se##.premium-label:after:style(content: "Premium" !important; background-color: red !important; color: white !important; padding: 2px !important;)
+gfycat.com##.upnext-container
+gfycat.com##.related-content
+warcraftlogs.com##script:inject(setTimeout-defuser.js, ad)
+
+! Misc HTML filters
+!#if env_firefox
+icy-veins.com##^script:has-text(adback_data)
+!#endif

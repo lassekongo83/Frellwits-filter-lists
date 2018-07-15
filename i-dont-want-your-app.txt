@@ -1,0 +1,26 @@
+[Adblock Plus 2.0]
+! Title: I Don't Want Your App
+! Expires: 7 days (update frequency)
+! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
+! Description: A filter for uBlock Origin (Firefox Android) that aims to specifically target websites that nags people to install their app.
+! License: GPLv3
+
+! Generic
+##a[href*=".app.link/"]
+
+! Reddit
+reddit.com##^script:has-text(xpromoInterstitial)
+reddit.com##.DualPartInterstitial
+reddit.com##.XPromoListingClickModal
+
+! Imgur
+imgur.com##.getTheApp
+imgur.com##.FloatingOIA-link
+imgur.com##.AppBanner-text
+imgur.com##.PopOverBannerSmall
+imgur.com##.PopOverBannerFull
+
+! Misc
+aftonbladet.se##._3aP1_
+soundcloud.com##.footer__appButtonContainer
+soundcloud.com##.upsellBanner__app
