@@ -208,6 +208,7 @@
 /monetization/pixel-sdk/*
 /mp_emediate/inc/annons.html
 /ntm-digital/adn/adn-setup.$script,important
+/permutive-async.js$script
 /seenthis-hub/assets/js/hub-time-spent.js^$script
 /sifo_analytics.js^$script
 /sifo_msr.js^$script
@@ -547,7 +548,6 @@ expressen.se##^script:has-text(window.ExpressenAnalytics)
 
 ! IDG
 ||idg.se/sharecounter?$xmlhttprequest
-||cmatch.idg.se^$script
 ||ax.idg.se^
 ||gx.idg.se^$image
 ||idg.se^*/prebid*.$script,~third-party
@@ -969,10 +969,8 @@ familjeliv.se##.flm-kampanj
 familjeliv.se##.articleTeaser:if(.articleSuperTitle:has-text(/i samarbete med/i))
 familjeliv.se##a[data-track]:if(.supertitle:has-text(/i samarbete med/i))
 familjeliv.se##:xpath(//span[text()[contains(., 'Sponsrat')]]/ancestor::div[contains(concat(' ', @class, ' '), ' blogPostWrapper ')]/parent::div/parent::div)
-familjeliv.se##script:inject(abort-current-inline-script.js, mfl, Fusion)
-familjeliv.se##script:inject(abort-current-inline-script.js, mfl, loadAdformAd)
-familjeliv.se##script:inject(abort-current-inline-script.js, Fusion, dmpSegment)
-||familjeliv.se^$object,object-subrequest
+familjeliv.se##script:inject(addEventListener-defuser.js, jquery:loaded)
+familjeliv.se##script:inject(abort-current-inline-script.js, promotions)
 mammasidan.se,minbebis.com,alltforforaldrar.se##.panorama:if(.add-text:has-text(/annons/i))
 mammasidan.se,minbebis.com,alltforforaldrar.se##div.section:if(.add-text:has-text(/annons/i))
 mammasidan.se,minbebis.com,alltforforaldrar.se##.advertisements-sidebar
@@ -1432,7 +1430,6 @@ kurera.se##.g:has(span.ads)
 /QX-AD.js^$script,domain=qx.se|qruiser.com
 /blogcounter/image?$image,domain=javligtgott.se
 /blogcounter.js^$script,domain=javligtgott.se
-||platform.tumblr.com^*/share.js$third-party,domain=javligtgott.se
 ||stumbleupon.com/hostedbadge.$script,domain=javligtgott.se
 @@||sportbibeln.se^$generichide
 sysidan.se##.adscolumn

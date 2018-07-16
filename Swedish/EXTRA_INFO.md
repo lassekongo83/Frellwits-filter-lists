@@ -68,7 +68,7 @@ Vill du bidra med filter så kan du skicka en pull request. Tänk på att följa
 - Varje pull request kommer att granskas. Jag kan välja att neka den eller att modifiera den.
 - Länkar till premium-alternativ (och liknande) som inte täcker över innehåll eller avbryter besökaren ska inte plockas bort.
 - Dubbletter kan förekomma i andra listor. Dessa plockas bort efter hand om det inte finns någon annan anledning till att de finns där.
-- Kontrollera dina filter med [redundancy check](https://arestwo.org/famlam/redundantRuleChecker.html). Det verktyget kan hjälpa till med att hitta dubletter och felaktigt skrivna filter.
-- Försök att undvika globala blockeringar om du är osäker på om det kan komma att förstöra funktionaliteten på andra sidor. Använd då helst `$domain` och/eller `$first-party` / `$~third-party`.
+- Kontrollera dina filter med [Redundant Rule Checker](https://arestwo.org/famlam/redundantRuleChecker.html). Det verktyget kan hjälpa till med att hitta dubbletter och felaktigt skrivna filter.
+- Försök att undvika globala blockeringar om du är osäker på om det kan komma att förstöra funktionaliteten på andra sidor. Använd då helst `$domain` och/eller first-party (`$~third-party`).
 
 Många förfrågningar och tjänster som blockeras kan även förekomma på utländska webbsidor. Förfrågningarna har blockerats pågrund av en av anledningarna som [nämnts ovan](https://github.com/lassekongo83/Frellwits-filter-lists/blob/master/Swedish/EXTRA_INFO.md#vad-listan-har-som-mål-att-ta-bort). Alla dessa förfrågningar förekommer eller har någon gång förekommit på en svensk webbsida.

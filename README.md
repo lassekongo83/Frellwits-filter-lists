@@ -23,6 +23,10 @@ Left-click on the subscribe link *or* copy the link address above and [follow th
 
 [Redundant Rule Checker](https://arestwo.org/famlam/redundantRuleChecker.html) by Famlam.
 
+[PyFunceble](https://github.com/funilrys/PyFunceble) by @funilrys.
+
+[FOP](https://hg.adblockplus.org/easylist/file/tip/FOP.py) by Michael/hgweb.
+
 ## Special thanks
 
 https://github.com/ryanbr for the rules from [Fanboy's Swedish filter](https://github.com/ryanbr/fanboy-adblock/blob/master/firefox-regional/fanboy-adblocklist-swe.txt).
