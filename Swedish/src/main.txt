@@ -8,7 +8,7 @@
 ||adrecord.com^$third-party
 ||adservone.com^$third-party
 ||adservicemedia.dk^$third-party
-||adten.eu^$third-party
+||delivery.adten.eu^$third-party
 ||adtooxcloud.com^$third-party
 ||adviral.media^$third-party
 ||adviralmedia.com^$third-party
@@ -130,7 +130,6 @@
 ||travtjansten.se^$third-party
 ||trn.ninja^$third-party
 ||trugaze.io^$third-party
-||tvdags.se^$third-party
 ||twingly.com^$third-party
 ||twittercounter.com^$third-party
 ||ubembed.com^$third-party
@@ -408,12 +407,12 @@ avanza.se#@#a[title="LeoVegas"]
 ! Common site specific blocking
 .*/*280x240*.$image,domain=rumhemma.se
 .*/*annons*.$image,domain=guldkanalen.se|kurera.se|nvp.se|rumhemma.se|tekniksmart.se|megafonen.nu|newsvoice.se|lesscarbs.se
-.*/*banner*.$image,domain=dansbandskanalen.se|etc.se|evertiq.se|guldkanalen.se|kurera.se|markbladet.se|rockkocken.se|rumhemma.se|skrattnet.se|tkj.se|vaken.se|sportpanelen.se|newsvoice.se|sportbloggare.com|marsta.nu|lakartidningen.se
+.*/*banner*.$image,domain=dansbandskanalen.se|etc.se|evertiq.se|guldkanalen.se|kurera.se|markbladet.se|rockkocken.se|rumhemma.se|skrattnet.se|tkj.se|vaken.se|sportpanelen.se|newsvoice.se|sportbloggare.com|marsta.nu|lakartidningen.se|bettips.se
 .*/*banner*.$script,domain=dagenshandel.se|entreprenor.se|food-supply.se|magasinetparagraf.se|motormagasinet.se|skyddosakerhet.se
 .*/*sponsor*.$image,domain=humorbibeln.se|newsner.com|sportbibeln.se
 /ajax_statistics_count/*$xmlhttprequest,domain=industrinyheter.se|dagensnaringsliv.se
 /analytics/*$domain=tkj.se
-/banner*/*$image,subdocument,domain=agriprim.se|byggnadsarbetaren.se|dagenstv.com|e.se|entreprenadaktuellt.se|etn.se|flashback.se|golfbladet.se|internetmedicin.se|ja.se|lfc.nu|maskinstationerna.se|metalcentral.net|muss.se|nvp.se|skogsaktuellt.se|sporttv.nu|storvretaibk.se|uppsalanyheter.se|vinochmatguiden.se|free.se|spelsnack.se|lakartidningen.se|vm-fotboll.se
+/banner*/*$image,subdocument,domain=agriprim.se|byggnadsarbetaren.se|dagenstv.com|e.se|entreprenadaktuellt.se|etn.se|flashback.se|golfbladet.se|internetmedicin.se|ja.se|lfc.nu|maskinstationerna.se|metalcentral.net|muss.se|nvp.se|skogsaktuellt.se|sporttv.nu|storvretaibk.se|uppsalanyheter.se|vinochmatguiden.se|free.se|spelsnack.se|lakartidningen.se|vm-fotboll.se|bukefalos.se
 /banner/ads/*$image,domain=bildelsbasen.se
 /campaign*/*$script,xmlhttprequest,domain=alltforforaldrar.se|kokaihop.se|mammasidan.se|minbebis.com|njus.me|nyheter24.se
 /cookieconsent.$script,domain=wwf.se
@@ -835,6 +834,7 @@ ekuriren.se,kkuriren.se,sn.se###citygate-family-widgetframe
 7ha.se,barometern.se,blt.se,bt.se,kristianstadsbladet.se,olandsbladet.se,ostrasmaland.se,smp.se,sydostran.se,trelleborgsallehanda.se,ut.se,ystadsallehanda.se##div[id*="marknadsguiden"]
 7ha.se,barometern.se,blt.se,bt.se,kristianstadsbladet.se,olandsbladet.se,ostrasmaland.se,smp.se,sydostran.se,trelleborgsallehanda.se,ut.se,ystadsallehanda.se##script:inject(abort-on-property-write.js, adTags)
 7ha.se,barometern.se,blt.se,bt.se,kristianstadsbladet.se,olandsbladet.se,ostrasmaland.se,smp.se,sydostran.se,trelleborgsallehanda.se,ut.se,ystadsallehanda.se##script:inject(abort-on-property-write.js, cX.callQueue)
+7ha.se,barometern.se,blt.se,bt.se,kristianstadsbladet.se,olandsbladet.se,ostrasmaland.se,smp.se,sydostran.se,trelleborgsallehanda.se,ut.se,ystadsallehanda.se##script:inject(abort-on-property-write.js, bm_website_code)
 ! Note to self. Don't block adds.js/css.
 nwt.se,sla.se,mariestadstidningen.se##.mfp-wrap
 nwt.se,sla.se,mariestadstidningen.se##.mfp-bg
@@ -1123,6 +1123,7 @@ victoriatornegren.se##article[id^="post-"]:if(.entry-header:has-text(Paid post i
 alexandrabring.se,biancaingrosso.se##article[id^="post-"]:if(em:has-text(/i samarbete med/i))
 
 ! NOUW
+/scripts/pb*.js$script,domain=nouw.com|alicestenlof.com|clarahenry.se|elinskoglund.com|fannystaaf.se|linnahlborg.se|lovisawallin.se|moamattsson.se|saraabrahamsson.se
 @@||nouw.com^$generichide
 @@||alicestenlof.com^$generichide
 @@||clarahenry.se^$generichide
@@ -1148,8 +1149,8 @@ dn.se,klart.se,norran.se##.ad-wrapper
 brollopstorget.se,familjeliv.se##.ad_right
 24blekinge.se,24emmaboda.se,24falkenberg.se,24halmstad.se,24helsingborg.se,24kalmar.se,24kristianstad.se,24malmo.se,24nybro.se,24trelleborg.se,24uppsala.se,24ystad.se,babyhjalp.se,branschkoll.se,fotosidan.se,moviezine.se,affarsliv.com,affarslivgotland.se,corren.se,eposten.se,folkbladet.se,helagotland.se,klackspark.com,kuriren.nu,mvt.se,norrbottensaffarer.se,nsd.se,nt.se,pt.se,unt.se,vt.se,globalportalen.org##.ads
 24blekinge.se,24emmaboda.se,24falkenberg.se,24halmstad.se,24helsingborg.se,24kalmar.se,24kristianstad.se,24malmo.se,24nybro.se,24trelleborg.se,24uppsala.se,24ystad.se###cookie-bar
-mestmotor.se,nyheter24.se##.advertisement
-agriprim.se,bike.se,e.se,entreprenadaktuellt.se,husbilhusvagn.se,ja.se,klassiker.nu,maskinstationerna.se,mopedgaraget.se,norran.se,nyckelspel.se,skogsaktuellt.se,spelo.se,sweclockers.com,vaken.se,vibilagare.se,lovelylife.se##.banner
+mestmotor.se,nyheter24.se,modette.se##.advertisement
+agriprim.se,bike.se,e.se,entreprenadaktuellt.se,husbilhusvagn.se,ja.se,klassiker.nu,maskinstationerna.se,mopedgaraget.se,norran.se,nyckelspel.se,skogsaktuellt.se,spelo.se,sweclockers.com,vaken.se,vibilagare.se,lovelylife.se,bettips.se##.banner
 etn.se,uppsalanyheter.se##.banneritem
 evertiq.se,fz.se##.bnr
 datormagazin.se,mmanytt.se##.category-annons
@@ -1157,7 +1158,7 @@ humorbibeln.se,newsner.com,sportbibeln.se##.inline-share-buttons
 humorbibeln.se,newsner.com,sportbibeln.se##a[href*=".adsrv."]
 runnersworld.se,utsidan.se,hockeymagasinet.com##.sponsored
 ekuriren.se,expressen.se,kkuriren.se,sn.se##.teaser--native-ad
-digitalfotoforalla.se,illvet.se,pctidningen.se##.top-banner
+digitalfotoforalla.se,illvet.se,pctidningen.se,bettips.se##.top-banner
 javligtgott.se,starbys.se##.category-samarbeten
 falkopingstidning.se,jnytt.se,jp.se,skaraborgslanstidning.se,skovdenyheter.se,smalandsdagblad.se,smalanningen.se,smt.se,tranastidning.se,vastgotabladet.se,vetlandaposten.se,vn.se,filmtipset.se##.social-share
 rumhemma.se,festivalrykten.se###top
@@ -1768,3 +1769,6 @@ mkse.com###upprev_box
 mkse.com###custom_html-2
 fotboll.com##[class^="fp_side_ad"]
 fotboll.com##.header-ad-lg
+bukefalos.se##.u-bottomFixer
+nhlbettingblog.se##.karusellWrapper
+bettips.se##.bettips-am
