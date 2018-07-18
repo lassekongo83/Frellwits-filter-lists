@@ -254,7 +254,6 @@
 ||hello.myfonts.net/count/$stylesheet
 ||herokuapp.com/visit?$image
 ||inevserver.com/~tournreport/$image
-||jifo.co/i/analytics/ga.js$script
 ||jssdk.privacy.schibsted.com/pulse.$script
 ||jssdk.privacy.schibsted.com/privacy-notifier.$script
 ||kayak.xno.se^$script
@@ -275,6 +274,7 @@
 ||pixel.playbuzz.com^$xmlhttprequest
 ||s3.amazonaws.com/cc.silktide.com/cookieconsent.$script
 ||sdk.pulse.schibsted.com^$script
+||slidesharecdn.com/ss_foundation/combined_li_tracking.$script
 ||service.survio.se^*/registerhit?$image
 ||solidtango.com^*/player_statistics$image
 ||tibaco.net/scripts/tws.js$script
@@ -429,7 +429,7 @@ avanza.se#@#a[title="LeoVegas"]
 /xtcore.$script,domain=kiaindex.se
 ||apprl.com/embed/$subdocument,domain=majaelisabeth.com|metromode.se|trendenser.se|forni.se|petratungarden.se
 ||herokuapp.com^$third-party,domain=aftonbladet.se
-||pji.nu^$third-party,domain=idg.se|minhembio.com|nordichardware.se|99.se|fz.se|sweclockers.com|mobil.se|viivilla.se|feber.se|kamerabild.se
+||pji.nu^$third-party,domain=idg.se|minhembio.com|nordichardware.se|99.se|fz.se|sweclockers.com|mobil.se|viivilla.se|feber.se|kamerabild.se|surfa.se
 ||prisjakt-a.akamaized.net/*/annons/$image,domain=idg.se|minhembio.com|nordichardware.se|99.se|fz.se|sweclockers.com|mobil.se|viivilla.se|feber.se|kamerabild.se
 ||youbora.com^$third-party,domain=aftonbladet.se|svd.se
 ||zotabox.com^$third-party,domain=rapport24.com
@@ -437,6 +437,9 @@ avanza.se#@#a[title="LeoVegas"]
 
 ! Common scriptlets
 ng.se,alltomstockholm.se,mitti.se,bloggbevakning.se,cornucopia.cornubot.se##script:inject(abort-on-property-read.js, ADTECH)
+dagensps.se,husvagnochcamping.se,hemtrevligt.se,akaskidor.se,utemagasinet.se,livetombord.se,svenskgolf.se,kingmagazine.se,vagabond.se,tidningenhalsa.se,mestmotor.se##script:inject(abort-current-inline-script.js, ADTECH, enqueueAd)
+dagensps.se,hemtrevligt.se,akaskidor.se,utemagasinet.se,livetombord.se,svenskgolf.se,kingmagazine.se,vagabond.se,tidningenhalsa.se,mestmotor.se,husvagnochcamping.se##script:inject(abort-current-inline-script.js, NREUM, info)
+letsdeal.se##script:inject(overlay-buster.js)
 
 ! Facebook junk
 /facebook_sdk.js$script,domain=njus.me|radioplay.se
@@ -478,6 +481,8 @@ ng.se,alltomstockholm.se,mitti.se,bloggbevakning.se,cornucopia.cornubot.se##scri
 /plugins/eu-cookie-law/*$script,stylesheet
 /plugins/facebook-pagelike-widget/*$script
 /plugins/facebook-conversion-pixel/*
+/plugins/ginger/addon/analytics/*$script
+/plugins/ginger/front/js/cookies-enabler$script,stylesheet
 /plugins/host-analyticsjs-local/*$script
 /plugins/hustle/*$script,domain=yogaworld.se
 /plugins/icegram/*$domain=dagensanalys.se
@@ -491,6 +496,7 @@ ng.se,alltomstockholm.se,mitti.se,bloggbevakning.se,cornucopia.cornubot.se##scri
 /plugins/monarch/*$domain=undertian.com
 /plugins/newsner-lead-tracking/*$script
 /plugins/pause-adblocker/*$script,stylesheet,image,domain=hightechguiden.se
+/plugins/pixel-cat/*$script
 /plugins/pixelyoursite-pro/*
 /plugins/popup-builder-platinum/*$important,domain=sportpanelen.se
 /plugins/sdcookie-warning/*$script,stylesheet
@@ -504,11 +510,13 @@ ng.se,alltomstockholm.se,mitti.se,bloggbevakning.se,cornucopia.cornubot.se##scri
 /plugins/sw_cookie_consent/*$script,stylesheet
 /plugins/thirstyaffiliates/*$script
 /plugins/thrive-leads/*
+/plugins/ultimate-social-media-icons/*$script,image,stylesheet,domain=buzzter.se
 /plugins/uk-cookie-consent/*$script,stylesheet
 /plugins/wf-cookie-consent/*$script,stylesheet
 /plugins/wp-auto-affiliate-links/*$script,stylesheet
 /plugins/wp-banner-manager/*$script,stylesheet,domain=branschkoll.se
 /plugins/wp-embed-facebook/*$script,stylesheet,domain=faktiskt.se
+/plugins/wordpress-popup/*$domain=buzzter.se
 /plugins/wppas/*$script,stylesheet,domain=elbilsnytt.se
 /plugins/wysija-newsletters/*
 /plugins/x-email-mailchimp/*$script
@@ -528,9 +536,9 @@ ng.se,alltomstockholm.se,mitti.se,bloggbevakning.se,cornucopia.cornubot.se##scri
 ||ssl.p.jwpcdn.com^*/googima.js$script,important
 
 ! Fix for the mediacreeper onerror attribute abuse
-||mediacreeper.com/image$image,domain=cornucopia.cornubot.se|peak-oil.se|apg29.nu|zaramis.se|horoskop.nu|blogspot.se|nyhetswebben.se|emanuelkarlsten.se|uvell.se|supermiljobloggen.se|swedishprepper.com|genusdebatten.se|vaken.se|solrosuppropet.se|toklandet.wordpress.com|experimentlandet.blogg.se|allmogen.org|lindelof.nu|sempermiles.se|opendata.se|hoforsbloggen.se|lindqvist.com|vargfakta.se|forenadebolag.se|xn--blljus-jua.se|frihetssmedjan.se|sysadmindagen.se|tjuvlyssnat.se|b19.se
-||mediacreeper.se/image$image,domain=cornucopia.cornubot.se|peak-oil.se|apg29.nu|zaramis.se|horoskop.nu|blogspot.se|nyhetswebben.se|emanuelkarlsten.se|uvell.se|supermiljobloggen.se|swedishprepper.com|genusdebatten.se|vaken.se|solrosuppropet.se|toklandet.wordpress.com|experimentlandet.blogg.se|allmogen.org|lindelof.nu|sempermiles.se|opendata.se|hoforsbloggen.se|lindqvist.com|vargfakta.se|forenadebolag.se|xn--blljus-jua.se|frihetssmedjan.se|sysadmindagen.se|tjuvlyssnat.se|b19.se
-cornucopia.cornubot.se,peak-oil.se,apg29.nu,zaramis.se,horoskop.nu,blogspot.se,nyhetswebben.se,emanuelkarlsten.se,uvell.se,supermiljobloggen.se,swedishprepper.com,genusdebatten.se,vaken.se,solrosuppropet.se,toklandet.wordpress.com,experimentlandet.blogg.se,allmogen.org,lindelof.nu,sempermiles.se,opendata.se,hoforsbloggen.se,lindqvist.com,vargfakta.se,forenadebolag.se,xn--blljus-jua.se,frihetssmedjan.se,sysadmindagen.se,tjuvlyssnat.se,b19.se##script:inject(remove-attr.js, onerror)
+||mediacreeper.com/image$image,domain=cornucopia.cornubot.se|peak-oil.se|apg29.nu|zaramis.se|horoskop.nu|blogspot.se|nyhetswebben.se|emanuelkarlsten.se|uvell.se|supermiljobloggen.se|swedishprepper.com|genusdebatten.se|vaken.se|solrosuppropet.se|toklandet.wordpress.com|experimentlandet.blogg.se|allmogen.org|lindelof.nu|sempermiles.se|opendata.se|hoforsbloggen.se|lindqvist.com|vargfakta.se|forenadebolag.se|xn--blljus-jua.se|frihetssmedjan.se|sysadmindagen.se|tjuvlyssnat.se|b19.se|webbjobb.io
+||mediacreeper.se/image$image,domain=cornucopia.cornubot.se|peak-oil.se|apg29.nu|zaramis.se|horoskop.nu|blogspot.se|nyhetswebben.se|emanuelkarlsten.se|uvell.se|supermiljobloggen.se|swedishprepper.com|genusdebatten.se|vaken.se|solrosuppropet.se|toklandet.wordpress.com|experimentlandet.blogg.se|allmogen.org|lindelof.nu|sempermiles.se|opendata.se|hoforsbloggen.se|lindqvist.com|vargfakta.se|forenadebolag.se|xn--blljus-jua.se|frihetssmedjan.se|sysadmindagen.se|tjuvlyssnat.se|b19.se|webbjobb.io
+cornucopia.cornubot.se,peak-oil.se,apg29.nu,zaramis.se,horoskop.nu,blogspot.se,nyhetswebben.se,emanuelkarlsten.se,uvell.se,supermiljobloggen.se,swedishprepper.com,genusdebatten.se,vaken.se,solrosuppropet.se,toklandet.wordpress.com,experimentlandet.blogg.se,allmogen.org,lindelof.nu,sempermiles.se,opendata.se,hoforsbloggen.se,lindqvist.com,vargfakta.se,forenadebolag.se,xn--blljus-jua.se,frihetssmedjan.se,sysadmindagen.se,tjuvlyssnat.se,b19.se,webbjobb.io##script:inject(remove-attr.js, onerror)
 
 ! HTML filters
 !#if env_firefox
@@ -1031,6 +1039,7 @@ sportfiskeforum.se,fiskejournalen.se##script:inject(abort-current-inline-script.
 @@||mestmotor.se^$generichide
 /js/marbles/marbles.js$script,~third-party,domain=mestmotor.se|vagabond.se|kingmagazine.se|hemtrevligt.se|akaskidor.se|svenskgolf.se|tidningenhalsa.se|livetombord.se|utemagasinet.se
 /headerbidding.js$script,domain=livetombord.se
+/multiad_jquery.js$script,domain=husvagnochcamping.se
 kingmagazine.se,vagabond.se,hemtrevligt.se,akaskidor.se,utemagasinet.se,livetombord.se,svenskgolf.se,tidningenhalsa.se,mestmotor.se##.latest-article-native
 vagabond.se##.most-read-article:if(span:has-text(/partner/i))
 mestmotor.se,vagabond.se,kingmagazine.se,hemtrevligt.se,akaskidor.se,svenskgolf.se,tidningenhalsa.se,livetombord.se,utemagasinet.se##.alert-cookies
@@ -1356,7 +1365,7 @@ market.se###newsletter-rollup
 dagensps.se##.xtss-above-post
 ||fusion.dagensps.se^$script,image
 dagensps.se##script:inject(abort-on-property-write.js, FloadCmatchIfr)
-dagensps.se##script:inject(abort-current-inline-script.js, ADTECH, enqueueAd)
+dagensps.se##script:inject(abort-current-inline-script.js, Fusion, loadAds)
 dagensps.se##.category-ps-partner
 ||petrk.com^$third-party,image,domain=dagensps.se
 /locker.js$script,domain=atl.nu|land.se|landlantbruk.se
@@ -1469,7 +1478,6 @@ news55.se##.news-feed-article[data-n55-theme="n55-theme--native-articles"]
 businessclass.se##.reveal-modal-bg
 businessclass.se###bcpop
 businessclass.se##script:inject(abort-current-inline-script.js, $, AdBlockDetector)
-letsdeal.se##script:inject(overlay-buster.js)
 /spons/*$image,domain=swehack.org
 viivilla.se##.teaserblockdata:has(.teaser-sponsored-text)
 viivilla.se##.sp-article:has(.commercial-label)
@@ -1509,6 +1517,8 @@ kungalvsposten.se,molndalsposten.se,lokaltidningensto.se,kungsbackaposten.se##di
 smartsenior.se##.ss-modal
 matklubben.se##.notification.cookies
 /_banners/*$image,domain=kolozzeum.com
+/kollos*.js$script,domain=kolozzeum.com
+kolozzeum.com##td[width="305"]
 happyride.se###a-panorama
 happyride.se###a-sidebar1
 happyride.se##li.sponsor
@@ -1772,3 +1782,12 @@ fotboll.com##.header-ad-lg
 bukefalos.se##.u-bottomFixer
 nhlbettingblog.se##.karusellWrapper
 bettips.se##.bettips-am
+@@||webbjobb.io^$generichide
+||webbjobb.io^*/abb-$script
+webbjobb.io##.cookie
+surfa.se###loader-wrapper
+surfa.se##.annonsDiv
+buzzter.se##script:inject(abort-current-inline-script.js, Optins, inc_opt)
+buzzter.se###lock
+buzzter.se###outer-wrap:style(overflow: auto !important;)
+buzzter.se##body.trend-lock #outer-wrap:style(position: inherit !important;)
