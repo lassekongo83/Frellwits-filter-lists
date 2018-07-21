@@ -1801,3 +1801,22 @@ buzzter.se###lock
 buzzter.se###outer-wrap:style(overflow: auto !important;)
 buzzter.se##body.trend-lock #outer-wrap:style(position: inherit !important;)
 goteborgdirekt.se,stockholmdirekt.se##.gdpr-warning
+!#if env_firefox
+nyafilmerhd.*,dreamfilmhd.*##^script:has-text(POPUP)
+nyafilmerhd.*,dreamfilmhd.*##^script:has-text(s,t,o,p,b,r,e,a,k,i,n,g)
+nyafilmerhd.*,dreamfilmhd.*##^script:has-text(_Hasync)
+nyafilmerhd.*,dreamfilmhd.*##^script:has-text(blockerDetected)
+nyafilmerhd.*,dreamfilmhd.*##^script:has-text(adsrvmedia)
+nyafilmerhd.*,dreamfilmhd.*##^script:has-text(uptopop.com)
+nyafilmerhd.*,dreamfilmhd.*##^script:has-text(OneSignal)
+nyafilmerhd.*,dreamfilmhd.*##^script[src^="/ads.js?"]
+!#endif
+nyafilmerhd.*,dreamfilmhd.*##script:inject(abort-current-inline-script.js, OneSignal)
+nyafilmerhd.*,dreamfilmhd.*##script:inject(set-constant.js, blockerDetected, false)
+nyafilmerhd.*,dreamfilmhd.*##a[style*="height"][rel*="nofollow"]
+nyafilmerhd.*,dreamfilmhd.*##a[data-hover="LADDA NED"]
+nyafilmerhd.*,dreamfilmhd.*##a[href$=".html"][target="_blank"]
+nyafilmerhd.*,dreamfilmhd.*##script:inject(addEventListener-defuser.js, /^(?:DOMContentLoaded|mouseup|mousedown|mousemove)$/)
+jawcloud.co##script:inject(addEventListener-defuser.js, contextmenu)
+||dreamfilmhd.*$csp=default-src 'self' 'unsafe-inline' 'unsafe-eval' jawcloud.co *.jawcloud.co upvtt.com wp.com *.wp.com *.googleapis.com vkpass.com *.vkpass.com *.gstatic.com
+||nyafilmerhd.*$csp=default-src 'self' 'unsafe-inline' 'unsafe-eval' jawcloud.co *.jawcloud.co upvtt.com wp.com *.wp.com *.googleapis.com vkpass.com *.vkpass.com *.gstatic.com
