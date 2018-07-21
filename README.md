@@ -9,11 +9,13 @@ Various filter lists for [uBlock Origin](https://github.com/gorhill/uBlock) and 
 | **[deviantJUNKfilter.txt](https://raw.githubusercontent.com/lassekongo83/Frellwits-filter-lists/master/deviantJUNKfilter.txt)** ([Subscribe][deviantJUNK Filter Subscribe]) | A filter for deviantart.com. Blocks over 1000 of users that upload junk or stuff in the wrong categories. (Warning: This list is highly personal and may not suit everyone.) 
 | **[emoji-filter.txt](https://raw.githubusercontent.com/lassekongo83/Frellwits-filter-lists/master/emoji-filter.txt)** ([Subscribe][I Don't Care About Emojis Subscribe]) | A.k.a "I Don't Care About Emojis." This filter aims to remove emoji realted scripts, stylesheets, fonts, and images.
 | **[a.txt](https://raw.githubusercontent.com/lassekongo83/Frellwits-filter-lists/master/a.txt)** ([Subscribe][Frellwit's personal filters Subscribe]) | This is where I keep some of my personal filters. (These may break stuff.)
+| **[i-dont-want-your-app.txt](https://raw.githubusercontent.com/lassekongo83/Frellwits-filter-lists/master/i-dont-want-your-app.txt)** ([Subscribe][I Don't Want Your App Subscribe]) | A filter for uBlock Origin (Firefox Android) that aims to specifically target websites that nags people to install their app.
 
 [Frellwit's Swedish Filter Subscribe]: https://subscribe.adblockplus.org/?location=https://raw.githubusercontent.com/lassekongo83/Frellwits-filter-lists/master/Frellwits-Swedish-Filter.txt&title=Frellwit%27s%20Swedish%20Filter
 [deviantJUNK Filter Subscribe]: https://subscribe.adblockplus.org/?location=https://raw.githubusercontent.com/lassekongo83/Frellwits-filter-lists/master/deviantJUNKfilter.txt&title=deviantJUNK%20Filter
 [I Don't Care About Emojis Subscribe]: https://subscribe.adblockplus.org/?location=https://raw.githubusercontent.com/lassekongo83/Frellwits-filter-lists/master/emoji-filter.txt&title=I%20Don%27t%20Care%20About%20Emojis
 [Frellwit's personal filters Subscribe]: https://subscribe.adblockplus.org/?location=https://raw.githubusercontent.com/lassekongo83/Frellwits-filter-lists/master/a.txt&title=Frellwit%27s%20personal%20filters
+[I Don't Want Your App Subscribe]: https://subscribe.adblockplus.org/?location=https://raw.githubusercontent.com/lassekongo83/Frellwits-filter-lists/master/i-dont-want-your-app.txt&title=I%20Don%27t%20Want%20Your%20App
 
 #### How to subscribe
 
