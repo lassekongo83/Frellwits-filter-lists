@@ -14,6 +14,7 @@
 ||adviralmedia.com^$third-party
 ||advrl.com^$third-party
 ||adwayplus.se^$third-party
+||affiliator.com^$third-party
 ||albacross.com^$third-party
 ||apsislead.com^$third-party
 ||anki.com^$third-party
@@ -221,6 +222,7 @@
 |http://sifomedia.
 |https://sifomedia.
 ||adviral.s3.amazonaws.com/sponsored/
+||aff.bstatic.com^$script,domain=~booking.com
 ||amazonaws.com/adn-tag/$script
 ||amazonaws.com/metapic-cdn/*/metapic.$script,stylesheet
 ||ana.tunnl.com^
@@ -412,7 +414,8 @@ avanza.se#@#a[title="LeoVegas"]
 .*/*sponsor*.$image,domain=humorbibeln.se|newsner.com|sportbibeln.se
 /ajax_statistics_count/*$xmlhttprequest,domain=industrinyheter.se|dagensnaringsliv.se
 /analytics/*$domain=tkj.se
-/banner*/*$image,subdocument,domain=agriprim.se|byggnadsarbetaren.se|dagenstv.com|e.se|entreprenadaktuellt.se|etn.se|flashback.se|golfbladet.se|internetmedicin.se|ja.se|lfc.nu|maskinstationerna.se|metalcentral.net|muss.se|nvp.se|skogsaktuellt.se|sporttv.nu|storvretaibk.se|uppsalanyheter.se|vinochmatguiden.se|free.se|spelsnack.se|lakartidningen.se|vm-fotboll.se|bukefalos.se
+/annons/*$subdocument,domain=internetlankar.se
+/banner*/*$image,subdocument,domain=agriprim.se|byggnadsarbetaren.se|dagenstv.com|e.se|entreprenadaktuellt.se|etn.se|flashback.se|golfbladet.se|internetmedicin.se|ja.se|lfc.nu|maskinstationerna.se|metalcentral.net|muss.se|nvp.se|skogsaktuellt.se|sporttv.nu|storvretaibk.se|uppsalanyheter.se|vinochmatguiden.se|free.se|spelsnack.se|lakartidningen.se|vm-fotboll.se|bukefalos.se|webfinanser.com|turistmal.se
 /banner/ads/*$image,domain=bildelsbasen.se
 /campaign*/*$script,xmlhttprequest,domain=alltforforaldrar.se|kokaihop.se|mammasidan.se|minbebis.com|njus.me|nyheter24.se
 /cookieconsent.$script,domain=wwf.se
@@ -1822,3 +1825,6 @@ nyafilmerhd.*,dreamfilmhd.*##script:inject(addEventListener-defuser.js, /^(?:DOM
 jawcloud.co##script:inject(addEventListener-defuser.js, contextmenu)
 ||dreamfilmhd.*$csp=default-src 'self' 'unsafe-inline' 'unsafe-eval' jawcloud.co *.jawcloud.co upvtt.com wp.com *.wp.com *.googleapis.com vkpass.com *.vkpass.com *.gstatic.com
 ||nyafilmerhd.*$csp=default-src 'self' 'unsafe-inline' 'unsafe-eval' jawcloud.co *.jawcloud.co upvtt.com wp.com *.wp.com *.googleapis.com vkpass.com *.vkpass.com *.gstatic.com
+*$object,object-subrequest,domain=internetlankar.se
+mintur.se##[id^="banner"]
+||turistmal.se/js/popup-controller.js$script
