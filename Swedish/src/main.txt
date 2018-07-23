@@ -595,8 +595,10 @@ bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##sc
 bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##script:inject(abort-current-inline-script.js, headerScripts, checkAdBlockers)
 bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##script:inject(abort-current-inline-script.js, adblockcookieExpire)
 bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##script:inject(abort-current-inline-script.js, $, initAds)
-! Ad script from flowplayer frame
+
+! Flowplayer/lemonwhale
 ||lwcdn.com/vendor/ima.min.js$script
+lwcdn.com##script:inject(addEventListener-defuser.js, /^(?:adBlocker|contextmenu)$/)
 
 ! SCHIBSTED
 svd.se##.AdWrapper
@@ -639,7 +641,7 @@ omni.se##article.article--sponsored
 ||omni-ads.omni.news^
 tv.nu##a[href*="adform.net"]
 tv.nu##.ad-mega--container
-tv.nu##div[class^="_"]:has(a[href^="/min-sida/guide/personuppgifter"])
+tv.nu##:xpath(//a[contains(@href,'/min-sida/guide/personuppgifter')]/parent::div/parent::div)
 tv.nu##.gdpr-bar-wrapper
 ||logger.tv.nu^$script
 /campaigns.js$script,domain=blocket.se
