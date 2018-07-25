@@ -3,6 +3,7 @@
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 !#if env_firefox
 dn.se##^script[id="js-ad-data"]
+di.se##^script:has-text(checkAdBlockEnabled)
 aftonbladet.se##^script:has-text(preLoadAds)
 svd.se##^script:has-text(the apntag object)
 svd.se##^script:has-text(SvD.ads)
@@ -11,6 +12,9 @@ expressen.se##^script:has-text(window.Exp.bamData)
 expressen.se##^script[id="ads-script"]
 expressen.se##^script:has-text(adsScript)
 expressen.se##^script:has-text(window.ExpressenAnalytics)
+!#endif
+!#if !env_firefox
+di.se##script:inject(setInterval-defuser.js, runAdBlockPaywall, 1000)
 !#endif
 !#if env_firefox
 nyafilmerhd.*,dreamfilmhd.*##^script:has-text(POPUP)

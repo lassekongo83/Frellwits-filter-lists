@@ -550,6 +550,7 @@ cornucopia.cornubot.se,peak-oil.se,apg29.nu,zaramis.se,horoskop.nu,blogspot.se,n
 ! HTML filters
 !#if env_firefox
 dn.se##^script[id="js-ad-data"]
+di.se##^script:has-text(checkAdBlockEnabled)
 aftonbladet.se##^script:has-text(preLoadAds)
 svd.se##^script:has-text(the apntag object)
 svd.se##^script:has-text(SvD.ads)
@@ -702,7 +703,9 @@ dn.se##script:inject(addEventListener-defuser.js, splusCheckPaywall)
 ||di.se^*/burt-main.$script
 ||di.se/part/ads/$xmlhttprequest
 /Scripts/burt/*$script,domain=di.se
-di.se##script:inject(abort-current-inline-script.js, checkAdBlockEnabled)
+!#if !env_firefox
+di.se##script:inject(setInterval-defuser.js, runAdBlockPaywall, 1000)
+!#endif
 ||personalized.di.se^$xmlhttprequest
 ||digital-personalized.di.se^$xmlhttprequest
 ||digital.di.se/api/sponsor/$xmlhttprequest
@@ -792,6 +795,7 @@ koket.se##.kf-mosaic-widget:has(.mosaic__custom-sponsor-holder)
 ||richrelevance.com^$third-party,domain=koket.se
 /bn-01d-fusion.js$domain=koket.se
 fotbollskanalen.se##div[class*="top-item__link"][onclick="trackClickThenOpen();"]
+||bugsnag.com^$third-party,domain=dn.se|di.se|tv4play.se|tv4.se|koket.se|fotbollskanalen.se|expressen.se
 &type=load_offers^$xmlhttprequest,domain=illvet.se|pctidningen.se
 va.se##.popup-wrapper
 va.se##.sponsored-article
@@ -1825,6 +1829,8 @@ nyafilmerhd.*,dreamfilmhd.*##a[style*="height"][rel*="nofollow"]
 nyafilmerhd.*,dreamfilmhd.*##a[data-hover="LADDA NED"]
 nyafilmerhd.*,dreamfilmhd.*##a[href$=".html"][target="_blank"]
 nyafilmerhd.*,dreamfilmhd.*##script:inject(addEventListener-defuser.js, /^(?:DOMContentLoaded|mouseup|mousedown|mousemove)$/)
+dreamfilmhd.*##script:inject(setInterval-defuser.js, F9, 500)
+nyafilmerhd.*##script:inject(setInterval-defuser.js, u6, 500)
 jawcloud.co##script:inject(addEventListener-defuser.js, contextmenu)
 ||dreamfilmhd.*$csp=default-src 'self' 'unsafe-inline' 'unsafe-eval' jawcloud.co *.jawcloud.co upvtt.com wp.com *.wp.com *.googleapis.com vkpass.com *.vkpass.com *.gstatic.com
 ||nyafilmerhd.*$csp=default-src 'self' 'unsafe-inline' 'unsafe-eval' jawcloud.co *.jawcloud.co upvtt.com wp.com *.wp.com *.googleapis.com vkpass.com *.vkpass.com *.gstatic.com
