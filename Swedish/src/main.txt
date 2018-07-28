@@ -710,6 +710,7 @@ di.se##script:inject(setInterval-defuser.js, runAdBlockPaywall, 1000)
 ||digital-personalized.di.se^$xmlhttprequest
 ||digital.di.se/api/sponsor/$xmlhttprequest
 /pulse-sdk-html5/*$object,object-subrequest,domain=di.se
+di.se##script:inject(set-constant.js, backendPaywall, false)
 di.se##.gdpr-policy-bar.toaster
 di.se##.mc__overlay--show
 di.se##.footer__cookie-info
@@ -1037,6 +1038,7 @@ allakorsord.se,allas.se,allers.se,antikochauktion.se,aretrunt.se,baaam.se,cafe.s
 /js/sticky-mobile-ad.js$script,domain=allakorsord.se|allas.se|allers.se|antikochauktion.se|aretrunt.se|baaam.se|cafe.se|dromhemochtradgard.se|elle.se|elledecoration.se|ellematovin.se|femina.se|frida.se|hant.se|hemmets.se|mabra.com|matmagasinet.se|residencemagazine.se|svenskdam.se
 /plugins/se-wordpress-newsletters/*$domain=allakorsord.se|allas.se|allers.se|antikochauktion.se|aretrunt.se|baaam.se|cafe.se|dromhemochtradgard.se|elle.se|elledecoration.se|ellematovin.se|femina.se|frida.se|hant.se|hemmets.se|mabra.com|matmagasinet.se|residencemagazine.se|svenskdam.se
 /se-wordpress-google-analytics/src/js/wp-tagmanager.js$script,domain=allakorsord.se|allas.se|allers.se|antikochauktion.se|aretrunt.se|baaam.se|cafe.se|dromhemochtradgard.se|elle.se|elledecoration.se|ellematovin.se|femina.se|frida.se|hant.se|hemmets.se|mabra.com|matmagasinet.se|residencemagazine.se|svenskdam.se
+/se-wordpress-gdpr/*$domain=allakorsord.se|allas.se|allers.se|antikochauktion.se|aretrunt.se|baaam.se|cafe.se|dromhemochtradgard.se|elle.se|elledecoration.se|ellematovin.se|femina.se|frida.se|hant.se|hemmets.se|mabra.com|matmagasinet.se|residencemagazine.se|svenskdam.se
 ||printfriendly.com^$third-party,domain=allakorsord.se|allas.se|allers.se|antikochauktion.se|aretrunt.se|baaam.se|cafe.se|dromhemochtradgard.se|elle.se|elledecoration.se|ellematovin.se|femina.se|frida.se|hant.se|hemmets.se|mabra.com|matmagasinet.se|residencemagazine.se|svenskdam.se
 sportfiskeforum.se###fj-topad
 @@||fiskejournalen.se^$generichide
@@ -1647,6 +1649,7 @@ accentmagasin.se##.widget-container:if(.widget-title:has-text(/annons/i))
 @@||samnytt.se^$generichide
 samnytt.se##script:inject(abort-on-property-read.js, advanced_ads_ready)
 samnytt.se##.nc_socialPanel
+samnytt.se##a[data-bid][href*="/linkout/"]
 merinfo.se##.articles-article-wrapper:if(span:has-text(/sponsrad/i))
 merinfo.se##.snippet-article-wrapper:has(.sponsored)
 minsolresa.se,resatillsolen.se##aside#text-5
