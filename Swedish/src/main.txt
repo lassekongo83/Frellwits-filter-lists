@@ -51,6 +51,8 @@
 ||cxpublic.com^$third-party
 ||datomik.com^$third-party
 ||destination.se^$third-party
+||drift.com^$third-party
+||driftt.com^$third-party
 ||e-magin.se^$third-party
 ||eacla.com^$third-party
 ||edynpub.com^$third-party
@@ -375,6 +377,7 @@
 ##a[title="LeoVegas"]
 ##img[alt="Leovegas"]
 ##img[alt="Spela på Betsson"]
+##[id^="adace_ads"]
 
 ! Site specific whitelists
 @@/*_adframe.js$~third-party,script,domain=fssweden.se
@@ -401,6 +404,7 @@
 @@/wp-content/*/adframe.js$~third-party,script,domain=falkopingstidning.se|jnytt.se|jp.se|skaraborgslanstidning.se|skovdenyheter.se|smalandsdagblad.se|smalanningen.se|smt.se|tranastidning.se|vastgotabladet.se|vetlandaposten.se|vn.se
 @@||assets-cdn.mytaste.org/js/ads.js$script
 @@||freeride.nu/js/ads.js^$script,domain=freeride.se|happyride.se
+@@/adblock-detector/advertisement.js$~third-party,script,domain=newzblab.com
 
 ! Unbreak
 avanza.se#@#a[title="LeoVegas"]
@@ -466,6 +470,7 @@ breakit.se##script:inject(abort-current-inline-script.js, _vwo_code)
 
 ! Unwanted Wordpress plugins and bloat
 /plugins/ab_appnexus_ads/*$script
+/plugins/ad-ace/*$script,stylesheet
 /plugins/ad-blocking-advisor/*$script,stylesheet,image,domain=deliquate.se|naturvetenskap.org|juliusguldbog.se|smartleasing.se
 /plugins/ad-inserter-pro/*$script,stylesheet,domain=rocknytt.net
 /plugins/add-to-any/*$script,stylesheet
@@ -487,6 +492,7 @@ breakit.se##script:inject(abort-current-inline-script.js, _vwo_code)
 /plugins/eu-cookie-law/*$script,stylesheet
 /plugins/facebook-pagelike-widget/*$script
 /plugins/facebook-conversion-pixel/*
+/plugins/wp-gdpr-compliance/*$script
 /plugins/ginger/addon/analytics/*$script
 /plugins/ginger/front/js/cookies-enabler$script,stylesheet
 /plugins/host-analyticsjs-local/*$script
@@ -1837,3 +1843,4 @@ jawcloud.co##script:inject(addEventListener-defuser.js, contextmenu)
 *$object,object-subrequest,domain=internetlankar.se
 mintur.se##[id^="banner"]
 ||turistmal.se/js/popup-controller.js$script
+newzblab.com##.g1-advertisement
