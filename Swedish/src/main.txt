@@ -311,6 +311,10 @@
 .*/*/*.php?*=aftonbladet-live-tv$document
 ||track.cpa.tpgrn.com^
 ||inxy.run^
+||masture.mobi^
+||runmewivel.com^
+||look.ufinkln.com^
+||ufinkln.com/offer?prod$popup
 ! https://www.aftonbladet.se/nyheter/a/vm1BOw/anders-46-lurades-av-falsk-trafiksajt--nu-stams-foretagaren
 ! https://www.svt.se/nyheter/konsument/tusentals-bilister-lurade-av-sajt-som-tar-betalt-for-gratis-tjanster
 ||trafikenheten.se^
@@ -1205,6 +1209,43 @@ mobil.se,kamerabild.se###gdpr
 8till5.se,sydsvenskan.se,hd.se,vimedbarn.se##.gdpr
 pomu.se,wwf.se##.cc-banner
 
+! Various websites with lots of malicious stuff and annoyances
+!#if env_firefox
+nyafilmerhd.*,dreamfilmhd.*##^script:has-text(POPUP)
+nyafilmerhd.*,dreamfilmhd.*##^script:has-text(s,t,o,p,b,r,e,a,k,i,n,g)
+nyafilmerhd.*,dreamfilmhd.*,swesub.*##^script:has-text(_Hasync)
+nyafilmerhd.*,dreamfilmhd.*##^script:has-text(blockerDetected)
+nyafilmerhd.*,dreamfilmhd.*##^script:has-text(adsrvmedia)
+nyafilmerhd.*,dreamfilmhd.*##^script:has-text(uptopop.com)
+nyafilmerhd.*,dreamfilmhd.*,nordicfilm.*##^script:has-text(OneSignal)
+nyafilmerhd.*,dreamfilmhd.*##^script[src^="/ads.js?"]
+!#endif
+nyafilmerhd.*,dreamfilmhd.*##script:inject(abort-current-inline-script.js, OneSignal)
+nyafilmerhd.*,dreamfilmhd.*##script:inject(set-constant.js, blockerDetected, false)
+nyafilmerhd.*,dreamfilmhd.*,swesub.*##a[style*="height"][rel*="nofollow"]
+nyafilmerhd.*##div[style^="margin-top:180px"]
+nyafilmerhd.*,dreamfilmhd.*##a[data-hover="LADDA NED"]
+nyafilmerhd.*,dreamfilmhd.*##a[href$=".html"][target="_blank"]
+nyafilmerhd.*,dreamfilmhd.*##script:inject(addEventListener-defuser.js, /^(?:DOMContentLoaded|mouseup|mousedown|mousemove)$/)
+dreamfilmhd.*##script:inject(setInterval-defuser.js, F9, 500)
+nyafilmerhd.*##script:inject(setInterval-defuser.js, u6, 500)
+jawcloud.co,openload.co,oload.stream##script:inject(addEventListener-defuser.js, contextmenu)
+||dreamfilmhd.*^$csp=default-src 'self' 'unsafe-inline' 'unsafe-eval' jawcloud.co *.jawcloud.co upvtt.com wp.com *.wp.com *.googleapis.com vkpass.com *.vkpass.com *.gstatic.com
+||nyafilmerhd.*^$csp=default-src 'self' 'unsafe-inline' 'unsafe-eval' jawcloud.co *.jawcloud.co upvtt.com wp.com *.wp.com *.googleapis.com vkpass.com *.vkpass.com *.gstatic.com
+||swesub.*^$csp=default-src 'self' 'unsafe-inline' 'unsafe-eval' *.tmdb.org ajax.cloudflare.com *.googleapis.com cdnjs.cloudflare.com fonts.gstatic.com openload.co data:
+||nordicfilm.*^$csp=default-src 'self' 'unsafe-inline' 'unsafe-eval' *.tmdb.org *.postimg.cc *.youtube.com *.googleapis.com fonts.gstatic.com vidbox.co
+||nordicfilm.*^$csp=worker-src 'none'
+||swesub.*^$csp=worker-src 'none'
+||swesub.*/sw.js$script
+||nordicfilm.*/sw.js
+nordicfilm.*,vidbox.co##script:inject(abort-current-inline-script.js, minimalUserResponseInMiliseconds)
+nordicfilm.*,vidbox.co##script:inject(abort-current-inline-script.js, miner)
+nordicfilm.*,vidbox.co,oload.stream##script:inject(noeval.js)
+swesub.*##script:inject(abort-current-inline-script.js, atob)
+nyafilmerhd.*,dreamfilmhd.*,swesub.*##script:inject(abort-current-inline-script.js, _Hasync.push)
+swesub.*##script:inject(abort-current-inline-script.js, document.oncontextmenu)
+swesub.*##.alert-bottom
+
 ! ÖVRIGT
 nordichardware.se##div.td_block_text_with_title:if(h4 > span:has-text(Från Surfa))
 nordichardware.se##.wpb_text_column:has(.surfamodul-blocktitle)
@@ -1819,33 +1860,6 @@ buzzter.se###lock
 buzzter.se###outer-wrap:style(overflow: auto !important;)
 buzzter.se##body.trend-lock #outer-wrap:style(position: inherit !important;)
 goteborgdirekt.se,stockholmdirekt.se##.gdpr-warning
-!#if env_firefox
-nyafilmerhd.*,dreamfilmhd.*##^script:has-text(POPUP)
-nyafilmerhd.*,dreamfilmhd.*##^script:has-text(s,t,o,p,b,r,e,a,k,i,n,g)
-nyafilmerhd.*,dreamfilmhd.*,swesub.*##^script:has-text(_Hasync)
-nyafilmerhd.*,dreamfilmhd.*##^script:has-text(blockerDetected)
-nyafilmerhd.*,dreamfilmhd.*##^script:has-text(adsrvmedia)
-nyafilmerhd.*,dreamfilmhd.*##^script:has-text(uptopop.com)
-nyafilmerhd.*,dreamfilmhd.*##^script:has-text(OneSignal)
-nyafilmerhd.*,dreamfilmhd.*##^script[src^="/ads.js?"]
-!#endif
-nyafilmerhd.*,dreamfilmhd.*##script:inject(abort-current-inline-script.js, OneSignal)
-nyafilmerhd.*,dreamfilmhd.*##script:inject(set-constant.js, blockerDetected, false)
-nyafilmerhd.*,dreamfilmhd.*,swesub.*##a[style*="height"][rel*="nofollow"]
-nyafilmerhd.*##div[style^="margin-top:180px"]
-nyafilmerhd.*,dreamfilmhd.*##a[data-hover="LADDA NED"]
-nyafilmerhd.*,dreamfilmhd.*##a[href$=".html"][target="_blank"]
-nyafilmerhd.*,dreamfilmhd.*##script:inject(addEventListener-defuser.js, /^(?:DOMContentLoaded|mouseup|mousedown|mousemove)$/)
-dreamfilmhd.*##script:inject(setInterval-defuser.js, F9, 500)
-nyafilmerhd.*##script:inject(setInterval-defuser.js, u6, 500)
-jawcloud.co,openload.co##script:inject(addEventListener-defuser.js, contextmenu)
-||dreamfilmhd.*^$csp=default-src 'self' 'unsafe-inline' 'unsafe-eval' jawcloud.co *.jawcloud.co upvtt.com wp.com *.wp.com *.googleapis.com vkpass.com *.vkpass.com *.gstatic.com
-||nyafilmerhd.*^$csp=default-src 'self' 'unsafe-inline' 'unsafe-eval' jawcloud.co *.jawcloud.co upvtt.com wp.com *.wp.com *.googleapis.com vkpass.com *.vkpass.com *.gstatic.com
-||swesub.*^$csp=default-src 'self' 'unsafe-inline' 'unsafe-eval' *.tmdb.org ajax.cloudflare.com *.googleapis.com cdnjs.cloudflare.com fonts.gstatic.com openload.co data:
-||swesub.*/sw.js$script
-swesub.*##script:inject(abort-current-inline-script.js, atob)
-nyafilmerhd.*,dreamfilmhd.*,swesub.*##script:inject(abort-current-inline-script.js, _Hasync.push)
-swesub.*##script:inject(abort-current-inline-script.js, document.oncontextmenu)
 *$object,object-subrequest,domain=internetlankar.se
 mintur.se##[id^="banner"]
 ||turistmal.se/js/popup-controller.js$script
