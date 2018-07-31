@@ -174,14 +174,10 @@ imgur.com##^script:has-text(GoogleAnalyticsObject)
 imgur.com##^script:has-text(ad-manager)
 reddit.com##a[href*=".app.link/"]
 reddit.com##.EUCookieNotice
-reddit.com##^script:has-text(xpromoInterstitial)
-reddit.com##^#adblock-test
 reddit.com##.DualPartInterstitial
-! May require 2 clicks to get into article before their cookie is set. The eventlistener defuser is better but it needs to be more specific.
-reddit.com##.XPromoListingClickModal
-! reddit.com##script:inject(addEventListener-defuser.js, click, ())
+reddit.com##.XPromoAdFeed
+reddit.com##.SnackBar
 youtube.com##script:inject(addEventListener-defuser.js, visibilitychange)
-quora.com#@#[id*=wrapper]:has-text(/ad\s{1,}by /i)
 quora.com##.open_in_app_link
 ||quora.com/sw.js$script
 quora.com##[id$="signup_wall_wrapper"]

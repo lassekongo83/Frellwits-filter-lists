@@ -334,6 +334,7 @@
 ##.cookie-disclaimer
 ##.cookie-disclaimer-notice
 ###cookie-policy
+###cookie-law-container
 ###cookieChoiceInfo
 ###cookie-bar
 ##.cookie-bar
@@ -1740,6 +1741,8 @@ garaget.org##:xpath(//h4[@class="title-bg"][text()[contains(., 'Sponsrade tjäns
 garaget.org##.title-bg:has-text(Sponsrade tjänster)
 garaget.org##:xpath(//p[contains(concat(' ', @class, ' '), ' discrete ')][text()[contains(., 'Annons:')]]/following-sibling::small)
 garaget.org##.small.discrete:has-text(Annons:)
+garaget.org##script:inject(cookie-remover.js, /^mayhem/)
+! TODO: Fixa sorteringen så att nedan kan ignoreras i uBO
 @@||remus.garaget.org/www/delivery/$script,xmlhttprequest,~third-party
 ||remus.garaget.org^$image
 @@||hightechguiden.se^$generichide
