@@ -360,6 +360,7 @@
 ###cookieAlert
 ##.cookieConsent
 ###CookieNotice
+###cookieInformerBooklet
 ##.cookie-overlay
 ##.ca-consent-cookie-bar
 ###cookiejar
@@ -450,7 +451,7 @@ avanza.se#@#a[title="LeoVegas"]
 
 ! Common scriptlets
 letsdeal.se##script:inject(overlay-buster.js)
-ng.se,alltomstockholm.se,mitti.se,bloggbevakning.se,cornucopia.cornubot.se##script:inject(abort-on-property-read.js, ADTECH)
+ng.se,alltomstockholm.se,mitti.se,bloggbevakning.se,cornucopia.cornubot.se,innebandymagazinet.se##script:inject(abort-on-property-read.js, ADTECH)
 dagensps.se,husvagnochcamping.se,hemtrevligt.se,akaskidor.se,utemagasinet.se,livetombord.se,svenskgolf.se,kingmagazine.se,vagabond.se,tidningenhalsa.se,mestmotor.se##script:inject(abort-current-inline-script.js, ADTECH, enqueueAd)
 breakit.se,dagensps.se,hemtrevligt.se,akaskidor.se,utemagasinet.se,livetombord.se,svenskgolf.se,kingmagazine.se,vagabond.se,tidningenhalsa.se,mestmotor.se,husvagnochcamping.se,ekuriren.se,kkuriren.se,sn.se##script:inject(abort-current-inline-script.js, NREUM, info)
 breakit.se,bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##script:inject(abort-on-property-read.js, _hjSettings)
@@ -798,7 +799,6 @@ tv4play.se##script:inject(addEventListener-defuser.js, load, a)
 tv4play.se,fotbollskanalen.se###skin-cover
 tv4play.se##.js-cookie-banner
 koket.se##.endorsed
-koket.se##.native
 koket.se##li.slide:has(.external_advertiser)
 koket.se##.external_advertiser
 koket.se###react-newsletter-overlay
@@ -1209,6 +1209,7 @@ finansliv.se,vinochmatguiden.se##.newsletter
 mobil.se,kamerabild.se###gdpr
 8till5.se,sydsvenskan.se,hd.se,vimedbarn.se##.gdpr
 pomu.se,wwf.se##.cc-banner
+koket.se,nyheter24.se##.native
 
 ! Various websites with lots of malicious stuff and annoyances
 !#if env_firefox
@@ -1246,6 +1247,12 @@ swesub.*##script:inject(abort-current-inline-script.js, atob)
 nyafilmerhd.*,dreamfilmhd.*,swesub.*##script:inject(abort-current-inline-script.js, _Hasync.push)
 swesub.*##script:inject(abort-current-inline-script.js, document.oncontextmenu)
 swesub.*##.alert-bottom
+
+! Various annoyances
+youplay.se,nyheter24.se,emocore.se,modette.se,dayviews.com,filmtipset.se,affarsliv.com,affarslivgotland.se,corren.se,eposten.se,folkbladet.se,helagotland.se,klackspark.com,kuriren.nu,mvt.se,norrbottensaffarer.se,nsd.se,nt.se,pt.se,unt.se,vt.se,kamrat.com##script:inject(set-constant.js, youplay.helpers.disableRightClick, noopFunc)
+youplay.se,nyheter24.se,emocore.se,modette.se,dayviews.com,filmtipset.se,affarsliv.com,affarslivgotland.se,corren.se,eposten.se,folkbladet.se,helagotland.se,klackspark.com,kuriren.nu,mvt.se,norrbottensaffarer.se,nsd.se,nt.se,pt.se,unt.se,vt.se,kamrat.com##script:inject(set-constant.js, youplay.helpers.tabActive, noopFunc)
+youplay.se,nyheter24.se,emocore.se,modette.se,dayviews.com,filmtipset.se,affarsliv.com,affarslivgotland.se,corren.se,eposten.se,folkbladet.se,helagotland.se,klackspark.com,kuriren.nu,mvt.se,norrbottensaffarer.se,nsd.se,nt.se,pt.se,unt.se,vt.se,kamrat.com##script:inject(set-constant.js, youplay.helpers.getTrackUrl, noopFunc)
+youplay.se,nyheter24.se,emocore.se,modette.se,dayviews.com,filmtipset.se,affarsliv.com,affarslivgotland.se,corren.se,eposten.se,folkbladet.se,helagotland.se,klackspark.com,kuriren.nu,mvt.se,norrbottensaffarer.se,nsd.se,nt.se,pt.se,unt.se,vt.se,kamrat.com##script:inject(set-constant.js, youplay.helpers.trackUrls, noopFunc)
 
 ! ÖVRIGT
 nordichardware.se##div.td_block_text_with_title:if(h4 > span:has-text(Från Surfa))
@@ -1435,8 +1442,12 @@ dagensps.se##script:inject(abort-on-property-write.js, FloadCmatchIfr)
 dagensps.se##script:inject(abort-current-inline-script.js, Fusion, loadAds)
 dagensps.se##.category-ps-partner
 ||petrk.com^$third-party,image,domain=dagensps.se
-/locker.js$script,domain=atl.nu|land.se|landlantbruk.se
-atl.nu,land.se,landlantbruk.se##[class*="--native"]
+/locker.js$script,domain=atl.nu|land.se|landlantbruk.se|landskogsbruk.se
+@@||land.se^$generichide
+@@||atl.nu^$generichide
+@@||landlantbruk.se^$generichide
+@@||landskogsbruk.se^$generichide
+atl.nu,land.se,landlantbruk.se,landskogsbruk.se##[class*="--native"]
 thelocal.se##:xpath(//h2[text()[contains(., 'From our sponsors')]]/parent::div)
 thelocal.se##div[class*="section"]:if(div[class$="-label"]:has-text(/sponsored/i))
 thelocal.se##.orange-panel
@@ -1867,3 +1878,9 @@ goteborgdirekt.se,stockholmdirekt.se##.gdpr-warning
 mintur.se##[id^="banner"]
 ||turistmal.se/js/popup-controller.js$script
 newzblab.com##.g1-advertisement
+||d3nhmqrdssv741.cloudfront.net/jppol-consent$domain=lokaltidningen.se
+lokaltidningen.se##.annoncer-wrapper
+kamrat.com###kadDiv
+kamrat.com##div[style="float:left;padding:12px 0;max-width:255px;"]:has-text(casino)
+!kamrat.com##td[height="538"][width="355"]:has(img[src*="annons"])
+||kamrat.com/js/cookiescript$script

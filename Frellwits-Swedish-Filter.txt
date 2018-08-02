@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Title: Frellwit's Swedish Filter
 ! Expires: 3 days (update frequency)
-! Last modified: 2018-07-31 18:52:05 CEST
+! Last modified: 2018-08-02 07:48:19 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -30,6 +30,7 @@
 ###cookieAlert
 ###cookieChoiceInfo
 ###cookieinfo
+###cookieInformerBooklet
 ###cookiejar
 ###CookieNotice
 ###cookiesInfo
@@ -235,7 +236,7 @@
 /live/radarmagazine.se.js$script
 /LoadIframePlugin.js^$domain=falkopingstidning.se|jnytt.se|jp.se|skaraborgslanstidning.se|skovdenyheter.se|smalandsdagblad.se|smalanningen.se|smt.se|tranastidning.se|vastgotabladet.se|vetlandaposten.se|vn.se
 /LoadSlotLocator.$script,domain=bohuslaningen.se|falkopingstidning.se|gp.se|hallandsposten.se|hn.se|jnytt.se|jp.se|skaraborgslanstidning.se|skovdenyheter.se|smalandsdagblad.se|smalanningen.se|smt.se|stromstadstidning.se|tranastidning.se|ttela.se|vastgotabladet.se|vetlandaposten.se|vn.se
-/locker.js$script,domain=atl.nu|land.se|landlantbruk.se
+/locker.js$script,domain=atl.nu|land.se|landlantbruk.se|landskogsbruk.se
 /logger/logger?
 /lunchguiden*.$image,domain=folkbladet.nu|vk.se
 /mitti-ad-block-blocker/scripts.$script,domain=alltomstockholm.se|mitti.se
@@ -433,6 +434,7 @@
 @@||akaskidor.se^$generichide
 @@||alicestenlof.com^$generichide
 @@||assets-cdn.mytaste.org/js/ads.js$script
+@@||atl.nu^$generichide
 @@||boffo.se^$generichide
 @@||clarahenry.se^$generichide
 @@||cxpublic.com^$image,domain=mariestadstidningen.se|nwt.se|sla.se
@@ -459,6 +461,9 @@
 @@||kkuriren.se^$generichide
 @@||klart.se^$generichide
 @@||kurslitteratur.se^$generichide
+@@||land.se^$generichide
+@@||landlantbruk.se^$generichide
+@@||landskogsbruk.se^$generichide
 @@||linnahlborg.se^$generichide
 @@||livetombord.se^$generichide
 @@||lovisawallin.se^$generichide
@@ -539,7 +544,7 @@ alltomstockholm.se,fotbollskanalen.se,mitti.se##.article-share
 alltomstockholm.se,mitti.se##.panorama_top
 alltomstockholm.se,mitti.se##.puff-container-native
 arbetaren.se##.adverter
-atl.nu,land.se,landlantbruk.se##[class*="--native"]
+atl.nu,land.se,landlantbruk.se,landskogsbruk.se##[class*="--native"]
 autonytt.se##.feed_ad
 autonytt.se##.leaderboard
 autonytt.se##.social_and_search
@@ -806,6 +811,7 @@ jaktsidan.se##[data-role="sidebarAd"]
 javligtgott.se,starbys.se##.category-samarbeten
 kamerabild.se##.partner
 kamerabild.se,mobil.se###gdpr
+kamrat.com###kadDiv
 kenzas.se##article[data-text*="In collaboration with"]
 kimura.se###firsttopbanner
 kimura.se##.bg
@@ -827,7 +833,7 @@ kokaihop.se##.modal-backdrop
 koket.se###react-newsletter-overlay
 koket.se##.endorsed
 koket.se##.external_advertiser
-koket.se##.native
+koket.se,nyheter24.se##.native
 kolozzeum.com##td[width="305"]
 kungalvsposten.se,kungsbackaposten.se,lokaltidningensto.se,molndalsposten.se##.wp-slot-layout-article-native
 kurera.se##.annonswrapper
@@ -841,6 +847,7 @@ liberalerna.se###cc-notice
 linnherbertsson.se##[id^="content-ad"]
 listor.se##.belowad
 listor.se##.swp_social_panelSide
+lokaltidningen.se##.annoncer-wrapper
 loppi.se##.entry__teaser--promotion
 loppi.se##.page__ad
 magasinetparagraf.se###large_banner
@@ -1161,6 +1168,7 @@ webbjobb.io##.cookie
 ||d24rtvkqjwgutp.cloudfront.net/*yb.js$script
 ||d24rtvkqjwgutp.cloudfront.net/cookie.html
 ||d2wy8f7a9ursnm.cloudfront.net/bugsnag$script,domain=expressen.se
+||d3nhmqrdssv741.cloudfront.net/jppol-consent$domain=lokaltidningen.se
 ||d9v72urx9pbbc.cloudfront.net/channel.js^$script
 ||damoh.tv4play.se^$image
 ||datomik.com^$third-party
@@ -1245,6 +1253,7 @@ webbjobb.io##.cookie
 ||jssdk.privacy.schibsted.com/pulse.$script
 ||jtp.expressen.se/notify/clip-started.$image
 ||kaloo.ga^$third-party
+||kamrat.com/js/cookiescript$script
 ||kartor.eniro.se/d.html$subdocument
 ||kayak.xno.se^$script
 ||kekocity2.com^$third-party
