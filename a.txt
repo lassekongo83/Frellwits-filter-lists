@@ -186,10 +186,10 @@ quora.com##*:style(filter: none !important;)
 !#endif
 
 ! Misc
-||/do/avtc?$image,important,domain=ixquick.com|ixquick.eu|startpage.com
-||/do/showimage?$image,important,domain=ixquick.com|ixquick.eu|startpage.com
-||/english/web/$image,important,domain=ixquick.com|ixquick.eu|startpage.com
-||/tix2/$image,important,domain=ixquick.com|ixquick.eu|startpa
+/do/avtc?$image,important,domain=ixquick.com|ixquick.eu|startpage.com
+/do/showimage?$image,important,domain=ixquick.com|ixquick.eu|startpage.com
+/english/web/$image,important,domain=ixquick.com|ixquick.eu|startpage.com
+/tix2/$image,important,domain=ixquick.com|ixquick.eu|startpage.com
 yahoo.com##.viewingpane:has(.now-playing)
 openstreetmap.org###banner
 gamefaqs.com##div.message_mpu
@@ -209,6 +209,11 @@ icy-veins.com###cookie_notice
 wowdb.com##.cc_banner
 quora.com##script:inject(setTimeout-defuser.js, [native code], 2000)
 quora.com##script:inject(setTimeout-defuser.js, trackTimeOnSite)
+!#if !env_mobile
+quora.com##:xpath(//div[contains(text(), 'ad') and contains(text(), 'by')]/parent::div/parent::div/parent::div[@id])
+quora.com##:xpath(//div[contains(text(), 'promoted') and contains(text(), 'by')]/parent::a/parent::div/parent::div/parent::div[@id])
+quora.com##:xpath(//div[contains(text(), 'by') and contains(text(), 'Quora') and contains(text(), 'Business')]/parent::a/parent::div/parent::div/parent::div[@id])
+!#endif
 webhallen.com###background
 css-tricks.com##.end-of-article-ads
 smhi.se##.polopolyNotification
