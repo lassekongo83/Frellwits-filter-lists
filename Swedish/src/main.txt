@@ -439,7 +439,7 @@ avanza.se#@#a[title="LeoVegas"]
 /newsletter/*$domain=zalando.se
 /panorama.js$script,domain=blogg.se|bloggkommentatorerna.se|ladydahmer.nu|nickesfilmblogg.se|themoviefreak.se|webblogg.se|svenskayoutubers.se
 /SitesterSurvey*.$script,domain=wwf.se
-/statistics.php$xmlhttprequest,domain=alltforforaldrar.se|fria.nu|friatidningen.se|goteborgsfria.se|landetsfria.se|mammasidan.se|market.se|minbebis.com|sesam.nu|stockholmsfria.se|industrinyheter.se|dagensnaringsliv.se
+/statistics.php$xmlhttprequest,domain=alltforforaldrar.se|fria.nu|friatidningen.se|goteborgsfria.se|landetsfria.se|mammasidan.se|market.se|minbebis.com|sesam.nu|stockholmsfria.se|industrinyheter.se|dagensnaringsliv.se|testfakta.se
 /xtcore.$script,domain=kiaindex.se
 ||apprl.com/embed/$subdocument,domain=majaelisabeth.com|metromode.se|trendenser.se|forni.se|petratungarden.se
 ||herokuapp.com^$third-party,domain=aftonbladet.se
@@ -722,6 +722,7 @@ di.se##script:inject(setInterval-defuser.js, runAdBlockPaywall, 1000)
 ||digital-personalized.di.se^$xmlhttprequest
 ||digital.di.se/api/sponsor/$xmlhttprequest
 /pulse-sdk-html5/*$object,object-subrequest,domain=di.se
+/livevideo/getlivevideo?autoplay=true&position=outsider$domain=di.se
 di.se##.gdpr-policy-bar.toaster
 di.se##.mc__overlay--show
 di.se##.footer__cookie-info
@@ -1891,3 +1892,5 @@ lokaltidningen.se##.annoncer-wrapper
 kamrat.com###kadDiv
 kamrat.com##div[style="float:left;padding:12px 0;max-width:255px;"]:has-text(casino)
 ||kamrat.com/js/cookiescript$script
+testfakta.se##script:inject(set-constant.js, Drupal.behaviors.euCookieCompliancePopup, noopFunc)
+testfakta.se###sliding-popup
