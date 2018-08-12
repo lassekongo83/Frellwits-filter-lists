@@ -855,6 +855,7 @@ affarsliv.com,affarslivgotland.se,corren.se,eposten.se,folkbladet.se,helagotland
 ||webimages.lokus.se^$image,important,domain=affarsliv.com|affarslivgotland.se|corren.se|eposten.se|folkbladet.se|helagotland.se|kuriren.nu|mvt.se|norrbottensaffarer.se|nsd.se|nt.se|pt.se|unt.se|vt.se
 ||widget.boende.se^$script,domain=affarsliv.com|affarslivgotland.se|corren.se|eposten.se|folkbladet.se|helagotland.se|kuriren.nu|mvt.se|norrbottensaffarer.se|nsd.se|nt.se|pt.se|unt.se|vt.se
 affarsliv.com,affarslivgotland.se,corren.se,eposten.se,folkbladet.se,helagotland.se,klackspark.com,kuriren.nu,mvt.se,norrbottensaffarer.se,nsd.se,nt.se,pt.se,unt.se,vt.se##script:inject(cookie-remover.js, /^VPW/)
+affarsliv.com,affarslivgotland.se,corren.se,eposten.se,folkbladet.se,helagotland.se,klackspark.com,kuriren.nu,mvt.se,norrbottensaffarer.se,nsd.se,nt.se,pt.se,unt.se,vt.se##script:inject(setTimeout-defuser.js, timer, 100)
 
 ! SÖRMLANDS MEDIA
 ||static.sm.infomaker.io^$image,domain=ekuriren.se|kkuriren.se|sn.se
@@ -875,8 +876,8 @@ ekuriren.se,kkuriren.se,sn.se###citygate-family-widgetframe
 
 ! GOTA MEDIA/MK WEBB/NWT
 7ha.se,barometern.se,blt.se,bt.se,kristianstadsbladet.se,olandsbladet.se,ostrasmaland.se,smp.se,sydostran.se,trelleborgsallehanda.se,ut.se,ystadsallehanda.se##div[id*="marknadsguiden"]
-7ha.se,barometern.se,blt.se,bt.se,kristianstadsbladet.se,olandsbladet.se,ostrasmaland.se,smp.se,sydostran.se,trelleborgsallehanda.se,ut.se,ystadsallehanda.se##script:inject(abort-on-property-write.js, adTags)
-7ha.se,barometern.se,blt.se,bt.se,kristianstadsbladet.se,olandsbladet.se,ostrasmaland.se,smp.se,sydostran.se,trelleborgsallehanda.se,ut.se,ystadsallehanda.se##script:inject(abort-on-property-write.js, cX.callQueue)
+7ha.se,barometern.se,blt.se,bt.se,kristianstadsbladet.se,olandsbladet.se,ostrasmaland.se,smp.se,sydostran.se,trelleborgsallehanda.se,ut.se,ystadsallehanda.se##script:inject(abort-current-inline-script.js, adTags)
+7ha.se,barometern.se,blt.se,bt.se,kristianstadsbladet.se,olandsbladet.se,ostrasmaland.se,smp.se,sydostran.se,trelleborgsallehanda.se,ut.se,ystadsallehanda.se##script:inject(abort-current-inline-script.js, cX, push)
 7ha.se,barometern.se,blt.se,bt.se,kristianstadsbladet.se,olandsbladet.se,ostrasmaland.se,smp.se,sydostran.se,trelleborgsallehanda.se,ut.se,ystadsallehanda.se##script:inject(abort-on-property-write.js, bm_website_code)
 ! Note to self. Don't block adds.js/css.
 nwt.se,sla.se,mariestadstidningen.se##.mfp-wrap
@@ -1263,6 +1264,7 @@ dreamfilm.*###ads_player_inside
 dreamfilm.*##.TPlayer.on:after:style(height: 0 !important; width: 0 !important;)
 ||dreamfilm.*/HD/player4k.$image
 ||dreamfilm.*/HD/780x.$image
+streamtajm.*##.longbanner
 
 ! Various annoyances
 youplay.se,nyheter24.se,emocore.se,modette.se,dayviews.com,filmtipset.se,affarsliv.com,affarslivgotland.se,corren.se,eposten.se,folkbladet.se,helagotland.se,klackspark.com,kuriren.nu,mvt.se,norrbottensaffarer.se,nsd.se,nt.se,pt.se,unt.se,vt.se,kamrat.com##script:inject(set-constant.js, youplay.helpers.disableRightClick, noopFunc)
