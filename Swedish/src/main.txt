@@ -649,6 +649,7 @@ aftonbladet.se##.ab-responsive-ads-wrapper
 aftonbladet.se##.social-shares
 aftonbladet.se##.abBtnShare
 aftonbladet.se##.share-icons
+aftonbladet.se##a[href*=".se/kampanj?"]:has-text(/erbjudande/i)
 /rabattkod/*$image,domain=aftonbladet.se
 /pulsetracking.$script,domain=aftonbladet.se
 aftonbladet.se##html,body:style(overflow: auto !important;)
@@ -1399,8 +1400,12 @@ ng.se##.js--llad
 /accl$script,domain=breakit.se
 breakit.se##.spnsr-widget
 breakit.se##.supportersSlideContainer
-breakit.se##div[class*="sponsored"]
+breakit.se##.puff-sponsored-by
+breakit.se##.sponsored
 breakit.se##.videoAd
+breakit.se##div[data-sponsored="1"]
+breakit.se##.brkt-article-slidein:has(.brkt-sponsored)
+breakit.se###mount-newsletter-signup-widget-mobile
 breakit.se##script:inject(abort-current-inline-script.js, twttr, trackPid)
 breakit.se##script:inject(abort-current-inline-script.js, _adftrack, push)
 metro.se##div[class*="o-advert"]
@@ -1776,6 +1781,7 @@ garaget.org##.title-bg:has-text(Sponsrade tjänster)
 garaget.org##:xpath(//p[contains(concat(' ', @class, ' '), ' discrete ')][text()[contains(., 'Annons:')]]/following-sibling::small)
 garaget.org##.small.discrete:has-text(Annons:)
 garaget.org##script:inject(cookie-remover.js, /^mayhem/)
+garaget.org##.gorgad-side
 ! TODO: Fixa sorteringen så att nedan kan ignoreras i uBO
 @@||remus.garaget.org/www/delivery/$script,xmlhttprequest,~third-party
 ||remus.garaget.org^$image
