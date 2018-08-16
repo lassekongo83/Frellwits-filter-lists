@@ -595,6 +595,7 @@ idg.se##.shareItems
 idg.se##[data-selector^=".wrapperAd"]
 idg.se,macworld.se##.adContainer
 idg.se##[class^="newsletterFormContainer"]
+idg.se##a[data-click-settings*="Article Outbound Links"]:if(strong:has-text(/annons/i))
 idg.se##script:inject(abort-on-property-read.js, pbjs.addAdUnits)
 idg.se##script:inject(abort-on-property-read.js, PREBID_TIMEOUT)
 studio.se##li[data-blocktitle="Anpassade Block"]:if(.sms-marking:has-text(Annons:))
@@ -1071,6 +1072,7 @@ sportfiskeforum.se###fj-topad
 @@||fiskejournalen.se^$generichide
 fiskejournalen.se##.blogindex-layout-large-post:has(.native-wrapper)
 sportfiskeforum.se,fiskejournalen.se##script:inject(abort-current-inline-script.js, m3_r, Math.floor)
+fiskejournalen.se##div[style="background-color:#ededed"]:if(small:has-text(/annons/i))
 
 ! EGMONT PUBLISHING
 @@||hemtrevligt.se^$generichide
