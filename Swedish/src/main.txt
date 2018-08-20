@@ -596,8 +596,6 @@ idg.se##[data-selector^=".wrapperAd"]
 idg.se,macworld.se##.adContainer
 idg.se##[class^="newsletterFormContainer"]
 idg.se##a[data-click-settings*="Article Outbound Links"]:if(strong:has-text(/annons/i))
-idg.se##script:inject(abort-on-property-read.js, pbjs.addAdUnits)
-idg.se##script:inject(abort-on-property-read.js, PREBID_TIMEOUT)
 studio.se##li[data-blocktitle="Anpassade Block"]:if(.sms-marking:has-text(Annons:))
 
 ! STAMPEN
@@ -1384,6 +1382,10 @@ mobil.se##.aside-puff > li:has-text(/sponsrad/i)
 mobil.se##[data-domid^="sprjr"]
 ||mobil.se/facebook/$xmlhttprequest
 /lunchguiden*.$image,domain=vk.se|folkbladet.nu
+/service-worker.js$script,domain=vk.se|folkbladet.nu
+||vk.se^$csp=worker-src 'none'
+||folkbladet.nu^$csp=worker-src 'none'
+vk.se,folkbladet.nu##div[data-track-id="strossle"]
 ||terms.vkmedia.se/agreements/$xmlhttprequest
 vk.se,folkbladet.nu##:xpath(//div[text()[contains(., 'Annons')]]/parent::div)
 24blekinge.se,24emmaboda.se,24falkenberg.se,24halmstad.se,24helsingborg.se,24kalmar.se,24kristianstad.se,24malmo.se,24nybro.se,24trelleborg.se,24uppsala.se,24ystad.se,24varberg.se,24oland.se##article.native
@@ -1556,6 +1558,7 @@ sysidan.se##.adscolumn
 /evqReadBot.js^$script,domain=evertiq.se
 evertiq.se##.bnrWrapper
 evertiq.se##script:inject(addEventListener-defuser.js, /^(?:click|mouseover)$/, t)
+evertiq.se##body,#bgWrapp:style(background-image: none !important; cursor: initial !important;)
 /hapyak.js$script,domain=viktvaktarna.se
 /BrightcoveExperiences.js$script,domain=viktvaktarna.se
 vardagspuls.se##.fs-overlay-wrapper
@@ -1663,6 +1666,7 @@ byggnadsarbetaren.se##.siteAlerts
 byggnadsarbetaren.se##[class^="siteAds"]
 @@||popmuzik.se^$generichide
 popmuzik.se##div[id^="bsa-block-"]
+/google-tracking/*$script,domain=popmuzik.se
 /uploads/*-2.2.3.$script,stylesheet,domain=popmuzik.se
 ||btg.mtvnservices.com/aria/bentojs.js^$script,domain=nickelodeon.se
 ||btg.mtvnservices.com/aria/coda.html^$script,domain=nickelodeon.se
