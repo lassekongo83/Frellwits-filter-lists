@@ -455,7 +455,7 @@ avanza.se#@#a[title="LeoVegas"]
 
 ! Common scriptlets
 ng.se,alltomstockholm.se,mitti.se,bloggbevakning.se,cornucopia.cornubot.se,innebandymagazinet.se##script:inject(abort-on-property-read.js, ADTECH)
-dagensps.se,husvagnochcamping.se,hemtrevligt.se,akaskidor.se,utemagasinet.se,livetombord.se,svenskgolf.se,kingmagazine.se,vagabond.se,tidningenhalsa.se,mestmotor.se,nyheter24.se,swedroid.se,dagensanalys.se,breakit.se##script:inject(abort-current-inline-script.js, ADTECH, enqueueAd)
+dagensps.se,husvagnochcamping.se,hemtrevligt.se,akaskidor.se,utemagasinet.se,livetombord.se,svenskgolf.se,kingmagazine.se,vagabond.se,tidningenhalsa.se,mestmotor.se,nyheter24.se,swedroid.se,dagensanalys.se,breakit.se,fotbolltransfers.com##script:inject(abort-current-inline-script.js, ADTECH, enqueueAd)
 breakit.se,dagensps.se,hemtrevligt.se,akaskidor.se,utemagasinet.se,livetombord.se,svenskgolf.se,kingmagazine.se,vagabond.se,tidningenhalsa.se,mestmotor.se,husvagnochcamping.se,ekuriren.se,kkuriren.se,sn.se,allehanda.se,arbetarbladet.se,avestatidning.com,bblat.se,dalademokraten.se,dt.se,fagersta-posten.se,gd.se,lt.se,ltz.se,na.se,norrteljetidning.se,nynashamnsposten.se,op.se,salaallehanda.com,st.nu,tidningenharjedalen.se,vlt.se##script:inject(abort-current-inline-script.js, NREUM, info)
 breakit.se,bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##script:inject(abort-on-property-read.js, _hjSettings)
 breakit.se##script:inject(abort-current-inline-script.js, _vwo_code)
@@ -776,6 +776,10 @@ mittkok.expressen.se##script:inject(abort-current-inline-script.js, ExpressenAna
 ||jtp.expressen.se/notify/clip-started.$image
 /_widget/destination$subdocument,domain=expressen.se
 /closest-native*/*$xmlhttprequest,domain=expressen.se
+! Plocka bort den onödiga och irriterande autostartande live-spelaren på förstasidan som enbart slöar ner och äter data för vissa
+! Bästa alternativet så länge tills feature-policy kanske implementerats
+expressen.se##figure[class*="video-player"][data-article-data*="/tv/nyheter/live-start/live-tv-senaste-nyheterna-med-expressen-tv"]
+/article/tv/nyheter/live-start/live-tv-senaste-nyheterna-med-expressen-tv$xmlhttprequest,domain=expressen.se
 ||expressen.se/videos/fstrat$media
 /_livetvpreview/*$media,domain=expressen.se
 /rantekartan/*$subdocument,domain=expressen.se
@@ -1866,6 +1870,7 @@ undertian.com##script:inject(set-constant.js, mi_track_user, false)
 globalportalen.org##.follow-us-section
 /piraja-banners/*$domain=piraja.se
 piraja.se##.intro:has(.spons)
+piraja.se###hero:has(.spons)
 piraja.se###featholder:has(.spons)
 piraja.se###panoramaholder
 piraja.se###parallax
