@@ -255,6 +255,7 @@
 ||es.loppi.se/get$script
 ||fast.fonts.net/t/1.css$stylesheet
 ||feeds.feedburner.com^$image
+||files.cdn.spilcloud.com/pb/$script
 ||gamedistribution.com/libs/gd/analytics.$script
 ||gnuheter.com/creeper/image$image
 ||guavaaffiliate.blob.core.windows.net/banner$image
@@ -476,7 +477,7 @@ breakit.se##script:inject(abort-current-inline-script.js, _vwo_code)
 ||google-analytics.com/ga.js$important,redirect=google-analytics.com/ga.js,script,domain=aftonbladet.se
 ||googletagmanager.com/gtm.js?id=$important,redirect=googletagmanager.com/gtm.js,script,domain=tradera.com
 ||tm.tradetracker.net/tag?$important,script,domain=agneswinqvist.se|enkelteknik.se|moviezine.se|everydayexplorers.org
-||amazonaws.com^*/ad_loader*.$script,important,domain=jkpgnews.se|linkopingnews.se|norrkopingnews.se|affarsliv.com|affarslivgotland.se|corren.se|eposten.se|folkbladet.se|gotland.net|helagotland.se|klackspark.com|kuriren.nu|mvt.se|norrbottensaffarer.se|nsd.se|nt.se|pt.se|unt.se|uppsala.com|uppsalatidningen.se|vt.se
+||biowebb-data.s3.amazonaws.com^*/ad_loader$script,important
 
 ! Unwanted Wordpress plugins and bloat
 /plugins/ab_appnexus_ads/*$script
@@ -514,6 +515,7 @@ breakit.se##script:inject(abort-current-inline-script.js, _vwo_code)
 /plugins/mailchimp-for-wp/*$script
 /plugins/mailchimp-wp/*$script
 /plugins/mailpoet/*$script,domain=opulens.se
+/plugins/mashshare-google-analytics/*
 /plugins/metro-affiliate/*$script,domain=metromode.se
 /plugins/mitti-cookie-disclaimer/*$script,domain=mitti.se|alltomstockholm.se
 /plugins/monarch/*$domain=undertian.com
@@ -551,7 +553,7 @@ breakit.se##script:inject(abort-current-inline-script.js, _vwo_code)
 /wp-admin/admin-ajax.php?action=addthis_global_options$script,domain=expressen.se
 
 ! JWplayer analytics/ad scripts
-svd.se,aftonbladet.se,gamereactor.se,muscles.se#@#.afs_ads
+svd.se,aftonbladet.se,gamereactor.se,muscles.se,nordichardware.se#@#.afs_ads
 ||ssl.p.jwpcdn.com^*/jwpsrv.js$script,important,domain=eurosport.se|aftonbladet.se|gamereactor.se|svd.se|muscles.se|tv.nu
 ||ssl.p.jwpcdn.com^*/vast.js$script,important,domain=eurosport.se|aftonbladet.se|gamereactor.se|svd.se
 ||ssl.p.jwpcdn.com^*/freewheel.js$script,important,domain=eurosport.se
@@ -1205,7 +1207,7 @@ ekuriren.se,kkuriren.se,norran.se,sn.se###cookie-info
 alltforforaldrar.se,battrestadsdel.se,flashback.se,mammasidan.se,minbebis.com###top-banner
 chef.se,svd.se##.Ad
 24blekinge.se,24emmaboda.se,24falkenberg.se,24halmstad.se,24helsingborg.se,24kalmar.se,24kristianstad.se,24malmo.se,24nybro.se,24trelleborg.se,24uppsala.se,24ystad.se,24varberg.se,24oland.se,99.se,bohuslaningen.se,byggnadsarbetaren.se,cissiochfreddan.se,claudiagalliconcha.se,di.se,dn.se,ekuriren.se,folkbladet.nu,gp.se,hallandsposten.se,hn.se,kimura.se,kkuriren.se,loppi.se,mariestadstidningen.se,markbladet.se,medievarlden.se,mestmotor.se,mobil.se,norran.se,nwt.se,paulas.me,skaraborgsbygden.se,skillingaryd.nu,sla.se,sn.se,sportbloggare.com,stromstadstidning.se,swedroid.se,ttela.se,vardagspuls.se,vk.se,vimedbarn.se,gabriellajoss.me,mybabydolls.se,emilysliv.se##.ad
-affarsvarlden.se,arbetarskydd.se,dagensmedia.se,lag-avtal.se,nickelodeon.se,nyteknik.se,thelocal.se##.ad-container
+affarsvarlden.se,arbetarskydd.se,dagensmedia.se,lag-avtal.se,nickelodeon.se,nyteknik.se##.ad-container
 dn.se,klart.se,norran.se##.ad-wrapper
 brollopstorget.se,familjeliv.se##.ad_right
 24blekinge.se,24emmaboda.se,24falkenberg.se,24halmstad.se,24helsingborg.se,24kalmar.se,24kristianstad.se,24malmo.se,24nybro.se,24trelleborg.se,24uppsala.se,24ystad.se,24varberg.se,24oland.se,babyhjalp.se,branschkoll.se,fotosidan.se,moviezine.se,affarsliv.com,affarslivgotland.se,corren.se,eposten.se,folkbladet.se,helagotland.se,klackspark.com,kuriren.nu,mvt.se,norrbottensaffarer.se,nsd.se,nt.se,pt.se,unt.se,vt.se,globalportalen.org##.ads
@@ -1285,6 +1287,7 @@ youplay.se,nyheter24.se,emocore.se,modette.se,dayviews.com,filmtipset.se,affarsl
 saraabrahamsson.se,eurosport.se,jawcloud.co,openload.co,oload.stream,streamango.com##script:inject(addEventListener-defuser.js, contextmenu)
 
 ! ÖVRIGT
+/uploads/Adblockerpanda$image,domain=nordichardware.se
 nordichardware.se##div.td_block_text_with_title:if(h4 > span:has-text(Från Surfa))
 nordichardware.se##.wpb_text_column:has(.surfamodul-blocktitle)
 nordichardware.se##.td_block_wrap:if(span:has-text(/sponsrat/i))
@@ -1318,9 +1321,12 @@ sweclockers.com###wdgtMainMonsterJobs
 /gilla-mb_plugg.png$domain=markbladet.se
 markbladet.se###small_yellowbox
 markbladet.se###fixed
-/affiliate/*$image,domain=minfil.org
-/sw_minfilcom.$script,domain=minfil.com|minfil.org
-*$csp=worker-src 'none',domain=minfil.com|minfil.org
+||minfil.com/sw.js$script
+/img/bnr/*$domain=minfil.com
+/affiliate/*$image,domain=minfil.com
+/sw_minfilcom.$script,domain=minfil.com
+*$csp=worker-src 'none',domain=minfil.com
+minfil.com##.ab-wrapper
 ||api.hitta.se/statistics$xmlhttprequest
 /partnerintegration$domain=hitta.se
 hitta.se##.partner-box
@@ -1488,6 +1494,7 @@ dagensps.se##.category-ps-partner
 @@||landlantbruk.se^$generichide
 @@||landskogsbruk.se^$generichide
 atl.nu,land.se,landlantbruk.se,landskogsbruk.se##[class*="--native"]
+/js/OneSignal.$script,domain=thelocal.se
 thelocal.se##:xpath(//h2[text()[contains(., 'From our sponsors')]]/parent::div)
 thelocal.se##div[class*="section"]:if(div[class$="-label"]:has-text(/sponsored/i))
 thelocal.se##.orange-panel
@@ -1932,3 +1939,4 @@ testfakta.se###sliding-popup
 liverattning.se##.promo-slider
 onlinepizza.se##li:if(.tag:has-text(Annons))
 tidningensyre.se##.social
+mumsigast.se,dagensknep.se,djursidan.se,mysigast.se##script:inject(abort-current-inline-script.js, mashvipo)
