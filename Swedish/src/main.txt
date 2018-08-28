@@ -37,6 +37,7 @@
 ||cintnetworks.com^$third-party
 ||cision.com^$third-party
 ||citygate.se^$third-party,~image,domain=~familj.se
+||connectad.io^$third-party
 ||cookie-script.com^$third-party
 ||cookieinformation.com^$third-party
 ||cookieinfoscript.com^$third-party
@@ -117,6 +118,7 @@
 ||sannsyn.com^$third-party
 ||seekly.se^$third-party
 ||seenthis.se^$third-party
+||serverbid.com^$third-party
 ||sesn.se^$third-party
 ||shareaholic.com^$third-party
 ||sharethis.com^$third-party
@@ -140,6 +142,7 @@
 ||upsales.com^$third-party
 ||yandex.st/share/share.$third-party
 ||yastatic.net/share/$third-party
+||yieldbird.com^$third-party
 ||vk.com^$third-party
 ||webbcensus.com^$third-party
 ||webpower.eu^$third-party
@@ -555,8 +558,8 @@ breakit.se##script:inject(abort-current-inline-script.js, _vwo_code)
 /wp-admin/admin-ajax.php?action=addthis_global_options$script,domain=expressen.se
 
 ! JWplayer analytics/ad scripts
-svd.se,aftonbladet.se,gamereactor.se,muscles.se,nordichardware.se#@#.afs_ads
-||ssl.p.jwpcdn.com^*/jwpsrv.js$script,important,domain=eurosport.se|aftonbladet.se|gamereactor.se|svd.se|muscles.se|tv.nu
+svd.se,aftonbladet.se,gamereactor.se,muscles.se,nordichardware.se,nyheteridag.se#@#.afs_ads
+||ssl.p.jwpcdn.com^*/jwpsrv.js$script,important,domain=eurosport.se|aftonbladet.se|gamereactor.se|svd.se|muscles.se|tv.nu|nyheteridag.se
 ||ssl.p.jwpcdn.com^*/vast.js$script,important,domain=eurosport.se|aftonbladet.se|gamereactor.se|svd.se
 ||ssl.p.jwpcdn.com^*/freewheel.js$script,important,domain=eurosport.se
 ||ssl.p.jwpcdn.com^*/gapro.js$script,important,domain=gamereactor.se
@@ -1895,6 +1898,7 @@ bloggbevakning.se###ad
 ||aff.bstatic.com^$domain=travelgrip.se
 nyadagbladet.se##script:inject(abort-on-property-read.js, cli_show_cookiebar)
 nyadagbladet.se###adpadding
+nyadagbladet.se##div[class^="wrapper-col"]:has-text(Annons:)
 deliquate.se##.ajax_loader
 iabsverige.se###load
 lesscarbs.se##.category-annonssamarbete
@@ -1946,3 +1950,5 @@ onlinepizza.se##li:if(.tag:has-text(Annons))
 tidningensyre.se##.social
 mumsigast.se,dagensknep.se,djursidan.se,mysigast.se##script:inject(abort-current-inline-script.js, mashvipo)
 abus.com##script:inject(abort-on-property-write.js, cookieChoices)
+nyheteridag.se##script:inject(abort-current-inline-script.js, googletag)
+nyheteridag.se##script:inject(abort-current-inline-script.js, sc, type)
