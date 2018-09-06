@@ -165,6 +165,7 @@
 .se/logger.$script
 .se/Logger?
 .se/sponsored/$image
+.se/files/annons/$image
 .se/upload/annons/
 /?file=lokus$subdocument
 /_graphics/annons/*
@@ -465,8 +466,9 @@ abus.com#@##cookieChoiceInfo
 ng.se,alltomstockholm.se,mitti.se,bloggbevakning.se,cornucopia.cornubot.se,innebandymagazinet.se##script:inject(abort-on-property-read.js, ADTECH)
 dagensps.se,husvagnochcamping.se,hemtrevligt.se,akaskidor.se,utemagasinet.se,livetombord.se,svenskgolf.se,kingmagazine.se,vagabond.se,tidningenhalsa.se,mestmotor.se,nyheter24.se,swedroid.se,dagensanalys.se,breakit.se,fotbolltransfers.com##script:inject(abort-current-inline-script.js, ADTECH, enqueueAd)
 breakit.se,dagensps.se,hemtrevligt.se,akaskidor.se,utemagasinet.se,livetombord.se,svenskgolf.se,kingmagazine.se,vagabond.se,tidningenhalsa.se,mestmotor.se,husvagnochcamping.se,ekuriren.se,kkuriren.se,sn.se,allehanda.se,arbetarbladet.se,avestatidning.com,bblat.se,dalademokraten.se,dt.se,fagersta-posten.se,gd.se,lt.se,ltz.se,na.se,norrteljetidning.se,nynashamnsposten.se,op.se,salaallehanda.com,st.nu,tidningenharjedalen.se,vlt.se##script:inject(abort-current-inline-script.js, NREUM, info)
-breakit.se,bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##script:inject(abort-on-property-read.js, _hjSettings)
+breakit.se,bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se,nyheter24.se##script:inject(abort-on-property-read.js, _hjSettings)
 breakit.se##script:inject(abort-current-inline-script.js, _vwo_code)
+mestmotor.se##script:inject(abort-current-inline-script.js, ADTECH, config)
 
 ! Facebook junk
 /facebook_sdk.js$script,domain=njus.me|radioplay.se
@@ -669,6 +671,7 @@ aftonbladet.se##script:inject(setTimeout-defuser.js, onerror, 1000)
 /privacy/notification?$xmlhttprequest,domain=aftonbladet.se
 omni.se##article.article--sponsored
 ||omni-ads.omni.news^
+||science.omni.se^$xmlhttprequest
 tv.nu##a[href*="adform.net"]
 tv.nu##.ad-mega--container
 tv.nu##:xpath(//a[contains(@href,'/min-sida/guide/personuppgifter')]/parent::div/parent::div)
@@ -971,6 +974,11 @@ affarsvarlden.se,arbetarskydd.se,dagensmedia.se,lag-avtal.se,nyteknik.se##sectio
 /splashy.html^$domain=hamsterpaj.net
 /splash_iframe/*$domain=dayviews.com
 /?agg_url=/shopping/*$xmlhttprequest,domain=nyheter24.se
+nyheter24.se##script:inject(abort-current-inline-script.js, ga, ypcomm)
+nyheter24.se##script:inject(abort-current-inline-script.js, check_ab)
+nyheter24.se##script:inject(abort-current-inline-script.js, slotNameCu)
+nyheter24.se##[id^="article"]:has(.native_header)
+nyheter24.se##[id^="article"]:has(em:has-text(/artikeln är i samarbete med/i))
 filmtipset.se###acceptCookiesDiv
 filmtipset.se##:xpath(//div[@id="toggle_all_prices"]/parent::td[1]/parent::tr[1])
 filmtipset.se##:xpath(//div[contains(concat(' ', @class, ' '), ' rightlinkheader ')][text()[contains(., 'Rekommenderade sajter')]]/parent::td)
@@ -1429,6 +1437,7 @@ ng.se##.js--llad
 /users/*/*minibanner$image,domain=ng.se
 /nodecounter/*?token$image,domain=ng.se
 ||breakit.solidtango.com^$subdocument
+||breakit.se/api/visit$xmlhttprequest
 /accl$script,domain=breakit.se
 breakit.se##.spnsr-widget
 breakit.se##.supportersSlideContainer
@@ -1891,6 +1900,7 @@ free.se##.buyAndSellPreamble
 /mod.js$xmlhttprequest,domain=internetmedicin.se
 undertian.com##script:inject(abort-current-inline-script.js, monsterinsights_frontend)
 undertian.com##script:inject(set-constant.js, mi_track_user, false)
+undertian.com##a[href*="-samarbete-med-"]
 globalportalen.org##.follow-us-section
 /piraja-banners/*$domain=piraja.se
 piraja.se##.intro:has(.spons)
