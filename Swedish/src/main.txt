@@ -1,4 +1,5 @@
 ! General third party ads, tracking, annoyances
+||10bet.com^$third-party
 ||ad.iplayer.org^$third-party
 ||adaptlogic.com^$third-party
 ||adcell.io^$third-party
@@ -215,6 +216,7 @@
 /monetization/pixel-sdk/*
 /mp_emediate/inc/annons.html
 /ntm-digital/adn/adn-setup.$script,important
+/revive/revivejs.php$script
 /permutive-async.js$script
 /seenthis-hub/assets/js/hub-time-spent.js^$script
 /sifo_analytics.js^$script
@@ -244,17 +246,20 @@
 ||btikon.se/analytics.$xmlhttprequest
 ||btikon.se/btstats.$script
 ||cdn.livechatinc.com/tracking.$script
+||d9v72urx9pbbc.cloudfront.net/LoadSlotLocator.$script
 ||creatives.ancoraplatform.com/ptphb*.$script
 ||connectio.s3.amazonaws.com/connect-retarget.$script
 ||d1lxhc4jvstzrp.cloudfront.net/scripts/js3caf.js^$script
 ||d24rtvkqjwgutp.cloudfront.net/*yb.js$script
 ||d24rtvkqjwgutp.cloudfront.net/cookie.html
+||d2m8uxg4w7uelx.cloudfront.net/fullpageads.$script
 ||d9v72urx9pbbc.cloudfront.net/channel.js^$script
 ||d10lumateci472.cloudfront.net/?amuld$script
 ||dsms0mj1bbhn4.cloudfront.net/assets/pub/shareaholic.$script
 ||delivery.youplay.se/report?$image
 ||diu127fbe6pn6.cloudfront.net^*/ga-universal.html$subdocument
 ||dspk.kindredplc.com/renderImage.aspx^$image
+||eacdn.com/TrafficOpt/$script
 ||episerver.net/*/epi-util/find.js$script
 ||es.loppi.se/api/imp$xmlhttprequest
 ||es.loppi.se/get$script
@@ -432,7 +437,7 @@ abus.com#@##cookieChoiceInfo
 
 ! Common site specific blocking
 .*/*280x240*.$image,domain=rumhemma.se
-.*/*annons*.$image,domain=guldkanalen.se|kurera.se|nvp.se|rumhemma.se|tekniksmart.se|megafonen.nu|newsvoice.se|lesscarbs.se
+.*/*annons*.$image,domain=guldkanalen.se|kurera.se|nvp.se|rumhemma.se|tekniksmart.se|megafonen.nu|newsvoice.se|lesscarbs.se|lundagard.se
 .*/*banner*.$image,domain=dansbandskanalen.se|etc.se|evertiq.se|guldkanalen.se|kurera.se|markbladet.se|rockkocken.se|rumhemma.se|skrattnet.se|tkj.se|vaken.se|sportpanelen.se|newsvoice.se|sportbloggare.com|marsta.nu|lakartidningen.se|bettips.se
 .*/*banner*.$script,domain=dagenshandel.se|entreprenor.se|food-supply.se|magasinetparagraf.se|motormagasinet.se|skyddosakerhet.se
 .*/*sponsor*.$image,domain=humorbibeln.se|newsner.com|sportbibeln.se
@@ -1163,6 +1168,7 @@ tvmatchen.nu##a.p-icon.partner
 /sticky*.$script,stylesheet,domain=svenskafans.com
 /js/partners.js$script,domain=sporttv.nu
 /js/awp.$script,domain=svenskafans.com
+||d16fx559zbp759.cloudfront.net/common/lazyload.js$script,domain=svenskafans.com
 svenskafans.com##[class^="ad_display"]
 svenskafans.com##.ad_info
 svartgul.se##a[href*=".adsrv.eacdn.com"]
@@ -1916,6 +1922,8 @@ nyadagbladet.se##script:inject(abort-on-property-read.js, cli_show_cookiebar)
 nyadagbladet.se###adpadding
 nyadagbladet.se##div[class^="wrapper-col"]:has-text(Annons:)
 deliquate.se##.ajax_loader
+deliquate.se##[id^="ads300"]
+deliquate.se##[id^="linkcat-"]
 iabsverige.se###load
 lesscarbs.se##.category-annonssamarbete
 ||stegforhalsa.se^*/ad.js$script
@@ -1970,3 +1978,7 @@ abus.com##script:inject(abort-on-property-write.js, cookieChoices)
 nyheteridag.se##script:inject(abort-current-inline-script.js, googletag)
 nyheteridag.se##script:inject(abort-current-inline-script.js, sc, type)
 nordicchoicehotels.se##script:inject(setTimeout-defuser.js, n.modal.showWithCondition, 60000)
+@@||knulla.se^$generichide
+lundagard.se###bdCheckAlso.bdCheckAlsoShow
+lundagard.se##.widget:has(h3:has-text(Annons:))
+betting.se##script:inject(abort-on-property-write.js, Fingerprint2)
