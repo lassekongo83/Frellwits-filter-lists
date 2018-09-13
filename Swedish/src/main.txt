@@ -418,7 +418,7 @@
 @@/js/adsbygoogle.js^$~third-party,script,domain=feber.se|tjock.se
 @@/js/advert.$script,domain=mariestadstidningen.se|nwt.se|sla.se
 @@/js/advert.js$~third-party,script,domain=burlovsnyheter.se
-@@/js/advertisement*.$~third-party,script,domain=brollopstorget.se|devote.se|expressen.se|familjeliv.se|feber.se|skyddsombud24.se|tjock.se|dagensmedia.nu
+@@/js/advertisement*.$~third-party,script,domain=brollopstorget.se|devote.se|expressen.se|familjeliv.se|feber.se|skyddsombud24.se|tjock.se|dagensmedia.nu|id.expressen.se
 @@/js/advertising.$~third-party,script,domain=byggnadsarbetaren.se|elbilsnytt.se|vilaser.se|svegot.se|tekniksmart.se
 @@/js/showads.js^$~third-party,script,domain=101ideer.se|alltomtradgard.se|amelia.se|lantliv.com|skonahem.com|styleby.nu|tara.se|topphalsa.se|veckorevyn.com
 @@/scripts/ads.js$~third-party,domain=bloggar.expressen.se
@@ -783,6 +783,7 @@ expressen.se##.gdpr-banner
 expressen.se##.widget-ad-marker
 expressen.se##.b-adblock-sidebar-container
 expressen.se##.b-ad2
+expressen.se##a[data-click-track][href*="utm_campaign"]:has(strong:has-text(annons))
 expressen.se##script:inject(addEventListener-defuser.js, error, adsBlocked)
 expressen.se##script:inject(abort-current-inline-script.js, adsScript)
 expressen.se##script:inject(abort-current-inline-script.js, ExpressenAnalytics, adblock)
@@ -1620,6 +1621,7 @@ flashback.org###top-banner-row
 flashback.org###bottom-banner-container
 flashback.org###right-banner-container
 flashback.org##.post-banner-container
+flashback.org##script:inject(setTimeout-defuser.js, e, 2000)
 mmanytt.se##.bannerTop
 mmanytt.se##.bannerHigh
 mmanytt.se##.bannerWide
