@@ -762,6 +762,8 @@ di.se##a[href^="/brandstudio/"]
 di.se##.article-teaser__text-inline:has(a[href^="/brandstudio/"])
 di.se##.di_start__insider-ad
 di.se##.di_panorama__isAdLabel
+di.se##script:inject(abort-on-property-read.js, diConf.servicePlusClientId)
+di.se##.clip-browser__clip:has(a[href*="/annons-"])
 digital.di.se,weekend.di.se##script:inject(abort-current-inline-script.js, diConf)
 expressen.se##.terms-dialog
 expressen.se###rich-media-ads
@@ -812,9 +814,8 @@ tv4.se##.social-block-ad
 tv4.se##[class*="aside-ad"]
 tv4.se##.social-buttons
 tv4.se##script:inject(abort-current-inline-script.js, burtConfigs)
-tv4.se,koket.se##script:inject(abort-current-inline-script.js, bamConfig)
 ||damoh.tv4play.se^$image
-||stat-api.tv4play.se$image
+||stat-api.tv4play.se^$image
 @@||videoplaza.tv^$domain=tv4.se|tv4play.se|fotbollskanalen.se|koket.se
 */trailers$media,redirect=noopmp3-0.1s,domain=tv4.se|tv4play.se|fotbollskanalen.se|koket.se
 ||tv4-trailers-prod.herokuapp.com/api/impression$xmlhttprequest
@@ -834,7 +835,6 @@ koket.se##li.slide:has(.external_advertiser)
 koket.se##.external_advertiser
 koket.se###react-newsletter-overlay
 koket.se##.kf-mosaic-widget:has(.mosaic__custom-sponsor-holder)
-||richrelevance.com^$third-party,domain=koket.se
 /bn-01d-fusion.js$domain=koket.se
 fotbollskanalen.se##div[class*="top-item__link"][onclick="trackClickThenOpen();"]
 fotbollskanalen.se##script:inject(abort-current-inline-script.js, adformtag)
@@ -1264,7 +1264,7 @@ koket.se,nyheter24.se##.native
 !#if env_firefox
 nyafilmerhd.*,dreamfilmhd.*##^script:has-text(POPUP)
 nyafilmerhd.*,dreamfilmhd.*##^script:has-text(s,t,o,p,b,r,e,a,k,i,n,g)
-nyafilmerhd.*,dreamfilmhd.*,swesub.*,dreamfilm.*##^script:has-text(_Hasync)
+nyafilmerhd.*,dreamfilmhd.*,swesub.*,dreamfilm.*,jawcloud.co##^script:has-text(_Hasync)
 nyafilmerhd.*,dreamfilmhd.*##^script:has-text(blockerDetected)
 nyafilmerhd.*,dreamfilmhd.*##^script:has-text(adsrvmedia)
 nyafilmerhd.*,dreamfilmhd.*##^script:has-text(uptopop.com)
@@ -1282,7 +1282,7 @@ dreamfilmhd.*##script:inject(setInterval-defuser.js, F9, 500)
 nyafilmerhd.*##script:inject(setInterval-defuser.js, u6, 500)
 ||dreamfilmhd.*^$csp=default-src 'self' 'unsafe-inline' 'unsafe-eval' jawcloud.co *.jawcloud.co upvtt.com wp.com *.wp.com *.googleapis.com vkpass.com *.vkpass.com *.gstatic.com
 ||nyafilmerhd.*^$csp=default-src 'self' 'unsafe-inline' 'unsafe-eval' jawcloud.co *.jawcloud.co upvtt.com wp.com *.wp.com *.googleapis.com vkpass.com *.vkpass.com *.gstatic.com
-||swesub.*^$csp=default-src 'self' 'unsafe-inline' 'unsafe-eval' *.tmdb.org ajax.cloudflare.com *.googleapis.com cdnjs.cloudflare.com fonts.gstatic.com openload.co data:
+||swesub.*^$csp=default-src 'self' 'unsafe-inline' 'unsafe-eval' *.tmdb.org ajax.cloudflare.com *.googleapis.com cdnjs.cloudflare.com fonts.gstatic.com openload.co nxload.com data:
 ||nordicfilm.*^$csp=default-src 'self' 'unsafe-inline' 'unsafe-eval' *.tmdb.org *.postimg.cc *.youtube.com *.googleapis.com fonts.gstatic.com vidbox.co
 ||nordicfilm.*^$csp=worker-src 'none'
 ||swesub.*^$csp=worker-src 'none'
@@ -1295,7 +1295,7 @@ nordicfilm.*,vidbox.co,oload.stream##script:inject(setTimeout-defuser.js, check)
 nordicfilm.*,vidbox.co,oload.stream##script:inject(setInterval-defuser.js, check)
 ||cdnbox.win/inc/ETKe.php^$script
 swesub.*##script:inject(abort-current-inline-script.js, atob)
-nyafilmerhd.*,dreamfilmhd.*,swesub.*##script:inject(abort-current-inline-script.js, _Hasync.push)
+nyafilmerhd.*,dreamfilmhd.*,swesub.*,jawcloud.co##script:inject(abort-current-inline-script.js, _Hasync, push)
 swesub.*##script:inject(abort-current-inline-script.js, document.oncontextmenu)
 swesub.*##.alert-bottom
 dreamfilm.*##.bnr
@@ -1305,6 +1305,7 @@ dreamfilm.*##.TPlayer.on:after:style(height: 0 !important; width: 0 !important;)
 ||dreamfilm.*/HD/780x.$image
 streamtajm.*##.longbanner
 streamtajm.*##script:inject(abort-current-inline-script.js, popunder)
+||bit.ly^$subdocument,domain=jawcloud.co
 
 ! Various annoyances
 youplay.se,nyheter24.se,emocore.se,modette.se,dayviews.com,filmtipset.se,affarsliv.com,affarslivgotland.se,corren.se,eposten.se,folkbladet.se,helagotland.se,klackspark.com,kuriren.nu,mvt.se,norrbottensaffarer.se,nsd.se,nt.se,pt.se,unt.se,vt.se,kamrat.com##script:inject(set-constant.js, youplay.helpers.disableRightClick, noopFunc)
