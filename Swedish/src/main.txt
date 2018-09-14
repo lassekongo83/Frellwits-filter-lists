@@ -115,6 +115,7 @@
 ||reco.se^$third-party
 ||reseguiden.se^$third-party
 ||revrelations.com^$third-party
+||revrtb.com^$third-party,popup
 ||royapp.com^$third-party
 ||sannsyn.com^$third-party
 ||seekly.se^$third-party
@@ -418,7 +419,7 @@
 @@/js/adsbygoogle.js^$~third-party,script,domain=feber.se|tjock.se
 @@/js/advert.$script,domain=mariestadstidningen.se|nwt.se|sla.se
 @@/js/advert.js$~third-party,script,domain=burlovsnyheter.se
-@@/js/advertisement*.$~third-party,script,domain=brollopstorget.se|devote.se|expressen.se|familjeliv.se|feber.se|skyddsombud24.se|tjock.se|dagensmedia.nu|id.expressen.se
+@@/js/advertisement*.$~third-party,script,domain=brollopstorget.se|devote.se|expressen.se|familjeliv.se|feber.se|skyddsombud24.se|tjock.se|dagensmedia.nu
 @@/js/advertising.$~third-party,script,domain=byggnadsarbetaren.se|elbilsnytt.se|vilaser.se|svegot.se|tekniksmart.se
 @@/js/showads.js^$~third-party,script,domain=101ideer.se|alltomtradgard.se|amelia.se|lantliv.com|skonahem.com|styleby.nu|tara.se|topphalsa.se|veckorevyn.com
 @@/scripts/ads.js$~third-party,domain=bloggar.expressen.se
@@ -469,11 +470,11 @@ abus.com#@##cookieChoiceInfo
 
 ! Common scriptlets
 ng.se,alltomstockholm.se,mitti.se,bloggbevakning.se,cornucopia.cornubot.se,innebandymagazinet.se##script:inject(abort-on-property-read.js, ADTECH)
-dagensps.se,husvagnochcamping.se,hemtrevligt.se,akaskidor.se,utemagasinet.se,livetombord.se,svenskgolf.se,kingmagazine.se,vagabond.se,tidningenhalsa.se,mestmotor.se,nyheter24.se,swedroid.se,dagensanalys.se,breakit.se,fotbolltransfers.com##script:inject(abort-current-inline-script.js, ADTECH, enqueueAd)
+dagensps.se,husvagnochcamping.se,hemtrevligt.se,akaskidor.se,utemagasinet.se,livetombord.se,svenskgolf.se,kingmagazine.se,vagabond.se,tidningenhalsa.se,mestmotor.se,nyheter24.se,swedroid.se,dagensanalys.se,breakit.se,fotbolltransfers.com,modette.se##script:inject(abort-current-inline-script.js, ADTECH, enqueueAd)
 breakit.se,dagensps.se,hemtrevligt.se,akaskidor.se,utemagasinet.se,livetombord.se,svenskgolf.se,kingmagazine.se,vagabond.se,tidningenhalsa.se,mestmotor.se,husvagnochcamping.se,ekuriren.se,kkuriren.se,sn.se,allehanda.se,arbetarbladet.se,avestatidning.com,bblat.se,dalademokraten.se,dt.se,fagersta-posten.se,gd.se,lt.se,ltz.se,na.se,norrteljetidning.se,nynashamnsposten.se,op.se,salaallehanda.com,st.nu,tidningenharjedalen.se,vlt.se##script:inject(abort-current-inline-script.js, NREUM, info)
 breakit.se,bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se,nyheter24.se##script:inject(abort-on-property-read.js, _hjSettings)
 breakit.se##script:inject(abort-current-inline-script.js, _vwo_code)
-mestmotor.se##script:inject(abort-current-inline-script.js, ADTECH, config)
+mestmotor.se,kingmagazine.se##script:inject(abort-current-inline-script.js, ADTECH, config)
 
 ! Facebook junk
 /facebook_sdk.js$script,domain=njus.me|radioplay.se
@@ -1117,6 +1118,7 @@ fiskejournalen.se##div[style="background-color:#ededed"]:if(small:has-text(/anno
 /headerbidding.js$script,domain=livetombord.se
 /multiad_jquery.js$script,domain=husvagnochcamping.se
 kingmagazine.se,vagabond.se,hemtrevligt.se,akaskidor.se,utemagasinet.se,livetombord.se,svenskgolf.se,tidningenhalsa.se,mestmotor.se##.latest-article-native
+kingmagazine.se##div[data-fullscreen-banner]
 vagabond.se##.most-read-article:if(span:has-text(/partner/i))
 mestmotor.se,vagabond.se,kingmagazine.se,hemtrevligt.se,akaskidor.se,svenskgolf.se,tidningenhalsa.se,livetombord.se,utemagasinet.se##.alert-cookies
 mestmotor.se,vagabond.se,kingmagazine.se,hemtrevligt.se,akaskidor.se,svenskgolf.se,tidningenhalsa.se,livetombord.se,utemagasinet.se###facebookSlideIn
@@ -1283,6 +1285,7 @@ dreamfilmhd.*##script:inject(setInterval-defuser.js, F9, 500)
 nyafilmerhd.*##script:inject(setInterval-defuser.js, u6, 500)
 ||dreamfilmhd.*^$csp=default-src 'self' 'unsafe-inline' 'unsafe-eval' jawcloud.co *.jawcloud.co upvtt.com wp.com *.wp.com *.googleapis.com vkpass.com *.vkpass.com *.gstatic.com
 ||nyafilmerhd.*^$csp=default-src 'self' 'unsafe-inline' 'unsafe-eval' jawcloud.co *.jawcloud.co upvtt.com wp.com *.wp.com *.googleapis.com vkpass.com *.vkpass.com *.gstatic.com
+||nyafilmerhd.*/wp-content/themes/keremiya1/js/script.js$script
 ||swesub.*^$csp=default-src 'self' 'unsafe-inline' 'unsafe-eval' *.tmdb.org ajax.cloudflare.com *.googleapis.com cdnjs.cloudflare.com fonts.gstatic.com openload.co nxload.com data:
 ||nordicfilm.*^$csp=default-src 'self' 'unsafe-inline' 'unsafe-eval' *.tmdb.org *.postimg.cc *.youtube.com *.googleapis.com fonts.gstatic.com vidbox.co
 ||nordicfilm.*^$csp=worker-src 'none'
@@ -1307,6 +1310,9 @@ dreamfilm.*##.TPlayer.on:after:style(height: 0 !important; width: 0 !important;)
 streamtajm.*##.longbanner
 streamtajm.*##script:inject(abort-current-inline-script.js, popunder)
 ||bit.ly^$subdocument,domain=jawcloud.co
+||jawcloud.co/js/script.js$script
+||jawcloud.co/banner$image
+jawcloud.co##script:inject(abort-current-inline-script.js, jawplayer, on)
 
 ! Various annoyances
 youplay.se,nyheter24.se,emocore.se,modette.se,dayviews.com,filmtipset.se,affarsliv.com,affarslivgotland.se,corren.se,eposten.se,folkbladet.se,helagotland.se,klackspark.com,kuriren.nu,mvt.se,norrbottensaffarer.se,nsd.se,nt.se,pt.se,unt.se,vt.se,kamrat.com##script:inject(set-constant.js, youplay.helpers.disableRightClick, noopFunc)
