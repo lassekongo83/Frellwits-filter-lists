@@ -417,7 +417,7 @@
 @@/adserver.$~third-party,script,domain=fotosidan.se|utsidan.se
 @@/advertisement.js$~third-party,script,domain=blocket.se|emocore.se|kaninsajten.se|kit.se|saljplatsen.se|spela.se
 @@/js/ad.js$~third-party,domain=sweclockers.com
-@@/js/ads.js$~third-party,domain=101ideer.se|affarsliv.com|affarslivgotland.se|alltforforaldrar.se|alltommat.se|alltomtradgard.se|amelia.se|bike.se|corren.se|damernasvarld.se|deliquate.se|eposten.se|folkbladet.se|foretagande.se|gardochtorp.se|godsochgardar.se|helagotland.se|hemochantik.se|husbilhusvagn.se|ilikeradio.se|johannatoftby.se|klackspark.com|klassiker.nu|kuriren.nu|lantliv.com|ljudochbild.se|madeleineilmrud.se|magdalenagraaf.se|mama.nu|mopedgaraget.se|mvt.se|naturvetenskap.org|norrbottensaffarer.se|nsd.se|nt.se|pt.se|radio.se|skonahem.com|styleby.nu|swedroid.se|tara.se|topphalsa.se|tvmatchen.nu|unt.se|uppsalatidningen.se|veckorevyn.com|vibilagare.se|villavarmt.se|vt.se|privataaffarer.se|tidningenhembakat.se|teknikensvarld.se|alltsomsker.nu|smartleasing.se|viforaldrar.se|englasshowroom.com|caroftheyear.se|isabellalowengrip.se|malagaguiden.se|matplatsen.net
+@@/js/ads.js$~third-party,domain=101ideer.se|affarsliv.com|affarslivgotland.se|alltforforaldrar.se|alltommat.se|alltomtradgard.se|amelia.se|bike.se|corren.se|damernasvarld.se|deliquate.se|eposten.se|folkbladet.se|foretagande.se|gardochtorp.se|godsochgardar.se|helagotland.se|hemochantik.se|husbilhusvagn.se|ilikeradio.se|johannatoftby.se|klackspark.com|klassiker.nu|kuriren.nu|lantliv.com|ljudochbild.se|madeleineilmrud.se|magdalenagraaf.se|mama.nu|mopedgaraget.se|mvt.se|naturvetenskap.org|norrbottensaffarer.se|nsd.se|nt.se|pt.se|radio.se|skonahem.com|styleby.nu|swedroid.se|tara.se|topphalsa.se|tvmatchen.nu|unt.se|uppsalatidningen.se|veckorevyn.com|vibilagare.se|villavarmt.se|vt.se|privataaffarer.se|tidningenhembakat.se|teknikensvarld.se|alltsomsker.nu|smartleasing.se|viforaldrar.se|englasshowroom.com|caroftheyear.se|isabellalowengrip.se|malagaguiden.se|matplatsen.net|kritiker.se
 @@/js/ads/advert.min.js$~third-party,script,domain=spelo.se
 @@/js/adsbygoogle.js^$~third-party,script,domain=feber.se|tjock.se
 @@/js/advert.$script,domain=mariestadstidningen.se|nwt.se|sla.se
@@ -540,7 +540,7 @@ mestmotor.se,kingmagazine.se##script:inject(abort-current-inline-script.js, ADTE
 /plugins/pause-adblocker/*$script,stylesheet,image,domain=hightechguiden.se
 /plugins/pixel-cat/*$script
 /plugins/pixelyoursite-pro/*
-/plugins/popup-builder-platinum/*$important,domain=sportpanelen.se
+/plugins/popup-builder-platinum/*$important,domain=sportpanelen.se|mmabetz.se
 /plugins/sdcookie-warning/*$script,stylesheet
 /plugins/se-wordpress-cookie-notice/*
 /plugins/se-wordpress-native-article/*$script,stylesheet
@@ -1038,6 +1038,8 @@ gamereactor.se##div[style="min-height: 600px; margin-bottom: 20px;"]:has(div[id^
 /prerolls/*$domain=gamereactor.se
 ||openx.gamereactor.dk/multi.php?$script,important
 gamereactor.se##script:inject(set-constant.js, detectAdblockUser, noopFunc)
+gamereactor.se##script:inject(abort-on-property-write.js, banner_video)
+gamereactor.se##script:inject(abort-current-inline-script.js, phpads_deliver)
 gamereactor.se###sky2_1
 gamereactor.se###facebooknotification
 gamereactor.se###ad_mobiletopinsidetext
@@ -1048,6 +1050,7 @@ gamereactor.se###ad_mobiletopinsidetext
 ||gamereactor.se/lay/js/background.$script,important
 ||gamereactor.se/media/eventad/$image
 /adblock_mobile.$script,important,domain=gamereactor.se
+/insert_grtv_stats.$xmlhttprequest,domain=gamereactor.se
 
 ! LIFE OF SVEA
 familjeliv.se##a[href*="/kampanj/"]
@@ -1541,12 +1544,12 @@ atl.nu,land.se,landlantbruk.se,landskogsbruk.se##[class*="--native"]
 thelocal.se##:xpath(//h2[text()[contains(., 'From our sponsors')]]/parent::div)
 thelocal.se##div[class*="section"]:if(div[class$="-label"]:has-text(/sponsored/i))
 thelocal.se##.orange-panel
-hbl.fi,vastranyland.fi,ostnyland.fi##rekrybanner
-hbl.fi,vastranyland.fi,ostnyland.fi##gdpr-notice
-hbl.fi,vastranyland.fi,ostnyland.fi###okCookie
-hbl.fi,vastranyland.fi,ostnyland.fi##.type-advertorial
-||ksfmedia.simulator.palmu.fi/*/*.js$script,domain=hbl.fi|vastranyland.fi|ostnyland.fi
-||munchkin.marketo.net/munchkin.js$script,important,domain=hbl.fi|vastranyland.fi|ostnyland.fi
+hbl.fi,vastranyland.fi,ostnyland.fi,hangotidningen.fi##rekrybanner
+hbl.fi,vastranyland.fi,ostnyland.fi,hangotidningen.fi##gdpr-notice
+hbl.fi,vastranyland.fi,ostnyland.fi,hangotidningen.fi###okCookie
+hbl.fi,vastranyland.fi,ostnyland.fi,hangotidningen.fi##.type-advertorial
+||ksfmedia.simulator.palmu.fi/*/*.js$script,domain=hbl.fi|vastranyland.fi|ostnyland.fi|hangotidningen.fi
+||munchkin.marketo.net/munchkin.js$script,important,domain=hbl.fi|vastranyland.fi|ostnyland.fi|hangotidningen.fi
 ||vasabladet.fi/Scripts/HSSAnalyticsUtils.js$script
 ||vasabladet.fi/Scripts/GA_EEC/$script
 ||vasabladet.fi/Scripts/karkimedia_init.js$script
@@ -2005,3 +2008,4 @@ betting.se##script:inject(abort-on-property-write.js, Fingerprint2)
 komponentkoll.se##.gdpr-popup
 affarsstaden.se##script:inject(abort-current-inline-script.js, jQuery, adblockdetect)
 affarsstaden.se##.esb-ad
+||185.102.215.69/wordpresshttp://bimber-live.localhost$image,domain=mmabetz.se
