@@ -92,6 +92,7 @@
 ||lwadm.com^$third-party
 ||mailchimp.com^$third-party
 ||mailerlite.com^$third-party
+||mailmunch.co^$third-party
 ||mediekompaniet.com^$third-party
 ||meltwater.com^$third-party
 ||metapic.se^$third-party
@@ -331,6 +332,7 @@
 ||runmewivel.com^
 ||look.ufinkln.com^
 ||ufinkln.com/offer?prod$popup
+||*.choose-your-prize*.life^$document
 ! https://www.aftonbladet.se/nyheter/a/vm1BOw/anders-46-lurades-av-falsk-trafiksajt--nu-stams-foretagaren
 ! https://www.svt.se/nyheter/konsument/tusentals-bilister-lurade-av-sajt-som-tar-betalt-for-gratis-tjanster
 ||trafikenheten.se^
@@ -338,7 +340,8 @@
 ! https://www.reddit.com/r/sweden/comments/8gamb7/massutskick_om_att_gå_ur_svenska_kyrkan_är_det/
 ||skattamindre.se^
 ||mindreskatt.se^
-||*.choose-your-prize*.life^$document
+! https://www.sweclockers.com/forum/trad/1529756-bettersport-se-och-andra-scamsidor
+||bettersport.se^
 
 ! Generic Element Hiding Rules
 ###accept-cookies-div
@@ -1655,6 +1658,7 @@ viivilla.se###product-area
 /adv_utils.$script,domain=viivilla.se
 ||allabolag.se^*/ad.html
 allabolag.se##article:has(.advert__mark)
+allabolag.se##.topBnrContainer
 /sf_tracking.js^$script,domain=stayfriends.se
 stayfriends.se###cookieHint
 spray.se###top_banner
@@ -1866,10 +1870,10 @@ faktiskt.se##.widget_wonderfoursocialmediawidget
 hugorosas.se##.tag-sponsored_post
 hugorosas.se##article.category-samarbete
 tekniksmart.se##.adcontainer
-industrinyheter.se,dagensnaringsliv.se##.insider-ads
-industrinyheter.se,dagensnaringsliv.se##[id^="mainadvertorial"]
-industrinyheter.se,dagensnaringsliv.se###dfptag-skyscraper
-industrinyheter.se,dagensnaringsliv.se###dfptag-superpanorama
+industrinyheter.se,dagensnaringsliv.se,infrastrukturnyheter.se##.insider-ads
+industrinyheter.se,dagensnaringsliv.se,infrastrukturnyheter.se##[id^="mainadvertorial"]
+industrinyheter.se,dagensnaringsliv.se,infrastrukturnyheter.se##[id^="dfptag"]
+industrinyheter.se,dagensnaringsliv.se,infrastrukturnyheter.se##.block-advertorial
 schoolido.se##.so-cookie__area
 blankspot.se##div.red-section.action-banner-2.sticky:style(position: initial !important;)
 muscles.se##.newsletter-signup--popup
@@ -1999,3 +2003,5 @@ lundagard.se##.widget:has(h3:has-text(Annons:))
 betting.se##script:inject(abort-on-property-write.js, Fingerprint2)
 @@||stockblogs.se^$generichide
 komponentkoll.se##.gdpr-popup
+affarsstaden.se##script:inject(abort-current-inline-script.js, jQuery, adblockdetect)
+affarsstaden.se##.esb-ad
