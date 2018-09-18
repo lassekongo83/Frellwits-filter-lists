@@ -1350,6 +1350,7 @@ newsvoice.se##div.wpb_raw_code:has(img[width="300"][height="200"])
 newsvoice.se##.td_module_related_posts:has(a[href$="/sponsrat/"])
 moviezine.se##[class*="inner_"]:if(.badge:has-text(/sponsrat/i))
 moviezine.se##[name="article-advertisment"]
+moviezine.se##.others:has-text(/sponsrat/i)
 fz.se##script:inject(abort-current-inline-script.js, Taiga, Blackboard)
 fz.se##.content-widget:if(div.fpnih-meta:has-text(/sponsrat/i))
 fz.se##.article-facebook
@@ -1397,7 +1398,9 @@ realtid.se##.block-realtid-native
 realtid.se##.block-realtid-ads
 realtid.se##.takeover-overlay
 realtid.se###block-views-takeover-career-block
+realtid.se###sliding-popup
 realtid.se##script:inject(abort-current-inline-script.js, sas)
+/realtid_ads/*$domain=realtid.se
 battrestadsdel.se###top-banner-mobile
 battrestadsdel.se###HideBanner
 battrestadsdel.se###sociala-medier-box
@@ -1406,12 +1409,12 @@ battrestadsdel.se##.apds_main
 battrestadsdel.se##.entry-priomaker
 battrestadsdel.se###my-mega-menu-widget:has-text(/sponsrade artiklar/i)
 swedroid.se##.social
-swedroid.se##.puff:if(h1:has-text(Android på Prisjakt))
-swedroid.se##.puff:if(h1:has-text(/sponsrat/i))
+swedroid.se##.puff:has(h1:has-text(Android på Prisjakt))
+swedroid.se##.puff:has(h1:has-text(/sponsrat/i))
 swedroid.se##table[style="width:1190px; height:76px"]
 swedroid.se##.aeChart:has(a[href*="prisjakt.nu"])
 swedroid.se##h3:has-text(Prisjaktspriser)
-swedroid.se##.widget-single:if(h3:has-text(Android på Prisjakt))
+swedroid.se##.widget-single:has(h3:has-text(Android på Prisjakt))
 hippson.se##.sponsorpuff
 magasin55.se##.td_module_wrap:has(a[href$="/annons/"])
 /veckansluncher.gif$domain=alingsastidning.se
@@ -1420,7 +1423,8 @@ autonytt.se##.sponsrad-artikel
 autonytt.se##.start-leaderboard
 autonytt.se##.leaderboard
 autonytt.se##.feed_ad
-autonytt.se##a:if(.label:has-text(/sponsrad/i))
+autonytt.se##a[href^="https://t.seenthis.se"]
+autonytt.se##a:has(.label:has-text(/sponsrad/i))
 autonytt.se##.article_widget_preview:if(h2 > a:has-text(/artikel i samarbete/i))
 /cookie-consent-*.js$domain=motormagasinet.se|skyddosakerhet.se|food-supply.se
 /trckr/*$xmlhttprequest,domain=motormagasinet.se|food-supply.se|skyddosakerhet.se|dagenshandel.se
@@ -1434,6 +1438,7 @@ mobil.se##li.partner
 mobil.se##a[href^="/partner/"]
 mobil.se##.aside-puff > li:has-text(/sponsrad/i)
 mobil.se##[data-domid^="sprjr"]
+mobil.se##.teaser:has(.sponsrat)
 ||mobil.se/facebook/$xmlhttprequest
 /lunchguiden*.$image,domain=vk.se|folkbladet.nu
 /service-worker.js$script,domain=vk.se|folkbladet.nu
