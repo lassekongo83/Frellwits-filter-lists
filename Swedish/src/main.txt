@@ -473,11 +473,11 @@ abus.com#@##cookieChoiceInfo
 
 ! Common scriptlets
 ng.se,alltomstockholm.se,mitti.se,bloggbevakning.se,cornucopia.cornubot.se,innebandymagazinet.se##script:inject(abort-on-property-read.js, ADTECH)
-dagensps.se,husvagnochcamping.se,hemtrevligt.se,akaskidor.se,utemagasinet.se,livetombord.se,svenskgolf.se,kingmagazine.se,vagabond.se,tidningenhalsa.se,mestmotor.se,nyheter24.se,swedroid.se,dagensanalys.se,breakit.se,fotbolltransfers.com,modette.se,muscles.se##script:inject(abort-current-inline-script.js, ADTECH, enqueueAd)
+dagensps.se,husvagnochcamping.se,hemtrevligt.se,akaskidor.se,utemagasinet.se,livetombord.se,svenskgolf.se,kingmagazine.se,vagabond.se,tidningenhalsa.se,mestmotor.se,nyheter24.se,swedroid.se,dagensanalys.se,breakit.se,fotbolltransfers.com,modette.se,muscles.se,cartoonnetwork.se##script:inject(abort-current-inline-script.js, ADTECH, enqueueAd)
 breakit.se,dagensps.se,hemtrevligt.se,akaskidor.se,utemagasinet.se,livetombord.se,svenskgolf.se,kingmagazine.se,vagabond.se,tidningenhalsa.se,mestmotor.se,husvagnochcamping.se,ekuriren.se,kkuriren.se,sn.se,allehanda.se,arbetarbladet.se,avestatidning.com,bblat.se,dalademokraten.se,dt.se,fagersta-posten.se,gd.se,lt.se,ltz.se,na.se,norrteljetidning.se,nynashamnsposten.se,op.se,salaallehanda.com,st.nu,tidningenharjedalen.se,vlt.se##script:inject(abort-current-inline-script.js, NREUM, info)
 breakit.se,bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se,nyheter24.se##script:inject(abort-on-property-read.js, _hjSettings)
 breakit.se##script:inject(abort-current-inline-script.js, _vwo_code)
-mestmotor.se,kingmagazine.se##script:inject(abort-current-inline-script.js, ADTECH, config)
+mestmotor.se,kingmagazine.se,cartoonnetwork.se##script:inject(abort-current-inline-script.js, ADTECH, config)
 
 ! Facebook junk
 /facebook_sdk.js$script,domain=njus.me|radioplay.se
@@ -1771,6 +1771,10 @@ datormagazin.se,skanesport.se##script:inject(abort-current-inline-script.js, adv
 datormagazin.se,skanesport.se##script:inject(abort-current-inline-script.js, advanced_ads_ready)
 datormagazin.se##catapult-cookie-bar
 datormagazin.se##.widget_advads_ad_widget
+datormagazin.se##img[width="1068"]
+datormagazin.se##.td-header-sp-recs
+datormagazin.se##.td-more-articles-box
+datormagazin.se##.dator-widget:has(h4 > span:has-text(/erbjudanden/i))
 @@||datormagazin.se^$generichide
 skanesport.se##script:inject(abort-current-inline-script.js, advanced_ads_adsense_UID)
 skanesport.se##[id^="skane-slider"]
@@ -2027,3 +2031,10 @@ affarsstaden.se##.esb-ad
 ||185.102.215.69/wordpresshttp://bimber-live.localhost$image,domain=mmabetz.se
 foreca.se###topbanner
 foreca.se###ckieconsent
+/metrics/*$domain=cartoonnetwork.se
+/bundle-bundle_cookiebar_defer.$script,domain=cartoonnetwork.se
+/bundle-bundle_omniture_defer.$script,domain=cartoonnetwork.se
+cartoonnetwork.se##script:inject(abort-current-inline-script.js, ADTECHQueue)
+cartoonnetwork.se##script:inject(abort-current-inline-script.js, ADTECH, executeQueue)
+skk.se###cookie-button-banner
+skkplay.solidtango.com###cookie-prompt
