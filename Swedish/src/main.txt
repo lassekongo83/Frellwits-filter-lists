@@ -417,7 +417,7 @@
 @@/adserver.$~third-party,script,domain=fotosidan.se|utsidan.se
 @@/advertisement.js$~third-party,script,domain=blocket.se|emocore.se|kaninsajten.se|kit.se|saljplatsen.se|spela.se
 @@/js/ad.js$~third-party,domain=sweclockers.com
-@@/js/ads.js$~third-party,domain=101ideer.se|affarsliv.com|affarslivgotland.se|alltforforaldrar.se|alltommat.se|alltomtradgard.se|amelia.se|bike.se|corren.se|damernasvarld.se|deliquate.se|eposten.se|folkbladet.se|foretagande.se|gardochtorp.se|godsochgardar.se|helagotland.se|hemochantik.se|husbilhusvagn.se|ilikeradio.se|johannatoftby.se|klackspark.com|klassiker.nu|kuriren.nu|lantliv.com|ljudochbild.se|madeleineilmrud.se|magdalenagraaf.se|mama.nu|mopedgaraget.se|mvt.se|naturvetenskap.org|norrbottensaffarer.se|nsd.se|nt.se|pt.se|radio.se|skonahem.com|styleby.nu|swedroid.se|tara.se|topphalsa.se|tvmatchen.nu|unt.se|uppsalatidningen.se|veckorevyn.com|vibilagare.se|villavarmt.se|vt.se|privataaffarer.se|tidningenhembakat.se|teknikensvarld.se|alltsomsker.nu|smartleasing.se|viforaldrar.se|englasshowroom.com|caroftheyear.se|isabellalowengrip.se|malagaguiden.se|matplatsen.net|kritiker.se
+@@/js/ads.js$~third-party,domain=101ideer.se|affarsliv.com|affarslivgotland.se|alltforforaldrar.se|alltommat.se|alltomtradgard.se|amelia.se|bike.se|corren.se|damernasvarld.se|deliquate.se|eposten.se|folkbladet.se|foretagande.se|gardochtorp.se|godsochgardar.se|helagotland.se|hemochantik.se|husbilhusvagn.se|ilikeradio.se|johannatoftby.se|klackspark.com|klassiker.nu|kuriren.nu|lantliv.com|ljudochbild.se|madeleineilmrud.se|magdalenagraaf.se|mama.nu|mopedgaraget.se|mvt.se|naturvetenskap.org|norrbottensaffarer.se|nsd.se|nt.se|pt.se|radio.se|skonahem.com|styleby.nu|swedroid.se|tara.se|topphalsa.se|tvmatchen.nu|unt.se|uppsalatidningen.se|veckorevyn.com|vibilagare.se|villavarmt.se|vt.se|privataaffarer.se|tidningenhembakat.se|teknikensvarld.se|alltsomsker.nu|smartleasing.se|viforaldrar.se|englasshowroom.com|caroftheyear.se|isabellalowengrip.se|malagaguiden.se|matplatsen.net|kritiker.se|svenskjakt.se
 @@/js/ads/advert.min.js$~third-party,script,domain=spelo.se
 @@/js/adsbygoogle.js^$~third-party,script,domain=feber.se|tjock.se
 @@/js/advert.$script,domain=mariestadstidningen.se|nwt.se|sla.se
@@ -462,7 +462,7 @@ abus.com#@##cookieChoiceInfo
 /panorama.js$script,domain=blogg.se|bloggkommentatorerna.se|ladydahmer.nu|nickesfilmblogg.se|themoviefreak.se|webblogg.se|svenskayoutubers.se
 /SitesterSurvey*.$script,domain=wwf.se
 /statistics.php$xmlhttprequest,domain=alltforforaldrar.se|fria.nu|friatidningen.se|goteborgsfria.se|landetsfria.se|mammasidan.se|market.se|minbebis.com|sesam.nu|stockholmsfria.se|industrinyheter.se|dagensnaringsliv.se|testfakta.se
-/xtcore.$script,domain=kiaindex.se
+/xtcore.$script,domain=kiaindex.se|bytbil.com
 ||apprl.com/embed/$subdocument,domain=majaelisabeth.com|metromode.se|trendenser.se|forni.se|petratungarden.se
 ||herokuapp.com^$third-party,domain=aftonbladet.se
 ||pji.nu^$third-party,domain=idg.se|minhembio.com|nordichardware.se|99.se|fz.se|sweclockers.com|mobil.se|viivilla.se|feber.se|kamerabild.se|surfa.se
@@ -503,6 +503,7 @@ mestmotor.se,kingmagazine.se##script:inject(abort-current-inline-script.js, ADTE
 /plugins/ad-inserter-pro/*$script,stylesheet,domain=rocknytt.net
 /plugins/add-to-any/*$script,stylesheet
 /plugins/adsanity/*$script,stylesheet
+/plugins/annonstorget/*$script,domain=svenskjakt.se
 /plugins/better-adsmanager/*$script,stylesheet
 /plugins/blog-analytics/*$domain=dagensanalys.se
 /plugins/bsa-pro-scripteo/*$script,stylesheet
@@ -714,6 +715,12 @@ klart.se##.gdpr-onboarding-container
 ||user-permissions.api.schibsted.media/privacy/$domain=klart.se
 ||cis.schibsted.com/api/*/identify$domain=klart.se
 ||metric-mobil.aftonbladet.se^$image
+||bytbil.com/bundles/js/appnexus.$script
+||bytbil.com/bundles/js/eas.$script
+bytbil.com##script:inject(abort-current-inline-script.js, apntag, anq)
+bytbil.com##script:inject(abort-current-inline-script.js, Bytbil, AppNexus)
+bytbil.com###privacyModal
+bytbil.com##html,body:style(overflow: auto !important;)
 
 ! BONNIER
 dn.se##.js-ad-sidebar
@@ -1072,6 +1079,9 @@ mammasidan.se,minbebis.com,alltforforaldrar.se##script:inject(abort-on-property-
 mammasidan.se,minbebis.com,alltforforaldrar.se##[id*="blogg_panorama"]
 mammasidan.se,minbebis.com,alltforforaldrar.se##a[href^="/native/"]
 mammasidan.se,minbebis.com,alltforforaldrar.se###partnerMenuContainer
+alltforforaldrar.se##.card:has-text(/annonssamarbete/i)
+||svenskanamn.alltforforaldrar.se/js/svenskanamn_ads.$script
+||svenskanamn.alltforforaldrar.se/js/svenskanamn_param_init.$script
 /themes/aurora/cookies/*$script,stylesheet,image,domain=mammasidan.se|minbebis.com|alltforforaldrar.se
 ||alltforforaldrar.se/extra/dp/dp.js
 ||alltforforaldrar.se/sites/all/themes/aurora/js/vendor/bootstrap/modal.js
@@ -1108,6 +1118,7 @@ sportfiskeforum.se###fj-topad
 @@||fiskejournalen.se^$generichide
 fiskejournalen.se##.blogindex-layout-large-post:has(.native-wrapper)
 sportfiskeforum.se,fiskejournalen.se##script:inject(abort-current-inline-script.js, m3_r, Math.floor)
+svenskjakt.se##script:inject(abort-current-inline-script.js, desktop_random_ad_id)
 fiskejournalen.se##div[style="background-color:#ededed"]:if(small:has-text(/annons/i))
 
 ! EGMONT PUBLISHING
@@ -2014,3 +2025,5 @@ komponentkoll.se##.gdpr-popup
 affarsstaden.se##script:inject(abort-current-inline-script.js, jQuery, adblockdetect)
 affarsstaden.se##.esb-ad
 ||185.102.215.69/wordpresshttp://bimber-live.localhost$image,domain=mmabetz.se
+foreca.se###topbanner
+foreca.se###ckieconsent
