@@ -48,7 +48,7 @@ BLANKPATTERN = re.compile(r"^\s*$")
 COMMITPATTERN = re.compile(r"^(A|M|P)\:\s(\((.+)\)\s)?(.*)$")
 
 # List the files that should not be sorted, either because they have a special sorting system or because they are not filter files
-IGNORE = ("headers.txt", "extended-headers.txt", "main-temp.txt", "pre-parsing-directives.txt")
+IGNORE = ("headers.txt", "extended-headers.txt", "main-temp.txt", "pre-parsing-directives.txt", "hosts-temp.txt")
 
 # List all Adblock Plus/uBO options (excepting domain, which is handled separately), as of version 1.3.9
 KNOWNOPTIONS = ("collapse", "csp", "document", "elemhide",

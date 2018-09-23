@@ -13,7 +13,7 @@ not_extended='output/not-extended.txt'
 # uBO specific filters. Exclude first-party as it will just be better to use ~third-party instead.
 ubo_n='redirect=|\$important|,important|\$document|,document|\$badfilter|,badfilter|\$inline-script|,inline-script|\$popunder|,popunder'
 ubo_c=':xpath\(|:matches-css\(|:matches-css-before\(|:matches-css-after\(|:has\(|:if\(|:if-not\(|:has-text\(|:style\('
-ubo_s='script:inject'
+ubo_s='script:inject|#\+js\('
 # Filters that work in most blockers but is needed in combination with other uBO filters to work
 ubo_o='mediacreeper.com|mediacreeper.se'
 
@@ -30,6 +30,10 @@ egrep -v "($ubo_n)|($ubo_c)|($ubo_s)|($ubo_o)|(^!.*|^$)" $main_temp > $not_exten
 
 # Sort with FOP.py
 python3 FOP.py output
+
+# Becuase FOP adds spaces around the pluses
+# TODO: Better fix this in FOP.py
+sed -i -e 's/# + js(/#+js(/g' $extended
 
 # Header content
 cat > output/headers.txt <<EOF
