@@ -527,6 +527,7 @@ mestmotor.se,kingmagazine.se,cartoonnetwork.se##script:inject(abort-current-inli
 /plugins/host-analyticsjs-local/*$script
 /plugins/hustle/*$script,domain=yogaworld.se
 /plugins/icegram/*$domain=dagensanalys.se
+/plugins/icegram-rainmaker/*$domain=battrenyheter.se
 /plugins/likebtn-like-button/*$script,stylesheet
 /plugins/loppi-cookie-consent/*$script
 /plugins/mailchimp/*$script
@@ -642,7 +643,7 @@ bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##sc
 bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##script:inject(abort-current-inline-script.js, runAd)
 bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##script:inject(abort-current-inline-script.js, $, checkFrqCookie)
 bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##script:inject(abort-current-inline-script.js, adformLoader, loadAd)
-bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##script:inject(addEventListener-defuser.js, /^(?:mousemove|mouseout)$/)
+bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##script:inject(addEventListener-defuser.js, /^(?:mousemove|mouseout|mousedown)$/)
 
 ! Flowplayer/lemonwhale
 ||lwcdn.com/vendor/ima.min.js$script
@@ -2046,3 +2047,7 @@ cartoonnetwork.se##script:inject(abort-current-inline-script.js, ADTECHQueue)
 cartoonnetwork.se##script:inject(abort-current-inline-script.js, ADTECH, executeQueue)
 skk.se###cookie-button-banner
 skkplay.solidtango.com###cookie-prompt
+battrenyheter.se##.vc_row.vc_row-flex:has(.abnan-single)
+battrenyheter.se##.gbnan
+battrenyheter.se##.abnan-single
+battrenyheter.se##.home-cat-first:has(a[href$="/sponsrad/"])
