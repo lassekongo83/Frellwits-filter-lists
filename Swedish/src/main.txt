@@ -129,7 +129,6 @@
 ||sociuslive.com^$third-party
 ||sprinklecontent.com^$third-party
 ||sprinkletxt.com^$third-party
-||suntcontent.se^$third-party
 ||telemetric.dk^$third-party
 ||tipser.com^$third-party
 ||tinypass.com^$third-party
@@ -475,7 +474,7 @@ abus.com#@##cookieChoiceInfo
 
 ! Common scriptlets
 ng.se,alltomstockholm.se,mitti.se,bloggbevakning.se,cornucopia.cornubot.se,innebandymagazinet.se##script:inject(abort-on-property-read.js, ADTECH)
-dagensps.se,husvagnochcamping.se,hemtrevligt.se,akaskidor.se,utemagasinet.se,livetombord.se,svenskgolf.se,kingmagazine.se,vagabond.se,tidningenhalsa.se,mestmotor.se,nyheter24.se,swedroid.se,dagensanalys.se,breakit.se,fotbolltransfers.com,modette.se,muscles.se,cartoonnetwork.se##script:inject(abort-current-inline-script.js, ADTECH, enqueueAd)
+dagensps.se,husvagnochcamping.se,hemtrevligt.se,akaskidor.se,utemagasinet.se,livetombord.se,svenskgolf.se,kingmagazine.se,vagabond.se,tidningenhalsa.se,mestmotor.se,nyheter24.se,swedroid.se,dagensanalys.se,breakit.se,fotbolltransfers.com,modette.se,muscles.se,cartoonnetwork.se,vf.se##script:inject(abort-current-inline-script.js, ADTECH, enqueueAd)
 breakit.se,dagensps.se,hemtrevligt.se,akaskidor.se,utemagasinet.se,livetombord.se,svenskgolf.se,kingmagazine.se,vagabond.se,tidningenhalsa.se,mestmotor.se,husvagnochcamping.se,ekuriren.se,kkuriren.se,sn.se,allehanda.se,arbetarbladet.se,avestatidning.com,bblat.se,dalademokraten.se,dt.se,fagersta-posten.se,gd.se,lt.se,ltz.se,na.se,norrteljetidning.se,nynashamnsposten.se,op.se,salaallehanda.com,st.nu,tidningenharjedalen.se,vlt.se##script:inject(abort-current-inline-script.js, NREUM, info)
 breakit.se,bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se,nyheter24.se##script:inject(abort-on-property-read.js, _hjSettings)
 breakit.se##script:inject(abort-current-inline-script.js, _vwo_code)
@@ -599,6 +598,7 @@ expressen.se##^script:has-text(window.Exp.bamData)
 expressen.se##^script[id="ads-script"]
 expressen.se##^script:has-text(adsScript)
 expressen.se##^script:has-text(window.ExpressenAnalytics)
+milansverige.se##^script:has-text(c.charCodeAt)
 !#endif
 
 ! IDG
@@ -607,8 +607,6 @@ expressen.se##^script:has-text(window.ExpressenAnalytics)
 ||gx.idg.se^$image
 ||idg.se^*/prebid*.$script,~third-party
 /pis.gif$image,domain=idg.se
-! https://github.com/lassekongo83/Frellwits-filter-lists/issues/25
-!||idg.se/idg-consent.min.js$script
 idg.se##div[data-cms-ad]
 idg.se##.wide-msg-fb
 idg.se##.pryltorget
@@ -945,13 +943,11 @@ skd.se,laholmstidning.se,nsk.se##div.skd-crsl-wrap:matches-css-before(content: A
 /sponsrat-frequency.js^$script,domain=skd.se|laholmstidning.se|nsk.se
 skd.se,laholmstidning.se,nsk.se##script:inject(abort-current-inline-script.js, ERWP, fif)
 skd.se,laholmstidning.se,nsk.se##script:inject(abort-current-inline-script.js, skd_adblocker)
-vf.se##.ajax-ad-info
-vf.se##.text-ad-info
-vf.se##.article__top-ad
-vf.se##.cookie__info
-vf.se##a[href="#bio"]
-vf.se##.readerlist__article-info__social
-vf.se##script:inject(set-constant.js, adblock, false)
+vf.se##.ad-container
+vf.se##script:inject(set-constant.js, isAdblock, false)
+vf.se##script:inject(cookie-remover.js, page-views)
+@@||cloudfront.net/js/ads.js$script,domain=vf.se
+/assets/js/ads.$script,important,domain=vf.se
 
 ! MITTMEDIA
 allehanda.se,arbetarbladet.se,avestatidning.com,bblat.se,dalademokraten.se,dt.se,fagersta-posten.se,gd.se,lt.se,ltz.se,na.se,norrteljetidning.se,nynashamnsposten.se,op.se,salaallehanda.com,st.nu,tidningenharjedalen.se,vlt.se##div.client-dialogue-plus
@@ -1618,8 +1614,7 @@ fokus.se##.social-sharing
 magasinetparagraf.se##script:inject(abort-current-inline-script.js, _stq)
 magasinetparagraf.se###large_banner
 sokmotorkonsult.se##.feature:has(a[href*="/sponsrade-lankar"])
-||milansverige.se^$csp=script-src 'self' 'unsafe-inline' 'unsafe-eval' *.googleapis.com *.tvmatchen.nu *.wp.com
-/deadblocker-front.$script,stylesheet,domain=milansverige.se
+/assets/js/front_js/*$script,domain=milansverige.se
 milansverige.se##.widget_text:has(a[href*="://ads."])
 @@||kurslitteratur.se^$generichide
 chef.se##.Blurb--native
@@ -1891,7 +1886,10 @@ garaget.org##.gorgad-side
 hightechguiden.se##script:inject(abort-on-property-write.js, document.oncontextmenu)
 hightechguiden.se##script:inject(abort-on-property-read.js, noNeedToBlock)
 /pum/pum-site-scripts.$script,domain=tkj.se
-tkj.se##script:inject(abort-on-property-write.js, cli_show_cookiebar)
+tkj.se###cookie-law-info-bar
+tkj.se##a[href*="tkj.se/ad/"]
+tkj.se##.category-annons
+tkj.se##li > a:has-text(Sponsor:)
 professionalsecrets.se##div[data-campaign="newsletter"]
 professionalsecrets.se##script:inject(abort-current-inline-script.js, $, fancybox)
 sportpanelen.se##.stream-item-above-post:has(a[href*="/ads."])
