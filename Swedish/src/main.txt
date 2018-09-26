@@ -111,6 +111,7 @@
 ||prisjakt.nu^$third-party
 ||proxyas.com^$third-party
 ||pushcrew.com^$third-party
+||push-notifications.top^$third-party
 ||qualifio.com^$third-party
 ||qualifioapp.com^$third-party
 ||reco.se^$third-party
@@ -332,6 +333,7 @@
 ||look.ufinkln.com^
 ||ufinkln.com/offer?prod$popup
 ||*.choose-your-prize*.life^$document
+||reauthenticator.com^$third-party
 ! https://www.aftonbladet.se/nyheter/a/vm1BOw/anders-46-lurades-av-falsk-trafiksajt--nu-stams-foretagaren
 ! https://www.svt.se/nyheter/konsument/tusentals-bilister-lurade-av-sajt-som-tar-betalt-for-gratis-tjanster
 ||trafikenheten.se^
@@ -488,7 +490,7 @@ mestmotor.se,kingmagazine.se,cartoonnetwork.se##script:inject(abort-current-inli
 ||facebook.com/plugins/like$third-party,domain=~facebook.com|~fb.com
 
 ! Override EasyPrivacy and EasyList whitelists
-/wp-content/plugins/google-analytics-for-wordpress/*$~third-party,important,script,domain=katerinamagasin.se|nyhetsbyran.org|sportpanelen.se|vegokak.se|starbys.se|carinasphotolifestyle.se|battrestadsdel.se|karolinesvintage.se|clarakron.com|foodstories.se|undertian.com|ralycka.se|mmabetz.se|folkblick.se|fores.se|tidskriftenrespons.se
+/wp-content/plugins/google-analytics-for-wordpress/*$~third-party,important,script,domain=katerinamagasin.se|nyhetsbyran.org|sportpanelen.se|vegokak.se|starbys.se|carinasphotolifestyle.se|battrestadsdel.se|karolinesvintage.se|clarakron.com|foodstories.se|undertian.com|ralycka.se|mmabetz.se|folkblick.se|fores.se|tidskriftenrespons.se|alltsomsker.nu
 /wp-content/plugins/google-analytics-premium/*$~third-party,important,script,domain=humorbibeln.se|newsner.com
 /google-analytics-dashboard$script,important,domain=firstfoto.se|cyclingplus.se|halsafitness.se|fitnessformen.se|macguiden.net|ordfrontforlag.se|ulrikadavidsson.se|hemmahosulrika.se
 ||google-analytics.com/analytics.js$important,redirect=google-analytics.com/analytics.js,script,domain=tradera.com
@@ -1302,6 +1304,7 @@ nyafilmerhd.*,dreamfilmhd.*##script:inject(abort-current-inline-script.js, OneSi
 nyafilmerhd.*,dreamfilmhd.*##script:inject(set-constant.js, blockerDetected, false)
 nyafilmerhd.*,dreamfilmhd.*,swesub.*##a[style*="height"][rel*="nofollow"]
 nyafilmerhd.*##div[style^="margin-top:180px"]
+nyafilmerhd.*##div[style^="margin-top:210px"]
 nyafilmerhd.*,dreamfilmhd.*##a[data-hover="LADDA NED"]
 nyafilmerhd.*,dreamfilmhd.*##a[href$=".html"][target="_blank"]
 nyafilmerhd.*,dreamfilmhd.*##script:inject(addEventListener-defuser.js, /^(?:DOMContentLoaded|mouseup|mousedown|mousemove)$/)
@@ -1313,9 +1316,12 @@ nyafilmerhd.*##script:inject(setInterval-defuser.js, u6, 500)
 ||swesub.*^$csp=default-src 'self' 'unsafe-inline' 'unsafe-eval' *.tmdb.org ajax.cloudflare.com *.googleapis.com cdnjs.cloudflare.com fonts.gstatic.com openload.co nxload.com data:
 ||nordicfilm.*^$csp=default-src 'self' 'unsafe-inline' 'unsafe-eval' *.tmdb.org *.postimg.cc *.youtube.com *.googleapis.com fonts.gstatic.com vidbox.co
 ||nordicfilm.*^$csp=worker-src 'none'
+||nordicfilmhd.*^$csp=default-src 'self' 'unsafe-inline' 'unsafe-eval' *.tmdb.org *.postimg.cc *.youtube.com *.googleapis.com fonts.gstatic.com vidbox.co
+||nordicfilmhd.*^$csp=worker-src 'none'
 ||swesub.*^$csp=worker-src 'none'
 ||swesub.*/sw.js$script
 ||nordicfilm.*/sw.js
+||nordicfilmhd.*/sw.js
 nordicfilm.*,vidbox.co##script:inject(abort-current-inline-script.js, minimalUserResponseInMiliseconds)
 nordicfilm.*,vidbox.co##script:inject(abort-current-inline-script.js, miner)
 nordicfilm.*,vidbox.co,oload.stream##script:inject(noeval.js)
@@ -1335,6 +1341,7 @@ streamtajm.*##.longbanner
 streamtajm.*##script:inject(abort-current-inline-script.js, popunder)
 ||bit.ly^$subdocument,domain=jawcloud.co
 ||jawcloud.co/js/script.js$script
+||nxload.com/js/script.js$script
 ||jawcloud.co/banner$image
 jawcloud.co##script:inject(abort-current-inline-script.js, jawplayer, on)
 
@@ -1352,6 +1359,7 @@ nordichardware.se##.wpb_text_column:has(.surfamodul-blocktitle)
 nordichardware.se##.td_block_wrap:if(span:has-text(/sponsrat/i))
 nordichardware.se##.td_block_social_counter
 nordichardware.se##.pspy_info
+nordichardware.se##script:inject(abort-current-inline-script.js, message)
 @@||nordichardware.se^$generichide
 bubb.la##:xpath(//h2[@class="ad"]/parent::div[1])
 friatider.se##img[src*="336x150"]
@@ -1571,6 +1579,9 @@ hbl.fi,vastranyland.fi,ostnyland.fi,hangotidningen.fi##rekrybanner
 hbl.fi,vastranyland.fi,ostnyland.fi,hangotidningen.fi##gdpr-notice
 hbl.fi,vastranyland.fi,ostnyland.fi,hangotidningen.fi###okCookie
 hbl.fi,vastranyland.fi,ostnyland.fi,hangotidningen.fi##.type-advertorial
+hbl.fi,vastranyland.fi,ostnyland.fi,hangotidningen.fi##script:inject(setTimeout-defuser.js, ksfDfp.adsBlockedByNeverLoading)
+hbl.fi,vastranyland.fi,ostnyland.fi,hangotidningen.fi##script:inject(set-constant.js, ksfDfp.DisplayDiligentSlots, noopFunc)
+hbl.fi,vastranyland.fi,ostnyland.fi,hangotidningen.fi##script:inject(abort-current-inline-script.js, adfBrand)
 ||ksfmedia.simulator.palmu.fi/*/*.js$script,domain=hbl.fi|vastranyland.fi|ostnyland.fi|hangotidningen.fi
 ||munchkin.marketo.net/munchkin.js$script,important,domain=hbl.fi|vastranyland.fi|ostnyland.fi|hangotidningen.fi
 ||vasabladet.fi/Scripts/HSSAnalyticsUtils.js$script
