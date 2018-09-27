@@ -337,7 +337,6 @@
 ! https://www.aftonbladet.se/nyheter/a/vm1BOw/anders-46-lurades-av-falsk-trafiksajt--nu-stams-foretagaren
 ! https://www.svt.se/nyheter/konsument/tusentals-bilister-lurade-av-sajt-som-tar-betalt-for-gratis-tjanster
 ||trafikenheten.se^
-||transportverket.com^
 ! https://www.reddit.com/r/sweden/comments/8gamb7/massutskick_om_att_gå_ur_svenska_kyrkan_är_det/
 ||skattamindre.se^
 ||mindreskatt.se^
@@ -445,7 +444,7 @@ abus.com#@##cookieChoiceInfo
 ! Common site specific blocking
 .*/*280x240*.$image,domain=rumhemma.se
 .*/*annons*.$image,domain=guldkanalen.se|kurera.se|nvp.se|rumhemma.se|tekniksmart.se|megafonen.nu|newsvoice.se|lesscarbs.se|lundagard.se
-.*/*banner*.$image,domain=dansbandskanalen.se|etc.se|evertiq.se|guldkanalen.se|kurera.se|markbladet.se|rockkocken.se|rumhemma.se|skrattnet.se|tkj.se|vaken.se|sportpanelen.se|newsvoice.se|sportbloggare.com|marsta.nu|lakartidningen.se|bettips.se
+.*/*banner*.$image,domain=dansbandskanalen.se|etc.se|evertiq.se|guldkanalen.se|kurera.se|markbladet.se|rockkocken.se|rumhemma.se|skrattnet.se|tkj.se|vaken.se|sportpanelen.se|newsvoice.se|sportbloggare.com|marsta.nu|lakartidningen.se|bettips.se|svf.se
 .*/*banner*.$script,domain=dagenshandel.se|entreprenor.se|food-supply.se|magasinetparagraf.se|motormagasinet.se|skyddosakerhet.se
 .*/*sponsor*.$image,domain=humorbibeln.se|newsner.com|sportbibeln.se
 /ajax_statistics_count/*$xmlhttprequest,domain=industrinyheter.se|dagensnaringsliv.se
@@ -480,7 +479,8 @@ dagensps.se,husvagnochcamping.se,hemtrevligt.se,akaskidor.se,utemagasinet.se,liv
 breakit.se,dagensps.se,hemtrevligt.se,akaskidor.se,utemagasinet.se,livetombord.se,svenskgolf.se,kingmagazine.se,vagabond.se,tidningenhalsa.se,mestmotor.se,husvagnochcamping.se,ekuriren.se,kkuriren.se,sn.se,allehanda.se,arbetarbladet.se,avestatidning.com,bblat.se,dalademokraten.se,dt.se,fagersta-posten.se,gd.se,lt.se,ltz.se,na.se,norrteljetidning.se,nynashamnsposten.se,op.se,salaallehanda.com,st.nu,tidningenharjedalen.se,vlt.se##script:inject(abort-current-inline-script.js, NREUM, info)
 breakit.se,bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se,nyheter24.se##script:inject(abort-on-property-read.js, _hjSettings)
 breakit.se##script:inject(abort-current-inline-script.js, _vwo_code)
-mestmotor.se,kingmagazine.se,cartoonnetwork.se##script:inject(abort-current-inline-script.js, ADTECH, config)
+mestmotor.se,kingmagazine.se,cartoonnetwork.se,vagabond.se##script:inject(abort-current-inline-script.js, ADTECH, config)
+kamerabild.se,mobil.se##script:inject(set-constant.js, Sidpyssel.prototype.fixaStoran, noopFunc)
 
 ! Facebook junk
 /facebook_sdk.js$script,domain=njus.me|radioplay.se
@@ -645,13 +645,16 @@ bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##sc
 bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##script:inject(abort-current-inline-script.js, runAd)
 bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##script:inject(abort-current-inline-script.js, $, checkFrqCookie)
 bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##script:inject(abort-current-inline-script.js, adformLoader, loadAd)
-bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##script:inject(addEventListener-defuser.js, /^(?:mousemove|mouseout|mousedown)$/)
+bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##script:inject(addEventListener-defuser.js, /^(?:mousemove|mouseout)$/)
 
 ! Flowplayer/lemonwhale
 ||lwcdn.com/vendor/ima.min.js$script
 lwcdn.com##script:inject(addEventListener-defuser.js, /^(?:adBlocker|contextmenu)$/)
+||ptm.flowplayer.com/vod/*/ping$xmlhttprequest
+||ptm.flowplayer.com/vod/*/view$xmlhttprequest
 
 ! SCHIBSTED
+||cis.schibsted.com/api/*/identify$xmlhttprequest
 svd.se##.AdWrapper
 svd.se##.Container--ad
 svd.se##div[data-controller="newslettersubscription"]
@@ -1145,6 +1148,7 @@ fiskejournalen.se##div[style="background-color:#ededed"]:if(small:has-text(/anno
 /multiad_jquery.js$script,domain=husvagnochcamping.se
 kingmagazine.se,vagabond.se,hemtrevligt.se,akaskidor.se,utemagasinet.se,livetombord.se,svenskgolf.se,tidningenhalsa.se,mestmotor.se##.latest-article-native
 kingmagazine.se##div[data-fullscreen-banner]
+kingmagazine.se##.partner-article
 vagabond.se##.most-read-article:if(span:has-text(/partner/i))
 mestmotor.se,vagabond.se,kingmagazine.se,hemtrevligt.se,akaskidor.se,svenskgolf.se,tidningenhalsa.se,livetombord.se,utemagasinet.se##.alert-cookies
 mestmotor.se,vagabond.se,kingmagazine.se,hemtrevligt.se,akaskidor.se,svenskgolf.se,tidningenhalsa.se,livetombord.se,utemagasinet.se###facebookSlideIn
@@ -1459,7 +1463,6 @@ motormagasinet.se,food-supply.se,skyddosakerhet.se###junglebogen
 motormagasinet.se##[id^="dfp-a1p"]
 motormagasinet.se,food-supply.se##.rotating-junglebogen
 ||food-supply.se/bnrscr^$subdocument
-mobil.se##script:inject(set-constant.js, Sidpyssel.prototype.fixaStoran, noopFunc)
 mobil.se##li.partner
 mobil.se##a[href^="/partner/"]
 mobil.se##.aside-puff > li:has-text(/sponsrad/i)
@@ -1852,6 +1855,7 @@ minsolresa.se,resatillsolen.se##aside#text-5
 gotlandswebben.se##.header-ads-wrapper
 @@||gotlandswebben.se^$generichide
 kamerabild.se##.partner
+kamerabild.se###storan
 kamerabild.se##script:inject(set-constant.js, Annons, noopFunc)
 firstfoto.se,cyclingplus.se,halsafitness.se,fitnessformen.se,macguiden.net##.this-is-an-ad
 cyclingplus.se##article:if(.single-subtitle:has-text(/annonssamarbete/i))
