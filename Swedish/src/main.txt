@@ -188,6 +188,7 @@
 /bmbBurt.$script
 /bmbDfpUtils.$script
 /bmbFusionUtils.$script
+/js/byside_webcare$script
 /cdn-cgi/pe/bag2?*adform.net$xmlhttprequest
 /cdn-cgi/pe/bag2?*doubleclick.net$xmlhttprequest
 /cdn-cgi/pe/bag2?*googletagmanager.com$xmlhttprequest,domain=~halsafitness.se
@@ -442,7 +443,7 @@ abus.com#@##cookieChoiceInfo
 @@||opinionstage.com^$domain=99.se|fz.se|sweclockers.com
 24blekinge.se,24emmaboda.se,24falkenberg.se,24halmstad.se,24helsingborg.se,24kalmar.se,24kristianstad.se,24malmo.se,24nybro.se,24trelleborg.se,24uppsala.se,24ystad.se,24varberg.se,24oland.se##script:inject(set-constant.js, lwhb, noopFunc)
 ! https://github.com/easylist/easylist/issues/1887
-@@||worldoftulo.com^
+@@||backend.worldoftulo.com^$script
 
 ! Common site specific blocking
 .*/*280x240*.$image,domain=rumhemma.se
@@ -825,12 +826,7 @@ mittkok.expressen.se##script:inject(abort-current-inline-script.js, ExpressenAna
 ||jtp.expressen.se/notify/clip-started.$image
 /_widget/destination$subdocument,domain=expressen.se
 /closest-native*/*$xmlhttprequest,domain=expressen.se
-! Plocka bort den onödiga och irriterande autostartande live-spelaren på förstasidan som enbart slöar ner och äter data för vissa
-! Bästa alternativet så länge tills feature-policy kanske implementerats
-expressen.se##figure[class*="video-player"][data-article-data*="/tv/nyheter/live-start/live-tv-senaste-nyheterna-med-expressen-tv"]
-/article/tv/nyheter/live-start/live-tv-senaste-nyheterna-med-expressen-tv$xmlhttprequest,domain=expressen.se
 ||expressen.se/videos/fstrat$media
-/_livetvpreview/*$media,domain=expressen.se
 /rantekartan/*$subdocument,domain=expressen.se
 sydsvenskan.se,hd.se##div[data-category="native-teaser"]
 /native?noBurtProfiles=1$xmlhttprequest,domain=hd.se|sydsvenskan.se
@@ -863,6 +859,7 @@ koket.se##li.slide:has(.external_advertiser)
 koket.se##.external_advertiser
 koket.se###react-newsletter-overlay
 koket.se##.kf-mosaic-widget:has(.mosaic__custom-sponsor-holder)
+koket.se##.promo__container
 /bn-01d-fusion.js$domain=koket.se
 fotbollskanalen.se##div[class*="top-item__link"][onclick="trackClickThenOpen();"]
 fotbollskanalen.se##script:inject(abort-current-inline-script.js, adformtag)
