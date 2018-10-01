@@ -266,7 +266,8 @@
 ||episerver.net/*/epi-util/find.js$script
 ||es.loppi.se/api/imp$xmlhttprequest
 ||es.loppi.se/get$script
-||fast.fonts.net/t/1.css$stylesheet
+||fast.fonts.net/t/1.css$stylesheet,xmlhttprequest
+||fast.fonts.com/t/1.css$stylesheet,xmlhttprequest
 ||feeds.feedburner.com^$image
 ||files.cdn.spilcloud.com/pb/$script
 ||gamedistribution.com/libs/gd/analytics.$script
@@ -291,6 +292,7 @@
 ||nouw.com/campaignpost/reg/$image
 ||oas.*.se/om/$script
 ||resources.blogblog.com^*/paging_dot.$image
+||p.typekit.net/p.css$stylesheet
 ||pingback.issuu.com/ping$xmlhttprequest
 ||pixel.playbuzz.com^$xmlhttprequest
 ||s3.amazonaws.com/cc.silktide.com/cookieconsent.$script
@@ -572,6 +574,7 @@ kamerabild.se,mobil.se##script:inject(set-constant.js, Sidpyssel.prototype.fixaS
 /plugins/wppas/*$script,stylesheet,domain=elbilsnytt.se
 /plugins/wysija-newsletters/*
 /plugins/x-email-mailchimp/*$script
+/wp-content/plugins/top-10/*$script
 /wp-content/plugins/easy-social-share-buttons$script
 /wp-content/uploads/*/advanced.$script,domain=datormagazin.se|skanesport.se
 /wp-content/themes/*/assets/js/cookie.$script
@@ -2076,3 +2079,6 @@ battrenyheter.se##.home-cat-first:has(a[href$="/sponsrad/"])
 /acilia-main.$script,domain=foxtv.se
 /freewheel.js$script,domain=foxtv.se
 foxtv.se###cookieBar
+tidningenkarriar.se##.l-advertisement
+@@||morgonbladet.nu^$generichide
+morgonbladet.nu##script:inject(noeval.js)
