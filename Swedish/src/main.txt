@@ -168,6 +168,7 @@
 .se/Logger?
 .se/sponsored/$image
 .se/files/annons/$image
+.se/fightodds.plugin/fightodds.plugin.$script
 .se/upload/annons/
 /?file=lokus$subdocument
 /_graphics/annons/*
@@ -420,7 +421,7 @@
 @@/adserver.$~third-party,script,domain=fotosidan.se|utsidan.se
 @@/advertisement.js$~third-party,script,domain=blocket.se|emocore.se|kaninsajten.se|kit.se|saljplatsen.se|spela.se
 @@/js/ad.js$~third-party,domain=sweclockers.com
-@@/js/ads.js$~third-party,domain=101ideer.se|affarsliv.com|affarslivgotland.se|alltforforaldrar.se|alltommat.se|alltomtradgard.se|amelia.se|bike.se|corren.se|damernasvarld.se|deliquate.se|eposten.se|folkbladet.se|foretagande.se|gardochtorp.se|godsochgardar.se|helagotland.se|hemochantik.se|husbilhusvagn.se|ilikeradio.se|johannatoftby.se|klackspark.com|klassiker.nu|kuriren.nu|lantliv.com|ljudochbild.se|madeleineilmrud.se|magdalenagraaf.se|mama.nu|mopedgaraget.se|mvt.se|naturvetenskap.org|norrbottensaffarer.se|nsd.se|nt.se|pt.se|radio.se|skonahem.com|styleby.nu|swedroid.se|tara.se|topphalsa.se|tvmatchen.nu|unt.se|uppsalatidningen.se|veckorevyn.com|vibilagare.se|villavarmt.se|vt.se|privataaffarer.se|tidningenhembakat.se|teknikensvarld.se|alltsomsker.nu|smartleasing.se|viforaldrar.se|englasshowroom.com|caroftheyear.se|isabellalowengrip.se|malagaguiden.se|matplatsen.net|kritiker.se|svenskjakt.se
+@@/js/ads.js$~third-party,domain=101ideer.se|affarsliv.com|affarslivgotland.se|alltforforaldrar.se|alltommat.se|alltomtradgard.se|amelia.se|bike.se|corren.se|damernasvarld.se|deliquate.se|eposten.se|folkbladet.se|foretagande.se|gardochtorp.se|godsochgardar.se|helagotland.se|hemochantik.se|husbilhusvagn.se|ilikeradio.se|johannatoftby.se|klackspark.com|klassiker.nu|kuriren.nu|lantliv.com|ljudochbild.se|madeleineilmrud.se|magdalenagraaf.se|mama.nu|mopedgaraget.se|mvt.se|naturvetenskap.org|norrbottensaffarer.se|nsd.se|nt.se|pt.se|radio.se|skonahem.com|styleby.nu|swedroid.se|tara.se|topphalsa.se|tvmatchen.nu|unt.se|uppsalatidningen.se|veckorevyn.com|vibilagare.se|villavarmt.se|vt.se|privataaffarer.se|tidningenhembakat.se|teknikensvarld.se|alltsomsker.nu|smartleasing.se|viforaldrar.se|englasshowroom.com|caroftheyear.se|isabellalowengrip.se|malagaguiden.se|matplatsen.net|kritiker.se|svenskjakt.se|rabattpris.se
 @@/js/ads/advert.min.js$~third-party,script,domain=spelo.se
 @@/js/adsbygoogle.js^$~third-party,script,domain=feber.se|tjock.se
 @@/js/advert.$script,domain=mariestadstidningen.se|nwt.se|sla.se
@@ -493,7 +494,7 @@ kamerabild.se,mobil.se##script:inject(set-constant.js, Sidpyssel.prototype.fixaS
 ||facebook.com/plugins/like$third-party,domain=~facebook.com|~fb.com
 
 ! Override EasyPrivacy and EasyList whitelists
-/wp-content/plugins/google-analytics-for-wordpress/*$~third-party,important,script,domain=katerinamagasin.se|nyhetsbyran.org|sportpanelen.se|vegokak.se|starbys.se|carinasphotolifestyle.se|battrestadsdel.se|karolinesvintage.se|clarakron.com|foodstories.se|undertian.com|ralycka.se|mmabetz.se|folkblick.se|fores.se|tidskriftenrespons.se|alltsomsker.nu
+/wp-content/plugins/google-analytics-for-wordpress/*$~third-party,important,script,domain=katerinamagasin.se|nyhetsbyran.org|sportpanelen.se|vegokak.se|starbys.se|carinasphotolifestyle.se|battrestadsdel.se|karolinesvintage.se|clarakron.com|foodstories.se|undertian.com|ralycka.se|mmabetz.se|folkblick.se|fores.se|tidskriftenrespons.se|alltsomsker.nu|mmanytt.se
 /wp-content/plugins/google-analytics-premium/*$~third-party,important,script,domain=humorbibeln.se|newsner.com
 /google-analytics-dashboard$script,important,domain=firstfoto.se|cyclingplus.se|halsafitness.se|fitnessformen.se|macguiden.net|ordfrontforlag.se|ulrikadavidsson.se|hemmahosulrika.se
 ||google-analytics.com/analytics.js$important,redirect=google-analytics.com/analytics.js,script,domain=tradera.com
@@ -505,7 +506,7 @@ kamerabild.se,mobil.se##script:inject(set-constant.js, Sidpyssel.prototype.fixaS
 ! Unwanted Wordpress plugins and bloat
 /plugins/ab_appnexus_ads/*$script
 /plugins/ad-ace/*$script,stylesheet
-/plugins/ad-blocking-advisor/*$script,stylesheet,image,domain=deliquate.se|naturvetenskap.org|juliusguldbog.se|smartleasing.se
+/plugins/ad-blocking-advisor/*$script,stylesheet,image,domain=deliquate.se|naturvetenskap.org|juliusguldbog.se|smartleasing.se|rabattpris.se
 /plugins/ad-inserter-pro/*$script,stylesheet,domain=rocknytt.net
 /plugins/add-to-any/*$script,stylesheet
 /plugins/adsanity/*$script,stylesheet
@@ -1317,6 +1318,7 @@ nyafilmerhd.*##script:inject(setInterval-defuser.js, u6, 500)
 ||dreamfilmhd.*^$csp=default-src 'self' 'unsafe-inline' 'unsafe-eval' jawcloud.co *.jawcloud.co upvtt.com wp.com *.wp.com *.googleapis.com vkpass.com *.vkpass.com *.gstatic.com
 ||nyafilmerhd.*^$csp=default-src 'self' 'unsafe-inline' 'unsafe-eval' jawcloud.co *.jawcloud.co upvtt.com wp.com *.wp.com *.googleapis.com vkpass.com *.vkpass.com *.gstatic.com
 ||nyafilmerhd.*/wp-content/themes/keremiya1/js/script.js$script
+||nyafilmerhd.*/wp-content/themes/keremiya1/js/license.$script
 ||swesub.*^$csp=default-src 'self' 'unsafe-inline' 'unsafe-eval' *.tmdb.org ajax.cloudflare.com *.googleapis.com cdnjs.cloudflare.com fonts.gstatic.com openload.co nxload.com data:
 ||nordicfilm.*^$csp=default-src 'self' 'unsafe-inline' 'unsafe-eval' *.tmdb.org *.postimg.cc *.youtube.com *.googleapis.com fonts.gstatic.com vidbox.co
 ||nordicfilm.*^$csp=worker-src 'none'
@@ -1333,6 +1335,7 @@ nordicfilm.*,vidbox.co,oload.stream##script:inject(setTimeout-defuser.js, check)
 nordicfilm.*,vidbox.co,oload.stream##script:inject(setInterval-defuser.js, check)
 ||cdnbox.win/inc/ETKe.php^$script
 swesub.*##script:inject(abort-current-inline-script.js, atob)
+swesub.*##a.btn[target="_blank"]
 nyafilmerhd.*,dreamfilmhd.*,swesub.*,jawcloud.co##script:inject(abort-current-inline-script.js, _Hasync, push)
 swesub.*##script:inject(abort-current-inline-script.js, document.oncontextmenu)
 swesub.*##.alert-bottom
@@ -1344,10 +1347,11 @@ dreamfilm.*##.TPlayer.on:after:style(height: 0 !important; width: 0 !important;)
 streamtajm.*##.longbanner
 streamtajm.*##script:inject(abort-current-inline-script.js, popunder)
 ||bit.ly^$subdocument,domain=jawcloud.co
-||jawcloud.co/js/script.js$script
-||nxload.com/js/script.js$script
+/js/script.js$script,domain=nxload.com|jawcloud.co|openload.co
+/license.$script,domain=nxload.com|jawcloud.co|openload.co
 ||jawcloud.co/banner$image
 jawcloud.co##script:inject(abort-current-inline-script.js, jawplayer, on)
+||openload.co/assets/js/video-js/vast$script
 
 ! Various annoyances
 youplay.se,nyheter24.se,emocore.se,modette.se,dayviews.com,filmtipset.se,affarsliv.com,affarslivgotland.se,corren.se,eposten.se,folkbladet.se,helagotland.se,klackspark.com,kuriren.nu,mvt.se,norrbottensaffarer.se,nsd.se,nt.se,pt.se,unt.se,vt.se,kamrat.com##script:inject(set-constant.js, youplay.helpers.disableRightClick, noopFunc)
@@ -1630,8 +1634,10 @@ magasinetparagraf.se###large_banner
 sokmotorkonsult.se##.feature:has(a[href*="/sponsrade-lankar"])
 /assets/js/front_js/*$script,domain=milansverige.se
 milansverige.se##.widget_text:has(a[href*="://ads."])
+milansverige.se##.background-cover
 @@||kurslitteratur.se^$generichide
 chef.se##.Blurb--native
+chef.se##.global-cookie-msg
 ||akamai.net/swordfishinc.download.akamai.com$script,domain=chef.se|arla.se
 dagenssamhalle.se##.notice
 dagenssamhalle.se##.node-native

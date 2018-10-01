@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Title: Frellwit's Swedish Filter
 ! Expires: 3 days (update frequency)
-! Last modified: 2018-10-01 05:34:37 CEST
+! Last modified: 2018-10-01 12:18:24 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -91,6 +91,7 @@
 .se/annons/
 .se/banner.stat?
 .se/counter/
+.se/fightodds.plugin/fightodds.plugin.$script
 .se/files/annons/$image
 .se/log/?
 .se/logger.$script
@@ -236,6 +237,7 @@
 /js/partners.js$script,domain=sporttv.nu
 /js/paywall.js$script,domain=fokus.se
 /js/personalization.js$script,domain=fokus.se
+/js/script.js$script,domain=jawcloud.co|nxload.com|openload.co
 /js/sifo.js^$script
 /js/smart-app-banner.$script,domain=svenskafans.com
 /js/smartbanner/*$domain=tvmatchen.nu
@@ -246,6 +248,7 @@
 /lazyad-loader.$script,domain=kimura.se|tvmatchen.nu
 /lib/js/sticky.$script,stylesheet,domain=kenzas.se
 /libs/cookieconsent2/*
+/license.$script,domain=jawcloud.co|nxload.com|openload.co
 /listByType?*adSettings^$xmlhttprequest,domain=kokaihop.se
 /live/radarmagazine.se.js$script
 /livevideo/getlivevideo?autoplay=true&position=outsider$domain=di.se
@@ -281,7 +284,7 @@
 /pis.gif$image,domain=idg.se
 /plugins/ab_appnexus_ads/*$script
 /plugins/ad-ace/*$script,stylesheet
-/plugins/ad-blocking-advisor/*$image,script,stylesheet,domain=deliquate.se|juliusguldbog.se|naturvetenskap.org|smartleasing.se
+/plugins/ad-blocking-advisor/*$image,script,stylesheet,domain=deliquate.se|juliusguldbog.se|naturvetenskap.org|rabattpris.se|smartleasing.se
 /plugins/ad-inserter-pro/*$script,stylesheet,domain=rocknytt.net
 /plugins/add-to-any/*$script,stylesheet
 /plugins/adsanity/*$script,stylesheet
@@ -443,7 +446,7 @@
 @@/advertisement*.js$script,domain=dn.se
 @@/advertisement.js$script,~third-party,domain=blocket.se|emocore.se|kaninsajten.se|kit.se|saljplatsen.se|spela.se
 @@/js/ad.js$~third-party,domain=sweclockers.com
-@@/js/ads.js$~third-party,domain=101ideer.se|affarsliv.com|affarslivgotland.se|alltforforaldrar.se|alltommat.se|alltomtradgard.se|alltsomsker.nu|amelia.se|bike.se|caroftheyear.se|corren.se|damernasvarld.se|deliquate.se|englasshowroom.com|eposten.se|folkbladet.se|foretagande.se|gardochtorp.se|godsochgardar.se|helagotland.se|hemochantik.se|husbilhusvagn.se|ilikeradio.se|isabellalowengrip.se|johannatoftby.se|klackspark.com|klassiker.nu|kritiker.se|kuriren.nu|lantliv.com|ljudochbild.se|madeleineilmrud.se|magdalenagraaf.se|malagaguiden.se|mama.nu|matplatsen.net|mopedgaraget.se|mvt.se|naturvetenskap.org|norrbottensaffarer.se|nsd.se|nt.se|privataaffarer.se|pt.se|radio.se|skonahem.com|smartleasing.se|styleby.nu|svenskjakt.se|swedroid.se|tara.se|teknikensvarld.se|tidningenhembakat.se|topphalsa.se|tvmatchen.nu|unt.se|uppsalatidningen.se|veckorevyn.com|vibilagare.se|viforaldrar.se|villavarmt.se|vt.se
+@@/js/ads.js$~third-party,domain=101ideer.se|affarsliv.com|affarslivgotland.se|alltforforaldrar.se|alltommat.se|alltomtradgard.se|alltsomsker.nu|amelia.se|bike.se|caroftheyear.se|corren.se|damernasvarld.se|deliquate.se|englasshowroom.com|eposten.se|folkbladet.se|foretagande.se|gardochtorp.se|godsochgardar.se|helagotland.se|hemochantik.se|husbilhusvagn.se|ilikeradio.se|isabellalowengrip.se|johannatoftby.se|klackspark.com|klassiker.nu|kritiker.se|kuriren.nu|lantliv.com|ljudochbild.se|madeleineilmrud.se|magdalenagraaf.se|malagaguiden.se|mama.nu|matplatsen.net|mopedgaraget.se|mvt.se|naturvetenskap.org|norrbottensaffarer.se|nsd.se|nt.se|privataaffarer.se|pt.se|rabattpris.se|radio.se|skonahem.com|smartleasing.se|styleby.nu|svenskjakt.se|swedroid.se|tara.se|teknikensvarld.se|tidningenhembakat.se|topphalsa.se|tvmatchen.nu|unt.se|uppsalatidningen.se|veckorevyn.com|vibilagare.se|viforaldrar.se|villavarmt.se|vt.se
 @@/js/ads/advert.min.js$script,~third-party,domain=spelo.se
 @@/js/adsbygoogle.js^$script,~third-party,domain=feber.se|tjock.se
 @@/js/advert.$script,domain=mariestadstidningen.se|nwt.se|sla.se
@@ -640,6 +643,7 @@ byggnadsarbetaren.se##[class^="siteAds"]
 bytbil.com###privacyModal
 centerpartiet.se##.sol-cookie-message
 chef.se##.Blurb--native
+chef.se##.global-cookie-msg
 chef.se,svd.se##.Ad
 cyclingplus.se,firstfoto.se,fitnessformen.se,halsafitness.se,macguiden.net##.this-is-an-ad
 cyclingplus.se,halsafitness.se##.headerbar-container
@@ -951,6 +955,7 @@ metro.se##.o-preview--ad
 metro.se##.o-preview--collab
 metro.se##div[class*="o-advert"]
 metromode.se##.b-topshop
+milansverige.se##.background-cover
 minfil.com##.ab-wrapper
 minhembio.com##.adbox
 minsolresa.se,resatillsolen.se##aside#text-5
@@ -1084,6 +1089,7 @@ sweclockers.com##.prisjaktPopular
 swedroid.se##.social
 swedroid.se##table[style="width:1190px; height:76px"]
 swesub.*##.alert-bottom
+swesub.*##a.btn[target="_blank"]
 sysidan.se##.adscolumn
 tasteline.com##.popup-overlay
 tekniksmart.se##.adcontainer
@@ -1343,7 +1349,6 @@ webbjobb.io##.cookie
 ||inxy.run^
 ||izooto.com^$third-party
 ||jawcloud.co/banner$image
-||jawcloud.co/js/script.js$script
 ||jssdk.privacy.schibsted.com/privacy-notifier.$script
 ||jssdk.privacy.schibsted.com/pulse.$script
 ||jtp.expressen.se/notify/clip-started.$image
@@ -1414,12 +1419,13 @@ webbjobb.io##.cookie
 ||nouw.com/api/campaignpost$xmlhttprequest
 ||nouw.com/campaignpost/reg/$image
 ||ntm.eu/om/img/cx/Matchad$subdocument,domain=affarsliv.com|affarslivgotland.se|corren.se|eposten.se|folkbladet.se|helagotland.se|kuriren.nu|mvt.se|norrbottensaffarer.se|nsd.se|nt.se|pt.se|unt.se|vt.se
-||nxload.com/js/script.js$script
+||nyafilmerhd.*/wp-content/themes/keremiya1/js/license.$script
 ||nyafilmerhd.*/wp-content/themes/keremiya1/js/script.js$script
 ||nyafilmerhd.*^$csp=default-src 'self' 'unsafe-inline' 'unsafe-eval' jawcloud.co *.jawcloud.co upvtt.com wp.com *.wp.com *.googleapis.com vkpass.com *.vkpass.com *.gstatic.com
 ||oas.*.se/om/$script
 ||obj.fotosidan.se/obj/pa/$image
 ||omni-ads.omni.news^
+||openload.co/assets/js/video-js/vast$script
 ||optnmnstr.com^$third-party
 ||panera.io^$third-party
 ||pensiono.se^$third-party
