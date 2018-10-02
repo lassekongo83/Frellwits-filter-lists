@@ -24,8 +24,8 @@
 /plugins/popup-builder-platinum/*$important,domain=mmabetz.se|sportpanelen.se
 /streamsense.$important,script,domain=dn.se
 /sweden/swedish/hjo-tidning.html$document
-/wp-content/plugins/google-analytics-for-wordpress/*$important,script,~third-party,domain=alltsomsker.nu|battrestadsdel.se|carinasphotolifestyle.se|clarakron.com|folkblick.se|foodstories.se|fores.se|karolinesvintage.se|katerinamagasin.se|mmabetz.se|mmanytt.se|nyhetsbyran.org|ralycka.se|sportpanelen.se|starbys.se|tidskriftenrespons.se|undertian.com|vegokak.se
-/wp-content/plugins/google-analytics-premium/*$important,script,~third-party,domain=humorbibeln.se|newsner.com
+/wp-content/plugins/google-analytics-for-wordpress/*$important,script,~third-party,domain=alltsomsker.nu|battrestadsdel.se|carinasphotolifestyle.se|clarakron.com|fjl.se|folkblick.se|foodstories.se|fores.se|karolinesvintage.se|katerinamagasin.se|mmabetz.se|mmanytt.se|nyhetsbyran.org|ralycka.se|sportpanelen.se|starbys.se|tidskriftenrespons.se|undertian.com|vegokak.se
+/wp-content/plugins/google-analytics-premium/*$important,script,~third-party,domain=ettgottskratt.se|humorbibeln.se|newsner.com|sportbibeln.se
 101ideer.se,alltommat.se,alltomtradgard.se,amelia.se,lantliv.com,mama.nu,privataaffarer.se,skonahem.com,styleby.nu,tara.se,topphalsa.se,veckorevyn.com##a.teaser:has-text(/annonssamarbete/i)
 24blekinge.se,24emmaboda.se,24falkenberg.se,24halmstad.se,24helsingborg.se,24kalmar.se,24kristianstad.se,24malmo.se,24nybro.se,24oland.se,24trelleborg.se,24uppsala.se,24varberg.se,24ystad.se##script:inject(set-constant.js, lwhb, noopFunc)
 7ha.se,barometern.se,blt.se,bt.se,kristianstadsbladet.se,olandsbladet.se,osterlenmagasinet.se,ostrasmaland.se,smp.se,sydostran.se,trelleborgsallehanda.se,ut.se,ystadsallehanda.se##script:inject(abort-current-inline-script.js, adTags)
@@ -153,6 +153,9 @@ dreamfilmhd.*##script:inject(setInterval-defuser.js, F9, 500)
 egoinas.se##article.uk-article:has(.sw-sf-sponsor)
 emocore.se##.m_t.box:if(h2:has-text(Rekommenderade länkar))
 eniro.se##script:inject(abort-current-inline-script.js, $, WebAnalytics)
+ettgottskratt.se,hightechguiden.se,humorbibeln.se,newsner.com,sportbibeln.se##script:inject(abort-on-property-write.js, advadsTracker)
+ettgottskratt.se,humorbibeln.se,newsner.com,sportbibeln.se##.ssp_divider:has(.sponsored-bar)
+ettgottskratt.se,humorbibeln.se,newsner.com,sportbibeln.se##script:inject(abort-on-property-write.js, advads_passive_ads)
 eurosport.se,jawcloud.co,oload.stream,openload.co,saraabrahamsson.se,streamango.com##script:inject(addEventListener-defuser.js, contextmenu)
 evertiq.se##body,#bgWrapp:style(background-image: none !important; cursor: initial !important;)
 evertiq.se##script:inject(addEventListener-defuser.js, /^(?:click|mouseover)$/, t)
@@ -211,7 +214,7 @@ garaget.org##:xpath(//h4[@class="title-bg"][text()[contains(., 'Sponsrade tjäns
 garaget.org##:xpath(//p[contains(concat(' ', @class, ' '), ' discrete ')][text()[contains(., 'Annons:')]]/following-sibling::small)
 garaget.org##script:inject(cookie-remover.js, /^mayhem/)
 gynning.net##[id^="post-"]:if(h3:has-text(/i samarbete med/i))
-halsafitness.se##.post-wrap:if(h3:has-text(/annonssamarbete/i))
+halsafitness.se,yogaworld.se##.post-wrap:has(h3:has-text(/annonssamarbete/i))
 hangotidningen.fi,hbl.fi,ostnyland.fi,vastranyland.fi##script:inject(abort-current-inline-script.js, adfBrand)
 hangotidningen.fi,hbl.fi,ostnyland.fi,vastranyland.fi##script:inject(set-constant.js, ksfDfp.DisplayDiligentSlots, noopFunc)
 hangotidningen.fi,hbl.fi,ostnyland.fi,vastranyland.fi##script:inject(setTimeout-defuser.js, ksfDfp.adsBlockedByNeverLoading)
@@ -220,9 +223,6 @@ hemnet.se##.featured-news__link:has(.featured-news__ribbon--sponsored)
 hemnet.se##.recent-news__item:if(.recent-news__category:has-text(/sponsrad/i))
 hightechguiden.se##script:inject(abort-on-property-read.js, noNeedToBlock)
 hightechguiden.se##script:inject(abort-on-property-write.js, document.oncontextmenu)
-hightechguiden.se,humorbibeln.se,newsner.com,sportbibeln.se##script:inject(abort-on-property-write.js, advadsTracker)
-humorbibeln.se,newsner.com,sportbibeln.se##.ssp_divider:has(.sponsored-bar)
-humorbibeln.se,newsner.com,sportbibeln.se##script:inject(abort-on-property-write.js, advads_passive_ads)
 hypeline.se##.homecontent:has(.sponsrad_ruta)
 ica.se##.hse-recipe-list__wrapper:has(a[data-tracking*="LEVERANTÖRSSAMARBETE"])
 ica.se##script:inject(abort-current-inline-script.js, $, .recipe-ad.multiple-sponsors)
@@ -338,6 +338,7 @@ realtid.se##script:inject(abort-current-inline-script.js, sas)
 resume.se##.teaser-regular:if(.tag:has-text(/sponsring/i))
 samnytt.se##script:inject(abort-on-property-read.js, advanced_ads_ready)
 skanesport.se##script:inject(abort-current-inline-script.js, advanced_ads_adsense_UID)
+skrattsajten.com##script:inject(abort-current-inline-script.js, $, e.preventDefault)
 sokmotorkonsult.se##.feature:has(a[href*="/sponsrade-lankar"])
 spela.se##script:inject(abort-current-inline-script.js, trackEvidonEvent)
 sportpanelen.se##.stream-item-above-post:has(a[href*="/ads."])
