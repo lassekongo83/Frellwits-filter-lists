@@ -61,6 +61,8 @@
 ||exitintel.com^$third-party
 ||fakturino.se^$third-party
 ||finkammat.se^$third-party
+||foxpush.com^$third-party
+||foxpush.net^$third-party
 ||franecki.net^$third-party
 ||gameanalytics.com^$third-party
 ||getsitecontrol.com^$third-party
@@ -484,7 +486,7 @@ abus.com#@##cookieChoiceInfo
 
 ! Common scriptlets
 ng.se,alltomstockholm.se,mitti.se,bloggbevakning.se,cornucopia.cornubot.se,innebandymagazinet.se##script:inject(abort-on-property-read.js, ADTECH)
-dagensps.se,husvagnochcamping.se,hemtrevligt.se,akaskidor.se,utemagasinet.se,livetombord.se,svenskgolf.se,kingmagazine.se,vagabond.se,tidningenhalsa.se,mestmotor.se,nyheter24.se,swedroid.se,dagensanalys.se,breakit.se,fotbolltransfers.com,modette.se,muscles.se,cartoonnetwork.se,vf.se##script:inject(abort-current-inline-script.js, ADTECH, enqueueAd)
+dagensps.se,husvagnochcamping.se,hemtrevligt.se,akaskidor.se,utemagasinet.se,livetombord.se,svenskgolf.se,kingmagazine.se,vagabond.se,tidningenhalsa.se,mestmotor.se,nyheter24.se,swedroid.se,dagensanalys.se,breakit.se,fotbolltransfers.com,modette.se,muscles.se,cartoonnetwork.se,vf.se,jogg.se,svettig.se,cykl.se##script:inject(abort-current-inline-script.js, ADTECH, enqueueAd)
 breakit.se,dagensps.se,hemtrevligt.se,akaskidor.se,utemagasinet.se,livetombord.se,svenskgolf.se,kingmagazine.se,vagabond.se,tidningenhalsa.se,mestmotor.se,husvagnochcamping.se,ekuriren.se,kkuriren.se,sn.se,allehanda.se,arbetarbladet.se,avestatidning.com,bblat.se,dalademokraten.se,dt.se,fagersta-posten.se,gd.se,lt.se,ltz.se,na.se,norrteljetidning.se,nynashamnsposten.se,op.se,salaallehanda.com,st.nu,tidningenharjedalen.se,vlt.se##script:inject(abort-current-inline-script.js, NREUM, info)
 breakit.se,bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se,nyheter24.se##script:inject(abort-on-property-read.js, _hjSettings)
 breakit.se##script:inject(abort-current-inline-script.js, _vwo_code)
@@ -579,7 +581,7 @@ kamerabild.se,mobil.se##script:inject(set-constant.js, Sidpyssel.prototype.fixaS
 /plugins/x-email-mailchimp/*$script
 /wp-content/plugins/top-10/*$script
 /wp-content/plugins/easy-social-share-buttons$script
-/wp-content/uploads/*/advanced.$script,domain=datormagazin.se|skanesport.se
+/wp-content/uploads/*/advanced$script,domain=datormagazin.se|skanesport.se|rocknytt.net
 /wp-content/themes/*/assets/js/cookie.$script
 /wp-content/plugins/addthis/*$script,stylesheet
 /wp-content/uploads/*.js?ver$script,domain=noterat.nu|nyadagbladet.se|mkse.com
@@ -2096,3 +2098,10 @@ lira.se###ads
 @@||hbwebben.se^$generichide
 hbwebben.se###cookie-law-info-bar
 hbwebben.se##[class^="hbweb-in_post"]
+civilekonomen.se###rollup
+civilekonomen.se##.native
+@@||rocknytt.net^$generichide
+rocknytt.net##div[id^="advads-"]
+rocknytt.net##aside[id^="advads_ad_widget-"]
+rocknytt.net##.advads-widget
+rocknytt.net##[class*="advads_ad_widget"]
