@@ -1320,6 +1320,7 @@ nyafilmerhd.*##div[style^="margin-top:180px"]
 nyafilmerhd.*##div[style^="margin-top:210px"]
 nyafilmerhd.*,dreamfilmhd.*##a[data-hover="LADDA NED"]
 nyafilmerhd.*,dreamfilmhd.*##a[href$=".html"][target="_blank"]
+nyafilmerhd.*,dreamfilmhd.*##li > a[target="_blank"]
 nyafilmerhd.*,dreamfilmhd.*##script:inject(addEventListener-defuser.js, /^(?:DOMContentLoaded|mouseup|mousedown|mousemove)$/)
 dreamfilmhd.*##script:inject(setInterval-defuser.js, F9, 500)
 nyafilmerhd.*##script:inject(setInterval-defuser.js, u6, 500)
@@ -1354,6 +1355,9 @@ dreamfilm.*##.TPlayer.on:after:style(height: 0 !important; width: 0 !important;)
 ||dreamfilm.*/HD/780x.$image
 streamtajm.*##.longbanner
 streamtajm.*##script:inject(abort-current-inline-script.js, popunder)
+||streamtajm.*/worker.$script
+||streamtajm.*/webpush.$script
+||streamtajm.*^$csp=worker-src 'none'
 ||bit.ly^$subdocument,domain=jawcloud.co
 /js/script.js$script,domain=nxload.com|jawcloud.co|openload.co
 /license.$script,domain=nxload.com|jawcloud.co|openload.co
@@ -1919,10 +1923,13 @@ garaget.org##.gorgad-side
 hightechguiden.se##script:inject(abort-on-property-write.js, document.oncontextmenu)
 hightechguiden.se##script:inject(abort-on-property-read.js, noNeedToBlock)
 /pum/pum-site-scripts.$script,domain=tkj.se
+/annons-linje.gif$image,domain=tkj.se
 tkj.se###cookie-law-info-bar
 tkj.se##a[href*="tkj.se/ad/"]
 tkj.se##.category-annons
 tkj.se##li > a:has-text(Sponsor:)
+tkj.se##[id^="text-"]:has(h4:has-text(Ad:))
+tkj.se##[id^="custom_html-"]:has(h4:has-text(Radannonser))
 professionalsecrets.se##div[data-campaign="newsletter"]
 professionalsecrets.se##script:inject(abort-current-inline-script.js, $, fancybox)
 sportpanelen.se##.stream-item-above-post:has(a[href*="/ads."])
