@@ -676,10 +676,14 @@ svd.se###AdSplashOverlayWindow
 svd.se##.ContentLayout-extraColumnAd
 svd.se##.theme-Native
 svd.se##script:inject(abort-current-inline-script.js, SvD, preDefineAd)
+svd.se##script:inject(abort-on-property-write.js, loadOverlayToolCallback)
+svd.se##script:inject(addEventListener-defuser.js, /^(?:mousemove|scroll)$/, I())
+svd.se##script:inject(setInterval-defuser.js, (), 5000)
 /selections/native$xmlhttprequest,domain=svd.se
 ||svd.se^*/native-article$xmlhttprequest,~third-party
 /infopeek.min.js$domain=svd.se
 /pulse_flash_ad*.swf$object,domain=svd.se
+||engage-auth.schibsted.media^
 aftonbladet.se##.abTheme-ad
 aftonbladet.se##.abTheme-adSportbladet
 aftonbladet.se##.abTheme-infeedad
