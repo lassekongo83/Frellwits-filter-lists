@@ -664,6 +664,7 @@ bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##sc
 lwcdn.com##script:inject(addEventListener-defuser.js, /^(?:adBlocker|contextmenu)$/)
 ||ptm.flowplayer.com/vod/*/ping$xmlhttprequest
 ||ptm.flowplayer.com/vod/*/view$xmlhttprequest
+||ptm.flowplayer.com/vod/*/display$xmlhttprequest
 
 ! SCHIBSTED
 svd.se##.AdWrapper
@@ -675,9 +676,8 @@ svd.se###AdSplashOverlayWindow
 svd.se##.ContentLayout-extraColumnAd
 svd.se##.theme-Native
 svd.se##script:inject(abort-current-inline-script.js, SvD, preDefineAd)
-svd.se##script:inject(abort-on-property-write.js, loadOverlayToolCallback)
 svd.se##script:inject(addEventListener-defuser.js, /^(?:mousemove|scroll)$/, I())
-svd.se##script:inject(setInterval-defuser.js, (), 5000)
+/assets.svd.se\/assets\/[0-9]+\-/$script
 /selections/native$xmlhttprequest,domain=svd.se
 ||svd.se^*/native-article$xmlhttprequest,~third-party
 /infopeek.min.js$domain=svd.se
