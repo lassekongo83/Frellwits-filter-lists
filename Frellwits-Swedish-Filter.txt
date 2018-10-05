@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Title: Frellwit's Swedish Filter
 ! Expires: 3 days (update frequency)
-! Last modified: 2018-10-05 09:03:31 CEST
+! Last modified: 2018-10-05 13:03:18 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -145,7 +145,7 @@
 /antiblock.$script,stylesheet,~third-party,domain=danskaspraket.se|digitalavykort.se|viseniorer.se|vmj.se
 /apester-javascript-sdk.min.js$script,domain=allakorsord.se|allas.se|allers.se|antikochauktion.se|aretrunt.se|baaam.se|cafe.se|dromhemochtradgard.se|elle.se|elledecoration.se|ellematovin.se|femina.se|frida.se|hant.se|hemmets.se|mabra.com|matmagasinet.se|residencemagazine.se|svenskdam.se
 /appnexus.js$script,domain=blocket.se|minhembio.com
-/assets.svd.se\/assets\/[0-9]+\-/$script
+/assets.svd.se\/assets\/[0-9]+\-/$script,domain=svd.se
 /assets/js/front_js/*$script,domain=milansverige.se
 /assets/leeads_takeover/*$script,domain=allehanda.se|arbetarbladet.se|avestatidning.com|bblat.se|dalademokraten.se|dt.se|fagersta-posten.se|gd.se|lt.se|ltz.se|na.se|norrteljetidning.se|nynashamnsposten.se|op.se|salaallehanda.com|st.nu|tidningenharjedalen.se|vlt.se
 /assets/triggerbee/*$script,domain=allehanda.se|arbetarbladet.se|avestatidning.com|bblat.se|dalademokraten.se|dt.se|fagersta-posten.se|gd.se|lt.se|ltz.se|na.se|norrteljetidning.se|nynashamnsposten.se|op.se|salaallehanda.com|st.nu|tidningenharjedalen.se|vlt.se
@@ -208,6 +208,7 @@
 /gdpr/*$domain=rapport24.com|vimedbarn.se
 /gilla-mb_plugg.png$domain=markbladet.se
 /glimr.min.js^$script,domain=affarsliv.com|affarslivgotland.se|aftonbladet.se|blocket.se|corren.se|di.se|dn.se|eposten.se|folkbladet.se|gotland.net|helagotland.se|klackspark.com|kuriren.nu|mvt.se|norrbottensaffarer.se|nsd.se|nt.se|politism.se|pt.se|unt.se|uppsala.com|uppsalatidningen.se|viivilla.se|vt.se
+/google-tag-manager-datalayer.$script,domain=reseguiden.se
 /google-tracking/*$script,domain=popmuzik.se
 /google_tag.script.js^$script,domain=fria.nu|friatidningen.se|goteborgsfria.se|landetsfria.se|sesam.nu|stockholmsfria.se
 /gplus.php^$script,domain=fria.nu|friatidningen.se|goteborgsfria.se|landetsfria.se|sesam.nu|stockholmsfria.se
@@ -254,6 +255,7 @@
 /lib/js/sticky.$script,stylesheet,domain=kenzas.se
 /libs/cookieconsent2/*
 /license.$script,domain=jawcloud.co|nxload.com|openload.co
+/links/*casino*.$image,domain=emocore.se
 /listByType?*adSettings^$xmlhttprequest,domain=kokaihop.se
 /live/radarmagazine.se.js$script
 /livevideo/getlivevideo?autoplay=true&position=outsider$domain=di.se
@@ -470,7 +472,7 @@
 @@||alicestenlof.com^$generichide
 @@||assets-cdn.mytaste.org/js/ads.js$script
 @@||atl.nu^$generichide
-@@||backend.worldoftulo.com^$script
+@@||backend.worldoftulo.com^$script,subdocument
 @@||boffo.se^$generichide
 @@||clarahenry.se^$generichide
 @@||cloudfront.net/js/ads.js$script,domain=vf.se
@@ -739,6 +741,7 @@ ekuriren.se,kkuriren.se,sn.se##.match-ad
 ekuriren.se,kkuriren.se,sn.se##.match-ad-article
 ekuriren.se,kkuriren.se,sn.se##.native-ad-top
 ekuriren.se,kkuriren.se,sn.se##div[class^="ew-bottom-ad"]
+emocore.se###reklam
 emocore.se###sticky-panorama
 eniro.se##.banner-container-result-header
 eniro.se##.hit-partners
@@ -853,6 +856,7 @@ hangotidningen.fi,hbl.fi,ostnyland.fi,vastranyland.fi##gdpr-notice
 hangotidningen.fi,hbl.fi,ostnyland.fi,vastranyland.fi##rekrybanner
 happyride.se###a-panorama
 happyride.se###a-sidebar1
+happyride.se###alert_cookieconsent
 happyride.se##li.sponsor
 hbwebben.se###cookie-law-info-bar
 hbwebben.se##[class^="hbweb-in_post"]
@@ -965,6 +969,7 @@ mestmotor.se##article[class*="sponsra"]
 mestmotor.se,modette.se,nyheter24.se##.advertisement
 mestmotor.se,muscles.se##.overlay
 mestmotor.se,vagabond.se##a[onclick^="ANALYTICS.trackEvent('Spotlight'"]
+metro.se##.m-article-native
 metro.se##.m-article__socials
 metro.se##.m-socials
 metro.se##.o-preview--ad
@@ -1032,7 +1037,7 @@ opulens.se##.mailpoet_form
 opulens.se##.s-social
 opulens.se##.side-box.opule-widget
 opulens.se##.social-btn
-pcgamer.se##a[href^="https://www.casino"]
+pcgamer.se##a[href*="casino.com"]
 pconline.se##h3.glasspinnesvart
 pingpong.se##.l-preloader
 piraja.se###panoramaholder
@@ -1150,6 +1155,8 @@ vf.se##.ad-container
 viafree.se##.ad-click-through
 viafree.se##.pause-ad
 viivilla.se###product-area
+viivilla.se##.afubar-top
+viivilla.se##.native-ad-md
 viseniorer.se##.topheaderinfo
 webbjobb.io##.cookie
 yogaworld.se##.headerbar-container
@@ -1402,6 +1409,8 @@ yogaworld.se##.headerbar-container
 ||lwadm.com^$third-party
 ||lwcdn.com/vendor/ima.min.js$script
 ||lystra.se^$third-party
+||ma-track.bonnierpublications.se^
+||ma.bonnierpublications.se/mtc/event$xmlhttprequest
 ||mailchimp.com^$third-party
 ||mailerlite.com^$third-party
 ||mailmunch.co^$third-party
@@ -1443,6 +1452,7 @@ yogaworld.se##.headerbar-container
 ||nordicfynd.se^
 ||nordishopping.com^
 ||nordiskemedier.dk/banner/
+||norranstats.azurewebsites.net^$xmlhttprequest
 ||nouw.com/api/campaignpost$xmlhttprequest
 ||nouw.com/campaignpost/reg/$image
 ||ntm.eu/om/img/cx/Matchad$subdocument,domain=affarsliv.com|affarslivgotland.se|corren.se|eposten.se|folkbladet.se|helagotland.se|kuriren.nu|mvt.se|norrbottensaffarer.se|nsd.se|nt.se|pt.se|unt.se|vt.se

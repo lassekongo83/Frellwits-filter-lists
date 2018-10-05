@@ -449,7 +449,7 @@ avanza.se#@#a[title="LeoVegas"]
 abus.com#@##cookieChoiceInfo
 @@||opinionstage.com^$domain=99.se|fz.se|sweclockers.com
 ! https://github.com/easylist/easylist/issues/1887
-@@||backend.worldoftulo.com^$script
+@@||backend.worldoftulo.com^$script,subdocument
 
 ! Common site specific blocking
 .*/*280x240*.$image,domain=rumhemma.se
@@ -677,7 +677,7 @@ svd.se##.ContentLayout-extraColumnAd
 svd.se##.theme-Native
 svd.se##script:inject(abort-current-inline-script.js, SvD, preDefineAd)
 svd.se##script:inject(addEventListener-defuser.js, /^(?:mousemove|scroll)$/, I())
-/assets.svd.se\/assets\/[0-9]+\-/$script
+/assets.svd.se\/assets\/[0-9]+\-/$script,domain=svd.se
 /selections/native$xmlhttprequest,domain=svd.se
 ||svd.se^*/native-article$xmlhttprequest,~third-party
 /infopeek.min.js$domain=svd.se
@@ -899,6 +899,17 @@ feber.se##script:inject(set-constant.js, showReklam, false)
 feber.se,tjock.se##.art_ad
 feber.se,tjock.se##.art_ad_sign
 feber.se,tjock.se##script:inject(abort-current-inline-script.js, $, GDPR)
+viivilla.se##.teaserblockdata:has(.teaser-sponsored-text)
+viivilla.se##.sp-article:has(.commercial-label)
+viivilla.se##div.row.item:has(.overlay-sponsor)
+viivilla.se###product-area
+viivilla.se##.native-ad-md
+viivilla.se##.afubar-top
+/fusionadloader.$script,domain=viivilla.se
+/iframeadvloader.$script,domain=viivilla.se
+/adv_utils.$script,domain=viivilla.se
+||ma-track.bonnierpublications.se^
+||ma.bonnierpublications.se/mtc/event$xmlhttprequest
 
 ! NTM
 /_ad.js$important,script,domain=affarsliv.com|affarslivgotland.se|corren.se|eposten.se|folkbladet.se|gotland.net|helagotland.se|klackspark.com|kuriren.nu|mvt.se|norrbottensaffarer.se|nsd.se|nt.se|pt.se|unt.se|uppsala.com|uppsalatidningen.se|vt.se
@@ -1528,6 +1539,7 @@ metro.se##.o-preview--collab
 metro.se##.m-teaser:has(div[class*="label--ad"])
 metro.se##.m-socials
 metro.se##.m-article__socials
+metro.se##.m-article-native
 metrojobb.se##.headlines__block:has(.ad-header)
 svt.se##li.nyh_contactbox-item:has(div[class*="facebook"])
 svt.se##li.nyh_contactbox-item:has(div[class*="twitter"])
@@ -1564,6 +1576,7 @@ tvdags.se##.article-list__item:has(.sponsor)
 norran.se##.js-cookie-information-bar
 @@||norran.se^$generichide
 ||annonsportalen.norran.se^$subdocument
+||norranstats.azurewebsites.net^$xmlhttprequest
 norran.se##.adtech-ad
 norran.se##.social-share__button
 kimura.se##.sidebar-section:has(.sidebar_ad)
@@ -1617,7 +1630,8 @@ tasteline.com##.popup:style(overflow: auto !important;)
 infoo.se##.content_wide_ads
 infoo.se##.line.orange
 pcgamer.se##div.wpb_text_column.wpb_content_element:if(h3:has-text(/sponsrade/i))
-pcgamer.se##a[href^="https://www.casino"]
+pcgamer.se##a[href*="casino.com"]
+pcgamer.se##.wpb_row:has(.vc_tta-title-text:has-text(/annonser/i))
 kit.se##.isNative
 kit.se##.box--newsletter
 kit.se##.post-share
@@ -1706,13 +1720,6 @@ businessclass.se##.reveal-modal-bg
 businessclass.se###bcpop
 businessclass.se##script:inject(abort-current-inline-script.js, $, AdBlockDetector)
 /spons/*$image,domain=swehack.org
-viivilla.se##.teaserblockdata:has(.teaser-sponsored-text)
-viivilla.se##.sp-article:has(.commercial-label)
-viivilla.se##div.row.item:has(.overlay-sponsor)
-viivilla.se###product-area
-/fusionadloader.$script,domain=viivilla.se
-/iframeadvloader.$script,domain=viivilla.se
-/adv_utils.$script,domain=viivilla.se
 ||allabolag.se^*/ad.html
 allabolag.se##article:has(.advert__mark)
 allabolag.se##.topBnrContainer
@@ -1750,6 +1757,7 @@ kolozzeum.com##td[width="305"]
 happyride.se###a-panorama
 happyride.se###a-sidebar1
 happyride.se##li.sponsor
+happyride.se###alert_cookieconsent
 /antiblock.$script,stylesheet,~third-party,domain=vmj.se|viseniorer.se|danskaspraket.se|digitalavykort.se
 vmj.se,danskaspraket.se,digitalavykort.se##.topdiv
 viseniorer.se##.topheaderinfo
@@ -1891,11 +1899,14 @@ egoinas.se###tm-top-a
 forni.se##.sw-tag-sponsored_post
 ||reseguiden.se^*/alexandra.ads.$script
 ||reseguiden.se^*/alexandra.banners.$script
+/google-tag-manager-datalayer.$script,domain=reseguiden.se
 themoviefreak.se##script:inject(remove-attr.js, oncontextmenu)
 radionytt.se###toppannons
 /modules/mod_ijoomla_adagency_zone/*$script,domain=villavarmt.se
 emocore.se###sticky-panorama
 emocore.se##.m_t.box:if(h2:has-text(Rekommenderade länkar))
+emocore.se###reklam
+/links/*casino*.$image,domain=emocore.se
 jaktsidan.se##[data-role="sidebarAd"]
 ||edgeflyfishing.com^$image,domain=jaktsidan.se
 mp.se###cookies
@@ -2025,7 +2036,7 @@ pingpong.se##.l-preloader
 /mod_adblockdetector/*$domain=hamnen.se
 hamnenplay.solidtango.com##.ads-click-overlay
 lakartidningen.se##.advelementnewsrow
-bloggkommentatorerna.se,ladydahmer.nu,nickesfilmblogg.se,svenskayoutubers.se,themoviefreak.se,modette.se##body.with-panorama:style(padding-top: 0 !important;)
+bloggkommentatorerna.se,ladydahmer.nu,nickesfilmblogg.se,svenskayoutubers.se,themoviefreak.se,modette.se,blogg.se##body.with-panorama:style(padding-top: 0 !important;)
 isabellalowengrip.se###preloader
 isabellalowengrip.se##.popup-block
 moderaterna.se##.sliding-popup-bottom
