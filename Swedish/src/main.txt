@@ -144,6 +144,7 @@
 ||ubembed.com^$third-party
 ||unformsy.mobi^$third-party
 ||upsales.com^$third-party
+||uptobranding.com^$third-party
 ||yandex.st/share/share.$third-party
 ||yastatic.net/share/$third-party
 ||yieldbird.com^$third-party
@@ -1318,30 +1319,34 @@ koket.se,nyheter24.se##.native
 
 ! Various websites with lots of malicious stuff and annoyances
 !#if env_firefox
-nyafilmerhd.*,dreamfilmhd.*##^script:has-text(POPUP)
-nyafilmerhd.*,dreamfilmhd.*##^script:has-text(s,t,o,p,b,r,e,a,k,i,n,g)
-nyafilmerhd.*,dreamfilmhd.*,swesub.*,dreamfilm.*,jawcloud.co##^script:has-text(_Hasync)
-nyafilmerhd.*,dreamfilmhd.*##^script:has-text(blockerDetected)
-nyafilmerhd.*,dreamfilmhd.*##^script:has-text(adsrvmedia)
-nyafilmerhd.*,dreamfilmhd.*##^script:has-text(uptopop.com)
-nyafilmerhd.*,dreamfilmhd.*,nordicfilm.*##^script:has-text(OneSignal)
-nyafilmerhd.*,dreamfilmhd.*##^script[src^="/ads.js?"]
+nyafilmerhd.*,dreamfilmhd.*,real123movies.*##^script:has-text(POPUP)
+nyafilmerhd.*,dreamfilmhd.*,real123movies.*##^script:has-text(s,t,o,p,b,r,e,a,k,i,n,g)
+nyafilmerhd.*,dreamfilmhd.*,swesub.*,dreamfilm.*,jawcloud.co,real123movies.*##^script:has-text(_Hasync)
+nyafilmerhd.*,dreamfilmhd.*,real123movies.*##^script:has-text(blockerDetected)
+nyafilmerhd.*,dreamfilmhd.*,real123movies.*##^script:has-text(adsrvmedia)
+nyafilmerhd.*,dreamfilmhd.*,real123movies.*##^script:has-text(uptopop.com)
+nyafilmerhd.*,dreamfilmhd.*,nordicfilm.*,real123movies.*##^script:has-text(OneSignal)
+nyafilmerhd.*,dreamfilmhd.*,real123movies.*##^script[src^="/ads.js?"]
 !#endif
-nyafilmerhd.*,dreamfilmhd.*##script:inject(abort-current-inline-script.js, OneSignal)
-nyafilmerhd.*,dreamfilmhd.*##script:inject(set-constant.js, blockerDetected, false)
-nyafilmerhd.*,dreamfilmhd.*,swesub.*##a[style*="height"][rel*="nofollow"]
-nyafilmerhd.*##div[style^="margin-top:180px"]
-nyafilmerhd.*##div[style^="margin-top:210px"]
-nyafilmerhd.*,dreamfilmhd.*##a[data-hover="LADDA NED"]
-nyafilmerhd.*,dreamfilmhd.*##a[href$=".html"][target="_blank"]
-nyafilmerhd.*,dreamfilmhd.*##li > a[target="_blank"]
-nyafilmerhd.*,dreamfilmhd.*##script:inject(addEventListener-defuser.js, /^(?:DOMContentLoaded|mouseup|mousedown|mousemove)$/)
-dreamfilmhd.*##script:inject(setInterval-defuser.js, F9, 500)
+nyafilmerhd.*,dreamfilmhd.*,real123movies.*##script:inject(abort-current-inline-script.js, OneSignal)
+nyafilmerhd.*,dreamfilmhd.*,real123movies.*##script:inject(set-constant.js, blockerDetected, false)
+nyafilmerhd.*,dreamfilmhd.*,swesub.*,real123movies.*##a[style*="height"][rel*="nofollow"]
+real123movies.*##div[onclick^="window.open"]
+nyafilmerhd.*,real123movies.*##div[style^="margin-top:180px"]
+nyafilmerhd.*,real123movies.*##div[style^="margin-top:210px"]
+nyafilmerhd.*,dreamfilmhd.*,real123movies.*##a[data-hover="LADDA NED"]
+nyafilmerhd.*,dreamfilmhd.*,real123movies.*##a[href$=".html"][target="_blank"]
+nyafilmerhd.*,dreamfilmhd.*,real123movies.*##li > a[target="_blank"]
+nyafilmerhd.*,dreamfilmhd.*,real123movies.*##script:inject(addEventListener-defuser.js, /^(?:DOMContentLoaded|mouseup|mousedown|mousemove)$/)
+dreamfilmhd.*,real123movies.*##script:inject(setInterval-defuser.js, F9, 500)
 nyafilmerhd.*##script:inject(setInterval-defuser.js, u6, 500)
 ||dreamfilmhd.*^$csp=default-src 'self' 'unsafe-inline' 'unsafe-eval' jawcloud.co *.jawcloud.co upvtt.com wp.com *.wp.com *.googleapis.com vkpass.com *.vkpass.com *.gstatic.com
 ||nyafilmerhd.*^$csp=default-src 'self' 'unsafe-inline' 'unsafe-eval' jawcloud.co *.jawcloud.co upvtt.com wp.com *.wp.com *.googleapis.com vkpass.com *.vkpass.com *.gstatic.com
+||real123movies.*^$csp=default-src 'self' 'unsafe-inline' 'unsafe-eval' jawcloud.co *.jawcloud.co upvtt.com wp.com *.wp.com *.googleapis.com vkpass.com *.vkpass.com *.gstatic.com
 ||nyafilmerhd.*/wp-content/themes/keremiya1/js/script.js$script
 ||nyafilmerhd.*/wp-content/themes/keremiya1/js/license.$script
+||real123movies.*/wp-content/themes/keremiya1/js/script.js$script
+||real123movies.*/wp-content/themes/keremiya1/js/license.$script
 ||swesub.*^$csp=default-src 'self' 'unsafe-inline' 'unsafe-eval' *.tmdb.org ajax.cloudflare.com *.googleapis.com cdnjs.cloudflare.com fonts.gstatic.com openload.co nxload.com data:
 ||nordicfilm.*^$csp=default-src 'self' 'unsafe-inline' 'unsafe-eval' *.tmdb.org *.postimg.cc *.youtube.com *.googleapis.com fonts.gstatic.com vidbox.co
 ||nordicfilm.*^$csp=worker-src 'none'
@@ -1351,6 +1356,7 @@ nyafilmerhd.*##script:inject(setInterval-defuser.js, u6, 500)
 ||swesub.*/sw.js$script
 ||nordicfilm.*/sw.js
 ||nordicfilmhd.*/sw.js
+||7godscasino.com^$popup,third-party
 nordicfilm.*,vidbox.co##script:inject(abort-current-inline-script.js, minimalUserResponseInMiliseconds)
 nordicfilm.*,vidbox.co##script:inject(abort-current-inline-script.js, miner)
 nordicfilm.*,vidbox.co,oload.stream##script:inject(noeval.js)
