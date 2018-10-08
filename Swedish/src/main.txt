@@ -451,6 +451,7 @@ abus.com#@##cookieChoiceInfo
 @@||opinionstage.com^$domain=99.se|fz.se|sweclockers.com
 ! https://github.com/easylist/easylist/issues/1887
 @@||backend.worldoftulo.com^$script,subdocument
+@@||happyride.se/img/admarket/$~third-party
 
 ! Common site specific blocking
 .*/*280x240*.$image,domain=rumhemma.se
@@ -589,11 +590,11 @@ kamerabild.se,mobil.se##script:inject(set-constant.js, Sidpyssel.prototype.fixaS
 
 ! JWplayer analytics/ad scripts
 svd.se,aftonbladet.se,gamereactor.se,muscles.se,nordichardware.se,nyheteridag.se#@#.afs_ads
-||ssl.p.jwpcdn.com^*/jwpsrv.js$script,important,domain=eurosport.se|aftonbladet.se|gamereactor.se|svd.se|muscles.se|tv.nu|nyheteridag.se|axess.se
+||ssl.p.jwpcdn.com^*/jwpsrv.js$script,important,domain=eurosport.se|aftonbladet.se|gamereactor.se|svd.se|muscles.se|tv.nu|nyheteridag.se|axess.se|freeride.se|happyride.se
 ||ssl.p.jwpcdn.com^*/vast.js$script,important,domain=eurosport.se|aftonbladet.se|gamereactor.se|svd.se
 ||ssl.p.jwpcdn.com^*/freewheel.js$script,important,domain=eurosport.se
-||ssl.p.jwpcdn.com^*/gapro.js$script,important,domain=gamereactor.se
-||ssl.p.jwpcdn.com^*/sharing.js$script,important,domain=eurosport.se|aftonbladet.se|gamereactor.se
+||ssl.p.jwpcdn.com^*/gapro.js$script,important,domain=gamereactor.se|freeride.se|happyride.se
+||ssl.p.jwpcdn.com^*/sharing.js$script,important,domain=eurosport.se|aftonbladet.se|gamereactor.se|freeride.se|happyride.se
 ||ssl.p.jwpcdn.com^*/googima.js$script,important
 
 ! Fix for the mediacreeper onerror attribute abuse
@@ -648,7 +649,7 @@ bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##.b
 bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##.rabble-widget
 bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##.share-fixed-desktop
 bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##.article__gallery__container:style(display: flex !important; justify-content: center !important;)
-bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##script:inject(abort-on-property-read.js, _cInfo)
+bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##script:inject(abort-current-inline-script.js, _cInfo)
 bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##script:inject(abort-current-inline-script.js, vendorList)
 bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##script:inject(abort-current-inline-script.js, headerScripts, checkAdBlockers)
 bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##script:inject(abort-current-inline-script.js, adblockcookieExpire)
@@ -726,6 +727,8 @@ blocket.se###index_panorama
 blocket.se###li_panorama
 blocket.se###vi_panorama
 blocket.se##[id^="ufti"]
+mobil.blocket.se###top_device
+mobil.blocket.se###top_large_device
 ||mobil.blocket.se/ufti$subdocument
 politism.se##[id^="ab-appnexus"]
 politism.se##[id^="native_ad"]
@@ -1762,9 +1765,10 @@ matklubben.se##.notification.cookies
 /kollos*.js$script,domain=kolozzeum.com
 kolozzeum.com##td[width="305"]
 happyride.se###a-panorama
-happyride.se###a-sidebar1
+happyride.se##.fixed-col > #a-sidebar1
+happyride.se##.container-fluid > .anp1-container
 happyride.se##li.sponsor
-happyride.se###alert_cookieconsent
+happyride.se,freeride.se###alert_cookieconsent
 /antiblock.$script,stylesheet,~third-party,domain=vmj.se|viseniorer.se|danskaspraket.se|digitalavykort.se
 vmj.se,danskaspraket.se,digitalavykort.se##.topdiv
 viseniorer.se##.topheaderinfo
@@ -2131,3 +2135,6 @@ rocknytt.net##div[id^="advads-"]
 rocknytt.net##aside[id^="advads_ad_widget-"]
 rocknytt.net##.advads-widget
 rocknytt.net##[class*="advads_ad_widget"]
+baws.se##a.gofollow[data-track][target="_blank"]
+baws.se##.td-post-sharing-top
+baws.se##.td-more-articles-box
