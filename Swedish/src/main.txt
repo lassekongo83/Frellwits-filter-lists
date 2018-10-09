@@ -71,6 +71,7 @@
 ||greatstoryvideo.se^$third-party
 ||happygreen.se^$third-party
 ||hapyak.com^$third-party
+||hittahem.se^$third-party
 ||hmads.se^$third-party
 ||hoomemakleri.se^$third-party
 ||hotwords.es^$third-party
@@ -104,6 +105,7 @@
 ||nbes.nu^$third-party
 ||nbes.se^$third-party
 ||nichehuset.dk^$third-party
+||norstatsurveys.com^$third-party
 ||optnmnstr.com^$third-party
 ||panera.io^$third-party
 ||pensiono.se^$third-party
@@ -131,6 +133,7 @@
 ||sociuslive.com^$third-party
 ||sprinklecontent.com^$third-party
 ||sprinkletxt.com^$third-party
+||storymedia.se^$third-party
 ||telemetric.dk^$third-party
 ||tipser.com^$third-party
 ||tinypass.com^$third-party
@@ -493,6 +496,9 @@ breakit.se,bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,t
 breakit.se##script:inject(abort-current-inline-script.js, _vwo_code)
 mestmotor.se,kingmagazine.se,cartoonnetwork.se,vagabond.se,manolo.se,modette.se##script:inject(abort-current-inline-script.js, ADTECH, config)
 kamerabild.se,mobil.se##script:inject(set-constant.js, Sidpyssel.prototype.fixaStoran, noopFunc)
+undertian.com,villaliv.se,newsner.com,humorbibeln.se,sportbibeln.se,ettgottskratt.se##script:inject(set-constant.js, mi_track_user, false)
+datormagazin.se,villalivet.se,rocknytt.net,skanesport.se,newsner.com,humorbibeln.se,sportbibeln.se,hightechguiden.se,ettgottskratt.se,hbwebben.se##script:inject(abort-current-inline-script.js, advanced_ads_ga_UID)
+opulens.se##script:inject(abort-current-inline-script.js, advanced_ads_adsense_UID)
 
 ! Facebook junk
 /facebook_sdk.js$script,domain=njus.me|radioplay.se
@@ -502,7 +508,7 @@ kamerabild.se,mobil.se##script:inject(set-constant.js, Sidpyssel.prototype.fixaS
 ||facebook.com/plugins/like$third-party,domain=~facebook.com|~fb.com
 
 ! Override EasyPrivacy and EasyList whitelists
-/wp-content/plugins/google-analytics-for-wordpress/*$~third-party,important,script,domain=katerinamagasin.se|nyhetsbyran.org|sportpanelen.se|vegokak.se|starbys.se|carinasphotolifestyle.se|battrestadsdel.se|karolinesvintage.se|clarakron.com|foodstories.se|undertian.com|ralycka.se|mmabetz.se|folkblick.se|fores.se|tidskriftenrespons.se|alltsomsker.nu|mmanytt.se|fjl.se
+/wp-content/plugins/google-analytics-for-wordpress/*$~third-party,important,script,domain=katerinamagasin.se|nyhetsbyran.org|sportpanelen.se|vegokak.se|starbys.se|carinasphotolifestyle.se|battrestadsdel.se|karolinesvintage.se|clarakron.com|foodstories.se|undertian.com|ralycka.se|mmabetz.se|folkblick.se|fores.se|tidskriftenrespons.se|alltsomsker.nu|mmanytt.se|fjl.se|villalivet.se|springlfa.se
 /wp-content/plugins/google-analytics-premium/*$~third-party,important,script,domain=humorbibeln.se|newsner.com|ettgottskratt.se|sportbibeln.se
 /google-analytics-dashboard$script,important,domain=firstfoto.se|cyclingplus.se|halsafitness.se|fitnessformen.se|macguiden.net|ordfrontforlag.se|ulrikadavidsson.se|hemmahosulrika.se
 ||google-analytics.com/analytics.js$important,redirect=google-analytics.com/analytics.js,script,domain=tradera.com
@@ -587,6 +593,8 @@ kamerabild.se,mobil.se##script:inject(set-constant.js, Sidpyssel.prototype.fixaS
 /wp-content/plugins/addthis/*$script,stylesheet
 /wp-content/uploads/*.js?ver$script,domain=noterat.nu|nyadagbladet.se|mkse.com
 /wp-admin/admin-ajax.php?action=addthis_global_options$script,domain=expressen.se
+/plugins/gdpr/*$domain=villalivet.se
+/plugins/arscode-ninja-popups/*$domain=springlfa.se
 
 ! JWplayer analytics/ad scripts
 svd.se,aftonbladet.se,gamereactor.se,muscles.se,nordichardware.se,nyheteridag.se#@#.afs_ads
@@ -806,6 +814,7 @@ di.se##.di_start__insider-ad
 di.se##.di_panorama__isAdLabel
 di.se##script:inject(abort-on-property-read.js, diConf.servicePlusClientId)
 di.se##.clip-browser__clip:has(a[href*="/annons-"])
+di.se##.carousel-tab:has-text(/annons:/i)
 digital.di.se,weekend.di.se##script:inject(abort-current-inline-script.js, diConf)
 expressen.se##.terms-dialog
 expressen.se###rich-media-ads
@@ -974,7 +983,6 @@ skd.se,laholmstidning.se,nsk.se##div.skd-crsl-wrap:matches-css-before(content: A
 /sponsrat-frequency.js^$script,domain=skd.se|laholmstidning.se|nsk.se
 skd.se,laholmstidning.se,nsk.se##script:inject(abort-current-inline-script.js, ERWP, fif)
 skd.se,laholmstidning.se,nsk.se##script:inject(abort-current-inline-script.js, skd_adblocker)
-vf.se##.ad-container
 vf.se##script:inject(set-constant.js, isAdblock, false)
 vf.se##script:inject(cookie-remover.js, page-views)
 @@||cloudfront.net/js/ads.js$script,domain=vf.se
@@ -1290,7 +1298,7 @@ ekuriren.se,kkuriren.se,norran.se,sn.se###cookie-info
 alltforforaldrar.se,battrestadsdel.se,flashback.se,mammasidan.se,minbebis.com###top-banner
 chef.se,svd.se##.Ad
 24blekinge.se,24emmaboda.se,24falkenberg.se,24halmstad.se,24helsingborg.se,24kalmar.se,24kristianstad.se,24malmo.se,24nybro.se,24trelleborg.se,24uppsala.se,24ystad.se,24varberg.se,24oland.se,99.se,bohuslaningen.se,byggnadsarbetaren.se,cissiochfreddan.se,claudiagalliconcha.se,di.se,dn.se,ekuriren.se,folkbladet.nu,gp.se,hallandsposten.se,hn.se,kimura.se,kkuriren.se,loppi.se,mariestadstidningen.se,markbladet.se,medievarlden.se,mestmotor.se,mobil.se,norran.se,nwt.se,paulas.me,skaraborgsbygden.se,skillingaryd.nu,sla.se,sn.se,sportbloggare.com,stromstadstidning.se,swedroid.se,ttela.se,vardagspuls.se,vk.se,vimedbarn.se,gabriellajoss.me,mybabydolls.se,emilysliv.se##.ad
-affarsvarlden.se,arbetarskydd.se,dagensmedia.se,lag-avtal.se,nickelodeon.se,nyteknik.se##.ad-container
+affarsvarlden.se,arbetarskydd.se,dagensmedia.se,lag-avtal.se,nickelodeon.se,nyteknik.se,vf.se,improveme.se##.ad-container
 dn.se,klart.se,norran.se##.ad-wrapper
 brollopstorget.se,familjeliv.se##.ad_right
 24blekinge.se,24emmaboda.se,24falkenberg.se,24halmstad.se,24helsingborg.se,24kalmar.se,24kristianstad.se,24malmo.se,24nybro.se,24trelleborg.se,24uppsala.se,24ystad.se,24varberg.se,24oland.se,babyhjalp.se,branschkoll.se,fotosidan.se,moviezine.se,affarsliv.com,affarslivgotland.se,corren.se,eposten.se,folkbladet.se,helagotland.se,klackspark.com,kuriren.nu,mvt.se,norrbottensaffarer.se,nsd.se,nt.se,pt.se,unt.se,vt.se,globalportalen.org##.ads
@@ -1597,7 +1605,6 @@ kimura.se###main-wrapper:style(background-image: none !important;)
 kimura.se##a[href*="utm_campaign"]
 kimura.se##article:has(img[src$="/sponsrad.png"])
 kimura.se##.bg
-kimura.se##script:inject(abort-current-inline-script.js, advads_has_ads)
 market.se##[id^="fusion_ad"]
 market.se###rollup
 market.se##article[about^="/annons/"]
@@ -1788,8 +1795,6 @@ mytaste.se##body:not(.kcolbda) .site-wrapper[data-state=default], body:not(.kcol
 newsner.com,humorbibeln.se,sportbibeln.se,ettgottskratt.se###wsfb-container
 newsner.com,humorbibeln.se,sportbibeln.se,ettgottskratt.se##.share-buttons
 humorbibeln.se,newsner.com,sportbibeln.se,ettgottskratt.se##.ssp_divider:has(.sponsored-bar)
-newsner.com,humorbibeln.se,sportbibeln.se,hightechguiden.se,ettgottskratt.se##script:inject(abort-on-property-write.js, advadsTracker)
-newsner.com,humorbibeln.se,sportbibeln.se,ettgottskratt.se##script:inject(abort-on-property-write.js, advads_passive_ads)
 njus.me##.article-list-item--sponsored
 /commercialAds/*$xmlhttprequest,domain=njus.me
 ||njus.me/files/analytics.js$script
@@ -1825,9 +1830,6 @@ pomu.se##.Banners-lateral
 ||unitedsverige.se^$csp=script-src 'self' 'unsafe-inline' 'unsafe-eval' *.googleapis.com
 forumbilder.se##a[target="_blank"] > img[src^="/Content/images"]
 /admin-ajax.php?action=advanced-ads-tracking-track$xmlhttprequest,domain=datormagazin.se
-datormagazin.se,skanesport.se##script:inject(abort-on-property-read.js, advadsGAAjaxAds)
-datormagazin.se,skanesport.se##script:inject(abort-current-inline-script.js, advadsGATracking)
-datormagazin.se,skanesport.se##script:inject(abort-current-inline-script.js, advanced_ads_ready)
 datormagazin.se##catapult-cookie-bar
 datormagazin.se##.widget_advads_ad_widget
 datormagazin.se##img[width="1068"]
@@ -1835,10 +1837,10 @@ datormagazin.se##.td-header-sp-recs
 datormagazin.se##.td-more-articles-box
 datormagazin.se##.dator-widget:has(h4 > span:has-text(/erbjudanden/i))
 @@||datormagazin.se^$generichide
-skanesport.se##script:inject(abort-current-inline-script.js, advanced_ads_adsense_UID)
 skanesport.se##[id^="skane-slider"]
 skanesport.se###cookie-notice
 skanesport.se###check-also-box.show-check-also
+skanesport.se##.stream-item
 @@||skanesport.se^$generichide
 hypeline.se##.homecontent:has(.sponsrad_ruta)
 dagenstv.com###bt
@@ -1860,7 +1862,6 @@ opulens.se##.social-btn
 opulens.se##.google-plus
 opulens.se##.side-box.opule-widget
 opulens.se##.mailpoet_form
-opulens.se##script:inject(abort-current-inline-script.js, advanced_ads_adsense_UID)
 /pum/*$script,domain=opulens.se
 landleyskok.se##.banner-leaderboard
 landleyskok.se##.category-sponsrat-inlagg
@@ -1885,7 +1886,6 @@ listor.se##.swp_social_panelSide
 accentmagasin.se##.widget-container:if(.widget-title:has-text(/annons/i))
 ||newsharecounts.com^$third-party,domain=samnytt.se
 @@||samnytt.se^$generichide
-samnytt.se##script:inject(abort-on-property-read.js, advanced_ads_ready)
 samnytt.se##.nc_socialPanel
 samnytt.se##a[data-bid][href*="/linkout/"]
 merinfo.se##.articles-article-wrapper:if(span:has-text(/sponsrad/i))
@@ -2018,7 +2018,6 @@ free.se##.buyAndSellPreamble
 ||amqp-ws-proxy.radioplay.se^$websocket
 /mod.js$xmlhttprequest,domain=internetmedicin.se
 undertian.com##script:inject(abort-current-inline-script.js, monsterinsights_frontend)
-undertian.com##script:inject(set-constant.js, mi_track_user, false)
 undertian.com##a[href*="-samarbete-med-"]
 globalportalen.org##.follow-us-section
 /piraja-banners/*$domain=piraja.se
@@ -2130,11 +2129,11 @@ hbwebben.se###cookie-law-info-bar
 hbwebben.se##[class^="hbweb-in_post"]
 civilekonomen.se###rollup
 civilekonomen.se##.native
-@@||rocknytt.net^$generichide
-rocknytt.net##div[id^="advads-"]
-rocknytt.net##aside[id^="advads_ad_widget-"]
-rocknytt.net##.advads-widget
-rocknytt.net##[class*="advads_ad_widget"]
 baws.se##a.gofollow[data-track][target="_blank"]
 baws.se##.td-post-sharing-top
 baws.se##.td-more-articles-box
+sonicmagazine.com##[class^="ad-"]
+springlfa.se##[id^="ad"]
+springlfa.se##.adrotate-loop
+springlfa.se##[class^="snp-pop"]
+improveme.se##script:inject(abort-current-inline-script.js, n_pbt)
