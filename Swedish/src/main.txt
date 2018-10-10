@@ -134,6 +134,7 @@
 ||sprinklecontent.com^$third-party
 ||sprinkletxt.com^$third-party
 ||storymedia.se^$third-party
+||suntana.se^$third-party
 ||telemetric.dk^$third-party
 ||tipser.com^$third-party
 ||tinypass.com^$third-party
@@ -536,6 +537,7 @@ opulens.se##script:inject(abort-current-inline-script.js, advanced_ads_adsense_U
 /plugins/cookie-law-info/*$script,stylesheet,domain=~natalieportman.com
 /plugins/cookie-notice/*$script,stylesheet
 /plugins/cresta-social-share-counter-pro/*$script,stylesheet
+/plugins/chimpy/*
 /plugins/doubleclick-wp/*
 /plugins/easy-eu-cookie-law/*
 /plugins/easy-wp-cookie-popup/*$script,stylesheet
@@ -1297,7 +1299,7 @@ businessclass.se,spela.se##.advert
 ekuriren.se,kkuriren.se,norran.se,sn.se###cookie-info
 alltforforaldrar.se,battrestadsdel.se,flashback.se,mammasidan.se,minbebis.com###top-banner
 chef.se,svd.se##.Ad
-24blekinge.se,24emmaboda.se,24falkenberg.se,24halmstad.se,24helsingborg.se,24kalmar.se,24kristianstad.se,24malmo.se,24nybro.se,24trelleborg.se,24uppsala.se,24ystad.se,24varberg.se,24oland.se,99.se,bohuslaningen.se,byggnadsarbetaren.se,cissiochfreddan.se,claudiagalliconcha.se,di.se,dn.se,ekuriren.se,folkbladet.nu,gp.se,hallandsposten.se,hn.se,kimura.se,kkuriren.se,loppi.se,mariestadstidningen.se,markbladet.se,medievarlden.se,mestmotor.se,mobil.se,norran.se,nwt.se,paulas.me,skaraborgsbygden.se,skillingaryd.nu,sla.se,sn.se,sportbloggare.com,stromstadstidning.se,swedroid.se,ttela.se,vardagspuls.se,vk.se,vimedbarn.se,gabriellajoss.me,mybabydolls.se,emilysliv.se##.ad
+24blekinge.se,24emmaboda.se,24falkenberg.se,24halmstad.se,24helsingborg.se,24kalmar.se,24kristianstad.se,24malmo.se,24nybro.se,24trelleborg.se,24uppsala.se,24ystad.se,24varberg.se,24oland.se,99.se,bohuslaningen.se,byggnadsarbetaren.se,cissiochfreddan.se,claudiagalliconcha.se,di.se,dn.se,ekuriren.se,folkbladet.nu,gp.se,hallandsposten.se,hn.se,kimura.se,kkuriren.se,loppi.se,mariestadstidningen.se,markbladet.se,medievarlden.se,mestmotor.se,mobil.se,norran.se,nwt.se,paulas.me,skaraborgsbygden.se,skillingaryd.nu,sla.se,sn.se,sportbloggare.com,stromstadstidning.se,swedroid.se,ttela.se,vardagspuls.se,vk.se,vimedbarn.se,gabriellajoss.me,mybabydolls.se,emilysliv.se,casinowings.se##.ad
 affarsvarlden.se,arbetarskydd.se,dagensmedia.se,lag-avtal.se,nickelodeon.se,nyteknik.se,vf.se,improveme.se##.ad-container
 dn.se,klart.se,norran.se##.ad-wrapper
 brollopstorget.se,familjeliv.se##.ad_right
@@ -1390,7 +1392,7 @@ streamtajm.*##script:inject(abort-current-inline-script.js, popunder)
 ||streamtajm.*/webpush.$script
 ||streamtajm.*^$csp=worker-src 'none'
 ||bit.ly^$subdocument,domain=jawcloud.co
-/js/script.js$script,domain=nxload.com|jawcloud.co|openload.co
+/js/script.$script,domain=nxload.com|jawcloud.co|openload.co
 /license.$script,domain=nxload.com|jawcloud.co|openload.co
 ||jawcloud.co/banner$image
 jawcloud.co##script:inject(abort-current-inline-script.js, jawplayer, on)
@@ -1953,6 +1955,10 @@ tkj.se##.category-annons
 tkj.se##li > a:has-text(Sponsor:)
 tkj.se##[id^="text-"]:has(h4:has-text(Ad:))
 tkj.se##[id^="custom_html-"]:has(h4:has-text(Radannonser))
+tkj.se##[id^="custom_html-"]:has(h4:has-text(/annons/i))
+tkj.se##[id^="volt-recent-posts"]:has(h4:has-text(/sponsrade poster/i))
+tkj.se##[id^="text-"]:has(h4:has-text(/sponsorer/i))
+tkj.se##.affiliatenatverk
 professionalsecrets.se##div[data-campaign="newsletter"]
 professionalsecrets.se##script:inject(abort-current-inline-script.js, $, fancybox)
 sportpanelen.se##.stream-item-above-post:has(a[href*="/ads."])
