@@ -254,7 +254,7 @@
 ||biowebb-data.*.amazonaws
 ||bloggplatsen.se/xtcore$script
 ||bloggerfy.com/flash/$object
-||bmbstatic.blob.core.windows.net^$script
+||bmbstatic.blob.core.windows.net^
 ||btikon.se/analytics.$xmlhttprequest
 ||btikon.se/btstats.$script
 ||cdn.livechatinc.com/tracking.$script
@@ -570,6 +570,7 @@ opulens.se##script:inject(abort-current-inline-script.js, advanced_ads_adsense_U
 /plugins/pixelyoursite-pro/*
 /plugins/popup-builder-platinum/*$important,domain=sportpanelen.se|mmabetz.se
 /plugins/sdcookie-warning/*$script,stylesheet
+/plugins/se-wordpress-affiliatehelper/*
 /plugins/se-wordpress-cookie-notice/*
 /plugins/se-wordpress-native-article/*$script,stylesheet
 /plugins/sociallocker-next-premium/*$domain=travprat.se
@@ -619,6 +620,7 @@ cornucopia.cornubot.se,peak-oil.se,apg29.nu,zaramis.se,horoskop.nu,blogspot.se,n
 
 ! HTML filters
 !#if env_firefox
+dn.se##^script:has-text(window.DN.initAds)
 dn.se##^script[id="js-ad-data"]
 di.se##^script:has-text(checkAdBlockEnabled)
 aftonbladet.se##^script:has-text(preLoadAds)
@@ -634,16 +636,14 @@ milansverige.se##^script:has-text(c.charCodeAt)
 
 ! IDG
 ||idg.se/sharecounter?$xmlhttprequest
-||ax.idg.se^
-||gx.idg.se^$image
-||idg.se^*/prebid*.$script,~third-party
-/pis.gif$image,domain=idg.se
+@@/granted/consent.json$domain=idg.se
 idg.se##div[data-cms-ad]
 idg.se##.wide-msg-fb
 idg.se##.pryltorget
 idg.se##.sparticle
 idg.se##.prisjaktCompare
 idg.se##.shareItems
+idg.se##.nextArticleSp
 idg.se##[data-selector^=".wrapperAd"]
 idg.se,macworld.se##.adContainer
 idg.se##[class^="newsletterFormContainer"]
@@ -778,11 +778,17 @@ dn.se##.account-information__tooltip
 dn.se##.js-bottom-bar
 dn.se##.social-media__section
 @@||dn.se^$generichide
+dn.se##.gdpr-header
 dn.se##.personal-carousel
+dn.se##.bottom-bar--visible
 dn.se##body > iframe[style^="display"]
 dn.se##.gdpr-header-container
+dn.se##script:inject(abort-current-inline-script.js, DN, initAds)
+dn.se##script:inject(abort-current-inline-script.js, gtmData)
 dn.se##script:inject(addEventListener-defuser.js, /^(?:error|load)$/, n())
 dn.se##script:inject(addEventListener-defuser.js, splusCheckPaywall)
+/analytics$script,domain=dn.se
+/initLogging$script,domain=dn.se
 /*?isPaywallBlocked$image,domain=dn.se
 /personalized/*$xmlhttprequest,domain=dn.se
 */extension.js$script,redirect=noopjs,domain=dn.se
@@ -824,7 +830,7 @@ di.se##.clip-browser__clip:has(a[href*="/annons-"])
 di.se##.carousel-tab:has-text(/annons:/i)
 digital.di.se,weekend.di.se##script:inject(abort-current-inline-script.js, diConf)
 expressen.se##.terms-dialog
-expressen.se###rich-media-ads
+expressen.se,dn.se###rich-media-ads
 expressen.se##.native-ad-teaser
 expressen.se##.teaser--sponsored
 expressen.se##.teaser:if(.vignette:has-text(/erbjudande från/i))
@@ -1152,6 +1158,7 @@ devote.se,familjeliv.se##div[style*="min-height: 244px;"][id][style*="display: i
 
 ! ALLER MEDIA
 allakorsord.se,allas.se,allers.se,antikochauktion.se,aretrunt.se,baaam.se,cafe.se,dromhemochtradgard.se,elle.se,elledecoration.se,ellematovin.se,femina.se,frida.se,hant.se,hemmets.se,mabra.com,matmagasinet.se,residencemagazine.se,svenskdam.se###black-studio-tinymce-7
+allakorsord.se,allas.se,allers.se,antikochauktion.se,aretrunt.se,baaam.se,cafe.se,dromhemochtradgard.se,elle.se,elledecoration.se,ellematovin.se,femina.se,frida.se,hant.se,hemmets.se,mabra.com,matmagasinet.se,residencemagazine.se,svenskdam.se##div[class^="app_gdpr"]
 allakorsord.se,allas.se,allers.se,antikochauktion.se,aretrunt.se,baaam.se,cafe.se,dromhemochtradgard.se,elle.se,elledecoration.se,ellematovin.se,femina.se,frida.se,hant.se,hemmets.se,mabra.com,matmagasinet.se,residencemagazine.se,svenskdam.se##article[id^="post-"]:has(a[href$="/annons/"])
 allakorsord.se,allas.se,allers.se,antikochauktion.se,aretrunt.se,baaam.se,cafe.se,dromhemochtradgard.se,elle.se,elledecoration.se,ellematovin.se,femina.se,frida.se,hant.se,hemmets.se,mabra.com,matmagasinet.se,residencemagazine.se,svenskdam.se##.c-newsletter
 allakorsord.se,allas.se,allers.se,antikochauktion.se,aretrunt.se,baaam.se,cafe.se,dromhemochtradgard.se,elle.se,elledecoration.se,ellematovin.se,femina.se,frida.se,hant.se,hemmets.se,mabra.com,matmagasinet.se,residencemagazine.se,svenskdam.se##script:inject(abort-on-property-read.js, pbjsChunk)
@@ -1304,7 +1311,7 @@ businessclass.se,spela.se##.advert
 ekuriren.se,kkuriren.se,norran.se,sn.se###cookie-info
 alltforforaldrar.se,battrestadsdel.se,flashback.se,mammasidan.se,minbebis.com###top-banner
 chef.se,svd.se##.Ad
-24blekinge.se,24emmaboda.se,24falkenberg.se,24halmstad.se,24helsingborg.se,24kalmar.se,24kristianstad.se,24malmo.se,24nybro.se,24trelleborg.se,24uppsala.se,24ystad.se,24varberg.se,24oland.se,99.se,bohuslaningen.se,byggnadsarbetaren.se,cissiochfreddan.se,claudiagalliconcha.se,di.se,dn.se,ekuriren.se,folkbladet.nu,gp.se,hallandsposten.se,hn.se,kimura.se,kkuriren.se,loppi.se,mariestadstidningen.se,markbladet.se,medievarlden.se,mestmotor.se,mobil.se,norran.se,nwt.se,paulas.me,skaraborgsbygden.se,skillingaryd.nu,sla.se,sn.se,sportbloggare.com,stromstadstidning.se,swedroid.se,ttela.se,vardagspuls.se,vk.se,vimedbarn.se,gabriellajoss.me,mybabydolls.se,emilysliv.se,casinowings.se##.ad
+24blekinge.se,24emmaboda.se,24falkenberg.se,24halmstad.se,24helsingborg.se,24kalmar.se,24kristianstad.se,24malmo.se,24nybro.se,24trelleborg.se,24uppsala.se,24ystad.se,24varberg.se,24oland.se,99.se,bohuslaningen.se,byggnadsarbetaren.se,cissiochfreddan.se,claudiagalliconcha.se,di.se,dn.se,ekuriren.se,folkbladet.nu,gp.se,hallandsposten.se,hn.se,kimura.se,kkuriren.se,loppi.se,mariestadstidningen.se,markbladet.se,medievarlden.se,mestmotor.se,mobil.se,norran.se,nwt.se,paulas.me,skaraborgsbygden.se,skillingaryd.nu,sla.se,sn.se,sportbloggare.com,stromstadstidning.se,swedroid.se,ttela.se,vardagspuls.se,vk.se,vimedbarn.se,gabriellajoss.me,mybabydolls.se,emilysliv.se,casinowings.se,allakorsord.se,allas.se,allers.se,antikochauktion.se,aretrunt.se,baaam.se,cafe.se,dromhemochtradgard.se,elle.se,elledecoration.se,ellematovin.se,femina.se,frida.se,hant.se,hemmets.se,mabra.com,matmagasinet.se,residencemagazine.se,svenskdam.se##.ad
 affarsvarlden.se,arbetarskydd.se,dagensmedia.se,lag-avtal.se,nickelodeon.se,nyteknik.se,vf.se,improveme.se,hjotidning.se##.ad-container
 dn.se,klart.se,norran.se##.ad-wrapper
 brollopstorget.se,familjeliv.se##.ad_right
