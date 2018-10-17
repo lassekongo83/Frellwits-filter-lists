@@ -17,7 +17,7 @@
 .info/tv4-nyheter/$document
 /_ad.js$important,script,domain=affarsliv.com|affarslivgotland.se|corren.se|eposten.se|folkbladet.se|gotland.net|helagotland.se|klackspark.com|kuriren.nu|mvt.se|norrbottensaffarer.se|nsd.se|nt.se|pt.se|unt.se|uppsala.com|uppsalatidningen.se|vt.se
 /adblock_mobile.$important,script,domain=gamereactor.se
-/assets/js/ads.$important,script,domain=hjotidning.se|mariestadstidningen.se|sla.se|vf.se
+/assets/js/ads.$important,script,domain=filipstadstidning.se|fryksdalsbygden.se|hjotidning.se|mariestadstidningen.se|sla.se|vf.se
 /google-analytics-dashboard$important,script,domain=cyclingplus.se|firstfoto.se|fitnessformen.se|halsafitness.se|hemmahosulrika.se|macguiden.net|ordfrontforlag.se|ulrikadavidsson.se
 /js/ads.$important,script,~third-party,domain=alltomstockholm.se|mitti.se
 /ntm-digital/adn/adn-setup.$important,script
@@ -56,7 +56,7 @@ aftonbladet.se##script:inject(abort-current-inline-script.js, preLoadAds, setup)
 aftonbladet.se##script:inject(setTimeout-defuser.js, onerror, 1000)
 akaskidor.se,allehanda.se,arbetarbladet.se,avestatidning.com,bblat.se,breakit.se,dagensps.se,dalademokraten.se,dt.se,ekuriren.se,fagersta-posten.se,gd.se,hemtrevligt.se,husvagnochcamping.se,kingmagazine.se,kkuriren.se,livetombord.se,lt.se,ltz.se,mestmotor.se,na.se,norrteljetidning.se,nynashamnsposten.se,op.se,salaallehanda.com,sn.se,st.nu,svenskgolf.se,tidningenhalsa.se,tidningenharjedalen.se,utemagasinet.se,vagabond.se,vlt.se##script:inject(abort-current-inline-script.js, NREUM, info)
 akaskidor.se,body.se,svenskgolf.se##body:style(background-image: none !important;)
-akaskidor.se,breakit.se,cartoonnetwork.se,cykl.se,dagensanalys.se,dagensps.se,fotbolltransfers.com,hemtrevligt.se,hjotidning.se,husvagnochcamping.se,jogg.se,kingmagazine.se,livetombord.se,mariestadstidningen.se,mestmotor.se,modette.se,muscles.se,nyheter24.se,sla.se,svenskgolf.se,svettig.se,swedroid.se,tidningenhalsa.se,utemagasinet.se,vagabond.se,vf.se##script:inject(abort-current-inline-script.js, ADTECH, enqueueAd)
+akaskidor.se,breakit.se,cartoonnetwork.se,cykl.se,dagensanalys.se,dagensps.se,filipstadstidning.se,fotbolltransfers.com,fryksdalsbygden.se,hemtrevligt.se,hjotidning.se,husvagnochcamping.se,jogg.se,kingmagazine.se,livetombord.se,mariestadstidningen.se,mestmotor.se,modette.se,muscles.se,nyheter24.se,sla.se,svenskgolf.se,svettig.se,swedroid.se,tidningenhalsa.se,utemagasinet.se,vagabond.se,vf.se##script:inject(abort-current-inline-script.js, ADTECH, enqueueAd)
 akaskidor.se,svenskgolf.se,tidningenhalsa.se##:xpath(//div[text()[contains(., 'ANNONS')]]/ancestor::div[contains(concat(' ', @class, ' '), ' row--native ')]/parent::div)
 akerstromsblog.com,annsoderlund.com,ellinorlofgren.se,emmagreen.se,fokis.se,fredagskocken.se,fridaselkirkblogg.se,frureinhold.se,gynning.net,hormonerhemorrojder.se,magnusnorman.com,majaelisabeth.com,pennyparnevik.com,pingishadenius.com,sannafischer.se,sannalundell.se,teresagrundin.se,thereselindgren.se##[id^="post-"]:has(.sponsored-notification)
 alexandrabring.se,biancaingrosso.se##article[id^="post-"]:if(em:has-text(/i samarbete med/i))
@@ -179,6 +179,8 @@ feber.se##script:inject(set-constant.js, showReklam, false)
 feber.se,tjock.se##script:inject(abort-current-inline-script.js, $, GDPR)
 festivalrykten.se##.featured:if(a:has-text(/annonssamarbete/i))
 festivalrykten.se##body:style(padding-top: 0 !important;)
+filipstadstidning.se,fryksdalsbygden.se,hjotidning.se,mariestadstidningen.se,sla.se,vf.se##script:inject(cookie-remover.js, page-views)
+filipstadstidning.se,fryksdalsbygden.se,hjotidning.se,mariestadstidningen.se,sla.se,vf.se##script:inject(set-constant.js, isAdblock, false)
 filmtipset.se##:xpath(//div[@id="toggle_all_prices"]/parent::td[1]/parent::tr[1])
 filmtipset.se##:xpath(//div[contains(concat(' ', @class, ' '), ' rightlinkheader ')][text()[contains(., 'Rekommenderade sajter')]]/parent::td)
 finansliv.se##script:inject(abort-on-property-read.js, OA_show)
@@ -223,8 +225,6 @@ hemnet.se##.featured-news__link:has(.featured-news__ribbon--sponsored)
 hemnet.se##.recent-news__item:if(.recent-news__category:has-text(/sponsrad/i))
 hightechguiden.se##script:inject(abort-on-property-read.js, noNeedToBlock)
 hightechguiden.se##script:inject(abort-on-property-write.js, document.oncontextmenu)
-hjotidning.se,mariestadstidningen.se,sla.se,vf.se##script:inject(cookie-remover.js, page-views)
-hjotidning.se,mariestadstidningen.se,sla.se,vf.se##script:inject(set-constant.js, isAdblock, false)
 hypeline.se##.homecontent:has(.sponsrad_ruta)
 ica.se##.hse-recipe-list__wrapper:has(a[data-tracking*="LEVERANTÖRSSAMARBETE"])
 ica.se##script:inject(abort-current-inline-script.js, $, .recipe-ad.multiple-sponsors)
