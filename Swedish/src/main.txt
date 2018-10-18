@@ -495,14 +495,15 @@ abus.com#@##cookieChoiceInfo
 ||youbora.com^$third-party,domain=aftonbladet.se|svd.se|foxtv.se
 ||zotabox.com^$third-party,domain=rapport24.com
 ||d2wy8f7a9ursnm.cloudfront.net/bugsnag$script,domain=expressen.se
+||consent.cmp.oath.com^$script,domain=mitti.se|alltomstockholm.se
 
 ! Common scriptlets
 ng.se,alltomstockholm.se,mitti.se,bloggbevakning.se,cornucopia.cornubot.se,innebandymagazinet.se##script:inject(abort-on-property-read.js, ADTECH)
-dagensps.se,husvagnochcamping.se,hemtrevligt.se,akaskidor.se,utemagasinet.se,livetombord.se,svenskgolf.se,kingmagazine.se,vagabond.se,tidningenhalsa.se,mestmotor.se,nyheter24.se,swedroid.se,dagensanalys.se,breakit.se,fotbolltransfers.com,modette.se,muscles.se,cartoonnetwork.se,vf.se,jogg.se,svettig.se,cykl.se,hjotidning.se,sla.se,mariestadstidningen.se,filipstadstidning.se,fryksdalsbygden.se##script:inject(abort-current-inline-script.js, ADTECH, enqueueAd)
+dagensps.se,husvagnochcamping.se,hemtrevligt.se,akaskidor.se,utemagasinet.se,livetombord.se,svenskgolf.se,kingmagazine.se,vagabond.se,tidningenhalsa.se,mestmotor.se,nyheter24.se,swedroid.se,dagensanalys.se,breakit.se,fotbolltransfers.com,modette.se,muscles.se,cartoonnetwork.se,vf.se,jogg.se,svettig.se,cykl.se,hjotidning.se,sla.se,mariestadstidningen.se,filipstadstidning.se,fryksdalsbygden.se,nwt.se,arvikanyheter.se,nkp.se,saffletidningen.se,provinstidningen.se,dalslanningen.se##script:inject(abort-current-inline-script.js, ADTECH, enqueueAd)
 breakit.se,dagensps.se,hemtrevligt.se,akaskidor.se,utemagasinet.se,livetombord.se,svenskgolf.se,kingmagazine.se,vagabond.se,tidningenhalsa.se,mestmotor.se,husvagnochcamping.se,ekuriren.se,kkuriren.se,sn.se,allehanda.se,arbetarbladet.se,avestatidning.com,bblat.se,dalademokraten.se,dt.se,fagersta-posten.se,gd.se,lt.se,ltz.se,na.se,norrteljetidning.se,nynashamnsposten.se,op.se,salaallehanda.com,st.nu,tidningenharjedalen.se,vlt.se##script:inject(abort-current-inline-script.js, NREUM, info)
 breakit.se,bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se,nyheter24.se##script:inject(abort-on-property-read.js, _hjSettings)
 breakit.se##script:inject(abort-current-inline-script.js, _vwo_code)
-mestmotor.se,kingmagazine.se,cartoonnetwork.se,vagabond.se,manolo.se,modette.se,innebandy.se##script:inject(abort-current-inline-script.js, ADTECH, config)
+mestmotor.se,kingmagazine.se,cartoonnetwork.se,vagabond.se,manolo.se,modette.se,innebandy.se,goteborgdirekt.se,stockholmdirekt.se##script:inject(abort-current-inline-script.js, ADTECH, config)
 kamerabild.se,mobil.se##script:inject(set-constant.js, Sidpyssel.prototype.fixaStoran, noopFunc)
 undertian.com,villaliv.se,newsner.com,humorbibeln.se,sportbibeln.se,ettgottskratt.se##script:inject(set-constant.js, mi_track_user, false)
 datormagazin.se,villalivet.se,rocknytt.net,skanesport.se,newsner.com,humorbibeln.se,sportbibeln.se,hightechguiden.se,ettgottskratt.se,hbwebben.se##script:inject(abort-current-inline-script.js, advanced_ads_ga_UID)
@@ -569,6 +570,7 @@ opulens.se##script:inject(abort-current-inline-script.js, advanced_ads_adsense_U
 /plugins/mashshare-google-analytics/*
 /plugins/metro-affiliate/*$script,domain=metromode.se
 /plugins/mitti-cookie-disclaimer/*$script,domain=mitti.se|alltomstockholm.se
+/plugins/mitti-oath-cmpi-js/*$domain=mitti.se|alltomstockholm.se
 /plugins/monarch/*$domain=undertian.com
 /plugins/newsner-lead-tracking/*$script
 /plugins/pause-adblocker/*$script,stylesheet,image,domain=hightechguiden.se
@@ -834,6 +836,7 @@ di.se##.di_panorama__isAdLabel
 di.se##script:inject(abort-on-property-read.js, diConf.servicePlusClientId)
 di.se##.clip-browser__clip:has(a[href*="/annons-"])
 di.se##.carousel-tab:has-text(/annons:/i)
+di.se##.di_expressen-rabatt-koder
 digital.di.se,weekend.di.se##script:inject(abort-current-inline-script.js, diConf)
 expressen.se##.terms-dialog
 expressen.se,dn.se###rich-media-ads
@@ -904,6 +907,7 @@ koket.se##.kf-mosaic-widget:has(.mosaic__custom-sponsor-holder)
 koket.se##.promo__container
 /bn-01d-fusion.js$domain=koket.se
 fotbollskanalen.se##div[class*="top-item__link"][onclick="trackClickThenOpen();"]
+fotbollskanalen.se##.player-index-sponsor
 fotbollskanalen.se##script:inject(abort-current-inline-script.js, adformtag)
 fotbollskanalen.se##script:inject(abort-current-inline-script.js, burtApi)
 fotbollskanalen.se##script:inject(abort-current-inline-script.js, $FK, AdIframeModule)
@@ -921,7 +925,7 @@ vafinans.se##:xpath(//div[contains(concat(' ', @class, ' '), ' brandStoryGreyBac
 vafinans.se###balken_top
 mama.nu,skonahem.com,101ideer.se,tara.se,styleby.nu,topphalsa.se,veckorevyn.com,lantliv.com,amelia.se,alltomtradgard.se,alltommat.se,privataaffarer.se##a.teaser[href*="/annonssamarbete/"]
 mama.nu,skonahem.com,101ideer.se,tara.se,styleby.nu,topphalsa.se,veckorevyn.com,lantliv.com,amelia.se,alltomtradgard.se,alltommat.se,privataaffarer.se##a.teaser:has-text(/annonssamarbete/i)
-mama.nu,skonahem.com,101ideer.se,tara.se,styleby.nu,topphalsa.se,veckorevyn.com,lantliv.com,amelia.se,alltomtradgard.se,alltommat.se,privataaffarer.se##.teaser-native
+mama.nu,skonahem.com,101ideer.se,tara.se,styleby.nu,topphalsa.se,veckorevyn.com,lantliv.com,amelia.se,alltomtradgard.se,alltommat.se,privataaffarer.se,dn.se##.teaser-native
 privataaffarer.se##a[href*="/bit.ly/"]
 /fusion.js$script,domain=tidningenhembakat.se
 /cinnaroll-fusion.min.js^$script,domain=tidningenhembakat.se
@@ -984,26 +988,16 @@ ekuriren.se,kkuriren.se,sn.se###citygate-family-widgetframe
 7ha.se,barometern.se,blt.se,bt.se,kristianstadsbladet.se,olandsbladet.se,ostrasmaland.se,smp.se,sydostran.se,trelleborgsallehanda.se,ut.se,ystadsallehanda.se,osterlenmagasinet.se##script:inject(abort-current-inline-script.js, adTags)
 7ha.se,barometern.se,blt.se,bt.se,kristianstadsbladet.se,olandsbladet.se,ostrasmaland.se,smp.se,sydostran.se,trelleborgsallehanda.se,ut.se,ystadsallehanda.se,osterlenmagasinet.se##script:inject(abort-current-inline-script.js, cX, push)
 7ha.se,barometern.se,blt.se,bt.se,kristianstadsbladet.se,olandsbladet.se,ostrasmaland.se,smp.se,sydostran.se,trelleborgsallehanda.se,ut.se,ystadsallehanda.se##script:inject(abort-on-property-write.js, bm_website_code)
-! Note to self. Don't block adds.js/css.
-nwt.se##.mfp-wrap
-nwt.se##.mfp-bg
-nwt.se##html:style(overflow: auto !important;)
-nwt.se###cookieChoiceInfo
-nwt.se###lokusjobb_small
-nwt.se##a[href*=".se/annons/"]
-nwt.se##.top-landscape-ad
-nwt.se##a[href="#hotelscombined"]
-@@||nwt.se^$generichide
 @@||cxpublic.com^$image,domain=nwt.se
 |https://kampanj.$domain=nwt.se
 skd.se,laholmstidning.se,nsk.se##div.skd-crsl-wrap:matches-css-before(content: Annons)
 /sponsrat-frequency.js^$script,domain=skd.se|laholmstidning.se|nsk.se
 skd.se,laholmstidning.se,nsk.se##script:inject(abort-current-inline-script.js, ERWP, fif)
 skd.se,laholmstidning.se,nsk.se##script:inject(abort-current-inline-script.js, skd_adblocker)
-vf.se,hjotidning.se,sla.se,mariestadstidningen.se,filipstadstidning.se,fryksdalsbygden.se##script:inject(set-constant.js, isAdblock, false)
-vf.se,hjotidning.se,sla.se,mariestadstidningen.se,filipstadstidning.se,fryksdalsbygden.se##script:inject(cookie-remover.js, page-views)
-@@||cloudfront.net/js/ads.js$script,domain=vf.se|hjotidning.se|sla.se|mariestadstidningen.se|filipstadstidning.se|fryksdalsbygden.se
-/assets/js/ads.$script,important,domain=vf.se|hjotidning.se|sla.se|mariestadstidningen.se|filipstadstidning.se|fryksdalsbygden.se
+vf.se,hjotidning.se,sla.se,mariestadstidningen.se,filipstadstidning.se,fryksdalsbygden.se,nwt.se,arvikanyheter.se,nkp.se,saffletidningen.se,provinstidningen.se,dalslanningen.se##script:inject(set-constant.js, isAdblock, false)
+vf.se,hjotidning.se,sla.se,mariestadstidningen.se,filipstadstidning.se,fryksdalsbygden.se,nwt.se,arvikanyheter.se,nkp.se,saffletidningen.se,provinstidningen.se,dalslanningen.se##script:inject(cookie-remover.js, page-views)
+@@||cloudfront.net/js/ads.js$script,domain=vf.se|hjotidning.se|sla.se|mariestadstidningen.se|filipstadstidning.se|fryksdalsbygden.se|nwt.se|arvikanyheter.se|nkp.se|saffletidningen.se|provinstidningen.se|dalslanningen.se
+/assets/js/ads.$script,important,domain=vf.se|hjotidning.se|sla.se|mariestadstidningen.se|filipstadstidning.se|fryksdalsbygden.se|nwt.se|arvikanyheter.se|nkp.se|saffletidningen.se|provinstidningen.se|dalslanningen.se
 
 ! MITTMEDIA
 allehanda.se,arbetarbladet.se,avestatidning.com,bblat.se,dalademokraten.se,dt.se,fagersta-posten.se,gd.se,lt.se,ltz.se,na.se,norrteljetidning.se,nynashamnsposten.se,op.se,salaallehanda.com,st.nu,tidningenharjedalen.se,vlt.se##div.client-dialogue-plus
@@ -1315,7 +1309,7 @@ ekuriren.se,kkuriren.se,norran.se,sn.se###cookie-info
 alltforforaldrar.se,battrestadsdel.se,flashback.se,mammasidan.se,minbebis.com###top-banner
 chef.se,svd.se##.Ad
 24blekinge.se,24emmaboda.se,24falkenberg.se,24halmstad.se,24helsingborg.se,24kalmar.se,24kristianstad.se,24malmo.se,24nybro.se,24trelleborg.se,24uppsala.se,24ystad.se,24varberg.se,24oland.se,99.se,bohuslaningen.se,byggnadsarbetaren.se,cissiochfreddan.se,claudiagalliconcha.se,di.se,dn.se,ekuriren.se,folkbladet.nu,gp.se,hallandsposten.se,hn.se,kimura.se,kkuriren.se,loppi.se,mariestadstidningen.se,markbladet.se,medievarlden.se,mestmotor.se,mobil.se,norran.se,nwt.se,paulas.me,skaraborgsbygden.se,skillingaryd.nu,sla.se,sn.se,sportbloggare.com,stromstadstidning.se,swedroid.se,ttela.se,vardagspuls.se,vk.se,vimedbarn.se,gabriellajoss.me,mybabydolls.se,emilysliv.se,casinowings.se,allakorsord.se,allas.se,allers.se,antikochauktion.se,aretrunt.se,baaam.se,cafe.se,dromhemochtradgard.se,elle.se,elledecoration.se,ellematovin.se,femina.se,frida.se,hant.se,hemmets.se,mabra.com,matmagasinet.se,residencemagazine.se,svenskdam.se##.ad
-affarsvarlden.se,arbetarskydd.se,dagensmedia.se,lag-avtal.se,nickelodeon.se,nyteknik.se,vf.se,improveme.se,hjotidning.se,sla.se,mariestadstidningen.se,filipstadstidning.se,fryksdalsbygden.se##.ad-container
+affarsvarlden.se,arbetarskydd.se,dagensmedia.se,lag-avtal.se,nickelodeon.se,nyteknik.se,vf.se,improveme.se,hjotidning.se,sla.se,mariestadstidningen.se,filipstadstidning.se,fryksdalsbygden.se,nwt.se,arvikanyheter.se,nkp.se,saffletidningen.se,provinstidningen.se,dalslanningen.se##.ad-container
 dn.se,klart.se,norran.se##.ad-wrapper
 brollopstorget.se,familjeliv.se##.ad_right
 24blekinge.se,24emmaboda.se,24falkenberg.se,24halmstad.se,24helsingborg.se,24kalmar.se,24kristianstad.se,24malmo.se,24nybro.se,24trelleborg.se,24uppsala.se,24ystad.se,24varberg.se,24oland.se,babyhjalp.se,branschkoll.se,fotosidan.se,moviezine.se,affarsliv.com,affarslivgotland.se,corren.se,eposten.se,folkbladet.se,helagotland.se,klackspark.com,kuriren.nu,mvt.se,norrbottensaffarer.se,nsd.se,nt.se,pt.se,unt.se,vt.se,globalportalen.org##.ads
@@ -1594,6 +1588,7 @@ mitti.se,alltomstockholm.se##.puff-container-native
 mitti.se,alltomstockholm.se##.panorama_top
 mitti.se,alltomstockholm.se##[class*="native_"]:has(.native-ad-mark-image)
 mitti.se,alltomstockholm.se##.teaser-large-container:has(.native-ad-mark)
+mitti.se,alltomstockholm.se###cmp-container-id
 /mitti-ad-block-blocker/scripts.$script,domain=mitti.se|alltomstockholm.se
 /js/ads.$script,~third-party,important,domain=mitti.se|alltomstockholm.se
 altinget.se##script:inject(setTimeout-defuser.js, show_popup)
@@ -2092,6 +2087,7 @@ buzzter.se###lock
 buzzter.se###outer-wrap:style(overflow: auto !important;)
 buzzter.se##body.trend-lock #outer-wrap:style(position: inherit !important;)
 goteborgdirekt.se,stockholmdirekt.se##.gdpr-warning
+goteborgdirekt.se,stockholmdirekt.se##script:inject(set-constant.js, NWS.config.enableAdblockerDetection, false)
 *$object,object-subrequest,domain=internetlankar.se
 mintur.se##[id^="banner"]
 ||turistmal.se/js/popup-controller.js$script
