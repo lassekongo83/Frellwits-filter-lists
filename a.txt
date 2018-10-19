@@ -4,6 +4,8 @@
 ! Description: This is where I keep some of my personal filters. (These may break stuff.)
 ! License: GPLv3
 
+/webtorrent.min.js$script
+
 ! Default battle.net forums sending too many image requests
 ||battle.net/forums/static/images/backgrounds/background*.$image
 ||worldofwarcraft.com/character/*avatar.$image
@@ -19,6 +21,8 @@ imgur.com###wrapper-pop_sky
 imgur.com##.social-icon
 imgur.com##script:inject(addEventListener-defuser.js, mousemove)
 imgur.com##a.post-action-tags-tag:style(background: none !important;)
+imgur.com##.NewCover.isFixed:style(box-shadow: none !important;)
+imgur.com##.Footer:style(box-shadow: none !important;)
 !#if !env_firefox
 imgur.com##script:inject(abort-on-property-read.js, PREBID_TIMEOUT)
 imgur.com##script:inject(abort-on-property-read.js, runSlots)
@@ -42,6 +46,13 @@ imgur.com##^script:has-text(f,b,e,v,n,t,s)
 imgur.com##^script:has-text(loaderFrameWindow)
 !#endif
 
+! LOADING
+loading.se##.PostItem-container, .Boop-container, .Games-container:style(max-width: 998px !important; width: 998px !important; margin: 0 auto !important;)
+!loading.se##body:style(font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif !important;)
+!loading.se##.Row-title:style(font-size: 13px !important; font-weight: bold !important; color: #333 !important; line-height: 1.2 !important; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif !important;)
+!loading.se##.Row-creation-text:style(font-size: 11px !important; line-height: 1.4 !important;)
+!loading.se##.Row-forum-container:style(margin-bottom: 0 !important;)
+
 ! NEOWIN
 neowin.net##article.news-item:has(a[href*="neowin-deals"])
 neowin.net##article.news-item:has(span.sponsored)
@@ -50,6 +61,12 @@ neowin.net###ipsLayout_sidebar > div:nth-of-type(3)
 /forum/topic*/?preview=1*$xmlhttprequest,domain=neowin.net
 neowin.net##li.ipsDataItem:has(a[href$="/sponsored/"])
 neowin.net##div[data-ns="leaderboard"]
+
+! SR
+||sverigesradio.se/sida/content/img/background/wall*.jpg
+sverigesradio.se##div[id="user-message-container"][data-require="modules/cookie-message"]
+sverigesradio.se##+js(abort-current-inline-script.js, _gaq, push)
+sverigesradio.se##body:style(padding-top: 64px !important;)
 
 ! DEVIANTART
 deviantart.com###block-notice
@@ -99,6 +116,7 @@ reddit.com##script:inject(abort-on-property-write.js, adSlots)
 reddit.com##p > a[href="#pixel"]
 reddit.com##.give-gold-button
 reddit.com##.native-ad-container
+reddit.com##a.redesign-beta-optin
 ! Block reddit users
 reddit.com##div.thing[data-author="udda_boktips"]
 
@@ -116,6 +134,10 @@ youtube.com##a[class^="ytp-videowall-still"][aria-label*="MUST WATCH"]
 youtube.com###secondary-links
 youtube.com##.item-section:has(a[href="/feed/trending"])
 youtube.com##li.video-list-item:if(span:has-text(/^Rekommendationer/))
+google.se##div[class*="middle-slot-promo"]
+google.se###cnsh
+google.se###cnso
+||youtube.com/pagead/
 
 ! WOWHEAD
 wowhead.com##.blocks:has(div[id^="ad-"])
@@ -130,6 +152,7 @@ wowhead.com##div#npc-model-container
 ||mb.zam.com^
 wowhead.com##.blocks:has(.block-pair)
 wowhead.com##script:inject(abort-current-inline-script.js, WAS, addComScoreTracking)
+wowhead.com##script:inject(abort-current-inline-script.js, I11C, Morph)
 
 ! MMO Champion and Curse
 ||media.mmo-champion.com^*/twitter.$script
@@ -223,6 +246,11 @@ gfycat.com##.upnext-container
 gfycat.com##.related-content
 warcraftlogs.com##script:inject(setTimeout-defuser.js, ad)
 dragoninquisition.com##script:inject(abort-current-inline-script.js, anOptions)
+||aaxads.com^
+||bitbucket-marketing-cdn.atlassian.com^$script
+/fstrat$media,domain=expressen.se
+coop.se##.Notice.Notice--sticky-bottom
+coop.se##script:inject(abort-current-inline-script.js, NREUM, info)
 
 ! Misc HTML filters
 !#if env_firefox
