@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Title: Frellwit's Swedish Filter
 ! Expires: 3 days (update frequency)
-! Last modified: 2018-10-18 20:02:13 CEST
+! Last modified: 2018-10-19 13:24:00 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -108,6 +108,7 @@
 /\/*annons*./$image,domain=guldkanalen.se|kurera.se|lesscarbs.se|lundagard.se|megafonen.nu|newsvoice.se|nvp.se|rumhemma.se|svf.se|tekniksmart.se
 /\/*banner*./$image,domain=alltomhif.se|bettips.se|dansbandskanalen.se|etc.se|evertiq.se|guldkanalen.se|it-finans.se|kurera.se|lakartidningen.se|markbladet.se|marsta.nu|newsvoice.se|rockkocken.se|rumhemma.se|skrattnet.se|sportbloggare.com|sportpanelen.se|svf.se|tkj.se|vaken.se
 /\/*banner*./$script,domain=dagenshandel.se|entreprenor.se|food-supply.se|magasinetparagraf.se|motormagasinet.se|skyddosakerhet.se
+/\/*casino*./$image,domain=hypeline.se
 /\/*sponsor*./$image,domain=ettgottskratt.se|humorbibeln.se|newsner.com|sportbibeln.se
 /_ad/*$script,domain=funbeat.se
 /_banners/*$image,domain=kolozzeum.com
@@ -200,6 +201,7 @@
 /eniro.pixel.script.js$domain=eniro.se
 /entag.js$script,domain=eniro.se|proff.se
 /entryclick;_
+/eu-cookie-compliance/*$domain=realtid.se
 /eu_cookie_alert/*$script,stylesheet
 /evqNewsBot.js^$script,domain=evertiq.se
 /evqReadBot.js^$script,domain=evertiq.se
@@ -379,7 +381,7 @@
 /pulsetracking.$script,domain=aftonbladet.se
 /pum/*$script,domain=opulens.se
 /pum/pum-site-scripts.$script,domain=tkj.se
-/QX-AD.js^$script,domain=qruiser.com|qx.se
+/QXA.$script,domain=qruiser.com|qx.se
 /rabattkod/*$image,domain=aftonbladet.se
 /rantekartan/*$subdocument,domain=expressen.se
 /realtid_ads/*$domain=realtid.se
@@ -503,6 +505,7 @@
 @@||fiskejournalen.se^$generichide
 @@||fokus.se^$generichide
 @@||freeride.nu/js/ads.js^$script,domain=freeride.se|happyride.se
+@@||funfunfun.se/advertisement.$script,~third-party
 @@||funnygames.se^$generichide
 @@||fwmrm.net/*MTG*HTML5$script,domain=viafree.se
 @@||fwmrm.net/ad/$script,domain=dplay.se
@@ -662,6 +665,7 @@ businessclass.se###bcpop
 businessclass.se##.reveal-modal-bg
 businessclass.se,spela.se##.advert
 buzzter.se###lock
+byggahus.se###wallpaper-ad-container
 byggahus.se##.block-partner-article
 byggahus.se##.block-revive-ad
 byggahus.se##.messageAd
@@ -899,6 +903,9 @@ hockeymagasinet.com##app-gdpr-alert
 hockeymagasinet.com,runnersworld.se,utsidan.se##.sponsored
 hugorosas.se##.tag-sponsored_post
 hugorosas.se##article.category-samarbete
+hypeline.se###herobanner
+hypeline.se##[class^="ad_"]
+hypeline.se,uppslaget.se##.annons
 iabsverige.se###load
 ica.se##.recipe-ad
 idg.se##.nextArticleSp
@@ -1174,7 +1181,6 @@ tvmatchen.nu##a.p-icon.partner
 underbaraclaras.se##.ad_parent
 undertian.com##a[href*="-samarbete-med-"]
 uppsalanyheter.se###banner-top-block
-uppslaget.se##.annons
 va.se##.popup-wrapper
 va.se##.share
 va.se##.sponsored-article
@@ -1521,6 +1527,7 @@ yogaworld.se##.headerbar-container
 ||qbrick.com^$third-party,domain=resume.se
 ||qualifio.com^$third-party
 ||qualifioapp.com^$third-party
+||qx.se/qxa/$xmlhttprequest
 ||rabble-res.cloudinary.com^$image,domain=bohuslaningen.se|gp.se|hallandsposten.se|hn.se|stromstadstidning.se|ttela.se
 ||real123movies.*/wp-content/themes/keremiya1/js/license.$script
 ||real123movies.*/wp-content/themes/keremiya1/js/script.js$script
@@ -1544,6 +1551,7 @@ yogaworld.se##.headerbar-container
 ||sdk.pulse.schibsted.com^$script
 ||seekly.se^$third-party
 ||seenthis.se^$third-party
+||sentry.nu/banner/
 ||serverbid.com^$third-party
 ||service.survio.se^*/registerhit?$image
 ||sesn.se^$third-party

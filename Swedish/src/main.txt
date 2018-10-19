@@ -311,6 +311,7 @@
 ||service.survio.se^*/registerhit?$image
 ||solidtango.com^*/player_statistics$image
 ||tibaco.net/scripts/tws.js$script
+||sentry.nu/banner/
 ||site.com/xtcore.$script
 ||sitegainer.com/jsinsert/*/sitegainer*.$script,third-party
 ||snapwidget.com/images/snapwidget_ad$image
@@ -469,6 +470,7 @@ abus.com#@##cookieChoiceInfo
 /\/*banner*./$image,domain=dansbandskanalen.se|etc.se|evertiq.se|guldkanalen.se|kurera.se|markbladet.se|rockkocken.se|rumhemma.se|skrattnet.se|tkj.se|vaken.se|sportpanelen.se|newsvoice.se|sportbloggare.com|marsta.nu|lakartidningen.se|bettips.se|svf.se|alltomhif.se|it-finans.se
 /\/*banner*./$script,domain=dagenshandel.se|entreprenor.se|food-supply.se|magasinetparagraf.se|motormagasinet.se|skyddosakerhet.se
 /\/*sponsor*./$image,domain=humorbibeln.se|newsner.com|sportbibeln.se|ettgottskratt.se
+/\/*casino*./$image,domain=hypeline.se
 /ajax_statistics_count/*$xmlhttprequest,domain=industrinyheter.se|dagensnaringsliv.se
 /analytics/*$domain=tkj.se
 /annons/*$subdocument,domain=internetlankar.se
@@ -503,7 +505,7 @@ dagensps.se,husvagnochcamping.se,hemtrevligt.se,akaskidor.se,utemagasinet.se,liv
 breakit.se,dagensps.se,hemtrevligt.se,akaskidor.se,utemagasinet.se,livetombord.se,svenskgolf.se,kingmagazine.se,vagabond.se,tidningenhalsa.se,mestmotor.se,husvagnochcamping.se,ekuriren.se,kkuriren.se,sn.se,allehanda.se,arbetarbladet.se,avestatidning.com,bblat.se,dalademokraten.se,dt.se,fagersta-posten.se,gd.se,lt.se,ltz.se,na.se,norrteljetidning.se,nynashamnsposten.se,op.se,salaallehanda.com,st.nu,tidningenharjedalen.se,vlt.se##script:inject(abort-current-inline-script.js, NREUM, info)
 breakit.se,bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se,nyheter24.se##script:inject(abort-on-property-read.js, _hjSettings)
 breakit.se##script:inject(abort-current-inline-script.js, _vwo_code)
-mestmotor.se,kingmagazine.se,cartoonnetwork.se,vagabond.se,manolo.se,modette.se,innebandy.se,goteborgdirekt.se,stockholmdirekt.se##script:inject(abort-current-inline-script.js, ADTECH, config)
+mestmotor.se,kingmagazine.se,cartoonnetwork.se,vagabond.se,manolo.se,modette.se,innebandy.se,goteborgdirekt.se,stockholmdirekt.se,qruiser.com##script:inject(abort-current-inline-script.js, ADTECH, config)
 kamerabild.se,mobil.se##script:inject(set-constant.js, Sidpyssel.prototype.fixaStoran, noopFunc)
 undertian.com,villaliv.se,newsner.com,humorbibeln.se,sportbibeln.se,ettgottskratt.se##script:inject(set-constant.js, mi_track_user, false)
 datormagazin.se,villalivet.se,rocknytt.net,skanesport.se,newsner.com,humorbibeln.se,sportbibeln.se,hightechguiden.se,ettgottskratt.se,hbwebben.se##script:inject(abort-current-inline-script.js, advanced_ads_ga_UID)
@@ -1118,7 +1120,8 @@ gamereactor.se###ad_mobiletopinsidetext
 ! LIFE OF SVEA
 familjeliv.se##a[href*="/kampanj/"]
 familjeliv.se##.flm-kampanj
-familjeliv.se##.articleTeaser:if(.articleSuperTitle:has-text(/i samarbete med/i))
+familjeliv.se##.articleTeaser:if(.articleSuperTitle:has-text(/samarbete med/i))
+familjeliv.se##a:has(span[data-supertitle^="Samarbete med"])
 familjeliv.se##a[data-track]:if(.supertitle:has-text(/i samarbete med/i))
 familjeliv.se##:xpath(//span[text()[contains(., 'Sponsrat')]]/ancestor::div[contains(concat(' ', @class, ' '), ' blogPostWrapper ')]/parent::div/parent::div)
 familjeliv.se##script:inject(addEventListener-defuser.js, jquery:loaded)
@@ -1338,6 +1341,7 @@ mobil.se,kamerabild.se###gdpr
 pomu.se,wwf.se##.cc-banner
 koket.se,nyheter24.se##.native
 svartgul.se,tvmatchen.nu###panorama
+uppslaget.se,hypeline.se##.annons
 
 ! Various websites with lots of malicious stuff and annoyances
 !#if env_firefox
@@ -1489,6 +1493,7 @@ realtid.se###block-views-takeover-career-block
 realtid.se###sliding-popup
 realtid.se##script:inject(abort-current-inline-script.js, sas)
 /realtid_ads/*$domain=realtid.se
+/eu-cookie-compliance/*$domain=realtid.se
 battrestadsdel.se###top-banner-mobile
 battrestadsdel.se###HideBanner
 battrestadsdel.se###sociala-medier-box
@@ -1593,6 +1598,7 @@ mitti.se,alltomstockholm.se###cmp-container-id
 altinget.se##script:inject(setTimeout-defuser.js, show_popup)
 existenz.se###backgroundad
 ?bannerid=$image,domain=existenz.se
+@@||funfunfun.se/advertisement.$script,~third-party
 existenz.se,funfunfun.se##a[href*="bannerid"]
 existenz.se##p:has(a[href^="http://ads."])
 ||existenz.se^$object,object-subrequest
@@ -1706,7 +1712,8 @@ flamman.se##.Banner
 /takeover.gif$image,domain=flamman.se
 kurera.se##.annonswrapper
 kurera.se##.g:has(span.ads)
-/QX-AD.js^$script,domain=qx.se|qruiser.com
+/QXA.$script,domain=qx.se|qruiser.com
+||qx.se/qxa/$xmlhttprequest
 /blogcounter/image?$image,domain=javligtgott.se
 /blogcounter.js^$script,domain=javligtgott.se
 ||stumbleupon.com/hostedbadge.$script,domain=javligtgott.se
@@ -1766,6 +1773,9 @@ byggahus.se##.block-partner-article
 byggahus.se##a[href^="/partner/"]
 byggahus.se##.messageAd
 byggahus.se##.messagePartner
+byggahus.se###wallpaper-ad-container
+byggahus.se##script:inject(abort-current-inline-script.js, divWpExtra)
+byggahus.se###col-content:style(margin-top: 0 !important;)
 metromode.se##.slick-item:has(.c-article__ad.advert)
 metromode.se##.js-blox-article:has(.c-article__ad.advert)
 metromode.se##.b-topshop
@@ -1794,6 +1804,7 @@ viseniorer.se##.topheaderinfo
 vmj.se,danskaspraket.se,digitalavykort.se,viseniorer.se##.cc-cookies
 ||fuska.se/media/js/td.js$script
 ||fuska.se/cdn-cgi/pe/bag2^$xmlhttprequest
+fuska.se##script:inject(abort-current-inline-script.js, $, .modal)
 fuska.se###top1
 voodoofilm.org##.content-news:has(span[id*="Sponsored"])
 mytaste.se##div[id*="panorama_"]
@@ -1855,6 +1866,8 @@ skanesport.se###check-also-box.show-check-also
 skanesport.se##.stream-item
 @@||skanesport.se^$generichide
 hypeline.se##.homecontent:has(.sponsrad_ruta)
+hypeline.se###herobanner
+hypeline.se##[class^="ad_"]
 dagenstv.com###bt
 /AC_RunActiveContent.js$script,domain=dagenstv.com
 /swfobject.js$script,domain=dagenstv.com
@@ -2135,7 +2148,6 @@ foxtv.se###cookieBar
 tidningenkarriar.se##.l-advertisement
 @@||morgonbladet.nu^$generichide
 morgonbladet.nu##script:inject(noeval.js)
-uppslaget.se##.annons
 camping.se###CookiesBox
 camping.se##.DfpAd
 camping.se##.OpenXAd
