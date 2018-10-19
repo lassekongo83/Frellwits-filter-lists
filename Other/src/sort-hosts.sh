@@ -16,6 +16,6 @@ cat > output/hosts-headers.txt <<EOF
 # homepage:       https://github.com/lassekongo83/Frellwits-filter-lists/
 EOF
 
-cat output/hosts-headers.txt output/sorted-hosts.txt > ../../anti-gambling-and-betting-hosts-file.txt
+cat output/hosts-headers.txt output/sorted-hosts.txt > ../../anti-casino-and-betting-hosts-file.txt
 
 rm output/*.txt
