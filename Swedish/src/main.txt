@@ -149,6 +149,7 @@
 ||ubembed.com^$third-party
 ||unformsy.mobi^$third-party
 ||upsales.com^$third-party
+||uptobanner.com^$third-party
 ||uptobranding.com^$third-party
 ||yandex.st/share/share.$third-party
 ||yastatic.net/share/$third-party
@@ -676,7 +677,6 @@ bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##.a
 bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##.burt-unit
 bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##.rabble-widget
 bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##.share-fixed-desktop
-bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##.article__gallery__container:style(display: flex !important; justify-content: center !important;)
 bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##script:inject(abort-current-inline-script.js, _cInfo)
 bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##script:inject(abort-current-inline-script.js, vendorList)
 bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##script:inject(abort-current-inline-script.js, headerScripts, checkAdBlockers)
@@ -729,6 +729,7 @@ aftonbladet.se##.share-icons
 aftonbladet.se##a[href*=".se/kampanj?"]:has-text(/erbjudande/i)
 /rabattkod/*$image,domain=aftonbladet.se
 /pulsetracking.$script,domain=aftonbladet.se
+/campaign-fallback.$script,domain=aftonbladet.se
 aftonbladet.se##html,body:style(overflow: auto !important;)
 aftonbladet.se##script:inject(abort-current-inline-script.js, preLoadAds, loadAd)
 aftonbladet.se##script:inject(abort-current-inline-script.js, preLoadAds, setup)
@@ -1408,11 +1409,12 @@ streamtajm.*##script:inject(abort-current-inline-script.js, popunder)
 ||streamtajm.*/webpush.$script
 ||streamtajm.*^$csp=worker-src 'none'
 ||bit.ly^$subdocument,domain=jawcloud.co
-/js/script.$script,domain=nxload.com|jawcloud.co|openload.co
-/license.$script,domain=nxload.com|jawcloud.co|openload.co
+/js/script.$script,domain=nxload.com|jawcloud.co|openload.co|streamango.com
+/license.$script,domain=nxload.com|jawcloud.co|openload.co|streamango.com
 ||jawcloud.co/banner$image
 jawcloud.co##script:inject(abort-current-inline-script.js, jawplayer, on)
 ||openload.co/assets/js/video-js/vast$script
+/vast/*$domain=streamango.com
 
 ! Various annoyances
 youplay.se,nyheter24.se,emocore.se,modette.se,dayviews.com,filmtipset.se,affarsliv.com,affarslivgotland.se,corren.se,eposten.se,folkbladet.se,helagotland.se,klackspark.com,kuriren.nu,mvt.se,norrbottensaffarer.se,nsd.se,nt.se,pt.se,unt.se,vt.se,kamrat.com##script:inject(set-constant.js, youplay.helpers.disableRightClick, noopFunc)
