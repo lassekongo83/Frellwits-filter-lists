@@ -500,7 +500,7 @@ abus.com#@##cookieChoiceInfo
 ||zotabox.com^$third-party,domain=rapport24.com
 ||d2wy8f7a9ursnm.cloudfront.net/bugsnag$script,domain=expressen.se
 ||consent.cmp.oath.com^$script,domain=mitti.se|alltomstockholm.se
-||consent.cookiebot.com^$third-party,domain=goteborgdirekt.se|stockholmdirekt.se|wesafe.se|alingsastidning.se|partilletidning.se|itaboutdoor.se|selmaspa.se|skeppsbrons.se|etc.se
+||consent.cookiebot.com^$third-party,domain=goteborgdirekt.se|stockholmdirekt.se|wesafe.se|alingsastidning.se|partilletidning.se|itaboutdoor.se|selmaspa.se|skeppsbrons.se|etc.se|norran.se
 ||marketingautomation.services^$third-party,domain=wesafe.se
 
 ! Common scriptlets
@@ -946,16 +946,16 @@ viivilla.se##div.row.item:has(.overlay-sponsor)
 viivilla.se###product-area
 viivilla.se##.native-ad-md
 viivilla.se##.afubar-top
+||europe-west1-bonnier-big-data.cloudfunctions.net^$third-party
 /fusionadloader.$script,domain=viivilla.se
 /iframeadvloader.$script,domain=viivilla.se
 /adv_utils.$script,domain=viivilla.se
-||ma-track.bonnierpublications.se^
+||ma-track.bonnierpublications.se^$third-party
 ||ma.bonnierpublications.se/mtc/event$xmlhttprequest
 /bau.js$script,domain=dagensmedia.se
-/*adContainer$script,domain=dagensmedia.se
-/*fullpageAd$script,domain=dagensmedia.se
-/*widgets_native$script,domain=dagensmedia.se
-/native.js$script,domain=dagensmedia.se
+adContainer$script,domain=dagensmedia.se
+fullpageAd$script,domain=dagensmedia.se
+widgets_native$script,domain=dagensmedia.se
 dagensmedia.se##.panoramaWrapper
 dagensmedia.se##.cookieBanner
 dagensmedia.se##.nativeCard
@@ -1384,14 +1384,14 @@ nyafilmerhd.*,dreamfilmhd.*,real123movies.*##li > a[target="_blank"]
 nyafilmerhd.*,dreamfilmhd.*,real123movies.*##script:inject(addEventListener-defuser.js, /^(?:DOMContentLoaded|mouseup|mousedown|mousemove)$/)
 dreamfilmhd.*,real123movies.*##script:inject(setInterval-defuser.js, F9, 500)
 nyafilmerhd.*##script:inject(setInterval-defuser.js, u6, 500)
-||dreamfilmhd.*^$csp=default-src 'self' 'unsafe-inline' 'unsafe-eval' jawcloud.co *.jawcloud.co upvtt.com wp.com *.wp.com *.googleapis.com vkpass.com *.vkpass.com *.gstatic.com
-||nyafilmerhd.*^$csp=default-src 'self' 'unsafe-inline' 'unsafe-eval' jawcloud.co *.jawcloud.co upvtt.com wp.com *.wp.com *.googleapis.com vkpass.com *.vkpass.com *.gstatic.com
-||real123movies.*^$csp=default-src 'self' 'unsafe-inline' 'unsafe-eval' jawcloud.co *.jawcloud.co upvtt.com wp.com *.wp.com *.googleapis.com vkpass.com *.vkpass.com *.gstatic.com *.cloudflare.com
+||dreamfilmhd.*^$csp=default-src 'self' 'unsafe-inline' 'unsafe-eval' jawcloud.co *.jawcloud.co upvtt.com wp.com *.wp.com *.googleapis.com vkpass.com *.vkpass.com streamango.com *.gstatic.com
+||nyafilmerhd.*^$csp=default-src 'self' 'unsafe-inline' 'unsafe-eval' jawcloud.co *.jawcloud.co upvtt.com wp.com *.wp.com *.googleapis.com vkpass.com *.vkpass.com streamango.com *.gstatic.com
+||real123movies.*^$csp=default-src 'self' 'unsafe-inline' 'unsafe-eval' jawcloud.co *.jawcloud.co upvtt.com wp.com *.wp.com *.googleapis.com vkpass.com *.vkpass.com streamango.com *.gstatic.com *.cloudflare.com
 ||nyafilmerhd.*/wp-content/themes/keremiya1/js/script.js$script
 ||nyafilmerhd.*/wp-content/themes/keremiya1/js/license.$script
 ||real123movies.*/wp-content/themes/keremiya1/js/script.js$script
 ||real123movies.*/wp-content/themes/keremiya1/js/license.$script
-||swesub.*^$csp=default-src 'self' 'unsafe-inline' 'unsafe-eval' *.tmdb.org ajax.cloudflare.com *.googleapis.com cdnjs.cloudflare.com fonts.gstatic.com openload.co nxload.com data:
+||swesub.*^$csp=default-src 'self' 'unsafe-inline' 'unsafe-eval' *.tmdb.org ajax.cloudflare.com *.googleapis.com cdnjs.cloudflare.com fonts.gstatic.com openload.co nxload.com streamango.com data:
 ||nordicfilm.*^$csp=default-src 'self' 'unsafe-inline' 'unsafe-eval' *.tmdb.org *.postimg.cc *.youtube.com *.googleapis.com fonts.gstatic.com vidbox.co
 ||nordicfilm.*^$csp=worker-src 'none'
 ||nordicfilmhd.*^$csp=default-src 'self' 'unsafe-inline' 'unsafe-eval' *.tmdb.org *.postimg.cc *.youtube.com *.googleapis.com fonts.gstatic.com vidbox.co
@@ -1448,6 +1448,7 @@ nordichardware.se##script:inject(abort-current-inline-script.js, message)
 @@||nordichardware.se^$generichide
 bubb.la##:xpath(//h2[@class="ad"]/parent::div[1])
 friatider.se##img[src*="336x150"]
+friatider.se##.plainbox:has(span:has-text(/annons/i))
 friatider.se##script:inject(abort-current-inline-script.js, Drupal, settings)
 etc.se##.banner-wrap
 etc.se##.article-type-annons
