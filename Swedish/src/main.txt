@@ -470,8 +470,8 @@ abus.com#@##cookieChoiceInfo
 ! Common site specific blocking
 /\/*280x240*./$image,domain=rumhemma.se
 /\/*280x360./$image,domain=kurera.se
-/\/*annons*./$image,domain=guldkanalen.se|kurera.se|nvp.se|rumhemma.se|tekniksmart.se|megafonen.nu|newsvoice.se|lesscarbs.se|lundagard.se|svf.se
-/\/*banner*./$image,domain=dansbandskanalen.se|etc.se|evertiq.se|guldkanalen.se|kurera.se|markbladet.se|rockkocken.se|rumhemma.se|skrattnet.se|tkj.se|vaken.se|sportpanelen.se|newsvoice.se|sportbloggare.com|marsta.nu|lakartidningen.se|bettips.se|svf.se|alltomhif.se|it-finans.se
+/\/*annons*./$image,domain=guldkanalen.se|kurera.se|nvp.se|rumhemma.se|tekniksmart.se|megafonen.nu|newsvoice.se|lesscarbs.se|lundagard.se|svf.se|boktugg.se
+/\/*banner*./$image,domain=dansbandskanalen.se|etc.se|evertiq.se|guldkanalen.se|kurera.se|markbladet.se|rockkocken.se|rumhemma.se|skrattnet.se|tkj.se|vaken.se|sportpanelen.se|newsvoice.se|sportbloggare.com|marsta.nu|lakartidningen.se|bettips.se|svf.se|alltomhif.se|it-finans.se|boktugg.se
 /\/*banner*./$script,domain=dagenshandel.se|entreprenor.se|food-supply.se|magasinetparagraf.se|motormagasinet.se|skyddosakerhet.se
 /\/*sponsor*./$image,domain=humorbibeln.se|newsner.com|sportbibeln.se|ettgottskratt.se
 /\/*casino*./$image,domain=hypeline.se
@@ -525,7 +525,7 @@ opulens.se##script:inject(abort-current-inline-script.js, advanced_ads_adsense_U
 ||facebook.com/plugins/like$third-party,domain=~facebook.com|~fb.com
 
 ! Override EasyPrivacy and EasyList whitelists
-/wp-content/plugins/google-analytics-for-wordpress/*$~third-party,important,script,domain=katerinamagasin.se|nyhetsbyran.org|sportpanelen.se|vegokak.se|starbys.se|carinasphotolifestyle.se|battrestadsdel.se|karolinesvintage.se|clarakron.com|foodstories.se|undertian.com|ralycka.se|mmabetz.se|folkblick.se|fores.se|tidskriftenrespons.se|alltsomsker.nu|mmanytt.se|fjl.se|villalivet.se|springlfa.se|hockeystaden.se|wesafe.se
+/wp-content/plugins/google-analytics-for-wordpress/*$~third-party,important,script,domain=katerinamagasin.se|nyhetsbyran.org|sportpanelen.se|vegokak.se|starbys.se|carinasphotolifestyle.se|battrestadsdel.se|karolinesvintage.se|clarakron.com|foodstories.se|undertian.com|ralycka.se|mmabetz.se|folkblick.se|fores.se|tidskriftenrespons.se|alltsomsker.nu|mmanytt.se|fjl.se|villalivet.se|springlfa.se|hockeystaden.se|wesafe.se|boktugg.se
 /wp-content/plugins/google-analytics-premium/*$~third-party,important,script,domain=humorbibeln.se|newsner.com|ettgottskratt.se|sportbibeln.se
 /google-analytics-dashboard$script,important,domain=firstfoto.se|cyclingplus.se|halsafitness.se|fitnessformen.se|macguiden.net|ordfrontforlag.se|ulrikadavidsson.se|hemmahosulrika.se
 ||google-analytics.com/analytics.js$important,redirect=google-analytics.com/analytics.js,script,domain=tradera.com
@@ -1077,6 +1077,10 @@ nyheter24.se##[id^="article"]:has(em:has-text(/artikeln är i samarbete med/i))
 filmtipset.se###acceptCookiesDiv
 filmtipset.se##:xpath(//div[@id="toggle_all_prices"]/parent::td[1]/parent::tr[1])
 filmtipset.se##:xpath(//div[contains(concat(' ', @class, ' '), ' rightlinkheader ')][text()[contains(., 'Rekommenderade sajter')]]/parent::td)
+filmtipset.se##:xpath(//span[text()[contains(., 'artikeln är en annons')]]/../../../parent::tr)
+filmtipset.se##:xpath(//span[text()[contains(., 'artikeln är en annons')]]/../../../parent::tr/following-sibling::tr[2])
+filmtipset.se##:xpath(//span[text()[contains(., 'artikeln är en annons')]]/../../../parent::tr/following-sibling::tr[3])
+filmtipset.se##p:has-text(nätcasino)
 /n24.js?$domain=filmtipset.se
 /annons-med-pil*.png$image,domain=filmtipset.se
 dayviews.com###frontpageRecommended

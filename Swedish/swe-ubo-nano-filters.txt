@@ -24,7 +24,7 @@
 /plugins/popup-builder-platinum/*$important,domain=mmabetz.se|sportpanelen.se
 /streamsense.$important,script,domain=dn.se
 /sweden/swedish/hjo-tidning.html$document
-/wp-content/plugins/google-analytics-for-wordpress/*$important,script,~third-party,domain=alltsomsker.nu|battrestadsdel.se|carinasphotolifestyle.se|clarakron.com|fjl.se|folkblick.se|foodstories.se|fores.se|hockeystaden.se|karolinesvintage.se|katerinamagasin.se|mmabetz.se|mmanytt.se|nyhetsbyran.org|ralycka.se|sportpanelen.se|springlfa.se|starbys.se|tidskriftenrespons.se|undertian.com|vegokak.se|villalivet.se|wesafe.se
+/wp-content/plugins/google-analytics-for-wordpress/*$important,script,~third-party,domain=alltsomsker.nu|battrestadsdel.se|boktugg.se|carinasphotolifestyle.se|clarakron.com|fjl.se|folkblick.se|foodstories.se|fores.se|hockeystaden.se|karolinesvintage.se|katerinamagasin.se|mmabetz.se|mmanytt.se|nyhetsbyran.org|ralycka.se|sportpanelen.se|springlfa.se|starbys.se|tidskriftenrespons.se|undertian.com|vegokak.se|villalivet.se|wesafe.se
 /wp-content/plugins/google-analytics-premium/*$important,script,~third-party,domain=ettgottskratt.se|humorbibeln.se|newsner.com|sportbibeln.se
 101ideer.se,alltommat.se,alltomtradgard.se,amelia.se,lantliv.com,mama.nu,privataaffarer.se,skonahem.com,styleby.nu,tara.se,topphalsa.se,veckorevyn.com##a.teaser:has-text(/annonssamarbete/i)
 7ha.se,barometern.se,blt.se,bt.se,kristianstadsbladet.se,olandsbladet.se,osterlenmagasinet.se,ostrasmaland.se,smp.se,sydostran.se,trelleborgsallehanda.se,ut.se,ystadsallehanda.se##script:inject(abort-current-inline-script.js, adTags)
@@ -185,6 +185,10 @@ festivalrykten.se##.featured:if(a:has-text(/annonssamarbete/i))
 festivalrykten.se##body:style(padding-top: 0 !important;)
 filmtipset.se##:xpath(//div[@id="toggle_all_prices"]/parent::td[1]/parent::tr[1])
 filmtipset.se##:xpath(//div[contains(concat(' ', @class, ' '), ' rightlinkheader ')][text()[contains(., 'Rekommenderade sajter')]]/parent::td)
+filmtipset.se##:xpath(//span[text()[contains(., 'artikeln är en annons')]]/../../../parent::tr)
+filmtipset.se##:xpath(//span[text()[contains(., 'artikeln är en annons')]]/../../../parent::tr/following-sibling::tr[2])
+filmtipset.se##:xpath(//span[text()[contains(., 'artikeln är en annons')]]/../../../parent::tr/following-sibling::tr[3])
+filmtipset.se##p:has-text(nätcasino)
 finansliv.se##script:inject(abort-on-property-read.js, OA_show)
 finansliv.se##script:inject(abort-on-property-write.js, nwlettersignupcheck)
 fiskejournalen.se##.blogindex-layout-large-post:has(.native-wrapper)
