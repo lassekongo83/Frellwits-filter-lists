@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Title: Frellwit's Swedish Filter
 ! Expires: 3 days (update frequency)
-! Last modified: 2018-11-04 07:57:32 CET
+! Last modified: 2018-11-05 11:46:28 CET
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -202,7 +202,6 @@
 /CXense_Video_Handler/*$subdocument,domain=affarsliv.com|affarslivgotland.se|corren.se|eposten.se|folkbladet.se|helagotland.se|kuriren.nu|mvt.se|norrbottensaffarer.se|nsd.se|nt.se|pt.se|unt.se|vt.se
 /dam/personalized/*$domain=dagensmedia.se
 /dohi-gdpr/*$domain=cyclingplus.se|firstfoto.se|fitnessformen.se|halsafitness.se|macguiden.net|yogaworld.se
-/downloads.mailchimp.com/*$script,domain=~movaglobes.com
 /emediate-responsive-wp-plugin/*
 /eniro.pixel.script.js$domain=eniro.se
 /entag.js$script,domain=eniro.se|proff.se
@@ -339,9 +338,6 @@
 /plugins/jetpack/_inc/build/widgets/eu-cookie-law/*$script
 /plugins/likebtn-like-button/*$script,stylesheet
 /plugins/loppi-cookie-consent/*$script
-/plugins/mailchimp-for-wp/*$script
-/plugins/mailchimp-wp/*$script
-/plugins/mailchimp/*$script
 /plugins/mailpoet/*$script,domain=opulens.se
 /plugins/mashshare-google-analytics/*
 /plugins/metro-affiliate/*$script,domain=metromode.se
@@ -379,7 +375,6 @@
 /plugins/wp-gdpr-compliance/*$script
 /plugins/wppas/*$script,stylesheet,domain=elbilsnytt.se
 /plugins/wysija-newsletters/*
-/plugins/x-email-mailchimp/*$script
 /popup/follow-us-fb.$xmlhttprequest,domain=tasteline.com
 /prerolls/*$domain=gamereactor.se
 /privacy/notification?$xmlhttprequest,domain=aftonbladet.se
@@ -1264,6 +1259,7 @@ yogaworld.se##.headerbar-container
 ||alltforforaldrar.se/extra/dp/dp.js
 ||alltforforaldrar.se/sites/all/themes/aurora/js/vendor/bootstrap/modal.js
 ||amazonaws.com/adn-tag/$script
+||amazonaws.com/downloads.mailchimp.com/js/signup-forms/popup$script
 ||amazonaws.com/metapic-cdn/*/metapic.$script,stylesheet
 ||amazonaws.com/spotlife.js$script,domain=spotlife.se
 ||ampproject.org^$domain=piraja.se
@@ -1307,7 +1303,6 @@ yogaworld.se##.headerbar-container
 ||brain.kit.se^$xmlhttprequest
 ||branschkoll.se/pagespeed_static/js_defer.*.js$script
 ||branschkoll.se^*/wpbm-banners/$image
-||breakit.se/api/insight$xmlhttprequest
 ||breakit.se/api/visit$xmlhttprequest
 ||breakit.solidtango.com^$subdocument
 ||btg.mtvnservices.com/aria/bentojs.js^$script,domain=nickelodeon.se
@@ -1326,12 +1321,12 @@ yogaworld.se##.headerbar-container
 ||cdn.livechatinc.com/tracking.$script
 ||cdn2.editmysite.com^*/snowday*.$script,domain=rapport24.com
 ||cdnbox.win/inc/ETKe.php^$script
-||chimpstatic.com^$third-party
 ||cintnetworks.com^$third-party
 ||cis.schibsted.com/api/*/identify$domain=klart.se
 ||cision.com^$third-party
 ||citygate.se^$~image,third-party,domain=~familj.se|~tillminne.se
 ||cloudfront.net/creatives/assets/$image,media,domain=fotbollskanalen.se|koket.se|tv4.se|tv4play.se
+||collect.breakit.se^$xmlhttprequest
 ||compricer.se^$third-party
 ||connect.facebook.net^*/fbds.js$third-party,domain=~facebook.com|~fb.com
 ||connectad.io^$third-party
@@ -1482,9 +1477,7 @@ yogaworld.se##.headerbar-container
 ||lystra.se^$third-party
 ||ma-track.bonnierpublications.se^$third-party
 ||ma.bonnierpublications.se/mtc/event$xmlhttprequest
-||mailchimp.com^$third-party
-||mailerlite.com^$third-party
-||mailmunch.co^$third-party
+||mailchimp.com^*/popup$script
 ||marketingautomation.services^$third-party,domain=wesafe.se
 ||masture.mobi^
 ||media.jw-it.se/b/$image
