@@ -443,7 +443,7 @@
 @@/js/ad.js$~third-party,domain=sweclockers.com
 @@/js/ads.js$~third-party,domain=101ideer.se|affarsliv.com|affarslivgotland.se|alltforforaldrar.se|alltommat.se|alltomtradgard.se|amelia.se|bike.se|corren.se|damernasvarld.se|deliquate.se|eposten.se|folkbladet.se|foretagande.se|gardochtorp.se|godsochgardar.se|helagotland.se|hemochantik.se|husbilhusvagn.se|ilikeradio.se|johannatoftby.se|klackspark.com|klassiker.nu|kuriren.nu|lantliv.com|ljudochbild.se|madeleineilmrud.se|magdalenagraaf.se|mama.nu|mopedgaraget.se|mvt.se|naturvetenskap.org|norrbottensaffarer.se|nsd.se|nt.se|pt.se|radio.se|skonahem.com|styleby.nu|swedroid.se|tara.se|topphalsa.se|tvmatchen.nu|unt.se|uppsalatidningen.se|veckorevyn.com|vibilagare.se|villavarmt.se|vt.se|privataaffarer.se|tidningenhembakat.se|teknikensvarld.se|alltsomsker.nu|smartleasing.se|viforaldrar.se|englasshowroom.com|caroftheyear.se|isabellalowengrip.se|malagaguiden.se|matplatsen.net|kritiker.se|svenskjakt.se|rabattpris.se|familyliving.se|kpwebben.se|mmabetz.se
 @@/js/ads/advert.min.js$~third-party,script,domain=spelo.se
-@@/js/adsbygoogle.js^$~third-party,script,domain=feber.se|tjock.se
+@@/js/adsbygoogle.js^$~third-party,script,domain=feber.se|tjock.se|sv.ucoin.net
 @@/js/advert.$script,domain=nwt.se
 @@/js/advert.js$~third-party,script,domain=burlovsnyheter.se
 @@/js/advertisement*.$~third-party,script,domain=brollopstorget.se|devote.se|expressen.se|familjeliv.se|feber.se|skyddsombud24.se|tjock.se|dagensmedia.nu
@@ -475,7 +475,7 @@ abus.com#@##cookieChoiceInfo
 /\/*banner*./$image,domain=dansbandskanalen.se|etc.se|evertiq.se|guldkanalen.se|kurera.se|markbladet.se|rockkocken.se|rumhemma.se|skrattnet.se|tkj.se|vaken.se|sportpanelen.se|newsvoice.se|sportbloggare.com|marsta.nu|lakartidningen.se|bettips.se|svf.se|alltomhif.se|it-finans.se|boktugg.se
 /\/*banner*./$script,domain=dagenshandel.se|entreprenor.se|food-supply.se|magasinetparagraf.se|motormagasinet.se|skyddosakerhet.se
 /\/*sponsor*./$image,domain=humorbibeln.se|newsner.com|sportbibeln.se|ettgottskratt.se
-/\/*casino*./$image,domain=hypeline.se
+/\/*casino*./$image,domain=hypeline.se|dayviews.com
 /ajax_statistics_count/*$xmlhttprequest,domain=industrinyheter.se|dagensnaringsliv.se
 /analytics/*$domain=tkj.se
 /annons/*$subdocument,domain=internetlankar.se
@@ -517,6 +517,7 @@ kamerabild.se,mobil.se##script:inject(set-constant.js, Sidpyssel.prototype.fixaS
 undertian.com,villaliv.se,newsner.com,humorbibeln.se,sportbibeln.se,ettgottskratt.se,sportpanelen.se##script:inject(set-constant.js, mi_track_user, false)
 datormagazin.se,villalivet.se,rocknytt.net,skanesport.se,newsner.com,humorbibeln.se,sportbibeln.se,hightechguiden.se,ettgottskratt.se,hbwebben.se##script:inject(abort-current-inline-script.js, advanced_ads_ga_UID)
 opulens.se##script:inject(abort-current-inline-script.js, advanced_ads_adsense_UID)
+alltforforaldrar.se,mammasidan.se,minbebis.com##script:inject(abort-current-inline-script.js, loadAd)
 
 ! Facebook junk
 /facebook_sdk.js$script,domain=njus.me|radioplay.se
@@ -795,6 +796,7 @@ dn.se##.personal-carousel
 dn.se##.bottom-bar--visible
 dn.se##body > iframe[style^="display"]
 dn.se##.gdpr-header-container
+dn.se##.chosen-for-you
 dn.se##script:inject(abort-current-inline-script.js, DN, initAds)
 dn.se##script:inject(abort-current-inline-script.js, gtmData)
 dn.se##script:inject(addEventListener-defuser.js, /^(?:error|load)$/, n())
@@ -1067,6 +1069,7 @@ affarsvarlden.se,arbetarskydd.se,lag-avtal.se,nyteknik.se##section.sponsored-art
 ! NYHETER24GRUPPEN
 /splash_iframe.html^$domain=fragbite.se|kwiss.me|tyda.se|synonymer.cc|filmtipset.se
 /splashy.html^$domain=hamsterpaj.net
+/gfx/banners/*$domain=hamsterpaj.net
 /splash_iframe/*$domain=dayviews.com
 /?agg_url=/shopping/*$xmlhttprequest,domain=nyheter24.se
 nyheter24.se##script:inject(abort-current-inline-script.js, ga, ypcomm)
@@ -1108,6 +1111,7 @@ modette.se##.lazyload_bar.show:if(span:has-text(/sponsrat/i))
 ||bloggportalen.se/BlogPortal/view/Statistics$image
 kwiss.me##.qz-main-slider-item-initial2:has(.qz-quiz-sponsored)
 hamsterpaj.net###accept-cookies
+hamsterpaj.net##.zone:has(h3:has-text(/rekommenderade sajter/i))
 bloggbevakning.se###ad
 
 ! GAMEREACTOR
@@ -1443,11 +1447,13 @@ jawcloud.co##script:inject(abort-current-inline-script.js, jawplayer, on)
 /vast/*$domain=streamango.com
 
 ! Various annoyances
-youplay.se,nyheter24.se,emocore.se,modette.se,dayviews.com,filmtipset.se,affarsliv.com,affarslivgotland.se,corren.se,eposten.se,folkbladet.se,helagotland.se,klackspark.com,kuriren.nu,mvt.se,norrbottensaffarer.se,nsd.se,nt.se,pt.se,unt.se,vt.se,kamrat.com##script:inject(set-constant.js, youplay.helpers.disableRightClick, noopFunc)
-youplay.se,nyheter24.se,emocore.se,modette.se,dayviews.com,filmtipset.se,affarsliv.com,affarslivgotland.se,corren.se,eposten.se,folkbladet.se,helagotland.se,klackspark.com,kuriren.nu,mvt.se,norrbottensaffarer.se,nsd.se,nt.se,pt.se,unt.se,vt.se,kamrat.com##script:inject(set-constant.js, youplay.helpers.tabActive, noopFunc)
-youplay.se,nyheter24.se,emocore.se,modette.se,dayviews.com,filmtipset.se,affarsliv.com,affarslivgotland.se,corren.se,eposten.se,folkbladet.se,helagotland.se,klackspark.com,kuriren.nu,mvt.se,norrbottensaffarer.se,nsd.se,nt.se,pt.se,unt.se,vt.se,kamrat.com##script:inject(set-constant.js, youplay.helpers.getTrackUrl, noopFunc)
-youplay.se,nyheter24.se,emocore.se,modette.se,dayviews.com,filmtipset.se,affarsliv.com,affarslivgotland.se,corren.se,eposten.se,folkbladet.se,helagotland.se,klackspark.com,kuriren.nu,mvt.se,norrbottensaffarer.se,nsd.se,nt.se,pt.se,unt.se,vt.se,kamrat.com##script:inject(set-constant.js, youplay.helpers.trackUrls, noopFunc)
+youplay.se,nyheter24.se,modette.se,filmtipset.se,affarsliv.com,affarslivgotland.se,corren.se,eposten.se,folkbladet.se,helagotland.se,klackspark.com,kuriren.nu,mvt.se,norrbottensaffarer.se,nsd.se,nt.se,pt.se,unt.se,vt.se##script:inject(set-constant.js, youplay.helpers.disableRightClick, noopFunc)
+youplay.se,nyheter24.se,modette.se,filmtipset.se,affarsliv.com,affarslivgotland.se,corren.se,eposten.se,folkbladet.se,helagotland.se,klackspark.com,kuriren.nu,mvt.se,norrbottensaffarer.se,nsd.se,nt.se,pt.se,unt.se,vt.se##script:inject(set-constant.js, youplay.helpers.tabActive, noopFunc)
+youplay.se,nyheter24.se,modette.se,filmtipset.se,affarsliv.com,affarslivgotland.se,corren.se,eposten.se,folkbladet.se,helagotland.se,klackspark.com,kuriren.nu,mvt.se,norrbottensaffarer.se,nsd.se,nt.se,pt.se,unt.se,vt.se##script:inject(set-constant.js, youplay.helpers.getTrackUrl, noopFunc)
+youplay.se,nyheter24.se,modette.se,filmtipset.se,affarsliv.com,affarslivgotland.se,corren.se,eposten.se,folkbladet.se,helagotland.se,klackspark.com,kuriren.nu,mvt.se,norrbottensaffarer.se,nsd.se,nt.se,pt.se,unt.se,vt.se##script:inject(set-constant.js, youplay.helpers.trackUrls, noopFunc)
 saraabrahamsson.se,eurosport.se,jawcloud.co,openload.co,oload.stream,streamango.com##script:inject(addEventListener-defuser.js, contextmenu)
+! Annoying, unecessary, and completely unrelated autoplaying video
+||youplay.se$third-party,domain=hamsterpaj.net|emocore.se|dayviews.com|kamrat.com
 
 ! ÖVRIGT
 /uploads/Adblockerpanda$image,domain=nordichardware.se
@@ -1465,6 +1471,7 @@ friatider.se##script:inject(abort-current-inline-script.js, Drupal, settings)
 etc.se##.banner-wrap
 etc.se##.article-type-annons
 etc.se##img[alt="Annons"]
+etc.se##script:inject(set-constant.js, Drupal.behaviors.lock_article, undefined)
 ||play.etc.se/sw.js$script
 newsvoice.se##:xpath(//strong[text()[contains(., 'ANNONSER')]]/parent::font/parent::div)
 newsvoice.se##aside.widget:if(span:has-text(/annonser/i))
