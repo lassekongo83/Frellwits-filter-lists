@@ -52,6 +52,7 @@
 ||destination.se^$third-party
 ||drift.com^$third-party
 ||driftt.com^$third-party
+||mediaglacier.com^$third-party
 ||e-magin.se^$third-party
 ||eacla.com^$third-party
 ||edynpub.com^$third-party
@@ -95,6 +96,8 @@
 ||mediekompaniet.com^$third-party
 ||meltwater.com^$third-party
 ||metapic.se^$third-party
+||metrics.syndn.net^$third-party
+||missaffiliate.com^$third-party
 ||mraffiliate.com^$third-party
 ||mtpc.se^$third-party
 ||mydatabankapp.com^$third-party
@@ -505,6 +508,8 @@ abus.com#@##cookieChoiceInfo
 ||consent.cmp.oath.com^$script,domain=mitti.se|alltomstockholm.se
 ||consent.cookiebot.com^$third-party,domain=goteborgdirekt.se|stockholmdirekt.se|wesafe.se|alingsastidning.se|partilletidning.se|itaboutdoor.se|selmaspa.se|skeppsbrons.se|etc.se|norran.se
 ||marketingautomation.services^$third-party,domain=wesafe.se
+/gdpr/*$domain=vimedbarn.se|rapport24.com|funnygames.se
+||api.pinterest.com/*/urls/count.json$script,domain=vimedbarn.se|gabriellajoss.me|mybabydolls.se|emilysliv.se
 
 ! Common scriptlets
 ng.se,alltomstockholm.se,mitti.se,bloggbevakning.se,cornucopia.cornubot.se,innebandymagazinet.se##script:inject(abort-on-property-read.js, ADTECH)
@@ -527,7 +532,7 @@ alltforforaldrar.se,mammasidan.se,minbebis.com##script:inject(abort-current-inli
 ||facebook.com/plugins/like$third-party,domain=~facebook.com|~fb.com
 
 ! Override EasyPrivacy and EasyList whitelists
-/wp-content/plugins/google-analytics-for-wordpress/*$~third-party,important,script,domain=katerinamagasin.se|nyhetsbyran.org|sportpanelen.se|vegokak.se|starbys.se|carinasphotolifestyle.se|battrestadsdel.se|karolinesvintage.se|clarakron.com|foodstories.se|undertian.com|ralycka.se|mmabetz.se|folkblick.se|fores.se|tidskriftenrespons.se|alltsomsker.nu|mmanytt.se|fjl.se|villalivet.se|springlfa.se|hockeystaden.se|wesafe.se|boktugg.se
+/wp-content/plugins/google-analytics-for-wordpress/*$~third-party,important,script,domain=katerinamagasin.se|nyhetsbyran.org|sportpanelen.se|vegokak.se|starbys.se|carinasphotolifestyle.se|battrestadsdel.se|karolinesvintage.se|clarakron.com|foodstories.se|undertian.com|ralycka.se|mmabetz.se|folkblick.se|fores.se|tidskriftenrespons.se|alltsomsker.nu|mmanytt.se|fjl.se|villalivet.se|springlfa.se|hockeystaden.se|wesafe.se|boktugg.se|businessarena.nu
 /wp-content/plugins/google-analytics-premium/*$~third-party,important,script,domain=humorbibeln.se|newsner.com|ettgottskratt.se|sportbibeln.se
 /google-analytics-dashboard$script,important,domain=firstfoto.se|cyclingplus.se|halsafitness.se|fitnessformen.se|macguiden.net|ordfrontforlag.se|ulrikadavidsson.se|hemmahosulrika.se
 ||google-analytics.com/analytics.js$important,redirect=google-analytics.com/analytics.js,script,domain=tradera.com
@@ -617,6 +622,7 @@ alltforforaldrar.se,mammasidan.se,minbebis.com##script:inject(abort-current-inli
 /plugins/arscode-ninja-popups/*$domain=springlfa.se
 /plugins/random-banner/*
 /plugins/so-widgets-bundle/*$domain=lokalsport.nu
+/plugins/sea-short-stats/*
 
 ! JWplayer analytics/ad scripts
 svd.se,aftonbladet.se,gamereactor.se,muscles.se,nordichardware.se,nyheteridag.se,freeride.se,happyride.se#@#.afs_ads
@@ -2051,8 +2057,6 @@ muscles.se##.newsletter-signup--popup
 loppi.se##.page__ad
 loppi.se##.entry__teaser--promotion
 /js/gdpr-public.$script,domain=loppi.se
-/gdpr/*$domain=vimedbarn.se|rapport24.com
-||api.pinterest.com/*/urls/count.json$script,domain=vimedbarn.se|gabriellajoss.me|mybabydolls.se|emilysliv.se
 festivalrykten.se##.loading
 festivalrykten.se##.sam-mobile
 festivalrykten.se###sam-takeover

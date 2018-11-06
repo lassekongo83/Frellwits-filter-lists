@@ -9,8 +9,9 @@ date=$(date '+%Y-%m-%d %H:%M:%S %Z')
 cat main-hosts.txt | sort > output/sorted-hosts.txt
 
 cat > output/hosts-headers.txt <<EOF
-# Server list for use with hosts files to block ads, tracking, scams & badware on (mostly) Swedish websites
+# Aims to get rid of ads, tracking, scams & badware on (mostly) Swedish websites
 # ----
+# title:          Frellwit's Swedish Hosts File
 # last updated:   ${date}
 # format:         hosts (hosts -- in hosts file format)
 # homepage:       https://github.com/lassekongo83/Frellwits-filter-lists/
