@@ -286,6 +286,7 @@
 ||guavaaffiliate.blob.core.windows.net/banner$image
 ||hello.myfonts.net/count/$stylesheet
 ||herokuapp.com/visit?$image
+||imgix.net^*/analytics.$script
 ||inevserver.com/~tournreport/$image
 ||jssdk.privacy.schibsted.com/pulse.$script
 ||jssdk.privacy.schibsted.com/privacy-notifier.$script
@@ -534,7 +535,7 @@ alltforforaldrar.se,mammasidan.se,minbebis.com##script:inject(abort-current-inli
 ||facebook.com/plugins/like$third-party,domain=~facebook.com|~fb.com
 
 ! Override EasyPrivacy and EasyList whitelists
-/wp-content/plugins/google-analytics-for-wordpress/*$~third-party,important,script,domain=katerinamagasin.se|nyhetsbyran.org|sportpanelen.se|vegokak.se|starbys.se|carinasphotolifestyle.se|battrestadsdel.se|karolinesvintage.se|clarakron.com|foodstories.se|undertian.com|ralycka.se|mmabetz.se|folkblick.se|fores.se|tidskriftenrespons.se|alltsomsker.nu|mmanytt.se|fjl.se|villalivet.se|springlfa.se|hockeystaden.se|wesafe.se|boktugg.se|businessarena.nu
+/wp-content/plugins/google-analytics-for-wordpress/*$~third-party,important,script,domain=katerinamagasin.se|nyhetsbyran.org|sportpanelen.se|vegokak.se|starbys.se|carinasphotolifestyle.se|battrestadsdel.se|karolinesvintage.se|clarakron.com|foodstories.se|undertian.com|ralycka.se|mmabetz.se|folkblick.se|fores.se|tidskriftenrespons.se|alltsomsker.nu|mmanytt.se|fjl.se|villalivet.se|springlfa.se|hockeystaden.se|wesafe.se|boktugg.se|businessarena.nu|kvartal.se
 /wp-content/plugins/google-analytics-premium/*$~third-party,important,script,domain=humorbibeln.se|newsner.com|ettgottskratt.se|sportbibeln.se
 /google-analytics-dashboard$script,important,domain=firstfoto.se|cyclingplus.se|halsafitness.se|fitnessformen.se|macguiden.net|ordfrontforlag.se|ulrikadavidsson.se|hemmahosulrika.se
 ||google-analytics.com/analytics.js$important,redirect=google-analytics.com/analytics.js,script,domain=tradera.com
@@ -1393,8 +1394,8 @@ nyafilmerhd.*,dreamfilmhd.*,real123movies.*,nyafilmer.*##script:inject(abort-cur
 nyafilmerhd.*,dreamfilmhd.*,real123movies.*,nyafilmer.*##script:inject(set-constant.js, blockerDetected, false)
 nyafilmerhd.*,dreamfilmhd.*,swesub.*,real123movies.*,nyafilmer.*##a[style*="height"][rel*="nofollow"]
 real123movies.*##div[onclick^="window.open"]
-nyafilmerhd.*,real123movies.*,nyafilmer.*##div[style^="margin-top:180px"]
-nyafilmerhd.*,real123movies.*,nyafilmer.*##div[style^="margin-top:210px"]
+nyafilmerhd.*,real123movies.*,nyafilmer.*,dreamfilmhd.*##div[style^="margin-top:180px"]
+nyafilmerhd.*,real123movies.*,nyafilmer.*,dreamfilmhd.*##div[style^="margin-top:210px"]
 nyafilmerhd.*,dreamfilmhd.*,real123movies.*,nyafilmer.*##a[data-hover="LADDA NED"]
 nyafilmerhd.*,dreamfilmhd.*,real123movies.*,nyafilmer.*##a[href$=".html"][target="_blank"]
 nyafilmerhd.*,dreamfilmhd.*,real123movies.*,nyafilmer.*##li > a[target="_blank"]
@@ -1412,6 +1413,8 @@ nyafilmerhd.*,nyafilmer.*##script:inject(setInterval-defuser.js, u6, 500)
 ||nyafilmer.*/wp-content/themes/keremiya1/js/script.js$script
 ||real123movies.*/wp-content/themes/keremiya1/js/script.js$script
 ||real123movies.*/wp-content/themes/keremiya1/js/license.$script
+||dreamfilmhd.*/wp-content/themes/keremiya1/js/script.js$script
+||dreamfilmhd.*/wp-content/themes/keremiya1/js/license.$script
 ||swesub.*^$csp=default-src 'self' 'unsafe-inline' 'unsafe-eval' *.tmdb.org ajax.cloudflare.com *.googleapis.com cdnjs.cloudflare.com fonts.gstatic.com openload.co nxload.com streamango.com data:
 ||nordicfilm.*^$csp=default-src 'self' 'unsafe-inline' 'unsafe-eval' *.tmdb.org *.postimg.cc *.youtube.com *.googleapis.com fonts.gstatic.com vidbox.co
 ||nordicfilm.*^$csp=worker-src 'none'
@@ -1457,6 +1460,7 @@ streamtajm.*##div[style^="background-color: #ccc; width: 750px;"]:has(img[src^="
 jawcloud.co##script:inject(abort-current-inline-script.js, jawplayer, on)
 ||openload.co/assets/js/video-js/vast$script
 /vast/*$domain=streamango.com
+||tracker.$important,domain=jawcloud.co
 
 ! Various annoyances
 youplay.se,nyheter24.se,modette.se,filmtipset.se,affarsliv.com,affarslivgotland.se,corren.se,eposten.se,folkbladet.se,helagotland.se,klackspark.com,kuriren.nu,mvt.se,norrbottensaffarer.se,nsd.se,nt.se,pt.se,unt.se,vt.se##script:inject(set-constant.js, youplay.helpers.disableRightClick, noopFunc)

@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Title: Frellwit's Swedish Filter
 ! Expires: 3 days (update frequency)
-! Last modified: 2018-11-09 08:32:05 CET
+! Last modified: 2018-11-11 08:20:30 CET
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -1089,8 +1089,8 @@ nyafilmerhd.*,dreamfilmhd.*,real123movies.*,nyafilmer.*##a[data-hover="LADDA NED
 nyafilmerhd.*,dreamfilmhd.*,real123movies.*,nyafilmer.*##a[href$=".html"][target="_blank"]
 nyafilmerhd.*,dreamfilmhd.*,real123movies.*,nyafilmer.*##li > a[target="_blank"]
 nyafilmerhd.*,dreamfilmhd.*,swesub.*,real123movies.*,nyafilmer.*##a[style*="height"][rel*="nofollow"]
-nyafilmerhd.*,real123movies.*,nyafilmer.*##div[style^="margin-top:180px"]
-nyafilmerhd.*,real123movies.*,nyafilmer.*##div[style^="margin-top:210px"]
+nyafilmerhd.*,real123movies.*,nyafilmer.*,dreamfilmhd.*##div[style^="margin-top:180px"]
+nyafilmerhd.*,real123movies.*,nyafilmer.*,dreamfilmhd.*##div[style^="margin-top:210px"]
 nyteknik.se###tws1
 nyteknik.se##.blurb-sponsored
 omni.se##article.article--sponsored
@@ -1382,6 +1382,8 @@ yogaworld.se##.headerbar-container
 ||dreamfilm.*/HD/780x.$image
 ||dreamfilm.*/HD/player4k.$image
 ||dreamfilm.*/swedish/stream.php$subdocument
+||dreamfilmhd.*/wp-content/themes/keremiya1/js/license.$script
+||dreamfilmhd.*/wp-content/themes/keremiya1/js/script.js$script
 ||dreamfilmhd.*^$csp=default-src 'self' 'unsafe-inline' 'unsafe-eval' jawcloud.co *.jawcloud.co upvtt.com wp.com *.wp.com *.googleapis.com vkpass.com *.vkpass.com streamango.com *.gstatic.com openload.co
 ||drift.com^$third-party
 ||driftt.com^$third-party
@@ -1452,6 +1454,7 @@ yogaworld.se##.headerbar-container
 ||hpevoices.com^$third-party
 ||hsadspixel.net^$third-party
 ||idg.se/sharecounter?$xmlhttprequest
+||imgix.net^*/analytics.$script
 ||inevserver.com/~tournreport/$image
 ||influact.com^$third-party
 ||insplanet.com^$third-party
