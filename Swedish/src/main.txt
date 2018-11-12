@@ -307,6 +307,7 @@
 ||oas.*.se/om/$script
 ||resources.blogblog.com^*/paging_dot.$image
 ||p.typekit.net/p.css$stylesheet
+||pensiono.se.$subdocument
 ||pingback.issuu.com/ping$xmlhttprequest
 ||pixel.playbuzz.com^$xmlhttprequest
 ||s3.amazonaws.com/cc.silktide.com/cookieconsent.$script
@@ -478,7 +479,7 @@ abus.com#@##cookieChoiceInfo
 ! Common site specific blocking
 /\/*280x240*./$image,domain=rumhemma.se
 /\/*280x360./$image,domain=kurera.se
-/\/*annons*./$image,domain=guldkanalen.se|kurera.se|nvp.se|rumhemma.se|tekniksmart.se|megafonen.nu|newsvoice.se|lesscarbs.se|lundagard.se|svf.se|boktugg.se|skillingaryd.nu
+/\/*annons*./$image,domain=guldkanalen.se|kurera.se|nvp.se|rumhemma.se|tekniksmart.se|megafonen.nu|newsvoice.se|lesscarbs.se|lundagard.se|svf.se|boktugg.se|skillingaryd.nu|etunawebben.se
 /\/*banner*./$image,domain=dansbandskanalen.se|etc.se|evertiq.se|guldkanalen.se|kurera.se|markbladet.se|rockkocken.se|rumhemma.se|skrattnet.se|tkj.se|vaken.se|sportpanelen.se|newsvoice.se|sportbloggare.com|marsta.nu|lakartidningen.se|bettips.se|svf.se|alltomhif.se|it-finans.se|boktugg.se
 /\/*banner*./$script,domain=dagenshandel.se|entreprenor.se|food-supply.se|magasinetparagraf.se|motormagasinet.se|skyddosakerhet.se
 /\/*sponsor*./$image,domain=humorbibeln.se|newsner.com|sportbibeln.se|ettgottskratt.se|swehockey.se
@@ -514,6 +515,7 @@ abus.com#@##cookieChoiceInfo
 ||marketingautomation.services^$third-party,domain=wesafe.se
 /gdpr/*$domain=vimedbarn.se|rapport24.com|funnygames.se
 ||api.pinterest.com/*/urls/count.json$script,domain=vimedbarn.se|gabriellajoss.me|mybabydolls.se|emilysliv.se
+||zotabox.com^$third-party,domain=etunawebben.se
 
 ! Common scriptlets
 ng.se,alltomstockholm.se,mitti.se,bloggbevakning.se,cornucopia.cornubot.se,innebandymagazinet.se##script:inject(abort-on-property-read.js, ADTECH)
@@ -527,6 +529,7 @@ undertian.com,villaliv.se,newsner.com,humorbibeln.se,sportbibeln.se,ettgottskrat
 datormagazin.se,villalivet.se,rocknytt.net,skanesport.se,newsner.com,humorbibeln.se,sportbibeln.se,hightechguiden.se,ettgottskratt.se,hbwebben.se##script:inject(abort-current-inline-script.js, advanced_ads_ga_UID)
 opulens.se##script:inject(abort-current-inline-script.js, advanced_ads_adsense_UID)
 alltforforaldrar.se,mammasidan.se,minbebis.com##script:inject(abort-current-inline-script.js, loadAd)
+falkopingstidning.se,jnytt.se,jp.se,skaraborgslanstidning.se,skovdenyheter.se,smalandsdagblad.se,smalanningen.se,smt.se,tranastidning.se,vastgotabladet.se,vetlandaposten.se,vn.se,ljudochbild.se##script:inject(abort-current-inline-script.js, googletag, push)
 
 ! Facebook junk
 /facebook_sdk.js$script,domain=njus.me|radioplay.se
@@ -1058,7 +1061,6 @@ falkopingstidning.se,jnytt.se,jp.se,skaraborgslanstidning.se,skovdenyheter.se,sm
 falkopingstidning.se,jnytt.se,jp.se,skaraborgslanstidning.se,skovdenyheter.se,smalandsdagblad.se,smalanningen.se,smt.se,tranastidning.se,vastgotabladet.se,vetlandaposten.se,vn.se##div.slideshow-in.active:has(.ad-wrapper)
 falkopingstidning.se,jnytt.se,jp.se,skaraborgslanstidning.se,skovdenyheter.se,smalandsdagblad.se,smalanningen.se,smt.se,tranastidning.se,vastgotabladet.se,vetlandaposten.se,vn.se##div[id^="adonnews"]
 falkopingstidning.se,jnytt.se,jp.se,skaraborgslanstidning.se,skovdenyheter.se,smalandsdagblad.se,smalanningen.se,smt.se,tranastidning.se,vastgotabladet.se,vetlandaposten.se,vn.se##script:inject(abort-current-inline-script.js, loadLeeads)
-falkopingstidning.se,jnytt.se,jp.se,skaraborgslanstidning.se,skovdenyheter.se,smalandsdagblad.se,smalanningen.se,smt.se,tranastidning.se,vastgotabladet.se,vetlandaposten.se,vn.se##script:inject(abort-current-inline-script.js, googletag, push)
 
 ! ALMA TALENT
 /annonstorget/*$domain=affarsvarlden.se|arbetarskydd.se|lag-avtal.se|nyteknik.se
@@ -2252,3 +2254,7 @@ swehockey.se##script:inject(noeval-if.js, config)
 swehockey.se##script:inject(noeval-if.js, enqueueAd)
 swehockey.se##script:inject(abort-current-inline-script.js, jQuery, adscript)
 tidningenhockey.se##.node-ads-right
+etunawebben.se##script:inject(setTimeout-defuser.js, ad)
+/dfp.css$stylesheet,domain=ljudochbild.se
+/wmpci-popup.$domain=ljudochbild.se
+ljudochbild.se##.background-ad:style(min-height: 0 !important;)
