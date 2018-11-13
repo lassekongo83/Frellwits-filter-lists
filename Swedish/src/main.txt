@@ -258,6 +258,7 @@
 ||bmbstatic.blob.core.windows.net^
 ||btikon.se/analytics.$xmlhttprequest
 ||btikon.se/btstats.$script
+||cdn.advisible.com/accl$script
 ||cdn.livechatinc.com/tracking.$script
 ||d9v72urx9pbbc.cloudfront.net/LoadSlotLocator.$script
 ||creatives.ancoraplatform.com/ptphb*.$script
@@ -514,8 +515,10 @@ abus.com#@##cookieChoiceInfo
 /gdpr/*$domain=vimedbarn.se|rapport24.com|funnygames.se|villalivet.se
 /urls/count.json$script,domain=vimedbarn.se|gabriellajoss.me|mybabydolls.se|emilysliv.se|kenzas.se
 ||aff.bstatic.com^$domain=travelgrip.se
-/downloads.mailchimp.com/*$domain=villalivet.se
+/downloads.mailchimp.com/*$domain=villalivet.se|landleyskok.se
 ||mailmunch.co^$third-party,domain=villalivet.se
+/snowplow-*.js$script,domain=hemnet.se
+||sentry.io^$third-party,domain=dagensmedia.se|dplay.se
 
 ! Common scriptlets
 ng.se,alltomstockholm.se,mitti.se,bloggbevakning.se,cornucopia.cornubot.se,innebandymagazinet.se##script:inject(abort-on-property-read.js, ADTECH)
@@ -631,11 +634,11 @@ falkopingstidning.se,jnytt.se,jp.se,skaraborgslanstidning.se,skovdenyheter.se,sm
 /plugins/sea-short-stats/*
 
 ! JWplayer analytics/ad scripts
-svd.se,aftonbladet.se,gamereactor.se,muscles.se,nordichardware.se,nyheteridag.se,freeride.se,happyride.se#@#.afs_ads
-||ssl.p.jwpcdn.com^*/jwpsrv.js$script,important,domain=eurosport.se|aftonbladet.se|gamereactor.se|svd.se|muscles.se|tv.nu|nyheteridag.se|axess.se|freeride.se|happyride.se
+svd.se,aftonbladet.se,gamereactor.se,muscles.se,nordichardware.se,nyheteridag.se,freeride.se,happyride.se,ilikeradio.se#@#.afs_ads
+||ssl.p.jwpcdn.com^*/jwpsrv.js$script,important,domain=eurosport.se|aftonbladet.se|gamereactor.se|svd.se|muscles.se|tv.nu|nyheteridag.se|axess.se|freeride.se|happyride.se|ilikeradio.se
 ||ssl.p.jwpcdn.com^*/vast.js$script,important,domain=eurosport.se|aftonbladet.se|gamereactor.se|svd.se
 ||ssl.p.jwpcdn.com^*/freewheel.js$script,important,domain=eurosport.se
-||ssl.p.jwpcdn.com^*/gapro.js$script,important,domain=gamereactor.se|freeride.se|happyride.se
+||ssl.p.jwpcdn.com^*/gapro.js$script,important,domain=gamereactor.se|freeride.se|happyride.se|ilikeradio.se
 ||ssl.p.jwpcdn.com^*/sharing.js$script,important,domain=eurosport.se|aftonbladet.se|gamereactor.se|freeride.se|happyride.se
 
 ! Fix for the mediacreeper onerror attribute abuse
@@ -980,7 +983,6 @@ dagensmedia.se##div[style="height:500px"]
 dagensmedia.se##div[style="height:360px"]
 dagensmedia.se##div[style="height: 500px;"]
 dagensmedia.se##div[style="height: 360px;"]
-||sentry.io^$third-party,domain=dagensmedia.se
 /dam/personalized/*$domain=dagensmedia.se
 
 ! NTM
@@ -1377,7 +1379,7 @@ ekuriren.se,kkuriren.se,sn.se###android-smart-appbanner
 finansliv.se,vinochmatguiden.se##.newsletter
 mobil.se,kamerabild.se###gdpr
 8till5.se,sydsvenskan.se,hd.se,vimedbarn.se##.gdpr
-pomu.se,wwf.se##.cc-banner
+pomu.se,wwf.se,ilikeradio.se##.cc-banner
 koket.se,nyheter24.se,civilekonomen.se##.native
 svartgul.se,tvmatchen.nu###panorama
 uppslaget.se,hypeline.se##.annons
@@ -1619,7 +1621,6 @@ ng.se##.js--llad
 ||breakit.solidtango.com^$subdocument
 ||breakit.se/api/visit$xmlhttprequest
 ||collect.breakit.se^$xmlhttprequest
-/accl$script,domain=breakit.se
 breakit.se##.spnsr-widget
 breakit.se##.supportersSlideContainer
 breakit.se##[class*="sponsored"]
@@ -1740,6 +1741,9 @@ branschkoll.se##.advert-widget
 hemnet.se##.recent-news__item:if(.recent-news__category:has-text(/sponsrad/i))
 hemnet.se##.article-news__link:has(.news-article--sponsored)
 hemnet.se##.featured-news__link:has(.featured-news__ribbon--sponsored)
+hemnet.se##.start-page-hero__caption:has(.start-page-hero__caption-category:has-text(/sponsrad av/i))
+||api.sfnix.net^$image,domain=hemnet.se
+/new_construction_ads/*$domain=hemnet.se
 /sticky-ads.*.js$script,domain=hemnet.se
 /*Fokus_360x300px_animate*.gif$image,domain=fokus.se
 fokus.se##.panorama-ads-top
@@ -2245,3 +2249,8 @@ etunawebben.se##script:inject(setTimeout-defuser.js, ad)
 /wmpci-popup.$domain=ljudochbild.se
 ljudochbild.se##.background-ad:style(min-height: 0 !important;)
 villalivet.se##.td_block_wrap:has(a[href$="/sponsrat-innehall"])
+ehandel.se###bannerContainer
+ehandel.se##.native_ad_index_small
+ehandel.se##.native_ad_article_page
+ehandel.se##:xpath(//div[contains(concat(' ', @class, ' '), ' native_ad_index_small ')]/following-sibling::div[1][contains(concat(' ', @class, ' '), ' lessImportant ')])
+ehandel.se##:xpath(//div[contains(concat(' ', @class, ' '), ' native_ad_article_page ')]/following-sibling::div[1][contains(concat(' ', @class, ' '), ' lessImportant ')])
