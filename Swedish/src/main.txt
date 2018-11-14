@@ -2122,7 +2122,8 @@ piraja.se###hero:has(.spons)
 piraja.se###featholder:has(.spons)
 piraja.se###panoramaholder
 piraja.se###parallax
-||ampproject.org^$domain=piraja.se
+||ampproject.org^$third-party,domain=piraja.se
+||cdn.ampproject.org/v0.js$script,redirect=ampproject.org/v0.js,domain=piraja.se
 /*jquery.blockUI.$script,domain=fssweden.se
 nyadagbladet.se##script:inject(abort-on-property-read.js, cli_show_cookiebar)
 nyadagbladet.se###adpadding
@@ -2207,10 +2208,12 @@ battrenyheter.se##.vc_row.vc_row-flex:has(.abnan-single)
 battrenyheter.se##.gbnan
 battrenyheter.se##.abnan-single
 battrenyheter.se##.home-cat-first:has(a[href$="/sponsrad/"])
+battrenyheter.se##.post-item:has(a[href$="/samarbete/"])
 /acilia-main.$script,domain=foxtv.se
 /freewheel.js$script,domain=foxtv.se
 foxtv.se###cookieBar
 tidningenkarriar.se##.l-advertisement
+tidningenkarriar.se##.m-adform
 @@||morgonbladet.nu^$generichide
 morgonbladet.nu##script:inject(noeval.js)
 /Js/DFP/*$script,domain=camping.se
@@ -2222,6 +2225,7 @@ lira.se###ads
 @@||hbwebben.se^$generichide
 hbwebben.se###cookie-law-info-bar
 hbwebben.se##[class^="hbweb-in_post"]
+hbwebben.se##a[data-bid="1"][href*="/linkout/"][target="_blank"]
 baws.se##.td-post-sharing-top
 springlfa.se##[id^="ad"]
 springlfa.se##.adrotate-loop
@@ -2233,6 +2237,8 @@ flashscore.se###cookie-law
 tennisportalen.se##aside.widget:has(a[href*="casino"])
 tennisportalen.se##aside.widget:has(a[href*="betting"])
 tennisportalen.se##.tdc-row.stretch_row_content:has(a[href$="/category/sponsrat/"])
+tennisportalen.se##aside:has(.block-title:has-text(/samarbete/i))
+tennisportalen.se##[class^="td-block-span"]:has(a[href$="/sponsrad/"])
 @@||hockeystaden.se^$generichide
 miscotbloggen.se###side-right
 coop.se##.js-personalInformationNotice.Notice--sticky-bottom.Notice--info.Notice
@@ -2255,3 +2261,4 @@ ehandel.se##.native_ad_index_small
 ehandel.se##.native_ad_article_page
 ehandel.se##:xpath(//div[contains(concat(' ', @class, ' '), ' native_ad_index_small ')]/following-sibling::div[1][contains(concat(' ', @class, ' '), ' lessImportant ')])
 ehandel.se##:xpath(//div[contains(concat(' ', @class, ' '), ' native_ad_article_page ')]/following-sibling::div[1][contains(concat(' ', @class, ' '), ' lessImportant ')])
+teknifik.se##.post:has(.sponsor)
