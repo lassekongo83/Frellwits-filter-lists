@@ -57,7 +57,7 @@ KNOWNOPTIONS = ("collapse", "csp", "document", "elemhide",
                 "script", "stylesheet", "subdocument", "third-party", "first-party", 
                 "websocket", "webrtc", "xmlhttprequest", "important", "redirect=googletagmanager.com/gtm.js", 
                 "redirect=google-analytics.com/ga.js", "redirect=google-analytics.com/analytics.js", "redirect=googletagservices.com/gpt.js", 
-                "redirect=google-analytics.com/cx/api.js", "redirect=googlesyndication.com/adsbygoogle.js", "redirect=doubleclick.net/instream/ad_status.js", 
+                "redirect=google-analytics.com/cx/api.js", "redirect=googlesyndication.com/adsbygoogle.js", "redirect=doubleclick.net/instream/ad_status.js", "redirect=ampproject.org/v0.js",
                 "redirect=noopjs", "redirect=noopcss", "redirect=noopframe", "redirect=nooptext", "redirect=noopmp3-0.1s", "redirect=noopmp4-1s", 
                 "redirect=1x1-transparent.png", "redirect=2x2-transparent.png", "redirect=3x2-transparent.png", "redirect=32x32-transparent.png")
 
