@@ -353,7 +353,6 @@
 ||look.ufinkln.com^
 ||ufinkln.com/offer?prod$popup
 ||*.choose-your-prize*.life^$document
-||reauthenticator.com^$third-party
 ||runtnc.net^
 ! https://www.aftonbladet.se/nyheter/a/vm1BOw/anders-46-lurades-av-falsk-trafiksajt--nu-stams-foretagaren
 ! https://www.svt.se/nyheter/konsument/tusentals-bilister-lurade-av-sajt-som-tar-betalt-for-gratis-tjanster
@@ -745,6 +744,7 @@ aftonbladet.se##a[href*=".se/kampanj?"]:has-text(/erbjudande/i)
 /rabattkod/*$image,domain=aftonbladet.se
 /pulsetracking.$script,domain=aftonbladet.se
 /campaign-fallback.$script,domain=aftonbladet.se
+/stats/sitecatalyst/s_code.jsp$script,domain=aftonbladet.se
 aftonbladet.se##html,body:style(overflow: auto !important;)
 aftonbladet.se##script:inject(abort-current-inline-script.js, preLoadAds, loadAd)
 aftonbladet.se##script:inject(abort-current-inline-script.js, preLoadAds, setup)
@@ -762,7 +762,7 @@ tv.nu##.gdpr-bar-wrapper
 ||logger.tv.nu^$script
 /campaigns.js$script,domain=blocket.se
 /utag*.js$script,domain=blocket.se
-/appnexus.js$script,domain=blocket.se|minhembio.com
+/appnexus.$script,domain=blocket.se|minhembio.com|bytbil.com
 ||blocket.se/inverted_classifieds.html
 ||blocket.com/fif.html?
 ||blocket.com/boost.html^$subdocument
@@ -790,7 +790,6 @@ klart.se##.gdpr-onboarding-container
 ||user-permissions.api.schibsted.media/privacy/$domain=klart.se
 ||cis.schibsted.com/api/*/identify$domain=klart.se
 ||metric-mobil.aftonbladet.se^$image
-||bytbil.com/bundles/js/appnexus.$script
 ||bytbil.com/bundles/js/eas.$script
 bytbil.com##script:inject(abort-current-inline-script.js, apntag, anq)
 bytbil.com##script:inject(abort-current-inline-script.js, Bytbil, AppNexus)
@@ -1286,6 +1285,7 @@ tvmatchen.nu###clickable-bg
 tvmatchen.nu###triangel_ad
 tvmatchen.nu##.custom-background:style(background-image: none !important;)
 tvmatchen.nu##a.p-icon.partner
+tvmatchen.nu##a[href*="tradedoubler.com"]
 /js/smartbanner/*$domain=tvmatchen.nu
 /partners/*_ad_icon$image,domain=tvmatchen.nu
 /js/smart-app-banner.$script,domain=svenskafans.com
