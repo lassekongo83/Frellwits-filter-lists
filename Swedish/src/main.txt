@@ -1467,12 +1467,15 @@ dreamfilm.*##.bnr
 dreamfilm.*,swesub.*###ads_player_inside
 streamtajm.*##.longbanner
 streamtajm.*##script:inject(abort-current-inline-script.js, popunder)
+streamtajm.*##script:inject(abort-current-inline-script.js, TID, J0)
 streamtajm.*##div[style^="background-color: #ccc; width: 750px;"]:has(img[src^="/images/reklam"])
 ||streamtajm.*/images/reklam$image
 ||streamtajm.*/worker.$script
+||streamtajm.*/sw.js$script
 ||streamtajm.*/webpush.$script
 ||streamtajm.*^$csp=worker-src 'none'
-||bit.ly^$subdocument,domain=jawcloud.co
+||streamtajm.*^$csp=default-src 'self' 'unsafe-inline' 'unsafe-eval' *.tmdb.org *.media-amazon.com *.googleapis.com openload.co nxload.com streamango.com jawcloud.co *.rapidvideo.com vcstream.to
+||bit.ly^$subdocument,domain=jawcloud.co|vcstream.to
 /js/script.$script,domain=nxload.com|jawcloud.co|openload.co|streamango.com
 /license.$script,domain=nxload.com|jawcloud.co|openload.co|streamango.com
 ||jawcloud.co/banner$image
@@ -1480,13 +1483,15 @@ jawcloud.co##script:inject(abort-current-inline-script.js, jawplayer, on)
 ||openload.co/assets/js/video-js/vast$script
 /vast/*$domain=streamango.com
 ||tracker.$important,domain=jawcloud.co
+||vcstream.to^*/script$script
+||vcstream.to^*/license$script
 
 ! Various annoyances
 youplay.se,nyheter24.se,modette.se,filmtipset.se,affarsliv.com,affarslivgotland.se,corren.se,eposten.se,folkbladet.se,helagotland.se,klackspark.com,kuriren.nu,mvt.se,norrbottensaffarer.se,nsd.se,nt.se,pt.se,unt.se,vt.se##script:inject(set-constant.js, youplay.helpers.disableRightClick, noopFunc)
 youplay.se,nyheter24.se,modette.se,filmtipset.se,affarsliv.com,affarslivgotland.se,corren.se,eposten.se,folkbladet.se,helagotland.se,klackspark.com,kuriren.nu,mvt.se,norrbottensaffarer.se,nsd.se,nt.se,pt.se,unt.se,vt.se##script:inject(set-constant.js, youplay.helpers.tabActive, noopFunc)
 youplay.se,nyheter24.se,modette.se,filmtipset.se,affarsliv.com,affarslivgotland.se,corren.se,eposten.se,folkbladet.se,helagotland.se,klackspark.com,kuriren.nu,mvt.se,norrbottensaffarer.se,nsd.se,nt.se,pt.se,unt.se,vt.se##script:inject(set-constant.js, youplay.helpers.getTrackUrl, noopFunc)
 youplay.se,nyheter24.se,modette.se,filmtipset.se,affarsliv.com,affarslivgotland.se,corren.se,eposten.se,folkbladet.se,helagotland.se,klackspark.com,kuriren.nu,mvt.se,norrbottensaffarer.se,nsd.se,nt.se,pt.se,unt.se,vt.se##script:inject(set-constant.js, youplay.helpers.trackUrls, noopFunc)
-saraabrahamsson.se,eurosport.se,jawcloud.co,openload.co,oload.stream,streamango.com##script:inject(addEventListener-defuser.js, contextmenu)
+saraabrahamsson.se,eurosport.se,jawcloud.co,openload.co,oload.stream,streamango.com,rapidvideo.com##script:inject(addEventListener-defuser.js, contextmenu)
 ! Annoying, unecessary, and completely unrelated autoplaying video
 ||youplay.se$third-party,domain=hamsterpaj.net|emocore.se|dayviews.com|kamrat.com
 
