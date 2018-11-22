@@ -5,6 +5,7 @@
 # License: GPLv3
 
 date=$(date '+%Y-%m-%d %H:%M:%S %Z')
+lines=$(cat main-hosts.txt | sed '/^\s*$/d' | wc -l)
 
 cat main-hosts.txt | sort > output/sorted-hosts.txt
 
@@ -13,6 +14,7 @@ cat > output/hosts-headers.txt <<EOF
 # ----
 # title:          Frellwit's Swedish Hosts File
 # last updated:   ${date}
+# entries:        ${lines}
 # format:         hosts (hosts -- in hosts file format)
 # homepage:       https://github.com/lassekongo83/Frellwits-filter-lists/
 EOF
