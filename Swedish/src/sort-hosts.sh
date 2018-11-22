@@ -5,7 +5,8 @@
 # License: GPLv3
 
 date=$(date '+%Y-%m-%d %H:%M:%S %Z')
-lines=$(cat main-hosts.txt | sed '/^\s*$/d' | wc -l)
+lines=$(grep -c '' main-hosts.txt)
+#lines=$(cat main-hosts.txt | sed '/^\s*$/d' | wc -l)
 
 cat main-hosts.txt | sort > output/sorted-hosts.txt
 
