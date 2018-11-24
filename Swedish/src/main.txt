@@ -668,6 +668,7 @@ expressen.se##^script[id="ads-script"]
 expressen.se##^script:has-text(adsScript)
 expressen.se##^script:has-text(window.ExpressenAnalytics)
 milansverige.se##^script:has-text(c.charCodeAt)
+gamereactor.se##^script[onError="adblockEnabled()"]
 !#endif
 
 ! IDG
@@ -994,6 +995,7 @@ dagensmedia.se##div[style="height:360px"]
 dagensmedia.se##div[style="height: 500px;"]
 dagensmedia.se##div[style="height: 360px;"]
 /dam/personalized/*$domain=dagensmedia.se
+aktuellhallbarhet.se##.native-article
 
 ! NTM
 /_ad.js$important,script,domain=affarsliv.com|affarslivgotland.se|corren.se|eposten.se|folkbladet.se|gotland.net|helagotland.se|klackspark.com|kuriren.nu|mvt.se|norrbottensaffarer.se|nsd.se|nt.se|pt.se|unt.se|uppsala.com|uppsalatidningen.se|vt.se
@@ -1153,7 +1155,8 @@ gamereactor.se##.ad_smartphbig
 gamereactor.se##div[style="min-height: 600px; margin-bottom: 20px;"]:has(div[id^="ad_sky"])
 /prerolls/*$domain=gamereactor.se
 ||openx.gamereactor.dk/multi.php?$script,important
-gamereactor.se##script:inject(set-constant.js, detectAdblockUser, noopFunc)
+gamereactor.se##script:inject(set-constant.js, adblockEnabled, noopFunc)
+gamereactor.se##script:inject(set-constant.js, trackAdblock, noopFunc)
 gamereactor.se##script:inject(abort-on-property-write.js, banner_video)
 gamereactor.se##script:inject(abort-current-inline-script.js, phpads_deliver)
 gamereactor.se###sky2_1
