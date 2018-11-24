@@ -45,6 +45,7 @@ imgur.com##^script:has-text(var _qevents)
 imgur.com##^script:has-text(f,b,e,v,n,t,s)
 imgur.com##^script:has-text(loaderFrameWindow)
 !#endif
+imgur.com##a[href="/apps"][target="_blank"]:style(pointer-events: none !important; cursor: default !important;)
 
 ! LOADING
 loading.se##.PostItem-container, .Boop-container, .Games-container:style(max-width: 998px !important; width: 998px !important; margin: 0 auto !important;)
@@ -89,6 +90,7 @@ deviantart.com##div#gmi-GMFrame_BluesBar:style(background: linear-gradient(#e1e8
 deviantart.com##body.gruze .catbar:style(background: linear-gradient(#c0d0bb, #aec2aa) !important)
 
 ! REDDIT
+/ads/pixel.$script,domain=reddit.com
 ||reddit.com/static/pixel.png
 ||reddit.com/api/request_promo
 ||redditmedia.com/ads/
@@ -243,6 +245,7 @@ quora.com##script:inject(setTimeout-defuser.js, trackTimeOnSite)
 quora.com##:xpath(//div[contains(text(), 'ad') and contains(text(), 'by')]/parent::div/parent::div/parent::div[@id])
 quora.com##:xpath(//div[contains(text(), 'promoted') and contains(text(), 'by')]/parent::a/parent::div/parent::div/parent::div[@id])
 quora.com##:xpath(//div[contains(text(), 'by') and contains(text(), 'Quora') and contains(text(), 'Business')]/parent::a/parent::div/parent::div/parent::div[@id])
+quora.com##:xpath(//p[not(@class="ui_qtext_para") and contains(text(), 'sponsored') and contains(text(), 'by')]/../../../parent::div[@id])
 !#endif
 webhallen.com###background
 css-tricks.com##.end-of-article-ads
