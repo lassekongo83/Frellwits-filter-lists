@@ -517,7 +517,7 @@ readly.com#@#.cookie-notice
 ||zotabox.com^$third-party,domain=etunawebben.se|rapport24.com
 ||d2wy8f7a9ursnm.cloudfront.net/bugsnag$script,domain=expressen.se
 ||consent.cmp.oath.com^$script,domain=mitti.se|alltomstockholm.se
-||consent.cookiebot.com^$third-party,domain=goteborgdirekt.se|stockholmdirekt.se|wesafe.se|alingsastidning.se|partilletidning.se|itaboutdoor.se|selmaspa.se|skeppsbrons.se|etc.se|norran.se|swedroid.se|villalivet.se
+||consent.cookiebot.com^$third-party,domain=goteborgdirekt.se|stockholmdirekt.se|wesafe.se|alingsastidning.se|partilletidning.se|itaboutdoor.se|selmaspa.se|skeppsbrons.se|etc.se|norran.se|swedroid.se|villalivet.se|ng.se
 ||marketingautomation.services^$third-party,domain=wesafe.se
 /gdpr/*$domain=vimedbarn.se|rapport24.com|funnygames.se|villalivet.se
 /urls/count.json$script,domain=vimedbarn.se|gabriellajoss.me|mybabydolls.se|emilysliv.se|kenzas.se
@@ -828,6 +828,7 @@ dn.se##script:inject(abort-current-inline-script.js, DN, initAds)
 dn.se##script:inject(abort-current-inline-script.js, gtmData)
 dn.se##script:inject(addEventListener-defuser.js, /^(?:error|load)$/, n())
 dn.se##script:inject(addEventListener-defuser.js, splusCheckPaywall)
+dn.se##script:inject(abort-current-inline-script.js, startBurtTracking)
 /analytics$script,domain=dn.se
 /initLogging$script,domain=dn.se
 /*?isPaywallBlocked$image,domain=dn.se
@@ -1609,6 +1610,7 @@ autonytt.se##.feed_ad
 autonytt.se##a[href^="https://t.seenthis.se"]
 autonytt.se##a:has(.label:has-text(/sponsrad/i))
 autonytt.se##.article_widget_preview:if(h2 > a:has-text(/artikel i samarbete/i))
+/autonytt-theme/js/blogger.$script,domain=autonytt.se
 /cookie-consent-*.js$domain=motormagasinet.se|skyddosakerhet.se|food-supply.se
 /trckr/*$xmlhttprequest,domain=motormagasinet.se|food-supply.se|skyddosakerhet.se|dagenshandel.se
 motormagasinet.se,skyddosakerhet.se,dagenshandel.se,food-supply.se##script:inject(abort-current-inline-script.js, openNewsletterPopup)
@@ -2305,3 +2307,4 @@ via.tt.se##.footer__notification
 skidresultat.se###message_cookie_info_accept
 da.se##.privacy-info
 da.se##.external:matches-css-before(content: "ANNONS:")
+smhi.se##.polopolyNotification
