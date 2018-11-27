@@ -125,6 +125,8 @@
 ||reseguiden.se^$third-party
 ||revrelations.com^$third-party
 ||revrtb.com^$third-party,popup
+||richaudience.com^$third-party
+||richmediastudio.com^$third-party
 ||royapp.com^$third-party
 ||sannsyn.com^$third-party
 ||scandicpartners.se^$third-party
@@ -139,6 +141,7 @@
 ||sprinklecontent.com^$third-party
 ||sprinkletxt.com^$third-party
 ||storymedia.se^$third-party
+||strossle.com^$third-party
 ||suntana.se^$third-party
 ||telemetric.dk^$third-party
 ||tinypass.com^$third-party,domain=~independent.co.uk
@@ -539,7 +542,7 @@ undertian.com,villaliv.se,newsner.com,humorbibeln.se,sportbibeln.se,ettgottskrat
 datormagazin.se,villalivet.se,rocknytt.net,skanesport.se,newsner.com,humorbibeln.se,sportbibeln.se,hightechguiden.se,ettgottskratt.se,hbwebben.se##script:inject(abort-current-inline-script.js, advanced_ads_ga_UID)
 opulens.se##script:inject(abort-current-inline-script.js, advanced_ads_adsense_UID)
 alltforforaldrar.se,mammasidan.se,minbebis.com##script:inject(abort-current-inline-script.js, loadAd)
-falkopingstidning.se,jnytt.se,jp.se,skaraborgslanstidning.se,skovdenyheter.se,smalandsdagblad.se,smalanningen.se,smt.se,tranastidning.se,vastgotabladet.se,vetlandaposten.se,vn.se,ljudochbild.se##script:inject(abort-current-inline-script.js, googletag, push)
+falkopingstidning.se,jnytt.se,jp.se,skaraborgslanstidning.se,skovdenyheter.se,smalandsdagblad.se,smalanningen.se,smt.se,tranastidning.se,vastgotabladet.se,vetlandaposten.se,vn.se,ljudochbild.se,pomu.se##script:inject(abort-current-inline-script.js, googletag, push)
 newsner.com,humorbibeln.se,sportbibeln.se,ettgottskratt.se,kimura.se,villalivet.se,datormagazin.se##script:inject(abort-current-inline-script.js, advads_placement_tests)
 
 ! Facebook junk
@@ -1887,6 +1890,7 @@ medievarlden.se##.noda-ad
 medievarlden.se##html,body:style(overflow: auto !important;)
 ||hockeymagasinet.com/footer/ad$xmlhttprequest
 hockeymagasinet.com##app-gdpr-alert
+hockeymagasinet.com##script:inject(set-constant.js, trackOutboundLink, noopFunc)
 kungalvsposten.se,molndalsposten.se,lokaltidningensto.se,kungsbackaposten.se##.wp-slot-layout-article-native
 kungalvsposten.se,molndalsposten.se,lokaltidningensto.se,kungsbackaposten.se##div[style="font-size: 15px; font-family: PT Serif; font-weight: normal;"]:if(p:has-text(/annons/i))
 smartsenior.se##.ss-modal
@@ -1918,7 +1922,7 @@ mytaste.se##body:not(.kcolbda) .site-wrapper[data-state=default], body:not(.kcol
 @@||ettgottskratt.se^$generichide
 newsner.com,humorbibeln.se,sportbibeln.se,ettgottskratt.se###wsfb-container
 newsner.com,humorbibeln.se,sportbibeln.se,ettgottskratt.se##.share-buttons
-humorbibeln.se,newsner.com,sportbibeln.se,ettgottskratt.se##.ssp_divider:has(.sponsored-bar)
+newsner.com,humorbibeln.se,sportbibeln.se,ettgottskratt.se##.ssp_divider:has(.sponsored-bar)
 njus.me##.article-list-item--sponsored
 /commercialAds/*$xmlhttprequest,domain=njus.me
 ||njus.me/files/analytics.js$script
@@ -1949,6 +1953,7 @@ skillingaryd.nu###more-banners
 pomu.se,video-static.tunnl.com##script:inject(set-constant.js, canRunAds, true)
 pomu.se###BannerCentral1
 pomu.se##.Banners-lateral
+pomu.se##.Games-addLateral
 ||allatvkanaler.se/js/js*.js$script
 ||unitedsverige.se^$csp=script-src 'self' 'unsafe-inline' 'unsafe-eval' *.googleapis.com
 forumbilder.se##a[target="_blank"] > img[src^="/Content/images"]
@@ -1974,7 +1979,7 @@ dagenstv.com###bt
 ||conviva.com^$script,xmlhttprequest,domain=eurosport.se
 eurosport.se###notification__cookie
 eurosport.se##.eso_video__share
-||video.eurosport.se/_bm/abd$script
+/_bm/abd$script,domain=eurosport.se
 pconline.se##:xpath(//h3[text()[contains(., 'Annonser')]]/parent::div)
 pconline.se##:xpath(//div[@class="sponsorruta"]/parent::div)
 pconline.se##h3.glasspinnesvart
