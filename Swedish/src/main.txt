@@ -788,7 +788,10 @@ blocket.se###vi_panorama
 blocket.se##[id^="ufti"]
 mobil.blocket.se###top_device
 mobil.blocket.se###top_large_device
+mobil.blocket.se##div[class*="StyledBanner"]
 ||mobil.blocket.se/ufti$subdocument
+||mobil.blocket.se^*/gdpr-bundle$script
+||mobil.blocket.se^*/ast.js$script
 politism.se##[id^="ab-appnexus"]
 politism.se##[id^="native_ad"]
 politism.se##.post-teaser:if(.nstory:has-text(/sponsrat innehåll/i))
@@ -876,6 +879,9 @@ di.se##.carousel-tab:has-text(/annons:/i)
 di.se##.di_expressen-rabatt-koder
 digital.di.se,weekend.di.se##script:inject(abort-current-inline-script.js, diConf)
 /adblk.js$script,domain=weekend.di.se
+! Den irriterande autostartande livespelaren nu igen
+/nyheter/live-start/live-tv-senaste-nyheterna-i-expressen-tv/*$xmlhttprequest,domain=expressen.se
+expressen.se##figure[data-article-data*="/tv/nyheter/live-start/live-tv-senaste-nyheterna-i-expressen-tv/"]
 expressen.se##.terms-dialog
 expressen.se,dn.se###rich-media-ads
 expressen.se##.native-ad-teaser
@@ -898,6 +904,7 @@ expressen.se##.b-adblock-sidebar-container
 expressen.se##.b-ad2
 expressen.se##.article__after-widgets
 expressen.se##a[data-click-track][href*="utm_campaign"]:has(strong:has-text(annons))
+expressen.se##.teaser:has(.vignette--text:has-text(/presenteras av/i))
 expressen.se##script:inject(addEventListener-defuser.js, error, adsBlocked)
 expressen.se##script:inject(abort-current-inline-script.js, adsScript)
 expressen.se##script:inject(abort-current-inline-script.js, ExpressenAnalytics, adblock)
