@@ -262,7 +262,11 @@ dragoninquisition.com##script:inject(abort-current-inline-script.js, anOptions)
 /fstrat$media,domain=expressen.se
 coop.se##.Notice.Notice--sticky-bottom
 coop.se##script:inject(abort-current-inline-script.js, NREUM, info)
-/img/t.gif$image,domain=vg.no
+vg.no##.ad
+@@||ad*.vg.no^*/check.js$script,~third-party
+||vgc.no/vgnett/img/t.$image,redirect=1x1-transparent.gif,domain=vg.no
+||vg.no/vg-perf-stats/$image,first-party,redirect=1x1-transparent.gif
+/appnexus-seat-test.$script,domain=vg.no
 /linkpulse/*$domain=vg.no
 /touchpoints.$script,domain=vg.no
 /vgtv-autoplay/*$domain=vg.no
