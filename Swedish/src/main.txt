@@ -375,6 +375,8 @@
 ||cameraeushop.com^
 ! https://www.sweclockers.com/forum/trad/1537546-ljuskompaniet-se-vagar-man-handla
 ||ljuskompaniet.se^
+! https://www.svt.se/nyheter/konsument/biljettsajt-saljer-dyra-och-falska-biljetter
+||viagogo.se^
 ! Common typing errors leading to some annoying or malicious pages
 *$csp=script-src 'none',domain=aftonbladett.se|svtt.se|ssvd.se|exressen.se|eexpressen.se|sskatteverket.se|klartt.se
 
@@ -489,7 +491,7 @@ readly.com#@#.cookie-notice
 /\/*280x240*./$image,domain=rumhemma.se
 /\/*280x360./$image,domain=kurera.se
 /\/*annons*./$image,domain=guldkanalen.se|kurera.se|nvp.se|rumhemma.se|tekniksmart.se|megafonen.nu|newsvoice.se|lesscarbs.se|lundagard.se|svf.se|boktugg.se|skillingaryd.nu|etunawebben.se
-/\/*banner*./$image,domain=dansbandskanalen.se|etc.se|evertiq.se|guldkanalen.se|kurera.se|markbladet.se|rockkocken.se|rumhemma.se|skrattnet.se|tkj.se|vaken.se|sportpanelen.se|newsvoice.se|sportbloggare.com|marsta.nu|lakartidningen.se|bettips.se|svf.se|alltomhif.se|it-finans.se|boktugg.se|katerinamagasin.se|everysport.com
+/\/*banner*./$image,domain=dansbandskanalen.se|etc.se|evertiq.se|guldkanalen.se|kurera.se|markbladet.se|rockkocken.se|rumhemma.se|skrattnet.se|tkj.se|vaken.se|sportpanelen.se|newsvoice.se|sportbloggare.com|marsta.nu|lakartidningen.se|bettips.se|svf.se|alltomhif.se|it-finans.se|boktugg.se|katerinamagasin.se|everysport.com|lundagard.se
 /\/*banner*./$script,domain=dagenshandel.se|entreprenor.se|food-supply.se|magasinetparagraf.se|motormagasinet.se|skyddosakerhet.se
 /\/*sponsor*./$image,domain=humorbibeln.se|newsner.com|sportbibeln.se|ettgottskratt.se|swehockey.se
 /\/*casino*./$image,domain=hypeline.se|dayviews.com
@@ -526,7 +528,7 @@ readly.com#@#.cookie-notice
 /urls/count.json$script,domain=vimedbarn.se|gabriellajoss.me|mybabydolls.se|emilysliv.se|kenzas.se
 ||aff.bstatic.com^$domain=travelgrip.se
 /downloads.mailchimp.com/*$domain=villalivet.se|landleyskok.se
-||mailmunch.co^$third-party,domain=villalivet.se
+||mailmunch.co^$third-party,domain=villalivet.se|affarsstaden.se
 /snowplow-*.js$script,domain=hemnet.se
 ||sentry.io^$third-party,domain=dagensmedia.se|dplay.se
 
@@ -1425,6 +1427,7 @@ civilekonomen.se,market.se###rollup
 baws.se,datormagazin.se,villalivet.se##.td-more-articles-box
 it-finans.se,baws.se##a.gofollow[data-track][target="_blank"]
 mammasidan.se,minbebis.com,alltforforaldrar.se##.panorama
+skanesport.se,stockblogs.se###cookie-notice
 
 ! Various websites with lots of malicious stuff and annoyances
 !#if env_firefox
@@ -1975,7 +1978,6 @@ datormagazin.se##.td-header-sp-recs
 datormagazin.se##.dator-widget:has(h4 > span:has-text(/erbjudanden/i))
 @@||datormagazin.se^$generichide
 skanesport.se##[id^="skane-slider"]
-skanesport.se###cookie-notice
 skanesport.se###check-also-box.show-check-also
 skanesport.se##.stream-item
 @@||skanesport.se^$generichide
@@ -2239,7 +2241,7 @@ nyheteridag.se##script:inject(abort-current-inline-script.js, sc, type)
 nordicchoicehotels.se##script:inject(setTimeout-defuser.js, n.modal.showWithCondition, 60000)
 @@||knulla.se^$generichide
 lundagard.se###bdCheckAlso.bdCheckAlsoShow
-lundagard.se##.widget:has(h3:has-text(Annons:))
+lundagard.se##.widget:has(h3:has-text(/annons/i))
 betting.se##script:inject(abort-on-property-write.js, Fingerprint2)
 @@||stockblogs.se^$generichide
 komponentkoll.se##.gdpr-popup
@@ -2260,6 +2262,7 @@ battrenyheter.se##.gbnan
 battrenyheter.se##.abnan-single
 battrenyheter.se##.home-cat-first:has(a[href$="/sponsrad/"])
 battrenyheter.se##.post-item:has(a[href$="/samarbete/"])
+battrenyheter.se##.post-item:has(a[href$="/sponsrad/"])
 /acilia-main.$script,domain=foxtv.se
 /freewheel.js$script,domain=foxtv.se
 foxtv.se###cookieBar
@@ -2325,3 +2328,4 @@ skidresultat.se###message_cookie_info_accept
 da.se##.privacy-info
 da.se##.external:matches-css-before(content: "ANNONS:")
 smhi.se##.polopolyNotification
+hallakonsument.se##.cookie-information
