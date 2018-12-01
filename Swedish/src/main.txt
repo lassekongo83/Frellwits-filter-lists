@@ -109,6 +109,7 @@
 ||nbes.se^$third-party
 ||nichehuset.dk^$third-party
 ||norstatsurveys.com^$third-party
+||oribi.io^$third-party
 ||optnmnstr.com^$third-party
 ||panera.io^$third-party
 ||pensiono.se^$third-party
@@ -265,6 +266,7 @@
 ||btikon.se/analytics.$xmlhttprequest
 ||btikon.se/btstats.$script
 ||cdn.advisible.com/accl$script
+||cdn.axiell.com^*/cookie-disclaimer.$script
 ||cdn.livechatinc.com/tracking.$script
 ||d9v72urx9pbbc.cloudfront.net/LoadSlotLocator.$script
 ||creatives.ancoraplatform.com/ptphb*.$script
@@ -531,6 +533,8 @@ readly.com#@#.cookie-notice
 ||mailmunch.co^$third-party,domain=villalivet.se|affarsstaden.se
 /snowplow-*.js$script,domain=hemnet.se
 ||sentry.io^$third-party,domain=dagensmedia.se|dplay.se
+||cdn.jsdelivr.net/npm/search-insights$script,domain=forum.hallon.se
+||execute-api.eu-west-1.amazonaws.com/*/event$xmlhttprequest,domain=forum.hallon.se
 
 ! Common scriptlets
 ng.se,alltomstockholm.se,mitti.se,bloggbevakning.se,cornucopia.cornubot.se,innebandymagazinet.se##script:inject(abort-on-property-read.js, ADTECH)
@@ -2329,3 +2333,9 @@ da.se##.privacy-info
 da.se##.external:matches-css-before(content: "ANNONS:")
 smhi.se##.polopolyNotification
 hallakonsument.se##.cookie-information
+webben7.se##.region-sidebar-second
+||akademiskahus.se/Content/js/cookieConsent.$script
+akademiskahus.se###cookieConsent
+! digilär.se
+xn--digilr-fua.se##.cookies
+8sidor.se##.cookie-accept
