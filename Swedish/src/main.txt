@@ -6,6 +6,7 @@
 ||adcell.io^$third-party
 ||adeprimo.se^$third-party
 ||addtoany.com^$third-party
+||adnami2.io^$third-party
 ||adonstudio.com^$third-party
 ||adrecord.com^$third-party
 ||adservone.com^$third-party
@@ -191,6 +192,7 @@
 /_graphics/annons/*
 /a?callback=pfmod.saveadsettings
 /ad/getNouw.$script
+/adnami/macro/*$script
 /ajax.php?action=get_cookies_policy$xmlhttprequest
 /ajax.php?action=get_policy&site=cookie-information$xmlhttprequest
 /annons.aspx?
@@ -450,6 +452,7 @@
 ##img[alt="Leovegas"]
 ##img[alt="Spela på Betsson"]
 ##[id^="adace_ads"]
+##a[href*="casinopro.se"][target="_blank"]
 
 ! Site specific whitelists
 @@/*_adframe.js$~third-party,script,domain=fssweden.se
@@ -550,6 +553,8 @@ opulens.se##script:inject(abort-current-inline-script.js, advanced_ads_adsense_U
 alltforforaldrar.se,mammasidan.se,minbebis.com##script:inject(abort-current-inline-script.js, loadAd)
 falkopingstidning.se,jnytt.se,jp.se,skaraborgslanstidning.se,skovdenyheter.se,smalandsdagblad.se,smalanningen.se,smt.se,tranastidning.se,vastgotabladet.se,vetlandaposten.se,vn.se,ljudochbild.se,pomu.se##script:inject(abort-current-inline-script.js, googletag, push)
 newsner.com,humorbibeln.se,sportbibeln.se,ettgottskratt.se,kimura.se,villalivet.se,datormagazin.se##script:inject(abort-current-inline-script.js, advads_placement_tests)
+allehanda.se,arbetarbladet.se,avestatidning.com,bblat.se,dalademokraten.se,dt.se,fagersta-posten.se,gd.se,lt.se,ltz.se,na.se,norrteljetidning.se,nynashamnsposten.se,op.se,salaallehanda.com,st.nu,tidningenharjedalen.se,vlt.se,skanesport.se##script:inject(addEventListener-defuser.js, mousemove)
+datormagazin.se,skanesport.se##script:inject(abort-on-property-read.js, advads)
 
 ! Facebook junk
 /facebook_sdk.js$script,domain=njus.me|radioplay.se
@@ -641,7 +646,6 @@ newsner.com,humorbibeln.se,sportbibeln.se,ettgottskratt.se,kimura.se,villalivet.
 /wp-content/plugins/top-10/*$script
 /wp-content/plugins/easy-social-share-buttons$script
 /wp-content/uploads/*/advanced$script,domain=datormagazin.se|skanesport.se|rocknytt.net
-/wp-content/themes/*/assets/js/cookie.$script
 /wp-content/plugins/addthis/*$script,stylesheet
 /wp-content/uploads/*.js?ver$script,domain=noterat.nu|nyadagbladet.se|mkse.com
 /wp-admin/admin-ajax.php?action=addthis_global_options$script,domain=expressen.se
@@ -1072,7 +1076,6 @@ allehanda.se,arbetarbladet.se,avestatidning.com,bblat.se,dalademokraten.se,dt.se
 allehanda.se,arbetarbladet.se,avestatidning.com,bblat.se,dalademokraten.se,dt.se,fagersta-posten.se,gd.se,lt.se,ltz.se,na.se,norrteljetidning.se,nynashamnsposten.se,op.se,salaallehanda.com,st.nu,tidningenharjedalen.se,vlt.se##script:inject(abort-on-property-read.js, oas_tag)
 allehanda.se,arbetarbladet.se,avestatidning.com,bblat.se,dalademokraten.se,dt.se,fagersta-posten.se,gd.se,lt.se,ltz.se,na.se,norrteljetidning.se,nynashamnsposten.se,op.se,salaallehanda.com,st.nu,tidningenharjedalen.se,vlt.se##script:inject(abort-current-inline-script.js, sparrow, push)
 allehanda.se,arbetarbladet.se,avestatidning.com,bblat.se,dalademokraten.se,dt.se,fagersta-posten.se,gd.se,lt.se,ltz.se,na.se,norrteljetidning.se,nynashamnsposten.se,op.se,salaallehanda.com,st.nu,tidningenharjedalen.se,vlt.se##script:inject(abort-current-inline-script.js, orvesto_id, orvesto_path)
-allehanda.se,arbetarbladet.se,avestatidning.com,bblat.se,dalademokraten.se,dt.se,fagersta-posten.se,gd.se,lt.se,ltz.se,na.se,norrteljetidning.se,nynashamnsposten.se,op.se,salaallehanda.com,st.nu,tidningenharjedalen.se,vlt.se##script:inject(addEventListener-defuser.js, mousemove)
 allehanda.se,arbetarbladet.se,avestatidning.com,bblat.se,dalademokraten.se,dt.se,fagersta-posten.se,gd.se,lt.se,ltz.se,na.se,norrteljetidning.se,nynashamnsposten.se,op.se,salaallehanda.com,st.nu,tidningenharjedalen.se,vlt.se##script:inject(cookie-remover.js, /^highlight_displayed/)
 ! Annoying temporary survey
 allehanda.se,arbetarbladet.se,avestatidning.com,bblat.se,dalademokraten.se,dt.se,fagersta-posten.se,gd.se,lt.se,ltz.se,na.se,norrteljetidning.se,nynashamnsposten.se,op.se,salaallehanda.com,st.nu,tidningenharjedalen.se,vlt.se##script:inject(set-constant.js, nps_dialogue_enabled, false)
@@ -1985,6 +1988,8 @@ skanesport.se##[id^="skane-slider"]
 skanesport.se###check-also-box.show-check-also
 skanesport.se##.stream-item
 @@||skanesport.se^$generichide
+@@||imasdk.googleapis.com/js/sdkloader/ima3.js$script,domain=skanesport.se
+||imasdk.googleapis.com/js/core$subdocument,important,domain=skanesport.se
 hypeline.se##.homecontent:has(.sponsrad_ruta)
 hypeline.se###herobanner
 hypeline.se##[class^="ad_"]
@@ -2049,8 +2054,8 @@ firstfoto.se,cyclingplus.se,halsafitness.se,fitnessformen.se,macguiden.net##.thi
 cyclingplus.se##article:has(.single-subtitle:has-text(/annonssamarbete/i))
 halsafitness.se,cyclingplus.se,yogaworld.se##.headerbar-container
 /dohi-gdpr/*$domain=firstfoto.se|cyclingplus.se|halsafitness.se|fitnessformen.se|macguiden.net|yogaworld.se
-/plugins/dohi-sellbranch/js/popup.$script,domain=yogaworld.se|halsafitness.se
-/improve_digital_ads.$script,domain=halsafitness.se
+/plugins/dohi-sellbranch/js/popup.$script,domain=cyclingplus.se|halsafitness.se|yogaworld.se
+/improve_digital_ads.$script,domain=cyclingplus.se|halsafitness.se|yogaworld.se
 halsafitness.se,yogaworld.se##.post-wrap:has(h3:has-text(/annonssamarbete/i))
 andreahedenstedt.se##article.post:has(.sw-sf-sponsor)
 egoinas.se##article.uk-article:has(.sw-sf-sponsor)
@@ -2230,6 +2235,8 @@ mintur.se##[id^="banner"]
 ||turistmal.se/js/popup-controller.js$script
 newzblab.com##.g1-advertisement
 newzblab.com##.adace-slot-wrapper
+newzblab.com##cloudflare-app[app="cookiless"]
+newzblab.com###slide-in-box
 ||d3nhmqrdssv741.cloudfront.net/jppol-consent$domain=lokaltidningen.se
 lokaltidningen.se##.annoncer-wrapper
 kamrat.com###kadDiv
