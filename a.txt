@@ -88,6 +88,7 @@ deviantart.com###elnino-modal
 ||http://st.deviantart.net/minish/gruzecontrol/bubbletop-gruze.gif
 deviantart.com##div#gmi-GMFrame_BluesBar:style(background: linear-gradient(#e1e8e0, #d2ded1) !important)
 deviantart.com##body.gruze .catbar:style(background: linear-gradient(#c0d0bb, #aec2aa) !important)
+deviantart.com##+js(abort-current-inline-script.js, googletag, cmd)
 
 ! REDDIT
 /ads/pixel.$script,domain=reddit.com
@@ -140,6 +141,7 @@ google.se##div[class*="middle-slot-promo"]
 google.se###cnsh
 google.se###cnso
 ||youtube.com/pagead/
+youtube.com##.video-list-item:has(.view-count:has-text(Rekommendationer))
 
 ! WOWHEAD
 wowhead.com##.blocks:has(div[id^="ad-"])
@@ -190,6 +192,12 @@ imdb.com##.aux-content-widget-2:has(#facebookWrapper)
 imdb.com##.mini-article:has(#facebookWrapper)
 imdb.com##:xpath(//h3[text()[contains(., 'Around The Web')]]/ancestor::div[contains(concat(' ', @class, ' '), ' mini-article ')])
 imdb.com##script:inject(abort-on-property-read.js, doWithAds)
+/ClientSideMetrics$domain=imdb.com
+imdb.com##+js(abort-current-inline-script.js, ue_ihe, cel_widgets)
+imdb.com##+js(abort-current-inline-script.js, COMSCORE, beacon)
+imdb.com##+js(abort-current-inline-script.js, el, onload)
+imdb.com##+js(set-constant.js, doWithAds, noopFunc)
+imdb.com##+js(abort-current-inline-script.js, ue_ibe, exec)
 
 ! For Firefox Android
 !#if env_mobile
