@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Title: Frellwit's Swedish Filter
 ! Expires: 3 days (update frequency)
-! Last modified: 2018-12-08 13:38:40 CET
+! Last modified: 2018-12-08 14:00:55 CET
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -336,6 +336,7 @@
 /plugins/ct-ultimate-gdpr/*$domain=itrace.se
 /plugins/dohi-sellbranch/js/popup.$script,domain=cyclingplus.se|halsafitness.se|yogaworld.se
 /plugins/doubleclick-wp/*
+/plugins/easy-affiliate-links/*$domain=handbollskanalen.se
 /plugins/easy-eu-cookie-law/*
 /plugins/easy-wp-cookie-popup/*$script,stylesheet
 /plugins/eu-cookie-law/*$script,stylesheet
@@ -380,7 +381,6 @@
 /plugins/sw_cookie_consent/*$script,stylesheet
 /plugins/thirstyaffiliates/*$script
 /plugins/thrive-leads/*
-/plugins/uk-cookie-consent/*$script,stylesheet,domain=~childhood.se
 /plugins/Ultimate-Premium-Plugin/*$script,domain=opulens.se
 /plugins/ultimate-social-media-icons/*$image,script,stylesheet,domain=buzzter.se|intre.se
 /plugins/wf-cookie-consent/*$script,stylesheet
@@ -957,6 +957,7 @@ grontvader.se##app-cookies
 hallakonsument.se##.cookie-information
 hamnenplay.solidtango.com##.ads-click-overlay
 hamsterpaj.net###accept-cookies
+handbollskanalen.se##.hb-adlabel
 hangotidningen.fi,hbl.fi,ostnyland.fi,vastranyland.fi###okCookie
 hangotidningen.fi,hbl.fi,ostnyland.fi,vastranyland.fi##.type-advertorial
 hangotidningen.fi,hbl.fi,ostnyland.fi,vastranyland.fi##gdpr-notice
@@ -1190,6 +1191,7 @@ skanesport.se###check-also-box.show-check-also
 skanesport.se##.stream-item
 skanesport.se##[id^="skane-slider"]
 skanesport.se,stockblogs.se###cookie-notice
+skanetrafiken2020.se###cookie-consent-block
 skidresultat.se###message_cookie_info_accept
 skillingaryd.nu###more-banners
 skk.se###cookie-button-banner
@@ -1508,6 +1510,7 @@ xn--digilr-fua.se##.cookies
 ||gru.eniro.se^
 ||gru.eniro.se^$csp=worker-src 'none'
 ||guavaaffiliate.blob.core.windows.net/banner$image
+||handbollskanalen.se^*/esmg/se-$script
 ||happygreen.se^$third-party
 ||hapyak.com^$third-party
 ||hello.myfonts.net/count/$stylesheet
