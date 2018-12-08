@@ -697,6 +697,15 @@ milansverige.se##^script:has-text(c.charCodeAt)
 gamereactor.se##^script[onError="adblockEnabled()"]
 !#endif
 
+! Firefox mobile filters
+!#if env_mobile
+ikea.com##.cookie-info__panel--show
+/sv/local-extensions/header-footer/scripts/adform/*$domain=ikea.com
+/sv/local-extensions/header-footer/scripts/track.$script,domain=ikea.com
+/sv/local-extensions/header-footer/scripts/hotjar.$script,domain=ikea.com
+/sv/analytics/*$domain=ikea.com
+!#endif
+
 ! IDG
 ||idg.se/sharecounter?$xmlhttprequest
 @@/consent.json$domain=idg.se|forum.studio.se
@@ -1543,7 +1552,7 @@ youplay.se,nyheter24.se,modette.se,filmtipset.se,affarsliv.com,affarslivgotland.
 youplay.se,nyheter24.se,modette.se,filmtipset.se,affarsliv.com,affarslivgotland.se,corren.se,eposten.se,folkbladet.se,helagotland.se,klackspark.com,kuriren.nu,mvt.se,norrbottensaffarer.se,nsd.se,nt.se,pt.se,unt.se,vt.se##script:inject(set-constant.js, youplay.helpers.trackUrls, noopFunc)
 saraabrahamsson.se,eurosport.se,jawcloud.co,openload.co,oload.stream,streamango.com,rapidvideo.com##script:inject(addEventListener-defuser.js, contextmenu)
 ! Annoying, unecessary, and completely unrelated autoplaying video
-||youplay.se$third-party,domain=hamsterpaj.net|emocore.se|dayviews.com|kamrat.com|familjeliv.se
+||youplay.se^$third-party,domain=hamsterpaj.net|emocore.se|dayviews.com|kamrat.com|familjeliv.se
 
 ! ÖVRIGT
 /uploads/Adblockerpanda$image,domain=nordichardware.se
