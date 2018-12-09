@@ -96,6 +96,7 @@
 ||lokus.se^$third-party,~image,domain=~familj.se
 ||lystra.se^$third-party
 ||lwadm.com^$third-party
+||marketo.com^$third-party
 ||mediekompaniet.com^$third-party
 ||meltwater.com^$third-party
 ||metapic.se^$third-party
@@ -579,6 +580,7 @@ datormagazin.se,skanesport.se##script:inject(abort-on-property-read.js, advads)
 ||googletagmanager.com/gtm.js?id=$important,redirect=googletagmanager.com/gtm.js,script,domain=tradera.com
 ||tm.tradetracker.net/tag?$important,script,domain=agneswinqvist.se|enkelteknik.se|moviezine.se|everydayexplorers.org
 ||biowebb-data.s3.amazonaws.com^*/ad_loader$script,important
+||munchkin.marketo.net/munchkin.js$script,important,domain=yougov.se|hbl.fi|vastranyland.fi|ostnyland.fi|hangotidningen.fi
 
 ! Unwanted Wordpress plugins and bloat
 /plugins/ab_appnexus_ads/*$script
@@ -794,6 +796,7 @@ aftonbladet.se##html,body:style(overflow: auto !important;)
 aftonbladet.se##script:inject(abort-current-inline-script.js, preLoadAds, loadAd)
 aftonbladet.se##script:inject(abort-current-inline-script.js, preLoadAds, setup)
 aftonbladet.se##script:inject(setTimeout-defuser.js, onerror, 1000)
+aftonbladet.se##script:inject(addEventListener-defuser.js, mousemove)
 @@||aftonbladet.se^$generichide
 @@||ad*.vg.no/check.js$script,domain=aftonbladet.se
 /privacy/notification?$xmlhttprequest,domain=aftonbladet.se
@@ -844,35 +847,21 @@ bytbil.com###privacyModal
 bytbil.com##html,body:style(overflow: auto !important;)
 
 ! BONNIER
-dn.se##.js-ad-sidebar
-dn.se##.nativeads-page
-dn.se##.sponsored-teaser
-dn.se##aside.js-social-toolbar
-dn.se##div.DNP_theme--reco
-dn.se##.account-information__tooltip
-dn.se##.js-bottom-bar
-dn.se##.social-media__section
 @@||dn.se^$generichide
 dn.se##.gdpr-header
 dn.se##.personal-carousel
 dn.se##.bottom-bar--visible
-dn.se##body > iframe[style^="display"]
-dn.se##.gdpr-header-container
 dn.se##.chosen-for-you
+dn.se##.takeover-modal
+dn.se##html,body:style(overflow: auto !important;)
 dn.se##script:inject(abort-current-inline-script.js, DN, initAds)
 dn.se##script:inject(abort-current-inline-script.js, gtmData)
-dn.se##script:inject(addEventListener-defuser.js, /^(?:error|load)$/, n())
-dn.se##script:inject(addEventListener-defuser.js, splusCheckPaywall)
-dn.se##script:inject(abort-current-inline-script.js, startBurtTracking)
 /analytics$script,domain=dn.se
 /initLogging$script,domain=dn.se
-/*?isPaywallBlocked$image,domain=dn.se
 /personalized/*$xmlhttprequest,domain=dn.se
-*/extension.js$script,redirect=noopjs,domain=dn.se
 /check-paywall$domain=dn.se
 @@/advertisement*.js$script,domain=dn.se
 /streamsense.$script,important,domain=dn.se
-||trackjs.com^$third-party,domain=dn.se
 ||di.se^*/burt-main.$script
 ||di.se/part/ads/$xmlhttprequest
 /Scripts/burt/*$script,domain=di.se
@@ -893,13 +882,9 @@ di.se##aside.di_share-buttons
 di.se##.di_article-body-commercial-link
 di.se##.di_panorama-wrapper
 di.se##.ad_container
-di.se##a[href*="facebook.com"][class^="article__toolbar"]
-di.se##a[href*="twitter.com"][class^="article__toolbar"]
-di.se##a[href*="linkedin.com"][class^="article__toolbar"]
 di.se##article[data-is-native-ad="1"]
 di.se##a[href^="/sponsrad/"]
 di.se##a[href^="/brandstudio/"]
-di.se##.article-teaser__text-inline:has(a[href^="/brandstudio/"])
 di.se##.di_start__insider-ad
 di.se##.di_panorama__isAdLabel
 di.se##script:inject(abort-on-property-read.js, diConf.servicePlusClientId)
@@ -1795,7 +1780,6 @@ hbl.fi,vastranyland.fi,ostnyland.fi,hangotidningen.fi##script:inject(setTimeout-
 hbl.fi,vastranyland.fi,ostnyland.fi,hangotidningen.fi##script:inject(set-constant.js, ksfDfp.DisplayDiligentSlots, noopFunc)
 hbl.fi,vastranyland.fi,ostnyland.fi,hangotidningen.fi##script:inject(abort-current-inline-script.js, adfBrand)
 ||ksfmedia.simulator.palmu.fi/*/*.js$script,domain=hbl.fi|vastranyland.fi|ostnyland.fi|hangotidningen.fi
-||munchkin.marketo.net/munchkin.js$script,important,domain=hbl.fi|vastranyland.fi|ostnyland.fi|hangotidningen.fi
 ||vasabladet.fi/Scripts/HSSAnalyticsUtils.js$script
 ||vasabladet.fi/Scripts/GA_EEC/$script
 ||vasabladet.fi/Scripts/karkimedia_init.js$script
@@ -2390,3 +2374,6 @@ handbollskanalen.se##.hb-adlabel
 ||handbollskanalen.se^*/esmg/se-$script
 skanetrafiken2020.se###cookie-consent-block
 dagensjuridik.se##script:inject(abort-current-inline-script.js, ox_u)
+||tracker.yougov.com^$domain=yougov.se
+||yougov.se/_partner/request.js$script
+yougov.se##.cookie-confirm

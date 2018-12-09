@@ -1,7 +1,6 @@
 ! This file is a part of Frellwits-Swedish-Filter.txt and contains filters specifically for uBO/Nano Adblocker
 ! There's no need to subscribe to this file
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
-*/extension.js$redirect=noopjs,script,domain=dn.se
 */trailers$media,redirect=noopmp3-0.1s,domain=fotbollskanalen.se|koket.se|tv4.se|tv4play.se
 .*/*/*.php?*=aftonbladet-live-tv$document
 .info/dagens-nyheter/$document
@@ -52,6 +51,7 @@ aftonbladet.se##article:has(a[data-sponsored="true"])
 aftonbladet.se##html,body:style(overflow: auto !important;)
 aftonbladet.se##script:inject(abort-current-inline-script.js, preLoadAds, loadAd)
 aftonbladet.se##script:inject(abort-current-inline-script.js, preLoadAds, setup)
+aftonbladet.se##script:inject(addEventListener-defuser.js, mousemove)
 aftonbladet.se##script:inject(setTimeout-defuser.js, onerror, 1000)
 akaskidor.se,allehanda.se,arbetarbladet.se,avestatidning.com,bblat.se,breakit.se,dagensps.se,dalademokraten.se,dt.se,ekuriren.se,fagersta-posten.se,gd.se,hemtrevligt.se,husvagnochcamping.se,kingmagazine.se,kkuriren.se,livetombord.se,lt.se,ltz.se,mestmotor.se,na.se,norrteljetidning.se,nynashamnsposten.se,op.se,salaallehanda.com,sn.se,st.nu,svenskgolf.se,tidningenhalsa.se,tidningenharjedalen.se,utemagasinet.se,vagabond.se,vlt.se##script:inject(abort-current-inline-script.js, NREUM, info)
 akaskidor.se,arvikanyheter.se,breakit.se,cartoonnetwork.se,cykl.se,dagensanalys.se,dagensps.se,dalslanningen.se,elitserien.se,filipstadstidning.se,fotbolltransfers.com,fryksdalsbygden.se,hemtrevligt.se,hjotidning.se,husvagnochcamping.se,jogg.se,karlskogatidning.se,kingmagazine.se,livetombord.se,mariestadstidningen.se,mestmotor.se,modette.se,muscles.se,nkp.se,nwt.se,nyheter24.se,provinstidningen.se,saffletidningen.se,sla.se,svenskgolf.se,svettig.se,swedroid.se,swehockey.se,tidningenhalsa.se,utemagasinet.se,vagabond.se,vf.se##script:inject(abort-current-inline-script.js, ADTECH, enqueueAd)
@@ -153,16 +153,13 @@ devote.se##.blogPostWrapper:has(em:has-text(/i samarbete med/i))
 devote.se##.blogPostWrapper:has(span:has-text(/sponsrat inlägg/i))
 devote.se##[class^="col-"]:has(.burt-unit-metadata)
 devote.se##article:has(div[class]:has-text(/samarbete/i))
-di.se##.article-teaser__text-inline:has(a[href^="/brandstudio/"])
 di.se##.carousel-tab:has-text(/annons:/i)
 di.se##.clip-browser__clip:has(a[href*="/annons-"])
 di.se##script:inject(abort-on-property-read.js, diConf.servicePlusClientId)
 digital.di.se,weekend.di.se##script:inject(abort-current-inline-script.js, diConf)
+dn.se##html,body:style(overflow: auto !important;)
 dn.se##script:inject(abort-current-inline-script.js, DN, initAds)
 dn.se##script:inject(abort-current-inline-script.js, gtmData)
-dn.se##script:inject(abort-current-inline-script.js, startBurtTracking)
-dn.se##script:inject(addEventListener-defuser.js, /^(?:error|load)$/, n())
-dn.se##script:inject(addEventListener-defuser.js, splusCheckPaywall)
 dreamfilm.*,swesub.*##.TPlayer.on:after:style(height: 0 !important; width: 0 !important;)
 dreamfilmhd.*,real123movies.*##script:inject(setInterval-defuser.js, F9, 500)
 egoinas.se##article.uk-article:has(.sw-sf-sponsor)
@@ -460,7 +457,7 @@ voodoofilm.org##.content-news:has(span[id*="Sponsored"])
 ||imasdk.googleapis.com/js/core$important,subdocument,domain=skanesport.se
 ||mediacreeper.com/image$image,domain=allmogen.org|apg29.nu|b19.se|blogspot.se|cornucopia.cornubot.se|emanuelkarlsten.se|experimentlandet.blogg.se|forenadebolag.se|frihetssmedjan.se|genusdebatten.se|hoforsbloggen.se|horoskop.nu|lindelof.nu|lindqvist.com|nyhetswebben.se|opendata.se|peak-oil.se|petterssonsblogg.se|sempermiles.se|solrosuppropet.se|supermiljobloggen.se|swedishprepper.com|sysadmindagen.se|tjuvlyssnat.se|toklandet.wordpress.com|uvell.se|vaken.se|vargfakta.se|webbjobb.io|xn--blljus-jua.se|zaramis.se
 ||mediacreeper.se/image$image,domain=allmogen.org|apg29.nu|b19.se|blogspot.se|cornucopia.cornubot.se|emanuelkarlsten.se|experimentlandet.blogg.se|forenadebolag.se|frihetssmedjan.se|genusdebatten.se|hoforsbloggen.se|horoskop.nu|lindelof.nu|lindqvist.com|nyhetswebben.se|opendata.se|peak-oil.se|petterssonsblogg.se|sempermiles.se|solrosuppropet.se|supermiljobloggen.se|swedishprepper.com|sysadmindagen.se|tjuvlyssnat.se|toklandet.wordpress.com|uvell.se|vaken.se|vargfakta.se|webbjobb.io|xn--blljus-jua.se|zaramis.se
-||munchkin.marketo.net/munchkin.js$important,script,domain=hangotidningen.fi|hbl.fi|ostnyland.fi|vastranyland.fi
+||munchkin.marketo.net/munchkin.js$important,script,domain=hangotidningen.fi|hbl.fi|ostnyland.fi|vastranyland.fi|yougov.se
 ||openx.gamereactor.dk/multi.php?$important,script
 ||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$redirect=noopjs,script,domain=aletorget.se|alingsastorget.se|almhulttorget.se|alvestatorget.se|amaltorget.se|angelholmtorget.se|arbogatorget.se|arvikatorget.se|askersundtorget.se|avestatorget.se|bastadtorget.se|bengtsforstorget.se|bjuvtorget.se|bodentorget.se|bollebygdtorget.se|bollnastorget.se|borastorget.se|borlangetorget.se|botkyrkatorget.se|bromollatorget.se|eksjotorget.se|enkopingtorget.se|eskilstunatorget.se|eslovtorget.se|fagerstatorget.se|falkenbergtorget.se|falkopingtorget.se|faluntorget.se|filipstadtorget.se|flentorget.se|forshagatorget.se|gallivaretorget.se|gavletorget.se|gislavedstorget.se|goteborgtorget.se|gotenetorget.se|gotlandtorget.se|hagforstorget.se|hallsbergtorget.se|hallstahammartorget.se|halmstadtorget.se|haningetorget.se|harnosandtorget.se|harrydatorget.se|hassleholmtorget.se|hebytorget.se|hedemoratorget.se|helsingborgtorget.se|herrljungatorget.se|hoforstorget.se|hoganastorget.se|hoortorget.se|horbytorget.se|huddingetorget.se|hudiksvalltorget.se|hultsfredtorget.se|hyltetorget.se|jonkopingtorget.se|kalixtorget.se|kalmartorget.se|karlshamntorget.se|karlskogatorget.se|karlskronatorget.se|karlstadtorget.se|katrineholmtorget.se|kavlingetorget.se|kiltorget.se|kirunatorget.se|klippantorget.se|kopingtorget.se|kramforstorget.se|kristianstadtorget.se|kristinehamntorget.se|krokomtorget.se|kumlatorget.se|kungalvtorget.se|kungsbackatorget.se|laholmtorget.se|landskronatorget.se|leksandtorget.se|lidkopingtorget.se|ljungbytorget.se|ljusdaltorget.se|ludvikatorget.se|luleatorget.se|lundtorget.se|lyckseletorget.se|lysekiltorget.se|malmotorget.se|mariestadstorget.se|markarydtorget.se|marktorget.se|moratorget.se|nackatorget.se|nassjotorget.se|norrtaljetorget.se|nybrotorget.se|nykopingtorget.se|nynashamntorget.se|olandtorget.se|olofstromtorget.se|orebrotorget.se|ornskoldsvikstorget.se|orusttorget.se|osbytorget.se|oskarshamntorget.se|ostersundtorget.se|osthammartorget.se|partilletorget.se|piteatorget.se|ronnebytorget.se|saffletorget.se|salatorget.se|sandvikentorget.se|sigtunatorget.se|simrishamntorget.se|sjobotorget.se|skaratorget.se|skellefteatorget.se|skovdetorget.se|skuruptorget.se|soderhamntorget.se|sodertaljetorget.se|sollefteatorget.se|sollentunatorget.se|solnatorget.se|solvesborgtorget.se|staffanstorptorget.se|stenungsundtorget.se|stockholmtorget.se|strangnastorget.se|stromstadtorget.se|sundsvalltorget.se|sunnetorget.se|svenljungatorget.se|tabytorget.se|tanumtorget.se|tidaholmtorget.se|tierptorget.se|timratorget.se|tingsrydtorget.se|tjorntorget.se|tomelillatorget.se|torsbytorget.se|tranastorget.se|tranemotorget.se|trelleborgtorget.se|trollhattantorget.se|trosatorget.se|uddevallatorget.se|ulricehamntorget.se|umeatorget.se|uppsalatorget.se|vallentunatorget.se|vanersborgtorget.se|varatorget.se|varbergtorget.se|varnamotorget.se|vasterastorget.se|vasterviktorget.se|vaxjotorget.se|vellingetorget.se|vetlandatorget.se|vimmerbytorget.se|ystadtorget.se
 ||ssl.p.jwpcdn.com^*/freewheel.js$important,script,domain=eurosport.se
