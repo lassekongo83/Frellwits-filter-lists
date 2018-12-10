@@ -1,14 +1,14 @@
 #!/bin/bash
 
 # Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
-# Description: Very simple script to sort the hosts file and include the headers
+# Description: A very simple script to sort the hosts file and include the headers
 # License: GPLv3
 
 date=$(date '+%Y-%m-%d %H:%M:%S %Z')
 lines=$(grep -c '' main-hosts.txt)
 #lines=$(cat main-hosts.txt | sed '/^\s*$/d' | wc -l)
 
-cat main-hosts.txt | sort > output/sorted-hosts.txt
+cat main-hosts.txt | sort -V > output/sorted-hosts.txt
 
 cat > output/hosts-headers.txt <<EOF
 # Aims to get rid of ads, tracking, scams & badware on (mostly) Swedish websites
