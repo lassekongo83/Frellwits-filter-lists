@@ -491,8 +491,6 @@ avanza.se#@#a[title="LeoVegas"]
 abus.com#@##cookieChoiceInfo
 readly.com#@#.cookie-notice
 @@||opinionstage.com^$domain=99.se|fz.se|sweclockers.com
-! https://github.com/easylist/easylist/issues/1887
-@@||backend.worldoftulo.com^$script,subdocument
 @@||happyride.se/img/admarket/$~third-party
 ! https://github.com/lassekongo83/Frellwits-filter-lists/issues/40
 @@||googletagmanager.com/gtm.js$script,domain=land.se
@@ -507,7 +505,7 @@ cykla.se#@#.advertisment
 /\/*annons*./$image,domain=guldkanalen.se|kurera.se|nvp.se|rumhemma.se|tekniksmart.se|megafonen.nu|newsvoice.se|lesscarbs.se|lundagard.se|svf.se|boktugg.se|skillingaryd.nu|etunawebben.se|etc.se|dansbandskanalen.se
 /\/*banner*./$image,domain=dansbandskanalen.se|etc.se|evertiq.se|guldkanalen.se|kurera.se|markbladet.se|rockkocken.se|rumhemma.se|skrattnet.se|tkj.se|vaken.se|sportpanelen.se|newsvoice.se|sportbloggare.com|marsta.nu|lakartidningen.se|bettips.se|svf.se|alltomhif.se|it-finans.se|boktugg.se|katerinamagasin.se|everysport.com|lundagard.se|autolife.se|byggteknikforlaget.se|ljuskultur.se
 /\/*banner*./$script,domain=dagenshandel.se|entreprenor.se|food-supply.se|magasinetparagraf.se|motormagasinet.se|skyddosakerhet.se|plastnet.se|habit.se|woodnet.se|foodnet.se|transportnet.se|processnet.se|packnet.se|verkstaderna.se|medtechmagazine.se|recyclingnet.se|rt-forum.se|kemivarldenbiotech.se|uochd.se|lifesciencesweden.se|fri-kopenskap.se|cleannet.se|entreprenad.com
-/\/*sponsor*./$image,domain=humorbibeln.se|newsner.com|sportbibeln.se|ettgottskratt.se|swehockey.se
+/\/*sponsor*./$image,domain=humorbibeln.se|newsner.com|sportbibeln.se|ettgottskratt.se|swehockey.se|happyride.se|freeride.se
 /\/*casino*./$image,domain=hypeline.se|dayviews.com
 /ajax_statistics_count/*$xmlhttprequest,domain=industrinyheter.se|dagensnaringsliv.se|sportochfritidsnyheter.se|inredningsnyheter.se|byggnyheter.se|dagensfastigheter.se|stockholmsbyggnyheter.se|energinyheter.se|vindkraftsnyheter.se|solenerginyheter.se|infrastrukturnyheter.se|jarnvagsnyheter.se|transportochlogistik.se|metallerochgruvor.se|papperochmassa.se
 /analytics/*$domain=tkj.se
@@ -896,7 +894,7 @@ expressen.se,dn.se###rich-media-ads
 expressen.se##.native-ad-teaser
 expressen.se##.teaser--sponsored
 expressen.se##.teaser--native
-expressen.se##.teaser:has(.vignette:has-text(/erbjudande från/i))
+expressen.se##.teaser:has(.vignette:has-text(/(^erbjudande från|^annons:)/i))
 expressen.se##.teaser:has(a[href*="lanapengar.expressen.se"])
 expressen.se##a[href*="/annons"]
 expressen.se##.widget--collaboration
@@ -913,7 +911,7 @@ expressen.se##.b-adblock-sidebar-container
 expressen.se##.b-ad2
 expressen.se##.article__after-widgets
 expressen.se##a[data-click-track][href*="utm_campaign"]:has(strong:has-text(annons))
-expressen.se##.teaser:has(.vignette--text:has-text(/presenteras av/i))
+expressen.se##.teaser:has(.vignette--text:has-text(/(^presenteras av|^leva&bo i samarbete med)/i))
 expressen.se##script:inject(addEventListener-defuser.js, error, adsBlocked)
 expressen.se##script:inject(abort-current-inline-script.js, adsScript)
 expressen.se##script:inject(abort-current-inline-script.js, ExpressenAnalytics, adblock)
@@ -941,7 +939,8 @@ tv4.se##.social-buttons
 tv4.se##script:inject(abort-current-inline-script.js, burtConfigs)
 ||damoh.tv4play.se^$image
 ||stat-api.tv4play.se^$image
-@@||videoplaza.tv^$domain=tv4.se|tv4play.se|fotbollskanalen.se|koket.se
+@@||videoplaza.tv/proxy/distributor$xmlhttprequest,domain=tv4.se|tv4play.se|fotbollskanalen.se|koket.se
+||tv4-trailers.b17g.net/api/trailers$xmlhttprequest
 */trailers$media,redirect=noopmp3-0.1s,domain=tv4.se|tv4play.se|fotbollskanalen.se|koket.se
 ||tv4-trailers-prod.herokuapp.com/api/impression$xmlhttprequest
 ||videoplaza.tv/proxy/tracker/$image,important,domain=tv4.se|tv4play.se|fotbollskanalen.se|koket.se
@@ -1934,6 +1933,7 @@ happyride.se###a-panorama
 happyride.se##.fixed-col > #a-sidebar1
 happyride.se##.container-fluid > .anp1-container
 happyride.se##li.sponsor
+happyride.se,freeride.se##.boxtext:has-text(casino)
 happyride.se,freeride.se###alert_cookieconsent
 /antiblock.$script,stylesheet,~third-party,domain=vmj.se|viseniorer.se|danskaspraket.se|digitalavykort.se
 vmj.se,danskaspraket.se,digitalavykort.se##.topdiv
