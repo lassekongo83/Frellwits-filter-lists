@@ -368,6 +368,7 @@
 ||*.*prize*.life/$document
 ||runtnc.net^
 ||realiteti.info^
+||manhembostad.se^
 ! https://www.aftonbladet.se/nyheter/a/vm1BOw/anders-46-lurades-av-falsk-trafiksajt--nu-stams-foretagaren
 ! https://www.svt.se/nyheter/konsument/tusentals-bilister-lurade-av-sajt-som-tar-betalt-for-gratis-tjanster
 ||trafikenheten.se^
@@ -1545,6 +1546,9 @@ jawcloud.co##script:inject(abort-current-inline-script.js, jawplayer, on)
 ||tracker.$important,domain=jawcloud.co
 ||vcstream.to^*/script$script
 ||vcstream.to^*/license$script
+||swefilmer.*/player/play.$subdocument
+swefilmer.*##a[href*="/player/play.php"]
+swefilmer.*##a[href*="/player/"][target="_blank"]
 
 ! Various annoyances
 youplay.se,nyheter24.se,modette.se,filmtipset.se,affarsliv.com,affarslivgotland.se,corren.se,eposten.se,folkbladet.se,helagotland.se,klackspark.com,kuriren.nu,mvt.se,norrbottensaffarer.se,nsd.se,nt.se,pt.se,unt.se,vt.se##script:inject(set-constant.js, youplay.helpers.disableRightClick, noopFunc)
@@ -1606,6 +1610,7 @@ minfil.com##.ab-wrapper
 /partnerintegration$domain=hitta.se
 hitta.se##.partner-box
 hitta.se##.curious-location-promo__container
+hitta.se##[trackcat="mysafety-integration"]
 ||pixel-profile-cloud.eniro.com/type/pixel^$image
 ||eniro.com^*/banners.js
 /eniro.pixel.script.js$domain=eniro.se
