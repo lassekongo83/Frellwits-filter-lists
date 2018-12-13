@@ -43,7 +43,7 @@
 ||cookienotice.co^$third-party
 ||cookies.orangegames.com^$third-party
 ||compricer.se^$third-party
-||consensu.org^$third-party
+||consensu.org^$third-party,domain=~mirror.co.uk|~sourceforge.net
 ||createsend.com^$third-party
 ||createsend1.com^$third-party
 ||curemedia.se^$third-party
@@ -536,7 +536,7 @@ cykla.se#@#.advertisment
 ||zotabox.com^$third-party,domain=etunawebben.se|rapport24.com
 ||d2wy8f7a9ursnm.cloudfront.net/bugsnag$script,domain=expressen.se
 ||consent.cmp.oath.com^$script,domain=mitti.se|alltomstockholm.se
-||consent.cookiebot.com^$third-party,domain=goteborgdirekt.se|stockholmdirekt.se|wesafe.se|alingsastidning.se|partilletidning.se|itaboutdoor.se|selmaspa.se|skeppsbrons.se|etc.se|norran.se|swedroid.se|villalivet.se|ng.se
+||consent.cookiebot.com^$third-party,domain=goteborgdirekt.se|stockholmdirekt.se|wesafe.se|alingsastidning.se|partilletidning.se|itaboutdoor.se|selmaspa.se|skeppsbrons.se|etc.se|norran.se|swedroid.se|villalivet.se|ng.se|kingsizemag.se
 ||marketingautomation.services^$third-party,domain=wesafe.se
 /gdpr/*$domain=vimedbarn.se|rapport24.com|funnygames.se|villalivet.se|nyckelspel.se|megaspel.se
 /urls/count.json$script,domain=vimedbarn.se|gabriellajoss.me|mybabydolls.se|emilysliv.se|kenzas.se
@@ -577,7 +577,7 @@ datormagazin.se,skanesport.se##script:inject(abort-on-property-read.js, advads)
 ||facebook.com/plugins/like$third-party,domain=~facebook.com|~fb.com
 
 ! Override EasyPrivacy, EasyList, and other whitelists
-/wp-content/plugins/google-analytics-for-wordpress/*$~third-party,important,script,domain=katerinamagasin.se|nyhetsbyran.org|sportpanelen.se|vegokak.se|starbys.se|carinasphotolifestyle.se|battrestadsdel.se|karolinesvintage.se|clarakron.com|foodstories.se|undertian.com|ralycka.se|mmabetz.se|folkblick.se|fores.se|tidskriftenrespons.se|alltsomsker.nu|mmanytt.se|fjl.se|villalivet.se|springlfa.se|hockeystaden.se|wesafe.se|boktugg.se|businessarena.nu|kvartal.se|streamasport.com|gamingaktier.com|datatjej.se|teknikministeriet.se
+/wp-content/plugins/google-analytics-for-wordpress/*$~third-party,important,script,domain=katerinamagasin.se|nyhetsbyran.org|sportpanelen.se|vegokak.se|starbys.se|carinasphotolifestyle.se|battrestadsdel.se|karolinesvintage.se|clarakron.com|foodstories.se|undertian.com|ralycka.se|mmabetz.se|folkblick.se|fores.se|tidskriftenrespons.se|alltsomsker.nu|mmanytt.se|fjl.se|villalivet.se|springlfa.se|hockeystaden.se|wesafe.se|boktugg.se|businessarena.nu|kvartal.se|streamasport.com|gamingaktier.com|datatjej.se|teknikministeriet.se|justwannahavefun.se
 /wp-content/plugins/google-analytics-premium/*$~third-party,important,script,domain=humorbibeln.se|newsner.com|ettgottskratt.se|sportbibeln.se|branschkoll.se
 /google-analytics-dashboard$script,important,domain=firstfoto.se|cyclingplus.se|halsafitness.se|fitnessformen.se|macguiden.net|ordfrontforlag.se|ulrikadavidsson.se|hemmahosulrika.se
 ||google-analytics.com/analytics.js$important,redirect=google-analytics.com/analytics.js,script,domain=tradera.com
@@ -748,9 +748,9 @@ bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##sc
 ! Flowplayer/lemonwhale
 ||lwcdn.com/vendor/ima.min.js$script
 lwcdn.com##script:inject(addEventListener-defuser.js, /^(?:adBlocker|contextmenu)$/)
-||ptm.flowplayer.com/vod/*/ping$xmlhttprequest
-||ptm.flowplayer.com/vod/*/view$xmlhttprequest
-||ptm.flowplayer.com/vod/*/display$xmlhttprequest
+||ptm.flowplayer.com^*/ping$xmlhttprequest
+||ptm.flowplayer.com^*/view$xmlhttprequest
+||ptm.flowplayer.com^*/display$xmlhttprequest
 
 ! SCHIBSTED
 svd.se##.AdWrapper
@@ -1646,6 +1646,7 @@ battrestadsdel.se##.apd-text
 battrestadsdel.se##.apds_main
 battrestadsdel.se##.entry-priomaker
 battrestadsdel.se###my-mega-menu-widget:has-text(/sponsrade artiklar/i)
+||swedroid.se/pjembed.$subdocument
 swedroid.se##div[id$="_ad"]
 swedroid.se##.puff:has(h1:has-text(Android på Prisjakt))
 swedroid.se##.puff:has(h1:has-text(/sponsrat/i))
@@ -2187,6 +2188,9 @@ svegot.se##script:inject(addEventListener-defuser.js, scroll, (a))
 finansliv.se##script:inject(abort-on-property-write.js, nwlettersignupcheck)
 finansliv.se##script:inject(abort-on-property-read.js, OA_show)
 spela.se##script:inject(abort-current-inline-script.js, trackEvidonEvent)
+spela.se##script:inject(abort-current-inline-script.js, AdPortal)
+spela.se##script:inject(abort-current-inline-script.js, $jscomp)
+/tracking_footer-active/*$domain=spela.se
 justwannahavefun.se##.legible:has(.sub-title:has-text(/sponsrat av/i))
 krickelins.se##article[id^="post-"]:has(a[href$="/sponsrade-inlagg/"])
 bonjourvintage.se##.category-om-samarbeten
@@ -2405,3 +2409,6 @@ grillbloggen.nu##.rstbox
 /modules/tracking$domain=freelancer.se
 fastighetssverige.se##a[href*="/banner/"]
 fastighetssverige.se##.panel:has(.panel-title:has-text(Partnertext))
+/loader.php$subdocument,domain=kingsizemag.se
+/kingrev.php$image,domain=kingsizemag.se
+kingsizemag.se##a[href*="/redir/"][target="_blank"]
