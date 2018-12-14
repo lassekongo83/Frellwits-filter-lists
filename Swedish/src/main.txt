@@ -167,6 +167,7 @@
 ||yieldbird.com^$third-party
 ||vdsinside.com^$third-party
 ||vikispot.com^$third-party
+||vinguiden.com^$third-party
 ||vk.com^$third-party
 ||webbcensus.com^$third-party
 ||webpower.eu^$third-party
@@ -765,6 +766,7 @@ svd.se##.Teaser--fullAdLabel
 svd.se###AdSplashOverlayWindow
 svd.se##.ContentLayout-extraColumnAd
 svd.se##.theme-Native
+svd.se##div[data-svd-customer]:has(.Ad-text)
 svd.se##script:inject(abort-current-inline-script.js, SvD, preDefineAd)
 svd.se##script:inject(addEventListener-defuser.js, /^(?:mousemove|scroll)$/, I())
 /assets.svd.se\/assets\/[0-9]+\-/$script,domain=svd.se
@@ -794,7 +796,6 @@ aftonbladet.se##html,body:style(overflow: auto !important;)
 aftonbladet.se##script:inject(abort-current-inline-script.js, preLoadAds, loadAd)
 aftonbladet.se##script:inject(abort-current-inline-script.js, preLoadAds, setup)
 aftonbladet.se##script:inject(setTimeout-defuser.js, onerror, 1000)
-aftonbladet.se##script:inject(addEventListener-defuser.js, mousemove)
 @@||aftonbladet.se^$generichide
 @@||ad*.vg.no/check.js$script,domain=aftonbladet.se
 /privacy/notification?$xmlhttprequest,domain=aftonbladet.se
