@@ -725,6 +725,7 @@ ikea.com##.cookie-info__panel--show
 ! IDG
 ||idg.se/sharecounter?$xmlhttprequest
 @@/consent.json$domain=idg.se|forum.studio.se
+idg.se##script:inject(set-constant.js, cmsad, undefined)
 idg.se##div[data-cms-ad]
 idg.se##.wide-msg-fb
 idg.se##.pryltorget
@@ -741,6 +742,7 @@ forum.studio.se##li[data-blocktitle="Anpassade Block"]:has(.sms-marking:has-text
 ! STAMPEN
 bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se###stampenCookieInformationContainer
 bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##.frequency-model__notice
+bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##.lokus-engine
 bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##script:inject(abort-current-inline-script.js, _cInfo)
 bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##script:inject(abort-current-inline-script.js, _adform)
 bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##script:inject(abort-current-inline-script.js, adformLoader)
@@ -926,6 +928,7 @@ expressen.se##.b-ad2
 expressen.se##.article__after-widgets
 expressen.se##a[data-click-track][href*="utm_campaign"]:has(strong:has-text(annons))
 expressen.se##.teaser:has(.vignette--text:has-text(/(^presenteras av|^leva&bo i samarbete med)/i))
+expressen.se##.teaser:has(a[href*="/casino/"])
 expressen.se##script:inject(addEventListener-defuser.js, error, adsBlocked)
 expressen.se##script:inject(abort-current-inline-script.js, adsScript)
 expressen.se##script:inject(abort-current-inline-script.js, ExpressenAnalytics, adblock)
@@ -1527,9 +1530,13 @@ nordicfilm.*,vidbox.co,oload.stream##script:inject(setInterval-defuser.js, check
 swesub.*##script:inject(abort-current-inline-script.js, atob)
 swesub.*##a.btn[target="_blank"]
 swesub.*##a[href*="/offer?prod"]
+swesub.*##a[href="/player/video.php"]
 nyafilmerhd.*,dreamfilmhd.*,swesub.*,jawcloud.co##script:inject(abort-current-inline-script.js, _Hasync, push)
 swesub.*##script:inject(abort-current-inline-script.js, document.oncontextmenu)
 swesub.*##.alert-bottom
+swesub.*###tab-ad
+swesub.*###tab1:style(display: initial !important;)
+swesub.*##:xpath(//strong[text()[contains(., 'Annons')]]/parent::div[@class="les-title"]/parent::li[1])
 ||dreamfilm.*/HD/780x.$image
 ||dreamfilm.*/HD/player4k.$image
 ||dreamfilm.*/swedish/stream.php$subdocument
