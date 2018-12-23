@@ -39,6 +39,7 @@
 ||cision.com^$third-party
 ||citygate.se^$third-party,~image,domain=~familj.se|~tillminne.se
 ||connectad.io^$third-party
+||conviva.com^$third-party
 ||cookie-script.com^$third-party
 ||cookieinformation.com^$third-party
 ||cookieinfoscript.com^$third-party
@@ -570,7 +571,7 @@ cykla.se#@#.advertisment
 ! Common scriptlets
 ng.se,alltomstockholm.se,mitti.se,bloggbevakning.se,cornucopia.cornubot.se,innebandymagazinet.se##script:inject(abort-on-property-read.js, ADTECH)
 dagensps.se,husvagnochcamping.se,hemtrevligt.se,akaskidor.se,utemagasinet.se,livetombord.se,svenskgolf.se,kingmagazine.se,vagabond.se,tidningenhalsa.se,mestmotor.se,nyheter24.se,swedroid.se,dagensanalys.se,breakit.se,fotbolltransfers.com,modette.se,muscles.se,cartoonnetwork.se,vf.se,jogg.se,svettig.se,cykl.se,hjotidning.se,sla.se,mariestadstidningen.se,filipstadstidning.se,fryksdalsbygden.se,nwt.se,arvikanyheter.se,nkp.se,saffletidningen.se,provinstidningen.se,dalslanningen.se,karlskogatidning.se,swehockey.se,elitserien.se##script:inject(abort-current-inline-script.js, ADTECH, enqueueAd)
-breakit.se,bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se,nyheter24.se##script:inject(abort-on-property-read.js, _hjSettings)
+breakit.se,nyheter24.se##script:inject(abort-on-property-read.js, _hjSettings)
 breakit.se##script:inject(abort-current-inline-script.js, _vwo_code)
 mestmotor.se,kingmagazine.se,cartoonnetwork.se,vagabond.se,manolo.se,modette.se,innebandy.se,goteborgdirekt.se,stockholmdirekt.se,qruiser.com,swehockey.se,norran.se##script:inject(abort-current-inline-script.js, ADTECH, config)
 kamerabild.se,mobil.se##script:inject(set-constant.js, Sidpyssel.prototype.fixaStoran, noopFunc)
@@ -731,6 +732,7 @@ ikea.com##.cookie-info__panel--show
 /sv/local-extensions/header-footer/scripts/track.$script,domain=ikea.com
 /sv/local-extensions/header-footer/scripts/hotjar.$script,domain=ikea.com
 /sv/analytics/*$domain=ikea.com
+di.se##section[data-load-ads="true"]
 !#endif
 
 ! IDG
@@ -761,6 +763,7 @@ bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##sc
 bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##script:inject(abort-current-inline-script.js, _adform)
 bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##script:inject(abort-current-inline-script.js, adformLoader)
 bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##script:inject(abort-current-inline-script.js, slm, scriptTag)
+bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##script:inject(abort-current-inline-script.js, slm, isArticle)
 bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##script:inject(abort-current-inline-script.js, runAd)
 bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##script:inject(cookie-remover.js, /^p_f/)
 bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##script:inject(abort-current-inline-script.js, headerScripts, checkFrqCookie)
@@ -1028,6 +1031,7 @@ viivilla.se##div.row.item:has(.overlay-sponsor)
 viivilla.se###product-area
 viivilla.se##.native-ad-md
 viivilla.se##.afubar-top
+viivilla.se##script:inject(abort-on-property-write.js, MauticTrackingObject)
 ||europe-west1-bonnier-big-data.cloudfunctions.net^$third-party
 /fusionadloader.$script,domain=viivilla.se
 /iframeadvloader.$script,domain=viivilla.se
@@ -2051,7 +2055,6 @@ dagenstv.com###bt
 /AC_RunActiveContent.js$script,domain=dagenstv.com
 /swfobject.js$script,domain=dagenstv.com
 @@||eurosport.se^$generichide
-||conviva.com^$script,xmlhttprequest,domain=eurosport.se
 eurosport.se###notification__cookie
 eurosport.se##.eso_video__share
 /_bm/abd$script,domain=eurosport.se
