@@ -84,6 +84,7 @@
 ||improvedigital.com^$third-party
 ||influact.com^$third-party
 ||insplanet.com^$third-party
+||instaforex.com^$third-party
 ||intercom.io^$third-party
 ||investerarbrevet.se^$third-party
 ||izooto.com^$third-party
@@ -210,6 +211,7 @@
 /annonssamarbete/*$xmlhttprequest
 /bannersidor/*
 /bilder/ads/*
+/bitcsys/js/bit.js$script
 /blogs/log_pageview/*$script
 /bmb-related-teasers$xmlhttprequest
 /bmb/*/native/boosted$xmlhttprequest
@@ -381,6 +383,12 @@
 ||realiteti.info^
 ||manhembostad.se^
 ||7godscasino.com^$popup,third-party
+||pushnice.com^
+||pushwhy.com^
+||nompakru.click^
+||pheegoab.click^
+||bitcoin-systems.com/script.js$script
+||bitcoin-systems.com^$csp=worker-src 'none'
 ! https://www.aftonbladet.se/nyheter/a/vm1BOw/anders-46-lurades-av-falsk-trafiksajt--nu-stams-foretagaren
 ! https://www.svt.se/nyheter/konsument/tusentals-bilister-lurade-av-sajt-som-tar-betalt-for-gratis-tjanster
 ||trafikenheten.se^
@@ -523,7 +531,7 @@ cykla.se#@#.advertisment
 /\/*280x240*./$image,domain=rumhemma.se
 /\/*280x360./$image,domain=kurera.se
 /\/*annons*./$image,domain=guldkanalen.se|kurera.se|nvp.se|rumhemma.se|tekniksmart.se|megafonen.nu|newsvoice.se|lesscarbs.se|lundagard.se|svf.se|boktugg.se|skillingaryd.nu|etunawebben.se|etc.se|dansbandskanalen.se|sff.nu|xn--vrnamo-bua.nu|fastighetstidningen.se
-/\/*banner*./$image,domain=dansbandskanalen.se|etc.se|evertiq.se|guldkanalen.se|kurera.se|markbladet.se|rockkocken.se|rumhemma.se|skrattnet.se|tkj.se|vaken.se|sportpanelen.se|newsvoice.se|sportbloggare.com|marsta.nu|lakartidningen.se|bettips.se|svf.se|alltomhif.se|it-finans.se|boktugg.se|katerinamagasin.se|everysport.com|lundagard.se|autolife.se|byggteknikforlaget.se|ljuskultur.se|tidningenbalans.se|farjestadbk.se|stowr.se|hamsterpaj.net|svenskhandboll.se|sbktavling.se|sff.nu|lakemedelsvarlden.se|bussmagasinet.se|svenskamagasinet.nu|arkitektur.se|fastighetstidningen.se|ordfrontmagasin.se|brollopsmagasinet.se|danstidningen.se
+/\/*banner*./$image,domain=dansbandskanalen.se|etc.se|evertiq.se|guldkanalen.se|kurera.se|markbladet.se|rockkocken.se|rumhemma.se|skrattnet.se|tkj.se|vaken.se|sportpanelen.se|newsvoice.se|sportbloggare.com|marsta.nu|lakartidningen.se|bettips.se|svf.se|alltomhif.se|it-finans.se|boktugg.se|katerinamagasin.se|everysport.com|lundagard.se|autolife.se|byggteknikforlaget.se|ljuskultur.se|tidningenbalans.se|farjestadbk.se|stowr.se|hamsterpaj.net|svenskhandboll.se|sbktavling.se|sff.nu|lakemedelsvarlden.se|bussmagasinet.se|svenskamagasinet.nu|arkitektur.se|fastighetstidningen.se|ordfrontmagasin.se|brollopsmagasinet.se|danstidningen.se|journalisten.se|blognyheter.se
 /\/*banner*./$script,domain=dagenshandel.se|entreprenor.se|food-supply.se|magasinetparagraf.se|motormagasinet.se|skyddosakerhet.se|plastnet.se|habit.se|woodnet.se|foodnet.se|transportnet.se|processnet.se|packnet.se|verkstaderna.se|medtechmagazine.se|recyclingnet.se|rt-forum.se|kemivarldenbiotech.se|uochd.se|lifesciencesweden.se|fri-kopenskap.se|cleannet.se|entreprenad.com
 /\/*sponsor*./$image,domain=humorbibeln.se|newsner.com|sportbibeln.se|ettgottskratt.se|swehockey.se|happyride.se|freeride.se|fotbollskanalen.se
 /\/*casino*./$image,domain=hypeline.se|dayviews.com|newsvoice.se
@@ -572,6 +580,7 @@ cykla.se#@#.advertisment
 -banner-$image,domain=litteraturmagazinet.se
 /ga.js$script,~third-party,domain=driverzone.se
 ||mailerlite.com^$third-party,domain=svenskamagasinet.nu
+/custom/ad/*$domain=thaisnack.se
 
 ! Common scriptlets
 ng.se,alltomstockholm.se,mitti.se,bloggbevakning.se,cornucopia.cornubot.se,innebandymagazinet.se##script:inject(abort-on-property-read.js, ADTECH)
@@ -592,6 +601,8 @@ dagensps.se,tasteline.com##script:inject(abort-current-inline-script.js, Fusion,
 dagensanalys.se##script:inject(abort-current-inline-script.js, Fusion, apply)
 popmuzik.se##script:inject(abort-current-inline-script.js, _fbq)
 undertian.com,kvalitetsmagasinet.se##script:inject(abort-current-inline-script.js, monsterinsights_frontend)
+mkse.com,nyadagbladet.se,senses.se##script:inject(abort-current-inline-script.js, anOptions)
+magasinetparagraf.se,senses.se##script:inject(abort-current-inline-script.js, _stq)
 
 ! Facebook junk
 /facebook_sdk.js$script,domain=njus.me|radioplay.se
@@ -704,6 +715,7 @@ undertian.com,kvalitetsmagasinet.se##script:inject(abort-current-inline-script.j
 /plugins/igomoon-cookie-banner-master/*$script
 /plugins/modal-for-elementor/*$domain=miljomagasinet.se
 /plugins/popup-maker/*$domain=ordfrontmagasin.se
+/plugins/wp-snow-effect/*
 
 ! JWplayer analytics/ad scripts
 svd.se,aftonbladet.se,gamereactor.se,muscles.se,nordichardware.se,nyheteridag.se,freeride.se,happyride.se,ilikeradio.se,embed.futuresportsmedia.com,nyckelspel.se#@#.afs_ads
@@ -1878,7 +1890,6 @@ fokus.se##[id^="entry-content-post"]:style(height: 100% !important;)
 /js/personalization.js$script,domain=fokus.se
 /js/paywall.js$script,domain=fokus.se
 @@||fokus.se^$generichide
-magasinetparagraf.se##script:inject(abort-current-inline-script.js, _stq)
 magasinetparagraf.se###large_banner
 sokmotorkonsult.se##.feature:has(a[href*="/sponsrade-lankar"])
 /assets/js/front_js/*$script,domain=milansverige.se
@@ -2278,12 +2289,11 @@ isabellalowengrip.se##.popup-block
 moderaterna.se##.sliding-popup-bottom
 centerpartiet.se##.sol-cookie-message
 liberalerna.se###cc-notice
-mkse.com,nyadagbladet.se##script:inject(abort-current-inline-script.js, anOptions)
 mkse.com###upprev_box
 mkse.com###custom_html-2
 fotboll.com##[class^="fp_side_ad"]
 fotboll.com##.header-ad-lg
-bukefalos.se##.u-bottomFixer
+bukefalos.se,thaisnack.se##.u-bottomFixer
 nhlbettingblog.se##.karusellWrapper
 bettips.se##.bettips-am
 @@||webbjobb.io^$generichide
@@ -2492,3 +2502,9 @@ trendsisters.se##.tws-newsletter-subscribe--dialog
 trendsisters.se##body.modal_active:style(overflow-y: scroll !important;)
 trendsisters.se##body.modal_active .page-canvas, body.modal_active .fabrikk--footer:style(filter: none !important; -webkit-filter: none !important; -moz-filter: none !important;)
 lokalnytt.se##.panoramaImageBox
+uwtd.me##a[href*="/track.adtraction."]
+ekonominyheter.se###lblock-ads
+ekonominyheter.se##a[rel="dofollow"][target="_blank"]
+/img/allalanse$image,domain=ekonominyheter.se
+/img/compricer$image,domain=ekonominyheter.se
+/img/banklan/*$image,domain=ekonominyheter.se
