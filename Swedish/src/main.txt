@@ -818,6 +818,7 @@ svd.se##script:inject(addEventListener-defuser.js, /^(?:mousemove|scroll)$/, I()
 /infopeek.min.js$domain=svd.se
 /pulse_flash_ad*.swf$object,domain=svd.se
 ||engage-auth.schibsted.media^$script
+||2mdn.net/instream/html5/ima3.js$script,important,domain=aftonbladet.se
 aftonbladet.se##.abTheme-ad
 aftonbladet.se##.abTheme-adSportbladet
 aftonbladet.se##.abTheme-infeedad
@@ -1570,8 +1571,11 @@ streamtajm.*##script:inject(abort-current-inline-script.js, TID, J0)
 streamtajm.*##.longbanner
 streamtajm.*##div[style^="background-color: #ccc; width: 750px;"]:has(img[src^="/images/reklam"])
 ||swefilmer.*/player/play.$subdocument
+||swefilmer.*/masha.$script
+||swefilmer.*/player/se/tittanuhd.$image
 swefilmer.*##a[href*="/player/play.php"]
 swefilmer.*##a[href*="/player/"][target="_blank"]
+swefilmer.*##iframe[src="/player/play.php"]
 ||swesub.*^$csp=default-src 'self' 'unsafe-inline' 'unsafe-eval' *.tmdb.org ajax.cloudflare.com *.googleapis.com cdnjs.cloudflare.com fonts.gstatic.com openload.co nxload.com streamango.com data: *.imgur.com
 ||swesub.*^$csp=worker-src 'none'
 ||swesub.*/sw.js$script
@@ -2435,6 +2439,7 @@ rocknytt.net##.elementor-post__thumbnail:style(padding-bottom: 0 !important;)
 worldkustom.com###moove_gdpr_cookie_info_bar
 /skyskrapa.$image,domain=it-finans.se
 handbollskanalen.se##.hb-adlabel
+handbollskanalen.se##a[data-bid="1"]
 ||handbollskanalen.se^*/esmg/se-$script
 skanetrafiken2020.se,fastighetstidningen.se###cookie-consent-block
 dagensjuridik.se##script:inject(abort-current-inline-script.js, ox_u)
