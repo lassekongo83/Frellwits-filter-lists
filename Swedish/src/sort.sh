@@ -31,10 +31,6 @@ egrep -v "($ubo_n)|($ubo_c)|($ubo_s)|($ubo_o)|(^!.*|^$)" $main_temp > $not_exten
 # Sort with FOP.py
 python3 FOP.py output
 
-# Becuase FOP adds spaces around the pluses
-# TODO: Better fix this in FOP.py
-#sed -i -e 's/# + js(/#+js(/g' $extended
-
 # Header content
 cat > output/headers.txt <<EOF
 [Adblock Plus 2.0]
