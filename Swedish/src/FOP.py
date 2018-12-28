@@ -291,14 +291,14 @@ def elementtidy (domains, separator, selector):
         if replaceby == "   ": replaceby = " "
         selector = selector.replace(tree.group(0), "{g1}{replaceby}{g3}".format(g1 = tree.group(1), replaceby = replaceby, g3 = tree.group(3)), 1)
     # Remove unnecessary tags
-    for untag in each(REMOVALPATTERN, selector):
+    """for untag in each(REMOVALPATTERN, selector):
         untagname = untag.group(4)
         if untagname in selectoronlystrings or not untagname in selectorwithoutstrings: continue
         bc = untag.group(2)
         if bc == None:
             bc = untag.group(3)
         ac = untag.group(5)
-        selector = selector.replace("{before}{untag}{after}".format(before = bc, untag = untagname, after = ac), "{before}{after}".format(before = bc, after = ac), 1)
+        selector = selector.replace("{before}{untag}{after}".format(before = bc, untag = untagname, after = ac), "{before}{after}".format(before = bc, after = ac), 1)"""
     # Make the remaining tags lower case wherever possible
     """ for tag in each(SELECTORPATTERN, selector):
         tagname = tag.group(1)
@@ -326,8 +326,7 @@ def isglobalelement (domains):
 
 ## EDIT by lassekongo83@github. Don't do this for uBO filters.
 def removeunnecessarywildcards (filtertext):
-    """ Where possible, remove unnecessary wildcards from the beginnings
-    and ends of blocking filters."""
+    # Where possible, remove unnecessary wildcards from the beginnings and ends of blocking filters.
     whitelist = False
     hadStar = False
     if filtertext[0:2] == "@@":
