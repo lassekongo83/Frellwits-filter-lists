@@ -33,7 +33,7 @@ python3 FOP.py output
 
 # Becuase FOP adds spaces around the pluses
 # TODO: Better fix this in FOP.py
-sed -i -e 's/# + js(/#+js(/g' $extended
+#sed -i -e 's/# + js(/#+js(/g' $extended
 
 # Header content
 cat > output/headers.txt <<EOF

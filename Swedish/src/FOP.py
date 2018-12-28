@@ -287,7 +287,7 @@ def elementtidy (domains, separator, selector):
     # Clean up tree selectors
     for tree in each(TREESELECTOR, selector):
         if tree.group(0) in selectoronlystrings or not tree.group(0) in selectorwithoutstrings: continue
-        replaceby = " {g2} ".format(g2 = tree.group(2))
+        replaceby = "{g2}".format(g2 = tree.group(2))
         if replaceby == "   ": replaceby = " "
         selector = selector.replace(tree.group(0), "{g1}{replaceby}{g3}".format(g1 = tree.group(1), replaceby = replaceby, g3 = tree.group(3)), 1)
     # Remove unnecessary tags
