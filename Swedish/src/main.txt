@@ -99,6 +99,7 @@
 ||lokus.se^$third-party,~image,domain=~familj.se
 ||lystra.se^$third-party
 ||lwadm.com^$third-party
+||marketale.com^$third-party
 ||marketo.com^$third-party
 ||mediaglacier.com^$third-party
 ||mediekompaniet.com^$third-party
@@ -538,7 +539,7 @@ cykla.se#@#.advertisment
 /\/*banner*./$image,domain=dansbandskanalen.se|etc.se|evertiq.se|guldkanalen.se|kurera.se|markbladet.se|rockkocken.se|rumhemma.se|skrattnet.se|tkj.se|vaken.se|sportpanelen.se|newsvoice.se|sportbloggare.com|marsta.nu|lakartidningen.se|bettips.se|svf.se|alltomhif.se|it-finans.se|boktugg.se|katerinamagasin.se|everysport.com|lundagard.se|autolife.se|byggteknikforlaget.se|ljuskultur.se|tidningenbalans.se|farjestadbk.se|stowr.se|hamsterpaj.net|svenskhandboll.se|sbktavling.se|sff.nu|lakemedelsvarlden.se|bussmagasinet.se|svenskamagasinet.nu|arkitektur.se|fastighetstidningen.se|ordfrontmagasin.se|brollopsmagasinet.se|danstidningen.se|journalisten.se|blognyheter.se|vi.se|pellesoft.se
 /\/*banner*./$script,domain=dagenshandel.se|entreprenor.se|food-supply.se|magasinetparagraf.se|motormagasinet.se|skyddosakerhet.se|plastnet.se|habit.se|woodnet.se|foodnet.se|transportnet.se|processnet.se|packnet.se|verkstaderna.se|medtechmagazine.se|recyclingnet.se|rt-forum.se|kemivarldenbiotech.se|uochd.se|lifesciencesweden.se|fri-kopenskap.se|cleannet.se|entreprenad.com
 /\/*sponsor*./$image,domain=humorbibeln.se|newsner.com|sportbibeln.se|ettgottskratt.se|swehockey.se|happyride.se|freeride.se|fotbollskanalen.se
-/\/*casino*./$image,domain=hypeline.se|dayviews.com|newsvoice.se
+/\/*casino*./$image,domain=hypeline.se|dayviews.com|newsvoice.se|hockeysverige.se
 /ajax_statistics_count/*$xmlhttprequest,domain=industrinyheter.se|dagensnaringsliv.se|sportochfritidsnyheter.se|inredningsnyheter.se|byggnyheter.se|dagensfastigheter.se|stockholmsbyggnyheter.se|energinyheter.se|vindkraftsnyheter.se|solenerginyheter.se|infrastrukturnyheter.se|jarnvagsnyheter.se|transportochlogistik.se|metallerochgruvor.se|papperochmassa.se
 /analytics/*$domain=tkj.se|ordfrontmagasin.se
 /annons/*$subdocument,domain=internetlankar.se
@@ -713,7 +714,7 @@ magasinetparagraf.se,senses.se##+js(abort-current-inline-script.js, _stq)
 /wp-json/wpstatistics/*$domain=itrace.se
 /plugins/gdpr-cookie-compliance/*$domain=worldkustom.com
 /plugins/wp-click-info/*$script,stylesheet
-/plugins/easy-affiliate-links/*$domain=handbollskanalen.se|byggteknikforlaget.se
+/plugins/easy-affiliate-links/*$domain=handbollskanalen.se|byggteknikforlaget.se|killsteal.se
 /plugins/uk-cookie-consent/*$domain=ljudochbild.se|samnytt.se|datormagazin.se|hoglandsnytt.se
 /plugins/popups/*$domain=grillbaronen.se|kvalitetsmagasinet.se|vdtidningen.se
 /plugins/ml-adverts/*$script
@@ -1432,6 +1433,7 @@ svartgul.se##a[href*=".adsrv.eacdn.com"]
 fotbolldirekt.se,hockeysverige.se##.nyheter-featured:has(.datum:has-text(/sponsrat/i))
 fotbolldirekt.se,hockeysverige.se##.justnu_category:has(.datum:has-text(/sponsrat/i))
 fotbolldirekt.se,hockeysverige.se##a[href="https://www.svenskafans.com/betting/"]
+fotbolldirekt.se,hockeysverige.se##img[alt*="Betting"]
 kittad.se##a[href]:has(.kittad-label-sponsored)
 kittad.se##.article-list-item-container:has(.kittad-label-sponsored)
 kittad.se###header-top
@@ -1566,6 +1568,7 @@ dreamfilm.*##.embed-container
 dreamfilm.*##a[href$="/go.html"]
 dreamfilm.*##.content-kuss
 dreamfilm.*##.bnr
+dreamfilm.*##+js(remove-attr.js, oncontextmenu)
 ||nyafilmer.*^$csp=default-src 'self' 'unsafe-inline' 'unsafe-eval' jawcloud.co *.jawcloud.co upvtt.com wp.com *.wp.com *.googleapis.com vkpass.com *.vkpass.com streamango.com *.gstatic.com openload.co
 nyafilmer.*##+js(abort-current-inline-script.js, OneSignal)
 nyafilmer.*##+js(addEventListener-defuser.js, /^(?:DOMContentLoaded|mouseup|mousedown|mousemove)$/)
@@ -2115,6 +2118,7 @@ opulens.se##.mailpoet_form
 landleyskok.se##.banner-leaderboard
 landleyskok.se##.category-sponsrat-inlagg
 landleyskok.se##.inpostbanner
+dagensvimmerby.se##.ingressAd
 dagensvimmerby.se##.insideAd
 dagensvimmerby.se##.annonsKolumn
 dagensvimmerby.se##.panoramaAnnons
@@ -2544,3 +2548,5 @@ konstlistan.se##a[href*="/click.adrecord."]
 studocu.com##.new-viewer-wrapper .p2hv:style(pointer-events: auto !important;)
 studocu.com###page-container:style(user-select: text !important;)
 posh24.se##.bannerArea
+uppsatser.se##li[style*="min-height:90px"]
+xn--lnforum-exa.se##.LFRBox
