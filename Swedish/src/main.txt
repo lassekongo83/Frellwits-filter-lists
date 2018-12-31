@@ -742,7 +742,8 @@ cornucopia.cornubot.se,peak-oil.se,apg29.nu,zaramis.se,horoskop.nu,blogspot.se,n
 ! HTML filters
 !#if env_firefox
 dn.se##^script:has-text(window.DN.initAds)
-dn.se##^script[id="js-ad-data"]
+dn.se##^.adblock
+dn.se##^#ads-bundle
 di.se##^script:has-text(checkAdBlockEnabled)
 aftonbladet.se##^script:has-text(preLoadAds)
 svd.se##^script:has-text(the apntag object)
@@ -915,7 +916,7 @@ dn.se##.personal-carousel
 dn.se##.bottom-bar--visible
 dn.se##.chosen-for-you
 dn.se##.takeover-modal
-dn.se##html,body:style(overflow: auto !important;)
+dn.se##body:style(overflow-y: auto !important; position: initial !important;)
 dn.se##+js(abort-current-inline-script.js, DN, initAds)
 dn.se##+js(abort-current-inline-script.js, gtmData)
 /analytics$script,domain=dn.se
