@@ -1563,8 +1563,8 @@ nyafilmer.*##^script[src^="/ads.js?"]
 ||dreamfilm.*/HD/780x.$image
 ||dreamfilm.*/HD/player4k.$image
 ||dreamfilm.*/swedish/stream.php$subdocument
-dreamfilm.*,swesub.*###ads_player_inside
-dreamfilm.*,swesub.*##.TPlayer.on:after:style(height: 0 !important; width: 0 !important;)
+dreamfilm.*,swesub.*,nordflix.*###ads_player_inside
+dreamfilm.*,swesub.*,nordflix.*##.TPlayer.on:after:style(height: 0 !important; width: 0 !important;)
 dreamfilm.*##.embed-container
 dreamfilm.*##a[href$="/go.html"]
 dreamfilm.*##.content-kuss
@@ -1856,6 +1856,8 @@ dagensps.se##.category-ps-partner
 @@||landskogsbruk.se^$generichide
 atl.nu,land.se,landlantbruk.se,landskogsbruk.se##[class*="--native"]
 atl.nu##a[href*="/atl-tv-annons/"]
+atl.nu,land.se,landlantbruk.se,landskogsbruk.se##.premium.Lrfsso-lock #MainContentWrapper:before, .single-article.Lrfsso-lock #MainContentWrapper:before:style(background: white !important; position: initial !important;)
+atl.nu,land.se,landlantbruk.se,landskogsbruk.se##.premium.Lrfsso-lock .ArticleLight, .premium.Lrfsso-lock .ArticleNative, .premium.Lrfsso-lock .ArticleStandard, .premium.Lrfsso-lock .ArticleSvepet, .single-article.Lrfsso-lock .ArticleLight, .single-article.Lrfsso-lock .ArticleNative, .single-article.Lrfsso-lock .ArticleStandard, .single-article.Lrfsso-lock .ArticleSvepet, .premium.Lrfsso-lock .SidebarPrimary, .premium.Lrfsso-lock .SidebarSecondary, .single-article.Lrfsso-lock .SidebarPrimary, .single-article.Lrfsso-lock .SidebarSecondary:style(height: initial !important;)
 grontvader.se##app-cookies
 /Sponsor/*$xmlhttprequest,domain=grontvader.se
 /js/OneSignal.$script,domain=thelocal.se
@@ -1875,6 +1877,8 @@ hbl.fi,vastranyland.fi,ostnyland.fi,hangotidningen.fi##+js(abort-current-inline-
 ||vasabladet.fi/Scripts/karkimedia_init.js$script
 ||access.vasabladet.fi/6-pack/$subdocument
 nvp.se##[id*="Banner_PageList"]
+nvp.se##[id="frame_top_banner"]
+nvp.se##[class^="ads-column"]
 /caption_banner.gif$domain=nvp.se
 tasteline.com##li.article:has(.category:has-text(/samarbete/i))
 tasteline.com##.popup-overlay
@@ -2318,6 +2322,7 @@ mkse.com###upprev_box
 mkse.com###custom_html-2
 fotboll.com##[class^="fp_side_ad"]
 fotboll.com##.header-ad-lg
+fotboll.com##.bo-wrapper
 bukefalos.se,thaisnack.se##.u-bottomFixer
 nhlbettingblog.se##.karusellWrapper
 bettips.se##.bettips-am
