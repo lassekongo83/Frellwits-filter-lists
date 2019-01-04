@@ -578,7 +578,7 @@ cykla.se#@#.advertisment
 ||sentry.io^$third-party,domain=dagensmedia.se|dplay.se
 ||cdn.jsdelivr.net/npm/search-insights$script,domain=forum.hallon.se
 ||execute-api.eu-west-1.amazonaws.com/*/event$xmlhttprequest,domain=forum.hallon.se
-||facebook.com/plugins/likebox.$subdocument,domain=resume.se
+||facebook.com/plugins/likebox.$subdocument,domain=resume.se|fotbolltransfers.com
 *$object,object-subrequest,domain=internetlankar.se|autolife.se
 ||evidon.com^$third-party,domain=spela.se|morningstar.se
 ||connect.getflowbox.com^$third-party,domain=aikfotboll.se|farjestadbk.se
@@ -586,6 +586,8 @@ cykla.se#@#.advertisment
 /ga.js$script,~third-party,domain=driverzone.se
 ||mailerlite.com^$third-party,domain=svenskamagasinet.nu
 /custom/ad/*$domain=thaisnack.se
+||ssl.google-analytics.com/ga.js$script,redirect=google-analytics.com/ga.js,domain=mp.se
+/abtf-pwa$domain=sd.se
 
 ! Common scriptlets
 ng.se,alltomstockholm.se,mitti.se,bloggbevakning.se,cornucopia.cornubot.se,innebandymagazinet.se##+js(abort-on-property-read.js, ADTECH)
@@ -724,6 +726,7 @@ magasinetparagraf.se,senses.se##+js(abort-current-inline-script.js, _stq)
 /plugins/wp-snow-effect/*
 /plugins/easy-adsense-ads-scripts-manager/*
 /plugins/wp-copy-protect-with-color-design/*
+/plugins/wp-power-stats/*
 
 ! JWplayer analytics/ad scripts
 svd.se,aftonbladet.se,gamereactor.se,muscles.se,nordichardware.se,nyheteridag.se,freeride.se,happyride.se,ilikeradio.se,embed.futuresportsmedia.com,nyckelspel.se#@#.afs_ads
@@ -2234,11 +2237,11 @@ sportpanelen.se###tie-block_1832
 sportpanelen.se##+js(abort-on-property-write.js, SG_POPUPS_QUEUE)
 /js/topBanner.$script,domain=masterkocken.se
 ||hingsten.se^*/*_ad_$image
-faktiskt.se##.widget_wonderfoursocialmediawidget
 hugorosas.se##.tag-sponsored_post
 hugorosas.se##article.category-samarbete
 tekniksmart.se##.adcontainer
 tekniksmart.se##.bs-wrap-gdpr-law
+tekniksmart.se##.copyright-text:has-text(casino)
 industrinyheter.se,dagensnaringsliv.se,infrastrukturnyheter.se,sportochfritidsnyheter.se,inredningsnyheter.se,byggnyheter.se,dagensfastigheter.se,stockholmsbyggnyheter.se,energinyheter.se,vindkraftsnyheter.se,solenerginyheter.se,jarnvagsnyheter.se,transportochlogistik.se,metallerochgruvor.se,papperochmassa.se##.insider-ads
 industrinyheter.se,dagensnaringsliv.se,infrastrukturnyheter.se,sportochfritidsnyheter.se,inredningsnyheter.se,byggnyheter.se,dagensfastigheter.se,stockholmsbyggnyheter.se,energinyheter.se,vindkraftsnyheter.se,solenerginyheter.se,jarnvagsnyheter.se,transportochlogistik.se,metallerochgruvor.se,papperochmassa.se##[id^="mainadvertorial"]
 industrinyheter.se,dagensnaringsliv.se,infrastrukturnyheter.se,sportochfritidsnyheter.se,inredningsnyheter.se,byggnyheter.se,dagensfastigheter.se,stockholmsbyggnyheter.se,energinyheter.se,vindkraftsnyheter.se,solenerginyheter.se,jarnvagsnyheter.se,transportochlogistik.se,metallerochgruvor.se,papperochmassa.se##[id^="dfptag"]
@@ -2263,6 +2266,7 @@ minhembio.com##div[style="height: 120px;"]:has(.top-ad)
 bilsport.se##.spons-article
 bilsport.se##[id^="bst-pano"]
 bilsport.se###bst-bot
+bilsport.se##.ads-and-other
 megafonen.nu###banner-top
 megafonen.nu###side-wrapper
 megafonen.nu##.box:has(h5 > span.title:has-text(/sponsrade inlägg/i))
@@ -2274,6 +2278,9 @@ kissies.se##.post:has(strong:has-text(/i samarbete med/i))
 travprat.se##+js(abort-on-property-write.js, bizpanda)
 linnherbertsson.se##.content:has(.sponsored-container)
 linnherbertsson.se##[id^="content-ad"]
+linnherbertsson.se###cookies
+linnherbertsson.se##.overlay
+linnherbertsson.se##body:style(overflow-y: auto !important;)
 ||cornucopia.cornubot.se/js/cookie*.$script
 svegot.se##[itemtype="https://schema.org/WPAdBlock"]
 svegot.se##+js(addEventListener-defuser.js, scroll, (a))
