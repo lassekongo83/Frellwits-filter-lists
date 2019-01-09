@@ -234,6 +234,7 @@
 /emediate-responsive-wp-plugin/*
 /entryclick;_
 /eu_cookie_alert/*$script,stylesheet
+/ga_cookie_track.js$script
 /sh404sefsocial/*$script
 /iab/iab.js$script
 /img/bettingstugan.$image
@@ -575,7 +576,7 @@ cykla.se#@#.advertisment
 ||consent.cmp.oath.com^$script,domain=mitti.se|alltomstockholm.se
 ||consent.cookiebot.com^$third-party,domain=goteborgdirekt.se|stockholmdirekt.se|wesafe.se|alingsastidning.se|partilletidning.se|itaboutdoor.se|selmaspa.se|skeppsbrons.se|etc.se|norran.se|swedroid.se|villalivet.se|ng.se|kingsizemag.se|hoglandsnytt.se|totallyorebro.se|totallystockholm.se
 ||marketingautomation.services^$third-party,domain=wesafe.se
-/gdpr/*$domain=vimedbarn.se|rapport24.com|funnygames.se|villalivet.se|nyckelspel.se|megaspel.se|capdesign.se
+/gdpr/*$domain=vimedbarn.se|rapport24.com|funnygames.se|villalivet.se|nyckelspel.se|megaspel.se|capdesign.se|digikey.se
 /urls/count.json$script,domain=vimedbarn.se|gabriellajoss.me|mybabydolls.se|emilysliv.se|kenzas.se
 ||aff.bstatic.com^$domain=travelgrip.se
 /downloads.mailchimp.com/*$domain=villalivet.se|landleyskok.se|branschkoll.se|vavawoom.com
@@ -595,6 +596,10 @@ cykla.se#@#.advertisment
 ||ssl.google-analytics.com/ga.js$script,redirect=google-analytics.com/ga.js,domain=mp.se
 /abtf-pwa$domain=sd.se
 /jquery.fancybox.$domain=tjanstebilen.se|saljledarskap.se
+/i10c@p1/*$domain=digikey.se|justfab.se|bax-shop.se
+/Web%20Analytics/*$script,domain=digikey.se
+/bc-tracking.js$script,domain=digikey.se
+||consent.cookieinfo.net^$third-party,domain=bax-shop.se
 
 ! Common scriptlets
 ng.se,alltomstockholm.se,mitti.se,bloggbevakning.se,cornucopia.cornubot.se,innebandymagazinet.se##+js(abort-on-property-read.js, ADTECH)
@@ -771,6 +776,8 @@ expressen.se##^script:has-text(window.ExpressenAnalytics)
 gamereactor.se##^script[onError="adblockEnabled()"]
 hannaofsweden.se##^script:has-text(NOclickNN)
 bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##^script:has-text(endpoint)
+digikey.se,bax-shop.se##^script:has-text(i10cdone)
+digikey.se,bax-shop.se,justfab.se##^script:has-text(INSTART.Init)
 !#endif
 
 ! Firefox mobile filters
@@ -1626,6 +1633,7 @@ swefilmer.*##iframe[src="/player/play.php"]
 ||swesub.*/sw.js$script
 ||swesub.*/wp-content/uploads/ad_$image
 ||swesub.*/player/nice.png$image
+||swesub.*/player/play.$image
 swesub.*,jawcloud.co##+js(abort-current-inline-script.js, _Hasync, push)
 swesub.*##+js(abort-current-inline-script.js, atob)
 swesub.*##+js(abort-current-inline-script.js, document.oncontextmenu)
@@ -1634,6 +1642,7 @@ swesub.*##a[href*="/offer?prod"]
 swesub.*##a[href="/player/video.php"]
 swesub.*##.alert-bottom
 swesub.*###tab-ad
+swesub.*###overlay-ad
 swesub.*###tab1:style(display: initial !important;)
 swesub.*##:xpath(//strong[text()[contains(., 'Annons')]]/parent::div[@class="les-title"]/parent::li[1])
 /js/script.$script,domain=nxload.com|jawcloud.co|openload.co|streamango.com
