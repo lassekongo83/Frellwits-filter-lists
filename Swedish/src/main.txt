@@ -428,7 +428,7 @@
 ! https://www.expressen.se/motor/bilnyheter/blufforetaget-lurar-dig-att-betala-for-gratistjanster/
 ||trafikstyrelsen.com^
 ! Common typing errors leading to some annoying or malicious pages
-*$csp=script-src 'none',domain=aftonbladett.se|svtt.se|ssvd.se|exressen.se|eexpressen.se|sskatteverket.se|klartt.se
+*$csp=script-src 'none',domain=aftonbladett.se|svtt.se|ssvd.se|exressen.se|eexpressen.se|sskatteverket.se|klartt.se|aatg.se|atgg.se
 
 ! Generic Element Hiding Rules
 ###accept-cookies-div
@@ -502,6 +502,7 @@
 ##[id^="adace_ads"]
 ##a[href*="casinopro.se"][target="_blank"]
 ##.widget_ic_ad_widget
+##.alert-box.info.cookies
 
 ! Site specific whitelists
 @@/*_adframe.js$~third-party,script,domain=fssweden.se
@@ -1465,6 +1466,8 @@ tvmatchen.nu##a[href*="tradedoubler.com"]
 ||d16fx559zbp759.cloudfront.net/everysport/main.js$script
 ||d16fx559zbp759.cloudfront.net/fotbolldirekt/main.js$script
 ||d16fx559zbp759.cloudfront.net/hockeysverige/main.js$script
+||d16fx559zbp759.cloudfront.net/svenskafans/main.js$script
+/js/ads/*$domain=svartgul.se
 svenskafans.com##[class^="ad_display"]
 svenskafans.com##.ad_info
 svenskafans.com###cookie-information
@@ -1478,7 +1481,9 @@ kittad.se##a[href]:has(.kittad-label-sponsored)
 kittad.se##.article-list-item-container:has(.kittad-label-sponsored)
 kittad.se###header-top
 ||golfbladet.se/_golfplaisir/$subdocument
+/_files/Ads/*$domain=golfbladet.se
 @@||golfbladet.se/_files/Banners/forum.gif$image
+golfbladet.se###top_banner
 /_ad/*$script,domain=funbeat.se
 funbeat.se##.l-adv-interstitial
 
@@ -1607,6 +1612,8 @@ nyafilmer.*##^script[src^="/ads.js?"]
 ||dreamfilm.*/HD/780x.$image
 ||dreamfilm.*/HD/player4k.$image
 ||dreamfilm.*/swedish/stream.php$subdocument
+||dreamfilm.*/HD/video.php$popup
+dreamfilm.*##+js(window.open-defuser.js)
 dreamfilm.*,swesub.*,nordflix.*###ads_player_inside
 dreamfilm.*,swesub.*,nordflix.*##.TPlayer.on:after:style(height: 0 !important; width: 0 !important;)
 dreamfilm.*##.embed-container
