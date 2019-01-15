@@ -795,7 +795,6 @@ ikea.com##.cookie-info__panel--show
 /sv/local-extensions/header-footer/scripts/track.$script,domain=ikea.com
 /sv/local-extensions/header-footer/scripts/hotjar.$script,domain=ikea.com
 /sv/analytics/*$domain=ikea.com
-di.se##section[data-load-ads="true"]
 !#endif
 
 ! IDG
@@ -986,6 +985,7 @@ di.se##+js(abort-on-property-read.js, diConf.servicePlusClientId)
 di.se##.clip-browser__clip:has(a[href*="/annons-"])
 di.se##.carousel-tab:has-text(/annons:/i)
 di.se##.di_expressen-rabatt-koder
+di.se##section[data-load-ads="true"]
 digital.di.se,weekend.di.se##+js(abort-current-inline-script.js, diConf)
 /adblk.js$script,domain=weekend.di.se
 ! Den irriterande autostartande livespelaren nu igen
@@ -2665,3 +2665,8 @@ digitaliserat.nu##.news-story:has(a:has-text(/^detta är en annons/i))
 ||byggvarlden.se/empty.html$subdocument
 /docunet_stats.js$script,domain=byggvarlden.se
 byggvarlden.se##.featured:matches-css-after(content: "Sponsrad")
+! Placera
+avanza.se##.cookieMessage
+avanza.se##.topAd
+avanza.se##.noMarginAd
+avanza.se##.section:has(a:has-text(/^annons/i))
