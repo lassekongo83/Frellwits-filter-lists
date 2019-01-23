@@ -154,6 +154,7 @@
 ||sociuslive.com^$third-party
 ||sprinklecontent.com^$third-party
 ||sprinkletxt.com^$third-party
+||stats.easyweb.se^$third-party
 ||storymedia.se^$third-party
 ||strossle.com^$third-party
 ||suntana.se^$third-party
@@ -266,6 +267,7 @@
 /sifo_analytics.js^$script
 /sifo_msr.js^$script
 /siforesponsivemeasure.js$script
+/stats/ewstats.$script
 /tabs_hits_counter.php$image
 /thumbnail_bettingstugan$image
 /trackers/SessionCam-tag$script
@@ -309,6 +311,7 @@
 ||diu127fbe6pn6.cloudfront.net^*/ga-universal.html$subdocument
 ||dspk.kindredplc.com/renderImage.aspx^$image
 ||eacdn.com/TrafficOpt/$script
+||easyweb.se/stats/$image
 ||episerver.net/*/epi-util/find.js$script
 ||es.loppi.se/api/imp$xmlhttprequest
 ||es.loppi.se/get$script
@@ -551,7 +554,7 @@ cykla.se#@#.advertisment
 @@||cykla.se/wp-admin/admin-ajax.php?action*&advert_search$xmlhttprequest
 
 ! Common site specific blocking
-/\/*280x240*./$image,domain=rumhemma.se
+/\/*280x240*/$image,domain=rumhemma.se
 /\/*280x360*/$image,domain=kurera.se
 /\/*300x250*/$image,domain=lokalfotboll.se
 /\/*annons*/$image,domain=guldkanalen.se|kurera.se|nvp.se|rumhemma.se|tekniksmart.se|megafonen.nu|newsvoice.se|lesscarbs.se|lundagard.se|svf.se|boktugg.se|skillingaryd.nu|etunawebben.se|etc.se|dansbandskanalen.se|sff.nu|xn--vrnamo-bua.nu|fastighetstidningen.se|opulens.se|vinbanken.se
@@ -788,6 +791,7 @@ expressen.se##^script:has-text(window.Exp.bamData)
 expressen.se##^script[id="ads-script"]
 expressen.se##^script:has-text(adsScript)
 expressen.se##^script:has-text(window.ExpressenAnalytics)
+mittkok.expressen.se##^script:has-text(adblock)
 gamereactor.se##^script[onError="adblockEnabled()"]
 hannaofsweden.se##^script:has-text(NOclickNN)
 bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##^script:has-text(endpoint)
@@ -823,6 +827,12 @@ idg.se##a[data-click-settings*="Article Outbound Links"]:has(strong:has-text(/an
 forum.studio.se##li[data-blocktitle="Anpassade Block"]:has(.sms-marking:has-text(Annons:))
 upphandling24.se##.type-partnerartikel
 upphandling24.se##.widget:has(.widget-title:has-text(/^annons/i))
+! Attempt to make their gdpr choice less annoying. Don't want to block it as a limbo choice will disable 3rd party videos and embeds.
+!#if !env_mobile
+forum.studio.se,upphandling24.se,idg.se##.idgcp__modal--in .idgcp__layer:style(background: none !important;)
+forum.studio.se,upphandling24.se,idg.se##.idgcp__layer--active, .idgcp__layer--active body:style(overflow: auto !important;)
+forum.studio.se,upphandling24.se,idg.se##.idgcp__layer:style(z-index: 0 !important;)
+!#endif
 
 ! STAMPEN
 /vendorList.js$script,domain=bohuslaningen.se|gp.se|hallandsposten.se|hn.se|stromstadstidning.se|ttela.se
@@ -1036,7 +1046,7 @@ mittkok.expressen.se##.widget-social-media
 mittkok.expressen.se##.tile-item:has(span.native)
 mittkok.expressen.se##+js(abort-current-inline-script.js, adblock)
 mittkok.expressen.se##+js(abort-current-inline-script.js, burtSegments)
-mittkok.expressen.se##+js(abort-current-inline-script.js, ExpressenAnalytics, push)
+mittkok.expressen.se##+js(addEventListener-defuser.js, click, trackClick)
 ||precis.expressen.se/recommendations$xmlhttprequest
 ||jtp.expressen.se/notify/clip-started.$image
 ||spel.expressen.se^$subdocument

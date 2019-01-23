@@ -14,6 +14,7 @@ expressen.se##^script:has-text(window.Exp.bamData)
 expressen.se##^script[id="ads-script"]
 expressen.se##^script:has-text(adsScript)
 expressen.se##^script:has-text(window.ExpressenAnalytics)
+mittkok.expressen.se##^script:has-text(adblock)
 gamereactor.se##^script[onError="adblockEnabled()"]
 hannaofsweden.se##^script:has-text(NOclickNN)
 bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##^script:has-text(endpoint)
@@ -26,6 +27,11 @@ ikea.com##.cookie-info__panel--show
 /sv/local-extensions/header-footer/scripts/track.$script,domain=ikea.com
 /sv/local-extensions/header-footer/scripts/hotjar.$script,domain=ikea.com
 /sv/analytics/*$domain=ikea.com
+!#endif
+!#if !env_mobile
+forum.studio.se,upphandling24.se,idg.se##.idgcp__modal--in .idgcp__layer:style(background: none !important;)
+forum.studio.se,upphandling24.se,idg.se##.idgcp__layer--active, .idgcp__layer--active body:style(overflow: auto !important;)
+forum.studio.se,upphandling24.se,idg.se##.idgcp__layer:style(z-index: 0 !important;)
 !#endif
 !#if !env_firefox
 di.se##+js(setInterval-defuser.js, runAdBlockPaywall, 1000)
