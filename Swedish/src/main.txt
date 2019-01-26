@@ -1633,6 +1633,7 @@ swesub.*,dreamfilm.*,jawcloud.co,nyafilmer.*##^script:has-text(_Hasync)
 nyafilmer.*##^script:has-text(blockerDetected)
 nyafilmer.*##^script:has-text(OneSignal)
 nyafilmer.*##^script[src^="/ads.js?"]
+streamtajm.*##^script:has-text(var TID=)
 !#endif
 /wp-content/themes/keremiya1/js/script.js$script
 /wp-content/themes/keremiya1/js/license.$script
@@ -1672,6 +1673,8 @@ streamtajm.*##div[style^="background-color: #ccc; width: 750px;"]:has(img[src^="
 ||swefilmer.*/player/play.$subdocument
 ||swefilmer.*/masha.$script
 ||swefilmer.*/player/se/tittanuhd.$image
+||swefilmer.*/player/se/titta4k.$image
+||swefilmer.*/player/se/registrerahd.$image
 swefilmer.*##a[href*="/player/play.php"]
 swefilmer.*##a[href*="/player/"][target="_blank"]
 swefilmer.*##iframe[src="/player/play.php"]
@@ -1680,18 +1683,21 @@ swefilmer.*##iframe[src="/player/play.php"]
 ||swesub.*/sw.js$script
 ||swesub.*/wp-content/uploads/ad_$image
 ||swesub.*/player/nice.png$image
-||swesub.*/player/play.$image
+||swesub.*/player/$image,subdocument
+||swesub.*/player/titta4k.png$image
 swesub.*,jawcloud.co##+js(abort-current-inline-script.js, _Hasync, push)
 swesub.*##+js(abort-current-inline-script.js, atob)
 swesub.*##+js(abort-current-inline-script.js, document.oncontextmenu)
 swesub.*##a.btn[target="_blank"]
 swesub.*##a[href*="/offer?prod"]
 swesub.*##a[href="/player/video.php"]
+swesub.*##a[href="/player/registrera.html"]
 swesub.*,dreamfilm.*##.alert-bottom
 swesub.*###tab-ad
 swesub.*###overlay-ad
 swesub.*###tab1:style(display: initial !important;)
 swesub.*##:xpath(//strong[text()[contains(., 'Annons')]]/parent::div[@class="les-title"]/parent::li[1])
+swesub.*##.movieplay:has(iframe[src="/player/video.php"])
 /js/script.$script,domain=nxload.com|jawcloud.co|openload.co|streamango.com
 /license.$script,domain=nxload.com|jawcloud.co|openload.co|streamango.com
 /vast/*$domain=streamango.com
