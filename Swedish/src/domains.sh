@@ -5,7 +5,7 @@
 INPUT_FILE='main.txt'
 COSMETIC='output/1.txt'
 SPECIFIC='output/2.txt'
-OUTPUT='domains.txt'
+OUTPUT='../../../domains.txt'
 
 # COSMETIC FILTERS
 # egrep cosmetic filters and scriptlets
