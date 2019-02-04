@@ -69,7 +69,6 @@ neowin.net##div[data-ns="leaderboard"]
 ||sverigesradio.se/sida/content/img/background/wall*.jpg
 sverigesradio.se##div[id="user-message-container"][data-require="modules/cookie-message"]
 sverigesradio.se##+js(abort-current-inline-script.js, _gaq, push)
-sverigesradio.se##body:style(padding-top: 64px !important;)
 
 ! DEVIANTART
 deviantart.com###block-notice
@@ -122,6 +121,7 @@ reddit.com##p > a[href="#pixel"]
 reddit.com##.give-gold-button
 reddit.com##.native-ad-container
 reddit.com##a.redesign-beta-optin
+reddit.com##.premium-banner
 ! Block reddit users
 reddit.com##div.thing[data-author="udda_boktips"]
 
@@ -144,6 +144,9 @@ google.se###cnsh
 google.se###cnso
 ||youtube.com/pagead/
 youtube.com##.video-list-item:has(.view-count:has-text(Rekommendationer))
+youtube.com##body.yt-dialog-active:style(overflow-y: scroll !important;)
+youtube.com###yt-consent-dialog
+youtube.com##.yt-dialog-bg
 
 ! WOWHEAD
 wowhead.com##.blocks:has(div[id^="ad-"])
@@ -253,7 +256,9 @@ quora.com##script:inject(setTimeout-defuser.js, [native code], 2000)
 quora.com##script:inject(setTimeout-defuser.js, trackTimeOnSite)
 !#if !env_mobile
 quora.com##.promoted_answer_wrapper
-quora.com##:xpath(//span[contains(text(), 'by')]/ancestor::*[contains(concat(' ', @class, ' '), ' external_link ')]/../../..)
+quora.com##.UnifiedAnswerPagedList:not(.PagedListFoo):has(.content_dismiss_title:has-text(/^you dismissed this ad/i))
+quora.com##.pagedlist_item:has(.content_dismiss_title:has-text(/^you dismissed this ad/i))
+quora.com##.UnifiedAnswerPagedList:not(.PagedListFoo):has(.promoted_answer_link)
 !#endif
 webhallen.com###background
 css-tricks.com##.end-of-article-ads
@@ -286,6 +291,9 @@ vg.no##.ad
 ||ssl.p.jwpcdn.com^*/jwpsrv.js$important,script,domain=vg.no
 ||ssl.p.jwpcdn.com^*/sharing.js$important,script,domain=vg.no
 ||ssl.p.jwpcdn.com^*/vast.js$important,script,domain=vg.no
+svtplay.se##.play_video-page__aside--share
+bing.com###b_notificationContainer
+bing.com###thp_notf_div
 
 ! Misc HTML filters
 !#if env_firefox
