@@ -208,6 +208,9 @@
 .se/files/annons/$image
 .se/fightodds.plugin/fightodds.plugin.$script
 .se/upload/annons/
+.se/wdg/tracking
+.se/annons.$subdocument,script
+.com/annons.$subdocument,script
 /468adrotate.php
 /?file=lokus$subdocument
 /_graphics/annons/*
@@ -231,6 +234,7 @@
 /bmbDfpUtils.$script
 /bmbFusionUtils.$script
 /cx-emediate-userprofile-se.$script
+/downloads.mailchimp.com/js/signup-forms/popup$script
 /helios/multiad_jquery.$script
 /js/byside_webcare$script
 /caos-analytics/analytics.$script
@@ -295,7 +299,6 @@
 ://sifomedia.
 ||adviral.s3.amazonaws.com/sponsored/
 ||amazonaws.com/adn-tag/$script
-||amazonaws.com/downloads.mailchimp.com/js/signup-forms/popup$script
 ||amazonaws.com/metapic-cdn/*/metapic.$script,stylesheet
 ||ana.tunnl.com^
 ||api.netb11.com/b/$image
@@ -754,7 +757,7 @@ pomu.se,video-static.tunnl.com,bioenergitidningen.se,weheartit.com##+js(set-cons
 /plugins/random-banner/*
 /plugins/so-widgets-bundle/*$domain=lokalsport.nu
 /plugins/sea-short-stats/*
-/plugins/onesignal-free-web-push-notifications/*$domain=humorbibeln.se|newsner.com|sportbibeln.se|ettgottskratt.se|nyadagbladet.se|skolporten.se|sparacash.se
+/plugins/onesignal-free-web-push-notifications/*$domain=humorbibeln.se|newsner.com|sportbibeln.se|ettgottskratt.se|nyadagbladet.se|skolporten.se|sparacash.se|svegot.se
 /plugins/optinpanda-premium/*$domain=villalivet.se
 /plugins/ct-ultimate-gdpr/*$domain=itrace.se
 /wp-json/wpstatistics/*$domain=itrace.se|rollspela.se
@@ -781,6 +784,7 @@ pomu.se,video-static.tunnl.com,bioenergitidningen.se,weheartit.com##+js(set-cons
 /plugins/skydda-advisor/*
 /plugins/dohi-sellbranch/js/popup.$script
 /plugins/dohi-gdpr/*
+/plugins/lbg-audio8-html5-radio_ads/*$script,domain=svegot.se
 
 ! JWplayer analytics/ad scripts
 svd.se,aftonbladet.se,gamereactor.se,muscles.se,nordichardware.se,nyheteridag.se,freeride.se,happyride.se,ilikeradio.se,embed.futuresportsmedia.com,nyckelspel.se,streamio.com,laget.se#@#.afs_ads
@@ -1763,7 +1767,7 @@ moviezine.se##[name="article-advertisment"]
 moviezine.se##.others:has-text(/sponsrat/i)
 fz.se##+js(abort-current-inline-script.js, Taiga, Blackboard)
 fz.se,sweclockers.com##+js(set-constant.js, adblock, false)
-fz.se##.content-widget:has(div.fpnih-meta:has-text(/sponsrat/i))
+fz.se##.fpn-item:has(.sponsored-content)
 fz.se##.article-facebook
 /rpc*/prisjakt$xmlhttprequest,domain=99.se|fz.se|sweclockers.com
 99.se##[id^="bbPrisjakt"]
@@ -2363,12 +2367,12 @@ linnherbertsson.se##body:style(overflow-y: auto !important;)
 ||cornucopia.cornubot.se/js/cookie*.$script
 svegot.se##[itemtype="https://schema.org/WPAdBlock"]
 svegot.se##+js(addEventListener-defuser.js, scroll, (a))
+svegot.se##.et_bloom_popup
 finansliv.se##+js(abort-on-property-write.js, nwlettersignupcheck)
 finansliv.se,pedagogiskamagasinet.se##+js(abort-on-property-read.js, OA_show)
 spela.se##+js(abort-current-inline-script.js, trackEvidonEvent)
 spela.se##+js(abort-current-inline-script.js, AdPortal)
 spela.se##+js(abort-current-inline-script.js, $jscomp)
-/tracking_footer-active/*$domain=spela.se
 justwannahavefun.se##.legible:has(.sub-title:has-text(/sponsrat av/i))
 krickelins.se##article[id^="post-"]:has(a[href$="/sponsrade-inlagg/"])
 bonjourvintage.se##.category-om-samarbeten
@@ -2385,9 +2389,7 @@ piraja.se###hero:has(.spons)
 piraja.se###featholder:has(.spons)
 piraja.se###panoramaholder
 piraja.se###parallax
-||ampproject.org^$third-party,domain=piraja.se
-||cdn.ampproject.org/v0.js$script,redirect=ampproject.org/v0.js,domain=piraja.se
-/*jquery.blockUI.$script,domain=fssweden.se
+_jquery.blockUI.$script,domain=fssweden.se
 nyadagbladet.se##+js(abort-on-property-read.js, cli_show_cookiebar)
 nyadagbladet.se###adpadding
 nyadagbladet.se##div[class^="wrapper-col"]:has-text(Annons:)
@@ -2399,9 +2401,8 @@ lesscarbs.se##.category-annonssamarbete
 lesscarbs.se##[id^="post"]:has-text(/annonssamarbete med/i)
 lesscarbs.se##.bd-block:has(h5:has-text(/annons/i))
 ||stegforhalsa.se^*/ad.js$script
-||stajlplejs.com/annons.asp$subdocument
-/hjv-google-analytics-startpage$script,domain=1177.se
 /verksamt-adrum.js$script,domain=verksamt.se
+||verksamt.se/TSbd/$script
 marsta.nu##.outsider
 pingpong.se##.l-preloader
 /mod_adblockdetector/*$domain=hamnen.se
