@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Title: Frellwit's Swedish Filter
 ! Expires: 3 days (update frequency)
-! Last modified: 2019-02-11 13:31:23 CET
+! Last modified: 2019-02-12 06:35:54 CET
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -592,6 +592,7 @@
 @@/vbc/jquery$domain=vi.se
 @@/wp-content/*/adframe.js$script,~third-party,domain=falkopingstidning.se|jnytt.se|jp.se|skaraborgslanstidning.se|skovdenyheter.se|smalandsdagblad.se|smalanningen.se|smt.se|tranastidning.se|vastgotabladet.se|vetlandaposten.se|vn.se
 @@||ad*.vg.no/check.js$script,domain=aftonbladet.se
+@@||aftonbladet.se/hyper-assets/namegen.$script
 @@||aka-cdn.adtech.de/dt/common/DAC.js$script,domain=bandyplay.se
 @@||akaskidor.se^$generichide
 @@||alicestenlof.com^$generichide
@@ -1441,6 +1442,7 @@ tandlakartidningen.se###panoramaad
 tasteline.com##.popup-overlay
 tekniksmart.se##.adcontainer
 thelocal.se##.orange-panel
+tidningenelektrikern.se##img[title^="Annons"]
 tidningenhockey.se##.node-ads-right
 tkj.se##.affiliatenatverk
 tkj.se##a[href$="-sponsor/"]
@@ -1661,6 +1663,7 @@ yougov.se##.cookie-confirm
 ||di.se^*/burt-main.$script
 ||digital-personalized.di.se^$xmlhttprequest
 ||digital.di.se/api/sponsor/$xmlhttprequest
+||digital.ntm.eu/adn$script
 ||diu127fbe6pn6.cloudfront.net^*/ga-universal.html$subdocument
 ||dreamfilm.*/HD/780x.$image
 ||dreamfilm.*/HD/player4k.$image
@@ -1690,8 +1693,8 @@ yougov.se##.cookie-confirm
 ||existenz.se/img/prq.gif
 ||existenz.se^$object,object-subrequest
 ||exitintel.com^$third-party
+||facebook.com/plugins/like$subdocument,domain=fotbolltransfers.com|resume.se|tidningenelektrikern.se
 ||facebook.com/plugins/like$third-party,domain=~facebook.com|~fb.com
-||facebook.com/plugins/likebox.$subdocument,domain=fotbolltransfers.com|resume.se
 ||facebook.com/tr/$image,domain=~facebook.com|~fb.com
 ||facebook.com/tr?$image,domain=~facebook.com|~fb.com
 ||fakturino.se^$third-party
