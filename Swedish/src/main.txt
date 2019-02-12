@@ -629,7 +629,6 @@ cykla.se#@#.advertisment
 -banner-$image,domain=litteraturmagazinet.se
 /ga.js$script,~third-party,domain=driverzone.se
 ||mailerlite.com^$third-party,domain=svenskamagasinet.nu
-||ssl.google-analytics.com/ga.js$script,redirect=google-analytics.com/ga.js,domain=mp.se
 /abtf-pwa$domain=sd.se
 /jquery.fancybox.$domain=tjanstebilen.se|saljledarskap.se
 /i10c@p1/*$domain=digikey.se|justfab.se|bax-shop.se
@@ -1475,6 +1474,7 @@ akaskidor.se,svenskgolf.se##.ad-wallpaper-wrapper
 akaskidor.se,svenskgolf.se,body.se##body:style(background-image: none !important;)
 cafe.se##[class^="oath-dac-"]
 cafe.se##.bg-white:has(.egmont-spotlights)
+cafe.se##.card-partner
 
 ! FRIA
 fria.nu,goteborgsfria.se,friatidningen.se,landetsfria.se,stockholmsfria.se,sesam.nu##[class*="annonser"]
@@ -1670,7 +1670,6 @@ dreamfilm.*##.bnr
 dreamfilm.*##+js(remove-attr.js, oncontextmenu)
 ||nyafilmer.*^$csp=default-src 'self' 'unsafe-inline' 'unsafe-eval' jawcloud.co *.jawcloud.co upvtt.com wp.com *.wp.com *.googleapis.com vkpass.com *.vkpass.com streamango.com *.gstatic.com openload.co
 nyafilmer.*##+js(abort-current-inline-script.js, OneSignal)
-nyafilmer.*##+js(addEventListener-defuser.js, /^(?:DOMContentLoaded|mouseup|mousedown|mousemove)$/)
 nyafilmer.*##+js(set-constant.js, blockerDetected, false)
 nyafilmer.*##+js(setInterval-defuser.js, u6, 500)
 nyafilmer.*,swesub.*##a[style*="height"][rel*="nofollow"]
@@ -1873,6 +1872,7 @@ ng.se##.js--llad
 ||breakit.solidtango.com^$subdocument
 ||breakit.se/api/visit$xmlhttprequest
 ||collect.breakit.se^$xmlhttprequest
+||breakit.se/accl$script
 breakit.se##.spnsr-widget
 breakit.se##.supportersSlideContainer
 breakit.se##[class*="sponsored"]
