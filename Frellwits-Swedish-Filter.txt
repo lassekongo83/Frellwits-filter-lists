@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Title: Frellwit's Swedish Filter
 ! Expires: 3 days (update frequency)
-! Last modified: 2019-02-16 09:24:29 CET
+! Last modified: 2019-02-17 20:06:51 CET
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -314,7 +314,7 @@
 /js/sifo.js$script
 /js/smart-app-banner.$script,domain=svenskafans.com
 /js/smartbanner/*$domain=tvmatchen.nu
-/js/sticky-mobile-ad.js$script,domain=allakorsord.se|allas.se|allers.se|antikochauktion.se|aretrunt.se|baaam.se|dromhemochtradgard.se|elle.se|elledecoration.se|ellematovin.se|femina.se|frida.se|hant.se|hemmets.se|mabra.com|matmagasinet.se|residencemagazine.se|svenskdam.se
+/js/sticky-mobile-ad.$script
 /js/svenskanamn_ads.$script
 /js/svenskanamn_param_init.$script
 /js/topBanner.$script,domain=masterkocken.se
@@ -438,7 +438,6 @@
 /plugins/se-wordpress-affiliatehelper/*
 /plugins/se-wordpress-cookie-notice/*
 /plugins/se-wordpress-native-article/*$script,stylesheet
-/plugins/se-wordpress-newsletters/*$domain=allakorsord.se|allas.se|allers.se|antikochauktion.se|aretrunt.se|baaam.se|dromhemochtradgard.se|elle.se|elledecoration.se|ellematovin.se|femina.se|frida.se|hant.se|hemmets.se|mabra.com|matmagasinet.se|residencemagazine.se|svenskdam.se
 /plugins/sea-short-stats/*
 /plugins/skydda-advisor/*
 /plugins/so-widgets-bundle/*$domain=lokalsport.nu
@@ -483,8 +482,9 @@
 /run/analytic$~third-party,xmlhttprequest,domain=momondo.se
 /Scripts/burt/*$script,domain=di.se
 /scripts/pb*.js$script,domain=alicestenlof.com|clarahenry.se|elinskoglund.com|fannystaaf.se|linnahlborg.se|lovisawallin.se|moamattsson.se|nouw.com|saraabrahamsson.se
-/se-wordpress-gdpr/*$domain=allakorsord.se|allas.se|allers.se|antikochauktion.se|aretrunt.se|baaam.se|dromhemochtradgard.se|elle.se|elledecoration.se|ellematovin.se|femina.se|frida.se|hant.se|hemmets.se|mabra.com|matmagasinet.se|residencemagazine.se|svenskdam.se
-/se-wordpress-google-analytics/src/js/wp-tagmanager.js$script,domain=allakorsord.se|allas.se|allers.se|antikochauktion.se|aretrunt.se|baaam.se|dromhemochtradgard.se|elle.se|elledecoration.se|ellematovin.se|femina.se|frida.se|hant.se|hemmets.se|mabra.com|matmagasinet.se|residencemagazine.se|svenskdam.se
+/se-wordpress-gdpr/*
+/se-wordpress-google-analytics/*
+/se-wordpress-newsletters/*
 /seenthis-hub/assets/js/hub-time-spent.js$script
 /selections/native$xmlhttprequest,domain=svd.se
 /service-worker.js$script,domain=folkbladet.nu|vk.se
@@ -579,6 +579,7 @@
 @@/adserver.$script,~third-party,domain=fotosidan.se|utsidan.se
 @@/advertisement*.js$script,domain=dn.se
 @@/advertisement.js$script,~third-party,domain=blocket.se|emocore.se|kaninsajten.se|kit.se|saljplatsen.se|spela.se
+@@/aff/images/search_button$image,domain=alltforforaldrar.se
 @@/assets/adsbygoogle.js$script,~third-party,domain=lonch.se
 @@/consent.json$domain=forum.studio.se|idg.se|upphandling24.se
 @@/js/ad.js$~third-party,domain=sweclockers.com
@@ -736,10 +737,13 @@ allsvenskan.se,superettan.se##.partners-slideshow-slide
 alltforforaldrar.se,battrestadsdel.se,casinoexpo.se,flashback.se,mammasidan.se,minbebis.com###top-banner
 alltforforaldrar.se,mammasidan.se,minbebis.com###owl-products
 alltforforaldrar.se,mammasidan.se,minbebis.com###partnerMenuContainer
+alltforforaldrar.se,mammasidan.se,minbebis.com###partnerMenuContainerFiller
 alltforforaldrar.se,mammasidan.se,minbebis.com##.advertisements-sidebar
+alltforforaldrar.se,mammasidan.se,minbebis.com##.art-small > a[target="_blank"]
 alltforforaldrar.se,mammasidan.se,minbebis.com##.productheader
+alltforforaldrar.se,mammasidan.se,minbebis.com##.spons-artc
 alltforforaldrar.se,mammasidan.se,minbebis.com##[id*="blogg_panorama"]
-alltforforaldrar.se,mammasidan.se,minbebis.com##a[href^="/native/"]
+alltforforaldrar.se,mammasidan.se,minbebis.com##li.views-row > a[target="_blank"]
 alltforforaldrar.se,mammasidan.se,minbebis.com,partilletidning.se##.middle-banner
 alltforforaldrar.se,mammasidan.se,minbebis.com,sverigesnatur.org##.panorama
 alltomhif.se,privatekonomi.org,tonyhatefnejad.se##.preloader
@@ -802,6 +806,7 @@ bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se###s
 bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##.frequency-model__notice
 bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##.julbordspuff
 bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##.lokus-engine
+bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##.ml-adon-hide-box
 bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##.rabble-widget
 bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##.seekly
 bonjourvintage.se##.category-om-samarbeten
@@ -908,8 +913,7 @@ dayviews.com##[class^="content_ad"]
 deliquate.se##.ajax_loader
 deliquate.se##[id^="ads300"]
 deliquate.se##[id^="linkcat-"]
-devote.se##div[style*="width: 980px; height: 244px;"]
-devote.se,familjeliv.se##div[style*="min-height: 244px;"][id][style*="display: inline-block;"]
+devote.se,familjeliv.se##div[style*="height: 244px;"]
 di.se##.di_article-body-commercial-link
 di.se##.di_expressen-rabatt-koder
 di.se##.di_panorama-wrapper
@@ -918,6 +922,7 @@ di.se##.di_start__insider-ad
 di.se##.footer__cookie-info
 di.se##.gdpr-policy-bar.toaster
 di.se##.mc__overlay--show
+di.se##a[href*="/annons-"]
 di.se##a[href^="/brandstudio/"]
 di.se##a[href^="/sponsrad/"]
 di.se##article.di_teaser--native
@@ -1007,7 +1012,6 @@ falkopingstidning.se,jnytt.se,jp.se,skaraborgslanstidning.se,skovdenyheter.se,sm
 falkopingstidning.se,jnytt.se,jp.se,skaraborgslanstidning.se,skovdenyheter.se,smalandsdagblad.se,smalanningen.se,smt.se,tranastidning.se,vastgotabladet.se,vetlandaposten.se,vn.se##div[id^="adonnews"]
 familjeliv.se##.flm-kampanj
 familjeliv.se##a[href*="/kampanj/"]
-familjeliv.se##a[href*="sveacasino"][target="_blank"]
 familjesidan.se##.cookies-wrapper
 fastighetsnytt.se##.promobox
 fastighetssverige.se##.partnerTextsSlider
@@ -1022,6 +1026,7 @@ festivalrykten.se##.sam-mobile
 festivalrykten.se,rumhemma.se###top
 filmtipset.se###acceptCookiesDiv
 finansliv.se,vinochmatguiden.se##.newsletter
+fiskejournalen.se##div[style="background-color:#ededed"]
 fjallbrynt.se###itc-cookie-notify
 flamman.se##.Banner
 flamman.se##.TakeOverBanner
@@ -1068,7 +1073,7 @@ freeride.se,happyride.se###alert_cookieconsent
 fria.nu,friatidningen.se,goteborgsfria.se,landetsfria.se,sesam.nu,stockholmsfria.se###cboxOverlay
 fria.nu,friatidningen.se,goteborgsfria.se,landetsfria.se,sesam.nu,stockholmsfria.se###cboxWrapper
 fria.nu,friatidningen.se,goteborgsfria.se,landetsfria.se,sesam.nu,stockholmsfria.se##[class*="annonser"]
-friatider.se##img[src*="336x150"]
+friatider.se##.rightbox
 friidrott.se###sponsor
 fullpageAd$script,domain=dagensmedia.se
 funbeat.se##.l-adv-interstitial
@@ -1090,6 +1095,7 @@ gamereactor.se##.sponsor
 gamereactor.se##a[href*="/adclick.php"]
 gamereactor.se##div[class^="ad300"]
 gamereactor.se##div[style*="width:300px;height:600px;"]
+gamereactor.se##div[style="min-height: 600px; margin-bottom: 20px;"]
 garaget.org###gorgad-horizontal-top
 garaget.org##.gorgad-side
 globalportalen.org##.follow-us-section
@@ -1498,6 +1504,8 @@ viafree.se##.pause-ad
 viivilla.se###product-area
 viivilla.se##.afubar-top
 viivilla.se##.native-ad-md
+viivilla.se##.overlay-bottom
+viivilla.se##.sp-article
 villalivet.se##.onp-sl-overlap-box
 vinbanken.se##.fancybox-overlay
 vinbanken.se##.push-to-newsletter

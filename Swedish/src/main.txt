@@ -267,6 +267,7 @@
 /js/improve_digital_ads.$script
 /js/mtiFontTrackingCode.$script
 /js/sifo.js$script
+/js/sticky-mobile-ad.$script
 /cookieconsent2/*
 /lazyad-loader.$script
 /leeads_takeover$script
@@ -822,6 +823,11 @@ digikey.se,bax-shop.se,justfab.se##^script:has-text(INSTART.Init)
 lundagard.se##^script:has-text(var _0x)
 undertian.com,villaliv.se,newsner.com,humorbibeln.se,sportbibeln.se,ettgottskratt.se,sportpanelen.se,kvalitetsmagasinet.se,bandyfeber.com,telekomidag.se,miljo-utveckling.se,vdtidningen.se,dagensanalys.se##^script:has-text(mi_track_user)
 undertian.com,villaliv.se,newsner.com,humorbibeln.se,sportbibeln.se,ettgottskratt.se,sportpanelen.se,kvalitetsmagasinet.se,bandyfeber.com,telekomidag.se,miljo-utveckling.se,vdtidningen.se,dagensanalys.se##^script:has-text(monsterinsights_frontend)
+swesub.*,dreamfilm.*,jawcloud.co,nyafilmer.*##^script:has-text(_Hasync)
+nyafilmer.*##^script:has-text(blockerDetected)
+nyafilmer.*##^script:has-text(OneSignal)
+nyafilmer.*##^script[src^="/ads.js?"]
+streamtajm.*##^script:has-text(var TID=)
 !#endif
 
 ! Firefox mobile filters
@@ -867,7 +873,7 @@ bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##.l
 bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##.julbordspuff
 bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##.seekly
 bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##.rabble-widget
-bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##.container:has(span:has-text(/^lokala annonser/i))
+bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##.ml-adon-hide-box
 bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##+js(abort-current-inline-script.js, _cInfo)
 bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##+js(abort-current-inline-script.js, _adform)
 bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##+js(abort-current-inline-script.js, adformLoader)
@@ -913,7 +919,6 @@ aftonbladet.se##.abTheme-infeedad
 aftonbladet.se##.abAdWrapper
 aftonbladet.se###MegaAd
 aftonbladet.se##article:has(a[data-sponsored="true"])
-aftonbladet.se##.abThemeBgTeaser:has(a[href*="kampanjer.aftonbladet.se"])
 aftonbladet.se##[id*="abAdArea"]
 aftonbladet.se##.ab-responsive-ads-wrapper
 aftonbladet.se##.social-shares
@@ -1025,8 +1030,8 @@ di.se##a[href^="/brandstudio/"]
 di.se##.di_start__insider-ad
 di.se##.di_panorama__isAdLabel
 di.se##+js(abort-on-property-read.js, diConf.servicePlusClientId)
-di.se##.clip-browser__clip:has(a[href*="/annons-"])
-di.se##.carousel-tab:has-text(/annons:/i)
+di.se##a[href*="/annons-"]
+di.se##.carousel-tab:has-text(/^annons:/i)
 di.se##.di_expressen-rabatt-koder
 di.se##section[data-load-ads="true"]
 digital.di.se,weekend.di.se##+js(abort-current-inline-script.js, diConf)
@@ -1134,7 +1139,6 @@ vafinans.se###balken_top
 @@/wp-content/plugins/seagal-plugin-dfp/src/showAds.js$~third-party,script
 @@/wp-content/themes/seagal-editorial/assets/js/ads.js$~third-party,script
 mama.nu,skonahem.com,101ideer.se,tara.se,styleby.nu,topphalsa.se,veckorevyn.com,lantliv.com,amelia.se,alltomtradgard.se,alltommat.se,privataaffarer.se##a.teaser[href*="/annonssamarbete/"]
-mama.nu,skonahem.com,101ideer.se,tara.se,styleby.nu,topphalsa.se,veckorevyn.com,lantliv.com,amelia.se,alltomtradgard.se,alltommat.se,privataaffarer.se##a.teaser:has-text(/annonssamarbete/i)
 mama.nu,skonahem.com,101ideer.se,tara.se,styleby.nu,topphalsa.se,veckorevyn.com,lantliv.com,amelia.se,alltomtradgard.se,alltommat.se,privataaffarer.se,dn.se##.teaser-native
 privataaffarer.se##a[href*="/bit.ly/"]
 /fusion.js$script,domain=tidningenhembakat.se
@@ -1146,9 +1150,8 @@ feber.se##+js(set-constant.js, showReklam, false)
 feber.se,tjock.se##.art_ad
 feber.se,tjock.se##.art_ad_sign
 feber.se,tjock.se##+js(abort-current-inline-script.js, $, GDPR)
-viivilla.se##.teaserblockdata:has(.teaser-sponsored-text)
-viivilla.se##.sp-article:has(.commercial-label)
-viivilla.se##div.row.item:has(.overlay-sponsor)
+viivilla.se##.sp-article
+viivilla.se##.overlay-bottom
 viivilla.se###product-area
 viivilla.se##.native-ad-md
 viivilla.se##.afubar-top
@@ -1348,7 +1351,7 @@ gamereactor.se###fbnotification
 gamereactor.se##a[href*="/adclick.php"]
 gamereactor.se###pagebackground:style(background-image: none !important)
 gamereactor.se##.ad_smartphbig
-gamereactor.se##div[style="min-height: 600px; margin-bottom: 20px;"]:has(div[id^="ad_sky"])
+gamereactor.se##div[style="min-height: 600px; margin-bottom: 20px;"]
 /prerolls/*$domain=gamereactor.se
 ||openx.gamereactor.dk/multi.php?$script,important
 gamereactor.se##+js(set-constant.js, adblockEnabled, noopFunc)
@@ -1372,25 +1375,19 @@ gamereactor.se###ad_mobiletopinsidetext
 familjeliv.se##+js(abort-current-inline-script.js, losAd)
 familjeliv.se##a[href*="/kampanj/"]
 familjeliv.se##.flm-kampanj
-familjeliv.se##.articleTeaser:has(.articleSuperTitle:has-text(/samarbete med/i))
-familjeliv.se##a:has(span[data-supertitle^="Samarbete med"])
-familjeliv.se##a[data-track]:has(.supertitle:has-text(/i samarbete med/i))
 familjeliv.se##:xpath(//span[text()[contains(., 'Sponsrat')]]/ancestor::div[contains(concat(' ', @class, ' '), ' blogPostWrapper ')]/parent::div/parent::div)
 familjeliv.se##+js(addEventListener-defuser.js, jquery:loaded)
 familjeliv.se##+js(abort-current-inline-script.js, promotions)
-familjeliv.se##a[href*="sveacasino"][target="_blank"]
-mammasidan.se,minbebis.com,alltforforaldrar.se##div.section:has(.add-text:has-text(/annons/i))
+mammasidan.se,minbebis.com,alltforforaldrar.se##li.views-row > a[target="_blank"]
+mammasidan.se,minbebis.com,alltforforaldrar.se##.art-small > a[target="_blank"]
 mammasidan.se,minbebis.com,alltforforaldrar.se##.advertisements-sidebar
-mammasidan.se,minbebis.com,alltforforaldrar.se##.unslider-wrap:has(.preamble-category:has-text(/annons/i))
 mammasidan.se,minbebis.com,alltforforaldrar.se##.productheader
 mammasidan.se,minbebis.com,alltforforaldrar.se###owl-products
-mammasidan.se,minbebis.com,alltforforaldrar.se##.art-small:has(.preamble-category:has-text(/annons/i))
-mammasidan.se,minbebis.com,alltforforaldrar.se##h2:has-text(/Sprinkle/i)
-mammasidan.se,minbebis.com,alltforforaldrar.se##+js(abort-on-property-write.js, cookieConsentURL)
+mammasidan.se,minbebis.com,alltforforaldrar.se##.spons-artc
 mammasidan.se,minbebis.com,alltforforaldrar.se##[id*="blogg_panorama"]
-mammasidan.se,minbebis.com,alltforforaldrar.se##a[href^="/native/"]
 mammasidan.se,minbebis.com,alltforforaldrar.se###partnerMenuContainer
-alltforforaldrar.se##.card:has-text(/annonssamarbete/i)
+mammasidan.se,minbebis.com,alltforforaldrar.se###partnerMenuContainerFiller
+@@/aff/images/search_button$image,domain=alltforforaldrar.se
 /js/svenskanamn_ads.$script
 /js/svenskanamn_param_init.$script
 /themes/aurora/cookies/*$domain=mammasidan.se|minbebis.com|alltforforaldrar.se
@@ -1400,12 +1397,8 @@ alltforforaldrar.se##.card:has-text(/annonssamarbete/i)
 @@||d11j2g8hmtmh4u.cloudfront.net/jquery.$script,domain=mammasidan.se|minbebis.com|alltforforaldrar.se|blimamma.se|kalasdags.se|babyhjalp.se
 /isbanner/ib.js$script,domain=mammasidan.se|minbebis.com|alltforforaldrar.se
 /plugins/sandviks-weblog/*$script,domain=babyvarlden.se
-devote.se##[class^="col-"]:has(.burt-unit-metadata)
 ||devote.se^$object,object-subrequest
-devote.se##div[style*="width: 980px; height: 244px;"]
-devote.se##.blogPostWrapper:has(span:has-text(/sponsrat inlägg/i))
-devote.se##.blogPostWrapper:has(em:has-text(/i samarbete med/i))
-devote.se,familjeliv.se##div[style*="min-height: 244px;"][id][style*="display: inline-block;"]
+devote.se,familjeliv.se##div[style*="height: 244px;"]
 /adson/*$domain=babyhjalp.se
 babyhjalp.se##+js(abort-current-inline-script.js, document.oncontextmenu)
 babyhjalp.se###nativendo-mainfeed
@@ -1424,10 +1417,9 @@ allakorsord.se,allas.se,allers.se,antikochauktion.se,aretrunt.se,baaam.se,dromhe
 allakorsord.se,allas.se,allers.se,antikochauktion.se,aretrunt.se,baaam.se,dromhemochtradgard.se,elle.se,elledecoration.se,ellematovin.se,femina.se,frida.se,hant.se,hemmets.se,mabra.com,matmagasinet.se,residencemagazine.se,svenskdam.se##section.block-largish-post:has(.native-sponsored-splash)
 allakorsord.se,allas.se,allers.se,antikochauktion.se,aretrunt.se,baaam.se,dromhemochtradgard.se,elle.se,elledecoration.se,ellematovin.se,femina.se,frida.se,hant.se,hemmets.se,mabra.com,matmagasinet.se,residencemagazine.se,svenskdam.se##section.block-minor-post:has(.native-sponsored-splash)
 /apester-javascript-sdk.min.js$script,domain=allakorsord.se|allas.se|allers.se|antikochauktion.se|aretrunt.se|baaam.se|dromhemochtradgard.se|elle.se|elledecoration.se|ellematovin.se|femina.se|frida.se|hant.se|hemmets.se|mabra.com|matmagasinet.se|residencemagazine.se|svenskdam.se
-/js/sticky-mobile-ad.js$script,domain=allakorsord.se|allas.se|allers.se|antikochauktion.se|aretrunt.se|baaam.se|dromhemochtradgard.se|elle.se|elledecoration.se|ellematovin.se|femina.se|frida.se|hant.se|hemmets.se|mabra.com|matmagasinet.se|residencemagazine.se|svenskdam.se
-/plugins/se-wordpress-newsletters/*$domain=allakorsord.se|allas.se|allers.se|antikochauktion.se|aretrunt.se|baaam.se|dromhemochtradgard.se|elle.se|elledecoration.se|ellematovin.se|femina.se|frida.se|hant.se|hemmets.se|mabra.com|matmagasinet.se|residencemagazine.se|svenskdam.se
-/se-wordpress-google-analytics/src/js/wp-tagmanager.js$script,domain=allakorsord.se|allas.se|allers.se|antikochauktion.se|aretrunt.se|baaam.se|dromhemochtradgard.se|elle.se|elledecoration.se|ellematovin.se|femina.se|frida.se|hant.se|hemmets.se|mabra.com|matmagasinet.se|residencemagazine.se|svenskdam.se
-/se-wordpress-gdpr/*$domain=allakorsord.se|allas.se|allers.se|antikochauktion.se|aretrunt.se|baaam.se|dromhemochtradgard.se|elle.se|elledecoration.se|ellematovin.se|femina.se|frida.se|hant.se|hemmets.se|mabra.com|matmagasinet.se|residencemagazine.se|svenskdam.se
+/se-wordpress-newsletters/*
+/se-wordpress-google-analytics/*
+/se-wordpress-gdpr/*
 ||printfriendly.com^$third-party,domain=allakorsord.se|allas.se|allers.se|antikochauktion.se|aretrunt.se|baaam.se|dromhemochtradgard.se|elle.se|elledecoration.se|ellematovin.se|femina.se|frida.se|hant.se|hemmets.se|mabra.com|matmagasinet.se|residencemagazine.se|svenskdam.se
 sportfiskeforum.se###fj-topad
 sportfiskeforum.se,fiskejournalen.se,jaktjournalen.se##+js(abort-current-inline-script.js, m3_r, Math.floor)
@@ -1436,8 +1428,7 @@ svenskjakt.se##.flaket-premium-adverts
 jaktplay.se##.jaktplay-ad
 @@||fiskejournalen.se^$generichide
 fiskejournalen.se##.blogindex-layout-large-post:has(.native-wrapper)
-fiskejournalen.se##div[style="background-color:#ededed"]:has(small:has-text(/annons/i))
-hant.se,svenskdam.se##.o-indenter:has-text(/^annons:/i)
+fiskejournalen.se##div[style="background-color:#ededed"]
 hant.se,svenskdam.se##.in-text-ad
 
 ! EGMONT PUBLISHING
@@ -1523,7 +1514,7 @@ svenskafans.com##[class^="ad_display"]
 svenskafans.com##.ad_info
 svenskafans.com###cookie-information
 svartgul.se##a[href*=".adsrv.eacdn.com"]
-fotbolldirekt.se,hockeysverige.se##.nyheter-featured:has(.datum:has-text(/sponsrat/i))
+fotbolldirekt.se,hockeysverige.se##article:has(.datum:has-text(/sponsrat/i))
 fotbolldirekt.se,hockeysverige.se##.justnu_category:has(.datum:has-text(/sponsrat/i))
 fotbolldirekt.se,hockeysverige.se##a[href="https://www.svenskafans.com/betting/"]
 fotbolldirekt.se,hockeysverige.se##img[alt*="Betting"]
@@ -1653,13 +1644,6 @@ hypeline.se,hrbloggen.se##[class^="ad_"]
 linkopingnews.se,norrkopingnews.se,affarsvarlden.se,arbetarskydd.se,lag-avtal.se,nyteknik.se##.sponsored-box
 
 ! Various websites with lots of malicious stuff and annoyances
-!#if env_firefox
-swesub.*,dreamfilm.*,jawcloud.co,nyafilmer.*##^script:has-text(_Hasync)
-nyafilmer.*##^script:has-text(blockerDetected)
-nyafilmer.*##^script:has-text(OneSignal)
-nyafilmer.*##^script[src^="/ads.js?"]
-streamtajm.*##^script:has-text(var TID=)
-!#endif
 /wp-content/themes/keremiya1/js/script.js$script
 /wp-content/themes/keremiya1/js/license.$script
 ||dreamfilm.*/HD/780x.$image
@@ -1747,8 +1731,6 @@ saraabrahamsson.se,eurosport.se,jawcloud.co,openload.co,oload.stream,streamango.
 
 ! ÖVRIGT
 /uploads/Adblockerpanda$image,domain=nordichardware.se
-nordichardware.se##div.td_block_text_with_title:has(h4 > span:has-text(Från Surfa))
-nordichardware.se##.wpb_text_column:has(.surfamodul-blocktitle)
 nordichardware.se##.td_block_wrap:has(span:has-text(/sponsrat/i))
 nordichardware.se##.td-big-grid-post:has(a[href*="/sponsrat/"])
 nordichardware.se##.td_block_social_counter
@@ -1756,9 +1738,7 @@ nordichardware.se##.pspy_info
 nordichardware.se##+js(abort-current-inline-script.js, message)
 @@||nordichardware.se^$generichide
 bubb.la##:xpath(//h2[@class="ad"]/parent::div[1])
-friatider.se##img[src*="336x150"]
-friatider.se##.plainbox:has(span:has-text(/annons/i))
-friatider.se##+js(abort-current-inline-script.js, Drupal, settings)
+friatider.se##.rightbox
 etc.se##.banner-wrap
 etc.se##.article-type-annons
 etc.se##img[alt="Annons"]
