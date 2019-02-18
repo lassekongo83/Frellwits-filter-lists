@@ -1737,7 +1737,6 @@ nordichardware.se##.td_block_social_counter
 nordichardware.se##.pspy_info
 nordichardware.se##+js(abort-current-inline-script.js, message)
 @@||nordichardware.se^$generichide
-bubb.la##:xpath(//h2[@class="ad"]/parent::div[1])
 friatider.se##.rightbox
 etc.se##.banner-wrap
 etc.se##.article-type-annons
@@ -1829,9 +1828,9 @@ autonytt.se##a:has(.label:has-text(/sponsrad/i))
 autonytt.se##.article_widget_preview:has(h2 > a:has-text(/artikel i samarbete/i))
 /autonytt-theme/js/blogger.$script,domain=autonytt.se
 mobil.se##li.partner
-mobil.se##.aside-puff > li:has-text(/sponsrad/i)
-mobil.se##[data-domid^="sprjr"]
-mobil.se##.teaser:has(.sponsrat)
+mobil.se##.aside-puff
+mobil.se##.pspy_info
+mobil.se##a[href^="/partner/"]
 /lunchguiden*.$image,domain=vk.se|folkbladet.nu
 /service-worker.js$script,domain=vk.se|folkbladet.nu
 ||vk.se^$csp=worker-src 'none'
@@ -1873,14 +1872,14 @@ breakit.se##+js(abort-current-inline-script.js, _adftrack, push)
 metro.se##div[class*="o-advert"]
 metro.se##.o-preview--ad
 metro.se##.o-preview--collab
-metro.se##.m-teaser:has(div[class*="label--ad"])
+metro.se##.m-teaser:has(.o-label--ad)
 metro.se##.m-socials
 metro.se##.m-article__socials
 metro.se##.m-article-native
 metrojobb.se##.headlines__block:has(.ad-header)
-svt.se##li.nyh_contactbox-item:has(div[class*="facebook"])
-svt.se##li.nyh_contactbox-item:has(div[class*="twitter"])
-svt.se##li.nyh_contactbox-item:has(div[class*="instagram"])
+svt.se##li.nyh_contactbox-item > a[href*="facebook"]
+svt.se##li.nyh_contactbox-item > a[href*="twitter"]
+svt.se##li.nyh_contactbox-item > a[href*="instagram"]
 svt.se##section.nyh_share
 svt.se##.SocialMediaShareButton
 svt.se###nyh_cookie-message
@@ -1891,8 +1890,6 @@ ratsit.se##.campaign-bar
 ratsit.se##.search-list-inline-ad
 mitti.se,alltomstockholm.se##.puff-container-native
 mitti.se,alltomstockholm.se##.panorama_top
-mitti.se,alltomstockholm.se##[class*="native_"]:has(.native-ad-mark-image)
-mitti.se,alltomstockholm.se##.teaser-large-container:has(.native-ad-mark)
 mitti.se,alltomstockholm.se###cmp-container-id
 /mitti-ad-block-blocker/scripts.$script,domain=mitti.se|alltomstockholm.se
 /js/ads.$script,~third-party,important,domain=mitti.se|alltomstockholm.se
@@ -1970,9 +1967,8 @@ tasteline.com##.popup:style(overflow: auto !important;)
 /popup/follow-us-fb.$xmlhttprequest,domain=tasteline.com
 infoo.se##.content_wide_ads
 infoo.se##.line.orange
-pcgamer.se##div.wpb_text_column.wpb_content_element:has(h3:has-text(/sponsrade/i))
 pcgamer.se##a[href*="casino.com"]
-pcgamer.se##.wpb_row:has(.vc_tta-title-text:has-text(/annonser/i))
+pcgamer.se##.main-container > div.vc_row:last-child
 kit.se##.isNative
 kit.se##.box--newsletter
 kit.se##.post-share
@@ -2018,7 +2014,6 @@ flamman.se##.TakeOverBanner
 flamman.se##.Banner
 /takeover.gif$image,domain=flamman.se
 kurera.se##.annonswrapper
-kurera.se##.g:has(span.ads)
 /QXA.$script,domain=qx.se|qruiser.com
 ||qx.se/qxa/$xmlhttprequest
 /blogcounter/image?$image,domain=javligtgott.se
@@ -2117,7 +2112,8 @@ happyride.se###a-panorama
 happyride.se##.fixed-col > #a-sidebar1
 happyride.se##.container-fluid > .anp1-container
 happyride.se##li.sponsor
-happyride.se,freeride.se##.boxtext:has-text(casino)
+happyride.se,freeride.se##.col-sm-4 > .boxtext
+happyride.se,freeride.se##.col-sm-4 > .boxlogo
 happyride.se,freeride.se###alert_cookieconsent
 /antiblock.$script,stylesheet,~third-party,domain=vmj.se|viseniorer.se|danskaspraket.se|digitalavykort.se
 vmj.se,danskaspraket.se,digitalavykort.se##.topdiv
@@ -2172,7 +2168,7 @@ datormagazin.se##div[class*="custom_ad"]
 datormagazin.se##.widget_advads_ad_widget
 datormagazin.se##img[width="1068"]
 datormagazin.se##.td-header-sp-recs
-datormagazin.se##.dator-widget:has(h4 > span:has-text(/erbjudanden/i))
+datormagazin.se##.dator-widget
 @@||datormagazin.se^$generichide
 skanesport.se##[id^="skane-slider"]
 skanesport.se###check-also-box.show-check-also
