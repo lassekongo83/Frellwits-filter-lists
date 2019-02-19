@@ -256,9 +256,9 @@ quora.com##script:inject(setTimeout-defuser.js, [native code], 2000)
 quora.com##script:inject(setTimeout-defuser.js, trackTimeOnSite)
 !#if !env_mobile
 quora.com##.promoted_answer_wrapper
-quora.com##.UnifiedAnswerPagedList:not(.PagedListFoo):has(.content_dismiss_title:has-text(/^you dismissed this ad/i))
+quora.com##.UnifiedAnswerPagedList:not([id$="paged_list"]):has(.content_dismiss_title:has-text(/^you dismissed this ad/i))
+quora.com##[data-clog-metadata*="promoted_content"]
 quora.com##.pagedlist_item:has(.content_dismiss_title:has-text(/^you dismissed this ad/i))
-quora.com##.UnifiedAnswerPagedList:not(.PagedListFoo):has(.promoted_answer_link)
 !#endif
 webhallen.com###background
 css-tricks.com##.end-of-article-ads
