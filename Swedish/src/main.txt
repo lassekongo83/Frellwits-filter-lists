@@ -948,7 +948,7 @@ omni.se##.resource--sponsored
 ||science.omni.se^$xmlhttprequest
 tv.nu##a[href*="adform.net"]
 tv.nu##.ad-mega--container
-tv.nu###app > div > div:last-child
+tv.nu###app > div > div:last-child:not(:first-child)
 tv.nu##.gdpr-bar-wrapper
 ||logger.tv.nu^$script
 /campaigns.js$script,domain=blocket.se
@@ -990,9 +990,6 @@ bytbil.com###privacyModal
 bytbil.com##html,body:style(overflow: auto !important;)
 
 ! BONNIER
-!#if !env_firefox
-di.se##+js(setInterval-defuser.js, runAdBlockPaywall, 1000)
-!#endif
 @@||dn.se^$generichide
 dn.se##.gdpr-header
 dn.se##.personal-carousel
@@ -1009,6 +1006,10 @@ dn.se##+js(abort-current-inline-script.js, gtmData)
 /check-paywall$domain=dn.se
 @@/advertisement*.js$script,domain=dn.se
 /streamsense.$script,important,domain=dn.se
+! di
+!#if !env_firefox
+di.se##+js(setInterval-defuser.js, runAdBlockPaywall, 1000)
+!#endif
 ||di.se^*/burt-main.$script
 ||di.se/part/ads/$xmlhttprequest
 /Scripts/burt/*$script,domain=di.se
@@ -1036,7 +1037,17 @@ di.se##.di_expressen-rabatt-koder
 di.se##section[data-load-ads="true"]
 digital.di.se,weekend.di.se##+js(abort-current-inline-script.js, diConf)
 /adblk.js$script,domain=weekend.di.se
-! Den irriterande autostartande livespelaren
+! expressen
+||precis.expressen.se/recommendations$xmlhttprequest
+||jtp.expressen.se/notify/clip-started.$image
+||spel.expressen.se^
+/_widget/destination$subdocument,domain=expressen.se
+/closest-native*/*$xmlhttprequest,domain=expressen.se
+/rantekartan/*$subdocument,domain=expressen.se
+expressen.se##+js(addEventListener-defuser.js, error, adsBlocked)
+expressen.se##+js(abort-current-inline-script.js, adsScript)
+expressen.se##+js(abort-current-inline-script.js, ExpressenAnalytics, adblock)
+! Den irriterande autostartande livespelaren och andra irritationer
 /getlivevideo$domain=di.se
 /nyheter/live-start/live-tv-senaste-nyheterna-i-expressen-tv/*$xmlhttprequest,domain=expressen.se
 /sport/live-start/live-tv-se-sportexpressen-tv-direkt/*$xmlhttprequest,domain=expressen.se
@@ -1044,51 +1055,40 @@ digital.di.se,weekend.di.se##+js(abort-current-inline-script.js, diConf)
 expressen.se##figure[data-article-data*="/tv/nyheter/live-start/live-tv-senaste-nyheterna-i-expressen-tv/"]
 expressen.se##figure[data-article-data*="/tv/sport/live-start/live-tv-se-sportexpressen-tv-direkt/"]
 expressen.se##.terms-dialog
-expressen.se,dn.se###rich-media-ads
-expressen.se##.native-ad-teaser
-expressen.se##.teaser--sponsored
-expressen.se##.teaser--native
-expressen.se##.teaser:has(.vignette:has-text(/(^erbjudande från|^annons:|^happy green)/i))
-expressen.se##.teaser:has(figure[data-article-data*="annons"])
-expressen.se##.teaser:has(a[href*="lanapengar.expressen.se"])
-expressen.se##a[href*="/annons"]
-expressen.se##.widget--collaboration
-expressen.se,dn.se##[class*="open-in-app"]
-expressen.se##.teaser:has(a[href^="https://rabattkoder."])
-expressen.se##.section-widget:has(a[href^="https://rabattkoder."])
-expressen.se##div[style*="font-size: 10px;"]:has-text(Annons:)
-expressen.se##.match-betting
-expressen.se##.discount-ad
-expressen.se##.b-native-ad-teaser
 expressen.se##.gdpr-banner
+expressen.se,dn.se##[class*="open-in-app"]
+! hittat på huvudsidan 20/2 2019
+expressen.se##.teaser--native
+expressen.se##a[href*="spel.expressen.se"]
+expressen.se##a[href*="lanapengar.expressen.se"]
+expressen.se,dn.se###rich-media-ads
+expressen.se##.teaser:has(.vignette:has-text(/(^erbjudande från|^annons:|^happy green|^presenteras av|i samarbete med)/i))
+expressen.se##a[href*="/annons"]
+expressen.se##.discount-ad
+expressen.se##div[style*="font-size: 10px;"]:has-text(Annons:)
+! sektion nöje 20/2 2019
+expressen.se##.teaser:has(img[src*="/images/e0/79/e079f91350bc4de8a004abea747ec0b8/"])
+! sektion allt om bilar/resor
+expressen.se##a[href*="rabattkoder.expressen.se"]
 expressen.se##.widget-ad-marker
-expressen.se##.b-adblock-sidebar-container
-expressen.se##.b-ad2
-expressen.se##.article__after-widgets
-expressen.se##a[data-click-track][href*="utm_campaign"]:has(strong:has-text(annons))
-expressen.se##.teaser:has(.vignette--text:has-text(/(^presenteras av|i samarbete med)/i))
-expressen.se##.teaser:has(a[href*="/casino/"])
-expressen.se##+js(addEventListener-defuser.js, error, adsBlocked)
-expressen.se##+js(abort-current-inline-script.js, adsScript)
-expressen.se##+js(abort-current-inline-script.js, ExpressenAnalytics, adblock)
+! "pressreleaser" från företag. Ett annat ord för native advertising.
+expressen.se##.pressrelease-teaser
+! sektion hälsoliv 20/2 2019
+expressen.se##.teaser--sponsored
+expressen.se##.article--sponsored
+! sektion allt om vin
+/qualp.$script,domain=expressen.se
+expressen.se##.qualifio_iframe_wrapper
+! mitt kök
 mittkok.expressen.se##.newsletter__slide
-mittkok.expressen.se###modal-newsletter-popup
+mittkok.expressen.se##.main:style(width: 100% !important;)
 mittkok.expressen.se##.widget-social-media
-mittkok.expressen.se##.tile-item:has(span.native)
 mittkok.expressen.se##+js(abort-current-inline-script.js, adblock)
 mittkok.expressen.se##+js(abort-current-inline-script.js, burtSegments)
 mittkok.expressen.se##+js(addEventListener-defuser.js, click, trackClick)
-||precis.expressen.se/recommendations$xmlhttprequest
-||jtp.expressen.se/notify/clip-started.$image
-||spel.expressen.se^
-/_widget/destination$subdocument,domain=expressen.se
-/closest-native*/*$xmlhttprequest,domain=expressen.se
-/rantekartan/*$subdocument,domain=expressen.se
-sydsvenskan.se,hd.se##div[data-category="native-teaser"]
-/native?noBurtProfiles=1$xmlhttprequest,domain=hd.se|sydsvenskan.se
-/ads-*.js$script,domain=hd.se|sydsvenskan.se|8till5.se
-/ajax/native$xmlhttprequest,domain=8till5.se
-8till5.se##.newsletter-form
+! hds
+/native?$xmlhttprequest,domain=hd.se|sydsvenskan.se
+! tv4
 tv4.se##.program-header-sponsors
 tv4.se##.social-block-ad
 tv4.se##[class*="aside-ad"]
@@ -1111,6 +1111,7 @@ tv4.se##+js(abort-current-inline-script.js, burtConfigs)
 tv4play.se##+js(addEventListener-defuser.js, load, a)
 tv4play.se,fotbollskanalen.se###skin-cover
 tv4play.se##.js-cookie-banner
+! Köket
 koket.se##.endorsed
 koket.se##li.slide:has(.external_advertiser)
 koket.se##.external_advertiser
@@ -1118,14 +1119,12 @@ koket.se###react-newsletter-overlay
 koket.se##.kf-mosaic-widget:has(.mosaic__custom-sponsor-holder)
 koket.se##.promo__container
 koket.se##.native_simple
-/bn-01d-fusion.js$domain=koket.se
-fotbollskanalen.se##div[class*="top-item__link"][onclick="trackClickThenOpen();"]
-fotbollskanalen.se##.player-index-sponsor
-fotbollskanalen.se##+js(abort-current-inline-script.js, adformtag)
-fotbollskanalen.se##+js(abort-current-inline-script.js, burtApi)
-fotbollskanalen.se##+js(abort-current-inline-script.js, $FK, AdIframeModule)
+! fotbollskanlen
+fotbollskanalen.se##+js(abort-current-inline-script.js, containerId)
+!fotbollskanalen.se##+js(abort-current-inline-script.js, $fk, TrackingModule)
 ||bugsnag.com^$third-party,domain=dn.se|di.se|tv4play.se|tv4.se|koket.se|fotbollskanalen.se|expressen.se
-&type=load_offers^$xmlhttprequest,domain=illvet.se|pctidningen.se
+! övrigt
+&type=load_offers$xmlhttprequest,domain=illvet.se|pctidningen.se
 va.se##.popup-wrapper
 va.se##.sponsored-article
 va.se##.sponsored-module
@@ -1140,8 +1139,6 @@ vafinans.se###balken_top
 mama.nu,skonahem.com,101ideer.se,tara.se,styleby.nu,topphalsa.se,veckorevyn.com,lantliv.com,amelia.se,alltomtradgard.se,alltommat.se,privataaffarer.se##a.teaser[href*="/annonssamarbete/"]
 mama.nu,skonahem.com,101ideer.se,tara.se,styleby.nu,topphalsa.se,veckorevyn.com,lantliv.com,amelia.se,alltomtradgard.se,alltommat.se,privataaffarer.se,dn.se##.teaser-native
 privataaffarer.se##a[href*="/bit.ly/"]
-/fusion.js$script,domain=tidningenhembakat.se
-/cinnaroll-fusion.min.js^$script,domain=tidningenhembakat.se
 tradera.com##react-adslot
 tradera.com##div[data-component-cookie-notification]
 tradera.com##.adsense
@@ -1586,7 +1583,7 @@ businessclass.se,spela.se,entreprenor.se,effektmagasin.se##.advert
 ekuriren.se,kkuriren.se,norran.se,sn.se,yelp.se###cookie-info
 alltforforaldrar.se,battrestadsdel.se,flashback.se,mammasidan.se,minbebis.com,casinoexpo.se###top-banner
 chef.se,svd.se##.Ad
-24blekinge.se,24emmaboda.se,24falkenberg.se,24halmstad.se,24helsingborg.se,24kalmar.se,24kristianstad.se,24malmo.se,24nybro.se,24trelleborg.se,24uppsala.se,24ystad.se,24varberg.se,24oland.se,24vasteras.se,99.se,bohuslaningen.se,byggnadsarbetaren.se,cissiochfreddan.se,claudiagalliconcha.se,di.se,dn.se,ekuriren.se,folkbladet.nu,kimura.se,kkuriren.se,loppi.se,mariestadstidningen.se,markbladet.se,medievarlden.se,mestmotor.se,mobil.se,norran.se,nwt.se,paulas.me,skaraborgsbygden.se,skillingaryd.nu,sla.se,sn.se,sportbloggare.com,swedroid.se,vk.se,vimedbarn.se,gabriellajoss.me,mybabydolls.se,emilysliv.se,casinowings.se,allakorsord.se,allas.se,allers.se,antikochauktion.se,aretrunt.se,baaam.se,dromhemochtradgard.se,elle.se,elledecoration.se,ellematovin.se,femina.se,frida.se,hant.se,hemmets.se,mabra.com,matmagasinet.se,residencemagazine.se,svenskdam.se,katerinamagasin.se,dagensmedia.se,tidningenbalans.se,xn--vrnamo-bua.nu,bettingstugan.se##.ad
+24blekinge.se,24emmaboda.se,24falkenberg.se,24halmstad.se,24helsingborg.se,24kalmar.se,24kristianstad.se,24malmo.se,24nybro.se,24trelleborg.se,24uppsala.se,24ystad.se,24varberg.se,24oland.se,24vasteras.se,99.se,bohuslaningen.se,byggnadsarbetaren.se,cissiochfreddan.se,claudiagalliconcha.se,di.se,dn.se,ekuriren.se,folkbladet.nu,kimura.se,kkuriren.se,loppi.se,mariestadstidningen.se,markbladet.se,medievarlden.se,mestmotor.se,mobil.se,norran.se,nwt.se,paulas.me,skaraborgsbygden.se,skillingaryd.nu,sla.se,sn.se,sportbloggare.com,swedroid.se,vk.se,vimedbarn.se,gabriellajoss.me,mybabydolls.se,emilysliv.se,casinowings.se,allakorsord.se,allas.se,allers.se,antikochauktion.se,aretrunt.se,baaam.se,dromhemochtradgard.se,elle.se,elledecoration.se,ellematovin.se,femina.se,frida.se,hant.se,hemmets.se,mabra.com,matmagasinet.se,residencemagazine.se,svenskdam.se,katerinamagasin.se,dagensmedia.se,tidningenbalans.se,xn--vrnamo-bua.nu,bettingstugan.se,expressen.se##.ad
 affarsvarlden.se,arbetarskydd.se,lag-avtal.se,nickelodeon.se,nyteknik.se,vf.se,improveme.se,hjotidning.se,kt.se,sla.se,mariestadstidningen.se,filipstadstidning.se,fryksdalsbygden.se,nwt.se,arvikanyheter.se,nkp.se,saffletidningen.se,provinstidningen.se,dalslanningen.se,karlskogatidning.se,kungalvsposten.se,molndalsposten.se,lokaltidningensto.se,kungsbackaposten.se##.ad-container
 dn.se,klart.se,norran.se##.ad-wrapper
 brollopstorget.se,familjeliv.se##.ad_right
@@ -1612,7 +1609,7 @@ svd.se,falkopingstidning.se,jnytt.se,jp.se,skaraborgslanstidning.se,skovdenyhete
 ekuriren.se,kkuriren.se,sn.se###android-smart-appbanner
 finansliv.se,vinochmatguiden.se##.newsletter
 mobil.se,kamerabild.se###gdpr
-8till5.se,sydsvenskan.se,hd.se,vimedbarn.se,capdesign.se##.gdpr
+sydsvenskan.se,hd.se,vimedbarn.se,capdesign.se##.gdpr
 pomu.se,wwf.se,ilikeradio.se##.cc-banner
 koket.se,nyheter24.se,civilekonomen.se,aktiespararna.se,24blekinge.se,24emmaboda.se,24falkenberg.se,24halmstad.se,24helsingborg.se,24kalmar.se,24kristianstad.se,24malmo.se,24nybro.se,24trelleborg.se,24uppsala.se,24ystad.se,24varberg.se,24oland.se,24vasteras.se##.native
 svartgul.se,tvmatchen.nu###panorama

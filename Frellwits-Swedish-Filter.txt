@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Title: Frellwit's Swedish Filter
 ! Expires: 3 days (update frequency)
-! Last modified: 2019-02-19 13:27:36 CET
+! Last modified: 2019-02-20 11:01:38 CET
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -95,7 +95,7 @@
 ##img[alt="Leovegas"]
 ##img[alt="Spela på Betsson"]
 ##img[src*="/track.adtraction"]
-&type=load_offers^$xmlhttprequest,domain=illvet.se|pctidningen.se
+&type=load_offers$xmlhttprequest,domain=illvet.se|pctidningen.se
 *$csp=script-src 'none',domain=aftonbladett.se|svtt.se|ssvd.se|exressen.se|eexpressen.se|sskatteverket.se|klartt.se|aatg.se|atgg.se
 *$csp=worker-src 'none',domain=minfil.com
 *$object,object-subrequest,domain=autolife.se|internetlankar.se
@@ -144,7 +144,6 @@
 /admin-ajax.php?action=advanced-ads-tracking-track$xmlhttprequest,domain=datormagazin.se
 /adn_consent_override.$stylesheet,domain=affarsliv.com|affarslivgotland.se|corren.se|eposten.se|folkbladet.se|gotland.net|helagotland.se|klackspark.com|kuriren.nu|mvt.se|norrbottensaffarer.se|nsd.se|nt.se|pt.se|unt.se|uppgang.com|uppsala.com|uppsalatidningen.se|vimmerbytidning.se|vt.se
 /adnami/macro/*$script
-/ads-*.js$script,domain=8till5.se|hd.se|sydsvenskan.se
 /ads-client.$xmlhttprequest,domain=games.softgames.com
 /ads/*$image,domain=bildelsbasen.se|golfbladet.se
 /adsLoader.$script,~third-party,domain=booli.se
@@ -157,7 +156,6 @@
 /ajax.php?action=get_policy&site=cookie-information$xmlhttprequest
 /ajax.php?action=get_share_data^$xmlhttprequest,domain=falkopingstidning.se|jnytt.se|jp.se|skaraborgslanstidning.se|skovdenyheter.se|smalandsdagblad.se|smalanningen.se|smt.se|tranastidning.se|vastgotabladet.se|vetlandaposten.se|vn.se
 /ajax.php?action=get_slideshow_ad_in$xmlhttprequest,domain=falkopingstidning.se|jnytt.se|jp.se|skaraborgslanstidning.se|skovdenyheter.se|smalandsdagblad.se|smalanningen.se|smt.se|tranastidning.se|vastgotabladet.se|vetlandaposten.se|vn.se
-/ajax/native$xmlhttprequest,domain=8till5.se
 /ajax_statistics_count/*$xmlhttprequest,domain=byggnyheter.se|dagensfastigheter.se|dagensnaringsliv.se|energinyheter.se|industrinyheter.se|infrastrukturnyheter.se|inredningsnyheter.se|jarnvagsnyheter.se|metallerochgruvor.se|papperochmassa.se|solenerginyheter.se|sportochfritidsnyheter.se|stockholmsbyggnyheter.se|transportochlogistik.se|vindkraftsnyheter.se
 /analytics$script,domain=dn.se
 /annons-linje.gif$image,domain=tkj.se
@@ -198,7 +196,6 @@
 /bmbBurt.$script
 /bmbDfpUtils.$script
 /bmbFusionUtils.$script
-/bn-01d-fusion.js$domain=koket.se
 /BrightcoveExperiences.js$script,domain=viktvaktarna.se
 /bundle-bundle_cookiebar_defer.$script,domain=cartoonnetwork.se
 /bundle-bundle_omniture_defer.$script,domain=cartoonnetwork.se
@@ -218,7 +215,6 @@
 /cdn-cgi/pe/bag2?*serve.albacross.com$xmlhttprequest
 /cdn-cgi/pe/bag2?*widgets.sprinklecontent.com$xmlhttprequest
 /check-paywall$domain=dn.se
-/cinnaroll-fusion.min.js^$script,domain=tidningenhembakat.se
 /citygate/payingcompanies$xmlhttprequest
 /closest-native*/*$xmlhttprequest,domain=expressen.se
 /collector$~third-party,xmlhttprequest,domain=momondo.se
@@ -252,7 +248,6 @@
 /facebook_sdk.js$script,domain=njus.me|radioplay.se
 /familjeannons$domain=ekuriren.se|kkuriren.se|sn.se
 /freewheel.js$script,domain=foxtv.se
-/fusion.js$script,domain=tidningenhembakat.se
 /fusionadloader.$script,domain=viivilla.se
 /ga.js$script,~third-party,domain=driverzone.se
 /ga_cookie_track.js$script
@@ -347,7 +342,7 @@
 /mp_emediate/inc/annons.html
 /n24.js?$domain=filmtipset.se
 /native.js$script,domain=dagensmedia.se
-/native?noBurtProfiles=1$xmlhttprequest,domain=hd.se|sydsvenskan.se
+/native?$xmlhttprequest,domain=hd.se|sydsvenskan.se
 /native_teaser_active/*$image,domain=dagenssamhalle.se
 /new_construction_ads/*$domain=hemnet.se
 /newsletter/*$domain=zalando.se
@@ -473,6 +468,7 @@
 /pulse_flash_ad*.swf$object,domain=svd.se
 /pulsetracking.$script,domain=aftonbladet.se
 /pum/*$script,domain=byggipedia.se|opulens.se|tkj.se
+/qualp.$script,domain=expressen.se
 /QXA.$script,domain=qruiser.com|qx.se
 /rabattkod/*$image,domain=aftonbladet.se
 /rantekartan/*$subdocument,domain=expressen.se
@@ -561,13 +557,11 @@
 24blekinge.se,24emmaboda.se,24falkenberg.se,24halmstad.se,24helsingborg.se,24kalmar.se,24kristianstad.se,24malmo.se,24nybro.se,24oland.se,24trelleborg.se,24uppsala.se,24varberg.se,24vasteras.se,24ystad.se##.loading-message
 24blekinge.se,24emmaboda.se,24falkenberg.se,24halmstad.se,24helsingborg.se,24kalmar.se,24kristianstad.se,24malmo.se,24nybro.se,24oland.se,24trelleborg.se,24uppsala.se,24varberg.se,24vasteras.se,24ystad.se##.mailform-overlay
 24blekinge.se,24emmaboda.se,24falkenberg.se,24halmstad.se,24helsingborg.se,24kalmar.se,24kristianstad.se,24malmo.se,24nybro.se,24oland.se,24trelleborg.se,24uppsala.se,24varberg.se,24vasteras.se,24ystad.se##.takeover-ad
-24blekinge.se,24emmaboda.se,24falkenberg.se,24halmstad.se,24helsingborg.se,24kalmar.se,24kristianstad.se,24malmo.se,24nybro.se,24oland.se,24trelleborg.se,24uppsala.se,24varberg.se,24vasteras.se,24ystad.se,99.se,allakorsord.se,allas.se,allers.se,antikochauktion.se,aretrunt.se,baaam.se,bettingstugan.se,bohuslaningen.se,byggnadsarbetaren.se,casinowings.se,cissiochfreddan.se,claudiagalliconcha.se,dagensmedia.se,di.se,dn.se,dromhemochtradgard.se,ekuriren.se,elle.se,elledecoration.se,ellematovin.se,emilysliv.se,femina.se,folkbladet.nu,frida.se,gabriellajoss.me,hant.se,hemmets.se,katerinamagasin.se,kimura.se,kkuriren.se,loppi.se,mabra.com,mariestadstidningen.se,markbladet.se,matmagasinet.se,medievarlden.se,mestmotor.se,mobil.se,mybabydolls.se,norran.se,nwt.se,paulas.me,residencemagazine.se,skaraborgsbygden.se,skillingaryd.nu,sla.se,sn.se,sportbloggare.com,svenskdam.se,swedroid.se,tidningenbalans.se,vimedbarn.se,vk.se,xn--vrnamo-bua.nu##.ad
+24blekinge.se,24emmaboda.se,24falkenberg.se,24halmstad.se,24helsingborg.se,24kalmar.se,24kristianstad.se,24malmo.se,24nybro.se,24oland.se,24trelleborg.se,24uppsala.se,24varberg.se,24vasteras.se,24ystad.se,99.se,allakorsord.se,allas.se,allers.se,antikochauktion.se,aretrunt.se,baaam.se,bettingstugan.se,bohuslaningen.se,byggnadsarbetaren.se,casinowings.se,cissiochfreddan.se,claudiagalliconcha.se,dagensmedia.se,di.se,dn.se,dromhemochtradgard.se,ekuriren.se,elle.se,elledecoration.se,ellematovin.se,emilysliv.se,expressen.se,femina.se,folkbladet.nu,frida.se,gabriellajoss.me,hant.se,hemmets.se,katerinamagasin.se,kimura.se,kkuriren.se,loppi.se,mabra.com,mariestadstidningen.se,markbladet.se,matmagasinet.se,medievarlden.se,mestmotor.se,mobil.se,mybabydolls.se,norran.se,nwt.se,paulas.me,residencemagazine.se,skaraborgsbygden.se,skillingaryd.nu,sla.se,sn.se,sportbloggare.com,svenskdam.se,swedroid.se,tidningenbalans.se,vimedbarn.se,vk.se,xn--vrnamo-bua.nu##.ad
 24blekinge.se,24emmaboda.se,24falkenberg.se,24halmstad.se,24helsingborg.se,24kalmar.se,24kristianstad.se,24malmo.se,24nybro.se,24oland.se,24trelleborg.se,24uppsala.se,24varberg.se,24vasteras.se,24ystad.se,affarsliv.com,affarslivgotland.se,alltomstockholm.se,babyhjalp.se,branschkoll.se,corren.se,eposten.se,folkbladet.se,fotosidan.se,globalportalen.org,helagotland.se,klackspark.com,kuriren.nu,mitti.se,moviezine.se,mvt.se,norrbottensaffarer.se,nsd.se,nt.se,pt.se,unt.se,uppgang.com,vimmerbytidning.se,vt.se##.ads
 24blekinge.se,24emmaboda.se,24falkenberg.se,24halmstad.se,24helsingborg.se,24kalmar.se,24kristianstad.se,24malmo.se,24nybro.se,24oland.se,24trelleborg.se,24uppsala.se,24varberg.se,24vasteras.se,24ystad.se,aktiespararna.se,civilekonomen.se,koket.se,nyheter24.se##.native
 7ha.se,barometern.se,blt.se,bt.se,kristianstadsbladet.se,olandsbladet.se,ostrasmaland.se,smp.se,sydostran.se,trelleborgsallehanda.se,ut.se,ystadsallehanda.se##div[id*="marknadsguiden"]
 8sidor.se##.cookie-accept
-8till5.se##.newsletter-form
-8till5.se,capdesign.se,hd.se,sydsvenskan.se,vimedbarn.se##.gdpr
 99.se##[id^="bbPrisjakt"]
 ://sifomedia.
 @@/*_adframe.js$script,~third-party,domain=fssweden.se
@@ -859,6 +853,7 @@ camping.se###CookiesBox
 camping.se##.DfpAd
 camping.se##.OpenXAd
 capdesign.se###shareright
+capdesign.se,hd.se,sydsvenskan.se,vimedbarn.se##.gdpr
 centerpartiet.se##.sol-cookie-message
 chef.se##.Blurb--native
 chef.se##.global-cookie-msg
@@ -996,20 +991,19 @@ evertiq.se,fz.se##.bnr
 existenz.se###backgroundad
 existenz.se###slidebox
 existenz.se##.wm-nopop
-expressen.se##.article__after-widgets
-expressen.se##.b-ad2
-expressen.se##.b-adblock-sidebar-container
-expressen.se##.b-native-ad-teaser
+expressen.se##.article--sponsored
 expressen.se##.discount-ad
 expressen.se##.gdpr-banner
-expressen.se##.match-betting
-expressen.se##.native-ad-teaser
+expressen.se##.pressrelease-teaser
+expressen.se##.qualifio_iframe_wrapper
 expressen.se##.teaser--native
 expressen.se##.teaser--sponsored
 expressen.se##.terms-dialog
-expressen.se##.widget--collaboration
 expressen.se##.widget-ad-marker
 expressen.se##a[href*="/annons"]
+expressen.se##a[href*="lanapengar.expressen.se"]
+expressen.se##a[href*="rabattkoder.expressen.se"]
+expressen.se##a[href*="spel.expressen.se"]
 expressen.se##figure[data-article-data*="/tv/nyheter/live-start/live-tv-senaste-nyheterna-i-expressen-tv/"]
 expressen.se##figure[data-article-data*="/tv/sport/live-start/live-tv-se-sportexpressen-tv-direkt/"]
 falkopingstidning.se,filmtipset.se,jnytt.se,jp.se,skaraborgslanstidning.se,skovdenyheter.se,smalandsdagblad.se,smalanningen.se,smt.se,tranastidning.se,vastgotabladet.se,vetlandaposten.se,vn.se##.social-share
@@ -1063,8 +1057,6 @@ fotboll.com##.header-ad-lg
 fotboll.com##[class^="fp_side_ad"]
 fotbolldirekt.se,hockeysverige.se##a[href="https://www.svenskafans.com/betting/"]
 fotbolldirekt.se,hockeysverige.se##img[alt*="Betting"]
-fotbollskanalen.se##.player-index-sponsor
-fotbollskanalen.se##div[class*="top-item__link"][onclick="trackClickThenOpen();"]
 fotbollskanalen.se,tv4play.se###skin-cover
 fotbolltransfers.com##div[class^="ad"]
 fotosidan.se##a[href^="https://ads."]
@@ -1132,7 +1124,6 @@ happyride.se##li.sponsor
 hbwebben.se###cookie-law-info-bar
 hbwebben.se##[class^="hbweb-in_post"]
 hbwebben.se##a[data-bid="1"][href*="/linkout/"][target="_blank"]
-hd.se,sydsvenskan.se##div[data-category="native-teaser"]
 hemhyra.se##.pageCookies
 hemtrevligt.se##.partner-navbar
 hemtrevligt.se,kingmagazine.se##.partner-article
@@ -1284,7 +1275,6 @@ minsolresa.se,resatillsolen.se##aside#text-5
 mintur.se,spelo.se##[id^="banner"]
 miscotbloggen.se###side-right
 missatsamtal.se##.nosnaj
-mittkok.expressen.se###modal-newsletter-popup
 mittkok.expressen.se##.newsletter__slide
 mittkok.expressen.se##.widget-social-media
 mkse.com###custom_html-2
@@ -1498,7 +1488,7 @@ tradera.com##.adsense
 tradera.com##div[data-component-cookie-notification]
 tradera.com##react-adslot
 trendsisters.se##.tws-newsletter-subscribe--dialog
-tv.nu###app > div > div:last-child
+tv.nu###app > div > div:last-child:not(:first-child)
 tv.nu##.ad-mega--container
 tv.nu##.gdpr-bar-wrapper
 tv.nu##a[href*="adform.net"]
