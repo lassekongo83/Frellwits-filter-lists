@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Title: Frellwit's Swedish Filter
 ! Expires: 3 days (update frequency)
-! Last modified: 2019-02-20 11:04:39 CET
+! Last modified: 2019-02-21 07:15:47 CET
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -78,6 +78,7 @@
 ##.js-cookie-warning
 ##.notification--cookie
 ##.nyhet_wrapper_annons
+##.o-grid__ad-column
 ##.outerCookieBar
 ##.p-cookie-prompt.-display
 ##.pea_cook_more_info_popover
@@ -324,7 +325,7 @@
 /listByType?*adSettings$xmlhttprequest,domain=kokaihop.se
 /live/radarmagazine.se.js$script
 /loader.php$subdocument,domain=kingsizemag.se
-/LoadIframePlugin.js^$domain=falkopingstidning.se|jnytt.se|jp.se|skaraborgslanstidning.se|skovdenyheter.se|smalandsdagblad.se|smalanningen.se|smt.se|tranastidning.se|vastgotabladet.se|vetlandaposten.se|vn.se
+/LoadIframePlugin.$domain=falkopingstidning.se|jnytt.se|jp.se|skaraborgslanstidning.se|skovdenyheter.se|smalandsdagblad.se|smalanningen.se|smt.se|tranastidning.se|vastgotabladet.se|vetlandaposten.se|vn.se
 /LoadSlotLocator.$script
 /logger/logger?
 /losad.$domain=familjeliv.se
@@ -424,9 +425,7 @@
 /plugins/pc-google-analytics/*
 /plugins/pixel-cat/*$script
 /plugins/pixelyoursite$image,script
-/plugins/popup-by-supsystic/*$domain=forvaltarforum.se
-/plugins/popup-maker/*$domain=ordfrontmagasin.se
-/plugins/popups/*$domain=bugburger.se|grillbaronen.se|kvalitetsmagasinet.se|miljo-utveckling.se|telekomidag.se|vdtidningen.se
+/plugins/popup$domain=bugburger.se|forvaltarforum.se|grillbaronen.se|kvalitetsmagasinet.se|miljo-utveckling.se|mmabetz.se|ordfrontmagasin.se|sportpanelen.se|telekomidag.se|vdtidningen.se
 /plugins/random-banner/*
 /plugins/sandviks-weblog/*$script,domain=babyvarlden.se
 /plugins/sdcookie-warning/*$script,stylesheet
@@ -612,7 +611,7 @@
 @@||fannystaaf.se^$generichide
 @@||fiskejournalen.se^$generichide
 @@||fokus.se^$generichide
-@@||freeride.nu/js/ads.js^$script,domain=freeride.se|happyride.se
+@@||freeride.nu/js/ads.js$script,domain=freeride.se|happyride.se
 @@||funfunfun.se/advertisement.$script,~third-party
 @@||funnygames.se^$generichide
 @@||fwmrm.net/*MTG*HTML5$script,domain=viafree.se
@@ -996,6 +995,7 @@ expressen.se##.discount-ad
 expressen.se##.gdpr-banner
 expressen.se##.pressrelease-teaser
 expressen.se##.qualifio_iframe_wrapper
+expressen.se##.site-header__widgets > .html-widget > a[target="_blank"]
 expressen.se##.teaser--native
 expressen.se##.teaser--sponsored
 expressen.se##.terms-dialog
@@ -1247,6 +1247,7 @@ market.se##[id^="fusion_ad"]
 market.se##article[about^="/annons/"]
 marsta.nu##.outsider
 matklubben.se##.notification.cookies
+medievarlden.se##.cookie-widget
 medievarlden.se##.newslettermodal
 medievarlden.se##.noda-ad
 medievarlden.se##.post-teaser--friend
@@ -1640,12 +1641,13 @@ yougov.se##.cookie-confirm
 ||cameraeushop.com^
 ||careerbuilder.se^$third-party
 ||casinotoplists.com^$third-party
+||cdn-sitegainer.com/sitegainer$script
 ||cdn.advisible.com/accl$script
 ||cdn.axiell.com^*/cookie-disclaimer.$script
 ||cdn.jsdelivr.net/npm/search-insights$script,domain=forum.hallon.se
 ||cdn.livechatinc.com/tracking.$script
 ||cdn2.editmysite.com^*/snowday*.$script,domain=rapport24.com
-||cdnbox.win/inc/ETKe.php^$script
+||cdnbox.win/inc/ETKe.$script
 ||cintnetworks.com^$third-party
 ||cis.schibsted.com/api/*/identify$domain=klart.se
 ||cision.com^$third-party
@@ -1785,6 +1787,7 @@ yougov.se##.cookie-confirm
 ||hsadspixel.net^$third-party
 ||hsleadflows.net^$third-party
 ||humorbrevet.se/externa_bilder$image
+||icarabatt.com^
 ||iconosquare.com^$third-party
 ||idg.se/sharecounter?$xmlhttprequest
 ||imgix.net^*/analytics.$script
@@ -1886,6 +1889,7 @@ yougov.se##.cookie-confirm
 ||nouw.com/api/campaignpost$xmlhttprequest
 ||nouw.com/campaignpost/reg/$image
 ||ntm.eu/om/img/cx/Matchad$subdocument,domain=affarsliv.com|affarslivgotland.se|corren.se|eposten.se|folkbladet.se|helagotland.se|kuriren.nu|mvt.se|norrbottensaffarer.se|nsd.se|nt.se|pt.se|unt.se|uppgang.com|vimmerbytidning.se|vt.se
+||nya-filmer.*/masha.$script
 ||nyafilmer.*^$csp=default-src 'self' 'unsafe-inline' 'unsafe-eval' jawcloud.co *.jawcloud.co upvtt.com wp.com *.wp.com *.googleapis.com vkpass.com *.vkpass.com streamango.com *.gstatic.com openload.co
 ||nyckelspel.se/images/adblocker-leaderboard.$image
 ||oas.*.se/om/$script
