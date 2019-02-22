@@ -41,6 +41,14 @@ forum.studio.se,upphandling24.se,idg.se##.idgcp__modal--in .idgcp__layer:style(b
 forum.studio.se,upphandling24.se,idg.se##.idgcp__layer--active, .idgcp__layer--active body:style(overflow: auto !important;)
 forum.studio.se,upphandling24.se,idg.se##.idgcp__layer:style(z-index: 0 !important;)
 !#endif
+!#if !env_mobile
+gp.se##body.logged-out *> .c-user-menu__title
+gp.se##body.logged-out *> .c-user-menu__status
+gp.se##body.logged-out *> .c-user-menu:before
+gp.se##body.logged-out *> .c-user-menu__item:not(.js-epaper-trigger)
+gp.se##body.logged-out *> .js-epaper-trigger:style(display: inherit !important; border:none !important;)
+gp.se##body.logged-out *> .c-user-menu:style(display: inherit !important; border: none !important; box-shadow: none !important; background: none !important; top: 157px !important;)
+!#endif
 !#if !env_firefox
 di.se##+js(setInterval-defuser.js, runAdBlockPaywall, 1000)
 !#endif

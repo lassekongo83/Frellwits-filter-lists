@@ -887,8 +887,15 @@ bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##+j
 bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##+js(addEventListener-defuser.js, /^(?:mousemove|mouseout)$/)
 bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##+js(set-constant.js, hasAccess, true)
 bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##+js(set-constant.js, leftToRead, undefined)
-bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##body.logged-out *> .c-user-avatar--initials:style(display: inherit !important;)
-bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##body.logged-out *> .js-epaper-trigger:style(display: inherit !important;)
+! hmm ;-P
+!#if !env_mobile
+gp.se##body.logged-out *> .c-user-menu__title
+gp.se##body.logged-out *> .c-user-menu__status
+gp.se##body.logged-out *> .c-user-menu:before
+gp.se##body.logged-out *> .c-user-menu__item:not(.js-epaper-trigger)
+gp.se##body.logged-out *> .js-epaper-trigger:style(display: inherit !important; border:none !important;)
+gp.se##body.logged-out *> .c-user-menu:style(display: inherit !important; border: none !important; box-shadow: none !important; background: none !important; top: 157px !important;)
+!#endif
 
 ! Flowplayer/lemonwhale
 ||lwcdn.com/vendor/ima.min.js$script
@@ -1068,8 +1075,9 @@ expressen.se##.teaser:has(.vignette:has-text(/(^erbjudande från|^annons:|^happy
 expressen.se##a[href*="/annons"]
 expressen.se##.discount-ad
 expressen.se##div[style*="font-size: 10px;"]:has-text(Annons:)
+! sektion sport Feb 2019
+expressen.se##.teaser:has(a[href^="/brandstudio/"])
 ! sektion nöje Feb 2019
-expressen.se##.teaser:has(img[src*="/images/e0/79/e079f91350bc4de8a004abea747ec0b8/"])
 expressen.se##.site-header__widgets > .html-widget > a[target="_blank"]
 ! sektion allt om bilar/resor
 expressen.se##a[href*="rabattkoder.expressen.se"]
@@ -1079,6 +1087,7 @@ expressen.se##.pressrelease-teaser
 ! sektion hälsoliv Feb 2019
 expressen.se##.teaser--sponsored
 expressen.se##.article--sponsored
+expressen.se##.teaser > a[href*="happygreen.se"]
 ! sektion allt om vin
 /qualp.$script,domain=expressen.se
 expressen.se##.qualifio_iframe_wrapper
