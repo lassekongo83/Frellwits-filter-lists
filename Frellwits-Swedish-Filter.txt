@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Title: Frellwit's Swedish Filter
 ! Expires: 3 days (update frequency)
-! Last modified: 2019-02-25 09:36:13 CET
+! Last modified: 2019-02-25 16:09:55 CET
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -187,6 +187,7 @@
 /betalannonser/*$domain=filmcafe.se
 /bilder/ads/*
 /bilder/foretag/*$image,domain=falubsbandy.com
+/bilder/partners/*$domain=badminton.nu
 /bimber-live.localhost$image,domain=mmabetz.se
 /bitcsys/js/bit.js$script
 /blogcounter.js$script,domain=javligtgott.se
@@ -541,7 +542,6 @@
 /wp-content/themes/keremiya1/js/script.js$script
 /wp-content/uploads/*.js?ver$script,domain=mkse.com|mobilanyheter.net|noterat.nu|nyadagbladet.se
 /wp-content/uploads/*/advanced$script,domain=datormagazin.se|rocknytt.net|skanesport.se
-/wp-json/wpstatistics/*$domain=itrace.se|rollspela.se
 /wp-json/wpstatistics/*$xmlhttprequest
 /wpbm-banners/*$image
 /www/images/*$image,domain=elektronikforumet.com
@@ -608,6 +608,7 @@
 @@||ettgottskratt.se^$generichide
 @@||eurosport.se^$generichide
 @@||fannystaaf.se^$generichide
+@@||feed.meltwater.com^$subdocument
 @@||fiskejournalen.se^$generichide
 @@||fokus.se^$generichide
 @@||freeride.nu/js/ads.js$script,domain=freeride.se|happyride.se
@@ -768,7 +769,9 @@ avanza.se##.topAd
 avanza.se#@#a[title="LeoVegas"]
 babyhjalp.se###nativendo-mainfeed
 babyhjalp.se##.sponserdarticle
-bandybyn.se###RightOuterBannerDiv
+badminton.nu,bandybyn.se###RightOuterBannerDiv
+bandybyn.se##.StartPageBoxRow > .boxcontainer:last-child > .StartPageBoxNarrow
+bandybyn.se##.StartPageBoxRow > .boxcontainer:nth-child(2) > .StartPageBoxNarrow
 bandybyn.se,falubsbandy.com###RightDiv
 bandyfeber.com##.widget_sp_image
 bandyplay.se,bettips.se,digitalfotoforalla.se,illvet.se,it-finans.se,it-halsa.se,it-kanalen.se,it-pedagogen.se,it-retail.se,pctidningen.se##.top-banner
