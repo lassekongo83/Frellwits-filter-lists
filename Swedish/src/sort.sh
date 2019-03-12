@@ -33,7 +33,7 @@ python3 FOP.py output
 
 # Header content
 cat > output/headers.txt <<EOF
-[Adblock Plus 2.0]
+[Adblock Plus 3.1]
 ! Title: Frellwit's Swedish Filter
 ! Expires: 3 days (update frequency)
 ! Last modified: ${date}
