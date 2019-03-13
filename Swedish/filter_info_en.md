@@ -1,6 +1,6 @@
 ## Basic information
 
-This list is specifically written and tested for [uBlock Origin](https://github.com/gorhill/uBlock) with its original settings. It should also work with other forks of uBlock Origin, like for exampel [Nano Adblocker](https://github.com/NanoAdblocker/NanoCore).
+This list is specifically written and tested for [uBlock Origin](https://github.com/gorhill/uBlock) with its original settings. It should also work with other forks of uBlock Origin, like for example [Nano Adblocker](https://github.com/NanoAdblocker/NanoCore).
 
 *The list has not been tested together with Nano Defender.*
 
