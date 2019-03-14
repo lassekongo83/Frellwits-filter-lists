@@ -1501,18 +1501,18 @@ fria.nu,goteborgsfria.se,friatidningen.se,landetsfria.se,stockholmsfria.se,sesam
 
 ! MTG/VIASAT
 ||fwmrm.net^$image,important,domain=viafree.se
-@@||fwmrm.net/ad/$xmlhttprequest,domain=viafree.se
-@@||fwmrm.net/*MTG*HTML5$script,domain=viafree.se
-||fwmrm.net^*/linktag2.js$script,important,domain=viafree.se
+/linktag2.js$script,important,domain=viafree.se
 ||freewheel-mtgx-tv.akamaized.net^$media,image,domain=viafree.se
-||mtg-api.com^*/comScore$script,domain=viafree.se
-@@||mtgx.tv/*/adinfo?$xmlhttprequest,domain=viafree.se
+@@||fwmrm.net/ad/$xmlhttprequest,domain=viafree.se
+@@||fwmrm.net/crossdomain.xml$xmlhttprequest,domain=viafree.se
 viafree.se##.pause-ad
 viafree.se##.ad-click-through
 viafree.se##.avodp.pause-ad-showing .vjs-progress-control, .avodp.ad-playing .vjs-progress-control:style(display: initial !important;)
 ||avod-fw-config.mtg-api.com^$xhr,important,domain=viafree.se
 ||viafree.se/collect$xhr,important
 viafree.se##+js(addEventListener-defuser.js, /^ad/, d())
+! Age gating kräver lite fula tricks
+viafree.se##.vjs-age-gating > .vjs-poster:before:style(content: "Klicka på spelaren för att spela innehållet." !important; color: red !important; font-size: 2em !important;)
 
 ! EVERYSPORT
 tvmatchen.nu###before-matches
