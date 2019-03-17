@@ -51,6 +51,8 @@ Målet är att sidorna i övrigt ska fungera så normalt som möjligt för besö
 
 ## Övrig info
 
+Listan uppdateras automatiskt var tredje dag. Du kan också [uppdatera manuellt](https://github.com/gorhill/uBlock/wiki/Dashboard:-Filter-lists#update-now).
+
 Om något inte fungerar som det ska, eller om du upptäcker oblockerat innehåll så kan du rapportera problemet här på GitHub. Var vänlig följ mallen. Frågor hänvisas till reddit.
 
 Frågor gällande Frellwit's Swedish Filter: Skicka ett DM till /u/Frellwit på reddit.
