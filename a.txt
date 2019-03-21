@@ -49,13 +49,6 @@ imgur.com##a[href="/apps"][target="_blank"]:style(pointer-events: none !importan
 imgur.com##.post-banner
 /ad-free/image.png$domain=imgur.com
 
-! LOADING
-loading.se##.PostItem-container, .Boop-container, .Games-container:style(max-width: 998px !important; width: 998px !important; margin: 0 auto !important;)
-!loading.se##body:style(font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif !important;)
-!loading.se##.Row-title:style(font-size: 13px !important; font-weight: bold !important; color: #333 !important; line-height: 1.2 !important; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif !important;)
-!loading.se##.Row-creation-text:style(font-size: 11px !important; line-height: 1.4 !important;)
-!loading.se##.Row-forum-container:style(margin-bottom: 0 !important;)
-
 ! NEOWIN
 neowin.net##article.news-item:has(a[href*="neowin-deals"])
 neowin.net##article.news-item:has(span.sponsored)
@@ -147,6 +140,7 @@ youtube.com##.video-list-item:has(.view-count:has-text(Rekommendationer))
 youtube.com##body.yt-dialog-active:style(overflow-y: scroll !important;)
 youtube.com###yt-consent-dialog
 youtube.com##.yt-dialog-bg
+||youtube.com/live_chat_replay
 
 ! WOWHEAD
 wowhead.com##.blocks:has(div[id^="ad-"])
@@ -237,8 +231,8 @@ quora.com##*:style(filter: none !important;)
 /tix2/$image,important,domain=ixquick.com|ixquick.eu|startpage.com
 yahoo.com##.viewingpane:has(.now-playing)
 openstreetmap.org###banner
-gamefaqs.com##div.message_mpu
-gamefaqs.com##td.msg:has(div.promo)
+gamefaqs.gamespot.com##.forum_promo
+gamefaqs.gamespot.com##.message_mpu
 pastebin.com##.promo-bar
 pastebin.com##script:inject(abort-on-property-write.js, abdd)
 pastebin.com###abrpm
@@ -256,9 +250,9 @@ quora.com##script:inject(setTimeout-defuser.js, [native code], 2000)
 quora.com##script:inject(setTimeout-defuser.js, trackTimeOnSite)
 !#if !env_mobile
 quora.com##.promoted_answer_wrapper
-quora.com##.UnifiedAnswerPagedList:not([id$="paged_list"]):has(.content_dismiss_title:has-text(/^you dismissed this ad/i))
 quora.com##[data-clog-metadata*="promoted_content"]
-quora.com##.pagedlist_item:has(.content_dismiss_title:has-text(/^you dismissed this ad/i))
+quora.com##.PagedListFoo > div:not(.paged_list_wrapper):has(a[target="_blank"])
+quora.com##.pagedlist_item > div:not(:has(a[name^="answer"])):has(a[target="_blank"])
 !#endif
 webhallen.com###background
 css-tricks.com##.end-of-article-ads
@@ -292,8 +286,13 @@ vg.no##.ad
 ||ssl.p.jwpcdn.com^*/sharing.js$important,script,domain=vg.no
 ||ssl.p.jwpcdn.com^*/vast.js$important,script,domain=vg.no
 svtplay.se##.play_video-page__aside--share
+/videobackground/*$media,domain=svtplay.se
+/cnm/cnm$script,domain=svtplay.se
 bing.com###b_notificationContainer
 bing.com###thp_notf_div
+ica.se##.digital-coupon
+ica.se##.recipe-ad
+||static.codepen.io/assets/common/cookie_used_reload$script
 
 ! Misc HTML filters
 !#if env_firefox

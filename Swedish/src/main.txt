@@ -238,7 +238,6 @@
 /bmbBurt.$script
 /bmbDfpUtils.$script
 /bmbFusionUtils.$script
-/caos-analytics/analytics.$script
 /cdn-cgi/pe/bag2?*.hotjar.com$xmlhttprequest
 /cdn-cgi/pe/bag2?*adform.net$xmlhttprequest
 /cdn-cgi/pe/bag2?*connect.facebook.net$xmlhttprequest
@@ -1196,6 +1195,7 @@ va.se##.share
 dagensmedicin.se##.widget-carousel--sponsored
 resume.se##.teaser-sponsored
 resume.se##.widget-agencyHighlight
+resume.se##a.teaser-image-overlay:has(.teaser-sponsored-title)
 ||qbrick.com^$third-party,domain=resume.se
 vafinans.se###balken_top
 @@/wp-content/plugins/seagal-plugin-dfp/src/showAds.js$~third-party,script
@@ -2228,7 +2228,6 @@ eurosport.se###notification__cookie
 eurosport.se##.eso_video__share
 /_bm/abd$script,domain=eurosport.se
 pconline.se###magazine-front-page-below-header-widgets > .widget_text
-||gettyimages.se/gallery-app/assets/shared/tracking-*.js$script
 @@||opulens.se^$generichide
 opulens.se##.s-social
 opulens.se##.header-social-icons
@@ -2271,9 +2270,12 @@ merinfo.se##.snippet-article-wrapper:has(.sponsored)
 minsolresa.se,resatillsolen.se##aside#text-5
 /js/external.php$script,domain=hockeysnack.com
 /pagespeed_static/1.$image,domain=hockeysnack.com
+||hockeysnack.com/service-worker.$script
+||hockeysnack.com^$csp=worker-src 'none'
 gotlandswebben.se##.header-ads-wrapper
 @@||gotlandswebben.se^$generichide
 kamerabild.se##.partner
+kamerabild.se##.Partner
 kamerabild.se###storan
 kamerabild.se##+js(set-constant.js, Annons, noopFunc)
 firstfoto.se,cyclingplus.se,halsafitness.se,fitnessformen.se,macguiden.net##.this-is-an-ad
