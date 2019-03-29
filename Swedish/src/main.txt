@@ -640,7 +640,7 @@ cykla.se#@#.advertisment
 /banner/$script,domain=cleannet.se|dagenshandel.se|entreprenad.com|entreprenor.se|food-supply.se|foodnet.se|fri-kopenskap.se|habit.se|kemivarldenbiotech.se|lifesciencesweden.se|magasinetparagraf.se|medtechmagazine.se|motormagasinet.se|packnet.se|plastnet.se|processnet.se|recyclingnet.se|rt-forum.se|skyddosakerhet.se|transportnet.se|uochd.se|verkstaderna.se|woodnet.se
 /bc-tracking.js$script,domain=digikey.se
 /campaign*/*$script,xmlhttprequest,domain=alltforforaldrar.se|kokaihop.se|mammasidan.se|minbebis.com|njus.me|nyheter24.se
-/casino/$image,domain=dayviews.com|hockeysverige.se|hypeline.se|newsvoice.se|spray.se|svenskhistoria.se
+/casino/$image,domain=dayviews.com|hockeysverige.se|hypeline.se|newsvoice.se|spray.se|svenskhistoria.se|nyheter24.se
 /cookieconsent.$script,domain=friaordet.org|husbilskompisar.se|kiacarclub.se|modelltag.se|wwf.se
 /cookieconsentpub/*$domain=sd.se
 /downloads.mailchimp.com/*$domain=branschkoll.se|landleyskok.se|vavawoom.com|villalivet.se
@@ -1364,6 +1364,7 @@ nyheter24.se##+js(abort-current-inline-script.js, check_ab)
 nyheter24.se##+js(abort-current-inline-script.js, slotNameCu)
 nyheter24.se##[id^="article"]:has(.native_header)
 nyheter24.se##[id^="article"]:has(em:has-text(/artikeln är i samarbete med/i))
+nyheter24.se##[class^="code_plugin"]:has(img[src*="/casino/"])
 filmtipset.se###acceptCookiesDiv
 filmtipset.se##:xpath(//div[@id="toggle_all_prices"]/parent::td[1]/parent::tr[1])
 filmtipset.se##:xpath(//div[contains(concat(' ', @class, ' '), ' rightlinkheader ')][text()[contains(., 'Rekommenderade sajter')]]/parent::td)
@@ -1437,13 +1438,14 @@ gamereactor.se###ad_mobiletopinsidetext
 /viewability.$script,important,domain=gamereactor.se
 
 ! LIFE OF SVEA
-/losad.$domain=familjeliv.se|alltforforaldrar.se
-/loada.$script,domain=alltforforaldrar.se
+/losad.$domain=familjeliv.se|alltforforaldrar.se|mammasidan.se|minbebis.com
+/loada.$script,domain=alltforforaldrar.se|mammasidan.se|minbebis.com
 familjeliv.se##+js(abort-current-inline-script.js, losAd)
 familjeliv.se##a[href*="/kampanj/"]
 familjeliv.se##.flm-kampanj
 familjeliv.se##+js(addEventListener-defuser.js, jquery:loaded)
 familjeliv.se##+js(abort-current-inline-script.js, promotions)
+familjeliv.se##+js(noeval-if.js, addInfiniteSlot)
 mammasidan.se,minbebis.com,alltforforaldrar.se##li.views-row > a[target="_blank"]
 mammasidan.se,minbebis.com,alltforforaldrar.se##.art-small > a[target="_blank"]
 mammasidan.se,minbebis.com,alltforforaldrar.se##.advertisements-sidebar
@@ -1453,6 +1455,7 @@ mammasidan.se,minbebis.com,alltforforaldrar.se##.spons-artc
 mammasidan.se,minbebis.com,alltforforaldrar.se##[id*="blogg_panorama"]
 mammasidan.se,minbebis.com,alltforforaldrar.se###partnerMenuContainer
 mammasidan.se,minbebis.com,alltforforaldrar.se###partnerMenuContainerFiller
+alltforforaldrar.se,mammasidan.se,minbebis.com##+js(set-constant.js, advertisementText, undefined)
 @@/aff/images/*$image,domain=alltforforaldrar.se
 /js/svenskanamn_ads.$script
 /js/svenskanamn_param_init.$script
@@ -1546,9 +1549,8 @@ fria.nu,goteborgsfria.se,friatidningen.se,landetsfria.se,stockholmsfria.se,sesam
 /gplus.php$script,domain=fria.nu|goteborgsfria.se|friatidningen.se|landetsfria.se|stockholmsfria.se|sesam.nu
 
 ! MTG/VIASAT
-||fwmrm.net^$image,important,domain=viafree.se
 /linktag2.js$script,important,domain=viafree.se
-||freewheel-mtgx-tv.akamaized.net^$media,image,domain=viafree.se
+||freewheel-mtgx-tv.akamaized.net^$image,domain=viafree.se
 ||freewheel-mtgx-tv.akamaized.net^$media,redirect=noopmp3-0.1s,domain=viafree.se
 @@||fwmrm.net/ad/$xmlhttprequest,domain=viafree.se
 @@||fwmrm.net/crossdomain.xml$xmlhttprequest,domain=viafree.se
@@ -1557,7 +1559,6 @@ viafree.se##.ad-click-through
 viafree.se##.avodp.pause-ad-showing .vjs-progress-control, .avodp.ad-playing .vjs-progress-control:style(display: initial !important;)
 ||avod-fw-config.mtg-api.com^$xhr,important,domain=viafree.se
 ||viafree.se/collect$xhr,important
-viafree.se##+js(addEventListener-defuser.js, /^ad/, d())
 
 ! EVERYSPORT
 tvmatchen.nu###before-matches
@@ -1784,6 +1785,10 @@ youplay.se,nyheter24.se,modette.se,filmtipset.se,affarsliv.com,affarslivgotland.
 saraabrahamsson.se,eurosport.se,jawcloud.co,openload.co,oload.stream,streamango.com,rapidvideo.com,nxload.com##+js(addEventListener-defuser.js, contextmenu)
 ! Annoying, unecessary, and completely unrelated autoplaying video
 ||youplay.se^$third-party,domain=hamsterpaj.net|emocore.se|dayviews.com|kamrat.com|familjeliv.se
+! Don't mess with peoples default scroll settings
+!#if !env_mobile
+/rokophoto-lite/js/SmoothScroll.$script
+!#endif
 
 ! ÖVRIGT
 /uploads/Adblockerpanda$image,domain=nordichardware.se
@@ -1970,6 +1975,7 @@ norran.se##.js-cookie-information-bar
 norran.se##.adtech-ad
 norran.se##.social-share__button
 norran.se##.article__ad--panorama
+norran.se##+js(remove-attr.js, onLoad, [onLoad="embedTracker()"])
 kimura.se##.sidebar-section:has(.sidebar_ad)
 kimura.se##a[href*="unibet.com"]
 kimura.se##a[href*="/kampanjer."]
@@ -2805,3 +2811,6 @@ tittapavideon.se##.adv
 backpacking.se##body > aside.mh-container:first-child
 hittahem.se###cookie-approval-wrapper
 /jquery-popupoverlay.js$domain=expressnytt.se
+mygatemagazine.se##.textwidget:has-text(Annons)
+radron.se##.c-page-restriction-infobar-content-wrapper
+radron.se##.content__body.cms-content.restricted:style(max-height: initial !important; overflow: initial !important;)
