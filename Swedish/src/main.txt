@@ -584,7 +584,7 @@
 @@/*_adframe.js$script,~third-party,domain=fssweden.se
 @@/ad.php$script,~third-party,domain=99.se|skogstok.se|temperatur.nu
 @@/adframe.js$script,~third-party,domain=diskant.se|diskantforum.se
-@@/ads.js$script,~third-party,domain=betting.se|koket.se|weekend.di.se
+@@/ads.js$script,~third-party,domain=betting.se|koket.se|weekend.di.se|hd.se|sydsvenskan.se
 @@/ads/ads-*.js$script,~third-party,domain=gettyimages.se
 @@/adsbygoogle.js$script,~third-party,domain=scanaktier.se
 @@/adsense.js$script,~third-party,domain=dayviews.com|fragbite.se|kwiss.me|modette.se|nyheter24.se|synonymer.cc|tyda.se
@@ -884,6 +884,7 @@ streamtajm.*##^script:has-text(var TID=)
 
 ! Firefox mobile filters
 !#if env_mobile
+swedroid.se##div[id$="_ad_mobile"]
 ikea.com##.cookie-info__panel--show
 /sv/local-extensions/header-footer/scripts/adform/*$domain=ikea.com
 /sv/local-extensions/header-footer/scripts/track.$script,domain=ikea.com
@@ -905,7 +906,6 @@ idg.se##.prisjaktCompare
 idg.se##.shareItems
 idg.se##.nextArticleSp
 idg.se##[data-selector^=".wrapperAd"]
-idg.se,macworld.se##.adContainer
 idg.se##[class^="newsletterFormContainer"]
 idg.se##a[data-click-settings*="Article Outbound Links"]:has(strong:has-text(/annons/i))
 forum.studio.se##li[data-blocktitle="Anpassade Block"]:has(.sms-marking:has-text(Annons:))
@@ -1307,6 +1307,8 @@ ekuriren.se,kkuriren.se,sn.se###citygate-family-widgetframe
 skd.se,nsk.se##div.skd-crsl-wrap:matches-css-before(content: Annons)
 /sponsrat-frequency.js$script,domain=skd.se|nsk.se
 /gam-resize.js$script,domain=skd.se|nsk.se
+/consent.js$script,domain=skd.se|nsk.se
+skd.se,nsk.se##body:style(opacity: 1 !important;)
 skd.se,nsk.se##+js(abort-current-inline-script.js, ERWP, fif)
 skd.se,nsk.se##+js(abort-current-inline-script.js, skd_adblocker)
 vf.se,hjotidning.se,kt.se,sla.se,mariestadstidningen.se,filipstadstidning.se,fryksdalsbygden.se,nwt.se,arvikanyheter.se,nkp.se,saffletidningen.se,provinstidningen.se,dalslanningen.se,karlskogatidning.se##+js(set-constant.js, isAdblock, false)
@@ -1710,6 +1712,7 @@ husvagn.se,husbil.se,stockholm.com,noje.se,karlstad.com,karlskrona.com##.ui-opti
 hugorosas.se##article.category-samarbete
 hypeline.se,hrbloggen.se##[class^="ad_"]
 affarsvarlden.se,arbetarskydd.se,lag-avtal.se,nyteknik.se##.sponsored-box
+idg.se,macworld.se,skd.se,nsk.se##.adContainer
 
 ! Various websites with lots of malicious stuff and annoyances
 /wp-content/themes/keremiya1/js/script.js$script
