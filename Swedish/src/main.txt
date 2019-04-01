@@ -57,6 +57,7 @@
 ||cxpublic.com^$third-party
 ||dackpartner-web.s3.amazonaws.com^$third-party
 ||datomik.com^$third-party
+||deep.bi^$third-party
 ||destination.se^$third-party
 ||drift.com^$third-party
 ||driftt.com^$third-party
@@ -1010,6 +1011,7 @@ aftonbladet.se##+js(addEventListener-defuser.js, mousemove, g())
 aftonbladet.se##+js(addEventListener-defuser.js, message, adError)
 aftonbladet.se,svd.se##+js(setInterval-defuser.js, e.ping())
 aftonbladet.se,svd.se##+js(setInterval-defuser.js, e.reportVisibility())
+! TODO: Se om det är möjligt att stoppa autoplay vid scroll med "scroll, g()" utan att någon annan funktion försvinner
 @@||ad*.vg.no/check.js$script,domain=aftonbladet.se
 /privacy/notification?$xmlhttprequest,domain=aftonbladet.se
 ! https://github.com/lassekongo83/Frellwits-filter-lists/issues/44
@@ -1147,6 +1149,8 @@ expressen.se##.html-widget > div[style="text-align: center; font-size: 10px;"]
 expressen.se##a[href^="/premium/erbjudanden/"]
 ! sektion sport Feb 2019
 expressen.se##.teaser:has(a[href^="/brandstudio/"])
+! sektion sport artikel April 2019
+expressen.se##.article__after-widgets:has(iframe[src^="https://spel.expressen.se"])
 ! sektion nöje Feb 2019
 expressen.se##.site-header__widgets > .html-widget > a[target="_blank"]
 ! sektion allt om bilar/resor
@@ -2009,6 +2013,7 @@ grontvader.se##app-cookies
 thelocal.se##div.section:not([class$="section"])
 thelocal.se##.orange-panel
 thelocal.se##.outbrain-row
+thelocal.se##h2[id$="-title"] ~ div[id$="-inner"]:not(#article-inner)
 hbl.fi,vastranyland.fi,ostnyland.fi,hangotidningen.fi##rekrybanner
 hbl.fi,vastranyland.fi,ostnyland.fi,hangotidningen.fi##gdpr-notice
 hbl.fi,vastranyland.fi,ostnyland.fi,hangotidningen.fi###okCookie
