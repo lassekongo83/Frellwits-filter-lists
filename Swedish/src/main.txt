@@ -134,6 +134,7 @@
 ||proxyas.com^$third-party
 ||pushcrew.com^$third-party
 ||push-notifications.top^$third-party
+||pushpushgo.com^$third-party
 ||qualifio.com^$third-party
 ||qualifioapp.com^$third-party
 ||rabble-res.cloudinary.com^$third-party
@@ -1011,7 +1012,6 @@ aftonbladet.se##+js(addEventListener-defuser.js, mousemove, g())
 aftonbladet.se##+js(addEventListener-defuser.js, message, adError)
 aftonbladet.se,svd.se##+js(setInterval-defuser.js, e.ping())
 aftonbladet.se,svd.se##+js(setInterval-defuser.js, e.reportVisibility())
-! TODO: Se om det är möjligt att stoppa autoplay vid scroll med "scroll, g()" utan att någon annan funktion försvinner
 @@||ad*.vg.no/check.js$script,domain=aftonbladet.se
 /privacy/notification?$xmlhttprequest,domain=aftonbladet.se
 ! https://github.com/lassekongo83/Frellwits-filter-lists/issues/44
@@ -1195,7 +1195,9 @@ tv4.se##+js(abort-current-inline-script.js, burtConfigs)
 ||bonnier-html-player.b17g.services/bumpers/$media,redirect=noopmp4-1s,domain=tv4.se|tv4play.se|fotbollskanalen.se|koket.se
 tv4play.se,fotbollskanalen.se###skin-cover
 tv4play.se##.js-cookie-banner
+tv4play.se##div[class^="CookiePolicy"]
 tv4play.se###pause-img-holder
+tv4play.se#@#.adBanner
 */tv4play_plugin.$script,redirect=noopjs,domain=tv4.se|tv4play.se|fotbollskanalen.se|koket.se
 @@||yospace.com/csm/live/*.m3u8$xmlhttprequest,domain=tv4play.se
 ! Köket
@@ -1345,6 +1347,8 @@ allehanda.se,arbetarbladet.se,avestatidning.com,bblat.se,dalademokraten.se,dt.se
 falkopingstidning.se,jnytt.se,jp.se,skaraborgslanstidning.se,skovdenyheter.se,smalandsdagblad.se,smalanningen.se,smt.se,tranastidning.se,vastgotabladet.se,vetlandaposten.se,vn.se###premium-nag-screen
 falkopingstidning.se,jnytt.se,jp.se,skaraborgslanstidning.se,skovdenyheter.se,smalandsdagblad.se,smalanningen.se,smt.se,tranastidning.se,vastgotabladet.se,vetlandaposten.se,vn.se##div.slideshow-in.active:has(.ad-wrapper)
 falkopingstidning.se,jnytt.se,jp.se,skaraborgslanstidning.se,skovdenyheter.se,smalandsdagblad.se,smalanningen.se,smt.se,tranastidning.se,vastgotabladet.se,vetlandaposten.se,vn.se##div[id^="adonnews"]
+falkopingstidning.se,jnytt.se,jp.se,skaraborgslanstidning.se,skovdenyheter.se,smalandsdagblad.se,smalanningen.se,smt.se,tranastidning.se,vastgotabladet.se,vetlandaposten.se,vn.se##.takeover
+falkopingstidning.se,jnytt.se,jp.se,skaraborgslanstidning.se,skovdenyheter.se,smalandsdagblad.se,smalanningen.se,smt.se,tranastidning.se,vastgotabladet.se,vetlandaposten.se,vn.se###takeover-placeholder
 falkopingstidning.se,jnytt.se,jp.se,skaraborgslanstidning.se,skovdenyheter.se,smalandsdagblad.se,smalanningen.se,smt.se,tranastidning.se,vastgotabladet.se,vetlandaposten.se,vn.se##+js(abort-current-inline-script.js, loadLeeads)
 
 ! ALMA TALENT
@@ -1695,7 +1699,7 @@ koket.se,nyheter24.se,civilekonomen.se,aktiespararna.se,24blekinge.se,24emmaboda
 svartgul.se,tvmatchen.nu###panorama
 uppslaget.se,hypeline.se,skidresultat.se,maklarvarlden.se##.annons
 alltomhif.se,privatekonomi.org,tonyhatefnejad.se##.preloader
-testfakta.se,realtid.se,viktvaktarna.se,plastikoperationsforum.se,riksettan.net,automobil.se,vibilagare.se,mopedgaraget.se,caroftheyear.se,klassiker.nu,bike.se,spraktidningen.se###sliding-popup
+testfakta.se,realtid.se,viktvaktarna.se,plastikoperationsforum.se,riksettan.net,automobil.se,vibilagare.se,mopedgaraget.se,caroftheyear.se,klassiker.nu,bike.se,spraktidningen.se,husbilhusvagn.se###sliding-popup
 swedroid.se,tidningensyre.se##.social
 byggahus.se,mobil.se##a[href^="/partner/"]
 sonicmagazine.com,ratsit.se##[class^="ad-"]
@@ -1726,8 +1730,8 @@ idg.se,macworld.se,skd.se,nsk.se##.adContainer
 ||dreamfilm.*/swedish/stream.php$subdocument
 ||dreamfilm.*/HD/video.php$popup
 dreamfilm.*##+js(window.open-defuser.js)
-dreamfilm.*,nordflix.*###ads_player_inside
-dreamfilm.*,nordflix.*##.TPlayer.on:after:style(height: 0 !important; width: 0 !important;)
+dreamfilm.*###ads_player_inside
+dreamfilm.*##.TPlayer.on:after:style(height: 0 !important; width: 0 !important;)
 dreamfilm.*##.embed-container
 dreamfilm.*##a[href$="/go.html"]
 dreamfilm.*##.content-kuss
