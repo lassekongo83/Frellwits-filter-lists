@@ -204,6 +204,7 @@
 .nu/annons/
 .se/*/nativeadvertising/
 .se/AdPlugins/
+.se/adson/$subdocument
 .se/advert$subdocument
 .se/adx.js
 .se/annons.$script,subdocument
@@ -1416,7 +1417,8 @@ modette.se##.lazyload_bar.show:has(span:has-text(/sponsrat/i))
 ||bloggportalen.se/BlogPortal/view/Statistics$image
 kwiss.me##.qz-main-slider-item-initial2:has(.qz-quiz-sponsored)
 hamsterpaj.net###accept-cookies
-hamsterpaj.net##.zone:has(h3:has-text(/rekommenderade sajter/i))
+hamsterpaj.net###sidebar_wrapper > .zone:last-child
+hamsterpaj.net##.article:has(a:has-text(/casino|spelautomat/i))
 bloggbevakning.se###ad
 
 ! GAMEREACTOR
@@ -1453,7 +1455,7 @@ gamereactor.se###ad_mobiletopinsidetext
 /viewability.$script,important,domain=gamereactor.se
 
 ! LIFE OF SVEA
-/losad.$domain=familjeliv.se|alltforforaldrar.se|mammasidan.se|minbebis.com
+/losad.$domain=familjeliv.se|alltforforaldrar.se|mammasidan.se|minbebis.com|devote.se
 /loada.$script,domain=alltforforaldrar.se|mammasidan.se|minbebis.com
 familjeliv.se##+js(abort-current-inline-script.js, losAd)
 familjeliv.se##a[href*="/kampanj/"]
@@ -1483,7 +1485,6 @@ alltforforaldrar.se,mammasidan.se,minbebis.com##+js(set-constant.js, advertiseme
 /plugins/sandviks-weblog/*$script,domain=babyvarlden.se
 ||devote.se^$object,object-subrequest
 devote.se,familjeliv.se##div[style*="height: 244px;"]
-/adson/*$domain=babyhjalp.se
 babyhjalp.se###nativendo-mainfeed
 babyhjalp.se##.sponserdarticle
 
@@ -1496,9 +1497,11 @@ allakorsord.se,allas.se,baaam.se,dromhemochtradgard.se,elle.se,elledecoration.se
 allakorsord.se,allas.se,baaam.se,dromhemochtradgard.se,elle.se,elledecoration.se,ellematovin.se,femina.se,frida.se,hant.se,mabra.com,residencemagazine.se,svenskdam.se##+js(abort-on-property-write.js, adblockDetector)
 allakorsord.se,allas.se,baaam.se,dromhemochtradgard.se,elle.se,elledecoration.se,ellematovin.se,femina.se,frida.se,hant.se,mabra.com,residencemagazine.se,svenskdam.se##+js(abort-on-property-write.js, newsletterHtml)
 allakorsord.se,allas.se,baaam.se,dromhemochtradgard.se,elle.se,elledecoration.se,ellematovin.se,femina.se,frida.se,hant.se,mabra.com,residencemagazine.se,svenskdam.se##+js(abort-on-property-write.js, socializerVars)
-allakorsord.se,allas.se,baaam.se,dromhemochtradgard.se,elle.se,elledecoration.se,ellematovin.se,femina.se,frida.se,hant.se,mabra.com,residencemagazine.se,svenskdam.se##section.block-large-post:has(.native-sponsored-splash)
-allakorsord.se,allas.se,baaam.se,dromhemochtradgard.se,elle.se,elledecoration.se,ellematovin.se,femina.se,frida.se,hant.se,mabra.com,residencemagazine.se,svenskdam.se##section.block-largish-post:has(.native-sponsored-splash)
-allakorsord.se,allas.se,baaam.se,dromhemochtradgard.se,elle.se,elledecoration.se,ellematovin.se,femina.se,frida.se,hant.se,mabra.com,residencemagazine.se,svenskdam.se##section.block-minor-post:has(.native-sponsored-splash)
+allakorsord.se,allas.se,baaam.se,dromhemochtradgard.se,elle.se,elledecoration.se,ellematovin.se,femina.se,frida.se,hant.se,mabra.com,residencemagazine.se,svenskdam.se##+js(abort-current-inline-script.js, aller_ga)
+allakorsord.se,allas.se,baaam.se,dromhemochtradgard.se,elle.se,elledecoration.se,ellematovin.se,femina.se,frida.se,hant.se,mabra.com,residencemagazine.se,svenskdam.se##section > .native-wrapper ~ article
+allakorsord.se,allas.se,baaam.se,dromhemochtradgard.se,elle.se,elledecoration.se,ellematovin.se,femina.se,frida.se,hant.se,mabra.com,residencemagazine.se,svenskdam.se##.native-sponsored-splash
+allakorsord.se,allas.se,baaam.se,dromhemochtradgard.se,elle.se,elledecoration.se,ellematovin.se,femina.se,frida.se,hant.se,mabra.com,residencemagazine.se,svenskdam.se##+js(noeval-if.js, dataLayer.push)
+elle.se###product-wrapper
 /apester-javascript-sdk.min.js$script,domain=allakorsord.se|allas.se|baaam.se|dromhemochtradgard.se|elle.se|elledecoration.se|ellematovin.se|femina.se|frida.se|hant.se|mabra.com|residencemagazine.se|svenskdam.se
 /se-wordpress-newsletters/*
 /se-wordpress-google-analytics/*
@@ -1531,8 +1534,7 @@ allas.se,hant.se,svenskdam.se##.in-text-ad
 /adLocker.$script,domain=mestmotor.se
 kingmagazine.se,vagabond.se,hemtrevligt.se,akaskidor.se,utemagasinet.se,livetombord.se,svenskgolf.se,tidningenhalsa.se,mestmotor.se##.latest-article-native
 kingmagazine.se##div[data-fullscreen-banner]
-kingmagazine.se,hemtrevligt.se##.partner-article
-vagabond.se##.most-read-article:has(span:has-text(/partner/i))
+kingmagazine.se,hemtrevligt.se,vagabond.se##.partner-article
 mestmotor.se,vagabond.se,kingmagazine.se,hemtrevligt.se,akaskidor.se,svenskgolf.se,tidningenhalsa.se,livetombord.se,utemagasinet.se##.alert-cookies
 mestmotor.se,vagabond.se,kingmagazine.se,hemtrevligt.se,akaskidor.se,svenskgolf.se,tidningenhalsa.se,livetombord.se,utemagasinet.se###facebookSlideIn
 mestmotor.se##.panel-native
@@ -1634,10 +1636,11 @@ aletorget.se,alingsastorget.se,almhulttorget.se,alvestatorget.se,amaltorget.se,a
 ! UNITED INFLUENCERS
 /ub-cookie-notice/*$script,stylesheet
 majanilssonlindelof.com##.apprl-title
-akerstromsblog.com,annsoderlund.com,ellinorlofgren.se,emmagreen.se,fokis.se,fredagskocken.se,fridaselkirkblogg.se,frureinhold.se,gynning.net,hormonerhemorrojder.se,magnusnorman.com,pennyparnevik.com,pingishadenius.com,sannafischer.se,sannalundell.se,teresagrundin.se,thereselindgren.se##+js(abort-current-inline-script.js, jQuery, .dfp)
-akerstromsblog.com,annsoderlund.com,ellinorlofgren.se,emmagreen.se,fokis.se,fredagskocken.se,fridaselkirkblogg.se,frureinhold.se,gynning.net,hormonerhemorrojder.se,magnusnorman.com,pennyparnevik.com,pingishadenius.com,sannafischer.se,sannalundell.se,teresagrundin.se,thereselindgren.se##+js(abort-current-inline-script.js, ga)
-akerstromsblog.com,annsoderlund.com,ellinorlofgren.se,emmagreen.se,fokis.se,fredagskocken.se,fridaselkirkblogg.se,frureinhold.se,gynning.net,hormonerhemorrojder.se,magnusnorman.com,pennyparnevik.com,pingishadenius.com,sannafischer.se,sannalundell.se,teresagrundin.se,thereselindgren.se##[id^="post-"]:has(.sponsored-notification)
+akerstromsblog.com,annsoderlund.com,ellinorlofgren.se,emmagreen.se,fokis.se,fredagskocken.se,fridaselkirkblogg.se,frureinhold.se,gynning.net,hormonerhemorrojder.se,magnusnorman.com,pennyparnevik.com,pingishadenius.com,sannafischer.se,sannalundell.se,teresagrundin.se##+js(abort-current-inline-script.js, jQuery, .dfp)
+akerstromsblog.com,annsoderlund.com,ellinorlofgren.se,emmagreen.se,fokis.se,fredagskocken.se,fridaselkirkblogg.se,frureinhold.se,gynning.net,hormonerhemorrojder.se,magnusnorman.com,pennyparnevik.com,pingishadenius.com,sannafischer.se,sannalundell.se,teresagrundin.se##+js(abort-current-inline-script.js, ga)
+akerstromsblog.com,annsoderlund.com,ellinorlofgren.se,emmagreen.se,fokis.se,fredagskocken.se,fridaselkirkblogg.se,frureinhold.se,gynning.net,hormonerhemorrojder.se,magnusnorman.com,pennyparnevik.com,pingishadenius.com,sannafischer.se,sannalundell.se,teresagrundin.se##[id^="post-"]:has(.sponsored-notification)
 gynning.net##[id^="post-"]:has(h3:has-text(/i samarbete med/i))
+||tv4play.se^$third-party,domain=gynning.net
 valerieaflalo.com##[id^="post-"]:has(p[style="text-align: center"]:has-text(/i samarbete med/i))
 fokis.se##[id^="post-"]:has(strong:has-text(/i samarbete med/i))
 
