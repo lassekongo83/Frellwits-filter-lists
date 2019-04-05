@@ -508,6 +508,7 @@
 ###CookieNotice
 ###accept-cookies-div
 ###catapult-cookie-bar
+###colorbox.cookie-info-modal
 ###cookie-alert
 ###cookieAlert
 ###cookieChoiceInfo
@@ -568,12 +569,14 @@
 ##.dagensps_ad
 ##.eu_coookie_toolbar
 ##.js-cookie-warning
+##._ning_outer._ning_jss_zone
 ##.notification--cookie
 ##.nyhet_wrapper_annons
 ##.o-grid__ad-column
 ##.pea_cook_more_info_popover
 ##.pea_cook_wrapper
 ##.p-cookie-prompt.-display
+##.s-cookies-info
 ##.swp-ad-strossle
 ##.sw-cookie-consent-wrapper
 ##.sw-popular__article--ad
@@ -746,6 +749,7 @@ scrollat.se##+js(abort-current-inline-script.js, _TradeTrackerTagOptions)
 /plugins/afp-default-pricetable/js/ga-tracking.$script
 /plugins/annonstorget/*$script,domain=svenskjakt.se
 /plugins/appbanners/*
+/plugins/angwp/*
 /plugins/arscode-ninja-popups/*$domain=springlfa.se
 /plugins/better-adsmanager/*$script,stylesheet
 /plugins/blog-analytics/*
@@ -914,11 +918,12 @@ idg.se##a[data-click-settings*="Article Outbound Links"]:has(strong:has-text(/an
 forum.studio.se##li[data-blocktitle="Anpassade Block"]:has(.sms-marking:has-text(Annons:))
 upphandling24.se##.type-partnerartikel
 upphandling24.se##.widget:has(.widget-title:has-text(/^annons/i))
+@@/angwp/assets/dev/js/advertising.js$domain=upphandling24.se
 ! Attempt to make their gdpr choice less annoying. Don't want to block it as a limbo choice will disable 3rd party videos and embeds.
 !#if !env_mobile
-forum.studio.se,upphandling24.se,idg.se##.idgcp__modal--in .idgcp__layer:style(background: none !important;)
-forum.studio.se,upphandling24.se,idg.se##.idgcp__layer--active, .idgcp__layer--active body:style(overflow: auto !important;)
-forum.studio.se,upphandling24.se,idg.se##.idgcp__layer:style(z-index: 0 !important;)
+forum.studio.se,idg.se##.idgcp__modal--in .idgcp__layer:style(background: none !important;)
+forum.studio.se,idg.se##.idgcp__layer--active, .idgcp__layer--active body:style(overflow: auto !important;)
+forum.studio.se,idg.se##.idgcp__layer:style(z-index: 0 !important;)
 !#endif
 
 ! STAMPEN
@@ -1151,7 +1156,7 @@ expressen.se##a[href^="/premium/erbjudanden/"]
 ! sektion sport Feb 2019
 expressen.se##.teaser:has(a[href^="/brandstudio/"])
 ! sektion sport artikel April 2019
-expressen.se##.article__after-widgets:has(iframe[src^="https://spel.expressen.se"])
+expressen.se##.article__after-widgets > .html-widget
 ! sektion nöje Feb 2019
 expressen.se##.site-header__widgets > .html-widget > a[target="_blank"]
 ! sektion allt om bilar/resor
@@ -1214,6 +1219,7 @@ koket.se##div[data-ad="true"]
 fotbollskanalen.se##+js(abort-current-inline-script.js, containerId)
 fotbollskanalen.se##.top-item.brand
 fotbollskanalen.se##.player-index-sponsor
+fotbollskanalen.se##.notice__link:has(.notice__tag_sponsored)
 ||bugsnag.com^$third-party,domain=dn.se|di.se|tv4play.se|tv4.se|koket.se|fotbollskanalen.se|expressen.se
 ! övrigt
 &type=load_offers$xmlhttprequest,domain=illvet.se|pctidningen.se
@@ -1380,7 +1386,7 @@ nyheter24.se##+js(abort-current-inline-script.js, check_ab)
 nyheter24.se##+js(abort-current-inline-script.js, slotNameCu)
 nyheter24.se##[id^="article"]:has(.native_header)
 nyheter24.se##[id^="article"]:has(em:has-text(/artikeln är i samarbete med/i))
-nyheter24.se##[class^="code_plugin"]:has(img[src*="/casino/"])
+nyheter24.se##section:last-of-type > [class^="code_plugin_content"]
 filmtipset.se###acceptCookiesDiv
 filmtipset.se##:xpath(//div[@id="toggle_all_prices"]/parent::td[1]/parent::tr[1])
 filmtipset.se##:xpath(//div[contains(concat(' ', @class, ' '), ' rightlinkheader ')][text()[contains(., 'Rekommenderade sajter')]]/parent::td)
@@ -1395,18 +1401,16 @@ dayviews.com###frontpageRecommended
 dayviews.com###panorama_ad
 dayviews.com##[class^="content_ad"]
 dayviews.com##[class$="-ad"]
-dayviews.com##div.zone.f30:has(img[src*="://sesn."])
-dayviews.com##.zone:has(a[href*="casino"])
+dayviews.com##.frontPageBox--links
 /p/tourn/*$domain=dayviews.com
 kwiss.me##.frontpage_top_image:has(span:has-text(/sponsrat av/i))
 kwiss.me##.square-item:has(.qz-quiz-sponsored)
 kwiss.me##.qz-related-quizes-item:has(span:has-text(/sponsrat av/i))
-fragbite.se##.module:has(h4:has-text(/sponsrat/i))
-fragbite.se##.spreadItemCollection:has(.category:has-text(/sponsrat/i))
+fragbite.se##.tn
+fragbite.se##article:has(.category:has-text(/spons/i))
 fragbite.se##.zooKeeper
 fragbite.se##.cookieBar
 fragbite.se,modette.se##.polar-native
-fragbite.se##.spreadItemCollection:has(.sponsor)
 modette.se##article.article-true-native
 modette.se##.lazyload_bar.show:has(span:has-text(/sponsrat/i))
 ||dynamic.fragbite.se/gfx/campaign/$image,domain=~fragleague.com
@@ -1714,7 +1718,7 @@ sonicmagazine.com,ratsit.se##[class^="ad-"]
 civilekonomen.se,market.se###rollup
 baws.se,datormagazin.se,villalivet.se##.td-more-articles-box
 it-finans.se,it-halsa.se,it-kanalen.se,it-pedagogen.se,it-retail.se,baws.se##a.gofollow[data-track][target="_blank"]
-mammasidan.se,minbebis.com,alltforforaldrar.se,sverigesnatur.org##.panorama
+mammasidan.se,minbebis.com,alltforforaldrar.se,sverigesnatur.org,upphandling24.se##.panorama
 skanesport.se,stockblogs.se###cookie-notice
 itrace.se,isabellalowengrip.se,vitalisfoto.se###preloader
 autolife.se###Banners
@@ -1729,6 +1733,7 @@ hugorosas.se##article.category-samarbete
 hypeline.se,hrbloggen.se##[class^="ad_"]
 affarsvarlden.se,arbetarskydd.se,lag-avtal.se,nyteknik.se##.sponsored-box
 idg.se,macworld.se,skd.se,nsk.se##.adContainer
+kamerabild.se,cafe.se##.partner
 
 ! Various websites with lots of malicious stuff and annoyances
 /wp-content/themes/keremiya1/js/script.js$script
@@ -1949,7 +1954,9 @@ breakit.se##+js(abort-current-inline-script.js, _adftrack, push)
 metro.se##div[class*="o-advert"]
 metro.se##.o-preview--ad
 metro.se##.o-preview--collab
-metro.se##.m-teaser:has(.o-label--ad)
+metro.se##.o-label--ad
+metro.se##a[data-element="nativeTeaser"]
+metro.se##.custos-banner__admarker
 metro.se##.m-socials
 metro.se##.m-article__socials
 metro.se##.m-article-native
@@ -2322,8 +2329,6 @@ minsolresa.se,resatillsolen.se##aside#text-5
 ||hockeysnack.com^$csp=worker-src 'none'
 gotlandswebben.se##.header-ads-wrapper
 @@||gotlandswebben.se^$generichide
-kamerabild.se##.partner
-kamerabild.se##.Partner
 kamerabild.se###storan
 kamerabild.se##+js(set-constant.js, Annons, noopFunc)
 firstfoto.se,cyclingplus.se,halsafitness.se,fitnessformen.se,macguiden.net##.this-is-an-ad
