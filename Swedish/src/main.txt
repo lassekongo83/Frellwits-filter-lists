@@ -285,6 +285,7 @@
 /live/radarmagazine.se.js$script
 /LoadSlotLocator.$script
 /logger/logger?
+/losad/loada.$script
 /monetization/ads-module/*
 /monetization/pixel-sdk/*
 /mp_emediate/inc/annons.html
@@ -344,6 +345,7 @@
 ||connectio.s3.amazonaws.com/connect-retarget.$script
 ||creatives.ancoraplatform.com/ptphb*.$script
 ||d10lumateci472.cloudfront.net/?amuld$script
+||d11j2g8hmtmh4u.cloudfront.net/losad/$script
 ||d1lxhc4jvstzrp.cloudfront.net/scripts/js3caf.js$script
 ||d24rtvkqjwgutp.cloudfront.net/*yb.js$script
 ||d24rtvkqjwgutp.cloudfront.net/cookie.html
@@ -691,7 +693,7 @@ cykla.se#@#.advertisment
 ||prisjakt-a.akamaized.net^$third-party,domain=99.se|feber.se|fz.se|idg.se|kamerabild.se|minhembio.com|mobil.se|nordichardware.se|sweclockers.com|viivilla.se
 ||sentry.io^$third-party,domain=dagensmedia.se|dplay.se|koket.se
 ||sentry-cdn.com^$third-party,domain=svd.se|koket.se
-||youbora.com^$third-party,domain=aftonbladet.se|foxtv.se|svd.se
+||youbora.com^$important,third-party,domain=aftonbladet.se|foxtv.se|svd.se
 ||zotabox.com^$third-party,domain=etunawebben.se|rapport24.com
 
 ! Common scriptlets
@@ -1460,8 +1462,6 @@ gamereactor.se###ad_mobiletopinsidetext
 /viewability.$script,important,domain=gamereactor.se
 
 ! LIFE OF SVEA
-/losad.$domain=familjeliv.se|alltforforaldrar.se|mammasidan.se|minbebis.com|devote.se
-/loada.$script,domain=alltforforaldrar.se|mammasidan.se|minbebis.com
 familjeliv.se##+js(abort-current-inline-script.js, losAd)
 familjeliv.se##a[href*="/kampanj/"]
 familjeliv.se##.flm-kampanj
@@ -1477,6 +1477,7 @@ mammasidan.se,minbebis.com,alltforforaldrar.se##.spons-artc
 mammasidan.se,minbebis.com,alltforforaldrar.se##[id*="blogg_panorama"]
 mammasidan.se,minbebis.com,alltforforaldrar.se###partnerMenuContainer
 mammasidan.se,minbebis.com,alltforforaldrar.se###partnerMenuContainerFiller
+mammasidan.se,minbebis.com,alltforforaldrar.se##a[href^="/native/"]
 alltforforaldrar.se,mammasidan.se,minbebis.com##+js(set-constant.js, advertisementText, undefined)
 @@/aff/images/*$image,domain=alltforforaldrar.se
 /js/svenskanamn_ads.$script
@@ -1681,7 +1682,7 @@ ekuriren.se,kkuriren.se,norran.se,sn.se,yelp.se###cookie-info
 alltforforaldrar.se,battrestadsdel.se,flashback.se,mammasidan.se,minbebis.com,casinoexpo.se,leta.eniro.se###top-banner
 chef.se,svd.se##.Ad
 24blekinge.se,24emmaboda.se,24falkenberg.se,24halmstad.se,24helsingborg.se,24kalmar.se,24kristianstad.se,24malmo.se,24nybro.se,24trelleborg.se,24uppsala.se,24ystad.se,24varberg.se,24oland.se,24vasteras.se,99.se,bohuslaningen.se,byggnadsarbetaren.se,cissiochfreddan.se,claudiagalliconcha.se,di.se,dn.se,ekuriren.se,folkbladet.nu,kimura.se,kkuriren.se,loppi.se,mariestadstidningen.se,markbladet.se,medievarlden.se,mestmotor.se,mobil.se,norran.se,nwt.se,paulas.me,skaraborgsbygden.se,skillingaryd.nu,sla.se,sn.se,sportbloggare.com,swedroid.se,vk.se,vimedbarn.se,gabriellajoss.me,mybabydolls.se,emilysliv.se,casinowings.se,allakorsord.se,baaam.se,dromhemochtradgard.se,elle.se,elledecoration.se,ellematovin.se,femina.se,frida.se,mabra.com,residencemagazine.se,katerinamagasin.se,dagensmedia.se,tidningenbalans.se,xn--vrnamo-bua.nu,bettingstugan.se,expressen.se##.ad
-affarsvarlden.se,arbetarskydd.se,lag-avtal.se,nickelodeon.se,nyteknik.se,vf.se,improveme.se,hjotidning.se,kt.se,sla.se,mariestadstidningen.se,filipstadstidning.se,fryksdalsbygden.se,nwt.se,arvikanyheter.se,nkp.se,saffletidningen.se,provinstidningen.se,dalslanningen.se,karlskogatidning.se,kungalvsposten.se,molndalsposten.se,lokaltidningensto.se,kungsbackaposten.se##.ad-container
+affarsvarlden.se,arbetarskydd.se,lag-avtal.se,nickelodeon.se,nyteknik.se,vf.se,improveme.se,hjotidning.se,kt.se,sla.se,mariestadstidningen.se,filipstadstidning.se,fryksdalsbygden.se,nwt.se,arvikanyheter.se,nkp.se,saffletidningen.se,provinstidningen.se,dalslanningen.se,karlskogatidning.se,kungalvsposten.se,molndalsposten.se,lokaltidningensto.se,kungsbackaposten.se,byggahus.se##.ad-container
 dn.se,klart.se,norran.se##.ad-wrapper
 brollopstorget.se,familjeliv.se##.ad_right
 24blekinge.se,24emmaboda.se,24falkenberg.se,24halmstad.se,24helsingborg.se,24kalmar.se,24kristianstad.se,24malmo.se,24nybro.se,24trelleborg.se,24uppsala.se,24ystad.se,24varberg.se,24oland.se,24vasteras.se,babyhjalp.se,branschkoll.se,fotosidan.se,moviezine.se,affarsliv.com,affarslivgotland.se,corren.se,eposten.se,folkbladet.se,helagotland.se,klackspark.com,kuriren.nu,mvt.se,norrbottensaffarer.se,nsd.se,nt.se,pt.se,unt.se,vt.se,globalportalen.org,alltomstockholm.se,mitti.se,uppgang.com,vimmerbytidning.se,osterbottenstidning.fi##.ads
@@ -2171,16 +2172,17 @@ spray.se##body:style(-webkit-user-select: text !important; user-select: text !im
 ||momondo.se/gtm/$subdocument
 ||momondo.se/ugtm/$subdocument
 /view_count/*$xmlhttprequest,domain=byggahus.se
-||byggahus.se/pixels/$subdocument
+||byggahus.se/pixels$subdocument
+@@/bhtheme/img/ad.png$image,domain=byggahus.se
+@@||byggahus.se^$generichide
 byggahus.se##.block-revive-ad
 byggahus.se##.block-partner-article
+byggahus.se##.cookie-consent
 byggahus.se##.messageAd
 byggahus.se##.messagePartner
 byggahus.se###wallpaper-ad-container
 byggahus.se##.threadPanorama
-byggahus.se###col-content:style(margin-top: 0 !important;)
 byggahus.se##.attachmentPreviewActive img:style(-webkit-filter: none !important; filter: none !important;)
-byggahus.se##+js(abort-current-inline-script.js, divWpExtra)
 metromode.se##.slick-item:has(.c-article__ad.advert)
 metromode.se##.js-blox-article:has(.c-article__ad.advert)
 metromode.se##.b-topshop
