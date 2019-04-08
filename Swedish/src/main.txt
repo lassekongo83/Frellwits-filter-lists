@@ -607,7 +607,7 @@
 @@/js/adsbygoogle.js$script,~third-party,domain=feber.se|sv.ucoin.net|tjock.se
 @@/js/advert.$script,~third-party,domain=burlovsnyheter.se
 @@/js/advertisement*.$script,~third-party,domain=dagensmedia.nu|devote.se|expressen.se|familjeliv.se|feber.se|skyddsombud24.se|tjock.se
-@@/js/advertising.$script,~third-party,domain=byggnadsarbetaren.se|cykla.se|elbilsnytt.se|svegot.se|tekniksmart.se|vi-tidningen.se|vi.se|vilaser.se
+@@/js/advertising.$script,~third-party,domain=byggnadsarbetaren.se|cykla.se|elbilsnytt.se|svegot.se|tekniksmart.se|vi-tidningen.se|vi.se|vilaser.se|snowmobile.se
 @@/scripts/advertisement*.$script,~third-party,domain=expressen.se
 @@/show_ads.js$script,~third-party,domain=happypancake.com
 @@/wp-content/*/adframe.js$script,~third-party,domain=falkopingstidning.se|jnytt.se|jp.se|skaraborgslanstidning.se|skovdenyheter.se|smalandsdagblad.se|smalanningen.se|smt.se|tranastidning.se|vastgotabladet.se|vetlandaposten.se|vn.se
@@ -693,6 +693,7 @@ cykla.se#@#.advertisment
 ||prisjakt-a.akamaized.net^$third-party,domain=99.se|feber.se|fz.se|idg.se|kamerabild.se|minhembio.com|mobil.se|nordichardware.se|sweclockers.com|viivilla.se
 ||sentry.io^$third-party,domain=dagensmedia.se|dplay.se|koket.se
 ||sentry-cdn.com^$third-party,domain=svd.se|koket.se
+||delivery.vidible.tv^$third-party,domain=teknikhype.se
 ||youbora.com^$important,third-party,domain=aftonbladet.se|foxtv.se|svd.se
 ||zotabox.com^$third-party,domain=etunawebben.se|rapport24.com
 
@@ -1267,16 +1268,9 @@ viivilla.se##+js(abort-on-property-write.js, MauticTrackingObject)
 adContainer$script,domain=dagensmedia.se
 fullpageAd$script,domain=dagensmedia.se
 widgets_native$script,domain=dagensmedia.se
-dagensmedia.se##[class^="panoramaWrapper"]
-dagensmedia.se##[class^="cookieBanner"]
-dagensmedia.se##[class^="nativeCard"]
-dagensmedia.se##[class^="fullpageAd"]
 dagensmedia.se##.slot-module
 dagensmedia.se##.slot-articlemodule
-dagensmedia.se##div[style="height:500px"]
-dagensmedia.se##div[style="height:360px"]
-dagensmedia.se##div[style="height: 500px;"]
-dagensmedia.se##div[style="height: 360px;"]
+dagensmedia.se##footer + div[class^="css-"]
 /dam/personalized/*$domain=dagensmedia.se
 aktuellhallbarhet.se##.native-article
 
@@ -2789,6 +2783,7 @@ skovdeik.se##.mlab-modal
 skovdeik.se##+js(abort-current-inline-script.js, jQuery, shareContainer)
 snowmobile.se,atvmag.se##.more-stories
 snowmobile.se,atvmag.se##.location-header_before
+snowmobile.se,atvmag.se##a[target="_blank"] > img.b-loaded
 @@||plastikoperationsforum.se^$generichide
 plastikoperationsforum.se##.block-dfp
 @@||typkanske.se^$generichide
