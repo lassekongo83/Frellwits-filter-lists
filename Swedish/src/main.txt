@@ -601,7 +601,7 @@
 @@/advertisement.js$script,~third-party,domain=blocket.se|emocore.se|kaninsajten.se|kit.se|saljplatsen.se|spela.se
 @@/assets/adsbygoogle.js$script,~third-party,domain=lonch.se
 @@/js/ad.js$~third-party,domain=sweclockers.com
-@@/js/ads.js$~third-party,domain=affarsliv.com|affarslivgotland.se|alltforforaldrar.se|alltsomsker.nu|amusetidningen.se|automobil.se|bike.se|caroftheyear.se|corren.se|deliquate.se|eposten.se|feber.se|folkbladet.se|foretagande.se|framtid.se|helagotland.se|husbilhusvagn.se|ilikeradio.se|klackspark.com|klassiker.nu|kritiker.se|kuriren.nu|ljudochbild.se|malagaguiden.se|mmabetz.se|mopedgaraget.se|mvt.se|naturvetenskap.org|norrbottensaffarer.se|nsd.se|nt.se|pt.se|rabattpris.se|radio.se|riksettan.net|snowmobile.se|svenskjakt.se|swedroid.se|tjock.se|tvmatchen.nu|unt.se|uppgang.com|uppsalatidningen.se|vibilagare.se|vimmerbytidning.se|vt.se|karlekonline.se
+@@/js/ads.js$~third-party,domain=affarsliv.com|affarslivgotland.se|alltforforaldrar.se|alltsomsker.nu|amusetidningen.se|automobil.se|bike.se|caroftheyear.se|corren.se|deliquate.se|eposten.se|feber.se|folkbladet.se|foretagande.se|framtid.se|helagotland.se|husbilhusvagn.se|ilikeradio.se|klackspark.com|klassiker.nu|kritiker.se|kuriren.nu|ljudochbild.se|malagaguiden.se|mmabetz.se|mopedgaraget.se|mvt.se|naturvetenskap.org|norrbottensaffarer.se|nsd.se|nt.se|pt.se|rabattpris.se|radio.se|riksettan.net|snowmobile.se|svenskjakt.se|swedroid.se|tjock.se|tvmatchen.nu|unt.se|uppgang.com|uppsalatidningen.se|vibilagare.se|vimmerbytidning.se|vt.se|karlekonline.se|ekuriren.se|kkuriren.se|sn.se
 @@/js/ads.min.js$~third-party,domain=sverigespelare.se
 @@/js/ads/advert.min.js$script,domain=spelo.se
 @@/js/adsbygoogle.js$script,~third-party,domain=feber.se|sv.ucoin.net|tjock.se
@@ -947,14 +947,15 @@ bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##.o
 bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##+js(abort-current-inline-script.js, _cInfo)
 bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##+js(abort-current-inline-script.js, _adform)
 bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##+js(abort-current-inline-script.js, adformLoader)
-bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##+js(abort-current-inline-script.js, runAd)
 bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##+js(abort-current-inline-script.js, adformtag, push)
 bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##+js(cookie-remover.js, /^p_f/)
-bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##+js(abort-current-inline-script.js, headerScripts, checkFrqCookie)
 bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##+js(abort-current-inline-script.js, headerScripts, checkAdBlockers)
 bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##+js(addEventListener-defuser.js, /^(?:mousemove|mouseout)$/)
-bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##+js(set-constant.js, hasAccess, true)
-bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##+js(set-constant.js, leftToRead, undefined)
+bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##+js(set-constant.js, frq, undefined)
+bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##+js(set-constant.js, frequencyModelEnabled, falseFunc)
+bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##+js(remove-attr.js, frequency-model)
+bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##+js(remove-attr.js, data-frequencymodel)
+bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##+js(remove-attr.js, data-access, [data-access="false"])
 @@||bohuslaningen.se^$generichide
 @@||gp.se^$generichide
 @@||hallandsposten.se^$generichide
@@ -1087,6 +1088,7 @@ dn.se##.article__lead:before:style(background-image: none !important;)
 dn.se##+js(abort-current-inline-script.js, DN, initAds)
 dn.se##+js(abort-current-inline-script.js, gtmData)
 dn.se##+js(remove-attr.js, data-auto-play)
+dn.se##+js(remove-attr.js, data-resource-id, [data-resource-id="dn.se-meteredmodel"])
 /analytics$script,domain=dn.se
 /initLogging$script,domain=dn.se
 /personalized/*$xmlhttprequest,domain=dn.se
@@ -1271,49 +1273,28 @@ widgets_native$script,domain=dagensmedia.se
 dagensmedia.se##.slot-module
 dagensmedia.se##.slot-articlemodule
 dagensmedia.se##footer + div[class^="css-"]
+dagensmedia.se##a[href^="/annons/"]
 /dam/personalized/*$domain=dagensmedia.se
 aktuellhallbarhet.se##.native-article
 
 ! NTM
 ||digital.ntm.eu/adn$script
-/_ad.js$important,script,domain=affarsliv.com|affarslivgotland.se|corren.se|eposten.se|folkbladet.se|gotland.net|helagotland.se|klackspark.com|kuriren.nu|mvt.se|norrbottensaffarer.se|nsd.se|nt.se|pt.se|unt.se|uppsala.com|uppsalatidningen.se|vt.se|uppgang.com|vimmerbytidning.se
-/CXense_Video_Handler/*$subdocument,domain=affarsliv.com|affarslivgotland.se|corren.se|eposten.se|folkbladet.se|helagotland.se|kuriren.nu|mvt.se|norrbottensaffarer.se|nsd.se|nt.se|pt.se|unt.se|vt.se|uppgang.com|vimmerbytidning.se
-/inc/statistic.aspx?$subdocument,domain=affarsliv.com|affarslivgotland.se|corren.se|eposten.se|folkbladet.se|helagotland.se|kuriren.nu|mvt.se|norrbottensaffarer.se|nsd.se|nt.se|pt.se|unt.se|vt.se|uppgang.com|vimmerbytidning.se
-/villapriser/*$subdocument,domain=affarsliv.com|affarslivgotland.se|corren.se|eposten.se|folkbladet.se|helagotland.se|kuriren.nu|mvt.se|norrbottensaffarer.se|nsd.se|nt.se|pt.se|unt.se|vt.se|uppgang.com|vimmerbytidning.se
+/_ad.js$important,script,domain=affarsliv.com|affarslivgotland.se|corren.se|eposten.se|folkbladet.se|gotland.net|helagotland.se|klackspark.com|kuriren.nu|mvt.se|norrbottensaffarer.se|nsd.se|nt.se|pt.se|unt.se|uppsala.com|uppsalatidningen.se|vt.se|uppgang.com|vimmerbytidning.se|ekuriren.se|kkuriren.se|sn.se
+/CXense_Video_Handler/*$subdocument,domain=affarsliv.com|affarslivgotland.se|corren.se|eposten.se|folkbladet.se|helagotland.se|kuriren.nu|mvt.se|norrbottensaffarer.se|nsd.se|nt.se|pt.se|unt.se|vt.se|uppgang.com|vimmerbytidning.se|ekuriren.se|kkuriren.se|sn.se
+/inc/statistic.aspx?$subdocument,domain=affarsliv.com|affarslivgotland.se|corren.se|eposten.se|folkbladet.se|helagotland.se|kuriren.nu|mvt.se|norrbottensaffarer.se|nsd.se|nt.se|pt.se|unt.se|vt.se|uppgang.com|vimmerbytidning.se|ekuriren.se|kkuriren.se|sn.se
+/villapriser/*$subdocument,domain=affarsliv.com|affarslivgotland.se|corren.se|eposten.se|folkbladet.se|helagotland.se|kuriren.nu|mvt.se|norrbottensaffarer.se|nsd.se|nt.se|pt.se|unt.se|vt.se|uppgang.com|vimmerbytidning.se|ekuriren.se|kkuriren.se|sn.se
 ||ntm.eu/om/img/cx/Matchad$subdocument,domain=affarsliv.com|affarslivgotland.se|corren.se|eposten.se|folkbladet.se|helagotland.se|kuriren.nu|mvt.se|norrbottensaffarer.se|nsd.se|nt.se|pt.se|unt.se|vt.se|uppgang.com|vimmerbytidning.se
-/adn_consent_override.$stylesheet,domain=affarsliv.com|affarslivgotland.se|corren.se|eposten.se|folkbladet.se|gotland.net|helagotland.se|klackspark.com|kuriren.nu|mvt.se|norrbottensaffarer.se|nsd.se|nt.se|pt.se|unt.se|uppsala.com|uppsalatidningen.se|vt.se|uppgang.com|vimmerbytidning.se
+/adn_consent_override.$stylesheet,domain=affarsliv.com|affarslivgotland.se|corren.se|eposten.se|folkbladet.se|gotland.net|helagotland.se|klackspark.com|kuriren.nu|mvt.se|norrbottensaffarer.se|nsd.se|nt.se|pt.se|unt.se|uppsala.com|uppsalatidningen.se|vt.se|uppgang.com|vimmerbytidning.se|ekuriren.se|kkuriren.se|sn.se
 norrbottensaffarer.se###naaddbox
 ##.ntm-ad
 ##img[data-original*="destination.se"]
-affarsliv.com,affarslivgotland.se,corren.se,eposten.se,folkbladet.se,helagotland.se,klackspark.com,kuriren.nu,mvt.se,norrbottensaffarer.se,nsd.se,nt.se,pt.se,unt.se,vt.se,uppgang.com,vimmerbytidning.se##.banner-column
-affarsliv.com,affarslivgotland.se,corren.se,eposten.se,folkbladet.se,helagotland.se,klackspark.com,kuriren.nu,mvt.se,norrbottensaffarer.se,nsd.se,nt.se,pt.se,unt.se,vt.se,uppgang.com,vimmerbytidning.se##.destination-border-color
-affarsliv.com,affarslivgotland.se,corren.se,eposten.se,folkbladet.se,helagotland.se,klackspark.com,kuriren.nu,mvt.se,norrbottensaffarer.se,nsd.se,nt.se,pt.se,unt.se,vt.se,uppgang.com,vimmerbytidning.se##.lunchguide
-affarsliv.com,affarslivgotland.se,corren.se,eposten.se,folkbladet.se,helagotland.se,klackspark.com,kuriren.nu,mvt.se,norrbottensaffarer.se,nsd.se,nt.se,pt.se,unt.se,vt.se,uppgang.com,vimmerbytidning.se##+js(abort-current-inline-script.js, adn, request)
-affarsliv.com,affarslivgotland.se,corren.se,eposten.se,folkbladet.se,helagotland.se,klackspark.com,kuriren.nu,mvt.se,norrbottensaffarer.se,nsd.se,nt.se,pt.se,unt.se,vt.se,uppgang.com,vimmerbytidning.se##+js(abort-current-inline-script.js, appInsights, trackPageView)
-||webimages.lokus.se^$image,important,domain=affarsliv.com|affarslivgotland.se|corren.se|eposten.se|folkbladet.se|helagotland.se|kuriren.nu|mvt.se|norrbottensaffarer.se|nsd.se|nt.se|pt.se|unt.se|vt.se|uppgang.com|vimmerbytidning.se
-||widget.boende.se^$script,domain=affarsliv.com|affarslivgotland.se|corren.se|eposten.se|folkbladet.se|helagotland.se|kuriren.nu|mvt.se|norrbottensaffarer.se|nsd.se|nt.se|pt.se|unt.se|vt.se|uppgang.com|vimmerbytidning.se
-affarsliv.com,affarslivgotland.se,corren.se,eposten.se,folkbladet.se,helagotland.se,klackspark.com,kuriren.nu,mvt.se,norrbottensaffarer.se,nsd.se,nt.se,pt.se,unt.se,vt.se,uppgang.com,vimmerbytidning.se##+js(cookie-remover.js, /^VPW/)
-affarsliv.com,affarslivgotland.se,corren.se,eposten.se,folkbladet.se,helagotland.se,klackspark.com,kuriren.nu,mvt.se,norrbottensaffarer.se,nsd.se,nt.se,pt.se,unt.se,vt.se,uppgang.com,vimmerbytidning.se##+js(setTimeout-defuser.js, timer, 100)
-
-! SÖRMLANDS MEDIA
-||static.sm.infomaker.io^$image,domain=ekuriren.se|kkuriren.se|sn.se
-/familjeannons$domain=ekuriren.se|kkuriren.se|sn.se
-/?file=bostadsnurra$subdocument,domain=ekuriren.se|kkuriren.se|sn.se
-ekuriren.se,kkuriren.se,sn.se##.article--ad
-ekuriren.se,kkuriren.se,sn.se##div[class^="ew-bottom-ad"]
-ekuriren.se,kkuriren.se,sn.se##.match-ad
-ekuriren.se,kkuriren.se,sn.se##.match-ad-article
-ekuriren.se,kkuriren.se,sn.se##.native-ad-top
-ekuriren.se,kkuriren.se,sn.se###lokusmotor
-ekuriren.se,kkuriren.se,sn.se###lokusJobb
-ekuriren.se,kkuriren.se,sn.se###bostad
-ekuriren.se,kkuriren.se,sn.se###citygate-family-widgetframe
-ekuriren.se,kkuriren.se,sn.se##.iframe-widget[data-src*="widget.citygate.se"]
-ekuriren.se,kkuriren.se,sn.se##+js(cookie-remover.js, fm_cookie)
-ekuriren.se,kkuriren.se,sn.se##+js(set-constant.js, fm, undefined)
-@@||ekuriren.se^$generichide
-@@||kkuriren.se^$generichide
-@@||sn.se^$generichide
+affarsliv.com,affarslivgotland.se,corren.se,eposten.se,folkbladet.se,helagotland.se,klackspark.com,kuriren.nu,mvt.se,norrbottensaffarer.se,nsd.se,nt.se,pt.se,unt.se,vt.se,uppgang.com,vimmerbytidning.se,ekuriren.se,kkuriren.se,sn.se##.banner-column
+affarsliv.com,affarslivgotland.se,corren.se,eposten.se,folkbladet.se,helagotland.se,klackspark.com,kuriren.nu,mvt.se,norrbottensaffarer.se,nsd.se,nt.se,pt.se,unt.se,vt.se,uppgang.com,vimmerbytidning.se,ekuriren.se,kkuriren.se,sn.se##.destination-border-color
+affarsliv.com,affarslivgotland.se,corren.se,eposten.se,folkbladet.se,helagotland.se,klackspark.com,kuriren.nu,mvt.se,norrbottensaffarer.se,nsd.se,nt.se,pt.se,unt.se,vt.se,uppgang.com,vimmerbytidning.se,ekuriren.se,kkuriren.se,sn.se##.lunchguide
+||webimages.lokus.se^$image,important,domain=affarsliv.com|affarslivgotland.se|corren.se|eposten.se|folkbladet.se|helagotland.se|kuriren.nu|mvt.se|norrbottensaffarer.se|nsd.se|nt.se|pt.se|unt.se|vt.se|uppgang.com|vimmerbytidning.se|ekuriren.se|kkuriren.se|sn.se
+||widget.boende.se^$script,domain=affarsliv.com|affarslivgotland.se|corren.se|eposten.se|folkbladet.se|helagotland.se|kuriren.nu|mvt.se|norrbottensaffarer.se|nsd.se|nt.se|pt.se|unt.se|vt.se|uppgang.com|vimmerbytidning.se|ekuriren.se|kkuriren.se|sn.se
+affarsliv.com,affarslivgotland.se,corren.se,eposten.se,folkbladet.se,helagotland.se,klackspark.com,kuriren.nu,mvt.se,norrbottensaffarer.se,nsd.se,nt.se,pt.se,unt.se,vt.se,uppgang.com,vimmerbytidning.se,ekuriren.se,kkuriren.se,sn.se##+js(cookie-remover.js, /^VPW/)
+affarsliv.com,affarslivgotland.se,corren.se,eposten.se,folkbladet.se,helagotland.se,klackspark.com,kuriren.nu,mvt.se,norrbottensaffarer.se,nsd.se,nt.se,pt.se,unt.se,vt.se,uppgang.com,vimmerbytidning.se,ekuriren.se,kkuriren.se,sn.se##+js(setTimeout-defuser.js, timer, 100)
 
 ! GOTA MEDIA/MK WEBB/NWT
 7ha.se,barometern.se,blt.se,bt.se,kristianstadsbladet.se,olandsbladet.se,ostrasmaland.se,smp.se,sydostran.se,trelleborgsallehanda.se,ut.se,ystadsallehanda.se##div[id*="marknadsguiden"]
@@ -1679,7 +1660,7 @@ chef.se,svd.se##.Ad
 affarsvarlden.se,arbetarskydd.se,lag-avtal.se,nickelodeon.se,nyteknik.se,vf.se,improveme.se,hjotidning.se,kt.se,sla.se,mariestadstidningen.se,filipstadstidning.se,fryksdalsbygden.se,nwt.se,arvikanyheter.se,nkp.se,saffletidningen.se,provinstidningen.se,dalslanningen.se,karlskogatidning.se,kungalvsposten.se,molndalsposten.se,lokaltidningensto.se,kungsbackaposten.se,byggahus.se##.ad-container
 dn.se,klart.se,norran.se##.ad-wrapper
 brollopstorget.se,familjeliv.se##.ad_right
-24blekinge.se,24emmaboda.se,24falkenberg.se,24halmstad.se,24helsingborg.se,24kalmar.se,24kristianstad.se,24malmo.se,24nybro.se,24trelleborg.se,24uppsala.se,24ystad.se,24varberg.se,24oland.se,24vasteras.se,babyhjalp.se,branschkoll.se,fotosidan.se,moviezine.se,affarsliv.com,affarslivgotland.se,corren.se,eposten.se,folkbladet.se,helagotland.se,klackspark.com,kuriren.nu,mvt.se,norrbottensaffarer.se,nsd.se,nt.se,pt.se,unt.se,vt.se,globalportalen.org,alltomstockholm.se,mitti.se,uppgang.com,vimmerbytidning.se,osterbottenstidning.fi##.ads
+24blekinge.se,24emmaboda.se,24falkenberg.se,24halmstad.se,24helsingborg.se,24kalmar.se,24kristianstad.se,24malmo.se,24nybro.se,24trelleborg.se,24uppsala.se,24ystad.se,24varberg.se,24oland.se,24vasteras.se,babyhjalp.se,branschkoll.se,fotosidan.se,moviezine.se,affarsliv.com,affarslivgotland.se,corren.se,eposten.se,folkbladet.se,helagotland.se,klackspark.com,kuriren.nu,mvt.se,norrbottensaffarer.se,nsd.se,nt.se,pt.se,unt.se,vt.se,globalportalen.org,alltomstockholm.se,mitti.se,uppgang.com,vimmerbytidning.se,osterbottenstidning.fi,ekuriren.se,kkuriren.se,sn.se##.ads
 mestmotor.se,nyheter24.se,modette.se,vagabond.se,cafe.se##.advertisement
 agriprim.se,bike.se,e.se,entreprenadaktuellt.se,husbilhusvagn.se,ja.se,klassiker.nu,maskinstationerna.se,mopedgaraget.se,norran.se,nyckelspel.se,skogsaktuellt.se,spelo.se,sweclockers.com,vaken.se,vibilagare.se,lovelylife.se,bettips.se,caroftheyear.se,maskinbladet.se,automobil.se,ljuskultur.se,lokalguiden.se,fightermag.se,riksettan.net,frillesasbandy.se,scanaktier.se,boxerville.se,livsmedel.se##.banner
 etn.se,uppsalanyheter.se##.banneritem
@@ -1798,10 +1779,10 @@ vidbox.co,oload.stream##+js(setInterval-defuser.js, check)
 ||swesub.n*^$csp=script-src 'none'
 
 ! Various annoyances
-youplay.se,nyheter24.se,modette.se,filmtipset.se,affarsliv.com,affarslivgotland.se,corren.se,eposten.se,folkbladet.se,helagotland.se,klackspark.com,kuriren.nu,mvt.se,norrbottensaffarer.se,nsd.se,nt.se,pt.se,unt.se,vt.se,uppgang.com,vimmerbytidning.se,vf.se,hjotidning.se,kt.se,sla.se,mariestadstidningen.se,filipstadstidning.se,fryksdalsbygden.se,nwt.se,arvikanyheter.se,nkp.se,saffletidningen.se,provinstidningen.se,dalslanningen.se,karlskogatidning.se,skd.se,nsk.se,affarsvarlden.se##+js(set-constant.js, youplay.helpers.disableRightClick, noopFunc)
-youplay.se,nyheter24.se,modette.se,filmtipset.se,affarsliv.com,affarslivgotland.se,corren.se,eposten.se,folkbladet.se,helagotland.se,klackspark.com,kuriren.nu,mvt.se,norrbottensaffarer.se,nsd.se,nt.se,pt.se,unt.se,vt.se,uppgang.com,vimmerbytidning.se,vf.se,hjotidning.se,kt.se,sla.se,mariestadstidningen.se,filipstadstidning.se,fryksdalsbygden.se,nwt.se,arvikanyheter.se,nkp.se,saffletidningen.se,provinstidningen.se,dalslanningen.se,karlskogatidning.se,skd.se,nsk.se,affarsvarlden.se##+js(set-constant.js, youplay.helpers.tabActive, noopFunc)
-youplay.se,nyheter24.se,modette.se,filmtipset.se,affarsliv.com,affarslivgotland.se,corren.se,eposten.se,folkbladet.se,helagotland.se,klackspark.com,kuriren.nu,mvt.se,norrbottensaffarer.se,nsd.se,nt.se,pt.se,unt.se,vt.se,uppgang.com,vimmerbytidning.se,vf.se,hjotidning.se,kt.se,sla.se,mariestadstidningen.se,filipstadstidning.se,fryksdalsbygden.se,nwt.se,arvikanyheter.se,nkp.se,saffletidningen.se,provinstidningen.se,dalslanningen.se,karlskogatidning.se,skd.se,nsk.se,affarsvarlden.se##+js(set-constant.js, youplay.helpers.getTrackUrl, noopFunc)
-youplay.se,nyheter24.se,modette.se,filmtipset.se,affarsliv.com,affarslivgotland.se,corren.se,eposten.se,folkbladet.se,helagotland.se,klackspark.com,kuriren.nu,mvt.se,norrbottensaffarer.se,nsd.se,nt.se,pt.se,unt.se,vt.se,uppgang.com,vimmerbytidning.se,vf.se,hjotidning.se,kt.se,sla.se,mariestadstidningen.se,filipstadstidning.se,fryksdalsbygden.se,nwt.se,arvikanyheter.se,nkp.se,saffletidningen.se,provinstidningen.se,dalslanningen.se,karlskogatidning.se,skd.se,nsk.se,affarsvarlden.se##+js(set-constant.js, youplay.helpers.trackUrls, noopFunc)
+youplay.se,nyheter24.se,modette.se,filmtipset.se,affarsliv.com,affarslivgotland.se,corren.se,eposten.se,folkbladet.se,helagotland.se,klackspark.com,kuriren.nu,mvt.se,norrbottensaffarer.se,nsd.se,nt.se,pt.se,unt.se,vt.se,uppgang.com,vimmerbytidning.se,vf.se,hjotidning.se,kt.se,sla.se,mariestadstidningen.se,filipstadstidning.se,fryksdalsbygden.se,nwt.se,arvikanyheter.se,nkp.se,saffletidningen.se,provinstidningen.se,dalslanningen.se,karlskogatidning.se,skd.se,nsk.se,affarsvarlden.se,ekuriren.se,kkuriren.se,sn.se##+js(set-constant.js, youplay.helpers.disableRightClick, noopFunc)
+youplay.se,nyheter24.se,modette.se,filmtipset.se,affarsliv.com,affarslivgotland.se,corren.se,eposten.se,folkbladet.se,helagotland.se,klackspark.com,kuriren.nu,mvt.se,norrbottensaffarer.se,nsd.se,nt.se,pt.se,unt.se,vt.se,uppgang.com,vimmerbytidning.se,vf.se,hjotidning.se,kt.se,sla.se,mariestadstidningen.se,filipstadstidning.se,fryksdalsbygden.se,nwt.se,arvikanyheter.se,nkp.se,saffletidningen.se,provinstidningen.se,dalslanningen.se,karlskogatidning.se,skd.se,nsk.se,affarsvarlden.se,ekuriren.se,kkuriren.se,sn.se##+js(set-constant.js, youplay.helpers.tabActive, noopFunc)
+youplay.se,nyheter24.se,modette.se,filmtipset.se,affarsliv.com,affarslivgotland.se,corren.se,eposten.se,folkbladet.se,helagotland.se,klackspark.com,kuriren.nu,mvt.se,norrbottensaffarer.se,nsd.se,nt.se,pt.se,unt.se,vt.se,uppgang.com,vimmerbytidning.se,vf.se,hjotidning.se,kt.se,sla.se,mariestadstidningen.se,filipstadstidning.se,fryksdalsbygden.se,nwt.se,arvikanyheter.se,nkp.se,saffletidningen.se,provinstidningen.se,dalslanningen.se,karlskogatidning.se,skd.se,nsk.se,affarsvarlden.se,ekuriren.se,kkuriren.se,sn.se##+js(set-constant.js, youplay.helpers.getTrackUrl, noopFunc)
+youplay.se,nyheter24.se,modette.se,filmtipset.se,affarsliv.com,affarslivgotland.se,corren.se,eposten.se,folkbladet.se,helagotland.se,klackspark.com,kuriren.nu,mvt.se,norrbottensaffarer.se,nsd.se,nt.se,pt.se,unt.se,vt.se,uppgang.com,vimmerbytidning.se,vf.se,hjotidning.se,kt.se,sla.se,mariestadstidningen.se,filipstadstidning.se,fryksdalsbygden.se,nwt.se,arvikanyheter.se,nkp.se,saffletidningen.se,provinstidningen.se,dalslanningen.se,karlskogatidning.se,skd.se,nsk.se,affarsvarlden.se,ekuriren.se,kkuriren.se,sn.se##+js(set-constant.js, youplay.helpers.trackUrls, noopFunc)
 saraabrahamsson.se,eurosport.se,jawcloud.co,openload.co,oload.stream,streamango.com,rapidvideo.com,nxload.com##+js(addEventListener-defuser.js, contextmenu)
 ! Annoying, unecessary, and completely unrelated autoplaying video
 ||youplay.se^$third-party,domain=hamsterpaj.net|emocore.se|dayviews.com|kamrat.com|familjeliv.se
