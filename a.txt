@@ -48,6 +48,7 @@ imgur.com##^script:has-text(loaderFrameWindow)
 imgur.com##a[href="/apps"][target="_blank"]:style(pointer-events: none !important; cursor: default !important;)
 imgur.com##.post-banner
 /ad-free/image.png$domain=imgur.com
+imgur.com###apocalypse-cta
 
 ! NEOWIN
 neowin.net##article.news-item:has(a[href*="neowin-deals"])
@@ -115,8 +116,11 @@ reddit.com##.give-gold-button
 reddit.com##.native-ad-container
 reddit.com##a.redesign-beta-optin
 reddit.com##.premium-banner
+reddit.com##.infobar.onboardingbar.redesignNightmodeBar, .infobar.onboardingbar.redesignInfiniteScroll
 ! Block reddit users
 reddit.com##div.thing[data-author="udda_boktips"]
+! adds a simple color to some websites promoting an "us vs them" propaganda
+reddit.com##.thing[data-url*="friatider"], .thing[data-url*="samnytt"], .thing[data-url*="nyadagbladet"], .thing[data-url*="expo.se"], .thing[data-url*="etc.se"]:style(background-color: rgba(250, 0, 0, 0.1) !important;)
 
 ! Google and Youtube
 developers.google.com##.devsite-notification-eu-cookie.devsite-notification-promo
@@ -262,6 +266,7 @@ gp.se##[class^="premium-splash"]
 gp.se##.frequency-model__notice
 gfycat.com##.upnext-container
 gfycat.com##.related-content
+||ga.gfycat.com^$subdocument,script,xhr
 warcraftlogs.com##script:inject(setTimeout-defuser.js, ad)
 dragoninquisition.com##script:inject(abort-current-inline-script.js, anOptions)
 ||aaxads.com^
@@ -293,6 +298,8 @@ bing.com###thp_notf_div
 ica.se##.digital-coupon
 ica.se##.recipe-ad
 ||static.codepen.io/assets/common/cookie_used_reload$script
+engadget.com##html:style(display: initial !important;)
+sweclockers.com#@#a[title="Youtube"]
 
 ! Misc HTML filters
 !#if env_firefox
