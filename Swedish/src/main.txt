@@ -1084,12 +1084,12 @@ dn.se##.bottom-bar--visible
 dn.se##.chosen-for-you
 dn.se##.takeover-modal
 dn.se##.easter-modal
-dn.se##body:style(overflow-y: auto !important; position: initial !important;)
-dn.se##.article__lead:before:style(background-image: none !important;)
-dn.se##+js(abort-current-inline-script.js, DN, initAds)
-dn.se##+js(abort-current-inline-script.js, gtmData)
-dn.se##+js(remove-attr.js, data-auto-play)
-dn.se##+js(remove-attr.js, data-resource-id, [data-resource-id="dn.se-meteredmodel"])
+dn.se,~ext.dn.se##body:style(overflow-y: auto !important; position: initial !important;)
+dn.se,~ext.dn.se##.article__lead:before:style(background-image: none !important;)
+dn.se,~ext.dn.se##+js(abort-current-inline-script.js, DN, initAds)
+dn.se,~ext.dn.se##+js(abort-current-inline-script.js, gtmData)
+dn.se,~ext.dn.se##+js(remove-attr.js, data-auto-play)
+dn.se,~ext.dn.se##+js(remove-attr.js, data-resource-id, [data-resource-id="dn.se-meteredmodel"])
 /analytics$script,domain=dn.se
 /initLogging$script,domain=dn.se
 /personalized/*$xmlhttprequest,domain=dn.se
@@ -1549,8 +1549,7 @@ fria.nu,goteborgsfria.se,friatidningen.se,landetsfria.se,stockholmsfria.se,sesam
 
 ! MTG/VIASAT
 /linktag2.js$script,important,domain=viafree.se
-||freewheel-mtgx-tv.akamaized.net^$image,domain=viafree.se
-||freewheel-mtgx-tv.akamaized.net^$media,redirect=noopmp3-0.1s,domain=viafree.se
+||freewheel-mtgx-tv.akamaized.net^$image,media,domain=viafree.se
 @@||fwmrm.net/ad/$xmlhttprequest,domain=viafree.se
 @@||fwmrm.net/crossdomain.xml$xmlhttprequest,domain=viafree.se
 viafree.se##.pause-ad
@@ -1558,6 +1557,12 @@ viafree.se##.ad-click-through
 viafree.se##.avodp.pause-ad-showing .vjs-progress-control, .avodp.ad-playing .vjs-progress-control:style(display: initial !important;)
 ||avod-fw-config.mtg-api.com^$xhr,important,domain=viafree.se
 ||viafree.se/collect$xhr,important
+||fwmrm.net^*/admanager.js$domain=viafree.se,important
+||cdn.ravenjs.com^$script,domain=viafree.se
+viafree.se##+js(setTimeout-defuser.js, r, 0)
+viafree.se##+js(addEventListener-defuser.js, error, (t,n))
+viafree.se##+js(addEventListener-defuser.js, /^ad/)
+viafree.se##+js(addEventListener-defuser.js, /^media/)
 
 ! EVERYSPORT
 tvmatchen.nu###before-matches
