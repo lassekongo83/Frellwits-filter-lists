@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Title: Frellwit's Swedish Filter
 ! Expires: 3 days (update frequency)
-! Last modified: 2019-04-13 17:10:04 CEST
+! Last modified: 2019-04-14 08:56:20 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -117,6 +117,7 @@
 *$object,object-subrequest,domain=autolife.se|internetlankar.se
 -ads.$image,domain=svenskbyggtidning.se
 -banner-$image,domain=litteraturmagazinet.se
+-prd-se-$xmlhttprequest,domain=hamnenplay.solidtango.com
 .com/annons.$script,subdocument
 .nu/annons/
 .se/*/nativeadvertising/
@@ -166,6 +167,7 @@
 /ads/*$image,domain=bildelsbasen.se|golfbladet.se
 /adsLoader.$script,~third-party,domain=booli.se
 /adv_utils.$script,domain=viivilla.se
+/advisible.js$script,domain=goteborgdirekt.se|stockholmdirekt.se
 /affiliate/*$image,domain=minfil.com
 /agi-annons$domain=capdesign.se
 /ajax.php?action=fetch_from_google_analytics$xmlhttprequest,domain=falkopingstidning.se|jnytt.se|jp.se|skaraborgslanstidning.se|skovdenyheter.se|smalandsdagblad.se|smalanningen.se|smt.se|tranastidning.se|vastgotabladet.se|vetlandaposten.se|vn.se
@@ -440,7 +442,7 @@
 /plugins/loppi-cookie-consent/*$script
 /plugins/mailpoet/*$script,domain=opulens.se
 /plugins/mashshare-google-analytics/*
-/plugins/mashsharer/*$script,domain=scrollat.se
+/plugins/mashsharer/*$script,domain=dagensknep.se|djursidan.se|mumsigast.se|mysigast.se|scrollat.se
 /plugins/metro-affiliate/*$script,domain=metromode.se
 /plugins/mitti-cookie-disclaimer/*$script,domain=alltomstockholm.se|mitti.se
 /plugins/mitti-oath-cmpi-js/*$domain=alltomstockholm.se|mitti.se
@@ -489,6 +491,7 @@
 /plugins/yeloni-free-exit-popup/*
 /popup/follow-us-fb.$xmlhttprequest,domain=tasteline.com
 /Portalannonser/*$image
+/postscribe.$script,domain=linnherbertsson.se
 /prerolls/*$domain=gamereactor.se
 /privacy/notification?$xmlhttprequest,domain=aftonbladet.se
 /prod/adform$xmlhttprequest
@@ -496,6 +499,7 @@
 /pulse_flash_ad*.swf$object,domain=svd.se
 /pulsetracking.$script,domain=aftonbladet.se
 /pum/*$script,domain=byggipedia.se|opulens.se|tkj.se
+/pum/*$stylesheet,domain=it-finans.se|it-halsa.se|it-kanalen.se|it-pedagogen.se|it-retail.se
 /PUSHNOTIFICATIONS_CONSENT$xmlhttprequest,domain=njus.me
 /qualp.$script,domain=expressen.se
 /QXA.$script,domain=qruiser.com|qx.se
@@ -898,6 +902,7 @@ byggnyheter.se,dagensfastigheter.se,dagensnaringsliv.se,energinyheter.se,industr
 byggnyheter.se,dagensfastigheter.se,dagensnaringsliv.se,energinyheter.se,industrinyheter.se,infrastrukturnyheter.se,inredningsnyheter.se,jarnvagsnyheter.se,metallerochgruvor.se,papperochmassa.se,solenerginyheter.se,sportochfritidsnyheter.se,stockholmsbyggnyheter.se,transportochlogistik.se,vindkraftsnyheter.se##[id^="dfptag"]
 byggnyheter.se,dagensfastigheter.se,dagensnaringsliv.se,energinyheter.se,industrinyheter.se,infrastrukturnyheter.se,inredningsnyheter.se,jarnvagsnyheter.se,metallerochgruvor.se,papperochmassa.se,solenerginyheter.se,sportochfritidsnyheter.se,stockholmsbyggnyheter.se,transportochlogistik.se,vindkraftsnyheter.se##[id^="mainadvertorial"]
 byggteknikforlaget.se##a[href*=".se/annons/"]
+byggteknikforlaget.se,hypeline.se,maklarvarlden.se,skidresultat.se,uppslaget.se##.annons
 bytbil.com###privacyModal
 cafe.se##.card-partner
 cafe.se##[class^="oath-dac-"]
@@ -1070,6 +1075,7 @@ falkopingstidning.se,jnytt.se,jp.se,skaraborgslanstidning.se,skovdenyheter.se,sm
 familjeliv.se##.flm-kampanj
 familjeliv.se##a[href*="/kampanj/"]
 familjesidan.se##.cookies-wrapper
+fastighetsnytt.se##.aside > .widget_text
 fastighetsnytt.se##.promobox
 fastighetssverige.se##.bnr_box
 fastighetssverige.se##.partnerTextsSlider
@@ -1182,6 +1188,7 @@ grillbloggen.nu##.rstbox
 grontvader.se##app-cookies
 hallakonsument.se##.cookie-information
 hamnenplay.solidtango.com##.ads-click-overlay
+hamnenplay.solidtango.com##.ads-overlay
 hamsterpaj.net###accept-cookies
 hamsterpaj.net###sidebar_wrapper > .zone:last-child
 handbollskanalen.se##.hb-adlabel
@@ -1216,7 +1223,6 @@ hugorosas.se##article.category-samarbete
 hujada.nu##.adds-block
 husbil.se,husvagn.se,karlskrona.com,karlstad.com,noje.se,stockholm.com##.ui-optin-wrapper
 hypeline.se###herobanner
-hypeline.se,maklarvarlden.se,skidresultat.se,uppslaget.se##.annons
 iabsverige.se###load
 ica.se##.recipe-ad
 idg.se##.nextArticleSp
@@ -1237,6 +1243,7 @@ intebitter.com##.wpcnt
 ipo.se##.tag-sponsrad
 isabellalowengrip.se##.popup-block
 isabellalowengrip.se,itrace.se,vitalisfoto.se###preloader
+it-finans.se,it-halsa.se,it-kanalen.se,it-pedagogen.se,it-retail.se,ordfrontmagasin.se##.pum-overlay
 jaktplay.se##.jaktplay-ad
 jaktsidan.se##[data-role="sidebarAd"]
 javligtgott.se##a[href="https://klimatkompensera.se"]
@@ -1311,6 +1318,7 @@ loppi.se##.entry__teaser--promotion
 loppi.se##.page__ad
 lundagard.se###bdCheckAlso.bdCheckAlsoShow
 lundagard.se##.theiaStickySidebar > .widget_sp_image:not(.bd-slider):not(.timeline-widget)
+lundagard.se##.theiaStickySidebar > [id^="media_image"]:not(.bd-slider):not(.timeline-widget)
 magasinetparagraf.se###large_banner
 maipenrai.se###elGuestTerms
 maipenrai.se##[data-nbenhadv]
@@ -1322,6 +1330,7 @@ markbladet.se###small_yellowbox
 market.se###newsletter-rollup
 market.se##[id^="fusion_ad"]
 market.se##article[about^="/annons/"]
+marsta.nu###secondary-content > .panel--naringsliv
 marsta.nu##.outsider
 matklubben.se##.notification.cookies
 medievarlden.se##.cookie-widget
@@ -1378,6 +1387,7 @@ mobil.se##.pspy_info
 mobil.se##a[href^="/partner/"]
 mobil.se##li.partner
 mobil.se##li.teaser.Partner
+moderaterna.se##.o-takeover
 moderaterna.se##.sliding-popup-bottom
 modette.se##article.article-true-native
 motormagasinet.se##[id^="dfp-a1p"]
@@ -1423,6 +1433,7 @@ nyheter24.se##section:last-of-type > [class^="code_plugin_content"]
 nyhetersto.se##a[href*="/reklam/"]
 omni.se##.article--sponsored
 omni.se##.resource--sponsored
+onlinepizza.se##.top-banner-container
 opulens.se##.google-plus
 opulens.se##.header-social-icons
 opulens.se##.mailpoet_form
@@ -1430,7 +1441,6 @@ opulens.se##.s-social
 opulens.se##.side-box.opule-widget
 opulens.se##.social-btn
 opulens.se##a[href$="Opulens_Banner"]
-ordfrontmagasin.se##.pum-overlay
 orebronyheter.com###top-wrapper
 osterbottenstidning.fi,vasabladet.fi##.dialogue-content
 osterbottenstidning.fi,vasabladet.fi##.dialogue-footer
@@ -1757,6 +1767,7 @@ yougov.se##.cookie-confirm
 ||casinotoplists.com^$third-party
 ||cdn-sitegainer.com/sitegainer$script
 ||cdn.advisible.com/accl$script
+||cdn.ampproject.org^$third-party,domain=piraja.se
 ||cdn.axiell.com^*/cookie-disclaimer.$script
 ||cdn.iubenda.com/iubenda.$script
 ||cdn.jsdelivr.net/npm/search-insights$script,domain=forum.hallon.se
@@ -1897,6 +1908,7 @@ yougov.se##.cookie-confirm
 ||handbollskanalen.se^*/esmg/se-$script
 ||happygreen.se^$third-party
 ||hapyak.com^$third-party
+||hbid.*.digitaloceanspaces.com^$third-party
 ||headbidder.net^$third-party
 ||hello.myfonts.net/count/$stylesheet
 ||heroaffiliates.com^$third-party
@@ -2119,6 +2131,7 @@ yougov.se##.cookie-confirm
 ||sprinkletxt.com^$third-party
 ||stat-api.tv4play.se^$image
 ||stat.modette.se^
+||static.blogg.se/shared/js/bloggse.js$script
 ||static.influencersofsweden.se/js/inos.$script
 ||static.stp.nwt.se/static-assets$script,domain=arvikanyheter.se|dalslanningen.se|filipstadstidning.se|fryksdalsbygden.se|hjotidning.se|karlskogatidning.se|kt.se|mariestadstidningen.se|nkp.se|nwt.se|provinstidningen.se|saffletidningen.se|sla.se|vf.se
 ||static.zbcdn2.net^$script,domain=rapport24.com
