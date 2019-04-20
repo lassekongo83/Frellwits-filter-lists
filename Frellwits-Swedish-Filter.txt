@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Title: Frellwit's Swedish Filter
 ! Expires: 3 days (update frequency)
-! Last modified: 2019-04-18 08:40:49 CEST
+! Last modified: 2019-04-20 05:42:56 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -289,10 +289,11 @@
 /gpAnalytics/*$script
 /gplus.php$script,domain=fria.nu|friatidningen.se|goteborgsfria.se|landetsfria.se|sesam.nu|stockholmsfria.se
 /gtm-$script,domain=popmuzik.se
+/gtm.js?$script,~third-party,domain=tui.se
 /hapyak.js$script,domain=viktvaktarna.se
 /headerbidding.js$script
 /helios/multiad_jquery.$script
-/i10c@p1/*$domain=bax-shop.se|digikey.se|justfab.se
+/i10c@p1/*$domain=bax-shop.se|digikey.se|justfab.se|tui.se
 /iab/iab.js$script
 /idg-dfp-minified/*
 /iframeadvloader.$script,domain=viivilla.se
@@ -702,7 +703,6 @@
 @@||nordichardware.se^$generichide
 @@||norran.se^$generichide
 @@||nouw.com^$generichide
-@@||opinionstage.com^$domain=99.se|fz.se|sweclockers.com
 @@||opulens.se^$generichide
 @@||plastikoperationsforum.se^$generichide
 @@||pomu.se^$generichide
@@ -2059,6 +2059,7 @@ yougov.se##.cookie-confirm
 ||obj.fotosidan.se/obj/pa/$image
 ||omni-ads.omni.news^
 ||openload.co/assets/js/video-js/vast$script
+||opinionstage.com/assets/autoengage.$script
 ||optnmnstr.com^$third-party
 ||organicfruitapps.com/analytics$image
 ||oribi.io^$third-party
