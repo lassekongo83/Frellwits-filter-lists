@@ -725,8 +725,8 @@ allehanda.se,arbetarbladet.se,avestatidning.com,bblat.se,dalademokraten.se,dt.se
 datormagazin.se,skanesport.se##+js(abort-on-property-read.js, advads)
 dagensps.se,tasteline.com##+js(abort-current-inline-script.js, Fusion, loadAds)
 popmuzik.se##+js(abort-current-inline-script.js, _fbq)
-undertian.com,villaliv.se,newsner.com,humorbibeln.se,sportbibeln.se,ettgottskratt.se,sportpanelen.se,kvalitetsmagasinet.se,bandyfeber.com,telekomidag.se,miljo-utveckling.se,vdtidningen.se,dagensanalys.se,ladok.se,binero.se,rikatillsammans.se,zeinaskitchen.se,dinbyggare.se,kvartal.se,trafiksakerhet.se,i-chalmers.se##+js(set-constant.js, mi_track_user, false)
-undertian.com,villaliv.se,newsner.com,humorbibeln.se,sportbibeln.se,ettgottskratt.se,sportpanelen.se,kvalitetsmagasinet.se,bandyfeber.com,telekomidag.se,miljo-utveckling.se,vdtidningen.se,dagensanalys.se,ladok.se,binero.se,rikatillsammans.se,zeinaskitchen.se,dinbyggare.se,kvartal.se,trafiksakerhet.se,i-chalmers.se##+js(abort-current-inline-script.js, monsterinsights_frontend)
+undertian.com,newsner.com,humorbibeln.se,sportbibeln.se,ettgottskratt.se,sportpanelen.se,kvalitetsmagasinet.se,bandyfeber.com,telekomidag.se,miljo-utveckling.se,vdtidningen.se,dagensanalys.se,ladok.se,binero.se,rikatillsammans.se,zeinaskitchen.se,dinbyggare.se,kvartal.se,trafiksakerhet.se,i-chalmers.se##+js(set-constant.js, mi_track_user, false)
+undertian.com,newsner.com,humorbibeln.se,sportbibeln.se,ettgottskratt.se,sportpanelen.se,kvalitetsmagasinet.se,bandyfeber.com,telekomidag.se,miljo-utveckling.se,vdtidningen.se,dagensanalys.se,ladok.se,binero.se,rikatillsammans.se,zeinaskitchen.se,dinbyggare.se,kvartal.se,trafiksakerhet.se,i-chalmers.se##+js(abort-current-inline-script.js, monsterinsights_frontend)
 mkse.com,nyadagbladet.se,senses.se,mobilanyheter.net##+js(abort-current-inline-script.js, anOptions)
 magasinetparagraf.se,senses.se,scrollat.se##+js(abort-current-inline-script.js, _stq)
 pomu.se,video-static.tunnl.com,bioenergitidningen.se,weheartit.com##+js(set-constant.js, canRunAds, true)
@@ -895,8 +895,8 @@ bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##^s
 digikey.se,bax-shop.se,tui.se##^script:has-text(i10cdone)
 digikey.se,bax-shop.se,justfab.se,tui.se##^script:has-text(INSTART.Init)
 lundagard.se##^script:has-text(var _0x)
-undertian.com,villaliv.se,newsner.com,humorbibeln.se,sportbibeln.se,ettgottskratt.se,sportpanelen.se,kvalitetsmagasinet.se,bandyfeber.com,telekomidag.se,miljo-utveckling.se,vdtidningen.se,dagensanalys.se##^script:has-text(mi_track_user)
-undertian.com,villaliv.se,newsner.com,humorbibeln.se,sportbibeln.se,ettgottskratt.se,sportpanelen.se,kvalitetsmagasinet.se,bandyfeber.com,telekomidag.se,miljo-utveckling.se,vdtidningen.se,dagensanalys.se##^script:has-text(monsterinsights_frontend)
+undertian.com,newsner.com,humorbibeln.se,sportbibeln.se,ettgottskratt.se,sportpanelen.se,kvalitetsmagasinet.se,bandyfeber.com,telekomidag.se,miljo-utveckling.se,vdtidningen.se,dagensanalys.se##^script:has-text(mi_track_user)
+undertian.com,newsner.com,humorbibeln.se,sportbibeln.se,ettgottskratt.se,sportpanelen.se,kvalitetsmagasinet.se,bandyfeber.com,telekomidag.se,miljo-utveckling.se,vdtidningen.se,dagensanalys.se##^script:has-text(monsterinsights_frontend)
 dreamfilm.*,jawcloud.co,nyafilmer.*##^script:has-text(_Hasync)
 nyafilmer.*##^script:has-text(blockerDetected)
 nyafilmer.*##^script:has-text(OneSignal)
@@ -906,6 +906,7 @@ streamtajm.*##^script:has-text(var TID=)
 
 ! Firefox mobile filters
 !#if env_mobile
+aftonbladet.se##div[data-reactroot] > div > div#MegaAd ~ div[class]:not(#header):not(.abThemeGradientPage)
 swedroid.se##div[id$="_ad_mobile"]
 ikea.com##.cookie-info__panel--show
 /sv/local-extensions/header-footer/scripts/adform/*$domain=ikea.com
@@ -1051,16 +1052,16 @@ tv.nu###app > div > div:last-child:not(:first-child)
 tv.nu##.gdpr-bar-wrapper
 ||logger.tv.nu^$script
 /campaigns.js$script,domain=blocket.se
-/utag*.js$script,domain=blocket.se
+/utag.$script,domain=blocket.se
 /appnexus$script,domain=blocket.se|minhembio.com|bytbil.com|aftonbladet.se
 ||blocket.se/inverted_classifieds.html
-||blocket.com/fif.html?
 ||blocket.com/boost.html^$subdocument
 /none.gif$image,domain=blocket.se
 blocket.se###index_panorama
 blocket.se###li_panorama
 blocket.se###vi_panorama
 blocket.se##[id^="ufti"]
+blocket.se##.tag.panorama
 mobil.blocket.se###top_device
 mobil.blocket.se###top_large_device
 mobil.blocket.se##div[class*="StyledBanner"]
@@ -1777,6 +1778,7 @@ streamtajm.*##div[style^="background-color: #ccc; width: 750px;"]:has(img[src^="
 swefilmer.*##a[href*="/player/play.php"]
 swefilmer.*##a[href*="/player/"][target="_blank"]
 swefilmer.*##iframe[src="/player/play.php"]
+swefilmer.*##.links_table
 ||nya-filmer.*/masha.$script
 /js/script.$script,domain=nxload.com|jawcloud.co|openload.co|streamango.com
 /license.$script,domain=nxload.com|jawcloud.co|openload.co|streamango.com
