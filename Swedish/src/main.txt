@@ -1142,7 +1142,7 @@ di.se##+js(abort-on-property-read.js, diConf.servicePlusClientId)
 di.se##a[href*="/annons-"]
 di.se##.carousel-tab:has-text(/^annons:/i)
 di.se##.di_expressen-rabatt-koder
-di.se##section[data-load-ads="true"]
+di.se##section[data-content-url^="/part/ads/"]
 digital.di.se,weekend.di.se##+js(abort-current-inline-script.js, diConf)
 di.se##.di_teaser-flak-native-column
 di.se##.di_teaser-flak-container--native
@@ -1746,6 +1746,7 @@ ordfrontmagasin.se,it-finans.se,it-halsa.se,it-kanalen.se,it-pedagogen.se,it-ret
 ! Various websites with lots of malicious stuff and annoyances
 /wp-content/themes/keremiya1/js/script.js$script
 /wp-content/themes/keremiya1/js/license.$script
+/wp-content/themes/keremiya1/js/jopper.$script
 ||dreamfilm.*/HD/780x.$image
 ||dreamfilm.*/HD/player4k.$image
 ||dreamfilm.*/swedish/stream.php$subdocument
@@ -1763,6 +1764,7 @@ dreamfilm.*##.splash-image
 dreamfilm.*##.alert-bottom
 ||nyafilmer.*^$csp=default-src 'self' 'unsafe-inline' 'unsafe-eval' jawcloud.co *.jawcloud.co upvtt.com wp.com *.wp.com *.googleapis.com vkpass.com *.vkpass.com streamango.com *.gstatic.com openload.co
 nyafilmer.*##+js(abort-current-inline-script.js, OneSignal)
+nyafilmer.*##+js(abort-current-inline-script.js, jopperJs, config)
 nyafilmer.*##+js(set-constant.js, blockerDetected, false)
 nyafilmer.*##+js(setInterval-defuser.js, u6, 500)
 nyafilmer.*##a[style*="height"][rel*="nofollow"]
@@ -1771,6 +1773,9 @@ nyafilmer.*##div[style^="margin-top:210px"]
 nyafilmer.*##a[data-hover="LADDA NED"]
 nyafilmer.*##a[href$=".html"][target="_blank"]
 nyafilmer.*##li > a[target="_blank"]
+nyafilmer.*##.movie-preview-content > a[target="_blank"]
+nyafilmer.*##.bigbg
+||nyafilmer.*/branding/$image
 ||streamtajm.*^$csp=default-src 'self' 'unsafe-inline' 'unsafe-eval' *.tmdb.org *.media-amazon.com *.googleapis.com openload.co nxload.com streamango.com jawcloud.co *.rapidvideo.com vcstream.to
 ||streamtajm.*/images/reklam$image
 ||streamtajm.*/worker.$script
