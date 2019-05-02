@@ -12,7 +12,7 @@ extended='output/extended.txt'
 not_extended='output/not-extended.txt'
 # uBO specific filters
 ubo_n='redirect=|\$important|,important|\$document|,document|\$badfilter|,badfilter|\$inline-script|,inline-script|\$popunder|,popunder|\$1p|,1p|\$3p|,3p|\$xhr|,xhr|\$first-party|,first-party'
-ubo_c=':xpath\(|:matches-css\(|:matches-css-before\(|:matches-css-after\(|:has\(|:if\(|:if-not\(|:has-text\(|:style\(|:scope'
+ubo_c=':xpath\(|:matches-css\(|:matches-css-before\(|:matches-css-after\(|:has\(|:if\(|:if-not\(|:has-text\(|:style\(|:scope|:nth-ancestor\(|:watch-attrs\('
 ubo_s='script:inject|#\+js\('
 # Filters that work in most blockers but is needed in combination with other uBO filters to work
 ubo_o='mediacreeper.com|mediacreeper.se'
