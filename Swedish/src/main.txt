@@ -219,6 +219,7 @@
 .se/log/?
 .se/logger.$script
 .se/Logger?
+.se/misc/loada.js$script
 .se/sponsored/$image
 .se/upload/annons/
 .se/wdg/tracking
@@ -354,6 +355,7 @@
 ||d1lxhc4jvstzrp.cloudfront.net/scripts/js3caf.js$script
 ||d24rtvkqjwgutp.cloudfront.net/*yb.js$script
 ||d24rtvkqjwgutp.cloudfront.net/cookie.html
+||d2m8uxg4w7uelx.cloudfront.net/fpa.js$script
 ||d2m8uxg4w7uelx.cloudfront.net/fullpageads.$script
 ||d9v72urx9pbbc.cloudfront.net/channel.js$script
 ||delivery.youplay.se/report?$image
@@ -679,7 +681,7 @@ mediamarkt.se#@#.cookie-info-layer
 /jquery.fancybox.$domain=saljledarskap.se|tjanstebilen.se
 /newsletter/*$domain=zalando.se
 /panorama.js$script,domain=blogg.se|bloggkommentatorerna.se|hannaofsweden.se|itsallabouttaif.se|ladydahmer.nu|lindablom.se|modette.se|rebeckasfoto.se|svenskayoutubers.se|themoviefreak.se|webblogg.se
-/pum/*$script,domain=byggipedia.se|opulens.se|tkj.se
+/pum/*$script,domain=byggipedia.se|opulens.se|tkj.se|exponera.nu
 /pum/*$stylesheet,domain=it-finans.se|it-halsa.se|it-kanalen.se|it-pedagogen.se|it-retail.se
 /SitesterSurvey*.$script,domain=wwf.se
 /smart-app-banner.$script,domain=allsvenskan.se|svenskafans.com|superettan.se
@@ -1299,9 +1301,10 @@ dagensmedia.se##a[href^="/annons/"]
 aktuellhallbarhet.se##.native-article
 digitalfotoforalla.se##.gallery-banner
 digitalfotoforalla.se,natgeo.se##.scroll-message
-natgeo.se##.rotator-custom-nav > li:has(.content-label:has-text(/annons/i))
-natgeo.se##.slides > li:has(.content-label:has-text(/annons/i))
 digitalfotoforalla.se,natgeo.se##.horseshoe
+natgeo.se##.rotator-custom-nav > li:has(.content-label:has-text(/annons/i))
+natgeo.se##.slides > .rotator-active-slide:has(.content-label:has-text(/annons/i))
+natgeo.se##a[data-ad-placement="1"]
 
 ! NTM
 ||digital.ntm.eu/adn$script
@@ -1481,6 +1484,7 @@ mammasidan.se,minbebis.com,alltforforaldrar.se###partnerMenuContainer
 mammasidan.se,minbebis.com,alltforforaldrar.se###partnerMenuContainerFiller
 mammasidan.se,minbebis.com,alltforforaldrar.se##a[href^="/native/"]
 alltforforaldrar.se,mammasidan.se,minbebis.com##+js(set-constant.js, advertisementText, undefined)
+alltforforaldrar.se##.unslider-wrap.unslider-carousel>li:has(.preamble-category:has-text(/^annons/i))
 @@/aff/images/*$image,domain=alltforforaldrar.se
 /js/svenskanamn_ads.$script
 /js/svenskanamn_param_init.$script
@@ -1743,7 +1747,7 @@ hypeline.se,hrbloggen.se##[class^="ad_"]
 affarsvarlden.se,arbetarskydd.se,lag-avtal.se,nyteknik.se##.sponsored-box
 idg.se,macworld.se,skd.se,nsk.se##.adContainer
 kamerabild.se,cafe.se##.partner
-ordfrontmagasin.se,it-finans.se,it-halsa.se,it-kanalen.se,it-pedagogen.se,it-retail.se##.pum-overlay
+ordfrontmagasin.se,it-finans.se,it-halsa.se,it-kanalen.se,it-pedagogen.se,it-retail.se,exponera.nu##.pum-overlay
 24blekinge.se,24emmaboda.se,24falkenberg.se,24halmstad.se,24helsingborg.se,24kalmar.se,24kristianstad.se,24malmo.se,24nybro.se,24trelleborg.se,24uppsala.se,24ystad.se,24varberg.se,24oland.se,24vasteras.se##.takeover-placeholder
 
 ! Various websites with lots of malicious stuff and annoyances
