@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Title: Frellwit's Swedish Filter
 ! Expires: 3 days (update frequency)
-! Last modified: 2019-05-08 18:50:52 CEST
+! Last modified: 2019-05-10 06:52:55 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -263,7 +263,7 @@
 /dfp.css$stylesheet,domain=ljudochbild.se
 /docunet_stats.js$script,domain=byggvarlden.se
 /downloads.mailchimp.com/*$domain=branschkoll.se|landleyskok.se|vavawoom.com|villalivet.se
-/downloads.mailchimp.com/js/signup-forms/popup$script
+/downloads.mailchimp.com/js/signup-forms/popup$image,script
 /ds-tracker.js$domain=dagenssamhalle.se
 /emediate-responsive-wp-plugin/*
 /entag.$script,domain=eniro.se|proff.se
@@ -933,7 +933,7 @@ camping.se###CookiesBox
 camping.se##.DfpAd
 camping.se##.OpenXAd
 capdesign.se###shareright
-capdesign.se,hd.se,sydsvenskan.se,vimedbarn.se##.gdpr
+capdesign.se,hd.se,sydsvenskan.se,villalivet.se,vimedbarn.se##.gdpr
 centerpartiet.se##.sol-cookie-message
 chef.se##.Blurb--native
 chef.se##.global-cookie-msg
@@ -1031,8 +1031,10 @@ dreamfilm.*##a[href$="/go.html"]
 driva-eget.se,hockeymagasinet.com,megafonen.nu,runnersworld.se,utsidan.se##.sponsored
 egoinas.se###tm-top-a
 ehandel.se###bannerContainer
+ehandel.se##.catInsights
 ehandel.se##.native_ad_article_page
-ehandel.se##.native_ad_index_small
+ehandel.se##[class^="native_ad"]
+ehandel.se##[class^="native_ad"] + .largePost
 ekonominyheter.se###lblock-ads
 ekonominyheter.se##a[rel="dofollow"][target="_blank"]
 ekonominyheter.se,uwtd.me##a[href*="/track.adtraction."]
@@ -2043,7 +2045,6 @@ yougov.se##.cookie-confirm
 ||minfil.com^$csp=default-src 'self' 'unsafe-inline' 'unsafe-eval' *.minfil.com
 ||missaffiliate.com^$third-party
 ||mobil.blocket.se/ufti$subdocument
-||mobil.blocket.se^*/ast.js$script
 ||mobil.blocket.se^*/gdpr-bundle$script
 ||molnvaxlar.se/banner/$third-party
 ||momondo.se/gtm/$subdocument
