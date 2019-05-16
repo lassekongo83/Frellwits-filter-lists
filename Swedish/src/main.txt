@@ -403,6 +403,7 @@
 ||nordiskemedier.dk/banner/
 ||nouw.com/api/campaignpost$xmlhttprequest
 ||nouw.com/campaignpost/reg/$image
+||rabattkoder.ifragasatt.se^
 ||oas.*.se/om/$script
 ||organicfruitapps.com/analytics$image
 ||opinionstage.com/assets/autoengage.$script
@@ -1763,7 +1764,7 @@ dreamfilm.*##+js(remove-attr.js, oncontextmenu)
 dreamfilm.*###content-embed:style(display: inherit !important;)
 dreamfilm.*##.splash-image
 dreamfilm.*##.alert-bottom
-||nyafilmer.*^$csp=default-src 'self' 'unsafe-inline' 'unsafe-eval' jawcloud.co *.jawcloud.co upvtt.com wp.com *.wp.com *.googleapis.com vkpass.com *.vkpass.com streamango.com *.gstatic.com openload.co
+||nyafilmer.*^$csp=default-src 'self' 'unsafe-inline' 'unsafe-eval' jawcloud.co *.jawcloud.co upvtt.com wp.com *.wp.com *.googleapis.com vkpass.com *.vkpass.com streamango.com *.gstatic.com openload.co verystream.com
 nyafilmer.*##+js(abort-current-inline-script.js, OneSignal)
 nyafilmer.*##+js(abort-current-inline-script.js, jopperJs, config)
 nyafilmer.*##+js(set-constant.js, blockerDetected, false)
@@ -1777,7 +1778,7 @@ nyafilmer.*##li > a[target="_blank"]
 nyafilmer.*##.movie-preview-content > a[target="_blank"]
 nyafilmer.*##.bigbg
 ||nyafilmer.*/branding/$image
-||streamtajm.*^$csp=default-src 'self' 'unsafe-inline' 'unsafe-eval' *.tmdb.org *.media-amazon.com *.googleapis.com openload.co nxload.com streamango.com jawcloud.co *.rapidvideo.com vcstream.to
+||streamtajm.*^$csp=default-src 'self' 'unsafe-inline' 'unsafe-eval' *.tmdb.org *.media-amazon.com *.googleapis.com openload.co nxload.com streamango.com jawcloud.co *.rapidvideo.com vcstream.to verystream.com
 ||streamtajm.*/images/reklam$image
 ||streamtajm.*/worker.$script
 ||streamtajm.*/sw.js$script
@@ -1813,6 +1814,8 @@ vidbox.co##+js(abort-current-inline-script.js, miner)
 vidbox.co,oload.stream##+js(noeval.js)
 vidbox.co,oload.stream##+js(setTimeout-defuser.js, check)
 vidbox.co,oload.stream##+js(setInterval-defuser.js, check)
+||verystream.com/doge$xmlhttprequest
+/videojs-ima$script,domain=verystream.com
 ! swesub seems to be gone and is redirecting to random pages. Will disable scripts on these pages just in case of badware exposure.
 ||swesub.n*^$csp=script-src 'none'
 
@@ -1922,6 +1925,7 @@ autonytt.se##.start-leaderboard
 autonytt.se##.leaderboard
 autonytt.se##.feed_ad
 autonytt.se##a[href^="https://t.seenthis.se"]
+autonytt.se##a[href*="/track.adtraction.com"]
 autonytt.se##a:has(.label:has-text(/sponsrad/i))
 autonytt.se##.article_widget_preview:has(h2 > a:has-text(/artikel i samarbete/i))
 /autonytt-theme/js/blogger.$script,domain=autonytt.se
@@ -2026,7 +2030,7 @@ kimura.se##article:has(img[src$="/sponsrad.png"])
 kimura.se##article:has(#storknapp:has-text(/^till kampanj/i))
 kimura.se##.bg
 market.se##[id^="fusion_ad"]
-market.se##article[about^="/annons/"]
+market.se##article[about^="/annons"]
 market.se###newsletter-rollup
 market.se##+js(set-constant.js, Drupal.behaviors.premium, undefined)
 dagensps.se##.category-ps-partner
