@@ -1393,10 +1393,15 @@ nyheter24.se##[id^="article"]:has(em:has-text(/artikeln är i samarbete med/i))
 nyheter24.se##section:last-of-type > [class^="code_plugin_content"]
 filmtipset.se###acceptCookiesDiv
 filmtipset.se##:xpath(//div[@id="toggle_all_prices"]/parent::td[1]/parent::tr[1])
-filmtipset.se##:xpath(//div[contains(concat(' ', @class, ' '), ' rightlinkheader ')][text()[contains(., 'Rekommenderade sajter')]]/parent::td)
-filmtipset.se##:xpath(//span[text()[contains(., 'artikeln är en annons')]]/../../../parent::tr)
-filmtipset.se##:xpath(//span[text()[contains(., 'artikeln är en annons')]]/../../../parent::tr/following-sibling::tr[2])
-filmtipset.se##:xpath(//span[text()[contains(., 'artikeln är en annons')]]/../../../parent::tr/following-sibling::tr[3])
+! messy sponsored articles
+filmtipset.se##span[style="padding:0 10px;display:block;height:40px;line-height:40px;background:black;color:#fff;"]:nth-ancestor(4)
+filmtipset.se##span[style="padding:0 10px;display:block;height:40px;line-height:40px;background:black;color:#fff;"]:nth-ancestor(4):xpath(following-sibling::tr[1])
+filmtipset.se##span[style="padding:0 10px;display:block;height:40px;line-height:40px;background:black;color:#fff;"]:nth-ancestor(4):xpath(following-sibling::tr[2])
+filmtipset.se##span[style="padding:0 10px;display:block;height:40px;line-height:40px;background:black;color:#fff;"]:nth-ancestor(4):xpath(following-sibling::tr[3])
+filmtipset.se##span[style="padding:0 10px;display:block;height:40px;line-height:40px;background:black;color:#fff;"]:nth-ancestor(4):xpath(following-sibling::tr[4])
+filmtipset.se##span[style="padding:0 10px;display:block;height:40px;line-height:40px;background:black;color:#fff;"]:nth-ancestor(4):xpath(following-sibling::tr[5])
+filmtipset.se##span[style="padding:0 10px;display:block;height:40px;line-height:40px;background:black;color:#fff;"]:nth-ancestor(4):xpath(following-sibling::tr[6])
+filmtipset.se##.rightlinkheader:has-text(Rekommenderade sajter) ~ .rightlink
 filmtipset.se##p:has-text(nätcasino)
 filmtipset.se##.rightlink:has(a[href*="lån"])
 /n24.js?$domain=filmtipset.se
