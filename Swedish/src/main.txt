@@ -220,6 +220,7 @@
 .se/logger.$script
 .se/Logger?
 .se/misc/loada.js$script
+.se/native?noBurtProfiles
 .se/sponsored/$image
 .se/upload/annons/
 .se/wdg/tracking
@@ -229,6 +230,7 @@
 /a?callback=pfmod.saveadsettings
 /ad/getNouw.$script
 /adnami/macro/*$script
+/ajax/docu_stats.jsp$xmlhttprequest
 /ajax.php?action=get_cookies_policy$xmlhttprequest
 /ajax.php?action=get_policy&site=cookie-information$xmlhttprequest
 /annons.aspx?
@@ -275,6 +277,7 @@
 /js/byside_webcare$script
 /js/cookie-consent.$script
 /js/cookienotice.$script
+/js/docunet_stats.js$script
 /js/fullpageads.js$script
 /js/iepngfix_tilebg.$script
 /js/improve_digital_ads.$script
@@ -577,6 +580,7 @@
 ##.cookie-notification
 ##.cookie-overlay
 ##.cookie-policy
+##.cookie_popup_box
 ##.cookie_consent_bar
 ##.cookie__wrapper
 ##.c-ad__floating
@@ -679,7 +683,7 @@ mediamarkt.se#@#.cookie-info-layer
 /ga.js$script,~third-party,domain=driverzone.se
 /gdpr/*$domain=capdesign.se|digikey.se|funnygames.se|megaspel.se|nyckelspel.se|rapport24.com|villalivet.se|vimedbarn.se
 /glasscandle.$script,domain=komponentkoll.se
-/glimr.$script,domain=affarsliv.com|affarslivgotland.se|aftonbladet.se|blocket.se|corren.se|di.se|dn.se|eposten.se|folkbladet.se|gotland.net|helagotland.se|klackspark.com|kuriren.nu|mvt.se|norrbottensaffarer.se|nsd.se|nt.se|politism.se|pt.se|unt.se|uppgang.com|uppsala.com|uppsalatidningen.se|viivilla.se|vimmerbytidning.se|vt.se
+/glimr.$script,domain=affarsliv.com|affarslivgotland.se|aftonbladet.se|blocket.se|corren.se|di.se|dn.se|eposten.se|folkbladet.se|gotland.net|helagotland.se|klackspark.com|kuriren.nu|mvt.se|norrbottensaffarer.se|nsd.se|nt.se|politism.se|pt.se|unt.se|uppgang.com|uppsala.com|uppsalatidningen.se|viivilla.se|vimmerbytidning.se|vt.se|ekuriren.se|kkuriren.se|sn.se
 /i10c@p1/*$domain=bax-shop.se|digikey.se|justfab.se|tui.se
 /jquery.fancybox.$domain=saljledarskap.se|tjanstebilen.se
 /newsletter/*$domain=zalando.se
@@ -1211,8 +1215,6 @@ mittkok.expressen.se##.widget-social-media
 mittkok.expressen.se##+js(abort-current-inline-script.js, adblock)
 mittkok.expressen.se##+js(abort-current-inline-script.js, burtSegments)
 mittkok.expressen.se##+js(addEventListener-defuser.js, click, trackClick)
-! hds
-/native?$xmlhttprequest,domain=hd.se|sydsvenskan.se
 ! tv4
 tv4.se##.program-header-sponsors
 tv4.se##.social-block-ad
@@ -1523,7 +1525,7 @@ elle.se###product-wrapper
 /se-wordpress-agilis-solum/assets/js/ad-collapse.$script
 ||printfriendly.com^$third-party,domain=allakorsord.se|allas.se|baaam.se|dromhemochtradgard.se|elle.se|elledecoration.se|ellematovin.se|femina.se|frida.se|hant.se|mabra.com|residencemagazine.se|svenskdam.se
 sportfiskeforum.se###fj-topad
-sportfiskeforum.se,fiskejournalen.se,jaktjournalen.se##+js(abort-current-inline-script.js, m3_r, Math.floor)
+sportfiskeforum.se,fiskejournalen.se,jaktjournalen.se,byggvarlden.se##+js(abort-current-inline-script.js, m3_r, Math.floor)
 svenskjakt.se,jaktplay.se##+js(abort-current-inline-script.js, desktop_random_ad_id)
 svenskjakt.se##.flaket-premium-adverts
 jaktplay.se##.jaktplay-ad
@@ -2051,6 +2053,7 @@ atl.nu,land.se,landlantbruk.se,landskogsbruk.se##.premium.Lrfsso-lock #MainConte
 atl.nu,land.se,landlantbruk.se,landskogsbruk.se##.premium.Lrfsso-lock .ArticleLight, .premium.Lrfsso-lock .ArticleNative, .premium.Lrfsso-lock .ArticleStandard, .premium.Lrfsso-lock .ArticleSvepet, .single-article.Lrfsso-lock .ArticleLight, .single-article.Lrfsso-lock .ArticleNative, .single-article.Lrfsso-lock .ArticleStandard, .single-article.Lrfsso-lock .ArticleSvepet, .premium.Lrfsso-lock .SidebarPrimary, .premium.Lrfsso-lock .SidebarSecondary, .single-article.Lrfsso-lock .SidebarPrimary, .single-article.Lrfsso-lock .SidebarSecondary:style(height: initial !important;)
 grontvader.se##app-cookies
 /Sponsor/*$xmlhttprequest,domain=grontvader.se
+/private-browsing.js$domain=thelocal.se
 thelocal.se##div.section:not([class$="section"])
 thelocal.se##.orange-panel
 thelocal.se##.outbrain-row
@@ -2840,6 +2843,9 @@ digitaliserat.nu##.news-story:has(a:has-text(/^detta är en annons/i))
 /docunet_stats.js$script,domain=byggvarlden.se
 byggvarlden.se##.ContentRight-50 > .featured
 byggvarlden.se###bannnerContainer
+byggvarlden.se,byggfaktadocu.se##+js(abort-current-inline-script.js, docu_stats_summaryview_no_time)
+byggvarlden.se,byggfaktadocu.se##+js(abort-current-inline-script.js, docu_stats_pageview_no_time)
+byggfaktadocu.se##.pop_box
 ! Placera
 avanza.se##.cookieMessage
 avanza.se##.topAd
