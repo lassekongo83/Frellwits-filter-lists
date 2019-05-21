@@ -309,6 +309,7 @@
 /sifo_analytics.$script
 /sifo_msr.$script
 /siforesponsivemeasure.js$script
+/static/js/loada.js$script
 /stats/ewstats.$script
 /strossle-start-page-ad$xmlhttprequest
 /swordfishinc.download.akamai.com/*$script
@@ -592,6 +593,7 @@
 ##.favethemes-content-ad-bottom
 ##.favethemes-content-ad-top
 ##.js-cookie-warning
+##.lazyb.panorama
 ##._ning_outer._ning_jss_zone
 ##.notification--cookie
 ##.nyhet_wrapper_annons
@@ -723,6 +725,7 @@ mediamarkt.se#@#.cookie-info-layer
 ||delivery.vidible.tv^$third-party,domain=teknikhype.se
 ||youbora.com^$important,third-party,domain=aftonbladet.se|foxtv.se|svd.se
 ||zotabox.com^$third-party,domain=etunawebben.se|rapport24.com
+||tags.tiqcdn.com^$domain=mallorcaliv.se
 
 ! Common scriptlets
 ng.se,alltomstockholm.se,mitti.se,bloggbevakning.se,cornucopia.cornubot.se,innebandymagazinet.se##+js(abort-on-property-read.js, ADTECH)
@@ -1490,6 +1493,7 @@ mammasidan.se,minbebis.com,alltforforaldrar.se##a[href^="/native/"]
 alltforforaldrar.se,mammasidan.se,minbebis.com##+js(set-constant.js, advertisementText, undefined)
 alltforforaldrar.se##.unslider-wrap.unslider-carousel>li:has(.preamble-category:has-text(/^annons/i))
 @@/aff/images/*$image,domain=alltforforaldrar.se
+@@||www.alltforforaldrar.se/extra/js/ads.js$script
 /js/svenskanamn_ads.$script
 /js/svenskanamn_param_init.$script
 /themes/aurora/cookies/*$domain=mammasidan.se|minbebis.com|alltforforaldrar.se
@@ -1697,7 +1701,7 @@ businessclass.se,spela.se,entreprenor.se,effektmagasin.se##.advert
 norran.se,yelp.se###cookie-info
 alltforforaldrar.se,battrestadsdel.se,flashback.se,mammasidan.se,minbebis.com,casinoexpo.se,leta.eniro.se###top-banner
 chef.se,svd.se##.Ad
-24blekinge.se,24emmaboda.se,24falkenberg.se,24halmstad.se,24helsingborg.se,24kalmar.se,24kristianstad.se,24malmo.se,24nybro.se,24trelleborg.se,24uppsala.se,24ystad.se,24varberg.se,24oland.se,24vasteras.se,99.se,bohuslaningen.se,byggnadsarbetaren.se,cissiochfreddan.se,claudiagalliconcha.se,di.se,dn.se,ekuriren.se,folkbladet.nu,kimura.se,kkuriren.se,loppi.se,mariestadstidningen.se,markbladet.se,medievarlden.se,mestmotor.se,mobil.se,norran.se,nwt.se,paulas.me,skaraborgsbygden.se,skillingaryd.nu,sla.se,sn.se,sportbloggare.com,swedroid.se,vk.se,vimedbarn.se,gabriellajoss.me,mybabydolls.se,emilysliv.se,casinowings.se,allakorsord.se,baaam.se,dromhemochtradgard.se,elle.se,elledecoration.se,ellematovin.se,femina.se,frida.se,mabra.com,residencemagazine.se,katerinamagasin.se,dagensmedia.se,tidningenbalans.se,xn--vrnamo-bua.nu,bettingstugan.se,expressen.se,dagensopinion.se,driva-eget.se,interiorbyvanessa.se##.ad
+24blekinge.se,24emmaboda.se,24falkenberg.se,24halmstad.se,24helsingborg.se,24kalmar.se,24kristianstad.se,24malmo.se,24nybro.se,24trelleborg.se,24uppsala.se,24ystad.se,24varberg.se,24oland.se,24vasteras.se,99.se,bohuslaningen.se,byggnadsarbetaren.se,cissiochfreddan.se,claudiagalliconcha.se,di.se,dn.se,ekuriren.se,folkbladet.nu,kimura.se,kkuriren.se,loppi.se,mariestadstidningen.se,markbladet.se,medievarlden.se,mestmotor.se,mobil.se,norran.se,nwt.se,paulas.me,skaraborgsbygden.se,skillingaryd.nu,sla.se,sn.se,sportbloggare.com,swedroid.se,vk.se,vimedbarn.se,gabriellajoss.me,mybabydolls.se,emilysliv.se,casinowings.se,allakorsord.se,baaam.se,dromhemochtradgard.se,elle.se,elledecoration.se,ellematovin.se,femina.se,frida.se,mabra.com,residencemagazine.se,katerinamagasin.se,dagensmedia.se,tidningenbalans.se,xn--vrnamo-bua.nu,bettingstugan.se,expressen.se,dagensopinion.se,driva-eget.se,interiorbyvanessa.se,vagabond.se##.ad
 affarsvarlden.se,arbetarskydd.se,lag-avtal.se,nickelodeon.se,nyteknik.se,vf.se,improveme.se,hjotidning.se,kt.se,sla.se,mariestadstidningen.se,filipstadstidning.se,fryksdalsbygden.se,nwt.se,arvikanyheter.se,nkp.se,saffletidningen.se,provinstidningen.se,dalslanningen.se,karlskogatidning.se,nlt.se,kungalvsposten.se,molndalsposten.se,lokaltidningensto.se,kungsbackaposten.se,byggahus.se##.ad-container
 dn.se,klart.se,norran.se##.ad-wrapper
 brollopstorget.se,familjeliv.se##.ad_right
@@ -2922,3 +2926,7 @@ veckorevyn.com##.category-partner-promotion
 fysikstugan.se##+js(abort-current-inline-script.js, ai_adb)
 konsumentverket.se##.cookie-block
 lantmateriet.se##.cookie.show
+runnersworld.se##body > div.d-md-block > a[target="_blank"]
+runnersworld.se##.container-footer
+runnersworld.se##.post-card-sponsored
+runnersworld.se##.post-card:has(.sponsrat)
