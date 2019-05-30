@@ -3,7 +3,7 @@ Various filter lists for [uBlock Origin](https://github.com/gorhill/uBlock) and 
 
 ##
 
-<b>IMPORTANT NOTE FOR CHROMIUM-BROWSER USERS:</b> Our list does not, can not, and will never ever support Manifest v3, due to its laughably short rule limit and the removal of `has`, `has-text`, `csp`, and `##+js`, among others. Issue reports for Manifest v3-based extension versions will not be accepted, and if you do submit one, you would be asked to use an alternate web browser or web browser version instead.
+<b>IMPORTANT NOTE FOR CHROMIUM-BROWSER USERS:</b> Our list does not, can not, and will not support Manifest v3 insofar as it is currently shaped, due to its laughably short rule limit and the removal of `has`, `has-text`, `csp`, and `##+js`, among others. Issue reports for Manifest v3-based extension versions will not be accepted, and if you do submit one, you would be asked to use an alternate web browser or web browser version instead.
 
 ## Available lists
 
