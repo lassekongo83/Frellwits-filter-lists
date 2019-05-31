@@ -3,7 +3,7 @@ Various filter lists for [uBlock Origin](https://github.com/gorhill/uBlock) and 
 
 ##
 
-<b>IMPORTANT NOTE FOR CHROMIUM-BROWSER USERS:</b> The lists do not, can not, and will not support Chromium's extension Manifest v3 in its current shape and form, due to its exteremly short rule limit, and the possibility of it crippling advanced content blockers which these lists rely on. **If you are using Chrome, Chromium, Opera, Edge, Vivaldi, Brave, or any other browser that's based on Chromium**, then you may have to start preparing to switch your browser to Firefox (or an updated Firfox fork) if you want to continue to use any of these lists within in the coming year(s) (2019-2020).
+<b>IMPORTANT NOTE FOR CHROMIUM-BROWSER USERS:</b> The lists do not, can not, and will not support Chromium's extension Manifest v3 in its current shape and form, due to its exteremly short rule limit, and the possibility of it crippling advanced content blockers which these lists rely on. **If you are using Chrome, Chromium, Opera, Edge, Vivaldi, Brave, or any other browser that's based on Chromium**, then you may have to start preparing to switch your browser to Firefox (or an updated Firefox fork) if you want to continue to use any of these lists within in the coming year(s) (2019-2020).
 
 ## Available lists
 
