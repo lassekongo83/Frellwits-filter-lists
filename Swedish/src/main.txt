@@ -238,6 +238,7 @@
 /annonssamarbete/*$xmlhttprequest
 /assets/google-universal-analytics$script
 /bannersidor/*
+/banners/*casino$image
 /bilder/ads/*
 /bitcsys/js/bit.js$script
 /blogs/log_pageview/*$script
@@ -310,6 +311,7 @@
 /static/js/loada.js$script
 /stats/ewstats.$script
 /strossle-start-page-ad$xmlhttprequest
+/sv_se/metrics/*$script,xmlhttprequest
 /swordfishinc.download.akamai.com/*$script
 /tabs_hits_counter.php$image
 /thumbnail_bettingstugan$image
@@ -506,7 +508,10 @@
 ! https://www.sweclockers.com/forum/trad/1557277-swedbank-sms-scam-eller-akta
 ||online.swedbank.se.swedd.$document
 ! Common typing errors leading to some annoying or malicious pages
-*$csp=script-src 'none',domain=aftonbladett.se|svtt.se|ssvd.se|exressen.se|eexpressen.se|sskatteverket.se|klartt.se|aatg.se|atgg.se
+*$csp=script-src 'none',domain=aftonbladett.se|svtt.se|ssvd.se|exressen.se|eexpressen.se|sskatteverket.se|klartt.se|aatg.se|atgg.se|dpaly.se
+! Add a simple reminder message to this typing error
+dpaly.se##html:after:style(content: "Menade du dplay.se?" !important; color: black !important; font-size: 2em !important; text-align: center !important; display: flex !important; justify-content: center !important;)
+dpaly.se##body:style(background: none !important; height: unset !important;)
 
 ! Generic Element Hiding Rules
 ##.adrotate-group
@@ -642,6 +647,10 @@
 @@/advertisement2.js$domain=gpro.net
 
 ! Unbreak
+@@||feed.meltwater.com^$subdocument
+@@||consensu.org^*/config.js$script
+@@||imasdk.googleapis.com/js/sdkloader/ima3.js$script,domain=skanesport.se|ekuriren.se|kkuriren.se|sn.se
+||imasdk.googleapis.com/js/core$subdocument,important,domain=skanesport.se|ekuriren.se|kkuriren.se|sn.se
 @@_advert.$domain=e-pages.dk
 avanza.se#@#a[title="LeoVegas"]
 abus.com#@##cookieChoiceInfo
@@ -653,15 +662,11 @@ readly.com#@#.cookie-notice
 cykla.se#@#.advertisment
 @@||cykla.se/wp-content/themes/cykla/assets/images/advert-filter-top.jpg$image
 @@||cykla.se/wp-admin/admin-ajax.php?action*&advert_search$xmlhttprequest
-@@||feed.meltwater.com^$subdocument
-@@||consensu.org^*/config.js$script
 ! https://github.com/lassekongo83/Frellwits-filter-lists/issues/51
 @@||marketo.com^*/form
 ! https://github.com/AdguardTeam/AdguardFilters/issues/32597
 mediamarkt.se#@##colorbox.cookie-info-modal
 mediamarkt.se#@#.cookie-info-layer
-@@||imasdk.googleapis.com/js/sdkloader/ima3.js$script,domain=skanesport.se|ekuriren.se|kkuriren.se|sn.se
-||imasdk.googleapis.com/js/core$subdocument,important,domain=skanesport.se|ekuriren.se|kkuriren.se|sn.se
 
 ! Common site specific blocking
 *$object,object-subrequest,domain=autolife.se|internetlankar.se
@@ -688,6 +693,7 @@ mediamarkt.se#@#.cookie-info-layer
 /gdpr/*$domain=capdesign.se|digikey.se|funnygames.se|megaspel.se|nyckelspel.se|rapport24.com|villalivet.se|vimedbarn.se
 /glasscandle.$script,domain=komponentkoll.se
 /glimr.$script,domain=affarsliv.com|affarslivgotland.se|aftonbladet.se|blocket.se|corren.se|di.se|dn.se|eposten.se|folkbladet.se|gotland.net|helagotland.se|klackspark.com|kuriren.nu|mvt.se|norrbottensaffarer.se|nsd.se|nt.se|politism.se|pt.se|unt.se|uppgang.com|uppsala.com|uppsalatidningen.se|viivilla.se|vimmerbytidning.se|vt.se|ekuriren.se|kkuriren.se|sn.se
+/gtm-$script,domain=popmuzik.se|ljudochbild.se
 /i10c@p1/*$domain=bax-shop.se|digikey.se|justfab.se|tui.se
 /jquery.fancybox.$domain=saljledarskap.se|tjanstebilen.se
 /newsletter/*$domain=zalando.se
@@ -2289,7 +2295,6 @@ rapport24.com##.kb-container
 ||byggnadsarbetaren.se^*/ad-byline.png$image
 byggnadsarbetaren.se##.siteAlerts
 byggnadsarbetaren.se##[class^="siteAds"]
-/gtm-$script,domain=popmuzik.se
 ||btg.mtvnservices.com/aria/bentojs.js$script,domain=nickelodeon.se
 ||btg.mtvnservices.com/aria/coda.html$script,domain=nickelodeon.se
 ||btg.mtvnservices.com/aria/projectX/projectX.html$script,domain=nickelodeon.se
@@ -2665,7 +2670,8 @@ ljudochbild.se###overlay
 ljudochbild.se###mask
 ljudochbild.se###dialog
 ljudochbild.se###paywall-parent:style(overflow: unset !important; max-height: unset !important; position: unset !important;)
-ljudochbild.se##a[href*="/?articleadvertorial"]:xpath(..)
+ljudochbild.se###paywall:style(background: none !important;)
+ljudochbild.se##a[href*="/?articleadvertorial"]:nth-ancestor(1)
 villalivet.se##.td-small-thumb:has(a[href*="/sponsrat-innehall"])
 villalivet.se##.onp-sl-overlap-box
 villalivet.se##.onp-sl-blur-area:style(filter: none !important;)
