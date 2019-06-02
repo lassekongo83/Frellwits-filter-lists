@@ -508,7 +508,7 @@
 ! https://www.sweclockers.com/forum/trad/1557277-swedbank-sms-scam-eller-akta
 ||online.swedbank.se.swedd.$document
 ! Common typing errors leading to some annoying or malicious pages
-*$csp=script-src 'none',domain=aftonbladett.se|svtt.se|ssvd.se|exressen.se|eexpressen.se|sskatteverket.se|klartt.se|aatg.se|atgg.se|dpaly.se
+*$csp=script-src 'none',domain=svtt.se|ssvd.se|exressen.se|eexpressen.se|sskatteverket.se|aatg.se|atgg.se|dpaly.se
 ! Add a simple reminder message to this typing error
 dpaly.se##html:after:style(content: "Menade du dplay.se?" !important; color: black !important; font-size: 2em !important; text-align: center !important; display: flex !important; justify-content: center !important;)
 dpaly.se##body:style(background: none !important; height: unset !important;)
@@ -889,7 +889,7 @@ scrollat.se##+js(abort-current-inline-script.js, _TradeTrackerTagOptions)
 /wp-content/plugins/addthis/*$script,stylesheet
 /wp-content/plugins/easy-social-share-buttons$script
 /wp-content/plugins/top-10/*$script
-/wp-content/uploads/*.js?ver$script,domain=mkse.com|mobilanyheter.net|noterat.nu|nyadagbladet.se
+/wp-content/uploads/*.js?ver$script,domain=mkse.com|mobilanyheter.net|nyadagbladet.se
 /wp-content/uploads/*/advanced$script,domain=datormagazin.se|rocknytt.net|skanesport.se
 
 ! JWplayer analytics/ad scripts
@@ -2248,7 +2248,8 @@ medievarlden.se##.newslettermodal
 medievarlden.se##.cookie-widget
 medievarlden.se##.header-friend
 medievarlden.se##.main__sidebar--secondary > div:first-child:not([class])
-medievarlden.se##.html--modalbox, .html--modalbox body:style(overflow: auto !important;)
+medievarlden.se##.html--modalbox, .html--modalbox body:style(overflow: auto !important; height: unset !important;)
+medievarlden.se##+js(set-constant.js, analyticsTrackGoogleAnalytics, noopFunc)
 ||hockeymagasinet.com/footer/ad$xmlhttprequest
 hockeymagasinet.com##gdpr-alert
 hockeymagasinet.com##body.modal-open:style(overflow-y: scroll !important;)
@@ -2952,3 +2953,4 @@ gardets.nu##.cookies-field
 /history_cookie_notice.$script,domain=historytv.se
 sv.geneanet.org###header-info-cookie
 /core/analytics$script,domain=sv.geneanet.org
+macken.xyz##.et_pb_section:has(p:has-text(/^annonser$/i))
