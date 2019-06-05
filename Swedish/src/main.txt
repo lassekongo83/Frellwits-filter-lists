@@ -1819,6 +1819,7 @@ swefilmer.*##a[href*="/player/play.php"]
 swefilmer.*##a[href*="/player/"][target="_blank"]
 swefilmer.*##iframe[src="/player/play.php"]
 swefilmer.*##.links_table
+swestream.*##.player-top-ad
 ||nya-filmer.*/masha.$script
 /js/script.$script,domain=nxload.com|jawcloud.co|openload.co|streamango.com
 /license.$script,domain=nxload.com|jawcloud.co|openload.co|streamango.com
@@ -1838,8 +1839,6 @@ vidbox.co,oload.stream##+js(setTimeout-defuser.js, check)
 vidbox.co,oload.stream##+js(setInterval-defuser.js, check)
 ||verystream.com/doge$xmlhttprequest
 /videojs-ima$script,domain=verystream.com
-! swesub seems to be gone and is redirecting to random pages. Will disable scripts on these pages just in case of badware exposure.
-||swesub.n*^$csp=script-src 'none'
 
 ! Various annoyances
 youplay.se,nyheter24.se,modette.se,filmtipset.se,affarsliv.com,affarslivgotland.se,corren.se,eposten.se,folkbladet.se,helagotland.se,klackspark.com,kuriren.nu,mvt.se,norrbottensaffarer.se,nsd.se,nt.se,pt.se,unt.se,vt.se,uppgang.com,vimmerbytidning.se,vf.se,hjotidning.se,kt.se,sla.se,mariestadstidningen.se,filipstadstidning.se,fryksdalsbygden.se,nwt.se,arvikanyheter.se,nkp.se,saffletidningen.se,provinstidningen.se,dalslanningen.se,karlskogatidning.se,nlt.se,skd.se,nsk.se,affarsvarlden.se,ekuriren.se,kkuriren.se,sn.se##+js(set-constant.js, youplay.helpers.disableRightClick, noopFunc)
@@ -1967,7 +1966,8 @@ mobil.se##li.teaser.Partner
 ||mega.folkbladet.nu^$script,xmlhttprequest
 vk.se,folkbladet.nu##div[data-track-id="strossle"]
 vk.se,folkbladet.nu##a[href="https://umealunchguide.se/"]
-vk.se,folkbladet.nu##div[style="max-height: 100%; max-width: 100%; clear: both;"]
+vk.se,folkbladet.nu##[class^="adContainer"]
+vk.se,folkbladet.nu##.vkmui-Text--grey
 ||ues.vk.se^*/event$xmlhttprequest
 ||terms.vkmedia.se/agreements/$xmlhttprequest
 24blekinge.se,24emmaboda.se,24falkenberg.se,24halmstad.se,24helsingborg.se,24kalmar.se,24kristianstad.se,24malmo.se,24nybro.se,24trelleborg.se,24uppsala.se,24ystad.se,24varberg.se,24oland.se,24vasteras.se##.article--native
@@ -1994,6 +1994,7 @@ breakit.se##div[data-sponsored="1"]
 breakit.se##.brkt-article-slidein:has(.brkt-sponsored)
 breakit.se###mount-newsletter-signup-widget-mobile
 breakit.se##.js-video-ad
+breakit.se##.main-nav__entry > a[target="_blank"]
 breakit.se##+js(abort-current-inline-script.js, twttr, trackPid)
 breakit.se##+js(abort-current-inline-script.js, _adftrack, push)
 metro.se##div[class*="o-advert"]
@@ -2243,7 +2244,7 @@ medievarlden.se##.post-teaser--friend
 medievarlden.se##.newslettermodal
 medievarlden.se##.cookie-widget
 medievarlden.se##.header-friend
-medievarlden.se##.main__sidebar--secondary > div:first-child:not([class])
+medievarlden.se##.main__sidebar--secondary > a:first-child
 medievarlden.se##.html--modalbox, .html--modalbox body:style(overflow: auto !important; height: unset !important;)
 medievarlden.se##+js(set-constant.js, analyticsTrackGoogleAnalytics, noopFunc)
 ||hockeymagasinet.com/footer/ad$xmlhttprequest
