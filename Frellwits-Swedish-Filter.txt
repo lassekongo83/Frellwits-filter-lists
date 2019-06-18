@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Title: Frellwit's Swedish Filter
 ! Expires: 3 days (update frequency)
-! Last modified: 2019-06-18 11:39:53 CEST
+! Last modified: 2019-06-18 19:13:26 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -44,6 +44,7 @@
 ###eu-cookie-bar
 ###js__cookie-disclaimer
 ###privacy-cookie-info
+###redim-cookiehint
 ###trn_cookie_holder
 ##._ning_outer._ning_jss_zone
 ##.adrotate-group
@@ -258,6 +259,7 @@
 /collector$~third-party,xmlhttprequest,domain=momondo.se
 /com_rstbox/*$domain=grillbloggen.nu
 /commercialAds/*$xmlhttprequest,domain=njus.me
+/common.metrics.$script,domain=tripadvisor.se
 /consent.$script,domain=typkanske.se
 /consent.js$script,domain=nsk.se|skd.se
 /content/admbl/*$image,domain=skrattnet.se
@@ -313,6 +315,7 @@
 /headerbidding.js$script
 /helios/multiad_jquery.$script
 /history_cookie_notice.$script,domain=historytv.se
+/hotels.tracking.$script,domain=tripadvisor.se
 /i10c@p1/*$domain=bax-shop.se|digikey.se|justfab.se|tui.se
 /iab/iab.js$script
 /idg-dfp-minified/*
@@ -384,6 +387,8 @@
 /losad/loada.$script
 /lunchguiden*.$image,domain=folkbladet.nu|vk.se
 /magnific-popup/*$domain=shortcut.se
+/maps.click-source-tracking.$script,domain=tripadvisor.se
+/maps.sponsored-pill.$script,domain=tripadvisor.se
 /metrics/*$domain=cartoonnetwork.se
 /mitti-ad-block-blocker/scripts.$script,domain=alltomstockholm.se|mitti.se
 /mod.js$xmlhttprequest,domain=internetmedicin.se
@@ -456,7 +461,7 @@
 /plugins/facebook-conversion-pixel/*
 /plugins/facebook-pagelike-widget/*$script
 /plugins/facebook-popout-likebox/*
-/plugins/gdpr-cookie-compliance/*$domain=dagensanalys.se|worldkustom.com
+/plugins/gdpr-cookie-compliance/*$domain=dagensanalys.se|studentlund.se|worldkustom.com
 /plugins/ginger/addon/analytics/*$script
 /plugins/ginger/front/js/cookies-enabler$script,stylesheet
 /plugins/homepage-pop-up/*$domain=skovdeik.se
@@ -473,7 +478,7 @@
 /plugins/loppi-cookie-consent/*$script
 /plugins/mailpoet/*$script,domain=opulens.se
 /plugins/mashshare-google-analytics/*
-/plugins/mashsharer/*$script,domain=dagensknep.se|djursidan.se|mumsigast.se|mysigast.se|rocknytt.net|scrollat.se
+/plugins/mashsharer/*$script,domain=dagensknep.se|djursidan.se|firefighters.se|mumsigast.se|mysigast.se|rocknytt.net|scrollat.se
 /plugins/metro-affiliate/*$script,domain=metromode.se
 /plugins/mitti-cookie-disclaimer/*$script,domain=alltomstockholm.se|mitti.se
 /plugins/mitti-oath-cmpi-js/*$domain=alltomstockholm.se|mitti.se
@@ -549,6 +554,7 @@
 /se-wordpress-gdpr/*
 /se-wordpress-google-analytics/*
 /se-wordpress-newsletters/*
+/search.tracking.$script,domain=tripadvisor.se
 /seenthis-hub/assets/js/hub-time-spent.js$script
 /selections/native$xmlhttprequest,domain=svd.se
 /service-worker.js$script,domain=folkbladet.nu|vk.se
@@ -584,8 +590,10 @@
 /themes/aurora/cookies/*$domain=alltforforaldrar.se|mammasidan.se|minbebis.com
 /thumbnail_bettingstugan$image
 /trackers/SessionCam-tag$script
+/tracking.interactions.$script,domain=tripadvisor.se
 /trafikfonden/*
 /trckr/*$xmlhttprequest,domain=cleannet.se|dagenshandel.se|entreprenad.com|food-supply.se|foodnet.se|fri-kopenskap.se|habit.se|kemivarldenbiotech.se|lifesciencesweden.se|medtechmagazine.se|motormagasinet.se|packnet.se|plastnet.se|processnet.se|recyclingnet.se|rt-forum.se|skyddosakerhet.se|transportnet.se|uochd.se|verkstaderna.se|woodnet.se
+/trips.tracking.$script,domain=tripadvisor.se
 /tv/annons/*$domain=expressen.se
 /twitter_count.php$xmlhttprequest,domain=fria.nu|friatidningen.se|goteborgsfria.se|landetsfria.se|sesam.nu|stockholmsfria.se
 /ub-ads/*uba*.$script
@@ -877,6 +885,8 @@ bandybyn.se,falubsbandy.com###RightDiv
 bandyfeber.com##.widget_sp_image
 bandyfeber.com##a[title^="ANNONS"]
 bandyplay.se,bettips.se,digitalfotoforalla.se,illvet.se,it-finans.se,it-halsa.se,it-kanalen.se,it-pedagogen.se,it-retail.se,pctidningen.se##.top-banner
+barnsemester.se###aggressivead
+barnsemester.se##.annonsfiendset
 barometern.se,blt.se,bt.se,kristianstadsbladet.se,olandsbladet.se,ostrasmaland.se,smp.se,sydostran.se,trelleborgsallehanda.se,ut.se,ystadsallehanda.se##div[id*="marknadsguiden"]
 battrenyheter.se##.abnan-single
 battrenyheter.se##.gbnan
@@ -894,7 +904,7 @@ bilsport.se###bst-bot
 bilsport.se##.ads-and-other
 bilsport.se##.spons-article
 bilsport.se##[id^="bst-pano"]
-bilsport.se,funnygames.se,gpro.net,ordguru.se,ratsit.se##.cc_banner-wrapper
+bilsport.se,funnygames.se,gpro.net,ordguru.se,ratsit.se,visitskane.com##.cc_banner-wrapper
 bilweb.se###cookie_alert
 bioenergitidningen.se##.cookieNotice
 blocket.se###index_panorama
@@ -993,8 +1003,8 @@ dagen.se##.video-annons
 dagensanalys.se##.category-sponsrat-content
 dagensanalys.se##.modal-wrap
 dagensanalys.se##.sidebar .zeen-widget:last-of-type:not(.widget_nav_menu)
-dagensanalys.se##.tipi-tile.active
 dagensanalys.se##[id^="moove_gdpr"]
+dagensanalys.se,letsgoexplore.se##.tipi-tile.active
 dagensmedia.se###__next > div[class^="css-"]:last-child
 dagensmedia.se##.slot-articlemodule
 dagensmedia.se##.slot-module
@@ -1164,6 +1174,8 @@ festivalrykten.se,rumhemma.se###top
 fightermag.se##a[href*="/sponsra"]
 filmtipset.se###acceptCookiesDiv
 finansliv.se,vinochmatguiden.se##.newsletter
+firstcamp.se##.frontpagepopupmodal
+firstcamp.se##.modal-backdrop
 fiskejournalen.se##div[style="background-color:#ededed"]
 fjallbrynt.se###itc-cookie-notify
 flamman.se##.Banner
@@ -1621,6 +1633,7 @@ startaochdriva.se##a[href*="&utm"][target="_blank"]
 startaochdriva.se##img[data-permalink]
 stayfriends.se###cookieHint
 streamtajm.*##.longbanner
+studentlund.se,worldkustom.com###moove_gdpr_cookie_info_bar
 surfa.se###loader-wrapper
 surfa.se##.annonsDiv
 sv.geneanet.org###header-info-cookie
@@ -1705,6 +1718,7 @@ tradera.com##.adsense
 tradera.com##.start-page-banner-carousel
 tradera.com##div[data-component-cookie-notification]
 tradera.com##react-adslot
+tripadvisor.se##[class$="banner_ad"]
 tv.nu###app > div > div:last-child:not(:first-child)
 tv.nu##.ad-mega--container
 tv.nu##.gdpr-bar-wrapper
@@ -1757,7 +1771,6 @@ viseniorer.se##.topheaderinfo
 webbjobb.io##.cookie
 webradio.dbmedia.se##.marquee
 widgets_native$script,domain=dagensmedia.se
-worldkustom.com###moove_gdpr_cookie_info_bar
 xn--fretagsverksamhet-zzb.se##.article-advertorial
 xn--fretagsverksamhet-zzb.se##.article-sponsored-by
 xn--lnforum-exa.se##.LFRBox
@@ -1904,6 +1917,7 @@ yougov.se##.cookie-confirm
 ||consent.cookiebot.com^$third-party,domain=alingsastidning.se|birthday.se|elitrapport.se|etc.se|gaffa.se|goteborgdirekt.se|hoglandsnytt.se|itaboutdoor.se|kingsizemag.se|lerumstidning.se|ljudochbild.se|ng.se|norran.se|partilletidning.se|selmaspa.se|skeppsbrons.se|smartsenior.se|stockholmdirekt.se|swedroid.se|tankesport.se|totallyorebro.se|totallystockholm.se|villalivet.se|wesafe.se
 ||consent.cookieinfo.net^$third-party,domain=bax-shop.se
 ||consent.dk^$third-party
+||converdiant.com^$third-party
 ||conviva.com^$third-party
 ||cookie-disclaimer.onewp.net^$third-party
 ||cookie-script.com^$third-party
