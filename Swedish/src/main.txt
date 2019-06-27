@@ -364,6 +364,9 @@
 ||cdn.axiell.com^*/cookie-disclaimer.$script
 ||cdn.iubenda.com/iubenda.$script
 ||cdn.livechatinc.com/tracking.$script
+||citygate.se^*/googleaccount$xmlhttprequest
+||citygate.se^*/mainads$xmlhttprequest
+||citygate.se^*/statistics$xmlhttprequest
 ||connectio.s3.amazonaws.com/connect-retarget.$script
 ||creatives.ancoraplatform.com/ptphb*.$script
 ||d10lumateci472.cloudfront.net/?amuld$script
@@ -773,7 +776,7 @@ breakit.se,nyheter24.se##+js(abort-on-property-read.js, _hjSettings)
 breakit.se##+js(abort-current-inline-script.js, _vwo_code)
 mestmotor.se,kingmagazine.se,cartoonnetwork.se,vagabond.se,manolo.se,modette.se,innebandy.se,goteborgdirekt.se,stockholmdirekt.se,qruiser.com,swehockey.se,norran.se,vetlandabk.se,bollnasbandy.se,siriusbandy.se,tellusbandy.se##+js(abort-current-inline-script.js, ADTECH, config)
 kamerabild.se,mobil.se##+js(set-constant.js, Sidpyssel.prototype.fixaStoran, noopFunc)
-datormagazin.se,villalivet.se,rocknytt.net,skanesport.se,newsner.com,humorbibeln.se,sportbibeln.se,ettgottskratt.se,hbwebben.se,enkelteknik.se,natursidan.se##+js(abort-current-inline-script.js, advanced_ads_ga_UID)
+datormagazin.se,villalivet.se,rocknytt.net,skanesport.se,newsner.com,humorbibeln.se,sportbibeln.se,ettgottskratt.se,hbwebben.se,enkelteknik.se,natursidan.se,screen-marknaden.se##+js(abort-current-inline-script.js, advanced_ads_ga_UID)
 opulens.se##+js(abort-current-inline-script.js, advanced_ads_adsense_UID)
 alltforforaldrar.se,mammasidan.se,minbebis.com##+js(abort-current-inline-script.js, loadAd)
 falkopingstidning.se,jnytt.se,jp.se,skaraborgslanstidning.se,skovdenyheter.se,smalandsdagblad.se,smalanningen.se,smt.se,tranastidning.se,vastgotabladet.se,vetlandaposten.se,vn.se,ljudochbild.se,pomu.se,thelocal.se,hockeynews.se##+js(abort-current-inline-script.js, googletag, push)
@@ -2040,6 +2043,7 @@ breakit.se##+js(abort-current-inline-script.js, twttr, trackPid)
 breakit.se##+js(abort-current-inline-script.js, _adftrack, push)
 metro.se##.custos-banner:nth-ancestor(1)
 metro.se##body > div:last-child:not(:first-child)
+metro.se##[data-linkarticledetails*="native"]
 metrojobb.se##.headlines__block:has(.ad-header)
 svt.se##li.nyh_contactbox-item > a[href*="facebook"]
 svt.se##li.nyh_contactbox-item > a[href*="twitter"]
@@ -2076,7 +2080,7 @@ tvdags.se##.like-modal
 ||tvdags.se/json/stats$xmlhttprequest
 norran.se##.js-cookie-information-bar
 @@||norran.se^$generichide
-||annonsportalen.norran.se^$subdocument
+||annonsportalen.norran.se^
 ||norranstats.azurewebsites.net^$xmlhttprequest
 norran.se##.adtech-ad
 norran.se##.social-share__button
@@ -2153,7 +2157,9 @@ branschkoll.se##.advert-widget
 hemnet.se##.recent-news__item:has(.recent-news__category:has-text(/sponsrad/i))
 hemnet.se##.article-news__link:has(.news-article--sponsored)
 hemnet.se##.featured-news__link:has(.featured-news__ribbon--sponsored)
+hemnet.se##.result-article__link:has(.article__ribbon--sponsored)
 hemnet.se##.start-page-hero__caption:has(.start-page-hero__caption-category:has-text(/sponsrad av/i))
+hemnet.se##.article-list-post a:has(span:has-text(Sponsrad))
 ||api.sfnix.net^$image,domain=hemnet.se
 /new_construction_ads/*$domain=hemnet.se
 /sticky-ads.*.js$script,domain=hemnet.se
@@ -3034,3 +3040,5 @@ sverak.se###third > #custom_html-19
 goteborgsgolfaren.se##.sgpb-popup-overlay
 goteborgsgolfaren.se###sgpb-popup-dialog-main-div-wrapper
 fn.se###cookie
+screen-marknaden.se##.fo-banner
+screen-marknaden.se##.fp-banner
