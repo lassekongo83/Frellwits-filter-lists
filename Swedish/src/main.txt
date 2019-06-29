@@ -974,6 +974,7 @@ nyafilmer.*##^script:has-text(blockerDetected)
 nyafilmer.*##^script:has-text(OneSignal)
 nyafilmer.*##^script[src^="/ads.js?"]
 streamtajm.*##^script:has-text(var TID=)
+teknikidag.se##^amp-ad
 !#endif
 
 ! Firefox mobile filters
@@ -1668,7 +1669,7 @@ tvmatchen.nu##+js(abort-on-property-write.js, onload)
 /sticky*.$script,stylesheet,domain=svenskafans.com
 /js/partners.js$script,domain=sporttv.nu
 /js/awp.$script,domain=svenskafans.com
-||d16fx559zbp759.cloudfront.net^$third-party,domain=everysport.com|svenskafans.com|fotbolldirekt.se|hockeysverige.se
+||d16fx559zbp759.cloudfront.net^$third-party,domain=everysport.com|svenskafans.com|fotbolldirekt.se|hockeysverige.se|hockeynews.se
 /js/ads/*$domain=svartgul.se
 ||svenskafans.com/se.js$script
 svenskafans.com##[class^="ad_display"]
@@ -1691,6 +1692,13 @@ golfbladet.se###top_banner
 golfbladet.se##.startpage_banner
 /_ad/*$script,domain=funbeat.se
 funbeat.se##.l-adv-interstitial
+hockeynews.se##.ad-style
+hockeynews.se##.top-ad-style
+hockeynews.se##[id^="outsider-"]
+hockeynews.se##.ad-mob-container
+hockeynews.se###mobile-one
+hockeynews.se###mobile-two
+hockeynews.se##.desktop-horizontal-ad
 
 ! Nordiske medier
 /cookie-consent-*.js$domain=motormagasinet.se|skyddosakerhet.se|food-supply.se
@@ -1751,7 +1759,7 @@ norran.se,yelp.se###cookie-info
 alltforforaldrar.se,battrestadsdel.se,flashback.se,mammasidan.se,minbebis.com,casinoexpo.se,leta.eniro.se###top-banner
 chef.se,svd.se##.Ad
 24blekinge.se,24emmaboda.se,24falkenberg.se,24halmstad.se,24helsingborg.se,24kalmar.se,24kristianstad.se,24malmo.se,24nybro.se,24trelleborg.se,24uppsala.se,24ystad.se,24varberg.se,24oland.se,24vasteras.se,99mac.se,bohuslaningen.se,byggnadsarbetaren.se,cissiochfreddan.se,claudiagalliconcha.se,di.se,dn.se,ekuriren.se,folkbladet.nu,kimura.se,kkuriren.se,loppi.se,mariestadstidningen.se,markbladet.se,medievarlden.se,mestmotor.se,mobil.se,norran.se,nwt.se,paulas.me,skaraborgsbygden.se,skillingaryd.nu,sla.se,sn.se,sportbloggare.com,swedroid.se,vk.se,vimedbarn.se,gabriellajoss.me,mybabydolls.se,emilysliv.se,casinowings.se,allakorsord.se,baaam.se,dromhemochtradgard.se,elle.se,elledecoration.se,ellematovin.se,femina.se,mabra.com,residencemagazine.se,katerinamagasin.se,dagensmedia.se,tidningenbalans.se,xn--vrnamo-bua.nu,bettingstugan.se,expressen.se,dagensopinion.se,driva-eget.se,interiorbyvanessa.se,vagabond.se,bioenergitidningen.se,tidningenhalsa.se,polistidningen.se##.ad
-affarsvarlden.se,arbetarskydd.se,lag-avtal.se,nickelodeon.se,nyteknik.se,vf.se,improveme.se,hjotidning.se,kt.se,sla.se,mariestadstidningen.se,filipstadstidning.se,fryksdalsbygden.se,nwt.se,arvikanyheter.se,nkp.se,saffletidningen.se,provinstidningen.se,dalslanningen.se,karlskogatidning.se,nlt.se,kungalvsposten.se,molndalsposten.se,lokaltidningensto.se,kungsbackaposten.se,byggahus.se##.ad-container
+affarsvarlden.se,arbetarskydd.se,lag-avtal.se,nickelodeon.se,nyteknik.se,vf.se,improveme.se,hjotidning.se,kt.se,sla.se,mariestadstidningen.se,filipstadstidning.se,fryksdalsbygden.se,nwt.se,arvikanyheter.se,nkp.se,saffletidningen.se,provinstidningen.se,dalslanningen.se,karlskogatidning.se,nlt.se,kungalvsposten.se,molndalsposten.se,lokaltidningensto.se,kungsbackaposten.se,byggahus.se,expressen.se##.ad-container
 dn.se,klart.se,norran.se##.ad-wrapper
 brollopstorget.se,familjeliv.se##.ad_right
 24blekinge.se,24emmaboda.se,24falkenberg.se,24halmstad.se,24helsingborg.se,24kalmar.se,24kristianstad.se,24malmo.se,24nybro.se,24trelleborg.se,24uppsala.se,24ystad.se,24varberg.se,24oland.se,24vasteras.se,babyhjalp.se,branschkoll.se,fotosidan.se,moviezine.se,affarsliv.com,affarslivgotland.se,corren.se,eposten.se,folkbladet.se,helagotland.se,klackspark.com,kuriren.nu,mvt.se,norrbottensaffarer.se,nsd.se,nt.se,pt.se,unt.se,vt.se,globalportalen.org,alltomstockholm.se,mitti.se,uppgang.com,vimmerbytidning.se,osterbottenstidning.fi,ekuriren.se,kkuriren.se,sn.se,allsvenskan.se##.ads
@@ -1792,7 +1800,7 @@ mammasidan.se,minbebis.com,alltforforaldrar.se,sverigesnatur.org,upphandling24.s
 skanesport.se,stockblogs.se###cookie-notice
 itrace.se,isabellalowengrip.se,vitalisfoto.se###preloader
 autolife.se###Banners
-katerinamagasin.se,aikfotboll.se,livsmedel.se##.banners
+expressen.se,katerinamagasin.se,aikfotboll.se,livsmedel.se##.banners
 xn--digilr-fua.se,ljuskultur.se,omvarlden.se,svenskfotboll.se##.cookies
 existenz.se,funfunfun.se,elektronikforumet.com##a[href*="bannerid"]
 lira.se,danstidningen.se###ads
@@ -2038,6 +2046,7 @@ breakit.se###mount-newsletter-signup-widget-mobile
 breakit.se##.js-video-ad
 breakit.se##.main-nav__entry > a[target="_blank"]
 breakit.se##.partner-atea
+breakit.se##.atea__button-wrapper
 breakit.se##.career-advertise
 breakit.se##+js(abort-current-inline-script.js, twttr, trackPid)
 breakit.se##+js(abort-current-inline-script.js, _adftrack, push)
@@ -2979,13 +2988,6 @@ mygatemagazine.se##.textwidget:has-text(Annons)
 radron.se##.c-page-restriction-infobar-content-wrapper
 radron.se##.content__body.cms-content.restricted:style(max-height: initial !important; overflow: initial !important;)
 radron.se##.read-more__overlay, .graybubble__overlay:style(position: initial !important;)
-hockeynews.se##.ad-style
-hockeynews.se##.top-ad-style
-hockeynews.se##[id^="outsider-"]
-hockeynews.se##.ad-mob-container
-hockeynews.se###mobile-one
-hockeynews.se###mobile-two
-hockeynews.se##.desktop-horizontal-ad
 utsidan.se###mastertop
 /gtm.js?$~third-party,script,domain=tui.se
 rikatillsammans.se##article:has(.sponsor_pre_heading)
@@ -2999,6 +3001,7 @@ runnersworld.se##body > div.d-md-block > a[target="_blank"]
 runnersworld.se##.container-footer
 runnersworld.se##.post-card-sponsored
 runnersworld.se##.post-card:has(.sponsrat)
+runnersworld.se##.sponsored-stats
 gardets.nu##.cookies-field
 /history_cookie_notice.$script,domain=historytv.se
 sv.geneanet.org###header-info-cookie
@@ -3042,3 +3045,5 @@ goteborgsgolfaren.se###sgpb-popup-dialog-main-div-wrapper
 fn.se###cookie
 screen-marknaden.se##.fo-banner
 screen-marknaden.se##.fp-banner
+rumhemma.se###aside > div:last-child
+rumhemma.se###aside > .html-widget
