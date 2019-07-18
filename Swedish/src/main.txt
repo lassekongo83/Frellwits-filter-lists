@@ -1840,6 +1840,8 @@ dreamfilm.*###content-embed:style(display: inherit !important;)
 dreamfilm.*##.splash-image
 dreamfilm.*##.alert-bottom
 ||nyafilmer.*^$csp=default-src 'self' 'unsafe-inline' 'unsafe-eval' jawcloud.co *.jawcloud.co upvtt.com wp.com *.wp.com *.googleapis.com vkpass.com *.vkpass.com streamango.com *.gstatic.com openload.co openload.pw verystream.com
+||nyafilmer.*^$csp=worker-src 'none'
+||nyafilmer.*/sw.js$script
 nyafilmer.*##+js(abort-current-inline-script.js, OneSignal)
 nyafilmer.*##+js(abort-current-inline-script.js, jopperJs, config)
 nyafilmer.*##+js(set-constant.js, blockerDetected, false)
@@ -1880,6 +1882,7 @@ swestream.*##.player-top-ad
 ||cdnbox.win/inc/ETKe.$script
 ||tracker.$important,domain=jawcloud.co
 ||jawcloud.co/banner$image
+||jawcloud.co/playerjs/vast/
 ||openload.*/assets/js/video-js/vast$script
 ||vcstream.to^*/script$script
 ||vcstream.to^*/license$script
