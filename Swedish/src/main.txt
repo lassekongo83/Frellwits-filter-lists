@@ -675,7 +675,7 @@ dpaly.se##body:style(background: none !important; height: unset !important;)
 @@/ads.min.js$~third-party,domain=notebookcheck.se
 @@/js/ads/advert.min.js$script,domain=spelo.se
 @@/js/adsbygoogle.js$script,~third-party,domain=feber.se|sv.ucoin.net|tjock.se
-@@/js/advert.$script,~third-party,domain=burlovsnyheter.se
+@@/js/advert.$script,~third-party,domain=burlovsnyheter.se|aftonbladet.se
 @@/js/advertisement*.$script,~third-party,domain=dagensmedia.nu|devote.se|expressen.se|familjeliv.se|feber.se|skyddsombud24.se|tjock.se
 @@/js/advertising.$script,~third-party,domain=byggnadsarbetaren.se|cykla.se|elbilsnytt.se|svegot.se|tekniksmart.se|vi-tidningen.se|vi.se|vilaser.se|snowmobile.se
 @@/scripts/advertisement*.$script,~third-party,domain=expressen.se
@@ -1096,6 +1096,7 @@ aftonbladet.se##.abTheme-ad
 aftonbladet.se##.abTheme-adSportbladet
 aftonbladet.se##.abTheme-infeedad
 aftonbladet.se##.abAdWrapper
+aftonbladet.se##.abAdArea
 aftonbladet.se###MegaAd
 aftonbladet.se##article:has(a[data-sponsored="true"])
 aftonbladet.se##[id*="abAdArea"]
@@ -1123,6 +1124,10 @@ aftonbladet.se,svd.se##+js(setInterval-defuser.js, e.reportVisibility())
 @@||aftonbladet.se/hyper-assets/namegen.$script
 @@||aftonbladet.se/hyper-assets/live-components$script
 ||aftonbladet.se/kampanj/casinoguide$document
+! ab story sektion
+/ab-xiti-min.$script,domain=aftonbladet.se
+/sptAutoTracker.$script,domain=aftonbladet.se
+/d-footer.min.$script,domain=aftonbladet.se
 omni.se##.article--sponsored
 omni.se##.resource--sponsored
 ||omni-ads.omni.news^
@@ -1458,6 +1463,7 @@ nyheter24.se##+js(abort-current-inline-script.js, check_ab)
 nyheter24.se##+js(abort-current-inline-script.js, slotNameCu)
 nyheter24.se##[id^="article"]:has(.native_header)
 nyheter24.se##[id^="article"]:has(em:has-text(/artikeln är i samarbete med/i))
+nyheter24.se##.lazyload:has(span:has-text(/^sponsrat$/i))
 nyheter24.se##.plugin_wrapper.code
 filmtipset.se###acceptCookiesDiv
 filmtipset.se##:xpath(//div[@id="toggle_all_prices"]/parent::td[1]/parent::tr[1])
