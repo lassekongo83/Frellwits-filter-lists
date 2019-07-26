@@ -75,6 +75,7 @@
 ||foxpush.net^$third-party
 ||franecki.net^$third-party
 ||funnelytics.io^$third-party
+||gamblingsyndication.com^$third-party
 ||gameanalytics.com^$third-party
 ||getlevelten.com^$third-party
 ||getsitecontrol.com^$third-party
@@ -1284,6 +1285,10 @@ expressen.se##.pressrelease-teaser
 expressen.se##.teaser--sponsored
 expressen.se##.article--sponsored
 expressen.se##.teaser > a[href*="happygreen.se"]
+! Jul 2019
+! Ads served from this script @ https://www.expressen.se/halsoliv/halsa/att-klappa-katter-eller-hundar-i-tio-minuter-kan-minska-stress/
+! The ads invalidates a request I got as a DM on reddit to whitelist their quizzes and polls. The iframes that serves ads are identical.
+/kit/qualp.$script,domain=expressen.se
 ! mitt kök
 mittkok.expressen.se##.newsletter__slide
 mittkok.expressen.se##.main:style(width: 100% !important;)
@@ -2052,8 +2057,7 @@ ng.se##[class*="sponsored-article"]
 ng.se##.secondary-sidebar > .panel-pane:last-child
 ng.se##.js--llad
 @@||ng.se^$generichide
-/users/*/*casi$image,domain=ng.se
-/users/*/*minibanner$image,domain=ng.se
+/users/2401/*$image,domain=ng.se
 /nodecounter/*?token$image,domain=ng.se
 ||breakit.solidtango.com^$subdocument
 ||breakit.se/api/visit$xmlhttprequest
@@ -2076,6 +2080,8 @@ breakit.se##+js(abort-current-inline-script.js, _adftrack, push)
 metro.se##.custos-banner:nth-ancestor(1)
 metro.se##body > div:last-child:not(:first-child)
 metro.se##[data-linkarticledetails*="native"]
+metro.se##div[class^="css-"][width^="1,1"]:has-text(/hela denna artikel är en annons/i)
+metro.se##div[class*="css-"]:matches-css-before(content: "annons")
 metrojobb.se##.headlines__block:has(.ad-header)
 svt.se##li.nyh_contactbox-item > a[href*="facebook"]
 svt.se##li.nyh_contactbox-item > a[href*="twitter"]
@@ -2442,6 +2448,7 @@ listor.se##article:has(a[href*="/annons/"])
 listor.se##.swp_social_panelSide
 accentmagasin.se##.widget-container:has(.widget-title:has-text(/annons/i))
 ||newsharecounts.com^$third-party,domain=samnytt.se
+||samnytt.se^$csp=frame-src 'self' *.youtube.com youtube.com *.youtube-nocookie.com youtube-nocookie.com *.vimeo.com disqus.com
 @@||samnytt.se^$generichide
 samnytt.se##.nc_socialPanel
 samnytt.se##a[data-bid][href*="/linkout/"]
