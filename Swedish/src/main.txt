@@ -750,7 +750,7 @@ patient.info##body:style(overflow: auto !important;)
 /gtm-$script,domain=popmuzik.se|ljudochbild.se
 /i10c@p1/*$domain=bax-shop.se|digikey.se|justfab.se|tui.se
 /jquery.fancybox.$domain=saljledarskap.se|tjanstebilen.se
-/modules/GTM$script,domain=iform.se
+/modules/GTM$script,domain=iform.se|digitalfotoforalla.se|natgeo.se|popularhistoria.se
 /newsletter/*$domain=zalando.se
 /panorama.js$script,domain=blogg.se|bloggkommentatorerna.se|hannaofsweden.se|itsallabouttaif.se|ladydahmer.nu|lindablom.se|modette.se|rebeckasfoto.se|svenskayoutubers.se|themoviefreak.se|webblogg.se
 /pum/*$script,xmlhttprequest,domain=byggipedia.se|opulens.se|tkj.se|exponera.nu
@@ -1937,6 +1937,7 @@ saraabrahamsson.se,eurosport.se,jawcloud.co,openload.co,openload.pw,oload.stream
 ||youplay.se^$third-party,domain=hamsterpaj.net|emocore.se|dayviews.com|kamrat.com|familjeliv.se
 ! Don't mess with peoples default scroll settings
 !#if !env_mobile
+lundagard.se##+js(aeld, wheel)
 /rokophoto-lite/js/SmoothScroll.$script
 /plugins/wp-enqueue/smoothscroll.$script
 !#endif
@@ -1994,10 +1995,14 @@ hitta.se##[trackcat="mysafety-integration"]
 ||kartor.eniro.se/d.html$subdocument
 ||gru.eniro.se^
 ||gru.eniro.se^$csp=worker-src 'none'
+||gru.proff.se^
+||gru.proff.se^$csp=worker-src 'none'
+||stats.proff.no^$script
 eniro.se##.hit-search-word-ad
 eniro.se##.profile-ad-wrapper
 eniro.se##.hit-partners
 eniro.se##.banner-container-result-header
+eniro.se###FrontImage:style(height: 0 !important;)
 fotosidan.se##a[href^="https://ads."]
 fotosidan.se##.banner-panorama-wmn
 ||obj.fotosidan.se/obj/pa/$image
