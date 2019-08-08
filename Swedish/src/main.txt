@@ -720,6 +720,8 @@ mediamarkt.se#@#.cookie-info-layer
 patient.info##body:style(overflow: auto !important;)
 ! https://github.com/lassekongo83/Frellwits-filter-lists/issues/56
 @@||vk.com/video_ext.php
+! https://twitter.com/arneby/status/1157674027516878848
+@@/optimizelyjs/*$domain=ikea.com
 
 ! Common site specific blocking
 -ads.$image,domain=svenskbyggtidning.se
@@ -774,7 +776,7 @@ patient.info##body:style(overflow: auto !important;)
 ||consent.cookieinfo.net^$third-party,domain=bax-shop.se
 ||cookiepro.com^$third-party,domain=sd.se
 ||d2wy8f7a9ursnm.cloudfront.net/bugsnag$script,domain=expressen.se|bioenergitidningen.se
-||evidon.com^$third-party,domain=morningstar.se|spela.se
+||evidon.com^$third-party,domain=morningstar.se|spela.se|downdetector.se
 ||execute-api.eu-west-1.amazonaws.com/*/event$xmlhttprequest,domain=forum.hallon.se
 ||getsentry.com^$third-party,domain=viafree.se
 ||herokuapp.com^$third-party,domain=aftonbladet.se
@@ -788,6 +790,7 @@ patient.info##body:style(overflow: auto !important;)
 ||sentry-cdn.com^$third-party,domain=svd.se|koket.se|viafree.se|bytbil.com
 ||delivery.vidible.tv^$third-party,domain=teknikhype.se
 ||youbora.com^$important,third-party,domain=aftonbladet.se|foxtv.se|svd.se
+||ziffstatic.com^$third-party,domain=downdetector.se
 ||zotabox.com^$third-party,domain=etunawebben.se|rapport24.com
 ||tags.tiqcdn.com^$domain=mallorcaliv.se
 
@@ -1005,11 +1008,8 @@ teknikidag.se##^amp-ad
 !#if env_mobile
 aftonbladet.se##div[data-reactroot] > div > div#MegaAd ~ div[class]:not(#header):not(.abThemeGradientPage)
 swedroid.se##div[id$="_ad_mobile"]
+swedroid.se##.externalTopMobile
 ikea.com##.cookie-info__panel--show
-/sv/local-extensions/header-footer/scripts/adform/*$domain=ikea.com
-/sv/local-extensions/header-footer/scripts/track.$script,domain=ikea.com
-/sv/local-extensions/header-footer/scripts/hotjar.$script,domain=ikea.com
-/sv/analytics/*$domain=ikea.com
 !#endif
 
 ! IDG
@@ -3121,3 +3121,7 @@ shoegazing.se###main-sidebar > .widget_media_image
 @@/wp-content/uploads/dynamic_avia$script,domain=bjornsennbrink.se
 /site-notifications.$script,domain=se.invertalia.net
 se.invertalia.net##.js-cookies-notification
+/sv/analytics/*$domain=ikea.com
+/sv/local-extensions/header-footer/scripts/adform/*$domain=ikea.com
+/sv/local-extensions/header-footer/scripts/track.$script,domain=ikea.com
+/sv/local-extensions/header-footer/scripts/hotjar.$script,domain=ikea.com
