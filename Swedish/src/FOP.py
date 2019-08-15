@@ -62,7 +62,7 @@ KNOWNOPTIONS = ("collapse", "csp", "document", "elemhide",
                 "redirect=google-analytics.com/cx/api.js", "redirect=googlesyndication.com/adsbygoogle.js", "redirect=doubleclick.net/instream/ad_status.js", 
                 "redirect=ampproject.org/v0.js", "redirect=noopjs", "redirect=noopcss", "redirect=noopframe", "redirect=nooptext", 
                 "redirect=noopmp3-0.1s", "redirect=noopmp4-1s", "redirect=1x1-transparent.png", "redirect=2x2-transparent.png", 
-                "redirect=3x2-transparent.png", "redirect=32x32-transparent.png", "1p", "3p", "inline-script", "xhr")
+                "redirect=3x2-transparent.png", "redirect=32x32-transparent.png", "1p", "3p", "inline-script", "xhr", "mp4", "empty", "all")
 
 # List the supported revision control system commands
 REPODEF = collections.namedtuple("repodef", "name, directory, locationoption, repodirectoryoption, checkchanges, difference, commit, pull, push")
