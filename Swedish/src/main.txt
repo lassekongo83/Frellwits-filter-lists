@@ -310,6 +310,7 @@
 /LoadSlotLocator.$script
 /logger/logger?
 /losad/loada.$script
+/loada.forum.$script
 /monetization/ads-module/*
 /monetization/pixel-sdk/*
 /mp_emediate/inc/annons.html
@@ -772,6 +773,7 @@ patient.info##body:style(overflow: auto !important;)
 ||aff.bstatic.com^$domain=travelgrip.se
 ||apprl.com/embed/$subdocument,domain=forni.se|majanilssonlindelof.com|metromode.se|petratungarden.se|trendenser.se|vavawoom.com
 ||bstatic.com/static/affiliate$third-party
+||cdn.cookielaw.org^$script,domain=cartoonnetwork.se
 ||cdn.jsdelivr.net/npm/search-insights$script,domain=forum.hallon.se
 ||cdn.lr-ingest.io/log$script,domain=ipo.se
 ||connect.getflowbox.com^$third-party,domain=aikfotboll.se|farjestadbk.se|svenskaturistforeningen.se
@@ -800,10 +802,10 @@ patient.info##body:style(overflow: auto !important;)
 
 ! Common scriptlets
 ng.se,alltomstockholm.se,mitti.se,bloggbevakning.se,cornucopia.cornubot.se,innebandymagazinet.se##+js(aopr, ADTECH)
-dagensps.se,husvagnochcamping.se,hemtrevligt.se,akaskidor.se,utemagasinet.se,livetombord.se,svenskgolf.se,kingmagazine.se,vagabond.se,tidningenhalsa.se,mestmotor.se,nyheter24.se,swedroid.se,breakit.se,fotbolltransfers.com,modette.se,muscles.se,cartoonnetwork.se,vf.se,jogg.se,svettig.se,cykl.se,hjotidning.se,kt.se,sla.se,mariestadstidningen.se,filipstadstidning.se,fryksdalsbygden.se,nwt.se,arvikanyheter.se,nkp.se,saffletidningen.se,provinstidningen.se,dalslanningen.se,karlskogatidning.se,nlt.se,swehockey.se,elitserien.se,dagensjuridik.se##+js(acis, ADTECH, enqueueAd)
+dagensps.se,husvagnochcamping.se,hemtrevligt.se,akaskidor.se,utemagasinet.se,livetombord.se,svenskgolf.se,kingmagazine.se,vagabond.se,tidningenhalsa.se,mestmotor.se,nyheter24.se,swedroid.se,breakit.se,fotbolltransfers.com,modette.se,muscles.se,vf.se,jogg.se,svettig.se,cykl.se,hjotidning.se,kt.se,sla.se,mariestadstidningen.se,filipstadstidning.se,fryksdalsbygden.se,nwt.se,arvikanyheter.se,nkp.se,saffletidningen.se,provinstidningen.se,dalslanningen.se,karlskogatidning.se,nlt.se,swehockey.se,elitserien.se,dagensjuridik.se##+js(acis, ADTECH, enqueueAd)
 breakit.se,nyheter24.se##+js(aopr, _hjSettings)
 breakit.se##+js(acis, _vwo_code)
-mestmotor.se,kingmagazine.se,cartoonnetwork.se,vagabond.se,manolo.se,modette.se,innebandy.se,goteborgdirekt.se,stockholmdirekt.se,qruiser.com,swehockey.se,norran.se,vetlandabk.se,bollnasbandy.se,siriusbandy.se,tellusbandy.se##+js(acis, ADTECH, config)
+mestmotor.se,kingmagazine.se,vagabond.se,manolo.se,modette.se,innebandy.se,goteborgdirekt.se,stockholmdirekt.se,qruiser.com,swehockey.se,norran.se,vetlandabk.se,bollnasbandy.se,siriusbandy.se,tellusbandy.se##+js(acis, ADTECH, config)
 kamerabild.se,mobil.se##+js(set-constant.js, Sidpyssel.prototype.fixaStoran, noopFunc)
 datormagazin.se,villalivet.se,rocknytt.net,skanesport.se,newsner.com,humorbibeln.se,sportbibeln.se,ettgottskratt.se,hbwebben.se,enkelteknik.se,natursidan.se,screen-marknaden.se##+js(acis, advanced_ads_ga_UID)
 opulens.se##+js(acis, advanced_ads_adsense_UID)
@@ -1275,6 +1277,7 @@ expressen.se,dn.se##[class*="open-in-app"]
 expressen.se##.collaboration--widget
 expressen.se##.flashes--visible
 expressen.se##.consent
+expressen.se##.flashes--premium
 ! hittat på förstasidan Feb 2019
 expressen.se##.teaser--native
 expressen.se##a[href*="spel.expressen.se"]
@@ -2476,6 +2479,7 @@ accentmagasin.se##.widget-container:has(.widget-title:has-text(/annons/i))
 samnytt.se##.nc_socialPanel
 samnytt.se##a[data-bid][href*="/linkout/"]
 samnytt.se##.estp-tab-wrapper
+samnytt.se##[id^="samny-"]
 merinfo.se##.articles-article-wrapper:has(span:has-text(/sponsrad/i))
 merinfo.se##.snippet-article-wrapper:has(.sponsored)
 minsolresa.se,resatillsolen.se##aside#text-5
@@ -2690,7 +2694,6 @@ kamrat.com##div[style="float:left;padding:12px 0;max-width:255px;"]:has-text(cas
 ||kamrat.com/js/cookiescript$script
 testfakta.se##+js(set-constant.js, Drupal.behaviors.euCookieCompliancePopup, noopFunc)
 testfakta.se##.row-uppdragstest
-liverattning.se##.promo-slider
 onlinepizza.se##li:has(.tag:has-text(Annons))
 onlinepizza.se##.top-banner-container
 mumsigast.se,dagensknep.se,djursidan.se,mysigast.se##+js(acis, mashvipo)
@@ -2703,6 +2706,7 @@ lundagard.se###bdCheckAlso.bdCheckAlsoShow
 lundagard.se##.theiaStickySidebar > .widget_sp_image:not(.bd-slider):not(.timeline-widget)
 lundagard.se##.theiaStickySidebar > [id^="media_image"]:not(.bd-slider):not(.timeline-widget)
 betting.se##+js(aopw, Fingerprint2)
+betting.se##.header-banners
 @@||stockblogs.se^$generichide
 komponentkoll.se##.gdpr-popup
 affarsstaden.se##+js(acis, jQuery, adblockdetect)
@@ -2712,12 +2716,6 @@ affarsstaden.se##.listing-partner
 /bimber-live.localhost$image,domain=mmabetz.se
 foreca.se###topbanner
 foreca.se###ckieconsent
-/metrics/*$domain=cartoonnetwork.se
-/bundle-bundle_cookiebar_defer.$script,domain=cartoonnetwork.se
-/bundle-bundle_omniture_defer.$script,domain=cartoonnetwork.se
-cartoonnetwork.se##+js(acis, ADTECHQueue)
-cartoonnetwork.se##+js(acis, ADTECH, executeQueue)
-cartoonnetwork.se##.basic-cookie-bar
 skk.se###cookie-button-banner
 solidtango.com###cookie-prompt
 battrenyheter.se##.vc_row.vc_row-flex:has(.abnan-single)
@@ -2742,8 +2740,9 @@ skrattsajten.com##.cookieScript
 @@||hbwebben.se^$generichide
 hbwebben.se###cookie-law-info-bar
 hbwebben.se##[class^="hbweb-in_post"]
-hbwebben.se##a[data-bid="1"][href*="/linkout/"][target="_blank"]
+hbwebben.se##a[data-bid="1"][href*="/linkout/"]
 baws.se##.td-post-sharing-top
+baws.se##.vc_column:has(.td-pulldown-size:has-text(/betting/i))
 springlfa.se##[id^="ad"]
 springlfa.se##.adrotate-loop
 springlfa.se##[class^="snp-pop"]
