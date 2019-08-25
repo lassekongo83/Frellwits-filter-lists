@@ -243,6 +243,7 @@
 /ajax/docu_stats.jsp$xmlhttprequest
 /ajax.php?action=get_cookies_policy$xmlhttprequest
 /ajax.php?action=get_policy&site=cookie-information$xmlhttprequest
+/analytics/gallup/*$script
 /annons.aspx?
 /annons_hor.
 /annons_ver.
@@ -730,6 +731,9 @@ patient.info##body:style(overflow: auto !important;)
 ! Common site specific blocking
 -ads.$image,domain=svenskbyggtidning.se
 -banner-$image,domain=litteraturmagazinet.se
+/480x360/$image,domain=marsta.nu
+/250x360/$image,domain=marsta.nu
+/980x360/$image,domain=marsta.nu
 /280x240/$image,domain=rumhemma.se
 /280x360/$image,domain=kurera.se
 /300x250/$image,domain=lokalfotboll.se
@@ -903,6 +907,7 @@ bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se,che
 /plugins/interstitial-ads/*
 /plugins/its-cookies/*$script
 /plugins/jetpack/_inc/build/widgets/eu-cookie-law/*$script
+/plugins/jnews-social-share/*$script,domain=svegot.se
 /plugins/lbg-audio8-html5-radio_ads/*$script,domain=svegot.se
 /plugins/likebtn-like-button/*$script,stylesheet
 /plugins/loppi-cookie-consent/*$script
@@ -1804,7 +1809,7 @@ businessclass.se,spela.se,entreprenor.se,effektmagasin.se##.advert
 norran.se,yelp.se###cookie-info
 alltforforaldrar.se,battrestadsdel.se,flashback.se,mammasidan.se,minbebis.com,casinoexpo.se,leta.eniro.se###top-banner
 chef.se,svd.se##.Ad
-99mac.se,bohuslaningen.se,byggnadsarbetaren.se,cissiochfreddan.se,claudiagalliconcha.se,di.se,dn.se,ekuriren.se,folkbladet.nu,kimura.se,kkuriren.se,loppi.se,mariestadstidningen.se,markbladet.se,medievarlden.se,mestmotor.se,mobil.se,norran.se,nwt.se,paulas.me,skaraborgsbygden.se,skillingaryd.nu,sla.se,sn.se,sportbloggare.com,swedroid.se,vk.se,vimedbarn.se,gabriellajoss.me,mybabydolls.se,emilysliv.se,casinowings.se,allakorsord.se,baaam.se,dromhemochtradgard.se,elle.se,elledecoration.se,ellematovin.se,femina.se,mabra.com,residencemagazine.se,katerinamagasin.se,dagensmedia.se,tidningenbalans.se,xn--vrnamo-bua.nu,bettingstugan.se,expressen.se,dagensopinion.se,driva-eget.se,interiorbyvanessa.se,vagabond.se,bioenergitidningen.se,tidningenhalsa.se,polistidningen.se,poddtoppen.se,ifokus.se##.ad
+99mac.se,bohuslaningen.se,byggnadsarbetaren.se,cissiochfreddan.se,claudiagalliconcha.se,di.se,dn.se,ekuriren.se,folkbladet.nu,kimura.se,kkuriren.se,loppi.se,mariestadstidningen.se,markbladet.se,medievarlden.se,mestmotor.se,mobil.se,norran.se,nwt.se,paulas.me,skaraborgsbygden.se,skillingaryd.nu,sla.se,sn.se,sportbloggare.com,swedroid.se,vk.se,vimedbarn.se,gabriellajoss.me,mybabydolls.se,emilysliv.se,casinowings.se,allakorsord.se,baaam.se,dromhemochtradgard.se,elle.se,elledecoration.se,ellematovin.se,femina.se,mabra.com,residencemagazine.se,katerinamagasin.se,dagensmedia.se,tidningenbalans.se,xn--vrnamo-bua.nu,bettingstugan.se,expressen.se,dagensopinion.se,driva-eget.se,interiorbyvanessa.se,vagabond.se,bioenergitidningen.se,tidningenhalsa.se,polistidningen.se,poddtoppen.se,ifokus.se,linnherbertsson.se##.ad
 affarsvarlden.se,arbetarskydd.se,lag-avtal.se,nickelodeon.se,nyteknik.se,vf.se,improveme.se,hjotidning.se,kt.se,sla.se,mariestadstidningen.se,filipstadstidning.se,fryksdalsbygden.se,nwt.se,arvikanyheter.se,nkp.se,saffletidningen.se,provinstidningen.se,dalslanningen.se,karlskogatidning.se,nlt.se,kungalvsposten.se,molndalsposten.se,lokaltidningensto.se,kungsbackaposten.se,byggahus.se,expressen.se##.ad-container
 dn.se,klart.se,norran.se##.ad-wrapper
 brollopstorget.se,familjeliv.se##.ad_right
@@ -2600,11 +2605,14 @@ kissies.se##.post:has(strong:has-text(/i samarbete med/i))
 minimalisterna.se##.post:has(p:has-text(/i samarbete med/i))
 @@||boffo.se^$generichide
 travprat.se##+js(aopw, bizpanda)
+travprat.se##.ff-ad
 /postscribe.$script,domain=linnherbertsson.se
 linnherbertsson.se##.content:has(.sponsored-container)
 linnherbertsson.se##[id^="content-ad"]
 linnherbertsson.se##body:style(overflow-y: auto !important;)
 ||cornucopia.cornubot.se/js/cookie*.$script
+cornucopia.cornubot.se##.FeaturedPost:has(a:has-text(/^Reklam/i))
+cornucopia.cornubot.se##h3:has-text(/sponsrade länkar/i) ~ *
 svegot.se##[itemtype="https://schema.org/WPAdBlock"]
 svegot.se##+js(aeld, scroll, (a))
 svegot.se##.et_bloom_popup
@@ -2637,7 +2645,6 @@ nyadagbladet.se##.third-col
 deliquate.se##.ajax_loader
 deliquate.se##[id^="ads300"]
 deliquate.se##[id^="linkcat-"]
-iabsverige.se###load
 lesscarbs.se##.post:has(p:has-text(/^annonssamarbete/i))
 lesscarbs.se##.category-annonssamarbete
 lesscarbs.se##.bd-flex-vertical > aside

@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Title: Frellwit's Swedish Filter
 ! Expires: 3 days (update frequency)
-! Last modified: 2019-08-24 07:31:07 CEST
+! Last modified: 2019-08-25 08:17:55 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -162,10 +162,13 @@
 .se/wdg/tracking
 /*Fokus_360x300px_animate*.gif$image,domain=fokus.se
 /*log_ad$image,domain=yelp.se
+/250x360/$image,domain=marsta.nu
 /280x240/$image,domain=rumhemma.se
 /280x360/$image,domain=kurera.se
 /300x250/$image,domain=lokalfotboll.se
 /468adrotate.php
+/480x360/$image,domain=marsta.nu
+/980x360/$image,domain=marsta.nu
 /?agg_url=/shopping/*$xmlhttprequest,domain=nyheter24.se
 /?agg_url=/sponsratinnehall/*$xmlhttprequest,domain=nyheter24.se
 /?file=lokus$subdocument
@@ -202,6 +205,7 @@
 /ajax_statistics_count/*$xmlhttprequest,domain=byggnyheter.se|dagensfastigheter.se|dagensnaringsliv.se|energinyheter.se|industrinyheter.se|infrastrukturnyheter.se|inredningsnyheter.se|jarnvagsnyheter.se|metallerochgruvor.se|papperochmassa.se|solenerginyheter.se|sportochfritidsnyheter.se|stockholmsbyggnyheter.se|transportochlogistik.se|vindkraftsnyheter.se
 /analytics$script,domain=dn.se
 /analytics$script,xmlhttprequest,domain=njus.me
+/analytics/gallup/*$script
 /annons-linje.gif$image,domain=tkj.se
 /annons-med-pil$image,domain=filmtipset.se
 /annons.aspx?
@@ -491,6 +495,7 @@
 /plugins/interstitial-ads/*
 /plugins/its-cookies/*$script
 /plugins/jetpack/_inc/build/widgets/eu-cookie-law/*$script
+/plugins/jnews-social-share/*$script,domain=svegot.se
 /plugins/lbg-audio8-html5-radio_ads/*$script,domain=svegot.se
 /plugins/likebtn-like-button/*$script,stylesheet
 /plugins/loppi-cookie-consent/*$script
@@ -667,7 +672,7 @@
 2000tv.se###bannerbox
 8sidor.se##.cookie-accept
 99mac.se##[id^="bbPrisjakt"]
-99mac.se,allakorsord.se,baaam.se,bettingstugan.se,bioenergitidningen.se,bohuslaningen.se,byggnadsarbetaren.se,casinowings.se,cissiochfreddan.se,claudiagalliconcha.se,dagensmedia.se,dagensopinion.se,di.se,dn.se,driva-eget.se,dromhemochtradgard.se,ekuriren.se,elle.se,elledecoration.se,ellematovin.se,emilysliv.se,expressen.se,femina.se,folkbladet.nu,gabriellajoss.me,ifokus.se,interiorbyvanessa.se,katerinamagasin.se,kimura.se,kkuriren.se,loppi.se,mabra.com,mariestadstidningen.se,markbladet.se,medievarlden.se,mestmotor.se,mobil.se,mybabydolls.se,norran.se,nwt.se,paulas.me,poddtoppen.se,polistidningen.se,residencemagazine.se,skaraborgsbygden.se,skillingaryd.nu,sla.se,sn.se,sportbloggare.com,swedroid.se,tidningenbalans.se,tidningenhalsa.se,vagabond.se,vimedbarn.se,vk.se,xn--vrnamo-bua.nu##.ad
+99mac.se,allakorsord.se,baaam.se,bettingstugan.se,bioenergitidningen.se,bohuslaningen.se,byggnadsarbetaren.se,casinowings.se,cissiochfreddan.se,claudiagalliconcha.se,dagensmedia.se,dagensopinion.se,di.se,dn.se,driva-eget.se,dromhemochtradgard.se,ekuriren.se,elle.se,elledecoration.se,ellematovin.se,emilysliv.se,expressen.se,femina.se,folkbladet.nu,gabriellajoss.me,ifokus.se,interiorbyvanessa.se,katerinamagasin.se,kimura.se,kkuriren.se,linnherbertsson.se,loppi.se,mabra.com,mariestadstidningen.se,markbladet.se,medievarlden.se,mestmotor.se,mobil.se,mybabydolls.se,norran.se,nwt.se,paulas.me,poddtoppen.se,polistidningen.se,residencemagazine.se,skaraborgsbygden.se,skillingaryd.nu,sla.se,sn.se,sportbloggare.com,swedroid.se,tidningenbalans.se,tidningenhalsa.se,vagabond.se,vimedbarn.se,vk.se,xn--vrnamo-bua.nu##.ad
 ://sifomedia.
 @@/*490x224$image,domain=dansbandskanalen.se|guldkanalen.se
 @@/*_adframe.js$script,~third-party,domain=fssweden.se
@@ -1370,7 +1375,6 @@ hujada.nu##.adds-block
 hujada.nu##.hujad-widget
 husbil.se,husvagn.se,karlskrona.com,karlstad.com,noje.se,stockholm.com##.ui-optin-wrapper
 hypeline.se###herobanner
-iabsverige.se###load
 ica.se##.recipe-ad
 idg.se##.articleBodyText + .lazyloaded > .cms-target
 idg.se##.nextArticleSp
@@ -1789,6 +1793,7 @@ tradera.com##.start-page-banner-carousel
 tradera.com##div[data-component-cookie-notification]
 tradera.com##react-adslot
 travelnews.se##.header_banner
+travprat.se##.ff-ad
 tripadvisor.se##[class$="banner_ad"]
 tv.nu###app > div > div:last-child:not(:first-child)
 tv.nu##.ad-mega--container
