@@ -431,6 +431,7 @@
 ||kuriren.eu/app/$subdocument
 ||laikabook.se/ib/banner$subdocument
 ||link.theplatform.com^$xmlhttprequest
+||liveagent.se/scripts/track.$script
 ||lemonwhale.com^*/adevent/$xmlhttprequest
 ||mailchimp.com^*/popup$script
 ||mailmunch.co^*/scrollbox.$script
@@ -754,7 +755,7 @@ patient.info##body:style(overflow: auto !important;)
 /facebook/gillkom$xmlhttprequest,domain=kamerabild.se|mobil.se
 /facebook/postkoll$xmlhttprequest,domain=kamerabild.se|mobil.se
 /ga.js$script,~third-party,domain=driverzone.se
-/gdpr/*$domain=capdesign.se|digikey.se|funnygames.se|megaspel.se|nyckelspel.se|rapport24.com|villalivet.se|vimedbarn.se
+/gdpr/*$domain=capdesign.se|digikey.se|megaspel.se|nyckelspel.se|rapport24.com|villalivet.se|vimedbarn.se
 /glasscandle.$script,domain=komponentkoll.se
 /glimr.$script,domain=affarsliv.com|affarslivgotland.se|aftonbladet.se|blocket.se|corren.se|di.se|dn.se|eposten.se|folkbladet.se|gotland.net|helagotland.se|klackspark.com|kuriren.nu|mvt.se|norrbottensaffarer.se|nsd.se|nt.se|politism.se|pt.se|unt.se|uppgang.com|uppsala.com|uppsalatidningen.se|viivilla.se|vimmerbytidning.se|vt.se|ekuriren.se|kkuriren.se|sn.se
 /gtm-$script,domain=popmuzik.se|ljudochbild.se
@@ -2381,6 +2382,9 @@ viseniorer.se##.topheaderinfo
 vmj.se,danskaspraket.se,digitalavykort.se,viseniorer.se##.cc-cookies
 fuska.se##+js(acis, $, .modal)
 fuska.se###top1
+fuska.se##.alert-success
+fuska.se##.well_green:has-text(låna)
+fuska.se##.space-top:has-text(Reklam)
 voodoofilm.org##.content-news:has(span[id*="Sponsored"])
 mytaste.se##div[id*="panorama_"]
 mytaste.se##.site-header__panorama
@@ -2399,10 +2403,6 @@ njus.me##.article-list-item--sponsored
 /commercialAds/*$xmlhttprequest,domain=njus.me
 /analytics$script,xmlhttprequest,domain=njus.me
 /PUSHNOTIFICATIONS_CONSENT$xmlhttprequest,domain=njus.me
-||cdn2.editmysite.com^*/snowday*.$script,domain=rapport24.com
-||promote.weebly.com^$xmlhttprequest,subdocument,script,domain=rapport24.com
-||static.zbcdn2.net^$script,domain=rapport24.com
-rapport24.com##.kb-container
 ||byggnadsarbetaren.se^*/ad-byline.png$image
 byggnadsarbetaren.se##.siteAlerts
 byggnadsarbetaren.se##[class^="siteAds"]
@@ -2410,7 +2410,8 @@ byggnadsarbetaren.se##[class^="siteAds"]
 ||btg.mtvnservices.com/aria/coda.html$script,domain=nickelodeon.se
 ||btg.mtvnservices.com/aria/projectX/projectX.html$script,domain=nickelodeon.se
 @@||funnygames.se^$generichide
-funnygames.se###katon-slot
+funnygames.se##.banner-container
+funnygames.se##.slot
 jogg.se,skid.se,cykl.se,svettig.se##.panoramaAd
 uppsalanyheter.se###banner-top-block
 uppsalanyheter.se##+js(acis, uri, Math.random)
