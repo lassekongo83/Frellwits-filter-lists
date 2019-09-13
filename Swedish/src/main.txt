@@ -225,6 +225,7 @@
 .se/cookiesamtykke$script
 .se/counter/
 .se/custom/ad/
+.se/js/cookie-message.$script
 .se/fightodds.plugin/fightodds.plugin.$script
 .se/files/annons/$image
 .se/log/?
@@ -377,6 +378,7 @@
 ||apis.google.com/js/plusone.js$third-party
 ||app.readpeak.com/ads/$xmlhttprequest
 ||auction-release.mlpapi.com/site/LoadPluginSite$script
+||b19.se/mediacreeper/image$image
 ||back.famebloggers.com/bloggerfy/tracker$script,subdocument
 ||bcm.interactives.dk/script/$script
 ||biowebb-data.*.amazonaws
@@ -447,6 +449,8 @@
 ||mailchimp.com^*/popup$script
 ||mailmunch.co^*/scrollbox.$script
 ||media.jw-it.se/b/$image
+||mediacreeper.com/image$image,redirect=32x32.png
+||mediacreeper.se/image$image,redirect=32x32.png
 ||molnvaxlar.se/banner/$third-party
 ||monkey.tunnl.com/identify$subdocument
 ||mtst.io/js/mtst.js$script
@@ -482,6 +486,7 @@
 ||susnet.nu/susnetstat.js$script
 ||susnet.se/susnetstat.js$script
 ||t.raptorsmartadvisor.com^$image
+||tc.hometogo.net^$image
 ||telemetry.bambuser.io^$websocket
 ||tibaco.net/scripts/tws.js$script
 ||video-static.tunnl.com/js/blocker.min.js$script
@@ -787,7 +792,7 @@ patient.info##body:style(overflow: auto !important;)
 /sharedaddy/sharing.$domain=nyheteridag.se|damhockey.se
 /SitesterSurvey*.$script,domain=wwf.se
 /smart-app-banner.$script,domain=allsvenskan.se|svenskafans.com|superettan.se
-/snowplow-*.js$script,domain=hemnet.se
+/snowplow$script,domain=hemnet.se|casamundo.se
 /sponsor/$image,domain=bandybyn.se|brynas.se|difhockey.se|ettgottskratt.se|farjestadbk.se|fotbollskanalen.se|freeride.se|frillesasbandy.se|frolundaindians.com|happyride.se|humorbibeln.se|hv71.se|ifkgoteborg.se|lhc.eu|luleahockey.se|malmoredhawks.com|moraik.se|newsner.com|orebrohockey.se|roglebk.se|skellefteaaik.se|sportbibeln.se|swehockey.se|timraik.se|vaxjolakers.se|vskbandy.se
 /statistics.$script,xmlhttprequest,domain=alltforforaldrar.se|byggnyheter.se|dagensfastigheter.se|dagensnaringsliv.se|energinyheter.se|fria.nu|friatidningen.se|goteborgsfria.se|industrinyheter.se|infrastrukturnyheter.se|inredningsnyheter.se|jarnvagsnyheter.se|landetsfria.se|mammasidan.se|market.se|metallerochgruvor.se|minbebis.com|papperochmassa.se|sesam.nu|solenerginyheter.se|sportochfritidsnyheter.se|stockholmsbyggnyheter.se|stockholmsfria.se|testfakta.se|transportochlogistik.se|vindkraftsnyheter.se|sxk.se|plastikoperationsforum.se
 /urls/count.json$script,domain=emilysliv.se|gabriellajoss.me|kenzas.se|mybabydolls.se|vimedbarn.se
@@ -1003,12 +1008,6 @@ svd.se,aftonbladet.se,muscles.se,nordichardware.se,nyheteridag.se,freeride.se,ha
 ||ssl.p.jwpcdn.com^*/gapro.js$script,important,domain=freeride.se|happyride.se|ilikeradio.se
 ||ssl.p.jwpcdn.com^*/sharing.js$script,important,domain=eurosport.se|aftonbladet.se|freeride.se|happyride.se
 ||ssl.p.jwpcdn.com^*/googima.js$script,important,domain=laget.se
-
-! Fix for the mediacreeper onerror attribute abuse
-||mediacreeper.com/image$image,domain=cornucopia.cornubot.se|peak-oil.se|apg29.nu|zaramis.se|horoskop.nu|blogspot.se|nyhetswebben.se|emanuelkarlsten.se|uvell.se|supermiljobloggen.se|swedishprepper.com|genusdebatten.se|vaken.se|solrosuppropet.se|toklandet.wordpress.com|experimentlandet.blogg.se|allmogen.org|lindelof.nu|sempermiles.se|opendata.se|hoforsbloggen.se|lindqvist.com|vargfakta.se|forenadebolag.se|xn--blljus-jua.se|frihetssmedjan.se|sysadmindagen.se|tjuvlyssnat.se|b19.se|webbjobb.io|petterssonsblogg.se|internetsweden.se|kameratrollet.se
-||mediacreeper.se/image$image,domain=cornucopia.cornubot.se|peak-oil.se|apg29.nu|zaramis.se|horoskop.nu|blogspot.se|nyhetswebben.se|emanuelkarlsten.se|uvell.se|supermiljobloggen.se|swedishprepper.com|genusdebatten.se|vaken.se|solrosuppropet.se|toklandet.wordpress.com|experimentlandet.blogg.se|allmogen.org|lindelof.nu|sempermiles.se|opendata.se|hoforsbloggen.se|lindqvist.com|vargfakta.se|forenadebolag.se|xn--blljus-jua.se|frihetssmedjan.se|sysadmindagen.se|tjuvlyssnat.se|b19.se|webbjobb.io|petterssonsblogg.se|internetsweden.se|kameratrollet.se
-cornucopia.cornubot.se,peak-oil.se,apg29.nu,zaramis.se,horoskop.nu,blogspot.se,nyhetswebben.se,emanuelkarlsten.se,uvell.se,supermiljobloggen.se,swedishprepper.com,genusdebatten.se,vaken.se,solrosuppropet.se,toklandet.wordpress.com,experimentlandet.blogg.se,allmogen.org,lindelof.nu,sempermiles.se,opendata.se,hoforsbloggen.se,lindqvist.com,vargfakta.se,forenadebolag.se,xn--blljus-jua.se,frihetssmedjan.se,sysadmindagen.se,tjuvlyssnat.se,b19.se,webbjobb.io,petterssonsblogg.se,internetsweden.se,kameratrollet.se##+js(remove-attr, onerror)
-||b19.se/mediacreeper/image$image
 
 ! HTML filters
 !#if env_firefox
@@ -2649,6 +2648,7 @@ linnherbertsson.se##body:style(overflow-y: auto !important;)
 ||cornucopia.cornubot.se/js/cookie*.$script
 cornucopia.cornubot.se##.FeaturedPost:has(a:has-text(/^Reklam/i))
 cornucopia.cornubot.se##h3:has-text(/sponsrade länkar/i) ~ *
+cornucopia.cornubot.se##.post:has(i:has-text(/reklam/i))
 svegot.se##[itemtype="https://schema.org/WPAdBlock"]
 svegot.se##+js(aeld, scroll, (a))
 svegot.se##.et_bloom_popup

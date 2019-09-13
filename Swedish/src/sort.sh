@@ -14,8 +14,6 @@ not_extended='output/not-extended.txt'
 ubo_n='redirect=|redirect-rule=|\$important|,important|\$document|,document|\$badfilter|,badfilter|\$inline-script|,inline-script|\$popunder|,popunder|\$1p|,1p|\$3p|,3p|\$xhr|,xhr|\$first-party|,first-party|\$all|\$mp4|,mp4|\$empty|,empty'
 ubo_c=':xpath\(|:matches-css\(|:matches-css-before\(|:matches-css-after\(|:has\(|:if\(|:if-not\(|:has-text\(|:style\(|:scope|:nth-ancestor\(|:watch-attr\('
 ubo_s='script:inject|#\+js\('
-# Filters that work in most blockers but is needed in combination with other uBO filters to work
-ubo_o='mediacreeper.com|mediacreeper.se'
 
 # Extract browser and extension specific fixes if there are any
 # TODO: Make sure !ext_ublock is handled differently AND included in the main list unlike the others
@@ -25,8 +23,8 @@ sleep .5
 sed -n '/^!#if/,/^!#endif/!p' $main > $main_temp
 
 # egrep the stuff needed and then remove it with egrep -v
-egrep "($ubo_n)|($ubo_c)|($ubo_s)|($ubo_o)" $main_temp > $extended
-egrep -v "($ubo_n)|($ubo_c)|($ubo_s)|($ubo_o)|(^!.*|^$)" $main_temp > $not_extended
+egrep "($ubo_n)|($ubo_c)|($ubo_s)" $main_temp > $extended
+egrep -v "($ubo_n)|($ubo_c)|($ubo_s)|(^!.*|^$)" $main_temp > $not_extended
 
 # Sort with FOP.py
 python3 FOP.py output
