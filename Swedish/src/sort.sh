@@ -11,7 +11,7 @@ ppd='output/pre-parsing-directives.txt'
 extended='output/extended.txt'
 not_extended='output/not-extended.txt'
 # uBO specific filters
-ubo_n='redirect=|redirect-rule=|\$important|,important|\$document|,document|\$badfilter|,badfilter|\$inline-script|,inline-script|\$popunder|,popunder|\$1p|,1p|\$3p|,3p|\$xhr|,xhr|\$first-party|,first-party|\$all|\$mp4|,mp4|\$empty|,empty'
+ubo_n='redirect=|redirect-rule=|\$important|,important|\$document|,document|\$badfilter|,badfilter|\$inline-script|,inline-script|\$popunder|,popunder|\$1p|,1p|\$3p|,3p|\$xhr|,xhr|\$first-party|,first-party|\$all|\$mp4|,mp4|\$empty|,empty|\$specifichide|,specifichide|\$shide|,shide|\$ghide|,ghide|\$ehide|,ehide'
 ubo_c=':xpath\(|:matches-css\(|:matches-css-before\(|:matches-css-after\(|:has\(|:if\(|:if-not\(|:has-text\(|:style\(|:scope|:nth-ancestor\(|:watch-attr\('
 ubo_s='script:inject|#\+js\('
 

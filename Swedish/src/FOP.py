@@ -53,7 +53,7 @@ COMMITPATTERN = re.compile(r"^(A|M|P)\:\s(\((.+)\)\s)?(.*)$")
 IGNORE = ("headers.txt", "extended-headers.txt", "main-temp.txt", "pre-parsing-directives.txt", "hosts-temp.txt")
 
 # List all Adblock Plus/uBO options (excepting domain, which is handled separately), as of version 1.3.9
-KNOWNOPTIONS = ("collapse", "csp", "document", "elemhide",
+KNOWNOPTIONS = ("collapse", "csp", "document", "elemhide", "specifichide", "shide", "ehide", "ghide", 
                 "font", "genericblock", "generichide", "image", "match-case",
                 "object", "media", "object-subrequest", "other", "ping", "popup", 
                 "script", "stylesheet", "subdocument", "third-party", "first-party", 
