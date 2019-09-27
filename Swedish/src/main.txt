@@ -33,6 +33,7 @@
 ||boka.holiday^$third-party
 ||bonad.io^$third-party
 ||bonniergaming.com^$third-party
+||brandy.bonniernewslifestyle.se^$third-party
 ||bytelab.dk^$third-party
 ||bulletproof-analytics.com^$third-party
 ||buzzador.com^$third-party
@@ -180,6 +181,7 @@
 ||tourn.co^$third-party
 ||tourn.se^$third-party
 ||tr.apsisforms.com^$third-party
+||tracking.bonnier.news^$third-party
 ||travtjansten.se^$third-party
 ||trn.ninja^$third-party
 ||trugaze.io^$third-party
@@ -712,7 +714,7 @@ dpaly.se##body:style(background: none !important; height: unset !important;)
 @@/js/advert.$script,~third-party,domain=burlovsnyheter.se|aftonbladet.se
 @@/js/advertisement*.$script,~third-party,domain=dagensmedia.nu|devote.se|expressen.se|familjeliv.se|feber.se|skyddsombud24.se|tjock.se
 @@/js/advertising.$script,~third-party,domain=byggnadsarbetaren.se|cykla.se|elbilsnytt.se|svegot.se|tekniksmart.se|vi-tidningen.se|vi.se|vilaser.se|snowmobile.se
-@@/scripts/advertisement*.$script,~third-party,domain=expressen.se
+@@/scripts/advertisement*.$script,~third-party,domain=expressen.se|mama.nu
 @@/show_ads.js$script,~third-party,domain=happypancake.com
 @@/wp-content/*/adframe.js$script,~third-party,domain=falkopingstidning.se|jnytt.se|jp.se|skaraborgslanstidning.se|skovdenyheter.se|smalandsdagblad.se|smalanningen.se|smt.se|tranastidning.se|vastgotabladet.se|vetlandaposten.se|vn.se
 @@||aka-cdn.adtech.de/dt/common/DAC.js$script,domain=bandyplay.se
@@ -1285,8 +1287,9 @@ di.se##.dip_panorama
 di.se##.di_article_ad-block
 /adblk.js$script,domain=weekend.di.se
 ! expressen
+||assets.expressen.se/bundles/analytics$script
 ||precis.expressen.se/recommendations$xmlhttprequest
-||jtp.expressen.se/notify/clip-started.$image
+||jtp.expressen.se/notify$image
 ||spel.expressen.se^
 /_widget/destination$subdocument,domain=expressen.se
 /closest-native*/*$xmlhttprequest,domain=expressen.se
@@ -1306,7 +1309,6 @@ expressen.se##.widget-area--collaboration
 expressen.se##figure[data-article-data*="/tv/nyheter/live-start/live-tv-senaste-nyheterna"]
 expressen.se##figure[data-article-data*="/tv/sport/live-start/live-tv-se-sportexpressen-tv-direkt"]
 expressen.se##.terms-dialog
-expressen.se##.gdpr-banner
 expressen.se,dn.se##[class*="open-in-app"]
 expressen.se##.collaboration--widget
 expressen.se##.flashes--visible
@@ -1373,6 +1375,7 @@ tv4play.se###__next > div:not(:first-child)
 tv4play.se##.js-cookie-banner
 tv4play.se###pause-img-holder
 tv4play.se#@#.adBanner
+@@||a.zxcvads.com/a/ads/-image-ad_ads.html$xmlhttprequest,domain=tv4play.se
 */tv4play_plugin.$script,redirect=noop.js,domain=tv4.se|tv4play.se|fotbollskanalen.se|koket.se
 ! Köket
 koket.se##.endorsed
@@ -1406,9 +1409,12 @@ vafinans.se###balken_top
 @@/wp-content/plugins/seagal-plugin-dfp/src/showAds.js$~third-party,script
 @@/wp-content/plugins/seagal-plugin-dfp/assets/showAds.js$~third-party,script
 @@/wp-content/themes/seagal-editorial/assets/js/ads.js$~third-party,script
-mama.nu,skonahem.com,101ideer.se,tara.se,styleby.nu,topphalsa.se,lantliv.com,amelia.se,alltomtradgard.se,alltommat.se,privataaffarer.se,familyliving.se,alltihemmet.se,godsochgardar.se,gardochtorp.se##a.teaser[href*="/annonssamarbete/"]
-mama.nu,skonahem.com,101ideer.se,tara.se,styleby.nu,topphalsa.se,lantliv.com,amelia.se,alltomtradgard.se,alltommat.se,privataaffarer.se,dn.se,familyliving.se,alltihemmet.se,godsochgardar.se,gardochtorp.se##.teaser-native
-topphalsa.se##.teaser:has(.teaser-label:has-text(/annonssamarbete/i))
+||akkurat.bonniernewslifestyle.se^*/recommendations$xmlhttprequest
+expressen.se,mama.nu##.gdpr-banner
+mama.nu##+js(acis, ExpressenAnalytics, push)
+skonahem.com,tara.se,styleby.nu,topphalsa.se,lantliv.com,amelia.se,alltomtradgard.se,alltommat.se,privataaffarer.se,familyliving.se,alltihemmet.se,godsochgardar.se,gardochtorp.se##a.teaser[href*="/annonssamarbete/"]
+skonahem.com,tara.se,styleby.nu,topphalsa.se,lantliv.com,amelia.se,alltomtradgard.se,alltommat.se,privataaffarer.se,dn.se,familyliving.se,alltihemmet.se,godsochgardar.se,gardochtorp.se##.teaser-native
+topphalsa.se,alltommat.se##.teaser:has(.teaser-label:has-text(/annonssamarbete/i))
 privataaffarer.se##a[href*="/bit.ly/"]
 privataaffarer.se##.data-grid-teaser:has(.teaser-label:has-text(/^annons/i))
 tradera.com##react-adslot
