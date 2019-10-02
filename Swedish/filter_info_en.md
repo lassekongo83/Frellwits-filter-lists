@@ -4,7 +4,7 @@ This list is specifically written and tested for [uBlock Origin](https://github.
 
 *The list has not been tested together with Nano Defender.*
 
-**Only use one blocker.** Some filters may not work correctly if 2 or more blockers are used. There is [no benefit](https://twitter.com/gorhill/status/1033706103782170625) to using more than 1 adblocker in your web browser. *(Using a network-wide adblocker, like for example pi-hole shouldn't be a problem. But keep in mind that the list is not tested with one in use.)*
+**Only use one blocker.** Some filters may not work correctly if 2 or more blockers are used. There is [no benefit](https://twitter.com/gorhill/status/1033706103782170625) to using more than 1 adblocker in your web browser.
 
 Some parts of the list may work with other adblockers, but **no support** is given for those. Then you'll be using the list at your own risk, and you'll have to fix any potential problems yourself.
 

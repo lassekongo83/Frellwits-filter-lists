@@ -4,7 +4,7 @@ Listan är specifikt skriven för, och testad i [uBlock Origin](https://github.c
 
 *Listan är inte testad tillsammans med Nano Defender.*
 
-**Använd bara en blockerare.** Används fler så kan det hända att vissa filter inte fungerar som de ska. Det finns [ingen fördel](https://twitter.com/gorhill/status/1033706103782170625) med att använda fler än 1 annonsblockerare i din webbläsare. *(Användning tillsammans med nätverksövergripande blockerare som till exempel pi-hole bör inte vara något problem. Listan är dock inte testad med användnignen av en sådan.)*
+**Använd bara en blockerare.** Används fler så kan det hända att vissa filter inte fungerar som de ska. Det finns [ingen fördel](https://twitter.com/gorhill/status/1033706103782170625) med att använda fler än 1 annonsblockerare i din webbläsare.
 
 Vissa delar av listan kan fungera i andra annonsblockerare, men **ingen support** ges för dessa. Då använder du listan på egen risk, och får fixa eventuella problem själv.
 
