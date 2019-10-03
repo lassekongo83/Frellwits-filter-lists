@@ -1177,7 +1177,11 @@ aftonbladet.se##+js(aeld, message, adError)
 aftonbladet.se,svd.se##+js(sid, e.ping())
 aftonbladet.se,svd.se##+js(sid, e.reportVisibility())
 @@||ad*.vg.no/check.js$script,domain=aftonbladet.se
+! https://github.com/lassekongo83/Frellwits-filter-lists/issues/61
+! Disabling this for Brave that don't support pre-parsing directives. Using a simple if-not safari as that browser is no longer supported as well.
+!#if !env_safari
 /privacy/notification?$xmlhttprequest,domain=aftonbladet.se
+!#endif
 ! https://github.com/lassekongo83/Frellwits-filter-lists/issues/44
 @@||sdk.pulse.schibsted.com/loader.min.js$domain=special.aftonbladet.se
 ||aftonbladet.se/kampanj/casinoguide$document
