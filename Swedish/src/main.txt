@@ -31,7 +31,6 @@
 ||blocket.se^$third-party
 ||bloglovin.com/widget/$third-party
 ||boka.holiday^$third-party
-||bonad.io^$third-party
 ||bonniergaming.com^$third-party
 ||brandy.bonniernewslifestyle.se^$third-party
 ||bytelab.dk^$third-party
@@ -148,6 +147,7 @@
 ||reaktion.se^$third-party
 ||reco.se^$third-party
 ||redeal.se^$third-party
+||referralhero.com^$third-party
 ||relevant-digital.com^$third-party
 ||reseguiden.se^$third-party
 ||resultify.com^$third-party
@@ -452,6 +452,7 @@
 ||laikabook.se/ib/banner$subdocument
 ||liveagent.se/scripts/track.$script
 ||lemonwhale.com^*/adevent/$xmlhttprequest
+||ma.kntnt.konzilo.net/mtc.js
 ||mailchimp.com^*/popup$script
 ||mailmunch.co^*/scrollbox.$script
 ||media.jw-it.se/b/$image
@@ -540,6 +541,7 @@
 ||7hd.org^
 ||simpleoneline.online^
 ||look.utndln.com^$all
+||byggkonsult.org^$all
 ! Random SMS spam. Most likely scams.
 ||manhembostad.se^
 ||bjursundfastigheter.se^
@@ -992,7 +994,7 @@ bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se,che
 /plugins/Ultimate-Premium-Plugin/*$script,xmlhttprequest,domain=opulens.se
 /plugins/ultimate-social-media-icons/*$image,script,stylesheet,domain=buzzter.se|grillbaronen.se|intre.se|loven4ever.com
 /plugins/wf-cookie-consent/*$script,stylesheet
-/plugins/wordpress-popup/*$domain=buzzter.se
+/plugins/wordpress-popup/*$domain=buzzter.se|maklarvarlden.se
 /plugins/wp-adsense-guard/*
 /plugins/wp-auto-affiliate-links/*$script,stylesheet
 /plugins/wp-banner-manager/*$script,stylesheet,domain=branschkoll.se
@@ -3067,6 +3069,9 @@ capdesign.se###shareright
 maklarvarlden.se##a[href*="utm_campaign"][target="_blank"]
 maklarvarlden.se##[id^="mts_ad"]
 maklarvarlden.se##article:has(.sponsored-inlist)
+maklarvarlden.se##.td-post-category:has-text(/spons/i):nth-ancestor(2)
+maklarvarlden.se##.td-pulldown-size:has-text(/spons/i):nth-ancestor(3)
+maklarvarlden.se##.hustle-popup
 digitaliserat.nu##.news-story:has(a:has-text(/^detta är en annons/i))
 ||byggvarlden.se/empty.html$subdocument
 ||stats.docu.info^$third-party
@@ -3266,3 +3271,4 @@ studentum.se##+js(set, cookieExists, true)
 downdetector.se##+js(set, pbjs.que.push, noopFunc)
 tidningen.nu##span:has-text(/^Annons$/):nth-ancestor(1) + .textwidget
 aventyriblodet.se##.template:style(visibility: visible !important;)
+boktugg.se##.category-sponsrat
