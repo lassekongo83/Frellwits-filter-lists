@@ -228,6 +228,7 @@
 .se/cookiesamtykke$script
 .se/counter/
 .se/custom/ad/
+.se/js/cookiealert.$script
 .se/js/cookie-message.$script
 .se/fightodds.plugin/fightodds.plugin.$script
 .se/files/annons/$image
@@ -828,7 +829,7 @@ patient.info##body:style(overflow: auto !important;)
 ||cdn.lr-ingest.io/log$script,domain=ipo.se
 ||connect.getflowbox.com^$third-party,domain=aikfotboll.se|farjestadbk.se|svenskaturistforeningen.se
 ||consent.cmp.oath.com^$script,domain=alltomstockholm.se|mitti.se
-||consent.cookiebot.com^$third-party,domain=alingsastidning.se|elitrapport.se|etc.se|goteborgdirekt.se|hoglandsnytt.se|itaboutdoor.se|kingsizemag.se|ng.se|norran.se|partilletidning.se|selmaspa.se|skeppsbrons.se|stockholmdirekt.se|swedroid.se|totallyorebro.se|totallystockholm.se|villalivet.se|wesafe.se|lerumstidning.se|ljudochbild.se|tankesport.se|smartsenior.se|birthday.se|gaffa.se|chiffer.se|vasterastidning.se|mediaplanering.se
+||consent.cookiebot.com^$third-party,domain=alingsastidning.se|elitrapport.se|etc.se|goteborgdirekt.se|hoglandsnytt.se|itaboutdoor.se|kingsizemag.se|ng.se|norran.se|partilletidning.se|selmaspa.se|skeppsbrons.se|stockholmdirekt.se|swedroid.se|totallyorebro.se|totallystockholm.se|villalivet.se|wesafe.se|lerumstidning.se|ljudochbild.se|tankesport.se|smartsenior.se|birthday.se|gaffa.se|chiffer.se|vasterastidning.se|mediaplanering.se|clipmyhorse.tv
 ||consent.cookieinfo.net^$third-party,domain=bax-shop.se
 ||cookiepro.com^$third-party,domain=sd.se
 ||d2wy8f7a9ursnm.cloudfront.net/bugsnag$script,domain=expressen.se|bioenergitidningen.se
@@ -1090,6 +1091,7 @@ idg.se##a[data-click-settings*="Article Outbound Links"]:has(strong:has-text(/an
 forum.studio.se##li[data-blocktitle="Anpassade Block"]:has(.sms-marking:has-text(Annons:))
 upphandling24.se##.type-partnerartikel
 upphandling24.se##.widget:has(.widget-title:has-text(/^annons/i))
+upphandling24.se##a[data-bid="1"][href*="/linkout"]
 @@/angwp/assets/dev/js/advertising.js$domain=upphandling24.se
 ! Attempt to make their gdpr choice less annoying. Don't want to block it as a limbo choice will disable 3rd party videos and embeds.
 !#if !env_mobile
@@ -1440,6 +1442,7 @@ skonahem.com,tara.se,styleby.nu,topphalsa.se,lantliv.com,amelia.se,alltomtradgar
 topphalsa.se,alltommat.se##.teaser:has(.teaser-label:has-text(/annonssamarbete/i))
 privataaffarer.se##a[href*="/bit.ly/"]
 privataaffarer.se##.data-grid-teaser:has(.teaser-label:has-text(/^annons/i))
+/admin-ajax.php?action=paf_ad_teaser$domain=privataaffarer.se
 tradera.com##react-adslot
 tradera.com##div[data-component-cookie-notification]
 tradera.com##.adsense
@@ -1658,7 +1661,6 @@ gamereactor.se###ad_mobiletopinsidetext
 ||gamereactor.se/media/eventad/$image
 /adblock_mobile.$script,important,domain=gamereactor.se
 /insert_grtv_stats.$xmlhttprequest,domain=gamereactor.se
-/viewability.$script,important,domain=gamereactor.se
 @@||openx.gamereactor.dk/www/delivery/fc.php$xmlhttprequest,domain=gamereactor.se
 ||media.gamereactor.dk/prerolls$media,redirect=noop-1s.mp4,domain=gamereactor.se
 ||media.gamereactor.dk/*Promo$media,redirect=noop-1s.mp4,domain=gamereactor.se
@@ -1897,7 +1899,7 @@ mobil.se,kamerabild.se###gdpr
 sydsvenskan.se,hd.se,vimedbarn.se,capdesign.se,villalivet.se##.gdpr
 pomu.se,wwf.se,ilikeradio.se,netdoktor.se,nevnarien.se##.cc-banner
 koket.se,nyheter24.se,civilekonomen.se,aktiespararna.se##.native
-svartgul.se,tvmatchen.nu,eventeffect.se###panorama
+svartgul.se,tvmatchen.nu,eventeffect.se,executiveeffect.se###panorama
 uppslaget.se,hypeline.se,skidresultat.se,maklarvarlden.se,byggteknikforlaget.se##.annons
 alltomhif.se,privatekonomi.org,tonyhatefnejad.se,soja.se##.preloader
 testfakta.se,realtid.se,viktvaktarna.se,plastikoperationsforum.se,riksettan.net,automobil.se,vibilagare.se,mopedgaraget.se,caroftheyear.se,klassiker.nu,bike.se,spraktidningen.se,husbilhusvagn.se,sandaren.se,kyrkanstidning.se,publikt.se,fof.se,industrinyheter.se,dagensnaringsliv.se,infrastrukturnyheter.se,sportochfritidsnyheter.se,inredningsnyheter.se,byggnyheter.se,dagensfastigheter.se,stockholmsbyggnyheter.se,energinyheter.se,vindkraftsnyheter.se,solenerginyheter.se,jarnvagsnyheter.se,transportochlogistik.se,metallerochgruvor.se,papperochmassa.se,hsr.se,so-rummet.se,kantarsifo.se###sliding-popup
@@ -2013,7 +2015,7 @@ youplay.se,nyheter24.se,modette.se,filmtipset.se,affarsliv.com,affarslivgotland.
 youplay.se,nyheter24.se,modette.se,filmtipset.se,affarsliv.com,affarslivgotland.se,corren.se,eposten.se,folkbladet.se,helagotland.se,klackspark.com,kuriren.nu,mvt.se,norrbottensaffarer.se,nsd.se,nt.se,pt.se,unt.se,vt.se,uppgang.com,vimmerbytidning.se,vf.se,hjotidning.se,kt.se,sla.se,mariestadstidningen.se,filipstadstidning.se,fryksdalsbygden.se,nwt.se,arvikanyheter.se,nkp.se,saffletidningen.se,provinstidningen.se,dalslanningen.se,karlskogatidning.se,nlt.se,skd.se,nsk.se,affarsvarlden.se,ekuriren.se,kkuriren.se,sn.se##+js(set, youplay.helpers.tabActive, noopFunc)
 youplay.se,nyheter24.se,modette.se,filmtipset.se,affarsliv.com,affarslivgotland.se,corren.se,eposten.se,folkbladet.se,helagotland.se,klackspark.com,kuriren.nu,mvt.se,norrbottensaffarer.se,nsd.se,nt.se,pt.se,unt.se,vt.se,uppgang.com,vimmerbytidning.se,vf.se,hjotidning.se,kt.se,sla.se,mariestadstidningen.se,filipstadstidning.se,fryksdalsbygden.se,nwt.se,arvikanyheter.se,nkp.se,saffletidningen.se,provinstidningen.se,dalslanningen.se,karlskogatidning.se,nlt.se,skd.se,nsk.se,affarsvarlden.se,ekuriren.se,kkuriren.se,sn.se##+js(set, youplay.helpers.getTrackUrl, noopFunc)
 youplay.se,nyheter24.se,modette.se,filmtipset.se,affarsliv.com,affarslivgotland.se,corren.se,eposten.se,folkbladet.se,helagotland.se,klackspark.com,kuriren.nu,mvt.se,norrbottensaffarer.se,nsd.se,nt.se,pt.se,unt.se,vt.se,uppgang.com,vimmerbytidning.se,vf.se,hjotidning.se,kt.se,sla.se,mariestadstidningen.se,filipstadstidning.se,fryksdalsbygden.se,nwt.se,arvikanyheter.se,nkp.se,saffletidningen.se,provinstidningen.se,dalslanningen.se,karlskogatidning.se,nlt.se,skd.se,nsk.se,affarsvarlden.se,ekuriren.se,kkuriren.se,sn.se##+js(set, youplay.helpers.trackUrls, noopFunc)
-saraabrahamsson.se,eurosport.se,jawcloud.co,openload.co,openload.pw,oload.*,streamango.com,rapidvideo.com,nxload.com,polistidningen.se,verystream.com##+js(aeld, contextmenu)
+saraabrahamsson.se,eurosport.se,jawcloud.co,openload.co,openload.pw,oload.*,streamango.com,rapidvideo.com,nxload.com,polistidningen.se,verystream.com,clipmyhorse.tv##+js(aeld, contextmenu)
 ! Annoying, unecessary, and completely unrelated autoplaying video
 ||youplay.se^$third-party,domain=hamsterpaj.net|emocore.se|dayviews.com|kamrat.com|familjeliv.se|extraextra.se
 ! Don't mess with peoples default scroll settings
@@ -3226,7 +3228,7 @@ maharajah.se##a[target="blank"]
 /ad-$subdocument,domain=forum.odla.nu
 /proad/*$domain=forum.odla.nu
 /rg-ads.js$domain=destination.se
-eventeffect.se##.partnerartikel
+eventeffect.se,executiveeffect.se,saleseffect.se##.partnerartikel
 eventeffect.se###secondary > .widget:nth-child(2)
 wappare.se##.cookie-consent-modal
 exponera.nu##.wof-overlay
@@ -3309,3 +3311,8 @@ revisionsvarlden.se##a[onclick*="banner"]
 esportare.se##a[href*="utm_campaign"]
 morotsliv.com##.et_bloom .et_bloom_flyin_center
 180.se##.ai-top-ad-outer
+clipmyhorse.tv##.archive-player-ads
+clipmyhorse.tv##.cmh-blocking
+clipmyhorse.tv##body:style(user-select: initial !important; -webkit-user-select: initial !important; -moz-user-select: initial !important;)
+clipmyhorse.tv##+js(aeld, /^(?:ads|adca|adend|ad_|adtime|blocking_|click_live_soft|click_premium|geo_|opened_premium|show_live_soft|show_premium)/)
+||amazonaws.com/stage$websocket,domain=clipmyhorse.tv

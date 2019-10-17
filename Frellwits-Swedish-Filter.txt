@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Title: Frellwit's Swedish Filter
 ! Expires: 3 days (update frequency)
-! Last modified: 2019-10-16 19:11:27 CEST
+! Last modified: 2019-10-17 08:27:24 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -161,6 +161,7 @@
 .se/fightodds.plugin/fightodds.plugin.$script
 .se/files/annons/$image
 .se/js/cookie-message.$script
+.se/js/cookiealert.$script
 .se/log/?
 .se/logger.$script
 .se/Logger?
@@ -197,6 +198,7 @@
 /addImpression$xmlhttprequest,domain=lajvo.se|skoj.se
 /addtoany/*$domain=fastighetssverige.se
 /admin-ajax.php?action=advanced-ads-tracking-track$xmlhttprequest,domain=datormagazin.se
+/admin-ajax.php?action=paf_ad_teaser$domain=privataaffarer.se
 /adn_consent_override.$stylesheet,domain=affarsliv.com|affarslivgotland.se|corren.se|ekuriren.se|eposten.se|folkbladet.se|gotland.net|helagotland.se|kkuriren.se|klackspark.com|kuriren.nu|mvt.se|norrbottensaffarer.se|nsd.se|nt.se|pt.se|sn.se|unt.se|uppgang.com|uppsala.com|uppsalatidningen.se|vimmerbytidning.se|vt.se
 /adnami/macro/*$script
 /ads-client.$xmlhttprequest,domain=games.softgames.com
@@ -1074,6 +1076,8 @@ chef.se##.Product-modal
 chef.se,svd.se##.Ad
 civilekonomen.se,market.se###rollup
 cleannet.se,dagenshandel.se,entreprenad.com,food-supply.se,foodnet.se,fri-kopenskap.se,habit.se,kemivarldenbiotech.se,lifesciencesweden.se,medtechmagazine.se,motormagasinet.se,packnet.se,plastnet.se,processnet.se,recyclingnet.se,rt-forum.se,skyddosakerhet.se,transportnet.se,uochd.se,verkstaderna.se,woodnet.se###junglebogen
+clipmyhorse.tv##.archive-player-ads
+clipmyhorse.tv##.cmh-blocking
 coop.se##.js-personalInformationNotice.Notice--sticky-bottom.Notice--info.Notice
 cyclingplus.se###gdpr-container
 cyclingplus.se,firstfoto.se,fitnessformen.se,halsafitness.se,macguiden.net##.this-is-an-ad
@@ -1212,8 +1216,8 @@ eurosport.se##.eso_video__share
 eurosportplayer.com###banner
 evalent.se##.loadPage
 eventeffect.se###secondary > .widget:nth-child(2)
-eventeffect.se##.partnerartikel
-eventeffect.se,svartgul.se,tvmatchen.nu###panorama
+eventeffect.se,executiveeffect.se,saleseffect.se##.partnerartikel
+eventeffect.se,executiveeffect.se,svartgul.se,tvmatchen.nu###panorama
 evertiq.se###carpet
 evertiq.se##.bnrWrapper
 evertiq.se##.gdprcookie
@@ -1934,6 +1938,7 @@ typkanske.se##.adbar
 underbaraclaras.se##.ad_parent
 undertian.com##a[href*="-samarbete-med-"]
 upphandling24.se##.type-partnerartikel
+upphandling24.se##a[data-bid="1"][href*="/linkout"]
 uppsalanyheter.se###banner-top-block
 uppsatser.se##li[style*="min-height:90px"]
 utsidan.se###mastertop
@@ -2023,6 +2028,7 @@ yougov.se##.cookie-confirm
 ||amazonaws.com/adn-tag/$script
 ||amazonaws.com/metapic-cdn/*/metapic.$script,stylesheet
 ||amazonaws.com/spotlife.js$script,domain=spotlife.se
+||amazonaws.com/stage$websocket,domain=clipmyhorse.tv
 ||amqp-ws-proxy.radioplay.se^$websocket
 ||ana.tunnl.com^
 ||analytics-sdk.yle.fi^$script
@@ -2125,7 +2131,7 @@ yougov.se##.cookie-confirm
 ||connectio.s3.amazonaws.com/connect-retarget.$script
 ||consensu.org^$third-party,domain=~mirror.co.uk|~sourceforge.net
 ||consent.cmp.oath.com^$script,domain=alltomstockholm.se|mitti.se
-||consent.cookiebot.com^$third-party,domain=alingsastidning.se|birthday.se|chiffer.se|elitrapport.se|etc.se|gaffa.se|goteborgdirekt.se|hoglandsnytt.se|itaboutdoor.se|kingsizemag.se|lerumstidning.se|ljudochbild.se|mediaplanering.se|ng.se|norran.se|partilletidning.se|selmaspa.se|skeppsbrons.se|smartsenior.se|stockholmdirekt.se|swedroid.se|tankesport.se|totallyorebro.se|totallystockholm.se|vasterastidning.se|villalivet.se|wesafe.se
+||consent.cookiebot.com^$third-party,domain=alingsastidning.se|birthday.se|chiffer.se|clipmyhorse.tv|elitrapport.se|etc.se|gaffa.se|goteborgdirekt.se|hoglandsnytt.se|itaboutdoor.se|kingsizemag.se|lerumstidning.se|ljudochbild.se|mediaplanering.se|ng.se|norran.se|partilletidning.se|selmaspa.se|skeppsbrons.se|smartsenior.se|stockholmdirekt.se|swedroid.se|tankesport.se|totallyorebro.se|totallystockholm.se|vasterastidning.se|villalivet.se|wesafe.se
 ||consent.cookieinfo.net^$third-party,domain=bax-shop.se
 ||consent.dk^$third-party
 ||converdiant.com^$third-party
