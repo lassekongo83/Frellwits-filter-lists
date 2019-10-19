@@ -668,6 +668,7 @@ dpaly.se##body:style(background: none !important; height: unset !important;)
 ##.cookie-notice:not(body):not(html)
 ##.cookie-notification:not(body):not(html)
 ##.cookie-overlay:not(body):not(html)
+##.cookie-panel:not(body):not(html)
 ##.cookie-policy:not(body):not(html)
 ##.cookie-warning.cookie-warning--visible:not(body):not(html)
 ##.cookie_consent_bar:not(body):not(html)
@@ -874,7 +875,7 @@ pomu.se,video-static.tunnl.com,bioenergitidningen.se,weheartit.com##+js(set, can
 babyhjalp.se,hightechguiden.se##+js(acis, document.oncontextmenu)
 handbollskanalen.se,villalivet.se##+js(acis, advadsTracking)
 handbollskanalen.se,villalivet.se##+js(acis, advads_has_ads)
-finansliv.se,pedagogiskamagasinet.se,lararnastidning.se,tidningenridsport.se,sulkysport.se,scanaktier.se,lektion.se,ridsport.se##+js(aopr, OA_show)
+finansliv.se,pedagogiskamagasinet.se,lararnastidning.se,tidningenridsport.se,sulkysport.se,scanaktier.se,lektion.se##+js(aopr, OA_show)
 scrollat.se##+js(acis, _TradeTrackerTagOptions)
 bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se,chef.se##+js(acis, _cInfo)
 
@@ -1873,7 +1874,7 @@ chef.se,svd.se##.Ad
 affarsvarlden.se,arbetarskydd.se,lag-avtal.se,nickelodeon.se,nyteknik.se,vf.se,improveme.se,hjotidning.se,kt.se,sla.se,mariestadstidningen.se,filipstadstidning.se,fryksdalsbygden.se,nwt.se,arvikanyheter.se,nkp.se,saffletidningen.se,provinstidningen.se,dalslanningen.se,karlskogatidning.se,nlt.se,kungalvsposten.se,molndalsposten.se,lokaltidningensto.se,kungsbackaposten.se,byggahus.se,expressen.se##.ad-container
 dn.se,klart.se,norran.se##.ad-wrapper
 brollopstorget.se,familjeliv.se##.ad_right
-babyhjalp.se,branschkoll.se,fotosidan.se,moviezine.se,affarsliv.com,affarslivgotland.se,corren.se,eposten.se,folkbladet.se,helagotland.se,klackspark.com,kuriren.nu,mvt.se,norrbottensaffarer.se,nsd.se,nt.se,pt.se,unt.se,vt.se,globalportalen.org,alltomstockholm.se,mitti.se,uppgang.com,vimmerbytidning.se,osterbottenstidning.fi,ekuriren.se,kkuriren.se,sn.se,allsvenskan.se,ridsport.se,kollega.se##.ads
+babyhjalp.se,branschkoll.se,fotosidan.se,moviezine.se,affarsliv.com,affarslivgotland.se,corren.se,eposten.se,folkbladet.se,helagotland.se,klackspark.com,kuriren.nu,mvt.se,norrbottensaffarer.se,nsd.se,nt.se,pt.se,unt.se,vt.se,globalportalen.org,alltomstockholm.se,mitti.se,uppgang.com,vimmerbytidning.se,osterbottenstidning.fi,ekuriren.se,kkuriren.se,sn.se,allsvenskan.se,kollega.se##.ads
 mestmotor.se,nyheter24.se,modette.se,vagabond.se,cafe.se##.advertisement
 agriprim.se,bike.se,e.se,entreprenadaktuellt.se,husbilhusvagn.se,ja.se,klassiker.nu,maskinstationerna.se,mopedgaraget.se,norran.se,nyckelspel.se,skogsaktuellt.se,spelo.se,sweclockers.com,vaken.se,vibilagare.se,lovelylife.se,bettips.se,caroftheyear.se,maskinbladet.se,automobil.se,ljuskultur.se,lokalguiden.se,fightermag.se,riksettan.net,frillesasbandy.se,scanaktier.se,boxerville.se,livsmedel.se##.banner
 etn.se,uppsalanyheter.se##.banneritem
@@ -2023,6 +2024,8 @@ lundagard.se##+js(aeld, wheel)
 /plugins/wp-enqueue/smoothscroll.$script
 /themes/willow/js/smoothscroll.$script
 !#endif
+! Bad async-hiding.
+sverigesradio.se,urplay.se,ica.se##.async-hide:style(opacity: 1 !important;)
 
 ! ÖVRIGT
 /uploads/Adblockerpanda$image,domain=nordichardware.se
@@ -2188,7 +2191,6 @@ svt.se##li.nyh_contactbox-item > a[href*="instagram"]
 svt.se##section.nyh_share
 svt.se##.SocialMediaShareButton
 svt.se###nyh_cookie-message
-sverigesradio.se##.async-hide:style(opacity: 1 !important;)
 svtplay.se##.play_cookie-information
 ratsit.se##.js-cookie-modal
 ratsit.se##body:style(overflow: auto !important;)
@@ -3236,7 +3238,8 @@ visitskargarden.se##a[onclick*="Banner"]
 visitskargarden.se##.boss-loader-overlay
 norrbotten.com##a[href*=".com/annons"]
 norrbotten.com##.td-ss-main-sidebar > .td-a-rec
-/ga-tagging.$script,domain=ridsport.se
+ridsport.se##.svrf__sticky-ad
+ridsport.se##.svrf-block__banner
 /oil/*$script,domain=findit.se|findit.fi
 natursidan.se###container > a:not(:first-child)
 spbi.se##.policy-disclaimer

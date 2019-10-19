@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Title: Frellwit's Swedish Filter
 ! Expires: 3 days (update frequency)
-! Last modified: 2019-10-18 07:23:35 CEST
+! Last modified: 2019-10-19 19:09:00 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -81,6 +81,7 @@
 ##.cookie-notice:not(body):not(html)
 ##.cookie-notification:not(body):not(html)
 ##.cookie-overlay:not(body):not(html)
+##.cookie-panel:not(body):not(html)
 ##.cookie-policy:not(body):not(html)
 ##.cookie-warning.cookie-warning--visible:not(body):not(html)
 ##.cookie__wrapper:not(body):not(html)
@@ -324,7 +325,6 @@
 /freelancer-tracking$script,domain=freelancer.se
 /freewheel.js$script,domain=foxtv.se
 /fusionadloader.$script
-/ga-tagging.$script,domain=ridsport.se
 /ga.js$script,domain=stayfriends.se
 /ga.js$script,~third-party,domain=driverzone.se
 /ga_cookie_track.js$script
@@ -835,7 +835,7 @@
 @@||www.alltforforaldrar.se/extra/js/ads.js$script
 _jquery.blockUI.$script,domain=fssweden.se
 abus.com#@##cookieChoiceInfo
-affarsliv.com,affarslivgotland.se,allsvenskan.se,alltomstockholm.se,babyhjalp.se,branschkoll.se,corren.se,ekuriren.se,eposten.se,folkbladet.se,fotosidan.se,globalportalen.org,helagotland.se,kkuriren.se,klackspark.com,kollega.se,kuriren.nu,mitti.se,moviezine.se,mvt.se,norrbottensaffarer.se,nsd.se,nt.se,osterbottenstidning.fi,pt.se,ridsport.se,sn.se,unt.se,uppgang.com,vimmerbytidning.se,vt.se##.ads
+affarsliv.com,affarslivgotland.se,allsvenskan.se,alltomstockholm.se,babyhjalp.se,branschkoll.se,corren.se,ekuriren.se,eposten.se,folkbladet.se,fotosidan.se,globalportalen.org,helagotland.se,kkuriren.se,klackspark.com,kollega.se,kuriren.nu,mitti.se,moviezine.se,mvt.se,norrbottensaffarer.se,nsd.se,nt.se,osterbottenstidning.fi,pt.se,sn.se,unt.se,uppgang.com,vimmerbytidning.se,vt.se##.ads
 affarsliv.com,affarslivgotland.se,corren.se,dagensvastervik.se,dagensvimmerby.se,eposten.se,falkopingstidning.se,folkbladet.se,helagotland.se,jnytt.se,jp.se,klackspark.com,kuriren.nu,mvt.se,norrbottensaffarer.se,nsd.se,nt.se,pt.se,skaraborgslanstidning.se,skovdenyheter.se,smalandsdagblad.se,smalanningen.se,smt.se,svd.se,tranastidning.se,unt.se,uppgang.com,vastgotabladet.se,vetlandaposten.se,vimmerbytidning.se,vn.se,vt.se###smartbanner.android
 affarsliv.com,affarslivgotland.se,corren.se,ekuriren.se,eposten.se,folkbladet.se,helagotland.se,kkuriren.se,klackspark.com,kuriren.nu,mvt.se,norrbottensaffarer.se,nsd.se,nt.se,pt.se,sn.se,unt.se,uppgang.com,vimmerbytidning.se,vt.se##.banner-column
 affarsliv.com,affarslivgotland.se,corren.se,ekuriren.se,eposten.se,folkbladet.se,helagotland.se,kkuriren.se,klackspark.com,kuriren.nu,mvt.se,norrbottensaffarer.se,nsd.se,nt.se,pt.se,sn.se,unt.se,uppgang.com,vimmerbytidning.se,vt.se##.destination-border-color
@@ -1752,6 +1752,8 @@ reseguiden.se##.as-oil
 resume.se##.teaser-sponsored
 resume.se##.widget-agencyHighlight
 revisionsvarlden.se##a[onclick*="banner"]
+ridsport.se##.svrf-block__banner
+ridsport.se##.svrf__sticky-ad
 rocknytt.net##[data-widget_type*="bnnrwidgets"]
 rumhemma.se###aside > .html-widget
 rumhemma.se###aside > div:last-child
