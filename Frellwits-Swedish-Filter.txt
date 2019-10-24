@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Title: Frellwit's Swedish Filter
 ! Expires: 3 days (update frequency)
-! Last modified: 2019-10-23 13:45:06 CEST
+! Last modified: 2019-10-24 08:29:10 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -135,6 +135,7 @@
 ##a[href$=".se/go/betsafe"]
 ##a[href*="/delivery.adnuntius.com"]
 ##a[href*="casinopro.se"][target="_blank"]
+##a[href*="cyberbetpromo.net/click"][target="_blank"]
 ##a[href^="https://www.adsettings.com/scripts/reg_click."]
 ##a[title="LeoVegas"]
 ##div.cookievarning-wrap
@@ -179,6 +180,7 @@
 .se/sponsored/$image
 .se/upload/annons/
 .se/wdg/tracking
+.se/wp-content/banners/
 /*Fokus_360x300px_animate*.gif$image,domain=fokus.se
 /*log_ad$image,domain=yelp.se
 /250x360/$image,domain=marsta.nu
@@ -478,6 +480,7 @@
 /plugins/better-adsmanager/*$script,stylesheet
 /plugins/blog-analytics/*
 /plugins/bmb-dfp-plugin/*$script,stylesheet
+/plugins/boxzilla/*$script,domain=obsid.se
 /plugins/bsa-pro-scripteo/*$script,stylesheet
 /plugins/cc-cookie-consent/*$script,domain=dagensjuridik.se
 /plugins/chimpy/*
@@ -937,6 +940,7 @@ alltomwhisky.se##.topmost-banner
 alpresor.se###toast-container
 altinget.se###CookieModal_cookiemodal
 arbetaren.se##.adverter
+arkitekt.se##.cookie-popup
 arkitekten.se##.post-teaser__wrapper--ad
 arkitektur.se##[class*="panorama"]
 artbannersplus$subdocument,domain=elinor.se
@@ -1128,7 +1132,7 @@ dagensvastervik.se,dagensvimmerby.se##.topAnnons
 dansbandskanalen.se,guldkanalen.se##.wppaslink
 danskaspraket.se,digitalavykort.se,viseniorer.se,vmj.se##.cc-cookies
 danskaspraket.se,digitalavykort.se,vmj.se##.topdiv
-danstidningen.se,lira.se###ads
+danstidningen.se,lira.se,livetsgoda.se###ads
 datormagazin.se###catapult-cookie-bar
 datormagazin.se##.dator-widget
 datormagazin.se##.td-header-sp-recs
@@ -1424,9 +1428,9 @@ halsafitness.se,yogaworld.se##.sticky-sidebar
 halsasverige.se##.isax
 hamnenplay.solidtango.com##.ads-click-overlay
 hamnenplay.solidtango.com##.ads-overlay
-hamsterpaj.net###accept-cookies
 hamsterpaj.net###frontpage_spotlight
 hamsterpaj.net###sidebar_wrapper > .zone:last-child
+hamsterpaj.net,streamly.com###accept-cookies
 handbollskanalen.se##.hb-adlabel
 handbollskanalen.se##a[data-bid="1"]
 hangotidningen.fi,hbl.fi,ostnyland.fi,vastranyland.fi###okCookie
@@ -1497,7 +1501,7 @@ isabellalowengrip.se##.popup-block
 jaktplay.se##.jaktplay-ad
 jaktsidan.se##[data-role="sidebarAd"]
 javligtgott.se##a[href="https://klimatkompensera.se"]
-javligtgott.se,starbys.se##.category-samarbeten
+javligtgott.se,starbys.se,vegankrubb.se##.category-samarbeten
 jobb.maxkompetens.se#@##single-ad
 jobb.maxkompetens.se#@#.ad-body
 jobb.maxkompetens.se#@#.ad-content
@@ -2346,6 +2350,7 @@ yougov.se##.cookie-confirm
 ||lemonwhale.com^*/adevent/$xmlhttprequest
 ||libring.com^$third-party
 ||likebtn.com^$third-party
+||linksalpha.com^$third-party
 ||liveagent.se/scripts/track.$script
 ||ljuskompaniet.se^
 ||logger.tv.nu^$script
