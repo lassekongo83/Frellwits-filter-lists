@@ -31,7 +31,7 @@ Listan har ingen ekonomisk eller politisk motivation bakom sig. Inga donationer 
     - Meddelanden om GDPR / Cookies.
     - Fientlig anti-högerklick och liknande som förhindrar besökaren från att använda sina enheter eller webbläsare som tänkt.
     - Alla former av anti-adblocks kommer att plockas bort, men bara om de triggas igång av något skript eller en CSS timer. Dold adblock-detektering kommer att klassas som spårning och plockas bort / avbrytas. Vanliga artiklar som uppmanar till diskussion om ämnet, eller en frågeställning nånstans på sidan, är helt ok att använda, så länge som ingen spårning görs av användningen av en annonsblockerare.
-    - Mjuka betalväggar och andra typer av låtsas väggar. Till exempel en sådan vägg som slutar att fungera om JavaScript och / eller cookies är inaktiverade i webbläsarens inställningar.
+    - Mjuka betalväggar, eller så kallade "fake walls". Till exempel en sådan betalvägg som slutar att fungera om JavaScript och / eller cookies är inaktiverade i webbläsarens inställningar.
         - Innehållet bakom sådana väggar **ska ej ses som skyddat** om det döljs av dålig JavaScript eller CSS som kan blockeras eller modifieras av user-agent. Skyddat innehåll ska ej finnas tillgänglig front-end förrens användaren blivit verifierad. En user-agent har i slutändan kontrollen över hur ett skickat förslag visas.
         - Med största sannolikhet så kommer mjuka betalväggar klassas som en form av irritation, lurendrejeri och / eller bloat, och kommer därmed att kringgås om det går.
 
@@ -47,7 +47,7 @@ Listan har ingen ekonomisk eller politisk motivation bakom sig. Inga donationer 
     - Beroenden och JavaScript-bibliotek som inte behövs längre på grund av att något annat har blockerats.
     - Något onödigt som slöar ner sidan markant. (Dåliga animationer till exempel.)
 
-Målet är att sidorna i övrigt ska fungera så normalt som möjligt för besökaren först och främst. Hänsyn kan inte alltid tas till saker som vanliga besökare ej har tillgång till. (Som till exempel administrativa paneler och liknande.)
+Målet är att sidorna i övrigt ska fungera så normalt som möjligt för besökaren först och främst. Hänsyn kan inte alltid tas till saker som vanliga besökare ej har tillgång till. (Som till exempel administrativa gränssnitt och liknande.)
 
 ## Övrig info
 

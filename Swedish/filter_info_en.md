@@ -29,9 +29,9 @@ This list has no economic or political motivation. No donations sought. No opini
 * **Annoyances**
     - Something that interrupts the visitor, covers the content, or takes up an unnecessary amount of space. (Unnecessary modal pop-ups for example.)
     - GDPR / Cookie messages.
-    - Hostile anti-right-click and similar things that prevents the visitor from using their devices/browsers as intended.
+    - Hostile anti-right-click and similar things that prevents the visitor from using their devices or browsers as intended.
     - Any form of anti-adblock will be removed, but only if it's triggered by a script or a CSS timer. Hidden adblock-detection will be classified as tracking and will be removed / aborted. Common articles that call for discussion on the subject, or a question somewhere on the page, are ok to use, as long as no tracking is made of the use of an adblocker.
-    - Soft paywalls and other types of fake walls. A wall is fake if it does not work when JavaScript and / or cookies are disabled in browser settings. 
+    - Soft paywalls, otherwise known as "fake walls". A paywall is fake if it does not work when JavaScript and / or cookies are disabled in browser settings. 
         - The content behind such walls **should not be considered protected** if it is hidden by bad JavaScript or CSS that can be blocked or modified by the user-agent. Protected content should not be accessible front-end before the user has been verified. The user-agent will have the final word on how a sent suggestion is rendered.
         - Fake walls will most likely be seen as a form of annoyance, scam and / or bloat, and will thus be bypassed if possible.
 
@@ -47,7 +47,7 @@ This list has no economic or political motivation. No donations sought. No opini
     - Dependencies and JavaScript libraries that are no longer needed because something else has been blocked.
     - Something unnecessary that's slows down a page for no good reason. (Bad animations for example.)
 
-The goal is for the pages to function as normally as possible for the visitor first and foremost. Consideration cannot always be given to things that ordinary visitors do not have access to. (For example, administrative panels and the like.)
+The goal is for the pages to function as normally as possible for the visitor first and foremost. Consideration cannot always be given to things that ordinary visitors do not have access to. (For example, administrative interfaces and the like.)
 
 ## Other information
 
