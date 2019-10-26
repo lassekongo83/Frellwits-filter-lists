@@ -394,6 +394,7 @@
 ||api.staylive.tv/videos/engagement$xmlhttprequest
 ||apis.google.com/js/plusone.js$third-party
 ||app.readpeak.com/ads/$xmlhttprequest
+||aswpsdkus.com^*/ua-sdk.$script
 ||auction-release.mlpapi.com/site/LoadPluginSite$script
 ||b19.se/mediacreeper/image$image
 ||back.famebloggers.com/bloggerfy/tracker$script,subdocument
@@ -745,7 +746,7 @@ dpaly.se##body:style(background: none !important; height: unset !important;)
 @@/js/advert.$script,~third-party,domain=burlovsnyheter.se|aftonbladet.se
 @@/js/advertisement*.$script,~third-party,domain=dagensmedia.nu|devote.se|expressen.se|familjeliv.se|feber.se|skyddsombud24.se|tjock.se
 @@/js/advertising.$script,~third-party,domain=byggnadsarbetaren.se|cykla.se|elbilsnytt.se|svegot.se|tekniksmart.se|vi-tidningen.se|vi.se|vilaser.se|snowmobile.se|vatternrundan.se
-@@/scripts/advertisement*.$script,~third-party,domain=expressen.se|mama.nu
+@@/scripts/advertisement*.$script,~third-party,domain=expressen.se|mama.nu|skonahem.com
 @@/show_ads.js$script,~third-party,domain=happypancake.com
 @@/wp-content/*/adframe.js$script,~third-party,domain=falkopingstidning.se|jnytt.se|jp.se|skaraborgslanstidning.se|skovdenyheter.se|smalandsdagblad.se|smalanningen.se|smt.se|tranastidning.se|vastgotabladet.se|vetlandaposten.se|vn.se
 @@||aka-cdn.adtech.de/dt/common/DAC.js$script,domain=bandyplay.se
@@ -822,6 +823,7 @@ patient.info##body:style(overflow: auto !important;)
 /i10c@p1/*$domain=bax-shop.se|digikey.se|justfab.se|tui.se
 /jquery.fancybox.$domain=saljledarskap.se|tjanstebilen.se
 /modules/GTM$script,domain=iform.se|digitalfotoforalla.se|natgeo.se|popularhistoria.se|aktivtraning.se|pctidningen.se|militarhistoria.se
+/modules/ctm-$script,domain=iform.se|digitalfotoforalla.se|natgeo.se|popularhistoria.se|aktivtraning.se|pctidningen.se|militarhistoria.se
 /newsletter/*$domain=zalando.se
 /panorama.js$script,domain=blogg.se|bloggkommentatorerna.se|hannaofsweden.se|itsallabouttaif.se|ladydahmer.nu|lindablom.se|modette.se|rebeckasfoto.se|svenskayoutubers.se|themoviefreak.se|webblogg.se|weberskold.se
 /pum/*$script,xmlhttprequest,domain=byggipedia.se|opulens.se|tkj.se|exponera.nu
@@ -1363,6 +1365,8 @@ expressen.se##.teaser:has(.vignette:has-text(/(^erbjudande från|^annons|^happy 
 expressen.se##a[href*="/annons"]
 expressen.se##.discount-ad
 expressen.se##.html-widget > div[style="text-align: center; font-size: 10px;"]
+! Okt 2019
+expressen.se##.rotator--external
 ! Mars 2019
 expressen.se##a[href^="/premium/erbjudanden/"]
 ! sektion sport Feb 2019
@@ -1450,11 +1454,11 @@ vafinans.se###balken_top
 @@/wp-content/plugins/seagal-plugin-dfp/assets/showAds.js$~third-party,script
 @@/wp-content/themes/seagal-editorial/assets/js/ads.js$~third-party,script
 ||akkurat.bonniernewslifestyle.se^*/recommendations$xmlhttprequest
-expressen.se,mama.nu##.gdpr-banner
-mama.nu##.teaser__third-party
-mama.nu##+js(acis, ExpressenAnalytics, push)
-skonahem.com,tara.se,styleby.nu,topphalsa.se,lantliv.com,amelia.se,alltomtradgard.se,alltommat.se,privataaffarer.se,familyliving.se,alltihemmet.se,godsochgardar.se,gardochtorp.se##a.teaser[href*="/annonssamarbete/"]
-skonahem.com,tara.se,styleby.nu,topphalsa.se,lantliv.com,amelia.se,alltomtradgard.se,alltommat.se,privataaffarer.se,dn.se,familyliving.se,alltihemmet.se,godsochgardar.se,gardochtorp.se##.teaser-native
+expressen.se,mama.nu,skonahem.com##.gdpr-banner
+mama.nu,skonahem.com##.teaser__third-party
+mama.nu,skonahem.com##+js(acis, ExpressenAnalytics, push)
+tara.se,styleby.nu,topphalsa.se,lantliv.com,amelia.se,alltomtradgard.se,alltommat.se,privataaffarer.se,familyliving.se,alltihemmet.se,godsochgardar.se,gardochtorp.se##a.teaser[href*="/annonssamarbete/"]
+tara.se,styleby.nu,topphalsa.se,lantliv.com,amelia.se,alltomtradgard.se,alltommat.se,privataaffarer.se,dn.se,familyliving.se,alltihemmet.se,godsochgardar.se,gardochtorp.se##.teaser-native
 topphalsa.se,alltommat.se##.teaser:has(.teaser-label:has-text(/annonssamarbete/i))
 privataaffarer.se##a[href*="/bit.ly/"]
 privataaffarer.se##.data-grid-teaser:has(.teaser-label:has-text(/^annons/i))
@@ -1538,6 +1542,7 @@ allehanda.se,arbetarbladet.se,avestatidning.com,bblat.se,dalademokraten.se,dt.se
 allehanda.se,arbetarbladet.se,avestatidning.com,bblat.se,dalademokraten.se,dt.se,fagersta-posten.se,gd.se,lt.se,ltz.se,na.se,norrteljetidning.se,nynashamnsposten.se,op.se,salaallehanda.com,st.nu,tidningenharjedalen.se,vlt.se,bandypuls.se##+js(cookie-remover, /^highlight_displayed/)
 allehanda.se,arbetarbladet.se,avestatidning.com,bblat.se,dalademokraten.se,dt.se,fagersta-posten.se,gd.se,lt.se,ltz.se,na.se,norrteljetidning.se,nynashamnsposten.se,op.se,salaallehanda.com,st.nu,tidningenharjedalen.se,vlt.se,bandypuls.se##.nps-client-dialogue-footer
 ||ues*.mmcloud.se/api/*/events$third-party
+/bam-data?device$xmlhttprequest
 
 ! HERENCO/HALL MEDIA
 /ajax.php?action=fetch_from_google_analytics$xmlhttprequest,domain=falkopingstidning.se|jnytt.se|jp.se|skaraborgslanstidning.se|skovdenyheter.se|smalandsdagblad.se|smalanningen.se|smt.se|tranastidning.se|vastgotabladet.se|vetlandaposten.se|vn.se
