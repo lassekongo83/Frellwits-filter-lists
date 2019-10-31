@@ -832,7 +832,7 @@ patient.info##body:style(overflow: auto !important;)
 /panorama.js$script,domain=blogg.se|bloggkommentatorerna.se|hannaofsweden.se|itsallabouttaif.se|ladydahmer.nu|lindablom.se|modette.se|rebeckasfoto.se|svenskayoutubers.se|themoviefreak.se|webblogg.se|weberskold.se
 /pum/*$script,xmlhttprequest,domain=byggipedia.se|opulens.se|tkj.se|exponera.nu
 /pum/*$stylesheet,domain=it-finans.se|it-halsa.se|it-kanalen.se|it-pedagogen.se|it-retail.se
-/sharedaddy/sharing.$domain=nyheteridag.se|damhockey.se
+/sharedaddy/sharing.$domain=nyheteridag.se|damhockey.se|ulrica.askmorling.se
 /SitesterSurvey*.$script,domain=wwf.se
 /smart-app-banner.$script,domain=allsvenskan.se|svenskafans.com|superettan.se
 /snowplow$script,domain=hemnet.se|casamundo.se
@@ -1188,6 +1188,7 @@ svd.se##+js(aeld, /^(?:mousemove|scroll)$/, j())
 /infopeek.min.js$domain=svd.se
 ||engage-auth.schibsted.media^$script
 ||2mdn.net/instream/html5/ima3.js$script,important,domain=aftonbladet.se
+/appnexus$script,domain=blocket.se|minhembio.com|bytbil.com|aftonbladet.se
 @@||aftonbladet.se^$generichide
 aftonbladet.se##.abTheme-ad
 aftonbladet.se##.abTheme-adSportbladet
@@ -1237,11 +1238,9 @@ tv.nu##.ad-mega--container
 tv.nu###app > div > div:last-child:not(:first-child)
 tv.nu##.gdpr-bar-wrapper
 ||logger.tv.nu^$script
+! gamla blocket
 /campaigns.js$script,domain=blocket.se
 /utag.$script,domain=blocket.se
-/appnexus$script,domain=blocket.se|minhembio.com|bytbil.com|aftonbladet.se
-||blocket.se/inverted_classifieds.html
-||blocket.com/boost.html$subdocument
 /none.gif$image,domain=blocket.se
 /uftiLoader.$script,domain=blocket.se
 blocket.se###index_panorama
@@ -1249,6 +1248,9 @@ blocket.se###li_panorama
 blocket.se###vi_panorama
 blocket.se##[id^="ufti"]
 blocket.se##.tag.panorama
+! nya blocket
+blocket.se##body.modal_open, html.modal_open:style(overflow: auto !important;)
+blocket.se###placement_panorama
 mobil.blocket.se###top_device
 mobil.blocket.se###top_large_device
 mobil.blocket.se##div[class*="StyledBanner"]
@@ -1874,7 +1876,7 @@ kenzas.se##article[data-text*="In collaboration with"]
 victoriatornegren.se##article[id^="post-"]:has(.entry-header:has-text(/(?:samarbete|Samarbete)\s+med/i))
 victoriatornegren.se##article[id^="post-"]:has(.entry-header:has-text(Paid post in collaboration))
 alexandrabring.se,biancaingrosso.se##article[id^="post-"]:has(em:has-text(/i samarbete med/i))
-/scripts/pb*.js$script,domain=nouw.com|elinskoglund.com|fannystaaf.se|linnahlborg.se|lovisawallin.se|moamattsson.se|saraabrahamsson.se
+||nouw.com/scripts/pb$script
 @@||nouw.com^$generichide
 @@||elinskoglund.com^$generichide
 @@||fannystaaf.se^$generichide
@@ -2123,6 +2125,7 @@ eniro.se##.banner-container-result-header
 eniro.se###FrontImage:style(height: 0 !important;)
 fotosidan.se##a[href^="https://ads."]
 fotosidan.se##.banner-panorama-wmn
+fotosidan.se##.banner-partner-zone-top-wrapper
 ||obj.fotosidan.se/obj/pa/$image
 ||dagensanalys.se/kmt.$script
 dagensanalys.se,letsgoexplore.se##.tipi-tile.active
