@@ -351,6 +351,7 @@
 /sifo_msr.$script
 /siforesponsivemeasure.js$script
 /skolvarlden_theme/js/s_code.js$script
+/snowplow-tracker$script
 /spotlight-ad_$image
 /static/js/loada.js$script
 /static.marklar.se/track/custom-tracker.$script
@@ -472,6 +473,7 @@
 ||ma.kntnt.konzilo.net/mtc.js
 ||mailchimp.com^*/popup$script
 ||mailmunch.co^*/scrollbox.$script
+||matchesfashion.com^*/ExternalBanners$image,third-party
 ||media.jw-it.se/b/$image
 ||mediacreeper.com/image$image,redirect=32x32.png
 ||mediacreeper.se/image$image,redirect=32x32.png
@@ -1877,7 +1879,7 @@ kenzas.se##article[data-text*="In collaboration with"]
 victoriatornegren.se##article[id^="post-"]:has(.entry-header:has-text(/(?:samarbete|Samarbete)\s+med/i))
 victoriatornegren.se##article[id^="post-"]:has(.entry-header:has-text(Paid post in collaboration))
 alexandrabring.se,biancaingrosso.se##article[id^="post-"]:has(em:has-text(/i samarbete med/i))
-||nouw.com/scripts/pb$script
+/scripts/pb*.js$script,domain=elinskoglund.com|fannystaaf.se|linnahlborg.se|lovisawallin.se|moamattsson.se|nouw.com|saraabrahamsson.se|100kitchenstories.se
 @@||nouw.com^$generichide
 @@||elinskoglund.com^$generichide
 @@||fannystaaf.se^$generichide
@@ -1885,13 +1887,19 @@ alexandrabring.se,biancaingrosso.se##article[id^="post-"]:has(em:has-text(/i sam
 @@||lovisawallin.se^$generichide
 @@||moamattsson.se^$generichide
 @@||saraabrahamsson.se^$generichide
+@@||100kitchenstories.se^$generichide
 ||nouw.com/api/postview$xmlhttprequest
+100kitchenstories.se###ConsentBanner
 nouw.com##.box.slide.active:has(.badge:has-text(/annons/i))
 nouw.com##.magazine-grid-item:has(.badge:has-text(/annons/i))
 nouw.com,elinskoglund.com,fannystaaf.se,linnahlborg.se,lovisawallin.se,moamattsson.se,saraabrahamsson.se###ConsentBanner
 nouw.com##.Container_blogPost:has(em:has-text(/reklamsamarbete/i))
 nouw.com,elinskoglund.com,fannystaaf.se,linnahlborg.se,lovisawallin.se,moamattsson.se,saraabrahamsson.se##[title="Ad space"]
 alicestenlof.com##.noscroll:style(overflow: initial !important;)
+/cookie_info.$domain=trendenser.se
+trendenser.se##.post_feed_post:has(.sponsor-info)
+morotsliv.com###sidebar .et_pb_widget
+||thestoryof2.se/em_event.html
 
 ! Common cosmetic filters that shouldn't be generic
 alicestenlof.com,tjanstebilen.se###cookies
@@ -2042,7 +2050,7 @@ youplay.se,nyheter24.se,modette.se,filmtipset.se,affarsliv.com,affarslivgotland.
 youplay.se,nyheter24.se,modette.se,filmtipset.se,affarsliv.com,affarslivgotland.se,corren.se,eposten.se,folkbladet.se,helagotland.se,klackspark.com,kuriren.nu,mvt.se,norrbottensaffarer.se,nsd.se,nt.se,pt.se,unt.se,vt.se,uppgang.com,vimmerbytidning.se,vf.se,hjotidning.se,kt.se,sla.se,mariestadstidningen.se,filipstadstidning.se,fryksdalsbygden.se,nwt.se,varmlandsaffarer.se,arvikanyheter.se,nkp.se,saffletidningen.se,provinstidningen.se,dalslanningen.se,karlskogatidning.se,nlt.se,skd.se,nsk.se,affarsvarlden.se,ekuriren.se,kkuriren.se,sn.se##+js(set, youplay.helpers.tabActive, noopFunc)
 youplay.se,nyheter24.se,modette.se,filmtipset.se,affarsliv.com,affarslivgotland.se,corren.se,eposten.se,folkbladet.se,helagotland.se,klackspark.com,kuriren.nu,mvt.se,norrbottensaffarer.se,nsd.se,nt.se,pt.se,unt.se,vt.se,uppgang.com,vimmerbytidning.se,vf.se,hjotidning.se,kt.se,sla.se,mariestadstidningen.se,filipstadstidning.se,fryksdalsbygden.se,nwt.se,varmlandsaffarer.se,arvikanyheter.se,nkp.se,saffletidningen.se,provinstidningen.se,dalslanningen.se,karlskogatidning.se,nlt.se,skd.se,nsk.se,affarsvarlden.se,ekuriren.se,kkuriren.se,sn.se##+js(set, youplay.helpers.getTrackUrl, noopFunc)
 youplay.se,nyheter24.se,modette.se,filmtipset.se,affarsliv.com,affarslivgotland.se,corren.se,eposten.se,folkbladet.se,helagotland.se,klackspark.com,kuriren.nu,mvt.se,norrbottensaffarer.se,nsd.se,nt.se,pt.se,unt.se,vt.se,uppgang.com,vimmerbytidning.se,vf.se,hjotidning.se,kt.se,sla.se,mariestadstidningen.se,filipstadstidning.se,fryksdalsbygden.se,nwt.se,varmlandsaffarer.se,arvikanyheter.se,nkp.se,saffletidningen.se,provinstidningen.se,dalslanningen.se,karlskogatidning.se,nlt.se,skd.se,nsk.se,affarsvarlden.se,ekuriren.se,kkuriren.se,sn.se##+js(set, youplay.helpers.trackUrls, noopFunc)
-saraabrahamsson.se,eurosport.se,jawcloud.co,nxload.com,polistidningen.se,verystream.com,clipmyhorse.tv##+js(aeld, contextmenu)
+saraabrahamsson.se,eurosport.se,jawcloud.co,nxload.com,polistidningen.se,verystream.com,clipmyhorse.tv,100kitchenstories.se##+js(aeld, contextmenu)
 ! Annoying, unecessary, and completely unrelated autoplaying video
 ||youplay.se^$third-party,domain=hamsterpaj.net|emocore.se|dayviews.com|kamrat.com|familjeliv.se|extraextra.se
 ! Don't mess with peoples default scroll settings
@@ -2326,6 +2334,7 @@ kit.se##kit-cookiebar
 branschkoll.se##.advert-widget
 /packs/consent.$domain=hemnet.se
 /packs/survey.$domain=hemnet.se
+/google-tag-manager$script,domain=hemnet.se
 hemnet.se##.recent-news__item:has(.recent-news__category:has-text(/sponsrad/i))
 hemnet.se##.article-news__link:has(.news-article--sponsored)
 hemnet.se##.featured-news__link:has(.featured-news__ribbon--sponsored)
