@@ -1241,29 +1241,20 @@ tv.nu##.ad-mega--container
 tv.nu###app > div > div:last-child:not(:first-child)
 tv.nu##.gdpr-bar-wrapper
 ||logger.tv.nu^$script
-! gamla blocket
-/campaigns.js$script,domain=blocket.se
-/utag.$script,domain=blocket.se
-/none.gif$image,domain=blocket.se
-/uftiLoader.$script,domain=blocket.se
-blocket.se###index_panorama
-blocket.se###li_panorama
-blocket.se###vi_panorama
-blocket.se##[id^="ufti"]
 blocket.se##.tag.panorama
-! nya blocket
 blocket.se##body.modal_open, html.modal_open:style(overflow: auto !important;)
 blocket.se###placement_panorama
 mobil.blocket.se###top_device
 mobil.blocket.se###top_large_device
 mobil.blocket.se##div[class*="StyledBanner"]
 ||mobil.blocket.se/ufti$subdocument
-||mobil.blocket.se^*/gdpr-bundle$script
+||blocket.se^*/gdpr-bundle$script
 ||jobb.blocket.se^*/tracker.js
 ||jobb.blocket.se^*/xtcore.min.js
-||static.finncdn.no^*/auto-track.$domain=resor.blocket.se
-! https://www.reddit.com/r/sweden/comments/dn0d7e/nu_f%C3%A5r_det_fan_i_mig_vara_nog/f570t8m/
-@@/xtcore.js$domain=blocket.se
+||jobb.blocket.se/blocket_puff.html$subdocument
+||finn.no/injector.js$domain=resor.blocket.se
+/travel-external/config/ast/*$domain=resor.blocket.se
+/analytics-adobe.$domain=resor.blocket.se
 politism.se##[id^="ab-appnexus"]
 politism.se##[id^="native_ad"]
 politism.se###panorama-annons
@@ -1283,6 +1274,7 @@ klart.se##.gdpr-onboarding-container
 /js/tracking.$script,domain=bytbil.com
 bytbil.com##+js(acis, apntag, anq)
 bytbil.com##+js(acis, Bytbil, AppNexus)
+bytbil.com##+js(aeld, mousedown, (t))
 bytbil.com###privacyModal
 bytbil.com##html,body:style(overflow: auto !important;)
 borsplus.se##.cookies-wrap
@@ -1969,6 +1961,7 @@ emocore.se,svenskamagic.com###reklam
 svenskfotboll.se,gbgfotboll.se###cookie_bar
 gentlemannaguiden.com##.advertising
 newsner.com,humorbibeln.se,sportbibeln.se,ettgottskratt.se##.ad-space
+ehandel.se,bytbil.com##.article-sponsored
 
 ! Various websites with lots of malicious stuff and annoyances
 /wp-content/themes/keremiya1/js/script.js$script
@@ -2935,7 +2928,6 @@ ehandel.se##.native_ad_article_page
 ehandel.se##.catInsights
 ehandel.se##[class^="native_ad"]
 ehandel.se##[class^="native_ad"] + .largePost
-ehandel.se##.article-sponsored
 teknifik.se##.post:has(.sponsor)
 readly.com##.cookies-container
 allsvenskan.se,superettan.se##.app-cookie-line
