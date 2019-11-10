@@ -51,7 +51,7 @@ The goal is for the pages to function as normally as possible for the visitor fi
 
 ## Other information
 
-The list is set to automatically update every 3rd day. You can also [update manually](https://github.com/gorhill/uBlock/wiki/Dashboard:-Filter-lists#update-now).
+The list is set to automatically update every 4th day. You can also [update manually](https://github.com/gorhill/uBlock/wiki/Dashboard:-Filter-lists#update-now).
 
 If something isn't working correctly, or if you find unblocked content, you can open an issue here on GitHub. Please follow the issue template. If you have a question, please use reddit.
 

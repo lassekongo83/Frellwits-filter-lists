@@ -33,7 +33,7 @@ python3 FOP.py output
 cat > output/headers.txt <<EOF
 [Adblock Plus 2.0]
 ! Title: Frellwit's Swedish Filter
-! Expires: 3 days (update frequency)
+! Expires: 4 days (update frequency)
 ! Last modified: ${date}
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
