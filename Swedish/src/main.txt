@@ -857,7 +857,7 @@ patient.info##body:style(overflow: auto !important;)
 ||consent.cookieinfo.net^$third-party,domain=bax-shop.se
 ||cookiepro.com^$third-party,domain=sd.se
 ||d2wy8f7a9ursnm.cloudfront.net/bugsnag$script,domain=expressen.se|bioenergitidningen.se
-||evidon.com^$third-party,domain=morningstar.se|spela.se|downdetector.se
+||evidon.com^$third-party,domain=morningstar.se|spela.se|downdetector.se|mtv.se
 ||execute-api.eu-west-1.amazonaws.com/*/event$xmlhttprequest,domain=forum.hallon.se
 ||getsentry.com^$third-party,domain=viafree.se
 ||herokuapp.com^$third-party,domain=aftonbladet.se
@@ -1390,6 +1390,7 @@ expressen.se##.pressrelease-teaser
 expressen.se##.teaser--sponsored
 expressen.se##.article--sponsored
 expressen.se##.teaser > a[href*="happygreen.se"]
+expressen.se##+js(aeld, click, preventDefault)
 ! Jul 2019
 ! Ads served from this script @ https://www.expressen.se/halsoliv/halsa/att-klappa-katter-eller-hundar-i-tio-minuter-kan-minska-stress/
 ! The ads invalidates a request I got as a DM on reddit to whitelist their quizzes and polls. The iframes that serves ads are identical.
@@ -2028,6 +2029,8 @@ swestream.*##.player-top-ad
 ||vcstream.to^*/script$script
 ||vcstream.to^*/license$script
 ||jawcloud.co^$csp=script-src 'self' 'unsafe-inline' blob: *.jawcloud.co upvtt.com *.gstatic.com
+||jawcloud.co/*.gif$image
+jawcloud.co##.loloba
 jawcloud.co##+js(acis, jawplayer, on)
 vidbox.co##+js(acis, minimalUserResponseInMiliseconds)
 vidbox.co##+js(acis, miner)
@@ -3070,6 +3073,7 @@ studocu.com##.new-viewer-wrapper .p2hv:style(pointer-events: auto !important;)
 studocu.com###page-container:style(user-select: text !important;)
 posh24.se##.bannerArea
 uppsatser.se##li[style*="min-height:90px"]
+uppsatser.se##.spahotels
 xn--lnforum-exa.se##.LFRBox
 ||spelo.se/bfb/$subdocument
 spelo.se##.cookie-box
@@ -3138,6 +3142,7 @@ digitaliserat.nu##.news-story:has(a:has-text(/^detta är en annons/i))
 /docunet_stats.js$script,domain=byggvarlden.se
 byggvarlden.se##.ContentRight-50 > .featured
 byggvarlden.se###bannnerContainer
+byggvarlden.se##ul.productnews
 byggvarlden.se,byggfaktadocu.se##+js(acis, docu_stats_summaryview_no_time)
 byggvarlden.se,byggfaktadocu.se##+js(acis, docu_stats_pageview_no_time)
 byggfaktadocu.se##.pop_box
@@ -3193,6 +3198,7 @@ spanaren.se##.textwidget > a[target="blank"] > img
 svenskhistoria.se##.widget_et_ads
 svenskhistoria.se##.module-etads
 svenskhistoria.se###text-13
+svenskhistoria.se##a[target="_blank"][rel="noopener noreferrer"]
 svenskbyggtidning.se##.ad-toppbanner
 scrollat.se##.wf-loading > *:style(visibility: visible !important; opacity: 1 !important;)
 ||delupe.se^*/iframe-track.$script
@@ -3237,16 +3243,12 @@ evalent.se##.loadPage
 /ie_pixel.png$domain=recept.se
 ||atgplay.se^*/stat$xmlhttprequest
 ingenjoren.se##.td-header-sp-recs
-/common.metrics.$script,domain=tripadvisor.se
-/tracking.interactions.$script,domain=tripadvisor.se
 /maps.sponsored-pill.$script,domain=tripadvisor.se
 tripadvisor.se##[class$="banner_ad"]
+tripadvisor.se##.ppr_rup.ppr_priv_document_cookie_banner
 barnsemester.se###aggressivead
 barnsemester.se##.annonsfiendset
 barnsemester.se##body:style(overflow: visible !important;)
-firstcamp.se##.frontpagepopupmodal
-firstcamp.se##.modal-backdrop
-firstcamp.se##.modal-open:style(overflow: visible !important;)
 sverak.se##+js(set, disable_copy, noopFunc)
 sverak.se##+js(set, disableEnterKey, noopFunc)
 sverak.se##+js(set, disableSelection, noopFunc)
@@ -3311,6 +3313,7 @@ halsasverige.se##.isax
 /simple-liking$script,domain=dagsattplocka.se
 paleoskafferiet.se##.right-sidebar > .box-item
 ||nordic.ign.com/cookienotice.$script
+||nordic.ign.com/s/js/zad.$script
 alpresor.se##+js(acis, snowMax)
 alpresor.se###toast-container
 /cookieDirective.$script,domain=sdr.se
