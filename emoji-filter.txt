@@ -1,9 +1,12 @@
+[Adblock Plus 2.0]
 ! Title: I Don't Care About Emojis
 ! Expires: 7 days (update frequency)
+! Last modified: 2019-11-18 13:10:50 CET
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: This filter aims to remove emoji realted scripts, stylesheets, fonts, and images.
 ! License: GPLv3
 
+! General / Providers
 ||twemoji.maxcdn.com^
 ||emoji.redditmedia.com^
 ||discordemoji.com^
@@ -15,3 +18,27 @@
 /emojiFace.$script
 /lsxemojipicker.$script
 /images/*emoji/*
+
+! Discord
+||discordapp.com/assets/*.svg
+@@||discordapp.com/assets/94b5558353f1d01035a874f6eddf6d70.svg
+||discordapp.com/assets/*.png
+@@||discordapp.com/assets/c33d106fdbfb5f84e0e4f0352665f230.png
+||cdn*/emojis/$image
+
+! MeWe
+||cdn*/emoji/$image
+mewe.com##.postbar_button_emoji
+
+! GitHub
+github.com##g-emoji
+github.com##.timeline-comment-action[aria-label="Add your reaction"]
+github.com##.reaction-summary-item
+
+! Twitch
+||static-cdn.jtvnw.net/emoticons/
+||static-cdn.jtvnw.net/badges/
+||cdn.frankerfacez.com$image
+
+! VKontakte
+||vk.com/emoji/
