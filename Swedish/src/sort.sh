@@ -11,10 +11,10 @@ main_temp='output/main-temp.txt'
 firefox='output/firefox.txt'
 not_firefox='output/not_firefox.txt'
 chromium='output/chromium.txt'
-not_chromium='output/not_chromium.txt'
+#not_chromium='output/not_chromium.txt'
 mobile='output/mobile.txt'
 not_mobile='output/not_mobile.txt'
-not_ubo='output/not_ubo.txt'
+#not_ubo='output/not_ubo.txt'
 brave_disable='output/brave_disable.txt'
 # extended/not extended syntax
 extended='output/extended.txt'
@@ -28,10 +28,10 @@ ubo_s='script:inject|#\+js\('
 sed -n '/^!#if env_firefox/,/^!#endif/p' $main > $firefox
 sed -n '/^!#if !env_firefox/,/^!#endif/p' $main > $not_firefox
 sed -n '/^!#if env_chromium/,/^!#endif/p' $main > $chromium
-sed -n '/^!#if !env_chromium/,/^!#endif/p' $main > $not_chromium
+#sed -n '/^!#if !env_chromium/,/^!#endif/p' $main > $not_chromium
 sed -n '/^!#if env_mobile/,/^!#endif/p' $main > $mobile
 sed -n '/^!#if !env_mobile/,/^!#endif/p' $main > $not_mobile
-sed -n '/^!#if !ext_ublock/,/^!#endif/p' $main > $not_ubo
+#sed -n '/^!#if !ext_ublock/,/^!#endif/p' $main > $not_ubo
 sed -n '/^!#if !env_safari/,/^!#endif/p' $main > $brave_disable
 sleep .5
 # Delete it (Sleep needed here or it won't be removed properly)
@@ -39,10 +39,10 @@ sed -n '/^!#if/,/^!#endif/!p' $main > $main_temp
 sed -n -i '/^!/!p' $firefox
 sed -n -i '/^!/!p' $not_firefox
 sed -n -i '/^!/!p' $chromium
-sed -n -i '/^!/!p' $not_chromium
+#sed -n -i '/^!/!p' $not_chromium
 sed -n -i '/^!/!p' $mobile
 sed -n -i '/^!/!p' $not_mobile
-sed -n -i '/^!/!p' $not_ubo
+#sed -n -i '/^!/!p' $not_ubo
 sed -n -i '/^!/!p' $brave_disable
 
 # egrep the stuff needed and then remove it with egrep -v
@@ -79,32 +79,27 @@ cat > output/headers.txt <<EOF
 !#if env_chromium
 !#include Swedish/chromium.txt
 !#endif
-!#if !env_chromium
-!#include Swedish/not_chromium.txt
-!#endif
 !#if env_mobile
 !#include Swedish/mobile.txt
 !#endif
 !#if !env_mobile
 !#include Swedish/not_mobile.txt
 !#endif
-!#if !ext_ublock
-!#include Swedish/not_ubo.txt
-!#endif
 !#include Swedish/brave_disable.txt
 ! --- End browser/extension specific filters
 EOF
 
+# FIXME - Don't create and use empty files https://github.com/DandelionSprout/adfilt/issues/7#issuecomment-559785940 & https://github.com/gorhill/uBlock/blob/92c0f6cab645a23374307b181498987c002c426c/src/js/assets.js#L116
 # Combine the files
 cat output/headers.txt $not_extended > ../../Frellwits-Swedish-Filter.txt
 cat $extended > ../swe-ubo-nano-filters.txt
 cat $firefox > ../firefox.txt
 cat $not_firefox > ../not_firefox.txt
 cat $chromium > ../chromium.txt
-cat $not_chromium > ../not_chromium.txt
+#cat $not_chromium > ../not_chromium.txt
 cat $mobile > ../mobile.txt
 cat $not_mobile > ../not_mobile.txt
-cat $not_ubo > ../not_ubo.txt
+#cat $not_ubo > ../not_ubo.txt
 cat $brave_disable > ../brave_disable.txt
 
 sleep .5
