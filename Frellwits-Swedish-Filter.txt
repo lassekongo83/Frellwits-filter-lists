@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2019-11-29 08:47:27 CET
+! Last modified: 2019-11-29 13:32:16 CET
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -12,8 +12,31 @@
 !
 ! Special thanks to ryanbr@github for the rules from Fanboy's Swedish list.
 !
+! --- Browser/extension specific filters
 !#include Swedish/swe-ubo-nano-filters.txt
-!#include Swedish/swe-ppd-filters.txt
+!#if env_firefox
+!#include Swedish/firefox.txt
+!#endif
+!#if !env_firefox
+!#include Swedish/not_firefox.txt
+!#endif
+!#if env_chromium
+!#include Swedish/chromium.txt
+!#endif
+!#if !env_chromium
+!#include Swedish/not_chromium.txt
+!#endif
+!#if env_mobile
+!#include Swedish/mobile.txt
+!#endif
+!#if !env_mobile
+!#include Swedish/not_mobile.txt
+!#endif
+!#if !ext_ublock
+!#include Swedish/not_ubo.txt
+!#endif
+!#include Swedish/brave_disable.txt
+! --- End browser/extension specific filters
 ###accept-cookies-div
 ###catapult-cookie-bar
 ###cliSettingsPopup.cli-modal
