@@ -51,6 +51,10 @@ bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##bo
 !#if !env_firefox
 di.se##+js(sid, runAdBlockPaywall, 1000)
 !#endif
+!#if env_chromium
+nyheter24.se###accept-cookies-div
+@@||nyheter24.se^$ghide
+!#endif
 !#if !env_mobile
 lundagard.se##+js(aeld, wheel)
 /rokophoto-lite/js/SmoothScroll.$script
