@@ -869,7 +869,7 @@ patient.info##body:style(overflow: auto !important;)
 ||mailerlite.com^$third-party,domain=svenskamagasinet.nu
 ||mailmunch.co^$third-party,domain=affarsstaden.se|enkelteknik.se|villalivet.se
 ||marketingautomation.services^$third-party,domain=wesafe.se
-||pji.nu^$third-party,domain=99mac.se|feber.se|fz.se|idg.se|kamerabild.se|minhembio.com|mobil.se|nordichardware.se|surfa.se|sweclockers.com|viivilla.se
+||pji.nu^$third-party,domain=99mac.se|feber.se|fz.se|idg.se|kamerabild.se|minhembio.com|mobil.se|nordichardware.se|surfa.se|sweclockers.com|viivilla.se|amazonaws.com
 ||prisjakt-a.akamaihd.net^$third-party,domain=pcgamer.se
 ||prisjakt-a.akamaized.net^$third-party,domain=99mac.se|feber.se|fz.se|idg.se|kamerabild.se|minhembio.com|mobil.se|nordichardware.se|sweclockers.com|viivilla.se
 ||sentry.io^$third-party,domain=dagensmedia.se|dplay.se|koket.se|klart.se
@@ -1081,7 +1081,6 @@ gamereactor.se##^script[onError="adblockEnabled()"]
 hannaofsweden.se##^script:has-text(NOclickNN)
 digikey.se,bax-shop.se,tui.se##^script:has-text(i10cdone)
 digikey.se,bax-shop.se,justfab.se,tui.se##^script:has-text(INSTART.Init)
-lundagard.se##^script:has-text(var _0x)
 undertian.com,newsner.com,humorbibeln.se,sportbibeln.se,ettgottskratt.se,sportpanelen.se,kvalitetsmagasinet.se,bandyfeber.com,telekomidag.se,miljo-utveckling.se,vdtidningen.se,dagensanalys.se,ladok.se,binero.se,rikatillsammans.se,zeinaskitchen.se,dinbyggare.se,kvartal.se,trafiksakerhet.se,i-chalmers.se##^script:has-text(mi_track_user)
 undertian.com,newsner.com,humorbibeln.se,sportbibeln.se,ettgottskratt.se,sportpanelen.se,kvalitetsmagasinet.se,bandyfeber.com,telekomidag.se,miljo-utveckling.se,vdtidningen.se,dagensanalys.se,ladok.se,binero.se,rikatillsammans.se,zeinaskitchen.se,dinbyggare.se,kvartal.se,trafiksakerhet.se,i-chalmers.se##^script:has-text(monsterinsights_frontend)
 dreamfilm.*,jawcloud.co,nyafilmer.*##^script:has-text(_Hasync)
@@ -1212,11 +1211,18 @@ aftonbladet.se##.share-icons
 aftonbladet.se##a[href*=".se/kampanj?"]:has-text(/erbjudande/i)
 aftonbladet.se##body.abTheme-entertainment *> .abAside > div[style^="text"]:last-child
 aftonbladet.se##a[href^="/brandstudio"]
+aftonbladet.se##div[style*="border-color:#0067b5;border-width:4px 0px 0px 0px;"]
+aftonbladet.se##div[style*="border-color:#0067b5;border-width:4px 0px 0px 0px;"] + a
+aftonbladet.se##div[style*="border-color:#0067b5;border-width:4px 0px 0px 0px;"] ~ a[href^="/rabattkod"]
+aftonbladet.se##div[style*="border-color:#0067b5;border-width:4px 0px 0px 0px;"] ~ a[href*="utm_campaign"]
+aftonbladet.se##div[style*="border-color: rgb(0, 103, 181); border-width: 4px 0px 0px;"]
+aftonbladet.se##div[style*="border-color: rgb(0, 103, 181); border-width: 4px 0px 0px;"] + a
+aftonbladet.se##div[style*="border-color: rgb(0, 103, 181); border-width: 4px 0px 0px;"] ~ a[href^="/rabattkod"]
+aftonbladet.se##div[style*="border-color: rgb(0, 103, 181); border-width: 4px 0px 0px;"] ~ a[href*="utm_campaign"]
 /rabattkod/*$image,domain=aftonbladet.se
 /pulsetracking.$script,domain=aftonbladet.se
 /campaign-fallback.$script,domain=aftonbladet.se
 /stats/sitecatalyst/s_code.jsp$script,domain=aftonbladet.se
-/ast.js$domain=live.aftonbladet.se
 aftonbladet.se,~editorialtools.aftonbladet.se##html,body:style(overflow: auto !important;)
 aftonbladet.se,~editorialtools.aftonbladet.se##+js(acis, preLoadAds, loadAd)
 aftonbladet.se,~editorialtools.aftonbladet.se##+js(acis, preLoadAds, setup)
@@ -1229,7 +1235,7 @@ aftonbladet.se,svd.se,~editorialtools.aftonbladet.se##+js(sid, e.reportVisibilit
 ! https://github.com/lassekongo83/Frellwits-filter-lists/issues/61
 ! Disabling this for Brave that don't support pre-parsing directives. Using a simple if-not safari as that browser is no longer supported as well.
 !#if !env_safari
-/privacy/notification?$xmlhttprequest,domain=aftonbladet.se
+/privacy/notification?$xhr,domain=aftonbladet.se
 !#endif
 ! https://github.com/lassekongo83/Frellwits-filter-lists/issues/44
 @@||sdk.pulse.schibsted.com/loader.min.js$domain=special.aftonbladet.se
@@ -1778,6 +1784,8 @@ fria.nu,goteborgsfria.se,friatidningen.se,landetsfria.se,stockholmsfria.se,sesam
 @@||fwmrm.net/ad/$xmlhttprequest,image,domain=viafree.se
 @@||fwmrm.net/crossdomain.xml$xmlhttprequest,domain=viafree.se
 viafree.se##.pause-ad-container
+viafree.se##.pause-ad
+viafree.se##.ad-click-through
 ||viafree.se/collect$xhr,important
 ||client-stream-events.mtg-api.com^$domain=viafree.se
 ||freewheel-mtgx-tv.akamaized.net^$media,domain=viafree.se
