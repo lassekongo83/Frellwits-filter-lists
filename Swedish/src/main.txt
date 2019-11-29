@@ -1090,14 +1090,6 @@ nyafilmer.*##^script[src^="/ads.js?"]
 streamtajm.*##^script:has-text(var TID=)
 !#endif
 
-! Temporary fix for https://github.com/DandelionSprout/adfilt/issues/7#issuecomment-559785940 until I can figure out something better
-!#if !env_chromium
-||temporary-fix.forbannade-skit^$font
-!#endif
-!#if !ext_ublock
-||temporary-fix.forbannade-skit^$font
-!#endif
-
 ! Firefox mobile filters
 !#if env_mobile
 aftonbladet.se##div[data-reactroot] > div > div#MegaAd ~ div[class]:not(#header):not(.abThemeGradientPage)
