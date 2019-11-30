@@ -50,6 +50,7 @@
 ||cookie-script.com^$third-party
 ||cookieinformation.com^$third-party
 ||cookieinfoscript.com^$third-party
+||cookielaw.org^$third-party
 ||cookienotice.co^$third-party
 ||cookies.orangegames.com^$third-party
 ||cookiepolicy.peytz.dk^$third-party
@@ -633,6 +634,7 @@ dpaly.se##body:style(background: none !important; height: unset !important;)
 ###cookieInfoBar
 ###cookieInformerBooklet
 ###cookieMsgBlock
+###cookieNotice
 ###cookieinfo
 ###cookiejar
 ###cookielawwarning
@@ -1095,7 +1097,6 @@ streamtajm.*##^script:has-text(var TID=)
 aftonbladet.se##div[data-reactroot] > div > div#MegaAd ~ div[class]:not(#header):not(.abThemeGradientPage)
 swedroid.se##div[id$="_ad_mobile"]
 swedroid.se##.externalTopMobile
-ikea.com##.cookie-info__panel--show
 !#endif
 
 ! IDG
@@ -1142,9 +1143,7 @@ bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##.c
 bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##.c-ad__floating
 bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##.o-grid__ad-column
 bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##+js(acis, _adform)
-bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##+js(acis, adformLoader)
 bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##+js(acis, adformtag, push)
-bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##+js(cookie-remover, /^p_f/)
 bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##+js(acis, headerScripts, checkAdBlockers)
 bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##+js(aeld, /^(?:mousemove|mouseout)$/)
 bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##+js(set, frequencyModelEnabled, undefined)
@@ -1195,6 +1194,8 @@ svd.se##+js(aeld, /^(?:mousemove|scroll)$/, j())
 ||engage-auth.schibsted.media^$script
 ||2mdn.net/instream/html5/ima3.js$script,important,domain=aftonbladet.se
 /appnexus$script,domain=blocket.se|minhembio.com|bytbil.com|aftonbladet.se
+||schibsted.io^*/gdpr-bundle.js$script
+/ast.js$domain=live.aftonbladet.se
 @@||aftonbladet.se^$generichide
 aftonbladet.se##.abTheme-ad
 aftonbladet.se##.abTheme-adSportbladet
@@ -1219,6 +1220,7 @@ aftonbladet.se##div[style*="border-color: rgb(0, 103, 181); border-width: 4px 0p
 aftonbladet.se##div[style*="border-color: rgb(0, 103, 181); border-width: 4px 0px 0px;"] + a
 aftonbladet.se##div[style*="border-color: rgb(0, 103, 181); border-width: 4px 0px 0px;"] ~ a[href^="/rabattkod"]
 aftonbladet.se##div[style*="border-color: rgb(0, 103, 181); border-width: 4px 0px 0px;"] ~ a[href*="utm_campaign"]
+aftonbladet.se##h3[style*="background-color:#0067b5;border-radius:2px;margin:16px 0px 0px 0px;"]
 /rabattkod/*$image,domain=aftonbladet.se
 /pulsetracking.$script,domain=aftonbladet.se
 /campaign-fallback.$script,domain=aftonbladet.se
@@ -3382,3 +3384,4 @@ bmwklubben.se##.ad-format
 @@||pricerunner.se^$generichide
 pricerunner.se###data-protection-notification
 sverige.nu###spopup
+kvartal.se##.email-popup-wrapper
