@@ -259,6 +259,7 @@
 /_graphics/annons/*
 /a?callback=pfmod.saveadsettings
 /ad/getNouw.$script
+/ad_acknowledgment$xmlhttprequest
 /adnami/macro/*$script
 /ajax/docu_stats.jsp$xmlhttprequest
 /ajax.php?action=get_cookies_policy$xmlhttprequest
@@ -445,6 +446,7 @@
 ||execute-api.eu-west-1.amazonaws.com/live/analytics/$xmlhttprequest
 ||fast.fonts.com/t/1.css$stylesheet,xmlhttprequest
 ||fast.fonts.net/t/1.css$stylesheet,xmlhttprequest
+||fast.fonts.net/lt/1.css$stylesheet,xmlhttprequest
 ||fastout.com/analytics/
 ||fathom.wheresmar.co/tracker.js$script
 ||fasttrack.webstream.dk/statistik$xmlhttprequest
@@ -642,6 +644,7 @@ dpaly.se##body:style(background: none !important; height: unset !important;)
 ###cookie-banner
 ###cookie-bar
 ###cookie-consent-banner
+###cookie-info
 ###cookie-law-container
 ###cookie-law-info-bar
 ###cookie-line
@@ -887,7 +890,7 @@ breakit.se,nyheter24.se##+js(aopr, _hjSettings)
 breakit.se##+js(acis, _vwo_code)
 mestmotor.se,kingmagazine.se,vagabond.se,manolo.se,innebandy.se,goteborgdirekt.se,stockholmdirekt.se,qruiser.com##+js(acis, ADTECH, config)
 kamerabild.se##+js(set, Sidpyssel.prototype.fixaStoran, noopFunc)
-datormagazin.se,villalivet.se,rocknytt.net,skanesport.se,newsner.com,humorbibeln.se,sportbibeln.se,ettgottskratt.se,hbwebben.se,enkelteknik.se,natursidan.se,screen-marknaden.se,goteborgssport.se,stockholmssport.se,fysioterapi.se,daisybeauty.com##+js(acis, advanced_ads_ga_UID)
+datormagazin.se,villalivet.se,rocknytt.net,skanesport.se,newsner.com,humorbibeln.se,sportbibeln.se,ettgottskratt.se,hbwebben.se,enkelteknik.se,natursidan.se,screen-marknaden.se,goteborgssport.se,stockholmssport.se,fysioterapi.se,daisybeauty.com,dagensopinion.se##+js(acis, advanced_ads_ga_UID)
 opulens.se##+js(acis, advanced_ads_adsense_UID)
 alltforforaldrar.se,mammasidan.se,minbebis.com##+js(acis, loadAd)
 falkopingstidning.se,jnytt.se,jp.se,skaraborgslanstidning.se,skovdenyheter.se,smalandsdagblad.se,smalanningen.se,smt.se,tranastidning.se,vastgotabladet.se,vetlandaposten.se,vn.se,pomu.se,thelocal.se,hockeynews.se##+js(acis, googletag, push)
@@ -1904,7 +1907,6 @@ morotsliv.com###sidebar .et_pb_widget
 alicestenlof.com,tjanstebilen.se###cookies
 di.se,thelocal.se##.ad_container
 businessclass.se,spela.se,entreprenor.se,effektmagasin.se,live.aftonbladet.se##.advert
-norran.se,yelp.se###cookie-info
 alltforforaldrar.se,battrestadsdel.se,flashback.se,mammasidan.se,minbebis.com,casinoexpo.se,leta.eniro.se###top-banner
 chef.se,svd.se##.Ad
 friluftsframjandet.se##.Ads
@@ -2563,11 +2565,6 @@ eurosportplayer.com###banner
 /_bm/abd$script,domain=eurosport.se
 pconline.se###magazine-front-page-below-header-widgets > .widget_text
 @@||opulens.se^$generichide
-opulens.se##.s-social
-opulens.se##.header-social-icons
-opulens.se##.social-btn
-opulens.se##.google-plus
-opulens.se##.side-box.opule-widget
 opulens.se##.mailpoet_form
 opulens.se##a[href$="Opulens_Banner"]
 @@/opulens_banner$image,domain=opulens.se
@@ -2582,33 +2579,24 @@ dagensvimmerby.se,dagensvastervik.se##.topAnnons
 dagensvimmerby.se,dagensvastervik.se##.bottomAnnons
 dagensvimmerby.se,dagensvastervik.se##.insideAnnons
 dagensvimmerby.se,dagensvastervik.se##.shareBtns
-||amazonaws.com/spotlife.js$script,domain=spotlife.se
 dagensopinion.se##a[href^="/annons-"]
-||yelp.se/yl*-$script
 ||yelp.se/eu_cookie_notice$subdocument
-/*log_ad$image,domain=yelp.se
+&log_ad$image,domain=yelp.se'
+/perimeter$script,domain=yelp.se
 ||yelp.se/sit_rep
-||sc-static.net/scevent.$third-party,domain=yelp.se
-||yelp.se/ad_acknowledgment$xmlhttprequest
 yelp.se##[data-ga-category="biz page ad"]
 yelp.se##[data-ad-placement="above_biz_review"]
 arbetaren.se##.adverter
 underbaraclaras.se##.ad_parent
 underbaraclaras.se##article.post:has(.entry-summary > p:has-text(/annonssamarbete/i))
 underbaraclaras.se##article.post:has(.entry-summary > p:has-text(/innehåller reklam för/i))
-ica.se##.recipe-ad
-listor.se##.belowad
+listor.se##.top-ads-widget
 listor.se##article:has(a[href*="/annons/"])
-listor.se##.swp_social_panelSide
-listor.se##.widget_easy_facebook_page_plugin
 accentmagasin.se##.site-cookies
 accentmagasin.se##+js(std, n.modal)
 ||newsharecounts.com^$third-party,domain=samnytt.se
 ||samnytt.se^$csp=frame-src 'self' *.youtube.com youtube.com *.youtube-nocookie.com youtube-nocookie.com *.vimeo.com disqus.com
 @@||samnytt.se^$generichide
-samnytt.se##.nc_socialPanel
-samnytt.se##a[data-bid][href*="/linkout/"]
-samnytt.se##.estp-tab-wrapper
 samnytt.se##[id^="samny-"]
 merinfo.se##.articles-article-wrapper:has(span:has-text(/sponsrad/i))
 merinfo.se##.snippet-article-wrapper:has(.sponsored)
