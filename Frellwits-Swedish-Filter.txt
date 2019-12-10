@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2019-12-08 20:26:16 CET
+! Last modified: 2019-12-10 16:22:43 CET
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -452,6 +452,7 @@
 /LoadIframePlugin.$domain=falkopingstidning.se|jnytt.se|jp.se|skaraborgslanstidning.se|skovdenyheter.se|smalandsdagblad.se|smalanningen.se|smt.se|tranastidning.se|vastgotabladet.se|vetlandaposten.se|vn.se
 /LoadSlotLocator.$script
 /logger/logger?
+/LogRocket.min.js$script,third-party
 /losad/loada.$script
 /lunchguiden*.$image,domain=folkbladet.nu|vk.se
 /magnific-popup/*$domain=shortcut.se
@@ -471,7 +472,7 @@
 /newsletter/*$domain=zalando.se
 /nodecounter/*?token$image,domain=ng.se
 /nordicbet_logo$domain=tvmatchen.nu
-/noview.js$script,domain=nyhetersto.se
+/noview.$script,domain=trafikexperten.com|trafikradion.se
 /oil/*$script,domain=findit.fi|findit.se
 /omniture/s_code.js$script,domain=~atgplay.se
 /omslagsexport/*$image,domain=autolife.se
@@ -1774,6 +1775,7 @@ nyafilmer.*##div[style^="margin-top:180px"]
 nyafilmer.*##div[style^="margin-top:210px"]
 nyafilmer.*##li > a[target="_blank"]
 nyheter24.se##.plugin_wrapper.code
+nyhetersto.se##a.gofollow[target="_blank"]
 nyhetersto.se##a[href*="/reklam/"]
 omni.se##.article--sponsored
 omni.se##.resource--sponsored
@@ -2184,7 +2186,6 @@ yougov.se##.cookie-confirm
 ||cdn.iubenda.com/iubenda.$script
 ||cdn.jsdelivr.net/npm/search-insights$script,domain=forum.hallon.se
 ||cdn.livechatinc.com/tracking.$script
-||cdn.lr-ingest.io/log$script,domain=ipo.se
 ||cdnbox.win/inc/ETKe.$script
 ||churnkit.com^$third-party
 ||cintnetworks.com^$third-party
@@ -2212,7 +2213,7 @@ yougov.se##.cookie-confirm
 ||conviva.com^$third-party
 ||cookie-disclaimer.onewp.net^$third-party
 ||cookie-script.com^$third-party
-||cookieinformation.com^$third-party,domain=~eniro.se
+||cookieinformation.com^$third-party,domain=~eniro.se|~gulesider.no
 ||cookieinfoscript.com^$third-party
 ||cookielaw.org^$third-party
 ||cookienotice.co^$third-party
@@ -2648,7 +2649,6 @@ yougov.se##.cookie-confirm
 ||tracker.yougov.com^$domain=yougov.se
 ||tracking.bonnier.news^$third-party
 ||trafikradion.nu/reklam$image
-||trafikradion.se/Scripts/noview.$script
 ||trafikstyrelsen.com^
 ||travtjansten.se^$third-party
 ||trckr.nordiskemedier.dk^$xmlhttprequest
@@ -2698,6 +2698,7 @@ yougov.se##.cookie-confirm
 ||widget.matklubben.*/tracker$image
 ||widget.mytaste.*/blogcounter$image,script
 ||win.stack-prizes*.com^
+||wishpond.net^$third-party
 ||woomio.com^$third-party
 ||yandex.st/share/share.$third-party
 ||yastatic.net/share/$third-party
