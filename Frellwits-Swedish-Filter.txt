@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2019-12-10 16:22:43 CET
+! Last modified: 2019-12-10 17:38:55 CET
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -170,7 +170,7 @@
 ##ul.adsmodern
 &log_ad$image,domain=yelp.se
 &type=load_offers$xmlhttprequest,domain=illvet.se|pctidningen.se
-*$csp=script-src 'none',domain=svtt.se|ssvd.se|exressen.se|eexpressen.se|sskatteverket.se|aatg.se|atgg.se|dpaly.se
+*$csp=script-src 'none',domain=svtt.se|ssvd.se|exressen.se|eexpressen.se|sskatteverket.se|aatg.se|atgg.se
 *$csp=worker-src 'none',domain=minfil.com
 -ads.$image,domain=svenskbyggtidning.se
 -banner-$image,domain=litteraturmagazinet.se
@@ -303,14 +303,6 @@
 /campaign*/*$script,xmlhttprequest,domain=alltforforaldrar.se|kokaihop.se|mammasidan.se|minbebis.com|njus.me|nyheter24.se
 /campaign-fallback.$script,domain=aftonbladet.se
 /casino/$image,domain=battrestadsdel.se|dayviews.com|hockeysverige.se|hypeline.se|newsvoice.se|nyheter24.se|spray.se|svenskhistoria.se
-/cdn-cgi/pe/bag2?*.hotjar.com$xmlhttprequest
-/cdn-cgi/pe/bag2?*adform.net$xmlhttprequest
-/cdn-cgi/pe/bag2?*connect.facebook.net$xmlhttprequest
-/cdn-cgi/pe/bag2?*doubleclick.net$xmlhttprequest
-/cdn-cgi/pe/bag2?*googletagmanager.com$xmlhttprequest,domain=~halsafitness.se
-/cdn-cgi/pe/bag2?*pagead2.googlesyndication.com$xmlhttprequest
-/cdn-cgi/pe/bag2?*serve.albacross.com$xmlhttprequest
-/cdn-cgi/pe/bag2?*widgets.sprinklecontent.com$xmlhttprequest
 /check-paywall$domain=dn.se
 /citygate/payingcompanies$xmlhttprequest
 /click-performance/cpg_ads.$script
@@ -1641,6 +1633,7 @@ lokalsport.nu##.art-sidebar1
 lokalsport.nu##.art-sidebar2
 lokaltidningen.se##.annoncer-wrapper
 lokaltidningen.se##.casino
+lokaltidningen.se##.custom-annoncer-wrapper
 loppi.se##.entry__teaser--promotion
 loppi.se##.page__ad
 lundagard.se###bdCheckAlso.bdCheckAlsoShow
@@ -2303,7 +2296,6 @@ yougov.se##.cookie-confirm
 ||feed.mikle.com^$third-party,domain=ekonominyheter.se
 ||feeds.feedburner.com^$image
 ||files.cdn.spilcloud.com/pb/$script
-||finkammat.se^$third-party
 ||finn.no/injector.js$domain=resor.blocket.se
 ||folkbladet.nu^$csp=worker-src 'none'
 ||food-supply.se/bnrscr$subdocument
