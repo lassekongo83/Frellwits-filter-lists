@@ -632,6 +632,7 @@
 ###cookieinfo
 ###cookiejar
 ###cookielawwarning
+###CookieDialog
 ###cookiesInfo
 ###cookie-alert
 ###cookie-banner
@@ -764,7 +765,6 @@
 @@/scripts/advertisement*.$script,~third-party,domain=expressen.se|mama.nu|skonahem.com|damernasvarld.se|amelia.se
 @@/show_ads.js$script,~third-party,domain=happypancake.com
 @@/wp-content/*/adframe.js$script,~third-party,domain=falkopingstidning.se|jnytt.se|jp.se|skaraborgslanstidning.se|skovdenyheter.se|smalandsdagblad.se|smalanningen.se|smt.se|tranastidning.se|vastgotabladet.se|vetlandaposten.se|vn.se
-@@||aka-cdn.adtech.de/dt/common/DAC.js$script,domain=bandyplay.se
 @@||assets-cdn.mytaste.org/js/ads.js$script
 @@||freeride.nu/js/ads.js$script,domain=happyride.se
 @@/advertisement2.js$domain=gpro.net
@@ -791,11 +791,6 @@ jobb.maxkompetens.se#@#.single-ad
 cykla.se#@#.advertisment
 @@||cykla.se/wp-content/themes/cykla/assets/images/advert-filter-top.jpg$image
 @@||cykla.se/wp-admin/admin-ajax.php?action*&advert_search$xmlhttprequest
-! https://github.com/lassekongo83/Frellwits-filter-lists/issues/51
-@@||marketo.com^*/form
-! https://github.com/AdguardTeam/AdguardFilters/issues/32597
-mediamarkt.se#@##colorbox.cookie-info-modal
-mediamarkt.se#@#.cookie-info-layer
 ! https://github.com/lassekongo83/Frellwits-filter-lists/issues/55
 patient.info##body:style(overflow: auto !important;)
 ! https://twitter.com/arneby/status/1157674027516878848
@@ -1117,6 +1112,7 @@ idg.se##[data-selector^=".wrapperAd"]
 idg.se##[class^="newsletterFormContainer"]
 idg.se##.articleBodyText + .lazyloaded > .cms-target
 idg.se##a[data-click-settings*="Article Outbound Links"]:has(strong:has-text(/annons/i))
+idg.se##.toolbar.prisjakt.toolbarSticky
 forum.studio.se##li[data-blocktitle="Anpassade Block"]:has(.sms-marking:has-text(Annons:))
 upphandling24.se##.type-partnerartikel
 upphandling24.se##.widget:has(.widget-title:has-text(/^annons/i))
@@ -1738,7 +1734,7 @@ allakorsord.se,allas.se,baaam.se,dromhemochtradgard.se,elle.se,elledecoration.se
 /se-wordpress-agilis-solum/assets/js/ad-collapse.$script
 ||printfriendly.com^$third-party,domain=allakorsord.se|allas.se|baaam.se|dromhemochtradgard.se|elle.se|elledecoration.se|ellematovin.se|femina.se|hant.se|mabra.com|residencemagazine.se|svenskdam.se
 allas.se,hant.se,svenskdam.se##.in-text-ad
-allas.se,hant.se,svenskdam.se###product-wrapper:has(#product-disclaimer:has-text(/annonssamarbete/i))
+allas.se,hant.se,svenskdam.se,elle.se###product-wrapper:has-text(/annonssamarbete/i)
 
 ! EGMONT PUBLISHING
 @@||hemtrevligt.se^$generichide
@@ -2061,10 +2057,9 @@ nxload.com,upstream.to##+js(set, adb, 0)
 ||i.ibb.co/qRBYR98/ban1.png
 
 ! Various annoyances
-youplay.se,nyheter24.se,modette.se,affarsliv.com,affarslivgotland.se,corren.se,eposten.se,folkbladet.se,helagotland.se,klackspark.com,kuriren.nu,mvt.se,norrbottensaffarer.se,nsd.se,nt.se,pt.se,unt.se,vt.se,uppgang.com,vimmerbytidning.se,vf.se,hjotidning.se,kt.se,sla.se,mariestadstidningen.se,filipstadstidning.se,fryksdalsbygden.se,nwt.se,varmlandsaffarer.se,arvikanyheter.se,nkp.se,saffletidningen.se,provinstidningen.se,dalslanningen.se,karlskogatidning.se,nlt.se,skd.se,nsk.se,affarsvarlden.se,ekuriren.se,kkuriren.se,sn.se,allas.se,hant.se,svenskdam.se,baaam.se,elle.se,goteborgssport.se,skanesport.se,stockholmssport.se,thelocal.se,goteborgdirekt.se,stockholmdirekt.se,vasterastidning.se,realtid.se,cafe.se,kingmagazine.se##+js(set, youplay.helpers.disableRightClick, noopFunc)
-youplay.se,nyheter24.se,modette.se,affarsliv.com,affarslivgotland.se,corren.se,eposten.se,folkbladet.se,helagotland.se,klackspark.com,kuriren.nu,mvt.se,norrbottensaffarer.se,nsd.se,nt.se,pt.se,unt.se,vt.se,uppgang.com,vimmerbytidning.se,vf.se,hjotidning.se,kt.se,sla.se,mariestadstidningen.se,filipstadstidning.se,fryksdalsbygden.se,nwt.se,varmlandsaffarer.se,arvikanyheter.se,nkp.se,saffletidningen.se,provinstidningen.se,dalslanningen.se,karlskogatidning.se,nlt.se,skd.se,nsk.se,affarsvarlden.se,ekuriren.se,kkuriren.se,sn.se,allas.se,hant.se,svenskdam.se,baaam.se,elle.se,goteborgssport.se,skanesport.se,stockholmssport.se,thelocal.se,goteborgdirekt.se,stockholmdirekt.se,vasterastidning.se,realtid.se,cafe.se,kingmagazine.se##+js(set, youplay.helpers.tabActive, noopFunc)
-youplay.se,nyheter24.se,modette.se,affarsliv.com,affarslivgotland.se,corren.se,eposten.se,folkbladet.se,helagotland.se,klackspark.com,kuriren.nu,mvt.se,norrbottensaffarer.se,nsd.se,nt.se,pt.se,unt.se,vt.se,uppgang.com,vimmerbytidning.se,vf.se,hjotidning.se,kt.se,sla.se,mariestadstidningen.se,filipstadstidning.se,fryksdalsbygden.se,nwt.se,varmlandsaffarer.se,arvikanyheter.se,nkp.se,saffletidningen.se,provinstidningen.se,dalslanningen.se,karlskogatidning.se,nlt.se,skd.se,nsk.se,affarsvarlden.se,ekuriren.se,kkuriren.se,sn.se,allas.se,hant.se,svenskdam.se,baaam.se,elle.se,goteborgssport.se,skanesport.se,stockholmssport.se,thelocal.se,goteborgdirekt.se,stockholmdirekt.se,vasterastidning.se,realtid.se,cafe.se,kingmagazine.se##+js(set, youplay.helpers.getTrackUrl, noopFunc)
-youplay.se,nyheter24.se,modette.se,affarsliv.com,affarslivgotland.se,corren.se,eposten.se,folkbladet.se,helagotland.se,klackspark.com,kuriren.nu,mvt.se,norrbottensaffarer.se,nsd.se,nt.se,pt.se,unt.se,vt.se,uppgang.com,vimmerbytidning.se,vf.se,hjotidning.se,kt.se,sla.se,mariestadstidningen.se,filipstadstidning.se,fryksdalsbygden.se,nwt.se,varmlandsaffarer.se,arvikanyheter.se,nkp.se,saffletidningen.se,provinstidningen.se,dalslanningen.se,karlskogatidning.se,nlt.se,skd.se,nsk.se,affarsvarlden.se,ekuriren.se,kkuriren.se,sn.se,allas.se,hant.se,svenskdam.se,baaam.se,elle.se,goteborgssport.se,skanesport.se,stockholmssport.se,thelocal.se,goteborgdirekt.se,stockholmdirekt.se,vasterastidning.se,realtid.se,cafe.se,kingmagazine.se##+js(set, youplay.helpers.trackUrls, noopFunc)
+youplay.se,nyheter24.se,modette.se,affarsliv.com,affarslivgotland.se,corren.se,eposten.se,folkbladet.se,helagotland.se,klackspark.com,kuriren.nu,mvt.se,norrbottensaffarer.se,nsd.se,nt.se,pt.se,unt.se,vt.se,uppgang.com,vimmerbytidning.se,vf.se,hjotidning.se,kt.se,sla.se,mariestadstidningen.se,filipstadstidning.se,fryksdalsbygden.se,nwt.se,varmlandsaffarer.se,arvikanyheter.se,nkp.se,saffletidningen.se,provinstidningen.se,dalslanningen.se,karlskogatidning.se,nlt.se,skd.se,nsk.se,affarsvarlden.se,ekuriren.se,kkuriren.se,sn.se,allas.se,hant.se,svenskdam.se,baaam.se,elle.se,goteborgssport.se,skanesport.se,stockholmssport.se,thelocal.se,goteborgdirekt.se,stockholmdirekt.se,vasterastidning.se,realtid.se,cafe.se,kingmagazine.se,mestmotor.se##+js(set, youplay.helpers.disableRightClick, noopFunc)
+youplay.se,nyheter24.se,modette.se,affarsliv.com,affarslivgotland.se,corren.se,eposten.se,folkbladet.se,helagotland.se,klackspark.com,kuriren.nu,mvt.se,norrbottensaffarer.se,nsd.se,nt.se,pt.se,unt.se,vt.se,uppgang.com,vimmerbytidning.se,vf.se,hjotidning.se,kt.se,sla.se,mariestadstidningen.se,filipstadstidning.se,fryksdalsbygden.se,nwt.se,varmlandsaffarer.se,arvikanyheter.se,nkp.se,saffletidningen.se,provinstidningen.se,dalslanningen.se,karlskogatidning.se,nlt.se,skd.se,nsk.se,affarsvarlden.se,ekuriren.se,kkuriren.se,sn.se,allas.se,hant.se,svenskdam.se,baaam.se,elle.se,goteborgssport.se,skanesport.se,stockholmssport.se,thelocal.se,goteborgdirekt.se,stockholmdirekt.se,vasterastidning.se,realtid.se,cafe.se,kingmagazine.se,mestmotor.se##+js(set, youplay.helpers.getTrackUrl, noopFunc)
+youplay.se,nyheter24.se,modette.se,affarsliv.com,affarslivgotland.se,corren.se,eposten.se,folkbladet.se,helagotland.se,klackspark.com,kuriren.nu,mvt.se,norrbottensaffarer.se,nsd.se,nt.se,pt.se,unt.se,vt.se,uppgang.com,vimmerbytidning.se,vf.se,hjotidning.se,kt.se,sla.se,mariestadstidningen.se,filipstadstidning.se,fryksdalsbygden.se,nwt.se,varmlandsaffarer.se,arvikanyheter.se,nkp.se,saffletidningen.se,provinstidningen.se,dalslanningen.se,karlskogatidning.se,nlt.se,skd.se,nsk.se,affarsvarlden.se,ekuriren.se,kkuriren.se,sn.se,allas.se,hant.se,svenskdam.se,baaam.se,elle.se,goteborgssport.se,skanesport.se,stockholmssport.se,thelocal.se,goteborgdirekt.se,stockholmdirekt.se,vasterastidning.se,realtid.se,cafe.se,kingmagazine.se,mestmotor.se##+js(set, youplay.helpers.trackUrls, noopFunc)
 saraabrahamsson.se,eurosport.se,jawcloud.co,nxload.com,polistidningen.se,verystream.com,clipmyhorse.tv,100kitchenstories.se,onlystream.*##+js(aeld, contextmenu)
 ! Annoying, unecessary, and completely unrelated autoplaying video
 ||youplay.se^$third-party,domain=hamsterpaj.net|emocore.se|dayviews.com|kamrat.com|familjeliv.se|extraextra.se
@@ -2080,7 +2075,7 @@ lundagard.se,boktugg.se##+js(aeld, wheel)
 ! Bad async-hiding.
 sverigesradio.se,urplay.se,ica.se##.async-hide:style(opacity: 1 !important;)
 ! Bye bye annoying autoplay in articles etc :-)
-youplay.se,nyheter24.se,modette.se,affarsliv.com,affarslivgotland.se,corren.se,eposten.se,folkbladet.se,helagotland.se,klackspark.com,kuriren.nu,mvt.se,norrbottensaffarer.se,nsd.se,nt.se,pt.se,unt.se,vt.se,uppgang.com,vimmerbytidning.se,vf.se,hjotidning.se,kt.se,sla.se,mariestadstidningen.se,filipstadstidning.se,fryksdalsbygden.se,nwt.se,varmlandsaffarer.se,arvikanyheter.se,nkp.se,saffletidningen.se,provinstidningen.se,dalslanningen.se,karlskogatidning.se,nlt.se,skd.se,nsk.se,affarsvarlden.se,ekuriren.se,kkuriren.se,sn.se,expressen.se,lwcdn.com,barometern.se,blt.se,bt.se,kristianstadsbladet.se,olandsbladet.se,ostrasmaland.se,smp.se,sydostran.se,trelleborgsallehanda.se,ut.se,ystadsallehanda.se,allas.se,hant.se,svenskdam.se,baaam.se,elle.se,goteborgssport.se,skanesport.se,stockholmssport.se,thelocal.se,goteborgdirekt.se,stockholmdirekt.se,vasterastidning.se,realtid.se,cafe.se,kingmagazine.se##+js(json-prune, autoplay)
+youplay.se,nyheter24.se,modette.se,affarsliv.com,affarslivgotland.se,corren.se,eposten.se,folkbladet.se,helagotland.se,klackspark.com,kuriren.nu,mvt.se,norrbottensaffarer.se,nsd.se,nt.se,pt.se,unt.se,vt.se,uppgang.com,vimmerbytidning.se,vf.se,hjotidning.se,kt.se,sla.se,mariestadstidningen.se,filipstadstidning.se,fryksdalsbygden.se,nwt.se,varmlandsaffarer.se,arvikanyheter.se,nkp.se,saffletidningen.se,provinstidningen.se,dalslanningen.se,karlskogatidning.se,nlt.se,skd.se,nsk.se,affarsvarlden.se,ekuriren.se,kkuriren.se,sn.se,expressen.se,lwcdn.com,barometern.se,blt.se,bt.se,kristianstadsbladet.se,olandsbladet.se,ostrasmaland.se,smp.se,sydostran.se,trelleborgsallehanda.se,ut.se,ystadsallehanda.se,allas.se,hant.se,svenskdam.se,baaam.se,elle.se,goteborgssport.se,skanesport.se,stockholmssport.se,thelocal.se,goteborgdirekt.se,stockholmdirekt.se,vasterastidning.se,realtid.se,cafe.se,kingmagazine.se,mestmotor.se##+js(json-prune, autoplay)
 
 ! ÖVRIGT
 nordichardware.se##.td_block_wrap:has(span:has-text(/sponsrat/i))
@@ -3288,6 +3283,7 @@ se.invertalia.net##.js-cookies-notification
 enkelteknik.se##.annons-label
 nikkasystems.com##.elementor-popup-modal
 sportbloggare.com##.partners-box
+sportbloggare.com##.cube-bonus-list
 lokalsport.nu##.art-sidebar2
 lokalsport.nu##.art-sidebar1
 rastaochdalla.se##.widget_advertise
