@@ -1995,8 +1995,7 @@ dreamfilm.*##+js(remove-attr, oncontextmenu)
 dreamfilm.*###content-embed:style(display: inherit !important;)
 dreamfilm.*##.splash-image
 dreamfilm.*##.alert-bottom
-||nyafilmer.*^$csp=default-src 'self' 'unsafe-inline' 'unsafe-eval' jawcloud.co *.jawcloud.co upvtt.com wp.com *.wp.com *.googleapis.com vkpass.com *.gstatic.com *.tmdb.org
-||nyafilmer.*^$csp=worker-src 'none'
+||nyafilmer.*^$csp=default-src 'self' 'unsafe-inline' 'unsafe-eval' jawcloud.co *.jawcloud.co *.googleapis.com;img-src *;worker-src 'none'
 ||nyafilmer.*/sw.js$script
 ||nyafilmer.*/banner$subdocument
 nyafilmer.*,swefilmer.*##+js(acis, OneSignal)
@@ -2013,10 +2012,8 @@ nyafilmer.*##.bigbg
 nyafilmer.*##.button.fke
 ||nyafilmer.*/branding/$image
 ||streamtajm.*/images/reklam$image
-||streamtajm.*/worker.$script
 ||streamtajm.*/sw.js$script
-||streamtajm.*/webpush.$script
-||streamtajm.*^$csp=worker-src 'none'
+||streamtajm.*^$csp=default-src 'self' 'unsafe-inline' *.googleapis.com stload.com nxload.com;img-src *;worker-src 'none'
 streamtajm.*##+js(acis, popunder)
 streamtajm.*##+js(acis, TID, J0)
 streamtajm.*##.longbanner
@@ -2121,8 +2118,7 @@ markbladet.se###fixed
 ||minfil.com/sw$script
 /img/bnr/*$domain=minfil.com
 /affiliate/*$image,domain=minfil.com
-*$csp=worker-src 'none',domain=minfil.com
-||minfil.com^$csp=default-src 'self' 'unsafe-inline' 'unsafe-eval' *.minfil.com
+||minfil.com^$csp=default-src 'self' 'unsafe-inline' 'unsafe-eval' *.minfil.com;worker-src 'none'
 minfil.com##.ab-wrapper
 ||api.hitta.se/statistics$xmlhttprequest
 /partnerintegration$domain=hitta.se
