@@ -346,6 +346,7 @@
 /prod/adform$xmlhttprequest
 /revive/revivejs.php$script
 /questback.popup$script
+/Scripts/burt/*$script
 /seenthis-hub/assets/js/hub-time-spent.js$script
 /sh404sefsocial/*$script
 /sifo_analytics.$script
@@ -1070,7 +1071,7 @@ dn.se##^#ads-bundle
 di.se##^script:has-text(checkAdBlockEnabled)
 aftonbladet.se##^script:has-text(preLoadAds)
 svd.se##^script:has-text(SvD.ads.preDefineAd)
-expressen.se##^#rich-media-ads
+expressen.se,di.se##^#rich-media-ads
 expressen.se##^script:has-text(window.ExpressenAnalytics)
 expressen.se##^script:has-text(window.Bau.preloadAds)
 mittkok.expressen.se##^script:has-text(adblock)
@@ -1318,8 +1319,8 @@ dn.se,~ext.dn.se##+js(remove-attr, data-resource-id, [data-resource-id="dn.se-me
 !#if !env_firefox
 di.se##+js(sid, runAdBlockPaywall, 1000)
 !#endif
-||di.se^*/burt-main.$script
-/Scripts/burt/*$script,domain=di.se
+di.se##+js(acis, Di, initAds)
+di.se##+js(set, getAdblockerStatus, noopFunc)
 ||personalized.di.se^$xmlhttprequest
 ||digital-personalized.di.se^$xmlhttprequest
 ||digital.di.se/api/sponsor/$xmlhttprequest
@@ -1336,7 +1337,6 @@ di.se##a[href^="/sponsrad/"]
 di.se##a[href^="/brandstudio/"]
 di.se##.di_start__insider-ad
 di.se##.di_panorama__isAdLabel
-di.se##+js(aopr, diConf.servicePlusClientId)
 di.se##a[href*="/annons-"]
 di.se##.carousel-tab:has-text(/^annons:/i)
 di.se##.di_expressen-rabatt-koder
@@ -1381,7 +1381,7 @@ expressen.se##.flashes--premium
 expressen.se,hd.se,sydsvenskan.se##.teaser--native
 expressen.se##a[href*="spel.expressen.se"]
 expressen.se##a[href*="lanapengar.expressen.se"]
-expressen.se,dn.se###rich-media-ads
+expressen.se,dn.se,di.se###rich-media-ads
 expressen.se##.teaser:has(.vignette:has-text(/(^erbjudande från|^annons|^happy green|^presenteras av|i samarbete med)/i))
 expressen.se##a[href*="/annons"]
 expressen.se##.discount-ad

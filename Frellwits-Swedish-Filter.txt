@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2019-12-17 15:37:18 CET
+! Last modified: 2019-12-18 10:37:43 CET
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -60,8 +60,8 @@
 ###cookiejar
 ###cookielawwarning
 ###cookieMsgBlock
-###CookieNotice
 ###cookieNotice
+###CookieNotice
 ###cookies-acceptance .alert.bottom
 ###cookiesInfo
 ###eu-cookie-bar
@@ -633,7 +633,7 @@
 /rpc*/prisjakt$xmlhttprequest,domain=99mac.se|fz.se|sweclockers.com
 /run/analytic$~third-party,xmlhttprequest,domain=momondo.se
 /s_code.js$domain=dagenstv.com
-/Scripts/burt/*$script,domain=di.se
+/Scripts/burt/*$script
 /scripts/pb*.js$script,domain=100kitchenstories.se|benjeey.se|elinskoglund.com|fannystaaf.se|linnahlborg.se|lovisawallin.se|moamattsson.se|nouw.com|saraabrahamsson.se
 /se-wordpress-agilis-solum/assets/js/ad-collapse.$script
 /se-wordpress-gdpr
@@ -1233,6 +1233,7 @@ di.se##article[data-is-native-ad="1"]
 di.se##aside.di_share-buttons
 di.se##section[data-ad-settings]
 di.se##section[data-content-url^="/part/ads/"]
+di.se,dn.se,expressen.se###rich-media-ads
 di.se,thelocal.se##.ad_container
 dialasen.com###boxzilla-overlay
 dialasen.com##.textwidget > a[target="_blank"]
@@ -1245,7 +1246,6 @@ dn.se##.free-user-modal
 dn.se##.gdpr-header
 dn.se##.personal-carousel
 dn.se##.takeover-modal
-dn.se,expressen.se###rich-media-ads
 dn.se,expressen.se##[class*="open-in-app"]
 dn.se,klart.se,norran.se##.ad-wrapper
 dplay.se##[class^="notificationArea"]
@@ -2256,7 +2256,6 @@ yougov.se##.cookie-confirm
 ||delivery.youplay.se/report?$image
 ||delupe.se^*/iframe-track.$script
 ||destination.se^$third-party
-||di.se^*/burt-main.$script
 ||digital-personalized.di.se^$xmlhttprequest
 ||digital.di.se/api/sponsor/$xmlhttprequest
 ||digital.ntm.eu/adn$script
