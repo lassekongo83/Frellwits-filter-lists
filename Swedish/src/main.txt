@@ -882,7 +882,7 @@ husvagnochcamping.se,hemtrevligt.se,akaskidor.se,utemagasinet.se,livetombord.se,
 breakit.se,nyheter24.se##+js(aopr, _hjSettings)
 breakit.se##+js(acis, _vwo_code)
 mestmotor.se,kingmagazine.se,vagabond.se,manolo.se,innebandy.se,goteborgdirekt.se,stockholmdirekt.se,qruiser.com##+js(acis, ADTECH, config)
-kamerabild.se##+js(set, Sidpyssel.prototype.fixaStoran, noopFunc)
+kamerabild.se,mobil.se##+js(set, Sidpyssel.prototype.fixaStoran, noopFunc)
 datormagazin.se,villalivet.se,rocknytt.net,skanesport.se,newsner.com,humorbibeln.se,sportbibeln.se,ettgottskratt.se,hbwebben.se,enkelteknik.se,natursidan.se,screen-marknaden.se,goteborgssport.se,stockholmssport.se,fysioterapi.se,daisybeauty.com,dagensopinion.se##+js(acis, advanced_ads_ga_UID)
 opulens.se##+js(acis, advanced_ads_adsense_UID)
 alltforforaldrar.se,mammasidan.se,minbebis.com##+js(acis, loadAd)
@@ -1324,7 +1324,7 @@ di.se##+js(set, getAdblockerStatus, noopFunc)
 ||personalized.di.se^$xmlhttprequest
 ||digital-personalized.di.se^$xmlhttprequest
 ||digital.di.se/api/sponsor/$xmlhttprequest
-di.se##.gdpr-policy-bar.toaster
+di.se##[class^="gdpr-policy"]
 di.se##.mc__overlay--show
 di.se##.footer__cookie-info
 di.se##article.di_teaser--native
@@ -1346,6 +1346,7 @@ di.se##.di_teaser-flak-native-column
 di.se##.di_teaser-flak-container--native
 di.se##.dip_panorama
 di.se##.di_article_ad-block
+di.se##.segment__column > .service-box:last-child
 /adblk.js$script,domain=weekend.di.se
 ! expressen
 ||assets.expressen.se/bundles/analytics$script
@@ -1813,7 +1814,8 @@ tvmatchen.nu##+js(aopw, onload)
 /sticky*.$script,stylesheet,domain=svenskafans.com
 /js/partners.js$script,domain=sporttv.nu
 /js/awp.$script,domain=svenskafans.com
-||d16fx559zbp759.cloudfront.net^$third-party,domain=everysport.com|svenskafans.com|fotbolldirekt.se|hockeysverige.se|hockeynews.se|handbollskanalen.se|innebandymagazinet.se
+||d16fx559zbp759.cloudfront.net/common$third-party
+||d16fx559zbp759.cloudfront.net/sites$third-party
 /js/ads/*$domain=svartgul.se
 ||svenskafans.com/se.js$script
 svenskafans.com##[class^="ad_display"]
@@ -1953,7 +1955,7 @@ sonicmagazine.com,ratsit.se##[class^="ad-"]
 civilekonomen.se,market.se###rollup
 baws.se,datormagazin.se,villalivet.se,tennisportalen.se,gjuteriet.se##.td-more-articles-box
 it-finans.se,it-halsa.se,it-kanalen.se,it-pedagogen.se,it-retail.se,baws.se##a.gofollow[data-track][target="_blank"]
-mammasidan.se,minbebis.com,alltforforaldrar.se,sverigesnatur.org,upphandling24.se,dagensvimmerby.se,dagensvastervik.se##.panorama
+mammasidan.se,minbebis.com,alltforforaldrar.se,sverigesnatur.org,upphandling24.se,dagensvimmerby.se,dagensvastervik.se,di.se##.panorama
 stockblogs.se###cookie-notice
 itrace.se,isabellalowengrip.se,vitalisfoto.se,alltommac.se###preloader
 autolife.se###Banners
@@ -2051,6 +2053,7 @@ vidbox.co##+js(noeval.js)
 vidbox.co##+js(std, check)
 vidbox.co##+js(sid, check)
 nxload.com,upstream.to##+js(set, adb, 0)
+||upstream.to^$csp=script-src 'self' 'unsafe-inline' *.gstatic.com
 /videojs-ima$script,domain=verystream.com
 ||nxload.com^$csp=script-src 'self' 'unsafe-inline' 'unsafe-eval' code.jquery.com data: blob:
 ||i.ibb.co/qRBYR98/ban1.png
@@ -2148,6 +2151,7 @@ eniro.se##.e-banner
 fotosidan.se##a[href^="https://ads."]
 fotosidan.se##.banner-panorama-wmn
 fotosidan.se##.banner-partner-zone-top-wrapper
+fotosidan.se##.subArticlesponsored
 ||obj.fotosidan.se/obj/pa/$image
 ||dagensanalys.se/kmt.$script
 dagensanalys.se,letsgoexplore.se##.tipi-tile.active
