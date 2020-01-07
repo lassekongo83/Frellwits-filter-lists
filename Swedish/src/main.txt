@@ -1088,9 +1088,7 @@ digikey.se,bax-shop.se,justfab.se,tui.se##^script:has-text(INSTART.Init)
 undertian.com,newsner.com,humorbibeln.se,sportbibeln.se,ettgottskratt.se,sportpanelen.se,kvalitetsmagasinet.se,bandyfeber.com,telekomidag.se,miljo-utveckling.se,vdtidningen.se,dagensanalys.se,ladok.se,binero.se,rikatillsammans.se,zeinaskitchen.se,dinbyggare.se,kvartal.se,trafiksakerhet.se,i-chalmers.se##^script:has-text(mi_track_user)
 undertian.com,newsner.com,humorbibeln.se,sportbibeln.se,ettgottskratt.se,sportpanelen.se,kvalitetsmagasinet.se,bandyfeber.com,telekomidag.se,miljo-utveckling.se,vdtidningen.se,dagensanalys.se,ladok.se,binero.se,rikatillsammans.se,zeinaskitchen.se,dinbyggare.se,kvartal.se,trafiksakerhet.se,i-chalmers.se##^script:has-text(monsterinsights_frontend)
 dreamfilm.*,jawcloud.co,nyafilmer.*##^script:has-text(_Hasync)
-nyafilmer.*##^script:has-text(blockerDetected)
-nyafilmer.*##^script:has-text(jopperJs.config)
-nyafilmer.*##^script[src^="/ads.js?"]
+nyafilmer.*##^script:has-text(window.popns) + script[src^="/"]
 streamtajm.*##^script:has-text(var TID=)
 onlystream.*##^script:has-text(/tag.min.js)
 onlystream.*##^script:has-text(zfgloadedpopup)
@@ -2012,9 +2010,8 @@ dreamfilm.*##.alert-bottom
 ||nyafilmer.*^$csp=default-src 'self' 'unsafe-inline' 'unsafe-eval' jawcloud.co *.jawcloud.co *.googleapis.com;img-src *;worker-src 'none'
 ||nyafilmer.*/sw.js$script
 ||nyafilmer.*/banner$subdocument
-nyafilmer.*,swefilmer.*##+js(acis, OneSignal)
-nyafilmer.*##+js(acis, jopperJs, config)
-nyafilmer.*##+js(set, blockerDetected, false)
+||nyafilmer.*/branding/$image
+nyafilmer.*##+js(acis, jQuery, appendTo)
 nyafilmer.*##a[style*="height"][rel*="nofollow"]
 nyafilmer.*##div[style^="margin-top:180px"]
 nyafilmer.*##div[style^="margin-top:210px"]
@@ -2025,7 +2022,6 @@ nyafilmer.*##.movie-preview-content > a[target="_blank"]
 nyafilmer.*##.bigbg
 nyafilmer.*##.button.fke
 nyafilmer.*##.nya-ann
-||nyafilmer.*/branding/$image
 ||streamtajm.*/images/reklam$image
 ||streamtajm.*/sw.js$script
 ||streamtajm.*^$csp=default-src 'self' 'unsafe-inline' *.googleapis.com stload.com nxload.com;img-src *;worker-src 'none'
@@ -2038,6 +2034,8 @@ streamtajm.*##div[style*="width: 750px; height: 100px; padding: 5px 5px 5px 0;"]
 ||swefilmer.*/player/se/tittanuhd.$image
 ||swefilmer.*/player/se/titta4k.$image
 ||swefilmer.*/player/se/registrerahd.$image
+||swefilmer.*/*google-analytics$script,important
+swefilmer.*##+js(acis, OneSignal)
 swefilmer.*##a[href*="/player/play.php"]
 swefilmer.*##a[href*="/player/"][target="_blank"]
 swefilmer.*##iframe[src="/player/play.php"]
@@ -2067,7 +2065,6 @@ vidbox.co##+js(std, check)
 vidbox.co##+js(sid, check)
 nxload.com,upstream.to##+js(set, adb, 0)
 ||upstream.to^$csp=script-src 'self' 'unsafe-inline' *.gstatic.com
-/videojs-ima$script,domain=verystream.com
 ||nxload.com^$csp=script-src 'self' 'unsafe-inline' 'unsafe-eval' code.jquery.com data: blob:
 ||i.ibb.co/qRBYR98/ban1.png
 
