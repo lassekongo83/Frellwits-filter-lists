@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2020-01-07 15:51:09 CET
+! Last modified: 2020-01-08 13:08:35 CET
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -60,8 +60,8 @@
 ###cookiejar
 ###cookielawwarning
 ###cookieMsgBlock
-###CookieNotice
 ###cookieNotice
+###CookieNotice
 ###cookies-acceptance .alert.bottom
 ###cookiesInfo
 ###eu-cookie-bar
@@ -468,11 +468,13 @@
 /monetization/ads-module/*
 /monetization/pixel-sdk/*
 /mp_emediate/inc/annons.html
+/native?placeholder$xmlhttprequest,domain=hd.se|sydsvenskan.se
 /new_construction_ads/*$domain=hemnet.se
 /newsletter/*$domain=zalando.se
 /nodecounter/*?token$image,domain=ng.se
 /nordicbet_logo$domain=tvmatchen.nu
 /noview.$script,domain=trafikexperten.com|trafikradion.se
+/nyafilmer.(to|lol|com|ga|bz)\/[A-z]{0,}\.js/$script,~third-party
 /oil/*$script,domain=findit.fi|findit.se
 /omniture/s_code.js$script,domain=~atgplay.se
 /omslagsexport/*$image,domain=autolife.se
@@ -581,7 +583,6 @@
 /plugins/sdcookie-warning/*$script,stylesheet
 /plugins/se-wordpress-affiliatehelper/*
 /plugins/se-wordpress-cookie-notice/*
-/plugins/se-wordpress-native-article/*$script,stylesheet
 /plugins/sea-short-stats/*
 /plugins/share-and-follow/*
 /plugins/skydda-advisor/*
@@ -783,7 +784,6 @@
 @@/opulens_banner$image,domain=opulens.se
 @@/scripts/advertisement*.$script,~third-party,domain=amelia.se|damernasvarld.se|expressen.se|mama.nu|skonahem.com
 @@/show_ads.js$script,~third-party,domain=happypancake.com
-@@/stickybits.$script,~third-party,domain=allakorsord.se|allas.se|baaam.se|dromhemochtradgard.se|elle.se|elledecoration.se|ellematovin.se|femina.se|hant.se|mabra.com|residencemagazine.se|svenskdam.se
 @@/vbc/jquery$domain=vi.se
 @@/wp-content/*/adframe.js$script,~third-party,domain=falkopingstidning.se|jnytt.se|jp.se|skaraborgslanstidning.se|skovdenyheter.se|smalandsdagblad.se|smalanningen.se|smt.se|tranastidning.se|vastgotabladet.se|vetlandaposten.se|vn.se
 @@/wp-content/plugins/seagal-plugin-dfp/assets/showAds.js$script,~third-party
@@ -961,6 +961,7 @@ allakorsord.se,allas.se,baaam.se,dromhemochtradgard.se,elle.se,elledecoration.se
 allakorsord.se,allas.se,baaam.se,dromhemochtradgard.se,elle.se,elledecoration.se,ellematovin.se,femina.se,hant.se,mabra.com,residencemagazine.se,svenskdam.se##.widget_black_studio_tinymce
 allakorsord.se,allas.se,baaam.se,dromhemochtradgard.se,elle.se,elledecoration.se,ellematovin.se,femina.se,hant.se,mabra.com,residencemagazine.se,svenskdam.se##div[class^="app_gdpr"]
 allakorsord.se,allas.se,baaam.se,dromhemochtradgard.se,elle.se,elledecoration.se,ellematovin.se,femina.se,hant.se,mabra.com,residencemagazine.se,svenskdam.se##section > .native-wrapper ~ article
+allas.se,elle.se,hant.se,svenskdam.se##.product-carousel
 allas.se,hant.se,svenskdam.se##.in-text-ad
 allehanda.se,arbetarbladet.se,avestatidning.com,bandypuls.se,bblat.se,dalademokraten.se,dt.se,fagersta-posten.se,gd.se,lt.se,ltz.se,na.se,norrteljetidning.se,nynashamnsposten.se,op.se,salaallehanda.com,st.nu,tidningenharjedalen.se,vlt.se##.nps-client-dialogue-footer
 allehanda.se,arbetarbladet.se,avestatidning.com,bandypuls.se,bblat.se,dalademokraten.se,dt.se,fagersta-posten.se,gd.se,lt.se,ltz.se,na.se,norrteljetidning.se,nynashamnsposten.se,op.se,salaallehanda.com,st.nu,tidningenharjedalen.se,vlt.se##.true-native
