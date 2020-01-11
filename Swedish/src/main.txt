@@ -1094,7 +1094,6 @@ digikey.se,bax-shop.se,justfab.se,tui.se##^script:has-text(INSTART.Init)
 undertian.com,newsner.com,humorbibeln.se,sportbibeln.se,ettgottskratt.se,sportpanelen.se,kvalitetsmagasinet.se,bandyfeber.com,telekomidag.se,miljo-utveckling.se,vdtidningen.se,dagensanalys.se,ladok.se,binero.se,rikatillsammans.se,zeinaskitchen.se,dinbyggare.se,kvartal.se,trafiksakerhet.se,i-chalmers.se,swefilmer.*##^script:has-text(mi_track_user)
 undertian.com,newsner.com,humorbibeln.se,sportbibeln.se,ettgottskratt.se,sportpanelen.se,kvalitetsmagasinet.se,bandyfeber.com,telekomidag.se,miljo-utveckling.se,vdtidningen.se,dagensanalys.se,ladok.se,binero.se,rikatillsammans.se,zeinaskitchen.se,dinbyggare.se,kvartal.se,trafiksakerhet.se,i-chalmers.se##^script:has-text(monsterinsights_frontend)
 dreamfilm.*,jawcloud.co,nyafilmer.*##^script:has-text(_Hasync)
-nyafilmer.*##^script:has-text(window.popns) + script[src^="/"]
 streamtajm.*##^script:has-text(var TID=)
 onlystream.*##^script:has-text(/tag.min.js)
 onlystream.*##^script:has-text(zfgloadedpopup)
@@ -2064,18 +2063,13 @@ swestream.*##.player-top-ad
 ||jawcloud.co/js/jawgo.js
 ||vcstream.to^*/script$script
 ||vcstream.to^*/license$script
-||jawcloud.co^$csp=script-src 'self' 'unsafe-inline' blob: *.jawcloud.co upvtt.com *.gstatic.com
+||jawcloud.co^$csp=script-src 'self' 'unsafe-inline' blob: data: *.jawcloud.co upvtt.com *.gstatic.com
 ||jawcloud.co/*.gif$image
 ||onlystream.*^$csp=default-src 'self' 'unsafe-inline' cdn.osimg.co cdnjs.cloudflare.com *.ostreamcdn.com *.osimg.co data:
 jawcloud.co##.loloba
 jawcloud.co##+js(acis, jawplayer, on)
-vidbox.co##+js(acis, minimalUserResponseInMiliseconds)
-vidbox.co##+js(acis, miner)
-vidbox.co##+js(noeval.js)
-vidbox.co##+js(nostif, check)
-vidbox.co##+js(nosiif, check)
 nxload.com,upstream.to##+js(set, adb, 0)
-||upstream.to^$csp=script-src 'self' 'unsafe-inline' *.gstatic.com
+||upstream.to^$csp=script-src 'self' 'unsafe-inline' 'unsafe-eval' *.gstatic.com
 ||nxload.com^$csp=script-src 'self' 'unsafe-inline' 'unsafe-eval' code.jquery.com data: blob:
 ||i.ibb.co/qRBYR98/ban1.png
 
