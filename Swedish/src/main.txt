@@ -2025,9 +2025,12 @@ nyafilmer.*##.movie-preview-content > a[target="_blank"]
 nyafilmer.*##.bigbg
 nyafilmer.*##.button.fke
 nyafilmer.*##.nya-ann
+!#if !env_firefox
+nyafilmer.*##+js(noeval-if, window)
+!#endif
 ||streamtajm.*/images/reklam$image
 ||streamtajm.*/sw.js$script
-||streamtajm.*^$csp=default-src 'self' 'unsafe-inline' *.googleapis.com stload.com nxload.com;img-src *;worker-src 'none'
+||streamtajm.*^$csp=default-src 'self' 'unsafe-inline' *.googleapis.com stload.com nxload.com jawcloud.co;img-src *;worker-src 'none'
 streamtajm.*##+js(acis, popunder)
 streamtajm.*##+js(acis, TID, J0)
 streamtajm.*##.longbanner
