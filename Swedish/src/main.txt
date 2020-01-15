@@ -339,17 +339,18 @@
 /monetization/ads-module/*
 /monetization/pixel-sdk/*
 /mp_emediate/inc/annons.html
-/ntm-digital/adn/adn-setup.$important,script
+/adn/adn-setup.$important,script
 /omniture/s_code.js$script,domain=~atgplay.se
 /orion/loada$script
 /permutive-async.js$script
 /phaser-ads.min.js$script
 /Portalannonser/*$image
+/popup/follow-us-fb.$xmlhttprequest
 /prod/adform$xmlhttprequest
 /revive/revivejs.php$script
 /questback.popup$script
 /Scripts/burt/*$script
-/seenthis-hub/assets/js/hub-time-spent.js$script
+/seenthis-hub/*$script
 /sh404sefsocial/*$script
 /sifo_analytics.$script
 /sifo_msr.$script
@@ -948,7 +949,7 @@ bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se,che
 /plugins/blog-analytics/*
 /plugins/bmb-dfp-plugin/*$script,stylesheet
 /plugins/boxzilla/*$script,domain=obsid.se
-/plugins/bsa-pro-scripteo/*$script,stylesheet
+/plugins/bsa-pro-scripteo/*
 /plugins/cardoza-facebook-like-box/*$script
 /plugins/cc-cookie-consent/*$script,domain=dagensjuridik.se
 /plugins/chimpy/*
@@ -960,7 +961,7 @@ bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se,che
 /plugins/cookie-notice/*$script,stylesheet
 /plugins/cookie_consent/*$script
 /plugins/cresta-social-share-counter-pro/*$script,stylesheet
-/plugins/ct-ultimate-gdpr/*$domain=itrace.se|hightechguiden.se
+/plugins/ct-ultimate-gdpr/*
 /plugins/custom-cookie-message/*$script
 /plugins/custom-cookie-message-btdm-extension/*$script
 /plugins/deblocker/js/deblocker.$script
@@ -1111,7 +1112,6 @@ swedroid.se##.externalTopMobile
 ! IDG
 ||idg.se/sharecounter?$xmlhttprequest
 ||cmatch.idg.se^
-/idg-dfp-minified/*
 @@/consent.json$domain=idg.se|forum.studio.se|upphandling24.se|forum.macworld.se
 idg.se##+js(set, cmsad, undefined)
 idg.se##div[data-cms-ad]
@@ -1130,7 +1130,6 @@ forum.studio.se##li[data-blocktitle="Anpassade Block"]:has(.sms-marking:has-text
 upphandling24.se##.type-partnerartikel
 upphandling24.se##.widget:has(.widget-title:has-text(/^annons/i))
 upphandling24.se##a[data-bid="1"][href*="/linkout"]
-@@/angwp/assets/dev/js/advertising.js$domain=upphandling24.se
 ! Attempt to make their gdpr choice less annoying. Don't want to block it as a limbo choice will disable 3rd party videos and embeds.
 !#if !env_mobile
 forum.macworld.se,forum.studio.se,idg.se##.idgcp__modal--in .idgcp__layer:style(background: none !important;)
@@ -1140,7 +1139,6 @@ forum.macworld.se,forum.studio.se,idg.se##.idgcp__layer:style(z-index: 0 !import
 
 ! STAMPEN
 gp.se##.blogcGRCookieContainer
-/plugins/slm-comscore-settings/*$domain=blogg.gp.se
 /vendorList.js$script,domain=bohuslaningen.se|gp.se|hallandsposten.se|hn.se|stromstadstidning.se|ttela.se
 /listicles.js$script,domain=bohuslaningen.se|gp.se|hallandsposten.se|hn.se|stromstadstidning.se|ttela.se
 bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se###stampenCookieInformationContainer
@@ -1231,10 +1229,10 @@ aftonbladet.se##div[style*="border-color: rgb(0, 103, 181); border-width: 4px 0p
 aftonbladet.se##div[style*="border-color: rgb(0, 103, 181); border-width: 4px 0px 0px;"] ~ a[href^="/rabattkod"]
 aftonbladet.se##div[style*="border-color: rgb(0, 103, 181); border-width: 4px 0px 0px;"] ~ a[href*="utm_campaign"]
 aftonbladet.se##h3[style*="background-color:#0067b5;border-radius:2px;margin:16px 0px 0px 0px;"]
-/rabattkod/*$image,domain=aftonbladet.se
-/pulsetracking.$script,domain=aftonbladet.se
+/rabattkod$image,domain=aftonbladet.se
+/pulsetracking$script,domain=aftonbladet.se
 /campaign-fallback.$script,domain=aftonbladet.se
-/stats/sitecatalyst/s_code.jsp$script,domain=aftonbladet.se
+/stats/sitecatalyst$script,domain=aftonbladet.se
 www.aftonbladet.se##html,body:style(overflow: auto !important;)
 www.aftonbladet.se##+js(acis, preLoadAds, loadAd)
 www.aftonbladet.se##+js(acis, preLoadAds, setup)
@@ -2335,7 +2333,6 @@ tasteline.com##li.article:has(.category:has-text(/samarbete/i))
 tasteline.com##.popup-overlay
 tasteline.com##.popup:style(overflow: auto !important;)
 tasteline.com##.article.related > a[href*="&utm"][target="_blank"]
-/popup/follow-us-fb.$xmlhttprequest,domain=tasteline.com
 pcgamer.se##a[href*="casino.com"]
 pcgamer.se##.main-container > div.vc_row:last-child
 kit.se##.isNative
