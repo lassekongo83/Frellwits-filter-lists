@@ -161,7 +161,6 @@
 ||reco.se^$third-party
 ||redeal.se^$third-party
 ||referralhero.com^$third-party
-||relevant-digital.com^$third-party
 ||reseguiden.se^$third-party
 ||resultify.com^$third-party
 ||resultify.se^$third-party
@@ -572,6 +571,7 @@
 ||look.utndln.com^$all
 ||byggkonsult.org^$all
 ||best-prizes-now.*^$all
+||172.104.145.13^
 ! Random SMS spam. Most likely scams.
 ||manhembostad.se^
 ||bjursundfastigheter.se^
@@ -1023,6 +1023,7 @@ bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se,che
 /plugins/pixel-cat/*$script
 /plugins/pixelyoursite$image,script
 /plugins/popup$domain=bugburger.se|forvaltarforum.se|grillbaronen.se|kvalitetsmagasinet.se|miljo-utveckling.se|mmabetz.se|ordfrontmagasin.se|sportpanelen.se|telekomidag.se|vdtidningen.se
+/plugins/popup-by-supsystic$domain=exakt24.se
 /plugins/quantcast-choice/*$script,domain=muscles.se
 /plugins/random-banner/*
 /plugins/sassy-social-share/*$script
@@ -1491,10 +1492,10 @@ tara.se,styleby.nu,topphalsa.se,lantliv.com,alltomtradgard.se,alltommat.se,priva
 tara.se,styleby.nu,topphalsa.se,lantliv.com,alltomtradgard.se,alltommat.se,privataaffarer.se,familyliving.se,alltihemmet.se,godsochgardar.se,gardochtorp.se,viforaldrar.se##a.teaser[href*="/promotion/"]
 tara.se,styleby.nu,topphalsa.se,lantliv.com,alltomtradgard.se,alltommat.se,privataaffarer.se,dn.se,familyliving.se,alltihemmet.se,godsochgardar.se,gardochtorp.se,viforaldrar.se,di.se##.teaser-native
 topphalsa.se,alltommat.se,styleby.nu,tara.se##.teaser:has(.teaser-label:has-text(/annonssamarbete/i))
-viforaldrar.se##.paywall-gradient-overlay
-viforaldrar.se##.t-single.-content-hide .entry-content, .t-single.-content-hide .entry-content .paywall-gradient-overlay:style(height: auto !important; overflow: visible !important;)
+viforaldrar.se,teknikensvarld.se##.paywall-gradient-overlay
+viforaldrar.se,teknikensvarld.se##.t-single.-content-hide .entry-content, .t-single.-content-hide .entry-content .paywall-gradient-overlay:style(height: auto !important; overflow: visible !important;)
 privataaffarer.se##.data-grid-teaser:has(.teaser-label:has-text(/^annons/i))
-/admin-ajax.php?action=paf_ad_teaser$domain=privataaffarer.se
+paf_ad_teaser$domain=privataaffarer.se
 tradera.com##react-adslot
 tradera.com##div[data-component-cookie-notification]
 tradera.com##.adsense
@@ -2151,6 +2152,8 @@ fotosidan.se##.banner-partner-zone-top-wrapper
 fotosidan.se##.subArticlesponsored
 ||obj.fotosidan.se/obj/pa/$image
 ||dagensanalys.se/kmt.$script
+||dagensanalys.se^$csp=img-src *
+dagensanalys.se###KMT
 dagensanalys.se,letsgoexplore.se##.tipi-tile.active
 dagensanalys.se##[id^="moove_gdpr"]
 dagensanalys.se##.sidebar .zeen-widget:last-of-type:not(.widget_nav_menu)
