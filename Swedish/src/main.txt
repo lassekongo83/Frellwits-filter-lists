@@ -766,7 +766,7 @@
 ! Site specific whitelists
 @@/*_adframe.js$script,~third-party,domain=fssweden.se
 @@/ad.php$script,~third-party,domain=99mac.se|skogstok.se|temperatur.nu
-@@/adframe.js$script,~third-party,domain=diskant.se|diskantforum.se
+@@/adframe.js$script,~third-party,domain=diskant.se|diskantforum.se|falkopingstidning.se|jnytt.se|jp.se|skaraborgslanstidning.se|skovdenyheter.se|smalandsdagblad.se|smalanningen.se|smt.se|tranastidning.se|vastgotabladet.se|vetlandaposten.se|vn.se
 @@/ads.js$script,~third-party,domain=betting.se|koket.se|weekend.di.se|hd.se|sydsvenskan.se|bioenergitidningen.se|visitskargarden.se
 @@/ads/ads-*.js$script,~third-party,domain=gettyimages.se
 @@/adsbygoogle.js$script,~third-party,domain=scanaktier.se
@@ -785,7 +785,6 @@
 @@/js/advertising.$script,~third-party,domain=byggnadsarbetaren.se|cykla.se|elbilsnytt.se|svegot.se|tekniksmart.se|vi-tidningen.se|vi.se|vilaser.se|snowmobile.se|vatternrundan.se
 @@/scripts/advertisement*.$script,~third-party,domain=expressen.se|mama.nu|skonahem.com|damernasvarld.se|amelia.se|di.se
 @@/show_ads.js$script,~third-party,domain=happypancake.com
-@@/wp-content/*/adframe.js$script,~third-party,domain=falkopingstidning.se|jnytt.se|jp.se|skaraborgslanstidning.se|skovdenyheter.se|smalandsdagblad.se|smalanningen.se|smt.se|tranastidning.se|vastgotabladet.se|vetlandaposten.se|vn.se
 @@||assets-cdn.mytaste.org/js/ads.js$script
 @@||freeride.nu/js/ads.js$script,domain=happyride.se
 @@/advertisement2.js$domain=gpro.net
@@ -1441,24 +1440,24 @@ tv4.se##.social-buttons
 tv4.se##.program-block-ad
 ||damoh.tv4play.se^$image
 ||stat-api.tv4play.se^$image
-@@||videoplaza.tv/proxy/distributor$xmlhttprequest,domain=tv4.se|tv4play.se|fotbollskanalen.se|koket.se
+@@||videoplaza.tv/proxy/distributor$xmlhttprequest,domain=tv4play.se|fotbollskanalen.se
 ||tv4-trailers.b17g.net/api/trailers$xmlhttprequest
-*/trailers$media,redirect=noop-0.1s.mp3,domain=tv4.se|tv4play.se|fotbollskanalen.se|koket.se
+*/trailers$media,redirect=noop-0.1s.mp3,domain=tv4play.se|fotbollskanalen.se
 ||tv4-trailers-prod.herokuapp.com/api/impression$xmlhttprequest
-||videoplaza.tv/proxy/tracker/$image,important,domain=tv4.se|tv4play.se|fotbollskanalen.se|koket.se
-||videoplaza.tv/*/pulse-sdk-html5/*$xmlhttprequest,redirect=noop.txt,important,domain=tv4.se|tv4play.se|fotbollskanalen.se|koket.se
-||b17g.net^*/play/log$xmlhttprequest,redirect=noop.txt,domain=tv4.se|tv4play.se|fotbollskanalen.se|koket.se
-||cloudfront.net/creatives/assets/$image,media,domain=tv4.se|tv4play.se|fotbollskanalen.se|koket.se
-||ad.doubleclick.net/ddm/*$image,important,domain=tv4.se|tv4play.se|fotbollskanalen.se|koket.se
+||videoplaza.tv/proxy/tracker/$image,important,domain=tv4play.se|fotbollskanalen.se
+||videoplaza.tv/*/pulse-sdk-html5/$xmlhttprequest,redirect=noop.txt,important,domain=tv4play.se|fotbollskanalen.se
+||b17g.net^*/play/log$xmlhttprequest,redirect=noop.txt,domain=tv4play.se|fotbollskanalen.se
+||cloudfront.net/creatives/assets/$image,media,domain=tv4play.se|fotbollskanalen.se
+||ad.doubleclick.net/ddm/$image,important,domain=tv4play.se|fotbollskanalen.se
 ||tv4play.se/hic_qos$script,redirect=noop.js
-||bonnier-html-player.b17g.services/bumpers/$media,redirect=noop-1s.mp4,domain=tv4.se|tv4play.se|fotbollskanalen.se|koket.se
+||bonnier-html-player.b17g.services/bumpers/$media,redirect=noop-1s.mp4,domain=tv4play.se|fotbollskanalen.se
 tv4play.se,fotbollskanalen.se###skin-cover
 tv4play.se###__next > div:not(:first-child)
 tv4play.se##.js-cookie-banner
 tv4play.se###pause-img-holder
 tv4play.se#@#.adBanner
-@@||a.zxcvads.com/a/ads/-image-ad_ads.html$xmlhttprequest,domain=tv4play.se
-*/tv4play_plugin.$script,redirect=noop.js,domain=tv4.se|tv4play.se|fotbollskanalen.se|koket.se
+@@||a.zxcvads.com/a/ads/-image-ad_ads.html$xmlhttprequest,domain=tv4play.se|fotbollskanalen.se
+*/tv4play_plugin.$script,redirect=noop.js,domain=tv4play.se|fotbollskanalen.se
 ! Köket
 koket.se##.endorsed
 koket.se##li.slide:has(.external_advertiser)
@@ -1475,6 +1474,7 @@ fotbollskanalen.se##.top-item.brand
 fotbollskanalen.se##.player-index-sponsor
 fotbollskanalen.se##.playerindex-ad
 fotbollskanalen.se##.notice__link:has(.notice__tag_sponsored)
+||minute.ly^$domain=fotbollskanalen.se
 ||bugsnag.com^$third-party,domain=dn.se|di.se|tv4play.se|tv4.se|koket.se|fotbollskanalen.se|expressen.se
 ! övrigt
 /native?placeholder$xmlhttprequest,domain=hd.se|sydsvenskan.se
@@ -1580,7 +1580,7 @@ allehanda.se,arbetarbladet.se,avestatidning.com,bblat.se,dalademokraten.se,dt.se
 ||ues*.mmcloud.se/api/*/events$third-party
 /bam-data?device$xmlhttprequest
 
-! HERENCO/HALL MEDIA
+! HALL MEDIA
 /ajax.php?action=fetch_from_google_analytics$xmlhttprequest,domain=falkopingstidning.se|jnytt.se|jp.se|skaraborgslanstidning.se|skovdenyheter.se|smalandsdagblad.se|smalanningen.se|smt.se|tranastidning.se|vastgotabladet.se|vetlandaposten.se|vn.se
 /ajax.php?action=get_share_data$xmlhttprequest,domain=falkopingstidning.se|jnytt.se|jp.se|skaraborgslanstidning.se|skovdenyheter.se|smalandsdagblad.se|smalanningen.se|smt.se|tranastidning.se|vastgotabladet.se|vetlandaposten.se|vn.se
 /ajax.php?action=get_slideshow_ad_in$xmlhttprequest,domain=falkopingstidning.se|jnytt.se|jp.se|skaraborgslanstidning.se|skovdenyheter.se|smalandsdagblad.se|smalanningen.se|smt.se|tranastidning.se|vastgotabladet.se|vetlandaposten.se|vn.se
@@ -3368,3 +3368,5 @@ vibilagare.se##a[href^="/partnermaterial/"]
 senses.se##.isobrick:has(a[href*="casino"])
 senses.se##.isobrick:has(a[href*="glhf-gg"])
 senses.se##.isobrick:has(a[href*="betting"])
+/popup-overlay$domain=ettsthlm.se
+ettsthlm.se##[class^="sqs-cookie-banner"]
