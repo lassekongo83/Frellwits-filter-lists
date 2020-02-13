@@ -366,6 +366,7 @@
 /static/js/loada.js$script
 /static.marklar.se/track/custom-tracker.$script
 /stats/ewstats.$script
+/stats/stats.asp?$script
 /sticky-ads.$script
 /strossle-start-page-ad$xmlhttprequest
 /sv_se/metrics/*$script,xmlhttprequest
@@ -673,6 +674,7 @@
 ###redim-cookiehint
 ###sp-cookie-consent
 ###trn_cookie_holder
+##.cookieAlert:not(body):not(html)
 ##.CookieConsentBanner:not(body):not(html)
 ##.CookieNotice:not(body):not(html)
 ##.cookiesWarning:not(body):not(html)
@@ -936,6 +938,7 @@ bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se,che
 /wp-content/plugins/ad-inserter/includes/*$important,domain=byggipedia.se|fysikstugan.se|asterixia.se
 ||cdn.segment.com/analytics.js$script,important,domain=studocu.com
 /wp-content/plugins/popup-builder-$script,important,domain=mmabetz.se
+||amazon-adsystem.com^$3p,important,domain=bilresaieuropa.se
 
 ! Unwanted Wordpress plugins and bloat
 /plugins/ab_appnexus_ads/*
@@ -1307,6 +1310,7 @@ bytbil.com##html,body:style(overflow: auto !important;)
 borsplus.se##.cookies-wrap
 borsplus.se##.ad-page-head
 borsplus.se##.article-list-item--native
+sportbladetplay.se##[class^="CookieConsentPopup"]
 
 ! BONNIER
 dn.se##.gdpr-header
@@ -2008,6 +2012,7 @@ uwtd.me,ekonominyheter.se,autonytt.se,undervarttak.se##a[href*="/track.adtractio
 spelo.se,svenskaturistforeningen.se##.cookie-box
 fokus.se,sverigeskonsumenter.se###cookie-box
 lindasbakskola.se,privataaffarer.se##a[href*="/bit.ly/"]
+autonytt.se,konstlistan.se,bjornsennbrink.se,bilresaieuropa.se##a[href*="/click.adrecord."]
 
 ! Various websites with lots of malicious stuff and annoyances
 /wp-content/themes/keremiya1/js/script.js$script
@@ -2198,7 +2203,6 @@ autonytt.se##.start-leaderboard
 autonytt.se##.leaderboard
 autonytt.se##.feed_ad
 autonytt.se##a[href^="https://t.seenthis.se"]
-autonytt.se##a[href*="/click.adrecord."]
 autonytt.se##a:has(.label:has-text(/sponsrad/i))
 autonytt.se##.article_widget_preview:has(h2 > a:has-text(/artikel i samarbete/i))
 /autonytt-theme/js/blogger.$script,domain=autonytt.se
@@ -3033,7 +3037,6 @@ byggipedia.se##+js(acis, ai_insert_2)
 byggipedia.se##.protect_contents-overlay
 byggipedia.se##.ai_widget
 byggipedia.se##*:style(user-select: text !important;)
-konstlistan.se,bjornsennbrink.se##a[href*="/click.adrecord."]
 studocu.com##.new-viewer-wrapper .p2hv:style(pointer-events: auto !important;)
 studocu.com###page-container:style(user-select: text !important;)
 posh24.se##.bannerArea
@@ -3376,3 +3379,6 @@ senses.se##.isobrick:has(a[href*="glhf-gg"])
 senses.se##.isobrick:has(a[href*="betting"])
 /popup-overlay$domain=ettsthlm.se
 ettsthlm.se##[class^="sqs-cookie-banner"]
+turismnytt.se##.site-wrap > .row > .col-sm-3
+bilresaieuropa.se##.widget_text:has(.widget-title:has-text(/^spons/i))
+gtsoder.se,maskalpin.se,telgesibk.se,fbitullinge.nu###outerAd
