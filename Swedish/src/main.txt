@@ -2050,19 +2050,16 @@ swestream.*##.player-top-ad
 /license.$script,domain=nxload.com|jawcloud.co
 ||bit.ly^$subdocument,domain=jawcloud.co|vcstream.to
 ||cdnbox.win/inc/ETKe.$script
-/p2p/*$script,domain=jawcloud.co
-||tracker.$important,domain=jawcloud.co
 ||jawcloud.co/banner$image
 ||jawcloud.co/playerjs/vast/
 ||jawcloud.co/js/jawgo.js
-||vcstream.to^*/script$script
-||vcstream.to^*/license$script
-||jawcloud.co^$csp=script-src 'self' 'unsafe-inline' blob: data: *.jawcloud.co upvtt.com *.gstatic.com
+||jawcloud.co^$csp=script-src 'self' 'unsafe-inline' 'unsafe-eval' blob: data: *.jawcloud.co upvtt.com *.gstatic.com
 ||jawcloud.co/*.gif$image
 .html$subdocument,domain=jawcloud.co
-||onlystream.*^$csp=default-src 'self' 'unsafe-inline' cdn.osimg.co cdnjs.cloudflare.com *.ostreamcdn.com *.osimg.co data:
 jawcloud.co##.loloba
-jawcloud.co##+js(acis, jawplayer, on)
+||vcstream.to^*/script$script
+||vcstream.to^*/license$script
+||onlystream.*^$csp=default-src 'self' 'unsafe-inline' cdn.osimg.co cdnjs.cloudflare.com *.ostreamcdn.com *.osimg.co data:
 nxload.com,upstream.to##+js(set, adb, 0)
 ||upstream.to^$csp=script-src 'self' 'unsafe-inline' 'unsafe-eval' *.gstatic.com
 ||nxload.com^$csp=script-src 'self' 'unsafe-inline' 'unsafe-eval' code.jquery.com data: blob:
