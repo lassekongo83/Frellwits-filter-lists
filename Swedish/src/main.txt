@@ -2267,7 +2267,8 @@ mitti.se,alltomstockholm.se##[class*="insider_"]
 mitti.se,alltomstockholm.se##.outsider-container
 mitti.se##+js(noeval-if, addthis.layers.refresh)
 mitti.se##.teaser-large-container:has(.native-ad-mark)
-/mitti-ad-block-blocker/scripts.$script,domain=mitti.se|alltomstockholm.se
+/mitti-adform$script
+/mitti-ad-block-blocker$script,domain=mitti.se|alltomstockholm.se
 /js/ads.$script,~third-party,important,domain=mitti.se|alltomstockholm.se
 altinget.se##+js(nostif, show_popup)
 altinget.se###CookieModal_cookiemodal
@@ -2320,17 +2321,15 @@ hbl.fi,vastranyland.fi,ostnyland.fi,hangotidningen.fi##+js(nostif, ksfDfp.adsBlo
 hbl.fi,vastranyland.fi,ostnyland.fi,hangotidningen.fi##+js(set, ksfDfp.DisplayDiligentSlots, noopFunc)
 hbl.fi,vastranyland.fi,ostnyland.fi,hangotidningen.fi##+js(acis, adfBrand)
 ||ksfmedia.simulator.palmu.fi/*/*.js$script,domain=hbl.fi|vastranyland.fi|ostnyland.fi|hangotidningen.fi
-||vasabladet.fi/Scripts/HSSAnalyticsUtils.js$script
-||vasabladet.fi/Scripts/GA_EEC/$script
-||vasabladet.fi/Scripts/karkimedia_init.js$script
+/HSSAnalyticsUtils.js$script
+/karkimedia_init.js$script
 ||access.vasabladet.fi/6-pack/$subdocument
-||osterbottenstidning.fi/Scripts/*analytics$script
-/impressions.js$script,domain=osterbottenstidning.fi
-/GA_EEC/*$script,domain=osterbottenstidning.fi
-osterbottenstidning.fi,vasabladet.fi##.dialogue-content
-osterbottenstidning.fi,vasabladet.fi##.dialogue-footer
-osterbottenstidning.fi,vasabladet.fi##article.kundmaterial
-osterbottenstidning.fi,vasabladet.fi##.online-ad
+/impressions.js$script,domain=osterbottenstidning.fi|vasabladet.fi|sydin.fi
+/GA_EEC/*$script,domain=osterbottenstidning.fi|vasabladet.fi|sydin.fi
+osterbottenstidning.fi,vasabladet.fi,sydin.fi##.dialogue-content
+osterbottenstidning.fi,vasabladet.fi,sydin.fi##.dialogue-footer
+osterbottenstidning.fi,vasabladet.fi,sydin.fi##article.kundmaterial
+osterbottenstidning.fi,vasabladet.fi,sydin.fi##.online-ad
 nvp.se##[class^="banner"]
 nvp.se###takeover-placeholder
 tasteline.com##li.article:has(.category:has-text(/samarbete/i))
@@ -3005,6 +3004,7 @@ norrkopinghandel.se###wp-flybox_tab1
 @@||fwmrm.net/ad/$script,domain=mtv.se
 ||asmassets.mtvnservices.com^$media,redirect=noop-1s.mp4,domain=mtv.se
 mtv.se##.clickLayer
+mtv.se##+js(json-prune, omnitureEnabled)
 lakemedelsvarlden.se##.annons-yta
 caminomagasin.se###cookie-compliance
 caminomagasin.se##.block--extern-annons
@@ -3381,3 +3381,4 @@ ettsthlm.se##[class^="sqs-cookie-banner"]
 turismnytt.se##.site-wrap > .row > .col-sm-3
 bilresaieuropa.se##.widget_text:has(.widget-title:has-text(/^spons/i))
 gtsoder.se,maskalpin.se,telgesibk.se,fbitullinge.nu###outerAd
+alkompis.se###check-also-box
