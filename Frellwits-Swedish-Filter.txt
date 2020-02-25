@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2020-02-24 10:35:10 CET
+! Last modified: 2020-02-25 11:51:40 CET
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -471,6 +471,7 @@
 /logger/logger?
 /LogRocket.min.js$script,third-party
 /losad/loada.$script
+/lottoland$image,domain=vett-och-etikett.com
 /lunchguiden*.$image,domain=folkbladet.nu|vk.se
 /magnific-popup/*$domain=shortcut.se
 /maps.sponsored-pill.$script,domain=tripadvisor.se
@@ -488,6 +489,7 @@
 /monetization/pixel-sdk/*
 /mp_emediate/inc/annons.html
 /native.html$domain=allas.se
+/native.js$domain=aktuellhallbarhet.se
 /native?placeholder$xmlhttprequest,domain=hd.se|sydsvenskan.se
 /new_construction_ads/*$domain=hemnet.se
 /newsletter/*$domain=zalando.se
@@ -501,7 +503,7 @@
 /p/tourn/*$domain=dayviews.com
 /packs/consent.$domain=hemnet.se
 /packs/survey.$domain=hemnet.se
-/pages/tag$script,domain=dagensmedia.se|resume.se
+/pages/tag$script,domain=aktuellhallbarhet.se|dagensmedia.se|resume.se
 /pagespeed_static/1.$image,domain=hockeysnack.com
 /panorama.js$script,domain=blogg.se|bloggkommentatorerna.se|hannaofsweden.se|itsallabouttaif.se|ladydahmer.nu|lindablom.se|modette.se|rebeckasfoto.se|svenskayoutubers.se|themoviefreak.se|webblogg.se|weberskold.se
 /partnerintegration$domain=hitta.se
@@ -932,7 +934,11 @@ akaskidor.se,svenskgolf.se##.ad-wallpaper-wrapper
 aktiespararna.se##.analysguiden-promote-articles
 aktiespararna.se,civilekonomen.se,koket.se,nyheter24.se##.native
 aktivtraning.se,digitalfotoforalla.se,iform.se,militarhistoria.se,natgeo.se,popularhistoria.se##.scroll-message
-aktuellhallbarhet.se##.native-article
+aktuellhallbarhet.se,dagensmedia.se,resume.se###__next > div[class^="css-"]:last-child
+aktuellhallbarhet.se,dagensmedia.se,resume.se##.slot-articlemodule
+aktuellhallbarhet.se,dagensmedia.se,resume.se##.slot-module
+aktuellhallbarhet.se,dagensmedia.se,resume.se##a[href^="/annons/"]
+aktuellhallbarhet.se,dagensmedia.se,resume.se##a[href^="/native/"]
 aktuellsakerhet.se##.category-sponsrat-innehall
 aktuelltfokus.se##.leader-wrap-out
 aldrenytt.se##.aldrenytt-header_add
@@ -1061,6 +1067,7 @@ benjeey.se,elinskoglund.com,fannystaaf.se,lovisawallin.se,moamattsson.se,nouw.co
 benjeey.se,elinskoglund.com,fannystaaf.se,lovisawallin.se,moamattsson.se,nouw.com##[title="Ad space"]
 betting.se##.header-banners
 bettips.se##.bettips-am
+bildobubbla.se##.annonser
 bilia.se,netbil.se###acceptcookies
 bilsport.se###bst-bot
 bilsport.se##.ads-and-other
@@ -1179,11 +1186,6 @@ dagensanalys.se##[id^="moove_gdpr"]
 dagensanalys.se,letsgoexplore.se##.tipi-tile.active
 dagensinfrastruktur.se##.g-single
 dagensinfrastruktur.se##[class^="ad-"]
-dagensmedia.se,resume.se###__next > div[class^="css-"]:last-child
-dagensmedia.se,resume.se##.slot-articlemodule
-dagensmedia.se,resume.se##.slot-module
-dagensmedia.se,resume.se##a[href^="/annons/"]
-dagensmedia.se,resume.se##a[href^="/native/"]
 dagensmedicin.se##.widget-carousel--sponsored
 dagensopinion.se##a[href^="/annons-"]
 dagensps.se##.category-ps-partner
@@ -1399,6 +1401,7 @@ fokus.se,sverigeskonsumenter.se###cookie-box
 folkbladet.nu,vk.se##.vkmui-Text--grey
 folkbladet.nu,vk.se##[class^="adContainer"]
 folkbladet.nu,vk.se##a[href="https://umealunchguide.se/"]
+folkbladet.nu,vk.se##div[class^="bordersAndShadows"] > div[style^="min-height"]:only-child
 folkbladet.nu,vk.se##div[data-track-id="strossle"]
 foodfolder.se###myModal
 foreca.se###ckieconsent
@@ -1820,6 +1823,7 @@ piraja.se###parallax
 pomu.se##.Games-addLateral
 pomu.se##[class^="Banner"]
 poolforum.se,varmepumpsforum.com##a[target="_blank"] > img[alt]
+popularastronomi.se##a.gofollow[data-track]:not([href*="www.popularastronomi.se"])
 posh24.se##.bannerArea
 pricerunner.se###data-protection-notification
 professionalsecrets.se##div[data-campaign="newsletter"]
@@ -2668,6 +2672,7 @@ yougov.se##.cookie-confirm
 ||tourn.se^$third-party
 ||tr.apsisforms.com^$third-party
 ||track.cpa.tpgrn.com^
+||track.intersport.se^$xmlhttprequest
 ||tracker.yougov.com^$domain=yougov.se
 ||tracking.bonnier.news^$third-party
 ||trafikradion.nu/reklam$image
