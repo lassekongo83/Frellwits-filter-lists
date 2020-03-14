@@ -381,6 +381,7 @@
 /ub-ads/*uba*.$script
 /view_count/view.php$xmlhttprequest
 /wdg_cookie_bar
+/wdg/iab-active$script
 /webbresurser/banner/*
 /widget.hittarecept.se/blogcounter$image,script
 /wp-content/static/unruly.js$script
@@ -783,7 +784,7 @@
 @@/advertisment.js$script,~third-party,domain=wappare.se
 @@/assets/adsbygoogle.js$script,~third-party,domain=lonch.se
 @@/js/ad.js$~third-party,domain=sweclockers.com
-@@/js/ads.js$~third-party,domain=affarsliv.com|affarslivgotland.se|alltforforaldrar.se|alltsomsker.nu|amusetidningen.se|automobil.se|bike.se|caroftheyear.se|corren.se|eposten.se|feber.se|folkbladet.se|framtid.se|helagotland.se|husbilhusvagn.se|ilikeradio.se|klackspark.com|klassiker.nu|kritiker.se|kuriren.nu|malagaguiden.se|mopedgaraget.se|mvt.se|naturvetenskap.org|norrbottensaffarer.se|nsd.se|nt.se|pt.se|rabattpris.se|radio.se|riksettan.net|snowmobile.se|svenskjakt.se|swedroid.se|tjock.se|tvmatchen.nu|unt.se|uppgang.com|vibilagare.se|vimmerbytidning.se|vt.se|ekuriren.se|kkuriren.se|sn.se|findit.fi|findit.se|jobb.maxkompetens.se|freeride.se|fz.se
+@@/js/ads.js$~third-party,domain=affarsliv.com|affarslivgotland.se|alltforforaldrar.se|alltsomsker.nu|amusetidningen.se|automobil.se|bike.se|caroftheyear.se|corren.se|eposten.se|feber.se|folkbladet.se|framtid.se|helagotland.se|husbilhusvagn.se|ilikeradio.se|klackspark.com|klassiker.nu|kritiker.se|kuriren.nu|malagaguiden.se|mopedgaraget.se|mvt.se|naturvetenskap.org|norrbottensaffarer.se|nsd.se|nt.se|pt.se|rabattpris.se|radio.se|riksettan.net|snowmobile.se|svenskjakt.se|swedroid.se|tjock.se|tvmatchen.nu|unt.se|uppgang.com|vibilagare.se|vimmerbytidning.se|vt.se|ekuriren.se|kkuriren.se|sn.se|findit.fi|findit.se|jobb.maxkompetens.se|freeride.se|fz.se|spela.se
 @@/ads.min.js$~third-party,domain=notebookcheck.se
 @@/js/ads/advert.min.js$script,domain=spelo.se
 @@/js/adsbygoogle.js$script,~third-party,domain=feber.se|sv.ucoin.net|tjock.se
@@ -868,6 +869,7 @@ intersport.*#@#.cookie-banner:not(body):not(html)
 /sponsor/$image,domain=bandybyn.se|brynas.se|difhockey.se|ettgottskratt.se|farjestadbk.se|fotbollskanalen.se|freeride.se|frillesasbandy.se|frolundaindians.com|happyride.se|humorbibeln.se|hv71.se|ifkgoteborg.se|lhc.eu|luleahockey.se|malmoredhawks.com|moraik.se|newsner.com|orebrohockey.se|roglebk.se|skellefteaaik.se|sportbibeln.se|swehockey.se|timraik.se|vaxjolakers.se|vskbandy.se
 /statistics.$script,xmlhttprequest,domain=alltforforaldrar.se|byggnyheter.se|dagensfastigheter.se|dagensnaringsliv.se|energinyheter.se|fria.nu|friatidningen.se|goteborgsfria.se|industrinyheter.se|infrastrukturnyheter.se|inredningsnyheter.se|jarnvagsnyheter.se|landetsfria.se|mammasidan.se|market.se|metallerochgruvor.se|minbebis.com|papperochmassa.se|sesam.nu|solenerginyheter.se|sportochfritidsnyheter.se|stockholmsbyggnyheter.se|stockholmsfria.se|testfakta.se|transportochlogistik.se|vindkraftsnyheter.se|sxk.se|plastikoperationsforum.se
 /urls/count.json$script,domain=emilysliv.se|gabriellajoss.me|kenzas.se|mybabydolls.se|vimedbarn.se
+/wdg_vda$script,domain=spela.se
 /Web%20Analytics/*$script,domain=digikey.se
 /xtcore$script,domain=bytbil.com|kiaindex.se|recept.se
 ||aff.bstatic.com^$domain=travelgrip.se
@@ -2739,9 +2741,12 @@ spela.se##+js(acis, trackEvidonEvent)
 spela.se##+js(acis, AdPortal)
 spela.se##+js(acis, $jscomp)
 spela.se##div[class^="app_gdpr"]
+/popular-in-the-community.js$domain=spela.se
+/targeted_campaign$domain=spela.se
 justwannahavefun.se##.legible:has(.sub-title:has-text(/sponsrat av/i))
 krickelins.se##article[id^="post-"]:has(a[href$="/sponsrade-inlagg/"])
 bonjourvintage.se##.category-om-samarbeten
+bonjourvintage.se##article:has(a[title*="Sponsrat inlägg"])
 fotbolltransfers.com##div[class^="ad"]
 fotbolltransfers.com##a[href^="https://ads."]
 fotbolltransfers.com##.smallNewsLink:has(.smallNewsCategory:has-text(/sponsrad/i))
