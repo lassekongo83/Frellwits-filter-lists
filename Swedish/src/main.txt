@@ -1255,6 +1255,7 @@ aftonbladet.se##h3[style*="background-color:#0067b5;border-radius:2px;margin:16p
 aftonbladet.se##a[href^="/kampanj/casino"]
 aftonbladet.se##a[href*="/se/app/aftonbladet/"]
 aftonbladet.se##a[href*="/store/apps/details?id=se.aftonbladet"]
+aftonbladet.se##a[href*="utm_"][target="_blank"]
 /rabattkod$image,domain=aftonbladet.se
 /pulsetracking$script,domain=aftonbladet.se
 /campaign-fallback.$script,domain=aftonbladet.se
@@ -2093,6 +2094,10 @@ lundagard.se,boktugg.se##+js(aeld, wheel)
 sverigesradio.se,urplay.se,ica.se##.async-hide:style(opacity: 1 !important;)
 ! Bye bye annoying autoplay in articles etc :-)
 ~fh-widgets.expressen.se,youplay.se,nyheter24.se,modette.se,affarsliv.com,affarslivgotland.se,corren.se,eposten.se,folkbladet.se,helagotland.se,klackspark.com,kuriren.nu,mvt.se,norrbottensaffarer.se,nsd.se,nt.se,pt.se,unt.se,vt.se,uppgang.com,vimmerbytidning.se,vf.se,hjotidning.se,kt.se,sla.se,mariestadstidningen.se,filipstadstidning.se,fryksdalsbygden.se,nwt.se,varmlandsaffarer.se,arvikanyheter.se,nkp.se,saffletidningen.se,provinstidningen.se,dalslanningen.se,karlskogatidning.se,nlt.se,skd.se,nsk.se,affarsvarlden.se,ekuriren.se,kkuriren.se,sn.se,expressen.se,lwcdn.com,barometern.se,blt.se,bt.se,kristianstadsbladet.se,olandsbladet.se,ostrasmaland.se,smp.se,sydostran.se,trelleborgsallehanda.se,ut.se,ystadsallehanda.se,allas.se,hant.se,svenskdam.se,baaam.se,elle.se,skanesport.se,thelocal.se,goteborgdirekt.se,stockholmdirekt.se,vasterastidning.se,realtid.se,cafe.se,kingmagazine.se,mestmotor.se,svenskanamn.se,viivilla.se,ibnytt.se##+js(json-prune, autoplay)
+! Don't mess with the default scrollbar!
+/themes/Jaz/inc/js/*scroll$script,domain=explorecurate.com
+@@/jquery.scrollUp$script,domain=explorecurate.com
+@@/scrollReveal$script,domain=explorecurate.com
 
 ! ÖVRIGT
 nordichardware.se##.td_block_wrap:has(span:has-text(/sponsrat/i))
@@ -3387,3 +3392,6 @@ mobilanyheter.net##+js(acis, idpt)
 /mod_responsivebannerslider$domain=bjuvsnytt.se
 frilagt.se###whitewrap > .wrapper-first:first-child
 frilagt.se##.column-2 > figure
+pussad.se##.g1-popup-newsletter
+pussad.se##.g1-slideup-wrap
+pussad.se##html.g1-popup-visible:style(overflow: initial !important;)
