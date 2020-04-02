@@ -159,6 +159,7 @@
 ||reco.se^$third-party
 ||redeal.se^$third-party
 ||referralhero.com^$third-party
+||rek.ai^$third-party
 ||reseguiden.se^$third-party
 ||resultify.com^$third-party
 ||resultify.se^$third-party
@@ -209,7 +210,6 @@
 ||yieldbird.com^$third-party
 ||yieldwrapper.com^$third-party
 ||vdsinside.com^$third-party
-||rek.ai^$third-party
 ||viforetag.se^$third-party
 ||vikispot.com^$third-party
 ||vinguiden.com^$third-party
@@ -823,6 +823,7 @@ patient.info##body:style(overflow: auto !important;)
 ! Blocked in EasyPrivacy. Breaks login/logout on some sites.
 @@||cdn.dynamicyield.com^$domain=alingsastidning.se|bohuslaningen.se|gp.se|hallandsposten.se|hn.se|stromstadstidning.se|ttela.se
 intersport.*#@#.cookie-banner:not(body):not(html)
+@@||dagensanalys.se/wp-content/*/pubmatic_$image
 
 ! Common site specific blocking
 -ads.$image,domain=svenskbyggtidning.se
@@ -870,6 +871,7 @@ intersport.*#@#.cookie-banner:not(body):not(html)
 /wdg_vda$script,domain=spela.se
 /Web%20Analytics/*$script,domain=digikey.se
 /xtcore$script,domain=bytbil.com|kiaindex.se|recept.se
+||addevent.com^$third-party,domain=godare.se
 ||aff.bstatic.com^$domain=travelgrip.se
 ||apprl.com/embed/$subdocument,domain=forni.se|majanilssonlindelof.com|metromode.se|petratungarden.se|trendenser.se|vavawoom.com
 ||bstatic.com/static/affiliate$third-party
@@ -1213,7 +1215,7 @@ svd.se##.ContentLayout-extraColumnAd
 svd.se##.theme-Native
 svd.se##.ContentLayout-mainColumn > figure[data-postmessage-command="iframe.resize"]
 www.svd.se##+js(acis, SvD, preDefineAd)
-www.svd.se##+js(aeld, /^(?:mousemove|scroll)$/, k())
+www.svd.se##+js(aeld, /^(?:mousemove|scroll|focus|mousedown|keydown|beforeunload)$/, j())
 www.svd.se##+js(nostif, w(), 500)
 www.svd.se##+js(nostif, c(), 200)
 ! Needed for some videos to work
@@ -1325,6 +1327,7 @@ borsplus.se##.cookies-wrap
 borsplus.se##.ad-page-head
 borsplus.se##.article-list-item--native
 sportbladetplay.se##[class^="CookieConsentPopup"]
+godare.se##.privacy-information
 
 ! BONNIER
 dn.se##.gdpr-header
