@@ -205,8 +205,6 @@
 ||upsales.com^$third-party
 ||uptobanner.com^$third-party
 ||uptobranding.com^$third-party
-||yandex.st/share/share.$third-party
-||yastatic.net/share/$third-party
 ||yieldbird.com^$third-party
 ||yieldwrapper.com^$third-party
 ||vdsinside.com^$third-party
@@ -928,6 +926,10 @@ finansliv.se,pedagogiskamagasinet.se,lararnastidning.se,tidningenridsport.se,sul
 bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se,chef.se##+js(acis, _cInfo)
 norran.se,nyheteridag.se,dagensps.se##+js(acis, googletag)
 mobilanyheter.net,villalivet.se##+js(set, MonsterInsights, undefined)
+nyadagbladet.se##+js(set, em_track_user, false)
+nyadagbladet.se##+js(acis, exactmetrics_frontend)
+nyadagbladet.se##+js(acis, exactmetrics_scroll_tracking_load)
+nyadagbladet.se##+js(acis, OneSignal)
 
 ! Facebook junk
 /facebook_sdk.js$script,domain=radioplay.se
@@ -1030,6 +1032,7 @@ mobilanyheter.net,villalivet.se##+js(set, MonsterInsights, undefined)
 /plugins/ml-adverts/*$script
 /plugins/modal-for-elementor/*$script,domain=miljomagasinet.se
 /plugins/newsner-lead-tracking/*
+/plugins/notificationx$script,domain=nyadagbladet.se
 /plugins/ns-facebook-pixel-for-wp/*
 /plugins/onesignal-free-web-push-notifications/*
 /plugins/optin-cat-elite-wp/*$script
@@ -1122,6 +1125,10 @@ onlystream.*##^script:has-text(/tag.min.js)
 onlystream.*##^script:has-text(zfgloadedpopup)
 onlystream.*##^script:has-text(Privet darkv.)
 tyda.se##^script:has-text(googlefcPresent)
+nyadagbladet.se##^script:has-text(em_track_user)
+nyadagbladet.se##^script:has-text(exactmetrics_frontend)
+nyadagbladet.se##^script:has-text(exactmetrics_scroll_tracking_load)
+nyadagbladet.se##^script:has-text(OneSignal)
 !#endif
 
 ! Firefox mobile filters
@@ -2760,9 +2767,11 @@ piraja.se###featholder:has(.spons)
 piraja.se###panoramaholder
 piraja.se###parallax
 _jquery.blockUI.$script,domain=fssweden.se
+/share-link$script,domain=nyadagbladet.se
 nyadagbladet.se##+js(aopr, cli_show_cookiebar)
 nyadagbladet.se###adpadding
 nyadagbladet.se##.third-col
+nyadagbladet.se##+js(aeld, mouseout)
 deliquate.se##.ajax_loader
 deliquate.se##[id^="ads300"]
 deliquate.se##[id^="linkcat-"]
