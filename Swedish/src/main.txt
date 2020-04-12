@@ -1266,6 +1266,8 @@ aftonbladet.se##a[href^="/kampanj/casino"]
 aftonbladet.se##a[href*="/se/app/aftonbladet/"]
 aftonbladet.se##a[href*="/store/apps/details?id=se.aftonbladet"]
 aftonbladet.se##a[href*="utm_"][target="_blank"]
+aftonbladet.se##a[href^="https://ad."][target="_blank"]
+aftonbladet.se##a[href*="partner_id"][target="_blank"]
 /rabattkod$image,domain=aftonbladet.se
 /pulsetracking$script,domain=aftonbladet.se
 /campaign-fallback.$script,domain=aftonbladet.se
@@ -1449,6 +1451,8 @@ expressen.se##.pressrelease-teaser
 expressen.se##.teaser--sponsored
 expressen.se##.article--sponsored
 expressen.se##.teaser > a[href*="happygreen.se"]
+expressen.se##.teaser__third-party
+expressen.se##p:has(strong:has-text(/^annons/i))
 ! sektion leva & bo
 expressen.se##.teaser:has(.teaser__third-party--bar)
 ! Juli 2019
@@ -2180,6 +2184,7 @@ proffs.se##.cookie-wrapper
 ||gru.proff.se^
 ||gru.proff.se^$csp=worker-src 'none'
 ||stats.proff.no^$script
+/*Adform.$script,domain=eniro.se
 eniro.se##.hit-search-word-ad
 eniro.se##.profile-ad-wrapper
 eniro.se##.hit-partners
@@ -2729,6 +2734,7 @@ minhembio.com##.adbox
 minhembio.com##div[style="height: 120px;"]:not([id]):not([class])
 bilsport.se##.panorama-top
 megafonen.nu##.sidebar-block:has(.block-title:has-text(/sponsrad/i))
+megafonen.nu##[data-article-sponsored="true"]
 minimalisterna.se##.post:has(p:has-text(/i samarbete med/i))
 travprat.se##+js(aopw, bizpanda)
 travprat.se##.ff-ad

@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2020-04-10 17:26:44 CEST
+! Last modified: 2020-04-12 15:22:19 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -62,8 +62,8 @@
 ###cookiejar
 ###cookielawwarning
 ###cookieMsgBlock
-###CookieNotice
 ###cookieNotice
+###CookieNotice
 ###cookies-acceptance .alert.bottom
 ###cookiesInfo
 ###eu-cookie-bar
@@ -220,6 +220,7 @@
 .se/upload/annons/
 .se/wdg/tracking
 .se/wp-content/banners/
+/*Adform.$script,domain=eniro.se
 /*Fokus_360x300px_animate*.gif$image,domain=fokus.se
 /250x360/$image,domain=marsta.nu
 /280x240/$image,domain=rumhemma.se
@@ -910,9 +911,11 @@ aftonbladet.se##.social-shares
 aftonbladet.se##[id*="abAdArea"]
 aftonbladet.se##a[href*="/se/app/aftonbladet/"]
 aftonbladet.se##a[href*="/store/apps/details?id=se.aftonbladet"]
+aftonbladet.se##a[href*="partner_id"][target="_blank"]
 aftonbladet.se##a[href*="utm_"][target="_blank"]
 aftonbladet.se##a[href^="/brandstudio"]
 aftonbladet.se##a[href^="/kampanj/casino"]
+aftonbladet.se##a[href^="https://ad."][target="_blank"]
 aftonbladet.se##body.abTheme-entertainment *> .abAside > div[style^="text"]:last-child
 aftonbladet.se##div[style*="border-color: rgb(0, 103, 181); border-width: 4px 0px 0px;"]
 aftonbladet.se##div[style*="border-color: rgb(0, 103, 181); border-width: 4px 0px 0px;"] + a
@@ -1343,6 +1346,7 @@ expressen.se##.site-header__widgets > .html-widget > a[target="_blank"]
 expressen.se##.teaser > a[href*="happygreen.se"]
 expressen.se##.teaser--native-ad
 expressen.se##.teaser--sponsored
+expressen.se##.teaser__third-party
 expressen.se##.terms-dialog
 expressen.se##.widget-ad-marker
 expressen.se##.widget-area--collaboration
@@ -1703,6 +1707,7 @@ market.se##article[about^="/annons"]
 marsta.nu###secondary-content > .panel--naringsliv
 marsta.nu##.outsider
 matklubben.se##.notification.cookies
+megafonen.nu##[data-article-sponsored="true"]
 megaspel.se###app-root > footer ~ aside:first-of-type:last-of-type
 megaspel.se##[class*="advertisement"]
 megaspel.se##button[class][title="Show CMP"]
