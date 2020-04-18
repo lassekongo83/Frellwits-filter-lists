@@ -346,6 +346,7 @@
 /orion/loada$script
 /permutive-async.js$script
 /phaser-ads.min.js$script
+/phpbb_ads$image
 /Portalannonser/*$image
 /popup/follow-us-fb.$xmlhttprequest
 /prod/adform$xmlhttprequest
@@ -823,6 +824,10 @@ patient.info##body:style(overflow: auto !important;)
 @@||cdn.dynamicyield.com^$domain=alingsastidning.se|bohuslaningen.se|gp.se|hallandsposten.se|hn.se|stromstadstidning.se|ttela.se
 intersport.*#@#.cookie-banner:not(body):not(html)
 @@||dagensanalys.se/wp-content/*/pubmatic_$image
+! frame crashes tab in firefox
+!#if env_firefox
+||issuu.com^$subdocument,domain=boktugg.se
+!#endif
 
 ! Common site specific blocking
 -ads.$image,domain=svenskbyggtidning.se
@@ -3432,3 +3437,16 @@ pussad.se##html.g1-popup-visible:style(overflow: initial !important;)
 ||sv.picmix.com/sw.js
 ||sv.picmix.com^$csp=worker-src 'none'
 ||kritiker.se/js/gdpr.js
+svensk-seo.se#@#.adsbygoogle
+/phpbb/ads$script,domain=svensktgolfforum.se
+svensktgolfforum.se##[data-ad-id]
+svensktgolfforum.se##+js(acis, setTimeout, test)
+||walls.io^$domain=svensktgolfforum.se
+/evidon$script,domain=morningstar.se
+/usabilla$script,domain=morningstar.se
+/CookieBar$script,domain=morningstar.se
+/AudienceTarget$script,domain=morningstar.se
+/DynamicGAFunctions$script,domain=morningstar.se
+/EUModalDialog$script,domain=morningstar.se
+/AiMatch$script,domain=morningstar.se
+@@||morningstar.com/scripts/ads.js$domain=morningstar.se
