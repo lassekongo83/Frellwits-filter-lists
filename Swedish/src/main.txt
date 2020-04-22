@@ -637,6 +637,7 @@
 ##ul.adsmodern
 ###CookieNotice
 ###accept-cookies-div
+###aloq-cookie-warning
 ###catapult-cookie-bar
 ###cliSettingsPopup.cli-modal
 ###colorbox.cookie-info-modal
@@ -828,6 +829,9 @@ intersport.*#@#.cookie-banner:not(body):not(html)
 !#if env_firefox
 ||issuu.com^$subdocument,domain=boktugg.se
 !#endif
+! first party blocked in pgl, only block as a 3rd party
+||cision.com^$badfilter
+||cision.com^$third-party
 
 ! Common site specific blocking
 -ads.$image,domain=svenskbyggtidning.se
@@ -842,7 +846,7 @@ intersport.*#@#.cookie-banner:not(body):not(html)
 /ajax_statistics_count/*$xmlhttprequest,domain=byggnyheter.se|dagensfastigheter.se|dagensnaringsliv.se|energinyheter.se|industrinyheter.se|infrastrukturnyheter.se|inredningsnyheter.se|jarnvagsnyheter.se|metallerochgruvor.se|papperochmassa.se|solenerginyheter.se|sportochfritidsnyheter.se|stockholmsbyggnyheter.se|transportochlogistik.se|vindkraftsnyheter.se
 /annons/$image,domain=boktugg.se|bubb.la|dansbandskanalen.se|etc.se|etunawebben.se|fastighetstidningen.se|guldkanalen.se|kurera.se|lesscarbs.se|lundagard.se|natursidan.se|newsvoice.se|nvp.se|opulens.se|rumhemma.se|saik.com|sff.nu|siriusbandy.se|skillingaryd.nu|svf.se|tekniksmart.se|vinbanken.se|xn--vrnamo-bua.nu|polistidningen.se|barnsemester.se|battrestadsdel.se|flygtorget.se|beinspiredtravel.se|kulturbloggen.com|bjuvsnytt.se|frilagt.se
 /annons/*$subdocument,domain=internetlankar.se
-/banner/$image,media,subdocument,domain=affarsstaden.se|airsoftsverige.com|alltomhif.se|arkitektur.se|autolife.se|bettips.se|blognyheter.se|boktugg.se|boxerville.se|brollopsmagasinet.se|brynas.se|bukefalos.se|bussmagasinet.se|byggteknikforlaget.se|dagenstv.com|dansbandskanalen.se|danstidningen.se|e.se|entreprenadaktuellt.se|etc.se|etn.se|everysport.com|farjestadbk.se|fastighetstidningen.se|flashback.se|forvaltarforum.se|free.se|friidrott.se|golfbladet.se|guldkanalen.se|hamsterpaj.net|hrbloggen.se|hv71.se|ifkgoteborg.se|internetmedicin.se|it-finans.se|it-halsa.se|it-kanalen.se|it-pedagogen.se|it-retail.se|ja.se|journalisten.se|julpyssel.com|katerinamagasin.se|kiacarclub.se|kolozzeum.com|kurera.se|lakartidningen.se|lakemedelsvarlden.se|lfc.nu|lhc.eu|ljuskultur.se|lokalguiden.se|luleahockey.se|lundagard.se|maipenrai.se|malmoredhawks.com|markbladet.se|marsta.nu|maskinstationerna.se|metalcentral.net|moraik.se|muss.se|natursidan.se|newsvoice.se|nvp.se|opulens.se|ordfrontmagasin.se|orebrohockey.se|pellesoft.se|poolforum.se|rockkocken.se|roglebk.se|rumhemma.se|sbktavling.se|sff.nu|skogsaktuellt.se|spelsnack.se|sportbloggare.com|sportpanelen.se|sporttv.nu|storvretaibk.se|stowr.se|svenskamagasinet.nu|svenskhandboll.se|svenskfotboll.se|svf.se|tidningenbalans.se|tidningenproffs.se|tkj.se|turistmal.se|uppsalanyheter.se|vaken.se|varmepumpsforum.com|veterinarmagazinet.se|vi.se|vinochbar.se|vinochmatguiden.se|viralsweden.com|vm-fotboll.se|webfinanser.com|worldkustom.com|sydkusten.es|leta.se|backpacking.se|dagensopinion.se|polistidningen.se|vardfokus.se|turismnytt.se|minbebis.com|milansverige.se|halsasverige.se|automation.se|verkstadstidningen.se|transportnytt.se|filmtipset.se|miljomat.se|revisionsvarlden.se|dialasen.com|cfoworld.se|aldrenytt.se|foodetc.se|takeventure.se|kulturbloggen.com|flm.nu|ordboken.nu|slangopedia.se|bjuvsnytt.se
+/banner/$image,media,subdocument,domain=affarsstaden.se|airsoftsverige.com|alltomhif.se|arkitektur.se|autolife.se|bettips.se|blognyheter.se|boktugg.se|boxerville.se|brollopsmagasinet.se|brynas.se|bukefalos.se|bussmagasinet.se|byggteknikforlaget.se|dagenstv.com|dansbandskanalen.se|danstidningen.se|e.se|entreprenadaktuellt.se|etc.se|etn.se|everysport.com|farjestadbk.se|fastighetstidningen.se|flashback.se|forvaltarforum.se|free.se|friidrott.se|golfbladet.se|guldkanalen.se|hamsterpaj.net|hrbloggen.se|hv71.se|ifkgoteborg.se|internetmedicin.se|it-finans.se|it-halsa.se|it-kanalen.se|it-pedagogen.se|it-retail.se|ja.se|journalisten.se|julpyssel.com|katerinamagasin.se|kiacarclub.se|kolozzeum.com|kurera.se|lakartidningen.se|lakemedelsvarlden.se|lfc.nu|lhc.eu|ljuskultur.se|lokalguiden.se|luleahockey.se|lundagard.se|maipenrai.se|malmoredhawks.com|markbladet.se|marsta.nu|maskinstationerna.se|metalcentral.net|moraik.se|muss.se|natursidan.se|newsvoice.se|nvp.se|opulens.se|ordfrontmagasin.se|orebrohockey.se|pellesoft.se|poolforum.se|rockkocken.se|roglebk.se|rumhemma.se|sbktavling.se|sff.nu|skogsaktuellt.se|spelsnack.se|sportbloggare.com|sportpanelen.se|sporttv.nu|storvretaibk.se|stowr.se|svenskamagasinet.nu|svenskhandboll.se|svenskfotboll.se|svf.se|tidningenbalans.se|tidningenproffs.se|tkj.se|turistmal.se|uppsalanyheter.se|vaken.se|varmepumpsforum.com|veterinarmagazinet.se|vi.se|vinochbar.se|vinochmatguiden.se|viralsweden.com|vm-fotboll.se|webfinanser.com|worldkustom.com|sydkusten.es|leta.se|backpacking.se|dagensopinion.se|polistidningen.se|vardfokus.se|turismnytt.se|minbebis.com|milansverige.se|halsasverige.se|automation.se|verkstadstidningen.se|transportnytt.se|filmtipset.se|miljomat.se|revisionsvarlden.se|dialasen.com|cfoworld.se|aldrenytt.se|foodetc.se|takeventure.se|kulturbloggen.com|flm.nu|ordboken.nu|slangopedia.se|bjuvsnytt.se|astmaoallergiforbundet.se
 /banner/$script,domain=cleannet.se|dagenshandel.se|entreprenad.com|food-supply.se|foodnet.se|fri-kopenskap.se|habit.se|kemivarldenbiotech.se|lifesciencesweden.se|magasinetparagraf.se|medtechmagazine.se|motormagasinet.se|packnet.se|plastnet.se|processnet.se|recyclingnet.se|rt-forum.se|skyddosakerhet.se|transportnet.se|uochd.se|verkstaderna.se|woodnet.se
 /bc-tracking.js$script,domain=digikey.se
 /campaign*/*$script,xmlhttprequest,domain=alltforforaldrar.se|kokaihop.se|mammasidan.se|minbebis.com|nyheter24.se
@@ -1504,11 +1508,12 @@ koket.se##.endorsed
 koket.se##li.slide:has(.external_advertiser)
 koket.se##.external_advertiser
 koket.se###react-newsletter-overlay
-koket.se##.kf-mosaic-widget:has(.mosaic__custom-sponsor-holder)
+koket.se##.mosaic__gridItem:has(.native-simple__banner)
 koket.se##.promo__container
 koket.se##.native_simple
 koket.se##div[data-ad="true"]
 koket.se###react-information-overlay[data-id="Erbjudanden"]
+koket.se##.cookie_message__wrapper
 ! fotbollskanlen
 fotbollskanalen.se##+js(acis, containerId)
 fotbollskanalen.se##.top-item.brand
@@ -1525,6 +1530,7 @@ va.se##.sponsored-article
 va.se##.sponsored-module
 va.se##.share
 dagensmedicin.se##.widget-carousel--sponsored
+dagensmedicin.se##.sponsored-article-wrapper
 @@/wp-content/plugins/seagal-plugin-dfp/src/showAds.js$~third-party,script
 @@/wp-content/plugins/seagal-plugin-dfp/assets/showAds.js$~third-party,script
 @@/wp-content/themes/seagal-editorial/assets/js/ads.js$~third-party,script
@@ -3451,3 +3457,7 @@ se.azrhymes.com###CookielawBanner
 /cs1pc.js$domain=kiaindex.se
 cannabis.se##+js(aopw, Cookies)
 cannabis.se##.header-ads-wrapper, .ai-adb-hide
+astmaoallergiforbundet.se##.banner-top, .banner-side
+diabetes.se##.c-cookies
+nordfront.se##.post:has(span:has-text(/annons/i))
+nordfront.se###campaign_area
