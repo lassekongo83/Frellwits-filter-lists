@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2020-05-10 15:16:54 CEST
+! Last modified: 2020-05-11 11:24:29 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -327,7 +327,6 @@
 /casino/$image,domain=battrestadsdel.se|dayviews.com|hockeysverige.se|hypeline.se|kamrat.com|kulturbloggen.com|newsvoice.se|nyheter24.se|spray.se|svenskhistoria.se|zeromagazine.nu
 /check-paywall$domain=dn.se
 /citygate/payingcompanies$xmlhttprequest
-/click-performance/cpg_ads.$script
 /closest-native$xmlhttprequest,domain=expressen.se
 /cm-ad-changer-server
 /cmp.$script,domain=allas.se
@@ -353,6 +352,7 @@
 /cookiswarning.$script,domain=visitskargarden.se
 /core/analytics$script,domain=sv.geneanet.org
 /core/minify/storage/*$script,domain=manolo.se
+/cpg_ads.$script
 /cs1pc.js$domain=kiaindex.se
 /cx-emediate-userprofile-se.$script
 /cx/Matchad$subdocument
@@ -614,6 +614,7 @@
 /plugins/pixelyoursite$image,script
 /plugins/popup$domain=bugburger.se|forvaltarforum.se|grillbaronen.se|kvalitetsmagasinet.se|miljo-utveckling.se|mmabetz.se|ordfrontmagasin.se|sportpanelen.se|telekomidag.se|vdtidningen.se
 /plugins/popup-by-supsystic$domain=exakt24.se
+/plugins/popups/*$script,domain=svenskhistoria.se
 /plugins/quantcast-choice/*$script,domain=muscles.se
 /plugins/random-banner/*
 /plugins/sandviks-weblog/*$script,domain=babyvarlden.se
@@ -1344,6 +1345,7 @@ eurosport.se##.pub
 eurosportplayer.com###banner
 evalent.se##.loadPage
 eventeffect.se###secondary > .widget:nth-child(2)
+eventeffect.se,executiveeffect.se,saleseffect.se###nyhetsbrev-pp-wrapper__container
 eventeffect.se,executiveeffect.se,saleseffect.se##.partnerartikel
 eventeffect.se,executiveeffect.se,svartgul.se,tvmatchen.nu###panorama
 evertiq.se###carpet
@@ -2433,6 +2435,7 @@ yougov.se##.cookie-confirm
 ||icarabatt.com^
 ||iconosquare.com^$third-party
 ||idg.se/sharecounter?$xmlhttprequest
+||idrottonline.se/client-views/cookieinfo$xmlhttprequest
 ||imgix.net^*/analytics.$script
 ||imp.laget.se^$image
 ||improvedigital.com^$third-party
