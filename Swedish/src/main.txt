@@ -1301,6 +1301,7 @@ aftonbladet.se##a[style*="border-color: rgb(0, 103, 181)"]
 aftonbladet.se##a[style*="border-color:#0067b5"]
 aftonbladet.se##.jwplayer:has(.svp-sponsor-label):remove()
 aftonbladet.se##a[href^="/tv/"]:has(span:has-text(/studio oddset/i)):upward(1)
+aftonbladet.se##a[href*="aftonbladet.se/kampanj/artikel"]:upward(1)
 /rabattkod$image,domain=aftonbladet.se
 /pulsetracking$script,domain=aftonbladet.se
 /campaign-fallback.$script,domain=aftonbladet.se
@@ -1395,6 +1396,7 @@ di.se##+js(nosiif, runAdBlockPaywall, 1000)
 !#endif
 di.se##+js(acis, Di, initAds)
 di.se##+js(set, getAdblockerStatus, noopFunc)
+di.se##+js(nostif, #triggerModal)
 ||digital.di.se/api/sponsor/$xmlhttprequest
 di.se##[class^="gdpr-policy"]
 di.se##.mc__overlay--show
@@ -1421,7 +1423,10 @@ di.se##.di_article_ad-block
 di.se##.segment__column > .service-box:last-child
 di.se##.discount-box
 di.se##.di_article-comments-tooltip
+di.se##.native-box
+di.se##.di_teaser-flak-planbokskoll
 /adblk.js$script,domain=weekend.di.se
+/getnative$xmlhttprequest,domain=di.se
 ! expressen
 ||assets.expressen.se/bundles/analytics$script
 ||precis.expressen.se/recommendations$xmlhttprequest
