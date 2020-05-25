@@ -1100,6 +1100,7 @@ mobilanyheter.net,villalivet.se,lchfarkivet.se##+js(set, MonsterInsights, undefi
 /plugins/wp-copy-protect-with-color-design/*
 /plugins/wp-evolve-gpt/*
 /plugins/wp-gdpr-compliance/*$script
+/plugins/wp-lrf-paywall/*
 /plugins/wp-power-stats/*
 /plugins/wp-sentry-integration/*$domain=chef.se
 /plugins/wp-snow-effect/*
@@ -1437,7 +1438,6 @@ di.se##.di_teaser-flak-planbokskoll
 /_widget/destination$subdocument,domain=expressen.se
 /closest-native$xmlhttprequest,domain=expressen.se
 /rantekartan/*$subdocument,domain=expressen.se
-www.expressen.se##+js(aeld, error, adsBlocked)
 www.expressen.se##+js(acis, Bau, preloadAds)
 www.expressen.se##+js(set, detect, noopFunc)
 www.expressen.se##+js(ra, data-video-tracking-info)
@@ -1528,6 +1528,9 @@ tv4play.se###pause-img-holder
 tv4play.se#@#.adBanner
 @@||a.zxcvads.com/a/ads/-image-ad_ads.html$xmlhttprequest,domain=tv4play.se|fotbollskanalen.se
 */tv4play_plugin.$script,redirect=noop.js,domain=tv4play.se|fotbollskanalen.se
+!#if env_firefox
+||se-tv4.videoplaza.tv/proxy/tracker/$all
+!#endif
 ! Köket
 koket.se##.endorsed
 koket.se##li.slide:has(.external_advertiser)
@@ -1611,7 +1614,7 @@ iform.se##a[data-ad-sub-pillar="Annons"]
 allehanda.se,arbetarbladet.se,avestatidning.com,bblat.se,dalademokraten.se,dt.se,fagersta-posten.se,gd.se,lt.se,ltz.se,na.se,norrteljetidning.se,nynashamnsposten.se,op.se,salaallehanda.com,st.nu,tidningenharjedalen.se,vlt.se,bandypuls.se##.nps-client-dialogue-footer
 allehanda.se,arbetarbladet.se,avestatidning.com,bblat.se,dalademokraten.se,dt.se,fagersta-posten.se,gd.se,lt.se,ltz.se,na.se,norrteljetidning.se,nynashamnsposten.se,op.se,salaallehanda.com,st.nu,tidningenharjedalen.se,vlt.se,bandypuls.se##.true-native
 ||ues*.mmcloud.se/api/*/events$third-party
-/bam-data?device$xmlhttprequest
+/bam-data$xmlhttprequest,domain=allehanda.se|arbetarbladet.se|avestatidning.com|bblat.se|dalademokraten.se|dt.se|fagersta-posten.se|gd.se|lt.se|ltz.se|na.se|norrteljetidning.se|nynashamnsposten.se|op.se|salaallehanda.com|st.nu|tidningenharjedalen.se|vlt.se|bandypuls.se
 
 ! NTM
 /cxense.$script,domain=corren.se|folkbladet.se|mvt.se|nt.se|vt.se|vimmerbytidning.se|kuriren.nu|nsd.se|norran.se|ekuriren.se|strengnastidning.se|kkuriren.se|sn.se|eposten.se|unt.se|helagotland.se|affarsliv.com|affarslivgotland.se|klackspark.com|norrbottensaffarer.se
@@ -2381,7 +2384,10 @@ market.se##article[about^="/annons"]
 market.se###newsletter-rollup
 dagensps.se##.category-ps-partner
 atl.nu,land.se,landlantbruk.se,landskogsbruk.se##[class*="--native"]
+atl.nu,land.se,landlantbruk.se,landskogsbruk.se##[id^="adwrapper"]
+atl.nu,land.se,landlantbruk.se,landskogsbruk.se##.has-sticky-add
 atl.nu##a[href*="/atl-tv-annons/"]
+screen9.com##+js(set, screen9.player.adblockerState, null)
 grontvader.se##app-cookies
 /Sponsor/*$xmlhttprequest,domain=grontvader.se
 /private-browsing.js$domain=thelocal.se
