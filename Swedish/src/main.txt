@@ -803,7 +803,7 @@
 @@/advertisment.js$script,~third-party,domain=wappare.se
 @@/assets/adsbygoogle.js$script,~third-party,domain=lonch.se
 @@/js/ad.js$~third-party,domain=sweclockers.com
-@@/js/ads.js$~third-party,domain=affarsliv.com|affarslivgotland.se|alltforforaldrar.se|alltsomsker.nu|amusetidningen.se|automobil.se|bike.se|caroftheyear.se|corren.se|eposten.se|feber.se|folkbladet.se|framtid.se|helagotland.se|husbilhusvagn.se|ilikeradio.se|klackspark.com|klassiker.nu|kritiker.se|kuriren.nu|malagaguiden.se|mopedgaraget.se|mvt.se|naturvetenskap.org|norrbottensaffarer.se|nsd.se|nt.se|pt.se|rabattpris.se|radio.se|riksettan.net|snowmobile.se|svenskjakt.se|swedroid.se|tjock.se|tvmatchen.nu|unt.se|vibilagare.se|vimmerbytidning.se|vt.se|ekuriren.se|kkuriren.se|sn.se|findit.fi|findit.se|jobb.maxkompetens.se|freeride.se|fz.se|spela.se
+@@/js/ads.js$~third-party,domain=malagaguiden.se|rabattpris.se|snowmobile.se|freeride.se
 @@/ads.min.js$~third-party,domain=notebookcheck.se
 @@/js/ads/advert.min.js$script,domain=spelo.se
 @@/js/adsbygoogle.js$script,~third-party,domain=feber.se|sv.ucoin.net|tjock.se
@@ -1174,7 +1174,7 @@ nyadagbladet.se##+js(acis, OneSignal)
 
 ! Firefox mobile filters
 !#if env_mobile
-aftonbladet.se##div[data-reactroot] > div > div#MegaAd ~ div[class]:not(#header):not(.abThemeGradientPage)
+aftonbladet.se##+js(nostif, abAndroidSmartAppBannerActive)
 swedroid.se##div[id$="_ad_mobile"]
 swedroid.se##.externalTopMobile
 m.sweclockers.com###topBanner
@@ -1327,6 +1327,7 @@ www.aftonbladet.se##+js(aeld, mousemove, g())
 www.aftonbladet.se##+js(aeld, message, adError)
 www.aftonbladet.se,www.svd.se##+js(nosiif, e.ping())
 www.aftonbladet.se,www.svd.se##+js(nosiif, e.reportVisibility())
+||vgc.no/cdn/js/libs/ast/$script,domain=www.aftonbladet.se
 @@||ad*.vg.no/check.js$script,domain=aftonbladet.se
 ! https://github.com/lassekongo83/Frellwits-filter-lists/issues/61
 ! Disabling this for Brave that don't support pre-parsing directives. Using a simple if-not safari as that browser is no longer supported as well.
