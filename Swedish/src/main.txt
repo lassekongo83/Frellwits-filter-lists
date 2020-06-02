@@ -793,22 +793,13 @@
 ! Site specific whitelists
 @@/*_adframe.js$script,~third-party,domain=fssweden.se
 @@/ad.php$script,~third-party,domain=99mac.se|skogstok.se|temperatur.nu
-@@/adframe.js$script,~third-party,domain=diskant.se|diskantforum.se
-@@/ads.js$script,~third-party,domain=betting.se|koket.se|weekend.di.se|hd.se|sydsvenskan.se|bioenergitidningen.se|visitskargarden.se|megafonen.nu
-@@/ads/ads-*.js$script,~third-party,domain=gettyimages.se
-@@/adsbygoogle.js$script,~third-party,domain=scanaktier.se|megafonen.nu
-@@/adsense.js$script,~third-party,domain=dayviews.com|fragbite.se|kwiss.me|modette.se|nyheter24.se|synonymer.cc|tyda.se
+@@/ads.js$script,~third-party,domain=hd.se|sydsvenskan.se|megafonen.nu
 @@/adserver.$script,~third-party,domain=fotosidan.se|utsidan.se|grannar.se
-@@/advertisement.js$script,~third-party,domain=blocket.se|emocore.se|kaninsajten.se|kit.se|saljplatsen.se|spela.se|orebroidag.se|megafonen.nu
 @@/advertisment.js$script,~third-party,domain=wappare.se
-@@/assets/adsbygoogle.js$script,~third-party,domain=lonch.se
 @@/js/ad.js$~third-party,domain=sweclockers.com
 @@/js/ads.js$~third-party,domain=malagaguiden.se|rabattpris.se|snowmobile.se|freeride.se
 @@/ads.min.js$~third-party,domain=notebookcheck.se
-@@/js/ads/advert.min.js$script,domain=spelo.se
-@@/js/adsbygoogle.js$script,~third-party,domain=feber.se|sv.ucoin.net|tjock.se
-@@/js/advert.$script,~third-party,domain=burlovsnyheter.se|aftonbladet.se
-@@/js/advertisement*.$script,~third-party,domain=dagensmedia.nu|devote.se|expressen.se|familjeliv.se|feber.se|skyddsombud24.se|tjock.se
+@@/js/advertisement*.$script,~third-party,domain=expressen.se
 @@/js/advertising.$script,~third-party,domain=byggnadsarbetaren.se|cykla.se|elbilsnytt.se|svegot.se|tekniksmart.se|vi-tidningen.se|vi.se|vilaser.se|snowmobile.se|vatternrundan.se
 @@/scripts/advertisement*.$script,~third-party,domain=expressen.se|mama.nu|skonahem.com|damernasvarld.se|amelia.se|di.se|alltomtradgard.se
 @@/show_ads.js$script,~third-party,domain=happypancake.com
@@ -1544,11 +1535,8 @@ koket.se##.endorsed
 koket.se##li.slide:has(.external_advertiser)
 koket.se##.external_advertiser
 koket.se###react-newsletter-overlay
-koket.se##.mosaic__gridItem:has(.native-simple__banner)
-koket.se##.promo__container
-koket.se##.native_simple
-koket.se##div[data-ad="true"]
-koket.se###react-information-overlay[data-id="Erbjudanden"]
+koket.se##.native-simple__wrapperLink
+koket.se##.list_item__sponsored
 koket.se##.cookie_message__wrapper
 ! fotbollskanlen
 fotbollskanalen.se##+js(acis, containerId)
@@ -1764,6 +1752,7 @@ devote.se,familjeliv.se##div[style*="height: 244px;"]
 babyhjalp.se###nativendo-mainfeed
 babyhjalp.se##.sponserdarticle
 ||dayviews.com^$third-party,domain=filmtipset.se
+||filmtipset.se/images/banners/
 filmtipset.se###topslider-wrapper + .container > .sidebar
 filmtipset.se##.row.news:has(em:has-text(/sponsrad/i))
 filmtipset.se##.row.news > div[style^="border"]:last-of-type
@@ -2091,7 +2080,7 @@ newsner.com,humorbibeln.se,sportbibeln.se,ettgottskratt.se##.ad-space
 ehandel.se,bytbil.com##.article-sponsored
 ekonominyheter.se,gjuteriet.se,haaf.se##.td-a-rec
 uwtd.me,ekonominyheter.se,autonytt.se,undervarttak.se,aftonbladet.se##a[href*="/track.adtraction."]
-spelo.se,svenskaturistforeningen.se##.cookie-box
+svenskaturistforeningen.se##.cookie-box
 fokus.se,sverigeskonsumenter.se###cookie-box
 lindasbakskola.se,privataaffarer.se##a[href*="/bit.ly/"]
 autonytt.se,konstlistan.se,bjornsennbrink.se,bilresaieuropa.se##a[href*="/click.adrecord."]
@@ -2150,9 +2139,9 @@ nxload.com,upstream.to##+js(set, adb, 0)
 ||i.ibb.co/qRBYR98/ban1.png
 
 ! Various annoyances
-youplay.se,modette.se,affarsliv.com,affarslivgotland.se,corren.se,eposten.se,folkbladet.se,helagotland.se,klackspark.com,kuriren.nu,mvt.se,norrbottensaffarer.se,nsd.se,nt.se,pt.se,unt.se,vt.se,vimmerbytidning.se,vf.se,hjotidning.se,kt.se,sla.se,mariestadstidningen.se,filipstadstidning.se,fryksdalsbygden.se,nwt.se,varmlandsaffarer.se,arvikanyheter.se,nkp.se,saffletidningen.se,provinstidningen.se,dalslanningen.se,karlskogatidning.se,nlt.se,skd.se,nsk.se,affarsvarlden.se,ekuriren.se,kkuriren.se,sn.se,allas.se,hant.se,svenskdam.se,baaam.se,elle.se,femina.se,skanesport.se,thelocal.se,goteborgdirekt.se,stockholmdirekt.se,vasterastidning.se,realtid.se,cafe.se,kingmagazine.se,mestmotor.se,svenskanamn.se,viivilla.se,ibnytt.se,strengnastidning.se##+js(set, youplay.helpers.disableRightClick, noopFunc)
-youplay.se,modette.se,affarsliv.com,affarslivgotland.se,corren.se,eposten.se,folkbladet.se,helagotland.se,klackspark.com,kuriren.nu,mvt.se,norrbottensaffarer.se,nsd.se,nt.se,pt.se,unt.se,vt.se,vimmerbytidning.se,vf.se,hjotidning.se,kt.se,sla.se,mariestadstidningen.se,filipstadstidning.se,fryksdalsbygden.se,nwt.se,varmlandsaffarer.se,arvikanyheter.se,nkp.se,saffletidningen.se,provinstidningen.se,dalslanningen.se,karlskogatidning.se,nlt.se,skd.se,nsk.se,affarsvarlden.se,ekuriren.se,kkuriren.se,sn.se,allas.se,hant.se,svenskdam.se,baaam.se,elle.se,femina.se,skanesport.se,thelocal.se,goteborgdirekt.se,stockholmdirekt.se,vasterastidning.se,realtid.se,cafe.se,kingmagazine.se,mestmotor.se,svenskanamn.se,viivilla.se,ibnytt.se,strengnastidning.se##+js(set, youplay.helpers.getTrackUrl, noopFunc)
-youplay.se,modette.se,affarsliv.com,affarslivgotland.se,corren.se,eposten.se,folkbladet.se,helagotland.se,klackspark.com,kuriren.nu,mvt.se,norrbottensaffarer.se,nsd.se,nt.se,pt.se,unt.se,vt.se,vimmerbytidning.se,vf.se,hjotidning.se,kt.se,sla.se,mariestadstidningen.se,filipstadstidning.se,fryksdalsbygden.se,nwt.se,varmlandsaffarer.se,arvikanyheter.se,nkp.se,saffletidningen.se,provinstidningen.se,dalslanningen.se,karlskogatidning.se,nlt.se,skd.se,nsk.se,affarsvarlden.se,ekuriren.se,kkuriren.se,sn.se,allas.se,hant.se,svenskdam.se,baaam.se,elle.se,femina.se,skanesport.se,thelocal.se,goteborgdirekt.se,stockholmdirekt.se,vasterastidning.se,realtid.se,cafe.se,kingmagazine.se,mestmotor.se,svenskanamn.se,viivilla.se,ibnytt.se,strengnastidning.se##+js(set, youplay.helpers.trackUrls, noopFunc)
+youplay.se,modette.se,affarsliv.com,affarslivgotland.se,corren.se,eposten.se,folkbladet.se,helagotland.se,klackspark.com,kuriren.nu,mvt.se,norrbottensaffarer.se,nsd.se,nt.se,pt.se,unt.se,vt.se,vimmerbytidning.se,vf.se,hjotidning.se,kt.se,sla.se,mariestadstidningen.se,filipstadstidning.se,fryksdalsbygden.se,nwt.se,varmlandsaffarer.se,arvikanyheter.se,nkp.se,saffletidningen.se,provinstidningen.se,dalslanningen.se,karlskogatidning.se,nlt.se,skd.se,nsk.se,affarsvarlden.se,ekuriren.se,kkuriren.se,sn.se,allas.se,hant.se,svenskdam.se,baaam.se,elle.se,femina.se,skanesport.se,thelocal.se,goteborgdirekt.se,stockholmdirekt.se,vasterastidning.se,realtid.se,cafe.se,kingmagazine.se,mestmotor.se,svenskanamn.se,viivilla.se,ibnytt.se,strengnastidning.se,fragbite.se##+js(set, youplay.helpers.disableRightClick, noopFunc)
+youplay.se,modette.se,affarsliv.com,affarslivgotland.se,corren.se,eposten.se,folkbladet.se,helagotland.se,klackspark.com,kuriren.nu,mvt.se,norrbottensaffarer.se,nsd.se,nt.se,pt.se,unt.se,vt.se,vimmerbytidning.se,vf.se,hjotidning.se,kt.se,sla.se,mariestadstidningen.se,filipstadstidning.se,fryksdalsbygden.se,nwt.se,varmlandsaffarer.se,arvikanyheter.se,nkp.se,saffletidningen.se,provinstidningen.se,dalslanningen.se,karlskogatidning.se,nlt.se,skd.se,nsk.se,affarsvarlden.se,ekuriren.se,kkuriren.se,sn.se,allas.se,hant.se,svenskdam.se,baaam.se,elle.se,femina.se,skanesport.se,thelocal.se,goteborgdirekt.se,stockholmdirekt.se,vasterastidning.se,realtid.se,cafe.se,kingmagazine.se,mestmotor.se,svenskanamn.se,viivilla.se,ibnytt.se,strengnastidning.se,fragbite.se##+js(set, youplay.helpers.getTrackUrl, noopFunc)
+youplay.se,modette.se,affarsliv.com,affarslivgotland.se,corren.se,eposten.se,folkbladet.se,helagotland.se,klackspark.com,kuriren.nu,mvt.se,norrbottensaffarer.se,nsd.se,nt.se,pt.se,unt.se,vt.se,vimmerbytidning.se,vf.se,hjotidning.se,kt.se,sla.se,mariestadstidningen.se,filipstadstidning.se,fryksdalsbygden.se,nwt.se,varmlandsaffarer.se,arvikanyheter.se,nkp.se,saffletidningen.se,provinstidningen.se,dalslanningen.se,karlskogatidning.se,nlt.se,skd.se,nsk.se,affarsvarlden.se,ekuriren.se,kkuriren.se,sn.se,allas.se,hant.se,svenskdam.se,baaam.se,elle.se,femina.se,skanesport.se,thelocal.se,goteborgdirekt.se,stockholmdirekt.se,vasterastidning.se,realtid.se,cafe.se,kingmagazine.se,mestmotor.se,svenskanamn.se,viivilla.se,ibnytt.se,strengnastidning.se,fragbite.se##+js(set, youplay.helpers.trackUrls, noopFunc)
 saraabrahamsson.se,eurosport.se,jawcloud.co,nxload.com,polistidningen.se,verystream.com,clipmyhorse.tv,100kitchenstories.se,onlystream.*,streamio.com,nyheter24.se,modette.se##+js(aeld, contextmenu)
 ! Annoying, unecessary, and completely unrelated autoplaying video
 ||youplay.se^$third-party,domain=hamsterpaj.net|emocore.se|dayviews.com|kamrat.com|familjeliv.se|extraextra.se|recept.se
@@ -2168,7 +2157,7 @@ lundagard.se,boktugg.se##+js(aeld, wheel)
 ! Bad async-hiding.
 sverigesradio.se,urplay.se,ica.se##.async-hide:style(opacity: 1 !important;)
 ! Bye bye annoying autoplay in articles etc :-)
-~fh-widgets.expressen.se,youplay.se,modette.se,affarsliv.com,affarslivgotland.se,corren.se,eposten.se,folkbladet.se,helagotland.se,klackspark.com,kuriren.nu,mvt.se,norrbottensaffarer.se,nsd.se,nt.se,pt.se,unt.se,vt.se,vimmerbytidning.se,vf.se,hjotidning.se,kt.se,sla.se,mariestadstidningen.se,filipstadstidning.se,fryksdalsbygden.se,nwt.se,varmlandsaffarer.se,arvikanyheter.se,nkp.se,saffletidningen.se,provinstidningen.se,dalslanningen.se,karlskogatidning.se,nlt.se,skd.se,nsk.se,affarsvarlden.se,ekuriren.se,kkuriren.se,sn.se,expressen.se,lwcdn.com,barometern.se,blt.se,bt.se,kristianstadsbladet.se,olandsbladet.se,ostrasmaland.se,smp.se,sydostran.se,trelleborgsallehanda.se,ut.se,ystadsallehanda.se,allas.se,hant.se,svenskdam.se,baaam.se,elle.se,femina.se,skanesport.se,thelocal.se,goteborgdirekt.se,stockholmdirekt.se,vasterastidning.se,realtid.se,cafe.se,kingmagazine.se,mestmotor.se,svenskanamn.se,viivilla.se,ibnytt.se,gotland.net,strengnastidning.se##+js(json-prune, autoplay)
+~fh-widgets.expressen.se,youplay.se,modette.se,affarsliv.com,affarslivgotland.se,corren.se,eposten.se,folkbladet.se,helagotland.se,klackspark.com,kuriren.nu,mvt.se,norrbottensaffarer.se,nsd.se,nt.se,pt.se,unt.se,vt.se,vimmerbytidning.se,vf.se,hjotidning.se,kt.se,sla.se,mariestadstidningen.se,filipstadstidning.se,fryksdalsbygden.se,nwt.se,varmlandsaffarer.se,arvikanyheter.se,nkp.se,saffletidningen.se,provinstidningen.se,dalslanningen.se,karlskogatidning.se,nlt.se,skd.se,nsk.se,affarsvarlden.se,ekuriren.se,kkuriren.se,sn.se,expressen.se,lwcdn.com,barometern.se,blt.se,bt.se,kristianstadsbladet.se,olandsbladet.se,ostrasmaland.se,smp.se,sydostran.se,trelleborgsallehanda.se,ut.se,ystadsallehanda.se,allas.se,hant.se,svenskdam.se,baaam.se,elle.se,femina.se,skanesport.se,thelocal.se,goteborgdirekt.se,stockholmdirekt.se,vasterastidning.se,realtid.se,cafe.se,kingmagazine.se,mestmotor.se,svenskanamn.se,viivilla.se,ibnytt.se,gotland.net,strengnastidning.se,fragbite.se##+js(json-prune, autoplay)
 ! Don't mess with the default scrollbar!
 /themes/Jaz/inc/js/*scroll$script,domain=explorecurate.com
 @@/jquery.scrollUp$script,domain=explorecurate.com
@@ -2886,6 +2875,12 @@ goteborgdirekt.se,stockholmdirekt.se,vasterastidning.se##[class^="casino-ad"]
 goteborgdirekt.se,stockholmdirekt.se,vasterastidning.se##+js(set, NWS.config.enableAdblockerDetection, false)
 ||trafikradion.nu/reklam$image
 spelo.se##[id^="banner"]
+spelo.se###onetrust-banner-sdk
+||spelo.se/bfb/$subdocument
+/ads-client.$xmlhttprequest,domain=games.softgames.com
+@@||games.softgames.com/assets/advertisement.js$script
+@@||games.softgames.com/assets/showads.js$script
+@@||ccf.admeen.org^*/js/ads/adverts.min.js$domain=spelo.se
 ||turistmal.se/js/popup-controller.js$script
 kamrat.com###kadDiv
 kamrat.com##div[style="margin:25px 0;max-width:255px!important;"]
@@ -3114,10 +3109,6 @@ posh24.se##.bannerArea
 uppsatser.se##li[style*="min-height:90px"]
 uppsatser.se##.spahotels
 xn--lnforum-exa.se##.LFRBox
-||spelo.se/bfb/$subdocument
-/ads-client.$xmlhttprequest,domain=games.softgames.com
-@@||games.softgames.com/assets/advertisement.js$script
-@@||games.softgames.com/assets/showads.js$script
 maipenrai.se###elGuestTerms
 maipenrai.se##[data-nbenhadv]
 /theme/set_resources$script,domain=maipenrai.se
