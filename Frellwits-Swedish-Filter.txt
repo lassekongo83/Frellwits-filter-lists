@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2020-06-15 10:33:44 CEST
+! Last modified: 2020-06-16 11:37:59 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -63,8 +63,8 @@
 ###cookiejar
 ###cookielawwarning
 ###cookieMsgBlock
-###CookieNotice
 ###cookieNotice
+###CookieNotice
 ###cookies-acceptance .alert.bottom
 ###cookiesInfo
 ###dialog-eu-cookie-law
@@ -872,6 +872,7 @@
 @@||hemtrevligt.se^$generichide
 @@||hn.se^$generichide
 @@||imasdk.googleapis.com/js/sdkloader/ima3.$script,domain=gamereactor.se
+@@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=screen9.com
 @@||kurslitteratur.se^$generichide
 @@||livetombord.se^$generichide
 @@||lovisawallin.se^$generichide
@@ -1172,7 +1173,6 @@ byggvarlden.se##.ContentRight-50 > .featured
 byggvarlden.se##ul.productnews
 bytbil.com###privacyModal
 bytbil.com,ehandel.se##.article-sponsored
-c19.se##.container > center
 cafe.se##[class^="oath-dac-"]
 cafe.se,kamerabild.se##.partner
 cafe.se,kingmagazine.se##.card-partner
@@ -1736,6 +1736,8 @@ market.se##article[about^="/annons"]
 marsta.nu###secondary-content > .panel--naringsliv
 marsta.nu##.outsider
 matklubben.se##.notification.cookies
+megafonen.nu##.campaign-slides
+megafonen.nu##.content-main-adwrapper
 megafonen.nu##[data-article-sponsored="true"]
 megaspel.se###app-root > footer ~ aside:first-of-type:last-of-type
 megaspel.se##[class*="advertisement"]
@@ -2544,6 +2546,7 @@ yougov.se##.cookie-confirm
 ||minfil.com^$csp=default-src 'self' 'unsafe-inline' 'unsafe-eval' *.minfil.com;worker-src 'none'
 ||minute.ly^$domain=fotbollskanalen.se
 ||missaffiliate.com^$third-party
+||mobilanyheter.net^$csp=script-src 'self' 'unsafe-inline' *.wp.com
 ||mogenromantik.com^
 ||molnvaxlar.se/banner/$third-party
 ||momondo.se/gtm/$subdocument
