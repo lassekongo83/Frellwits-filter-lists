@@ -177,6 +177,7 @@
 ||shareaholic.net^$third-party
 ||sharethis.com^$third-party
 ||sleeknote.com^$third-party
+||snigelweb.com^$third-party
 ||sociuslive.com^$third-party
 ||sparkloop.app^$third-party
 ||sprinklecontent.com^$third-party
@@ -185,6 +186,7 @@
 ||step.dk^$third-party
 ||storymedia.se^$third-party
 ||strossle.com^$third-party
+||studads.com^$third-party
 ||suntana.se^$third-party
 ||t.fml.rip^$third-party
 ||telemetric.dk^$third-party
@@ -358,6 +360,7 @@
 /Scripts/burt/*$script
 /seenthis-hub/*$script
 /sh404sefsocial/*$script
+/shared/crm-campaign-handler.js$script
 /sifo_analytics.$script
 /sifo_msr.$script
 /siforesponsivemeasure.js$script
@@ -429,6 +432,7 @@
 ||cdn.axiell.com^*/cookie-disclaimer.$script
 ||cdn.iubenda.com/iubenda.$script
 ||cdn.livechatinc.com/tracking.$script
+||cdn.svenskalag.se/img/sponsors$image
 ||citygate.se^*/googleaccount$xmlhttprequest
 ||citygate.se^*/mainads$xmlhttprequest
 ||citygate.se^*/statistics$xmlhttprequest
@@ -1159,6 +1163,7 @@ nyadagbladet.se##^script:has-text(em_track_user)
 nyadagbladet.se##^script:has-text(exactmetrics_frontend)
 nyadagbladet.se##^script:has-text(exactmetrics_scroll_tracking_load)
 nyadagbladet.se##^script:has-text(OneSignal)
+nyadagbladet.se##^script:has-text(admiral-engaged)
 !#endif
 
 ! For browsers that don't support HTML filters
@@ -1577,12 +1582,9 @@ paf_ad_teaser$domain=privataaffarer.se
 tradera.com##react-adslot
 tradera.com##ads-takeover
 tradera.com##.react-modal:has([data-gdpr-modal])
-feber.se##+js(set, showReklam, false)
 feber.se,tjock.se##.art_ad
 feber.se,tjock.se##.art_ad_sign
 feber.se,tjock.se##adline
-feber.se,tjock.se##+js(acis, $, GDPR)
-feber.se,tjock.se##+js(acis, showMutedUserAlert)
 viivilla.se##.sp-article
 viivilla.se##.overlay-bottom
 viivilla.se###product-area
@@ -1859,6 +1861,7 @@ cafe.se##[class^="oath-dac-"]
 cafe.se##.bg-white:has(.egmont-spotlights)
 cafe.se,kingmagazine.se##.card-partner
 cafe.se,kingmagazine.se##.partner
+cafe.se##a[href*="/cafe?kampanj"]
 
 ! FRIA
 fria.nu,goteborgsfria.se,friatidningen.se,landetsfria.se,stockholmsfria.se,sesam.nu##[class*="annonser"]
@@ -2008,7 +2011,7 @@ dn.se,klart.se##.ad-wrapper
 brollopstorget.se,familjeliv.se##.ad_right
 babyhjalp.se,branschkoll.se,fotosidan.se,moviezine.se,affarsliv.com,affarslivgotland.se,corren.se,eposten.se,folkbladet.se,helagotland.se,klackspark.com,kuriren.nu,mvt.se,norrbottensaffarer.se,nsd.se,nt.se,pt.se,unt.se,vt.se,globalportalen.org,alltomstockholm.se,mitti.se,vimmerbytidning.se,osterbottenstidning.fi,ekuriren.se,kkuriren.se,sn.se,allsvenskan.se,kollega.se##.ads
 mestmotor.se,nyheter24.se,modette.se,vagabond.se,cafe.se##.advertisement
-agriprim.se,bike.se,e.se,entreprenadaktuellt.se,husbilhusvagn.se,ja.se,klassiker.nu,maskinstationerna.se,mopedgaraget.se,nyckelspel.se,skogsaktuellt.se,spelo.se,sweclockers.com,vaken.se,vibilagare.se,lovelylife.se,bettips.se,caroftheyear.se,maskinbladet.se,automobil.se,ljuskultur.se,lokalguiden.se,fightermag.se,riksettan.net,frillesasbandy.se,scanaktier.se,boxerville.se,livsmedel.se,dh.se,djungeltrumman.se,bilsport.se##.banner
+agriprim.se,bike.se,e.se,entreprenadaktuellt.se,husbilhusvagn.se,ja.se,klassiker.nu,maskinstationerna.se,mopedgaraget.se,nyckelspel.se,skogsaktuellt.se,spelo.se,sweclockers.com,vaken.se,vibilagare.se,lovelylife.se,bettips.se,caroftheyear.se,maskinbladet.se,automobil.se,ljuskultur.se,lokalguiden.se,fightermag.se,riksettan.net,frillesasbandy.se,scanaktier.se,boxerville.se,livsmedel.se,dh.se,djungeltrumman.se,bilsport.se,skik.se##.banner
 etn.se,uppsalanyheter.se##.banneritem
 evertiq.se,fz.se##.bnr
 datormagazin.se,mmanytt.se,tkj.se,fotbollsthlm.se,opulens.se##.category-annons
@@ -2813,6 +2816,8 @@ nyadagbladet.se##+js(aopr, cli_show_cookiebar)
 nyadagbladet.se###adpadding
 nyadagbladet.se##.third-col
 nyadagbladet.se##+js(aeld, mouseout)
+nyadagbladet.se##article:has(.sponsrad)
+nyadagbladet.se##.widget_media_image:has-text(/annons/i)
 deliquate.se##.ajax_loader
 deliquate.se##[id^="ads300"]
 deliquate.se##[id^="linkcat-"]
