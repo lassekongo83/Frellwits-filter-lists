@@ -1531,20 +1531,20 @@ tv4.se##.program-block-ad
 ||damoh.tv4play.se^$image
 ||stat-api.tv4play.se^$image
 ||tv4-trailers.b17g.net/api/trailers$xmlhttprequest
-*/trailers$media,redirect=noop-0.1s.mp3,domain=tv4play.se|fotbollskanalen.se
+*/trailers$media,redirect=noop-0.1s.mp3,domain=tv4play.se|fotbollskanalen.se|koket.se
 ||tv4-trailers-prod.herokuapp.com/api/impression$xmlhttprequest
-||b17g.net^*/play/log$xmlhttprequest,redirect=noop.txt,domain=tv4play.se|fotbollskanalen.se
-||cloudfront.net/creatives/assets/$image,media,domain=tv4play.se|fotbollskanalen.se
-||ad.doubleclick.net/ddm/$image,important,domain=tv4play.se|fotbollskanalen.se
+||b17g.net^*/play/log$xmlhttprequest,redirect=noop.txt,domain=tv4play.se|fotbollskanalen.se|koket.se
+||cloudfront.net/creatives/assets/$image,media,domain=tv4play.se|fotbollskanalen.se|koket.se
+||ad.doubleclick.net/ddm/$image,important,domain=tv4play.se|fotbollskanalen.se|koket.se
 ||tv4play.se/hic_qos$script,redirect=noop.js
-||bonnier-html-player.b17g.services/bumpers/$media,redirect=noop-1s.mp4,domain=tv4play.se|fotbollskanalen.se
+||bonnier-html-player.b17g.services/bumpers/$media,redirect=noop-1s.mp4,domain=tv4play.se|fotbollskanalen.se|koket.se
 tv4play.se,fotbollskanalen.se###skin-cover
 tv4play.se###__next > div:not(:first-child)
 tv4play.se##.js-cookie-banner
 tv4play.se###pause-img-holder
 tv4play.se#@#.adBanner
-@@||a.zxcvads.com/a/ads/-image-ad_ads.html$xmlhttprequest,domain=tv4play.se|fotbollskanalen.se
-*/tv4play_plugin.$script,redirect=noop.js,domain=tv4play.se|fotbollskanalen.se
+@@||a.zxcvads.com/a/ads/-image-ad_ads.html$xmlhttprequest,domain=tv4play.se|fotbollskanalen.se|koket.se
+*/tv4play_plugin.$script,redirect=noop.js,domain=tv4play.se|fotbollskanalen.se|koket.se
 !#if env_firefox
 ||se-tv4.videoplaza.tv/proxy/tracker/$all
 !#endif
@@ -2111,7 +2111,7 @@ saraabrahamsson.se,eurosport.se,jawcloud.co,nxload.com,polistidningen.se,clipmyh
 ||youplay.se^$third-party,domain=hamsterpaj.net|emocore.se|dayviews.com|kamrat.com|familjeliv.se|extraextra.se|recept.se
 ! More annoyances for desktop. (Don't mess with the user's default scroll settings!)
 !#if !env_mobile
-lundagard.se,boktugg.se##+js(aeld, wheel)
+lundagard.se,boktugg.se,outsidesweden.se##+js(aeld, wheel)
 /rokophoto-lite/js/SmoothScroll.$script
 /plugins/wp-enqueue/smoothscroll.$script
 /themes/willow/js/smoothscroll.$script
