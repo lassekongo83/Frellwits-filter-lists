@@ -729,7 +729,7 @@
 ##.cc-window.cc-floating:not(body):not(html)
 ##.cc-grower:not(body):not(html)
 ##.cc-banner.cc-bottom:not(body):not(html)
-##.CMAC_AdChangerWidget
+##.CMAC_AdChangerWidget:not(body):not(html)
 ##.cookieConsent:not(body):not(html)
 ##.cookiebar:not(body):not(html)
 ##.cookies-area:not(body):not(html)
@@ -759,15 +759,15 @@
 ##.cookie_popup_box:not(body):not(html)
 ##.cookie__wrapper:not(body):not(html)
 ##.cookieinfo:not(body):not(html)
-##.c-ad__floating
-##.c-ad-wrapper
+##.c-ad__floating:not(body):not(html)
+##.c-ad-wrapper:not(body):not(html)
 ##.c-cookie-bar:not(body):not(html)
 ##.c-cookie-disclaimer:not(body):not(html)
-##.c-dfp_ads
-##.c-post--native-ad
-##.dagensps_ad
-##.dfp-ad-widget-class
-##.dj-ad-size
+##.c-dfp_ads:not(body):not(html)
+##.c-post--native-ad:not(body):not(html)
+##.dagensps_ad:not(body):not(html)
+##.dfp-ad-widget-class:not(body):not(html)
+##.dj-ad-size:not(body):not(html)
 ##.eu_coookie_toolbar:not(body):not(html)
 ##.favethemes-content-ad-bottom
 ##.favethemes-content-ad-inline
@@ -775,34 +775,35 @@
 ##.js-cookie-disclaimer:not(body):not(html)
 ##.js-cookie-warning:not(body):not(html)
 ##.leeads-advert:not(body):not(html)
-##.mittenannons
+##.mittenannons:not(body):not(html)
 ##div.newsletter-slider
 ##.notification--cookie:not(body):not(html)
-##.nyhet_wrapper_annons
+##.nyhet_wrapper_annons:not(body):not(html)
 ##.outerCookieBar:not(body):not(html)
 ##.o-cookie-bar:not(body):not(html)
-##.o-grid__ad-column
+##.o-grid__ad-column:not(body):not(html)
 ##.online-cookie-consent:not(body):not(html)
-##.pea_cook_more_info_popover
-##.pea_cook_wrapper
-##.plista_widget_outstream
+##.pea_cook_more_info_popover:not(body):not(html)
+##.pea_cook_wrapper:not(body):not(html)
+##.plista_widget_outstream:not(body):not(html)
 ##.p-cookie-prompt.-display:not(body):not(html)
 ##.site-alert--cookies:not(body):not(html)
-##.swp-ad-strossle
+##.swp-ad-strossle:not(body):not(html)
 ##.sw-cookie-consent-wrapper:not(body):not(html)
-##.sw-popular__article--ad
-##.sw-sponsored_post
+##.sw-popular__article--ad:not(body):not(html)
+##.sw-sponsored_post:not(body):not(html)
 ##.s-cookies-info:not(body):not(html)
-##.thb_ad_header
-##.toppannonser
+##.thb_ad_header:not(body):not(html)
+##.thb-cookie-bar:not(body):not(html)
+##.toppannonser:not(body):not(html)
 ###topBannerAds
 ##.viacomcookiebar:not(body):not(html)
 ##.we-are-using-cookies:not(body):not(html)
 ##.widget_adonnews:not(body):not(html)
 ##.widget_eu_cookie_law_widget:not(body):not(html)
-##.widget_ev_ad_widget
-##.widget_ic_ad_widget
-##._ning_outer._ning_jss_zone
+##.widget_ev_ad_widget:not(body):not(html)
+##.widget_ic_ad_widget:not(body):not(html)
+##._ning_outer._ning_jss_zone:not(body):not(html)
 ##[id^="adace_ads"]
 ##div.ad.container
 ##div.avia-cookiemessage-bottom
@@ -919,7 +920,7 @@ intersport.*#@#.cookie-banner:not(body):not(html)
 ||connect.getflowbox.com^$third-party,domain=aikfotboll.se|farjestadbk.se|svenskaturistforeningen.se
 ||consent.cmp.oath.com^$script,domain=alltomstockholm.se|mitti.se
 ||consent.cookiebot.com^$third-party,domain=etc.se|goteborgdirekt.se|hoglandsnytt.se|itaboutdoor.se|kingsizemag.se|ng.se|skeppsbrons.se|stockholmdirekt.se|swedroid.se|totallyorebro.se|totallystockholm.se|villalivet.se|wesafe.se|tankesport.se|smartsenior.se|vasterastidning.se|clipmyhorse.tv|bax-shop.se|kurera.se|norrahalland.se|upplysning.se
-||cookiepro.com^$third-party,domain=sd.se|birthday.se
+||cookiepro.com^$third-party,domain=sd.se|birthday.se|friendsarena.se|hastnet.se
 ||d2wy8f7a9ursnm.cloudfront.net/bugsnag$script,domain=expressen.se|bioenergitidningen.se
 ||evidon.com^$third-party,domain=morningstar.se|spela.se|downdetector.se|mtv.se
 ||execute-api.eu-west-1.amazonaws.com/*/event$xmlhttprequest,domain=forum.hallon.se
@@ -1357,8 +1358,9 @@ omni.se##.resource--sponsored
 ||*-ads.omni.news^
 tv.nu##a[href*="adform.net"]
 tv.nu##.ad-mega--container
-tv.nu###app > div > div:last-child:not(:first-child)
+tv.nu###app > div > div[class]:nth-of-type(2)
 tv.nu##.gdpr-bar-wrapper
+tv.nu###ad-fullscreen-desktop
 ||logger.tv.nu^$script
 blocket.se##.tag.panorama
 blocket.se##body.modal_open, html.modal_open:style(overflow: auto !important;)
@@ -3466,3 +3468,4 @@ glassakademin.se##[class^="adverts-"]
 laromedia.se##img[alt="Annons"] + .img-flipper
 alekuriren.se###widget_code-6
 konsolnyheter.se##.wplinktrade
+hastnet.se##.add-wrap
