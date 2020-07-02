@@ -41,8 +41,10 @@
 ||cintnetworks.com^$third-party
 ||cision.com^$third-party
 ||citygate.se^$third-party,~image,domain=~familj.se|~tillminne.se
+||ck.page^$third-party
 ||connectad.io^$third-party
 ||consent.dk^$third-party
+||convertkit.com^$third-party
 ||conviva.com^$third-party
 ||cookie-disclaimer.onewp.net^$third-party
 ||cookie-script.com^$third-party
@@ -2006,6 +2008,9 @@ morotsliv.com###sidebar .et_pb_widget
 linnherbertsson.se##.content:has(.sponsored-container)
 linnherbertsson.se##[id^="content-ad"]
 linnherbertsson.se##body:style(overflow-y: auto !important;)
+monasuniversum.se,matplatsen.net###gatsby-focus-wrapper > div[class^="css-"]:last-of-type
+matplatsen.net##article:has(em:has-text(/i samarbete med/i)):remove()
+||bloggtoppen.fi^$third-party
 
 ! Common cosmetic filters that shouldn't be generic
 alicestenlof.com,tjanstebilen.se###cookies
@@ -2449,6 +2454,7 @@ kokaihop.se##.kng-cookie-info-bar
 kokaihop.se,tjanstebilen.se##.modal
 kokaihop.se,ratsit.se##.modal-backdrop
 kokaihop.se###popupStatus
+/ads.js?$script,domain=flashback.org
 flashback.org###top-banner-row
 flashback.org###bottom-banner-container
 flashback.org###right-banner-container
@@ -2471,7 +2477,6 @@ dplay.se##[class^="notificationArea"]
 news55.se##.footer_popup
 news55.se##.news-feed-article[data-n55-theme="n55-theme--native-articles"]
 news55.se##.page-sidebar > section > a.teaser__link[target="_blank"]
-@@/js/ads.js$xmlhttprequest,domain=news55.se
 businessclass.se##.reveal-modal-bg
 businessclass.se###bcpop
 businessclass.se##+js(acis, $, AdBlockDetector)
@@ -3131,14 +3136,12 @@ maklarvarlden.se##article:has(.sponsored-inlist)
 maklarvarlden.se##.td-post-category:has-text(/spons/i):upward(2)
 maklarvarlden.se##.td-pulldown-size:has-text(/spons/i):upward(3)
 maklarvarlden.se##.hustle-popup
-||byggvarlden.se/empty.html$subdocument
+/empty.html$subdocument,domain=byggvarlden.se|hotellorestaurang.se
 ||stats.docu.info^$third-party
-/docunet_stats.js$script,domain=byggvarlden.se
-byggvarlden.se##.ContentRight-50 > .featured
-byggvarlden.se###bannnerContainer
-byggvarlden.se##ul.productnews
-byggvarlden.se,byggfaktadocu.se##+js(acis, docu_stats_summaryview_no_time)
-byggvarlden.se,byggfaktadocu.se##+js(acis, docu_stats_pageview_no_time)
+/docunet_stats.js$script
+byggvarlden.se,hotellorestaurang.se##.ContentRight-50 > .featured
+byggvarlden.se,hotellorestaurang.se###bannnerContainer
+byggvarlden.se,hotellorestaurang.se##ul.productnews
 byggfaktadocu.se##.pop_box
 ! Placera
 avanza.se##.cookieMessage
@@ -3390,7 +3393,7 @@ armsport.nu###page-overlay
 resemagasinetbuss.se##.bottom-spin
 resemagasinetbuss.se##.adbox
 takeventure.se##.widget_text:has(.title:has-text(/annons/i))
-aventyrsresor.se##.newsletter-popup
+aventyrsresor.se,travelnews.se##.newsletter-popup
 firstclassmagazine.se###leader-wrap
 spelagratis.se##.sidebar-right
 spelagratis.se##.ad_header + p
