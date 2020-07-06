@@ -1329,6 +1329,7 @@ aftonbladet.se##a[style*="border-color:#0067b5"]
 aftonbladet.se##.jwplayer:has(.svp-sponsor-label):remove()
 aftonbladet.se##a[href^="/tv/"]:has(span:has-text(/studio oddset/i)):upward(1)
 aftonbladet.se##a[href*="aftonbladet.se/kampanj/artikel"]:upward(1)
+aftonbladet.se##div[class][style^="text"]:has(h3:has-text(/annons/i))
 /rabattkod$image,domain=aftonbladet.se
 /pulsetracking$script,domain=aftonbladet.se
 /campaign-fallback.$script,domain=aftonbladet.se
@@ -1382,6 +1383,7 @@ klart.se##.sponsor-message
 klart.se##.content-box-list__item:has(.ad-text)
 klart.se###overlay
 klart.se##.gdpr-onboarding-container
+klart.se##+js(rc, mega-loading)
 ||klart.se/assets/blockadblock$script
 ||user-permissions.api.schibsted.media/privacy/$domain=klart.se
 ||cis.schibsted.com/api/*/identify$domain=klart.se
@@ -1602,6 +1604,7 @@ viivilla.se###product-area
 viivilla.se##.native-ad-md
 viivilla.se##.afubar-top
 viivilla.se##+js(aopw, MauticTrackingObject)
+viivilla.se##.teaserblockdata:has(.teaser-sponsored-text)
 ||europe-west1-bonnier-big-data.cloudfunctions.net^$third-party
 /fusionadloader.$script
 /iframeadvloader.$script
@@ -1613,7 +1616,7 @@ dagensmedia.se,resume.se,aktuellhallbarhet.se,fastighetsnytt.se##.slot-articlemo
 dagensmedia.se,resume.se,aktuellhallbarhet.se,fastighetsnytt.se###__next > div[class^="css-"]:last-child
 dagensmedia.se,resume.se,aktuellhallbarhet.se,fastighetsnytt.se##a[href^="/annons/"]
 dagensmedia.se,resume.se,aktuellhallbarhet.se,fastighetsnytt.se##a[href^="/native/"]
-/pages/tag$script,domain=dagensmedia.se|resume.se|aktuellhallbarhet.se|fastighetsnytt.se
+/pages/tag$domain=dagensmedia.se|resume.se|aktuellhallbarhet.se|fastighetsnytt.se
 /native.js$domain=aktuellhallbarhet.se
 digitalfotoforalla.se##.gallery-banner
 digitalfotoforalla.se,natgeo.se,popularhistoria.se,militarhistoria.se,iform.se,aktivtraning.se##.scroll-message
@@ -1789,6 +1792,7 @@ gamereactor.se##+js(acis, phpads_deliver)
 gamereactor.se###sky2_1
 gamereactor.se###facebooknotification
 gamereactor.se###ad_mobiletopinsidetext
+gamereactor.se##.external_div_bigVideoAd:remove()
 ||gamereactor.se/lay/ad-video-stats.$script
 ||gamereactor.se/lay/js/manageBanners.$script
 ||gamereactor.se/lay/js/adblock_desktop.$script
@@ -1904,6 +1908,7 @@ tvmatchen.nu##.custom-background:style(background-image: none !important;)
 tvmatchen.nu##a.p-icon.partner
 tvmatchen.nu##a[href*="tradedoubler.com"]
 tvmatchen.nu##+js(aopw, onload)
+/splash-redirector$domain=tvmatchen.nu
 /media/partners$image,domain=tvmatchen.nu|hockeynews.se
 /liveodds-button_nordicbet$domain=tvmatchen.nu
 /nordicbet_logo$domain=tvmatchen.nu
