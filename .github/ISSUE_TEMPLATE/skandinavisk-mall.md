@@ -13,15 +13,16 @@ about: Använd denna mallen för att rapportera oblockerat innehåll eller felak
 
 ### Länk till sidan
 
-`[Minst en webbadress till en webbsida där problemet uppstår är **obligatoriskt**. Baklängescitationstecknen kring webbadresserna är viktiga, det förhindrar att webbadressen går att klicka på. Varna med "NSFW" när innehållet på sidan är olämpligt för arbetsplatser.]`
+<!-- Minst en webbadress till en webbsida där problemet uppstår är **obligatoriskt**. Baklängescitationstecknen kring länkarna är viktiga, det förhindrar att länken går att klicka på. Varna med "NSFW" när innehållet på sidan är olämpligt för arbetsplatser. -->
+`Länk: [här]`
 
 ### Beskriv problemet
 
-[Var så tydlig som möjligt]
+<!-- Var så tydlig som möjligt -->
 
 ### Skärmdump(ar)
 
-[När problemet är svårt att beskriva i text.]
+<!-- När problemet är svårt att beskriva i text. -->
 
 ### Versioner
 
@@ -30,4 +31,4 @@ about: Använd denna mallen för att rapportera oblockerat innehåll eller felak
 
 ### Inställningar
 
-- [Lista alla ändringar du gjort till uBlock Origins originalinställningar.]
+<!-- Lista alla ändringar du gjort till uBlock Origins originalinställningar. -->

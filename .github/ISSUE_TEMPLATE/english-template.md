@@ -14,15 +14,16 @@ about: Use this template to report unblocked content or incorrectly removed cont
 
 ### URL(s) where the issue occurs
 
-`[At least one URL for a web page where the clearly described issue occurs is **mandatory**. The backticks surrounding the URLs is important, it prevents the URL from being clickable. Warn with "NSFW" where applicable.]`
+<!-- At least one URL for a web page where the clearly described issue occurs is **mandatory**. The backticks surrounding the URLs is important, it prevents the URL from being clickable. Warn with "NSFW" where applicable. -->
+`Link: [here]`
 
 ### Describe the issue
 
-[Be as clear as possible: nobody can read mind, and nobody is looking at your issue over your shoulder.]
+<!-- Be as clear as possible: nobody can read mind, and nobody is looking at your issue over your shoulder. -->
 
 ### Screenshot(s)
 
-[Screenshot(s) for difficult to describe visual issues.]
+<!-- Screenshot(s) for difficult to describe visual issues. -->
 
 ### Versions
 
@@ -31,4 +32,4 @@ about: Use this template to report unblocked content or incorrectly removed cont
 
 ### Settings
 
-- [List here all the changes you made to uBO's default settings]
+<!-- List here all the changes you made to uBO's default settings -->
