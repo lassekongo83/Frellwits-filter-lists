@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2020-08-16 08:35:59 CEST
+! Last modified: 2020-08-17 08:54:26 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -66,8 +66,8 @@
 ###cookiejar
 ###cookielawwarning
 ###cookieMsgBlock
-###cookieNotice
 ###CookieNotice
+###cookieNotice
 ###cookies-acceptance .alert.bottom
 ###cookiesInfo
 ###dialog-eu-cookie-law
@@ -198,6 +198,7 @@
 ##ul.adsmodern
 &log_ad$image,domain=yelp.se
 &type=load_offers$xmlhttprequest,domain=illvet.se|pctidningen.se
+&utm_campaign=$subdocument
 *$csp=script-src 'none',domain=svtt.se|ssvd.se|exressen.se|eexpressen.se|sskatteverket.se|aatg.se|atgg.se
 -ads.$image,domain=svenskbyggtidning.se
 -banner-$image,domain=litteraturmagazinet.se
@@ -1167,6 +1168,7 @@ businessclass.se##.reveal-modal-bg
 businessclass.se,effektmagasin.se,live.aftonbladet.se,spela.se,svenskorientering.se##.advert
 bussmagasinet.se###page > div[id]:not([class])
 bussmagasinet.se###titlebanner
+bussmagasinet.se##a.gofollow[data-track]
 buzzter.se###lock
 byemilia.nu##.category-sponsrade-inlagg
 byggahus.se###wallpaper-ad-container
@@ -2222,7 +2224,6 @@ yougov.se##.cookie-confirm
 ||apsislead.com^$third-party
 ||ascontentcloud.com^$third-party
 ||assets.expressen.se/bundles/advertisement-dfp$script
-||assets.expressen.se/bundles/analytics$script
 ||assets.pinterest.com/js/pinit$third-party
 ||aswpsdkus.com^*/ua-sdk.$script
 ||atgplay.se^*/stat$xmlhttprequest
@@ -2238,6 +2239,7 @@ yougov.se##.cookie-confirm
 ||bettersport.se^
 ||bettingstugan.se^$third-party
 ||biddercore.io^$third-party
+||bilweb.se^$third-party
 ||biowebb-data.*.amazonaws
 ||bit.ly^$subdocument,domain=jawcloud.co
 ||bitcoin-systems.com/script.js$script
