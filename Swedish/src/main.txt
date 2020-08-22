@@ -359,6 +359,7 @@
 /mp_emediate/inc/annons.html
 /adn/adn-setup.$script
 /omniture/s_code.js$script,domain=~atgplay.se
+/OneSignalSDKWorker$script
 /orion/loada$script
 /permutive-async.js$script
 /phaser-ads.min.js$script
@@ -946,7 +947,7 @@ dekra.de#@##cookie-banner
 ||connect.getflowbox.com^$third-party,domain=aikfotboll.se|farjestadbk.se|svenskaturistforeningen.se
 ||consent.cmp.oath.com^$script,domain=alltomstockholm.se|mitti.se
 ||consent.cookiebot.com^$third-party,domain=etc.se|goteborgdirekt.se|hoglandsnytt.se|itaboutdoor.se|kingsizemag.se|ng.se|skeppsbrons.se|stockholmdirekt.se|swedroid.se|totallyorebro.se|totallystockholm.se|villalivet.se|wesafe.se|tankesport.se|smartsenior.se|vasterastidning.se|clipmyhorse.tv|bax-shop.se|kurera.se|norrahalland.se|upplysning.se|ratsit.se
-||cookiepro.com^$third-party,domain=sd.se|birthday.se|friendsarena.se|hastnet.se
+||cookiepro.com^$third-party,domain=sd.se|birthday.se|friendsarena.se|hastnet.se|aktiespararna.se
 ||d2wy8f7a9ursnm.cloudfront.net/bugsnag$script,domain=expressen.se|bioenergitidningen.se
 ||evidon.com^$third-party,domain=morningstar.se|spela.se|downdetector.se|mtv.se
 ||execute-api.eu-west-1.amazonaws.com/*/event$xmlhttprequest,domain=forum.hallon.se
@@ -3134,12 +3135,15 @@ byggipedia.se##.ai_widget
 byggipedia.se##*:style(user-select: text !important;)
 studocu.com##.new-viewer-wrapper .p2hv:style(pointer-events: auto !important;)
 studocu.com###page-container:style(user-select: text !important;)
+studocu.com##footer + div:not([class])
 posh24.se##.bannerArea
 uppsatser.se##li[style*="min-height:90px"]
 uppsatser.se##.spahotels
 xn--lnforum-exa.se##.LFRBox
 maipenrai.se###elGuestTerms
 maipenrai.se##[data-nbenhadv]
+maipenrai.se##.cWidgetContainer > ul > li:first-child
+maipenrai.se##article + div[align="center"]
 /theme/set_resources$script,domain=maipenrai.se
 tandlakartidningen.se###panoramaad
 aktiespararna.se##.analysguiden-promote-articles
@@ -3550,3 +3554,5 @@ customerinsider.se##figure > a[target="_self"]
 radarbox.com##+js(set, ads_enabled, true)
 motorblogofsweden.se##.sidebar .textwidget
 motorblogofsweden.se##[aria-label^="banner"]
+netflixguiden.se##.a-instream
+||netflixguiden.se^$csp=worker-src 'none'
