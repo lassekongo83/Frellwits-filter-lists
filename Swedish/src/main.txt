@@ -729,6 +729,7 @@
 ###sp-cookie-consent
 ###trn_cookie_holder
 ##.ad-single-news:not(body):not(html)
+##.annonseArticle:not(body):not(html)
 ##.c-cookie-popup:not(body):not(html)
 ##.cookieAlert:not(body):not(html)
 ##.CookieConsentBanner:not(body):not(html)
@@ -1015,10 +1016,9 @@ mobilanyheter.net,villalivet.se,lchfarkivet.se##+js(set, MonsterInsights, undefi
 ||biowebb-data.s3.amazonaws.com^*/ad_loader$script,important
 ||munchkin.marketo.net/munchkin.js$script,important,domain=yougov.se|hbl.fi|vastranyland.fi|ostnyland.fi|hangotidningen.fi
 /wp-content/plugins/ad-inserter/includes/*$important,domain=byggipedia.se|fysikstugan.se|asterixia.se
-||cdn.segment.com/analytics.js$script,important,domain=studocu.com
+||cdn.segment.com/analytics.js$script,important,domain=studocu.com|se.trustpilot.com|dagen.se
 /wp-content/plugins/popup-builder-$script,important,domain=mmabetz.se
 ||amazon-adsystem.com^$3p,important,domain=bilresaieuropa.se
-||cdn.segment.com/analytics.js$important,domain=se.trustpilot.com
 
 ! Unwanted Wordpress plugins and bloat
 /plugins/ab_appnexus_ads/*
@@ -3108,7 +3108,7 @@ caminomagasin.se##.block--extern-annons
 bussmagasinet.se###page > div[id]:not([class])
 bussmagasinet.se###titlebanner
 bussmagasinet.se##a.gofollow[data-track]
-/magnific-popup/*$domain=shortcut.se
+/magnific-popup$domain=shortcut.se
 shortcut.se##.annons-block
 shortcut.se##.layout-advertisement
 shortcut.se##.employer:has(.sponsored)
@@ -3556,3 +3556,4 @@ motorblogofsweden.se##.sidebar .textwidget
 motorblogofsweden.se##[aria-label^="banner"]
 netflixguiden.se##.a-instream
 ||netflixguiden.se^$csp=worker-src 'none'
+jula.se##.g-cookie
