@@ -956,6 +956,7 @@ dekra.de#@##cookie-banner
 ||mailerlite.com^$third-party,domain=svenskamagasinet.nu
 ||mailmunch.co^$third-party,domain=affarsstaden.se|enkelteknik.se|villalivet.se|kingsizemag.se
 ||marketingautomation.services^$third-party,domain=wesafe.se
+||onetrust.com^$third-party,domain=yougov.se
 ||pji.nu^$third-party,domain=99mac.se|feber.se|fz.se|idg.se|kamerabild.se|minhembio.com|mobil.se|nordichardware.se|surfa.se|sweclockers.com|viivilla.se|amazonaws.com
 ||prisjakt-a.akamaihd.net^$third-party,domain=pcgamer.se
 ||prisjakt-a.akamaized.net^$third-party,domain=99mac.se|feber.se|fz.se|idg.se|kamerabild.se|minhembio.com|mobil.se|nordichardware.se|sweclockers.com|viivilla.se
@@ -1016,7 +1017,7 @@ mobilanyheter.net,villalivet.se,lchfarkivet.se##+js(set, MonsterInsights, undefi
 ||biowebb-data.s3.amazonaws.com^*/ad_loader$script,important
 ||munchkin.marketo.net/munchkin.js$script,important,domain=yougov.se|hbl.fi|vastranyland.fi|ostnyland.fi|hangotidningen.fi
 /wp-content/plugins/ad-inserter/includes/*$important,domain=byggipedia.se|fysikstugan.se|asterixia.se
-||cdn.segment.com/analytics.js$script,important,domain=studocu.com|se.trustpilot.com|dagen.se
+||cdn.segment.com/analytics.js$script,important,domain=studocu.com|se.trustpilot.com|dagen.se|tholin.se
 /wp-content/plugins/popup-builder-$script,important,domain=mmabetz.se
 ||amazon-adsystem.com^$3p,important,domain=bilresaieuropa.se
 
@@ -1925,6 +1926,7 @@ cafe.se##.bg-white:has(.egmont-spotlights)
 cafe.se,kingmagazine.se##.card-partner
 cafe.se,kingmagazine.se##.partner
 cafe.se##a[href*="/cafe?kampanj"]
+/omslagsexport/*$image,domain=autolife.se
 
 ! FRIA
 fria.nu,goteborgsfria.se,friatidningen.se,landetsfria.se,stockholmsfria.se,sesam.nu##[class*="annonser"]
@@ -3023,6 +3025,7 @@ hallakonsument.se,handels.se,megafonen.nu##.cookie-information
 ||akademiskahus.se/AddThis?$script
 akademiskahus.se###cookieConsent
 8sidor.se##.cookie-accept
+||itks.se/p/$domain=8sidor.se
 ||cykla.se/api/banners$xmlhttprequest
 ||nyckelspel.se/images/adblocker-leaderboard.$image
 megaspel.se##[class*="advertisement"]
@@ -3031,28 +3034,24 @@ megaspel.se##button[class][title="Show CMP"]
 @@||game-cdn.poki.com^$subdocument
 ||a.poki.com/observer/t.js
 ||game-cdn.poki.com^*/poki-ads.$script
-rocknytt.net##.elementor-post__thumbnail:style(padding-bottom: 0 !important;)
 rocknytt.net##[data-widget_type*="bnnrwidgets"]
+rocknytt.net##a[href*="/annons/"]
 /www/images/*$image,domain=elektronikforumet.com
 elektronikforumet.com##td > a[href*="bildelar"][target="_blank"]
 /skyskrapa.$image,domain=it-finans.se|it-halsa.se|it-kanalen.se|it-pedagogen.se|it-retail.se
 handbollskanalen.se##.hb-adlabel
 handbollskanalen.se##[id^="hb-"]
 handbollskanalen.se##.td-pulldown-size:has-text(/^i samarbete med/i):upward(3).td_block_widget
+handbollskanalen.se##.td-block-title-wrap:has-text(/^i samarbete med/i) + .td_block_inner:has(a[href*="/annons/"])
 ||handbollskanalen.se^*/esmg/se-$script
 skanetrafiken2020.se,fastighetstidningen.se###cookie-consent-block
 dagensjuridik.se##+js(acis, ox_u)
 dagensjuridik.se##.card--muted:has(strong:has-text(/^senaste nytt från våra partners/i))
-||tracker.yougov.com^$domain=yougov.se
-||yougov.se/_partner/request.js$script
-yougov.se##.cookie-confirm
 bilweb.se###cookie_alert
-/omslagsexport/*$image,domain=autolife.se
 foretagsverige.se,forskningsverige.se,motorbibeln.se,dinlivsstil.nu,hallbarhetsverige.se,tillvaxtsverige.se,grillbibeln.se,kampenmotcancer.se##+js(acis, showConsentDlg)
 foretagsverige.se,forskningsverige.se,motorbibeln.se,dinlivsstil.nu,hallbarhetsverige.se,tillvaxtsverige.se,grillbibeln.se,kampenmotcancer.se##.vicky-post-whitebox:has(.vicky-whitebox-label-text:has-text(/spons/i))
-/atomic-blocks/*$script,domain=foretagsverige.se|forskningsverige.se|motorbibeln.se|dinlivsstil.nu|hallbarhetsverige.se|tillvaxtsverige.se|grillbibeln.se|kampenmotcancer.se
+/atomic-blocks$script,domain=foretagsverige.se|forskningsverige.se|motorbibeln.se|dinlivsstil.nu|hallbarhetsverige.se|tillvaxtsverige.se|grillbibeln.se|kampenmotcancer.se
 ||js.hs-scripts.com^$third-party,domain=tholin.se
-||cdn.segment.com^$3p,important,domain=tholin.se
 alltomwhisky.se##.topmost-banner
 framtid.se###siteflash
 artbannersplus$subdocument,domain=www.elinor.se

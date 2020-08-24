@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2020-08-23 15:29:21 CEST
+! Last modified: 2020-08-24 08:18:09 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -66,8 +66,8 @@
 ###cookiejar
 ###cookielawwarning
 ###cookieMsgBlock
-###cookieNotice
 ###CookieNotice
+###cookieNotice
 ###cookies-acceptance .alert.bottom
 ###cookiesInfo
 ###dialog-eu-cookie-law
@@ -309,7 +309,7 @@
 /assets/pb-$script,domain=weheartit.com
 /ast.js$domain=live.aftonbladet.se
 /at-internet-desktop.js$script,domain=klart.se
-/atomic-blocks/*$script,domain=dinlivsstil.nu|foretagsverige.se|forskningsverige.se|grillbibeln.se|hallbarhetsverige.se|kampenmotcancer.se|motorbibeln.se|tillvaxtsverige.se
+/atomic-blocks$script,domain=dinlivsstil.nu|foretagsverige.se|forskningsverige.se|grillbibeln.se|hallbarhetsverige.se|kampenmotcancer.se|motorbibeln.se|tillvaxtsverige.se
 /AudienceTarget$script,domain=morningstar.se
 /autonytt-theme/js/blogger.$script,domain=autonytt.se
 /avia-snippet-cookieconsent.$script
@@ -1925,6 +1925,7 @@ revisionsvarlden.se##a[onclick*="banner"]
 ridsport.se##.svrf-block__banner
 ridsport.se##.svrf__sticky-ad
 rocknytt.net##[data-widget_type*="bnnrwidgets"]
+rocknytt.net##a[href*="/annons/"]
 rumhemma.se###aside > .html-widget
 rumhemma.se###aside > div:last-child
 rumhemma.se###top
@@ -2167,7 +2168,6 @@ webradio.dbmedia.se##.marquee
 xn--lnforum-exa.se##.LFRBox
 yelp.se##[data-ad-placement="above_biz_review"]
 yelp.se##[data-ga-category="biz page ad"]
-yougov.se##.cookie-confirm
 ||*-ads.omni.news^
 ||10bet.com^$third-party
 ||123on.com/images/pixel.$image
@@ -2498,6 +2498,7 @@ yougov.se##.cookie-confirm
 ||interactiveads.ai^$third-party
 ||investerarbrevet.se^$third-party
 ||inxy.run^
+||itks.se/p/$domain=8sidor.se
 ||iubenda.com/cookie$script,subdocument
 ||izooto.com^$third-party
 ||jajja.com^$third-party
@@ -2619,6 +2620,7 @@ yougov.se##.cookie-confirm
 ||nyckelspel.se/images/adblocker-leaderboard.$image
 ||oas.*.se/om/$script
 ||obj.fotosidan.se/obj/pa/$image
+||onetrust.com^$third-party,domain=yougov.se
 ||opinionstage.com/assets/autoengage.$script
 ||optnmnstr.com^$third-party
 ||opulens.se^$csp=worker-src 'none'
@@ -2767,7 +2769,6 @@ yougov.se##.cookie-confirm
 ||tr.apsisforms.com^$third-party
 ||track.cpa.tpgrn.com^
 ||track.intersport.se^$xmlhttprequest
-||tracker.yougov.com^$domain=yougov.se
 ||tracking.bonnier.news^$third-party
 ||trafikradion.nu/reklam$image
 ||trafikstyrelsen.com^
@@ -2828,7 +2829,6 @@ yougov.se##.cookie-confirm
 ||yieldbird.com^$third-party
 ||yieldwrapper.com^$third-party
 ||yle.fi/initAdobeAnalytics.$script
-||yougov.se/_partner/request.js$script
 ||youplay.se^$third-party,domain=dayviews.com|emocore.se|extraextra.se|familjeliv.se|hamsterpaj.net|kamrat.com|recept.se
 ||yoursecurecheckout1.com^
 ||ziffstatic.com^$third-party,domain=downdetector.se
