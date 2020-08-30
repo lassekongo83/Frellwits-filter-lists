@@ -752,6 +752,7 @@
 ##.cc-grower:not(body):not(html)
 ##.cc-banner.cc-bottom:not(body):not(html)
 ##.CMAC_AdChangerWidget:not(body):not(html)
+##.comment-ad_wrapper:not(body):not(html)
 ##.cookieConsent:not(body):not(html)
 ##.cookiebar:not(body):not(html)
 ##.cookies-area:not(body):not(html)
@@ -1120,7 +1121,7 @@ mobilanyheter.net,villalivet.se,lchfarkivet.se##+js(set, MonsterInsights, undefi
 /plugins/popup-by-supsystic$domain=exakt24.se
 /plugins/popup-$domain=sverige.nu
 /plugins/pum-$script,domain=snowmobile.se
-/plugins/quantcast-choice/*$script,domain=muscles.se|kimura.se
+/plugins/quantcast-choice/*$script,domain=muscles.se|kimura.se|news55.se
 /plugins/random-banner/*
 /plugins/sassy-social-share/*$script
 /plugins/sdcookie-warning/*
@@ -2168,8 +2169,6 @@ swefilmer.*###oscuridad
 ||jawcloud.co^$csp=script-src 'self' 'unsafe-inline' 'unsafe-eval' blob: data: *.jawcloud.co upvtt.com *.gstatic.com;frame-src 'self'
 ||jawcloud.co/*.gif$image
 jawcloud.co##.loloba
-nxload.com##+js(set, adb, 0)
-||nxload.com^$csp=script-src 'self' 'unsafe-inline' 'unsafe-eval' code.jquery.com data: blob:
 ||i.ibb.co/qRBYR98/ban1.png
 
 ! Various annoyances
@@ -2545,9 +2544,9 @@ webradio.dbmedia.se##.marquee
 @@||identity.mparticle.com^*/login$domain=dplay.se
 ||imasdk.googleapis.com/pal/sdkloader/pal.js$script,redirect=noop.js,domain=dplay.se
 dplay.se##[class^="notificationArea"]
-news55.se##.footer_popup
-news55.se##.news-feed-article[data-n55-theme="n55-theme--native-articles"]
-news55.se##.page-sidebar > section > a.teaser__link[target="_blank"]
+news55.se###newsletter-popup
+news55.se##.is-native
+news55.se##.after-article-widget
 businessclass.se##.reveal-modal-bg
 businessclass.se###bcpop
 businessclass.se##+js(acis, $, AdBlockDetector)
@@ -2565,6 +2564,7 @@ spray.se##.accept-cookies-container
 spray.se##[class*="article-casino"]
 spray.se##.column-left > .article-partial
 spray.se##body:style(-webkit-user-select: text !important; user-select: text !important;)
+@@||cdn.yieldwrapper.com/yieldwrapper.min.js$script,domain=spray.se
 booli.se###app > div:last-child
 /adsLoader.$script,~third-party,domain=booli.se
 ||booli.se/ladda-annons
