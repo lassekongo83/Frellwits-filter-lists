@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2020-08-31 11:08:56 CEST
+! Last modified: 2020-08-31 12:29:26 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -243,6 +243,7 @@
 .se/wdg/tracking
 .se/wp-content/banners/
 .se/xhr/add-impression/
+.TB.min.js$domain=kokaihop.se
 /*Fokus_360x300px_animate*.gif$image,domain=fokus.se
 /250x360/$image,domain=marsta.nu
 /280x240/$image,domain=rumhemma.se
@@ -807,6 +808,7 @@
 /webbresurser/banner/*
 /widget.hittarecept.se/blogcounter$image,script
 /wp-admin/admin-ajax.php?action=addthis_global_options$script,domain=expressen.se
+/wp-banner-manager.min.js$domain=branschkoll.se
 /wp-content/js/infinite-ads.$script
 /wp-content/plugins/addthis/*
 /wp-content/plugins/easy-social-share-buttons$script
@@ -1701,8 +1703,10 @@ klart.se##.cookie-disclaimer
 klart.se##.gdpr-onboarding-container
 klart.se##.sponsor-message
 knulla.se###cookiescript_injected
+kokaihop.se###mat-se-buy-widget
 kokaihop.se###popupStatus
 kokaihop.se##.kng-cookie-info-bar
+kokaihop.se##.share-and-add-parent
 kokaihop.se,ratsit.se##.modal-backdrop
 kokaihop.se,tjanstebilen.se##.modal
 koket.se###react-newsletter-overlay
@@ -1722,6 +1726,7 @@ kungalvsposten.se,kungsbackaposten.se,lokaltidningensto.se,molndalsposten.se##.n
 kungalvsposten.se,kungsbackaposten.se,lokaltidningensto.se,molndalsposten.se##.wp-slot-layout-article-native
 kungalvsposten.se,kungsbackaposten.se,lokaltidningensto.se,molndalsposten.se##[data-html*="ad-container"]
 kurera.se##.annonswrapper
+kurera.se##.kurera-register-newsletter-popup
 kurslitteratur.se##.ad-section
 kvalitetsmagasinet.se,miljo-utveckling.se,telekomidag.se,vdtidningen.se###subscribe_splash
 kvartal.se##.email-popup-wrapper
@@ -2639,6 +2644,7 @@ yelp.se##[data-ga-category="biz page ad"]
 ||pixel.playbuzz.com^$xmlhttprequest
 ||pji.nu^$third-party,domain=99mac.se|amazonaws.com|feber.se|fz.se|idg.se|kamerabild.se|minhembio.com|mobil.se|nordichardware.se|surfa.se|sweclockers.com|viivilla.se
 ||platform.linkedin.com^$third-party
+||platform.tumblr.com/*/share.js$third-party
 ||platssajten.se^$third-party
 ||play.etc.se/sw.js$script
 ||pliing.com^$third-party
