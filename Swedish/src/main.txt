@@ -947,7 +947,7 @@ dekra.de#@##cookie-banner
 ||aff.bstatic.com^$domain=travelgrip.se
 ||apprl.com/embed/$subdocument,domain=forni.se|majanilssonlindelof.com|metromode.se|petratungarden.se|trendenser.se
 ||bstatic.com/static/affiliate$third-party
-||cdn.cookielaw.org^$script,domain=cartoonnetwork.se|foxtv.se
+||cdn.cookielaw.org^$script,domain=cartoonnetwork.se|foxtv.se|nvp.se
 ||cdn.jsdelivr.net/npm/search-insights$script,domain=forum.hallon.se
 ||cookieinformation.com^$third-party,domain=valuta.se|iform.se|digitalfotoforalla.se|natgeo.se|popularhistoria.se|aktivtraning.se|pctidningen.se|militarhistoria.se|viivilla.se|varldenshistoria.se|motormagasinet.se|food-supply.se|skyddosakerhet.se|dagenshandel.se|plastnet.se|habit.se|woodnet.se|foodnet.se|transportnet.se|processnet.se|packnet.se|verkstaderna.se|medtechmagazine.se|recyclingnet.se|rt-forum.se|kemivarldenbiotech.se|uochd.se|lifesciencesweden.se|fri-kopenskap.se|cleannet.se|entreprenad.com
 ||connect.getflowbox.com^$third-party,domain=aikfotboll.se|farjestadbk.se|svenskaturistforeningen.se
@@ -1263,13 +1263,14 @@ idg.se##[class^="newsletterFormContainer"]
 idg.se##.articleBodyText + .lazyloaded > .cms-target
 idg.se##a[data-click-settings*="Article Outbound Links"]:has(strong:has-text(/annons/i))
 idg.se##.toolbar.prisjakt.toolbarSticky
+idg.se##.idgmsg__box
 forum.studio.se##li[data-blocktitle="Anpassade Block"]:has(.sms-marking:has-text(Annons:))
 upphandling24.se##.type-partnerartikel
 upphandling24.se##.widget:has(.widget-title:has-text(/^annons/i))
 ! Attempt to make their gdpr choice less annoying. Don't want to block it as a limbo choice will disable 3rd party videos and embeds.
 !#if !env_mobile
 forum.macworld.se,forum.studio.se,idg.se##.idgcp__modal--in .idgcp__layer:style(background: none !important;)
-forum.macworld.se,forum.studio.se,idg.se##.idgcp__layer--active, .idgcp__layer--active body:style(overflow: auto !important;)
+forum.macworld.se,forum.studio.se,idg.se##.idgcp__layer--active, .idgcp__layer--active body:style(overflow: unset !important;)
 forum.macworld.se,forum.studio.se,idg.se##.idgcp__layer:style(z-index: 0 !important;)
 !#endif
 
@@ -1407,7 +1408,7 @@ www.aftonbladet.se,www.svd.se##+js(nosiif, e.reportVisibility())
 /d-footer.min.$script,domain=aftonbladet.se
 omni.se##.article--sponsored
 omni.se##.resource--sponsored
-@@||sdk.pulse.schibsted.com^$domain=omni.se
+@@||sdk.pulse.schibsted.com^$domain=omni.se|omniekonomi.se
 ||*-ads.omni.news^
 tv.nu##a[href*="adform.net"]
 tv.nu##.ad-mega--container
@@ -2460,7 +2461,7 @@ kit.se##.box--newsletter
 kit.se##.post-share
 kit.se##kit-cookiebar
 ||brain.kit.se^$xmlhttprequest,image
-||brain.internetkunskap.se^$xmlhttprequest,image
+/iis-mailchimp$domain=internetkunskap.se|internetstiftelsen.se
 branschkoll.se##.advert-widget
 /wp-banner-manager.min.js$domain=branschkoll.se
 /packs/consent.$domain=hemnet.se

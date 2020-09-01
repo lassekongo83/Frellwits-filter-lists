@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2020-09-01 06:45:41 CEST
+! Last modified: 2020-09-01 10:05:41 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -433,6 +433,7 @@
 /i10c@p1/*$domain=bax-shop.se|digikey.se|justfab.se|tui.se
 /iab/iab.js$script
 /iframeadvloader.$script
+/iis-mailchimp$domain=internetkunskap.se|internetstiftelsen.se
 /img/allalanse$image,domain=ekonominyheter.se
 /img/banklan/*$image,domain=ekonominyheter.se
 /img/bettingstugan.$image
@@ -926,7 +927,7 @@
 @@||remus.garaget.org/www/delivery/$script,~third-party,xmlhttprequest
 @@||samnytt.se^$generichide
 @@||sdk.pulse.schibsted.com/loader.min.js$domain=special.aftonbladet.se
-@@||sdk.pulse.schibsted.com^$domain=omni.se
+@@||sdk.pulse.schibsted.com^$domain=omni.se|omniekonomi.se
 @@||stockblogs.se^$generichide
 @@||stromstadstidning.se^$generichide
 @@||tidningenhalsa.se^$generichide
@@ -1642,6 +1643,7 @@ husbil.se,husvagn.se,karlskrona.com,karlstad.com,noje.se,stockholm.com##.ui-opti
 hypeline.se###herobanner
 icagruppen.se##.cookieInfo
 idg.se##.articleBodyText + .lazyloaded > .cms-target
+idg.se##.idgmsg__box
 idg.se##.nextArticleSp
 idg.se##.prisjaktCompare
 idg.se##.pryltorget
@@ -2275,7 +2277,6 @@ yelp.se##[data-ga-category="biz page ad"]
 ||booli.se/ladda-annons
 ||borsvarlden-banners.azurewebsites.net^
 ||borsvarlden.com/js/cookie-notice.$script
-||brain.internetkunskap.se^$image,xmlhttprequest
 ||brain.kit.se^$image,xmlhttprequest
 ||brandy.bonniernewslifestyle.se^$third-party
 ||breakit.se/accl$script
@@ -2302,7 +2303,7 @@ yelp.se##[data-ga-category="biz page ad"]
 ||cdn.advisible.com/accl$script
 ||cdn.ampproject.org^$third-party,domain=piraja.se
 ||cdn.axiell.com^*/cookie-disclaimer.$script
-||cdn.cookielaw.org^$script,domain=cartoonnetwork.se|foxtv.se
+||cdn.cookielaw.org^$script,domain=cartoonnetwork.se|foxtv.se|nvp.se
 ||cdn.iubenda.com/iubenda.$script
 ||cdn.jsdelivr.net/npm/search-insights$script,domain=forum.hallon.se
 ||cdn.livechatinc.com/tracking.$script
