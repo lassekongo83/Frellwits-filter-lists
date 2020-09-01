@@ -1202,7 +1202,6 @@ digikey.se,bax-shop.se,justfab.se,tui.se##^script:has-text(INSTART.Init)
 newsner.com,humorbibeln.se,sportbibeln.se,ettgottskratt.se,sportpanelen.se,kvalitetsmagasinet.se,bandyfeber.com,telekomidag.se,miljo-utveckling.se,vdtidningen.se,dagensanalys.se,ladok.se,binero.se,rikatillsammans.se,zeinaskitchen.se,dinbyggare.se,kvartal.se,trafiksakerhet.se,i-chalmers.se,boktugg.se,mobilanyheter.net,lchfarkivet.se##^script:has-text(mi_track_user)
 newsner.com,humorbibeln.se,sportbibeln.se,ettgottskratt.se,sportpanelen.se,kvalitetsmagasinet.se,bandyfeber.com,telekomidag.se,miljo-utveckling.se,vdtidningen.se,dagensanalys.se,ladok.se,binero.se,rikatillsammans.se,zeinaskitchen.se,dinbyggare.se,kvartal.se,trafiksakerhet.se,i-chalmers.se,boktugg.se,mobilanyheter.net,lchfarkivet.se##^script:has-text(monsterinsights_frontend)
 jawcloud.co,nyafilmer.*##^script:has-text(_Hasync)
-tyda.se,netflixguiden.se##^script:has-text(googlefcPresent)
 nyadagbladet.se,fysikstugan.se,thorengruppen.se,brpsystems.se,pppress.se,utslappsratt.se,newsvoice.se,historiskahem.se,bastad.se,gdpr.se,heleneholmsif.se,trafikskola.se,melodifestivalklubben.se##^script:has-text(em_track_user)
 nyadagbladet.se,fysikstugan.se,thorengruppen.se,brpsystems.se,pppress.se,utslappsratt.se,newsvoice.se,historiskahem.se,bastad.se,gdpr.se,heleneholmsif.se,trafikskola.se,melodifestivalklubben.se##^script:has-text(exactmetrics_frontend)
 nyadagbladet.se##^script:has-text(exactmetrics_scroll_tracking_load)
@@ -1232,8 +1231,6 @@ lchfarkivet.se##+js(acis, create_ezolpl)
 lchfarkivet.se##+js(acis, ezCanEngagePage)
 lchfarkivet.se##+js(acis, cmpCookies)
 lchfarkivet.se##+js(acis, ezCMP)
-@@||netflixguiden.se^$generichide
-netflixguiden.se##[id^="div-gpt-ad"], .c-ad
 !#endif
 
 ! Firefox mobile filters
@@ -1729,11 +1726,6 @@ affarsvarlden.se##.cookies-wrap
 ||lifeofsvea.bbvms.com/b/$script
 @@||cdn.bluebillywig.com^*/components/admanager.js$script,domain=nyheter24.se|modette.se
 @@||2mdn.net/instream/html5/ima3.js$script,domain=nyheter24.se|modette.se
-!#if env_chromium
-nyheter24.se,tyda.se###accept-cookies-div
-@@||nyheter24.se^$ghide
-@@||tyda.se^$ghide
-!#endif
 nyheter24.se##+js(acis, ga, ypcomm)
 nyheter24.se##+js(acis, check_ab)
 nyheter24.se##[id^="article"]:has(.native_header)
@@ -1815,7 +1807,6 @@ filmtipset.se###topslider-wrapper + .container > .sidebar
 filmtipset.se##.row.news:has(em:has-text(/sponsrad/i))
 filmtipset.se##.row.news > div[style^="border"]:last-of-type
 ||statics.lifeofsvea.se/production/borka/*.min.js$script
-||contributor.google.com^*/loader.js$script,domain=tyda.se
 vimedbarn.se##.annonsinlagg
 loppi.se##.page__ad
 loppi.se##.entry__teaser--promotion
@@ -2205,6 +2196,8 @@ youplay.se##+js(aeld, loadstart)
 @@/scrollReveal$script,domain=explorecurate.com
 ! Useless preloaders
 tonyhatefnejad.se,soja.se,alltomhif.se,restaurangilse.se,lyckasmedbakning.nu,rikakvinnor.se##.preloader
+! google fc
+netflixguiden.se,feber.se,tjock.se##+js(nostif, f.parentNode.removeChild(f), 100)
 
 ! ÖVRIGT
 nordichardware.se##.td_block_wrap:has(span:has-text(/sponsrat/i))

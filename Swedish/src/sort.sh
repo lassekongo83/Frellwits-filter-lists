@@ -10,7 +10,7 @@ main_temp='output/main-temp.txt'
 # browser specific
 firefox='output/firefox.txt'
 not_firefox='output/not_firefox.txt'
-chromium='output/chromium.txt'
+#chromium='output/chromium.txt'
 #not_chromium='output/not_chromium.txt'
 mobile='output/mobile.txt'
 not_mobile='output/not_mobile.txt'
@@ -27,7 +27,7 @@ ubo_s='script:inject|#\+js\('
 # Extract browser and extension specific filters if there are any
 sed -n '/^!#if env_firefox/,/^!#endif/p' $main > $firefox
 sed -n '/^!#if !env_firefox/,/^!#endif/p' $main > $not_firefox
-sed -n '/^!#if env_chromium/,/^!#endif/p' $main > $chromium
+#sed -n '/^!#if env_chromium/,/^!#endif/p' $main > $chromium
 #sed -n '/^!#if !env_chromium/,/^!#endif/p' $main > $not_chromium
 sed -n '/^!#if env_mobile/,/^!#endif/p' $main > $mobile
 sed -n '/^!#if !env_mobile/,/^!#endif/p' $main > $not_mobile
@@ -38,7 +38,7 @@ sleep .5
 sed -n '/^!#if/,/^!#endif/!p' $main > $main_temp
 sed -n -i '/^!/!p' $firefox
 sed -n -i '/^!/!p' $not_firefox
-sed -n -i '/^!/!p' $chromium
+#sed -n -i '/^!/!p' $chromium
 #sed -n -i '/^!/!p' $not_chromium
 sed -n -i '/^!/!p' $mobile
 sed -n -i '/^!/!p' $not_mobile
@@ -76,9 +76,6 @@ cat > output/headers.txt <<EOF
 !#if !env_firefox
 !#include Swedish/not_firefox.txt
 !#endif
-!#if env_chromium
-!#include Swedish/chromium.txt
-!#endif
 !#if env_mobile
 !#include Swedish/mobile.txt
 !#endif
@@ -95,7 +92,7 @@ cat output/headers.txt $not_extended > ../../Frellwits-Swedish-Filter.txt
 cat $extended > ../swe-ubo-nano-filters.txt
 cat $firefox > ../firefox.txt
 cat $not_firefox > ../not_firefox.txt
-cat $chromium > ../chromium.txt
+#cat $chromium > ../chromium.txt
 #cat $not_chromium > ../not_chromium.txt
 cat $mobile > ../mobile.txt
 cat $not_mobile > ../not_mobile.txt
