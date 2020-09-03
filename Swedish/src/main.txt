@@ -1232,6 +1232,8 @@ lchfarkivet.se##+js(acis, create_ezolpl)
 lchfarkivet.se##+js(acis, ezCanEngagePage)
 lchfarkivet.se##+js(acis, cmpCookies)
 lchfarkivet.se##+js(acis, ezCMP)
+proffs.se##*::-webkit-scrollbar:style(display: unset !important;)
+proffs.se##*::-webkit-scrollbar-thumb:style(background: #5e5e5e !important; border: 64px none #ffffff !important; border-radius: 0px !important;)
 !#endif
 
 ! Firefox mobile filters
@@ -1406,7 +1408,7 @@ www.aftonbladet.se,www.svd.se##+js(nosiif, e.reportVisibility())
 /d-footer.min.$script,domain=aftonbladet.se
 omni.se##.article--sponsored
 omni.se##.resource--sponsored
-@@||sdk.pulse.schibsted.com^$domain=omni.se|omniekonomi.se
+@@/pulse.min.js$domain=omni.se|omniekonomi.se
 ||*-ads.omni.news^
 tv.nu##a[href*="adform.net"]
 tv.nu##.ad-mega--container
@@ -1419,7 +1421,7 @@ blocket.se##body.modal_open, html.modal_open:style(overflow: auto !important;)
 blocket.se###placement_panorama
 blocket.se##.blocket-placement
 blocket.se##div[style="height: 240px;"]
-@@/ad-block-detection-script$~third-party,domain=blocket.se
+@@/ad-block-detection-script$domain=blocket.se
 @@||blocket.se^$generichide
 ||blocket.se^*/gdpr-bundle$script
 ||jobb.blocket.se^*/tracker.js
@@ -1629,6 +1631,7 @@ fotbollskanalen.se##.notice__link:has(.notice__tag_sponsored)
 dagensmedicin.se##.widget-carousel--sponsored
 dagensmedicin.se##.sponsored-article-wrapper
 ||akkurat.bonniernewslifestyle.se^*/recommendations$xmlhttprequest
+/analytics-bmb$script
 expressen.se,mama.nu,skonahem.com,damernasvarld.se,amelia.se,topphalsa.se,alltomtradgard.se,tara.se,gardochtorp.se,godsochgardar.se,alltihemmet.se,lantliv.com##.gdpr-banner
 mama.nu,skonahem.com,damernasvarld.se,amelia.se,alltomtradgard.se##.teaser__third-party
 mama.nu,skonahem.com,damernasvarld.se,amelia.se,alltomtradgard.se##+js(acis, ExpressenAnalytics, push)
@@ -1667,6 +1670,7 @@ dagensmedia.se,resume.se,aktuellhallbarhet.se,fastighetsnytt.se##.slot-articlemo
 dagensmedia.se,resume.se,aktuellhallbarhet.se,fastighetsnytt.se###__next > div[class^="css-"]:last-child
 dagensmedia.se,resume.se,aktuellhallbarhet.se,fastighetsnytt.se##a[href^="/annons/"]
 dagensmedia.se,resume.se,aktuellhallbarhet.se,fastighetsnytt.se##a[href^="/native/"]
+dagensmedia.se,resume.se,aktuellhallbarhet.se,fastighetsnytt.se##article:matches-css-after(content: "Annonssamarbete")
 /pages/tag$domain=dagensmedia.se|resume.se|aktuellhallbarhet.se|fastighetsnytt.se
 /native.js$domain=aktuellhallbarhet.se
 digitalfotoforalla.se##.gallery-banner
@@ -1690,6 +1694,7 @@ corren.se,folkbladet.se,mvt.se,nt.se,vt.se,vimmerbytidning.se,kuriren.nu,nsd.se,
 corren.se,folkbladet.se,mvt.se,nt.se,vt.se,vimmerbytidning.se,kuriren.nu,nsd.se,norran.se,pt.se,ekuriren.se,strengnastidning.se,kkuriren.se,sn.se,eposten.se,unt.se,helagotland.se,affarsliv.com,affarslivgotland.se,klackspark.com,norrbottensaffarer.se##widget-family
 corren.se,folkbladet.se,mvt.se,nt.se,vt.se,vimmerbytidning.se,kuriren.nu,nsd.se,norran.se,pt.se,ekuriren.se,strengnastidning.se,kkuriren.se,sn.se,eposten.se,unt.se,helagotland.se,affarsliv.com,affarslivgotland.se,klackspark.com,norrbottensaffarer.se##widget-memorial
 corren.se,folkbladet.se,mvt.se,nt.se,vt.se,vimmerbytidning.se,kuriren.nu,nsd.se,norran.se,pt.se,ekuriren.se,strengnastidning.se,kkuriren.se,sn.se,eposten.se,unt.se,helagotland.se,affarsliv.com,affarslivgotland.se,klackspark.com,norrbottensaffarer.se##widget-marknadsguiden
+corren.se,folkbladet.se,mvt.se,nt.se,vt.se,vimmerbytidning.se,kuriren.nu,nsd.se,norran.se,pt.se,ekuriren.se,strengnastidning.se,kkuriren.se,sn.se,eposten.se,unt.se,helagotland.se,affarsliv.com,affarslivgotland.se,klackspark.com,norrbottensaffarer.se##ad-block
 sn.se,ekuriren.se,kkuriren.se,strengnastidning.se##+js(json-prune, ad_block)
 gotland.net##+js(set, ntm_kv, null)
 gotland.net##+js(set, cxUserID, null)
@@ -1697,6 +1702,7 @@ gotland.net##+js(set, cxUserID, null)
 ! GOTA MEDIA/MK WEBB/NWT
 barometern.se,blt.se,bt.se,kristianstadsbladet.se,olandsbladet.se,ostrasmaland.se,smp.se,sydostran.se,trelleborgsallehanda.se,ut.se,ystadsallehanda.se##.component__ad__ad-box
 barometern.se,blt.se,bt.se,kristianstadsbladet.se,olandsbladet.se,ostrasmaland.se,smp.se,sydostran.se,trelleborgsallehanda.se,ut.se,ystadsallehanda.se##.component__guide-ads
+barometern.se,blt.se,bt.se,kristianstadsbladet.se,olandsbladet.se,ostrasmaland.se,smp.se,sydostran.se,trelleborgsallehanda.se,ut.se,ystadsallehanda.se##.component_gdprMessage__container
 /sunt/*$subdocument,domain=barometern.se|blt.se|bt.se|kristianstadsbladet.se|olandsbladet.se|ostrasmaland.se|smp.se|sydostran.se|trelleborgsallehanda.se|ut.se|ystadsallehanda.se
 /consent.js$domain=skd.se|nsk.se
 skd.se,nsk.se##.advert-widget
