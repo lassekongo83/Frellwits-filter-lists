@@ -967,7 +967,6 @@ dekra.de#@##cookie-banner
 ||pji.nu^$third-party,domain=99mac.se|feber.se|fz.se|idg.se|kamerabild.se|minhembio.com|mobil.se|nordichardware.se|surfa.se|sweclockers.com|viivilla.se|amazonaws.com
 ||prisjakt-a.akamaihd.net^$third-party,domain=pcgamer.se
 ||prisjakt-a.akamaized.net^$third-party,domain=99mac.se|feber.se|fz.se|idg.se|kamerabild.se|minhembio.com|mobil.se|nordichardware.se|sweclockers.com|viivilla.se
-||sentry.io^$third-party,domain=dagensmedia.se|dplay.se|koket.se|klart.se
 ||sentry-cdn.com^$third-party,domain=svd.se|koket.se|bytbil.com
 ||delivery.vidible.tv^$third-party,domain=teknikhype.se
 ||youbora.com^$important,third-party,domain=aftonbladet.se|foxtv.se|svd.se
@@ -1186,7 +1185,7 @@ svd.se,aftonbladet.se,muscles.se,nordichardware.se,nyheteridag.se,freeride.se,ha
 ||ssl.p.jwpcdn.com^*/googima.js$script,important,domain=laget.se
 ||ssl.p.jwpcdn.com^*/vast.js$script,important,domain=moviezine.se
 
-! HTML filters
+! HTML filters, and other Firefox specific filters
 !#if env_firefox
 dn.se##^script:has-text(window.DN.initAds)
 dn.se##^.adblock
@@ -1219,7 +1218,7 @@ lchfarkivet.se##^script:has-text(cmpCookies)
 lchfarkivet.se##^script:has-text(ezCMP)
 !#endif
 
-! For browsers that don't support HTML filters
+! For browsers that aren't firefox
 !#if !env_firefox
 newsner.com,humorbibeln.se,sportbibeln.se,ettgottskratt.se,sportpanelen.se,kvalitetsmagasinet.se,bandyfeber.com,telekomidag.se,miljo-utveckling.se,vdtidningen.se,dagensanalys.se,ladok.se,binero.se,rikatillsammans.se,zeinaskitchen.se,dinbyggare.se,kvartal.se,trafiksakerhet.se,i-chalmers.se,boktugg.se,mobilanyheter.net,lchfarkivet.se##+js(set, mi_track_user, false)
 newsner.com,humorbibeln.se,sportbibeln.se,ettgottskratt.se,sportpanelen.se,kvalitetsmagasinet.se,bandyfeber.com,telekomidag.se,miljo-utveckling.se,vdtidningen.se,dagensanalys.se,ladok.se,binero.se,rikatillsammans.se,zeinaskitchen.se,dinbyggare.se,kvartal.se,trafiksakerhet.se,i-chalmers.se,boktugg.se,mobilanyheter.net,lchfarkivet.se##+js(acis, monsterinsights_frontend)
@@ -1235,6 +1234,7 @@ lchfarkivet.se##+js(acis, cmpCookies)
 lchfarkivet.se##+js(acis, ezCMP)
 proffs.se##*::-webkit-scrollbar:style(display: unset !important;)
 proffs.se##*::-webkit-scrollbar-thumb:style(background: #5e5e5e !important; border: 64px none #ffffff !important; border-radius: 0px !important;)
+||prod-adops-proxy.dnitv.net^$empty,domain=dplay.se
 !#endif
 
 ! Firefox mobile filters
