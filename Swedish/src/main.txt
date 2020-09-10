@@ -847,7 +847,7 @@
 @@/ads.min.js$~third-party,domain=notebookcheck.se
 @@/js/advertisement*.$script,~third-party,domain=expressen.se
 @@/js/advertising.$script,~third-party,domain=byggnadsarbetaren.se|cykla.se|elbilsnytt.se|snowmobile.se|vatternrundan.se
-@@/scripts/advertisement*.$script,~third-party,domain=expressen.se|mama.nu|skonahem.com|damernasvarld.se|amelia.se|di.se|alltomtradgard.se
+@@/scripts/advertisement*.$script,~third-party,domain=expressen.se|skonahem.com|damernasvarld.se|amelia.se|di.se|alltomtradgard.se
 @@/show_ads.js$script,~third-party,domain=happypancake.com
 @@||assets-cdn.mytaste.org/js/ads.js$script
 @@||freeride.nu/js/ads.js$script,domain=happyride.se
@@ -1504,6 +1504,7 @@ di.se##.discount-box
 di.se##.di_article-comments-tooltip
 di.se##.native-box
 di.se##.di_teaser-flak-planbokskoll
+di.se##.site-header__panorama
 /adblk.js$script,domain=weekend.di.se
 /getnative$xmlhttprequest,domain=di.se
 ! expressen
@@ -1633,9 +1634,10 @@ dagensmedicin.se##.widget-carousel--sponsored
 dagensmedicin.se##.sponsored-article-wrapper
 ||akkurat.bonniernewslifestyle.se^*/recommendations$xmlhttprequest
 /analytics-bmb$script
-expressen.se,mama.nu,skonahem.com,damernasvarld.se,amelia.se,topphalsa.se,alltomtradgard.se,tara.se,gardochtorp.se,godsochgardar.se,alltihemmet.se,lantliv.com##.gdpr-banner
-mama.nu,skonahem.com,damernasvarld.se,amelia.se,alltomtradgard.se##.teaser__third-party
-mama.nu,skonahem.com,damernasvarld.se,amelia.se,alltomtradgard.se##+js(acis, ExpressenAnalytics, push)
+/scripts/initLogging$domain=expressen.se|skonahem.com|damernasvarld.se|amelia.se|alltomtradgard.se
+expressen.se,skonahem.com,damernasvarld.se,amelia.se,topphalsa.se,alltomtradgard.se,tara.se,gardochtorp.se,godsochgardar.se,alltihemmet.se,lantliv.com##.gdpr-banner
+skonahem.com,damernasvarld.se,amelia.se,alltomtradgard.se##.teaser__third-party
+skonahem.com,damernasvarld.se,amelia.se,alltomtradgard.se##+js(acis, ExpressenAnalytics, push)
 alltommat.se,privataaffarer.se,familyliving.se,viforaldrar.se##a.teaser[href*="/annonssamarbete/"]
 alltommat.se,privataaffarer.se,familyliving.se,viforaldrar.se##a.teaser[href*="/promotion/"]
 alltommat.se,privataaffarer.se,dn.se,familyliving.se,viforaldrar.se,di.se##.teaser-native
@@ -2595,6 +2597,7 @@ booli.se###app > div:last-child
 ||byggahus.se/pixels$subdocument
 @@/bhtheme/img/ad.png$image,domain=byggahus.se
 @@||byggahus.se^$generichide
+@@.ad.json?$xmlhttprequest,~third-party,domain=byggahus.se
 byggahus.se##.block-revive-ad
 byggahus.se##.block-partner-article
 byggahus.se##.cookie-consent
@@ -2604,7 +2607,7 @@ byggahus.se###wallpaper-ad-container
 byggahus.se##.threadPanorama
 byggahus.se##.attachmentPreviewActive img:style(-webkit-filter: none !important; filter: none !important;)
 byggahus.se##body.wallpaper-ad #col-content:style(margin-top: 0 !important;)
-metromode.se##.slick-item:has(.advert)
+metromode.se##.slick-item:has(.advert):remove()
 metromode.se##.js-blox-article:has(.advert)
 metromode.se##.b-related__item:has(.advert)
 metromode.se##.b-topshop
