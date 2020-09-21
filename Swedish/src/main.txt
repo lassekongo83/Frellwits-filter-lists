@@ -1320,7 +1320,7 @@ bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##bo
 bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##body.logged-out.is-header-sticky *> .c-user-menu:style(visibility: hidden !important;)
 !#endif
 ! flowplayer stuff
-alingsastidning.se,bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##+js(json-prune, autoplay players.1.autoplay players.0.ga players.1.ga acl.ads)
+alingsastidning.se,bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##+js(json-prune, autoplay players.*.ga acl.ads players.*.autoplay)
 
 ! Flowplayer/lemonwhale
 ||lwcdn.com/vendor/ima.min.js$script
@@ -1341,11 +1341,6 @@ svd.se##.theme-Native
 svd.se##.ContentLayout-mainColumn > figure[data-postmessage-command="iframe.resize"]
 svd.se###mega-ad-wrapper
 www.svd.se##+js(acis, SvD, preDefineAd)
-www.svd.se##+js(aeld, /^(?:mousemove|scroll|focus|mousedown|keydown|beforeunload)$/, j())
-www.svd.se##+js(nostif, w(), 500)
-www.svd.se##+js(nostif, c(), 200)
-! Needed for some videos to work
-@@||acdn.adnxs.com/ast/ast.js$script,domain=svd.se
 /static.svd.se\/assets\/[0-9]+\-/$script,domain=svd.se
 /selections/native$xmlhttprequest,domain=svd.se
 ||svd.se^*/native-article$xmlhttprequest,~third-party
@@ -1397,8 +1392,8 @@ www.aftonbladet.se##+js(acis, preLoadAds, setup)
 www.aftonbladet.se##+js(nostif, onerror, 1000)
 www.aftonbladet.se##+js(aeld, mousemove, g())
 www.aftonbladet.se##+js(aeld, message, adError)
-www.aftonbladet.se,www.svd.se##+js(nosiif, e.ping())
-www.aftonbladet.se,www.svd.se##+js(nosiif, e.reportVisibility())
+www.aftonbladet.se##+js(nosiif, e.ping())
+www.aftonbladet.se##+js(nosiif, e.reportVisibility())
 ||vgc.no/cdn/js/libs/ast/$script,domain=www.aftonbladet.se
 @@||ad*.vg.no/check.js$script,domain=aftonbladet.se
 ! https://github.com/lassekongo83/Frellwits-filter-lists/issues/61
@@ -1535,7 +1530,7 @@ expressen.se##.promotion-banner
 expressen.se##.teaser__hero:has(iframe[src*="/tv/nyheter/live-start/live-tv-senaste-nyheterna"])
 expressen.se##figure[data-article-data*="/tv/nyheter/live-start/live-tv-senaste-nyheterna"]
 expressen.se##figure[data-article-data*="/tv/sport/live-start/live-tv-se-sportexpressen-tv-direkt"]
-expressen.se##.terms-dialog
+expressen.se##.pa-dialog
 expressen.se,dn.se##[class*="open-in-app"]
 expressen.se##.collaboration--widget
 expressen.se##.flashes--visible
