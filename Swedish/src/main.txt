@@ -116,6 +116,7 @@
 ||libring.com^$third-party
 ||likebtn.com^$third-party
 ||linksalpha.com^$third-party
+||logs.datadoghq.com^$third-party
 ||lokus.se^$third-party,~image,domain=~familj.se
 ||lystra.se^$third-party
 ||maaw.io^$third-party
@@ -1072,6 +1073,7 @@ mobilanyheter.net,villalivet.se,lchfarkivet.se##+js(set, MonsterInsights, undefi
 /plugins/convertplug/*
 /plugins/convertpro/*
 /plugins/cookie-bar/*
+/plugins/cookie-law-info/*$domain=majanilssonlindelof.com
 /plugins/cookie-notice/*
 /plugins/cookie_consent/*$script
 /plugins/cresta-social-share-counter-pro/*
@@ -1726,7 +1728,6 @@ skd.se,nsk.se##.advert-widget
 vf.se,hjotidning.se,kt.se,sla.se,mariestadstidningen.se,filipstadstidning.se,fryksdalsbygden.se,nwt.se,arvikanyheter.se,nkp.se,saffletidningen.se,provinstidningen.se,dalslanningen.se,karlskogatidning.se,nlt.se,varmlandsaffarer.se##+js(cookie-remover, page-views)
 vf.se,hjotidning.se,kt.se,sla.se,mariestadstidningen.se,filipstadstidning.se,fryksdalsbygden.se,nwt.se,arvikanyheter.se,nkp.se,saffletidningen.se,provinstidningen.se,dalslanningen.se,karlskogatidning.se,nlt.se,varmlandsaffarer.se##+js(acis, nwtThirdParties)
 vf.se,hjotidning.se,kt.se,sla.se,mariestadstidningen.se,filipstadstidning.se,fryksdalsbygden.se,nwt.se,arvikanyheter.se,nkp.se,saffletidningen.se,provinstidningen.se,dalslanningen.se,karlskogatidning.se,nlt.se,varmlandsaffarer.se##[id^="nwt-marknadsguiden"]
-||browser-http-intake.logs.datadoghq.$third-party
 
 ! ALMA TALENT
 /cookiewarning$xmlhttprequest,domain=allatjanstebilar.nyteknik.se
@@ -2047,7 +2048,8 @@ aletorget.se,alingsastorget.se,almhulttorget.se,alvestatorget.se,amaltorget.se,a
 
 ! UNITED INFLUENCERS/TOURN/NOUW/MISC BLOGS
 /ub-cookie-notice/*
-majanilssonlindelof.com##.apprl-title
+majanilssonlindelof.com##.apprl-title,.cli-modal,.cli-modal-backdrop
+majanilssonlindelof.com##article:has(.has-text-align-center:has-text(/samarbete med/i))
 ||mikz.com^$third-party,domain=emmagreen.se|fokis.se|fredagskocken.se|frureinhold.se|gynning.net|hormonerhemorrojder.se|magnusnorman.com|sannafischer.se|sannalundell.se|teresagrundin.se
 emmagreen.se,fokis.se,fredagskocken.se,frureinhold.se,gynning.net,hormonerhemorrojder.se,magnusnorman.com,sannafischer.se,sannalundell.se,teresagrundin.se##+js(acis, jQuery, .dfp)
 emmagreen.se,fokis.se,fredagskocken.se,frureinhold.se,gynning.net,hormonerhemorrojder.se,magnusnorman.com,sannafischer.se,sannalundell.se,teresagrundin.se##+js(acis, ga)
@@ -2062,21 +2064,18 @@ kenzas.se##article[data-text*="In collaboration with"]
 victoriatornegren.se##article[id^="post-"]:has(.entry-header:has-text(/(?:samarbete|Samarbete)\s+med/i))
 victoriatornegren.se##article[id^="post-"]:has(.entry-header:has-text(Paid post in collaboration))
 alexandrabring.se,biancaingrosso.se##article[id^="post-"]:has(em:has-text(/i samarbete med/i))
-/scripts/pb*.js$script,domain=elinskoglund.com|fannystaaf.se|lovisawallin.se|moamattsson.se|nouw.com|100kitchenstories.se|benjeey.se
+/scripts/pb*.js$script,domain=elinskoglund.com|fannystaaf.se|lovisawallin.se|moamattsson.se|nouw.com
 @@||nouw.com^$generichide
 @@||elinskoglund.com^$generichide
 @@||fannystaaf.se^$generichide
 @@||lovisawallin.se^$generichide
 @@||moamattsson.se^$generichide
-@@||100kitchenstories.se^$generichide
-@@||benjeey.se^$generichide
 ||nouw.com/api/postview$xmlhttprequest
-100kitchenstories.se###ConsentBanner
 nouw.com##.box.slide.active:has(.badge:has-text(/annons/i))
 nouw.com##.magazine-grid-item:has(.badge:has-text(/annons/i))
-nouw.com,elinskoglund.com,fannystaaf.se,lovisawallin.se,moamattsson.se,benjeey.se###ConsentBanner
+nouw.com,elinskoglund.com,fannystaaf.se,lovisawallin.se,moamattsson.se###ConsentBanner
 nouw.com##.Container_blogPost:has(em:has-text(/reklamsamarbete/i))
-nouw.com,elinskoglund.com,fannystaaf.se,lovisawallin.se,moamattsson.se,benjeey.se##[title="Ad space"]
+nouw.com,elinskoglund.com,fannystaaf.se,lovisawallin.se,moamattsson.se##[title="Ad space"]
 alicestenlof.com,ellinorlofgren.se##.noscroll:style(overflow: initial !important;)
 /cookie_info.$domain=trendenser.se
 trendenser.se##.post_feed_post:has(.sponsor-info)
@@ -2087,7 +2086,7 @@ linnherbertsson.se##.content:has(.sponsored-container)
 linnherbertsson.se##[id^="content-ad"]
 linnherbertsson.se##body:style(overflow-y: auto !important;)
 monasuniversum.se,matplatsen.net###gatsby-focus-wrapper > div[class^="css-"]:last-of-type
-matplatsen.net##article:has(em:has-text(/i samarbete med/i)):remove()
+matplatsen.net,isabellalowengrip.se##article:has(em:has-text(/i samarbete med/i)):remove()
 ||bloggtoppen.fi^$third-party
 isabellalowengrip.se##.popup-block
 isabellalowengrip.se##main + div
