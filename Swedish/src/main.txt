@@ -231,6 +231,7 @@
 ||zummycloud.com^$third-party
 
 ! General ads, tracking, and annoyances
+?url=*impse.tradedoubler.com$image
 .ax/ad/
 .ax/images/banners/
 .com/annons.$script,subdocument
@@ -1045,6 +1046,7 @@ mobilanyheter.net,villalivet.se,lchfarkivet.se##+js(set, MonsterInsights, undefi
 ||cdn.segment.com/analytics.js$script,important,domain=studocu.com|se.trustpilot.com|dagen.se|tholin.se
 /wp-content/plugins/popup-builder-$script,important,domain=mmabetz.se
 ||amazon-adsystem.com^$3p,important,domain=bilresaieuropa.se
+||lwadm.com/lw/pbjs?pid=$script,important,domain=sydostran.se
 
 ! Unwanted Wordpress plugins and bloat
 /plugins/ab_appnexus_ads/*
@@ -1115,6 +1117,7 @@ mobilanyheter.net,villalivet.se,lchfarkivet.se##+js(set, MonsterInsights, undefi
 /plugins/jetpack/_inc/build/widgets/eu-cookie-law/*$script
 /plugins/jnews-social-share/*$script,domain=svegot.se
 /plugins/lbg-audio8-html5-radio_ads/*$script,domain=svegot.se
+/plugins/leaky-paywall$domain=driva-eget.se
 /plugins/likebtn-like-button/*
 /plugins/loppi-cookie-consent/*$script
 /plugins/mailpoet/*$script,domain=opulens.se
@@ -1271,7 +1274,7 @@ idg.se##.articleBodyText + .lazyloaded > .cms-target
 idg.se##a[data-click-settings*="Article Outbound Links"]:has(strong:has-text(/annons/i))
 idg.se##.toolbar.prisjakt.toolbarSticky
 idg.se##.idgmsg__box
-forum.studio.se##li[data-blocktitle="Anpassade Block"]:has(.sms-marking:has-text(Annons:))
+studio.se###elGuestTerms
 upphandling24.se##.type-partnerartikel
 upphandling24.se##.widget:has(.widget-title:has-text(/^annons/i))
 ! Attempt to make their gdpr choice less annoying. Don't want to block it as a limbo choice will disable 3rd party videos and embeds.
@@ -1938,6 +1941,10 @@ cafe.se,kingmagazine.se##.card-partner
 cafe.se,kingmagazine.se##.partner
 cafe.se##a[href*="/cafe?kampanj"]
 /omslagsexport/*$image,domain=autolife.se
+sportfack.se##+js(set, AD, undefined)
+sportfack.se##+js(set, ANALYTICS, undefined)
+sportfack.se##+js(set, EGMONT, undefined)
+/facebook$script,domain=sportfack.se
 
 ! FRIA
 fria.nu,goteborgsfria.se,friatidningen.se,landetsfria.se,stockholmsfria.se,sesam.nu##[class*="annonser"]
