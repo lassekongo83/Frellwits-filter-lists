@@ -743,6 +743,7 @@
 ##.CookieNotice:not(body):not(html)
 ##.cookiesWarning:not(body):not(html)
 ##.Cookie-banner.is-open:not(body):not(html)
+##.ad_container_bottom:not(body):not(html)
 ##.ad-rotator:not(body):not(html)
 ##.adrotate-group:not(body):not(html)
 ##.adtoma_container:not(body):not(html)
@@ -858,7 +859,7 @@
 @@/adserver.$script,~third-party,domain=fotosidan.se|utsidan.se|grannar.se
 @@/advertisment.js$script,~third-party,domain=wappare.se
 @@/js/ad.js$~third-party,domain=sweclockers.com
-@@/js/ads.js$~third-party,domain=malagaguiden.se|rabattpris.se|snowmobile.se|freeride.se|fz.se
+@@/js/ads.js$~third-party,domain=malagaguiden.se|rabattpris.se|snowmobile.se|freeride.se|fz.se|mobilanyheter.net
 @@/ads.min.js$~third-party,domain=notebookcheck.se
 @@/js/advertisement*.$script,~third-party,domain=expressen.se
 @@/js/advertising.$script,~third-party,domain=byggnadsarbetaren.se|cykla.se|elbilsnytt.se|snowmobile.se|vatternrundan.se
@@ -1451,6 +1452,7 @@ bytbil.com###privacyModal
 bytbil.com##html,body:style(overflow: auto !important;)
 sportbladetplay.se,sportexpressenplay.se##[class^="CookieConsentPopup"]
 godare.se##.privacy-information
+classic.prisjakt.nu###confirm_cookie_use
 
 ! BONNIER
 dn.se##.gdpr-header
@@ -3463,18 +3465,20 @@ pricerunner.se###data-protection-notification
 sverige.nu###spopup
 kvartal.se##.email-popup-wrapper
 flygtorget.se###PreHeader
+*$subdocument,domain=flygtorget.se
 sporthalsa.se##.header_top
 sporthalsa.se###text-6
 armsport.nu###page-overlay
 ||emotorsport.se/ans/$image
 aventyrsresor.se,travelnews.se##.newsletter-popup
 firstclassmagazine.se###leader-wrap
+firstclassmagazine.se##a:has(.feat-cat:has-text(/annons/i))
 spelagratis.se##.sidebar-right
 spelagratis.se##.ad_header + p
 kulturbloggen.com##.sidebar > .widget_custom_html
 flm.nu##.spons
 schack.se###sidebar > .widget_custom_html
-lektionsbanken.se###partners_right
+lektionsbanken.se###partners_right, #partners_top
 norrahalland.se##.norra-leeads-ads
 djungeltrumman.se###sponsored-posts
 djungeltrumman.se###right-banners
