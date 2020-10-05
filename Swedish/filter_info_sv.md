@@ -1,8 +1,6 @@
 ## Grundläggande information
 
-Listan är specifikt skriven för, och testad i [uBlock Origin](https://github.com/gorhill/uBlock) med sina ursprungliga inställningar. Den bör också fungera i andra förgreningar av uBlock Origin, som till exempel [Nano Adblocker](https://github.com/NanoAdblocker/NanoCore).
-
-*Listan är inte testad tillsammans med Nano Defender.*
+Listan är specifikt skriven för, och testad i [uBlock Origin](https://github.com/gorhill/uBlock) med sina ursprungliga inställningar.
 
 **Använd bara en blockerare.** Används fler så kan det hända att vissa filter inte fungerar som de ska. Det finns [ingen fördel](https://twitter.com/gorhill/status/1033706103782170625) med att använda fler än 1 annonsblockerare i din webbläsare.
 
@@ -61,4 +59,4 @@ Generella frågor om uBlock Origin som inte specifikt berör detta filtret: http
 
 Vissa svar kan även finnas i [uBlock Origins wiki](https://github.com/gorhill/uBlock/wiki).
 
-Om du inte håller med om någon lösning i listan så kan du kontakta mig på reddit och förklara varför. Alternativt så kan du skriva en egen filter-regel, skapa en egen förgrening av listan, vitlista sidan det gäller på, eller deaktivera hela listan i uBlock Origins eller Nano Adblockers inställningar.
+Om du inte håller med om någon lösning i listan så kan du kontakta mig på reddit och förklara varför. Alternativt så kan du skriva en egen filter-regel, skapa en egen förgrening av listan, vitlista sidan det gäller på, eller deaktivera hela listan i uBlock Origins inställningar.

@@ -1,8 +1,6 @@
 ## Basic information
 
-This list is specifically written and tested for [uBlock Origin](https://github.com/gorhill/uBlock) with its original settings. It should also work with other forks of uBlock Origin, like for example [Nano Adblocker](https://github.com/NanoAdblocker/NanoCore).
-
-*The list has not been tested together with Nano Defender.*
+This list is specifically written and tested for [uBlock Origin](https://github.com/gorhill/uBlock) with its original settings.
 
 **Only use one blocker.** Some filters may not work correctly if 2 or more blockers are used. There is [no benefit](https://twitter.com/gorhill/status/1033706103782170625) to using more than 1 adblocker in your web browser.
 
@@ -61,4 +59,4 @@ General questions about uBlock Origin that does not regard this filter: https://
 
 Some answers may also be found in [uBlock Origin's wiki](https://github.com/gorhill/uBlock/wiki).
 
-If you don't agree with any of the solutions in the list you can contact me on reddit and explain why. Alternatively you can write your own filter rule, make your own fork of the list, whitelist the page in question, or deactivate the whole list in uBO's or Nano's settings.
+If you don't agree with any of the solutions in the list you can contact me on reddit and explain why. Alternatively you can write your own filter rule, make your own fork of the list, whitelist the page in question, or deactivate the whole list in uBlock Origin's settings.
