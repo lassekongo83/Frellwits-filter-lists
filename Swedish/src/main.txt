@@ -686,6 +686,7 @@
 ##img[alt="Spela på Betsson"]
 ##img[src*="/track.adtraction"]
 ##ul.adsmodern
+##cookie-law-banner
 ###_ning_gdpr_approve
 ###CookieNotice
 ###accept-cookies-div
@@ -739,6 +740,7 @@
 ##.ad-single-news:not(body):not(html)
 ##.annonseArticle:not(body):not(html)
 ##.c-cookie-popup:not(body):not(html)
+##.casino-ad:not(body):not(html)
 ##.cookieAlert:not(body):not(html)
 ##.CookieConsentBanner:not(body):not(html)
 ##.CookieNotice:not(body):not(html)
@@ -974,8 +976,7 @@ dekra.de#@##cookie-banner
 ||cdn.jsdelivr.net/npm/search-insights$script,domain=forum.hallon.se
 ||cookieinformation.com^$third-party,domain=valuta.se|iform.se|digitalfotoforalla.se|natgeo.se|popularhistoria.se|aktivtraning.se|pctidningen.se|militarhistoria.se|viivilla.se|varldenshistoria.se|motormagasinet.se|food-supply.se|skyddosakerhet.se|dagenshandel.se|plastnet.se|habit.se|woodnet.se|foodnet.se|transportnet.se|processnet.se|packnet.se|verkstaderna.se|medtechmagazine.se|recyclingnet.se|rt-forum.se|kemivarldenbiotech.se|uochd.se|lifesciencesweden.se|fri-kopenskap.se|cleannet.se|entreprenad.com|proff.se
 ||connect.getflowbox.com^$third-party,domain=aikfotboll.se|farjestadbk.se|svenskaturistforeningen.se
-||consent.cmp.oath.com^$script,domain=alltomstockholm.se|mitti.se
-||consent.cookiebot.com^$third-party,domain=etc.se|goteborgdirekt.se|hoglandsnytt.se|itaboutdoor.se|kingsizemag.se|ng.se|skeppsbrons.se|stockholmdirekt.se|swedroid.se|totallyorebro.se|totallystockholm.se|villalivet.se|wesafe.se|tankesport.se|smartsenior.se|vasterastidning.se|clipmyhorse.tv|bax-shop.se|kurera.se|norrahalland.se|upplysning.se|ratsit.se
+||cookiebot.com^$third-party,domain=etc.se|goteborgdirekt.se|itaboutdoor.se|kingsizemag.se|ng.se|skeppsbrons.se|stockholmdirekt.se|swedroid.se|totallyorebro.se|totallystockholm.se|wesafe.se|tankesport.se|smartsenior.se|vasterastidning.se|clipmyhorse.tv|bax-shop.se|kurera.se|upplysning.se|mitti.se
 ||cookiepro.com^$third-party,domain=sd.se|birthday.se|friendsarena.se|hastnet.se|aktiespararna.se|spela.se
 ||d2wy8f7a9ursnm.cloudfront.net/bugsnag$script,domain=expressen.se|bioenergitidningen.se
 ||evidon.com^$third-party,domain=morningstar.se|spela.se|downdetector.se|mtv.se
@@ -1127,8 +1128,7 @@ mobilanyheter.net,villalivet.se,lchfarkivet.se##+js(set, MonsterInsights, undefi
 /plugins/mashshare$script,domain=obsid.se
 /plugins/material-admin/visitor-stats$script
 /plugins/metro-affiliate/*$script
-/plugins/mitti-cookie-disclaimer/*$script
-/plugins/mitti-oath-cmpi-js/*$domain=alltomstockholm.se|mitti.se
+/plugins/mitti-oath-cmpi-js/*
 /plugins/ml-adverts/*$script
 /plugins/modal-for-elementor/*$script,domain=miljomagasinet.se
 /plugins/newsletter$script,domain=56kilo.se
@@ -2392,6 +2392,7 @@ mitti.se,alltomstockholm.se##.article_desktop_ad_container
 mitti.se,alltomstockholm.se##[class*="insider_"]
 mitti.se,alltomstockholm.se##.outsider-container
 mitti.se##+js(noeval-if, addthis.layers.refresh)
+mitti.se##+js(set, NWS.config.enableAdblockerDetection, false)
 mitti.se##.teaser-large-container:has(.native-ad-mark)
 /sirius\/js\/[0-9]+\.js/$script,domain=mitti.se
 /mitti-adform$script
@@ -2920,7 +2921,7 @@ buzzter.se##body.trend-lock #outer-wrap:style(position: inherit !important;)
 /advisible.js$script,domain=goteborgdirekt.se|stockholmdirekt.se|vasterastidning.se
 goteborgdirekt.se,stockholmdirekt.se,vasterastidning.se##.profile-native
 goteborgdirekt.se,stockholmdirekt.se,vasterastidning.se##.push-component-native
-goteborgdirekt.se,stockholmdirekt.se,vasterastidning.se##.gdpr-warning
+goteborgdirekt.se,stockholmdirekt.se,vasterastidning.se,mitti.se##.gdpr-warning
 goteborgdirekt.se,stockholmdirekt.se,vasterastidning.se##[class^="casino-ad"]
 goteborgdirekt.se,stockholmdirekt.se,vasterastidning.se##+js(set, NWS.config.enableAdblockerDetection, false)
 ||trafikradion.nu/reklam$image
@@ -3023,7 +3024,7 @@ ljudochbild.se##.pricecomp
 ljudochbild.se##.maincontent:style(max-height: unset !important;)
 villalivet.se##.onp-sl-overlap-box
 villalivet.se##.onp-sl-blur-area:style(filter: none !important;)
-villalivet.se##a:has-text(/sponsrat innehåll/i):upward(3)
+villalivet.se##a:has-text(/sponsra/i):upward(3)
 villalivet.se##+js(acis, sgpbPublicUrl)
 villalivet.se##+js(acis, SGPB_POPUP_PARAMS)
 ehandel.se##.commercial-row
@@ -3479,7 +3480,7 @@ kulturbloggen.com##.sidebar > .widget_custom_html
 flm.nu##.spons
 schack.se###sidebar > .widget_custom_html
 lektionsbanken.se###partners_right, #partners_top
-norrahalland.se##.norra-leeads-ads
+norrahalland.se##.norra-leeads-ads,.egna_annonser_widget
 djungeltrumman.se###sponsored-posts
 djungeltrumman.se###right-banners
 ?action=get_banners$domain=djungeltrumman.se
