@@ -310,6 +310,7 @@
 /bmbDfpUtils.$script
 /bmbFusionUtils.$script
 /caos/analytics.js$script
+/cecado/advisible.js
 /citygate/payingcompanies$xmlhttprequest
 /cpg_ads.$script
 /cm-ad-changer-server
@@ -902,13 +903,10 @@ patient.info##body:style(overflow: auto !important;)
 ! Blocked in EasyPrivacy. Breaks login/logout on some sites.
 @@||cdn.dynamicyield.com^$domain=alingsastidning.se|bohuslaningen.se|gp.se|hallandsposten.se|hn.se|stromstadstidning.se|ttela.se
 intersport.*#@#.cookie-banner:not(body):not(html)
-@@||dagensanalys.se/wp-content/*/pubmatic_$image
 ! frame crashes tab in firefox
 !#if env_firefox
 ||issuu.com^$subdocument
 !#endif
-! first party blocked in pgl, only block as a 3rd party
-||cision.com^$badfilter
 ! https://github.com/AdguardTeam/AdguardFilters/issues/55513
 @@||vendorlist.consensu.org/vendorlist.json
 ! https://github.com/lassekongo83/Frellwits-filter-lists/issues/81
@@ -974,7 +972,7 @@ dekra.de#@##cookie-banner
 ||bstatic.com/static/affiliate$third-party
 ||cdn.cookielaw.org^$script,domain=cartoonnetwork.se|foxtv.se|nvp.se
 ||cdn.jsdelivr.net/npm/search-insights$script,domain=forum.hallon.se
-||cookieinformation.com^$third-party,domain=valuta.se|iform.se|digitalfotoforalla.se|natgeo.se|popularhistoria.se|aktivtraning.se|pctidningen.se|militarhistoria.se|viivilla.se|varldenshistoria.se|motormagasinet.se|food-supply.se|skyddosakerhet.se|dagenshandel.se|plastnet.se|habit.se|woodnet.se|foodnet.se|transportnet.se|processnet.se|packnet.se|verkstaderna.se|medtechmagazine.se|recyclingnet.se|rt-forum.se|kemivarldenbiotech.se|uochd.se|lifesciencesweden.se|fri-kopenskap.se|cleannet.se|entreprenad.com|proff.se
+||cookieinformation.com^$script,domain=valuta.se|iform.se|digitalfotoforalla.se|natgeo.se|popularhistoria.se|aktivtraning.se|pctidningen.se|militarhistoria.se|viivilla.se|varldenshistoria.se|proff.se
 ||connect.getflowbox.com^$third-party,domain=aikfotboll.se|farjestadbk.se|svenskaturistforeningen.se
 ||cookiebot.com^$third-party,domain=etc.se|goteborgdirekt.se|itaboutdoor.se|kingsizemag.se|ng.se|skeppsbrons.se|stockholmdirekt.se|swedroid.se|totallyorebro.se|totallystockholm.se|wesafe.se|tankesport.se|smartsenior.se|vasterastidning.se|clipmyhorse.tv|bax-shop.se|kurera.se|upplysning.se|mitti.se
 ||cookiepro.com^$third-party,domain=sd.se|birthday.se|friendsarena.se|hastnet.se|aktiespararna.se|spela.se
@@ -1681,13 +1679,14 @@ dagensmedia.se,resume.se,aktuellhallbarhet.se,fastighetsnytt.se##a[href^="/nativ
 dagensmedia.se,resume.se,aktuellhallbarhet.se,fastighetsnytt.se##article:matches-css-after(content: "Annonssamarbete")
 /pages/tag$domain=dagensmedia.se|resume.se|aktuellhallbarhet.se|fastighetsnytt.se
 /native.js$domain=aktuellhallbarhet.se
-digitalfotoforalla.se##.gallery-banner
-digitalfotoforalla.se,natgeo.se,popularhistoria.se,militarhistoria.se,iform.se,aktivtraning.se##.scroll-message
-digitalfotoforalla.se,natgeo.se,popularhistoria.se,militarhistoria.se##.horseshoe
-natgeo.se##a[data-ad-placement="1"]
+digitalfotoforalla.se,natgeo.se,popularhistoria.se,militarhistoria.se,iform.se,aktivtraning.se,pctidningen.se##.gallery-banner
+digitalfotoforalla.se,natgeo.se,popularhistoria.se,militarhistoria.se,iform.se,aktivtraning.se,pctidningen.se##.scroll-message
+digitalfotoforalla.se,natgeo.se,popularhistoria.se,militarhistoria.se,iform.se,aktivtraning.se,pctidningen.se##.horseshoe
+digitalfotoforalla.se,natgeo.se,popularhistoria.se,militarhistoria.se,iform.se,aktivtraning.se,pctidningen.se##a[data-ad-placement]
 iform.se,aktivtraning.se,natgeo.se##li:has(.content-label:has-text(/annons/i)):remove()
 iform.se##a[data-ad-sub-pillar="Annons"]
 sportexpressenplay.se##[class^="BauProvider"]
+varldenshistoria.se##.campaign-teaser-show
 
 ! Bonnier Local
 allehanda.se,arbetarbladet.se,avestatidning.com,bblat.se,dalademokraten.se,dt.se,fagersta-posten.se,gd.se,lt.se,ltz.se,na.se,norrteljetidning.se,nynashamnsposten.se,op.se,salaallehanda.com,st.nu,tidningenharjedalen.se,vlt.se,bandypuls.se,falkopingstidning.se,jp.se,skaraborgslanstidning.se,skovdenyheter.se,smalandsdagblad.se,smalanningen.se,smt.se,tranastidning.se,vastgotabladet.se,vetlandaposten.se,vn.se,jnytt.se##.nps-client-dialogue-footer
@@ -3492,6 +3491,7 @@ vibilagare.se##a[href^="/partnermaterial/"]
 senses.se##.isobrick:has(a[href*="casino"])
 senses.se##.isobrick:has(a[href*="glhf-gg"])
 senses.se##.isobrick:has(a[href*="betting"])
+senses.se##.isobrick:has(a[title^="Reklam:"])
 /popup-overlay$domain=ettsthlm.se
 ettsthlm.se##[class^="sqs-cookie-banner"]
 turismnytt.se##.site-wrap > .row > .col-sm-3
