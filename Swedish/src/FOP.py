@@ -64,10 +64,10 @@ KNOWNOPTIONS = ("collapse", "csp", "document", "elemhide", "specifichide", "shid
                 "redirect=noopmp3-0.1s", "redirect=noopmp4-1s", "redirect=1x1-transparent.png", "redirect=2x2-transparent.png", 
                 "redirect=google-analytics_ga.js", "redirect=google-analytics_analytics.js", "redirect=googletagservices_gpt.js", "redirect=googletagmanager_gtm.js", 
                 "redirect=google-analytics_cx_api.js", "redirect=googlesyndication_adsbygoogle.js", "redirect=doubleclick_instream_ad_status.js", 
-                "redirect=ampproject_v0.js", "redirect=noop.js", "redirect=noop.css", "redirect=noop.html", "redirect=noop.txt", 
+                "redirect=ampproject_v0.js", "redirect=noop.js", "redirect=noop.css", "redirect=noop.html", "redirect=noop.txt", "redirect=click2load.html", 
                 "redirect=noop-0.1s.mp3", "redirect=noop-1s.mp4", "redirect=1x1.gif", "redirect=2x2.png", "redirect=3x2.png", "redirect=32x32.png", 
-                "redirect=3x2-transparent.png", "redirect=32x32-transparent.png", "1p", "3p", "inline-script", "xhr", "mp4", "empty", "all", 
-                "redirect-rule=noop.js", "redirect-rule=noop.css", "redirect-rule=noop.html", "redirect-rule=noop.txt", 
+                "redirect=3x2-transparent.png", "redirect=32x32-transparent.png", "1p", "3p", "frame", "inline-script", "xhr", "mp4", "empty", "all", 
+                "redirect-rule=noop.js", "redirect-rule=noop.css", "redirect-rule=noop.html", "redirect-rule=noop.txt", "redirect-rule=click2load.html", 
                 "redirect-rule=noop-0.1s.mp3", "redirect-rule=noop-1s.mp4", "redirect=google-analytics-analytics.js", "redirect=googletagmanager-gtm.js")
 
 # List the supported revision control system commands
