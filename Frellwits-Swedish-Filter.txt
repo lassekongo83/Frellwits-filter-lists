@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2020-10-21 05:35:33 CEST
+! Last modified: 2020-10-22 18:54:11 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -85,6 +85,7 @@
 ##.ad_container_bottom:not(body):not(html)
 ##.adrotate-group:not(body):not(html)
 ##.adtoma_container:not(body):not(html)
+##.adtrue-holder:not(body):not(html)
 ##.alert-box.info.cookies:not(body):not(html)
 ##.annonseArticle:not(body):not(html)
 ##.b-ad__wrapper:not(body):not(html)
@@ -338,7 +339,7 @@
 /bannersidor/*
 /bc-tracking.js$script,domain=digikey.se
 /betalannonser/*$domain=filmcafe.se
-/betting/$image,domain=fotboll.com|kulturbloggen.com|nyadagbladet.se
+/betting/$image,domain=fotboll.com|hockeybladet.nu|kulturbloggen.com|nyadagbladet.se
 /bilder-for-annonser/*$image
 /bilder/ads/*
 /bilder/foretag/*$image,domain=falubsbandy.com
@@ -359,7 +360,7 @@
 /campaign*/*$script,xmlhttprequest,domain=alltforforaldrar.se|kokaihop.se|mammasidan.se|minbebis.com|nyheter24.se
 /campaign-fallback.$script,domain=aftonbladet.se
 /caos/analytics.js$script
-/casino/$image,domain=battrestadsdel.se|dayviews.com|fotboll.com|hockeysverige.se|hypeline.se|kamrat.com|kulturbloggen.com|newsvoice.se|nyadagbladet.se|nyheter24.se|spray.se|svenskhistoria.se|totallyorebro.se|totallystockholm.se|zeromagazine.nu
+/casino/$image,domain=battrestadsdel.se|dayviews.com|fotboll.com|hockeybladet.nu|hockeysverige.se|hypeline.se|kamrat.com|kulturbloggen.com|newsvoice.se|nyadagbladet.se|nyheter24.se|spray.se|svenskhistoria.se|totallyorebro.se|totallystockholm.se|zeromagazine.nu
 /cecado/advisible.js
 /check-paywall$domain=dn.se
 /citygate/payingcompanies$xmlhttprequest
@@ -467,6 +468,7 @@
 /js/acceptCookies.$script
 /js/adLocker.$script
 /js/ads/*$domain=svartgul.se
+/js/aller-ads.$script
 /js/annons.js$script
 /js/awp.$script,domain=svenskafans.com
 /js/byside_webcare$script
@@ -533,7 +535,7 @@
 /monetization/ads-module/*
 /monetization/pixel-sdk/*
 /mp_emediate/inc/annons.html
-/native.html$domain=allas.se
+/native.html$domain=allas.se|elle.se|femina.se|hant.se|mabra.com|svenskdam.se
 /native.js$domain=aktuellhallbarhet.se
 /native?placeholder$xmlhttprequest,domain=hd.se|sydsvenskan.se
 /new_construction_ads/*$domain=hemnet.se
@@ -585,7 +587,7 @@
 /plugins/convertplug/*
 /plugins/convertpro/*
 /plugins/cookie-bar/*
-/plugins/cookie-law-info/*$domain=hockeybladet.nu|majanilssonlindelof.com|nyadagbladet.se
+/plugins/cookie-law-info/*$domain=carup.se|hockeybladet.nu|majanilssonlindelof.com|nyadagbladet.se
 /plugins/cookie-notice/*
 /plugins/cookie_consent/*$script
 /plugins/cresta-social-share-counter-pro/*
@@ -990,7 +992,7 @@ aftonbladet.se##div[style*="border-color: rgb(0, 103, 181);"] ~ a
 aftonbladet.se##div[style*="border-color:#0067b5;"]
 aftonbladet.se##div[style*="border-color:#0067b5;"] ~ a
 aftonbladet.se##h3[style*="background-color:#0067b5;border-radius:2px;margin:16px 0px 0px 0px;"]
-aftonbladet.se,autonytt.se,ekonominyheter.se,lesscarbs.se,undervarttak.se,uwtd.me,xn--snabbalnen-75a.se##a[href*="/track.adtraction."]
+aftonbladet.se,autonytt.se,ekonominyheter.se,hockeybladet.nu,lesscarbs.se,undervarttak.se,uwtd.me,xn--snabbalnen-75a.se##a[href*="/track.adtraction."]
 aftonbladet.se,businessclass.se,effektmagasin.se,spela.se,svenskorientering.se##.advert
 aftonbladet.se,embed.futuresportsmedia.com,fasttrack.webstream.dk,fotbolldirekt.se,freeride.se,happyride.se,hockeysverige.se,ilikeradio.se,innebandymagazinet.se,jwplayer.com,laget.se,maharajah.se,moviezine.se,muscles.se,nordichardware.se,nyckelspel.se,nyheteridag.se,streamio.com,svd.se,upstream.to#@#.afs_ads
 agriprim.se,automobil.se,bettips.se,bike.se,bilsport.se,boxerville.se,caroftheyear.se,dh.se,djungeltrumman.se,e.se,entreprenadaktuellt.se,fightermag.se,frillesasbandy.se,husbilhusvagn.se,ja.se,klassiker.nu,livsmedel.se,ljuskultur.se,lokalguiden.se,lovelylife.se,maskinbladet.se,maskinstationerna.se,mopedgaraget.se,nyckelspel.se,omni.se,riksettan.net,scanaktier.se,skik.se,skogsaktuellt.se,spelo.se,sweclockers.com,vaken.se,vibilagare.se##.banner
@@ -1633,6 +1635,7 @@ hittahem.se###cookie-approval-wrapper
 hockeybladet.nu##.td_mod_wrap > a > img[data-permalink]
 hockeybladet.nu##.td_mod_wrap > p > a > img[data-permalink]
 hockeybladet.nu##.wpcnt
+hockeybladet.nu##a[data-wpel-link="external"][onclick]
 hockeymagasinet.com##gdpr-alert
 hockeynews.se###mobile-one
 hockeynews.se###mobile-two
@@ -2279,8 +2282,6 @@ yelp.se##[data-ga-category="biz page ad"]
 ||bilweb.se^$third-party
 ||biowebb-data.*.amazonaws
 ||bit.ly^$subdocument,domain=jawcloud.co
-||bitcoin-systems.com/script.js$script
-||bitcoin-systems.com^$csp=worker-src 'none'
 ||bjursundfastigheter.se^
 ||blocket.se^$third-party
 ||blocket.se^*/gdpr-bundle$script
@@ -2322,7 +2323,7 @@ yelp.se##[data-ga-category="biz page ad"]
 ||cdn.advisible.com/adk$third-party
 ||cdn.ampproject.org^$third-party,domain=piraja.se
 ||cdn.axiell.com^*/cookie-disclaimer.$script
-||cdn.cookielaw.org^$script,domain=cartoonnetwork.se|foxtv.se|nvp.se|recept.se
+||cdn.cookielaw.org^$script,domain=allas.se|cartoonnetwork.se|elle.se|femina.se|foxtv.se|hant.se|mabra.com|nvp.se|recept.se|svenskdam.se
 ||cdn.iubenda.com/iubenda.$script
 ||cdn.jsdelivr.net/npm/search-insights$script,domain=forum.hallon.se
 ||cdn.livechatinc.com/tracking.$script
@@ -2721,7 +2722,6 @@ yelp.se##[data-ga-category="biz page ad"]
 ||s3.amazonaws.com/cc.silktide.com/cookieconsent.$script
 ||sa.svenskalag.se/*/__tm.gif
 ||salesiq.zoho.com/widget$domain=seodesign.se
-||samnytt.se^$csp=frame-src 'self' *.youtube.com youtube.com *.youtube-nocookie.com youtube-nocookie.com *.vimeo.com disqus.com
 ||sannsyn.com^$third-party
 ||scandicpartners.se^$third-party
 ||schibsted.io^*/gdpr-bundle.js$script
@@ -2817,7 +2817,6 @@ yelp.se##[data-ga-category="biz page ad"]
 ||ues.vk.se^*/event$xmlhttprequest
 ||ufinkln.com/offer?prod$popup
 ||unformsy.mobi^$third-party
-||unitedsverige.se^$csp=script-src 'self' 'unsafe-inline' 'unsafe-eval' *.googleapis.com
 ||upsales.com^$third-party
 ||uptobanner.com^$third-party
 ||uptobranding.com^$third-party
