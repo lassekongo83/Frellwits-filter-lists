@@ -512,8 +512,6 @@
 ||juicer.io/api/page_views$xmlhttprequest
 ||js.hs-scripts.com/3322485.js$script
 ||js.hs-banner.com^$script
-||jssdk.privacy.schibsted.com/privacy-notifier.$script
-||jssdk.privacy.schibsted.com/pulse.$script
 ||kayak.xno.se^$script
 ||kuriren.eu/app/$subdocument
 ||laikabook.se/ib/banner$subdocument
@@ -1327,6 +1325,8 @@ lwcdn.com##+js(aeld, /^(?:adBlocker|contextmenu)$/)
 ||ptm.flowplayer.com^*/display$xmlhttprequest
 
 ! SCHIBSTED
+||schibsted.com/privacy-notifier.$third-party
+||schibsted.com/pulse.$third-party
 svd.se##.AdWrapper
 svd.se##.Container--ad
 svd.se##div[data-controller="newslettersubscription"]
@@ -1405,8 +1405,7 @@ www.aftonbladet.se##+js(nosiif, e.reportVisibility())
 /ab-xiti-min.$script,domain=aftonbladet.se
 /sptAutoTracker.$script,domain=aftonbladet.se
 /d-footer.min.$script,domain=aftonbladet.se
-omni.se##.article--sponsored
-omni.se##.resource--sponsored
+omni.se##.article--sponsored,.resource--sponsored,.component--sticky-sponsor-banner
 ||*-ads.omni.news^
 tv.nu##a[href*="adform.net"]
 tv.nu##.ad-mega--container
