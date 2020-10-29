@@ -2,6 +2,7 @@
 ||10bet.com^$third-party
 ||acookiemonster.herokuapp.com^$third-party
 ||activate.social^$third-party
+||activehosted.com^$third-party
 ||ad.iplayer.org^$third-party
 ||adaptlogic.com^$third-party
 ||adcell.io^$third-party
@@ -1155,7 +1156,7 @@ mobilanyheter.net,villalivet.se,lchfarkivet.se##+js(set, MonsterInsights, undefi
 /plugins/skydda-advisor/*
 /plugins/so-widgets-bundle/*$domain=lokalsport.nu
 /plugins/social-pug
-/plugins/socialsnap$script,domain=samnytt.se|listor.se
+/plugins/socialsnap$script,domain=samnytt.se|listor.se|katerinamagasin.se
 /plugins/statebuilt-facebook-page-like-popup/*
 /plugins/sticky-facebook-banner/*$script,domain=ettgottskratt.se|humorbibeln.se|newsner.com|sportbibeln.se
 /plugins/super-progressive-web-apps/*$domain=temadagar.se
@@ -1361,23 +1362,15 @@ aftonbladet.se###MegaAd
 aftonbladet.se##article:has(a[data-sponsored="true"])
 aftonbladet.se##[id*="abAdArea"]
 aftonbladet.se##.ab-responsive-ads-wrapper
-aftonbladet.se##.social-shares
-aftonbladet.se##.abBtnShare
-aftonbladet.se##.share-icons
+aftonbladet.se##.social-shares, .abBtnShare, .share-icons
 aftonbladet.se##a[href*=".se/kampanj?"]:has-text(/erbjudande/i)
 aftonbladet.se##body.abTheme-entertainment *> .abAside > div[style^="text"]:last-child
 aftonbladet.se##a[href^="/brandstudio"]
-aftonbladet.se##div[style*="border-color:#0067b5;"]
-aftonbladet.se##div[style*="border-color:#0067b5;"] ~ a
-aftonbladet.se##div[style*="border-color: rgb(0, 103, 181);"]
-aftonbladet.se##div[style*="border-color: rgb(0, 103, 181);"] ~ a
+aftonbladet.se##div[style*="border-color:#0067b5;"], div[style*="border-color:#0067b5;"] ~ a
+aftonbladet.se##div[style*="border-color: rgb(0, 103, 181);"], div[style*="border-color: rgb(0, 103, 181);"] ~ a
 aftonbladet.se##h3[style*="background-color:#0067b5;border-radius:2px;margin:16px 0px 0px 0px;"]
-aftonbladet.se##a[href^="/kampanj/casino"]
-aftonbladet.se##a[href^="/rabattkod"]
-aftonbladet.se##a[href*="/se/app/aftonbladet/"]
-aftonbladet.se##a[href*="/store/apps/details?id=se.aftonbladet"]
-aftonbladet.se##a[style*="border-color: rgb(0, 103, 181)"]
-aftonbladet.se##a[style*="border-color:#0067b5"]
+aftonbladet.se##a[href^="/kampanj/casino"], a[href^="/rabattkod"], a[href*="/se/app/aftonbladet/"], a[href*="/store/apps/details?id=se.aftonbladet"]
+aftonbladet.se##a[style*="border-color: rgb(0, 103, 181)"], a[style*="border-color:#0067b5"]
 aftonbladet.se##.jwplayer:has(.svp-sponsor-label):remove()
 aftonbladet.se##a[href^="/tv/"]:has(span:has-text(/studio oddset/i)):upward(1)
 aftonbladet.se##a[href*="aftonbladet.se/kampanj/artikel"]:upward(1)
@@ -3512,7 +3505,7 @@ se.azrhymes.com###CookielawBanner
 /cs1pc.js$domain=kiaindex.se
 cannabis.se##+js(aopw, Cookies)
 cannabis.se##.header-ads-wrapper, .ai-adb-hide
-astmaoallergiforbundet.se##.banner-top, .banner-side
+astmaoallergiforbundet.se##.banner-top, .banner-side, .section-top
 diabetes.se##.c-cookies
 nordfront.se##.post:has(span:has-text(/annons/i))
 nordfront.se###campaign_area
@@ -3527,8 +3520,8 @@ nasdaqomxnordic.com##+js(acis, $, shuffle)
 /sweet-alert.$domain=hittaren.com
 birthday.se##.datax
 totallyorebro.se,totallystockholm.se##div.tot-content-preview-container-small[style*="border-top:4px solid #ffb200;"]
-totallyorebro.se,totallystockholm.se##[class*="tot-content-preview-container"]:has(a[href*="casino"])
-totallyorebro.se,totallystockholm.se##a[href*="casino-bonus"]
+totallyorebro.se,totallystockholm.se##[class*="tot-content-preview-container"]:has(a[href*="casino"]):remove()
+totallyorebro.se,totallystockholm.se##a[href*="casino-bonus"],a[href*="/sponsrat/"]
 glassakademin.se##[class^="adverts-"]
 /wp-content/uploads$image,domain=xn--snabbalnen-75a.se
 laromedia.se##img[alt="Annons"] + .img-flipper
@@ -3548,7 +3541,7 @@ voister.se##.cookiebanner
 ||skidspar.se/scripts/revive.js
 skidspar.se###ads-panorama
 skidspar.se###videoad
-katerinamagasin.se##.adv-area
+katerinamagasin.se##.adv-area,#right-areas
 darkside.se##+js(set, kod, undefined)
 customerinsider.se##figure > a[target="_self"]
 radarbox.com##+js(set, ads_enabled, true)

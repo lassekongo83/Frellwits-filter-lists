@@ -69,7 +69,7 @@ cat > output/headers.txt <<EOF
 ! Special thanks to ryanbr@github for the rules from Fanboy's Swedish list.
 !
 ! --- Browser/extension specific filters
-!#include Swedish/swe-ubo-nano-filters.txt
+!#include Swedish/swe-ubo-filters.txt
 !#if env_firefox
 !#include Swedish/firefox.txt
 !#endif
@@ -89,7 +89,7 @@ EOF
 # FIXME - Don't create and use empty files https://github.com/DandelionSprout/adfilt/issues/7#issuecomment-559785940 & https://github.com/gorhill/uBlock/blob/92c0f6cab645a23374307b181498987c002c426c/src/js/assets.js#L116
 # Combine the files
 cat output/headers.txt $not_extended > ../../Frellwits-Swedish-Filter.txt
-cat $extended > ../swe-ubo-nano-filters.txt
+cat $extended > ../swe-ubo-filters.txt
 cat $firefox > ../firefox.txt
 cat $not_firefox > ../not_firefox.txt
 #cat $chromium > ../chromium.txt
