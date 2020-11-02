@@ -1362,7 +1362,6 @@ aftonbladet.se##.ab-responsive-ads-wrapper
 aftonbladet.se##.social-shares, .abBtnShare, .share-icons
 aftonbladet.se##a[href*=".se/kampanj?"]:has-text(/erbjudande/i)
 aftonbladet.se##body.abTheme-entertainment *> .abAside > div[style^="text"]:last-child
-aftonbladet.se##a[href^="/brandstudio"]
 aftonbladet.se##div[style*="border-color:#0067b5;"], div[style*="border-color:#0067b5;"] ~ a
 aftonbladet.se##div[style*="border-color: rgb(0, 103, 181);"], div[style*="border-color: rgb(0, 103, 181);"] ~ a
 aftonbladet.se##h3[style*="background-color:#0067b5;border-radius:2px;margin:16px 0px 0px 0px;"]
@@ -1468,36 +1467,12 @@ di.se##+js(nosiif, runAdBlockPaywall, 1000)
 di.se##+js(acis, Di, initAds)
 di.se##+js(set, getAdblockerStatus, noopFunc)
 di.se##+js(nostif, #triggerModal)
+digital.di.se##+js(acis, diConf)
 ||digital.di.se/api/sponsor/$xmlhttprequest
+/videoplayer/embed/*&autoplay=true$frame,queryprune=autoplay,domain=di.se
 di.se##[class^="gdpr-policy"]
-di.se##.mc__overlay--show
-di.se##.footer__cookie-info
-di.se##article.di_teaser--native
-di.se##section[data-ad-settings]
-di.se##aside.di_share-buttons
-di.se##.di_article-body-commercial-link
-di.se##.di_panorama-wrapper
-di.se##article[data-is-native-ad="1"]
-di.se##a[href^="/sponsrad/"]
-di.se##a[href^="/brandstudio/"]
-di.se##.di_start__insider-ad
-di.se##.di_panorama__isAdLabel
-di.se##a[href*="/annons-"]
-di.se##.carousel-tab:has-text(/^annons:/i)
-di.se##.di_expressen-rabatt-koder
-di.se##section[data-content-url^="/part/ads/"]
-digital.di.se,weekend.di.se##+js(acis, diConf)
-di.se##.di_teaser-flak-native-column
-di.se##.di_teaser-flak-container--native
-di.se##.dip_panorama
-di.se##.di_article_ad-block
-di.se##.segment__column > .service-box:last-child
-di.se##.discount-box
-di.se##.di_article-comments-tooltip
-di.se##.native-box
-di.se##.di_teaser-flak-planbokskoll
-di.se##.site-header__panorama
-/adblk.js$script,domain=weekend.di.se
+di.se##.di_start__teaser-placeholder[data-content-url*="/ads/"]
+di.se##.bandit-box__teaser--native,.service-box,.discount-box,.di_panorama__isAdLabel,.di_panorama-wrapper,.di_teaser-flak-container--native,.di_teaser-flak-planbokskoll,.di_stock-service
 /getnative$xmlhttprequest,domain=di.se
 ! expressen
 ||precis.expressen.se/recommendations$xmlhttprequest
@@ -2129,6 +2104,7 @@ snowmobile.se,atvmag.se##.bs-wrap-gdpr-law
 mp.se,linnherbertsson.se,ellinorlofgren.se###cookies
 egoinas.se,metalcentral.net###tm-top-a
 nvp.se,fplus.se##[class^="banner"]
+aftonbladet.se,di.se##a[href^="/brandstudio"]
 
 ! Various websites with lots of malicious stuff and annoyances
 /wp-content/themes/keremiya1/js/script.js$script
