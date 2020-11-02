@@ -868,7 +868,7 @@
 @@/ads.min.js$~third-party,domain=notebookcheck.se
 @@/js/advertisement*.$script,~third-party,domain=expressen.se
 @@/js/advertising.$script,~third-party,domain=byggnadsarbetaren.se|cykla.se|elbilsnytt.se|snowmobile.se|vatternrundan.se
-@@/scripts/advertisement*.$script,~third-party,domain=expressen.se|skonahem.com|damernasvarld.se|di.se|alltomtradgard.se
+@@/scripts/advertisement*.$script,~third-party,domain=expressen.se|skonahem.com|damernasvarld.se|di.se|alltomtradgard.se|teknikensvarld.se
 @@/show_ads.js$script,~third-party,domain=happypancake.com
 @@||assets-cdn.mytaste.org/js/ads.js$script
 @@||freeride.nu/js/ads.js$script,domain=happyride.se
@@ -1251,6 +1251,7 @@ swedroid.se##.externalTopMobile
 !#endif
 
 ! IDG
+/prebid$script,domain=idg.se
 ||idg.se/sharecounter?$xmlhttprequest
 ||cmatch.idg.se^
 @@/consent.json$domain=idg.se|forum.studio.se|upphandling24.se|forum.macworld.se
@@ -1270,8 +1271,6 @@ idg.se##a[data-click-settings*="Article Outbound Links"]:has(strong:has-text(/an
 idg.se##.toolbar.prisjakt.toolbarSticky
 idg.se##.idgmsg__box
 studio.se###elGuestTerms
-upphandling24.se##.type-partnerartikel
-upphandling24.se##.widget:has(.widget-title:has-text(/^annons/i))
 ! Attempt to make their gdpr choice less annoying. Don't want to block it as a limbo choice will disable 3rd party videos and embeds.
 !#if !env_mobile
 forum.macworld.se,forum.studio.se,idg.se##.idgcp__modal--in .idgcp__layer:style(background: none !important;)
@@ -1458,7 +1457,7 @@ www.dn.se##+js(acis, gtmData)
 www.dn.se##+js(ra, data-auto-play)
 www.dn.se##+js(ra, data-resource-id, [data-resource-id="dn.se-meteredmodel"])
 /analytics$script,domain=dn.se
-/initLogging$script,domain=dn.se
+/initLogging$script,domain=dn.se|teknikensvarld.se
 /check-paywall$domain=dn.se
 @@/advertisement*.js$script,domain=dn.se
 /streamsense.$script,important,domain=dn.se
@@ -1628,15 +1627,15 @@ dagensmedicin.se##.sponsored-article-wrapper
 ||akkurat.bonniernewslifestyle.se^*/recommendations$xmlhttprequest
 /analytics-bmb$script
 /scripts/initLogging$domain=expressen.se|skonahem.com|damernasvarld.se|alltomtradgard.se
-expressen.se,skonahem.com,damernasvarld.se,topphalsa.se,alltomtradgard.se,tara.se,gardochtorp.se,godsochgardar.se,alltihemmet.se,lantliv.com##.gdpr-banner
+expressen.se,skonahem.com,damernasvarld.se,topphalsa.se,alltomtradgard.se,tara.se,gardochtorp.se,godsochgardar.se,alltihemmet.se,lantliv.com,teknikensvarld.se##.gdpr-banner
 skonahem.com,damernasvarld.se,alltomtradgard.se##.teaser__third-party
 skonahem.com,damernasvarld.se,alltomtradgard.se##+js(acis, ExpressenAnalytics, push)
-alltommat.se,privataaffarer.se,familyliving.se,viforaldrar.se##a.teaser[href*="/annonssamarbete/"]
-alltommat.se,privataaffarer.se,familyliving.se,viforaldrar.se##a.teaser[href*="/promotion/"]
-alltommat.se,privataaffarer.se,dn.se,familyliving.se,viforaldrar.se,di.se##.teaser-native
+alltommat.se,privataaffarer.se,familyliving.se##a.teaser[href*="/annonssamarbete/"]
+alltommat.se,privataaffarer.se,familyliving.se##a.teaser[href*="/promotion/"]
+alltommat.se,privataaffarer.se,dn.se,familyliving.se,di.se##.teaser-native
 alltommat.se##.teaser:has(.teaser-label:has-text(/annonssamarbete/i))
-viforaldrar.se,teknikensvarld.se##.paywall-gradient-overlay
-viforaldrar.se,teknikensvarld.se##.t-single.-content-hide .entry-content, .t-single.-content-hide .entry-content .paywall-gradient-overlay:style(height: auto !important; overflow: visible !important;)
+teknikensvarld.se##.paywall-gradient-overlay
+teknikensvarld.se##.t-single.-content-hide .entry-content, .t-single.-content-hide .entry-content .paywall-gradient-overlay:style(height: auto !important; overflow: visible !important;)
 privataaffarer.se##.data-grid-teaser:has(.teaser-label:has-text(/^annons/i))
 paf_ad_teaser$domain=privataaffarer.se
 tradera.com##react-adslot
@@ -2115,7 +2114,7 @@ sydsvenskan.se,hd.se,vimedbarn.se,capdesign.se,typkanske.se##.gdpr
 pomu.se,wwf.se,ilikeradio.se,netdoktor.se,nevnarien.se,su.se##.cc-banner
 koket.se,nyheter24.se,civilekonomen.se,aktiespararna.se,alekuriren.se##.native
 svartgul.se,tvmatchen.nu,eventeffect.se,executiveeffect.se###panorama
-uppslaget.se,hypeline.se,skidresultat.se,maklarvarlden.se,byggteknikforlaget.se,fotbolldirekt.se,hockeysverige.se,innebandymagazinet.se##.annons
+uppslaget.se,hypeline.se,skidresultat.se,maklarvarlden.se,byggteknikforlaget.se,fotbolldirekt.se,hockeysverige.se,innebandymagazinet.se,motivation.se##.annons
 testfakta.se,realtid.se,viktvaktarna.se,plastikoperationsforum.se,riksettan.net,automobil.se,vibilagare.se,mopedgaraget.se,caroftheyear.se,klassiker.nu,bike.se,spraktidningen.se,husbilhusvagn.se,sandaren.se,kyrkanstidning.se,publikt.se,fof.se,industrinyheter.se,dagensnaringsliv.se,infrastrukturnyheter.se,sportochfritidsnyheter.se,inredningsnyheter.se,byggnyheter.se,dagensfastigheter.se,stockholmsbyggnyheter.se,energinyheter.se,vindkraftsnyheter.se,solenerginyheter.se,jarnvagsnyheter.se,transportochlogistik.se,metallerochgruvor.se,papperochmassa.se,hsr.se,so-rummet.se,kantarsifo.se,ungforetagsamhet.se,cgi.se,alandsradio.ax,sjofart.ax###sliding-popup
 swedroid.se,tidningensyre.se##.social
 byggahus.se,mobil.se##a[href^="/partner/"]
@@ -2987,7 +2986,7 @@ swehockey.se##+js(acis, jQuery, adscript)
 tidningenhockey.se##.node-ads-right
 etunawebben.se##+js(nostif, ad)
 ljudochbild.se##.topper:style(margin-top: 0 !important;)
-ljudochbild.se,fotosidan.se##.topbanner
+ljudochbild.se,fotosidan.se,motivation.se##.topbanner
 ljudochbild.se##.adremark
 ljudochbild.se##.coofad
 ljudochbild.se##.popup-overlay
@@ -3579,3 +3578,7 @@ matspar.se##+js(json-prune, payload.ads campaigns.singleinsider campaigns.ros ca
 forum.robsoft.nu##td[valign="middle"] > a[target="_blank"]
 axess.se##.popup--cookie
 receptcentralen.se###text-9
+upphandling24.se##.type-partnerartikel
+upphandling24.se##.widget:has(.widget-title:has-text(/^annons/i))
+||matorama.se^$csp=img-src 'self' *.wordpress.com *.wp.com *.gravatar.com
+motivation.se##.sponsored-item,.middlebanner,.bottombanner,.outsider
