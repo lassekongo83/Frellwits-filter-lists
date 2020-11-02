@@ -1575,49 +1575,6 @@ mittkok.expressen.se##.widget-social-media
 mittkok.expressen.se##+js(acis, adblock)
 mittkok.expressen.se##+js(acis, burtSegments)
 mittkok.expressen.se##+js(aeld, click, trackClick)
-! tv4
-tv4.se##.program-header-sponsors
-tv4.se##.social-block-ad
-tv4.se##[class*="aside-ad"]
-tv4.se##.social-buttons
-tv4.se##.program-block-ad
-||damoh.tv4play.se^$image
-||stat-api.tv4play.se^$image
-||tv4-trailers.b17g.net/api/trailers$xmlhttprequest
-*/trailers$media,redirect=noop-0.1s.mp3,domain=tv4play.se|fotbollskanalen.se|koket.se
-||tv4-trailers-prod.herokuapp.com/api/impression$xmlhttprequest
-||b17g.net^*/play/log$xmlhttprequest,redirect=noop.txt,domain=tv4play.se|fotbollskanalen.se|koket.se
-||cloudfront.net/creatives/assets/$image,media,domain=tv4play.se|fotbollskanalen.se|koket.se
-||ad.doubleclick.net/ddm/$image,important,domain=tv4play.se|fotbollskanalen.se|koket.se
-||tv4play.se/hic_qos$script,redirect=noop.js
-||bonnier-html-player.b17g.services/bumpers/$media,redirect=noop-1s.mp4,domain=tv4play.se|fotbollskanalen.se|koket.se
-tv4play.se,fotbollskanalen.se###skin-cover
-tv4play.se###__next > div:not(:first-child)
-tv4play.se##.js-cookie-banner
-tv4play.se###pause-img-holder
-tv4play.se#@#.adBanner
-@@||a.zxcvads.com/a/ads/-image-ad_ads.html$xmlhttprequest,domain=tv4play.se|fotbollskanalen.se|koket.se
-*/tv4play_plugin.$script,redirect=noop.js,domain=tv4play.se|fotbollskanalen.se|koket.se
-!#if env_firefox
-||se-tv4.videoplaza.tv/proxy/tracker/$all
-!#endif
-! Köket
-koket.se##.endorsed
-koket.se##li.slide:has(.external_advertiser)
-koket.se##.external_advertiser
-koket.se###react-newsletter-overlay
-koket.se##.native-simple__wrapperLink
-koket.se##.list_item__sponsored
-koket.se##.cookie_message__wrapper
-koket.se##.promo__container
-koket.se##.sponsor_top__wrapper a
-! fotbollskanlen
-fotbollskanalen.se##+js(acis, containerId)
-fotbollskanalen.se##.top-item.brand
-fotbollskanalen.se##.player-index-sponsor
-fotbollskanalen.se##.playerindex-ad
-fotbollskanalen.se##.notice__link:has(.notice__tag_sponsored)
-||minute.ly^$domain=fotbollskanalen.se
 ||bugsnag.com^$third-party,domain=dn.se|di.se|tv4play.se|tv4.se|koket.se|fotbollskanalen.se|expressen.se
 ! övrigt
 /native?placeholder$xmlhttprequest,domain=hd.se|sydsvenskan.se
@@ -1684,6 +1641,25 @@ allehanda.se,arbetarbladet.se,avestatidning.com,bblat.se,dalademokraten.se,dt.se
 allehanda.se,arbetarbladet.se,avestatidning.com,bblat.se,dalademokraten.se,dt.se,fagersta-posten.se,gd.se,lt.se,ltz.se,na.se,norrteljetidning.se,nynashamnsposten.se,op.se,salaallehanda.com,st.nu,tidningenharjedalen.se,vlt.se,bandypuls.se,falkopingstidning.se,jp.se,skaraborgslanstidning.se,skovdenyheter.se,smalandsdagblad.se,smalanningen.se,smt.se,tranastidning.se,vastgotabladet.se,vetlandaposten.se,vn.se,jnytt.se##.true-native
 ||ues*.mmcloud.se/api/*/events$third-party
 /bam-data$xmlhttprequest,domain=allehanda.se|arbetarbladet.se|avestatidning.com|bblat.se|dalademokraten.se|dt.se|fagersta-posten.se|gd.se|lt.se|ltz.se|na.se|norrteljetidning.se|nynashamnsposten.se|op.se|salaallehanda.com|st.nu|tidningenharjedalen.se|vlt.se|bandypuls.se|falkopingstidning.se|jp.se|skaraborgslanstidning.se|skovdenyheter.se|smalandsdagblad.se|smalanningen.se|smt.se|tranastidning.se|vastgotabladet.se|vetlandaposten.se|vn.se|jnytt.se
+
+! TV4
+||damoh.tv4play.se^$image
+||stat-api.tv4play.se^$image
+||b17g.net^*/play/log$xmlhttprequest,redirect=noop.txt,domain=tv4play.se|fotbollskanalen.se|koket.se|tv4.se
+tv4play.se#@#.adBanner
+@@||a.zxcvads.com/a/ads/-image-ad_ads.html$xmlhttprequest,domain=tv4play.se|fotbollskanalen.se|koket.se|tv4.se
+*/tv4play_plugin.$script,redirect=noop.js,domain=tv4play.se|fotbollskanalen.se|koket.se|tv4.se
+!#if env_firefox
+||playback-api.b17g.net/*&browser=MozillaFirefox$xhr,queryprune=|browser,domain=tv4play.se|fotbollskanalen.se|koket.se|tv4.se
+!#endif
+! Köket
+koket.se##div[class*="recipe_sponsored"] > [class*="sponsor_banner"]
+koket.se##div[class*="recipe_sponsored"] div[class*="list_item_wide_wrapper"]
+koket.se##div[class*="recipe_sponsored"] div[class*="recipe_sourceImageDesktop"]
+! fotbollskanlen
+fotbollskanalen.se##.top-item.brand,.player-index-sponsor,.playerindex-ad
+fotbollskanalen.se##.notice__link:has(.notice__tag_sponsored)
+||minute.ly^$domain=fotbollskanalen.se
 
 ! NTM
 /cxense.$script,domain=corren.se|folkbladet.se|mvt.se|nt.se|vt.se|vimmerbytidning.se|kuriren.nu|nsd.se|norran.se|ekuriren.se|strengnastidning.se|kkuriren.se|sn.se|eposten.se|unt.se|helagotland.se|affarsliv.com|affarslivgotland.se|klackspark.com|norrbottensaffarer.se
