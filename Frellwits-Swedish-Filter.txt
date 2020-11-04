@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2020-11-03 18:00:20 CET
+! Last modified: 2020-11-04 07:09:55 CET
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -63,8 +63,8 @@
 ###cookiejar
 ###cookielawwarning
 ###cookieMsgBlock
-###CookieNotice
 ###cookieNotice
+###CookieNotice
 ###cookies-acceptance .alert.bottom
 ###cookiesInfo
 ###dialog-eu-cookie-law
@@ -326,6 +326,7 @@
 /api/plugins/google-analytics$xmlhttprequest
 /app.php/adsview/*$xmlhttprequest
 /appnexus$script,domain=aftonbladet.se|blocket.se|bytbil.com|minhembio.com
+/article-paywall
 /assets/comeon/*$image,domain=fotbolldirekt.se|hockeysverige.se
 /assets/google-universal-analytics$script
 /assets/pb-$script,domain=weheartit.com
@@ -1187,7 +1188,7 @@ bukefalos.se##a > video
 bukefalos.se,thaisnack.se##.u-bottomFixer
 businessclass.se###bcpop
 businessclass.se##.reveal-modal-bg
-bussmagasinet.se###page > div[id]:not([class])
+bussmagasinet.se###page > div:not(.left):not(.right)
 bussmagasinet.se###titlebanner
 bussmagasinet.se##a.gofollow[data-track]
 buzzter.se###lock
@@ -1305,7 +1306,7 @@ deliquate.se##.ajax_loader
 deliquate.se##[id^="ads300"]
 deliquate.se##[id^="linkcat-"]
 devote.se,familjeliv.se##div[style*="height: 244px;"]
-di.se##.bandit-box__teaser--native,.service-box,.discount-box,.di_panorama__isAdLabel,.di_panorama-wrapper,.di_teaser-flak-container--native,.di_teaser-flak-planbokskoll,.di_stock-service
+di.se##.bandit-box__teaser--native,.service-box,.discount-box,.di_panorama__isAdLabel,.di_panorama-wrapper,.di_teaser-flak-container--native,.di_teaser-flak-planbokskoll,.di_stock-service,.native-box,.di_teaser--native
 di.se##.di_start__teaser-placeholder[data-content-url*="/ads/"]
 di.se##[class^="gdpr-policy"]
 di.se,dn.se,expressen.se###rich-media-ads
