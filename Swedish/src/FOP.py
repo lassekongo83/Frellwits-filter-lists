@@ -162,6 +162,14 @@ def fopsort (filename):
 
         # Combines domains for (further) identical rules
         def combinefilters(uncombinedFilters, DOMAINPATTERN, domainseparator):
+            """
+            Combine the domain filters.
+
+            Args:
+                uncombinedFilters: (todo): write your description
+                DOMAINPATTERN: (str): write your description
+                domainseparator: (str): write your description
+            """
             combinedFilters = []
             for i in range(len(uncombinedFilters)):
                 domains1 = re.search(DOMAINPATTERN, uncombinedFilters[i])
@@ -196,6 +204,11 @@ def fopsort (filename):
 
         # Writes the filter lines to the file
         def writefilters():
+            """
+            Write filters to file.
+
+            Args:
+            """
             if elementlines > filterlines:
                 uncombinedFilters = sorted(set(section), key = lambda rule: re.sub(ELEMENTDOMAINPATTERN, "", rule))
                 outputfile.write("{filters}\n".format(filters = "\n".join(combinefilters(uncombinedFilters, ELEMENTDOMAINPATTERN, ","))))
@@ -335,6 +348,12 @@ def isglobalelement (domains):
 
 ## EDIT by lassekongo83@github. Don't do this for uBO filters.
 def removeunnecessarywildcards (filtertext):
+    """
+    Removes the wildcard from the text.
+
+    Args:
+        filtertext: (str): write your description
+    """
     # Where possible, remove unnecessary wildcards from the beginnings and ends of blocking filters.
     whitelist = False
     hadStar = False
