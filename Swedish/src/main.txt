@@ -882,6 +882,7 @@
 @@/assets/ads-$~third-party,domain=vackertvader.se
 
 ! Unbreak
+##div.cli-modal-backdrop
 realm667.com#@##redim-cookiehint
 tillminne.se#@#.ads-list
 @@||feed.meltwater.com^$subdocument
@@ -896,6 +897,7 @@ jobb.maxkompetens.se#@##single-ad
 jobb.maxkompetens.se#@#.ad-body
 jobb.maxkompetens.se#@#.ad-content
 jobb.maxkompetens.se#@#.single-ad
+intersport.*#@#.cookie-banner:not(body):not(html)
 ! personlig annonsmarknad
 cykla.se#@#.advertisment
 @@||cykla.se/wp-content/themes/cykla/assets/images/advert-filter-top.jpg$image
@@ -906,11 +908,6 @@ patient.info##body:style(overflow: auto !important;)
 @@/optimizelyjs/*$domain=ikea.com
 ! Blocked in EasyPrivacy. Breaks login/logout on some sites.
 @@||cdn.dynamicyield.com^$domain=alingsastidning.se|bohuslaningen.se|gp.se|hallandsposten.se|hn.se|stromstadstidning.se|ttela.se
-intersport.*#@#.cookie-banner:not(body):not(html)
-! frame crashes tab in firefox
-!#if env_firefox
-||issuu.com^$subdocument
-!#endif
 ! https://github.com/AdguardTeam/AdguardFilters/issues/55513
 @@||vendorlist.consensu.org/vendorlist.json
 ! https://github.com/lassekongo83/Frellwits-filter-lists/issues/81
@@ -922,7 +919,6 @@ dekra.de#@##cookie-banner
 ! https://github.com/lassekongo83/Frellwits-filter-lists/issues/87
 @@||createsend1.com/css/
 @@||js.createsend1.com/js/jquery
-##div.cli-modal-backdrop
 
 ! Common site specific blocking
 -ads.$image,domain=svenskbyggtidning.se
