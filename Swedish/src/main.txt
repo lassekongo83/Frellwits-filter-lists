@@ -22,6 +22,7 @@
 ||apccdn.apsis1.com^$third-party
 ||appsmav.com^$third-party
 ||apsislead.com^$third-party
+||analytics.ozzi.io^$third-party
 ||anki.com^$third-party
 ||ascontentcloud.com^$third-party
 ||audience.systems^$third-party
@@ -302,6 +303,7 @@
 /banner/ads/*
 /bannersidor/*
 /banners/*casino$image
+/betald-exponering/huvudspons$image
 /bilder/ads/*
 /bilder-for-annonser/*$image
 /bitcsys/js/bit.js$script
@@ -511,6 +513,7 @@
 ||inevserver.com/~tournreport/$image
 ||konzilo.com/mtc.js$script
 ||idrottonline.se/client-views/cookieinfo$xmlhttprequest
+||idrottonline.se/globalassets/*/samarbetspartners$image
 ||iubenda.com/cookie$script,subdocument
 ||juicer.io/api/page_views$xmlhttprequest
 ||js.hs-scripts.com/3322485.js$script
@@ -861,6 +864,7 @@
 ##div.avia-cookiemessage-bottom
 ##div.cookie-show-bar-bottom
 ##div.oc_cb_wrapper.fill_black
+##div.NativeAd
 
 ! Site specific whitelists
 @@/*_adframe.js$script,~third-party,domain=fssweden.se
@@ -973,7 +977,7 @@ dekra.de#@##cookie-banner
 ||aff.bstatic.com^$domain=travelgrip.se
 ||apprl.com/embed/$subdocument,domain=forni.se|majanilssonlindelof.com|metromode.se|petratungarden.se|trendenser.se
 ||bstatic.com/static/affiliate$third-party
-||cdn.cookielaw.org^$script,domain=cartoonnetwork.se|foxtv.se|nvp.se|recept.se
+||cdn.cookielaw.org^$script,domain=cartoonnetwork.se|foxtv.se|nvp.se|recept.se|tv4.se|tv4play.se|koket.se|fotbollskanalen.se|flashscore.se|manpower.se|svenskorientering.se
 ||cdn.jsdelivr.net/npm/search-insights$script,domain=forum.hallon.se
 ||cookieinformation.com^$script,domain=valuta.se|iform.se|digitalfotoforalla.se|natgeo.se|popularhistoria.se|aktivtraning.se|pctidningen.se|militarhistoria.se|viivilla.se|varldenshistoria.se|proff.se
 ||connect.getflowbox.com^$third-party,domain=aikfotboll.se|farjestadbk.se|svenskaturistforeningen.se
@@ -1003,14 +1007,14 @@ opulens.se##+js(acis, advanced_ads_adsense_UID)
 pomu.se,thelocal.se,hockeynews.se##+js(acis, googletag, push)
 newsner.com,humorbibeln.se,sportbibeln.se,ettgottskratt.se,kimura.se,villalivet.se,datormagazin.se,handbollskanalen.se,enkelteknik.se,samnytt.se,styrkelabbet.se##+js(acis, advads_placement_tests)
 allehanda.se,arbetarbladet.se,avestatidning.com,bblat.se,dalademokraten.se,dt.se,fagersta-posten.se,gd.se,lt.se,ltz.se,na.se,norrteljetidning.se,nynashamnsposten.se,op.se,salaallehanda.com,st.nu,tidningenharjedalen.se,vlt.se,skanesport.se##+js(aeld, mousemove)
-datormagazin.se,skanesport.se##+js(aopr, advads)
+datormagazin.se,skanesport.se,villalivet.se##+js(aopr, advads)
 nyadagbladet.se,senses.se##+js(acis, anOptions)
 magasinetparagraf.se,senses.se,plazakvinna.com,omnihalsa.com##+js(acis, _stq)
 video-static.tunnl.com##+js(set, canRunAds, true)
 babyhjalp.se,omnihalsa.com,adlanda.se##+js(acis, document.oncontextmenu)
 handbollskanalen.se,villalivet.se##+js(acis, advadsTracking)
 handbollskanalen.se,villalivet.se##+js(acis, advads_has_ads)
-finansliv.se,pedagogiskamagasinet.se,lararnastidning.se,tidningenridsport.se,sulkysport.se,scanaktier.se,lektion.se##+js(aopr, OA_show)
+finansliv.se,lararnastidning.se,tidningenridsport.se,sulkysport.se,scanaktier.se,lektion.se##+js(aopr, OA_show)
 bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se,chef.se,familjeliv.se##+js(acis, _cInfo)
 nyheteridag.se,dagensps.se##+js(acis, googletag)
 mobilanyheter.net,villalivet.se,lchfarkivet.se##+js(set, MonsterInsights, undefined)
@@ -2094,7 +2098,8 @@ mp.se,linnherbertsson.se,ellinorlofgren.se###cookies
 egoinas.se,metalcentral.net###tm-top-a
 nvp.se,fplus.se##[class^="banner"]
 aftonbladet.se,di.se##a[href^="/brandstudio"]
-ikea.com,spelo.se###onetrust-banner-sdk
+ikea.com,spelo.se,allakorsord.se,baaam.se,dromhemochtradgard.se,elle.se,femina.se,hant.se,mabra.com,residencemagazine.se,svenskdam.se###onetrust-banner-sdk
+adecco.se###onetrust-consent-sdk
 
 ! Various websites with lots of malicious stuff and annoyances
 /wp-content/themes/keremiya1/js/script.js$script
@@ -3495,7 +3500,7 @@ kvalitetsmagasinet.se,miljo-utveckling.se,telekomidag.se,vdtidningen.se##.partne
 rikakvinnor.se##article.category-samarbete:remove()
 voister.se##.campaign
 voister.se##.voister .brief:has(.voister .campaign-vignette)
-voister.se##.cookiebanner
+voister.se,lararen.se##.cookiebanner
 ||teknikveckan.se/wp-json/*/ads$xmlhttprequest
 /html5videovastplugin.$domain=skidspar.se
 ||skidspar.se/scripts/revive.js
@@ -3547,3 +3552,4 @@ upphandling24.se##.widget:has(.widget-title:has-text(/^annons/i))
 motivation.se##.sponsored-item,.middlebanner,.bottombanner,.outsider
 husbilsklubben.se##.u-bottomFixer
 brafiler.se###header-banner
+svenskorientering.se###RightDiv

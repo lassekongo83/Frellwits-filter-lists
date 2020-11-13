@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2020-11-13 12:15:07 CET
+! Last modified: 2020-11-13 13:06:43 CET
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -64,8 +64,8 @@
 ###cookiejar
 ###cookielawwarning
 ###cookieMsgBlock
-###cookieNotice
 ###CookieNotice
+###cookieNotice
 ###cookies-acceptance .alert.bottom
 ###cookiesInfo
 ###dialog-eu-cookie-law
@@ -214,6 +214,7 @@
 ##div.cli-modal-backdrop
 ##div.cookie-show-bar-bottom
 ##div.cookievarning-wrap
+##div.NativeAd
 ##div.newsletter-cta
 ##div.newsletter-slider
 ##div.oc_cb_wrapper.fill_black
@@ -348,6 +349,7 @@
 /bannersidor/*
 /bc-tracking.js$script,domain=digikey.se
 /betalannonser/*$domain=filmcafe.se
+/betald-exponering/huvudspons$image
 /betting/$image,domain=fotboll.com|hockeybladet.nu|kulturbloggen.com|nyadagbladet.se
 /bilder-for-annonser/*$image
 /bilder/ads/*
@@ -965,6 +967,7 @@
 _jquery.blockUI.$script,domain=fssweden.se
 aapl.se,digilar.se,hrnytt.se,ljuskultur.se,omvarlden.se,svenskfotboll.se##.cookies
 accentmagasin.se##.site-cookies
+adecco.se###onetrust-consent-sdk
 affarsliv.com,affarslivgotland.se,allsvenskan.se,alltomstockholm.se,babyhjalp.se,branschkoll.se,corren.se,ekuriren.se,eposten.se,folkbladet.se,fotosidan.se,globalportalen.org,helagotland.se,kkuriren.se,klackspark.com,kollega.se,kuriren.nu,moviezine.se,mvt.se,norrbottensaffarer.se,nsd.se,nt.se,osterbottenstidning.fi,pt.se,sn.se,tasteline.com,unt.se,vimmerbytidning.se,vt.se##.ads
 affarsliv.com,affarslivgotland.se,corren.se,ekuriren.se,eposten.se,folkbladet.se,helagotland.se,kkuriren.se,klackspark.com,kuriren.nu,mvt.se,norran.se,norrbottensaffarer.se,nsd.se,nt.se,pt.se,sn.se,strengnastidning.se,unt.se,vimmerbytidning.se,vt.se##.cdk-overlay-pane
 affarsliv.com,affarslivgotland.se,corren.se,ekuriren.se,eposten.se,folkbladet.se,helagotland.se,kkuriren.se,klackspark.com,kuriren.nu,mvt.se,norran.se,norrbottensaffarer.se,nsd.se,nt.se,pt.se,sn.se,strengnastidning.se,unt.se,vimmerbytidning.se,vt.se##ad-block
@@ -1045,6 +1048,7 @@ alingsastidning.se,bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidn
 alkompis.se###check-also-box
 allabolag.se##.topBnrContainer
 allakorsord.se,allas.se,baaam.se,dromhemochtradgard.se,elle.se,femina.se,hant.se,mabra.com,residencemagazine.se,svenskdam.se##.c-newsletter
+allakorsord.se,baaam.se,dromhemochtradgard.se,elle.se,femina.se,hant.se,ikea.com,mabra.com,residencemagazine.se,spelo.se,svenskdam.se###onetrust-banner-sdk
 allakorsord.se,baaam.se,dromhemochtradgard.se,elle.se,femina.se,hant.se,mabra.com,residencemagazine.se,svenskdam.se##.ad-collapse
 allakorsord.se,baaam.se,dromhemochtradgard.se,elle.se,femina.se,hant.se,mabra.com,residencemagazine.se,svenskdam.se##.c-native-carousel--wrapper
 allakorsord.se,baaam.se,dromhemochtradgard.se,elle.se,femina.se,hant.se,mabra.com,residencemagazine.se,svenskdam.se##.native-sponsored-splash
@@ -1651,7 +1655,6 @@ idg.se##div[data-cms-ad]
 idg.se,macworld.se,nsk.se,skd.se##.adContainer
 iform.se##a[data-ad-sub-pillar="Annons"]
 ikea.com##.cookie-bot-overlay.is--visible
-ikea.com,spelo.se###onetrust-banner-sdk
 ilikeradio.se,netdoktor.se,nevnarien.se,pomu.se,su.se,wwf.se##.cc-banner
 ingenjoren.se##.td-header-sp-recs
 innebandy.se,lokalguiden.se##.banner-container
@@ -1735,6 +1738,7 @@ landleyskok.se##.banner-leaderboard
 landleyskok.se##.inpostbanner
 lantmannen.se##.cookieinformation
 lantmateriet.se##.cookie.show
+lararen.se,voister.se##.cookiebanner
 laromedia.se##img[alt="Annons"] + .img-flipper
 lchfarkivet.se##.wppopups-whole
 lektionsbanken.se###partners_right, #partners_top
@@ -2052,6 +2056,7 @@ svenskhistoria.se##.module-etads
 svenskhistoria.se##.widget_et_ads
 svenskhistoria.se##a[target="_blank"][rel="noopener noreferrer"]
 svenskjakt.se##.flaket-premium-adverts
+svenskorientering.se###RightDiv
 svensktgolfforum.se##[data-ad-id]
 svensktidskrift.se###bannercolumn
 sverak.se###third > #custom_html-19
@@ -2167,7 +2172,6 @@ visitskargarden.se##.boss-loader-overlay
 visitskargarden.se##a[onclick*="Banner"]
 vm-fotboll.se##a[href*="/go/"][target]
 voister.se##.campaign
-voister.se##.cookiebanner
 wappare.se##.cookie-consent-modal
 webbjobb.io##.cookie
 webradio.dbmedia.se##.marquee
@@ -2225,6 +2229,7 @@ yelp.se##[data-ga-category="biz page ad"]
 ||ana.tunnl.com^
 ||analytics-sdk.yle.fi^$script
 ||analytics.ci-360.se^$script,xmlhttprequest,domain=fokus.se
+||analytics.ozzi.io^$third-party
 ||anki.com^$third-party
 ||annons.lidkopingsnytt.nu^
 ||apccdn.apsis1.com^$third-party
@@ -2300,7 +2305,7 @@ yelp.se##[data-ga-category="biz page ad"]
 ||cdn.advisible.com/adk$third-party
 ||cdn.ampproject.org^$third-party,domain=piraja.se
 ||cdn.axiell.com^*/cookie-disclaimer.$script
-||cdn.cookielaw.org^$script,domain=cartoonnetwork.se|foxtv.se|nvp.se|recept.se
+||cdn.cookielaw.org^$script,domain=cartoonnetwork.se|flashscore.se|fotbollskanalen.se|foxtv.se|koket.se|manpower.se|nvp.se|recept.se|svenskorientering.se|tv4.se|tv4play.se
 ||cdn.iubenda.com/iubenda.$script
 ||cdn.jsdelivr.net/npm/search-insights$script,domain=forum.hallon.se
 ||cdn.livechatinc.com/tracking.$script
@@ -2493,6 +2498,7 @@ yelp.se##[data-ga-category="biz page ad"]
 ||iconosquare.com^$third-party
 ||idg.se/sharecounter?$xmlhttprequest
 ||idrottonline.se/client-views/cookieinfo$xmlhttprequest
+||idrottonline.se/globalassets/*/samarbetspartners$image
 ||imgix.net^*/analytics.$script
 ||imp.laget.se^$image
 ||improvedigital.com^$third-party
