@@ -36,6 +36,7 @@ aftonbladet.se##a[href*="aftonbladet.se/kampanj/artikel"]:upward(1)
 aftonbladet.se##a[href^="/tv/"]:has(span:has-text(/studio oddset/i)):upward(1)
 aftonbladet.se##article:has(a[data-sponsored="true"])
 aftonbladet.se##div[class][style^="text"]:has(h3:has-text(/annons/i))
+aftonbladet.se##source[srcset*="/ANNONS"]:upward(a)
 akaskidor.se,body.se,svenskgolf.se##body:style(background-image: none !important;)
 akaskidor.se,svenskgolf.se##.margin-bottom:has(.row--native)
 aktivtraning.se,iform.se,natgeo.se##li:has(.content-label:has-text(/annons/i)):remove()
@@ -442,6 +443,7 @@ underbaraclaras.se##article.post:has(.entry-summary > p:has-text(/annonssamarbet
 underbaraclaras.se##article.post:has(.entry-summary > p:has-text(/innehåller reklam för/i))
 upphandling24.se##.widget:has(.widget-title:has-text(/^annons/i))
 uppsalanyheter.se##+js(acis, uri, Math.random)
+utm_$document,queryprune=|utm-,domain=tv.nu
 vagabond.se##.most-read-article:has(a[href*="/partner/"])
 valerieaflalo.com##[id^="post-"]:has(p[style="text-align: center"]:has-text(/i samarbete med/i))
 viafree.se##.vjs-playing:upward(1) ~ .no-autoplay-overlay
