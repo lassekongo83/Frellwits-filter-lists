@@ -868,7 +868,7 @@
 ##div.l-footer__adtext
 
 ! Site specific whitelists
-@@/*_adframe.js$script,~third-party,domain=fssweden.se
+@@_adframe.js$script,~third-party,domain=fssweden.se
 @@/ad.php$script,~third-party,domain=99mac.se|skogstok.se|temperatur.nu
 @@/ads.js$script,~third-party,domain=hd.se|sydsvenskan.se|megafonen.se
 @@/adserver.$script,~third-party,domain=fotosidan.se|utsidan.se|grannar.se
@@ -2289,7 +2289,7 @@ autonytt.se##a:has(.label:has-text(/sponsrad/i))
 autonytt.se##.article_widget_preview:has(h2 > a:has-text(/artikel i samarbete/i))
 /autonytt-theme/js/blogger.$script,domain=autonytt.se
 ||mobil.se/sites/*.mp4$media
-mobil.se##.storan
+mobil.se,kamerabild.se##.storan
 mobil.se##li.partner
 mobil.se##.aside-puff
 mobil.se##.pspy_info
@@ -2673,6 +2673,7 @@ listor.se##article:has(a[href*="/annons/"])
 accentmagasin.se##.site-cookies
 accentmagasin.se##+js(nostif, n.modal)
 samnytt.se##[id^="samny-"]
+samnytt.se##a.c-news-post[href*="jackpott-pa"], a.c-news-post[href*="-casino-"], a.c-news-post[href*="-betting-"]
 merinfo.se##.articles-article-wrapper:has(span:has-text(/sponsrad/i))
 merinfo.se##.snippet-article-wrapper:has(.sponsored)
 minsolresa.se,resatillsolen.se##aside#text-5
@@ -3552,3 +3553,9 @@ husbilsklubben.se##.u-bottomFixer
 brafiler.se###header-banner
 svenskorientering.se###RightDiv
 innebandy.se##.external-banner-container-distrikt, .external-banner-container
+oru.se##.modal-cookieform
+oru.se##.no-scroll:style(overflow: initial !important;)
+/cookie-banner$script,domain=skyscanner.se
+/trackolding$script,domain=skyscanner.se
+skyscanner.se###cookie-banner-root
+svenskfast.se##.cookie-law__wrapper
