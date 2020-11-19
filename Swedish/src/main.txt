@@ -208,6 +208,7 @@
 ||travtjansten.se^$third-party
 ||trn.ninja^$third-party
 ||trugaze.io^$third-party
+||truthlyanalytics.com^$third-party
 ||twingly.com^$third-party
 ||twittercounter.com^$third-party
 ||ubembed.com^$third-party
@@ -1073,7 +1074,7 @@ mobilanyheter.net,villalivet.se,lchfarkivet.se##+js(set, MonsterInsights, undefi
 /plugins/convertplug/*
 /plugins/convertpro/*
 /plugins/cookie-bar/*
-/plugins/cookie-law-info/*$domain=majanilssonlindelof.com|nyadagbladet.se|hockeybladet.nu|carup.se|temadagar.se|ljudochbild.se
+/plugins/cookie-law-info/*$domain=majanilssonlindelof.com|nyadagbladet.se|hockeybladet.nu|carup.se|temadagar.se|ljudochbild.se|gilla.se
 /plugins/cookie-notice/*
 /plugins/cookie_consent/*$script
 /plugins/cresta-social-share-counter-pro/*
@@ -1400,8 +1401,9 @@ www.aftonbladet.se##+js(nosiif, e.reportVisibility())
 /ab-xiti-min.$script,domain=aftonbladet.se
 /sptAutoTracker.$script,domain=aftonbladet.se
 /d-footer.min.$script,domain=aftonbladet.se
-omni.se##.article--sponsored,.resource--sponsored,.component--sticky-sponsor-banner
-||*-ads.omni.news^
+omni.se,omniekonomi.se##.article--sponsored,.resource--sponsored,.component--sticky-sponsor-banner,.pre-banner
+omni.se,omniekonomi.se##a[href*="article-ad-"]:upward(.resource--link)
+omni.se,omniekonomi.se##+js(aeld, omniPulseLoaded)
 tv.nu##a[href*="adform.net"]
 tv.nu##.ad-mega--container
 tv.nu###app > div > div[class]:nth-of-type(2)
@@ -3559,3 +3561,5 @@ oru.se##.no-scroll:style(overflow: initial !important;)
 /trackolding$script,domain=skyscanner.se
 skyscanner.se###cookie-banner-root
 svenskfast.se##.cookie-law__wrapper
+/native?$domain=varden.se
+varden.se##.cdk-overlay-container, app-cookies
