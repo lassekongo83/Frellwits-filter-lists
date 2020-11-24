@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2020-11-23 12:41:40 CET
+! Last modified: 2020-11-24 12:29:46 CET
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -215,6 +215,7 @@
 ##div.cli-modal-backdrop
 ##div.cookie-show-bar-bottom
 ##div.cookievarning-wrap
+##div.holidAds
 ##div.l-footer__adtext
 ##div.NativeAd
 ##div.newsletter-cta
@@ -422,7 +423,6 @@
 /entag.$script,domain=eniro.se|leta.se|proff.se
 /entryclick;_
 /ess.eurovator.se/*
-/eu-cookie-compliance/*$domain=realtid.se
 /eu-cookie-law.min.js$script
 /eu_cookie_alert/*
 /eu_cookie_compliance/*$script
@@ -743,7 +743,7 @@
 /QXA.$script,domain=qruiser.com|qx.se
 /rabattkod$image,domain=aftonbladet.se
 /rantekartan/*$subdocument,domain=expressen.se
-/realtid_ads/*$domain=realtid.se
+/realtid_ads$domain=realtid.se
 /res_ads$domain=res.se
 /retargeting-pixels.$script
 /revive/revivejs.php$script
@@ -2072,6 +2072,7 @@ svt.se###nyh_cookie-message,#svtmat_cookie,section.nyh_share
 svtplay.se##.play_cookie-information
 sweclockers.com###prisjakt-popular
 sweclockers.com##.article-sponsored, .article-sponsored ~ div
+swedroid.se###nativendo-mainfeed + aside > .article
 swedroid.se##.article-footer > .aeChart
 swedroid.se##.article-footer > h3
 swedroid.se##a[href^="//www.prisjakt.nu/produkt"]
