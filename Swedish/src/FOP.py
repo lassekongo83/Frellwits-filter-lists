@@ -56,7 +56,7 @@ IGNORE = ("headers.txt", "extended-headers.txt", "main-temp.txt", "pre-parsing-d
 KNOWNOPTIONS = ("collapse", "csp", "document", "elemhide", "specifichide", "shide", "ehide", "ghide", 
                 "font", "genericblock", "generichide", "image", "match-case",
                 "object", "media", "object-subrequest", "other", "ping", "popup", 
-                "script", "stylesheet", "subdocument", "third-party", "first-party", "cname", "denyallow", "queryprune", 
+                "script", "stylesheet", "subdocument", "third-party", "first-party", "cname", "denyallow", "queryprune", "header", 
                 "websocket", "webrtc", "xmlhttprequest", "important", "redirect=googletagmanager.com/gtm.js", 
                 "redirect=google-analytics.com/ga.js", "redirect=google-analytics.com/analytics.js", "redirect=googletagservices.com/gpt.js", 
                 "redirect=google-analytics.com/cx/api.js", "redirect=googlesyndication.com/adsbygoogle.js", "redirect=doubleclick.net/instream/ad_status.js", 
@@ -66,7 +66,7 @@ KNOWNOPTIONS = ("collapse", "csp", "document", "elemhide", "specifichide", "shid
                 "redirect=google-analytics_cx_api.js", "redirect=googlesyndication_adsbygoogle.js", "redirect=doubleclick_instream_ad_status.js", 
                 "redirect=ampproject_v0.js", "redirect=noop.js", "redirect=noop.css", "redirect=noop.html", "redirect=noop.txt", "redirect=click2load.html", 
                 "redirect=noop-0.1s.mp3", "redirect=noop-1s.mp4", "redirect=1x1.gif", "redirect=2x2.png", "redirect=3x2.png", "redirect=32x32.png", 
-                "redirect=3x2-transparent.png", "redirect=32x32-transparent.png", "1p", "3p", "frame", "inline-script", "xhr", "mp4", "empty", "all", 
+                "redirect=3x2-transparent.png", "redirect=32x32-transparent.png", "1p", "3p", "1P", "3P", "frame", "inline-script", "xhr", "mp4", "empty", "all", 
                 "redirect-rule=noop.js", "redirect-rule=noop.css", "redirect-rule=noop.html", "redirect-rule=noop.txt", "redirect-rule=click2load.html", 
                 "redirect-rule=noop-0.1s.mp3", "redirect-rule=noop-1s.mp4", "redirect=google-analytics-analytics.js", "redirect=googletagmanager-gtm.js")
 
