@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2020-11-27 13:05:56 CET
+! Last modified: 2020-11-28 05:38:51 CET
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -380,6 +380,7 @@
 /cecado/advisible.js
 /check-paywall$domain=dn.se
 /citygate/payingcompanies$xmlhttprequest
+/clickperformance$domain=radio.se
 /closest-native$xmlhttprequest,domain=expressen.se
 /cm-ad-changer-server
 /cmp.$script,domain=allas.se
@@ -926,7 +927,6 @@
 @@||cdn.bluebillywig.com^*/components/admanager.js$script,domain=loppi.se|modette.se|nyheter24.se
 @@||cdn.dynamicyield.com^$domain=alingsastidning.se|bohuslaningen.se|gp.se|hallandsposten.se|hn.se|stromstadstidning.se|ttela.se
 @@||cdn.yieldwrapper.com/yieldwrapper.min.js$script,domain=spray.se
-@@||consensu.org^*/config.js$script
 @@||createsend1.com/css/
 @@||cykla.se/wp-admin/admin-ajax.php?action*&advert_search$xmlhttprequest
 @@||cykla.se/wp-content/themes/cykla/assets/images/advert-filter-top.jpg$image
@@ -966,7 +966,6 @@
 @@||tidningenhalsa.se^$generichide
 @@||ttela.se^$generichide
 @@||typkanske.se^$generichide
-@@||vendorlist.consensu.org/vendorlist.json
 @@||www.aftonbladet.se^$generichide
 _jquery.blockUI.$script,domain=fssweden.se
 aapl.se,digilar.se,hrnytt.se,ljuskultur.se,omvarlden.se,svenskfotboll.se##.cookies
@@ -1914,6 +1913,7 @@ professionalsecrets.se##div[data-campaign="newsletter"]
 proffs.se##.cookie-wrapper
 pussad.se##.g1-popup-newsletter
 pussad.se##.g1-slideup-wrap
+radio.se###main > div > div:not([id])
 radionytt.se###toppannons
 radioplay.se###root > div[data-reactroot] > div:not([class]):not([id])
 rastaochdalla.se##.sidebar-right > .widget_social_links
@@ -2337,7 +2337,6 @@ yelp.se##[data-ga-category="biz page ad"]
 ||connect.nosto.com^*/behav-popup.$script
 ||connectad.io^$third-party
 ||connectio.s3.amazonaws.com/connect-retarget.$script
-||consensu.org^$third-party,domain=~crfashionbook.com|~independent.co.uk|~joe.co.uk|~joe.ie|~mirror.co.uk|~sourceforge.net|~sportsjoe.ie|~vi.nl
 ||consent.cmp.oath.com^$third-party,domain=alltomstockholm.se
 ||consent.dk^$third-party,domain=~ekstrabladet.dk
 ||converdiant.com^$third-party
@@ -2534,7 +2533,7 @@ yelp.se##[data-ga-category="biz page ad"]
 ||js.hs-banner.com^$script
 ||js.hs-scripts.com/*.js?integration$script,domain=borsvarlden.com
 ||js.hs-scripts.com/3322485.js$script
-||js.hs-scripts.com^$third-party,domain=tholin.se
+||js.hs-scripts.com^$third-party,domain=breakit.se|tholin.se
 ||jtp.expressen.se/notify$image
 ||juicer.io/api/page_views$xmlhttprequest
 ||kaloo.ga^$third-party

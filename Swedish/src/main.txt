@@ -59,7 +59,6 @@
 ||cookies.orangegames.com^$third-party
 ||cookiepolicy.peytz.dk^$third-party
 ||compricer.se^$third-party
-||consensu.org^$third-party,domain=~mirror.co.uk|~sourceforge.net|~vi.nl|~joe.ie|~sportsjoe.ie|~crfashionbook.com|~independent.co.uk|~joe.co.uk
 ||converdiant.com^$third-party
 ||createsend.com^$third-party
 ||createsend1.com^$third-party
@@ -898,7 +897,6 @@ skandia.se##div[data-block="CookieBannerBlock"]
 realm667.com#@##redim-cookiehint
 tillminne.se#@#.ads-list
 @@||feed.meltwater.com^$subdocument
-@@||consensu.org^*/config.js$script
 @@_advert.$domain=e-pages.dk
 avanza.se#@#a[title="LeoVegas"]
 readly.com#@#.cookie-notice:not(body):not(html)
@@ -920,8 +918,6 @@ patient.info##body:style(overflow: auto !important;)
 @@/optimizelyjs/*$domain=ikea.com
 ! Blocked in EasyPrivacy. Breaks login/logout on some sites.
 @@||cdn.dynamicyield.com^$domain=alingsastidning.se|bohuslaningen.se|gp.se|hallandsposten.se|hn.se|stromstadstidning.se|ttela.se
-! https://github.com/AdguardTeam/AdguardFilters/issues/55513
-@@||vendorlist.consensu.org/vendorlist.json
 ! https://github.com/lassekongo83/Frellwits-filter-lists/issues/81
 leovegas.com###cookie-consent-banner + div[data-test-id="header"]:style(top: 0 !important;)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/61749
@@ -994,6 +990,7 @@ dekra.de#@##cookie-banner
 ||evidon.com^$third-party,domain=morningstar.se|spela.se|mtv.se|tripadvisor.se
 ||execute-api.eu-west-1.amazonaws.com/*/event$xmlhttprequest,domain=forum.hallon.se
 ||herokuapp.com^$third-party,domain=aftonbladet.se
+||js.hs-scripts.com^$third-party,domain=tholin.se|breakit.se
 ||mailerlite.com^$third-party,domain=svenskamagasinet.nu|vandringsguiden.se
 ||mailmunch.co^$third-party,domain=affarsstaden.se|enkelteknik.se|villalivet.se|kingsizemag.se
 ||marketingautomation.services^$third-party,domain=wesafe.se
@@ -2205,7 +2202,7 @@ fz.se##.fp-carousel .fpci-kicker:has-text(/^sponsr/i):upward(.fpc-item)
 99mac.se##a[href*="annons-"]:upward(.carousel-item)
 sweclockers.com###prisjakt-popular
 sweclockers.com##.article-sponsored, .article-sponsored ~ div
-sweclockers.com##+js(set, adblock, false)
+sweclockers.com,fz.se##+js(set, adblock, false)
 ||pricespy*.kxcdn.com^$domain=sweclockers.com|ljudochbild.se
 /gilla-mb_plugg.png$domain=markbladet.se
 markbladet.se###small_yellowbox
@@ -3013,7 +3010,6 @@ bilweb.se###cookie_alert
 foretagsverige.se,forskningsverige.se,motorbibeln.se,dinlivsstil.nu,hallbarhetsverige.se,tillvaxtsverige.se,grillbibeln.se,kampenmotcancer.se##+js(acis, showConsentDlg)
 foretagsverige.se,forskningsverige.se,motorbibeln.se,dinlivsstil.nu,hallbarhetsverige.se,tillvaxtsverige.se,grillbibeln.se,kampenmotcancer.se##.vicky-post-whitebox:has(.vicky-whitebox-label-text:has-text(/spons/i))
 /atomic-blocks$script,domain=foretagsverige.se|forskningsverige.se|motorbibeln.se|dinlivsstil.nu|hallbarhetsverige.se|tillvaxtsverige.se|grillbibeln.se|kampenmotcancer.se
-||js.hs-scripts.com^$third-party,domain=tholin.se
 alltomwhisky.se##.topmost-banner
 framtid.se###siteflash
 artbannersplus$subdocument,domain=www.elinor.se
@@ -3208,7 +3204,8 @@ tidningenridsport.se##.entry-content:style(display: initial !important;)
 tidningenridsport.se###captive
 tidningenridsport.se##.type-native
 orebronyheter.com###top-wrapper
-radio.se###main > div:last-child:has-text(/använder cookies/i)
+/clickperformance$domain=radio.se
+radio.se###main > div > div:not([id])
 spanaren.se##.textwidget > a[target="blank"] > img
 svenskhistoria.se##.widget_et_ads
 svenskhistoria.se##.module-etads
