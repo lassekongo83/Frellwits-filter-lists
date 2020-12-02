@@ -43,7 +43,6 @@
 ||careerbuilder.se^$third-party
 ||casinotoplists.com^$third-party
 ||churnkit.com^$third-party
-||cintnetworks.com^$third-party
 ||cision.com^$third-party
 ||citygate.se^$third-party,~image,domain=~familj.se|~tillminne.se
 ||ck.page^$third-party
@@ -285,6 +284,7 @@
 /adnami/macro/*$script
 /ad-takeover
 /ads.for.me/jsa?$script
+/advertisement-dfp$script
 /ajax/docu_stats.jsp$xmlhttprequest
 /ajax.php?action=get_cookies_policy$xmlhttprequest
 /ajax.php?action=get_policy&site=cookie-information$xmlhttprequest
@@ -1046,10 +1046,12 @@ mobilanyheter.net,villalivet.se,lchfarkivet.se##+js(set, MonsterInsights, undefi
 /wp-content/plugins/popup-builder-$script,important,domain=mmabetz.se
 ||amazon-adsystem.com^$3p,important,domain=bilresaieuropa.se
 ||lwadm.com/lw/pbjs?pid=$script,important,domain=sydostran.se
+||ssl.google-analytics.com/ga.js$important,domain=aftonbladet.se
 
 ! Unwanted Wordpress plugins and bloat
 /plugins/ab_appnexus_ads/*
 /plugins/ab_stats_params/*
+/plugins/ab_tracking$domain=aftonbladet.se
 /plugins/ad-blocking-advisor/*
 /plugins/ad-inserter-pro/*
 /plugins/add-to-any/*$~stylesheet
@@ -1280,39 +1282,12 @@ forum.macworld.se,forum.studio.se,idg.se##.idgcp__layer:style(z-index: 0 !import
 !#endif
 
 ! STAMPEN
-/vendorList.js$script,domain=alingsastidning.se|bohuslaningen.se|gp.se|hallandsposten.se|hn.se|stromstadstidning.se|ttela.se
-/listicles.js$script,domain=alingsastidning.se|bohuslaningen.se|gp.se|hallandsposten.se|hn.se|stromstadstidning.se|ttela.se
-alingsastidning.se,bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se###stampenCookieInformationContainer
-alingsastidning.se,bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##.frequency-model__notice
-alingsastidning.se,bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##.lokus-engine
-alingsastidning.se,bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##.seekly
-alingsastidning.se,bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##.rabble-widget
-alingsastidning.se,bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##.ml-adon-hide-box
-alingsastidning.se,bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##.c-ad
-alingsastidning.se,bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##.c-ad__floating
-alingsastidning.se,bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##.o-grid__ad-column
-alingsastidning.se,bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##+js(acis, _adform)
-alingsastidning.se,bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##+js(acis, adformtag, push)
-alingsastidning.se,bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##+js(acis, headerScripts, checkAdBlockers)
-alingsastidning.se,bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##+js(aeld, /^(?:mousemove|mouseout)$/)
-alingsastidning.se,bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##+js(set, frequencyModelEnabled, undefined)
-alingsastidning.se,bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##+js(ra, frequency-model)
-alingsastidning.se,bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##+js(ra, data-frequencymodel)
-alingsastidning.se,bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##+js(ra, data-access, [data-access="false"])
-alingsastidning.se,bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##+js(acis, adformScripts)
-@@||alingsastidning.se^$generichide
-@@||bohuslaningen.se^$generichide
-@@||gp.se^$generichide
-@@||hallandsposten.se^$generichide
-@@||hn.se^$generichide
-@@||stromstadstidning.se^$generichide
-@@||ttela.se^$generichide
+alingsastidning.se,bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##.stampenCookieContainer
+alingsastidning.se,bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##.lokus-engine, .seekly, .rabble-widget
+alingsastidning.se,bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##+js(aeld, click, showSponsoredArticleOffer)
 ! hmm ;-P
 !#if !env_mobile
-bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##body.logged-out *> .c-user-menu__title
-bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##body.logged-out *> .c-user-menu__status
-bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##body.logged-out *> .c-user-menu:before
-bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##body.logged-out *> .c-user-menu__item:not(.js-epaper-trigger)
+bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##body.logged-out *> .c-user-menu__title, body.logged-out *> .c-user-menu__status, body.logged-out *> .c-user-menu:before, body.logged-out *> .c-user-menu__item:not(.js-epaper-trigger)
 bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##body.logged-out *> .js-epaper-trigger:style(display: inherit !important; border:none !important;)
 bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##body.logged-out *> .c-user-menu:style(display: inherit !important; border: none !important; box-shadow: none !important; background: none !important; top: 20px !important; left: 400px !important;)
 bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##body.logged-out.is-header-sticky *> .c-user-menu:style(visibility: hidden !important;)
@@ -1328,8 +1303,11 @@ lwcdn.com##+js(aeld, /^(?:adBlocker|contextmenu)$/)
 ||ptm.flowplayer.com^*/display$xmlhttprequest
 
 ! SCHIBSTED
+/gdpr-bundle$domain=aftonbladet.se|svd.se
+/appnexus$script,domain=blocket.se|minhembio.com|bytbil.com|aftonbladet.se
 ||schibsted.com/privacy-notifier.$third-party
 ||schibsted.com/pulse.$third-party
+! SVD
 svd.se##.AdWrapper
 svd.se##.Container--ad
 svd.se##div[data-controller="newslettersubscription"]
@@ -1346,61 +1324,37 @@ www.svd.se##+js(aopr, navigator.sendBeacon)
 ||svd.se^*/native-article$xmlhttprequest,~third-party
 /infopeek.min.js$domain=svd.se
 ||engage-auth.schibsted.media^$script
-||2mdn.net/instream/html5/ima3.js$script,important,domain=aftonbladet.se
-/appnexus$script,domain=blocket.se|minhembio.com|bytbil.com|aftonbladet.se
-||schibsted.io^*/gdpr-bundle.js$script
-||direkte.vg.no/vgc/cdn/js/libs/ast$domain=aftonbladet.se
-@@||www.aftonbladet.se^$generichide
-aftonbladet.se##.abTheme-ad
-aftonbladet.se##.abTheme-adSportbladet
-aftonbladet.se##.abTheme-infeedad
-aftonbladet.se##.abAdWrapper
-aftonbladet.se##.abAdArea
+! Aftonbladet
+@@||ad*.vg.no/check.js$script,domain=aftonbladet.se
+||aftonbladet.se/kampanj/casinoguide$all
+||vgc.no/cdn/js/libs/ast$script,domain=aftonbladet.se
+||gfx.productsup.io^$third-party,domain=aftonbladet.se
+/gdpr-bundle$domain=aftonbladet.se|svd.se
+/rabattkod$domain=aftonbladet.se
+/pulsetracking$script,domain=aftonbladet.se
+! Cosmetic ad filters
 aftonbladet.se###MegaAd
-aftonbladet.se##article:has(a[data-sponsored="true"])
 aftonbladet.se##[id*="abAdArea"]
 aftonbladet.se##.ab-responsive-ads-wrapper
-aftonbladet.se##.social-shares, .abBtnShare, .share-icons
-aftonbladet.se##a[href*=".se/kampanj?"]:has-text(/erbjudande/i)
-aftonbladet.se##body.abTheme-entertainment *> .abAside > div[style^="text"]:last-child
+aftonbladet.se##a[href*="utm_campaign=rantekartan"], a[href*="letsdeal.se"]
 aftonbladet.se##div[style*="border-color:#0067b5;"], div[style*="border-color:#0067b5;"] ~ a
 aftonbladet.se##div[style*="border-color: rgb(0, 103, 181);"], div[style*="border-color: rgb(0, 103, 181);"] ~ a
-aftonbladet.se##h3[style*="background-color:#0067b5;border-radius:2px;margin:16px 0px 0px 0px;"]
-aftonbladet.se##a[href^="/kampanj/casino"], a[href^="/rabattkod"], a[href*="/se/app/aftonbladet/"], a[href*="/store/apps/details?id=se.aftonbladet"]
-aftonbladet.se##a[style*="border-color: rgb(0, 103, 181)"], a[style*="border-color:#0067b5"]
+aftonbladet.se##a[style*="background-color: rgb(228, 240, 255)"], a[style*="background-color:#e4f0ff"], a[style*="border-color: rgb(0, 103, 181)"], a[style*="border-color:#0067b5"]
 aftonbladet.se##.jwplayer:has(.svp-sponsor-label):remove()
 aftonbladet.se##a[href^="/tv/"]:has(span:has-text(/studio oddset/i)):upward(1)
-aftonbladet.se##a[href*="aftonbladet.se/kampanj/artikel"]:upward(1)
-aftonbladet.se##div[class][style^="text"]:has(h3:has-text(/annons/i))
-aftonbladet.se##a[href*="matspar.se/varumarke/"]
-aftonbladet.se##a[href*="utm_campaign=rantekartan"]
-aftonbladet.se##source[srcset*="/ANNONS"]:upward(a)
-/rabattkod$image,domain=aftonbladet.se
-/pulsetracking$script,domain=aftonbladet.se
-/campaign-fallback.$script,domain=aftonbladet.se
-/stats/sitecatalyst$script,domain=aftonbladet.se
-www.aftonbladet.se##html,body:style(overflow: auto !important;)
-www.aftonbladet.se##+js(acis, preLoadAds, loadAd)
-www.aftonbladet.se##+js(acis, preLoadAds, setup)
-www.aftonbladet.se##+js(nostif, onerror, 1000)
-www.aftonbladet.se##+js(aeld, mousemove, g())
-www.aftonbladet.se##+js(aeld, message, adError)
+aftonbladet.se##a[href*="/kampanj/artikel"]:upward(1)
+aftonbladet.se##[classname="speltipsMarkup"]
+! ab story sektion
+/ab-xiti-min$script,domain=aftonbladet.se
+/sptAutoTracker$script,domain=aftonbladet.se
+/d-footer.$script,domain=aftonbladet.se
+! scriptlets
 www.aftonbladet.se##+js(nosiif, e.ping())
 www.aftonbladet.se##+js(nosiif, e.reportVisibility())
-||vgc.no/cdn/js/libs/ast/$script,domain=www.aftonbladet.se
-@@||ad*.vg.no/check.js$script,domain=aftonbladet.se
-! https://github.com/lassekongo83/Frellwits-filter-lists/issues/61
-! Disabling this for Brave that don't support pre-parsing directives. Using a simple if-not safari as that browser is no longer supported as well.
-!#if !env_safari
-/privacy/notification?$xmlhttprequest,domain=aftonbladet.se
-!#endif
+www.aftonbladet.se##+js(aeld, mousemove, g())
 ! https://github.com/lassekongo83/Frellwits-filter-lists/issues/44
 @@||sdk.pulse.schibsted.com/loader.min.js$domain=special.aftonbladet.se
-||aftonbladet.se/kampanj/casinoguide$document
-! ab story sektion
-/ab-xiti-min.$script,domain=aftonbladet.se
-/sptAutoTracker.$script,domain=aftonbladet.se
-/d-footer.min.$script,domain=aftonbladet.se
+! Övrigt
 omni.se,omniekonomi.se##.article--sponsored,.resource--sponsored,.component--sticky-sponsor-banner,.pre-banner
 omni.se,omniekonomi.se##a[href*="article-ad-"]:upward(.resource--link)
 omni.se,omniekonomi.se##+js(aeld, omniPulseLoaded)
@@ -1446,19 +1400,11 @@ godare.se##.privacy-information
 classic.prisjakt.nu###confirm_cookie_use
 
 ! BONNIER
+expressen.se,dn.se,di.se###rich-media-ads
 dn.se##.gdpr-header
-dn.se##.personal-carousel
-dn.se##.bottom-bar--visible
-dn.se##.chosen-for-you
-dn.se##.takeover-modal
-dn.se##.free-user-modal
 dn.se##.campaign-holder
-dn.se##.article--native
-www.dn.se##body:style(overflow-y: auto !important; position: initial !important;)
-www.dn.se##+js(acis, DN, initAds)
-www.dn.se##+js(acis, gtmData)
+www.dn.se##body:style(position: unset !important;)
 www.dn.se##+js(ra, data-auto-play)
-www.dn.se##+js(ra, data-resource-id, [data-resource-id="dn.se-meteredmodel"])
 /analytics$script,domain=dn.se
 /initLogging$script,domain=dn.se|teknikensvarld.se
 /check-paywall$domain=dn.se
@@ -1474,94 +1420,56 @@ di.se##+js(nostif, #triggerModal)
 digital.di.se##+js(acis, diConf)
 digital.di.se##.start__articles-ad
 ||digital.di.se/api/sponsor/$xmlhttprequest
-/videoplayer/embed/*&autoplay=true$frame,queryprune=autoplay,domain=di.se
 di.se##[class^="gdpr-policy"]
 di.se##.di_start__teaser-placeholder[data-content-url*="/ads/"]
 di.se##.bandit-box__teaser--native,.service-box,.discount-box,.di_panorama__isAdLabel,.di_panorama-wrapper,.di_teaser-flak-container--native,.di_teaser-flak-planbokskoll,.di_stock-service,.native-box,.di_teaser--native
 /getnative$xmlhttprequest,domain=di.se
-! expressen
-||precis.expressen.se/recommendations$xmlhttprequest
-||jtp.expressen.se/notify$image
+! EXPRESSEN
+||brandy.bonniernewslifestyle.se^
+||lifestyle.expressen.se^$subdocument
 ||spel.expressen.se^
-/_widget/destination$subdocument,domain=expressen.se
-/closest-native$xmlhttprequest,domain=expressen.se
-/rantekartan/*$subdocument,domain=expressen.se
-www.expressen.se##+js(acis, Bau, preloadAds)
-www.expressen.se##+js(set, detect, noopFunc)
-www.expressen.se##+js(ra, data-video-tracking-info)
-www.expressen.se##+js(ra, data-article-tracking-info)
-www.expressen.se##+js(ra, data-ad-config)
-expressen.se##.widget-area--collaboration
-expressen.se##.promotion-banner
-! Den irriterande autostartande livespelaren och andra irritationer
-/getlivevideo$domain=di.se
-/live-start/live-tv-senaste-nyheterna$xmlhttprequest,subdocument,domain=expressen.se
-/live-start/live-tv-se-sportexpressen-tv-direkt$xmlhttprequest,domain=expressen.se
+||widgets.bonniernewslifestyle.se^$subdocument
+/closest-native$domain=expressen.se
+/rantekartan$subdocument,domain=expressen.se
+/recommendations$xmlhttprequest,domain=expressen.se
 /tv/brand-studio$domain=expressen.se
 /tv/annons$domain=expressen.se
 /tv/sponsrat$domain=expressen.se
-expressen.se##.teaser > a[href*="://kampanj.exp"]
-expressen.se##figure[data-article-data*="sponsrat"]
-||assets.expressen.se/bundles/advertisement-dfp$script
-expressen.se##.teaser__hero:has(iframe[src*="/tv/nyheter/live-start/live-tv-senaste-nyheterna"])
-expressen.se##figure[data-article-data*="/tv/nyheter/live-start/live-tv-senaste-nyheterna"]
-expressen.se##figure[data-article-data*="/tv/sport/live-start/live-tv-se-sportexpressen-tv-direkt"]
-expressen.se##.pa-dialog
-expressen.se,dn.se##[class*="open-in-app"]
-expressen.se##.collaboration--widget
-expressen.se##.flashes--visible
-expressen.se##.consent
-expressen.se##.flashes--premium
-expressen.se##.campaign
-! hittat på förstasidan
-expressen.se,hd.se,sydsvenskan.se##.teaser--native
-expressen.se##a[href*="spel.expressen.se"]
-expressen.se##a[href*="lanapengar.expressen.se"]
-expressen.se,dn.se,di.se###rich-media-ads
-expressen.se##.teaser:has(.vignette:has-text(/(^erbjudande från|^annons|^happy green|^presenteras av|i samarbete med)/i))
-expressen.se##a[href*="/annons"]
+! Cosmetic ad filters
+expressen.se##a[href*="/spel.exp"], a[href*="/lanapengar.exp"], a[href*="/rabattkoder.exp"], a[href*="/annons"]
+expressen.se##.teaser > a[href*="/kampanj."], .teaser > a[href*="/brandstudio"], .teaser > a[href*="/brand-studio"]
+expressen.se##figure[data-article-data*="/sponsrat"], figure[data-article-data*="/annons"], figure[data-article-data*="/brand-studio"]
+expressen.se##.teaser--native, .native-article
 expressen.se##.discount-ad
-expressen.se##.html-widget > div[style="text-align: center; font-size: 10px;"]
-expressen.se##.rotator--external
-expressen.se##a[href^="/premium/erbjudanden/"]
-! sektion sport
-expressen.se##.match-betting
-expressen.se##.teaser:has(a[href^="/brandstudio/"])
-! sektion sport artikel
-expressen.se##.article__after-widgets > .html-widget
-! sektion nöje
-expressen.se##.site-header__widgets > .html-widget > a[target="_blank"]
-! sektion allt om bilar/resor
-expressen.se##a[href*="rabattkoder.expressen.se"]
-expressen.se##.widget-ad-marker
-expressen.se##aside.article-list > .ad-label--overlay
-expressen.se##aside.article-list > .ad-label--overlay + ul
-expressen.se##a[href*="/brand-studios/"]
-expressen.se##.rotator__link:style(width: unset !important;)
-||widgets.bonniernewslifestyle.se^$subdocument
-! "pressreleaser" från företag. Ett annat ord för native advertising.
 expressen.se##.pressrelease-teaser
-! sektion hälsoliv
-expressen.se##.teaser--sponsored
-expressen.se##.article--sponsored
-expressen.se##.teaser__third-party,.old-teaser__third-party
-expressen.se##.teaser > a[href*="happygreen.se"]
-expressen.se##p:has(strong:has-text(/^annons/i))
-! sektion leva & bo
-expressen.se##.teaser:has(.teaser__third-party--bar)
-! Juli 2019
-! Expressen seems to be mis-using this service to serve the occasional ad
-/kit/qualp.$script,domain=expressen.se
+expressen.se##.widget-ad-marker, .widget-ad-marker + a
+expressen.se##.promotion-banner
+expressen.se##.widget--collaboration
+expressen.se##.rotator--external
+! Annoyances
+?autoPlay$frame,queryprune=autoPlay,domain=expressen.se
+&autoplay$frame,queryprune=autoplay,domain=expressen.se|di.se
+expressen.se##.pa-dialog
+expressen.se##.campaign
+expressen.se##.html-widget > div[style^="text-align: center; font-size: 10px;"]
+! scriptlets
+www.expressen.se##+js(acis, Bau, preloadAds)
+www.expressen.se##+js(set, detect, noopFunc)
 ! mitt kök
-mittkok.expressen.se##.newsletter__slide
 mittkok.expressen.se##.main:style(width: 100% !important;)
 mittkok.expressen.se##.widget-social-media
 mittkok.expressen.se##+js(acis, adblock)
-mittkok.expressen.se##+js(acis, burtSegments)
-mittkok.expressen.se##+js(aeld, click, trackClick)
-||bugsnag.com^$third-party,domain=dn.se|di.se|tv4play.se|tv4.se|koket.se|fotbollskanalen.se|expressen.se
+! Procedural cosmetic filters
+expressen.se##.teaser:has(a[href*="/annons"])
+expressen.se##.teaser:has(a[href*="/brandstudio"])
+expressen.se##.teaser:has(a[href*="/brand-studio"])
+expressen.se##.teaser:has(a[href*="/kampanj."])
+expressen.se##.teaser:has(a[href*="/lanapengar."])
+expressen.se##.teaser:has(a[href*="/rabattkoder."])
+expressen.se##.teaser:has(a[href*="/spel.expressen.se"])
 ! övrigt
-/native?placeholder$xmlhttprequest,domain=hd.se|sydsvenskan.se
+||bugsnag.com^$third-party,domain=dn.se|di.se|expressen.se
+/native?$domain=hd.se|sydsvenskan.se
 &type=load_offers$xmlhttprequest,domain=illvet.se|pctidningen.se
 ||akkurat.bonniernewslifestyle.se^*/recommendations$xmlhttprequest
 /analytics-bmb$script

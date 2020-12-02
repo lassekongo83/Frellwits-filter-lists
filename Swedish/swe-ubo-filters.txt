@@ -1,3 +1,4 @@
+&autoplay$frame,queryprune=autoplay,domain=di.se|expressen.se
 */tv4play_plugin.$redirect=noop.js,script,domain=fotbollskanalen.se|koket.se|tv4.se|tv4play.se
 .*/*/*.php?*=aftonbladet-live-tv$document
 .info/dagens-nyheter/$document
@@ -21,23 +22,19 @@
 /plugins/google-analytics-dashboard$important,script
 /streamsense.$important,script,domain=dn.se
 /sweden/swedish/hjo-tidning.html$document
-/videoplayer/embed/*&autoplay=true$frame,queryprune=autoplay,domain=di.se
 /wp-content/plugins/ad-inserter/includes/*$important,domain=asterixia.se|byggipedia.se|fysikstugan.se
 /wp-content/plugins/popup-builder-$important,script,domain=mmabetz.se
 100kitchenstories.se,clipmyhorse.tv,eurosport.se,jawcloud.co,modette.se,nxload.com,nyheter24.se,polistidningen.se,saraabrahamsson.se,streamio.com##+js(aeld, contextmenu)
 99mac.se##.nitem:has(a[href="/arkiv/kategori/annons"])
 99mac.se##a[href*="annons-"]:upward(.carousel-item)
+?autoPlay$frame,queryprune=autoplay,domain=expressen.se
 accentmagasin.se##+js(nostif, n.modal)
 adlanda.se,babyhjalp.se,omnihalsa.com##+js(acis, document.oncontextmenu)
 affarsliv.com,affarslivgotland.se,affarsvarlden.se,allas.se,arvikanyheter.se,baaam.se,barometern.se,blt.se,bt.se,cafe.se,corren.se,dalslanningen.se,ekuriren.se,elle.se,eposten.se,expressen.se,femina.se,filipstadstidning.se,folkbladet.se,fragbite.se,fryksdalsbygden.se,goteborgdirekt.se,gotland.net,hant.se,helagotland.se,hjotidning.se,ibnytt.se,karlskogatidning.se,kindaposten.se,kingmagazine.se,kkuriren.se,klackspark.com,kristianstadsbladet.se,kt.se,kuriren.nu,lwcdn.com,mariestadstidningen.se,mestmotor.se,mitti.se,modette.se,mvt.se,nkp.se,nlt.se,norran.se,norrbottensaffarer.se,nsd.se,nsk.se,nt.se,nwt.se,olandsbladet.se,ostrasmaland.se,provinstidningen.se,pt.se,realtid.se,saffletidningen.se,skanesport.se,skd.se,sla.se,smp.se,sn.se,strengnastidning.se,svenskanamn.se,svenskdam.se,sydostran.se,thelocal.se,trelleborgsallehanda.se,unt.se,ut.se,varmlandsaffarer.se,vasterastidning.se,vf.se,viivilla.se,vimmerbytidning.se,vt.se,youplay.se,ystadsallehanda.se##+js(json-prune, autoplay)
 affarsstaden.se##+js(acis, jQuery, adblockdetect)
 aftonbladet.se##.jwplayer:has(.svp-sponsor-label):remove()
-aftonbladet.se##a[href*=".se/kampanj?"]:has-text(/erbjudande/i)
-aftonbladet.se##a[href*="aftonbladet.se/kampanj/artikel"]:upward(1)
+aftonbladet.se##a[href*="/kampanj/artikel"]:upward(1)
 aftonbladet.se##a[href^="/tv/"]:has(span:has-text(/studio oddset/i)):upward(1)
-aftonbladet.se##article:has(a[data-sponsored="true"])
-aftonbladet.se##div[class][style^="text"]:has(h3:has-text(/annons/i))
-aftonbladet.se##source[srcset*="/ANNONS"]:upward(a)
 akaskidor.se,body.se,svenskgolf.se##body:style(background-image: none !important;)
 akaskidor.se,svenskgolf.se##.margin-bottom:has(.row--native)
 aktivtraning.se,iform.se,natgeo.se##li:has(.content-label:has-text(/annons/i)):remove()
@@ -45,16 +42,8 @@ aktuellhallbarhet.se,dagensmedia.se,dagensmedicin.se,fastighetsnytt.se,resume.se
 aktuellhallbarhet.se,dagensmedia.se,dagensmedicin.se,fastighetsnytt.se,resume.se##article:matches-css-after(content: "Annonssamarbete")
 alexandrabring.se,biancaingrosso.se##article[id^="post-"]:has(em:has-text(/i samarbete med/i))
 alicestenlof.com,ellinorlofgren.se##.noscroll:style(overflow: initial !important;)
-alingsastidning.se,bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##+js(acis, _adform)
-alingsastidning.se,bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##+js(acis, adformScripts)
-alingsastidning.se,bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##+js(acis, adformtag, push)
-alingsastidning.se,bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##+js(acis, headerScripts, checkAdBlockers)
-alingsastidning.se,bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##+js(aeld, /^(?:mousemove|mouseout)$/)
+alingsastidning.se,bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##+js(aeld, click, showSponsoredArticleOffer)
 alingsastidning.se,bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##+js(json-prune, autoplay players.*.ga acl.ads players.*.autoplay)
-alingsastidning.se,bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##+js(ra, data-access, [data-access="false"])
-alingsastidning.se,bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##+js(ra, data-frequencymodel)
-alingsastidning.se,bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##+js(ra, frequency-model)
-alingsastidning.se,bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##+js(set, frequencyModelEnabled, undefined)
 allabolag.se##article:has(.advert__mark)
 allakorsord.se,baaam.se,dromhemochtradgard.se,elle.se,femina.se,hant.se,mabra.com,residencemagazine.se,svenskdam.se##+js(acis, aller_ga)
 allakorsord.se,baaam.se,dromhemochtradgard.se,elle.se,femina.se,hant.se,mabra.com,residencemagazine.se,svenskdam.se##+js(aopr, pbjsChunk)
@@ -163,12 +152,13 @@ eventeffect.se,executiveeffect.se,saleseffect.se##.post-teaser:has(a[href$="/ann
 evertiq.se###bgWrapp:style(pointer-events: none !important;)
 evertiq.se###content, .sitesTab, .menuBar, #foot:style(pointer-events: all !important;)
 evertiq.se##body:style(cursor: default !important;)
-expressen.se##.rotator__link:style(width: unset !important;)
-expressen.se##.teaser:has(.teaser__third-party--bar)
-expressen.se##.teaser:has(.vignette:has-text(/(^erbjudande från|^annons|^happy green|^presenteras av|i samarbete med)/i))
-expressen.se##.teaser:has(a[href^="/brandstudio/"])
-expressen.se##.teaser__hero:has(iframe[src*="/tv/nyheter/live-start/live-tv-senaste-nyheterna"])
-expressen.se##p:has(strong:has-text(/^annons/i))
+expressen.se##.teaser:has(a[href*="/annons"])
+expressen.se##.teaser:has(a[href*="/brand-studio"])
+expressen.se##.teaser:has(a[href*="/brandstudio"])
+expressen.se##.teaser:has(a[href*="/kampanj."])
+expressen.se##.teaser:has(a[href*="/lanapengar."])
+expressen.se##.teaser:has(a[href*="/rabattkoder."])
+expressen.se##.teaser:has(a[href*="/spel.expressen.se"])
 familjeliv.se##+js(acis, promotions)
 familjeliv.se##+js(nostif, dataLayer.push)
 familjeliv.se##+js(nostif, sendImps)
@@ -320,8 +310,6 @@ minimalisterna.se##.post:has(p:has-text(/i samarbete med/i))
 missatsamtal.se##+js(aopw, _gaq)
 missatsamtal.se##.comment:has(.nosnaj)
 mittkok.expressen.se##+js(acis, adblock)
-mittkok.expressen.se##+js(acis, burtSegments)
-mittkok.expressen.se##+js(aeld, click, trackClick)
 mittkok.expressen.se##.main:style(width: 100% !important;)
 mmanytt.se##.img-featured-posts-image:has(a[href$="/annons/"])
 modette.se##.lazyload_bar.show:has(span:has-text(/sponsrat/i))
@@ -469,32 +457,20 @@ vinochbar.se##[class*="et_pb_row_inner"]:has(span:has-text(/^annons/i))
 voister.se##.voister .brief:has(.voister .campaign-vignette)
 voodoofilm.org##.content-news:has(span[id*="Sponsored"])
 worldkustom.com##a[target="_blank"]:upward(.textwidget)
-www.aftonbladet.se##+js(acis, preLoadAds, loadAd)
-www.aftonbladet.se##+js(acis, preLoadAds, setup)
-www.aftonbladet.se##+js(aeld, message, adError)
 www.aftonbladet.se##+js(aeld, mousemove, g())
 www.aftonbladet.se##+js(nosiif, e.ping())
 www.aftonbladet.se##+js(nosiif, e.reportVisibility())
-www.aftonbladet.se##+js(nostif, onerror, 1000)
-www.aftonbladet.se##html,body:style(overflow: auto !important;)
-www.dn.se##+js(acis, DN, initAds)
-www.dn.se##+js(acis, gtmData)
 www.dn.se##+js(ra, data-auto-play)
-www.dn.se##+js(ra, data-resource-id, [data-resource-id="dn.se-meteredmodel"])
-www.dn.se##body:style(overflow-y: auto !important; position: initial !important;)
+www.dn.se##body:style(position: unset !important;)
 www.expressen.se##+js(acis, Bau, preloadAds)
-www.expressen.se##+js(ra, data-ad-config)
-www.expressen.se##+js(ra, data-article-tracking-info)
-www.expressen.se##+js(ra, data-video-tracking-info)
 www.expressen.se##+js(set, detect, noopFunc)
 www.google.se##+js(ra, onmousedown|ping, a[href][onmousedown]\, a[href][ping])
 www.svd.se##+js(acis, SvD, preDefineAd)
 www.svd.se##+js(aopr, navigator.sendBeacon)
 xlbygg.se##.main.cookiewarning:style(margin-top: 0 !important)
 youplay.se##+js(aeld, loadstart)
-||2mdn.net/instream/html5/ima3.js$important,script,domain=aftonbladet.se
 ||aftonbladet.se.senaste.$document
-||aftonbladet.se/kampanj/casinoguide$document
+||aftonbladet.se/kampanj/casinoguide$all
 ||amazon-adsystem.com^$3p,important,domain=bilresaieuropa.se
 ||asmassets.mtvnservices.com^$media,redirect=noop-1s.mp4,domain=mtv.se
 ||b17g.net^*/play/log$redirect=noop.txt,xmlhttprequest,domain=fotbollskanalen.se|koket.se|tv4.se|tv4play.se
@@ -515,6 +491,7 @@ youplay.se##+js(aeld, loadstart)
 ||online.swedbank.se.swedd.$document
 ||openx.gamereactor.dk/multi.php?$important,script
 ||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$redirect=noop.js,script,domain=aletorget.se|alingsastorget.se|almhulttorget.se|alvestatorget.se|amaltorget.se|angelholmtorget.se|arbogatorget.se|arvikatorget.se|askersundtorget.se|avestatorget.se|bastadtorget.se|bengtsforstorget.se|bjuvtorget.se|bodentorget.se|bollebygdtorget.se|bollnastorget.se|borastorget.se|borlangetorget.se|botkyrkatorget.se|bromollatorget.se|eksjotorget.se|enkopingtorget.se|eskilstunatorget.se|eslovtorget.se|fagerstatorget.se|falkenbergtorget.se|falkopingtorget.se|faluntorget.se|filipstadtorget.se|flentorget.se|forshagatorget.se|gallivaretorget.se|gavletorget.se|gislavedstorget.se|goteborgtorget.se|gotenetorget.se|gotlandtorget.se|hagforstorget.se|hallsbergtorget.se|hallstahammartorget.se|halmstadtorget.se|haningetorget.se|harnosandtorget.se|harrydatorget.se|hassleholmtorget.se|hebytorget.se|hedemoratorget.se|helsingborgtorget.se|herrljungatorget.se|hoforstorget.se|hoganastorget.se|hoortorget.se|horbytorget.se|huddingetorget.se|hudiksvalltorget.se|hultsfredtorget.se|hyltetorget.se|jonkopingtorget.se|kalixtorget.se|kalmartorget.se|karlshamntorget.se|karlskogatorget.se|karlskronatorget.se|karlstadtorget.se|katrineholmtorget.se|kavlingetorget.se|kiltorget.se|kirunatorget.se|klippantorget.se|kopingtorget.se|kramforstorget.se|kristianstadtorget.se|kristinehamntorget.se|krokomtorget.se|kumlatorget.se|kungalvtorget.se|kungsbackatorget.se|laholmtorget.se|landskronatorget.se|leksandtorget.se|lidkopingtorget.se|ljungbytorget.se|ljusdaltorget.se|ludvikatorget.se|luleatorget.se|lundtorget.se|lyckseletorget.se|lysekiltorget.se|malmotorget.se|mariestadstorget.se|markarydtorget.se|marktorget.se|moratorget.se|nackatorget.se|nassjotorget.se|norrtaljetorget.se|nybrotorget.se|nykopingtorget.se|nynashamntorget.se|olandtorget.se|olofstromtorget.se|orebrotorget.se|ornskoldsvikstorget.se|orusttorget.se|osbytorget.se|oskarshamntorget.se|ostersundtorget.se|osthammartorget.se|partilletorget.se|piteatorget.se|ronnebytorget.se|saffletorget.se|salatorget.se|sandvikentorget.se|sigtunatorget.se|simrishamntorget.se|sjobotorget.se|skaratorget.se|skellefteatorget.se|skovdetorget.se|skuruptorget.se|soderhamntorget.se|sodertaljetorget.se|sollefteatorget.se|sollentunatorget.se|solnatorget.se|solvesborgtorget.se|staffanstorptorget.se|stenungsundtorget.se|stockholmtorget.se|strangnastorget.se|stromstadtorget.se|sundsvalltorget.se|sunnetorget.se|svenljungatorget.se|tabytorget.se|tanumtorget.se|tidaholmtorget.se|tierptorget.se|timratorget.se|tingsrydtorget.se|tjorntorget.se|tomelillatorget.se|torsbytorget.se|tranastorget.se|tranemotorget.se|trelleborgtorget.se|trollhattantorget.se|trosatorget.se|uddevallatorget.se|ulricehamntorget.se|umeatorget.se|uppsalatorget.se|vallentunatorget.se|vanersborgtorget.se|varatorget.se|varbergtorget.se|varnamotorget.se|vasterastorget.se|vasterviktorget.se|vaxjotorget.se|vellingetorget.se|vetlandatorget.se|vimmerbytorget.se|ystadtorget.se
+||ssl.google-analytics.com/ga.js$important,domain=aftonbladet.se
 ||ssl.p.jwpcdn.com^*/freewheel.js$important,script,domain=eurosport.se
 ||ssl.p.jwpcdn.com^*/gapro.js$important,script,domain=freeride.se|happyride.se|ilikeradio.se
 ||ssl.p.jwpcdn.com^*/googima.js$important,script,domain=laget.se
