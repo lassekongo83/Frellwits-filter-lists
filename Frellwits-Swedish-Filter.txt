@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2020-12-09 12:03:52 CET
+! Last modified: 2020-12-09 16:35:21 CET
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -264,6 +264,7 @@
 .se/custom/ad/
 .se/fightodds.plugin/fightodds.plugin.$script
 .se/files/annons/$image
+.se/getBannerImage
 .se/images/banner/
 .se/images/banners/
 .se/img/banners/
@@ -339,7 +340,7 @@
 /annonslinje_
 /annonssamarbete/*$xmlhttprequest
 /antiblock.$script,stylesheet,~third-party,domain=danskaspraket.se|digitalavykort.se|viseniorer.se|vmj.se
-/apester-javascript-sdk.min.js$script,domain=allakorsord.se|allas.se|baaam.se|dromhemochtradgard.se|elle.se|femina.se|hant.se|mabra.com|residencemagazine.se|svenskdam.se
+/apester-javascript-sdk.min.js
 /api/plugins/google-analytics$xmlhttprequest
 /app.php/adsview/*$xmlhttprequest
 /appnexus$script,domain=aftonbladet.se|blocket.se|bytbil.com|minhembio.com
@@ -783,6 +784,7 @@
 /siforesponsivemeasure.js$script
 /simple-liking$script,domain=dagsattplocka.se|gardets.nu
 /site-notifications.$script,domain=se.invertalia.net
+/site_media/annons
 /sites/holid-$script,domain=kamerabild.se|mobil.se
 /SitesterSurvey*.$script,domain=wwf.se
 /skolvarlden_theme/js/s_code.js$script
@@ -812,7 +814,7 @@
 /sticky*.$script,stylesheet,domain=svenskafans.com
 /sticky-ads.$script
 /strossle-start-page-ad$xmlhttprequest
-/sunt/*$subdocument,domain=barometern.se|blt.se|bt.se|kristianstadsbladet.se|olandsbladet.se|ostrasmaland.se|smp.se|sydostran.se|trelleborgsallehanda.se|ut.se|ystadsallehanda.se
+/sunt/mainfeed
 /sv_se/metrics/*$script,xmlhttprequest
 /sweet-alert.$domain=hittaren.com
 /swfobject.js$script,domain=dagenstv.com
@@ -1142,9 +1144,9 @@ bandyplay.se##div[class^="CookieConsent"]
 bandyplay.se,bettips.se,digitalfotoforalla.se,illvet.se,it-finans.se,it-halsa.se,it-kanalen.se,it-pedagogen.se,it-retail.se,pctidningen.se##.top-banner
 barnsemester.se###aggressivead
 barnsemester.se##.annonsfiendset
-barometern.se,blt.se,bt.se,kristianstadsbladet.se,olandsbladet.se,ostrasmaland.se,smp.se,sydostran.se,trelleborgsallehanda.se,ut.se,ystadsallehanda.se##.component__ad__ad-box
-barometern.se,blt.se,bt.se,kristianstadsbladet.se,olandsbladet.se,ostrasmaland.se,smp.se,sydostran.se,trelleborgsallehanda.se,ut.se,ystadsallehanda.se##.component__guide-ads
-barometern.se,blt.se,bt.se,kristianstadsbladet.se,olandsbladet.se,ostrasmaland.se,smp.se,sydostran.se,trelleborgsallehanda.se,ut.se,ystadsallehanda.se##.component_gdprMessage__container
+barometern.se,blt.se,borasdly.se,bt.se,kalmarposten.se,kristianstadsbladet.se,olandsbladet.se,osterlenmagasinet.se,ostrasmaland.se,smp.se,sydostran.se,trelleborgsallehanda.se,ut.se,ystadsallehanda.se##.component__ad__ad-box
+barometern.se,blt.se,borasdly.se,bt.se,kalmarposten.se,kristianstadsbladet.se,olandsbladet.se,osterlenmagasinet.se,ostrasmaland.se,smp.se,sydostran.se,trelleborgsallehanda.se,ut.se,ystadsallehanda.se##.component__guide-ads
+barometern.se,blt.se,borasdly.se,bt.se,kalmarposten.se,kristianstadsbladet.se,olandsbladet.se,osterlenmagasinet.se,ostrasmaland.se,smp.se,sydostran.se,trelleborgsallehanda.se,ut.se,ystadsallehanda.se##.component_gdprMessage__container
 battrenyheter.se##.abnan-single
 battrenyheter.se##.gbnan
 battrenyheter.se##a[href*="bettingsidor"]
@@ -1324,7 +1326,7 @@ ehandel.se##.aside-image-with-link
 ehandel.se##.commercial-row
 ehandel.se##.post-container-sponsored
 ekonominyheter.se###lblock-ads
-ekonominyheter.se,gjuteriet.se,haaf.se,hockeybladet.nu##.td-a-rec
+ekonominyheter.se,gjuteriet.se,haaf.se,hockeybladet.nu,mariefredstidning.se##.td-a-rec
 elektronikforumet.com##td > a[href*="bildelar"][target="_blank"]
 elektronikforumet.com,existenz.se,funfunfun.se##a[href*="bannerid"]
 elinskoglund.com,fannystaaf.se,lovisawallin.se,moamattsson.se,nouw.com###ConsentBanner
@@ -1405,6 +1407,7 @@ feber.se,tjock.se##.art_ad_sign
 feber.se,tjock.se##adline
 feber.se,tjock.se##f-deals
 feber.se,tjock.se##f-panorama
+feministisktperspektiv.se##.two_column_ad
 fightermag.se##a[href*="/sponsra"]
 filmtipset.se###topslider-wrapper + .container > .sidebar
 filmtipset.se##.row.news > div[style^="border"]:last-of-type
@@ -1623,6 +1626,7 @@ idg.se,macworld.se,nsk.se,skd.se##.adContainer
 iform.se##a[data-ad-sub-pillar="Annons"]
 ikea.com##.cookie-bot-overlay.is--visible
 ilikeradio.se,netdoktor.se,nevnarien.se,pomu.se,su.se,wwf.se##.cc-banner
+inblick.se##.cookieBG
 ingenjoren.se##.td-header-sp-recs
 innebandy.se##.external-banner-container-distrikt, .external-banner-container
 innebandy.se,lokalguiden.se##.banner-container
@@ -1718,6 +1722,7 @@ lidkopingsnytt.nu###annons_head
 lindasbakskola.se,mykitchenstories.se##.panorama-sticky, .sticky-area
 lindasbakskola.se,privataaffarer.se,skk.se##a[href*="/bit.ly/"]
 lindasbakskola.se,zeinaskitchen.se##.proad
+lindenytt.com,poolforum.se,varmepumpsforum.com##a[target="_blank"] > img[alt]
 linnherbertsson.se##[id^="content-ad"]
 listor.se##.top-ads-widget
 livetombord.se##a[href^="//www.livetombord.se/artiklar/partner/"]
@@ -1866,7 +1871,6 @@ piraja.se###panoramaholder
 piraja.se###parallax
 pomu.se##.Games-addLateral
 pomu.se##[class^="Banner"]
-poolforum.se,varmepumpsforum.com##a[target="_blank"] > img[alt]
 popularastronomi.se##a.gofollow[data-track]:not([href*="www.popularastronomi.se"])
 posh24.se##.bannerArea
 pricerunner.se###data-protection-notification

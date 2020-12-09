@@ -269,6 +269,7 @@
 .se/js/cookie-message.$script
 .se/fightodds.plugin/fightodds.plugin.$script
 .se/files/annons/$image
+.se/getBannerImage
 .se/images/banner/
 .se/images/banners/
 .se/log/?
@@ -309,6 +310,7 @@
 /annonsbanners/*
 /annons-banner
 /annonssamarbete/*$xmlhttprequest
+/apester-javascript-sdk.min.js
 /api/plugins/google-analytics$xmlhttprequest
 /app.php/adsview/*$xmlhttprequest
 /assets/google-universal-analytics$script
@@ -403,6 +405,7 @@
 /sifo_analytics.$script
 /sifo_msr.$script
 /siforesponsivemeasure.js$script
+/site_media/annons
 /skolvarlden_theme/js/s_code.js$script
 /snowfall.jquery.min.js
 /snowfall.min.jquery.js
@@ -415,6 +418,7 @@
 /stats.wp.com$script
 /sticky-ads.$script
 /strossle-start-page-ad$xmlhttprequest
+/sunt/mainfeed
 /sv_se/metrics/*$script,xmlhttprequest
 /swordfishinc.download.akamai.com/*$script
 /tabs_hits_counter.php$image
@@ -1224,8 +1228,8 @@ mittkok.expressen.se##^script:has-text(adblock)
 hannaofsweden.se##^script:has-text(NOclickNN)
 digikey.se,bax-shop.se,tui.se##^script:has-text(i10cdone)
 digikey.se,bax-shop.se,justfab.se,tui.se##^script:has-text(INSTART.Init)
-newsner.com,humorbibeln.se,sportbibeln.se,ettgottskratt.se,sportpanelen.se,kvalitetsmagasinet.se,bandyfeber.com,telekomidag.se,miljo-utveckling.se,vdtidningen.se,dagensanalys.se,ladok.se,binero.se,rikatillsammans.se,zeinaskitchen.se,dinbyggare.se,kvartal.se,trafiksakerhet.se,i-chalmers.se,boktugg.se,mobilanyheter.net,lchfarkivet.se,carup.se##^script:has-text(mi_track_user)
-newsner.com,humorbibeln.se,sportbibeln.se,ettgottskratt.se,sportpanelen.se,kvalitetsmagasinet.se,bandyfeber.com,telekomidag.se,miljo-utveckling.se,vdtidningen.se,dagensanalys.se,ladok.se,binero.se,rikatillsammans.se,zeinaskitchen.se,dinbyggare.se,kvartal.se,trafiksakerhet.se,i-chalmers.se,boktugg.se,mobilanyheter.net,lchfarkivet.se,carup.se##^script:has-text(monsterinsights_frontend)
+newsner.com,humorbibeln.se,sportbibeln.se,ettgottskratt.se,sportpanelen.se,kvalitetsmagasinet.se,bandyfeber.com,telekomidag.se,miljo-utveckling.se,vdtidningen.se,dagensanalys.se,ladok.se,binero.se,rikatillsammans.se,zeinaskitchen.se,dinbyggare.se,kvartal.se,trafiksakerhet.se,i-chalmers.se,boktugg.se,mobilanyheter.net,lchfarkivet.se,carup.se,exakt24.se##^script:has-text(mi_track_user)
+newsner.com,humorbibeln.se,sportbibeln.se,ettgottskratt.se,sportpanelen.se,kvalitetsmagasinet.se,bandyfeber.com,telekomidag.se,miljo-utveckling.se,vdtidningen.se,dagensanalys.se,ladok.se,binero.se,rikatillsammans.se,zeinaskitchen.se,dinbyggare.se,kvartal.se,trafiksakerhet.se,i-chalmers.se,boktugg.se,mobilanyheter.net,lchfarkivet.se,carup.se,exakt24.se##^script:has-text(monsterinsights_frontend)
 jawcloud.co,nyafilmer.*##^script:has-text(_Hasync)
 nyadagbladet.se,fysikstugan.se,thorengruppen.se,brpsystems.se,pppress.se,utslappsratt.se,newsvoice.se,historiskahem.se,bastad.se,gdpr.se,heleneholmsif.se,trafikskola.se,melodifestivalklubben.se##^script:has-text(em_track_user)
 nyadagbladet.se,fysikstugan.se,thorengruppen.se,brpsystems.se,pppress.se,utslappsratt.se,newsvoice.se,historiskahem.se,bastad.se,gdpr.se,heleneholmsif.se,trafikskola.se,melodifestivalklubben.se##^script:has-text(exactmetrics_frontend)
@@ -1236,8 +1240,8 @@ nyadagbladet.se##^script:has-text(admiral-engaged)
 
 ! For browsers that aren't firefox
 !#if !env_firefox
-newsner.com,humorbibeln.se,sportbibeln.se,ettgottskratt.se,sportpanelen.se,kvalitetsmagasinet.se,bandyfeber.com,telekomidag.se,miljo-utveckling.se,vdtidningen.se,dagensanalys.se,ladok.se,binero.se,rikatillsammans.se,zeinaskitchen.se,dinbyggare.se,kvartal.se,trafiksakerhet.se,i-chalmers.se,boktugg.se,mobilanyheter.net,lchfarkivet.se,carup.se##+js(set, mi_track_user, false)
-newsner.com,humorbibeln.se,sportbibeln.se,ettgottskratt.se,sportpanelen.se,kvalitetsmagasinet.se,bandyfeber.com,telekomidag.se,miljo-utveckling.se,vdtidningen.se,dagensanalys.se,ladok.se,binero.se,rikatillsammans.se,zeinaskitchen.se,dinbyggare.se,kvartal.se,trafiksakerhet.se,i-chalmers.se,boktugg.se,mobilanyheter.net,lchfarkivet.se,carup.se##+js(acis, monsterinsights_frontend)
+newsner.com,humorbibeln.se,sportbibeln.se,ettgottskratt.se,sportpanelen.se,kvalitetsmagasinet.se,bandyfeber.com,telekomidag.se,miljo-utveckling.se,vdtidningen.se,dagensanalys.se,ladok.se,binero.se,rikatillsammans.se,zeinaskitchen.se,dinbyggare.se,kvartal.se,trafiksakerhet.se,i-chalmers.se,boktugg.se,mobilanyheter.net,lchfarkivet.se,carup.se,exakt24.se##+js(set, mi_track_user, false)
+newsner.com,humorbibeln.se,sportbibeln.se,ettgottskratt.se,sportpanelen.se,kvalitetsmagasinet.se,bandyfeber.com,telekomidag.se,miljo-utveckling.se,vdtidningen.se,dagensanalys.se,ladok.se,binero.se,rikatillsammans.se,zeinaskitchen.se,dinbyggare.se,kvartal.se,trafiksakerhet.se,i-chalmers.se,boktugg.se,mobilanyheter.net,lchfarkivet.se,carup.se,exakt24.se##+js(acis, monsterinsights_frontend)
 nyadagbladet.se,fysikstugan.se,thorengruppen.se,brpsystems.se,pppress.se,utslappsratt.se,newsvoice.se,historiskahem.se,bastad.se,gdpr.se,heleneholmsif.se,trafikskola.se,melodifestivalklubben.se##+js(set, em_track_user, false)
 nyadagbladet.se,fysikstugan.se,thorengruppen.se,brpsystems.se,pppress.se,utslappsratt.se,newsvoice.se,historiskahem.se,bastad.se,gdpr.se,heleneholmsif.se,trafikskola.se,melodifestivalklubben.se##+js(acis, exactmetrics_frontend)
 nyadagbladet.se##+js(acis, exactmetrics_scroll_tracking_load)
@@ -1560,10 +1564,9 @@ gotland.net##+js(set, ntm_kv, null)
 gotland.net##+js(set, cxUserID, null)
 
 ! GOTA MEDIA/MK WEBB/NWT
-barometern.se,blt.se,bt.se,kristianstadsbladet.se,olandsbladet.se,ostrasmaland.se,smp.se,sydostran.se,trelleborgsallehanda.se,ut.se,ystadsallehanda.se##.component__ad__ad-box
-barometern.se,blt.se,bt.se,kristianstadsbladet.se,olandsbladet.se,ostrasmaland.se,smp.se,sydostran.se,trelleborgsallehanda.se,ut.se,ystadsallehanda.se##.component__guide-ads
-barometern.se,blt.se,bt.se,kristianstadsbladet.se,olandsbladet.se,ostrasmaland.se,smp.se,sydostran.se,trelleborgsallehanda.se,ut.se,ystadsallehanda.se##.component_gdprMessage__container
-/sunt/*$subdocument,domain=barometern.se|blt.se|bt.se|kristianstadsbladet.se|olandsbladet.se|ostrasmaland.se|smp.se|sydostran.se|trelleborgsallehanda.se|ut.se|ystadsallehanda.se
+barometern.se,blt.se,bt.se,kristianstadsbladet.se,olandsbladet.se,ostrasmaland.se,smp.se,sydostran.se,trelleborgsallehanda.se,ut.se,ystadsallehanda.se,borasdly.se,kalmarposten.se,osterlenmagasinet.se##.component__ad__ad-box
+barometern.se,blt.se,bt.se,kristianstadsbladet.se,olandsbladet.se,ostrasmaland.se,smp.se,sydostran.se,trelleborgsallehanda.se,ut.se,ystadsallehanda.se,borasdly.se,kalmarposten.se,osterlenmagasinet.se##.component__guide-ads
+barometern.se,blt.se,bt.se,kristianstadsbladet.se,olandsbladet.se,ostrasmaland.se,smp.se,sydostran.se,trelleborgsallehanda.se,ut.se,ystadsallehanda.se,borasdly.se,kalmarposten.se,osterlenmagasinet.se##.component_gdprMessage__container
 /consent.js$domain=skd.se|nsk.se
 skd.se,nsk.se##.advert-widget
 vf.se,hjotidning.se,kt.se,sla.se,mariestadstidningen.se,filipstadstidning.se,fryksdalsbygden.se,nwt.se,arvikanyheter.se,nkp.se,saffletidningen.se,provinstidningen.se,dalslanningen.se,karlskogatidning.se,nlt.se,varmlandsaffarer.se##+js(cookie-remover, page-views)
@@ -1738,7 +1741,6 @@ allakorsord.se,baaam.se,dromhemochtradgard.se,elle.se,femina.se,hant.se,mabra.co
 allakorsord.se,baaam.se,dromhemochtradgard.se,elle.se,femina.se,hant.se,mabra.com,residencemagazine.se,svenskdam.se##section > .native-wrapper ~ article
 allakorsord.se,baaam.se,dromhemochtradgard.se,elle.se,femina.se,hant.se,mabra.com,residencemagazine.se,svenskdam.se##.native-sponsored-splash
 allakorsord.se,baaam.se,dromhemochtradgard.se,elle.se,femina.se,hant.se,mabra.com,residencemagazine.se,svenskdam.se##+js(noeval-if, dataLayer.push)
-/apester-javascript-sdk.min.js$script,domain=allakorsord.se|allas.se|baaam.se|dromhemochtradgard.se|elle.se|femina.se|hant.se|mabra.com|residencemagazine.se|svenskdam.se
 /se-wordpress-newsletters
 /se-wordpress-google-analytics
 /se-wordpress-gdpr
@@ -2005,7 +2007,7 @@ svenskfotboll.se,gbgfotboll.se###cookie_bar
 gentlemannaguiden.com##.advertising
 newsner.com,humorbibeln.se,sportbibeln.se,ettgottskratt.se##.ad-space
 ehandel.se,bytbil.com##.article-sponsored
-ekonominyheter.se,gjuteriet.se,haaf.se,hockeybladet.nu##.td-a-rec
+ekonominyheter.se,gjuteriet.se,haaf.se,hockeybladet.nu,mariefredstidning.se##.td-a-rec
 uwtd.me,ekonominyheter.se,autonytt.se,undervarttak.se,aftonbladet.se,xn--snabbalnen-75a.se,lesscarbs.se,hockeybladet.nu##a[href*="/track.adtraction."]
 svenskaturistforeningen.se##.cookie-box
 fokus.se,sverigeskonsumenter.se###cookie-box
@@ -3090,7 +3092,7 @@ snowmobile.se,atvmag.se##a[target="_blank"] > img.b-loaded
 @@||typkanske.se^$generichide
 typkanske.se##.adbar
 /consent.$script,domain=typkanske.se
-varmepumpsforum.com,poolforum.se##a[target="_blank"] > img[alt]
+varmepumpsforum.com,poolforum.se,lindenytt.com##a[target="_blank"] > img[alt]
 /assets/pb-$script,domain=weheartit.com
 /bilder/foretag/*$image,domain=falubsbandy.com
 bandybyn.se,falubsbandy.com###RightDiv
@@ -3484,3 +3486,5 @@ varden.se##.cdk-overlay-container, app-cookies
 ibnytt.se##.widget:has(h3:has-text(Speltips))
 ||svenskfotboll.se/ui/dist/js/ai.$script
 /bannerblock$domain=svenskfotboll.se
+feministisktperspektiv.se##.two_column_ad
+inblick.se##.cookieBG
