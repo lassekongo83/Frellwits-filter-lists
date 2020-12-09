@@ -53,10 +53,8 @@ Listan uppdateras automatiskt var fjärde dag. Du kan också [uppdatera manuellt
 
 Om något inte fungerar som det ska, eller om du upptäcker oblockerat innehåll så kan du rapportera problemet här på GitHub. Var vänlig följ mallen. Frågor hänvisas till reddit.
 
-Frågor gällande Frellwit's Swedish Filter: Skicka ett DM till /u/Frellwit på reddit.
+Frågor gällande Frellwit's Swedish Filter? Gå till [discussions](https://github.com/lassekongo83/Frellwits-filter-lists/discussions) eller skicka ett DM till /u/Frellwit på reddit.
 
 Generella frågor om uBlock Origin som inte specifikt berör detta filtret: https://old.reddit.com/r/uBlockOrigin/
 
 Vissa svar kan även finnas i [uBlock Origins wiki](https://github.com/gorhill/uBlock/wiki).
-
-Om du inte håller med om någon lösning i listan så kan du kontakta mig på reddit och förklara varför. Alternativt så kan du skriva en egen filter-regel, skapa en egen förgrening av listan, vitlista sidan det gäller på, eller deaktivera hela listan i uBlock Origins inställningar.

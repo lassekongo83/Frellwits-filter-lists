@@ -53,10 +53,8 @@ The list is set to automatically update every 4th day. You can also [update manu
 
 If something isn't working correctly, or if you find unblocked content, you can open an issue here on GitHub. Please follow the issue template. If you have a question, please use reddit.
 
-Questions regarding Frellwit's Swedish Filter: Send a DM to /u/Frellwit on reddit.
+Questions about Frellwit's Swedish Filter? Go to [discussions](https://github.com/lassekongo83/Frellwits-filter-lists/discussions) or send a DM to /u/Frellwit on reddit.
 
 General questions about uBlock Origin that does not regard this filter: https://old.reddit.com/r/uBlockOrigin/
 
 Some answers may also be found in [uBlock Origin's wiki](https://github.com/gorhill/uBlock/wiki).
-
-If you don't agree with any of the solutions in the list you can contact me on reddit and explain why. Alternatively you can write your own filter rule, make your own fork of the list, whitelist the page in question, or deactivate the whole list in uBlock Origin's settings.
