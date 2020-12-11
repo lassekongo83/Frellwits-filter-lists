@@ -281,6 +281,7 @@
 .se/portalen-stats/register-view
 .se/prebid$script
 .se/pres/bnrs/$image
+.se/revive/www/
 .se/sponsored/$image
 .se/upload/annons/
 .se/uploads/images/banners/
@@ -897,6 +898,7 @@
 @@||imasdk.googleapis.com/js/sdkloader/ima3.$script,domain=gamereactor.se|screen9.com|atl.nu|sn.se|ekuriren.se|kkuriren.se|strengnastidning.se
 @@/prebid.js$~third-party,domain=feber.se|tjock.se
 @@/assets/ads-$~third-party,domain=vackertvader.se
+@@/adblock-detector$~third-party,domain=pussad.se
 
 ! Unbreak
 skandia.se##div[data-block="CookieBannerBlock"]
@@ -2049,7 +2051,7 @@ jawcloud.co##.loloba
 ! Various annoyances and tracking
 saraabrahamsson.se,eurosport.se,jawcloud.co,nxload.com,polistidningen.se,clipmyhorse.tv,100kitchenstories.se,streamio.com,nyheter24.se,modette.se##+js(aeld, contextmenu)
 ! Annoying, unecessary, and completely unrelated autoplaying video
-||youplay.se^$third-party,domain=hamsterpaj.net|emocore.se|dayviews.com|kamrat.com|familjeliv.se|extraextra.se|recept.se
+||youplay.se^$third-party,domain=hamsterpaj.net|emocore.se|dayviews.com|kamrat.com|familjeliv.se|extraextra.se|recept.se|kalender.se
 ! More annoyances for desktop. (Don't mess with the user's default scroll settings!)
 !#if !env_mobile
 lundagard.se,boktugg.se,outsidesweden.se,morotsliv.com,macken.xyz,affarsstaden.se##+js(aeld, wheel)
@@ -2857,7 +2859,7 @@ tennisportalen.se##[class^="td-block-span"]:has(a[href$="/sponsrad/"])
 miscotbloggen.se###side-right
 coop.se##.Notice.Notice--info
 fjallbrynt.se###itc-cookie-notify
-grannar.se##.cookiebox
+grannar.se##.cookiebox, .revive, .offert-promobox
 ||swehockey.se/Ad/$image
 swehockey.se##[id^="swehockey_pano"]
 swehockey.se##[id*="rightRegion"] > p
@@ -3363,8 +3365,7 @@ mobilanyheter.net###amp-user-notification1
 /mod_responsivebannerslider$domain=bjuvsnytt.se
 frilagt.se###whitewrap > .wrapper-first:first-child
 frilagt.se##.column-2 > figure
-pussad.se##.g1-popup-newsletter
-pussad.se##.g1-slideup-wrap
+pussad.se##.g1-popup-newsletter, .g1-slideup-wrap
 pussad.se##html.g1-popup-visible:style(overflow: initial !important;)
 ||sv.picmix.com/sw.js
 ||sv.picmix.com^$csp=worker-src 'none'
@@ -3485,3 +3486,4 @@ ibnytt.se##.widget:has(h3:has-text(Speltips))
 /bannerblock$domain=svenskfotboll.se
 feministisktperspektiv.se##.two_column_ad
 inblick.se##.cookieBG
+kalender.se##.day-nav ~ a:not([href*="kalender.se"])
