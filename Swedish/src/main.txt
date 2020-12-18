@@ -1353,6 +1353,7 @@ aftonbladet.se##.jwplayer:has(.svp-sponsor-label):remove()
 aftonbladet.se##a[href^="/tv/"]:has(span:has-text(/studio oddset/i)):upward(1)
 aftonbladet.se##a[href*="/kampanj/artikel"]:upward(1)
 aftonbladet.se##[classname="speltipsMarkup"]
+aftonbladet.se##.abThemeGradientPage:not(.abIsNichedContent) a[href^="/family/a/"]
 ! ab story sektion
 /ab-xiti-min$script,domain=aftonbladet.se
 /sptAutoTracker$script,domain=aftonbladet.se
@@ -1470,6 +1471,7 @@ www.expressen.se##+js(set, detect, noopFunc)
 mittkok.expressen.se##.main:style(width: 100% !important;)
 mittkok.expressen.se##.widget-social-media
 mittkok.expressen.se##+js(acis, adblock)
+mittkok.expressen.se##+js(aeld, click, trackClick)
 ! Procedural cosmetic filters
 expressen.se##.teaser:has(a[href*="/annons"])
 expressen.se##.teaser:has(a[href*="/brandstudio"])
@@ -1824,9 +1826,7 @@ tidningensyre.se,landetsfria.nu##div[style*="verdana; color:#888888"]
 ! NENT
 @@||fwmrm.net/ad/$xmlhttprequest,image,domain=viafree.se
 @@||fwmrm.net/crossdomain.xml$xmlhttprequest,domain=viafree.se
-viafree.se##.pause-ad-container
-viafree.se##.pause-ad
-viafree.se##.ad-click-through
+viafree.se##.pause-ad-container, .pause-ad, .ad-click-through
 viafree.se##.vjs-playing:upward(1) ~ .no-autoplay-overlay
 ||viafree.se/collect$xmlhttprequest,important
 ||client-stream-events.mtg-api.com^$domain=viafree.se
@@ -1888,6 +1888,8 @@ hockeynews.se##.desktop-horizontal-ad
 sporttv.nu##a[onclick*="bannerClick"]
 
 ! Nordiske medier
+||trckr.nordiskemedier.dk^
+||nordiskemedier.dk/bnr/
 /trckr/*$xmlhttprequest,domain=motormagasinet.se|food-supply.se|skyddosakerhet.se|dagenshandel.se|plastnet.se|habit.se|woodnet.se|foodnet.se|transportnet.se|processnet.se|packnet.se|verkstaderna.se|medtechmagazine.se|recyclingnet.se|rt-forum.se|kemivarldenbiotech.se|uochd.se|lifesciencesweden.se|fri-kopenskap.se|cleannet.se|entreprenad.com
 motormagasinet.se,skyddosakerhet.se,dagenshandel.se,food-supply.se,plastnet.se,habit.se,woodnet.se,foodnet.se,transportnet.se,processnet.se,packnet.se,verkstaderna.se,medtechmagazine.se,recyclingnet.se,rt-forum.se,kemivarldenbiotech.se,uochd.se,lifesciencesweden.se,fri-kopenskap.se,cleannet.se,entreprenad.com##+js(acis, openNewsletterPopup)
 motormagasinet.se,skyddosakerhet.se,dagenshandel.se,food-supply.se,plastnet.se,habit.se,woodnet.se,foodnet.se,transportnet.se,processnet.se,packnet.se,verkstaderna.se,medtechmagazine.se,recyclingnet.se,rt-forum.se,kemivarldenbiotech.se,uochd.se,lifesciencesweden.se,fri-kopenskap.se,cleannet.se,entreprenad.com##+js(acis, $, .banner)
@@ -1897,9 +1899,6 @@ motormagasinet.se,skyddosakerhet.se,dagenshandel.se,food-supply.se,plastnet.se,h
 motormagasinet.se##[id^="dfp-a1p"]
 motormagasinet.se,skyddosakerhet.se,dagenshandel.se,food-supply.se,plastnet.se,habit.se,woodnet.se,foodnet.se,transportnet.se,processnet.se,packnet.se,verkstaderna.se,medtechmagazine.se,recyclingnet.se,rt-forum.se,kemivarldenbiotech.se,uochd.se,lifesciencesweden.se,fri-kopenskap.se,cleannet.se,entreprenad.com##.rotating-junglebogen
 motormagasinet.se,skyddosakerhet.se,dagenshandel.se,food-supply.se,plastnet.se,habit.se,woodnet.se,foodnet.se,transportnet.se,processnet.se,packnet.se,verkstaderna.se,medtechmagazine.se,recyclingnet.se,rt-forum.se,kemivarldenbiotech.se,uochd.se,lifesciencesweden.se,fri-kopenskap.se,cleannet.se,entreprenad.com##.box-of-announcement
-||food-supply.se/bnrscr$subdocument
-||trckr.nordiskemedier.dk^$xmlhttprequest
-||nordiskemedier.dk/bnr/$xmlhttprequest
 
 ! ANNONSTORGET
 ||media.jw-it.se/getip.php
@@ -1911,7 +1910,7 @@ aletorget.se,alingsastorget.se,almhulttorget.se,alvestatorget.se,amaltorget.se,a
 /ub-cookie-notice/*
 majanilssonlindelof.com##.apprl-title,.cli-modal,.cli-modal-backdrop
 majanilssonlindelof.com##article:has(.has-text-align-center:has-text(/samarbete med/i))
-||mikz.com^$third-party,domain=emmagreen.se|fokis.se|fredagskocken.se|frureinhold.se|gynning.net|hormonerhemorrojder.se|magnusnorman.com|sannafischer.se|sannalundell.se|teresagrundin.se
+||mikz.com^$third-party
 emmagreen.se,fokis.se,fredagskocken.se,frureinhold.se,gynning.net,hormonerhemorrojder.se,magnusnorman.com,sannafischer.se,sannalundell.se,teresagrundin.se##+js(acis, jQuery, .dfp)
 emmagreen.se,fokis.se,fredagskocken.se,frureinhold.se,gynning.net,hormonerhemorrojder.se,magnusnorman.com,sannafischer.se,sannalundell.se,teresagrundin.se##+js(acis, ga)
 emmagreen.se,fokis.se,fredagskocken.se,frureinhold.se,gynning.net,hormonerhemorrojder.se,magnusnorman.com,sannafischer.se,sannalundell.se,teresagrundin.se##[id^="post-"]:has(.sponsored-notification)
