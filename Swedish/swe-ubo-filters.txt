@@ -1,5 +1,5 @@
 &autoplay$frame,queryprune=autoplay,domain=di.se|expressen.se
-*/tv4play_plugin.$redirect=noop.js,script,domain=fotbollskanalen.se|koket.se|tv4.se|tv4play.se
+&browser=MozillaFirefox$queryprune=|browser,xhr,domain=fotbollskanalen.se|koket.se|tv4.se|tv4play.se
 .*/*/*.php?*=aftonbladet-live-tv$document
 .info/dagens-nyheter/$document
 .info/dn-nyheter/$document
@@ -13,13 +13,14 @@
 .info/tt-nyheter/$document
 .info/tv4-nyheter/$document
 .space/?domain=grabbers.info$all
-/adblock_mobile.$important,script,domain=gamereactor.se
+/aab/tv4play$redirect=noop.js,script,domain=fotbollskanalen.se|koket.se|tv4.se|tv4play.se
 /aftonbladet/crypt/?lpkey$all
 /expressen/crypt/?lpkey$all
 /google-analytics-for-wordpress$important,script
 /google-analytics-premium$important,script
 /keremiya1/js/addtoany.js$important,script
 /plugins/google-analytics-dashboard$important,script
+/prerolls$media,mp4,domain=gamereactor.se
 /streamsense.$important,script,domain=dn.se
 /sweden/swedish/hjo-tidning.html$document
 /wp-content/plugins/ad-inserter/includes$important,domain=asterixia.se|byggipedia.se|fysikstugan.se
@@ -41,7 +42,6 @@ akaskidor.se,body.se,svenskgolf.se##body:style(background-image: none !important
 akaskidor.se,svenskgolf.se##.margin-bottom:has(.row--native)
 aktivtraning.se,iform.se,natgeo.se##li:has(.content-label:has-text(/annons/i)):remove()
 aktuellhallbarhet.se,dagensmedia.se,dagensmedicin.se,fastighetsnytt.se,resume.se##.slot-panorama:upward(1)
-aktuellhallbarhet.se,dagensmedia.se,dagensmedicin.se,fastighetsnytt.se,resume.se##article:matches-css-after(content: "Annonssamarbete")
 alexandrabring.se,biancaingrosso.se##article[id^="post-"]:has(em:has-text(/i samarbete med/i))
 alicestenlof.com,ellinorlofgren.se##.noscroll:style(overflow: initial !important;)
 alingsastidning.se,bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##+js(json-prune, autoplay players.*.ga acl.ads players.*.autoplay)
@@ -81,9 +81,9 @@ battrenyheter.se##.post-item:has(a[href*="casino"])
 battrenyheter.se##.vc_row.vc_row-flex:has(.abnan-single)
 battrestadsdel.se###my-mega-menu-widget:has-text(/sponsrade artiklar/i)
 betting.se##+js(aopw, Fingerprint2)
+bicycling.se,runnersworld.se##.modal-open:style(overflow: initial !important;)
 bilresaieuropa.se##.widget_text:has(.widget-title:has-text(/spons/i))
 blocket.se##body.modal_open, html.modal_open:style(overflow: auto !important;)
-bohuslaningen.se,chef.se,familjeliv.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##+js(acis, _cInfo)
 bonjourvintage.se##article:has(a[title*="Sponsrat inlägg"])
 borskollen.se##a[href^="/nyheter"]:has(span:has-text(/annons/i))
 borsvarlden.com##+js(acis, setREVStartSize)
@@ -182,34 +182,24 @@ fokis.se##[id^="post-"]:has(strong:has-text(/i samarbete med/i))
 fokus.se##[id^="entry-content-post"], [id^="entry-content-related"]:style(height: 100% !important;)
 foretagsnamngenerator.se##small:has-text(Annons):upward(1)
 forni.se##section, .recent-article-small:has(.collaboration-brand)
+forum.macworld.se,idg.se##.idgcp__layer--active, .idgcp__layer--active body:style(overflow: initial !important;)
 fotbolldirekt.se,hockeysverige.se,innebandymagazinet.se##.c-announcement:has(.c-label--sponsored)
 fotbolldirekt.se,hockeysverige.se,innebandymagazinet.se##.justnu_category:has(.datum:has-text(/sponsrat/i))
 fotbolldirekt.se,hockeysverige.se,innebandymagazinet.se##article:has(.datum:has-text(/sponsrat/i))
-fotbollskanalen.se##.notice__link:has(.notice__tag_sponsored)
+fotbollskanalen.se##.notice__tag_sponsored:upward(1)
 fotbolltransfers.com##.smallNewsLink:has(.smallNewsCategory:has-text(/sponsrad/i))
 fragbite.se##+js(noeval-if, cmd)
 fragbite.se##article:has(.category:has-text(/spons/i))
-freeride.se##.item.active:has(.sponsor)
 friluftsframjandet.se##+js(ra, data-ads-manual)
 frureinhold.se##[id^="post-"]:has(h5:has-text(/i samarbete med/i))
 fuska.se##+js(acis, $, .modal)
 fuska.se##.space-top:has-text(Reklam)
 fuska.se##.well_green:has-text(låna)
 futsalmagasinet.se##.td_block_wrap:has(span:has-text(/annonserat innehåll/i))
-fz.se##+js(acis, Taiga, Blackboard)
 fz.se##.card:has(.article-sponsored)
 fz.se##.fp-carousel .fpci-kicker:has-text(/^sponsr/i):upward(.fpc-item)
 fz.se,sweclockers.com##+js(set, adblock, false)
-gamereactor.se###pagebackground:style(background-image: none !important)
-gamereactor.se##+js(acis, AdsReloadConfig)
-gamereactor.se##+js(aopw, banner_video)
-gamereactor.se##+js(nano-stb, timeDown)
-gamereactor.se##+js(set, adblockEnabled, noopFunc)
-gamereactor.se##+js(set, trackAdblock, noopFunc)
-gamereactor.se##.artistyle3:has(h4:has-text(/sponsored/i))
-gamereactor.se##.external_div_bigVideoAd:remove()
-gamereactor.se##a[href^="/grtv/"][title*="Sponsored"]:upward(1)
-gamereactor.se##article.rwd_row:has(a[href$="/sponsoredcontent/"])
+gamereactor.se###grtvbelt_Sponsored:upward(1)
 gamereactor.se,svenskjakt.se##+js(ra, autoplay)
 garaget.org##+js(cookie-remover, /^mayhem/)
 garaget.org##.small.discrete:has-text(Annons:)
@@ -246,8 +236,6 @@ hypeline.se##.homecontent:has(.sponsrad_ruta)
 ibnytt.se##.widget:has(h3:has-text(Speltips))
 ica.se,sverigesradio.se,urplay.se##.async-hide:style(opacity: 1 !important;)
 idg.se##+js(nostif, gFail)
-idg.se##+js(set, cmsad, undefined)
-idg.se##a[data-click-settings*="Article Outbound Links"]:has(strong:has-text(/annons/i))
 improveme.se##+js(acis, n_pbt)
 interiorbyvanessa.se##.post:has-text(I annonssamarbete med)
 isabellalowengrip.se##.post:has(em:has-text(/^i samarbete med/i))
@@ -373,9 +361,6 @@ realtid.se##+js(acis, sas)
 realtid.se##.modal-open:style(overflow: unset !important;)
 rikakvinnor.se##article.category-samarbete:remove()
 rikatillsammans.se##article:has(.sponsor_pre_heading)
-runnersworld.se##.modal-open:style(overflow: auto !important;)
-runnersworld.se##.post-card:has(.sponsrat)
-runnersworld.se##.postscroll:has(.sponsrat-promo)
 senses.se##.isobrick:has(a[href*="betting"])
 senses.se##.isobrick:has(a[href*="casino"])
 senses.se##.isobrick:has(a[href*="glhf-gg"])
@@ -479,7 +464,6 @@ youplay.se##+js(aeld, loadstart)
 ||aftonbladet.se/kampanj/casinoguide$all
 ||amazon-adsystem.com^$3p,important,domain=bilresaieuropa.se
 ||asmassets.mtvnservices.com^$media,redirect=noop-1s.mp4,domain=mtv.se
-||b17g.net^*/play/log$redirect=noop.txt,xmlhttprequest,domain=fotbollskanalen.se|koket.se|tv4.se|tv4play.se
 ||best-prizes-now.*^$all
 ||biowebb-data.s3.amazonaws.com^*/ad_loader$important,script
 ||byggkonsult.org^$all
@@ -490,16 +474,12 @@ youplay.se##+js(aeld, loadstart)
 ||googletagmanager.com^$important,domain=tradera.com|xxl.se
 ||imasdk.googleapis.com/pal/sdkloader/pal.js$redirect=noop.js,script,domain=dplay.se
 ||look.utndln.com^$all
-||lwadm.com/lw/pbjs?pid=$important,script,domain=sydostran.se
-||media.gamereactor.dk/*Promo$media,redirect=noop-1s.mp4,domain=gamereactor.se
-||media.gamereactor.dk/prerolls$media,redirect=noop-1s.mp4,domain=gamereactor.se
+||lwadm.com^$important,domain=sydostran.se
 ||mediacreeper.com/image$image,redirect=32x32.png
 ||mediacreeper.se/image$image,redirect=32x32.png
 ||munchkin.marketo.net/munchkin.js$important,script,domain=hangotidningen.fi|hbl.fi|ostnyland.fi|vastranyland.fi|yougov.se
 ||online.swedbank.se.swedd.$document
-||openx.gamereactor.dk/multi.php?$important,script
 ||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$redirect=noop.js,script,domain=aletorget.se|alingsastorget.se|almhulttorget.se|alvestatorget.se|amaltorget.se|angelholmtorget.se|arbogatorget.se|arvikatorget.se|askersundtorget.se|avestatorget.se|bastadtorget.se|bengtsforstorget.se|bjuvtorget.se|bodentorget.se|bollebygdtorget.se|bollnastorget.se|borastorget.se|borlangetorget.se|botkyrkatorget.se|bromollatorget.se|eksjotorget.se|enkopingtorget.se|eskilstunatorget.se|eslovtorget.se|fagerstatorget.se|falkenbergtorget.se|falkopingtorget.se|faluntorget.se|filipstadtorget.se|flentorget.se|forshagatorget.se|gallivaretorget.se|gavletorget.se|gislavedstorget.se|goteborgtorget.se|gotenetorget.se|gotlandtorget.se|hagforstorget.se|hallsbergtorget.se|hallstahammartorget.se|halmstadtorget.se|haningetorget.se|harnosandtorget.se|harrydatorget.se|hassleholmtorget.se|hebytorget.se|hedemoratorget.se|helsingborgtorget.se|herrljungatorget.se|hoforstorget.se|hoganastorget.se|hoortorget.se|horbytorget.se|huddingetorget.se|hudiksvalltorget.se|hultsfredtorget.se|hyltetorget.se|jonkopingtorget.se|kalixtorget.se|kalmartorget.se|karlshamntorget.se|karlskogatorget.se|karlskronatorget.se|karlstadtorget.se|katrineholmtorget.se|kavlingetorget.se|kiltorget.se|kirunatorget.se|klippantorget.se|kopingtorget.se|kramforstorget.se|kristianstadtorget.se|kristinehamntorget.se|krokomtorget.se|kumlatorget.se|kungalvtorget.se|kungsbackatorget.se|laholmtorget.se|landskronatorget.se|leksandtorget.se|lidkopingtorget.se|ljungbytorget.se|ljusdaltorget.se|ludvikatorget.se|luleatorget.se|lundtorget.se|lyckseletorget.se|lysekiltorget.se|malmotorget.se|mariestadstorget.se|markarydtorget.se|marktorget.se|moratorget.se|nackatorget.se|nassjotorget.se|norrtaljetorget.se|nybrotorget.se|nykopingtorget.se|nynashamntorget.se|olandtorget.se|olofstromtorget.se|orebrotorget.se|ornskoldsvikstorget.se|orusttorget.se|osbytorget.se|oskarshamntorget.se|ostersundtorget.se|osthammartorget.se|partilletorget.se|piteatorget.se|ronnebytorget.se|saffletorget.se|salatorget.se|sandvikentorget.se|sigtunatorget.se|simrishamntorget.se|sjobotorget.se|skaratorget.se|skellefteatorget.se|skovdetorget.se|skuruptorget.se|soderhamntorget.se|sodertaljetorget.se|sollefteatorget.se|sollentunatorget.se|solnatorget.se|solvesborgtorget.se|staffanstorptorget.se|stenungsundtorget.se|stockholmtorget.se|strangnastorget.se|stromstadtorget.se|sundsvalltorget.se|sunnetorget.se|svenljungatorget.se|tabytorget.se|tanumtorget.se|tidaholmtorget.se|tierptorget.se|timratorget.se|tingsrydtorget.se|tjorntorget.se|tomelillatorget.se|torsbytorget.se|tranastorget.se|tranemotorget.se|trelleborgtorget.se|trollhattantorget.se|trosatorget.se|uddevallatorget.se|ulricehamntorget.se|umeatorget.se|uppsalatorget.se|vallentunatorget.se|vanersborgtorget.se|varatorget.se|varbergtorget.se|varnamotorget.se|vasterastorget.se|vasterviktorget.se|vaxjotorget.se|vellingetorget.se|vetlandatorget.se|vimmerbytorget.se|ystadtorget.se
-||playback-api.b17g.net/*&browser=MozillaFirefox$queryprune=|browser,xhr,domain=fotbollskanalen.se|koket.se|tv4.se|tv4play.se
 ||s.arclk.net/tr?$all
 ||ssl.p.jwpcdn.com^*/freewheel.js$important,script,domain=eurosport.se
 ||ssl.p.jwpcdn.com^*/gapro.js$important,script,domain=freeride.se|happyride.se|ilikeradio.se
