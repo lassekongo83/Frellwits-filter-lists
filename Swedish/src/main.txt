@@ -356,6 +356,7 @@
 /helios/multiad_jquery.$script
 /iab/iab.js
 /img/bettingstugan.
+/isbanner/ib.js
 /javascript_nbenhadverts/*
 /jquery-eu-cookie-law-popup.$script
 /js/acceptCookies.
@@ -473,6 +474,8 @@
 ||back.famebloggers.com/bloggerfy/tracker$script,subdocument
 ||bcm.interactives.dk/script/
 ||biowebb-data.*.amazonaws
+||blogg.se/public/js/metrics
+||blogg.se/shared/js/bloggse.js
 ||bmbstatic.blob.core.windows.net^
 ||btikon.se/analytics
 ||btikon.se/btstats
@@ -491,8 +494,10 @@
 ||connectio.s3.amazonaws.com/connect-retarget.$script
 ||d10lumateci472.cloudfront.net/?amuld$script
 ||d1gwclp1pmzk26.cloudfront.net/agile/agile-cloud.js
-||d11j2g8hmtmh4u.cloudfront.net/losad/$script
-||d11j2g8hmtmh4u.cloudfront.net/loswidget/$script
+||d11j2g8hmtmh4u.cloudfront.net/losad
+||d11j2g8hmtmh4u.cloudfront.net/loswidget
+||d11j2g8hmtmh4u.cloudfront.net/orion
+||d11j2g8hmtmh4u.cloudfront.net/tags
 ||d1lxhc4jvstzrp.cloudfront.net/scripts/js3caf.js$script
 ||d24rtvkqjwgutp.cloudfront.net/*yb.js$script
 ||d24rtvkqjwgutp.cloudfront.net/cookie.html
@@ -544,6 +549,7 @@
 ||js.hs-banner.com^$script
 ||kayak.xno.se^$script
 ||laikabook.se/ib/banner$subdocument
+||lifeofsvea.se/production/borka/
 ||liveagent.se/scripts/track.$script
 ||mailchimp.com^*/popup$script
 ||mailmunch.co^*/scrollbox.$script
@@ -557,6 +563,7 @@
 ||monkey.tunnl.com/identify$subdocument
 ||mtst.io/js/mtst.js$script
 ||newsharecounts.*.amazonaws.com/nsc.js$script
+||newstats.blogg.se/collector
 ||nordiskemedier.dk/banner/
 ||nouw.com/api/campaignpost$xmlhttprequest
 ||nouw.com/campaignpost/reg/$image
@@ -588,7 +595,7 @@
 ||snt-matrix-app.herokuapp.com^*/user-tracking
 ||solidtango.com^*/player_statistics$image
 ||stackpathcdn.com^*/shrMain.$script
-||static.blogg.se/shared/js/bloggse.js$script
+||stat.modette.se^
 ||static.influencersofsweden.se/js/inos.$script
 ||stats.tipser.com^$xmlhttprequest
 ||susnet.nu/susnetstat.js$script
@@ -888,6 +895,7 @@
 ##div.CMACG_AdChangerWidget
 ##div.elementor-widget-wp-widget-advads_ad_widget
 ##div#mega-ad-content
+##div#panorama_ad
 
 ! Site specific whitelists
 @@_adframe.js$script,~third-party,domain=fssweden.se
@@ -1564,112 +1572,41 @@ vf.se,hjotidning.se,kt.se,sla.se,mariestadstidningen.se,filipstadstidning.se,fry
 vf.se,hjotidning.se,kt.se,sla.se,mariestadstidningen.se,filipstadstidning.se,fryksdalsbygden.se,nwt.se,arvikanyheter.se,nkp.se,saffletidningen.se,provinstidningen.se,dalslanningen.se,karlskogatidning.se,nlt.se,varmlandsaffarer.se##[id^="nwt-marknadsguiden"]
 
 ! ALMA TALENT
-/cookiewarning$xmlhttprequest,domain=allatjanstebilar.nyteknik.se
-arbetarskydd.se,lag-avtal.se,nyteknik.se##.ads-only
-arbetarskydd.se,lag-avtal.se,nyteknik.se##.annonstorget
-arbetarskydd.se,lag-avtal.se,nyteknik.se##.ad-panorama
-arbetarskydd.se,lag-avtal.se,nyteknik.se##.ad-teaser
-arbetarskydd.se,lag-avtal.se,nyteknik.se##.disable-ad-marks
-arbetarskydd.se,lag-avtal.se,nyteknik.se##a[href*="utm_campaign"][target="_blank"]
-arbetarskydd.se,lag-avtal.se,nyteknik.se##.social-teasers
-arbetarskydd.se,lag-avtal.se,nyteknik.se##a[href*="/sponsrad/"]
-arbetarskydd.se,lag-avtal.se,nyteknik.se##section.sponsored-articles-inline
-arbetarskydd.se,lag-avtal.se,nyteknik.se,personalledarskap.se##.annonssaljarna_iframe
-arbetarskydd.se,lag-avtal.se,nyteknik.se,personalledarskap.se##+js(acis, ALMA, loadAd)
+arbetarskydd.se,lag-avtal.se,nyteknik.se##.alman-teaser
 
 ! Adhype/LIFE OF SVEA
-/heatmap.js$domain=nyheter24.se
-/?agg_url=/shopping/*$xmlhttprequest,domain=nyheter24.se
-/?agg_url=/sponsratinnehall/*$xmlhttprequest,domain=nyheter24.se
-||lifeofsvea.bbvms.com/b/$script
-@@||cdn.bluebillywig.com^*/components/admanager.js$script,domain=nyheter24.se|modette.se|loppi.se
-@@||2mdn.net/instream/html5/ima3.js$script,domain=nyheter24.se|modette.se
-nyheter24.se##+js(acis, ga, ypcomm)
-nyheter24.se##+js(acis, check_ab)
-nyheter24.se##[id^="article"]:has(.native_header)
-nyheter24.se##[id^="article"]:has(em:has-text(/artikeln är i samarbete med/i))
-nyheter24.se##.lazyload:has(span:has-text(/^sponsrat$/i))
-nyheter24.se##.plugin_wrapper.code
-nyheter24.se##.lazyload_bar.show
-nyheter24.se##.lazyload_outer.show
-nyheter24.se##article:has(a[href="/casino"])
-dayviews.com###frontpageRecommended
-dayviews.com###panorama_ad
-dayviews.com##[class^="content_ad"]
-dayviews.com##[class$="-ad"]
-dayviews.com##.frontPageBox--links
-/p/tourn/*$domain=dayviews.com
-kwiss.me##.frontpage_top_image:has(span:has-text(/sponsrat av/i))
-kwiss.me##.square-item:has(.qz-quiz-sponsored)
-kwiss.me##.qz-related-quizes-item:has(span:has-text(/sponsrat av/i))
-fragbite.se##.tn
-fragbite.se##article:has(.category:has-text(/spons/i))
-fragbite.se##.zooKeeper
-fragbite.se##.cookieBar
-fragbite.se###scraper
-fragbite.se##+js(noeval-if, cmd)
-fragbite.se,modette.se##.polar-native
-modette.se##article.article-true-native
-modette.se##.true_native_block
-modette.se##.lazyload_bar.show:has(span:has-text(/sponsrat/i))
-||dynamic.fragbite.se/gfx/campaign/$image,domain=~fragleague.com
-||blogg.se/public/js/metrics.$script
-||newstats.blogg.se/collector.$script
-||stat.modette.se^
-/BlogPortal/js/stats/blogstat.$script
-||bloggportalen.se/BlogPortal/view/Statistics$image
-kwiss.me##.qz-main-slider-item-initial2:has(.qz-quiz-sponsored)
+@@||d11j2g8hmtmh4u.cloudfront.net/orion/jquery.$script
+@@/aff/images/*$image,domain=alltforforaldrar.se
+||dayviews.com^$third-party,domain=filmtipset.se|hamsterpaj.net
+||dayviews.com/p/tourn/
 ||hamsterpaj.net/gfx/banners/
-hamsterpaj.net,streamly.com###accept-cookies
-hamsterpaj.net###frontpage_spotlight
-hamsterpaj.net###sidebar_wrapper > .zone:last-child
-hamsterpaj.net##.article:has(a:has-text(/casino|spelautomat/i))
-familjeliv.se##a[href*="/kampanj/"]
-familjeliv.se##.flm-kampanj
+||stat.modette.se^
+/?agg_url=/sponsratinnehall$domain=nyheter24.se
+/?agg_url=/shopping$domain=nyheter24.se
+/modal.js$script,domain=alltforforaldrar.se|mammasidan.se|minbebis.com
+/plugins/sandviks-weblog$script,domain=babyvarlden.se
+alltforforaldrar.se,mammasidan.se,minbebis.com##.spons-artc, a[href^="/native/"]
+alltforforaldrar.se,mammasidan.se,minbebis.com###partnerMenuContainer, #partnerMenuContainerFiller
+alltforforaldrar.se,mammasidan.se,minbebis.com##.unslider-wrap.unslider-carousel>li:has(.preamble-category:has-text(/^annons/i))
+dayviews.com##.content-center-ad, .frontPageBox--links
+devote.se,familjeliv.se##div[style*="height: 244px;"]
+familjeliv.se##a[href*="/kampanj/"], .flm-kampanj
+familjeliv.se###articleContainer:has(.articleSuperTitle:has-text(/annons/i)):remove()
 familjeliv.se##li.flm-kampanj:remove()
 familjeliv.se##li:has(a[href*="/kampanj/"]):remove()
-familjeliv.se##+js(acis, promotions)
-familjeliv.se##+js(nostif, sendImps)
-familjeliv.se##+js(nostif, dataLayer.push)
-familjeliv.se##div[data-element^="#article"]:has(.articleSuperTitle:has-text(/annons/i)):remove()
-mammasidan.se,minbebis.com,alltforforaldrar.se##li.views-row > a[target="_blank"]
-mammasidan.se,minbebis.com,alltforforaldrar.se##.art-small > a[target="_blank"]
-mammasidan.se,minbebis.com,alltforforaldrar.se##.advertisements-sidebar
-mammasidan.se,minbebis.com,alltforforaldrar.se##.productheader
-mammasidan.se,minbebis.com,alltforforaldrar.se###owl-products
-mammasidan.se,minbebis.com,alltforforaldrar.se##.spons-artc
-mammasidan.se,minbebis.com,alltforforaldrar.se##[id*="blogg_panorama"]
-mammasidan.se,minbebis.com,alltforforaldrar.se###partnerMenuContainer
-mammasidan.se,minbebis.com,alltforforaldrar.se###partnerMenuContainerFiller
-mammasidan.se,minbebis.com,alltforforaldrar.se##a[href^="/native/"]
-alltforforaldrar.se,mammasidan.se,minbebis.com##+js(set, advertisementText, undefined)
-alltforforaldrar.se##.unslider-wrap.unslider-carousel>li:has(.preamble-category:has-text(/^annons/i))
-@@/aff/images/*$image,domain=alltforforaldrar.se
-/js/svenskanamn_ads.$script
-/js/svenskanamn_param_init.$script
-/themes/aurora/cookies/*$domain=mammasidan.se|minbebis.com|alltforforaldrar.se
-||alltforforaldrar.se/extra/dp/dp.js$script
-/modal.js$script,domain=mammasidan.se|minbebis.com|alltforforaldrar.se
-||d11j2g8hmtmh4u.cloudfront.net/orion$script
-||d11j2g8hmtmh4u.cloudfront.net/tags$script
-@@||d11j2g8hmtmh4u.cloudfront.net/orion/jquery.$script
-/isbanner/ib.js$script,domain=mammasidan.se|minbebis.com|alltforforaldrar.se
-/plugins/sandviks-weblog/*$script,domain=babyvarlden.se
-devote.se,familjeliv.se##div[style*="height: 244px;"]
-babyhjalp.se###nativendo-mainfeed
-babyhjalp.se##.sponserdarticle
-babyhjalp.se##.ad_wrapper_div
-babyhjalp.se##.lastips:has(.title-sponserd:has-text(/^sp/i))
-||dayviews.com^$third-party,domain=filmtipset.se|hamsterpaj.net
 filmtipset.se###topslider-wrapper + .container > .sidebar
 filmtipset.se##.row.news:has(em:has-text(/sponsrad/i))
 filmtipset.se##.row.news > div[style^="border"]:last-of-type
-||statics.lifeofsvea.se/production/borka/*.min.js$script
+fragbite.se##.cookieBar
+fragbite.se##.tn, .zooKeeper, #scraper
+fragbite.se##article:has(.category:has-text(/spons/i))
+hamsterpaj.net###accept-cookies
+hamsterpaj.net###sidebar_wrapper > .zone:last-child
+kwiss.me##.square-item:has(.qz-quiz-sponsored)
+loppi.se##.entry__teaser--promotion, .wpcnt
+modette.se##.true_native_block
+nyheter24.se##.lazyload_bar.show, .lazyload_outer.show
 vimedbarn.se##.annonsinlagg
-loppi.se##.page__ad
-loppi.se##.entry__teaser--promotion
-/js/gdpr-public.$script,domain=loppi.se
-svenskanamn.se##[class$="-advert"]
 
 ! GAMEREACTOR
 /lay/js/background$domain=gamereactor.se
