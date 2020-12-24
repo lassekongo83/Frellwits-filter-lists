@@ -2259,11 +2259,9 @@ mmanytt.se##.img-featured-posts-image:has(a[href$="/annons/"])
 guldkanalen.se,dansbandskanalen.se##.wppaslink
 ||webradio.dbmedia.se/images/AnnonserMarker.png
 webradio.dbmedia.se##.marquee
+@@||mparticle.com^*/login$domain=dplay.se
 ||akamaihd.net^$media,domain=dplay.se
 ||dnitv.com^$media,domain=dplay.se
-@@||fwmrm.net/ad/$script,domain=dplay.se
-@@||identity.mparticle.com^*/login$domain=dplay.se
-||imasdk.googleapis.com/pal/sdkloader/pal.js$script,redirect=noop.js,domain=dplay.se
 dplay.se##[class^="notificationArea"]
 news55.se###newsletter-popup
 news55.se##.is-native,.is-native-yes
@@ -2465,19 +2463,9 @@ skogsforum.se##a[href^="https://goo.gl/"]
 skogsforum.se##a[href*="//bit.ly/"]
 ||skogsforum.se/sda/$xmlhttprequest
 ||skogsforum.se^$csp=worker-src 'none'
-/integrated_ads/*$script,domain=garaget.org
-garaget.org##.gorgad-main
-garaget.org##.title-bg:has-text(Sponsrade tjänster)
-garaget.org##.small.discrete:has-text(Annons:)
-garaget.org##+js(cookie-remover, /^mayhem/)
-garaget.org##.gorgad-side
-garaget.org###ia_compricer
-garaget.org###ia_biluppgifter
-garaget.org##a[href*="casino"][target="_blank"]
-garaget.org##a[href*="utm_campaign"][target="_blank"]
-! TODO: Fixa sorteringen så att nedan kan ignoreras i uBO
-@@||remus.garaget.org/www/delivery/$script,xmlhttprequest,~third-party
-||remus.garaget.org^$image
+||remus.garaget.org^
+garaget.org##.gorgad
+garaget.org##.gorg-side-content > div.small:nth-last-child(2)
 /annons-linje.gif$image,domain=tkj.se
 tkj.se##a[href*="tkj.se/ad/"]
 tkj.se##.sidebar2 > #custom_html-3
@@ -2787,8 +2775,6 @@ bandyfeber.com##a[title^="ANNONS"]
 bandyfeber.com##article:has(a[href*="/annons-"])
 bandyfeber.com##.avia-content-slider:has(.slide-entry-excerpt:has-text(/annons:/i))
 norrkopinghandel.se###wp-flybox_tab1
-||asmassets.mtvnservices.com^$media,redirect=noop-1s.mp4,domain=mtv.se
-mtv.se##.clickLayer
 mtv.se##+js(json-prune, omnitureAdTracking omnitureEnabled ads adServer adsEnabled adTimeouts comScoreAdTracking freewheelEnabled)
 lakemedelsvarlden.se##.annons-yta
 caminomagasin.se##.block--extern-annons
