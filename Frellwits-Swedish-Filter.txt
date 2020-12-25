@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2020-12-24 20:43:33 CET
+! Last modified: 2020-12-25 18:00:40 CET
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -64,8 +64,8 @@
 ###cookiejar
 ###cookielawwarning
 ###cookieMsgBlock
-###CookieNotice
 ###cookieNotice
+###CookieNotice
 ###cookies-acceptance .alert.bottom
 ###cookiesInfo
 ###dialog-eu-cookie-law
@@ -227,6 +227,7 @@
 ##div.newsletter-cta
 ##div.newsletter-slider
 ##div.oc_cb_wrapper.fill_black
+##div.outsideAdsWrapper
 ##div.sch-datacontroller--footer
 ##div.sch-datacontroller--subheader
 ##img[alt="Leovegas"]
@@ -421,7 +422,6 @@
 /cookies/*$xmlhttprequest,domain=stowr.se
 /cookiswarning.$script,domain=visitskargarden.se
 /core/analytics$script,domain=sv.geneanet.org
-/core/minify/storage/*$script,domain=manolo.se
 /cpg_ads.$script
 /cs1pc.js$domain=kiaindex.se
 /cx-emediate-userprofile-se.$script
@@ -443,7 +443,6 @@
 /EUModalDialog$script,domain=morningstar.se
 /evidon$script,domain=morningstar.se
 /exposure$xmlhttprequest,domain=lokalguiden.se
-/facebook$script,domain=sportfack.se
 /facebook/gillkom$xmlhttprequest,domain=kamerabild.se|mobil.se
 /facebook/postkoll$xmlhttprequest,domain=kamerabild.se|mobil.se
 /fixed-panorama$domain=fiskejournalen.se
@@ -471,7 +470,7 @@
 /gpAnalytics/*$script
 /gplus.php$script,domain=fria.nu|friatidningen.se|goteborgsfria.se|landetsfria.se|sesam.nu|stockholmsfria.se
 /gtm.js?$script,~third-party,xmlhttprequest,domain=tui.se
-/headerbidding.js$script
+/headerbidding.js
 /helios/multiad_jquery.$script
 /history_cookie_notice.$script,domain=historytv.se
 /HSSAnalyticsUtils.js$script
@@ -508,7 +507,6 @@
 /js/fullpageads.js
 /js/iepngfix_tilebg.
 /js/improve_digital_ads.
-/js/marbles/marbles.js$script,~third-party,domain=akaskidor.se|hemtrevligt.se|kingmagazine.se|livetombord.se|mestmotor.se|svenskgolf.se|tidningenhalsa.se|utemagasinet.se|vagabond.se
 /js/mtiFontTrackingCode.
 /js/OneSignal.js
 /js/partners.js$script,domain=sporttv.nu
@@ -547,6 +545,7 @@
 /magnific-popup$domain=shortcut.se
 /manageBanners$domain=gamereactor.se
 /maps.sponsored-pill.$script,domain=tripadvisor.se
+/marbles/marbles.js
 /media/partners$image,domain=hockeynews.se|tvmatchen.nu
 /mod.js$xmlhttprequest,domain=icd.internetmedicin.se
 /mod_responsivebannerslider$domain=bjuvsnytt.se
@@ -568,7 +567,6 @@
 /noview.$script,domain=gofm.se|trafikdirekt.se|trafikexperten.com|trafikradion.se
 /oil/*$script,domain=findit.fi|findit.se
 /omniture/s_code.js$script,domain=~atgplay.se
-/omslagsexport/*$image,domain=autolife.se
 /OneSignalSDKWorker$script
 /orion/loada$script
 /packs/consent.$domain=hemnet.se
@@ -948,11 +946,9 @@
 @@||golfbladet.se/_files/Banners/forum.gif$image
 @@||gotlandswebben.se^$generichide
 @@||happyride.se/img/admarket/$~third-party
-@@||hemtrevligt.se^$generichide
 @@||imasdk.googleapis.com/js/sdkloader/ima3.$script,domain=atl.nu|ekuriren.se|gamereactor.se|kkuriren.se|screen9.com|sn.se|strengnastidning.se
 @@||js.createsend1.com/js/jquery
 @@||kurslitteratur.se^$generichide
-@@||livetombord.se^$generichide
 @@||lovisawallin.se^$generichide
 @@||moamattsson.se^$generichide
 @@||morningstar.com/scripts/ads.js$domain=morningstar.se
@@ -960,7 +956,6 @@
 @@||nouw.com^$generichide
 @@||sdk.pulse.schibsted.com/loader.min.js$domain=special.aftonbladet.se
 @@||stockblogs.se^$generichide
-@@||tidningenhalsa.se^$generichide
 @@||typkanske.se^$generichide
 _jquery.blockUI.$script,domain=fssweden.se
 aapl.se,digilar.se,hrnytt.se,ljuskultur.se,omvarlden.se,svenskfotboll.se##.cookies
@@ -992,13 +987,6 @@ aftonbladet.se,di.se##a[href^="/brandstudio"]
 agriprim.se,automobil.se,bettips.se,bike.se,bilsport.se,boxerville.se,caroftheyear.se,dh.se,djungeltrumman.se,e.se,entreprenadaktuellt.se,fightermag.se,frillesasbandy.se,husbilhusvagn.se,ja.se,klassiker.nu,ljuskultur.se,lokalguiden.se,lovelylife.se,maskinbladet.se,mopedgaraget.se,nyckelspel.se,omni.se,riksettan.net,scanaktier.se,skik.se,skogsaktuellt.se,spelo.se,sweclockers.com,vaken.se,vibilagare.se##.banner
 aikfotboll.se,expressen.se##.banners
 akademiskahus.se###cookieConsent
-akaskidor.se,hemtrevligt.se,kingmagazine.se,livetombord.se,mestmotor.se,svenskgolf.se,tidningenhalsa.se,utemagasinet.se,vagabond.se###facebookSlideIn
-akaskidor.se,hemtrevligt.se,kingmagazine.se,livetombord.se,mestmotor.se,svenskgolf.se,tidningenhalsa.se,utemagasinet.se,vagabond.se##.alert-cookies
-akaskidor.se,hemtrevligt.se,kingmagazine.se,livetombord.se,mestmotor.se,svenskgolf.se,tidningenhalsa.se,utemagasinet.se,vagabond.se##.latest-article-native
-akaskidor.se,hemtrevligt.se,kingmagazine.se,livetombord.se,mestmotor.se,svenskgolf.se,tidningenhalsa.se,utemagasinet.se,vagabond.se##.row--native
-akaskidor.se,livetombord.se,mestmotor.se,svenskgolf.se,tidningenhalsa.se,utemagasinet.se,vagabond.se##a[onclick^="ANALYTICS.trackEvent('Spotlight'"]
-akaskidor.se,svenskgolf.se##.ad-wallpaper-panorama-container
-akaskidor.se,svenskgolf.se##.ad-wallpaper-wrapper
 aktiespararna.se##.analysguiden-promote-articles
 aktiespararna.se,alekuriren.se,civilekonomen.se,koket.se,nyheter24.se##.native
 aktivtraning.se,digitalfotoforalla.se,iform.se,militarhistoria.se,natgeo.se,pctidningen.se,popularhistoria.se##.gallery-banner
@@ -1169,11 +1157,9 @@ byggvarlden.se,hotellorestaurang.se##.ContentRight-50 > .featured
 byggvarlden.se,hotellorestaurang.se##ul.productnews
 bytbil.com###privacyModal
 bytbil.com,ehandel.se##.article-sponsored
-cafe.se##[class^="oath-dac-"]
-cafe.se##a[href*="/cafe?kampanj"]
 cafe.se,kamerabild.se##.partner
-cafe.se,kingmagazine.se##.card-partner
-cafe.se,kingmagazine.se##.partner
+cafe.se,kingmagazine.se,manolo.se##.card-partner
+cafe.se,kingmagazine.se,manolo.se,vagabond.se##.partner
 cafe.se,mestmotor.se,modette.se,nyheter24.se,vagabond.se##.advertisement
 caminomagasin.se##.block--extern-annons
 camping.se###CookiesBox
@@ -1472,9 +1458,8 @@ hastnet.se##.add-wrap
 hbwebben.se##[class^="hbweb-in_post"]
 hemhyra.se##.pageCookies
 hemnet.se###ad_unit_placeholder
-hemtrevligt.se##.partner-navbar
-hemtrevligt.se,kingmagazine.se,vagabond.se##.partner-article
-hemtrevligt.se,livetombord.se,mestmotor.se##.navbar-native
+hemtrevligt.se##.row--native
+hemtrevligt.se,tidningenhalsa.se,utemagasinet.se,vagabond.se###facebookSlideIn
 hippson.se##.sponsorpuff
 hitta.se###__next > div[class^="style_notification"]
 hitta.se##[class*="dummyAd"], [class*="StyledAdSlot"], [data-bind*="Ad"]
@@ -1551,8 +1536,6 @@ kimura.se##.submission-before-everything
 kimura.se##a[href*="/kampanjer."]
 kimura.se##a[href*="unibet.com"]
 kimura.se##a[href*="utm_campaign"]
-kingmagazine.se##.cookie-consent
-kingmagazine.se##div[data-fullscreen-banner]
 kingsizemag.se##a[href*="/redir/"][target="_blank"]
 kit.se##.box--newsletter
 kit.se##.isNative
@@ -1609,7 +1592,7 @@ lindasbakskola.se,zeinaskitchen.se##.proad
 lindenytt.com,poolforum.se,varmepumpsforum.com##a[target="_blank"] > img[alt]
 linnherbertsson.se##[id^="content-ad"]
 listor.se##.top-ads-widget
-livetombord.se##a[href^="//www.livetombord.se/artiklar/partner/"]
+livetombord.se##[data-spotlight-id]
 livetsgoda.se##.custom-html-widget
 livetsgoda.se##.penci-rlt-popup
 livetsgoda.se##[class*="advads"]
@@ -1652,12 +1635,7 @@ megaspel.se###app-root > footer ~ aside:first-of-type:last-of-type
 megaspel.se##[class*="advertisement"]
 megaspel.se##button[class][title="Show CMP"]
 merinfo.se##article[data-customer]
-mestmotor.se##.article-social
-mestmotor.se##.article-wayke-module
 mestmotor.se##.panel-native
-mestmotor.se##a[data-spotlight-id]
-mestmotor.se##a[href*="/artiklar/partner/"]
-mestmotor.se##article[class*="sponsra"]
 metalcentral.net##.bannergroupno-padding
 metromode.se##.b-topshop
 miljomat.se##[id^="Annons"]
@@ -1986,6 +1964,7 @@ uppsalanyheter.se###banner-top-block
 uppsatser.se##.spahotels
 uppsatser.se##li[style*="min-height:90px"]
 utsidan.se###mastertop
+vagabond.se##.latest-article-native
 varden.se##.cdk-overlay-container, app-cookies
 varldenshaftigaste.se###getFixed
 varldenshaftigaste.se##[id*="annons"]
@@ -2383,8 +2362,8 @@ yelp.se##[data-ga-category="biz page ad"]
 ||look.ufinkln.com^
 ||lwcdn.com/vendor/ima.min.js$script
 ||lystra.se^$third-party
-||ma-track.bonnierpublications.se^$third-party
-||ma.bonnierpublications.se/mtc/event$xmlhttprequest
+||ma-track.bonnierpublications.se^
+||ma.bonnierpublications.se/mtc/event
 ||maaw.io^$third-party
 ||mailchimp.com^*/popup$script
 ||mailerlite.com^$third-party,domain=svenskamagasinet.nu|vandringsguiden.se
@@ -2554,6 +2533,7 @@ yelp.se##[data-ga-category="biz page ad"]
 ||sparkloop.app^$third-party
 ||spel.expressen.se^
 ||spelo.se/bfb/$subdocument
+||sportfack.se/core/java/facebook
 ||sporttv.nu/components/banners/
 ||sprinklecontent.com^$third-party
 ||sprinkletxt.com^$third-party
