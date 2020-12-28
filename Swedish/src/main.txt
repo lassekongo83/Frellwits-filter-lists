@@ -634,7 +634,7 @@
 .info/dn-nyheter/$document
 .space/?domain=grabbers.info$all
 /sweden/swedish/hjo-tidning.html$document
-.*/*/*.php?*=aftonbladet-live-tv$document
+.php?*=aftonbladet-live-tv$document
 ||track.cpa.tpgrn.com^
 ||inxy.run^
 ||masture.mobi^
@@ -1378,6 +1378,7 @@ aftonbladet.se##body.abMegaAd:style(overflow: auto !important;)
 www.aftonbladet.se##+js(nosiif, e.ping())
 www.aftonbladet.se##+js(nosiif, e.reportVisibility())
 www.aftonbladet.se##+js(aeld, mousemove, g())
+www.aftonbladet.se##+js(nostif, onerror, 1000)
 ! https://github.com/lassekongo83/Frellwits-filter-lists/issues/44
 @@||sdk.pulse.schibsted.com/loader.min.js$domain=special.aftonbladet.se
 ! Övrigt
@@ -2250,12 +2251,7 @@ allabolag.se##.topBnrContainer
 /sf_tracking.js$script,domain=stayfriends.se
 /ga.js$script,domain=stayfriends.se
 stayfriends.se###cookieHint
-spray.se##[class^="ads-"]
-spray.se##.overlay-cover
-spray.se##.overlay-controller
-spray.se##.overlay-text
-spray.se##.accept-cookies-container
-spray.se##[class*="article-casino"]
+spray.se##[class^="ads-"], [class*="article-casino"]
 spray.se##.column-left > .article-partial
 spray.se##body:style(-webkit-user-select: text !important; user-select: text !important;)
 @@||cdn.yieldwrapper.com/yieldwrapper.min.js$script,domain=spray.se
