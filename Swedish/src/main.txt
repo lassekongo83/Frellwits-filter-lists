@@ -1017,6 +1017,7 @@ dekra.de#@##cookie-banner
 ||aff.bstatic.com^$domain=travelgrip.se
 ||apprl.com/embed/$subdocument,domain=forni.se|majanilssonlindelof.com|metromode.se|petratungarden.se|trendenser.se
 ||bstatic.com/static/affiliate$third-party
+||cdn.ampproject.org^$third-party,domain=piraja.se
 ||cdn.cookielaw.org^$script,domain=cartoonnetwork.se|foxtv.se|nvp.se|recept.se|tv4.se|tv4play.se|koket.se|fotbollskanalen.se|flashscore.se|manpower.se|svenskorientering.se
 ||cdn.jsdelivr.net/npm/search-insights$script,domain=forum.hallon.se
 ||cookieinformation.com^$script,domain=valuta.se|iform.se|digitalfotoforalla.se|natgeo.se|popularhistoria.se|aktivtraning.se|pctidningen.se|militarhistoria.se|viivilla.se|varldenshistoria.se|proff.se
@@ -2500,7 +2501,6 @@ podplay.com##footer + section[class^="sc-"]
 /mod.js$xmlhttprequest,domain=icd.internetmedicin.se
 /ad-render$domain=internetmedicin.se
 globalportalen.org##.follow-us-section
-||cdn.ampproject.org^$third-party,domain=piraja.se
 /piraja-banners/*$domain=piraja.se
 piraja.se##.intro:has(.spons)
 piraja.se###hero:has(.spons)
@@ -2994,8 +2994,7 @@ enkelteknik.se##.annons-label
 nikkasystems.com,brinkenbakar.se##.elementor-popup-modal
 sportbloggare.com##.partners-box
 sportbloggare.com##.cube-bonus-list
-lokalsport.nu##.art-sidebar2
-lokalsport.nu##.art-sidebar1
+lokalsport.nu##.art-sidebar1, .art-sidebar2
 rastaochdalla.se##.widget_advertise
 rastaochdalla.se##.sidebar-right > .widget_social_links
 norrortssporten.se##.td-post-content > div[style^="float: none"]
@@ -3024,9 +3023,8 @@ byggindustrin.se##.sponsrat
 lantmannen.se##.cookieinformation
 sveajordskog.se##[id^="jords-"]
 xlbygg.se##.main.cookiewarning:style(margin-top: 0 !important)
-vimeddjur.se,sportbilen.se###heateor_ss_browser_popup_bg
-vimeddjur.se,sportbilen.se###the_champ_sharing_more_providers
-vimeddjur.se##article:has-text(Annons:)
+sportbilen.se###heateor_ss_browser_popup_bg
+sportbilen.se###the_champ_sharing_more_providers
 sportbilen.se###text-4
 /publicPartners$domain=familjehemsbanken.se|familjehemmet.se
 so-rummet.se##.block-advert
@@ -3108,6 +3106,7 @@ lektionsbanken.se###partners_right, #partners_top
 norrahalland.se##.norra-leeads-ads,.egna_annonser_widget
 djungeltrumman.se###sponsored-posts
 djungeltrumman.se###right-banners
+djungeltrumman.se##.item:has(.label-post:has-text(/spons/i))
 ?action=get_banners$domain=djungeltrumman.se
 netbil.se,bilia.se###acceptcookies
 www.google.se##+js(ra, onmousedown|ping, a[href][onmousedown]\, a[href][ping])
@@ -3171,9 +3170,9 @@ omnihalsa.com##.stream-item
 nasdaqomxnordic.com##+js(acis, $, shuffle)
 /sweet-alert.$domain=hittaren.com
 birthday.se##.datax
-totallyorebro.se,totallystockholm.se##div.tot-content-preview-container-small[style*="border-top:4px solid #ffb200;"]
+totallyorebro.se,totallystockholm.se##div.tot-content-preview-container-small[style*="border-top:4px solid #ffb200;"], .content-overlay--black
 totallyorebro.se,totallystockholm.se##[class*="tot-content-preview-container"]:has(a[href*="casino"]):remove()
-totallyorebro.se,totallystockholm.se##a[href*="casino-bonus"],a[href*="/sponsrat/"]
+totallyorebro.se,totallystockholm.se##a[href*="casino-bonus"], a[href*="/sponsrat/"], a[href*="/sponsrat/"] + p.tot-content-preview--meta
 glassakademin.se##[class^="adverts-"]
 /wp-content/uploads$image,domain=xn--snabbalnen-75a.se
 laromedia.se##img[alt="Annons"] + .img-flipper
