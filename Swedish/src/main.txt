@@ -720,6 +720,7 @@
 ###CookieNotice
 ###accept-cookies-div
 ###ad-fullscreen:not(body):not(html)
+###ad-mega-container:not(body):not(html)
 ###ad-wallpaper:not(body):not(html)
 ###aloq-cookie-warning
 ###catapult-cookie-bar
@@ -1329,8 +1330,9 @@ lwcdn.com##+js(aeld, /^(?:adBlocker|contextmenu)$/)
 ! SCHIBSTED
 ##div.sch-datacontroller--subheader
 ##div.sch-datacontroller--footer
-/gdpr-bundle$domain=aftonbladet.se|svd.se|blocket.se
 /appnexus$script,domain=blocket.se|minhembio.com|bytbil.com|aftonbladet.se
+||metric-mobil.aftonbladet.se^$image
+||schibsted.io^*/gdpr-bundle.js
 ||schibsted.com/privacy-notifier.$third-party
 ||schibsted.com/pulse.$third-party
 ! SVD
@@ -1386,41 +1388,20 @@ www.aftonbladet.se##+js(nostif, onerror, 1000)
 omni.se,omniekonomi.se##.article--sponsored,.resource--sponsored,.component--sticky-sponsor-banner,.pre-banner
 omni.se,omniekonomi.se##a[href*="article-ad-"]:upward(.resource--link)
 omni.se,omniekonomi.se##+js(aeld, omniPulseLoaded)
+||logger.tv.nu^
 tv.nu##a[href*="adform.net"]
-tv.nu##.ad-mega--container
 tv.nu###app > div > div[class]:nth-of-type(2)
-tv.nu##.gdpr-bar-wrapper
-tv.nu###ad-fullscreen-desktop
-||logger.tv.nu^$script
-blocket.se##.tag.panorama
-blocket.se##body.modal_open, html.modal_open:style(overflow: auto !important;)
-blocket.se###placement_panorama
-blocket.se##.blocket-placement
-blocket.se##div[style="height: 240px;"]
 @@/ad-block-detection-script$domain=blocket.se
-@@||blocket.se^$generichide
-/ast.js$script,domain=blocket.se
+||jobb.blocket.se/blocket_puff.html
 ||jobb.blocket.se^*/tracker.js
 ||jobb.blocket.se^*/xtcore.min.js
-||jobb.blocket.se/blocket_puff.html$subdocument
-/at-internet-desktop.js$script,domain=klart.se
-klart.se##+js(aopr, blockAdBlock)
-klart.se##.cookie-disclaimer
-klart.se##.sponsor-message
-klart.se##.content-box-list__item:has(.ad-text)
-klart.se###overlay
-klart.se##.gdpr-onboarding-container
+blocket.se###placement_panorama, .blocket-placement, div[style="height: 240px;"]
+klart.se###overlay, .gdpr-onboarding-container
+klart.se##.content-box-list__item:has(.ad-text:has-text(/annons/i))
 klart.se##+js(rc, mega-loading)
-||klart.se/assets/blockadblock$script
-||user-permissions.api.schibsted.media/privacy/$domain=klart.se
-||cis.schibsted.com/api/*/identify$domain=klart.se
-||metric-mobil.aftonbladet.se^$image
-||bytbil.com/bundles/js/eas.$script
-/js/tracking.$script,domain=bytbil.com
-bytbil.com##+js(acis, apntag, anq)
-bytbil.com##+js(acis, Bytbil, AppNexus)
-bytbil.com##+js(aeld, mousedown, (t))
+||bytbil.com/bundles/js/tracking
 bytbil.com###privacyModal
+bytbil.com##.available-services
 bytbil.com##html,body:style(overflow: auto !important;)
 sportbladetplay.se,sportexpressenplay.se##[class^="CookieConsentPopup"]
 godare.se##.privacy-information
