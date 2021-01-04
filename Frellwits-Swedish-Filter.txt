@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2021-01-03 15:25:08 CET
+! Last modified: 2021-01-04 15:54:54 CET
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -65,8 +65,8 @@
 ###cookiejar
 ###cookielawwarning
 ###cookieMsgBlock
-###CookieNotice
 ###cookieNotice
+###CookieNotice
 ###cookies-acceptance .alert.bottom
 ###cookiesInfo
 ###dialog-eu-cookie-law
@@ -231,6 +231,7 @@
 ##div.newsletter-slider
 ##div.oc_cb_wrapper.fill_black
 ##div.outsideAdsWrapper
+##div.rotating-junglebogen
 ##div.sch-datacontroller--footer
 ##div.sch-datacontroller--subheader
 ##img[alt="Leovegas"]
@@ -387,6 +388,7 @@
 /bmbBurt.$script
 /bmbDfpUtils.$script
 /bmbFusionUtils.$script
+/bnrscr?$domain=cleannet.se|dagenshandel.se|entreprenad.com|food-supply.se|foodnet.se|fri-kopenskap.se|habit.se|kemivarldenbiotech.se|lifesciencesweden.se|medtechmagazine.se|motormagasinet.se|packnet.se|plastnet.se|processnet.se|recyclingnet.se|rt-forum.se|skyddosakerhet.se|transportnet.se|uochd.se|verkstaderna.se|woodnet.se
 /BrightcoveExperiences.js$script,domain=viktvaktarna.se
 /buttonizer$domain=macken.xyz
 /campaign*/*$script,xmlhttprequest,domain=alltforforaldrar.se|kokaihop.se|mammasidan.se|minbebis.com|nyheter24.se
@@ -818,7 +820,6 @@
 /trackolding$script,domain=skyscanner.se
 /trafikfonden/*
 /translations/sponsors$script,domain=sdhl.se|storvretaibk.se
-/trckr/*$xmlhttprequest,domain=cleannet.se|dagenshandel.se|entreprenad.com|food-supply.se|foodnet.se|fri-kopenskap.se|habit.se|kemivarldenbiotech.se|lifesciencesweden.se|medtechmagazine.se|motormagasinet.se|packnet.se|plastnet.se|processnet.se|recyclingnet.se|rt-forum.se|skyddosakerhet.se|transportnet.se|uochd.se|verkstaderna.se|woodnet.se
 /tv/annons$domain=expressen.se
 /tv/brand-studio$domain=expressen.se
 /tv/sponsrat$domain=expressen.se
@@ -924,8 +925,6 @@
 @@||cykla.se/wp-admin/admin-ajax.php?action*&advert_search$xmlhttprequest
 @@||cykla.se/wp-content/themes/cykla/assets/images/advert-filter-top.jpg$image
 @@||d11j2g8hmtmh4u.cloudfront.net/orion/jquery.$script
-@@||elinskoglund.com^$generichide
-@@||fannystaaf.se^$generichide
 @@||feed.meltwater.com^$subdocument
 @@||freeride.nu/js/ads.js$script,domain=happyride.se
 @@||fwmrm.net^$image,xmlhttprequest,domain=viafree.se
@@ -937,11 +936,8 @@
 @@||imasdk.googleapis.com/js/sdkloader/ima3.$script,domain=atl.nu|ekuriren.se|gamereactor.se|kkuriren.se|screen9.com|sn.se|strengnastidning.se
 @@||js.createsend1.com/js/jquery
 @@||kurslitteratur.se^$generichide
-@@||lovisawallin.se^$generichide
-@@||moamattsson.se^$generichide
 @@||morningstar.com/scripts/ads.js$domain=morningstar.se
 @@||mparticle.com^*/login$domain=dplay.se
-@@||nouw.com^$generichide
 @@||sdk.pulse.schibsted.com/loader.min.js$domain=special.aftonbladet.se
 @@||stockblogs.se^$generichide
 @@||typkanske.se^$generichide
@@ -1162,9 +1158,7 @@ chef.se##.Product-modal,.Offer-popup
 chef.se,svd.se##.Ad
 civilekonomen.se,market.se###rollup
 classic.prisjakt.nu###confirm_cookie_use
-cleannet.se,dagenshandel.se,entreprenad.com,food-supply.se,foodnet.se,fri-kopenskap.se,habit.se,kemivarldenbiotech.se,lifesciencesweden.se,medtechmagazine.se,motormagasinet.se,packnet.se,plastnet.se,processnet.se,recyclingnet.se,rt-forum.se,skyddosakerhet.se,transportnet.se,uochd.se,verkstaderna.se,woodnet.se###junglebogen
 cleannet.se,dagenshandel.se,entreprenad.com,food-supply.se,foodnet.se,fri-kopenskap.se,habit.se,kemivarldenbiotech.se,lifesciencesweden.se,medtechmagazine.se,motormagasinet.se,packnet.se,plastnet.se,processnet.se,recyclingnet.se,rt-forum.se,skyddosakerhet.se,transportnet.se,uochd.se,verkstaderna.se,woodnet.se##.box-of-announcement
-cleannet.se,dagenshandel.se,entreprenad.com,food-supply.se,foodnet.se,fri-kopenskap.se,habit.se,kemivarldenbiotech.se,lifesciencesweden.se,medtechmagazine.se,motormagasinet.se,packnet.se,plastnet.se,processnet.se,recyclingnet.se,rt-forum.se,skyddosakerhet.se,transportnet.se,uochd.se,verkstaderna.se,woodnet.se##.rotating-junglebogen
 clipmyhorse.tv##.archive-player-ads
 clipmyhorse.tv##.cmh-blocking
 coop.se##.Notice.Notice--info
@@ -1635,7 +1629,6 @@ morotsliv.com##a[href*="/?utm_medium=affiliate"]
 motivation.se##.sponsored-item,.middlebanner,.bottombanner,.outsider
 motorblogofsweden.se##.sidebar .textwidget
 motorblogofsweden.se##[aria-label^="banner"]
-motormagasinet.se##[id^="dfp-a1p"]
 moviezine.se###home_ans
 moviezine.se##[name="article-advertisment"]
 muscles.se##.newsletter-signup--popup
@@ -2038,6 +2031,7 @@ yelp.se##[data-ga-category="biz page ad"]
 ||blogg.se/public/js/metrics
 ||blogg.se/shared/js/bloggse.js
 ||blogglisten.no^$third-party
+||bloggportalen.se^*/blogstat.js
 ||bloggtoppen.fi^$third-party
 ||bloglovin.com/widget/$third-party
 ||bmbstatic.blob.core.windows.net^
@@ -2374,10 +2368,11 @@ yelp.se##[data-ga-category="biz page ad"]
 ||nompakru.click^
 ||nordicfynd.se^
 ||nordiskemedier.dk/banner/
-||nordiskemedier.dk/bnr/
+||nordiskemedier.dk/remodal$script
 ||norstatsurveys.com^$third-party
 ||nouw.com/api/campaignpost$xmlhttprequest
-||nouw.com/api/postview$xmlhttprequest
+||nouw.com/api/postimpression
+||nouw.com/api/postview
 ||nouw.com/campaignpost/reg/$image
 ||nya-filmer.*/masha.$script
 ||nyafilmer.*/branding/$image
@@ -2541,7 +2536,7 @@ yelp.se##[data-ga-category="biz page ad"]
 ||trafikradion.nu/reklam$image
 ||trafikstyrelsen.com^
 ||travtjansten.se^$third-party
-||trckr.nordiskemedier.dk^
+||trckr*.nordiskemedier.dk^
 ||tripadvisor.se/PVLog
 ||tripadvisor.se^$csp=worker-src 'none'
 ||trn.ninja^$third-party
