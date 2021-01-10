@@ -1,5 +1,5 @@
 &autoplay$frame,queryprune=autoplay,domain=di.se|expressen.se
-&browser=MozillaFirefox$queryprune=|browser,xhr,domain=fotbollskanalen.se|koket.se|tv4.se|tv4play.se
+&browser=MozillaFirefox$queryprune=/^browser/,xhr,domain=fotbollskanalen.se|koket.se|tv4.se|tv4play.se
 .info/dagens-nyheter/$document
 .info/dn-nyheter/$document
 .info/expressen-se-nyheter/$document
@@ -55,7 +55,6 @@ alpresor.se##+js(acis, snowMax)
 altinget.se##+js(nostif, show_popup)
 arvikanyheter.se,dalslanningen.se,filipstadstidning.se,fryksdalsbygden.se,hjotidning.se,karlskogatidning.se,kt.se,mariestadstidningen.se,nkp.se,nlt.se,nwt.se,provinstidningen.se,saffletidningen.se,sla.se,varmlandsaffarer.se,vf.se##+js(acis, nwtThirdParties)
 arvikanyheter.se,dalslanningen.se,filipstadstidning.se,fryksdalsbygden.se,hjotidning.se,karlskogatidning.se,kt.se,mariestadstidningen.se,nkp.se,nlt.se,nwt.se,provinstidningen.se,saffletidningen.se,sla.se,varmlandsaffarer.se,vf.se##+js(cookie-remover, page-views)
-autonytt.se##.article_widget_preview:has(h2 > a:has-text(/artikel i samarbete/i))
 autonytt.se##a:has(.label:has-text(/sponsrad/i))
 avanza.se##.section:has(a:has-text(/^annons/i))
 aventyriblodet.se##.template:style(visibility: visible !important;)
@@ -192,8 +191,6 @@ hemnet.se##.recent-news__item:has(.recent-news__category:has-text(/sponsrad/i))
 hemnet.se##.result-article__link:has(.article__ribbon--sponsored)
 hemnet.se##.start-page-hero__caption:has(.start-page-hero__caption-category:has-text(/sponsrad av/i))
 himlentv7.se##+js(acis, fbq)
-hippson.se##+js(acis, sayHi, shown)
-hippson.se##.puff:has(.presentedby)
 hippson.se##.toolboxheader:has-text(/aktuella samarbeten/i) ~ a.more
 hockeymagasinet.com##+js(set, trackOutboundLink, noopFunc)
 hockeymagasinet.com##body.modal-open:style(overflow-y: scroll !important;)
@@ -372,7 +369,7 @@ underbaraclaras.se##article.post:has(.entry-summary > p:has-text(/annonssamarbet
 underbaraclaras.se##article.post:has(.entry-summary > p:has-text(/innehåller reklam för/i))
 upphandling24.se##.widget:has(.widget-title:has-text(/^annons/i))
 uppsalanyheter.se##+js(acis, uri, Math.random)
-utm_$document,queryprune=|utm_,domain=aftonbladet.se|alltommat.se|booli.se|damernasvarld.se|expressen.se|skonahem.com|teknikensvarld.se|tv.nu
+utm_$document,queryprune=/^utm_/,domain=aftonbladet.se|alltommat.se|booli.se|damernasvarld.se|expressen.se|skonahem.com|teknikensvarld.se|tv.nu
 valerieaflalo.com##[id^="post-"]:has(p[style="text-align: center"]:has-text(/i samarbete med/i))
 victoriatornegren.se##article[id^="post-"]:has(.entry-header:has-text(/(?:samarbete|Samarbete)\s+med/i))
 victoriatornegren.se##article[id^="post-"]:has(.entry-header:has-text(Paid post in collaboration))
