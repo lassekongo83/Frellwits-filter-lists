@@ -1740,7 +1740,6 @@ ratsit.se,bilsport.se,funnygames.se,ordguru.se,gpro.net,visitskane.com##.cc_bann
 fotbollskanalen.se,alltomstockholm.se##.article-share
 svd.se,dagensvimmerby.se,dagensvastervik.se###smartbanner.android
 finansliv.se,vinochmatguiden.se##.newsletter
-mobil.se,kamerabild.se###gdpr
 sydsvenskan.se,hd.se,vimedbarn.se,capdesign.se,typkanske.se##.gdpr
 pomu.se,wwf.se,ilikeradio.se,netdoktor.se,nevnarien.se,su.se##.cc-banner
 koket.se,nyheter24.se,civilekonomen.se,aktiespararna.se,alekuriren.se##.native
@@ -1748,7 +1747,7 @@ svartgul.se,tvmatchen.nu,eventeffect.se,executiveeffect.se###panorama
 uppslaget.se,hypeline.se,skidresultat.se,maklarvarlden.se,byggteknikforlaget.se,fotbolldirekt.se,hockeysverige.se,innebandymagazinet.se,motivation.se##.annons
 testfakta.se,realtid.se,viktvaktarna.se,plastikoperationsforum.se,riksettan.net,automobil.se,vibilagare.se,mopedgaraget.se,caroftheyear.se,klassiker.nu,bike.se,spraktidningen.se,husbilhusvagn.se,sandaren.se,kyrkanstidning.se,publikt.se,fof.se,industrinyheter.se,dagensnaringsliv.se,infrastrukturnyheter.se,sportochfritidsnyheter.se,inredningsnyheter.se,byggnyheter.se,dagensfastigheter.se,stockholmsbyggnyheter.se,energinyheter.se,vindkraftsnyheter.se,solenerginyheter.se,jarnvagsnyheter.se,transportochlogistik.se,metallerochgruvor.se,papperochmassa.se,hsr.se,so-rummet.se,kantarsifo.se,ungforetagsamhet.se,cgi.se,alandsradio.ax,sjofart.ax###sliding-popup
 swedroid.se,tidningensyre.se##.social
-byggahus.se,mobil.se##a[href^="/partner/"]
+byggahus.se##a[href^="/partner/"]
 sonicmagazine.com,ratsit.se##[class^="ad-"]
 civilekonomen.se,market.se###rollup
 datormagazin.se,villalivet.se,tennisportalen.se,gjuteriet.se##.td-more-articles-box
@@ -1905,47 +1904,24 @@ hippson.se##.toolboxheader:has-text(/aktuella samarbeten/i) ~ a.more
 autonytt.se,sv.picmix.com##.leaderboard
 autonytt.se###main > .col-links
 autonytt.se##a:has(.label:has-text(/sponsrad/i))
-||mobil.se/sites/*.mp4$media
-mobil.se,kamerabild.se##.storan
-mobil.se##li.partner
-mobil.se##.aside-puff
+/sites/holid-$script,domain=kamerabild.se|mobil.se
+kamerabild.se,mobil.se##.storan, .Partner
 mobil.se##.pspy_info
-mobil.se##li.teaser.Partner
-/sites/holid-$script,domain=mobil.se|kamerabild.se
-kamerabild.se##.kol2 > div:has(.pane-title):has-text(/annons/i)
-kamerabild.se###storan
-kamerabild.se###aside
-kamerabild.se##.Partner
-kamerabild.se##+js(set, Annons, noopFunc)
-/lunchguiden*.$image,domain=vk.se|folkbladet.nu
-/service-worker.js$script,domain=vk.se|folkbladet.nu
-||vk.se^$csp=worker-src 'none'
-||folkbladet.nu^$csp=worker-src 'none'
-||mega.vk.se^$script,xmlhttprequest
-||mega.folkbladet.nu^$script,xmlhttprequest
-vk.se,folkbladet.nu##div[data-track-id="strossle"]
-vk.se,folkbladet.nu##a[href="https://umealunchguide.se/"]
-vk.se,folkbladet.nu##[class^="adContainer"]
+||terms.vkmedia.se^
+||ues.vk.se^*/events
+||mega.folkbladet.nu^
+||mega.vk.se^
 vk.se,folkbladet.nu##.vkmui-Text--grey
-vk.se,folkbladet.nu##div[class^="bordersAndShadows"] > div[style^="min-height"]:only-child
-vk.se,folkbladet.nu##div[data-track-id="article-header"] + div:not([class])
-||ues.vk.se^*/event$xmlhttprequest
-||terms.vkmedia.se/agreements/$xmlhttprequest
-ng.se##[class*="sponsored-article"]
-ng.se##.secondary-sidebar > .panel-pane:last-child
-ng.se##.partner-articles-wrap
-ng.se##.secondary-top
+vk.se,folkbladet.nu##[class^="adContainer"], div[class^="bordersAndShadows"] > div[style^="min-height"]:only-child
 /users/2401/*$image,domain=ng.se
-/nodecounter/*?token$image,domain=ng.se
-||breakit.solidtango.com^$subdocument
-||breakit.se/api/visit$xmlhttprequest
-||collect.breakit.se^$xmlhttprequest
+||ng.se/nodecounter/
+ng.se##.view-partner-articles, [class*="sponsored-article"]
+ng.se##.secondary-sidebar > .panel-pane:last-child
+ng.se###nativendo-mainfeed:upward(1):remove()
 ||breakit.se/adk$script
+||collect.breakit.se^
 breakit.se##[class*="sponsored"]
-breakit.se##.videoAd,.js-video-ad
-breakit.se##+js(acis, twttr, trackPid)
-breakit.se##+js(acis, _adftrack, push)
-breakit.se##+js(acis, brktloadfs)
+breakit.se##.videoAd, .js-video-ad
 metrojobb.se##.headlines__block:has(.ad-header)
 svt.se###nyh_cookie-message,#svtmat_cookie,section.nyh_share
 svtplay.se##.play_cookie-information
