@@ -428,6 +428,7 @@
 /sv_se/metrics/*$script,xmlhttprequest
 /swordfishinc.download.akamai.com/*$script
 /tabs_hits_counter.php$image
+/dovas/ads/*
 /thumbnail_bettingstugan$image
 /thumbs/webbannons$image
 /trackers/SessionCam-tag$script
@@ -758,6 +759,7 @@
 ###cookie_consent
 ###cookie_prompt
 ###dialog-eu-cookie-law
+###div-leeadsFullpageAd
 ###eazy_ad_unblocker_dialog-message
 ###eu-cookie-bar
 ###gdpr-bar
@@ -903,6 +905,7 @@
 ##div.CMACG_AdChangerWidget
 ##div.elementor-widget-wp-widget-advads_ad_widget
 ##div.outsideAdsWrapper
+##div.gdpr-warning-slide-up
 ##div#mega-ad-content
 ##div#panorama_ad
 
@@ -1925,49 +1928,23 @@ breakit.se##.videoAd, .js-video-ad
 metrojobb.se##.headlines__block:has(.ad-header)
 svt.se###nyh_cookie-message,#svtmat_cookie,section.nyh_share
 svtplay.se##.play_cookie-information
-||ratsit.se/Koppalett
-ratsit.se##.js-cookie-modal
-ratsit.se##body:style(overflow: auto !important;)
-ratsit.se##.campaign-bar
-ratsit.se##.search-list-inline-ad
 ratsit.se##.promo
-ratsit.se##[class*="lonekollen"]
-ratsit.se##.modal-backdrop
-goteborgdirekt.se,vasterastidning.se##.profile-native
-goteborgdirekt.se,vasterastidning.se##.push-component-native
-goteborgdirekt.se,vasterastidning.se,mitti.se##.gdpr-warning
-goteborgdirekt.se,vasterastidning.se##[class^="casino-ad"]
 goteborgdirekt.se,vasterastidning.se,mitti.se##+js(set, NWS.config.enableAdblockerDetection, false)
-alltomstockholm.se##.panorama_top,.ad-mark-rotated,[class^="insider_"],[class*="ad_container"],.interstitial-background
-/ads/mitti/*$image
-/plugins/mitti-ad$script,domain=alltomstockholm.se
+alltomstockholm.se##.panorama_top,.ad-mark-rotated,[class^="insider_"],.outsider-container,[class*="ad_container"],.interstitial-background
 ||trafikradion.nu/reklam$image
-altinget.se##+js(nostif, show_popup)
-altinget.se###CookieModal_cookiemodal
-existenz.se###backgroundad
-existenz.se##.wm-nopop
+||existenz.se/img/o/
+existenz.se##.wm-nopop, #main > p[style^="color"]
 existenz.se###slidebox
-existenz.se###main > p[style="color:#7A7A7A;font-size:11px"]
-||existenz.se/img/o/$image
-||existenz.se/img/prq.gif
-||existenz.se/js/wiget.$script
-missatsamtal.se##+js(aopw, _gaq)
+existenz.se##a[href*="bannerid="]:upward(.link)
 missatsamtal.se##.nosnaj
 missatsamtal.se##.comment:has(.nosnaj)
+||tvdags.se/json/stats
 tvdags.se##.article-list__item:has(.sponsor)
-tvdags.se##.like-modal
-||tvdags.se/json/stats$xmlhttprequest
-kimura.se##a[href*="unibet.com"]
-kimura.se##a[href*="/kampanjer."]
-kimura.se##.submission-before-everything
-kimura.se##a[href*="utm_campaign"]
+kimura.se##.bg, a[href*="unibet.com"], a[href*="/kampanjer."], a[href*="utm_campaign"]
 kimura.se##article:has(img[src$="/sponsrad.png"])
 kimura.se##article:has(#storknapp:has-text(/^till kampanj/i))
-kimura.se##.bg
-kimura.se##+js(acis, advanced_ads_ready)
-market.se##[id^="fusion_ad"]
 market.se##article[about^="/annons"]
-market.se###newsletter-rollup
+market.se###rollup, #newsletter-rollup
 dagensps.se##a[href*="/ps-partner/"]
 atl.nu,land.se,landlantbruk.se,landskogsbruk.se##[class*="--native"]
 atl.nu,land.se,landlantbruk.se,landskogsbruk.se##[id^="adwrapper"]
@@ -2906,7 +2883,7 @@ revisionsvarlden.se##a[onclick*="banner"]
 esportare.se##a[href*="utm_campaign"]
 morotsliv.com##.et_bloom .et_bloom_flyin_center
 morotsliv.com##a[href*="/?utm_medium=affiliate"]
-180.se##.ai-top-ad-outer
+180.se##[class*="top-ad-"]
 clipmyhorse.tv##.archive-player-ads
 clipmyhorse.tv##.cmh-blocking
 clipmyhorse.tv##body:style(user-select: initial !important; -webkit-user-select: initial !important; -moz-user-select: initial !important;)
