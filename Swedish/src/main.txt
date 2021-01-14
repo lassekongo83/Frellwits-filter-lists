@@ -270,6 +270,7 @@
 .se/fightodds.plugin/fightodds.plugin.$script
 .se/files/annons/$image
 .se/getBannerImage
+.se/globalassets/banners/
 .se/images/banner/
 .se/images/banners/
 .se/log/?
@@ -354,6 +355,7 @@
 /gpAnalytics/*$script
 /headerbidding.js
 /helios/multiad_jquery.$script
+/HSSAnalyticsUtils.js
 /iab/iab.js
 /img/bettingstugan.
 /isbanner/ib.js
@@ -1946,40 +1948,23 @@ kimura.se##article:has(#storknapp:has-text(/^till kampanj/i))
 market.se##article[about^="/annons"]
 market.se###rollup, #newsletter-rollup
 dagensps.se##a[href*="/ps-partner/"]
-atl.nu,land.se,landlantbruk.se,landskogsbruk.se##[class*="--native"]
-atl.nu,land.se,landlantbruk.se,landskogsbruk.se##[id^="adwrapper"]
-atl.nu,land.se,landlantbruk.se,landskogsbruk.se##.has-sticky-add
+atl.nu,land.se,landlantbruk.se,landskogsbruk.se##[class*="--native"], [id^="adwrapper"], .has-sticky-add
 atl.nu##a[href*="/atl-tv-annons/"]
 atl.nu#@#.adsbox
 grontvader.se##app-cookies
-/Sponsor/*$xmlhttprequest,domain=grontvader.se
-/private-browsing.js$domain=thelocal.se
-||news.google.com/swg$third-party,domain=thelocal.se
+/Sponsor/*$domain=grontvader.se
+||thelocal.se^*/private-browsing.js
 thelocal.se##div.section:not([class$="section"])
-thelocal.se##.orange-panel
-thelocal.se##.outbrain-row
-thelocal.se##h2[id$="-title"] ~ div[id$="-inner"]:not(#article-inner)
-hbl.fi,vastranyland.fi,ostnyland.fi,hangotidningen.fi##rekrybanner
+thelocal.se##.panel:has(div[class$="panel-label"]:has-text(/sponsor/i))
 hbl.fi,vastranyland.fi,ostnyland.fi,hangotidningen.fi##gdpr-notice
-hbl.fi,vastranyland.fi,ostnyland.fi,hangotidningen.fi###okCookie
 hbl.fi,vastranyland.fi,ostnyland.fi,hangotidningen.fi##.type-advertorial
-hbl.fi,vastranyland.fi,ostnyland.fi,hangotidningen.fi##+js(nostif, ksfDfp.adsBlockedByNeverLoading)
-hbl.fi,vastranyland.fi,ostnyland.fi,hangotidningen.fi##+js(set, ksfDfp.DisplayDiligentSlots, noopFunc)
-hbl.fi,vastranyland.fi,ostnyland.fi,hangotidningen.fi##+js(acis, adfBrand)
-||ksfmedia.simulator.palmu.fi/*/*.js$script,domain=hbl.fi|vastranyland.fi|ostnyland.fi|hangotidningen.fi
-/HSSAnalyticsUtils.js$script
-/karkimedia_init.js$script
+/karkimedia_init.js
 ||access.vasabladet.fi/6-pack/$subdocument
-/impressions.js$script,domain=osterbottenstidning.fi|vasabladet.fi|sydin.fi
-/GA_EEC/*$script,domain=osterbottenstidning.fi|vasabladet.fi|sydin.fi
-osterbottenstidning.fi,vasabladet.fi,sydin.fi##.dialogue-content
-osterbottenstidning.fi,vasabladet.fi,sydin.fi##.dialogue-footer
-osterbottenstidning.fi,vasabladet.fi,sydin.fi##article.kundmaterial
-osterbottenstidning.fi,vasabladet.fi,sydin.fi##.online-ad
+/GA_EEC$domain=osterbottenstidning.fi|sydin.fi|vasabladet.fi
 bosidan.ax##.ad-li
 /rotban.js$domain=peace.ax
 bilwebben.ax##.front #secondary-content-wrapper
-nvp.se###takeover-placeholder
+nvp.se##[class*="banner_"]
 tasteline.com##li.article:has(.category:has-text(/samarbete/i))
 tasteline.com##.popup-overlay
 tasteline.com##.popup:style(overflow: auto !important;)
