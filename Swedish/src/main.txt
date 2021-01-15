@@ -1008,6 +1008,7 @@ dekra.de#@##cookie-banner
 /modules/GTM$script,domain=iform.se|digitalfotoforalla.se|natgeo.se|popularhistoria.se|aktivtraning.se|pctidningen.se|militarhistoria.se
 /modules/ctm-$script,domain=iform.se|digitalfotoforalla.se|natgeo.se|popularhistoria.se|aktivtraning.se|pctidningen.se|militarhistoria.se
 /newsletter/*$domain=zalando.se
+/profile$ping,domain=feber.se|lawline.se|tasteline.com|tjock.se
 /pum/*$script,xmlhttprequest,domain=byggipedia.se|opulens.se|tkj.se|exponera.nu|flm.nu
 /pum/*$stylesheet,domain=it-finans.se|it-halsa.se|it-kanalen.se|it-pedagogen.se|it-retail.se
 /s_code.js$domain=dagenstv.com
@@ -1154,6 +1155,7 @@ mobilanyheter.net,villalivet.se,lchfarkivet.se##+js(set, MonsterInsights, undefi
 /plugins/ilmenite-cookie-consent/*
 /plugins/interscroller-ads-enko/*
 /plugins/interstitial-ads
+/plugins/iis-mailchimp
 /plugins/its-cookies/*$script
 /plugins/jetpack/_inc/build/widgets/eu-cookie-law/*$script
 /plugins/jnews-social-share/*$script,domain=svegot.se
@@ -1821,7 +1823,7 @@ saraabrahamsson.se,eurosport.se,jawcloud.co,nxload.com,polistidningen.se,clipmyh
 ||youplay.se^$third-party,domain=hamsterpaj.net|emocore.se|dayviews.com|kamrat.com|familjeliv.se|extraextra.se|recept.se|kalender.se
 ! More annoyances for desktop. (Don't mess with the user's default scroll settings!)
 !#if !env_mobile
-lundagard.se,boktugg.se,outsidesweden.se,morotsliv.com,macken.xyz,affarsstaden.se##+js(aeld, wheel)
+lundagard.se,boktugg.se,outsidesweden.se,morotsliv.com,macken.xyz,affarsstaden.se,kitsverige.se##+js(aeld, wheel)
 /themes/buzzy/assets/js/modules/plugins/smoothPageScroll$script
 /rokophoto-lite/js/SmoothScroll.$script
 /plugins/wp-enqueue/smoothscroll.$script
@@ -1845,7 +1847,6 @@ tonyhatefnejad.se,soja.se,alltomhif.se,restaurangilse.se,lyckasmedbakning.nu,rik
 utm_$document,queryprune=/^utm_/,domain=tv.nu|booli.se|alltommat.se|damernasvarld.se|skonahem.com|teknikensvarld.se|expressen.se|aftonbladet.se
 
 ! ÖVRIGT
-/profile$ping,domain=feber.se|tjock.se
 feber.se,tjock.se##.burt-unit, .art_ad, adline, f-panorama, f-deals, #rpPopular
 nordichardware.se##.td_block_wrap:has(span:has-text(/sponsrat/i))
 nordichardware.se##.td-big-grid-post:has(a[href*="/sponsrat/"])
@@ -1971,17 +1972,11 @@ tasteline.com##.popup:style(overflow: auto !important;)
 tasteline.com##.article.related > a[href*="&utm"][target="_blank"]
 pcgamer.se##a[href*="casino.com"]
 pcgamer.se##.main-container > div.vc_row:last-child
-kit.se##.isNative
-kit.se##.box--newsletter
-kit.se##.post-share
-kit.se##kit-cookiebar
-||brain.kit.se^$xmlhttprequest,image
-/iis-mailchimp$domain=internetkunskap.se|internetstiftelsen.se
-branschkoll.se##.advert-widget
 /wp-banner-manager.min.js$domain=branschkoll.se
-/packs/consent.$domain=hemnet.se
-/packs/survey.$domain=hemnet.se
-/google-tag-manager$script,domain=hemnet.se
+branschkoll.se##.advert-widget
+/new_construction_ads/*$domain=hemnet.se
+/packs/consent$domain=hemnet.se
+||api.sfnix.net^$image,domain=hemnet.se
 hemnet.se##.recent-news__item:has(.recent-news__category:has-text(/sponsrad/i))
 hemnet.se##.article-news__link:has(.news-article--sponsored)
 hemnet.se##.featured-news__link:has(.featured-news__ribbon--sponsored)
@@ -1989,20 +1984,13 @@ hemnet.se##.result-article__link:has(.article__ribbon--sponsored)
 hemnet.se##.start-page-hero__caption:has(.start-page-hero__caption-category:has-text(/sponsrad av/i))
 hemnet.se##.article-list-post a:has(span:has-text(Sponsrad))
 hemnet.se###ad_unit_placeholder
-||api.sfnix.net^$image,domain=hemnet.se
-/new_construction_ads/*$domain=hemnet.se
-/*Fokus_360x300px_animate*.gif$image,domain=fokus.se
-/social-sharing.$script,domain=fokus.se
-fokus.se##.panorama-ads-top
-fokus.se##[class^="right-ads"]
-fokus.se##img[onload*="banner"]
+/fokus-banners.js$domain=fokus.se
+/fokus-paywall.js$domain=fokus.se
+/js/abd.js$domain=fokus.se
+/js/personalization.js$domain=fokus.se
+/js/social-sharing.js$domain=fokus.se
 fokus.se##.social-sharing
 fokus.se##[id^="entry-content-post"], [id^="entry-content-related"]:style(height: 100% !important;)
-||analytics.ci-360.se^$script,xmlhttprequest,domain=fokus.se
-||auth.ci-360.se/check-paywall$script,domain=fokus.se
-/js/abd.js$script,domain=fokus.se
-/js/personalization.js$script,domain=fokus.se
-/js/paywall.js$script,domain=fokus.se
 magasinetparagraf.se###large_banner
 sokmotorkonsult.se##.feature:has(a[href*="/sponsrade-lankar"])
 sokmotorkonsult.se##.pb-topbar
