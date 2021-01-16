@@ -154,6 +154,7 @@
 ||platform.linkedin.com^$third-party
 ||platssajten.se^$third-party
 ||pliing.com^$third-party
+||plowking.mecenat.com^$third-party
 ||portalhc.com^$third-party
 ||prisjakt.nu^$third-party
 ||proxyas.com^$third-party
@@ -290,6 +291,7 @@
 .se/wp-content/banners/
 .se/xhr/add-impression/
 /468adrotate.php
+/?dtbnrspcid=$xmlhttprequest
 /?file=lokus$subdocument
 /_adsmodern/*$image
 /_graphics/annons/*
@@ -405,6 +407,7 @@
 /revive/revivejs.php$script
 /questback.popup$script
 /Scripts/burt/*$script
+/scripts/opt/view.analytics.js
 /seenthis-hub/*$script
 /sh404sefsocial/*$script
 /shared/crm-campaign-handler.js$script
@@ -419,7 +422,7 @@
 /snowplow-tracker$script
 /spotlight-ad_$image
 /static/js/loada.js$script
-/static.marklar.se/track/custom-tracker.$script
+/static.marklar.se/*-tracker
 /stats/ewstats.$script
 /stats/stats.asp?$script
 /stats.wp.com$script
@@ -1992,43 +1995,24 @@ hemnet.se###ad_unit_placeholder
 fokus.se##.social-sharing
 fokus.se##[id^="entry-content-post"], [id^="entry-content-related"]:style(height: 100% !important;)
 magasinetparagraf.se###large_banner
-sokmotorkonsult.se##.feature:has(a[href*="/sponsrade-lankar"])
-sokmotorkonsult.se##.pb-topbar
-@@||kurslitteratur.se^$generichide
-kurslitteratur.se##.ad-section
 chef.se##.Blurb--native
 chef.se##.global-cookie-msg
 chef.se##.Product-modal,.Offer-popup
 dagenssamhalle.se##.notice
-dagenssamhalle.se##.node-native
-dagenssamhalle.se##.c-teaser.-native
-/ds-tracker.js$domain=dagenssamhalle.se
-arbetsmarknadsnytt.se##.twitter-announcement-bg
-/timeOnPage.$script,domain=arbetsmarknadsnytt.se
-/view.analytics.js$script,domain=kodboken.se
-flamman.se##.TakeOverBanner
+dagenssamhalle.se##.node-native, .c-teaser.-native
 flamman.se##.Banner
-/takeover.gif$image,domain=flamman.se
-kurera.se##.annonswrapper
 kurera.se##.kurera-register-newsletter-popup
 /QXA.$script,domain=qx.se|qruiser.com
+/QA.js$domain=qruiser.com
 qx.se##.col-4:has(script)
 qx.se##.qxa-container:upward(1)
-||qx.se/qxa/$xmlhttprequest
-/blogcounter/image?$image,domain=javligtgott.se
-/blogcounter.js$script,domain=javligtgott.se
-||stumbleupon.com/hostedbadge.$script,domain=javligtgott.se
+||stumbleupon.com/hostedbadge$domain=javligtgott.se
 javligtgott.se##a[href="https://klimatkompensera.se"]
 sysidan.se##.adscolumn
-||evertiq.se/bximg/$image
-evertiq.se##.bnrWrapper
-evertiq.se##[data-gabnr]
+||evertiq.se/bximg/
 evertiq.se##.gdprcookie
-evertiq.se###carpet
-evertiq.se###bgWrapp:style(pointer-events: none !important;)
-evertiq.se###content, .sitesTab, .menuBar, #foot:style(pointer-events: all !important;)
-evertiq.se##body:style(cursor: default !important;)
-/BrightcoveExperiences.js$script,domain=viktvaktarna.se
+evertiq.se##[data-gabnr], #carpet
+evertiq.se##+js(acis, $, banner_loader)
 viktvaktarna.se##div[class*="GDPRBanner"]
 kokaihop.se##.ads-wrapper-main
 kokaihop.se##.cookieBarWrapper:remove()
