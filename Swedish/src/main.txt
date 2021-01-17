@@ -605,6 +605,7 @@
 ||stat.modette.se^
 ||static.influencersofsweden.se/js/inos.$script
 ||stats.tipser.com^$xmlhttprequest
+||stayfriends.de/metatag
 ||susnet.nu/susnetstat.js$script
 ||susnet.se/susnetstat.js$script
 ||t.raptorsmartadvisor.com^$image
@@ -1003,7 +1004,7 @@ dekra.de#@##cookie-banner
 /facebook/gillkom$xmlhttprequest,domain=kamerabild.se|mobil.se
 /facebook/postkoll$xmlhttprequest,domain=kamerabild.se|mobil.se
 /ga.js$script,~third-party,domain=driverzone.se
-/gdpr/*$domain=capdesign.se|digikey.se|megaspel.se|nyckelspel.se|villalivet.se|vimedbarn.se|visitlulea.se|se.laowl.com|husbilskompisar.se|rotter.se
+/gdpr/*$domain=capdesign.se|digikey.se|megaspel.se|nyckelspel.se|villalivet.se|vimedbarn.se|visitlulea.se|se.laowl.com|husbilskompisar.se|rotter.se|momondo.se
 /glasscandle.$script,domain=komponentkoll.se
 /glimr.$script,domain=affarsliv.com|affarslivgotland.se|aftonbladet.se|blocket.se|corren.se|di.se|dn.se|eposten.se|folkbladet.se|gotland.net|helagotland.se|klackspark.com|kuriren.nu|mvt.se|norrbottensaffarer.se|kindaposten.se|nsd.se|nt.se|pt.se|unt.se|viivilla.se|vimmerbytidning.se|vt.se|ekuriren.se|kkuriren.se|sn.se|norran.se|strengnastidning.se
 /i10c@p1/*$domain=bax-shop.se|digikey.se|justfab.se|tui.se
@@ -1046,6 +1047,7 @@ dekra.de#@##cookie-banner
 ||mailmunch.co^$third-party,domain=affarsstaden.se|enkelteknik.se|villalivet.se|kingsizemag.se
 ||marketingautomation.services^$third-party,domain=wesafe.se
 ||onetrust.com^$third-party,domain=yougov.se
+||privacy-mgmt.com^$third-party,domain=stayfriends.se
 ||sentry-cdn.com^$third-party,domain=svd.se|koket.se|bytbil.com
 ||delivery.vidible.tv^$third-party,domain=teknikhype.se
 ||youbora.com^$important,third-party,domain=aftonbladet.se|foxtv.se|svd.se
@@ -1193,6 +1195,8 @@ mobilanyheter.net,villalivet.se,lchfarkivet.se##+js(set, MonsterInsights, undefi
 /plugins/popup-$domain=sverige.nu
 /plugins/pum-$script,domain=snowmobile.se
 /plugins/quantcast-choice/*$script,domain=muscles.se|kimura.se|news55.se
+/plugins/r9-analytics
+/plugins/r9-gdpr$script
 /plugins/random-banner/*
 /plugins/sassy-social-share/*$script,domain=~nova.rs
 /plugins/sdcookie-warning/*
@@ -2016,41 +2020,29 @@ evertiq.se##+js(acis, $, banner_loader)
 viktvaktarna.se##div[class*="GDPRBanner"]
 kokaihop.se##.ads-wrapper-main
 kokaihop.se##.cookieBarWrapper:remove()
-/ads.js?$script,domain=flashback.org
-flashback.org###top-banner-row,#bottom-banner-container,#right-banner-container,.post-banner-container
-flashback.org##+js(nostif, e, 10000)
-mmanytt.se##.bannerTop,.bannerHigh,.bannerWide,.front-banner,.front-banner-cover,#text-2,[class*="sponsrat-inlagg"],a[href*="://kampanjer."]
+/ads.js$domain=flashback.org
+flashback.org###top-banner-row
+mmanytt.se##.front-banner,.front-banner-cover,#text-2,[class*="sponsrat-inlagg"],a[href*="://kampanjer."],.ohmbet_link
 mmanytt.se##.img-featured-posts-image:has(a[href$="/annons/"])
-guldkanalen.se,dansbandskanalen.se##.wppaslink
-||webradio.dbmedia.se/images/AnnonserMarker.png
-webradio.dbmedia.se##.marquee
 @@||mparticle.com^*/login$domain=discoveryplus.se
 ||akamaihd.net^$media,domain=discoveryplus.se
 ||dnitv.com^$media,domain=discoveryplus.se
 news55.se###newsletter-popup
 news55.se##.is-native,.is-native-yes
 news55.se##.after-article-widget
-businessclass.se##.reveal-modal-bg
-businessclass.se###bcpop
-businessclass.se##+js(acis, $, AdBlockDetector)
-||allabolag.se^*/ad.html
+news55.se##a[href]:not([href*="/news55.se"]):upward(section.sidebar)
+/bcpop.js$domain=businessclass.se
+allabolag.se###company-card_top-banner
 allabolag.se##article:has(.advert__mark)
-allabolag.se##.topBnrContainer
-/sf_tracking.js$script,domain=stayfriends.se
-/ga.js$script,domain=stayfriends.se
-stayfriends.se###cookieHint
 spray.se##[class^="ads-"], [class*="article-casino"]
 spray.se##.column-left > .article-partial
 spray.se##body:style(-webkit-user-select: text !important; user-select: text !important;)
-@@||cdn.yieldwrapper.com/yieldwrapper.min.js$script,domain=spray.se
+@@/yieldwrapper.min.js$domain=spray.se
 booli.se###app > div:last-child
-/adsLoader.$script,~third-party,domain=booli.se
-||booli.se/ladda-annons
-/collector$xmlhttprequest,~third-party,domain=momondo.se
-/googleyolo/impression$xmlhttprequest,~third-party,domain=momondo.se
-/run/analytic$xmlhttprequest,~third-party,domain=momondo.se
-||momondo.se/gtm/$subdocument
-||momondo.se/ugtm/$subdocument
+booli.se###outer
+/vestigo/*/measure$domain=momondo.se
+||momondo.se/gtm/
+||momondo.se/ugtm/
 ||byggahus.se/pixels/
 byggahus.se##.cookie-consent
 byggahus.se##.attachmentPreviewActive img:style(-webkit-filter: none !important; filter: none !important;)
