@@ -236,6 +236,7 @@
 ||wonderpush.com^$third-party
 
 ! General ads, tracking, and annoyances
+?action=advanced-ads-tracking-track
 ?url=*impse.tradedoubler.com$image
 -popup-analytics$script
 .ax/ad/
@@ -451,6 +452,7 @@
 /wp-content/js/infinite-ads.$script
 /wp-content/static/unruly.js$script
 /wp-content/themes/*/js/cookie-bar.
+/wp-content/uploads/*annons$image
 /wp-content/uploads/*bettingstugan$image
 /wp-content/uploads/*Casinodealen$image
 /wp-content/uploads/*LeoVegas$image
@@ -713,7 +715,7 @@
 ##a[href*="doktor-se.onelink.me"]
 ##a[href*="/delivery.adnuntius.com"]
 ##a[href^="https://www.adsettings.com/scripts/reg_click."]
-##a[href*="://clk.tradedoubler.com/click?"]
+##a[href*="tradedoubler.com/click?"]
 ##a[data-bid="1"][href*="/linkout"]
 ##a[title="LeoVegas"]
 ##a.cookiecutter[onclick^="cookie"]
@@ -898,6 +900,7 @@
 ##.widget_ev_ad_widget:not(body):not(html)
 ##.widget_ic_ad_widget:not(body):not(html)
 ##._ning_outer._ning_jss_zone:not(body):not(html)
+##[class*="advads_ad_widget"]:not(body):not(html)
 ##[id^="adace_ads"]
 ##div.ad.container
 ##div.avia-cookiemessage-bottom
@@ -906,6 +909,7 @@
 ##div.cookie-notification-show
 ##div.oc_cb_wrapper.fill_black
 ##div.NativeAd
+##div.panoramaAd
 ##div.l-footer__adtext
 ##div.holidAds
 ##div.CMACG_AdChangerWidget
@@ -1215,7 +1219,7 @@ mobilanyheter.net,villalivet.se,lchfarkivet.se##+js(set, MonsterInsights, undefi
 /plugins/sw_ad_inserter/*
 /plugins/sw_cookie_consent/*
 /plugins/the-moneytizer/*$script
-/plugins/themify-popup/*$xmlhttprequest,domain=karinhaglund.se
+/plugins/themify-popup$domain=karinhaglund.se|opulens.se
 /plugins/thirstyaffiliates/*$script
 /plugins/thrive-leads/*
 /plugins/trackable-social-share-icons/*
@@ -1750,7 +1754,7 @@ digitalfotoforalla.se,illvet.se,pctidningen.se,bettips.se,bandyplay.se,it-finans
 rumhemma.se###top
 mammasidan.se,minbebis.com,alltforforaldrar.se##.middle-banner
 mestmotor.se,muscles.se,linnherbertsson.se,alicestenlof.com,ellinorlofgren.se##.overlay
-ratsit.se,bilsport.se,funnygames.se,ordguru.se,gpro.net,visitskane.com##.cc_banner-wrapper
+ratsit.se,bilsport.se,ordguru.se,gpro.net,visitskane.com##.cc_banner-wrapper
 fotbollskanalen.se,alltomstockholm.se##.article-share
 svd.se,dagensvimmerby.se,dagensvastervik.se###smartbanner.android
 finansliv.se,vinochmatguiden.se##.newsletter
@@ -2079,48 +2083,21 @@ newsner.com,humorbibeln.se,sportbibeln.se,ettgottskratt.se##.ssp_divider:has(.sp
 byggnadsarbetaren.se##[class^="siteAds"], .siteAlerts
 /aria/bentojs.js$domain=nickelodeon.se
 /aria/coda.html$domain=nickelodeon.se
-funnygames.se##.banner-container
 funnygames.se##.slot
-jogg.se,skid.se,cykl.se,svettig.se##.panoramaAd
 uppsalanyheter.se###banner-top-block
-uppsalanyheter.se##+js(acis, uri, Math.random)
 skillingaryd.nu,xn--vrnamo-bua.nu###more-banners
-/ads.json$xmlhttprequest,domain=pomu.se
-||engine.pomu.com^$domain=pomu.se
+||pomu.se/api/ads.json
 pomu.se##[class^="Banner"]
-pomu.se##.Games-addLateral
 allatvkanaler.se##.ga
-||allatvkanaler.se/js/js*.js$script
-/admin-ajax.php?action=advanced-ads-tracking-track$xmlhttprequest,domain=datormagazin.se
-datormagazin.se##div[class*="custom_ad"]
-datormagazin.se##div[id^="div-gpt-ad"]
-datormagazin.se##.widget_advads_ad_widget
-datormagazin.se##img[width="1068"]
-datormagazin.se##.td-header-sp-recs
-datormagazin.se##.dator-widget
-datormagazin.se##.td-big-grid-post:has(a[href*="/annons/"])
-datormagazin.se##div[class^="td-block-span"]:has(a[href*="/annons/"])
-skanesport.se##[id^="skane-slider"]
-skanesport.se###black-studio-tinymce-3
-skanesport.se,trbg.news###check-also-box.show-check-also
-skanesport.se,trbg.news##.stream-item
-skanesport.se##+js(json-prune, main.content_data.ad_block)
-hypeline.se##.homecontent:has(.sponsrad_ruta)
-hypeline.se###herobanner
+datormagazin.se##.td_module_wrap:has(a[href*="/annons/"])
+skanesport.se##.stream-item, #black-studio-tinymce-3
+hypeline.se##.sponsrad_ruta
 dagenstv.com###bt
-/AC_RunActiveContent.js$script,domain=dagenstv.com
-/swfobject.js$script,domain=dagenstv.com
-eurosport.se##.pub
-eurosportplayer.com###banner
-pconline.se###magazine-front-page-below-header-widgets > .widget_text
-opulens.se##.mailpoet_form
-opulens.se##a[href$="Opulens_Banner"]
-opulens.se###secondary
-@@/opulens_banner$image,domain=opulens.se
 ||opulens.se^$csp=worker-src 'none'
-opulens.se##+js(acis, jQuery, themifyPopup)
-landleyskok.se##.banner-leaderboard
-landleyskok.se##.inpostbanner
+@@/opulens_banner$image,domain=opulens.se
+opulens.se##.mailpoet_form
+opulens.se###secondary
+landleyskok.se##.inpostbanner, .banner-leaderboard
 dagensvimmerby.se,dagensvastervik.se##body:style(margin-top: 0 !important;)
 dagensvimmerby.se,dagensvastervik.se##.panoramaAnnons, .JobAdDiv, .annonsKolumn, .insideAd, .ingressAd, .familyAds
 dagensopinion.se##a[href^="/annons-"]
