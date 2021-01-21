@@ -334,7 +334,6 @@
 /bmbBurt.$script
 /bmbDfpUtils.$script
 /bmbFusionUtils.$script
-/caos/analytics.js$script
 /cecado/advisible.js
 /citygate/payingcompanies$xmlhttprequest
 /cpg_ads.$script
@@ -888,6 +887,7 @@
 ##.sw-cookie-consent-wrapper:not(body):not(html)
 ##.sw-popular__article--ad:not(body):not(html)
 ##.sw-sponsored_post:not(body):not(html)
+##.sw-tag-sponsored_post:not(body):not(html)
 ##.s-cookies-info:not(body):not(html)
 ##.thb_ad_header:not(body):not(html)
 ##.thb-cookie-bar:not(body):not(html)
@@ -918,6 +918,7 @@
 ##div.gdpr-warning-slide-up
 ##div#mega-ad-content
 ##div#panorama_ad
+##div#toppannons
 
 ! Site specific whitelists
 @@_adframe.js$script,~third-party,domain=fssweden.se
@@ -1346,6 +1347,7 @@ lwcdn.com##+js(aeld, /^(?:adBlocker|contextmenu)$/)
 ||ptm.flowplayer.com^*/display$xmlhttprequest
 
 ! SCHIBSTED
+##div#schibsted-data-controller-sticky
 ##div.sch-datacontroller--subheader
 ##div.sch-datacontroller--footer
 /appnexus$script,domain=blocket.se|minhembio.com|bytbil.com|aftonbladet.se
@@ -1579,6 +1581,7 @@ arbetarskydd.se,lag-avtal.se,nyteknik.se##.alman-teaser
 ! Adhype/LIFE OF SVEA
 @@||d11j2g8hmtmh4u.cloudfront.net/orion/jquery.$script
 @@/aff/images/*$image,domain=alltforforaldrar.se
+||adhype.se/js/native
 ||dayviews.com^$third-party,domain=filmtipset.se|hamsterpaj.net
 ||dayviews.com/p/tourn/
 ||hamsterpaj.net/gfx/banners/
@@ -2101,77 +2104,45 @@ landleyskok.se##.inpostbanner, .banner-leaderboard
 dagensvimmerby.se,dagensvastervik.se##body:style(margin-top: 0 !important;)
 dagensvimmerby.se,dagensvastervik.se##.panoramaAnnons, .JobAdDiv, .annonsKolumn, .insideAd, .ingressAd, .familyAds
 dagensopinion.se##a[href^="/annons-"]
-||yelp.se/eu_cookie_notice$subdocument
-&log_ad$image,domain=yelp.se
-/perimeter$script,domain=yelp.se
 ||yelp.se/sit_rep
-yelp.se##[data-ga-category="biz page ad"]
-yelp.se##[data-ad-placement="above_biz_review"]
-arbetaren.se##.adverter
-underbaraclaras.se##.ad_parent
-underbaraclaras.se##article.post:has(.entry-summary > p:has-text(/annonssamarbete/i))
-underbaraclaras.se##article.post:has(.entry-summary > p:has-text(/innehåller reklam för/i))
+yelp.se##.js-cookie-iframe
+underbaraclaras.se##.jet-listing-grid__item:has(.jet-listing-dynamic-field__content:has-text(/annonssamarbete/i))
+listor.se###ss-floating-bar
 listor.se##.top-ads-widget
 listor.se##article:has(a[href*="/annons/"])
 accentmagasin.se##.site-cookies
 accentmagasin.se##+js(nostif, n.modal)
-samnytt.se##[id^="samny-"]
+samnytt.se##.c-wysiwyg
 samnytt.se##a.c-news-post[href*="jackpott"], a.c-news-post[href*="-casino-"], a.c-news-post[href*="-betting-"]
-merinfo.se##.articles-article-wrapper:has(span:has-text(/sponsrad/i))
-merinfo.se##.snippet-article-wrapper:has(.sponsored)
 merinfo.se##article[data-customer]
 minsolresa.se,resatillsolen.se##aside#text-5
-/js/external.php$script,domain=hockeysnack.com
-/pagespeed_static/1.$image,domain=hockeysnack.com
-||hockeysnack.com/service-worker.$script
-||hockeysnack.com^$csp=worker-src 'none'
+/js/external.php$domain=hockeysnack.com
+||hockeysnack.com/pagespeed_static/1.$image
 gotlandswebben.se##.header-ads-wrapper
-@@||gotlandswebben.se^$generichide
-firstfoto.se,cyclingplus.se,halsafitness.se,fitnessformen.se,macguiden.net##.this-is-an-ad
-cyclingplus.se##article:has(.single-subtitle:has-text(/annonssamarbete/i))
-cyclingplus.se,halsafitness.se,yogaworld.se###gdpr-container
-halsafitness.se,cyclingplus.se,yogaworld.se##.headerbar-container
-halsafitness.se,yogaworld.se##.sticky-sidebar
 halsafitness.se,yogaworld.se,cyclingplus.se##.post-wrap:has(h3:has-text(/samarbete/i))
-halsafitness.se,yogaworld.se##.post-wrap:has(a[title="PROMOTION"])
-halsafitness.se,yogaworld.se##.gdpr-container
-forni.se##.sw-tag-sponsored_post
-forni.se##section, .recent-article-small:has(.collaboration-brand)
-||reseguiden.se^*/alexandra.ads.$script
-||reseguiden.se^*/alexandra.banners.$script
-reseguiden.se##.as-oil
-/google-tag-manager-datalayer.$script,domain=reseguiden.se
-/cmp.js$script,domain=reseguiden.se|recept.se
+halsafitness.se,yogaworld.se,cyclingplus.se##.sticky-sidebar
+||external.reseguiden.se/offer
+||reseguiden.se^*/google-tag
+reseguiden.se##.adsbox-wrapper
+/cmp.js$script,domain=recept.se
 ||instawidget.net^$domain=themoviefreak.se
 themoviefreak.se##+js(ra, oncontextmenu)
 themoviefreak.se##+js(acis, animate)
-radionytt.se###toppannons
+/links/*casino*.$domain=emocore.se
 emocore.se###sticky-panorama
 emocore.se###main > #home_start_div ~ .m_t.box:nth-last-child(-n+2)
-/links/*casino*.$image,domain=emocore.se
-jaktsidan.se##[data-role="sidebarAd"]
-jaktsidan.se###ipsLayout_mainArea > iframe
 ||edgeflyfishing.com^$image,domain=jaktsidan.se
-skrattnet.se,webben7.se##.region-sidebar-second
+jaktsidan.se###ipsLayout_mainArea > iframe
 /skrattnetdotse/js-ck.js
 /skrattnetdotse/js-xdp.js
-/content/admbl/*$image,domain=skrattnet.se
+skrattnet.se,webben7.se##.region-sidebar-second
+||lajvo.se/addImpression
 lajvo.se###panoramaTop
-lajvo.se##.extraTop
-lajvo.se##.share-button
 lajvo.se##.postCard:has-text(/bonusar|casino|betting/i)
-lajvo.se##.adhype_videoAd
-lajvo.se###nextPostPreview
-lajvo.se##.flex-video:style(opacity: 1 !important;)
-/addImpression$xmlhttprequest,domain=lajvo.se
-||adhype.se^*/native$domain=lajvo.se
 svensktidskrift.se###bannercolumn
-skogsforum.se##.masthead
-skogsforum.se##.col-right
-skogsforum.se##a[href^="https://goo.gl/"]
-skogsforum.se##a[href*="//bit.ly/"]
-||skogsforum.se/sda/$xmlhttprequest
+||skogsforum.se/sda/
 ||skogsforum.se^$csp=worker-src 'none'
+skogsforum.se##.masthead, .col-right, a[href^="https://goo.gl/"], a[href*="//bit.ly/"]
 ||remus.garaget.org^
 garaget.org##.gorgad
 garaget.org##.gorg-side-content > div.small:nth-last-child(2)
