@@ -373,6 +373,7 @@
 /js/fullpageads.js
 /js/iepngfix_tilebg.
 /js/improve_digital_ads.
+/js/intelecom.tracker
 /js/mtiFontTrackingCode.
 /js/OneSignal.js
 /js/sifo.js
@@ -445,6 +446,7 @@
 /view-resources/public/*/js/dfp.
 /wdg_cookie_bar
 /wdg/iab-active$script
+/wds_nyhetsbrev_popup
 /webbresurser/banner/*
 /widget.hittarecept.se/blogcounter
 /wp-content/banners$image
@@ -460,6 +462,10 @@
 /wp-content/uploads/*noaccountbet$image
 /wp-content/uploads/*svea-casino$image
 /wp-content/uploads/*bettingkollen$image
+/wp-content/uploads/*unibet$image
+/wp-content/uploads/*mrgreen$image
+/wp-content/uploads/*betfair$image
+/wp-content/uploads/*bethard$image
 /wp-json/wpstatistics/*$xmlhttprequest
 /wpbm-banners/*$image
 /xhr-ads.min.js$script
@@ -923,7 +929,7 @@
 ! Site specific whitelists
 @@_adframe.js$script,~third-party,domain=fssweden.se
 @@/ad.php$script,~third-party,domain=99mac.se|skogstok.se|temperatur.nu
-@@/ads.js$script,~third-party,domain=hd.se|sydsvenskan.se|megafonen.se
+@@/ads.js$script,~third-party,domain=hd.se|sydsvenskan.se
 @@/adserver.$script,~third-party,domain=fotosidan.se|utsidan.se|grannar.se
 @@/advertisment.js$script,~third-party,domain=wappare.se
 @@/js/ad.js$~third-party,domain=sweclockers.com
@@ -1612,6 +1618,7 @@ loppi.se##.entry__teaser--promotion, .wpcnt
 modette.se##.true_native_block
 nyheter24.se##.lazyload_bar.show, .lazyload_outer.show
 vimedbarn.se##.annonsinlagg
+interiorbyvanessa.se##.post:has-text(I annonssamarbete med)
 
 ! GAMEREACTOR
 /lay/js/background$domain=gamereactor.se
@@ -1807,6 +1814,8 @@ ikea.com,spelo.se,allakorsord.se,baaam.se,dromhemochtradgard.se,elle.se,femina.s
 adecco.se,viafree.se###onetrust-consent-sdk
 it-finans.se,it-halsa.se,it-kanalen.se,it-pedagogen.se,it-retail.se##a[onclick^="gtag"]
 freeride.se,gamereactor.se##.sponsor
+omnihalsa.com,skanesport.se,sportpanelen.se##.stream-item
+hallakonsument.se,handels.se,megafonen.se##.cookie-information
 
 ! Various websites with lots of malicious stuff and annoyances
 /wp-content/themes/keremiya1/js/script.js$script
@@ -2093,7 +2102,7 @@ skillingaryd.nu,xn--vrnamo-bua.nu###more-banners
 pomu.se##[class^="Banner"]
 allatvkanaler.se##.ga
 datormagazin.se##.td_module_wrap:has(a[href*="/annons/"])
-skanesport.se##.stream-item, #black-studio-tinymce-3
+skanesport.se###black-studio-tinymce-3
 hypeline.se##.sponsrad_ruta
 dagenstv.com###bt
 ||opulens.se^$csp=worker-src 'none'
@@ -2146,39 +2155,15 @@ skogsforum.se##.masthead, .col-right, a[href^="https://goo.gl/"], a[href*="//bit
 ||remus.garaget.org^
 garaget.org##.gorgad
 garaget.org##.gorg-side-content > div.small:nth-last-child(2)
-/annons-linje.gif$image,domain=tkj.se
-tkj.se##a[href*="tkj.se/ad/"]
-tkj.se##.sidebar2 > #custom_html-3
-tkj.se##.sidebar2 > #custom_html-2
-tkj.se##.sidebar2 > .widget_text:first-child
-tkj.se##.sidebar2 > .volt_recent_entries
-tkj.se##.sidebar1 > .widget_text:nth-last-child(-n+2)
-tkj.se##.affiliatenatverk
-tkj.se##a[href$="-sponsor/"]
-professionalsecrets.se##div[data-campaign="newsletter"]
+tkj.se###text-19, #text-23, #text-25, #text-32, #custom_html-2, #custom_html-3, #volt-recent-posts-5
 professionalsecrets.se##+js(acis, $, fancybox)
-sportpanelen.se##.stream-item-above-post:has(a[href*="/ads."])
 sportpanelen.se###text-html-widget-3
-sportpanelen.se###tie-block_1832
-sportpanelen.se##.main-content > div.stream-item
-sportpanelen.se##+js(aopw, SG_POPUPS_QUEUE)
-||hingsten.se^*/*_ad_$image
-tekniksmart.se##a[href*="casino"][rel]
+tekniksmart.se##.code-block, main > div:last-child:not(:only-child)
 industrinyheter.se,dagensnaringsliv.se,infrastrukturnyheter.se,sportochfritidsnyheter.se,inredningsnyheter.se,byggnyheter.se,dagensfastigheter.se,stockholmsbyggnyheter.se,energinyheter.se,vindkraftsnyheter.se,solenerginyheter.se,jarnvagsnyheter.se,transportochlogistik.se,metallerochgruvor.se,papperochmassa.se##.insider-ads, [id^="mainadvertorial"], [id^="dfptag"], .block-advertorial, .block-views-blockconventus-info-articles-info-article-block
 schoolido.se##.so-cookie__area
-muscles.se##.newsletter-signup--popup
-||muscles.se^*/fb-icon.$image
-||muscles.se^*/twitter-icon.$image
-||muscles.se^*/news-icon.$image
-interiorbyvanessa.se##.post:has-text(I annonssamarbete med)
-||webdesignskolan.se/wds_nyhetsbrev_popup
-minhembio.com##.adbox
 minhembio.com##div[style="height: 120px;"]:not([id]):not([class])
 bilsport.se##fl-panorama-top,fl-newsletter-popup
-megafonen.se##.sidebar-block:has(.block-title:has-text(/sponsrad/i))
-megafonen.se##[data-article-sponsored="true"]
-megafonen.se##.campaign-slides
-megafonen.se##.content-main-adwrapper
+megafonen.se##[data-article-sponsored="true"], .content-main-adwrapper, .campaign-sidebar
 minimalisterna.se##.post:has(p:has-text(/i samarbete med/i))
 travprat.se##+js(aopw, bizpanda)
 travprat.se##.ff-ad
@@ -2377,7 +2362,6 @@ skidresultat.se###message_cookie_info_accept
 da.se##.privacy-info
 da.se##.external
 smhi.se##.polopolyNotification
-hallakonsument.se,handels.se,megafonen.se##.cookie-information
 ||akademiskahus.se^*/cookieConsent.$script
 ||akademiskahus.se/AddThis?$script
 akademiskahus.se###cookieConsent
@@ -2874,7 +2858,6 @@ ravarumarknaden.se###header > div > div.last
 lchfarkivet.se##+js(aopw, lepopup_resize)
 lchfarkivet.se##+js(aeld, /^Ezoic/)
 lchfarkivet.se##.wppopups-whole
-omnihalsa.com##.stream-item
 nasdaqomxnordic.com##+js(acis, $, shuffle)
 /sweet-alert.$domain=hittaren.com
 birthday.se##.datax
