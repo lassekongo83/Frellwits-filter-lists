@@ -343,6 +343,7 @@
 /cx-emediate-userprofile-se.$script
 /discourse-adplugin
 /downloads.mailchimp.com/js/signup-forms/popup$script,image
+/elementor/assets/lib/share-link$script
 /emediate-responsive-wp-plugin/*
 /entryclick;_
 /ess.eurovator.se/*
@@ -1024,7 +1025,7 @@ dekra.de#@##cookie-banner
 /modules/GTM$script,domain=iform.se|digitalfotoforalla.se|natgeo.se|popularhistoria.se|aktivtraning.se|pctidningen.se|militarhistoria.se
 /modules/ctm-$script,domain=iform.se|digitalfotoforalla.se|natgeo.se|popularhistoria.se|aktivtraning.se|pctidningen.se|militarhistoria.se
 /newsletter/*$domain=zalando.se
-/profile$ping,domain=feber.se|lawline.se|tasteline.com|tjock.se
+/profile$ping,domain=feber.se|hamnen.se|lawline.se|tasteline.com|tjock.se
 /pum/*$script,xmlhttprequest,domain=byggipedia.se|opulens.se|tkj.se|exponera.nu|flm.nu
 /pum/*$stylesheet,domain=it-finans.se|it-halsa.se|it-kanalen.se|it-pedagogen.se|it-retail.se
 /s_code.js$domain=dagenstv.com
@@ -1065,6 +1066,7 @@ dekra.de#@##cookie-banner
 ||youbora.com^$important,third-party,domain=aftonbladet.se|foxtv.se|svd.se
 ||zotabox.com^$third-party,domain=etunawebben.se
 ||tags.tiqcdn.com^$domain=mallorcaliv.se
+||privacy-center.org^$domain=stegforhalsa.se
 
 ! Common scriptlets
 datormagazin.se,villalivet.se,rocknytt.net,skanesport.se,newsner.com,humorbibeln.se,sportbibeln.se,ettgottskratt.se,hbwebben.se,enkelteknik.se,natursidan.se,screen-marknaden.se,fysioterapi.se,daisybeauty.com,dagensopinion.se,plazakvinna.com,carup.se,samnytt.se##+js(acis, advanced_ads_ga_UID)
@@ -1869,6 +1871,7 @@ youplay.se##+js(aeld, loadstart)
 tonyhatefnejad.se,soja.se,alltomhif.se,restaurangilse.se,lyckasmedbakning.nu,rikakvinnor.se,pinkprogramming.se,mat-meny.se##.preloader
 hockeyguiden.com##.main-loader.loader-bg
 deliquate.se##.ajax_loader
+pingpong.se##.l-preloader
 ! utm
 utm_$document,queryprune=/^utm_/,domain=tv.nu|booli.se|alltommat.se|damernasvarld.se|skonahem.com|teknikensvarld.se|expressen.se|aftonbladet.se
 
@@ -2185,26 +2188,18 @@ piraja.se###hero:has(.spons)
 piraja.se###featholder:has(.spons)
 piraja.se###panoramaholder, #parallax
 _jquery.blockUI.$domain=fssweden.se
-/share-link$script,domain=nyadagbladet.se
 nyadagbladet.se##.third-col
 nyadagbladet.se##article:has(.sponsrad)
 nyadagbladet.se##.widget_media_image:has-text(/annons/i)
 deliquate.se##[id^="ads300"], [id^="linkcat-"]
-lesscarbs.se##.post:has(p:has-text(/^annonssamarbete/i))
-lesscarbs.se##.bd-flex-vertical > aside
+lesscarbs.se###mid section.elementor-section:has(a[href*="/annonssamarbete/"])
+lesscarbs.se##.elementor-image > a
 lesscarbs.se##a[href*="/affiliates/"]
-stegforhalsa.se##+js(json-prune, runtimeConfig.FACEBOOK_PIXEL_DMP runtimeConfig.FACEBOOK_PIXEL_ID)
-/verksamt-adrum.js$script,domain=verksamt.se
-||verksamt.se/TSbd/$script
-foretagsnamngenerator.se##small:has-text(Annons):upward(1)
-marsta.nu##.outsider
-marsta.nu###secondary-content > .panel--naringsliv
-pingpong.se##.l-preloader
-hamnen.se##[class*="annons"]
-hamnen.se##.tag-sponsrad
+||stegforhalsa.se^$csp=worker-src 'none'
+marsta.nu##.outsider, .panel--naringsliv
+hamnen.se##[class*="annons"], .tag-sponsrad
 hamnenplay.solidtango.com###video-controls-bar:style(display: initial !important;)
-hamnenplay.solidtango.com##.ads-overlay
-hamnenplay.solidtango.com##.ads-click-overlay
+hamnenplay.solidtango.com##.ads-overlay, .ads-click-overlay
 lakartidningen.se##.advelementnewsrow
 moderaterna.se##.sliding-popup-bottom
 centerpartiet.se##.sol-cookie-message
