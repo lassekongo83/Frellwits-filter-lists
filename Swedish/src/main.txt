@@ -930,6 +930,8 @@
 ##div#panorama_ad
 ##div#toppannons
 ##div#sliding-popup div[class^="eu-cookie"]
+##div#topreklam
+##div#banner_right
 
 ! Site specific whitelists
 @@/ad.php$script,~third-party,domain=99mac.se|skogstok.se|temperatur.nu
@@ -1046,7 +1048,7 @@ dekra.de#@##cookie-banner
 ||apprl.com/embed/$subdocument,domain=forni.se|majanilssonlindelof.com|metromode.se|petratungarden.se|trendenser.se
 ||bstatic.com/static/affiliate$third-party
 ||cdn.ampproject.org^$third-party,domain=piraja.se
-||cdn.cookielaw.org^$script,domain=cartoonnetwork.se|foxtv.se|nvp.se|recept.se|tv4.se|tv4play.se|koket.se|fotbollskanalen.se|flashscore.se|manpower.se|svenskorientering.se|discoveryplus.se
+||cdn.cookielaw.org^$script,domain=cartoonnetwork.se|nvp.se|recept.se|tv4.se|tv4play.se|koket.se|fotbollskanalen.se|flashscore.se|manpower.se|svenskorientering.se|discoveryplus.se
 ||cdn.jsdelivr.net/npm/search-insights$script,domain=forum.hallon.se
 ||cookieinformation.com^$script,domain=valuta.se|iform.se|digitalfotoforalla.se|natgeo.se|popularhistoria.se|aktivtraning.se|pctidningen.se|militarhistoria.se|viivilla.se|varldenshistoria.se|proff.se
 ||connect.getflowbox.com^$third-party,domain=aikfotboll.se|farjestadbk.se|svenskaturistforeningen.se
@@ -1065,7 +1067,7 @@ dekra.de#@##cookie-banner
 ||sp-prod.net^$third-party,domain=radioplay.se
 ||sentry-cdn.com^$third-party,domain=svd.se|koket.se|bytbil.com
 ||delivery.vidible.tv^$third-party,domain=teknikhype.se
-||youbora.com^$important,third-party,domain=aftonbladet.se|foxtv.se|svd.se
+||youbora.com^$important,third-party,domain=aftonbladet.se|svd.se
 ||zotabox.com^$third-party,domain=etunawebben.se
 ||tags.tiqcdn.com^$domain=mallorcaliv.se
 ||privacy-center.org^$domain=stegforhalsa.se
@@ -2216,51 +2218,27 @@ turistmal.se###col_right
 kamrat.com###kadDiv, div[style="margin:25px 0;max-width:255px!important;"], #scrollAdj ~ *
 kamrat.com##+js(set, showAds, false)
 kamrat.com##+js(set, trap, noopFunc)
-testfakta.se##+js(set, Drupal.behaviors.euCookieCompliancePopup, noopFunc)
 testfakta.se##.row-uppdragstest
-onlinepizza.se##.top-banner-container
-dagensknep.se,djursidan.se,mysigast.se##+js(acis, mashvipo)
-nyheteridag.se##+js(acis, sc, type)
-nyheteridag.se##a[href*="www.casino"]
-nyheteridag.se##.content > div > a[href$=".php"] > img
-nordicchoicehotels.se##+js(nostif, n.modal.showWithCondition, 60000)
+foodora.se##.top-banner-container
+nyheteridag.se##.widget.facebook
+nyheteridag.se##.content > div:not([class]) img, a[href*="www.casino"]
+nyheteridag.se##.article-inner:has(h2:has-text(/samarbetslänkar/i))
 lundagard.se###bdCheckAlso.bdCheckAlsoShow
-lundagard.se##.theiaStickySidebar > .widget_sp_image:not(.bd-slider):not(.timeline-widget)
-lundagard.se##.theiaStickySidebar > [id^="media_image"]:not(.bd-slider):not(.timeline-widget)
-lundagard.se##.theiaStickySidebar > .widget_custom_html:last-child
-betting.se##+js(aopw, Fingerprint2)
-betting.se##.header-banners
-knulla.se###cookiescript_injected
-@@||stockblogs.se^$generichide
+knulla.se###cookie-popup
 komponentkoll.se##.gdpr-wide
+komponentkoll.se##.disclaimMyNuuuuu ~ *
 affarsstaden.se##+js(acis, jQuery, adblockdetect)
-affarsstaden.se##.esb-ad
-affarsstaden.se##.esb-front-news-roll-ad
-affarsstaden.se##.listing-partner
-/bimber-live.localhost$image,domain=mmabetz.se
-mmabetz.se##.desktop-homepage-ad, .desktop-main-ad
-mmabetz.se##.latest-betting-campaigns
-mmabetz.se##.best-casino-section
-mmabetz.se##.top-casino
-mmabetz.se###sgpb-popup-dialog-main-div-wrapper
-foreca.se###topbanner
+mmabetz.se##.desktop-homepage-ad, .desktop-main-ad, .latest-betting-campaigns, .best-casino-section, .top-casino
 foreca.se###ckieconsent
 skk.se###cookie-button-banner
-skk.se##.campaigns
-solidtango.com###cookie-prompt
-battrenyheter.se##.vc_row.vc_row-flex:has(.abnan-single)
-battrenyheter.se##.gbnan
-battrenyheter.se##.abnan-single
+skk.se##.campaigns, #MainContent_GlobalCampaigns
+battrenyheter.se##.gbnan, .abnan-single, a[href*="bettingsidor"]
 battrenyheter.se##.home-cat-first:has(a[href$="/sponsrad/"])
 battrenyheter.se##.post-item:has(a[href$="/samarbete/"])
 battrenyheter.se##.post-item:has(a[href$="/sponsrad/"])
 battrenyheter.se##.post-item:has(a[href*="casino"])
-battrenyheter.se##a[href*="bettingsidor"]
-/acilia-main.$script,domain=foxtv.se
-/freewheel.js$script,domain=foxtv.se
-foxtv.se###cookieBar
-jusek.se##.l-advertisement
-jusek.se##.m-adform
+battrenyheter.se##.vc_row.vc_row-flex:has(.abnan-single)
+jusek.se##.l-advertisement, .m-adform, .m-splash
 /Js/DFP/*$script,domain=camping.se
 camping.se###CookiesBox
 camping.se##.DfpAd
@@ -2909,3 +2887,4 @@ affarsvarlden.se##article:has(span:has-text(/annons/i))
 hockeyettan.se##.club-ad-item
 /hemmafixbloggen/includes/events-tracker
 hemmafixbloggen.se##.post-item:has(.sponsor-summary)
+||lantbruksnet.se/files/reklan/
