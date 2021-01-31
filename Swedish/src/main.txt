@@ -726,6 +726,7 @@ artbannersplus&task=show
 ##a[href*="/delivery.adnuntius.com"]
 ##a[href^="https://www.adsettings.com/scripts/reg_click."]
 ##a[href*="tradedoubler.com/click?"]
+##a[href*="https://click.adrecord"] img
 ##a[data-bid="1"][href*="/linkout"]
 ##a[title="LeoVegas"]
 ##a.cookiecutter[onclick^="cookie"]
@@ -742,6 +743,7 @@ artbannersplus&task=show
 ###ad-mega-container:not(body):not(html)
 ###ad-wallpaper:not(body):not(html)
 ###aloq-cookie-warning
+###annons_head
 ###catapult-cookie-bar
 ###cliSettingsPopup.cli-modal
 ###colorbox.cookie-info-modal
@@ -1218,7 +1220,7 @@ mobilanyheter.net,lchfarkivet.se,lakartidningen.se##+js(set, MonsterInsights, un
 /plugins/pixel-cat/*$script
 /plugins/pixelyoursite$image,script
 /plugins/popup$domain=ordfrontmagasin.se|snowmobile.se
-/plugins/popups/*$script,domain=svenskhistoria.se|bugburger.se|grillbaronen.se
+/plugins/popups/*$script,domain=svenskhistoria.se|bugburger.se
 /plugins/popup-by-supsystic$domain=exakt24.se
 /plugins/popup-$domain=sverige.nu
 /plugins/pum-$script,domain=snowmobile.se
@@ -1239,6 +1241,7 @@ mobilanyheter.net,lchfarkivet.se,lakartidningen.se##+js(set, MonsterInsights, un
 /plugins/statebuilt-facebook-page-like-popup/*
 /plugins/sticky-facebook-banner/*$script,domain=ettgottskratt.se|humorbibeln.se|newsner.com|sportbibeln.se
 /plugins/super-progressive-web-apps/*$domain=temadagar.se
+/plugins/super-socializer$script,domain=shortcut.se
 /plugins/svenskaspel-$script
 /plugins/sw_ad_inserter/*
 /plugins/sw_cookie_consent/*
@@ -1264,6 +1267,7 @@ mobilanyheter.net,lchfarkivet.se,lakartidningen.se##+js(set, MonsterInsights, un
 /plugins/wp-evolve-gpt/*
 /plugins/wp-gdpr-compliance/*$script
 /plugins/wp-lrf-paywall/*
+/plugins/wp-popups-lite$domain=grillbaronen.se
 /plugins/wp-power-stats/*
 /plugins/wp-sentry-integration/*$domain=chef.se
 /plugins/wp-snow-effect/*
@@ -1309,8 +1313,8 @@ mittkok.expressen.se##^script:has-text(adblock)
 hannaofsweden.se##^script:has-text(NOclickNN)
 digikey.se,bax-shop.se,tui.se##^script:has-text(i10cdone)
 digikey.se,bax-shop.se,justfab.se,tui.se##^script:has-text(INSTART.Init)
-newsner.com,humorbibeln.se,sportbibeln.se,ettgottskratt.se,sportpanelen.se,kvalitetsmagasinet.se,bandyfeber.com,telekomidag.se,miljo-utveckling.se,vdtidningen.se,dagensanalys.se,ladok.se,binero.se,rikatillsammans.se,zeinaskitchen.se,dinbyggare.se,kvartal.se,trafiksakerhet.se,i-chalmers.se,boktugg.se,mobilanyheter.net,lchfarkivet.se,carup.se,exakt24.se,lakartidningen.se,villalivet.se##^script:has-text(mi_track_user)
-newsner.com,humorbibeln.se,sportbibeln.se,ettgottskratt.se,sportpanelen.se,kvalitetsmagasinet.se,bandyfeber.com,telekomidag.se,miljo-utveckling.se,vdtidningen.se,dagensanalys.se,ladok.se,binero.se,rikatillsammans.se,zeinaskitchen.se,dinbyggare.se,kvartal.se,trafiksakerhet.se,i-chalmers.se,boktugg.se,mobilanyheter.net,lchfarkivet.se,carup.se,exakt24.se,lakartidningen.se,villalivet.se##^script:has-text(monsterinsights_frontend)
+newsner.com,humorbibeln.se,sportbibeln.se,ettgottskratt.se,sportpanelen.se,kvalitetsmagasinet.se,telekomidag.se,miljo-utveckling.se,vdtidningen.se,dagensanalys.se,ladok.se,binero.se,rikatillsammans.se,zeinaskitchen.se,dinbyggare.se,kvartal.se,trafiksakerhet.se,i-chalmers.se,boktugg.se,mobilanyheter.net,lchfarkivet.se,carup.se,exakt24.se,lakartidningen.se,villalivet.se##^script:has-text(mi_track_user)
+newsner.com,humorbibeln.se,sportbibeln.se,ettgottskratt.se,sportpanelen.se,kvalitetsmagasinet.se,telekomidag.se,miljo-utveckling.se,vdtidningen.se,dagensanalys.se,ladok.se,binero.se,rikatillsammans.se,zeinaskitchen.se,dinbyggare.se,kvartal.se,trafiksakerhet.se,i-chalmers.se,boktugg.se,mobilanyheter.net,lchfarkivet.se,carup.se,exakt24.se,lakartidningen.se,villalivet.se##^script:has-text(monsterinsights_frontend)
 jawcloud.co,nyafilmer.*##^script:has-text(_Hasync)
 nyadagbladet.se,fysikstugan.se,thorengruppen.se,brpsystems.se,pppress.se,utslappsratt.se,newsvoice.se,historiskahem.se,bastad.se,gdpr.se,heleneholmsif.se,trafikskola.se,melodifestivalklubben.se##^script:has-text(em_track_user)
 nyadagbladet.se,fysikstugan.se,thorengruppen.se,brpsystems.se,pppress.se,utslappsratt.se,newsvoice.se,historiskahem.se,bastad.se,gdpr.se,heleneholmsif.se,trafikskola.se,melodifestivalklubben.se##^script:has-text(exactmetrics_frontend)
@@ -1321,8 +1325,8 @@ nyadagbladet.se##^script:has-text(admiral-engaged)
 
 ! For browsers that aren't firefox
 !#if env_chromium
-newsner.com,humorbibeln.se,sportbibeln.se,ettgottskratt.se,sportpanelen.se,kvalitetsmagasinet.se,bandyfeber.com,telekomidag.se,miljo-utveckling.se,vdtidningen.se,dagensanalys.se,ladok.se,binero.se,rikatillsammans.se,zeinaskitchen.se,dinbyggare.se,kvartal.se,trafiksakerhet.se,i-chalmers.se,boktugg.se,mobilanyheter.net,lchfarkivet.se,carup.se,exakt24.se,lakartidningen.se,villalivet.se##+js(set, mi_track_user, false)
-newsner.com,humorbibeln.se,sportbibeln.se,ettgottskratt.se,sportpanelen.se,kvalitetsmagasinet.se,bandyfeber.com,telekomidag.se,miljo-utveckling.se,vdtidningen.se,dagensanalys.se,ladok.se,binero.se,rikatillsammans.se,zeinaskitchen.se,dinbyggare.se,kvartal.se,trafiksakerhet.se,i-chalmers.se,boktugg.se,mobilanyheter.net,lchfarkivet.se,carup.se,exakt24.se,lakartidningen.se,villalivet.se##+js(acis, monsterinsights_frontend)
+newsner.com,humorbibeln.se,sportbibeln.se,ettgottskratt.se,sportpanelen.se,kvalitetsmagasinet.se,telekomidag.se,miljo-utveckling.se,vdtidningen.se,dagensanalys.se,ladok.se,binero.se,rikatillsammans.se,zeinaskitchen.se,dinbyggare.se,kvartal.se,trafiksakerhet.se,i-chalmers.se,boktugg.se,mobilanyheter.net,lchfarkivet.se,carup.se,exakt24.se,lakartidningen.se,villalivet.se##+js(set, mi_track_user, false)
+newsner.com,humorbibeln.se,sportbibeln.se,ettgottskratt.se,sportpanelen.se,kvalitetsmagasinet.se,telekomidag.se,miljo-utveckling.se,vdtidningen.se,dagensanalys.se,ladok.se,binero.se,rikatillsammans.se,zeinaskitchen.se,dinbyggare.se,kvartal.se,trafiksakerhet.se,i-chalmers.se,boktugg.se,mobilanyheter.net,lchfarkivet.se,carup.se,exakt24.se,lakartidningen.se,villalivet.se##+js(acis, monsterinsights_frontend)
 nyadagbladet.se,fysikstugan.se,thorengruppen.se,brpsystems.se,pppress.se,utslappsratt.se,newsvoice.se,historiskahem.se,bastad.se,gdpr.se,heleneholmsif.se,trafikskola.se,melodifestivalklubben.se##+js(set, em_track_user, false)
 nyadagbladet.se,fysikstugan.se,thorengruppen.se,brpsystems.se,pppress.se,utslappsratt.se,newsvoice.se,historiskahem.se,bastad.se,gdpr.se,heleneholmsif.se,trafikskola.se,melodifestivalklubben.se##+js(acis, exactmetrics_frontend)
 nyadagbladet.se##+js(acis, exactmetrics_scroll_tracking_load)
@@ -2315,35 +2319,23 @@ fastighetssverige.se##div[class^="panel"][style*="lightgoldenrodyellow"]
 ||kingsizemag.se/kingrev.php
 kingsizemag.se##div#video-overlay
 kingsizemag.se##a[href*="/redir/"][target="_blank"]
-/cookies/*$xmlhttprequest,domain=stowr.se
-stowr.se##article:has(.sponsored)
-stowr.se##article:has(.user-card-sponsor-marker)
-grillbaronen.se##.spu-bg
-grillbaronen.se##.spu-box
-skrattportalen.se##.topBanner
-||humorbrevet.se/externa_bilder$image
+||humorbrevet.se/externa_bilder
 friidrott.se###sponsor
 ||annons.lidkopingsnytt.nu^
-lidkopingsnytt.nu###annons_head
 familjesidan.se##.cookies-wrapper
 dagen.se##.cookie-acceptance
 dagen.se##.video-annons
-/article-paywall
-sff.nu###sidebar > li:not(.widget_wp_sidebarlogin)
-sff.nu##li.widget_sp_image
-bandyfeber.com##.widget_sp_image
-bandyfeber.com##a[title^="ANNONS"]
+sff.nu###sidebar > li:not(.widget_wp_sidebarlogin), li.widget_sp_image
+bandyfeber.com##.widget_sp_image, a[title^="ANNONS"]
 bandyfeber.com##article:has(a[href*="/annons-"])
 bandyfeber.com##.avia-content-slider:has(.slide-entry-excerpt:has-text(/annons:/i))
-norrkopinghandel.se###wp-flybox_tab1
 mtv.se##+js(json-prune, omnitureAdTracking omnitureEnabled ads adServer adsEnabled adTimeouts comScoreAdTracking freewheelEnabled)
-lakemedelsvarlden.se##.annons-yta
+caminomagasin.se###cookie-compliance
 caminomagasin.se##.block--extern-annons
 bussmagasinet.se###page > div:not(.left):not(.right)
 bussmagasinet.se###titlebanner
 /magnific-popup$domain=shortcut.se
-shortcut.se##.annons-block
-shortcut.se##.layout-advertisement
+shortcut.se##.annons-block, .layout-advertisement
 shortcut.se##.employer:has(.sponsored)
 shortcut.se##article:has(.sponsored)
 shortcut.se##.blockquote:has(strong:has-text(/^annons/i))

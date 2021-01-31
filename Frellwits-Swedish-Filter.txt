@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2021-01-30 10:44:21 CET
+! Last modified: 2021-01-31 13:40:10 CET
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -34,6 +34,7 @@
 ###ad-mega-container:not(body):not(html)
 ###ad-wallpaper:not(body):not(html)
 ###aloq-cookie-warning
+###annons_head
 ###catapult-cookie-bar
 ###cliSettingsPopup.cli-modal
 ###colorbox.cookie-info-modal
@@ -65,8 +66,8 @@
 ###cookiejar
 ###cookielawwarning
 ###cookieMsgBlock
-###cookieNotice
 ###CookieNotice
+###cookieNotice
 ###cookies-acceptance .alert.bottom
 ###cookiesInfo
 ###dialog-eu-cookie-law
@@ -212,6 +213,7 @@
 ##a[href*="casinopro.se"][target="_blank"]
 ##a[href*="cyberbetpromo.net/click"][target="_blank"]
 ##a[href*="doktor-se.onelink.me"]
+##a[href*="https://click.adrecord"] img
 ##a[href*="https://sexapp.me/"]
 ##a[href*="tradedoubler.com/click?"]
 ##a[href^="https://www.adsettings.com/scripts/reg_click."]
@@ -364,7 +366,6 @@
 /appnexus$script,domain=aftonbladet.se|blocket.se|bytbil.com|minhembio.com
 /aria/bentojs.js$domain=nickelodeon.se
 /aria/coda.html$domain=nickelodeon.se
-/article-paywall
 /assets/google-universal-analytics$script
 /assets/pb-$script,domain=weheartit.com
 /atomic-blocks$script,domain=dinlivsstil.nu|foretagsverige.se|forskningsverige.se|grillbibeln.se|hallbarhetsverige.se|kampenmotcancer.se|motorbibeln.se|tillvaxtsverige.se
@@ -419,7 +420,6 @@
 /cookieDirective.$script,domain=sdr.se
 /CookieInfo.$script,domain=viddla.se
 /cookienotice.$script,domain=nordic.ign.com
-/cookies/*$xmlhttprequest,domain=stowr.se
 /cookiswarning.$script,domain=visitskargarden.se
 /core/analytics$script,domain=sv.geneanet.org
 /cpg_ads.$script
@@ -654,7 +654,7 @@
 /plugins/popup$domain=ordfrontmagasin.se|snowmobile.se
 /plugins/popup-$domain=sverige.nu
 /plugins/popup-by-supsystic$domain=exakt24.se
-/plugins/popups/*$script,domain=bugburger.se|grillbaronen.se|svenskhistoria.se
+/plugins/popups/*$script,domain=bugburger.se|svenskhistoria.se
 /plugins/pum-$script,domain=snowmobile.se
 /plugins/quantcast-choice/*$script,domain=kimura.se|muscles.se|news55.se
 /plugins/r9-analytics
@@ -674,6 +674,7 @@
 /plugins/statebuilt-facebook-page-like-popup/*
 /plugins/sticky-facebook-banner/*$script,domain=ettgottskratt.se|humorbibeln.se|newsner.com|sportbibeln.se
 /plugins/super-progressive-web-apps/*$domain=temadagar.se
+/plugins/super-socializer$script,domain=shortcut.se
 /plugins/svenskaspel-$script
 /plugins/sw_ad_inserter/*
 /plugins/sw_cookie_consent/*
@@ -700,6 +701,7 @@
 /plugins/wp-evolve-gpt/*
 /plugins/wp-gdpr-compliance/*$script
 /plugins/wp-lrf-paywall/*
+/plugins/wp-popups-lite$domain=grillbaronen.se
 /plugins/wp-power-stats/*
 /plugins/wp-sentry-integration/*$domain=chef.se
 /plugins/wp-snow-effect/*
@@ -1021,8 +1023,7 @@ badminton.nu,bandybyn.se###RightOuterBannerDiv
 bandybyn.se##.StartPageBoxRow > .boxcontainer:last-child > .StartPageBoxNarrow
 bandybyn.se##.StartPageBoxRow > .boxcontainer:nth-child(2) > .StartPageBoxNarrow
 bandybyn.se,falubsbandy.com###RightDiv
-bandyfeber.com##.widget_sp_image
-bandyfeber.com##a[title^="ANNONS"]
+bandyfeber.com##.widget_sp_image, a[title^="ANNONS"]
 bandyplay.se##div[class^="CookieConsent"]
 bandyplay.se,bettips.se,digitalfotoforalla.se,illvet.se,it-finans.se,it-halsa.se,it-kanalen.se,it-pedagogen.se,it-retail.se,pctidningen.se##.top-banner
 barnsemester.se###aggressivead
@@ -1086,6 +1087,7 @@ cafe.se,kamerabild.se##.partner
 cafe.se,kingmagazine.se,manolo.se##.card-partner
 cafe.se,kingmagazine.se,manolo.se,vagabond.se##.partner
 cafe.se,lakartidningen.se,mestmotor.se,modette.se,nyheter24.se,vagabond.se##.advertisement
+caminomagasin.se###cookie-compliance
 caminomagasin.se##.block--extern-annons
 camping.se###CookiesBox
 camping.se###rightSideAds, .OpenXAd
@@ -1275,8 +1277,6 @@ goteborgsgolfaren.se###sgpb-popup-dialog-main-div-wrapper
 goteborgsgolfaren.se##.sgpb-popup-overlay
 gotlandswebben.se##.header-ads-wrapper
 grannar.se##.cookiebox, .revive, .offert-promobox
-grillbaronen.se##.spu-bg
-grillbaronen.se##.spu-box
 grillbloggen.nu##.rstbox
 grontvader.se##app-cookies
 hallakonsument.se,handels.se,megafonen.se##.cookie-information
@@ -1381,7 +1381,6 @@ kvalitetsmagasinet.se,miljo-utveckling.se,telekomidag.se,vdtidningen.se##.partne
 kvalitetsmagasinet.se,miljo-utveckling.se,telekomidag.se,vdtidningen.se##[class*="nativeadwidget"]
 kvartal.se##.email-popup-wrapper
 lajvo.se###panoramaTop
-lakemedelsvarlden.se##.annons-yta
 landetsfria.nu,tidningensyre.se##div[style*="verdana; color:#888888"]
 landleyskok.se##.inpostbanner, .banner-leaderboard
 lantmannen.se##.cookieinformation
@@ -1394,7 +1393,6 @@ lesscarbs.se##.elementor-image > a
 lesscarbs.se##a[href*="/affiliates/"]
 leta.se###bookingcom-resor-wrapper
 letsgoexplore.se##.tipi-tile.active
-lidkopingsnytt.nu###annons_head
 lindasbakskola.se,privataaffarer.se,skk.se##a[href*="/bit.ly/"]
 lindasbakskola.se,zeinaskitchen.se##.proad
 lindenytt.com,poolforum.se,varmepumpsforum.com##a[target="_blank"] > img[alt]
@@ -1471,7 +1469,6 @@ norpan.se,skrattsajten.com##.cookieScript
 norrahalland.se##.norra-leeads-ads,.egna_annonser_widget
 norrbotten.com##.td-ss-main-sidebar > .td-a-rec
 norrbotten.com##a[href*=".com/annons"]
-norrkopinghandel.se###wp-flybox_tab1
 norrortssporten.se##.td-a-rec-id-custom-spot
 norrortssporten.se##.td-post-content > div[style^="float: none"]
 nsk.se,skd.se##.advert-widget
@@ -1538,11 +1535,9 @@ se.azrhymes.com,svensk-seo.se#@#.adsbygoogle
 se.invertalia.net##.js-cookies-notification
 se.readly.com##.show-consent
 sexpacket.se##.info_cookies
-sff.nu###sidebar > li:not(.widget_wp_sidebarlogin)
-sff.nu##li.widget_sp_image
+sff.nu###sidebar > li:not(.widget_wp_sidebarlogin), li.widget_sp_image
 shoegazing.se###main-sidebar > .widget_media_image
-shortcut.se##.annons-block
-shortcut.se##.layout-advertisement
+shortcut.se##.annons-block, .layout-advertisement
 siriusbandy.se,vetlandabk.se##[id$="-ad"]
 sjoaguden.se##.av-siteloader-wrap
 skandia.se##div[data-block="CookieBannerBlock"]
@@ -1554,7 +1549,6 @@ skk.se###cookie-button-banner
 skk.se##.campaigns, #MainContent_GlobalCampaigns
 skogsforum.se##.masthead, .col-right, a[href^="https://goo.gl/"], a[href*="//bit.ly/"]
 skrattnet.se,webben7.se##.region-sidebar-second
-skrattportalen.se##.topBanner
 skyscanner.se###cookie-banner-root
 smartsenior.se##.ss-modal, .modal-mobile-app
 smhi.se##.polopolyNotification
@@ -1968,7 +1962,7 @@ yelp.se##.js-cookie-iframe
 ||hpevoices.com^$third-party
 ||hsadspixel.net^$third-party
 ||hsleadflows.net^$third-party
-||humorbrevet.se/externa_bilder$image
+||humorbrevet.se/externa_bilder
 ||i.ibb.co/qRBYR98/ban1.png
 ||iconosquare.com^$third-party
 ||idg.se/sharecounter?
