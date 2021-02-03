@@ -252,6 +252,7 @@ artbannersplus&task=show
 .se/_Banners/
 .se/Banners/
 .se/bilder/banners/
+.se/bildbank/banners/
 .se/*/nativeadvertising/
 .se/ad/AdSpaceBlock/
 .se/ad-delivery/
@@ -288,6 +289,7 @@ artbannersplus&task=show
 .se/revive/www/
 .se/sponsored/$image
 .se/upload/annons/
+.se/uploads/banners/
 .se/uploads/images/banners/
 .se/wdg/tracking
 .se/wp-content/banners/
@@ -720,6 +722,7 @@ artbannersplus&task=show
 ! Generic Element Hiding Rules
 ##.lazyb.panorama
 ##a[href$=".se/go/betsafe"]
+##a[href*="/banner/klick/"] img
 ##a[href*="casinopro.se"][target="_blank"]
 ##a[href*="cyberbetpromo.net/click"][target="_blank"]
 ##a[href*="doktor-se.onelink.me"]
@@ -729,6 +732,7 @@ artbannersplus&task=show
 ##a[href*="https://click.adrecord"] img
 ##a[data-bid="1"][href*="/linkout"]
 ##a[title="LeoVegas"]
+##a.card.-sponsored
 ##a.cookiecutter[onclick^="cookie"]
 ##div.cookievarning-wrap
 ##img[alt="Leovegas"]
@@ -882,6 +886,7 @@ artbannersplus&task=show
 ##.js-cookie-warning:not(body):not(html)
 ##.leeads-advert:not(body):not(html)
 ##.mittenannons:not(body):not(html)
+##.tag-sponsrat-inlagg:not(body):not(html)
 ##div.newsletter-cta
 ##div.newsletter-slider
 ##.notification--cookie:not(body):not(html)
@@ -1068,7 +1073,6 @@ airam.fi##.body-fixed:style(position: unset !important;)
 ||consent.cmp.oath.com^$third-party,domain=alltomstockholm.se
 ||cookiebot.com^$third-party,domain=etc.se|goteborgdirekt.se|itaboutdoor.se|kingsizemag.se|ng.se|skeppsbrons.se|swedroid.se|totallyorebro.se|totallystockholm.se|wesafe.se|tankesport.se|smartsenior.se|vasterastidning.se|clipmyhorse.tv|bax-shop.se|kurera.se|upplysning.se|mitti.se
 ||cookiepro.com^$third-party,domain=sd.se|birthday.se|friendsarena.se|hastnet.se|aktiespararna.se|spela.se|fz.se|sweclockers.com
-||d2wy8f7a9ursnm.cloudfront.net/bugsnag$script,domain=expressen.se|bioenergitidningen.se
 ||evidon.com^$third-party,domain=morningstar.se|spela.se|mtv.se|tripadvisor.se
 ||execute-api.eu-west-1.amazonaws.com/*/event$xmlhttprequest,domain=forum.hallon.se
 ||herokuapp.com^$third-party,domain=aftonbladet.se
@@ -1842,6 +1846,7 @@ omnihalsa.com,skanesport.se,sportpanelen.se##.stream-item
 hallakonsument.se,handels.se,megafonen.se##.cookie-information
 mkse.com,cyclingplus.se###upprev_box
 motivation.se##.topbanner
+byggteknikforlaget.se,dialasen.com,torbjornstips.se##.textwidget a[target="_blank"]
 
 ! Various websites with lots of malicious stuff and annoyances
 /wp-content/themes/keremiya1/js/script.js$script
@@ -2307,7 +2312,6 @@ foretagsverige.se,forskningsverige.se,motorbibeln.se,dinlivsstil.nu,hallbarhetsv
 framtid.se###siteflash
 framtid.se###customer-link-container
 byggteknikforlaget.se###text-2.widget_text, .header-widget-area
-byggteknikforlaget.se,torbjornstips.se##.textwidget > a[target="_blank"]
 ||grillbloggen.nu/media/com_rstbox/
 grillbloggen.nu##.rstbox
 /modules/gdpr-consent$domain=freelancer.se
@@ -2364,30 +2368,17 @@ maipenrai.se##.cWidgetContainer > ul > li:first-child, div[style*="border: 1px s
 aktiespararna.se##.analysguiden-promote-articles
 ||streamio.com/api/*/stats$xmlhttprequest
 veterinarmagazinet.se##.nyhet-ad
-lokalfotboll.se###topbar
-lokalfotboll.se##.inside-right-sidebar > .really_simple_image_widget
-torbjornstips.se##.sfsi_plus_outr_div
-torbjornstips.se##.tag-sponsrat-inlagg
-vinochbar.se##[class*="et_pb_row_inner"]:has(span:has-text(/^annons/i))
-vinochbar.se##.et_pb_column.et-last-child:has(span:has-text(/^annons/i))
-startaochdriva.se##.banner-right
-startaochdriva.se##.banner-left
-startaochdriva.se##img[data-permalink]
-startaochdriva.se##.featured-image-wrap:has(a[href*="/sponsrat"])
+lokalfotboll.se###topbar, .inside-right-sidebar > .really_simple_image_widget
+startaochdriva.se##.banner-right, .banner-left, .wpb_single_image a[target="_blank"]
+startaochdriva.se##.latest-post:has(a[href*="/sponsrat"])
 alltomburgare.se##.newscolumn:has(a[href$="/sponsrat/"])
-/exposure$xmlhttprequest,domain=lokalguiden.se
-bioenergitidningen.se##.cookieNotice
+||lokalguiden.se/premises/exposure
+lokalguiden.se##.applicant-match-container
 fightermag.se##a[href*="/sponsra"]
-forvaltarforum.se##[id^="ff_banner"]
-forvaltarforum.se##.home .partner_article + .mh-section
-forvaltarforum.se##.home .payed_article + .mh-section
-forvaltarforum.se##.home-columns .ticker-title.partner_article
-forvaltarforum.se##.home-columns .ticker-title.payed_article
+forvaltarforum.se##[id^="ff_banner"], .home .partner_article + .mh-section, .home .payed_article + .mh-section, .home-columns .ticker-title.partner_article, .home-columns .ticker-title.payed_article, .mh-header .widget_sow-slider, .sow-slider-image, .houdini_partner_article
 gaffa.se##.external-branding
-||js.hs-scripts.com/*.js?integration$script,domain=borsvarlden.com
-||borsvarlden.com/js/cookie-notice.$script
+||borsvarlden.com/js/cookie-notice
 ||borsvarlden-banners.azurewebsites.net^
-borsvarlden.com##+js(acis, setREVStartSize)
 borsvarlden.com##.sponsored-articles-container,.nav-sep-blink,.annons-label,.index-side-banner-wrapper
 borsvarlden.com##article:has(.border-sponsored)
 borsvarlden.com##.format-thumb-small:has(.overlay-label:has-text(/spons/i))
@@ -2464,7 +2455,7 @@ tidningenridsport.se##.type-native
 orebronyheter.com###top-wrapper
 /clickperformance$domain=radio.se
 radio.se###main > div > div:not([id])
-spanaren.se##.textwidget > a[target="blank"] > img
+spanaren.se##.textwidget a[target="blank"] img
 svenskhistoria.se##.widget_et_ads
 svenskhistoria.se##.module-etads
 svenskhistoria.se###text-13
@@ -2635,7 +2626,6 @@ dagensinfrastruktur.se##.g-single
 tennisstockholm.se###RightOuterBannerDiv
 res.se##.node-sponsored-article
 /res_ads$domain=res.se
-dialasen.com##.textwidget > a[target="_blank"]
 friluftsframjandet.se##+js(ra, data-ads-manual)
 arkitekt.se##.Cookie
 ruthless.se##.notices

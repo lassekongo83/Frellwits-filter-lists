@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2021-02-02 19:33:22 CET
+! Last modified: 2021-02-03 08:33:11 CET
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -66,8 +66,8 @@
 ###cookiejar
 ###cookielawwarning
 ###cookieMsgBlock
-###cookieNotice
 ###CookieNotice
+###cookieNotice
 ###cookies-acceptance .alert.bottom
 ###cookiesInfo
 ###dialog-eu-cookie-law
@@ -195,6 +195,7 @@
 ##.sw-sponsored_post:not(body):not(html)
 ##.sw-tag-sponsored_post:not(body):not(html)
 ##.swp-ad-strossle:not(body):not(html)
+##.tag-sponsrat-inlagg:not(body):not(html)
 ##.thb-cookie-bar:not(body):not(html)
 ##.thb_ad_header:not(body):not(html)
 ##.toppannonser:not(body):not(html)
@@ -206,9 +207,11 @@
 ##.widget_ic_ad_widget:not(body):not(html)
 ##[class*="advads_ad_widget"]:not(body):not(html)
 ##[id^="adace_ads"]
+##a.card.-sponsored
 ##a.cookiecutter[onclick^="cookie"]
 ##a[data-bid="1"][href*="/linkout"]
 ##a[href$=".se/go/betsafe"]
+##a[href*="/banner/klick/"] img
 ##a[href*="/delivery.adnuntius.com"]
 ##a[href*="casinopro.se"][target="_blank"]
 ##a[href*="cyberbetpromo.net/click"][target="_blank"]
@@ -283,6 +286,7 @@
 .se/annons/$domain=~blocket.se
 .se/banner.stat?
 .se/Banners/
+.se/bildbank/banners/
 .se/bilder/banners/
 .se/client-views/cookieinfo?$xmlhttprequest
 .se/components/cookiebar$script
@@ -310,6 +314,7 @@
 .se/revive/www/
 .se/sponsored/$image
 .se/upload/annons/
+.se/uploads/banners/
 .se/uploads/images/banners/
 .se/wdg/tracking
 .se/wp-content/banners/
@@ -445,7 +450,6 @@
 /eu_cookie_compliance/*$script
 /EUModalDialog$script,domain=morningstar.se
 /evidon$script,domain=morningstar.se
-/exposure$xmlhttprequest,domain=lokalguiden.se
 /facebook/gillkom$xmlhttprequest,domain=kamerabild.se|mobil.se
 /facebook/postkoll$xmlhttprequest,domain=kamerabild.se|mobil.se
 /fixed-panorama$domain=fiskejournalen.se
@@ -1043,7 +1047,6 @@ bilsport.se##fl-panorama-top,fl-newsletter-popup
 bilsport.se,gpro.net,ordguru.se,ratsit.se,visitskane.com##.cc_banner-wrapper
 bilweb.se###cookie_alert
 bilwebben.ax##.front #secondary-content-wrapper
-bioenergitidningen.se##.cookieNotice
 birthday.se##.datax
 blocket.se###placement_panorama, .blocket-placement, div[style="height: 240px;"]
 bmwklubben.se###campaign-image
@@ -1075,8 +1078,8 @@ byggipedia.se##.protect_contents-overlay
 byggnadsarbetaren.se##[class^="siteAds"], .siteAlerts
 byggnyheter.se,dagensfastigheter.se,dagensnaringsliv.se,energinyheter.se,industrinyheter.se,infrastrukturnyheter.se,inredningsnyheter.se,jarnvagsnyheter.se,metallerochgruvor.se,papperochmassa.se,solenerginyheter.se,sportochfritidsnyheter.se,stockholmsbyggnyheter.se,transportochlogistik.se,vindkraftsnyheter.se##.insider-ads, [id^="mainadvertorial"], [id^="dfptag"], .block-advertorial, .block-views-blockconventus-info-articles-info-article-block
 byggteknikforlaget.se###text-2.widget_text, .header-widget-area
+byggteknikforlaget.se,dialasen.com,torbjornstips.se##.textwidget a[target="_blank"]
 byggteknikforlaget.se,fotbolldirekt.se,hockeysverige.se,hypeline.se,innebandymagazinet.se,maklarvarlden.se,motivation.se,skidresultat.se,uppslaget.se##.annons
-byggteknikforlaget.se,torbjornstips.se##.textwidget > a[target="_blank"]
 byggvarlden.se,hotellorestaurang.se###bannnerContainer
 byggvarlden.se,hotellorestaurang.se##.ContentRight-50 > .featured
 byggvarlden.se,hotellorestaurang.se##ul.productnews
@@ -1138,7 +1141,6 @@ di.se##[class^="gdpr-policy"]
 di.se,dn.se,expressen.se###rich-media-ads
 di.se,thelocal.se##.ad_container
 diabetes.se##.c-cookies
-dialasen.com##.textwidget > a[target="_blank"]
 digital.di.se##.start__articles-ad
 djungeltrumman.se###right-banners
 djungeltrumman.se###sponsored-posts
@@ -1229,11 +1231,7 @@ foreca.se###ckieconsent
 foretagarna.se##.c-cookie
 forum.macworld.se,idg.se##.idgcp__layer
 forum.robsoft.nu##td[valign="middle"] > a[target="_blank"]
-forvaltarforum.se##.home .partner_article + .mh-section
-forvaltarforum.se##.home .payed_article + .mh-section
-forvaltarforum.se##.home-columns .ticker-title.partner_article
-forvaltarforum.se##.home-columns .ticker-title.payed_article
-forvaltarforum.se##[id^="ff_banner"]
+forvaltarforum.se##[id^="ff_banner"], .home .partner_article + .mh-section, .home .payed_article + .mh-section, .home-columns .ticker-title.partner_article, .home-columns .ticker-title.payed_article, .mh-header .widget_sow-slider, .sow-slider-image, .houdini_partner_article
 fotboll.com##.header-static-lg, .fp-partner, .xs-ad, .bo-wrapper
 fotbolldirekt.se,hockeysverige.se,innebandymagazinet.se##.c-announcement a:not([href*="://fotbolldirekt.se/"]):not([href*="://hockeysverige.se/"]):not([href*="://innebandymagazinet.se/"])
 fotbolldirekt.se,hockeysverige.se,innebandymagazinet.se##.site-partnevisment, .h-background--sponsored-light
@@ -1404,8 +1402,8 @@ livetsgoda.se##.penci-rlt-popup
 livetsgoda.se##[class*="advads"]
 livetsgoda.se##a[target="_blank"]
 ljudochbild.se##.adremark, .coofad, .popup-overlay, .hidead, .phoneads, .pricecomp, .offerz, .type-articleadvertorial
-lokalfotboll.se###topbar
-lokalfotboll.se##.inside-right-sidebar > .really_simple_image_widget
+lokalfotboll.se###topbar, .inside-right-sidebar > .really_simple_image_widget
+lokalguiden.se##.applicant-match-container
 lokalnytt.se##.panoramaImageBox
 lokalsport.nu##.art-sidebar1, .art-sidebar2
 loppi.se##.entry__teaser--promotion, .wpcnt
@@ -1548,7 +1546,7 @@ skyscanner.se###cookie-banner-root
 smartsenior.se##.ss-modal, .modal-mobile-app
 smhi.se##.polopolyNotification
 so-rummet.se##.block-advert
-spanaren.se##.textwidget > a[target="blank"] > img
+spanaren.se##.textwidget a[target="blank"] img
 spbi.se##.policy-disclaimer
 spelagratis.se##.ad_header + p
 spelagratis.se##.sidebar-right
@@ -1566,9 +1564,7 @@ sportpanelen.se###text-html-widget-3
 sporttv.nu##a[onclick*="bannerClick"]
 spray.se##.column-left > .article-partial
 spray.se##[class^="ads-"], [class*="article-casino"]
-startaochdriva.se##.banner-left
-startaochdriva.se##.banner-right
-startaochdriva.se##img[data-permalink]
+startaochdriva.se##.banner-right, .banner-left, .wpb_single_image a[target="_blank"]
 studentum.se###emg-cookie
 studocu.com##[data-test-selector="the-cookie-banner"]
 surfa.se##div[class*="-promo"], div[class*="prisjakt-"]
@@ -1632,8 +1628,6 @@ tjanstebilen.se##.header-banner-top
 tjanstebilen.se##.modal
 tjanstebilen.se##a[href*="/?SPA="]
 tkj.se###text-19, #text-23, #text-25, #text-32, #custom_html-2, #custom_html-3, #volt-recent-posts-5, a[href*=".se/ad/"]
-torbjornstips.se##.sfsi_plus_outr_div
-torbjornstips.se##.tag-sponsrat-inlagg
 totallyorebro.se,totallystockholm.se##a[href*="casino-bonus"], a[href*="/sponsrat/"], a[href*="/sponsrat/"] + p.tot-content-preview--meta
 totallyorebro.se,totallystockholm.se##div.tot-content-preview-container-small[style*="border-top:4px solid #ffb200;"], .content-overlay--black
 tradera.com##ads-takeover
@@ -1770,7 +1764,7 @@ yelp.se##.js-cookie-iframe
 ||boka.holiday^$third-party
 ||bonniergaming.com^$third-party
 ||borsvarlden-banners.azurewebsites.net^
-||borsvarlden.com/js/cookie-notice.$script
+||borsvarlden.com/js/cookie-notice
 ||brandy.bonniernewslifestyle.se^$third-party
 ||breakit.se/adk$script
 ||bstatic.com/static/affiliate$third-party
@@ -1852,7 +1846,6 @@ yelp.se##.js-cookie-iframe
 ||d2m8uxg4w7uelx.cloudfront.net/fpa.js$script
 ||d2m8uxg4w7uelx.cloudfront.net/fullpageads.$script
 ||d2p5edqepo3b1l.cloudfront.net/meetrics-tracker.$script
-||d2wy8f7a9ursnm.cloudfront.net/bugsnag$script,domain=bioenergitidningen.se|expressen.se
 ||d9v72urx9pbbc.cloudfront.net/channel.js$script
 ||da.yle.fi/yle/areena/s?$image
 ||dackpartner-web.s3.amazonaws.com^$third-party
@@ -1986,7 +1979,6 @@ yelp.se##.js-cookie-iframe
 ||jobb.blocket.se^*/xtcore.min.js
 ||jobba-hemifran.com^
 ||js.hs-banner.com^$script
-||js.hs-scripts.com/*.js?integration$script,domain=borsvarlden.com
 ||js.hs-scripts.com/3322485.js$script
 ||js.hs-scripts.com^$third-party,domain=breakit.se|tholin.se
 ||juicer.io/api/page_views$xmlhttprequest
@@ -2021,6 +2013,7 @@ yelp.se##.js-cookie-iframe
 ||ljuskompaniet.se^
 ||logger.tv.nu^
 ||logs.datadoghq.com^$third-party
+||lokalguiden.se/premises/exposure
 ||lokus.se^$~image,third-party,domain=~familj.se
 ||look.ufinkln.com^
 ||lwcdn.com/vendor/ima.min.js$script
