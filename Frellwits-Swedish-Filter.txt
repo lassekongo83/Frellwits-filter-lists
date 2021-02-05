@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2021-02-04 11:29:45 CET
+! Last modified: 2021-02-05 11:07:23 CET
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -66,8 +66,8 @@
 ###cookiejar
 ###cookielawwarning
 ###cookieMsgBlock
-###CookieNotice
 ###cookieNotice
+###CookieNotice
 ###cookies-acceptance .alert.bottom
 ###cookiesInfo
 ###dialog-eu-cookie-law
@@ -258,6 +258,7 @@
 ##div.sidebar-item .banner-box
 ##div.sol-cookie-message
 ##div.topmost-banner
+##div.wppasrotate
 ##img[alt="Leovegas"]
 ##img[alt="Spela på Betsson"]
 ##img[src*="/track.adtraction"]
@@ -336,7 +337,7 @@
 /ad-$subdocument,domain=forum.odla.nu
 /ad-render$domain=internetmedicin.se
 /ad-takeover
-/Ad/*$domain=hallbyhandboll.se|laget.se|skiljebosk.nu
+/Ad/*$domain=hallbyhandboll.se|skiljebosk.nu
 /ad/getNouw.$script
 /ad_acknowledgment$xmlhttprequest
 /adn/adn-setup.$script
@@ -407,7 +408,6 @@
 /cecado/advisible.js
 /check-paywall$domain=dn.se
 /citygate/payingcompanies$xmlhttprequest
-/clickperformance$domain=radio.se
 /client-stream-events$domain=viafree.se
 /closest-native$domain=expressen.se
 /cm-ad-changer-server
@@ -777,6 +777,7 @@
 /Sponsor/*$domain=grontvader.se
 /sponsored_articles$domain=fastighetssverige.se
 /sponsorer-$image,domain=ridsport.se
+/sponsors$domain=sdhl.se|storvretaibk.se
 /spotlight-ad_$image
 /sptAutoTracker$script,domain=aftonbladet.se
 /static.marklar.se/*-tracker
@@ -800,7 +801,6 @@
 /trackers/SessionCam-tag$script
 /trackolding$script,domain=skyscanner.se
 /trafikfonden/*
-/translations/sponsors$script,domain=sdhl.se|storvretaibk.se
 /tv/annons$domain=expressen.se
 /tv/brand-studio$domain=expressen.se
 /tv/sponsrat$domain=expressen.se
@@ -1267,8 +1267,8 @@ grannar.se##.cookiebox, .revive, .offert-promobox
 grillbloggen.nu##.rstbox
 grontvader.se##app-cookies
 hallakonsument.se,handels.se,megafonen.se##.cookie-information
-hallbyhandboll.se,laget.se,skiljebosk.nu##.cookiePush
-hallbyhandboll.se,laget.se,skiljebosk.nu##.stickyFollow
+hallbyhandboll.se,skiljebosk.nu##.cookiePush
+hallbyhandboll.se,skiljebosk.nu##.stickyFollow
 halsasverige.se##.isax
 hamnen.se##[class*="annons"], .tag-sponsrad
 hamsterpaj.net###accept-cookies
@@ -1461,8 +1461,7 @@ nyafilmer.*##.headerSpace
 nyheter24.se##.lazyload_bar.show, .lazyload_outer.show
 nyheteridag.se##.content > div:not([class]) img, a[href*="www.casino"]
 nyheteridag.se##.widget.facebook
-nyhetersto.se##a[href*="/reklam/"]
-nyhetersto.se##a[href*="/restaurangguidensto"]
+nyhetersto.se##header > div.g
 omni.se,omniekonomi.se##.article--sponsored,.resource--sponsored,.component--sticky-sponsor-banner,.pre-banner
 omnihalsa.com,skanesport.se,sportpanelen.se##.stream-item
 opulens.se###secondary
@@ -1481,7 +1480,7 @@ pricerunner.se###consent
 pricerunner.se##a[href*="&clickarea=sponsored"]
 proffs.se##.cookie-wrapper
 pussad.se##.g1-popup-newsletter, .g1-slideup-wrap
-radio.se###main > div > div:not([id])
+radio.se##.topAdSpacer
 rastaochdalla.se##.sidebar-right > .widget_social_links
 rastaochdalla.se##.widget_advertise
 ratsit.se##.promo
@@ -1509,6 +1508,7 @@ schack.se###sidebar > .widget_custom_html
 schoolido.se##.so-cookie__area
 screen-marknaden.se##.fo-banner
 screen-marknaden.se##.fp-banner
+sdhl.se,ssl.se,storvretaibk.se##.rmss_module-block-linked_image
 se.azrhymes.com###CookielawBanner
 se.azrhymes.com##.shader
 se.azrhymes.com,svensk-seo.se#@#.adsbygoogle
@@ -1571,10 +1571,7 @@ svenskafans.com##.puff__ad-heading
 svenskaturistforeningen.se##.cookie-box
 svenskbyggtidning.se##.ad-toppbanner
 svenskfast.se##.cookie-law__wrapper
-svenskhistoria.se###text-13
-svenskhistoria.se##.module-etads
-svenskhistoria.se##.widget_et_ads
-svenskhistoria.se##a[target="_blank"][rel="noopener noreferrer"]
+svenskhistoria.se##.widget_et_ads, .module-etads, #text-13, a[target="_blank"][rel="noopener noreferrer"]
 svenskjakt.se##.flaket-premium-adverts
 svenskorientering.se###RightDiv
 svensktgolfforum.se##[data-ad-id]
@@ -1601,8 +1598,6 @@ tekniksmart.se##.code-block, main > div:last-child:not(:only-child)
 tennisstockholm.se###RightOuterBannerDiv
 testfakta.se##.row-uppdragstest
 thelocal.se##div.section:not([class$="section"])
-tidningenelektrikern.se##img[title^="Annons"]
-tidningenproffs.se##.wppasrotate
 tidningenridsport.se###captive
 tidningenridsport.se##.subscribe_now_popup
 tidningenridsport.se##.type-native
@@ -1658,7 +1653,6 @@ yelp.se##.js-cookie-iframe
 ||123on.com/images/pixel
 ||123on.com/logs$xmlhttprequest
 ||123on.com/static/videojs.pulse.$script
-||123on.com^$third-party,domain=tidningenproffs.se
 ||172.104.145.13^
 ||1terms.com^
 ||7godscasino.com^$popup,third-party
@@ -1852,6 +1846,7 @@ yelp.se##.js-cookie-iframe
 ||easyweb.se/stats/$image
 ||ecomm.events/i.js
 ||edgeflyfishing.com^$image,domain=jaktsidan.se
+||elfsight.com/events/views
 ||emg-services.net/public/scripts/bundles/emg-desktop$script
 ||emotorsport.se/ans/$image
 ||engage-auth.schibsted.media^$script
@@ -1935,7 +1930,7 @@ yelp.se##.js-cookie-iframe
 ||idrottonline.se/client-views/cookieinfo$xmlhttprequest
 ||idrottonline.se^*/samarbetspartners$image
 ||imgix.net^*/analytics.$script
-||imp.laget.se^$image
+||imp.laget.se^
 ||improvedigital.com^$third-party
 ||inevserver.com/~tournreport/$image
 ||influact.com^$third-party
@@ -2110,6 +2105,8 @@ yelp.se##.js-cookie-iframe
 ||pxl.host^$third-party
 ||rabattkoder.ifragasatt.se^
 ||rabble-res.cloudinary.com^$third-party
+||radio.se^*/clickperformance
+||ramses.nu^*/banners/
 ||reaktion.se^$third-party
 ||realiteti.info^
 ||recirculation.spot.im^$third-party
