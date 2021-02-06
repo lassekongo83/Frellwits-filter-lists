@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2021-02-05 11:07:23 CET
+! Last modified: 2021-02-06 08:13:50 CET
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -66,8 +66,8 @@
 ###cookiejar
 ###cookielawwarning
 ###cookieMsgBlock
-###cookieNotice
 ###CookieNotice
+###cookieNotice
 ###cookies-acceptance .alert.bottom
 ###cookiesInfo
 ###dialog-eu-cookie-law
@@ -231,6 +231,7 @@
 ##div#sliding-popup div[class^="eu-cookie"]
 ##div#toppannons
 ##div#topreklam
+##div.ad-toppbanner
 ##div.ad.container
 ##div.avia-cookiemessage-bottom
 ##div.better-ads-listitemad
@@ -414,7 +415,6 @@
 /cmp.js$script,domain=recept.se
 /consent.js$domain=nsk.se|skd.se
 /cookie-banner$script,domain=skyscanner.se
-/cookie/GA$xmlhttprequest,domain=tui.se
 /cookie_info.$domain=trendenser.se
 /cookie_policy$script,domain=nasdaqomxnordic.com
 /CookieBar$script,domain=morningstar.se
@@ -468,7 +468,6 @@
 /glimr.$script,domain=affarsliv.com|affarslivgotland.se|aftonbladet.se|blocket.se|corren.se|di.se|dn.se|ekuriren.se|eposten.se|folkbladet.se|gotland.net|helagotland.se|kindaposten.se|kkuriren.se|klackspark.com|kuriren.nu|mvt.se|norran.se|norrbottensaffarer.se|nsd.se|nt.se|pt.se|sn.se|strengnastidning.se|unt.se|viivilla.se|vimmerbytidning.se|vt.se
 /gpAnalytics/*$script
 /gplus.php$script,domain=fria.nu|friatidningen.se|goteborgsfria.se|landetsfria.se|sesam.nu|stockholmsfria.se
-/gtm.js?$script,~third-party,xmlhttprequest,domain=tui.se
 /headerbidding.js
 /helios/multiad_jquery.$script
 /hemmafixbloggen/includes/events-tracker
@@ -488,7 +487,6 @@
 /isbanner/ib.js
 /javascript_nbenhadverts/*
 /jquery-eu-cookie-law-popup.$script
-/jquery-popupoverlay.js$domain=expressnytt.se
 /js/abd.js$domain=fokus.se
 /js/acceptCookies.
 /js/adLocker.
@@ -1014,7 +1012,7 @@ aventyrsresor.se,travelnews.se##.newsletter-popup
 axess.se##.popup--cookie
 axier.se##.consent
 axier.se,emocore.se,svenskamagic.com###reklam
-backpacking.se##body > aside.mh-container:first-child
+backpacking.se,byggteknikforlaget.se,dialasen.com,torbjornstips.se##.textwidget a[target="_blank"]
 badminton.nu,bandybyn.se###RightOuterBannerDiv
 bandybyn.se##.StartPageBoxRow > .boxcontainer:last-child > .StartPageBoxNarrow
 bandybyn.se##.StartPageBoxRow > .boxcontainer:nth-child(2) > .StartPageBoxNarrow
@@ -1069,7 +1067,6 @@ byggipedia.se##.protect_contents-overlay
 byggnadsarbetaren.se##[class^="siteAds"], .siteAlerts
 byggnyheter.se,dagensfastigheter.se,dagensnaringsliv.se,energinyheter.se,industrinyheter.se,infrastrukturnyheter.se,inredningsnyheter.se,jarnvagsnyheter.se,metallerochgruvor.se,papperochmassa.se,solenerginyheter.se,sportochfritidsnyheter.se,stockholmsbyggnyheter.se,transportochlogistik.se,vindkraftsnyheter.se##.insider-ads, [id^="mainadvertorial"], [id^="dfptag"], .block-advertorial, .block-views-blockconventus-info-articles-info-article-block
 byggteknikforlaget.se###text-2.widget_text, .header-widget-area
-byggteknikforlaget.se,dialasen.com,torbjornstips.se##.textwidget a[target="_blank"]
 byggteknikforlaget.se,fotbolldirekt.se,hockeysverige.se,hypeline.se,innebandymagazinet.se,maklarvarlden.se,motivation.se,skidresultat.se,uppslaget.se##.annons
 byggvarlden.se,hotellorestaurang.se##.ContentRight-50 .featured, #bannnerContainer, ul.productnews
 bytbil.com###privacyModal
@@ -1123,8 +1120,9 @@ dayviews.com##.content-center-ad, .frontPageBox--links
 dekra.de#@##cookie-banner
 deliquate.se##.ajax_loader
 deliquate.se##[id^="ads300"], [id^="linkcat-"]
+delupe.se###preloader
 devote.se,familjeliv.se##div[style*="height: 244px;"]
-di.se##.bandit-box__teaser--native,.service-box,.discount-box,.di_panorama__isAdLabel,.di_panorama-wrapper,.di_teaser-flak-container--native,.di_teaser-flak-planbokskoll,.di_stock-service,.native-box,.di_teaser--native
+di.se##.bandit-box__teaser--native,.service-box,.discount-box,.di_panorama__isAdLabel,.di_panorama-wrapper,.di_teaser-flak-container--native,.di_teaser-flak-planbokskoll,.di_stock-service,.native-box,.di_teaser--native,.campaign-ad-box
 di.se##.di_start__teaser-placeholder[data-content-url*="/ads/"]
 di.se##[class^="gdpr-policy"]
 di.se,dn.se,expressen.se###rich-media-ads
@@ -1189,7 +1187,6 @@ expressen.se##.widget-ad-marker, .widget-ad-marker + a
 expressen.se##a[data-click-track*="prisjakt"]
 expressen.se##a[href*="/spel.exp"], a[href*="/lanapengar.exp"], a[href*="/rabattkoder.exp"], a[href*="/annons"]
 expressen.se##figure[data-article-data*="/sponsrat"], figure[data-article-data*="/annons"], figure[data-article-data*="/brand-studio"]
-expressnytt.se###poput
 falubsbandy.com##.ImageLinkBox
 familjeliv.se##a[href*="/kampanj/"], .flm-kampanj
 familjesidan.se##.cookies-wrapper
@@ -1291,7 +1288,7 @@ hitta.se###__next > div[class^="style_notification"]
 hitta.se##[class*="dummyAd"], [class*="StyledAdSlot"], [data-bind*="Ad"], div[class^="GraphicAd_"]
 hitta.se##[class^="styleManual_mainContentBox"] > div[style^="min-height"]:first-of-type
 hitta.se##[data-trackimp], .integration-txt
-hittahem.se###cookie-approval-wrapper
+hittahem.se##.user-consent.active
 hockeybladet.nu##.td_mod_wrap > a > img[data-permalink]
 hockeybladet.nu##.td_mod_wrap > p > a > img[data-permalink]
 hockeybladet.nu##.wpcnt
@@ -1569,7 +1566,6 @@ sveajordskog.se##[id^="jords-"]
 svenskafans.com##.cookieConsent
 svenskafans.com##.puff__ad-heading
 svenskaturistforeningen.se##.cookie-box
-svenskbyggtidning.se##.ad-toppbanner
 svenskfast.se##.cookie-law__wrapper
 svenskhistoria.se##.widget_et_ads, .module-etads, #text-13, a[target="_blank"][rel="noopener noreferrer"]
 svenskjakt.se##.flaket-premium-adverts
@@ -1619,7 +1615,6 @@ tv.nu##a[href*="adform.net"]
 tvmatchen.nu##.bet365
 upphandling24.se##.type-partnerartikel
 uppsalanyheter.se###banner-top-block
-utsidan.se###mastertop
 vagabond.se##.latest-article-native
 varden.se##.cdk-overlay-container, app-cookies
 varldenshaftigaste.se###getFixed
@@ -1830,7 +1825,6 @@ yelp.se##.js-cookie-iframe
 ||delivery.adten.eu^$third-party
 ||delivery.vidible.tv^$third-party,domain=teknikhype.se
 ||delivery.youplay.se/report?$image
-||delupe.se^*/iframe-track.$script
 ||destination.se^$third-party
 ||digital.di.se/api/sponsor/$xmlhttprequest
 ||distansarbete.com^
@@ -2092,7 +2086,7 @@ yelp.se##.js-cookie-iframe
 ||prisguide.no/price.js?partner$third-party
 ||prisjakt-a.$third-party,domain=~hintaopas.fi|~ledenicheur.fr|~pricespy.co.nz|~pricespy.co.uk|~prisjagt.dk|~prisjakt.no|~prisjakt.nu
 ||prisjakt.nu^$third-party
-||privacy-center.org^$domain=stegforhalsa.se
+||privacy-center.org^$domain=di.se|stegforhalsa.se
 ||proxyas.com^$third-party
 ||ptm.flowplayer.com^*/display$xmlhttprequest
 ||ptm.flowplayer.com^*/ping$xmlhttprequest

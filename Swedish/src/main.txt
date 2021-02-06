@@ -927,6 +927,7 @@ artbannersplus&task=show
 ##[class*="advads_ad_widget"]:not(body):not(html)
 ##[id^="adace_ads"]
 ##div.ad.container
+##div.ad-toppbanner
 ##div.avia-cookiemessage-bottom
 ##div.better-ads-listitemad
 ##div.borka-ad
@@ -1094,7 +1095,7 @@ airam.fi##.body-fixed:style(position: unset !important;)
 ||youbora.com^$important,third-party,domain=aftonbladet.se|svd.se
 ||zotabox.com^$third-party,domain=etunawebben.se
 ||tags.tiqcdn.com^$domain=mallorcaliv.se
-||privacy-center.org^$domain=stegforhalsa.se
+||privacy-center.org^$domain=stegforhalsa.se|di.se
 ||piano.io^$domain=thelocal.se
 
 ! Common scriptlets
@@ -1489,7 +1490,7 @@ digital.di.se##.start__articles-ad
 ||digital.di.se/api/sponsor/$xmlhttprequest
 di.se##[class^="gdpr-policy"]
 di.se##.di_start__teaser-placeholder[data-content-url*="/ads/"]
-di.se##.bandit-box__teaser--native,.service-box,.discount-box,.di_panorama__isAdLabel,.di_panorama-wrapper,.di_teaser-flak-container--native,.di_teaser-flak-planbokskoll,.di_stock-service,.native-box,.di_teaser--native
+di.se##.bandit-box__teaser--native,.service-box,.discount-box,.di_panorama__isAdLabel,.di_panorama-wrapper,.di_teaser-flak-container--native,.di_teaser-flak-planbokskoll,.di_stock-service,.native-box,.di_teaser--native,.campaign-ad-box
 /getnative$xmlhttprequest,domain=di.se
 ! EXPRESSEN
 ||lifestyle.expressen.se^$subdocument
@@ -1852,7 +1853,7 @@ omnihalsa.com,skanesport.se,sportpanelen.se##.stream-item
 hallakonsument.se,handels.se,megafonen.se##.cookie-information
 mkse.com,cyclingplus.se###upprev_box
 motivation.se##.topbanner
-byggteknikforlaget.se,dialasen.com,torbjornstips.se##.textwidget a[target="_blank"]
+byggteknikforlaget.se,dialasen.com,torbjornstips.se,backpacking.se##.textwidget a[target="_blank"]
 
 ! Various websites with lots of malicious stuff and annoyances
 /wp-content/themes/keremiya1/js/script.js$script
@@ -1908,6 +1909,7 @@ deliquate.se##.ajax_loader
 pingpong.se##.l-preloader
 surfa.se,hemmafixbloggen.se###loader-wrapper
 sjoaguden.se##.av-siteloader-wrap
+delupe.se###preloader
 ! utm
 utm_$document,queryprune=/^utm_/,domain=tv.nu|booli.se|alltommat.se|damernasvarld.se|skonahem.com|teknikensvarld.se|expressen.se|aftonbladet.se
 
@@ -2437,19 +2439,10 @@ orebronyheter.com###top-wrapper
 radio.se##.topAdSpacer
 spanaren.se##.textwidget a[target="blank"] img
 svenskhistoria.se##.widget_et_ads, .module-etads, #text-13, a[target="_blank"][rel="noopener noreferrer"]
-svenskbyggtidning.se##.ad-toppbanner
-||delupe.se^*/iframe-track.$script
 tittapavideon.se##.adv
 tittapavideon.se###cookcont
-backpacking.se##body > aside.mh-container:first-child
-hittahem.se###cookie-approval-wrapper
-/jquery-popupoverlay.js$domain=expressnytt.se
-expressnytt.se###poput
+hittahem.se##.user-consent.active
 mygatemagazine.se##.textwidget:has-text(Annons)
-radron.se##+js(cookie-remover, RR_RP)
-utsidan.se###mastertop
-/gtm.js?$~third-party,xmlhttprequest,script,domain=tui.se
-/cookie/GA$xmlhttprequest,domain=tui.se
 rikatillsammans.se##article:has(.sponsor_pre_heading)
 vilaser.se##+js(set, vil_js_params, undefined)
 veckorevyn.com##.category-partner-promotion
