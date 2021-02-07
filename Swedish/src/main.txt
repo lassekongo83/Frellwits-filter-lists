@@ -305,6 +305,7 @@ artbannersplus&task=show
 /ad_acknowledgment$xmlhttprequest
 /adnami/macro/*$script
 /ad-takeover
+/ads.article.js
 /ads.for.me/jsa?$script
 /advertisement-dfp$script
 /ajax/docu_stats.jsp$xmlhttprequest
@@ -366,6 +367,7 @@ artbannersplus&task=show
 /HSSAnalyticsUtils.js
 /iab/iab.js
 /img/bettingstugan.
+/infinite-ads.js
 /isbanner/ib.js
 /javascript_nbenhadverts/*
 /jquery-eu-cookie-law-popup.$script
@@ -634,6 +636,7 @@ artbannersplus&task=show
 ||track.intersport.se^$xmlhttprequest
 ||video-static.tunnl.com/js/blocker.min.js$script
 ||videoplaza.*/proxy/tracker?
+||umami.nordiskehandel.cloud^
 ||webbannons.ntm.eu^$subdocument
 ||webformscr.com/apps/fc3/build/default-handler.js
 ||widgets.getpocket.com^$third-party
@@ -645,6 +648,7 @@ artbannersplus&task=show
 ||xfm.se/cookie/cookie_popup.$script
 ||yle.fi/initAdobeAnalytics.$script
 ||znaptag-tags-se.s3.amazonaws.com^$script
+||link.theplatform.com^
 
 ! Scams and badware
 .info/svt-se-nyheter/$document
@@ -794,6 +798,7 @@ artbannersplus&task=show
 ###gdpr-bar
 ###gdpr-consent
 ###itc-cookie-notify.active
+###js-cookie-section.show
 ###js__cookie-disclaimer
 ###leeads-panorama-container
 ###moove_gdpr_cookie_info_bar
@@ -932,6 +937,7 @@ artbannersplus&task=show
 ##div.better-ads-listitemad
 ##div.borka-ad
 ##div.bs-wrap-gdpr-law
+##div.cookie-block
 ##div.cookie-show-bar-bottom
 ##div.cookie-notification-show
 ##div.oc_cb_wrapper.fill_black
@@ -955,6 +961,7 @@ artbannersplus&task=show
 ##div#sliding-popup div[class^="eu-cookie"]
 ##div#topreklam
 ##div#banner_right
+##div[class^="sqs-cookie-banner"]
 
 ! Site specific whitelists
 @@/ad.php$script,~third-party,domain=99mac.se|skogstok.se|temperatur.nu
@@ -1055,7 +1062,7 @@ airam.fi##.body-fixed:style(position: unset !important;)
 /modules/GTM$script,domain=iform.se|digitalfotoforalla.se|natgeo.se|popularhistoria.se|aktivtraning.se|pctidningen.se|militarhistoria.se
 /modules/ctm-$script,domain=iform.se|digitalfotoforalla.se|natgeo.se|popularhistoria.se|aktivtraning.se|pctidningen.se|militarhistoria.se
 /newsletter/*$domain=zalando.se
-/profile$ping,domain=feber.se|hamnen.se|lawline.se|tasteline.com|tjock.se
+/profile$ping,domain=feber.se|hamnen.se|lawline.se|tasteline.com|tjock.se|veckorevyn.com
 /pum/*$script,xmlhttprequest,domain=byggipedia.se|opulens.se|tkj.se|exponera.nu|flm.nu
 /pum/*$stylesheet,domain=it-finans.se|it-halsa.se|it-kanalen.se|it-pedagogen.se|it-retail.se
 /s_code.js$domain=dagenstv.com
@@ -1114,6 +1121,7 @@ handbollskanalen.se##+js(acis, advads_has_ads)
 finansliv.se,lararnastidning.se,tidningenridsport.se,sulkysport.se,scanaktier.se,lektion.se##+js(aopr, OA_show)
 nyheteridag.se,dagensps.se##+js(acis, googletag)
 mobilanyheter.net,lchfarkivet.se,lakartidningen.se##+js(set, MonsterInsights, undefined)
+egoinas.se,fysikstugan.se,enkelteknik.se,hamnen.se##+js(acis, ai_front)
 
 ! Facebook junk
 ||connect.facebook.net^*/fbds.js$third-party,domain=~facebook.com
@@ -1910,6 +1918,7 @@ pingpong.se##.l-preloader
 surfa.se,hemmafixbloggen.se###loader-wrapper
 sjoaguden.se##.av-siteloader-wrap
 delupe.se###preloader
+evalent.se##.loadPage
 ! utm
 utm_$document,queryprune=/^utm_/,domain=tv.nu|booli.se|alltommat.se|damernasvarld.se|skonahem.com|teknikensvarld.se|expressen.se|aftonbladet.se
 
@@ -2443,34 +2452,18 @@ tittapavideon.se##.adv
 tittapavideon.se###cookcont
 hittahem.se##.user-consent.active
 mygatemagazine.se##.textwidget:has-text(Annons)
-rikatillsammans.se##article:has(.sponsor_pre_heading)
-vilaser.se##+js(set, vil_js_params, undefined)
-veckorevyn.com##.category-partner-promotion
-veckorevyn.com##.annons-block
-/CookieInfo.$script,domain=viddla.se
-fysikstugan.se,enkelteknik.se,hamnen.se##+js(acis, ai_front)
-konsumentverket.se##.cookie-block
-lantmateriet.se##.cookie.show
+/CookieInfo.js$domain=viddla.se
 bicycling.se,runnersworld.se##.post-card-sponsored
 bicycling.se,runnersworld.se##.modal-plus, .modal-backdrop, .footer-newsletter
 bicycling.se,runnersworld.se##.modal-open:style(overflow: initial !important;)
-gardets.nu##[class^="sqs-cookie-banner"]
-/social-buttons$script,domain=gardets.nu
-/simple-liking$script,domain=gardets.nu
-/history_cookie_notice.$script,domain=historytv.se
-sv.geneanet.org###header-info-cookie
-/core/analytics$script,domain=sv.geneanet.org
-macken.xyz##.et_builder_inner_content > .et_pb_section_2
+/share-buttons$script,domain=gardets.nu
 /buttonizer$domain=macken.xyz
-svenskjakt.se,jaktplay.se##+js(acis, desktop_random_ad_id)
-svenskjakt.se##.flaket-premium-adverts
+macken.xyz##.et_builder_inner_content > .et_pb_section_2
 jaktplay.se##.jaktplay-ad
-/fixed-panorama$domain=fiskejournalen.se
+||fiskejournalen.se^*/fixed-panorama
 fiskejournalen.se##.fisher-takeover-container
 fiskejournalen.se##+js(rc, no-scroll)
-evalent.se##.loadPage
 ||atgplay.se^*/stat$xmlhttprequest
-ingenjoren.se##.td-header-sp-recs
 /maps.sponsored-pill.$script,domain=tripadvisor.se
 ||tripadvisor.se^$csp=worker-src 'none'
 ||tripadvisor.se/PVLog
