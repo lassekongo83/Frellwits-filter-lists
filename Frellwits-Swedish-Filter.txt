@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2021-02-08 12:11:08 CET
+! Last modified: 2021-02-09 12:44:05 CET
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -249,6 +249,7 @@
 ##div.gdpr-warning-slide-up
 ##div.holidAds
 ##div.ilcc-cookie-consent-notice
+##div.js-top-banner-container
 ##div.l-footer__adtext
 ##div.NativeAd
 ##div.newsletter-cta
@@ -400,6 +401,7 @@
 /bilder/ads/*
 /bilder/betalannonser/*
 /bilder/foretag/*$domain=falubsbandy.com
+/bilder/logotyper/sponsorer-partners
 /bitcsys/js/bit.js$script
 /blogs/log_pageview/*$script
 /bmb-related-teasers$xmlhttprequest
@@ -552,7 +554,6 @@
 /new_construction_ads/*$domain=hemnet.se
 /newsletter/*$domain=zalando.se
 /noview.$script,domain=gofm.se|trafikdirekt.se|trafikexperten.com|trafikradion.se
-/oil/*$script,domain=findit.fi|findit.se
 /omniture/s_code.js$script,domain=~atgplay.se
 /OneSignalSDKWorker$script
 /orion/loada$script
@@ -759,7 +760,7 @@
 /sifo_msr.$script
 /siforesponsivemeasure.js$script
 /simple-liking$script,domain=dagsattplocka.se
-/site-notifications.$script,domain=se.invertalia.net
+/site-notifications$script,domain=se.invertalia.net
 /site_media/annons
 /sites/holid-$script,domain=kamerabild.se|mobil.se
 /SitesterSurvey*.$script,domain=wwf.se
@@ -776,7 +777,6 @@
 /sponsor/$image,domain=bandybyn.se|brynas.se|difhockey.se|ettgottskratt.se|farjestadbk.se|fotbollskanalen.se|freeride.se|frillesasbandy.se|frolundaindians.com|happyride.se|humorbibeln.se|hv71.se|ifkgoteborg.se|lhc.eu|luleahockey.se|malmoredhawks.com|moraik.se|newsner.com|orebrohockey.se|roglebk.se|skellefteaaik.se|sportbibeln.se|swehockey.se|timraik.se|vaxjolakers.se|vskbandy.se
 /Sponsor/*$domain=grontvader.se
 /sponsored_articles$domain=fastighetssverige.se
-/sponsorer-$image,domain=ridsport.se
 /sponsors$domain=sdhl.se|storvretaibk.se
 /spotlight-ad_$image
 /sptAutoTracker$script,domain=aftonbladet.se
@@ -791,6 +791,7 @@
 /sunt/mainfeed
 /sunt/sidefeed
 /sv_se/metrics/*$script,xmlhttprequest
+/svenska-ridsportforbundet/*banners
 /sweet-alert.$domain=hittaren.com
 /swordfishinc.download.akamai.com/*$script
 /tabs_hits_counter.php$image
@@ -1051,7 +1052,7 @@ branschkoll.se##.advert-widget
 bravenewbusiness.se##.site-information-container
 breakit.se##.videoAd, .js-video-ad
 breakit.se##[class*="sponsored"]
-brinkenbakar.se,nikkasystems.com##.elementor-popup-modal
+brinkenbakar.se##.elementor-popup-modal
 brollopsmagasinet.se,bussmagasinet.se,customerinsider.se,maklarvarlden.se,startaochdriva.se##a[target="_blank"]
 brollopstorget.se,familjeliv.se##.ad_right
 bukefalos.se,thaisnack.se##.u-bottomFixer
@@ -1134,6 +1135,7 @@ dn.se##.campaign-holder
 dn.se##.gdpr-header
 dn.se,klart.se##.ad-wrapper
 driva-eget.se,foretagande.se,hockeymagasinet.com,revisionsvarlden.se,runnersworld.se,utsidan.se##.sponsored
+drivkraftsverige.se##.policy-disclaimer
 duplotryck.se##.wof-overlay, .wof-wheels
 egoinas.se,metalcentral.net###tm-top-a
 ehandel.se##.commercial-row, .aside-image-with-link, .post-container-sponsored
@@ -1146,7 +1148,6 @@ elinskoglund.com,fannystaaf.se,lovisawallin.se,moamattsson.se,nouw.com##[title="
 ellinorlofgren.se,linnherbertsson.se,mp.se###cookies
 emocore.se###main > #home_start_div ~ .m_t.box:nth-last-child(-n+2)
 emocore.se###sticky-panorama
-enkelteknik.se##.annons-label
 esportare.se##a[href*="utm_campaign"]
 etc.se###popup, .etc-mobile-app-buttons-wrapper
 etc.se##.article-type-annons, .banner-wrap
@@ -1301,7 +1302,6 @@ hypeline.se##.sponsrad_ruta
 icagruppen.se##.cookieInfo
 idg.se##.sparticle, .nextArticleSp, .pryltorget, .prisjakt, .prisjaktCompare, .teasers-block.bfteasers
 idg.se,macworld.se,nsk.se,skd.se##.adContainer
-ikea.com##.cookie-bot-overlay.is--visible
 ilikeradio.se,netdoktor.se,nevnarien.se,pomu.se,su.se,wwf.se##.cc-banner
 inblick.se##.cookieBG
 innebandy.se##.external-banner-container-distrikt, .external-banner-container
@@ -1479,8 +1479,7 @@ receptcentralen.se###text-9
 res.se##.node-sponsored-article
 reseguiden.se##.adsbox-wrapper
 revisionsvarlden.se##a[onclick*="banner"]
-ridsport.se##.svrf-block__banner
-ridsport.se##.svrf__sticky-ad
+ridsport.se##.svrf__sticky-ad, .svrf-block__banner
 riktighockey.se###custom_html-2
 rocknytt.net##[data-widget_type*="bnnrwidgets"], a[href*="/annons/"]
 rotter.se##.cookie_wrap
@@ -1498,7 +1497,7 @@ se.invertalia.net##.js-cookies-notification
 se.readly.com##.show-consent
 sexpacket.se##.info_cookies
 sff.nu###sidebar > li:not(.widget_wp_sidebarlogin), li.widget_sp_image
-shoegazing.se###main-sidebar > .widget_media_image
+shoegazing.se###main-sidebar .widget_media_image, #post-sidebar .widget_media_image, #content > .code-block
 shortcut.se##.annons-block, .layout-advertisement
 siriusbandy.se,vetlandabk.se##[id$="-ad"]
 sjoaguden.se##.av-siteloader-wrap
@@ -1516,7 +1515,6 @@ smartsenior.se##.ss-modal, .modal-mobile-app
 smhi.se##.polopolyNotification
 so-rummet.se##.block-advert
 spanaren.se##.textwidget a[target="blank"] img
-spbi.se##.policy-disclaimer
 spelagratis.se##.ad_header + p
 spelagratis.se##.sidebar-right
 spisa.nu###app > div > div > div[class]:not([data-reactid])
@@ -1524,8 +1522,7 @@ sportbilen.se###heateor_ss_browser_popup_bg
 sportbilen.se###text-4
 sportbilen.se###the_champ_sharing_more_providers
 sportbladetplay.se,sportexpressenplay.se##[class^="CookieConsentPopup"]
-sportbloggare.com##.cube-bonus-list
-sportbloggare.com##.partners-box
+sportbloggare.com##.partners-box, .cube-bonus-list
 sportexpressenplay.se##[class^="BauProvider"]
 sporthalsa.se###text-6
 sporthalsa.se##.header_top
@@ -1735,7 +1732,7 @@ yelp.se##.js-cookie-iframe
 ||cdn.advisible.com/adk$third-party
 ||cdn.ampproject.org^$third-party,domain=piraja.se
 ||cdn.axiell.com^*/cookie-disclaimer.$script
-||cdn.cookielaw.org^$script,domain=cartoonnetwork.se|discoveryplus.se|flashscore.se|fotbollskanalen.se|koket.se|manpower.se|nvp.se|recept.se|svenskorientering.se|tv4.se|tv4play.se
+||cdn.cookielaw.org^$script,domain=cartoonnetwork.se|discoveryplus.se|findit.se|flashscore.se|fotbollskanalen.se|ikea.com|koket.se|manpower.se|nvp.se|recept.se|svenskorientering.se|tv4.se|tv4play.se
 ||cdn.iubenda.com/iubenda.$script
 ||cdn.jsdelivr.net/npm/search-insights$script,domain=forum.hallon.se
 ||cdn.livechatinc.com/tracking.$script
