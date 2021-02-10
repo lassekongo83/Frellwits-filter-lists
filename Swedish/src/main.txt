@@ -296,6 +296,7 @@ artbannersplus&task=show
 .se/wp-content/banners/
 .se/xhr/add-impression/
 /468adrotate.php
+/?adsforwp_front_js
 /?dtbnrspcid=$xmlhttprequest
 /?file=lokus$subdocument
 /_adsmodern/*$image
@@ -954,6 +955,8 @@ artbannersplus&task=show
 ##div.ilcc-cookie-consent-notice
 ##div.outsideAdsWrapper
 ##div.gdpr-warning-slide-up
+##div.sgm-ad
+##div.sgm-large-ad
 ##div.sol-cookie-message
 ##div.topmost-banner
 ##div.sidebar-item .banner-box
@@ -1098,7 +1101,7 @@ airam.fi##.body-fixed:style(position: unset !important;)
 ||mailerlite.com^$third-party,domain=svenskamagasinet.nu|vandringsguiden.se
 ||mailmunch.co^$third-party,domain=affarsstaden.se|enkelteknik.se|villalivet.se|kingsizemag.se
 ||marketingautomation.services^$third-party,domain=wesafe.se
-||onetrust.com^$third-party,domain=yougov.se
+||onetrust.com^$third-party,domain=lantmannen.se|yougov.se
 ||sp-prod.net^$third-party,domain=radioplay.se
 ||sentry-cdn.com^$third-party,domain=svd.se|koket.se|bytbil.com
 ||delivery.vidible.tv^$third-party,domain=teknikhype.se
@@ -1346,6 +1349,7 @@ nyadagbladet.se,fysikstugan.se,thorengruppen.se,brpsystems.se,pppress.se,utslapp
 nyadagbladet.se##^script:has-text(exactmetrics_scroll_tracking_load)
 nyadagbladet.se##^script:has-text(OneSignal)
 nyadagbladet.se##^script:has-text(admiral-engaged)
+futsalmagasinet.se##^script[id^="buy_sell_ads"]
 !#endif
 
 ! For browsers that aren't firefox
@@ -1580,12 +1584,12 @@ viivilla.se##.teaserblockdata:has(.teaser-sponsored-text)
 /adv_utils.$script,domain=viivilla.se
 ||ma-track.bonnierpublications.se^
 ||ma.bonnierpublications.se/mtc/event
-/pages/native$domain=aktuellhallbarhet.se|dagensmedia.se|dagensmedicin.se|fastighetsnytt.se|resume.se
-/pages/tag$domain=aktuellhallbarhet.se|dagensmedia.se|dagensmedicin.se|fastighetsnytt.se|resume.se
-aktuellhallbarhet.se,dagensmedia.se,dagensmedicin.se,fastighetsnytt.se,resume.se###__next > div[class^="css-"]:last-child
-aktuellhallbarhet.se,dagensmedia.se,dagensmedicin.se,fastighetsnytt.se,resume.se##a[href^="/annons/"], a[href^="/native/"]
-aktuellhallbarhet.se,dagensmedia.se,dagensmedicin.se,fastighetsnytt.se,resume.se##.slot-module, .slot-articlemodule
-aktuellhallbarhet.se,dagensmedia.se,dagensmedicin.se,fastighetsnytt.se,resume.se##.slot-panorama:upward(1)
+/pages/native$domain=aktuellhallbarhet.se|byggindustrin.se|dagensmedia.se|dagensmedicin.se|fastighetsnytt.se|resume.se
+/pages/tag$domain=aktuellhallbarhet.se|byggindustrin.se|dagensmedia.se|dagensmedicin.se|fastighetsnytt.se|resume.se
+aktuellhallbarhet.se,byggindustrin.se,dagensmedia.se,dagensmedicin.se,fastighetsnytt.se,resume.se###__next > div[class^="css-"]:last-child
+aktuellhallbarhet.se,byggindustrin.se,dagensmedia.se,dagensmedicin.se,fastighetsnytt.se,resume.se##a[href^="/annons/"], a[href^="/native/"]
+aktuellhallbarhet.se,byggindustrin.se,dagensmedia.se,dagensmedicin.se,fastighetsnytt.se,resume.se##.slot-module, .slot-articlemodule
+aktuellhallbarhet.se,byggindustrin.se,dagensmedia.se,dagensmedicin.se,fastighetsnytt.se,resume.se##.slot-panorama:upward(1)
 digitalfotoforalla.se,natgeo.se,popularhistoria.se,militarhistoria.se,iform.se,aktivtraning.se,pctidningen.se##.scroll-message
 digitalfotoforalla.se,natgeo.se,popularhistoria.se,militarhistoria.se,iform.se,aktivtraning.se,pctidningen.se##.gallery-banner, .horseshoe, [data-ad-type]
 digitalfotoforalla.se,natgeo.se,popularhistoria.se,militarhistoria.se,iform.se,aktivtraning.se,pctidningen.se##li:has(.content-label:has-text(/annons/i)):remove()
@@ -1790,7 +1794,7 @@ isabellalowengrip.se##.post:has(em:has-text(/^i samarbete med/i))
 ! Common cosmetic filters that shouldn't be generic
 alicestenlof.com,tjanstebilen.se###cookies
 di.se,thelocal.se##.ad_container
-businessclass.se,spela.se,effektmagasin.se,svenskorientering.se,aftonbladet.se##.advert
+businessclass.se,spela.se,effektmagasin.se,svenskorientering.se,aftonbladet.se,halsasverige.se##.advert
 alltforforaldrar.se,battrestadsdel.se,flashback.se,mammasidan.se,minbebis.com,casinoexpo.se,leta.se###top-banner
 chef.se,svd.se##.Ad
 friluftsframjandet.se##.Ads
@@ -1845,7 +1849,7 @@ svenskfotboll.se,gbgfotboll.se###cookie_bar
 gentlemannaguiden.com##.advertising
 newsner.com,humorbibeln.se,sportbibeln.se,ettgottskratt.se##.ad-space
 ehandel.se,bytbil.com##.article-sponsored
-ekonominyheter.se,gjuteriet.se,haaf.se,hockeybladet.nu,mariefredstidning.se##.td-a-rec
+ekonominyheter.se,gjuteriet.se,haaf.se,hockeybladet.nu,mariefredstidning.se,norrortssporten.se##.td-a-rec
 uwtd.me,ekonominyheter.se,autonytt.se,undervarttak.se,aftonbladet.se,xn--snabbalnen-75a.se,lesscarbs.se,hockeybladet.nu##a[href*="/track.adtraction."]
 svenskaturistforeningen.se##.cookie-box
 fokus.se,sverigeskonsumenter.se###cookie-box
@@ -1864,6 +1868,7 @@ hallakonsument.se,handels.se,megafonen.se##.cookie-information
 mkse.com,cyclingplus.se###upprev_box
 motivation.se##.topbanner
 byggteknikforlaget.se,dialasen.com,torbjornstips.se,backpacking.se##.textwidget a[target="_blank"]
+automation.se,verkstadstidningen.se,transportnytt.se,peace.ax##.bannergroup
 
 ! Various websites with lots of malicious stuff and annoyances
 /wp-content/themes/keremiya1/js/script.js$script
@@ -2499,31 +2504,16 @@ sportbloggare.com##.partners-box, .cube-bonus-list
 lokalsport.nu##.art-sidebar1, .art-sidebar2
 rastaochdalla.se##.widget_advertise
 rastaochdalla.se##.sidebar-right > .widget_social_links
-norrortssporten.se##.td-post-content > div[style^="float: none"]
-norrortssporten.se##.td-a-rec-id-custom-spot
-hockeybladet.nu##.wpcnt
-hockeybladet.nu##.td_mod_wrap > a > img[data-permalink]
-hockeybladet.nu##.td_mod_wrap > p > a > img[data-permalink]
-hockeybladet.nu##a[data-wpel-link="external"][onclick]
+hockeybladet.nu##.td_mod_wrap a img[data-permalink], a[data-wpel-link="external"][onclick]
 futsalmagasinet.se##.vc_widget_sidebar > .widget_text
 futsalmagasinet.se##.td_block_wrap:has(span:has-text(/annonserat innehåll/i))
 luss.se##.sidebar > .widget_text:not(.widget_custom_html)
-aktuelltfokus.se##.leader-wrap-out
-aktuelltfokus.se###sidebar-wrap > .widget_media_image
 arkitekten.se##.post-teaser__wrapper--ad
-halsasverige.se##.isax
-/social-buttons$script,domain=dagsattplocka.se
-/simple-liking$script,domain=dagsattplocka.se
-/cookienotice.$script,domain=nordic.ign.com
-/js/zad.$script,domain=nordic.ign.com
+/cookienotice.js$domain=nordic.ign.com
+/zad.js$domain=nordic.ign.com
 /zdadkit$script,domain=nordic.ign.com
-alpresor.se##+js(acis, snowMax)
 alpresor.se###toast-container
-/cookieDirective.$script,domain=sdr.se
-automation.se,verkstadstidningen.se,transportnytt.se,peace.ax##.bannergroup
-byggindustrin.se##.sponsrat
-lantmannen.se##.cookieinformation
-sveajordskog.se##[id^="jords-"]
+/cookieDirective.js$domain=sdr.se
 xlbygg.se##.main.cookiewarning:style(margin-top: 0 !important)
 sportbilen.se###heateor_ss_browser_popup_bg
 sportbilen.se###the_champ_sharing_more_providers
