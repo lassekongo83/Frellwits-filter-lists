@@ -1101,7 +1101,7 @@ airam.fi##.body-fixed:style(position: unset !important;)
 ||execute-api.eu-west-1.amazonaws.com/*/event$xmlhttprequest,domain=forum.hallon.se
 ||herokuapp.com^$third-party,domain=aftonbladet.se
 ||js.hs-scripts.com^$third-party,domain=tholin.se|breakit.se
-||mailerlite.com^$third-party,domain=svenskamagasinet.nu|vandringsguiden.se
+||mailerlite.com^$third-party,domain=svenskamagasinet.nu|vandringsguiden.se|flm.nu
 ||mailmunch.co^$third-party,domain=affarsstaden.se|enkelteknik.se|villalivet.se|kingsizemag.se
 ||marketingautomation.services^$third-party,domain=wesafe.se
 ||onetrust.com^$third-party,domain=lantmannen.se|yougov.se
@@ -1870,7 +1870,7 @@ omnihalsa.com,skanesport.se,sportpanelen.se##.stream-item
 hallakonsument.se,handels.se,megafonen.se##.cookie-information
 mkse.com,cyclingplus.se###upprev_box
 motivation.se##.topbanner
-byggteknikforlaget.se,dialasen.com,torbjornstips.se,backpacking.se##.textwidget a[target="_blank"]
+byggteknikforlaget.se,dialasen.com,torbjornstips.se,backpacking.se,sporthalsa.se##.textwidget a[target="_blank"]
 automation.se,verkstadstidningen.se,transportnytt.se,peace.ax##.bannergroup
 
 ! Various websites with lots of malicious stuff and annoyances
@@ -2552,27 +2552,23 @@ bokadirekt.se##.home-banner, img[alt*="banner"]
 pricerunner.se##a[href*="&clickarea=sponsored"]
 pricerunner.se###consent
 pricerunner.se##.noscroll:style(overflow: initial !important;)
-kvartal.se##.email-popup-wrapper
+.html$subdocument,domain=flygtorget.se
 flygtorget.se###PreHeader
-*$subdocument,domain=flygtorget.se
-sporthalsa.se##.header_top
-sporthalsa.se###text-6
-armsport.nu###page-overlay
+sporthalsa.se##.header_top, #media_image-2
+sporthalsa.se##a[href*="/annonsering"]
+sporthalsa.se##h4:has-text(veckans produkt):upward(3)
 ||emotorsport.se/ans/$image
 aventyrsresor.se##.newsletter-popup
-firstclassmagazine.se###leader-wrap
+firstclassmagazine.se###leader-wrap, #rpwe_widget-2
 firstclassmagazine.se##a:has(.feat-cat:has-text(/annons/i))
-spelagratis.se##.sidebar-right
-spelagratis.se##.ad_header + p
-kulturbloggen.com##.sidebar > .widget_custom_html
+spelagratis.se##.sidebar-right, .ad_header + p
+kulturbloggen.com,schack.se##.sidebar .widget_custom_html
 flm.nu##.spons
-schack.se###sidebar > .widget_custom_html
-lektionsbanken.se###partners_right, #partners_top
+schack.se##.schac-widget
 norrahalland.se##.norra-leeads-ads,.egna_annonser_widget
-djungeltrumman.se###sponsored-posts
-djungeltrumman.se###right-banners
-djungeltrumman.se##.item:has(.label-post:has-text(/spons/i))
 ?action=get_banners$domain=djungeltrumman.se
+djungeltrumman.se###sponsored-posts, #right-banners
+djungeltrumman.se##.item:has(.label-post:has-text(/spons/i))
 netbil.se,bilia.se###acceptcookies
 www.google.se##+js(ra, onmousedown|ping, a[href][onmousedown]\, a[href][ping])
 google.se##mobile-promo

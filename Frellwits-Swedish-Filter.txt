@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2021-02-12 08:16:35 CET
+! Last modified: 2021-02-13 11:43:10 CET
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -275,13 +275,13 @@
 ##ul.adsmodern
 &type=load_offers$xmlhttprequest,domain=illvet.se|pctidningen.se
 *$csp=script-src 'none',domain=svtt.se|ssvd.se|exressen.se|eexpressen.se|sskatteverket.se|aatg.se|atgg.se
-*$subdocument,domain=flygtorget.se
 -banner-$image,domain=litteraturmagazinet.se
 -popup-analytics$script
 .ax/ad/
 .ax/images/banners/
 .com/annons.$script,subdocument
 .com/misc/loada.js$script
+.html$subdocument,domain=flygtorget.se
 .nu/annons/
 .nu/banner/
 .nu/files/banner/
@@ -992,7 +992,6 @@ arbetarskydd.se,lag-avtal.se,nyteknik.se##.sponsored-box
 arkitekt.se##.Cookie
 arkitekten.se##.post-teaser__wrapper--ad
 arkitektur.se##[class*="panorama"]
-armsport.nu###page-overlay
 artbannersplus&task=show
 arvikanyheter.se,dalslanningen.se,filipstadstidning.se,fryksdalsbygden.se,hjotidning.se,karlskogatidning.se,kt.se,mariestadstidningen.se,nkp.se,nlt.se,nwt.se,provinstidningen.se,saffletidningen.se,sla.se,varmlandsaffarer.se,vf.se##[id^="nwt-marknadsguiden"]
 astmaoallergiforbundet.se##.banner-top, .banner-side, .section-top
@@ -1013,7 +1012,7 @@ aventyrsresor.se##.newsletter-popup
 axess.se##.popup--cookie
 axier.se##.consent
 axier.se,emocore.se,svenskamagic.com###reklam
-backpacking.se,byggteknikforlaget.se,dialasen.com,torbjornstips.se##.textwidget a[target="_blank"]
+backpacking.se,byggteknikforlaget.se,dialasen.com,sporthalsa.se,torbjornstips.se##.textwidget a[target="_blank"]
 badminton.nu,bandybyn.se###RightOuterBannerDiv
 bandybyn.se##.StartPageBoxRow > .boxcontainer:last-child > .StartPageBoxNarrow
 bandybyn.se##.StartPageBoxRow > .boxcontainer:nth-child(2) > .StartPageBoxNarrow
@@ -1121,8 +1120,7 @@ di.se,dn.se,expressen.se###rich-media-ads
 di.se,thelocal.se##.ad_container
 diabetes.se##.c-cookies
 digital.di.se##.start__articles-ad
-djungeltrumman.se###right-banners
-djungeltrumman.se###sponsored-posts
+djungeltrumman.se###sponsored-posts, #right-banners
 dn.se##.campaign-holder
 dn.se##.gdpr-header
 dn.se,klart.se##.ad-wrapper
@@ -1190,7 +1188,7 @@ fightermag.se##a[href*="/sponsra"]
 filmtipset.se###topslider-wrapper + .container > .sidebar
 filmtipset.se##.row.news > div[style^="border"]:last-of-type
 finansliv.se,vinochmatguiden.se##.newsletter
-firstclassmagazine.se###leader-wrap
+firstclassmagazine.se###leader-wrap, #rpwe_widget-2
 fiskejournalen.se##.fisher-takeover-container
 flamman.se##.Banner
 flashback.org###top-banner-row
@@ -1335,20 +1333,18 @@ kolozzeum.com##td[width="305"]
 komponentkoll.se##.disclaimMyNuuuuu ~ *
 komponentkoll.se##.gdpr-wide
 konsolnyheter.se##.wplinktrade
-kulturbloggen.com##.sidebar > .widget_custom_html
+kulturbloggen.com,schack.se##.sidebar .widget_custom_html
 kungalvsposten.se,kungsbackaposten.se,lokaltidningensto.se,molndalsposten.se##.wp-slot-layout-article-native, .native-div, [data-html*="ad-container"]
 kurera.se##.kurera-register-newsletter-popup
 kvalitetsmagasinet.se,miljo-utveckling.se,telekomidag.se,vdtidningen.se###subscribe_splash
 kvalitetsmagasinet.se,miljo-utveckling.se,telekomidag.se,vdtidningen.se##.partnermedia
 kvalitetsmagasinet.se,miljo-utveckling.se,telekomidag.se,vdtidningen.se##[class*="nativeadwidget"]
-kvartal.se##.email-popup-wrapper
 lajvo.se###panoramaTop
 landetsfria.nu,tidningensyre.se##div[style*="verdana; color:#888888"]
 landleyskok.se##.inpostbanner, .banner-leaderboard
 lararen.se,voister.se##.cookiebanner
 laromedia.se##img[alt="Annons"] + .img-flipper
 lchfarkivet.se##.wppopups-whole
-lektionsbanken.se###partners_right, #partners_top
 lesscarbs.se##.elementor-image > a
 lesscarbs.se##a[href*="/affiliates/"]
 leta.se###bookingcom-resor-wrapper
@@ -1467,7 +1463,7 @@ rotter.se##.cookie_wrap
 ruthless.se##.notices
 samnytt.se##.c-wysiwyg
 samnytt.se##a.c-news-post[href*="jackpott"], a.c-news-post[href*="-casino-"], a.c-news-post[href*="-betting-"]
-schack.se###sidebar > .widget_custom_html
+schack.se##.schac-widget
 schoolido.se##.so-cookie__area
 screen-marknaden.se##.fo-banner, .fp-banner
 sdhl.se,ssl.se,storvretaibk.se##.rmss_module-block-linked_image
@@ -1495,14 +1491,13 @@ skyscanner.se###cookie-banner-root
 smartsenior.se##.ss-modal, .modal-mobile-app
 smhi.se##.polopolyNotification
 spanaren.se##.textwidget a[target="blank"] img
-spelagratis.se##.ad_header + p
-spelagratis.se##.sidebar-right
+spelagratis.se##.sidebar-right, .ad_header + p
 sportbilen.se###text-4
 sportbladetplay.se,sportexpressenplay.se##[class^="CookieConsentPopup"]
 sportbloggare.com##.partners-box, .cube-bonus-list
 sportexpressenplay.se##[class^="BauProvider"]
-sporthalsa.se###text-6
-sporthalsa.se##.header_top
+sporthalsa.se##.header_top, #media_image-2
+sporthalsa.se##a[href*="/annonsering"]
 sportpanelen.se###text-html-widget-3
 sporttv.nu##a[onclick*="bannerClick"]
 spray.se##.column-left > .article-partial
@@ -1942,7 +1937,7 @@ yelp.se##.js-cookie-iframe
 ||ma.bonnierpublications.se/mtc/event
 ||maaw.io^$third-party
 ||mailchimp.com^*/popup$script
-||mailerlite.com^$third-party,domain=svenskamagasinet.nu|vandringsguiden.se
+||mailerlite.com^$third-party,domain=flm.nu|svenskamagasinet.nu|vandringsguiden.se
 ||mailmunch.co^$third-party,domain=affarsstaden.se|enkelteknik.se|kingsizemag.se|villalivet.se
 ||mailmunch.co^*/scrollbox.$script
 ||marfeelcache.com^$third-party
