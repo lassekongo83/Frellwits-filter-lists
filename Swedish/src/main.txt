@@ -360,6 +360,7 @@ artbannersplus&task=show
 /eu_cookie_alert/*
 /eu_cookie_compliance/*$script
 /eu-cookie-law.min.js$script
+/ext/phpbb/ads/*
 /forum/img/banners
 /forum/images/_banners
 /forumannons.$subdocument,image,script
@@ -412,7 +413,6 @@ artbannersplus&task=show
 /orion/loada$script
 /permutive-async.js$script
 /phaser-ads.min.js$script
-/phpbb_ads$image
 /Portalannonser/*$image
 /popup/follow-us-fb.$xmlhttprequest
 /prod/adform$xmlhttprequest
@@ -496,6 +496,7 @@ artbannersplus&task=show
 ||api.staylive.tv/videos/engagement$xmlhttprequest
 ||apis.google.com/js/plusone.js$third-party
 ||assets.pinterest.com/js/pinit$third-party
+||assets.tumblr.com/share-button.js$third-party
 ||auction-release.mlpapi.com/site/LoadPluginSite$script
 ||back.famebloggers.com/bloggerfy/tracker$script,subdocument
 ||bcm.interactives.dk/script/
@@ -971,6 +972,7 @@ artbannersplus&task=show
 ##div#sliding-popup div[class^="eu-cookie"]
 ##div#topreklam
 ##div#banner_right
+##div#outerAd
 ##div[class^="sqs-cookie-banner"]
 
 ! Site specific whitelists
@@ -992,7 +994,6 @@ artbannersplus&task=show
 @@||imasdk.googleapis.com/js/sdkloader/ima3.$script,domain=gamereactor.se|screen9.com|atl.nu|sn.se|ekuriren.se|kkuriren.se|strengnastidning.se
 @@/prebid.js$~third-party,domain=feber.se|tjock.se
 @@/assets/ads-$~third-party,domain=vackertvader.se
-@@/adblock-detector$~third-party,domain=pussad.se
 
 ! Unbreak
 skandia.se##div[data-block="CookieBannerBlock"]
@@ -2151,7 +2152,7 @@ mytaste.se##[id^="Modal_plugin"]
 mytaste.se##.recipe-modal[data-state=default] .modal-container.open, .recipe-modal[data-state=panorama] .modal-container.open:style(padding-top: 0 !important;)
 mytaste.se##.site-wrapper[data-state=panorama], .site-wrapper[data-state=default]:style(padding-top: 40px !important;)
 mytaste.se##body.modal-active.modal-open:before, body.modal-active:before:style(opacity: unset !important; content: unset !important;)
-lindasbakskola.se,mykitchenstories.se,jennysmatblogg.nu##.panorama-sticky, .sticky-area
+lindasbakskola.se,mykitchenstories.se,jennysmatblogg.nu,zeinaskitchen.se##.panorama-sticky, .sticky-area
 newsner.com,humorbibeln.se,sportbibeln.se,ettgottskratt.se###wsfb-container, .share-buttons
 newsner.com,humorbibeln.se,sportbibeln.se,ettgottskratt.se##.ssp_divider:has(.sponsored-bar)
 byggnadsarbetaren.se##[class^="siteAds"], .siteAlerts
@@ -2569,28 +2570,25 @@ norrahalland.se##.norra-leeads-ads,.egna_annonser_widget
 ?action=get_banners$domain=djungeltrumman.se
 djungeltrumman.se###sponsored-posts, #right-banners
 djungeltrumman.se##.item:has(.label-post:has-text(/spons/i))
-netbil.se,bilia.se###acceptcookies
+biliaoutlet.se,bilia.se###acceptcookies
 www.google.se##+js(ra, onmousedown|ping, a[href][onmousedown]\, a[href][ping])
 google.se##mobile-promo
-lindasbakskola.se,zeinaskitchen.se##.proad
 vibilagare.se##a[href^="/partnermaterial/"]
 senses.se##.isobrick:has(a[href*="casino"])
 senses.se##.isobrick:has(a[href*="glhf-gg"])
 senses.se##.isobrick:has(a[href*="betting"])
 senses.se##.isobrick:has(a[title^="Reklam:"])
+senses.se##.isobrick:has(a[title^="Sponsrat:"])
 /popup-overlay$domain=ettsthlm.se
-ettsthlm.se##[class^="sqs-cookie-banner"]
 turismnytt.se##.site-wrap > .row > .col-sm-3
 bilresaieuropa.se##.widget_text:has(.widget-title:has-text(/spons/i))
-gtsoder.se,maskalpin.se,telgesibk.se,fbitullinge.nu###outerAd
-alkompis.se###check-also-box
+alkompis.se##app-ads
+alkompis.se##.cdk-overlay-container
+alkompis.se##.cdk-global-scrollblock:style(overflow-y: initial !important; position: unset !important;)
 ||axier.se/i/commercials/
 axier.se##.consent
-/lottoland$image,domain=vett-och-etikett.com
 popularastronomi.se##a.gofollow[data-track]:not([href*="www.popularastronomi.se"])
 bildobubbla.se##.annonser
-mobilanyheter.net###amp-user-notification1
-/amp-addthis$domain=mobilanyheter.net
 /mod_responsivebannerslider$domain=bjuvsnytt.se
 frilagt.se###whitewrap > .wrapper-first:first-child
 frilagt.se##.column-2 > figure
@@ -2599,11 +2597,12 @@ pussad.se##html.g1-popup-visible:style(overflow: initial !important;)
 ||sv.picmix.com/sw.js
 ||sv.picmix.com^$csp=worker-src 'none'
 ||kritiker.se/js/gdpr.js
-svensk-seo.se,se.azrhymes.com#@#.adsbygoogle
-/phpbb/ads$script,domain=svensktgolfforum.se
+se.azrhymes.com##.shader, #CookielawBanner
+se.azrhymes.com##.info-center
+se.azrhymes.com##+js(nostif, .info-center)
+||walls.io^$domain=svensktgolfforum.se
 svensktgolfforum.se##[data-ad-id]
 svensktgolfforum.se,sjofart.net,polestarclubsweden.se##+js(acis, setTimeout, test)
-||walls.io^$domain=svensktgolfforum.se
 /evidon$script,domain=morningstar.se
 /usabilla$script,domain=morningstar.se
 /CookieBar$script,domain=morningstar.se

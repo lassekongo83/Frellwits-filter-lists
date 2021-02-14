@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2021-02-13 11:43:10 CET
+! Last modified: 2021-02-14 11:40:28 CET
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -228,6 +228,7 @@
 ##cookie-law-banner
 ##div#banner_right
 ##div#mega-ad-content
+##div#outerAd
 ##div#panorama_ad
 ##div#panoramaad
 ##div#schibsted-data-controller-sticky
@@ -365,7 +366,6 @@
 /ajax.php?action=get_policy&site=cookie-information$xmlhttprequest
 /ajax/docu_stats.jsp$xmlhttprequest
 /ajax_statistics_count$xmlhttprequest,domain=byggnyheter.se|dagensfastigheter.se|dagensnaringsliv.se|energinyheter.se|industrinyheter.se|infrastrukturnyheter.se|inredningsnyheter.se|jarnvagsnyheter.se|metallerochgruvor.se|papperochmassa.se|solenerginyheter.se|sportochfritidsnyheter.se|stockholmsbyggnyheter.se|transportochlogistik.se|vindkraftsnyheter.se
-/amp-addthis$domain=mobilanyheter.net
 /analytics$script,domain=dn.se
 /analytics-bmb$script
 /analytics.js$domain=carnegie.se
@@ -460,6 +460,7 @@
 /eu_cookie_compliance/*$script
 /EUModalDialog$script,domain=morningstar.se
 /evidon$script,domain=morningstar.se
+/ext/phpbb/ads/*
 /facebook/gillkom$xmlhttprequest,domain=kamerabild.se|mobil.se
 /facebook/postkoll$xmlhttprequest,domain=kamerabild.se|mobil.se
 /fokus-banners.js$domain=fokus.se
@@ -536,7 +537,6 @@
 /logger/logger?
 /LogRocket.min.js$script,third-party,domain=~dsc.gg
 /losad/loada.$script
-/lottoland$image,domain=vett-och-etikett.com
 /magnific-popup$domain=shortcut.se
 /manageBanners$domain=gamereactor.se
 /maps.sponsored-pill.$script,domain=tripadvisor.se
@@ -567,8 +567,6 @@
 /pages/tag$domain=aktuellhallbarhet.se|byggindustrin.se|dagensmedia.se|dagensmedicin.se|fastighetsnytt.se|resume.se
 /permutive-async.js$script
 /phaser-ads.min.js$script
-/phpbb/ads$script,domain=svensktgolfforum.se
-/phpbb_ads$image
 /plugins/ab_appnexus_ads/*
 /plugins/ab_stats_params/*
 /plugins/ab_tracking$domain=aftonbladet.se
@@ -879,7 +877,6 @@
 ?url=*impse.tradedoubler.com$image
 @@/ad-block-detection-script$domain=blocket.se
 @@/ad.php$script,~third-party,domain=99mac.se|skogstok.se|temperatur.nu
-@@/adblock-detector$~third-party,domain=pussad.se
 @@/ads.js$script,~third-party,domain=hd.se|sydsvenskan.se
 @@/ads.min.js$~third-party,domain=notebookcheck.se
 @@/adserver.$script,~third-party,domain=fotosidan.se|grannar.se|utsidan.se
@@ -964,7 +961,8 @@ alicestenlof.com,ellinorlofgren.se,linnherbertsson.se,mestmotor.se,muscles.se##.
 alicestenlof.com,tjanstebilen.se###cookies
 alingsastidning.se,bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##.lokus-engine, .seekly, .rabble-widget
 alingsastidning.se,bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##.stampenCookieContainer
-alkompis.se###check-also-box
+alkompis.se##.cdk-overlay-container
+alkompis.se##app-ads
 allabolag.se###company-card_top-banner
 allakorsord.se,allas.se,baaam.se,dromhemochtradgard.se,elle.se,femina.se,hant.se,ikea.com,mabra.com,residencemagazine.se,svenskdam.se###onetrust-banner-sdk
 allakorsord.se,allas.se,baaam.se,dromhemochtradgard.se,elle.se,femina.se,hant.se,mabra.com,residencemagazine.se,svenskdam.se##.ag-product-wrapper
@@ -1029,7 +1027,7 @@ bettips.se##.bettips-am
 bicycling.se,runnersworld.se##.modal-plus, .modal-backdrop, .footer-newsletter
 bicycling.se,runnersworld.se##.post-card-sponsored
 bildobubbla.se##.annonser
-bilia.se,netbil.se###acceptcookies
+bilia.se,biliaoutlet.se###acceptcookies
 bilsport.se##fl-panorama-top,fl-newsletter-popup
 bilsport.se,gpro.net,ordguru.se,ratsit.se,visitskane.com##.cc_banner-wrapper
 bilweb.se###cookie_alert
@@ -1147,7 +1145,6 @@ ettgottskratt.se,humorbibeln.se,newsner.com,sportbibeln.se###wsfb-container, .sh
 ettgottskratt.se,humorbibeln.se,newsner.com,sportbibeln.se##.ad-space
 ettgottskratt.se,humorbibeln.se,newsner.com,sportbibeln.se##.inline-share-buttons
 ettgottskratt.se,humorbibeln.se,newsner.com,sportbibeln.se##a[href*=".adsrv."]
-ettsthlm.se##[class^="sqs-cookie-banner"]
 evalent.se##.loadPage
 eventeffect.se###secondary > .widget:nth-child(2)
 eventeffect.se,executiveeffect.se,saleseffect.se###nyhetsbrev-pp-wrapper__container
@@ -1181,7 +1178,6 @@ familjesidan.se##.cookies-wrapper
 fastighetssverige.se##a[href*="/banner/out/"]
 fastighetssverige.se##div[class^="panel"][style*="lightgoldenrodyellow"]
 fastighetstidningen.se##.adspace
-fbitullinge.nu,gtsoder.se,maskalpin.se,telgesibk.se###outerAd
 feber.se,tjock.se##.burt-unit, .art_ad, adline, f-panorama, f-deals, #rpPopular
 feministisktperspektiv.se##.two_column_ad
 fightermag.se##a[href*="/sponsra"]
@@ -1304,7 +1300,7 @@ jamtlandstidning.se##.elementor-widget-image-carousel
 jamtlandstidning.se##div[data-elementor-type=single] .elementor-top-section[data-settings^="{\""]:not(.elementor-hidden-phone)
 javligtgott.se##a[href="https://klimatkompensera.se"]
 jawcloud.co##.loloba
-jennysmatblogg.nu,lindasbakskola.se,mykitchenstories.se##.panorama-sticky, .sticky-area
+jennysmatblogg.nu,lindasbakskola.se,mykitchenstories.se,zeinaskitchen.se##.panorama-sticky, .sticky-area
 jobb.maxkompetens.se#@##single-ad
 jobb.maxkompetens.se#@#.ad-body
 jobb.maxkompetens.se#@#.ad-content
@@ -1350,7 +1346,6 @@ lesscarbs.se##a[href*="/affiliates/"]
 leta.se###bookingcom-resor-wrapper
 letsgoexplore.se##.tipi-tile.active
 lindasbakskola.se,privataaffarer.se,skk.se##a[href*="/bit.ly/"]
-lindasbakskola.se,zeinaskitchen.se##.proad
 lindenytt.com,poolforum.se,varmepumpsforum.com##a[target="_blank"] img[alt]
 linnherbertsson.se##[id^="content-ad"]
 listor.se###ss-floating-bar
@@ -1392,7 +1387,6 @@ mittkok.expressen.se##.widget-social-media
 mmabetz.se##.desktop-homepage-ad, .desktop-main-ad, .latest-betting-campaigns, .best-casino-section, .top-casino
 mmanytt.se##.front-banner,.front-banner-cover,#text-2,[class*="sponsrat-inlagg"],a[href*="://kampanjer."],.ohmbet_link
 mobil.se##.pspy_info
-mobilanyheter.net###amp-user-notification1
 modette.se##.true_native_block
 morotsliv.com###sidebar .et_pb_widget
 morotsliv.com##.et_bloom .et_bloom_flyin_center
@@ -1468,8 +1462,9 @@ schoolido.se##.so-cookie__area
 screen-marknaden.se##.fo-banner, .fp-banner
 sdhl.se,ssl.se,storvretaibk.se##.rmss_module-block-linked_image
 se.azrhymes.com###CookielawBanner
+se.azrhymes.com##.info-center
 se.azrhymes.com##.shader
-se.azrhymes.com,svensk-seo.se#@#.adsbygoogle
+se.azrhymes.com##.shader, #CookielawBanner
 se.invertalia.net##.js-cookies-notification
 se.readly.com##.show-consent
 sexpacket.se##.info_cookies
@@ -1648,6 +1643,7 @@ yelp.se##.js-cookie-iframe
 ||apsislead.com^$third-party
 ||ascontentcloud.com^$third-party
 ||assets.pinterest.com/js/pinit$third-party
+||assets.tumblr.com/share-button.js$third-party
 ||atgplay.se^*/stat$xmlhttprequest
 ||auction-release.mlpapi.com/site/LoadPluginSite$script
 ||audience.systems^$third-party
