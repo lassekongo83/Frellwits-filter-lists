@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2021-02-15 11:30:18 CET
+! Last modified: 2021-02-15 12:53:14 CET
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -66,8 +66,8 @@
 ###cookiejar
 ###cookielawwarning
 ###cookieMsgBlock
-###cookieNotice
 ###CookieNotice
+###cookieNotice
 ###cookies-acceptance .alert.bottom
 ###cookiesInfo
 ###dialog-eu-cookie-law
@@ -459,7 +459,7 @@
 /eu_cookie_alert/*
 /eu_cookie_compliance/*$script
 /EUModalDialog$script,domain=morningstar.se
-/evidon$script,domain=morningstar.se
+/evidon*.js$domain=morningstar.se
 /ext/phpbb/ads/*
 /facebook/gillkom$xmlhttprequest,domain=kamerabild.se|mobil.se
 /facebook/postkoll$xmlhttprequest,domain=kamerabild.se|mobil.se
@@ -679,6 +679,7 @@
 /plugins/so-widgets-bundle/*$domain=lokalsport.nu
 /plugins/social-pug
 /plugins/socialsnap$script,domain=folknyheter.se|katerinamagasin.se|listor.se
+/plugins/srs-simple-hits-counter
 /plugins/statebuilt-facebook-page-like-popup/*
 /plugins/sticky-facebook-banner/*$script,domain=ettgottskratt.se|humorbibeln.se|newsner.com|sportbibeln.se
 /plugins/super-progressive-web-apps/*$domain=temadagar.se
@@ -695,6 +696,7 @@
 /plugins/triggerbee/*
 /plugins/uk-cookie-consent/*$domain=akerioentreprenad.se|datormagazin.se|hoglandsnytt.se|transportarbetaren.se
 /plugins/Ultimate-Premium-Plugin/*$script,xmlhttprequest,domain=opulens.se
+/plugins/ultimate-social-deux$script,domain=totallyorebro.se|totallystockholm.se
 /plugins/ultimate-social-media-$image,script
 /plugins/ungrabber$script
 /plugins/vizzit-analytics-for-wordpress/*$script
@@ -916,7 +918,6 @@
 @@||happyride.se/img/admarket/$~third-party
 @@||imasdk.googleapis.com/js/sdkloader/ima3.$script,domain=atl.nu|ekuriren.se|gamereactor.se|kkuriren.se|screen9.com|sn.se|strengnastidning.se
 @@||js.createsend1.com/js/jquery
-@@||morningstar.com/scripts/ads.js$domain=morningstar.se
 @@||mparticle.com^*/login$domain=discoveryplus.se
 @@||sdk.pulse.schibsted.com/loader.min.js$domain=special.aftonbladet.se
 _jquery.blockUI.$domain=fssweden.se
@@ -1010,7 +1011,7 @@ aventyrsresor.se##.newsletter-popup
 axess.se##.popup--cookie
 axier.se##.consent
 axier.se,emocore.se,svenskamagic.com###reklam
-backpacking.se,byggteknikforlaget.se,dialasen.com,sporthalsa.se,torbjornstips.se##.textwidget a[target="_blank"]
+backpacking.se,byggteknikforlaget.se,dialasen.com,ravarumarknaden.se,sporthalsa.se,torbjornstips.se##.textwidget a[target="_blank"]
 badminton.nu,bandybyn.se###RightOuterBannerDiv
 bandybyn.se##.StartPageBoxRow > .boxcontainer:last-child > .StartPageBoxNarrow
 bandybyn.se##.StartPageBoxRow > .boxcontainer:nth-child(2) > .StartPageBoxNarrow
@@ -1072,7 +1073,8 @@ caminomagasin.se###cookie-compliance
 caminomagasin.se##.block--extern-annons
 camping.se###CookiesBox
 camping.se###rightSideAds, .OpenXAd
-cannabis.se##.header-ads-wrapper, .ai-adb-hide
+cannabis.se##.header-ads-wrapper, .ai-adb-hide, .ai-sticky-widget, .hampaonline
+cannabis.se,exponera.nu,it-finans.se,it-halsa.se,it-kanalen.se,it-pedagogen.se,it-retail.se,ordfrontmagasin.se##.pum-overlay
 capdesign.se###shareright
 capdesign.se,hd.se,sydsvenskan.se,typkanske.se,vimedbarn.se##.gdpr
 chef.se##.Blurb--native
@@ -1156,7 +1158,6 @@ evertiq.se,fz.se##.bnr
 existenz.se###slidebox
 existenz.se##.wm-nopop, #main > p[style^="color"]
 expo.se##div[class*="expo-ads"]
-exponera.nu,it-finans.se,it-halsa.se,it-kanalen.se,it-pedagogen.se,it-retail.se,ordfrontmagasin.se##.pum-overlay
 expressen.se##.campaign
 expressen.se##.discount-ad
 expressen.se##.html-widget > div[style^="text-align: center; font-size: 10px;"]
@@ -1268,7 +1269,7 @@ hippson.se##.sponsorpuff
 hitta.se###__next > div[class^="style_notification"]
 hitta.se##[class*="dummyAd"], [class*="StyledAdSlot"], [data-bind*="Ad"], div[class^="GraphicAd_"]
 hitta.se##[class^="styleManual_mainContentBox"] > div[style^="min-height"]:first-of-type
-hitta.se##[data-trackimp], .integration-txt
+hitta.se##[data-trackimp], .integration-txt, .section-details--alb
 hittahem.se##.user-consent.active
 hockeybladet.nu##.td_mod_wrap a img[data-permalink], a[data-wpel-link="external"][onclick]
 hockeyettan.se##.club-ad-item
@@ -1326,6 +1327,7 @@ koket.se##div[class*="recipe_sponsored"] > [class*="sponsor_banner"]
 koket.se##div[class*="recipe_sponsored"] div[class*="list_item_wide_wrapper"]
 koket.se##div[class*="recipe_sponsored"] div[class*="recipe_sourceImageDesktop"]
 kolozzeum.com##td[width="305"]
+kommunal.se###modalBackdrop, #modalContent
 komponentkoll.se##.disclaimMyNuuuuu ~ *
 komponentkoll.se##.gdpr-wide
 konsolnyheter.se##.wplinktrade
@@ -1461,9 +1463,7 @@ schack.se##.schac-widget
 schoolido.se##.so-cookie__area
 screen-marknaden.se##.fo-banner, .fp-banner
 sdhl.se,ssl.se,storvretaibk.se##.rmss_module-block-linked_image
-se.azrhymes.com###CookielawBanner
 se.azrhymes.com##.info-center
-se.azrhymes.com##.shader
 se.azrhymes.com##.shader, #CookielawBanner
 se.invertalia.net##.js-cookies-notification
 se.readly.com##.show-consent
@@ -1544,7 +1544,7 @@ tittapavideon.se###cookcont
 tittapavideon.se##.adv
 tjanstebilen.se##.container-banner-sidebar
 tkj.se###text-19, #text-23, #text-25, #text-32, #custom_html-2, #custom_html-3, #volt-recent-posts-5, a[href*=".se/ad/"]
-totallyorebro.se,totallystockholm.se##a[href*="casino-bonus"], a[href*="/sponsrat/"], a[href*="/sponsrat/"] + p.tot-content-preview--meta
+totallyorebro.se,totallystockholm.se##a[href*="casino"], a[href*="/sponsrat/"], a[href*="/sponsrat/"] + p.tot-content-preview--meta
 totallyorebro.se,totallystockholm.se##div.tot-content-preview-container-small[style*="border-top:4px solid #ffb200;"], .content-overlay--black
 tradera.com##ads-takeover
 tradera.com##react-adslot
@@ -1723,7 +1723,7 @@ yelp.se##.js-cookie-iframe
 ||conviva.com^$third-party
 ||cookie-disclaimer.onewp.net^$third-party
 ||cookie-script.com^$third-party
-||cookiebot.com^$third-party,domain=bax-shop.se|clipmyhorse.tv|etc.se|goteborgdirekt.se|itaboutdoor.se|kingsizemag.se|kurera.se|mitti.se|ng.se|skeppsbrons.se|smartsenior.se|swedroid.se|tankesport.se|totallyorebro.se|totallystockholm.se|upplysning.se|vasterastidning.se|wesafe.se
+||cookiebot.com^$third-party,domain=bax-shop.se|clipmyhorse.tv|etc.se|goteborgdirekt.se|itaboutdoor.se|kingsizemag.se|kurera.se|mitti.se|ng.se|skeppsbrons.se|smartsenior.se|swedroid.se|tankesport.se|upplysning.se|vasterastidning.se|wesafe.se
 ||cookieinformation.com^$script,domain=aktivtraning.se|digitalfotoforalla.se|iform.se|militarhistoria.se|natgeo.se|pctidningen.se|popularhistoria.se|proff.se|valuta.se|varldenshistoria.se|viivilla.se
 ||cookieinformation.com^$subdocument,third-party
 ||cookieinfoscript.com^$third-party
@@ -1889,9 +1889,10 @@ yelp.se##.js-cookie-iframe
 ||jobb.blocket.se^*/tracker.js
 ||jobb.blocket.se^*/xtcore.min.js
 ||jobba-hemifran.com^
-||js.hs-banner.com^$script
-||js.hs-scripts.com/3322485.js$script
+||js.hs-banner.com^
+||js.hs-scripts.com/3322485.js
 ||js.hs-scripts.com^$third-party,domain=breakit.se|tholin.se
+||js.rating-widget.com/external
 ||juicer.io/api/page_views$xmlhttprequest
 ||kaloo.ga^$third-party
 ||kamrat.com/js/cookiescript
