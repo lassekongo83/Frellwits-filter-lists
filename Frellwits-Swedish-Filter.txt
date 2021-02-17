@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2021-02-16 15:10:20 CET
+! Last modified: 2021-02-17 20:42:08 CET
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -83,6 +83,7 @@
 ###moove_gdpr_cookie_info_bar
 ###privacy-cookie-info
 ###redim-cookiehint
+###redim-cookiehint-modal
 ###RightOuterBannerDiv
 ###sp-cookie-consent
 ###topBannerAds
@@ -215,11 +216,12 @@
 ##a[data-bid="1"][href*="/linkout"]
 ##a[href$=".se/go/betsafe"]
 ##a[href*="/banner/klick/"] img
+##a[href*="/click.adrecord"] img
+##a[href*="/click.linksynergy"] img
 ##a[href*="/delivery.adnuntius.com"]
 ##a[href*="casinopro.se"][target="_blank"]
 ##a[href*="cyberbetpromo.net/click"][target="_blank"]
 ##a[href*="doktor-se.onelink.me"]
-##a[href*="https://click.adrecord"] img
 ##a[href*="https://sexapp.me/"]
 ##a[href*="tradedoubler.com/click?"]
 ##a[href^="https://www.adsettings.com/scripts/reg_click."]
@@ -240,6 +242,8 @@
 ##div.ad.container
 ##div.avia-cookiemessage-bottom
 ##div.better-ads-listitemad
+##div.big-desktop-ads
+##div.big-mobile-ads
 ##div.borka-ad
 ##div.bs-wrap-gdpr-law
 ##div.cli-modal-backdrop
@@ -842,7 +846,6 @@
 /wp-content/themes/keremiya1/js/jopper.$script
 /wp-content/themes/keremiya1/js/license.$script
 /wp-content/themes/keremiya1/js/script.js$script
-/wp-content/uploads$image,domain=xn--snabbalnen-75a.se
 /wp-content/uploads/*.js?ver$script,domain=nyadagbladet.se
 /wp-content/uploads/*/public/assets/js/advanced.js$script
 /wp-content/uploads/*annons$image
@@ -1000,7 +1003,7 @@ atl.nu,land.se,landlantbruk.se,landskogsbruk.se##[class*="--native"], [id^="adwr
 atvmag.se,snowmobile.se##.location-header_before
 atvmag.se,snowmobile.se##.more-stories
 autolife.se###Banners
-automation.se,peace.ax,transportnytt.se,verkstadstidningen.se##.bannergroup
+automation.se,konsolnyheter.se,peace.ax,transportnytt.se,verkstadstidningen.se##.bannergroup
 autonytt.se###main > .col-links
 autonytt.se,bilresaieuropa.se,bjornsennbrink.se,konstlistan.se##a[href*="/click.adrecord."]
 autonytt.se,sv.picmix.com##.leaderboard
@@ -1257,7 +1260,7 @@ hangotidningen.fi,hbl.fi,ostnyland.fi,vastranyland.fi##.type-advertorial
 hangotidningen.fi,hbl.fi,ostnyland.fi,vastranyland.fi##gdpr-notice
 happypancake.se###__next > div > div.bar:first-child
 happyride.se##.col-sm-4 > .boxtext
-hastnet.se##.add-wrap
+hastnet.se##.add-wrap, .listings-search-ads, .right_panel
 hbwebben.se##.elementor-widget-container > a > img
 hemhyra.se##.pageCookies
 hemmafixbloggen.se,surfa.se###loader-wrapper
@@ -1282,6 +1285,7 @@ husbil.se,husvagn.se,karlskrona.com,karlstad.com,noje.se,stockholm.com##.ui-opti
 husbilsklubben.se##.u-bottomFixer
 hypeline.se##.sponsrad_ruta
 icagruppen.se##.cookieInfo
+icagruppen.se##div[ng-show*="isUiDisabled"]
 idg.se##.sparticle, .nextArticleSp, .pryltorget, .prisjakt, .prisjaktCompare, .teasers-block.bfteasers
 idg.se,macworld.se,nsk.se,skd.se##.adContainer
 ilikeradio.se,netdoktor.se,nevnarien.se,pomu.se,su.se,wwf.se##.cc-banner
@@ -1330,7 +1334,7 @@ kolozzeum.com##td[width="305"]
 kommunal.se###modalBackdrop, #modalContent
 komponentkoll.se##.disclaimMyNuuuuu ~ *
 komponentkoll.se##.gdpr-wide
-konsolnyheter.se##.wplinktrade
+konsolnyheter.se##.t3-topbanner
 kulturbloggen.com,schack.se##.sidebar .widget_custom_html
 kungalvsposten.se,kungsbackaposten.se,lokaltidningensto.se,molndalsposten.se##.wp-slot-layout-article-native, .native-div, [data-html*="ad-container"]
 kurera.se##.kurera-register-newsletter-popup
@@ -1619,6 +1623,7 @@ yelp.se##.js-cookie-iframe
 ||akademiskahus.se^*/cookieConsent.$script
 ||akamaihd.net^$media,domain=discoveryplus.se
 ||akkurat.bonniernewslifestyle.se^*/recommendations$xmlhttprequest
+||alertir.com^$third-party
 ||allsvenskan.se/allsvenskan-script-min.js
 ||amazonaws.com/adn-tag/$script
 ||amazonaws.com/metapic-cdn/*/metapic.

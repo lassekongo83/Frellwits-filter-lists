@@ -20,6 +20,7 @@
 ||advrl.com^$third-party
 ||af.analytics.elx.cloud^$third-party
 ||affiliator.com^$third-party
+||alertir.com^$third-party
 ||apccdn.apsis1.com^$third-party
 ||appsmav.com^$third-party
 ||apsis.one^$third-party
@@ -744,7 +745,8 @@ artbannersplus&task=show
 ##a[href*="/delivery.adnuntius.com"]
 ##a[href^="https://www.adsettings.com/scripts/reg_click."]
 ##a[href*="tradedoubler.com/click?"]
-##a[href*="https://click.adrecord"] img
+##a[href*="/click.adrecord"] img
+##a[href*="/click.linksynergy"] img
 ##a[data-bid="1"][href*="/linkout"]
 ##a[title="LeoVegas"]
 ##a.card.-sponsored
@@ -810,6 +812,7 @@ artbannersplus&task=show
 ###moove_gdpr_cookie_info_bar
 ###privacy-cookie-info
 ###redim-cookiehint
+###redim-cookiehint-modal
 ###RightOuterBannerDiv
 ###sp-cookie-consent
 ###trn_cookie_holder
@@ -966,6 +969,8 @@ artbannersplus&task=show
 ##div.topmost-banner
 ##div.sidebar-item .banner-box
 ##div.wppasrotate
+##div.big-desktop-ads
+##div.big-mobile-ads
 ##div#mega-ad-content
 ##div#panorama_ad
 ##div#panoramaad
@@ -1875,7 +1880,7 @@ hallakonsument.se,handels.se,megafonen.se##.cookie-information
 mkse.com,cyclingplus.se###upprev_box
 motivation.se##.topbanner
 byggteknikforlaget.se,dialasen.com,torbjornstips.se,backpacking.se,sporthalsa.se,ravarumarknaden.se##.textwidget a[target="_blank"]
-automation.se,verkstadstidningen.se,transportnytt.se,peace.ax##.bannergroup
+automation.se,verkstadstidningen.se,transportnytt.se,peace.ax,konsolnyheter.se##.bannergroup
 
 ! Various websites with lots of malicious stuff and annoyances
 /wp-content/themes/keremiya1/js/script.js$script
@@ -1933,6 +1938,7 @@ surfa.se,hemmafixbloggen.se###loader-wrapper
 sjoaguden.se##.av-siteloader-wrap
 delupe.se###preloader
 evalent.se##.loadPage
+icagruppen.se##div[ng-show*="isUiDisabled"]
 ! utm
 utm_$document,queryprune=/^utm_/,domain=tv.nu|booli.se|alltommat.se|damernasvarld.se|skonahem.com|teknikensvarld.se|expressen.se|aftonbladet.se
 
@@ -2634,11 +2640,13 @@ totallyorebro.se,totallystockholm.se##div.tot-content-preview-container-small[st
 totallyorebro.se,totallystockholm.se##[class*="tot-content-preview-container"]:has(a[href*="casino"]):remove()
 totallyorebro.se,totallystockholm.se##a[href*="casino"], a[href*="/sponsrat/"], a[href*="/sponsrat/"] + p.tot-content-preview--meta
 glassakademin.se##[class^="adverts-"]
-/wp-content/uploads$image,domain=xn--snabbalnen-75a.se
 laromedia.se##img[alt="Annons"] + .img-flipper
 alekuriren.se###widget_code-6
-konsolnyheter.se##.wplinktrade
-hastnet.se##.add-wrap
+konsolnyheter.se##.t3-topbanner
+konsolnyheter.se##+js(acis, show_popup)
+konsolnyheter.se##+js(acis, disableSelection)
+konsolnyheter.se##+js(acis, addEvent, oncopy)
+hastnet.se##.add-wrap, .listings-search-ads, .right_panel
 icagruppen.se##.cookieInfo
 kvalitetsmagasinet.se,miljo-utveckling.se,telekomidag.se,vdtidningen.se###subscribe_splash
 kvalitetsmagasinet.se,miljo-utveckling.se,telekomidag.se,vdtidningen.se##[class*="nativeadwidget"]
