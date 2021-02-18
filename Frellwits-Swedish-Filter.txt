@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2021-02-17 20:42:08 CET
+! Last modified: 2021-02-18 12:50:42 CET
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -228,6 +228,7 @@
 ##a[title="LeoVegas"]
 ##article.category-samarbete
 ##cookie-law-banner
+##div#ads-panorama
 ##div#banner_right
 ##div#mega-ad-content
 ##div#outerAd
@@ -251,6 +252,7 @@
 ##div.cookie-block
 ##div.cookie-notification-show
 ##div.cookie-show-bar-bottom
+##div.cookiebanner
 ##div.cookievarning-wrap
 ##div.elementor-widget-wp-widget-advads_ad_widget
 ##div.gdpr-warning-slide-up
@@ -889,7 +891,6 @@
 @@/advertisement2.js$domain=gpro.net
 @@/advertisment.js$script,~third-party,domain=wappare.se
 @@/aff/images/*$image,domain=alltforforaldrar.se
-@@/assets/ads-$~third-party,domain=vackertvader.se
 @@/consent.json$domain=forum.macworld.se|idg.se
 @@/css/ad.$stylesheet,domain=sv.geneanet.org
 @@/jquery.scrollUp$script,domain=explorecurate.com
@@ -1003,7 +1004,7 @@ atl.nu,land.se,landlantbruk.se,landskogsbruk.se##[class*="--native"], [id^="adwr
 atvmag.se,snowmobile.se##.location-header_before
 atvmag.se,snowmobile.se##.more-stories
 autolife.se###Banners
-automation.se,konsolnyheter.se,peace.ax,transportnytt.se,verkstadstidningen.se##.bannergroup
+automation.se,konsolnyheter.se,metalcentral.net,peace.ax,transportnytt.se,verkstadstidningen.se##.bannergroup
 autonytt.se###main > .col-links
 autonytt.se,bilresaieuropa.se,bjornsennbrink.se,konstlistan.se##a[href*="/click.adrecord."]
 autonytt.se,sv.picmix.com##.leaderboard
@@ -1014,7 +1015,7 @@ aventyrsresor.se##.newsletter-popup
 axess.se##.popup--cookie
 axier.se##.consent
 axier.se,emocore.se,svenskamagic.com###reklam
-backpacking.se,byggteknikforlaget.se,dialasen.com,ravarumarknaden.se,sporthalsa.se,torbjornstips.se##.textwidget a[target="_blank"]
+backpacking.se,byggteknikforlaget.se,dialasen.com,livetsgoda.se,ravarumarknaden.se,sporthalsa.se,torbjornstips.se,worldkustom.com##.textwidget a[target="_blank"]
 badminton.nu,bandybyn.se###RightOuterBannerDiv
 bandybyn.se##.StartPageBoxRow > .boxcontainer:last-child > .StartPageBoxNarrow
 bandybyn.se##.StartPageBoxRow > .boxcontainer:nth-child(2) > .StartPageBoxNarrow
@@ -1030,7 +1031,7 @@ battrestadsdel.se###top-banner-mobile, #HideBanner, .apd-text, .apds_main, .entr
 bettips.se##.bettips-am
 bicycling.se,runnersworld.se##.modal-plus, .modal-backdrop, .footer-newsletter
 bicycling.se,runnersworld.se##.post-card-sponsored
-bildobubbla.se##.annonser
+bildobubbla.se,nyatider.nu##.annonser
 bilia.se,biliaoutlet.se###acceptcookies
 bilsport.se##fl-panorama-top,fl-newsletter-popup
 bilsport.se,gpro.net,ordguru.se,ratsit.se,visitskane.com##.cc_banner-wrapper
@@ -1089,7 +1090,7 @@ classic.prisjakt.nu###confirm_cookie_use
 cleannet.se,dagenshandel.se,entreprenad.com,food-supply.se,foodnet.se,fri-kopenskap.se,habit.se,kemivarldenbiotech.se,lifesciencesweden.se,medtechmagazine.se,motormagasinet.se,packnet.se,plastnet.se,processnet.se,recyclingnet.se,rt-forum.se,skyddosakerhet.se,transportnet.se,uochd.se,verkstaderna.se,woodnet.se##.box-of-announcement
 coop.se##.Notice--cookie
 cornucopia.cornubot.se###HTML9
-customerinsider.se##figure > a[target="_self"]
+customerinsider.se,livetsgoda.se##a[target="_blank"] img
 cyclingplus.se,halsafitness.se,yogaworld.se##.sticky-sidebar
 cyclingplus.se,mkse.com###upprev_box
 cykla.se#@#.advertisment
@@ -1130,7 +1131,6 @@ dn.se,klart.se##.ad-wrapper
 driva-eget.se,foretagande.se,hockeymagasinet.com,revisionsvarlden.se,runnersworld.se,utsidan.se##.sponsored
 drivkraftsverige.se##.policy-disclaimer
 duplotryck.se##.wof-overlay, .wof-wheels
-egoinas.se,metalcentral.net###tm-top-a
 ehandel.se##.commercial-row, .aside-image-with-link, .post-container-sponsored
 ekonominyheter.se###lblock-ads
 ekonominyheter.se,gjuteriet.se,haaf.se,hockeybladet.nu,mariefredstidning.se,norrortssporten.se##.td-a-rec
@@ -1300,8 +1300,7 @@ it-finans.se,it-halsa.se,it-kanalen.se,it-pedagogen.se,it-retail.se##a[onclick^=
 jaktplay.se##.jaktplay-ad
 jaktsidan.se###ipsLayout_mainArea > iframe
 jamtlandstidning.se##.animated-fast .elementor-element:not(:last-of-type)
-jamtlandstidning.se##.elementor-arrows-position-inside
-jamtlandstidning.se##.elementor-widget-image-carousel
+jamtlandstidning.se##.elementor-arrows-position-inside, .elementor-widget-image-carousel
 jamtlandstidning.se##div[data-elementor-type=single] .elementor-top-section[data-settings^="{\""]:not(.elementor-hidden-phone)
 javligtgott.se##a[href="https://klimatkompensera.se"]
 jawcloud.co##.loloba
@@ -1311,13 +1310,12 @@ jobb.maxkompetens.se#@#.ad-body
 jobb.maxkompetens.se#@#.ad-content
 jobb.maxkompetens.se#@#.ad-item
 jobb.maxkompetens.se#@#.single-ad
-jula.se##.g-cookie
 jusek.se##.l-advertisement, .m-adform, .m-splash
 kalender.se##.day-nav ~ a:not([href*="kalender.se"])
 kamerabild.se,mobil.se##.storan, .Partner
 kamrat.com###kadDiv, div[style="margin:25px 0;max-width:255px!important;"], #scrollAdj ~ *
 kartor.eniro.se##.e-banner
-katerinamagasin.se##.adv-area,#right-areas
+katerinamagasin.se##.adv-area,#right-areas,a[href*=".casino"]
 kenzas.se##article[data-text*="In collaboration with"]
 kimura.se##.bg, a[href*="unibet.com"], a[href*="/kampanjer."], a[href*="utm_campaign"]
 kingsizemag.se##a[href*="/redir/"][target="_blank"]
@@ -1344,7 +1342,6 @@ kvalitetsmagasinet.se,miljo-utveckling.se,telekomidag.se,vdtidningen.se##[class*
 lajvo.se###panoramaTop
 landetsfria.nu,tidningensyre.se##div[style*="verdana; color:#888888"]
 landleyskok.se##.inpostbanner, .banner-leaderboard
-lararen.se,voister.se##.cookiebanner
 laromedia.se##img[alt="Annons"] + .img-flipper
 lchfarkivet.se##.wppopups-whole
 lesscarbs.se##.elementor-image > a
@@ -1357,10 +1354,7 @@ linnherbertsson.se##[id^="content-ad"]
 listor.se###ss-floating-bar
 listor.se##.top-ads-widget
 livetombord.se##[data-spotlight-id]
-livetsgoda.se##.custom-html-widget
 livetsgoda.se##.penci-rlt-popup
-livetsgoda.se##[class*="advads"]
-livetsgoda.se##a[target="_blank"]
 ljudochbild.se##.adremark, .coofad, .popup-overlay, .hidead, .phoneads, .pricecomp, .offerz, .type-articleadvertorial
 lokalfotboll.se###topbar, .inside-right-sidebar > .really_simple_image_widget
 lokalguiden.se##.applicant-match-container
@@ -1383,7 +1377,7 @@ matspar.se##div[style="z-index: 2000;"],div[style="z-index: 2000;"] + div
 megafonen.se##[data-article-sponsored="true"], .content-main-adwrapper, .campaign-sidebar
 merinfo.se##article[data-customer]
 mestmotor.se##.panel-native
-metalcentral.net##.bannergroupno-padding
+metalcentral.net##.bannergroupno-padding, #tm-top-a
 miljomat.se##[id^="Annons"]
 miljomat.se##td[style="width: 340px;"] > video
 minhembio.com##div[style="height: 120px;"]:not([id]):not([class])
@@ -1399,14 +1393,12 @@ morotsliv.com##.et_bloom .et_bloom_flyin_center
 morotsliv.com##a[href*="/?utm_medium=affiliate"]
 motivation.se##.sponsored-item,.middlebanner,.bottombanner,.outsider
 motivation.se##.topbanner
-motorblogofsweden.se##.sidebar .textwidget
-motorblogofsweden.se##[aria-label^="banner"]
 moviezine.se###home_ans, [name="article-advertisment"]
 mytaste.se##[id^="Modal_plugin"]
 mytaste.se##div[id*="panorama_"], [class^="affiliate-container"], .site-header__panorama
 natursidan.se###container > a:not(:first-child)
 natursidan.se###sidebar .widget_text a[target]
-netflixguiden.se##.a-instream
+netflixguiden.se##div.lboard, div.instream-dynamic
 news55.se###newsletter-popup
 news55.se##.after-article-widget
 news55.se##.is-native,.is-native-yes
@@ -1479,7 +1471,6 @@ siriusbandy.se,vetlandabk.se##[id$="-ad"]
 sjoaguden.se##.av-siteloader-wrap
 skandia.se##div[data-block="CookieBannerBlock"]
 skanesport.se###black-studio-tinymce-3
-skidspar.se###ads-panorama
 skidspar.se###videoad
 skillingaryd.nu,xn--vrnamo-bua.nu###more-banners
 skk.se###cookie-button-banner
@@ -1578,10 +1569,12 @@ vinbanken.se##.push-to-newsletter, .fancybox-overlay
 vinbanken.se##.top-add, .sidebar-adds, .spons-content
 viseniorer.se##.topheaderinfo
 visitskargarden.se##a[onclick*="Banner"], .boss-loader-overlay
+vm-fotboll.se##.category-kampanjer
 vm-fotboll.se##a[href*="/go/"][target]
 voister.se##.campaign
 wappare.se##.cookie-consent-modal
 webbjobb.io##.cookie
+worldkustom.com##.middleban
 xlbygg.se##div[class^="CookieBar"]
 xn--lnforum-exa.se##.LFRBox
 yelp.se##.js-cookie-iframe
@@ -1899,6 +1892,7 @@ yelp.se##.js-cookie-iframe
 ||js.hs-scripts.com^$third-party,domain=breakit.se|tholin.se
 ||js.rating-widget.com/external
 ||juicer.io/api/page_views$xmlhttprequest
+||jula.se/CookieConsent
 ||kaloo.ga^$third-party
 ||kamrat.com/js/cookiescript
 ||kayak.xno.se^$script
@@ -1982,7 +1976,6 @@ yelp.se##.js-cookie-iframe
 ||myadmessenger.com^$third-party
 ||mydatabankapp.com^$third-party
 ||mymediaindex.com^$third-party
-||netflixguiden.se^$csp=worker-src 'none'
 ||network-n.com^$third-party
 ||newsharecounts.*.amazonaws.com/nsc.js$script
 ||newstats.blogg.se/collector
@@ -2095,6 +2088,7 @@ yelp.se##.js-cookie-iframe
 ||simpleoneline.online^
 ||sitegainer.com/jsinsert/*/sitegainer*.$script,third-party
 ||skattamindre.se^
+||skidspar.se/scripts/html5videovastplugin.js
 ||skidspar.se/scripts/revive.js
 ||skogsforum.se/sda/
 ||skogsforum.se^$csp=worker-src 'none'
@@ -2137,12 +2131,13 @@ yelp.se##.js-cookie-iframe
 ||svenskafans.com/menu-logo/bottom
 ||svenskarecept.se/pwa-register-sw.js
 ||svenskfotboll.se/ui/dist/js/ai.$script
+||swebbtv.se/tracker
 ||t.fml.rip^$third-party
 ||t.raptorsmartadvisor.com^$image
 ||tags.tiqcdn.com^$domain=mallorcaliv.se
 ||tc.hometogo.net^$image
 ||tdi.cartoonnetwork.com/turnerintl$script,domain=cartoonnetwork.se
-||teknikveckan.se/wp-json/*/ads$xmlhttprequest
+||teknikveckan.se^*/ads
 ||telemetric.dk^$third-party
 ||telemetry.bambuser.io^$websocket
 ||temadagar.se/ezoic
