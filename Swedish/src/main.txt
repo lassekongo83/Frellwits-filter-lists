@@ -332,6 +332,7 @@ artbannersplus&task=show
 /banner/ads/*
 /bannersidor/*
 /banners/*casino$image
+/Banners/webbannons
 /betald-exponering/huvudspons$image
 /bilder/ads/*
 /bilder/betalannonser/*
@@ -446,6 +447,7 @@ artbannersplus&task=show
 /sunt/sidefeed
 /sv_se/metrics/*$script,xmlhttprequest
 /svenska-ridsportforbundet/*banners
+/svff/bannerblock/*
 /swordfishinc.download.akamai.com/*$script
 /tabs_hits_counter.php$image
 /dovas/ads/*
@@ -843,6 +845,7 @@ artbannersplus&task=show
 ##.category-annonssamarbete:not(body):not(html)
 ##.category-om-samarbeten:not(body):not(html)
 ##article.category-samarbete
+##article.type-partnerartikel
 ##.category-annons:not(body):not(html)
 ##.category-samarbeten:not(body):not(html)
 ##.category-sponsrade-reklaminlagg:not(body):not(html)
@@ -1740,7 +1743,6 @@ viafree.se##.pause-ad-container, .pause-ad, .ad-click-through
 ||tvmatchen.nu/plugins/splash-redirector
 tvmatchen.nu##.bet365
 hockeynews.se##[class*="ad-style"], [id^="outsider-"], .ad-mob-container, #mobile-one, #mobile-two, .desktop-horizontal-ad
-svenskafans.com##.cookieConsent
 svenskafans.com##.puff__ad-heading
 sporttv.nu##a[onclick*="bannerClick"]
 fotbolldirekt.se,hockeysverige.se,innebandymagazinet.se##.site-partnevisment, .h-background--sponsored-light
@@ -1850,7 +1852,7 @@ expressen.se,aikfotboll.se##.banners
 digilar.se,ljuskultur.se,omvarlden.se,svenskfotboll.se,hrnytt.se,aapl.se##.cookies
 existenz.se,funfunfun.se,elektronikforumet.com##a[href*="bannerid"]
 lira.se,danstidningen.se,livetsgoda.se,slangopedia.se###ads
-innebandy.se,lokalguiden.se##.banner-container
+lokalguiden.se##.banner-container
 husvagn.se,husbil.se,stockholm.com,noje.se,karlstad.com,karlskrona.com##.ui-optin-wrapper
 hypeline.se,hrbloggen.se##[class^="ad_"]
 arbetarskydd.se,lag-avtal.se,nyteknik.se##.sponsored-box
@@ -1864,7 +1866,7 @@ newsner.com,humorbibeln.se,sportbibeln.se,ettgottskratt.se##.ad-space
 ehandel.se,bytbil.com##.article-sponsored
 ekonominyheter.se,gjuteriet.se,haaf.se,hockeybladet.nu,mariefredstidning.se,norrortssporten.se##.td-a-rec
 uwtd.me,ekonominyheter.se,autonytt.se,undervarttak.se,aftonbladet.se,xn--snabbalnen-75a.se,lesscarbs.se,hockeybladet.nu##a[href*="/track.adtraction."]
-svenskaturistforeningen.se##.cookie-box
+svenskaturistforeningen.se,forum.robsoft.nu##.cookie-box
 fokus.se,sverigeskonsumenter.se###cookie-box
 lindasbakskola.se,privataaffarer.se,skk.se##a[href*="/bit.ly/"]
 autonytt.se,konstlistan.se,bjornsennbrink.se,bilresaieuropa.se##a[href*="/click.adrecord."]
@@ -1878,8 +1880,7 @@ freeride.se,gamereactor.se##.sponsor
 omnihalsa.com,skanesport.se,sportpanelen.se##.stream-item
 hallakonsument.se,handels.se,megafonen.se##.cookie-information
 mkse.com,cyclingplus.se###upprev_box
-motivation.se##.topbanner
-byggteknikforlaget.se,dialasen.com,torbjornstips.se,backpacking.se,sporthalsa.se,ravarumarknaden.se,livetsgoda.se,worldkustom.com##.textwidget a[target="_blank"]
+byggteknikforlaget.se,dialasen.com,torbjornstips.se,backpacking.se,sporthalsa.se,ravarumarknaden.se,livetsgoda.se,worldkustom.com,receptcentralen.se##.textwidget a[target="_blank"]
 automation.se,verkstadstidningen.se,transportnytt.se,peace.ax,konsolnyheter.se,metalcentral.net##.bannergroup
 bildobubbla.se,nyatider.nu##.annonser
 customerinsider.se,livetsgoda.se##a[target="_blank"] img
@@ -2683,23 +2684,23 @@ worldkustom.com##.middleban
 svampguiden.com##.panel:has(.label-sponsor)
 ||svenskarecept.se/pwa-register-sw.js
 borskollen.se##[id^="borskollen_small"],[id^="borskollen_large"],.featured-link
-borskollen.se##a[href^="/nyheter"]:has(span:has-text(/annons/i))
-rotter.se##.cookie_wrap
+borskollen.se##.sponsored-chip:matches-css(display: block):upward(a)
+borskollen.se##.colorized:has-text(/annons/i):upward(a)
+borskollen.se##img[src$="ad_label.png"]:upward(.outer)
 matspar.se##.overflow-hidden:style(overflow-y: initial !important;)
 matspar.se##div[style="z-index: 2000;"],div[style="z-index: 2000;"] + div
-matspar.se##+js(json-prune, payload.ads campaigns.singleinsider campaigns.ros campaigns.conceptstore campaigns.topprio campaigns.winthestore)
+matspar.se##+js(json-prune, payload.ads campaigns.*)
 ||temadagar.se/ezoic
 forum.robsoft.nu##td[valign="middle"] > a[target="_blank"]
 axess.se##.popup--cookie
 receptcentralen.se###text-9
-upphandling24.se##.type-partnerartikel
-upphandling24.se##.widget:has(.widget-title:has-text(/^annons/i))
+receptcentralen.se##.post:has-text(/casino/i)
 ||matorama.se^$csp=img-src 'self' *.wordpress.com *.wp.com *.gravatar.com
-motivation.se##.sponsored-item,.middlebanner,.bottombanner,.outsider
+motivation.se##.sponsored-item, [class*="banner"], .outsider
 husbilsklubben.se##.u-bottomFixer
 brafiler.se###header-banner
 svenskorientering.se###RightDiv
-innebandy.se##.external-banner-container-distrikt, .external-banner-container
+innebandy.se##[class*="banner-container"]
 oru.se##.modal-cookieform
 oru.se##.no-scroll:style(overflow: initial !important;)
 /cookie-banner$script,domain=skyscanner.se
@@ -2708,17 +2709,15 @@ skyscanner.se###cookie-banner-root
 svenskfast.se##.cookie-law__wrapper
 /native?$domain=varden.se
 varden.se##.cdk-overlay-container, app-cookies
+varden.se##app-blog-puff:has(.sponsored-label)
 ibnytt.se##.widget:has(h3:has-text(Speltips))
-||svenskfotboll.se/ui/dist/js/ai.$script
-/bannerblock$domain=svenskfotboll.se
-feministisktperspektiv.se##.two_column_ad
+||svenskfotboll.se/ui/dist/js/ai.
 inblick.se##.cookieBG
 kalender.se##.day-nav ~ a:not([href*="kalender.se"])
-affarsvarlden.se##.cookies-wrap
-affarsvarlden.se##.kingstreet-media-section
-affarsvarlden.se##article:has(span:has-text(/annons/i))
 /native_$script,domain=affarsvarlden.se
-hockeyettan.se##.club-ad-item
+affarsvarlden.se##.cookies-wrap
+affarsvarlden.se##.kingstreet-media-section, .modal-get-premium__wrap
+affarsvarlden.se##article:has(span:has-text(/annons/i))
 /hemmafixbloggen/includes/events-tracker
 hemmafixbloggen.se##.post-item:has(.sponsor-summary)
 ||lantbruksnet.se/files/reklan/
