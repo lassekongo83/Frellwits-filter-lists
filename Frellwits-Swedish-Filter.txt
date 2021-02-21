@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2021-02-19 12:48:15 CET
+! Last modified: 2021-02-21 15:17:09 CET
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -66,8 +66,8 @@
 ###cookiejar
 ###cookielawwarning
 ###cookieMsgBlock
-###cookieNotice
 ###CookieNotice
+###cookieNotice
 ###cookies-acceptance .alert.bottom
 ###cookiesInfo
 ###dialog-eu-cookie-law
@@ -283,7 +283,6 @@
 ##ul.adsmodern
 &type=load_offers$xmlhttprequest,domain=illvet.se|pctidningen.se
 *$csp=script-src 'none',domain=svtt.se|ssvd.se|exressen.se|eexpressen.se|sskatteverket.se|aatg.se|atgg.se
--banner-$image,domain=litteraturmagazinet.se
 -popup-analytics$script
 .ax/ad/
 .ax/images/banners/
@@ -1353,6 +1352,7 @@ lindenytt.com,poolforum.se,varmepumpsforum.com##a[target="_blank"] img[alt]
 linnherbertsson.se##[id^="content-ad"]
 listor.se###ss-floating-bar
 listor.se##.top-ads-widget
+litteraturmagazinet.se###pageContainer > div:first-child:not([id])
 livetombord.se##[data-spotlight-id]
 livetsgoda.se##.penci-rlt-popup
 ljudochbild.se##.adremark, .coofad, .popup-overlay, .hidead, .phoneads, .pricecomp, .offerz, .type-articleadvertorial
@@ -1589,22 +1589,16 @@ yelp.se##.js-cookie-iframe
 ||activate.social^$third-party
 ||activehosted.com^$third-party
 ||ad.iplayer.org^$third-party
-||adaptlogic.com^$third-party
-||adcell.io^$third-party
-||adclick.se^$third-party
 ||addevent.com^$third-party,domain=godare.se
 ||addtoany.com^$third-party
 ||adeprimo.se^$third-party
 ||adhype.se/js/native
 ||adonstudio.com^$third-party
 ||adrunner.pricerunner.se^$third-party
-||adservone.com^$third-party
 ||adt511.net^$third-party
 ||adt532.com^$third-party
-||adtooxcloud.com^$third-party
-||adviral.media^$third-party
+||adten.eu^$third-party
 ||adviral.s3.amazonaws.com/sponsored/
-||advrl.com^$third-party
 ||af.analytics.elx.cloud^$third-party
 ||aff.bstatic.com^$domain=travelgrip.se
 ||affiliator.com^$third-party
@@ -1619,9 +1613,7 @@ yelp.se##.js-cookie-iframe
 ||ana.tunnl.com^
 ||analytics-sdk.yle.fi^$script
 ||analytics.ozzi.io^$third-party
-||anki.com^$third-party
 ||annons.lidkopingsnytt.nu^
-||apccdn.apsis1.com^$third-party
 ||api.hitta.se/creepy
 ||api.hitta.se/offer
 ||api.hitta.se/partnerintegration
@@ -1634,13 +1626,11 @@ yelp.se##.js-cookie-iframe
 ||apprl.com/embed/$subdocument,domain=forni.se|majanilssonlindelof.com|metromode.se|petratungarden.se|trendenser.se
 ||appsmav.com^$third-party
 ||apsis.one^$third-party
-||apsislead.com^$third-party
 ||ascontentcloud.com^$third-party
 ||assets.pinterest.com/js/pinit$third-party
 ||assets.tumblr.com/share-button.js$third-party
 ||atgplay.se^*/stat$xmlhttprequest
 ||auction-release.mlpapi.com/site/LoadPluginSite$script
-||audience.systems^$third-party
 ||avanza.se/_api/placera/visit
 ||axier.se/i/commercials/
 ||back.famebloggers.com/bloggerfy/tracker$script,subdocument
@@ -1661,7 +1651,6 @@ yelp.se##.js-cookie-iframe
 ||bloggtoppen.fi^$third-party
 ||bloglovin.com/widget/$third-party
 ||bmbstatic.blob.core.windows.net^
-||boka.holiday^$third-party
 ||bonniergaming.com^$third-party
 ||borsvarlden-banners.azurewebsites.net^
 ||borsvarlden.com/js/cookie-notice
@@ -1695,7 +1684,6 @@ yelp.se##.js-cookie-iframe
 ||cdn.svenskalag.se/img/sponsors$image
 ||cdnbox.win/inc/ETKe.$script
 ||churnkit.com^$third-party
-||cision.com^$third-party
 ||citygate.se^$~image,third-party,domain=~familj.se|~tillminne.se
 ||citygate.se^*/googleaccount$xmlhttprequest
 ||citygate.se^*/mainads$xmlhttprequest
@@ -1705,10 +1693,8 @@ yelp.se##.js-cookie-iframe
 ||cms.catena.media/js/cm-tracking.$script
 ||collect.breakit.se^
 ||compricer.se^$third-party
-||connect.facebook.net^*/fbds.js$third-party,domain=~facebook.com
 ||connect.getflowbox.com^$third-party,domain=aikfotboll.se|farjestadbk.se|svenskaturistforeningen.se
 ||connect.nosto.com^*/behav-popup.$script
-||connectad.io^$third-party
 ||connectio.s3.amazonaws.com/connect-retarget.$script
 ||consent.cmp.oath.com^$third-party,domain=alltomstockholm.se
 ||consent.dk^$third-party,domain=~ekstrabladet.dk
@@ -1724,7 +1710,6 @@ yelp.se##.js-cookie-iframe
 ||cookienotice.co^$third-party
 ||cookiepolicy.peytz.dk^$third-party
 ||cookiepro.com^$third-party,domain=aktiespararna.se|birthday.se|friendsarena.se|fz.se|hastnet.se|sd.se|spela.se|sweclockers.com
-||cookies.orangegames.com^$third-party
 ||cornucopia.cornubot.se/js/cookie
 ||createsend.com^$third-party
 ||createsend1.com^$third-party
@@ -1750,10 +1735,8 @@ yelp.se##.js-cookie-iframe
 ||d9v72urx9pbbc.cloudfront.net/channel.js$script
 ||da.yle.fi/yle/areena/s?$image
 ||dackpartner-web.s3.amazonaws.com^$third-party
-||datomik.com^$third-party
 ||dayviews.com/p/tourn/
 ||dayviews.com^$third-party,domain=filmtipset.se|hamsterpaj.net
-||delivery.adten.eu^$third-party
 ||delivery.vidible.tv^$third-party,domain=teknikhype.se
 ||delivery.youplay.se/report?$image
 ||destination.se/track.js
@@ -1769,7 +1752,6 @@ yelp.se##.js-cookie-iframe
 ||dsms0mj1bbhn4.cloudfront.net/assets/pub/shareaholic.$script
 ||dspk.kindredplc.com/renderImage.aspx$image
 ||eacdn.com/TrafficOpt/$script
-||eacla.com^$third-party
 ||easyweb.se/stats/$image
 ||ecomm.events/i.js
 ||edgeflyfishing.com^$image,domain=jaktsidan.se
@@ -1783,7 +1765,6 @@ yelp.se##.js-cookie-iframe
 ||eteppy.com^
 ||europe-west1-bonnier-big-data.cloudfunctions.net^$third-party
 ||evertiq.se/bximg/
-||everydaystories.se^$third-party
 ||evidon.com^$third-party,domain=morningstar.se|mtv.se|spela.se|tripadvisor.se
 ||execute-api.eu-west-1.amazonaws.com/*/event$xmlhttprequest,domain=forum.hallon.se
 ||execute-api.eu-west-1.amazonaws.com/live/analytics/$xmlhttprequest
@@ -1814,14 +1795,10 @@ yelp.se##.js-cookie-iframe
 ||foretagande.se/r/$xmlhttprequest
 ||foretagarna.se/embeddedresources.siteseeker$script
 ||forms.hsforms.com^*/counters.$image
-||foxpush.com^$third-party
-||foxpush.net^$third-party
-||franecki.net^$third-party
 ||freyanews.com^*/tracker$script
 ||fritiden.se/js/cookiealert-standalone.js
 ||funnelytics.io^$third-party
 ||gamblingsyndication.com^$third-party
-||gameanalytics.com^$third-party
 ||gamedistribution.com/libs/gd/analytics.$script
 ||gamesglue.com/js/gameanalytics/GameAnalytics.$script
 ||getlevelten.com^$third-party
@@ -1829,7 +1806,6 @@ yelp.se##.js-cookie-iframe
 ||gfx.productsup.io^$third-party,domain=aftonbladet.se
 ||glimr.io^$third-party
 ||gnuheter.com/creeper/image$image
-||googlnalytics.com^$third-party
 ||greatstoryvideo.se^$third-party
 ||grillbloggen.nu/media/com_rstbox/
 ||gstatic.com/partners/badge$subdocument
@@ -1837,20 +1813,16 @@ yelp.se##.js-cookie-iframe
 ||hamsterpaj.net/gfx/banners/
 ||happygreen.se^$third-party
 ||hapyak.com^$third-party
-||hbid.*.digitaloceanspaces.com^$third-party
-||headbidder.net^$third-party
 ||helloreco.com^$third-party
 ||heroaffiliates.com^$third-party
 ||herokuapp.com/visit?$image
 ||herokuapp.com^$third-party,domain=aftonbladet.se
 ||heylink.com^$third-party
 ||hittahem.se^$third-party
-||hmads.se^$third-party
 ||hockeymagasinet.com/footer/ad
 ||hockeysnack.com/pagespeed_static/1.$image
 ||hoomemakleri.se^$third-party
 ||hpevoices.com^$third-party
-||hsadspixel.net^$third-party
 ||hsleadflows.net^$third-party
 ||humorbrevet.se/externa_bilder
 ||i.ibb.co/qRBYR98/ban1.png
@@ -1860,9 +1832,7 @@ yelp.se##.js-cookie-iframe
 ||idrottonline.se^*/samarbetspartners$image
 ||imgix.net^*/analytics.$script
 ||imp.laget.se^
-||improvedigital.com^$third-party
 ||inevserver.com/~tournreport/$image
-||influact.com^$third-party
 ||insertcoin.se^$third-party
 ||insplanet.com^$third-party
 ||instaforex.com^$third-party
@@ -1892,7 +1862,6 @@ yelp.se##.js-cookie-iframe
 ||kaloo.ga^$third-party
 ||kamrat.com/js/cookiescript
 ||kayak.xno.se^$script
-||kekocity2.com^$third-party
 ||kingsizemag.se/content/$image
 ||kingsizemag.se/kingrev.php
 ||kingsumo.com^$third-party
@@ -1919,7 +1888,6 @@ yelp.se##.js-cookie-iframe
 ||liveagent.se/scripts/track.$script
 ||ljuskompaniet.se^
 ||logger.tv.nu^
-||logs.datadoghq.com^$third-party
 ||lokalguiden.se/premises/exposure
 ||lokus.se^$~image,third-party,domain=~familj.se
 ||look.ufinkln.com^
@@ -1946,7 +1914,6 @@ yelp.se##.js-cookie-iframe
 ||mcgtrack.herokuapp.com^$third-party
 ||media.jw-it.se/b/$image
 ||media.jw-it.se/getip.php
-||mediaglacier.com^$third-party
 ||mediakraft.se^$third-party
 ||mediekompaniet.com^$third-party
 ||mega.folkbladet.nu^
@@ -1954,10 +1921,8 @@ yelp.se##.js-cookie-iframe
 ||meltwater.com^$third-party
 ||metapic.se^$third-party
 ||metric-mobil.aftonbladet.se^$image
-||metrics.syndn.net^$third-party
 ||mikz.com^$third-party
 ||miljomat.se/movie/Ekomatcentrum$media
-||milotree.com^$third-party
 ||mindreskatt.se^
 ||missaffiliate.com^$third-party
 ||mogenromantik.com^
@@ -1970,7 +1935,6 @@ yelp.se##.js-cookie-iframe
 ||mtpc.se^$third-party
 ||mtst.io/js/mtst.js$script
 ||myadmessenger.com^$third-party
-||mydatabankapp.com^$third-party
 ||mymediaindex.com^$third-party
 ||network-n.com^$third-party
 ||newsharecounts.*.amazonaws.com/nsc.js$script
@@ -1997,11 +1961,8 @@ yelp.se##.js-cookie-iframe
 ||opulens.se^$csp=worker-src 'none'
 ||organicfruitapps.com/analytics$image
 ||p.typekit.net/p.css$stylesheet
-||panera.io^$third-party
-||partners.mcontigo.com^$third-party
 ||pensiono.se.$subdocument
 ||pensiono.se^$third-party
-||petrk.com^$third-party
 ||pheegoab.click^
 ||piano.io^$domain=thelocal.se
 ||pingback.issuu.com/ping$xmlhttprequest
@@ -2013,7 +1974,7 @@ yelp.se##.js-cookie-iframe
 ||platssajten.se^$third-party
 ||play.etc.se/sw.js
 ||pliing.com^$third-party
-||plowking.mecenat.com^$third-party
+||plowking.mecenat.com^
 ||pomu.se/api/ads.json
 ||portalhc.com^$third-party
 ||powr.io/powr.js$script
@@ -2054,8 +2015,6 @@ yelp.se##.js-cookie-iframe
 ||resultify.com^$third-party
 ||resultify.se^$third-party
 ||revrelations.com^$third-party
-||revrtb.com^$popup,third-party
-||richaudience.com^$third-party
 ||richmediastudio.com^$third-party
 ||riedta.com^$third-party
 ||royapp.com^$third-party
@@ -2071,12 +2030,9 @@ yelp.se##.js-cookie-iframe
 ||schibsted.io^*/gdpr-bundle.js
 ||script.e-space.se^$third-party
 ||sdk.pulse.schibsted.com^$script
-||seekly.se^$third-party
 ||seenthis.se^$third-party
 ||sentry-cdn.com^$third-party,domain=bytbil.com|koket.se|svd.se
-||serverbid.com^$third-party
 ||service.survio.se^*/registerhit?$image
-||sesn.se^$third-party
 ||sexapp.me^
 ||shareaholic.com^$third-party
 ||shareaholic.net^$third-party
@@ -2091,7 +2047,6 @@ yelp.se##.js-cookie-iframe
 ||sleeknote.com^$third-party
 ||slidesharecdn.com/ss_foundation/combined_li_tracking.$script
 ||snapwidget.com/images/snapwidget_ad$image
-||snigelweb.com^$third-party
 ||snt-matrix-app.herokuapp.com^*/user-tracking
 ||sociuslive.com^$third-party
 ||solidtango.com^*/player_statistics$image
@@ -2101,7 +2056,6 @@ yelp.se##.js-cookie-iframe
 ||sportfack.se/core/java/facebook
 ||sporttv.nu/components/banners/
 ||sporttv.nu/js/partners
-||sprinklecontent.com^$third-party
 ||sprinkletxt.com^$third-party
 ||stackpathcdn.com^*/shrMain.$script
 ||stat-api.tv4play.se^
@@ -2134,14 +2088,12 @@ yelp.se##.js-cookie-iframe
 ||tc.hometogo.net^$image
 ||tdi.cartoonnetwork.com/turnerintl$script,domain=cartoonnetwork.se
 ||teknikveckan.se^*/ads
-||telemetric.dk^$third-party
 ||telemetry.bambuser.io^$websocket
 ||temadagar.se/ezoic
 ||terms.vkmedia.se^
 ||thelocal.se^*/private-browsing.js
 ||thestoryof2.se/em_event.html
 ||tibaco.net/scripts/tws.js$script
-||topdisplaynetwork.com^$third-party
 ||tourn.co^$third-party
 ||tourn.se^$third-party
 ||tr.apsisforms.com^$third-party
@@ -2156,7 +2108,6 @@ yelp.se##.js-cookie-iframe
 ||tripadvisor.se/PVLog
 ||tripadvisor.se^$csp=worker-src 'none'
 ||trn.ninja^$third-party
-||trugaze.io^$third-party
 ||truthlyanalytics.com^$third-party
 ||turistmal.se/js/popup-controller.js
 ||tv4-video-tracking.b17g.net/event
@@ -2164,7 +2115,6 @@ yelp.se##.js-cookie-iframe
 ||tvmatchen.nu/plugins/splash-redirector
 ||tvmatchen.nu^*/smartbanner
 ||twingly.com^$third-party
-||twittercounter.com^$third-party
 ||ubembed.com^$third-party
 ||ues*.mmcloud.se/api/*/events$third-party
 ||ues.vk.se^*/events
@@ -2172,24 +2122,18 @@ yelp.se##.js-cookie-iframe
 ||umami.nordiskehandel.cloud^
 ||unformsy.mobi^$third-party
 ||upsales.com^$third-party
-||uptobanner.com^$third-party
-||uptobranding.com^$third-party
-||vdsinside.com^$third-party
 ||vgc.no/cdn/js/libs/ast$script,domain=aftonbladet.se
 ||viagogo.se^
 ||video-static.tunnl.com/js/blocker.min.js$script
 ||videoplaza.*/proxy/tracker?
 ||viforetag.se^$third-party
-||vikispot.com^$third-party
 ||vinguiden.com^$third-party
 ||walls.io^$domain=svensktgolfforum.se
 ||webbannons.ntm.eu^$subdocument
-||webbcensus.com^$third-party
 ||webbjobb.io^*/abb-$script
 ||webformscr.com/apps/fc3/build/default-handler.js
 ||webpower.eu^$third-party
 ||webpushs.com^$third-party
-||websking.com^$third-party
 ||websta.me^$third-party
 ||widget.getyourguide.com^$third-party
 ||widget.matklubben.*/tracker$image
@@ -2199,13 +2143,11 @@ yelp.se##.js-cookie-iframe
 ||widgets.jobtechdev.se^$third-party
 ||win.stack-prizes*.com^
 ||wishpond.net^$third-party
-||wonderpush.com^$third-party
 ||woomio.com/assets/js/analytics$third-party
 ||wp.com/wp-content/js/bilmur.min.js$script
 ||wpcc.io^*/cookieconsent$script
 ||xfm.se/cookie/cookie_popup.$script
 ||yelp.se/sit_rep
-||yieldbird.com^$third-party
 ||yieldwrapper.com^$third-party
 ||yle.fi/initAdobeAnalytics.$script
 ||youplay.se^$third-party,domain=dayviews.com|emocore.se|extraextra.se|familjeliv.se|hamsterpaj.net|kalender.se|kamrat.com|recept.se
