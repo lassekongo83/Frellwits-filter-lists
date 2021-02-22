@@ -345,7 +345,7 @@ artbannersplus&task=show
 /live/radarmagazine.se.js$script
 /LoadSlotLocator.$script
 /logger/logger?
-/LogRocket.min.js$script,third-party,domain=~dsc.gg
+/LogRocket.min.js$third-party,domain=~dsc.gg
 /losad/loada.$script
 /loada.forum.$script
 /log/hublytics$xmlhttprequest
@@ -353,7 +353,7 @@ artbannersplus&task=show
 /monetization/pixel-sdk/*
 /mp_emediate/inc/annons.html
 /adn/adn-setup.$script
-/omniture/s_code.js$script,domain=~atgplay.se
+/omniture/s_code.js$domain=~atgplay.se
 /OneSignalSDKWorker$script
 /orion/loada$script
 /permutive-async.js$script
@@ -956,23 +956,9 @@ tillminne.se#@#.ads-list
 @@||feed.meltwater.com^$subdocument
 @@_advert.$domain=e-pages.dk
 avanza.se#@#a[title="LeoVegas"]
-readly.com#@#.cookie-notice:not(body):not(html)
 @@||happyride.se/img/admarket/$~third-party
 @@||amazonaws.com/ads/$image,domain=jobb.maxkompetens.se
-jobb.maxkompetens.se#@#.ad-item
-jobb.maxkompetens.se#@##single-ad
-jobb.maxkompetens.se#@#.ad-body
-jobb.maxkompetens.se#@#.ad-content
-jobb.maxkompetens.se#@#.single-ad
 intersport.*#@#.cookie-banner:not(body):not(html)
-! personlig annonsmarknad
-cykla.se#@#.advertisment
-@@||cykla.se/wp-content/themes/cykla/assets/images/advert-filter-top.jpg$image
-@@||cykla.se/wp-admin/admin-ajax.php?action*&advert_search$xmlhttprequest
-! https://github.com/lassekongo83/Frellwits-filter-lists/issues/55
-patient.info##body:style(overflow: auto !important;)
-! https://twitter.com/arneby/status/1157674027516878848
-@@/optimizelyjs/*$domain=ikea.com
 ! Blocked in EasyPrivacy. Breaks login/logout on some sites.
 @@||cdn.dynamicyield.com^$domain=alingsastidning.se|bohuslaningen.se|gp.se|hallandsposten.se|hn.se|stromstadstidning.se|ttela.se
 ! https://github.com/lassekongo83/Frellwits-filter-lists/issues/81
@@ -1267,6 +1253,9 @@ egoinas.se,fysikstugan.se,enkelteknik.se,hamnen.se,cannabis.se##+js(acis, ai_fro
 /wp-content/plugins/top-10/*$script
 /wp-content/uploads/*.js?ver$script,domain=nyadagbladet.se
 /wp-content/uploads/*/public/assets/js/advanced.js$script
+/wp-content/themes/keremiya1/js/script.js
+/wp-content/themes/keremiya1/js/license.
+/wp-content/themes/keremiya1/js/jopper.
 /se-wordpress-newsletters
 /se-wordpress-google-analytics
 /se-wordpress-gdpr
@@ -1275,7 +1264,6 @@ egoinas.se,fysikstugan.se,enkelteknik.se,hamnen.se,cannabis.se##+js(acis, ai_fro
 /se-wordpress-agilis-solum/assets/js/ad-collapse.$script
 
 ! JWplayer analytics/ad scripts
-svd.se,aftonbladet.se,muscles.se,nordichardware.se,nyheteridag.se,freeride.se,happyride.se,ilikeradio.se,embed.futuresportsmedia.com,nyckelspel.se,streamio.com,laget.se,moviezine.se,maharajah.se,fasttrack.webstream.dk,upstream.to,fotbolldirekt.se,hockeysverige.se,innebandymagazinet.se,jwplayer.com,axess.se,funnygames.se#@#.afs_ads
 ||ssl.p.jwpcdn.com^*/jwpsrv.js$script,important,domain=eurosport.se|aftonbladet.se|svd.se|muscles.se|tv.nu|nyheteridag.se|axess.se|freeride.se|happyride.se|ilikeradio.se|embed.futuresportsmedia.com|streamio.com|laget.se|moviezine.se|maharajah.se|fasttrack.webstream.dk|innebandymagazinet.se|fotbolldirekt.se|hockeysverige.se|cdn.jwplayer.com
 ||ssl.p.jwpcdn.com^*/freewheel.js$script,important,domain=eurosport.se
 ||ssl.p.jwpcdn.com^*/gapro.js$script,important,domain=freeride.se|happyride.se|ilikeradio.se
@@ -1825,29 +1813,6 @@ byggteknikforlaget.se,dialasen.com,torbjornstips.se,backpacking.se,sporthalsa.se
 automation.se,verkstadstidningen.se,transportnytt.se,peace.ax,konsolnyheter.se,metalcentral.net##.bannergroup
 bildobubbla.se,nyatider.nu##.annonser
 customerinsider.se,livetsgoda.se##a[target="_blank"] img
-
-! Various websites with lots of malicious stuff and annoyances
-/wp-content/themes/keremiya1/js/script.js$script
-/wp-content/themes/keremiya1/js/license.$script
-/wp-content/themes/keremiya1/js/jopper.$script
-||nyafilmer.*^$csp=default-src 'self' 'unsafe-inline' 'unsafe-eval' jawcloud.co *.jawcloud.co *.googleapis.com *.google.com *.gstatic.com;img-src *;worker-src 'none'
-||nyafilmer.*/branding/$image
-nyafilmer.*##.bigbg
-nyafilmer.*##.headerSpace
-swefilmer.*##.blueimp-gallery
-swefilmer.*###oscuridad
-||nya-filmer.*/masha.$script
-/js/script.$script,domain=nxload.com|jawcloud.co
-/license.$script,domain=nxload.com|jawcloud.co
-||bit.ly^$subdocument,domain=jawcloud.co
-||cdnbox.win/inc/ETKe.$script
-||jawcloud.co/banner$image
-||jawcloud.co/playerjs/vast/
-||jawcloud.co/js/jawgo.js
-||jawcloud.co^$csp=script-src 'self' 'unsafe-inline' 'unsafe-eval' blob: data: *.jawcloud.co upvtt.com *.gstatic.com;frame-src 'self'
-||jawcloud.co/*.gif$image
-jawcloud.co##.loloba
-||i.ibb.co/qRBYR98/ban1.png
 
 ! Various annoyances and tracking
 saraabrahamsson.se,eurosport.se,jawcloud.co,nxload.com,polistidningen.se,clipmyhorse.tv,100kitchenstories.se,streamio.com,nyheter24.se,modette.se##+js(aeld, contextmenu)
