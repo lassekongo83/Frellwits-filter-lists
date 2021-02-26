@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2021-02-24 10:54:28 CET
+! Last modified: 2021-02-26 06:43:19 CET
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -27,7 +27,6 @@
 !#include Swedish/not_mobile.txt
 !#endif
 ! --- End browser/extension specific filters
-###___gatsby > div[class^="css-"]:last-child
 ###_ning_gdpr_approve
 ###accept-cookies-div
 ###ad-fullscreen:not(body):not(html)
@@ -66,8 +65,8 @@
 ###cookiejar
 ###cookielawwarning
 ###cookieMsgBlock
-###CookieNotice
 ###cookieNotice
+###CookieNotice
 ###cookies-acceptance .alert.bottom
 ###cookiesInfo
 ###dialog-eu-cookie-law
@@ -1278,6 +1277,7 @@ intersport.*#@#.cookie-banner:not(body):not(html)
 ipo.se##.tag-sponsrad
 isabellalowengrip.se##.popup-block
 isabellalowengrip.se##main + div
+isabellalowengrip.se,matplatsen.net,monasuniversum.se###gatsby-focus-wrapper > div[class^="css-"]:last-of-type
 it-finans.se,it-halsa.se,it-kanalen.se,it-pedagogen.se,it-retail.se##a[onclick^="gtag"]
 jaktplay.se##.jaktplay-ad
 jaktsidan.se###ipsLayout_mainArea > iframe
@@ -1350,7 +1350,6 @@ market.se###rollup, #newsletter-rollup
 market.se##article[about^="/annons"]
 marsta.nu##.outsider, .panel--naringsliv
 matklubben.se##.notification.cookies
-matplatsen.net,monasuniversum.se###gatsby-focus-wrapper > div[class^="css-"]:last-of-type
 matspar.se##div[style="z-index: 2000;"],div[style="z-index: 2000;"] + div
 megafonen.se##[data-article-sponsored="true"], .content-main-adwrapper, .campaign-sidebar
 merinfo.se##article[data-customer]
