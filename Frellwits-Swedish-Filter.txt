@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2021-02-26 15:53:40 CET
+! Last modified: 2021-02-27 11:32:32 CET
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -65,8 +65,8 @@
 ###cookiejar
 ###cookielawwarning
 ###cookieMsgBlock
-###cookieNotice
 ###CookieNotice
+###cookieNotice
 ###cookies-acceptance .alert.bottom
 ###cookiesInfo
 ###dialog-eu-cookie-law
@@ -394,12 +394,11 @@
 /AudienceTarget$script,domain=morningstar.se
 /avia-snippet-cookieconsent.$script
 /bam-data$xmlhttprequest,domain=allehanda.se|arbetarbladet.se|avestatidning.com|bandypuls.se|bblat.se|dalademokraten.se|dt.se|fagersta-posten.se|falkopingstidning.se|gd.se|jnytt.se|jp.se|lt.se|ltz.se|na.se|norrteljetidning.se|nynashamnsposten.se|op.se|salaallehanda.com|skaraborgslanstidning.se|skovdenyheter.se|smalandsdagblad.se|smalanningen.se|smt.se|st.nu|tidningenharjedalen.se|tranastidning.se|vastgotabladet.se|vetlandaposten.se|vlt.se|vn.se
-/banner/$script,domain=cleannet.se|dagenshandel.se|entreprenad.com|food-supply.se|foodnet.se|fri-kopenskap.se|habit.se|kemivarldenbiotech.se|lifesciencesweden.se|magasinetparagraf.se|medtechmagazine.se|motormagasinet.se|packnet.se|plastnet.se|processnet.se|recyclingnet.se|rt-forum.se|skyddosakerhet.se|transportnet.se|uochd.se|verkstaderna.se|woodnet.se
 /banner/ads/*
+/banners$script,domain=magasinetparagraf.se
 /banners/*casino$image
 /Banners/webbannons
 /bannersidor/*
-/bc-tracking.js$script,domain=digikey.se
 /bcpop.js$domain=businessclass.se
 /betald-exponering/huvudspons$image
 /betting/$image,domain=fotboll.com|hockeybladet.nu|kulturbloggen.com|newsvoice.se|nyadagbladet.se
@@ -474,7 +473,7 @@
 /ga.js$script,~third-party,domain=driverzone.se
 /ga_cookie_track.js$script
 /GA_EEC$domain=osterbottenstidning.fi|sydin.fi|vasabladet.fi
-/gdpr/*$domain=capdesign.se|digikey.se|husbilskompisar.se|megaspel.se|momondo.se|nyckelspel.se|rotter.se|se.laowl.com|villalivet.se|vimedbarn.se|visitlulea.se
+/gdpr/*$domain=capdesign.se|husbilskompisar.se|megaspel.se|momondo.se|nyckelspel.se|rotter.se|se.laowl.com|villalivet.se|vimedbarn.se|visitlulea.se
 /get.aspx?AdSlotID$script
 /getnative$xmlhttprequest,domain=di.se
 /glasscandle.$script,domain=komponentkoll.se
@@ -487,7 +486,7 @@
 /hemmafixbloggen/includes/events-tracker
 /HSSAnalyticsUtils.js
 /html5videovastplugin.$domain=skidspar.se
-/i10c@p1/*$domain=bax-shop.se|digikey.se|justfab.se|tui.se
+/i10c@p1/*$domain=bax-shop.se|justfab.se|tui.se
 /iab/iab.js
 /iframeadvloader.$script
 /illustrationer/annons_
@@ -831,7 +830,7 @@
 /wdg_cookie_bar
 /wdg_vda$script,domain=spela.se
 /wds_nyhetsbrev_popup
-/Web%20Analytics/*$script,domain=digikey.se
+/Web%20Analytics/*$script
 /webbresurser/banner/*
 /widget.hittarecept.se/blogcounter
 /wp-admin/admin-ajax.php?action=addthis_global_options$script,domain=expressen.se
@@ -922,11 +921,9 @@ affarsliv.com,affarslivgotland.se,corren.se,ekuriren.se,eposten.se,folkbladet.se
 affarsvarlden.se##.cookies-wrap
 affarsvarlden.se##.kingstreet-media-section, .modal-get-premium__wrap
 affarsvarlden.se,alekuriren.se,arbetarskydd.se,arvikanyheter.se,byggahus.se,dalslanningen.se,expressen.se,filipstadstidning.se,filmtopp.se,fryksdalsbygden.se,hjotidning.se,improveme.se,karlskogatidning.se,kt.se,kungalvsposten.se,kungsbackaposten.se,lag-avtal.se,lokaltidningensto.se,mariestadstidningen.se,molndalsposten.se,nickelodeon.se,nkp.se,nlt.se,nwt.se,nyteknik.se,provinstidningen.se,realtid.se,saffletidningen.se,sla.se,varmlandsaffarer.se,vf.se##.ad-container
-aftonbladet.se###MegaAd
-aftonbladet.se##.ab-responsive-ads-wrapper
+aftonbladet.se###MegaAd, [id*="abAdArea"], .ab-responsive-ads-wrapper
 aftonbladet.se##.abThemeGradientPage:not(.abIsNichedContent) a[href^="/family/a/"]
 aftonbladet.se##[classname="speltipsMarkup"]
-aftonbladet.se##[id*="abAdArea"]
 aftonbladet.se##a[href*="utm_campaign=rantekartan"], a[href*="letsdeal.se"]
 aftonbladet.se##a[style*="background-color: rgb(228, 240, 255)"], a[style*="background-color:#e4f0ff"], a[style*="border-color: rgb(0, 103, 181)"], a[style*="border-color:#0067b5"]
 aftonbladet.se##div[style*="border-color: rgb(0, 103, 181);"], div[style*="border-color: rgb(0, 103, 181);"] ~ a
@@ -1724,6 +1721,8 @@ yelp.se##.js-cookie-iframe
 ||destination.se/track.js
 ||destination.se^$third-party
 ||destination.se^*/elastic-apm-rum.umd.min.js
+||digikey.se^*/banners/
+||digikey.se^*/consent
 ||digital.di.se/api/sponsor/$xmlhttprequest
 ||distansarbete.com^
 ||diu127fbe6pn6.cloudfront.net^*/ga-universal.html$subdocument
@@ -1757,8 +1756,6 @@ yelp.se##.js-cookie-iframe
 ||facebook.com/*/plugins/like$third-party
 ||facebook.com/plugins/like$third-party
 ||facebook.com/plugins/share_button.php$third-party
-||facebook.com/tr/$third-party
-||facebook.com/tr?$third-party
 ||fakturino.se^$third-party
 ||fapp.pw^$third-party
 ||fast.fonts.com/t/1.css$stylesheet,xmlhttprequest
