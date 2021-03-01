@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2021-02-27 11:32:32 CET
+! Last modified: 2021-03-01 12:40:59 CET
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -65,8 +65,8 @@
 ###cookiejar
 ###cookielawwarning
 ###cookieMsgBlock
-###CookieNotice
 ###cookieNotice
+###CookieNotice
 ###cookies-acceptance .alert.bottom
 ###cookiesInfo
 ###dialog-eu-cookie-law
@@ -349,6 +349,7 @@
 /_adsmodern/*$image
 /_graphics/annons/*
 /_sites_media/*/uploads/Banners
+/_t/se.js$domain=hornbach.se
 /a?callback=pfmod.saveadsettings
 /ab-xiti-min$script,domain=aftonbladet.se
 /ad-$subdocument,domain=forum.odla.nu
@@ -389,6 +390,7 @@
 /aria/bentojs.js$domain=nickelodeon.se
 /aria/coda.html$domain=nickelodeon.se
 /assets/google-universal-analytics$script
+/assets/tracking$domain=hornbach.se
 /atomic-blocks$script,domain=dinlivsstil.nu|foretagsverige.se|forskningsverige.se|grillbibeln.se|hallbarhetsverige.se|kampenmotcancer.se|motorbibeln.se|tillvaxtsverige.se
 /atoms/images/*banner$domain=etc.se
 /AudienceTarget$script,domain=morningstar.se
@@ -419,6 +421,8 @@
 /campaign*/*$script,xmlhttprequest,domain=alltforforaldrar.se|kokaihop.se|mammasidan.se|minbebis.com|nyheter24.se
 /casino/$image,domain=battrestadsdel.se|dayviews.com|djungeltrumman.se|fotboll.com|hockeybladet.nu|hockeysverige.se|hypeline.se|kamrat.com|newsvoice.se|nyheter24.se|spray.se|svenskhistoria.se|totallyorebro.se|totallystockholm.se|zeromagazine.nu
 /cecado/advisible.js
+/census.js?bust=release
+/census/webtrekk
 /check-paywall$domain=dn.se
 /citygate/payingcompanies$xmlhttprequest
 /client-stream-events$domain=viafree.se
@@ -448,7 +452,9 @@
 /dovas/ads/*
 /downloads.mailchimp.com/*$domain=branschkoll.se|landleyskok.se|villalivet.se
 /downloads.mailchimp.com/js/signup-forms/popup$image,script
+/dynamic-yield/report/pageview
 /DynamicGAFunctions$script,domain=morningstar.se
+/dyTracker.js?bust=release
 /elementor/assets/lib/share-link$script
 /emediate-responsive-wp-plugin/*
 /empty.html$subdocument,domain=byggvarlden.se|hotellorestaurang.se
@@ -521,6 +527,7 @@
 /js/social-sharing.js$domain=fokus.se
 /js/sticky-mobile-ad.
 /js/userneeds.
+/js/webtrekk
 /karkimedia_init.js
 /kenzazouiten/lib/js/sticky.
 /lay/dfp_$domain=gamereactor.se
@@ -1397,7 +1404,7 @@ nyheter24.se##.lazyload_bar.show, .lazyload_outer.show
 nyheteridag.se##.content > div:not([class]) img, a[href*="www.casino"]
 nyheteridag.se##.widget.facebook
 nyhetersto.se##header > div.g
-omni.se,omniekonomi.se##.article--sponsored,.resource--sponsored,.component--sticky-sponsor-banner,.pre-banner
+omni.se,omniekonomi.se##.article--sponsored, .resource--sponsored, .component--sticky-sponsor-banner, .pre-banner, .banner--toppanorama, .banner--mobiletoppanorama, .banner--midpanorama
 omnihalsa.com,skanesport.se,sportpanelen.se##.stream-item
 opulens.se###secondary
 opulens.se##.mailpoet_form
@@ -1555,6 +1562,7 @@ yelp.se##.js-cookie-iframe
 ||123on.com/static/videojs.pulse.$script
 ||172.104.145.13^
 ||1terms.com^
+||2mdn.net^$media,domain=viafree.se
 ||7godscasino.com^$popup,third-party
 ||7hd.org^
 ||aa-cdn.mytaste.org/js/ad.js$script
@@ -1679,7 +1687,7 @@ yelp.se##.js-cookie-iframe
 ||conviva.com^$third-party
 ||cookie-disclaimer.onewp.net^$third-party
 ||cookie-script.com^$third-party
-||cookiebot.com^$third-party,domain=bax-shop.se|clipmyhorse.tv|etc.se|goteborgdirekt.se|itaboutdoor.se|kingsizemag.se|kurera.se|mitti.se|ng.se|skeppsbrons.se|smartsenior.se|swedroid.se|tankesport.se|upplysning.se|vasterastidning.se|wesafe.se
+||cookiebot.com^$third-party,domain=bax-shop.se|circlek.se|clipmyhorse.tv|etc.se|goteborgdirekt.se|itaboutdoor.se|kingsizemag.se|kurera.se|mitti.se|ng.se|skeppsbrons.se|smartsenior.se|swedroid.se|tankesport.se|upplysning.se|vasterastidning.se|wesafe.se
 ||cookieinformation.com^$script,domain=aktivtraning.se|digitalfotoforalla.se|iform.se|militarhistoria.se|natgeo.se|pctidningen.se|popularhistoria.se|proff.se|valuta.se|varldenshistoria.se|viivilla.se
 ||cookieinformation.com^$subdocument,third-party
 ||cookieinfoscript.com^$third-party
@@ -1774,6 +1782,7 @@ yelp.se##.js-cookie-iframe
 ||foretagande.se/r/$xmlhttprequest
 ||foretagarna.se/embeddedresources.siteseeker$script
 ||forms.hsforms.com^*/counters.$image
+||freewheel-mtgx-tv.akamaized.net^$media,domain=viafree.se
 ||freyanews.com^*/tracker$script
 ||fritiden.se/js/cookiealert-standalone.js
 ||funnelytics.io^$third-party
@@ -2004,6 +2013,7 @@ yelp.se##.js-cookie-iframe
 ||schibsted.com/privacy-notifier.$third-party
 ||schibsted.com/pulse.$third-party
 ||schibsted.io^*/gdpr-bundle.js
+||screen9.com^$media,domain=viafree.se
 ||script.e-space.se^$third-party
 ||sdk.pulse.schibsted.com^$script
 ||seenthis.se^$third-party
@@ -2077,6 +2087,7 @@ yelp.se##.js-cookie-iframe
 ||tr.apsisforms.com^$third-party
 ||track.cpa.tpgrn.com^
 ||track.intersport.se^$xmlhttprequest
+||track.postkodlotteriet.se^
 ||tracking.bonnier.news^$third-party
 ||trafikradion.nu/reklam$image
 ||trafikstyrelsen.com^
