@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2021-03-05 07:58:20 CET
+! Last modified: 2021-03-06 10:38:58 CET
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -65,8 +65,8 @@
 ###cookiejar
 ###cookielawwarning
 ###cookieMsgBlock
-###cookieNotice
 ###CookieNotice
+###cookieNotice
 ###cookies-acceptance .alert.bottom
 ###cookiesInfo
 ###dialog-eu-cookie-law
@@ -799,6 +799,7 @@
 /themes/Jaz/inc/js/*scroll$script,domain=explorecurate.com
 /thumbnail_bettingstugan$image
 /thumbs/webbannons$image
+/tinypass-gtp.min.js
 /TopBanner$subdocument,domain=hitta.se
 /trackers/SessionCam-tag$script
 /trackolding$script,domain=skyscanner.se
@@ -1218,6 +1219,7 @@ gentlemannaguiden.com##.advertising
 glassakademin.se##[class^="adverts-"]
 godare.se##.privacy-information
 google.se##mobile-promo
+goteborgdirekt.se,mitti.se,vasterastidning.se##.profile-native
 goteborgsgolfaren.se##.sgpb-popup-overlay, #sgpb-popup-dialog-main-div-wrapper
 gotlandswebben.se##.header-ads-wrapper
 grannar.se##.cookiebox, .revive, .offert-promobox
@@ -1643,7 +1645,7 @@ yelp.se##.js-cookie-iframe
 ||cdn.advisible.com/accl$script
 ||cdn.advisible.com/adk$third-party
 ||cdn.axiell.com^*/cookie-disclaimer.$script
-||cdn.cookielaw.org^$script,domain=cartoonnetwork.se|discoveryplus.se|findit.se|flashscore.se|fotbollskanalen.se|ikea.com|koket.se|manpower.se|nvp.se|recept.se|tv4.se|tv4play.se
+||cdn.cookielaw.org^$script,domain=cartoonnetwork.se|discoveryplus.se|findit.se|flashscore.se|fotbollskanalen.se|hastnet.se|ikea.com|koket.se|manpower.se|nvp.se|recept.se|tv4.se|tv4play.se
 ||cdn.iubenda.com/iubenda.$script
 ||cdn.livechatinc.com/tracking.$script
 ||cdn.svenskalag.se/img/sponsors$image
@@ -1657,7 +1659,6 @@ yelp.se##.js-cookie-iframe
 ||cms.catena.media/js/cm-tracking.$script
 ||collect.breakit.se^
 ||compricer.se^$third-party
-||connect.getflowbox.com^$third-party,domain=aikfotboll.se|farjestadbk.se|svenskaturistforeningen.se
 ||connect.nosto.com^*/behav-popup.$script
 ||connectio.s3.amazonaws.com/connect-retarget.$script
 ||consent.cmp.oath.com^$third-party,domain=alltomstockholm.se
@@ -1667,8 +1668,7 @@ yelp.se##.js-cookie-iframe
 ||conviva.com^$third-party
 ||cookie-disclaimer.onewp.net^$third-party
 ||cookie-script.com^$third-party
-||cookiebot.com^$third-party,domain=bax-shop.se|circlek.se|clipmyhorse.tv|etc.se|goteborgdirekt.se|itaboutdoor.se|kingsizemag.se|kurera.se|mitti.se|ng.se|skeppsbrons.se|smartsenior.se|swedroid.se|tankesport.se|upplysning.se|vasterastidning.se|wesafe.se
-||cookieinformation.com^$script,domain=aktivtraning.se|digitalfotoforalla.se|iform.se|militarhistoria.se|natgeo.se|pctidningen.se|popularhistoria.se|proff.se|valuta.se|varldenshistoria.se|viivilla.se
+||cookiebot.com^$third-party,domain=bax-shop.se|circlek.se|etc.se|goteborgdirekt.se|itaboutdoor.se|kingsizemag.se|kurera.se|mitti.se|ng.se|skeppsbrons.se|smartsenior.se|swedroid.se|tankesport.se|upplysning.se|vasterastidning.se|wesafe.se
 ||cookieinformation.com^$subdocument,third-party
 ||cookieinfoscript.com^$third-party
 ||cookienotice.co^$third-party
@@ -1705,7 +1705,6 @@ yelp.se##.js-cookie-iframe
 ||dayviews.com/p/tourn/
 ||dayviews.com^$third-party,domain=filmtipset.se|hamsterpaj.net
 ||deals.innocode.no^$third-party
-||delivery.vidible.tv^$third-party,domain=teknikhype.se
 ||delivery.youplay.se/report?$image
 ||destination.se/track.js
 ||destination.se^$third-party
@@ -1735,8 +1734,7 @@ yelp.se##.js-cookie-iframe
 ||eteppy.com^
 ||europe-west1-bonnier-big-data.cloudfunctions.net^$third-party
 ||evertiq.se/bximg/
-||evidon.com^$third-party,domain=morningstar.se|mtv.se|spela.se|tripadvisor.se
-||execute-api.eu-west-1.amazonaws.com/*/event$xmlhttprequest,domain=forum.hallon.se
+||evidon.com^$third-party,domain=morningstar.se|mtv.se|tripadvisor.se
 ||execute-api.eu-west-1.amazonaws.com/live/analytics/$xmlhttprequest
 ||existenz.se/img/o/
 ||exitintel.com^$third-party
@@ -1818,8 +1816,6 @@ yelp.se##.js-cookie-iframe
 ||jobb.blocket.se^*/xtcore.min.js
 ||jobba-hemifran.com^
 ||js.hs-banner.com^
-||js.hs-scripts.com/3322485.js
-||js.hs-scripts.com^$third-party,domain=breakit.se|tholin.se
 ||js.rating-widget.com/external
 ||juicer.io/api/page_views$xmlhttprequest
 ||jula.se/CookieConsent
@@ -1861,12 +1857,11 @@ yelp.se##.js-cookie-iframe
 ||ma.bonnierpublications.se/mtc/event
 ||maaw.io^$third-party
 ||mailchimp.com^*/popup$script
-||mailerlite.com^$third-party,domain=flm.nu|svenskamagasinet.nu|vandringsguiden.se
-||mailmunch.co^$third-party,domain=affarsstaden.se|enkelteknik.se|kingsizemag.se|villalivet.se
+||mailerlite.com^$third-party,domain=flm.nu|vandringsguiden.se
+||mailmunch.co^$third-party,domain=affarsstaden.se|enkelteknik.se|kingsizemag.se
 ||mailmunch.co^*/scrollbox.$script
 ||marfeelcache.com^$third-party
 ||marketale.com^$third-party
-||marketingautomation.services^$third-party,domain=wesafe.se
 ||marketinghub.zoho.com/hub/js/WebsiteAutomation.js$third-party
 ||marketo.com^$third-party
 ||marlin.kumo.at/script.js$third-party
@@ -1997,7 +1992,6 @@ yelp.se##.js-cookie-iframe
 ||script.e-space.se^$third-party
 ||sdk.pulse.schibsted.com^$script
 ||seenthis.se^$third-party
-||sentry-cdn.com^$third-party,domain=bytbil.com|koket.se|svd.se
 ||service.survio.se^*/registerhit?$image
 ||sexapp.me^
 ||shareaholic.com^$third-party
@@ -2052,7 +2046,6 @@ yelp.se##.js-cookie-iframe
 ||sydkusten.es/store/banners/
 ||t.fml.rip^$third-party
 ||t.raptorsmartadvisor.com^$image
-||tags.tiqcdn.com^$domain=mallorcaliv.se
 ||tc.hometogo.net^$image
 ||tdi.cartoonnetwork.com/turnerintl$script,domain=cartoonnetwork.se
 ||teknikveckan.se^*/ads
@@ -2113,6 +2106,7 @@ yelp.se##.js-cookie-iframe
 ||win.stack-prizes*.com^
 ||wishpond.net^$third-party
 ||woomio.com/assets/js/analytics$third-party
+||workhaus.se^$third-party
 ||wp.com/wp-content/js/bilmur.min.js$script
 ||wpcc.io^*/cookieconsent$script
 ||xfm.se/cookie/cookie_popup.$script
@@ -2122,4 +2116,3 @@ yelp.se##.js-cookie-iframe
 ||youplay.se^$third-party,domain=dayviews.com|emocore.se|extraextra.se|familjeliv.se|hamsterpaj.net|kalender.se|kamrat.com
 ||yoursecurecheckout1.com^
 ||znaptag-tags-se.s3.amazonaws.com^$script
-||zotabox.com^$third-party,domain=etunawebben.se
