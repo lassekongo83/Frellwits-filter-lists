@@ -473,7 +473,7 @@ artbannersplus&task=show
 ||auction-release.mlpapi.com/site/LoadPluginSite$script
 ||back.famebloggers.com/bloggerfy/tracker$script,subdocument
 ||bcm.interactives.dk/script/
-||biowebb-data.*.amazonaws
+||biowebb-data.*.amazonaws$important,third-party
 ||blogg.se/public/js/metrics
 ||blogg.se/shared/js/bloggse.js
 ||bloggportalen.se^*/blogstat.js
@@ -1024,19 +1024,7 @@ airam.fi##.body-fixed:style(position: unset !important;)
 ||piano.io^$domain=thelocal.se
 
 ! Common scriptlets
-datormagazin.se,rocknytt.net,skanesport.se,newsner.com,humorbibeln.se,sportbibeln.se,ettgottskratt.se,hbwebben.se,enkelteknik.se,natursidan.se,screen-marknaden.se,fysioterapi.se,daisybeauty.com,dagensopinion.se,plazakvinna.com,carup.se,samnytt.se##+js(acis, advanced_ads_ga_UID)
-pomu.se,thelocal.se,hockeynews.se##+js(acis, googletag, push)
-newsner.com,humorbibeln.se,sportbibeln.se,ettgottskratt.se,kimura.se,datormagazin.se,handbollskanalen.se,enkelteknik.se,samnytt.se,styrkelabbet.se##+js(acis, advads_placement_tests)
-allehanda.se,arbetarbladet.se,avestatidning.com,bblat.se,dalademokraten.se,dt.se,fagersta-posten.se,gd.se,lt.se,ltz.se,na.se,norrteljetidning.se,nynashamnsposten.se,op.se,salaallehanda.com,st.nu,tidningenharjedalen.se,vlt.se,skanesport.se##+js(aeld, mousemove)
-datormagazin.se,skanesport.se##+js(aopr, advads)
-nyadagbladet.se,senses.se##+js(acis, anOptions)
-magasinetparagraf.se,senses.se,plazakvinna.com,omnihalsa.com##+js(acis, _stq)
-video-static.tunnl.com##+js(set, canRunAds, true)
-babyhjalp.se,omnihalsa.com,adlanda.se##+js(acis, document.oncontextmenu)
-handbollskanalen.se##+js(acis, advadsTracking)
-handbollskanalen.se##+js(acis, advads_has_ads)
-finansliv.se,lararnastidning.se,tidningenridsport.se,sulkysport.se,scanaktier.se,lektion.se##+js(aopr, OA_show)
-nyheteridag.se,dagensps.se##+js(acis, googletag)
+senses.se##+js(acis, anOptions)
 mobilanyheter.net,lchfarkivet.se,lakartidningen.se##+js(set, MonsterInsights, undefined)
 egoinas.se,fysikstugan.se,enkelteknik.se,hamnen.se,cannabis.se##+js(acis, ai_front)
 
@@ -1050,14 +1038,8 @@ egoinas.se,fysikstugan.se,enkelteknik.se,hamnen.se,cannabis.se##+js(acis, ai_fro
 /google-analytics-for-wordpress$important,script
 /google-analytics-premium$important,script
 /plugins/google-analytics-dashboard$script,important
-/wp-content/plugins/ad-inserter/includes$important,domain=byggipedia.se|fysikstugan.se|asterixia.se
-/wp-content/plugins/popup-builder-$script,important,domain=mmabetz.se
 ||google-analytics.com^$important,domain=aftonbladet.se|tradera.com|xxl.se
 ||googletagmanager.com^$important,domain=tradera.com|xxl.se
-||tm.tradetracker.net/tag?$important,script,domain=agneswinqvist.se|enkelteknik.se|moviezine.se|everydayexplorers.org|netikett.se
-||biowebb-data.s3.amazonaws.com^*/ad_loader$script,important
-||munchkin.marketo.net/munchkin.js$script,important,domain=yougov.se|hbl.fi|vastranyland.fi|ostnyland.fi|hangotidningen.fi
-||cdn.segment.com/analytics.js$script,important,domain=studocu.com|se.trustpilot.com|dagen.se
 ||amazon-adsystem.com^$3p,important,domain=bilresaieuropa.se
 ||lwadm.com^$important,domain=sydostran.se
 
@@ -2118,7 +2100,7 @@ bilsport.se##fl-panorama-top,fl-newsletter-popup
 megafonen.se##[data-article-sponsored="true"], .content-main-adwrapper, .campaign-sidebar
 minimalisterna.se##.post:has(p:has-text(/i samarbete med/i))
 ||cornucopia.cornubot.se/js/cookie
-cornucopia.cornubot.se###HTML9
+cornucopia.cornubot.se###HTML9, a[href*="://track."]
 cornucopia.cornubot.se##.FeaturedPost:has(a:has-text(/^Reklam/i))
 cornucopia.cornubot.se##.post:has(i:has-text(/reklam/i))
 cornucopia.cornubot.se##.FeaturedPost:has-text(/i samarbete med/i)
@@ -2623,3 +2605,6 @@ milansverige.se##[alt="ad"], [class^="mom-"] a[target="_blank"]
 ||digikey.se^*/banners/
 /assets/tracking$domain=hornbach.se
 /_t/se.js$domain=hornbach.se
+||lararen.se/siteassets/lf-puffar
+lararen.se##a[href*="=annons"]
+scanaktier.se###overlay-black
