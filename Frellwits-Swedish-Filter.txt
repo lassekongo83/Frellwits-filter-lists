@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2021-03-08 18:30:38 CET
+! Last modified: 2021-03-09 10:58:53 CET
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -226,6 +226,7 @@
 ##a[href^="https://www.adsettings.com/scripts/reg_click."]
 ##a[title="LeoVegas"]
 ##article.category-samarbete
+##article.tag-annons
 ##article.type-partnerartikel
 ##cookie-law-banner
 ##div#ads-panorama
@@ -565,6 +566,7 @@
 /OneSignalSDKWorker$script
 /orion/loada$script
 /packs/consent$domain=hemnet.se
+/pagead$domain=horoskoptid.se
 /pages/native$domain=aktuellhallbarhet.se|byggindustrin.se|dagensmedia.se|dagensmedicin.se|fastighetsnytt.se|resume.se
 /pages/tag$domain=aktuellhallbarhet.se|byggindustrin.se|dagensmedia.se|dagensmedicin.se|fastighetsnytt.se|resume.se
 /permutive-async.js$script
@@ -580,30 +582,29 @@
 /plugins/angwp/*
 /plugins/annonstorget/*$script,domain=svenskjakt.se
 /plugins/appbanners/*
-/plugins/arscode-ninja-popups/*$domain=horoskoptid.se|springlfa.se
 /plugins/arscode-social-slider$image,script
 /plugins/beautiful-and-responsive-cookie-consent$script
 /plugins/better-adsmanager/*$~stylesheet
 /plugins/blog-analytics/*
 /plugins/bmb-dfp-plugin/*
-/plugins/boxzilla/*$script,domain=dialasen.com|obsid.se
+/plugins/boxzilla/*$script,domain=dialasen.com
 /plugins/bsa-pro-scripteo/*
 /plugins/cardoza-facebook-like-box/*$script
-/plugins/cc-cookie-consent/*$script,domain=dagensjuridik.se
+/plugins/cc-cookie-consent/*$script
 /plugins/chimpy/*
 /plugins/christmas-panda/*
 /plugins/content-hub-wp-plugin/assets/js/hub-time-spent.$script
 /plugins/convertplug/*
 /plugins/convertpro/*
 /plugins/cookie-bar/*
-/plugins/cookie-law-info/*$domain=carup.se|gilla.se|hockeybladet.nu|ljudochbild.se|majanilssonlindelof.com|nyadagbladet.se|temadagar.se
+/plugins/cookie-law-info/*$domain=carup.se|gilla.se|hockeybladet.nu|nyadagbladet.se|temadagar.se
 /plugins/cookie-notice/*
 /plugins/cookie_consent/*$script
 /plugins/cresta-social-share-counter-pro/*
 /plugins/ct-ultimate-gdpr/*
 /plugins/custom-cookie-message-btdm-extension/*$script
 /plugins/custom-cookie-message/*$script
-/plugins/daftplug-facebook-reactions/*$domain=popmuzik.se
+/plugins/daftplug-facebook-reactions$domain=popmuzik.se
 /plugins/deblocker/js/deblocker$script,domain=~filecr.com
 /plugins/dohi-gdpr/*
 /plugins/dohi-sellbranch/js/popup.$script
@@ -612,23 +613,23 @@
 /plugins/easy-affiliate-links/*
 /plugins/easy-eu-cookie-law/*
 /plugins/easy-facebook-likebox$script
-/plugins/easy-social-sharing/*$script,domain=natursidan.se
+/plugins/easy-social-sharing/*$script
 /plugins/easy-wp-cookie-popup/*
 /plugins/elfsight-social-share-buttons-cc/*$script
 /plugins/eu-cookie-law/*
 /plugins/facebook-conversion-pixel/*
 /plugins/facebook-pagelike-widget/*$script
 /plugins/facebook-popout-likebox/*
-/plugins/ga-germanized/*$script,domain=aktuelltfokus.se
+/plugins/ga-germanized/*
 /plugins/ga-in/*
-/plugins/gdpr-cookie-compliance/*$domain=dagensanalys.se|deliquate.se|goteborgsgolfaren.se|nyhetersto.se|studentlund.se|vaken.se|worldkustom.com
-/plugins/gdpr-framework/*$script,domain=nevnarien.se
+/plugins/gdpr-cookie-compliance/*$domain=dagensanalys.se|deliquate.se|goteborgsgolfaren.se|nyhetersto.se|vaken.se|worldkustom.com
+/plugins/gdpr-framework/*$script
 /plugins/ginger/addon/analytics/*$script
 /plugins/ginger/front/js/cookies-enabler
 /plugins/hemmafix-facebooklike
 /plugins/host-analyticsjs-local/*$script
-/plugins/hustle/*$script,domain=maklarvarlden.se|yogaworld.se
-/plugins/icegram$domain=aktuellsakerhet.se|battrenyheter.se|maklarvarlden.se
+/plugins/hustle/*$script
+/plugins/icegram
 /plugins/igomoon-cookie-banner-master/*$script
 /plugins/iis-mailchimp
 /plugins/ilmenite-cookie-consent/*
@@ -636,15 +637,14 @@
 /plugins/interstitial-ads
 /plugins/its-cookies/*$script
 /plugins/jetpack/_inc/build/widgets/eu-cookie-law/*$script
-/plugins/jnews-social-share/*$script,domain=svegot.se
-/plugins/lbg-audio8-html5-radio_ads/*$script,domain=svegot.se
+/plugins/jnews-social-share/*$script
+/plugins/lbg-audio8-html5-radio_ads
 /plugins/leaky-paywall$domain=driva-eget.se
 /plugins/likebtn-like-button/*
 /plugins/loppi-cookie-consent/*$script
-/plugins/mailpoet/*$script,domain=opulens.se
-/plugins/mashshare$script,domain=obsid.se
+/plugins/mailpoet/*$script
+/plugins/mashshare$script
 /plugins/mashshare-google-analytics/*
-/plugins/mashsharer/*$script,domain=bilresaieuropa.se|dagensknep.se|djursidan.se|firefighters.se|misween.com|mysigast.se
 /plugins/material-admin/visitor-stats$script
 /plugins/metro-affiliate/*$script
 /plugins/mitti-oath-cmpi-js/*
@@ -652,22 +652,19 @@
 /plugins/modal-for-elementor/*$script,domain=miljomagasinet.se
 /plugins/newsletter$script,domain=56kilo.se
 /plugins/newsner-lead-tracking/*
-/plugins/notificationx$script,domain=nyadagbladet.se
+/plugins/notificationx$script
 /plugins/ns-facebook-pixel-for-wp/*
 /plugins/onesignal-free-web-push-notifications/*
 /plugins/optin-cat-elite-wp/*$script
-/plugins/optinpanda-premium/*$domain=villalivet.se
 /plugins/page-views-count/*
 /plugins/pc-google-analytics/*
 /plugins/pixel-caffeine/*
 /plugins/pixel-cat/*$script
 /plugins/pixelyoursite$image,script
-/plugins/popup$domain=ordfrontmagasin.se|snowmobile.se
-/plugins/popup-$domain=sverige.nu
-/plugins/popup-by-supsystic$domain=exakt24.se
+/plugins/popup$domain=exakt24.se|ordfrontmagasin.se|snowmobile.se|sverige.nu
 /plugins/popups/*$script,domain=bugburger.se|svenskhistoria.se
 /plugins/pum-$script,domain=snowmobile.se
-/plugins/quantcast-choice/*$script,domain=kimura.se|muscles.se|news55.se
+/plugins/quantcast-choice/*$script,domain=kimura.se|muscles.se
 /plugins/r9-analytics
 /plugins/r9-gdpr$script
 /plugins/random-banner/*
@@ -679,13 +676,11 @@
 /plugins/sea-short-stats/*
 /plugins/share-and-follow/*
 /plugins/skydda-advisor/*
-/plugins/so-widgets-bundle/*$domain=lokalsport.nu
 /plugins/social-pug
-/plugins/socialsnap$script,domain=folknyheter.se|katerinamagasin.se|listor.se
+/plugins/socialsnap$script
 /plugins/srs-simple-hits-counter
 /plugins/statebuilt-facebook-page-like-popup/*
-/plugins/sticky-facebook-banner/*$script,domain=ettgottskratt.se|humorbibeln.se|newsner.com|sportbibeln.se
-/plugins/super-progressive-web-apps/*$domain=temadagar.se
+/plugins/sticky-facebook-banner$script
 /plugins/super-socializer$script,domain=shortcut.se|sportbilen.se
 /plugins/svenskaspel-$script
 /plugins/sw_ad_inserter/*
@@ -695,10 +690,7 @@
 /plugins/thirstyaffiliates/*$script
 /plugins/thrive-leads/*
 /plugins/trackable-social-share-icons/*
-/plugins/treby/*$image,domain=radiotreby.se
 /plugins/triggerbee/*
-/plugins/uk-cookie-consent/*$domain=akerioentreprenad.se|datormagazin.se|hoglandsnytt.se|transportarbetaren.se
-/plugins/Ultimate-Premium-Plugin/*$script,xmlhttprequest,domain=opulens.se
 /plugins/ultimate-social-deux$script,domain=totallyorebro.se|totallystockholm.se
 /plugins/ultimate-social-media-$image,script
 /plugins/ungrabber$script
@@ -844,10 +836,10 @@
 /wp-content/uploads/*banner$image,domain=alltomhif.se|brollopsmagasinet.se|bussmagasinet.se|customerinsider.se|danstidningen.se|guldkanalen.se|katerinamagasin.se|ljuskultur.se|marsta.nu|polistidningen.se|sff.nu|sportpanelen.se|turismnytt.se|vardfokus.se|viralsweden.com
 /wp-content/uploads/*betfair$image
 /wp-content/uploads/*bethard$image
-/wp-content/uploads/*betting$domain=hockeybladet.nu|kulturbloggen.com|newsvoice.se|nyadagbladet.se
+/wp-content/uploads/*betting$image,domain=hockeybladet.nu|kulturbloggen.com|newsvoice.se|nyadagbladet.se
 /wp-content/uploads/*bettingkollen$image
 /wp-content/uploads/*bettingstugan$image
-/wp-content/uploads/*casino$domain=battrestadsdel.se|djungeltrumman.se|hockeybladet.nu|kulturbloggen.com|newsvoice.se|nyadagbladet.se|svenskhistoria.se|totallyorebro.se|totallystockholm.se|zeromagazine.nu
+/wp-content/uploads/*casino$image,domain=battrestadsdel.se|djungeltrumman.se|hockeybladet.nu|kulturbloggen.com|lokalsport.nu|newsvoice.se|nyadagbladet.se|svenskhistoria.se|totallyorebro.se|totallystockholm.se|vaken.se|zeromagazine.nu
 /wp-content/uploads/*Casinodealen$image
 /wp-content/uploads/*LeoVegas$image
 /wp-content/uploads/*mrgreen$image
@@ -925,7 +917,7 @@ aftonbladet.se,autonytt.se,ekonominyheter.se,hockeybladet.nu,lesscarbs.se,underv
 aftonbladet.se,businessclass.se,effektmagasin.se,halsasverige.se,spela.se,svenskorientering.se##.advert
 aftonbladet.se,di.se##a[href^="/brandstudio"]
 agriprim.se,automobil.se,bettips.se,bike.se,bilsport.se,boxerville.se,caroftheyear.se,dh.se,djungeltrumman.se,e.se,entreprenadaktuellt.se,fightermag.se,frillesasbandy.se,husbilhusvagn.se,ja.se,klassiker.nu,ljuskultur.se,lokalguiden.se,lovelylife.se,maskinbladet.se,mopedgaraget.se,nyckelspel.se,omni.se,riksettan.net,scanaktier.se,skik.se,skogsaktuellt.se,spelo.se,sweclockers.com,vaken.se,vibilagare.se##.banner
-aikfotboll.se,expressen.se##.banners
+aikfotboll.se,expressen.se,vaken.se##.banners
 aktiespararna.se##.analysguiden-promote-articles
 aktiespararna.se,alekuriren.se,civilekonomen.se,koket.se,nyheter24.se##.native
 aktivtraning.se,digitalfotoforalla.se,iform.se,militarhistoria.se,natgeo.se,pctidningen.se,popularhistoria.se##.gallery-banner, .horseshoe, [data-ad-type]
@@ -992,7 +984,7 @@ aventyrsresor.se##.newsletter-popup
 axess.se##.popup--cookie
 axier.se##.consent
 axier.se,emocore.se,svenskamagic.com###reklam
-backpacking.se,byggteknikforlaget.se,dialasen.com,livetsgoda.se,opulens.se,ravarumarknaden.se,receptcentralen.se,sporthalsa.se,torbjornstips.se,worldkustom.com##.textwidget a[target="_blank"]
+backpacking.se,byggteknikforlaget.se,dialasen.com,livetsgoda.se,opulens.se,radiotreby.se,ravarumarknaden.se,receptcentralen.se,sporthalsa.se,torbjornstips.se,worldkustom.com##.textwidget a[target="_blank"]
 badminton.nu,bandybyn.se###RightOuterBannerDiv
 bandybyn.se##.StartPageBoxRow > .boxcontainer:last-child > .StartPageBoxNarrow
 bandybyn.se##.StartPageBoxRow > .boxcontainer:nth-child(2) > .StartPageBoxNarrow
@@ -1029,7 +1021,7 @@ bravenewbusiness.se##.site-information-container
 breakit.se##.videoAd, .js-video-ad
 breakit.se##[class*="sponsored"]
 brinkenbakar.se##.elementor-popup-modal
-brollopsmagasinet.se,bussmagasinet.se,customerinsider.se,maklarvarlden.se,startaochdriva.se##a[target="_blank"]
+brollopsmagasinet.se,bussmagasinet.se,customerinsider.se,exakt24.se,maklarvarlden.se,startaochdriva.se##a[target="_blank"]
 brollopsmagasinet.se,bussmagasinet.se,it-finans.se,it-halsa.se,it-kanalen.se,it-pedagogen.se,it-retail.se,nyhetersto.se,svenskbyggtidning.se##a.gofollow[data-track]
 brollopstorget.se,familjeliv.se##.ad_right
 bukefalos.se,thaisnack.se##.u-bottomFixer
@@ -2054,6 +2046,7 @@ yelp.se##.js-cookie-iframe
 ||tdi.cartoonnetwork.com/turnerintl$script,domain=cartoonnetwork.se
 ||teknikveckan.se^*/ads
 ||telemetry.bambuser.io^$websocket
+||temadagar.se/detroitchicago
 ||temadagar.se/ezoic
 ||terms.vkmedia.se^
 ||thelocal.se^*/private-browsing.js
