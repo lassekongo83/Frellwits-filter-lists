@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2021-03-10 09:40:27 CET
+! Last modified: 2021-03-11 11:29:27 CET
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -498,7 +498,6 @@
 /img/bettingstugan.
 /img/compricer$image,domain=ekonominyheter.se
 /infinite-ads.js
-/infopeek.min.js$domain=svd.se
 /initLogging$script,domain=dn.se|teknikensvarld.se
 /inlist-InlistSponsored$domain=pricerunner.se
 /isbanner/ib.js
@@ -746,7 +745,6 @@
 /se-wordpress-newsletters
 /se-wordpress-sunt
 /seenthis-hub/*$script
-/selections/native$xmlhttprequest,domain=svd.se
 /sg_reklam$domain=svampguiden.com
 /sh404sefsocial/*$script
 /share-buttons$script,domain=gardets.nu
@@ -953,8 +951,7 @@ alltomhif.se##.sek-module-inner a[target="_blank"]
 alltomhif.se,lyckasmedbakning.nu,mat-meny.se,pinkprogramming.se,restaurangilse.se,rikakvinnor.se,soja.se,tonyhatefnejad.se##.preloader
 alltommat.se,alltomtradgard.se,damernasvarld.se,skonahem.com,teknikensvarld.se##.teaser__third-party
 alltommat.se,di.se,dn.se,familyliving.se,privataaffarer.se##.teaser-native
-alltommat.se,familyliving.se,privataaffarer.se##a.teaser[href*="/annonssamarbete/"]
-alltommat.se,familyliving.se,privataaffarer.se##a.teaser[href*="/promotion/"]
+alltommat.se,familyliving.se,privataaffarer.se##a.teaser[href*="/annonssamarbete/"], a.teaser[href*="/promotion/"]
 alltomstockholm.se##.panorama_top,.ad-mark-rotated,[class^="insider_"],.outsider-container,[class*="ad_container"],.interstitial-background
 alltomstockholm.se,fotbollskanalen.se##.article-share
 alpresor.se###toast-container
@@ -1387,7 +1384,6 @@ opulens.se###secondary
 opulens.se##.mailpoet_form
 orebronyheter.com###top-wrapper
 oru.se##.modal-cookieform
-paf_ad_teaser$domain=privataaffarer.se
 pcgamer.se##.main-container > div.vc_row:last-child
 pcgamer.se##a[href*="casino.com"]
 pingpong.se##.l-preloader
@@ -1455,15 +1451,7 @@ spray.se##[class^="ads-"], [class*="article-casino"]
 startaochdriva.se##.banner-right, .banner-left, .wpb_single_image a[target="_blank"]
 studocu.com##[data-test-selector="the-cookie-banner"]
 surfa.se##div[class*="-promo"], div[class*="prisjakt-"]
-svd.se###AdSplashOverlayWindow
-svd.se###mega-ad-wrapper
-svd.se##.AdWrapper
-svd.se##.Container--ad
-svd.se##.ContentLayout-extraColumnAd
-svd.se##.ContentLayout-mainColumn > figure[data-postmessage-command="iframe.resize"]
-svd.se##.Teaser-adLabel, .Teaser--fullAdLabel
-svd.se##.theme-Native
-svd.se##div[data-controller="newslettersubscription"]
+svd.se###mega-ad-wrapper, .Container--ad, .theme-Native
 svenskafans.com##.puff__ad-heading
 svenskfast.se##.cookie-law__wrapper
 svenskhistoria.se##.widget_et_ads, .module-etads, #text-13, a[target="_blank"][rel="noopener noreferrer"]
@@ -1483,7 +1471,6 @@ swehockey.se##[class*="-reklam"], .sif-sponsorer
 sysidan.se##.adscolumn
 tasteline.com##.article.related > a[href*="&utm"][target="_blank"]
 tasteline.com##.popup-overlay
-teknikensvarld.se##.paywall-gradient-overlay
 tekniksmart.se##.code-block, main > div:last-child:not(:only-child)
 testfakta.se##.row-uppdragstest
 thelocal.se##.section-sponsored
@@ -1499,7 +1486,6 @@ tkj.se###text-19, #text-23, #text-25, #text-32, #custom_html-2, #custom_html-3, 
 totallyorebro.se,totallystockholm.se##a[href*="casino"], a[href*="/sponsrat/"], a[href*="/sponsrat/"] + p.tot-content-preview--meta
 totallyorebro.se,totallystockholm.se##div.tot-content-preview-container-small[style*="border-top:4px solid #ffb200;"], .content-overlay--black
 tradera.com##ads-takeover
-tradera.com##react-adslot
 tripadvisor.se##[class$="banner_ad"]
 turismnytt.se##.site-wrap > .row > .col-sm-3
 turistmal.se###col_right
@@ -2031,7 +2017,6 @@ yelp.se##.js-cookie-iframe
 ||susnet.se/susnetstat.js$script
 ||sv.picmix.com/sw.js
 ||sv.picmix.com^$csp=worker-src 'none'
-||svd.se^*/native-article$~third-party,xmlhttprequest
 ||svenskafans.com/menu-logo/bottom
 ||svenskarecept.se/pwa-register-sw.js
 ||svenskfotboll.se/ui/dist/js/ai.

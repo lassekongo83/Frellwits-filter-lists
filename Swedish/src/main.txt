@@ -1286,21 +1286,9 @@ lwcdn.com##+js(aeld, /^(?:adBlocker|contextmenu)$/)
 ||schibsted.com/privacy-notifier.$third-party
 ||schibsted.com/pulse.$third-party
 ! SVD
-svd.se##.AdWrapper
-svd.se##.Container--ad
-svd.se##div[data-controller="newslettersubscription"]
-svd.se##.Teaser-adLabel, .Teaser--fullAdLabel
-svd.se###AdSplashOverlayWindow
-svd.se##.ContentLayout-extraColumnAd
-svd.se##.theme-Native
-svd.se##.ContentLayout-mainColumn > figure[data-postmessage-command="iframe.resize"]
-svd.se###mega-ad-wrapper
-www.svd.se##+js(acis, SvD, preDefineAd)
+svd.se###mega-ad-wrapper, .Container--ad, .theme-Native
 www.svd.se##+js(aopr, navigator.sendBeacon)
 www.svd.se##+js(aopr, Tracker)
-/selections/native$xmlhttprequest,domain=svd.se
-||svd.se^*/native-article$xmlhttprequest,~third-party
-/infopeek.min.js$domain=svd.se
 ||engage-auth.schibsted.media^$script
 ! Aftonbladet
 @@||ad*.vg.no/check.js$script,domain=aftonbladet.se
@@ -1439,18 +1427,13 @@ expressen.se,skonahem.com,damernasvarld.se,topphalsa.se,alltomtradgard.se,tara.s
 alltommat.se,damernasvarld.se,skonahem.com,teknikensvarld.se,alltomtradgard.se,expressen.se##.teaser:has(.teaser__bottom--ad-marker)
 alltommat.se,damernasvarld.se,skonahem.com,teknikensvarld.se,alltomtradgard.se##.teaser__third-party
 alltommat.se,damernasvarld.se,skonahem.com,teknikensvarld.se,alltomtradgard.se##+js(acis, ExpressenAnalytics, push)
-alltommat.se,privataaffarer.se,familyliving.se##a.teaser[href*="/annonssamarbete/"]
-alltommat.se,privataaffarer.se,familyliving.se##a.teaser[href*="/promotion/"]
+alltommat.se,privataaffarer.se,familyliving.se##a.teaser[href*="/annonssamarbete/"], a.teaser[href*="/promotion/"]
 alltommat.se,privataaffarer.se,dn.se,familyliving.se,di.se##.teaser-native
 alltommat.se##.teaser:has(.teaser-label:has-text(/annonssamarbete/i))
-teknikensvarld.se##.paywall-gradient-overlay
-teknikensvarld.se##.t-single.-content-hide .entry-content, .t-single.-content-hide .entry-content .paywall-gradient-overlay:style(height: auto !important; overflow: visible !important;)
+teknikensvarld.se##.article__body__preview:style(height: auto !important; overflow: visible !important;)
+teknikensvarld.se##.article__body__preview:before:style(background: none !important;)
 privataaffarer.se##.data-grid-teaser:has(.teaser-label:has-text(/^annons/i))
-paf_ad_teaser$domain=privataaffarer.se
-tradera.com##react-adslot
 tradera.com##ads-takeover
-tradera.com##.react-modal:has([data-gdpr-modal])
-tradera.com##[id^="adsense-shopping"]:upward(1)
 viivilla.se##.afubar-top, .native-ad-md, .sp-article
 viivilla.se##.overlay-bottom
 viivilla.se###product-area
