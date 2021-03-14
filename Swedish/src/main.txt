@@ -310,6 +310,7 @@ artbannersplus&task=show
 /cookieconsent/cookieconsent.min.js
 /cx-emediate-userprofile-se.$script
 /discourse-adplugin
+/DO-theme/ads.js
 /docunet_stats.js
 /dynamic-yield/report/pageview
 /dyTracker.js?bust=release
@@ -917,6 +918,8 @@ artbannersplus&task=show
 ##._ning_outer._ning_jss_zone:not(body):not(html)
 ##[class*="advads_ad_widget"]:not(body):not(html)
 ##[id^="adace_ads"]
+##div[id^="ad_insider"]
+##div[id^="matchads-"]
 ##div.ad.container
 ##div.ad-panorama_dynamic-wrapper
 ##div.ad-toppbanner
@@ -1542,6 +1545,7 @@ gamereactor.se###grtvbelt_Sponsored:upward(1)
 ! ALLER MEDIA
 allakorsord.se,allas.se,baaam.se,dromhemochtradgard.se,elle.se,femina.se,hant.se,mabra.com,residencemagazine.se,svenskdam.se##a[href$="native=1"]:upward(article)
 allakorsord.se,allas.se,baaam.se,dromhemochtradgard.se,elle.se,femina.se,hant.se,mabra.com,residencemagazine.se,svenskdam.se##.ag-product-wrapper
+dromhemochtradgard.se##.native-wrapper:upward(1)
 /AffiliateHelper$domain=allakorsord.se|allas.se|baaam.se|dromhemochtradgard.se|elle.se|femina.se|hant.se|mabra.com|residencemagazine.se|svenskdam.se
 /native.html$domain=allakorsord.se|allas.se|baaam.se|dromhemochtradgard.se|elle.se|femina.se|hant.se|mabra.com|residencemagazine.se|svenskdam.se
 
@@ -1637,11 +1641,10 @@ isabellalowengrip.se##.post:has(em:has-text(/^i samarbete med/i))
 
 ! Common cosmetic filters that shouldn't be generic
 alicestenlof.com,tjanstebilen.se,mp.se,linnherbertsson.se,ellinorlofgren.se###cookies
-di.se,thelocal.se##.ad_container
-businessclass.se,spela.se,effektmagasin.se,svenskorientering.se,aftonbladet.se,halsasverige.se##.advert
-alltforforaldrar.se,battrestadsdel.se,flashback.se,mammasidan.se,minbebis.com,casinoexpo.se,leta.se###top-banner
+spela.se,effektmagasin.se,svenskorientering.se,aftonbladet.se,halsasverige.se##.advert
+battrestadsdel.se,casinoexpo.se,flashback.se,leta.se###top-banner
 chef.se,svd.se##.Ad
-99mac.se,bohuslaningen.se,byggnadsarbetaren.se,cissiochfreddan.se,claudiagalliconcha.se,di.se,dn.se,ekuriren.se,folkbladet.nu,kimura.se,kkuriren.se,loppi.se,mariestadstidningen.se,mestmotor.se,mobil.se,nwt.se,varmlandsaffarer.se,paulas.me,skaraborgsbygden.se,skillingaryd.nu,sla.se,sn.se,sportbloggare.com,swedroid.se,vk.se,vimedbarn.se,gabriellajoss.me,mybabydolls.se,casinowings.se,allakorsord.se,baaam.se,dromhemochtradgard.se,elle.se,elledecoration.se,ellematovin.se,femina.se,mabra.com,residencemagazine.se,dagensmedia.se,tidningenbalans.se,xn--vrnamo-bua.nu,bettingstugan.se,expressen.se,dagensopinion.se,driva-eget.se,interiorbyvanessa.se,vagabond.se,bioenergitidningen.se,tidningenhalsa.se,polistidningen.se,poddtoppen.se,ifokus.se,linnherbertsson.se,linneasskafferi.se,filmtipset.se,storstadsmamman.com,padelfeber.se,hemtrevligt.se,akaskidor.se,svenskgolf.se,livetombord.se,utemagasinet.se,sv.picmix.com,sweclockers.com,ifragasatt.se,tripadvisor.se,fordonsproffs.eu,tandlakartidningen.se,vardfokus.se##.ad
+99mac.se,di.se,dn.se,mobil.se,skaraborgsbygden.se,skillingaryd.nu,swedroid.se,tidningenbalans.se,xn--vrnamo-bua.nu,bettingstugan.se,expressen.se,dagensopinion.se,driva-eget.se,bioenergitidningen.se,polistidningen.se,ifokus.se,linnherbertsson.se,padelfeber.se,sv.picmix.com,sweclockers.com,ifragasatt.se,tripadvisor.se,fordonsproffs.eu,tandlakartidningen.se,vardfokus.se##.ad
 affarsvarlden.se,arbetarskydd.se,lag-avtal.se,nickelodeon.se,nyteknik.se,vf.se,improveme.se,hjotidning.se,kt.se,sla.se,mariestadstidningen.se,filipstadstidning.se,fryksdalsbygden.se,nwt.se,varmlandsaffarer.se,arvikanyheter.se,nkp.se,saffletidningen.se,provinstidningen.se,dalslanningen.se,karlskogatidning.se,nlt.se,kungalvsposten.se,molndalsposten.se,lokaltidningensto.se,kungsbackaposten.se,byggahus.se,expressen.se,filmtopp.se,alekuriren.se,realtid.se##.ad-container
 dn.se,klart.se##.ad-wrapper
 brollopstorget.se,familjeliv.se##.ad_right
@@ -2052,8 +2055,8 @@ megafonen.se##[data-article-sponsored="true"], .content-main-adwrapper, .campaig
 minimalisterna.se##.post:has(p:has-text(/i samarbete med/i))
 ||cornucopia.cornubot.se/js/cookie
 cornucopia.cornubot.se###HTML9, a[href*="://track."]
-cornucopia.cornubot.se##.FeaturedPost:has(a:has-text(/^Reklam:/i))
-cornucopia.cornubot.se##.post:has(a:has-text(/^Sponsrat:/i))
+cornucopia.cornubot.se##.FeaturedPost:has(a:has-text(/^Reklam:|^Sponsrat:|^Samarbete:/i))
+cornucopia.cornubot.se##.post:has(a:has-text(/^Reklam:|^Sponsrat:|^Samarbete:/i))
 finansliv.se##+js(aopw, nwlettersignupcheck)
 justwannahavefun.se##.teaser:has(.sub-title:has-text(/sponsrat/i))
 fotbolltransfers.com##div[class^="ad"], a[href^="https://ads."]
@@ -2560,3 +2563,4 @@ scanaktier.se###overlay-black
 svenskjakt.se##+js(acis, body_class_list)
 /pagead$domain=horoskoptid.se
 tidningen.djurskyddet.se##.ai-track
+poddtoppen.se##.txs-a
