@@ -959,6 +959,7 @@ artbannersplus&task=show
 ##div#banner_right
 ##div#outerAd
 ##div#ads-panorama
+##div#ads_column
 ##div[class^="sqs-cookie-banner"]
 
 ! Site specific whitelists
@@ -1557,7 +1558,7 @@ cafe.se,kingmagazine.se,manolo.se,vagabond.se##.partner
 livetombord.se##[data-spotlight-id]
 hemtrevligt.se##.row--native
 hemtrevligt.se,vagabond.se,tidningenhalsa.se,utemagasinet.se###facebookSlideIn
-mestmotor.se##.panel-native
+mestmotor.se##.panel-native, a[href*="/artiklar/partner/"]
 mestmotor.se###piano:style(opacity: 1 !important;)
 vagabond.se##.latest-article-native
 
@@ -1647,8 +1648,8 @@ chef.se,svd.se##.Ad
 99mac.se,di.se,dn.se,mobil.se,skaraborgsbygden.se,skillingaryd.nu,swedroid.se,tidningenbalans.se,xn--vrnamo-bua.nu,bettingstugan.se,expressen.se,dagensopinion.se,driva-eget.se,bioenergitidningen.se,polistidningen.se,ifokus.se,linnherbertsson.se,padelfeber.se,sv.picmix.com,sweclockers.com,ifragasatt.se,tripadvisor.se,fordonsproffs.eu,tandlakartidningen.se,vardfokus.se##.ad
 improveme.se,vf.se,hjotidning.se,kt.se,sla.se,mariestadstidningen.se,filipstadstidning.se,fryksdalsbygden.se,nwt.se,varmlandsaffarer.se,arvikanyheter.se,nkp.se,saffletidningen.se,provinstidningen.se,dalslanningen.se,karlskogatidning.se,nlt.se,kungalvsposten.se,molndalsposten.se,lokaltidningensto.se,kungsbackaposten.se,byggahus.se,expressen.se,filmtopp.se,alekuriren.se,realtid.se##.ad-container
 fotosidan.se,merinfo.se,allsvenskan.se,kollega.se,tasteline.com##.ads
-mestmotor.se,nyheter24.se,modette.se,vagabond.se,cafe.se,lakartidningen.se##.advertisement
-agriprim.se,bike.se,e.se,entreprenadaktuellt.se,husbilhusvagn.se,ja.se,klassiker.nu,mopedgaraget.se,nyckelspel.se,skogsaktuellt.se,spelo.se,sweclockers.com,vaken.se,vibilagare.se,lovelylife.se,bettips.se,caroftheyear.se,maskinbladet.se,automobil.se,ljuskultur.se,lokalguiden.se,fightermag.se,riksettan.net,frillesasbandy.se,scanaktier.se,boxerville.se,dh.se,djungeltrumman.se,bilsport.se,skik.se,omni.se##.banner
+nyheter24.se,lakartidningen.se##.advertisement
+entreprenadaktuellt.se,husbilhusvagn.se,ja.se,klassiker.nu,mopedgaraget.se,nyckelspel.se,skogsaktuellt.se,spelo.se,vaken.se,vibilagare.se,bettips.se,caroftheyear.se,maskinbladet.se,automobil.se,ljuskultur.se,fightermag.se,riksettan.net,frillesasbandy.se,dh.se,djungeltrumman.se,bilsport.se,skik.se,omni.se##.banner
 etn.se,uppsalanyheter.se##.banneritem
 evertiq.se,fz.se##.bnr
 humorbibeln.se,newsner.com,sportbibeln.se,ettgottskratt.se##.inline-share-buttons
@@ -1657,7 +1658,7 @@ runnersworld.se,utsidan.se,hockeymagasinet.com,driva-eget.se,foretagande.se,revi
 expressen.se##.teaser--native-ad
 digitalfotoforalla.se,illvet.se,pctidningen.se,bettips.se,bandyplay.se,it-finans.se,it-halsa.se,it-kanalen.se,it-pedagogen.se,it-retail.se##.top-banner
 mammasidan.se,minbebis.com,alltforforaldrar.se##.middle-banner
-mestmotor.se,muscles.se,linnherbertsson.se,alicestenlof.com,ellinorlofgren.se##.overlay
+muscles.se,linnherbertsson.se,alicestenlof.com,ellinorlofgren.se##.overlay
 ratsit.se,bilsport.se,ordguru.se,gpro.net,visitskane.com##.cc_banner-wrapper
 fotbollskanalen.se,alltomstockholm.se##.article-share
 svd.se,dagensvimmerby.se,dagensvastervik.se###smartbanner.android
@@ -2392,8 +2393,9 @@ flm.nu##.spons
 schack.se##.schac-widget
 norrahalland.se##.norra-leeads-ads,.egna_annonser_widget
 ?action=get_banners$domain=djungeltrumman.se
-djungeltrumman.se###sponsored-posts, #right-banners
+djungeltrumman.se###sponsored-posts, #right-banners, .banner-wrapper
 djungeltrumman.se##.item:has(.label-post:has-text(/spons/i))
+djungeltrumman.se##+js(nano-sib, dt_fullpage_ad)
 biliaoutlet.se,bilia.se###acceptcookies
 www.google.se##+js(ra, onmousedown|ping, a[href][onmousedown]\, a[href][ping])
 google.se##mobile-promo
@@ -2564,3 +2566,4 @@ tidningen.djurskyddet.se##.ai-track
 poddtoppen.se##.txs-a
 brollopstorget.se##.bt-article:has(a[href*="/annons/"])
 babyhjalp.se##.elementor-widget[data-settings*="sticky_"]
+lovelylife.se##.elementor-image a[href]:not([href*="lovelylife.se/"]) img
