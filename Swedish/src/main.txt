@@ -742,6 +742,7 @@ artbannersplus&task=show
 ###ad-wallpaper:not(body):not(html)
 ###aloq-cookie-warning
 ###annons_head
+###bottomAnnonsBar
 ###catapult-cookie-bar
 ###cliSettingsPopup.cli-modal
 ###colorbox.cookie-info-modal
@@ -884,6 +885,7 @@ artbannersplus&task=show
 ##.mittenannons:not(body):not(html)
 ##.node-sponsored-article:not(body):not(html)
 ##.tag-sponsrat-inlagg:not(body):not(html)
+##.teaser--native-ad:not(body):not(html)
 ##div.newsletter-cta
 ##div.newsletter-slider
 ##.notification--cookie:not(body):not(html)
@@ -1005,6 +1007,8 @@ dekra.de#@##cookie-banner
 tv2.no##+js(acis, TV2, questback)
 ! https://github.com/lassekongo83/Frellwits-filter-lists/issues/99
 airam.fi##.body-fixed:style(position: unset !important;)
+! Site may return 410 on Firefox unless url is written as https. This fixes it.
+$csp=upgrade-insecure-requests,domain=vimedbarn.se
 
 ! Common site specific blocking
 /wp-content/uploads/*banner$image,domain=marsta.nu|polistidningen.se|alltomhif.se|brollopsmagasinet.se|bussmagasinet.se|danstidningen.se|guldkanalen.se|katerinamagasin.se|ljuskultur.se|sff.nu|sportpanelen.se|viralsweden.com|vardfokus.se|turismnytt.se|customerinsider.se
@@ -1653,21 +1657,14 @@ entreprenadaktuellt.se,husbilhusvagn.se,ja.se,klassiker.nu,mopedgaraget.se,nycke
 etn.se,uppsalanyheter.se##.banneritem
 evertiq.se,fz.se##.bnr
 humorbibeln.se,newsner.com,sportbibeln.se,ettgottskratt.se##.inline-share-buttons
-humorbibeln.se,newsner.com,sportbibeln.se,ettgottskratt.se##a[href*=".adsrv."]
 runnersworld.se,utsidan.se,hockeymagasinet.com,driva-eget.se,foretagande.se,revisionsvarlden.se,tidningenbalans.se##.sponsored
-expressen.se##.teaser--native-ad
-digitalfotoforalla.se,illvet.se,pctidningen.se,bettips.se,bandyplay.se,it-finans.se,it-halsa.se,it-kanalen.se,it-pedagogen.se,it-retail.se##.top-banner
-mammasidan.se,minbebis.com,alltforforaldrar.se##.middle-banner
-muscles.se,linnherbertsson.se,alicestenlof.com,ellinorlofgren.se##.overlay
-ratsit.se,bilsport.se,ordguru.se,gpro.net,visitskane.com##.cc_banner-wrapper
-fotbollskanalen.se,alltomstockholm.se##.article-share
-svd.se,dagensvimmerby.se,dagensvastervik.se###smartbanner.android
-finansliv.se,vinochmatguiden.se##.newsletter
-sydsvenskan.se,hd.se,vimedbarn.se,capdesign.se,typkanske.se##.gdpr
-pomu.se,wwf.se,ilikeradio.se,netdoktor.se,nevnarien.se,su.se##.cc-banner
-koket.se,nyheter24.se,civilekonomen.se,aktiespararna.se,alekuriren.se##.native
-svartgul.se,tvmatchen.nu,eventeffect.se,executiveeffect.se,saleseffect.se###panorama
-uppslaget.se,hypeline.se,skidresultat.se,maklarvarlden.se,byggteknikforlaget.se,fotbolldirekt.se,hockeysverige.se,innebandymagazinet.se,motivation.se##.annons
+bettips.se##.top-banner
+linnherbertsson.se,alicestenlof.com,ellinorlofgren.se##.overlay
+vinochmatguiden.se##.newsletter
+capdesign.se,hd.se,sydsvenskan.se,typkanske.se##.gdpr
+civilekonomen.se,aktiespararna.se,alekuriren.se##.native
+svartgul.se,eventeffect.se,executiveeffect.se,saleseffect.se###panorama
+uppslaget.se,hypeline.se,skidresultat.se,fotbolldirekt.se,hockeysverige.se,innebandymagazinet.se,motivation.se##.annons
 testfakta.se,realtid.se,viktvaktarna.se,plastikoperationsforum.se,riksettan.net,automobil.se,vibilagare.se,mopedgaraget.se,caroftheyear.se,klassiker.nu,bike.se,spraktidningen.se,husbilhusvagn.se,sandaren.se,kyrkanstidning.se,publikt.se,fof.se,industrinyheter.se,dagensnaringsliv.se,infrastrukturnyheter.se,sportochfritidsnyheter.se,inredningsnyheter.se,byggnyheter.se,dagensfastigheter.se,stockholmsbyggnyheter.se,energinyheter.se,vindkraftsnyheter.se,solenerginyheter.se,jarnvagsnyheter.se,transportochlogistik.se,metallerochgruvor.se,papperochmassa.se,hsr.se,so-rummet.se,kantarsifo.se,ungforetagsamhet.se,cgi.se,alandsradio.ax,sjofart.ax,kommunal.se###sliding-popup
 swedroid.se,tidningensyre.se##.social
 byggahus.se##a[href^="/partner/"]
@@ -2000,7 +1997,7 @@ opulens.se##.mailpoet_form
 opulens.se###secondary
 landleyskok.se##.inpostbanner, .banner-leaderboard
 dagensvimmerby.se,dagensvastervik.se##body:style(margin-top: 0 !important;)
-dagensvimmerby.se,dagensvastervik.se##.panoramaAnnons, .JobAdDiv, .annonsKolumn, .insideAd, .ingressAd, .familyAds
+dagensvimmerby.se,dagensvastervik.se##.panoramaAnnons, .JobAdDiv, .annonsKolumn, .insideAd, .ingressAd, .familyAds, .annonsWrapper
 dagensopinion.se##a[href^="/annons-"]
 ||yelp.se/sit_rep
 yelp.se##.js-cookie-iframe
@@ -2567,3 +2564,5 @@ poddtoppen.se##.txs-a
 brollopstorget.se##.bt-article:has(a[href*="/annons/"])
 babyhjalp.se##.elementor-widget[data-settings*="sticky_"]
 lovelylife.se##.elementor-image a[href]:not([href*="lovelylife.se/"]) img
+||vinochmatguiden.se/jsskins/ad.html
+netdoktor.se##.article-list__item__link--sponsored
