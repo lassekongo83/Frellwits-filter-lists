@@ -581,6 +581,7 @@ artbannersplus&task=show
 ||oas.*.se/om/$script
 ||organicfruitapps.com/analytics$image
 ||opinionstage.com/assets/autoengage.$script
+||onrender.com/tracker.js
 ||p.typekit.net/p.css$stylesheet
 ||pensiono.se.$subdocument
 ||pingback.issuu.com/ping$xmlhttprequest
@@ -952,6 +953,7 @@ artbannersplus&task=show
 ##div.wppasrotate
 ##div.big-desktop-ads
 ##div.big-mobile-ads
+##div.td-more-articles-box
 ##div#mega-ad-content
 ##div#panorama_ad
 ##div#panoramaad
@@ -1007,8 +1009,6 @@ dekra.de#@##cookie-banner
 tv2.no##+js(acis, TV2, questback)
 ! https://github.com/lassekongo83/Frellwits-filter-lists/issues/99
 airam.fi##.body-fixed:style(position: unset !important;)
-! Site may return 410 on Firefox unless url is written as https. This fixes it.
-$csp=upgrade-insecure-requests,domain=vimedbarn.se
 
 ! Common site specific blocking
 /wp-content/uploads/*banner$image,domain=marsta.nu|polistidningen.se|alltomhif.se|brollopsmagasinet.se|bussmagasinet.se|danstidningen.se|guldkanalen.se|katerinamagasin.se|ljuskultur.se|sff.nu|sportpanelen.se|viralsweden.com|vardfokus.se|turismnytt.se|customerinsider.se
@@ -1666,21 +1666,16 @@ civilekonomen.se,aktiespararna.se,alekuriren.se##.native
 svartgul.se,eventeffect.se,executiveeffect.se,saleseffect.se###panorama
 uppslaget.se,hypeline.se,skidresultat.se,fotbolldirekt.se,hockeysverige.se,innebandymagazinet.se,motivation.se##.annons
 testfakta.se,realtid.se,viktvaktarna.se,plastikoperationsforum.se,riksettan.net,automobil.se,vibilagare.se,mopedgaraget.se,caroftheyear.se,klassiker.nu,bike.se,spraktidningen.se,husbilhusvagn.se,sandaren.se,kyrkanstidning.se,publikt.se,fof.se,industrinyheter.se,dagensnaringsliv.se,infrastrukturnyheter.se,sportochfritidsnyheter.se,inredningsnyheter.se,byggnyheter.se,dagensfastigheter.se,stockholmsbyggnyheter.se,energinyheter.se,vindkraftsnyheter.se,solenerginyheter.se,jarnvagsnyheter.se,transportochlogistik.se,metallerochgruvor.se,papperochmassa.se,hsr.se,so-rummet.se,kantarsifo.se,ungforetagsamhet.se,cgi.se,alandsradio.ax,sjofart.ax,kommunal.se###sliding-popup
-swedroid.se,tidningensyre.se##.social
-byggahus.se##a[href^="/partner/"]
 sonicmagazine.com,ratsit.se,dagensinfrastruktur.se##[class^="ad-"]
 friluftsframjandet.se##[id^="ad-"]
 civilekonomen.se,market.se###rollup
-datormagazin.se,villalivet.se,tennisportalen.se,gjuteriet.se,springlfa.se,lakemedelsvarlden.se##.td-more-articles-box
-it-finans.se,it-halsa.se,it-kanalen.se,it-pedagogen.se,it-retail.se,svenskbyggtidning.se,nyhetersto.se,bussmagasinet.se,brollopsmagasinet.se##a.gofollow[data-track]
-bussmagasinet.se,brollopsmagasinet.se,customerinsider.se,maklarvarlden.se,startaochdriva.se,exakt24.se##a[target="_blank"]
-mammasidan.se,minbebis.com,alltforforaldrar.se,sverigesnatur.org,upphandling24.se,dagensvimmerby.se,dagensvastervik.se,di.se##.panorama
+svenskbyggtidning.se,nyhetersto.se,bussmagasinet.se,brollopsmagasinet.se##a.gofollow[data-track]
+mammasidan.se,minbebis.com,alltforforaldrar.se,di.se,upphandling24.se,bytbil.com##.panorama
 autolife.se###Banners
-expressen.se,aikfotboll.se,vaken.se##.banners
-digilar.se,ljuskultur.se,omvarlden.se,svenskfotboll.se,hrnytt.se,aapl.se##.cookies
+aikfotboll.se,vaken.se##.banners
+ljuskultur.se,omvarlden.se,svenskfotboll.se,hrnytt.se,aapl.se##.cookies
 existenz.se,funfunfun.se,elektronikforumet.com##a[href*="bannerid"]
-lira.se,danstidningen.se,livetsgoda.se,slangopedia.se###ads
-lokalguiden.se##.banner-container
+lira.se,danstidningen.se,slangopedia.se###ads
 husvagn.se,husbil.se,stockholm.com,noje.se,karlstad.com,karlskrona.com##.ui-optin-wrapper
 hypeline.se,hrbloggen.se##[class^="ad_"]
 arbetarskydd.se,lag-avtal.se,nyteknik.se##.sponsored-box
@@ -1939,7 +1934,7 @@ booli.se###outer
 ||momondo.se/gtm/
 ||momondo.se/ugtm/
 ||byggahus.se/pixels/
-byggahus.se##.block-ad, #cookie-consent-dialog
+byggahus.se##.block-ad, #cookie-consent-dialog, a[href^="/partner/"]
 byggahus.se##.attachmentPreviewActive img:style(-webkit-filter: none !important; filter: none !important;)
 byggahus.se###svartalistan-login-required-overlay
 byggahus.se##body.forum-logged-out .svartalistan-results-login-required:style(height: unset !important;)
@@ -1986,6 +1981,7 @@ skillingaryd.nu,xn--vrnamo-bua.nu###more-banners
 pomu.se##[class^="Banner"]
 allatvkanaler.se##.ga
 datormagazin.se##.td_module_wrap:has(a[href*="/annons/"])
+datormagazin.se##a:has-text(/^annons/i)
 skanesport.se###black-studio-tinymce-3
 hypeline.se##.sponsrad_ruta
 ||dagenstv.com/images/banners/
@@ -2566,3 +2562,6 @@ babyhjalp.se##.elementor-widget[data-settings*="sticky_"]
 lovelylife.se##.elementor-image a[href]:not([href*="lovelylife.se/"]) img
 ||vinochmatguiden.se/jsskins/ad.html
 netdoktor.se##.article-list__item__link--sponsored
+exakt24.se##.td-single-image- a[target="_blank"]
+sverigesnatur.org##div[id^="sverigesNaturPopup"]
+hrnytt.se##article:has(.sponsored-article)
