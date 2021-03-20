@@ -726,6 +726,7 @@ artbannersplus&task=show
 ##a[title="LeoVegas"]
 ##a.card.-sponsored
 ##a.cookiecutter[onclick^="cookie"]
+##article.article-sponsored
 ##article.category-samarbete
 ##article.tag-annons
 ##article.type-partnerartikel
@@ -796,6 +797,7 @@ artbannersplus&task=show
 ###sp-cookie-consent
 ###trn_cookie_holder
 ##.ad-single-news:not(body):not(html)
+##.adContainer:not(body):not(html)
 ##.adtrue-holder:not(body):not(html)
 ##.annons_panorama:not(body):not(html)
 ##.annons_mitten:not(body):not(html)
@@ -882,6 +884,7 @@ artbannersplus&task=show
 ##.footer-ad-wrap:not(body):not(html)
 ##.js-cookie-disclaimer:not(body):not(html)
 ##.js-cookie-warning:not(body):not(html)
+##.layerAdContainer:not(body):not(html)
 ##.leeads-advert:not(body):not(html)
 ##.mittenannons:not(body):not(html)
 ##.node-sponsored-article:not(body):not(html)
@@ -924,6 +927,7 @@ artbannersplus&task=show
 ##div[id^="ad_insider"]
 ##div[id^="matchads-"]
 ##div.ad.container
+##div.ad-after-header
 ##div.ad-panorama_dynamic-wrapper
 ##div.ad-toppbanner
 ##div.avia-cookiemessage-bottom
@@ -949,6 +953,7 @@ artbannersplus&task=show
 ##div.sgm-large-ad
 ##div.sol-cookie-message
 ##div.topmost-banner
+##div.td-a-rec img
 ##div.sidebar-item .banner-box
 ##div.wppasrotate
 ##div.big-desktop-ads
@@ -965,6 +970,9 @@ artbannersplus&task=show
 ##div#ads-panorama
 ##div#ads_column
 ##div[class^="sqs-cookie-banner"]
+##footer .ui-optin-wrapper
+##td#reklam
+##div#reklam
 
 ! Site specific whitelists
 @@/ad.php$script,~third-party,domain=99mac.se|skogstok.se|temperatur.nu
@@ -1018,7 +1026,7 @@ airam.fi##.body-fixed:style(position: unset !important;)
 /gdpr/*$domain=capdesign.se|visitlulea.se|se.laowl.com|husbilskompisar.se|rotter.se|momondo.se
 /glimr.$script,domain=aftonbladet.se|blocket.se
 /profile$ping,domain=feber.se|hamnen.se|lawline.se|tasteline.com|tjock.se|veckorevyn.com
-/pum/*$domain=tkj.se|exponera.nu|flm.nu
+/pum/*$domain=tkj.se|flm.nu
 /videojs.ima.$script,domain=gamereactor.se
 ||cdn.cookielaw.org^$script,domain=cartoonnetwork.se|nvp.se|recept.se|tv4.se|tv4play.se|koket.se|fotbollskanalen.se|flashscore.se|manpower.se|discoveryplus.se|findit.se|ikea.com|hastnet.se|eurosport.se
 ||consent.cmp.oath.com^$third-party,domain=alltomstockholm.se
@@ -1649,7 +1657,7 @@ alicestenlof.com,tjanstebilen.se,mp.se,linnherbertsson.se,ellinorlofgren.se###co
 spela.se,effektmagasin.se,svenskorientering.se,aftonbladet.se,halsasverige.se##.advert
 battrestadsdel.se,casinoexpo.se,flashback.se,leta.se###top-banner
 chef.se,svd.se##.Ad
-99mac.se,di.se,dn.se,mobil.se,skaraborgsbygden.se,skillingaryd.nu,swedroid.se,tidningenbalans.se,xn--vrnamo-bua.nu,bettingstugan.se,expressen.se,dagensopinion.se,driva-eget.se,bioenergitidningen.se,polistidningen.se,ifokus.se,linnherbertsson.se,padelfeber.se,sv.picmix.com,sweclockers.com,ifragasatt.se,tripadvisor.se,fordonsproffs.eu,tandlakartidningen.se,vardfokus.se##.ad
+99mac.se,di.se,dn.se,mobil.se,skaraborgsbygden.se,skillingaryd.nu,swedroid.se,tidningenbalans.se,xn--vrnamo-bua.nu,bettingstugan.se,expressen.se,dagensopinion.se,driva-eget.se,bioenergitidningen.se,polistidningen.se,ifokus.se,linnherbertsson.se,padelfeber.se,sv.picmix.com,sweclockers.com,ifragasatt.se,tripadvisor.se,fordonsproffs.eu,tandlakartidningen.se,vardfokus.se,ehandel.se##.ad
 improveme.se,vf.se,hjotidning.se,kt.se,sla.se,mariestadstidningen.se,filipstadstidning.se,fryksdalsbygden.se,nwt.se,varmlandsaffarer.se,arvikanyheter.se,nkp.se,saffletidningen.se,provinstidningen.se,dalslanningen.se,karlskogatidning.se,nlt.se,kungalvsposten.se,molndalsposten.se,lokaltidningensto.se,kungsbackaposten.se,byggahus.se,expressen.se,filmtopp.se,alekuriren.se,realtid.se##.ad-container
 fotosidan.se,merinfo.se,allsvenskan.se,kollega.se,tasteline.com##.ads
 nyheter24.se,lakartidningen.se##.advertisement
@@ -1676,19 +1684,9 @@ aikfotboll.se,vaken.se##.banners
 ljuskultur.se,omvarlden.se,svenskfotboll.se,hrnytt.se,aapl.se##.cookies
 existenz.se,funfunfun.se,elektronikforumet.com##a[href*="bannerid"]
 lira.se,danstidningen.se,slangopedia.se###ads
-husvagn.se,husbil.se,stockholm.com,noje.se,karlstad.com,karlskrona.com##.ui-optin-wrapper
 hypeline.se,hrbloggen.se##[class^="ad_"]
-arbetarskydd.se,lag-avtal.se,nyteknik.se##.sponsored-box
-idg.se,macworld.se,skd.se,nsk.se##.adContainer
-kamerabild.se,cafe.se##.partner
-ordfrontmagasin.se,it-finans.se,it-halsa.se,it-kanalen.se,it-pedagogen.se,it-retail.se,exponera.nu,cannabis.se##.pum-overlay
-emocore.se,svenskamagic.com,axier.se###reklam
-svenskfotboll.se,gbgfotboll.se###cookie_bar
-gentlemannaguiden.com##.advertising
-newsner.com,humorbibeln.se,sportbibeln.se,ettgottskratt.se##.ad-space
-ehandel.se,bytbil.com##.article-sponsored
-ekonominyheter.se,gjuteriet.se,haaf.se,hockeybladet.nu,mariefredstidning.se,norrortssporten.se##.td-a-rec
-uwtd.me,ekonominyheter.se,autonytt.se,undervarttak.se,aftonbladet.se,xn--snabbalnen-75a.se,lesscarbs.se,hockeybladet.nu##a[href*="/track.adtraction."]
+ordfrontmagasin.se,cannabis.se##.pum-overlay
+uwtd.me,ekonominyheter.se,autonytt.se,undervarttak.se,aftonbladet.se,xn--snabbalnen-75a.se,lesscarbs.se,hockeybladet.nu,modette.se##a[href*="/track.adtraction."]
 svenskaturistforeningen.se,forum.robsoft.nu##.cookie-box
 fokus.se,sverigeskonsumenter.se###cookie-box
 lindasbakskola.se,privataaffarer.se,skk.se##a[href*="/bit.ly/"]
@@ -2124,7 +2122,7 @@ etunawebben.se##+js(nostif, ad)
 ljudochbild.se##.adremark, .coofad, .popup-overlay, .hidead, .phoneads, .pricecomp, .offerz, .type-articleadvertorial, .adblock, .lbplussinfo
 ljudochbild.se##.entry-content-wrap:style(max-height: unset !important; overflow: initial !important;)
 villalivet.se##a:has-text(/sponsra/i):upward(3)
-ehandel.se##.commercial-row, .aside-image-with-link, .post-container-sponsored
+ehandel.se##.commercial-row, .aside-image-with-link, .post-container-sponsored, aside a[href*="/branschnyheter/"]
 teknifik.se##.post:has(.sponsor)
 se.readly.com##.show-consent
 se.readly.com##+js(rc, cookie-consent)
@@ -2565,3 +2563,7 @@ netdoktor.se##.article-list__item__link--sponsored
 exakt24.se##.td-single-image- a[target="_blank"]
 sverigesnatur.org##div[id^="sverigesNaturPopup"]
 hrnytt.se##article:has(.sponsored-article)
+/adsense.index.js$domain=husvagn.se|husbil.se
+gbgfotboll.se###cookie_bar, #cookie_bar_overlay
+gbgfotboll.se##body:style(overflow: initial !important;)
+gentlemannaguiden.com##.advertising, .sidebar .widget_text, .sidebar .widget_media_image
