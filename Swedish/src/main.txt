@@ -1378,15 +1378,16 @@ www.dn.se##+js(ra, data-auto-play)
 @@/advertisement*.js$script,domain=dn.se
 /streamsense.$script,important,domain=dn.se
 ! di
+||digital.di.se/api/sponsor/
+||trader.di.se/smallad
 di.se##+js(acis, Di, initAds)
 di.se##+js(set, getAdblockerStatus, noopFunc)
 di.se##+js(nostif, #triggerModal)
 digital.di.se##+js(acis, diConf)
 digital.di.se##.start__articles-ad
-||digital.di.se/api/sponsor/$xmlhttprequest
 di.se##[class^="gdpr-policy"]
 di.se##.di_start__teaser-placeholder[data-content-url*="/ads/"]
-di.se##.bandit-box__teaser--native,.service-box,.discount-box,.di_panorama__isAdLabel,.di_panorama-wrapper,.di_teaser-flak-container--native,.di_teaser-flak-planbokskoll,.di_stock-service,.native-box,.di_teaser--native,.campaign-ad-box
+di.se##.di_panorama-wrapper, .di_panorama__isAdLabel, .discount-box, .campaign-ad-box, .di_start__teaser-placeholder, .di_teaser-flak-planbokskoll, .di_teaser-flak-container--native, .native-box, .bandit-box__teaser--native, a[href*="/brandstudio"]
 /getnative$xmlhttprequest,domain=di.se
 ! EXPRESSEN
 ||lifestyle.expressen.se^$subdocument
@@ -1690,16 +1691,15 @@ uwtd.me,ekonominyheter.se,autonytt.se,undervarttak.se,aftonbladet.se,xn--snabbal
 svenskaturistforeningen.se,forum.robsoft.nu##.cookie-box
 fokus.se,sverigeskonsumenter.se###cookie-box
 lindasbakskola.se,privataaffarer.se,skk.se##a[href*="/bit.ly/"]
-autonytt.se,konstlistan.se,bjornsennbrink.se,bilresaieuropa.se##a[href*="/click.adrecord."]
+autonytt.se,konstlistan.se,bilresaieuropa.se##a[href*="/click.adrecord."]
 nvp.se,fplus.se##[class^="banner"]
-aftonbladet.se,di.se##a[href^="/brandstudio"]
-ikea.com,allakorsord.se,baaam.se,dromhemochtradgard.se,elle.se,femina.se,hant.se,mabra.com,residencemagazine.se,svenskdam.se,allas.se###onetrust-banner-sdk
-adecco.se,viafree.se###onetrust-consent-sdk
+baaam.se,dromhemochtradgard.se,elle.se,femina.se,hant.se,mabra.com,residencemagazine.se,svenskdam.se,allas.se###onetrust-banner-sdk
+allakorsord.se###CybotCookiebotDialog
+adecco.se,viafree.se,ica.se###onetrust-consent-sdk
 it-finans.se,it-halsa.se,it-kanalen.se,it-pedagogen.se,it-retail.se##a[onclick^="gtag"]
 freeride.se,gamereactor.se##.sponsor
 omnihalsa.com,skanesport.se,sportpanelen.se##.stream-item
-hallakonsument.se,handels.se,megafonen.se##.cookie-information
-mkse.com,cyclingplus.se###upprev_box
+handels.se,megafonen.se##.cookie-information
 byggteknikforlaget.se,dialasen.com,torbjornstips.se,backpacking.se,sporthalsa.se,ravarumarknaden.se,livetsgoda.se,worldkustom.com,receptcentralen.se,opulens.se,radiotreby.se##.textwidget a[target="_blank"]
 automation.se,verkstadstidningen.se,transportnytt.se,peace.ax,konsolnyheter.se,metalcentral.net##.bannergroup
 bildobubbla.se,nyatider.nu##.annonser
@@ -1707,9 +1707,9 @@ customerinsider.se,livetsgoda.se,foodetc.se##a[target$="blank"] img
 bukefalos.se,thaisnack.se,rollspel.nu,husbilsklubben.se,friaordet.org##.u-bottomFixer
 
 ! Various annoyances and tracking
-saraabrahamsson.se,eurosport.se,jawcloud.co,nxload.com,polistidningen.se,100kitchenstories.se,streamio.com,nyheter24.se,modette.se##+js(aeld, contextmenu)
+jawcloud.co,polistidningen.se,streamio.com##+js(aeld, contextmenu)
 ! Annoying, unecessary, and completely unrelated autoplaying video
-||youplay.se^$third-party,domain=hamsterpaj.net|emocore.se|dayviews.com|kamrat.com|familjeliv.se|extraextra.se|kalender.se
+||youplay.se^$third-party,domain=hamsterpaj.net|emocore.se|dayviews.com|kamrat.com|extraextra.se|kalender.se
 ! More annoyances for desktop. (Don't mess with the user's default scroll settings!)
 !#if !env_mobile
 lundagard.se,boktugg.se,outsidesweden.se,morotsliv.com,macken.xyz,affarsstaden.se,kitsverige.se##+js(aeld, wheel)
@@ -1721,10 +1721,8 @@ lundagard.se,boktugg.se,outsidesweden.se,morotsliv.com,macken.xyz,affarsstaden.s
 /tapatalkdetect.$script,1p
 /themes/Jaz/inc/js/*nicescroll
 !#endif
-! Bad async-hiding.
-sverigesradio.se,urplay.se,ica.se##.async-hide:style(opacity: 1 !important;)
 ! Bye bye annoying autoplay in articles etc :-)
-youplay.se,modette.se,affarsliv.com,affarslivgotland.se,corren.se,eposten.se,folkbladet.se,helagotland.se,klackspark.com,kuriren.nu,mvt.se,norrbottensaffarer.se,kindaposten.se,nsd.se,norran.se,nt.se,pt.se,unt.se,vt.se,vimmerbytidning.se,vf.se,hjotidning.se,kt.se,sla.se,mariestadstidningen.se,filipstadstidning.se,fryksdalsbygden.se,nwt.se,varmlandsaffarer.se,arvikanyheter.se,nkp.se,saffletidningen.se,provinstidningen.se,dalslanningen.se,karlskogatidning.se,nlt.se,skd.se,nsk.se,affarsvarlden.se,ekuriren.se,kkuriren.se,sn.se,expressen.se,lwcdn.com,barometern.se,blt.se,bt.se,kristianstadsbladet.se,olandsbladet.se,ostrasmaland.se,smp.se,sydostran.se,trelleborgsallehanda.se,ut.se,ystadsallehanda.se,allas.se,hant.se,svenskdam.se,baaam.se,elle.se,femina.se,skanesport.se,thelocal.se,goteborgdirekt.se,vasterastidning.se,realtid.se,cafe.se,kingmagazine.se,mestmotor.se,svenskanamn.se,viivilla.se,ibnytt.se,gotland.net,strengnastidning.se,fragbite.se,mitti.se,byrum.se,sverigespringer.se,recept.se,babyhjalp.se##+js(json-prune, autoplay)
+youplay.se,affarsliv.com,affarslivgotland.se,corren.se,eposten.se,folkbladet.se,helagotland.se,klackspark.com,kuriren.nu,mvt.se,norrbottensaffarer.se,kindaposten.se,nsd.se,norran.se,nt.se,pt.se,unt.se,vt.se,vimmerbytidning.se,vf.se,hjotidning.se,kt.se,sla.se,mariestadstidningen.se,filipstadstidning.se,fryksdalsbygden.se,nwt.se,varmlandsaffarer.se,arvikanyheter.se,nkp.se,saffletidningen.se,provinstidningen.se,dalslanningen.se,karlskogatidning.se,nlt.se,skd.se,nsk.se,affarsvarlden.se,ekuriren.se,kkuriren.se,sn.se,expressen.se,lwcdn.com,barometern.se,blt.se,bt.se,kristianstadsbladet.se,olandsbladet.se,ostrasmaland.se,smp.se,sydostran.se,trelleborgsallehanda.se,ut.se,ystadsallehanda.se,allas.se,hant.se,svenskdam.se,baaam.se,elle.se,femina.se,skanesport.se,thelocal.se,goteborgdirekt.se,vasterastidning.se,realtid.se,cafe.se,kingmagazine.se,mestmotor.se,svenskanamn.se,viivilla.se,ibnytt.se,gotland.net,strengnastidning.se,fragbite.se,mitti.se,byrum.se,sverigespringer.se,recept.se,babyhjalp.se##+js(json-prune, autoplay)
 gamereactor.se,svenskjakt.se,globalportalen.org##+js(ra, autoplay)
 youplay.se##+js(aeld, loadstart)
 ! Don't mess with the default scrollbar!
