@@ -1319,7 +1319,7 @@ www.svd.se##+js(aopr, Tracker)
 /rabattkod$domain=aftonbladet.se
 /pulsetracking$script,domain=aftonbladet.se
 ! Cosmetic ad filters
-aftonbladet.se###MegaAd, [id*="abAdArea"], .ab-responsive-ads-wrapper
+aftonbladet.se###MegaAd, [id*="abAdArea"], .ab-responsive-ads-wrapper, [id^="adPlacement"]
 aftonbladet.se##a[href*="utm_campaign=rantekartan"], a[href*="letsdeal.se"]
 aftonbladet.se##div[style*="border-color:#0067b5;"], div[style*="border-color:#0067b5;"] ~ a
 aftonbladet.se##div[style*="border-color: rgb(0, 103, 181);"], div[style*="border-color: rgb(0, 103, 181);"] ~ a
@@ -1329,6 +1329,7 @@ aftonbladet.se##a[href^="/tv/"]:has(span:has-text(/studio oddset/i)):upward(1)
 aftonbladet.se##a[href*="/kampanj/artikel"]:upward(1)
 aftonbladet.se##[classname="speltipsMarkup"]
 aftonbladet.se##.abThemeGradientPage:not(.abIsNichedContent) a[href^="/family/a/"]
+aftonbladet.se##span:has-text(/^annons/i):upward(a)
 ! ab story sektion
 /ab-xiti-min$script,domain=aftonbladet.se
 /sptAutoTracker$script,domain=aftonbladet.se
@@ -1368,7 +1369,8 @@ classic.prisjakt.nu###confirm_cookie_use
 /messagingNoTcfApi.js$domain=klart.se|omni.se|omniekonomi.se|tv.nu|wellness.se
 /www.wellness.se\/cnp-assets\/[0-9]+./$script,domain=wellness.se
 wellness.se##[id^="adPlacement"]:upward(1)
-wellness.se##p:has-text(/kommersiellt innehåll/i):upward(article)
+wellness.se##p:has-text(/^kommersiellt innehåll/i):upward(article)
+wellness.se##p:has-text(/^kommersiellt innehåll/i):upward(a)
 
 ! BONNIER
 expressen.se,dn.se,di.se###rich-media-ads
@@ -1410,13 +1412,7 @@ expressen.se##a[href*="/spel.exp"], a[href*="/lanapengar.exp"], a[href*="/rabatt
 expressen.se##.teaser > a[href*="/kampanj."], .teaser > a[href*="/brandstudio"], .teaser > a[href*="/brand-studio"]
 expressen.se##figure[data-article-data*="/sponsrat"], figure[data-article-data*="/annons"], figure[data-article-data*="/brand-studio"]
 expressen.se##.teaser--native, .native-article
-expressen.se##.discount-ad
-expressen.se##.pressrelease-teaser
-expressen.se##.widget-ad-marker, .widget-ad-marker + a
-expressen.se##.promotion-banner
-expressen.se##.widget--collaboration
-expressen.se##.rotator--external
-expressen.se##a[data-click-track*="prisjakt"]
+expressen.se##.discount-ad, .b-ad__caption, .pressrelease-teaser, .widget-ad-marker, .widget-ad-marker + a, .promotion-banner, .widget--collaboration, .rotator--external, a[data-click-track*="prisjakt"]
 ! Annoyances
 ?autoPlay$frame,queryprune=autoPlay,domain=expressen.se
 &autoplay$frame,queryprune=autoplay,domain=expressen.se|di.se
