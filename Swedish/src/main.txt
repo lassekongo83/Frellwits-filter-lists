@@ -309,6 +309,7 @@ artbannersplus&task=show
 /cookieconsent3/cookieconsent.min.js
 /cookieconsent/cookieconsent.min.js
 /cx-emediate-userprofile-se.$script
+/detroitchicago/cmb.js
 /discourse-adplugin
 /DO-theme/ads.js
 /docunet_stats.js
@@ -1001,8 +1002,6 @@ avanza.se#@#a[title="LeoVegas"]
 @@||happyride.se/img/admarket/$~third-party
 @@||amazonaws.com/ads/$image,domain=jobb.maxkompetens.se
 intersport.*#@#.cookie-banner:not(body):not(html)
-! Blocked in EasyPrivacy. Breaks login/logout on some sites.
-@@||cdn.dynamicyield.com^$domain=alingsastidning.se|bohuslaningen.se|gp.se|hallandsposten.se|hn.se|stromstadstidning.se|ttela.se
 ! https://github.com/lassekongo83/Frellwits-filter-lists/issues/81
 leovegas.com###cookie-consent-banner + div[data-test-id="header"]:style(top: 0 !important;)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/61749
@@ -1277,8 +1276,10 @@ idg.se,forum.macworld.se##.idgcp__layer
 idg.se,forum.macworld.se##.idgcp__layer--active, .idgcp__layer--active body:style(overflow: initial !important;)
 
 ! STAMPEN
-alingsastidning.se,bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##.stampenCookieContainer
-alingsastidning.se,bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##.lokus-engine, .seekly, .rabble-widget
+alingsastidning.se,bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se,kungsbackaposten.se,kungalvsposten.se,molndalsposten.se,lokaltidningensto.se##.stampenCookieContainer
+alingsastidning.se,bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se,kungsbackaposten.se,kungalvsposten.se,molndalsposten.se,lokaltidningensto.se##.lokus-engine, .seekly, .rabble-widget
+! unbreak logout
+@@||cdn.dynamicyield.com^$domain=alingsastidning.se|bohuslaningen.se|gp.se|hallandsposten.se|hn.se|stromstadstidning.se|ttela.se|kungsbackaposten.se|kungalvsposten.se|molndalsposten.se|lokaltidningensto.se
 ! hmm ;-P
 !#if !env_mobile
 bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##body.logged-out *> .c-user-menu__title, body.logged-out *> .c-user-menu__status, body.logged-out *> .c-user-menu:before, body.logged-out *> .c-user-menu__item:not(.js-epaper-trigger)
@@ -1287,7 +1288,7 @@ bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##bo
 bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##body.logged-out.is-header-sticky *> .c-user-menu:style(visibility: hidden !important;)
 !#endif
 ! flowplayer stuff
-lwcdn.com,alingsastidning.se,bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##+js(json-prune, autoplay players.*.ga acl.ads players.*.autoplay)
+lwcdn.com,alingsastidning.se,bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se,kungsbackaposten.se,kungalvsposten.se,molndalsposten.se,lokaltidningensto.se##+js(json-prune, autoplay players.*.ga acl.ads players.*.autoplay)
 
 ! Flowplayer/lemonwhale
 ||lwcdn.com/vendor/ima.min.js$script
@@ -1660,7 +1661,7 @@ spela.se,effektmagasin.se,svenskorientering.se,aftonbladet.se,halsasverige.se##.
 battrestadsdel.se,casinoexpo.se,flashback.se,leta.se###top-banner
 chef.se,svd.se##.Ad
 99mac.se,di.se,dn.se,mobil.se,skaraborgsbygden.se,skillingaryd.nu,swedroid.se,tidningenbalans.se,xn--vrnamo-bua.nu,bettingstugan.se,expressen.se,dagensopinion.se,driva-eget.se,bioenergitidningen.se,polistidningen.se,ifokus.se,linnherbertsson.se,padelfeber.se,sv.picmix.com,sweclockers.com,ifragasatt.se,tripadvisor.se,fordonsproffs.eu,tandlakartidningen.se,vardfokus.se,ehandel.se##.ad
-improveme.se,vf.se,hjotidning.se,kt.se,sla.se,mariestadstidningen.se,filipstadstidning.se,fryksdalsbygden.se,nwt.se,varmlandsaffarer.se,arvikanyheter.se,nkp.se,saffletidningen.se,provinstidningen.se,dalslanningen.se,karlskogatidning.se,nlt.se,kungalvsposten.se,molndalsposten.se,lokaltidningensto.se,kungsbackaposten.se,byggahus.se,expressen.se,filmtopp.se,alekuriren.se,realtid.se##.ad-container
+improveme.se,vf.se,hjotidning.se,kt.se,sla.se,mariestadstidningen.se,filipstadstidning.se,fryksdalsbygden.se,nwt.se,varmlandsaffarer.se,arvikanyheter.se,nkp.se,saffletidningen.se,provinstidningen.se,dalslanningen.se,karlskogatidning.se,nlt.se,byggahus.se,expressen.se,filmtopp.se,alekuriren.se,realtid.se##.ad-container
 fotosidan.se,merinfo.se,allsvenskan.se,kollega.se,tasteline.com##.ads
 nyheter24.se,lakartidningen.se##.advertisement
 entreprenadaktuellt.se,husbilhusvagn.se,ja.se,klassiker.nu,mopedgaraget.se,nyckelspel.se,skogsaktuellt.se,spelo.se,vaken.se,vibilagare.se,bettips.se,caroftheyear.se,maskinbladet.se,automobil.se,endurobloggen.se,ljuskultur.se,fightermag.se,riksettan.net,frillesasbandy.se,dh.se,djungeltrumman.se,bilsport.se,skik.se,omni.se##.banner
@@ -1946,7 +1947,6 @@ foretagande.se##article:has(.sponsored-text)
 ||hockeymagasinet.com/footer/ad
 hockeymagasinet.com##gdpr-alert
 hockeymagasinet.com##+js(rc, modal-open)
-kungalvsposten.se,molndalsposten.se,lokaltidningensto.se,kungsbackaposten.se##.wp-slot-layout-article-native, .native-div, [data-html*="ad-container"]
 smartsenior.se##.ss-modal, .modal-mobile-app
 matklubben.se##.notification.cookies
 ||kolozzeum.com/forum/kollos*$script
@@ -2496,8 +2496,7 @@ borskollen.se##img[src$="ad_label.png"]:upward(.outer)
 matspar.se##.overflow-hidden:style(overflow-y: initial !important;)
 matspar.se##div[style="z-index: 2000;"],div[style="z-index: 2000;"] + div
 matspar.se##+js(json-prune, payload.ads campaigns.*)
-||temadagar.se/ezoic
-||temadagar.se/detroitchicago
+/ezoic$domain=temadagar.se
 forum.robsoft.nu##td[valign="middle"] > a[target="_blank"]
 ||axess.se^*/track-views
 axess.se##.popup--cookie
