@@ -732,7 +732,9 @@ artbannersplus&task=show
 ##a.card.-sponsored
 ##a.cookiecutter[onclick^="cookie"]
 ##article.article-sponsored
+##article.category-reklam
 ##article.category-samarbete
+##article.category-samarbete-sponsrat-inlagg
 ##article.tag-annons
 ##article.type-partnerartikel
 ##div.cookievarning-wrap
@@ -935,6 +937,7 @@ artbannersplus&task=show
 ##div.ad-after-header
 ##div.ad-panorama_dynamic-wrapper
 ##div.ad-toppbanner
+##div.annonsbox
 ##div.avia-cookiemessage-bottom
 ##div.better-ads-listitemad
 ##div.borka-ad
@@ -953,6 +956,7 @@ artbannersplus&task=show
 ##div.CMACG_AdChangerWidget
 ##div.elementor-widget-wp-widget-advads_ad_widget
 ##div.ilcc-cookie-consent-notice
+##div.o-indenter--ad
 ##div.outsideAdsWrapper
 ##div.gdpr-warning-slide-up
 ##div.sgm-ad
@@ -1148,6 +1152,7 @@ egoinas.se,fysikstugan.se,enkelteknik.se,hamnen.se,cannabis.se,ljudochbild.se,ti
 /plugins/ml-adverts/*$script
 /plugins/modal-for-elementor/*$script,domain=miljomagasinet.se
 /plugins/newsletter$script,domain=56kilo.se
+/plugins/newsletter-leads/libs/simplemodal$script
 /plugins/newsner-lead-tracking/*
 /plugins/notificationx$script
 /plugins/ns-facebook-pixel-for-wp/*
@@ -1161,7 +1166,7 @@ egoinas.se,fysikstugan.se,enkelteknik.se,hamnen.se,cannabis.se,ljudochbild.se,ti
 /plugins/popup$domain=ordfrontmagasin.se|snowmobile.se|sverige.nu|exakt24.se
 /plugins/popups/*$script,domain=svenskhistoria.se|bugburger.se
 /plugins/pum-$script,domain=snowmobile.se
-/plugins/quantcast-choice/*$script,domain=muscles.se|kimura.se
+/plugins/quantcast-choice/*$script,domain=muscles.se|kimura.se|paulas.me
 /plugins/r9-analytics
 /plugins/r9-gdpr$script
 /plugins/random-banner/*
@@ -1566,8 +1571,9 @@ gamereactor.se###grtvbelt_Sponsored:upward(1)
 
 ! ALLER MEDIA
 allakorsord.se,allas.se,baaam.se,dromhemochtradgard.se,elle.se,femina.se,hant.se,mabra.com,residencemagazine.se,svenskdam.se##a[href$="native=1"]:upward(article)
-allakorsord.se,allas.se,baaam.se,dromhemochtradgard.se,elle.se,femina.se,hant.se,mabra.com,residencemagazine.se,svenskdam.se##.ag-product-wrapper
+allakorsord.se,allas.se,baaam.se,dromhemochtradgard.se,elle.se,femina.se,hant.se,mabra.com,residencemagazine.se,svenskdam.se##.ag-product-wrapper, .product-carousel__container
 dromhemochtradgard.se##.native-wrapper:upward(1)
+elle.se##section.c-native_banner:upward(2)
 /AffiliateHelper$domain=allakorsord.se|allas.se|baaam.se|dromhemochtradgard.se|elle.se|femina.se|hant.se|mabra.com|residencemagazine.se|svenskdam.se
 /native.html$domain=allakorsord.se|allas.se|baaam.se|dromhemochtradgard.se|elle.se|femina.se|hant.se|mabra.com|residencemagazine.se|svenskdam.se
 
@@ -1581,6 +1587,7 @@ hemtrevligt.se##.row--native
 hemtrevligt.se,vagabond.se,tidningenhalsa.se,utemagasinet.se###facebookSlideIn
 mestmotor.se##.panel-native, a[href*="/artiklar/partner/"]
 mestmotor.se###piano:style(opacity: 1 !important;)
+mestmotor.se##+js(ra, onclick, [onclick^="ANAL"])
 vagabond.se##.latest-article-native
 
 ! FRIA
@@ -1658,6 +1665,8 @@ monasuniversum.se,matplatsen.net,isabellalowengrip.se###gatsby-focus-wrapper > d
 matplatsen.net,isabellalowengrip.se##article:has(em:has-text(/i samarbete med/i)):remove()
 ||bloggtoppen.fi^$third-party
 isabellalowengrip.se##.post:has(em:has-text(/^i samarbete med/i))
+monasuniversum.se##article > div > p:has-text(/annonssamarbete/i):upward(article)
+56kilo.se,paulas.me##em:has-text(/Annons|Reklam/i):upward(article)
 
 ! Common cosmetic filters that shouldn't be generic
 annicaenglund.se,alicestenlof.com,tjanstebilen.se,mp.se,linnherbertsson.se,ellinorlofgren.se###cookies
@@ -1916,7 +1925,8 @@ kokaihop.se##.ads-wrapper-main, .InterstitialModal
 kokaihop.se##body:style(overflow-y: auto !important;)
 kokaihop.se##.cookieBarWrapper:remove()
 /ads.js$domain=flashback.org
-flashback.org###top-banner-row
+/otSDKStub.js$domain=flashback.org
+flashback.org###top-banner-container
 flashback.org##+js(nostif, #top-banner-container)
 mmanytt.se##.front-banner,.front-banner-cover,#text-2,[class*="sponsrat-inlagg"],a[href*="://kampanjer."],.ohmbet_link
 mmanytt.se##.img-featured-posts-image:has(a[href$="/annons/"])
@@ -2578,3 +2588,5 @@ travelnews.se##.bottom-bar--animate-in, #job_ads_scroller, .header_banner
 livetochdiabetes.se###text-3
 synonymer.se##+js(cookie-remover, /^ev_did|ev_sid/)
 lexbase.se##+js(cookie-remover, lmt)
+duochjobbet.se###topbanner
+duochjobbet.se##.editor_content.post:has(p:has-text(/^annons/i))

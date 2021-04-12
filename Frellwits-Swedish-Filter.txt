@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2021-04-11 13:30:43 CEST
+! Last modified: 2021-04-12 11:32:31 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -66,8 +66,8 @@
 ###cookiejar
 ###cookielawwarning
 ###cookieMsgBlock
-###CookieNotice
 ###cookieNotice
+###CookieNotice
 ###cookies-acceptance .alert.bottom
 ###cookiesInfo
 ###dialog-eu-cookie-law
@@ -230,7 +230,9 @@
 ##a[href^="https://www.adsettings.com/scripts/reg_click."]
 ##a[title="LeoVegas"]
 ##article.article-sponsored
+##article.category-reklam
 ##article.category-samarbete
+##article.category-samarbete-sponsrat-inlagg
 ##article.tag-annons
 ##article.type-partnerartikel
 ##cookie-law-banner
@@ -251,6 +253,7 @@
 ##div.ad-panorama_dynamic-wrapper
 ##div.ad-toppbanner
 ##div.ad.container
+##div.annonsbox
 ##div.avia-cookiemessage-bottom
 ##div.better-ads-listitemad
 ##div.big-desktop-ads
@@ -274,6 +277,7 @@
 ##div.NativeAd
 ##div.newsletter-cta
 ##div.newsletter-slider
+##div.o-indenter--ad
 ##div.oc_cb_wrapper.fill_black
 ##div.outsideAdsWrapper
 ##div.panoramaAd
@@ -588,6 +592,7 @@
 /omniture/s_code.js$domain=~atgplay.se
 /OneSignalSDKWorker$script
 /orion/loada$script
+/otSDKStub.js$domain=flashback.org
 /packs/consent$domain=hemnet.se
 /pagead$domain=horoskoptid.se
 /pages/native$domain=aktuellhallbarhet.se|byggindustrin.se|dagensmedia.se|dagensmedicin.se|fastighetsnytt.se|resume.se
@@ -675,6 +680,7 @@
 /plugins/ml-adverts/*$script
 /plugins/modal-for-elementor/*$script,domain=miljomagasinet.se
 /plugins/newsletter$script,domain=56kilo.se
+/plugins/newsletter-leads/libs/simplemodal$script
 /plugins/newsner-lead-tracking/*
 /plugins/notificationx$script
 /plugins/ns-facebook-pixel-for-wp/*
@@ -688,7 +694,7 @@
 /plugins/popup$domain=exakt24.se|ordfrontmagasin.se|snowmobile.se|sverige.nu
 /plugins/popups/*$script,domain=bugburger.se|svenskhistoria.se
 /plugins/pum-$script,domain=snowmobile.se
-/plugins/quantcast-choice/*$script,domain=kimura.se|muscles.se
+/plugins/quantcast-choice/*$script,domain=kimura.se|muscles.se|paulas.me
 /plugins/r9-analytics
 /plugins/r9-gdpr$script
 /plugins/random-banner/*
@@ -957,7 +963,7 @@ alkompis.se##.cdk-overlay-container
 alkompis.se##app-ads
 allabolag.se###company-card_top-banner
 allakorsord.se###CybotCookiebotDialog
-allakorsord.se,allas.se,baaam.se,dromhemochtradgard.se,elle.se,femina.se,hant.se,mabra.com,residencemagazine.se,svenskdam.se##.ag-product-wrapper
+allakorsord.se,allas.se,baaam.se,dromhemochtradgard.se,elle.se,femina.se,hant.se,mabra.com,residencemagazine.se,svenskdam.se##.ag-product-wrapper, .product-carousel__container
 allas.se,baaam.se,dromhemochtradgard.se,elle.se,femina.se,hant.se,mabra.com,residencemagazine.se,svenskdam.se###onetrust-banner-sdk
 allatvkanaler.se##.ga
 allehanda.se,arbetarbladet.se,avestatidning.com,bandypuls.se,bblat.se,dalademokraten.se,dt.se,fagersta-posten.se,falkopingstidning.se,gd.se,jnytt.se,jp.se,lt.se,ltz.se,na.se,norrteljetidning.se,nynashamnsposten.se,op.se,salaallehanda.com,skaraborgslanstidning.se,skovdenyheter.se,smalandsdagblad.se,smalanningen.se,smt.se,st.nu,tidningenharjedalen.se,tranastidning.se,vastgotabladet.se,vetlandaposten.se,vlt.se,vn.se##.nps-client-dialogue-footer
@@ -1105,6 +1111,7 @@ dn.se##.campaign-holder
 dn.se##.gdpr-header
 driva-eget.se,foretagande.se,hockeymagasinet.com,revisionsvarlden.se,runnersworld.se,tidningenbalans.se,travelnews.se,utsidan.se##.sponsored
 drivkraftsverige.se##.policy-disclaimer
+duochjobbet.se###topbanner
 duplotryck.se##.wof-overlay, .wof-wheels
 ehandel.se##.commercial-row, .aside-image-with-link, .post-container-sponsored, aside a[href*="/branschnyheter/"]
 ekonominyheter.se###lblock-ads
@@ -1155,7 +1162,7 @@ filmtipset.se##.row.news > div[style^="border"]:last-of-type
 firstclassmagazine.se###leader-wrap, #rpwe_widget-2
 fiskejournalen.se##.fisher-takeover-container
 flamman.se##.Banner
-flashback.org###top-banner-row
+flashback.org###top-banner-container
 flashscore.se##.boxOverContent--a
 flm.nu##.spons
 flygtorget.se###PreHeader

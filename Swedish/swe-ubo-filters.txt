@@ -25,6 +25,7 @@
 /prerolls$media,mp4,domain=gamereactor.se
 /streamsense.$important,script,domain=dn.se
 /sweden/swedish/hjo-tidning.html$document
+56kilo.se,paulas.me##em:has-text(/Annons|Reklam/i):upward(article)
 99mac.se##.nitem:has(a[href="/arkiv/kategori/annons"])
 99mac.se##a[href*="annons-"]:upward(.carousel-item)
 ?autoPlay$frame,queryprune=autoplay,domain=expressen.se
@@ -100,6 +101,8 @@ dinlivsstil.nu,foretagsverige.se,forskningsverige.se,grillbibeln.se,hallbarhetsv
 djungeltrumman.se##+js(nano-sib, dt_fullpage_ad)
 djungeltrumman.se##.item:has(.label-post:has-text(/spons/i))
 dromhemochtradgard.se##.native-wrapper:upward(1)
+duochjobbet.se##.editor_content.post:has(p:has-text(/^annons/i))
+elle.se##section.c-native_banner:upward(2)
 etc.se##+js(set, Drupal.behaviors.lock_article, undefined)
 ettgottskratt.se,humorbibeln.se,newsner.com,sportbibeln.se##.ssp_divider:has(.sponsored-bar)
 etunawebben.se##+js(nostif, ad)
@@ -196,6 +199,7 @@ maklarvarlden.se##article:has(.sponsored-inlist)
 matspar.se##+js(json-prune, payload.ads campaigns.*)
 matspar.se##.overflow-hidden:style(overflow-y: initial !important;)
 mestmotor.se###piano:style(opacity: 1 !important;)
+mestmotor.se##+js(ra, onclick, [onclick^="ANAL"])
 metrojobb.se##.headlines__block:has(.ad-header)
 metromode.se##.b-card:has(.advert)
 metromode.se##.b-related__item:has(.advert)
@@ -207,6 +211,7 @@ mittkok.expressen.se##+js(aeld, click, trackClick)
 mittkok.expressen.se##.main:style(width: 100% !important;)
 mmanytt.se##.img-featured-posts-image:has(a[href$="/annons/"])
 modette.se,nyheter24.se##+js(ra, data-isready, .bb_wrapper, stay)
+monasuniversum.se##article > div > p:has-text(/annonssamarbete/i):upward(article)
 mtv.se##+js(json-prune, omnitureAdTracking omnitureEnabled ads adServer adsEnabled adTimeouts comScoreAdTracking freewheelEnabled)
 mygatemagazine.se##.textwidget:has-text(Annons)
 mytaste.se##.recipe-modal[data-state=default] .modal-container.open, .recipe-modal[data-state=panorama] .modal-container.open:style(padding-top: 0 !important;)
