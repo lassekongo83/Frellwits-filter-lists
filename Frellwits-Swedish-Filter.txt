@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2021-04-16 10:15:54 CEST
+! Last modified: 2021-04-19 11:10:51 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -233,6 +233,7 @@
 ##article.category-reklam
 ##article.category-samarbete
 ##article.category-samarbete-sponsrat-inlagg
+##article.NativeTeaser
 ##article.tag-annons
 ##article.type-partnerartikel
 ##cookie-law-banner
@@ -263,10 +264,12 @@
 ##div.bsa_pro_ajax_load
 ##div.cli-modal-backdrop
 ##div.CMACG_AdChangerWidget
+##div.Container--ad
 ##div.cookie-block
 ##div.cookie-notification-show
 ##div.cookie-show-bar-bottom
 ##div.cookiebanner
+##div.CookieConsentBanner.is-active
 ##div.cookievarning-wrap
 ##div.elementor-widget-wp-widget-advads_ad_widget
 ##div.gdpr-warning-slide-up
@@ -600,10 +603,13 @@
 /otSDKStub.js$domain=flashback.org
 /packs/consent$domain=hemnet.se
 /pagead$domain=horoskoptid.se
-/pages/native$domain=aktuellhallbarhet.se|byggindustrin.se|dagensmedia.se|dagensmedicin.se|fastighetsnytt.se|resume.se
-/pages/tag$domain=aktuellhallbarhet.se|byggindustrin.se|dagensmedia.se|dagensmedicin.se|fastighetsnytt.se|resume.se
+/pages/native$domain=aktuellhallbarhet.se|byggindustrin.se|dagensmedia.se|dagensmedicin.se|dagenssamhalle.se|fastighetsnytt.se|resume.se
+/pages/tag$domain=aktuellhallbarhet.se|byggindustrin.se|dagensmedia.se|dagensmedicin.se|dagenssamhalle.se|fastighetsnytt.se|resume.se
 /permutive-async.js$script
 /phaser-ads.min.js$script
+/player-plugin-ad$domain=tv.aftonbladet.se
+/player-plugin-sponsor$domain=tv.aftonbladet.se
+/player-plugin-tracking$domain=tv.aftonbladet.se
 /plugins/ab_appnexus_ads/*
 /plugins/ab_stats_params/*
 /plugins/ab_tracking$domain=aftonbladet.se
@@ -638,7 +644,6 @@
 /plugins/ct-ultimate-gdpr/*
 /plugins/custom-cookie-message-btdm-extension/*$script
 /plugins/custom-cookie-message/*$script
-/plugins/daftplug-facebook-reactions$domain=popmuzik.se
 /plugins/deblocker/js/deblocker$script,domain=~filecr.com
 /plugins/dohi-gdpr/*
 /plugins/dohi-sellbranch/js/popup.$script
@@ -733,6 +738,7 @@
 /plugins/vizzit-analytics-for-wordpress/*$script
 /plugins/wf-cookie-consent/*
 /plugins/wordpress-popup$domain=buzzter.se|lesscarbs.se|maklarvarlden.se
+/plugins/wordpress-stats-manager-pro
 /plugins/wp-adsense-guard/*
 /plugins/wp-auto-affiliate-links/*
 /plugins/wp-banner-manager/*
@@ -949,13 +955,15 @@ aftonbladet.se##div[style*="border-color:#0067b5;"], div[style*="border-color:#0
 aftonbladet.se,autonytt.se,ekonominyheter.se,hockeybladet.nu,lesscarbs.se,modette.se,undervarttak.se,uwtd.me,xn--snabbalnen-75a.se##a[href*="/track.adtraction."]
 aftonbladet.se,effektmagasin.se,halsasverige.se,spela.se,svenskorientering.se##.advert
 aikfotboll.se,vaken.se##.banners
+akaviaaspekt.se##.article-list-item--native
+akaviaaspekt.se,lakartidningen.se,nyheter24.se##.advertisement
 aktiespararna.se##.analysguiden-promote-articles
 aktiespararna.se,alekuriren.se,civilekonomen.se##.native
 aktivtraning.se,digitalfotoforalla.se,iform.se,militarhistoria.se,natgeo.se,pctidningen.se,popularhistoria.se##.gallery-banner, .horseshoe, [data-ad-type]
 aktivtraning.se,digitalfotoforalla.se,iform.se,militarhistoria.se,natgeo.se,pctidningen.se,popularhistoria.se##.scroll-message
-aktuellhallbarhet.se,byggindustrin.se,dagensmedia.se,dagensmedicin.se,fastighetsnytt.se,resume.se###__next > div[class^="css-"]:last-child
-aktuellhallbarhet.se,byggindustrin.se,dagensmedia.se,dagensmedicin.se,fastighetsnytt.se,resume.se##.slot-module, .slot-articlemodule
-aktuellhallbarhet.se,byggindustrin.se,dagensmedia.se,dagensmedicin.se,fastighetsnytt.se,resume.se##a[href^="/annons/"], a[href^="/native/"]
+aktuellhallbarhet.se,byggindustrin.se,dagensmedia.se,dagensmedicin.se,dagenssamhalle.se,fastighetsnytt.se,resume.se###__next > div[class^="css-"]:last-child
+aktuellhallbarhet.se,byggindustrin.se,dagensmedia.se,dagensmedicin.se,dagenssamhalle.se,fastighetsnytt.se,resume.se##.slot-module, .slot-articlemodule
+aktuellhallbarhet.se,byggindustrin.se,dagensmedia.se,dagensmedicin.se,dagenssamhalle.se,fastighetsnytt.se,resume.se##a[href^="/annons/"], a[href^="/native/"]
 alandsradio.ax,automobil.se,bike.se,byggnyheter.se,caroftheyear.se,cgi.se,dagensfastigheter.se,dagensnaringsliv.se,endurobloggen.se,energinyheter.se,fof.se,hsr.se,husbilhusvagn.se,industrinyheter.se,infrastrukturnyheter.se,inredningsnyheter.se,jarnvagsnyheter.se,kantarsifo.se,klassiker.nu,kommunal.se,kyrkanstidning.se,metallerochgruvor.se,mopedgaraget.se,papperochmassa.se,plastikoperationsforum.se,publikt.se,realtid.se,riksettan.net,sandaren.se,sjofart.ax,so-rummet.se,solenerginyheter.se,sportochfritidsnyheter.se,spraktidningen.se,stockholmsbyggnyheter.se,testfakta.se,transportochlogistik.se,ungforetagsamhet.se,vibilagare.se,viktvaktarna.se,vindkraftsnyheter.se###sliding-popup
 aldrenytt.se##div[id*="aldrenytt-"], .aldrenytt-adlabel, .aldrenytt-adlabel ~ a
 alekuriren.se###widget_code-6
@@ -1095,8 +1103,6 @@ dagensinfrastruktur.se,ratsit.se,sonicmagazine.com##[class^="ad-"]
 dagensjuridik.se##.outher-sidebar, a[href*="/annons/"]
 dagensopinion.se##a[href^="/annons-"]
 dagensps.se##a[href*="/ps-partner/"]
-dagenssamhalle.se##.node-native, .c-teaser.-native
-dagenssamhalle.se##.notice
 dagenstv.com###bt
 dagensvastervik.se,dagensvimmerby.se##.panoramaAnnons, .JobAdDiv, .annonsKolumn, .insideAd, .ingressAd, .familyAds, .annonsWrapper
 danskaspraket.se,digitalavykort.se,viseniorer.se,vmj.se##.cc-cookies
@@ -1306,7 +1312,6 @@ kvalitetsmagasinet.se,miljo-utveckling.se,telekomidag.se,vdtidningen.se###subscr
 kvalitetsmagasinet.se,miljo-utveckling.se,telekomidag.se,vdtidningen.se##.partnermedia
 kvalitetsmagasinet.se,miljo-utveckling.se,telekomidag.se,vdtidningen.se##[class*="nativeadwidget"]
 lajvo.se###panoramaTop
-lakartidningen.se,nyheter24.se##.advertisement
 landetsfria.nu,tidningensyre.se##div[style*="verdana; color:#888888"]
 landleyskok.se##.inpostbanner, .banner-leaderboard
 lararen.se##a[href*="=annons"]
@@ -1404,6 +1409,7 @@ pomu.se##[class^="Banner"]
 popularastronomi.se##a.gofollow[data-track]:not([href*="www.popularastronomi.se"])
 pricerunner.se###consent
 pricerunner.se##a[href*="&clickarea=sponsored"]
+privataaffarer.se##.category-promotion
 proffs.se##.cookie-wrapper
 pussad.se##.g1-popup-newsletter, .g1-slideup-wrap
 radio.se##.topAdSpacer
