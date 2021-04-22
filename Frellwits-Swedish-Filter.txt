@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2021-04-21 10:46:20 CEST
+! Last modified: 2021-04-22 09:33:19 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -405,6 +405,7 @@
 /ajax.php?action=get_cookies_policy$xmlhttprequest
 /ajax.php?action=get_policy&site=cookie-information$xmlhttprequest
 /ajax/docu_stats.jsp$xmlhttprequest
+/analytics$domain=fiskejournalen.se|jaktjournalen.se
 /analytics$script,domain=dn.se
 /analytics-bmb$script
 /analytics/cts.min.js$script
@@ -503,6 +504,7 @@
 /evidon*.js$domain=morningstar.se
 /ext/phpbb/ads/*
 /ezoic$domain=temadagar.se
+/fixed-panorama$domain=fiskejournalen.se|jaktjournalen.se
 /flex-mag/js/dfp.js
 /fokus-banners.js$domain=fokus.se
 /fokus-paywall.js$domain=fokus.se
@@ -535,7 +537,6 @@
 /img/banklan/*$image,domain=ekonominyheter.se
 /img/bettingstugan.
 /img/compricer$image,domain=ekonominyheter.se
-/infinite-ads.js
 /initLogging$script,domain=dn.se|teknikensvarld.se
 /inlist-InlistSponsored$domain=pricerunner.se
 /isbanner/ib.js
@@ -553,6 +554,7 @@
 /js/fullpageads.js
 /js/iepngfix_tilebg.
 /js/improve_digital_ads.
+/js/infinite-ads
 /js/intelecom.tracker
 /js/mtiFontTrackingCode.
 /js/OneSignal.js
@@ -1177,7 +1179,7 @@ fightermag.se##a[href*="/sponsra"]
 filmtipset.se###topslider-wrapper + .container > .sidebar
 filmtipset.se##.row.news > div[style^="border"]:last-of-type
 firstclassmagazine.se###leader-wrap, #rpwe_widget-2
-fiskejournalen.se##.fisher-takeover-container
+fiskejournalen.se,jaktjournalen.se##.fisher-takeover-container
 flamman.se##.Banner
 flashback.org###top-banner-container
 flashscore.se##.boxOverContent--a
@@ -1280,6 +1282,7 @@ intersport.*#@#.cookie-banner:not(body):not(html)
 ipo.se##.tag-sponsrad
 isabellalowengrip.se,matplatsen.net,monasuniversum.se###gatsby-focus-wrapper > div[class^="css-"]:last-of-type
 it-finans.se,it-halsa.se,it-kanalen.se,it-pedagogen.se,it-retail.se##a[onclick^="gtag"]
+jaktjournalen.se##.activate-notifications-container.shown
 jaktplay.se##.jaktplay-ad
 jaktsidan.se###ipsLayout_mainArea > iframe
 jamtlandstidning.se##.animated-fast .elementor-element:not(:last-of-type)
@@ -1761,7 +1764,6 @@ yelp.se##.js-cookie-iframe
 ||feed.mikle.com^$third-party,domain=ekonominyheter.se
 ||feeds.feedburner.com^$image
 ||files.cdn.spilcloud.com/pb/$script
-||fiskejournalen.se^*/fixed-panorama
 ||flirtmatch.se^
 ||folkspel.se^$third-party
 ||foretagande.se/a/$xmlhttprequest
