@@ -1106,7 +1106,7 @@ egoinas.se,fysikstugan.se,enkelteknik.se,hamnen.se,cannabis.se,ljudochbild.se,ti
 /plugins/convertplug/*
 /plugins/convertpro/*
 /plugins/cookie-bar/*
-/plugins/cookie-law-info/*$domain=nyadagbladet.se|hockeybladet.nu|carup.se|temadagar.se|gilla.se
+/plugins/cookie-law-info/*$domain=nyadagbladet.se|hockeybladet.nu|carup.se|temadagar.se|gilla.se|ljudochbild.se
 /plugins/cookie-notice/*
 /plugins/cookie_consent/*$script
 /plugins/cresta-social-share-counter-pro/*
@@ -1745,7 +1745,7 @@ brinkenbakar.se,nyadagbladet.se,ff.se##.elementor-popup-modal
 
 ! Various annoyances and tracking
 annicaenglund.se,alicestenlof.com,ellinorlofgren.se,linnherbertsson.se,pricerunner.se##.noscroll:style(overflow: initial !important;)
-jawcloud.co,polistidningen.se,streamio.com##+js(aeld, contextmenu)
+jawcloud.co,polistidningen.se,streamio.com,konsolnyheter.se##+js(aeld, contextmenu)
 ! Annoying, unecessary, and completely unrelated autoplaying video
 ||youplay.se^$third-party,domain=hamsterpaj.net|emocore.se|dayviews.com|kamrat.com|extraextra.se|kalender.se
 ! More annoyances for desktop. (Don't mess with the user's default scroll settings!)
@@ -1946,7 +1946,7 @@ kokaihop.se##body:style(overflow-y: auto !important;)
 kokaihop.se##.cookieBarWrapper:remove()
 /ads.js$domain=flashback.org
 /otSDKStub.js$domain=flashback.org
-flashback.org###top-banner-container
+flashback.org###top-banner-container, #top-banner-wrapper
 flashback.org##+js(nostif, #top-banner-container)
 mmanytt.se##.front-banner,.front-banner-cover,#text-2,[class*="sponsrat-inlagg"],a[href*="://kampanjer."],.ohmbet_link
 mmanytt.se##.img-featured-posts-image:has(a[href$="/annons/"])
@@ -2127,7 +2127,6 @@ nyheteridag.se##.article-inner:has(h2:has-text(/samarbetslänkar/i))
 lundagard.se###bdCheckAlso.bdCheckAlsoShow
 knulla.se###cookie-popup
 komponentkoll.se##.gdpr-wide
-komponentkoll.se##img[src*="/promo/"]:upward(1)
 affarsstaden.se##+js(acis, jQuery, adblockdetect)
 mmabetz.se##.desktop-homepage-ad, .desktop-main-ad, .latest-betting-campaigns, .best-casino-section, .top-casino
 foreca.se###ckieconsent
@@ -2155,6 +2154,7 @@ grannar.se##.cookiebox, .revive, .offert-promobox
 swehockey.se##[class*="-reklam"], .sif-sponsorer
 etunawebben.se##+js(nostif, ad)
 /?template=prisjakt$domain=ljudochbild.se
+/lbxjquery.dfp.$domain=ljudochbild.se
 ljudochbild.se##.adremark, .coofad, .popup-overlay, .hidead, .phoneads, .pricecomp, .offerz, .type-articleadvertorial, .adblock, .lbplussinfo
 ljudochbild.se##.entry-content-wrap:style(max-height: unset !important; overflow: initial !important;)
 villalivet.se##a:has-text(/sponsra/i):upward(3)
@@ -2491,7 +2491,7 @@ alekuriren.se###widget_code-6
 konsolnyheter.se##.t3-topbanner
 konsolnyheter.se##+js(acis, show_popup)
 konsolnyheter.se##+js(acis, disableSelection)
-konsolnyheter.se##+js(acis, addEvent, oncopy)
+konsolnyheter.se##+js(set, document.body.oncopy, noopFunc)
 hastnet.se##.add-wrap, .listings-search-ads, .right_panel
 icagruppen.se##.cookieInfo
 kvalitetsmagasinet.se,miljo-utveckling.se,telekomidag.se,vdtidningen.se###subscribe_splash
