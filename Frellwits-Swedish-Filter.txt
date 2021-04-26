@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2021-04-23 09:20:26 CEST
+! Last modified: 2021-04-26 10:52:31 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -66,8 +66,8 @@
 ###cookiejar
 ###cookielawwarning
 ###cookieMsgBlock
-###CookieNotice
 ###cookieNotice
+###CookieNotice
 ###cookies-acceptance .alert.bottom
 ###cookiesInfo
 ###dialog-eu-cookie-law
@@ -358,6 +358,7 @@
 .se/Media/Banners/
 .se/misc/loada.js$script
 .se/native?noBurtProfiles
+.se/nonsec/banner/
 .se/portalen-stats/register-view
 .se/prebid$script
 .se/pres/bnrs/$image
@@ -881,7 +882,7 @@
 /wp-content/uploads/*.js?ver$script,domain=nyadagbladet.se
 /wp-content/uploads/*/public/assets/js/advanced.js$script
 /wp-content/uploads/*annons$image
-/wp-content/uploads/*banner$image,domain=alltomhif.se|borattforum.se|brollopsmagasinet.se|bussmagasinet.se|customerinsider.se|danstidningen.se|guldkanalen.se|katerinamagasin.se|ljuskultur.se|marsta.nu|polistidningen.se|sff.nu|sportpanelen.se|turismnytt.se|vardfokus.se|viralsweden.com
+/wp-content/uploads/*banner$image,domain=alltomhif.se|borattforum.se|brollopsmagasinet.se|bussmagasinet.se|customerinsider.se|danstidningen.se|dental24.se|guldkanalen.se|katerinamagasin.se|ljuskultur.se|marsta.nu|polistidningen.se|sff.nu|sportpanelen.se|turismnytt.se|vardfokus.se|viralsweden.com
 /wp-content/uploads/*betfair$image
 /wp-content/uploads/*bethard$image
 /wp-content/uploads/*betting$image,domain=hockeybladet.nu|kulturbloggen.com|newsvoice.se|nyadagbladet.se
@@ -1043,7 +1044,7 @@ battrestadsdel.se,casinoexpo.se,flashback.se,leta.se###top-banner
 beernews.se##.cookie-consent-wrapper
 bergsmannen.se##.ann-puff
 bettips.se##.bettips-am
-bettips.se##.top-banner
+bettips.se,borskollen.se##.top-banner
 bicycling.se,runnersworld.se##.modal-plus, .modal-backdrop, .footer-newsletter
 bicycling.se,runnersworld.se##.post-card-sponsored
 bildobubbla.se,nyatider.nu##.annonser
@@ -1449,6 +1450,7 @@ sff.nu###sidebar > li:not(.widget_wp_sidebarlogin), li.widget_sp_image
 shoegazing.se###main-sidebar .widget_media_image, #post-sidebar .widget_media_image, #content > .code-block
 shortcut.se##.annons-block, .layout-advertisement
 siriusbandy.se,vetlandabk.se##[id$="-ad"]
+siteseeker$script,domain=foretagarna.se
 sjoaguden.se##.av-siteloader-wrap
 skandia.se##div[data-block="CookieBannerBlock"]
 skanesport.se###black-studio-tinymce-3
@@ -1486,7 +1488,7 @@ svensktidskrift.se###bannercolumn
 sverigesnatur.org##div[id^="sverigesNaturPopup"]
 sverigespringer.se##.cd-desktop-banner
 svt.se###nyh_cookie-message,#svtmat_cookie,section.nyh_share
-svtplay.se##.play_cookie-information
+svtplay.se###PlayCookieInformationRoot
 sweclockers.com###prisjakt-popular
 sweclockers.com##.article-sponsored, .article-sponsored ~ div
 swedroid.se###nativendo-mainfeed + aside > .article, .article-footer > h3, .article-footer > .aeChart
@@ -1620,6 +1622,8 @@ yelp.se##.js-cookie-iframe
 ||biddercore.io^$third-party
 ||bilweb.se^$third-party
 ||bitcoin-code.net^
+||bjarenu.se/?news=ajaxrequest&ArtSponsor
+||bjarenu.se/?news=ajaxrequest&bannerzone
 ||bjuvsnytt.se/images/*annons
 ||blocket.se^$third-party
 ||blogg.se/public/js/metrics
@@ -1769,7 +1773,6 @@ yelp.se##.js-cookie-iframe
 ||folkspel.se^$third-party
 ||foretagande.se/a/$xmlhttprequest
 ||foretagande.se/r/$xmlhttprequest
-||foretagarna.se/embeddedresources.siteseeker$script
 ||forms.hsforms.com^*/counters.$image
 ||freewheel-mtgx-tv.akamaized.net^$media,domain=viafree.se
 ||freyanews.com^*/tracker$script
