@@ -20,7 +20,7 @@ not_mobile='output/not_mobile.txt'
 extended='output/extended.txt'
 not_extended='output/not-extended.txt'
 # uBO specific filters
-ubo_n='redirect=|redirect-rule=|\$important|,important|\$document|,document|\$frame|,frame|\$badfilter|,badfilter|\$inline-script|,inline-script|\$popunder|,popunder|\$1p|,1p|\$3p|,3p|\$strict1p|,strict1p|\$strict3p|,strict3p|\$xhr|,xhr|\$header|,header|\$first-party|,first-party|\$all|\$mp4|,mp4|\$empty|,empty|\$specifichide|,specifichide|\$shide|,shide|\$ghide|,ghide|\$ehide|,ehide|\$cname|,cname|\$denyallow|,denyallow|\$queryprune|,queryprune'
+ubo_n='redirect=|redirect-rule=|\$important|,important|\$document|,document|\$doc|,doc|\$frame|,frame|\$badfilter|,badfilter|\$inline-script|,inline-script|\$popunder|,popunder|\$1p|,1p|\$3p|,3p|\$strict1p|,strict1p|\$strict3p|,strict3p|\$xhr|,xhr|\$header|,header|\$first-party|,first-party|\$all|\$mp4|,mp4|\$empty|,empty|\$specifichide|,specifichide|\$shide|,shide|\$ghide|,ghide|\$ehide|,ehide|\$cname|,cname|\$denyallow|,denyallow|\$queryprune|,queryprune|\$removeparam|,removeparam'
 ubo_c=':xpath\(|:matches-css\(|:matches-css-before\(|:matches-css-after\(|:has\(|:has-text\(|:style\(|:scope|:nth-ancestor\(|:watch-attr\(|:upward\(|:remove\('
 ubo_s='script:inject|#\+js\('
 

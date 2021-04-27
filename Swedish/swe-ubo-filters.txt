@@ -1,5 +1,5 @@
-&autoplay$frame,queryprune=autoplay,domain=di.se|expressen.se
-&browser=MozillaFirefox$queryprune=/^browser/,xhr,domain=fotbollskanalen.se|koket.se|tv4.se|tv4play.se
+&autoplay$frame,removeparam=autoplay,domain=di.se|expressen.se
+&browser=MozillaFirefox$removeparam=/^browser/,xhr,domain=fotbollskanalen.se|koket.se|tv4.se|tv4play.se
 .info/dagens-nyheter/$document
 .info/dn-nyheter/$document
 .info/expressen-se-nyheter/$document
@@ -28,7 +28,7 @@
 56kilo.se,paulas.me##em:has-text(/Annons|Reklam/i):upward(article)
 99mac.se##.nitem:has(a[href="/arkiv/kategori/annons"])
 99mac.se##a[href*="annons-"]:upward(.carousel-item)
-?autoPlay$frame,queryprune=autoplay,domain=expressen.se
+?autoPlay$frame,removeparam=autoplay,domain=expressen.se
 accentmagasin.se##+js(nostif, n.modal)
 affarsliv.com,affarslivgotland.se,affarsvarlden.se,allas.se,arvikanyheter.se,baaam.se,babyhjalp.se,barometern.se,blt.se,bt.se,byrum.se,cafe.se,corren.se,dalslanningen.se,ekuriren.se,elle.se,eposten.se,expressen.se,femina.se,filipstadstidning.se,folkbladet.se,fragbite.se,fryksdalsbygden.se,goteborgdirekt.se,gotland.net,hant.se,helagotland.se,hjotidning.se,ibnytt.se,karlskogatidning.se,kindaposten.se,kingmagazine.se,kkuriren.se,klackspark.com,kristianstadsbladet.se,kt.se,kuriren.nu,lwcdn.com,mariestadstidningen.se,mestmotor.se,mitti.se,mvt.se,nkp.se,nlt.se,norran.se,norrbottensaffarer.se,nsd.se,nsk.se,nt.se,nwt.se,olandsbladet.se,ostrasmaland.se,provinstidningen.se,pt.se,realtid.se,recept.se,saffletidningen.se,skanesport.se,skd.se,sla.se,smp.se,sn.se,strengnastidning.se,svenskanamn.se,svenskdam.se,sverigespringer.se,sydostran.se,thelocal.se,trelleborgsallehanda.se,unt.se,ut.se,varmlandsaffarer.se,vasterastidning.se,vf.se,viivilla.se,vimmerbytidning.se,vt.se,vxonews.se,youplay.se,ystadsallehanda.se##+js(json-prune, autoplay)
 affarsstaden.se##+js(acis, jQuery, adblockdetect)
@@ -300,7 +300,7 @@ trendenser.se##.post_feed_post:has(.sponsor-info)
 tv2.no##+js(acis, TV2, questback)
 tvdags.se##.article-list__item:has(.sponsor)
 underbaraclaras.se##.jet-listing-grid__item:has(.jet-listing-dynamic-field__content:has-text(/annonssamarbete/i))
-utm_$document,queryprune=/^utm_/,domain=aftonbladet.se|alltommat.se|booli.se|damernasvarld.se|expressen.se|skonahem.com|teknikensvarld.se|tv.nu
+utm_$document,removeparam=/^utm_/,domain=aftonbladet.se|alltommat.se|booli.se|damernasvarld.se|expressen.se|skonahem.com|teknikensvarld.se|tv.nu
 varden.se##app-blog-puff:has(.sponsored-label)
 viafree.se##.player-wrapper .viafree-player .vjs-tech:style(display:initial!important;)
 viivilla.se##.teaserblockdata:has(.teaser-sponsored-text)
