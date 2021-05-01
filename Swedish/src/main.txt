@@ -165,6 +165,7 @@
 ||tourn.se^$third-party
 ||tr.apsisforms.com^$third-party
 ||tracking.bonnier.news^$third-party
+||tracker.zummycloud.com^$third-party
 ||travtjansten.se^$third-party
 ||trn.ninja^$third-party
 ||truthlyanalytics.com^$third-party
@@ -535,7 +536,6 @@ artbannersplus&task=show
 ||es.loppi.se/api/imp$xmlhttprequest
 ||es.loppi.se/get$script
 ||execute-api.eu-west-1.amazonaws.com/live/analytics/$xmlhttprequest
-||experience.tinypass.com^*/execute$xmlhttprequest,domain=mestmotor.se|thelocal.se
 ||fast.fonts.com/t/1.css$stylesheet,xmlhttprequest
 ||fast.fonts.net/t/1.css$stylesheet,xmlhttprequest
 ||fast.fonts.net/lt/1.css$stylesheet,xmlhttprequest
@@ -938,6 +938,7 @@ artbannersplus&task=show
 ##._ning_outer._ning_jss_zone:not(body):not(html)
 ##[class*="advads_ad_widget"]:not(body):not(html)
 ##[id^="adace_ads"]
+##aside.thb-cookie-bar
 ##div[id^="ad_insider"]
 ##div[id^="matchads-"]
 ##div.ad.container
@@ -967,6 +968,7 @@ artbannersplus&task=show
 ##div.ilcc-cookie-consent-notice
 ##div.o-indenter--ad
 ##div.outsideAdsWrapper
+##div.prebid-ad-slot
 ##div.gdpr-warning-slide-up
 ##div.sgm-ad
 ##div.sgm-large-ad
@@ -1057,6 +1059,7 @@ airam.fi##.body-fixed:style(position: unset !important;)
 ||sp-prod.net^$third-party,domain=radioplay.se
 ||privacy-center.org^$domain=stegforhalsa.se|di.se
 ||piano.io^$domain=thelocal.se
+||experience.tinypass.com^*/execute$xmlhttprequest,domain=mestmotor.se|thelocal.se
 
 ! Common scriptlets
 senses.se##+js(acis, anOptions)
@@ -1327,7 +1330,7 @@ lwcdn.com##+js(aeld, /^(?:adBlocker|contextmenu)$/)
 ||schibsted.io^*/gdpr-bundle.js
 ||schibsted.com/privacy-notifier.$third-party
 ||schibsted.com/pulse.$third-party
-||youbora.com^*/sp.min.js$domain=aftonbladet.se|svd.se|wellness.se
+||youbora.com^*/sp.min.js$important,domain=aftonbladet.se|svd.se|wellness.se
 ! SVD
 svd.se###mega-ad-wrapper, .Container--ad, .theme-Native
 www.svd.se##+js(aopr, navigator.sendBeacon)
