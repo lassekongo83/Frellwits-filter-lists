@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2021-05-01 11:22:36 CEST
+! Last modified: 2021-05-03 09:50:35 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -605,6 +605,7 @@
 /native?$domain=hd.se|sydsvenskan.se|varden.se
 /native_$script,domain=affarsvarlden.se
 /new_construction_ads/*$domain=hemnet.se
+/news55-ga.js$domain=news55.se
 /noview.$script,domain=gofm.se|trafikdirekt.se|trafikexperten.com|trafikradion.se
 /omniture/s_code.js$domain=~atgplay.se
 /OneSignalSDKWorker$script
@@ -1388,7 +1389,7 @@ natursidan.se###container > a:not(:first-child)
 natursidan.se###sidebar .widget_text a[target]
 netdoktor.se##.article-list__item__link--sponsored
 netflixguiden.se##div.lboard, div.instream-dynamic
-news55.se###newsletter-popup
+news55.se###newsletter-popup, #premium-bottom-bar, #premium-popup
 news55.se##.after-article-widget
 news55.se##.is-native,.is-native-yes
 ng.se##.secondary-sidebar > .panel-pane:last-child
@@ -1609,6 +1610,7 @@ yelp.se##.js-cookie-iframe
 ||apprl.com/embed/$subdocument
 ||appsmav.com^$third-party
 ||apsis.one^$third-party
+||arctic.nyheter24.se^*/heatmap.js
 ||ascontentcloud.com^$third-party
 ||assets.pinterest.com/js/pinit$third-party
 ||assets.tumblr.com/share-button.js$third-party
@@ -1665,7 +1667,7 @@ yelp.se##.js-cookie-iframe
 ||cdn.advisible.com/accl$script
 ||cdn.advisible.com/adk$third-party
 ||cdn.axiell.com^*/cookie-disclaimer.$script
-||cdn.cookielaw.org^$script,domain=cartoonnetwork.se|discoveryplus.se|eurosport.se|findit.se|flashscore.se|fotbollskanalen.se|gaffa.se|hastnet.se|ikea.com|koket.se|manpower.se|nvp.se|recept.se|tv4.se|tv4play.se
+||cdn.cookielaw.org^$script,domain=cartoonnetwork.se|discoveryplus.se|eurosport.se|findit.se|flashscore.se|fotbollskanalen.se|gaffa.se|hastnet.se|ikea.com|koket.se|manpower.se|mtv.se|nvp.se|recept.se|tv4.se|tv4play.se
 ||cdn.iubenda.com/iubenda.$script
 ||cdn.livechatinc.com/tracking$domain=~box.co.uk
 ||cdn.svenskalag.se/img/sponsors$image
@@ -1754,7 +1756,7 @@ yelp.se##.js-cookie-iframe
 ||eteppy.com^
 ||europe-west1-bonnier-big-data.cloudfunctions.net^$third-party
 ||evertiq.se/bximg/
-||evidon.com^$third-party,domain=fasting.nu|morningstar.se|mtv.se|tripadvisor.se
+||evidon.com^$third-party,domain=fasting.nu|morningstar.se|tripadvisor.se
 ||evt-api.ntm.eu/api/*/datacollector
 ||execute-api.eu-west-1.amazonaws.com/live/analytics/$xmlhttprequest
 ||existenz.se/img/o/
@@ -1863,6 +1865,7 @@ yelp.se##.js-cookie-iframe
 ||legalmonster.com^$third-party
 ||libring.com^$third-party
 ||lifeofsvea.se/production/borka/
+||lifeofsvea.se/production/losjs/
 ||lifestyle.expressen.se^$subdocument
 ||likebtn.com^$third-party
 ||linksalpha.com^$third-party
