@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2021-05-17 09:09:54 CEST
+! Last modified: 2021-05-18 19:56:29 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -66,8 +66,8 @@
 ###cookiejar
 ###cookielawwarning
 ###cookieMsgBlock
-###cookieNotice
 ###CookieNotice
+###cookieNotice
 ###cookies-acceptance .alert.bottom
 ###cookiesInfo
 ###dialog-eu-cookie-law
@@ -166,7 +166,6 @@
 ##.cookies-info-static:not(body):not(html)
 ##.cookies-info:not(body):not(html)
 ##.cookiesWarning:not(body):not(html)
-##.dagensps_ad:not(body):not(html)
 ##.dfp-ad-widget-class:not(body):not(html)
 ##.dj-ad-size:not(body):not(html)
 ##.esmg-hb-slot:not(body):not(html)
@@ -1110,7 +1109,7 @@ dagensinfrastruktur.se##.g-single
 dagensinfrastruktur.se,ratsit.se,sonicmagazine.com##[class^="ad-"]
 dagensjuridik.se##.outher-sidebar, a[href*="/annons/"]
 dagensopinion.se##a[href^="/annons-"]
-dagensps.se##a[href*="/ps-partner/"]
+dagensps.se##a[href*="/ps-partner/"], .ad-links-module, .dagensps_ad
 dagenstv.com###bt
 dagensvastervik.se,dagensvimmerby.se##.panoramaAnnons, .JobAdDiv, .annonsKolumn, .insideAd, .ingressAd, .familyAds, .annonsWrapper
 danskaspraket.se,digitalavykort.se,viseniorer.se,vmj.se##.cc-cookies
@@ -1548,6 +1547,7 @@ vm-fotboll.se##a[href*="/go/"][target]
 voister.se##.campaign, .cookiebanner
 wappare.se##.cookie-consent-modal
 webbjobb.io##.cookie
+webbkryss.nu##.skyad-wrapper
 wellness.se##a[href*="campaign"][data-test-tag="external-link"]
 worldkustom.com##.middleban
 xlbygg.se##div[class^="CookieBar"]
@@ -1784,6 +1784,7 @@ yelp.se##.js-cookie-iframe
 ||funnelytics.io^$third-party
 ||gamblingsyndication.com^$third-party
 ||gamedistribution.com/libs/gd/analytics.$script
+||gamereactor.se/exclusive.json
 ||gamesglue.com/js/gameanalytics/GameAnalytics.$script
 ||getlevelten.com^$third-party
 ||getsitecontrol.com^$third-party
