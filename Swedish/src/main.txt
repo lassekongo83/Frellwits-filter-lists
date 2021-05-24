@@ -1050,7 +1050,7 @@ airam.fi##.body-fixed:style(position: unset !important;)
 /glimr.$script,domain=aftonbladet.se|blocket.se
 /profile$ping,domain=feber.se|hamnen.se|lawline.se|tasteline.com|tjock.se|veckorevyn.com
 /pum/*$domain=tkj.se|flm.nu|biostock.se
-||cdn.cookielaw.org^$script,domain=cartoonnetwork.se|nvp.se|recept.se|tv4.se|tv4play.se|koket.se|fotbollskanalen.se|flashscore.se|manpower.se|discoveryplus.se|findit.se|ikea.com|hastnet.se|eurosport.se|gaffa.se|mtv.se
+||cdn.cookielaw.org^$script,domain=cartoonnetwork.se|nvp.se|recept.se|tv4.se|tv4play.se|koket.se|fotbollskanalen.se|flashscore.se|manpower.se|discoveryplus.se|findit.se|ikea.com|hastnet.se|eurosport.se|gaffa.se|mtv.se|natgeotv.com
 ||consent.cmp.oath.com^$third-party,domain=alltomstockholm.se
 ||cookiebot.com^$third-party,domain=etc.se|goteborgdirekt.se|itaboutdoor.se|kingsizemag.se|ng.se|skeppsbrons.se|swedroid.se|wesafe.se|tankesport.se|smartsenior.se|vasterastidning.se|bax-shop.se|kurera.se|upplysning.se|mitti.se|circlek.se|livetochdiabetes.se|tn.se
 ||cookiepro.com^$third-party,domain=sd.se|birthday.se|friendsarena.se|hastnet.se|aktiespararna.se|spela.se|fz.se|sweclockers.com|djurskyddet.se
@@ -1061,7 +1061,7 @@ airam.fi##.body-fixed:style(position: unset !important;)
 ||sp-prod.net^$third-party,domain=radioplay.se
 ||privacy-center.org^$domain=stegforhalsa.se|di.se
 ||piano.io^$domain=thelocal.se
-||experience.tinypass.com^*/execute$xmlhttprequest,domain=mestmotor.se|thelocal.se
+||experience.tinypass.com^*/execute$xmlhttprequest,domain=mestmotor.se|thelocal.se|illvet.se
 ||consensu.org^$domain=hockeynews.se|tvmatchen.nu|motormagasinet.se|food-supply.se|skyddosakerhet.se|dagenshandel.se|plastnet.se|habit.se|woodnet.se|foodnet.se|transportnet.se|processnet.se|packnet.se|verkstaderna.se|medtechmagazine.se|recyclingnet.se|rt-forum.se|kemivarldenbiotech.se|uochd.se|lifesciencesweden.se|fri-kopenskap.se|cleannet.se|entreprenad.com|flashback.org
 
 ! Common scriptlets
@@ -1474,8 +1474,9 @@ expressen.se##.teaser:has(a[href*="/rabattkoder."])
 expressen.se##.teaser:has(a[href*="/spel.expressen.se"])
 ! övrigt
 ||bugsnag.com^$third-party,domain=dn.se|di.se|expressen.se
-/native?$domain=hd.se|sydsvenskan.se
+hd.se,sydsvenskan.se##[class*="teaser-native"]
 &type=load_offers$xmlhttprequest,domain=illvet.se|pctidningen.se
+illvet.se##div[id^="cx_"]
 ||akkurat.bonniernewslifestyle.se^*/recommendations$xmlhttprequest
 /analytics-bmb$script
 /scripts/initLogging$domain=expressen.se|skonahem.com|damernasvarld.se|alltomtradgard.se
@@ -1507,9 +1508,9 @@ aktuellhallbarhet.se,byggindustrin.se,dagensmedia.se,dagensmedicin.se,fastighets
 aktuellhallbarhet.se,byggindustrin.se,dagensmedia.se,dagensmedicin.se,fastighetsnytt.se,resume.se,dagenssamhalle.se##a[href^="/annons/"], a[href^="/native/"]
 aktuellhallbarhet.se,byggindustrin.se,dagensmedia.se,dagensmedicin.se,fastighetsnytt.se,resume.se,dagenssamhalle.se##.slot-module, .slot-articlemodule
 aktuellhallbarhet.se,byggindustrin.se,dagensmedia.se,dagensmedicin.se,fastighetsnytt.se,resume.se,dagenssamhalle.se##.slot-panorama:upward(1)
-digitalfotoforalla.se,natgeo.se,popularhistoria.se,militarhistoria.se,iform.se,aktivtraning.se,pctidningen.se##.scroll-message
-digitalfotoforalla.se,natgeo.se,popularhistoria.se,militarhistoria.se,iform.se,aktivtraning.se,pctidningen.se##.gallery-banner, .horseshoe, [data-ad-type]
-digitalfotoforalla.se,natgeo.se,popularhistoria.se,militarhistoria.se,iform.se,aktivtraning.se,pctidningen.se##li:has(.content-label:has-text(/annons/i)):remove()
+digitalfotoforalla.se,popularhistoria.se,militarhistoria.se,iform.se,aktivtraning.se,pctidningen.se##.scroll-message
+digitalfotoforalla.se,popularhistoria.se,militarhistoria.se,iform.se,aktivtraning.se,pctidningen.se##.gallery-banner, .horseshoe, [data-ad-type]
+digitalfotoforalla.se,popularhistoria.se,militarhistoria.se,iform.se,aktivtraning.se,pctidningen.se##li:has(.content-label:has-text(/annons/i)):remove()
 sportexpressenplay.se##[class^="BauProvider"]
 varldenshistoria.se##.campaign-teaser-show
 
