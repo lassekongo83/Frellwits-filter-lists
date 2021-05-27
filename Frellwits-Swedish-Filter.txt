@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2021-05-26 07:24:53 CEST
+! Last modified: 2021-05-27 12:14:17 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -299,6 +299,7 @@
 ##div.td-more-articles-box
 ##div.topmost-banner
 ##div.wppasrotate
+##div[class^="holid_desktop"]
 ##div[class^="sqs-cookie-banner"]
 ##div[id^="ad_insider"]
 ##div[id^="matchads-"]
@@ -1414,6 +1415,7 @@ omni.se,omniekonomi.se##.article--sponsored, .resource--sponsored, .component--s
 omnihalsa.com,skanesport.se,sportpanelen.se##.stream-item
 opulens.se###secondary
 opulens.se##.mailpoet_form
+ordguru.se##.visible-lg, .hidden-lg
 orebronyheter.com###top-wrapper
 oru.se##.modal-cookieform
 pcgamer.se##.main-container > div.vc_row:last-child
@@ -1428,7 +1430,7 @@ pricerunner.se##a[href*="&clickarea=sponsored"]
 privataaffarer.se##.category-promotion
 proffs.se##.cookie-wrapper
 pussad.se##.g1-popup-newsletter, .g1-slideup-wrap
-radio.se##.topAdSpacer
+radio.se##.topAdSpacer, .topASp
 rastaochdalla.se##.sidebar-right > .widget_social_links
 rastaochdalla.se##.widget_advertise
 ratsit.se##.promo
@@ -2043,7 +2045,7 @@ yelp.se##.js-cookie-iframe
 ||snt-matrix-app.herokuapp.com^*/user-tracking
 ||sociuslive.com^$third-party
 ||solidtango.com^*/player_statistics$image
-||sp-prod.net^$third-party,domain=radioplay.se
+||sp-prod.net^$third-party,domain=radio.se|radioplay.se
 ||spania.no^$third-party
 ||sparkloop.app^$third-party
 ||spel.expressen.se^
