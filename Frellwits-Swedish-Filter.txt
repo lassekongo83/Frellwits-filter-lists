@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2021-05-31 15:19:59 CEST
+! Last modified: 2021-06-02 09:53:06 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -66,8 +66,8 @@
 ###cookiejar
 ###cookielawwarning
 ###cookieMsgBlock
-###cookieNotice
 ###CookieNotice
+###cookieNotice
 ###cookies-acceptance .alert.bottom
 ###cookiesInfo
 ###dialog-eu-cookie-law
@@ -390,7 +390,6 @@
 /_sites_media/*/uploads/Banners
 /_t/se.js$domain=hornbach.se
 /a?callback=pfmod.saveadsettings
-/ab-xiti-min$script,domain=aftonbladet.se
 /ad-$subdocument,domain=forum.odla.nu
 /ad-render$domain=internetmedicin.se
 /ad-takeover
@@ -491,7 +490,6 @@
 /cpg_ads.$script
 /cs1pc.js$domain=kiaindex.se
 /cx-emediate-userprofile-se.$script
-/d-footer.$script,domain=aftonbladet.se
 /detroitchicago/cmb.js
 /discourse-adplugin
 /DO-theme/ads.js
@@ -526,8 +524,8 @@
 /gdpr/*$domain=borattforum.se|capdesign.se|husbilskompisar.se|momondo.se|rotter.se|se.laowl.com|visitlulea.se
 /get.aspx?AdSlotID$script
 /getnative$xmlhttprequest,domain=di.se
+/glimr$script,domain=aftonbladet.se|blocket.se
 /glimr-static$domain=~klart.se
-/glimr.$script,domain=aftonbladet.se|blocket.se
 /Global/Annons/*
 /gpAnalytics/*$script
 /gplus.php$script,domain=fria.nu|friatidningen.se|goteborgsfria.se|sesam.nu|stockholmsfria.se
@@ -591,7 +589,7 @@
 /media/partners$domain=hockeynews.se|tvmatchen.nu
 /mediehuset-gront/img/*annons
 /mediehuset-gront/img/*banner
-/messagingNoTcfApi.js$domain=klart.se|omni.se|omniekonomi.se|tv.nu|wellness.se
+/messagingNoTcfApi.js$domain=aftonbladet.se|klart.se|omni.se|omniekonomi.se|tv.nu|wellness.se
 /metrics/bambuser
 /min/1/fpa-$domain=handbollskanalen.se
 /mod.js$domain=icd.internetmedicin.se
@@ -824,7 +822,6 @@
 /sponsored_articles$domain=fastighetssverige.se
 /sponsors$domain=sdhl.se|storvretaibk.se
 /spotlight-ad_$image
-/sptAutoTracker$script,domain=aftonbladet.se
 /static.marklar.se/*-tracker
 /static/js/loada.js$script
 /stats.wp.com$script
@@ -862,6 +859,7 @@
 /users/2401/*$image,domain=ng.se
 /vackertvader.se\/assets\/[0-9]+\-/$script,domain=vackertvader.se
 /vestigo/*/measure$domain=momondo.se
+/vgc/cdn/js/libs/ast/*$script,domain=aftonbladet.se
 /videojs-preroll.$domain=himlentv7.se
 /videojs.ima.$script,domain=gamereactor.se
 /view-resources/public/*/js/dfp.
@@ -902,9 +900,11 @@
 /wp-content/uploads/*oddsbonusar$image
 /wp-content/uploads/*svea-casino$image
 /wp-content/uploads/*unibet$image
+/wp-json/wp-statistics/*$xmlhttprequest
 /wp-json/wpstatistics/*$xmlhttprequest
 /wpbm-banners/*$image
 /ws-tracking$domain=voister.se
+/www.aftonbladet.se\/cnp-assets\/[0-9]+./$script,domain=aftonbladet.se
 /www.wellness.se\/cnp-assets\/[0-9]+./$script,domain=wellness.se
 /www/images/*$domain=elektronikforumet.com
 /xhr-ads.min.js$script
@@ -937,7 +937,6 @@
 @@/scrollReveal$script,domain=explorecurate.com
 @@/yieldwrapper.min.js$domain=spray.se
 @@_advert.$domain=e-pages.dk
-@@||ad*.vg.no/check.js$script,domain=aftonbladet.se
 @@||amazonaws.com/ads/$image,domain=jobb.maxkompetens.se
 @@||ccf.admeen.org^*/js/ads/adverts.min.js$domain=spelo.se
 @@||cdn.dynamicyield.com^$domain=alingsastidning.se|bohuslaningen.se|gp.se|hallandsposten.se|hn.se|kungalvsposten.se|kungsbackaposten.se|lokaltidningensto.se|molndalsposten.se|stromstadstidning.se|ttela.se
@@ -948,7 +947,6 @@
 @@||happyride.se/img/admarket/$~third-party
 @@||imasdk.googleapis.com/js/sdkloader/ima3.$script,domain=atl.nu|ekuriren.se|gamereactor.se|kkuriren.se|screen9.com|sn.se|strengnastidning.se
 @@||js.createsend1.com/js/jquery
-@@||sdk.pulse.schibsted.com/loader.min.js$domain=special.aftonbladet.se
 _jquery.blockUI.$domain=fssweden.se
 aapl.se,hrnytt.se,ljuskultur.se,omvarlden.se,svenskfotboll.se##.cookies
 accentmagasin.se##.site-cookies
@@ -959,13 +957,7 @@ affarsliv.com,affarslivgotland.se,corren.se,ekuriren.se,eposten.se,folkbladet.se
 affarsvarlden.se##.article-list-item--native, .advert-notice-box
 affarsvarlden.se##.cookies-wrap
 affarsvarlden.se##.kingstreet-media-section, .modal-get-premium__wrap
-aftonbladet.se###MegaAd, [id*="abAdArea"], .ab-responsive-ads-wrapper, [id^="adPlacement"]
-aftonbladet.se##.abThemeGradientPage:not(.abIsNichedContent) a[href^="/family/a/"]
-aftonbladet.se##[classname="speltipsMarkup"]
-aftonbladet.se##a[href*="utm_campaign=rantekartan"], a[href*="letsdeal.se"]
-aftonbladet.se##a[style*="background-color: rgb(228, 240, 255)"], a[style*="background-color:#e4f0ff"], a[style*="border-color: rgb(0, 103, 181)"], a[style*="border-color:#0067b5"]
-aftonbladet.se##div[style*="border-color: rgb(0, 103, 181);"], div[style*="border-color: rgb(0, 103, 181);"] ~ a
-aftonbladet.se##div[style*="border-color:#0067b5;"], div[style*="border-color:#0067b5;"] ~ a
+aftonbladet.se###megaAd-placeholder, #superright-side, #main > div > div:first-child, a[href^="/brandstudio"], a[href*="/rabattkod"], a[href*="/casinoguide"]
 aftonbladet.se,autonytt.se,ekonominyheter.se,hockeybladet.nu,lesscarbs.se,modette.se,undervarttak.se,uwtd.me,xn--snabbalnen-75a.se##a[href*="/track.adtraction."]
 aftonbladet.se,effektmagasin.se,halsasverige.se,nojesmagasinet.nu,spela.se,svenskorientering.se##.advert
 aikfotboll.se,vaken.se##.banners
@@ -1699,7 +1691,7 @@ yelp.se##.js-cookie-iframe
 ||conviva.com^$third-party
 ||cookie-disclaimer.onewp.net^$third-party
 ||cookie-script.com^$third-party
-||cookiebot.com^$third-party,domain=bax-shop.se|circlek.se|etc.se|goteborgdirekt.se|itaboutdoor.se|kingsizemag.se|kurera.se|livetochdiabetes.se|mitti.se|ng.se|skeppsbrons.se|smartsenior.se|swedroid.se|tankesport.se|tn.se|upplysning.se|vasterastidning.se|wesafe.se
+||cookiebot.com^$third-party,domain=bax-shop.se|circlek.se|etc.se|findroommate.se|goteborgdirekt.se|itaboutdoor.se|kingsizemag.se|kurera.se|livetochdiabetes.se|mitti.se|ng.se|skeppsbrons.se|smartsenior.se|swedroid.se|tankesport.se|tn.se|upplysning.se|vasterastidning.se|wesafe.se
 ||cookieconsent.popupsmart.com^$third-party
 ||cookieinformation.com^$subdocument,third-party
 ||cookieinfoscript.com^$third-party
@@ -1802,7 +1794,6 @@ yelp.se##.js-cookie-iframe
 ||gamesglue.com/js/gameanalytics/GameAnalytics.$script
 ||getlevelten.com^$third-party
 ||getsitecontrol.com^$third-party
-||gfx.productsup.io^$third-party,domain=aftonbladet.se
 ||glimr.io^$third-party
 ||gnuheter.com/creeper/image$image
 ||greatstoryvideo.se^$third-party
@@ -2123,7 +2114,6 @@ yelp.se##.js-cookie-iframe
 ||umami.nordiskehandel.cloud^
 ||unformsy.mobi^$third-party
 ||upsales.com^$third-party
-||vgc.no/cdn/js/libs/ast$script,domain=aftonbladet.se
 ||viagogo.se^
 ||video-static.tunnl.com/js/blocker.min.js$script
 ||videoplaza.*/proxy/tracker?

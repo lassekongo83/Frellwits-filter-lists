@@ -464,6 +464,7 @@ artbannersplus&task=show
 /wp-content/uploads/*mrgreen$image
 /wp-content/uploads/*betfair$image
 /wp-content/uploads/*bethard$image
+/wp-json/wp-statistics/*$xmlhttprequest
 /wp-json/wpstatistics/*$xmlhttprequest
 /wpbm-banners/*$image
 /xhr-ads.min.js$script
@@ -1053,12 +1054,12 @@ whowhatwear.co.uk#@#a[href*="/click.linksynergy"] img
 /wp-content/uploads/*casino$image,domain=nyadagbladet.se|kulturbloggen.com|newsvoice.se|svenskhistoria.se|battrestadsdel.se|zeromagazine.nu|totallyorebro.se|totallystockholm.se|hockeybladet.nu|djungeltrumman.se|vaken.se|lokalsport.nu
 /banners$script,domain=magasinetparagraf.se
 /gdpr/*$domain=capdesign.se|visitlulea.se|se.laowl.com|husbilskompisar.se|rotter.se|momondo.se|borattforum.se
-/glimr.$script,domain=aftonbladet.se|blocket.se
+/glimr$script,domain=aftonbladet.se|blocket.se
 /profile$ping,domain=feber.se|hamnen.se|lawline.se|tasteline.com|tjock.se|veckorevyn.com
 /pum/*$domain=tkj.se|flm.nu|biostock.se
 ||cdn.cookielaw.org^$script,domain=cartoonnetwork.se|nvp.se|recept.se|tv4.se|tv4play.se|koket.se|fotbollskanalen.se|flashscore.se|manpower.se|discoveryplus.se|findit.se|ikea.com|hastnet.se|eurosport.se|gaffa.se|mtv.se|natgeotv.com|internetkunskap.se|internetstiftelsen.se
 ||consent.cmp.oath.com^$third-party,domain=alltomstockholm.se
-||cookiebot.com^$third-party,domain=etc.se|goteborgdirekt.se|itaboutdoor.se|kingsizemag.se|ng.se|skeppsbrons.se|swedroid.se|wesafe.se|tankesport.se|smartsenior.se|vasterastidning.se|bax-shop.se|kurera.se|upplysning.se|mitti.se|circlek.se|livetochdiabetes.se|tn.se
+||cookiebot.com^$third-party,domain=etc.se|goteborgdirekt.se|itaboutdoor.se|kingsizemag.se|ng.se|skeppsbrons.se|swedroid.se|wesafe.se|tankesport.se|smartsenior.se|vasterastidning.se|bax-shop.se|kurera.se|upplysning.se|mitti.se|circlek.se|livetochdiabetes.se|tn.se|findroommate.se
 ||cookiepro.com^$third-party,domain=sd.se|birthday.se|friendsarena.se|hastnet.se|aktiespararna.se|spela.se|fz.se|sweclockers.com|djurskyddet.se
 ||evidon.com^$third-party,domain=morningstar.se|tripadvisor.se|fasting.nu
 ||mailerlite.com^$third-party,domain=vandringsguiden.se|flm.nu
@@ -1335,6 +1336,7 @@ lwcdn.com##+js(aeld, /^(?:adBlocker|contextmenu)$/)
 ##div.sch-datacontroller--subheader
 ##div.sch-datacontroller--footer
 ##div.schibsted-info-sticky
+! /src-components-BrandMetricsSurvey
 /appnexus$script,domain=blocket.se|minhembio.com|bytbil.com|aftonbladet.se
 ||metric-mobil.aftonbladet.se^$image
 ||schibsted.io^*/gdpr-bundle.js
@@ -1347,9 +1349,7 @@ www.svd.se##+js(aopr, navigator.sendBeacon)
 www.svd.se##+js(aopr, Tracker)
 ||engage-auth.schibsted.media^$script
 ! Aftonbladet
-@@||ad*.vg.no/check.js$script,domain=aftonbladet.se
-||vgc.no/cdn/js/libs/ast$script,domain=aftonbladet.se
-||gfx.productsup.io^$third-party,domain=aftonbladet.se
+/www.aftonbladet.se\/cnp-assets\/[0-9]+./$script,domain=aftonbladet.se
 /casinoguide$all,domain=aftonbladet.se
 /casinokollen$all,domain=aftonbladet.se
 /rabattkod$domain=aftonbladet.se
@@ -1357,32 +1357,18 @@ www.svd.se##+js(aopr, Tracker)
 /player-plugin-tracking$domain=tv.aftonbladet.se
 /player-plugin-ad$domain=tv.aftonbladet.se
 /player-plugin-sponsor$domain=tv.aftonbladet.se
+/vgc/cdn/js/libs/ast/*$script,domain=aftonbladet.se
 ! Cosmetic ad filters
-aftonbladet.se###MegaAd, [id*="abAdArea"], .ab-responsive-ads-wrapper, [id^="adPlacement"]
-aftonbladet.se##a[href*="utm_campaign=rantekartan"], a[href*="letsdeal.se"]
-aftonbladet.se##div[style*="border-color:#0067b5;"], div[style*="border-color:#0067b5;"] ~ a
-aftonbladet.se##div[style*="border-color: rgb(0, 103, 181);"], div[style*="border-color: rgb(0, 103, 181);"] ~ a
-aftonbladet.se##a[style*="background-color: rgb(228, 240, 255)"], a[style*="background-color:#e4f0ff"], a[style*="border-color: rgb(0, 103, 181)"], a[style*="border-color:#0067b5"]
-aftonbladet.se##.jwplayer:has(.svp-sponsor-label):remove()
-aftonbladet.se##a[href^="/tv/"]:has(span:has-text(/studio oddset/i)):upward(1)
-aftonbladet.se##a[href*="/kampanj/artikel"]:upward(1)
-aftonbladet.se##[classname="speltipsMarkup"]
-aftonbladet.se##.abThemeGradientPage:not(.abIsNichedContent) a[href^="/family/a/"]
-aftonbladet.se##span:has-text(/^annons/i):upward(a)
-! ab story sektion
-/ab-xiti-min$script,domain=aftonbladet.se
-/sptAutoTracker$script,domain=aftonbladet.se
-/d-footer.$script,domain=aftonbladet.se
+aftonbladet.se###megaAd-placeholder, #superright-side, #main > div > div:first-child, a[href^="/brandstudio"], a[href*="/rabattkod"], a[href*="/casinoguide"]
+aftonbladet.se##aside > div:has([data-ad-subtype])
+aftonbladet.se##aside > div:has(h3:has-text(/^annons/i))
+aftonbladet.se##section > div:has([data-ad-subtype])
+aftonbladet.se##section > div:has(h3:has-text(/^annons/i))
+aftonbladet.se##a:has(span:has-text(/^annons/i))
 ! css
-aftonbladet.se##body.abMegaAd:style(overflow: auto !important;)
+www.aftonbladet.se##body:style(overflow:unset!important)
 ! scriptlets
-www.aftonbladet.se##+js(nosiif, e.ping())
-www.aftonbladet.se##+js(nosiif, e.reportVisibility())
-www.aftonbladet.se##+js(aeld, mousemove, g())
-www.aftonbladet.se##+js(nostif, onerror, 1000)
-www.aftonbladet.se##+js(aeld, pageshow, useBeacon)
-! https://github.com/lassekongo83/Frellwits-filter-lists/issues/44
-@@||sdk.pulse.schibsted.com/loader.min.js$domain=special.aftonbladet.se
+www.aftonbladet.se##+js(nostif, TAKEOVER)
 ! Övrigt
 omni.se,omniekonomi.se##.article--sponsored, .resource--sponsored, .component--sticky-sponsor-banner, .pre-banner, .banner--toppanorama, .banner--mobiletoppanorama, .banner--midpanorama
 omni.se,omniekonomi.se##a[href*="article-ad-"]:upward(.resource--link)
@@ -1406,7 +1392,7 @@ bytbil.com##html,body:style(overflow: auto !important;)
 sportbladetplay.se,sportexpressenplay.se##[class^="CookieConsentPopup"]
 godare.se##.privacy-information
 classic.prisjakt.nu###confirm_cookie_use
-/messagingNoTcfApi.js$domain=klart.se|omni.se|omniekonomi.se|tv.nu|wellness.se
+/messagingNoTcfApi.js$domain=aftonbladet.se|klart.se|omni.se|omniekonomi.se|tv.nu|wellness.se
 /www.wellness.se\/cnp-assets\/[0-9]+./$script,domain=wellness.se
 wellness.se##a[href*="campaign"][data-test-tag="external-link"]
 wellness.se##[id^="adPlacement"]:upward(1)
