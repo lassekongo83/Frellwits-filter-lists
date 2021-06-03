@@ -1392,7 +1392,6 @@ klart.se##+js(rc, mega-loading)
 bytbil.com###privacyModal
 bytbil.com##.available-services
 bytbil.com##html,body:style(overflow: auto !important;)
-sportbladetplay.se,sportexpressenplay.se##[class^="CookieConsentPopup"]
 godare.se##.privacy-information
 classic.prisjakt.nu###confirm_cookie_use
 /messagingNoTcfApi.js$domain=aftonbladet.se|klart.se|omni.se|omniekonomi.se|tv.nu|wellness.se
@@ -1401,6 +1400,8 @@ wellness.se##a[href*="campaign"][data-test-tag="external-link"]
 wellness.se##[id^="adPlacement"]:upward(1)
 wellness.se##p:has-text(/^kommersiellt innehåll/i):upward(article)
 wellness.se##p:has-text(/^kommersiellt innehåll|^annons$/i):upward(a)
+sportbladetplay.se##[class^="CookieConsentPopup"]:upward(.ui.page.dimmer)
+sportbladetplay.se##body.dimmed:style(overflow:unset!important)
 
 ! BONNIER
 expressen.se,dn.se,di.se###rich-media-ads
@@ -1508,6 +1509,7 @@ digitalfotoforalla.se,popularhistoria.se,militarhistoria.se,iform.se,aktivtranin
 digitalfotoforalla.se,popularhistoria.se,militarhistoria.se,iform.se,aktivtraning.se,pctidningen.se##li:has(.content-label:has-text(/annons/i)):remove()
 sportexpressenplay.se##[class^="BauProvider"]
 varldenshistoria.se##.campaign-teaser-show
+sportexpressenplay.se##[class^="CookieConsentPopup"]
 
 ! Bonnier Local
 allehanda.se,arbetarbladet.se,avestatidning.com,bblat.se,dalademokraten.se,dt.se,fagersta-posten.se,gd.se,lt.se,ltz.se,na.se,norrteljetidning.se,nynashamnsposten.se,op.se,salaallehanda.com,st.nu,tidningenharjedalen.se,vlt.se,bandypuls.se,falkopingstidning.se,jp.se,skaraborgslanstidning.se,skovdenyheter.se,smalandsdagblad.se,smalanningen.se,smt.se,tranastidning.se,vastgotabladet.se,vetlandaposten.se,vn.se,jnytt.se##.nps-client-dialogue-footer
