@@ -1350,7 +1350,7 @@ www.svd.se##+js(aopr, navigator.sendBeacon)
 www.svd.se##+js(aopr, Tracker)
 ||engage-auth.schibsted.media^$script
 ! Aftonbladet
-/www.aftonbladet.se\/cnp-assets\/[0-9]+./$script,domain=aftonbladet.se
+/www.aftonbladet.se\/cnp-assets\/[1-9][0-9]{0,2}\./$script,domain=aftonbladet.se
 /casinoguide$all,domain=aftonbladet.se
 /casinokollen$all,domain=aftonbladet.se
 /rabattkod$domain=aftonbladet.se
@@ -1360,9 +1360,15 @@ www.svd.se##+js(aopr, Tracker)
 /player-plugin-sponsor$domain=tv.aftonbladet.se
 /vgc/cdn/js/libs/ast/*$script,domain=aftonbladet.se
 ! Cosmetic ad filters
-aftonbladet.se###megaAd-placeholder, #superright-side, a[href^="/brandstudio"], a[href*="/rabattkod"], a[href*="/casinoguide"]
-aftonbladet.se##.css-zjik7, .css-1bhf25k, .css-1o0kvkl, .css-m8ssz6, .css-1666xo6, .css-a3h57q, .css-a3h57q + a, .css-1ekjlzt
+aftonbladet.se###megaAd-placeholder, #superright-side, a[href^="/brandstudio"], a[href*="/rabattkod"], a[href*="/casinoguide"], #main > div > div:first-child
 aftonbladet.se,skonhetsredaktorerna.se##.ab_responsive_ads
+aftonbladet.se##aside > div:has([data-ad-subtype])
+aftonbladet.se##aside > div:has(h3:has-text(/^annons/i))
+aftonbladet.se##section > div:has([data-ad-subtype])
+aftonbladet.se##section > div:has(h3:has-text(/^annons/i))
+aftonbladet.se###main > div > div > div:has(h3:has-text(/^annons/i))
+aftonbladet.se###main > div > div > div:has([data-ad-subtype])
+aftonbladet.se##a:has(span:has-text(/^annons/i))
 ! css
 www.aftonbladet.se##body:style(overflow:unset!important)
 ! scriptlets
