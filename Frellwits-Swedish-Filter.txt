@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2021-06-13 08:38:48 CEST
+! Last modified: 2021-06-15 08:37:47 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -66,8 +66,8 @@
 ###cookiejar
 ###cookielawwarning
 ###cookieMsgBlock
-###cookieNotice
 ###CookieNotice
+###cookieNotice
 ###cookies-acceptance .alert.bottom
 ###cookiesInfo
 ###dialog-eu-cookie-law
@@ -263,6 +263,7 @@
 ##div.better-ads-listitemad
 ##div.big-desktop-ads
 ##div.big-mobile-ads
+##div.block-bean-header-banner
 ##div.borka-ad
 ##div.bs-wrap-gdpr-law
 ##div.bsa_pro_ajax_load
@@ -772,6 +773,7 @@
 /Portalannonser/*$image
 /postscribe.$script,domain=linnherbertsson.se
 /prebid$script,domain=idg.se
+/private-browsing.js$domain=thelocal.se
 /prod/adform$xmlhttprequest
 /profile$ping,domain=arbetarskydd.se|feber.se|hamnen.se|lag-avtal.se|lawline.se|nyteknik.se|tasteline.com|tjock.se|veckorevyn.com
 /publicPartners$domain=familjehemmet.se|familjehemsbanken.se
@@ -902,6 +904,7 @@
 /wp-content/uploads/*oddsbonusar$image
 /wp-content/uploads/*svea-casino$image
 /wp-content/uploads/*unibet$image
+/wp-content/uploads/html5ads/*
 /wp-json/wp-statistics/*$xmlhttprequest
 /wp-json/wpstatistics/*$xmlhttprequest
 /wpbm-banners/*$image
@@ -1398,7 +1401,7 @@ norrahalland.se##.norra-leeads-ads,.egna_annonser_widget
 norrbotten.com##a[href*=".com/annons"], .td-ss-main-sidebar > .td-a-rec
 nsk.se,skd.se##.advert-widget
 nsk.se,skd.se##[data-teaser-section*="native"]
-nvp.se##[class*="banner_"]
+nvp.se##[class*="banner_"], .BottomBannerContainer
 nyadagbladet.se##.third-col
 nyheter24.se##.lazyload_bar.show, .lazyload_outer.show, .sponsrat
 nyheteridag.se##.content > div:not([class]) img, a[href*="www.casino"]
@@ -2081,7 +2084,6 @@ yelp.se##.js-cookie-iframe
 ||teknikveckan.se^*/ads
 ||telemetry.bambuser.io^$websocket
 ||terms.vkmedia.se^
-||thelocal.se^*/private-browsing.js
 ||thestoryof2.se/em_event.html
 ||tibaco.net/scripts/tws.js$script
 ||tourn.co^$third-party
