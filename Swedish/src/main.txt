@@ -1363,14 +1363,14 @@ www.svd.se##+js(aopr, Tracker)
 /player-plugin-sponsor$domain=tv.aftonbladet.se
 /vgc/cdn/js/libs/ast/*$script,domain=aftonbladet.se
 ! Cosmetic ad filters
-aftonbladet.se###megaAd-placeholder, #superright-side, a[href^="/brandstudio"], a[href*="/rabattkod"], a[href*="/casinoguide"], #main > div > div:first-child
+aftonbladet.se###megaAd-placeholder, #superright-side, a[href^="/brandstudio"], a[href*="/rabattkod"], a[href*="/casinoguide"], #main > div > div:first-child, [id^="adPlacement"]
 aftonbladet.se,skonhetsredaktorerna.se##.ab_responsive_ads
 aftonbladet.se##aside > div:has([data-ad-subtype])
 aftonbladet.se##aside > div:has(h3:has-text(/^annons/i))
-aftonbladet.se##section > div:has([data-ad-subtype])
+aftonbladet.se##section > div:not([style]):has([data-ad-subtype])
 aftonbladet.se##section > div:has(h3:has-text(/^annons/i))
 aftonbladet.se###main > div > div > div:has(h3:has-text(/^annons/i))
-aftonbladet.se###main > div > div > div:has([data-ad-subtype])
+aftonbladet.se###main > div > div > div:not([style]):has([data-ad-subtype])
 aftonbladet.se##a:has(span:has-text(/^annons/i))
 ! css
 www.aftonbladet.se##body:style(overflow:unset!important)
