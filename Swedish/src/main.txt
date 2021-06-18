@@ -1365,12 +1365,10 @@ www.svd.se##+js(aopr, Tracker)
 ! Cosmetic ad filters
 aftonbladet.se###megaAd-placeholder, #superright-side, a[href^="/brandstudio"], a[href*="/rabattkod"], a[href*="/casinoguide"], #main > div > div:first-child, [id^="adPlacement"]
 aftonbladet.se,skonhetsredaktorerna.se##.ab_responsive_ads
-aftonbladet.se##aside > div:has([data-ad-subtype])
+aftonbladet.se##[data-ad-subtype]:upward(1):style(min-height:unset!important)
 aftonbladet.se##aside > div:has(h3:has-text(/^annons/i))
-aftonbladet.se##section > div:not([style]):has([data-ad-subtype])
 aftonbladet.se##section > div:has(h3:has-text(/^annons/i))
 aftonbladet.se###main > div > div > div:has(h3:has-text(/^annons/i))
-aftonbladet.se###main > div > div > div:not([style]):has([data-ad-subtype])
 aftonbladet.se##a:has(span:has-text(/^annons/i))
 ! css
 www.aftonbladet.se##body:style(overflow:unset!important)
@@ -1811,6 +1809,7 @@ etc.se##.article-type-annons, .banner-wrap
 etc.se##.block-content > p img[alt]:not([class])
 etc.se##+js(set, Drupal.behaviors.lock_article, undefined)
 2000tv.se###bannerbox
+newsvoice.se##.td-fix-index a[target="_blank"] img, aside a[target="_blank"] img
 newsvoice.se##h4:has-text(/annonser/i) ~ a
 newsvoice.se##aside:has(h4:has-text(/annonser/i))
 newsvoice.se##.td-post-author-name > a[href$="/author/underhallning/"]:upward(5)
@@ -2648,3 +2647,4 @@ hejaolika.se##+js(acis, advads_passive_placements)
 hejaolika.se##.partnerinfostyle
 /cookies-policy-notification-bar$domain=bakasockerfritt.se
 ordguru.se##.visible-lg, .hidden-lg
+bulletin.nu##[class^="newsletter-subscribe"]
