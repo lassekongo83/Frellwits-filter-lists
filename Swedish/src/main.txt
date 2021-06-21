@@ -1450,6 +1450,7 @@ expressen.se##.teaser--native, .native-article
 expressen.se##.discount-ad, .b-ad__caption, .pressrelease-teaser, .widget-ad-marker, .widget-ad-marker + a, .promotion-banner, .widget--collaboration, .rotator--external, a[data-click-track*="prisjakt"]
 ! Annoyances
 ?autoPlay$frame,removeparam=autoPlay,domain=expressen.se
+?autoplay=true$frame,removeparam=autoplay,domain=expressen.se
 &autoplay$frame,removeparam=autoplay,domain=expressen.se|di.se
 expressen.se##.pa-dialog
 expressen.se##.campaign
@@ -1457,6 +1458,7 @@ expressen.se##.html-widget > div[style^="text-align: center; font-size: 10px;"]
 ! scriptlets
 www.expressen.se##+js(acis, Bau, preloadAds)
 www.expressen.se##+js(set, detect, noopFunc)
+www.expressen.se##+js(ra, data-start-in-view)
 ! mitt kök
 mittkok.expressen.se##.main:style(width: 100% !important;)
 mittkok.expressen.se##.widget-social-media
@@ -1500,10 +1502,11 @@ viivilla.se##.teaserblockdata:has(.teaser-sponsored-text)
 /adv_utils.$script,domain=viivilla.se
 ||ma-track.bonnierpublications.se^
 ||ma.bonnierpublications.se/mtc/event
-/pages/native$domain=aktuellhallbarhet.se|byggindustrin.se|dagensmedia.se|dagensmedicin.se|fastighetsnytt.se|resume.se|dagenssamhalle.se
-/pages/tag$domain=aktuellhallbarhet.se|byggindustrin.se|dagensmedia.se|dagensmedicin.se|fastighetsnytt.se|resume.se|dagenssamhalle.se
-aktuellhallbarhet.se,byggindustrin.se,dagensmedia.se,dagensmedicin.se,fastighetsnytt.se,resume.se,dagenssamhalle.se###__next > div[class^="css-"]:last-child
-aktuellhallbarhet.se,byggindustrin.se,dagensmedia.se,dagensmedicin.se,fastighetsnytt.se,resume.se,dagenssamhalle.se##a[href^="/annons/"], a[href^="/native/"], .slot-module, .slot-articlemodule, .css-j2gezj
+/pages/native$domain=aktuellhallbarhet.se|byggindustrin.se|dagensmedia.se|dagensmedicin.se|fastighetsnytt.se|resume.se|dagenssamhalle.se|market.se
+/pages/tag$domain=aktuellhallbarhet.se|byggindustrin.se|dagensmedia.se|dagensmedicin.se|fastighetsnytt.se|resume.se|dagenssamhalle.se|market.se
+aktuellhallbarhet.se,byggindustrin.se,dagensmedia.se,dagensmedicin.se,fastighetsnytt.se,resume.se,dagenssamhalle.se,market.se###__next > div[class^="css-"]:last-child
+aktuellhallbarhet.se,byggindustrin.se,dagensmedia.se,dagensmedicin.se,fastighetsnytt.se,resume.se,dagenssamhalle.se,market.se##a[href^="/annons/"], a[href^="/native/"], .slot-module, .slot-articlemodule
+aktuellhallbarhet.se,byggindustrin.se,dagensmedia.se,dagensmedicin.se,fastighetsnytt.se,resume.se,dagenssamhalle.se,market.se##.slot-panorama:upward(1)
 digitalfotoforalla.se,popularhistoria.se,militarhistoria.se,iform.se,aktivtraning.se,pctidningen.se##.scroll-message
 digitalfotoforalla.se,popularhistoria.se,militarhistoria.se,iform.se,aktivtraning.se,pctidningen.se##.gallery-banner, .horseshoe, [data-ad-type]
 digitalfotoforalla.se,popularhistoria.se,militarhistoria.se,iform.se,aktivtraning.se,pctidningen.se##li:has(.content-label:has-text(/annons/i)):remove()
@@ -1731,7 +1734,7 @@ uppslaget.se,hypeline.se,skidresultat.se,fotbolldirekt.se,hockeysverige.se,inneb
 testfakta.se,realtid.se,viktvaktarna.se,plastikoperationsforum.se,riksettan.net,automobil.se,endurobloggen.se,vibilagare.se,mopedgaraget.se,caroftheyear.se,klassiker.nu,bike.se,spraktidningen.se,husbilhusvagn.se,sandaren.se,kyrkanstidning.se,publikt.se,fof.se,industrinyheter.se,dagensnaringsliv.se,infrastrukturnyheter.se,sportochfritidsnyheter.se,inredningsnyheter.se,byggnyheter.se,dagensfastigheter.se,stockholmsbyggnyheter.se,energinyheter.se,vindkraftsnyheter.se,solenerginyheter.se,jarnvagsnyheter.se,transportochlogistik.se,metallerochgruvor.se,papperochmassa.se,hsr.se,so-rummet.se,kantarsifo.se,ungforetagsamhet.se,cgi.se,alandsradio.ax,sjofart.ax,kommunal.se###sliding-popup
 sonicmagazine.com,ratsit.se,dagensinfrastruktur.se##[class^="ad-"]
 friluftsframjandet.se##[id^="ad-"]
-civilekonomen.se,market.se###rollup
+civilekonomen.se###rollup
 svenskbyggtidning.se,nyhetersto.se,bussmagasinet.se,brollopsmagasinet.se,borattforum.se##a.gofollow[data-track]
 mammasidan.se,minbebis.com,alltforforaldrar.se,di.se,upphandling24.se,bytbil.com##.panorama
 autolife.se###Banners
@@ -1898,12 +1901,10 @@ tvdags.se##.article-list__item:has(.sponsor)
 kimura.se##.bg, a[href*="unibet.com"], a[href*="/kampanjer."], a[href*="utm_campaign"]
 kimura.se##article:has(img[src$="/sponsrad.png"])
 kimura.se##article:has(#storknapp:has-text(/^till kampanj/i))
-market.se##article[about^="/annons"]
-market.se###rollup, #newsletter-rollup
 dagensps.se##a[href*="/ps-partner/"], .ad-links-module, .dagensps_ad
-atl.nu,land.se,landlantbruk.se,landskogsbruk.se##[class*="--native"], [id^="adwrapper"], .has-sticky-add
+/native-ads$domain=atl.nu
 atl.nu##a[href*="/atl-tv-annons/"]
-atl.nu#@#.adsbox
+land.se,landlantbruk.se,landskogsbruk.se##[class*="--native"], [id^="adwrapper"], .has-sticky-add
 grontvader.se##app-cookies
 /Sponsor/*$domain=grontvader.se
 /private-browsing.js$domain=thelocal.se
