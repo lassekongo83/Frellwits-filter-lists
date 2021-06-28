@@ -1166,6 +1166,7 @@ egoinas.se,fysikstugan.se,enkelteknik.se,hamnen.se,cannabis.se,ljudochbild.se,ti
 /plugins/its-cookies/*$script
 /plugins/jetpack/_inc/build/widgets/eu-cookie-law/*$script
 /plugins/jnews-social-share/*$script
+/plugins/koko-analytics
 /plugins/lbg-audio8-html5-radio_ads
 /plugins/leaky-paywall$domain=driva-eget.se
 /plugins/likebtn-like-button/*
@@ -2184,6 +2185,8 @@ etunawebben.se##+js(nostif, ad)
 /lbxjquery.dfp.$domain=ljudochbild.se
 ljudochbild.se##.adremark, .coofad, .popup-overlay, .hidead, .phoneads, .pricecomp, .offerz, .type-articleadvertorial, .adblock, .lbplussinfo, .popup-overlayx
 ljudochbild.se##.entry-content-wrap, .hideaway:style(max-height: unset !important; overflow: initial !important; height: unset !important;)
+/villalivet.se\/wp-content\/uploads\/[0-9]+/$script,domain=villalivet.se
+villalivet.se##.mtsnb, .villalivet-target
 villalivet.se##a:has-text(/sponsra/i):upward(3)
 ehandel.se##.commercial-row, .aside-image-with-link, .post-container-sponsored, aside a[href*="/branschnyheter/"]
 ehandel.se##.aside-list--heading:has-text(/^sponsra/i):upward(.aside-list)
@@ -2661,3 +2664,8 @@ aktuellsakerhet.se##.td-slider > .td_module_slide:has-text(/reklamsamarbete/i):r
 epochtimes.se##img[alt*="casino"]
 fof.se##+js(set, Drupal.behaviors.oxys_cookie_monster, undefined)
 tekniknytt.se##.label:has-text(/samarbete|annons|reklam|presenteras av/i):upward(a)
+medibok.se##.annonsmellandiv, .annonssidadiv
+medibok.se##+js(noeval-if, Math.round)
+medibok.se##+js(acis, show_msg)
+medibok.se##style:has-text(body * :not):remove()
+medibok.se##noscript:has-text(mdp-deblocker-js-disabled):remove()
