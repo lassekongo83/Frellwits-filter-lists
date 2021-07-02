@@ -954,6 +954,7 @@ artbannersplus&task=show
 ##div[id^="ad_insider"]
 ##div[id^="matchads-"]
 ##div.ad.container
+##div.ad.panorama
 ##div.ad-after-header
 ##div.ad-panorama_dynamic-wrapper
 ##div.ad-toppbanner
@@ -1064,7 +1065,7 @@ whowhatwear.co.uk#@#a[href*="/click.linksynergy"] img
 /profile$ping,domain=feber.se|hamnen.se|lawline.se|tasteline.com|tjock.se|veckorevyn.com|arbetarskydd.se|lag-avtal.se|nyteknik.se
 /pum/*$domain=tkj.se|flm.nu|biostock.se
 ||cdn.cookielaw.org^$script,domain=cartoonnetwork.se|nvp.se|recept.se|tv4.se|tv4play.se|koket.se|fotbollskanalen.se|flashscore.se|manpower.se|discoveryplus.se|findit.se|ikea.com|hastnet.se|eurosport.se|gaffa.se|mtv.se|natgeotv.com|internetkunskap.se|internetstiftelsen.se|yelp.se
-||cookiebot.com^$third-party,domain=etc.se|goteborgdirekt.se|itaboutdoor.se|kingsizemag.se|ng.se|skeppsbrons.se|swedroid.se|wesafe.se|tankesport.se|smartsenior.se|vasterastidning.se|bax-shop.se|kurera.se|upplysning.se|mitti.se|circlek.se|livetochdiabetes.se|tn.se|findroommate.se
+||cookiebot.com^$third-party,domain=etc.se|goteborgdirekt.se|itaboutdoor.se|kingsizemag.se|ng.se|skeppsbrons.se|swedroid.se|wesafe.se|tankesport.se|smartsenior.se|vasterastidning.se|bax-shop.se|kurera.se|upplysning.se|mitti.se|circlek.se|livetochdiabetes.se|tn.se|findroommate.se|advokaten.se
 ||cookiepro.com^$third-party,domain=sd.se|birthday.se|friendsarena.se|hastnet.se|aktiespararna.se|spela.se|fz.se|sweclockers.com|djurskyddet.se
 ||evidon.com^$third-party,domain=morningstar.se|tripadvisor.se|fasting.nu
 ||mailerlite.com^$third-party,domain=vandringsguiden.se|flm.nu
@@ -1694,6 +1695,7 @@ kenzas.se##article[data-text*="In collaboration with"]
 /scripts/pb*.js$script,domain=elinskoglund.com|fannystaaf.se|lovisawallin.se|moamattsson.se|nouw.com
 ||nouw.com/api/postview
 ||nouw.com/api/postimpression
+nouw.com##.washer
 nouw.com##.box.slide.active:has(.badge:has-text(/annons/i))
 nouw.com##.magazine-grid-item:has(.badge:has-text(/annons/i))
 nouw.com,elinskoglund.com,fannystaaf.se,lovisawallin.se,moamattsson.se###ConsentBanner
@@ -1701,6 +1703,8 @@ nouw.com##.Container_blogPost:has(em:has-text(/reklamsamarbete/i))
 nouw.com,elinskoglund.com,fannystaaf.se,lovisawallin.se,moamattsson.se##[title="Ad space"]
 /cookie_info.$domain=trendenser.se
 trendenser.se##.post_feed_post:has(.sponsor-info)
+trendenser.se##a[href*="/category/reklam"]:upward(.featured-post)
+trendenser.se##a[href*="/category/annons"]:upward(.featured-post)
 morotsliv.com###sidebar .et_pb_widget
 ||thestoryof2.se/em_event.html
 /postscribe.$script,domain=linnherbertsson.se
@@ -2051,9 +2055,10 @@ dagenstv.com###bt
 opulens.se##.mailpoet_form
 opulens.se###secondary
 landleyskok.se##.inpostbanner, .banner-leaderboard
-/annons$image,domain=dagensvimmerby.se|dagensvastervik.se
-dagensvimmerby.se,dagensvastervik.se##body:style(margin-top: 0 !important;)
-dagensvimmerby.se,dagensvastervik.se##.panoramaAnnons, .JobAdDiv, .annonsKolumn, .insideAd, .ingressAd, .familyAds, .annonsWrapper
+/Script/Ads.js$domain=dagensvimmerby.se|dagensvastervik.se|dagenskalmar.nu|dagenshultsfred.se
+/annons$image,domain=dagensvimmerby.se|dagensvastervik.se|dagenskalmar.nu|dagenshultsfred.se
+dagensvimmerby.se,dagensvastervik.se,dagenskalmar.nu,dagenshultsfred.se##body:style(margin-top: 0 !important;)
+dagensvimmerby.se,dagensvastervik.se,dagenskalmar.nu,dagenshultsfred.se##.panoramaAnnons, .JobAdDiv, .annonsKolumn, .insideAd, .ingressAd, .familyAds, .annonsWrapper
 dagensopinion.se##a[href^="/annons-"]
 ||yelp.se/sit_rep
 yelp.se##.js-cookie-iframe
@@ -2669,3 +2674,8 @@ medibok.se##+js(noeval-if, Math.round)
 medibok.se##+js(acis, show_msg)
 medibok.se##style:has-text(body * :not):remove()
 medibok.se##noscript:has-text(mdp-deblocker-js-disabled):remove()
+skargarden.se###topbanner, #mittbanner
+skargarden.se##article:has([title^="Annons"])
+||assistanskoll.se/images/banner
+assistanskoll.se###annons
+lansposten.se##.sgm-header-start-ad

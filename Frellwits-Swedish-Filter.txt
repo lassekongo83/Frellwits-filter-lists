@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2021-06-29 15:07:55 CEST
+! Last modified: 2021-07-02 09:19:17 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -66,8 +66,8 @@
 ###cookiejar
 ###cookielawwarning
 ###cookieMsgBlock
-###CookieNotice
 ###cookieNotice
+###CookieNotice
 ###cookies-acceptance .alert.bottom
 ###cookiesInfo
 ###dialog-eu-cookie-law
@@ -258,6 +258,7 @@
 ##div.ad-panorama_dynamic-wrapper
 ##div.ad-toppbanner
 ##div.ad.container
+##div.ad.panorama
 ##div.annonsbox
 ##div.ashe-preloader-wrap
 ##div.avia-cookiemessage-bottom
@@ -419,7 +420,7 @@
 /analytics-bmb$script
 /analytics/cts.min.js$script
 /analytics/gallup/*$script
-/annons$image,domain=dagensvastervik.se|dagensvimmerby.se
+/annons$image,domain=dagenshultsfred.se|dagenskalmar.nu|dagensvastervik.se|dagensvimmerby.se
 /annons-banner
 /annons.aspx?
 /annons_hor.
@@ -800,6 +801,7 @@
 /retargeting-pixels.$script
 /revive/revivejs.php$script
 /rotban.js$domain=peace.ax
+/Script/Ads.js$domain=dagenshultsfred.se|dagenskalmar.nu|dagensvastervik.se|dagensvimmerby.se
 /Scripts/burt/*$script
 /scripts/initLogging$domain=alltomtradgard.se|damernasvarld.se|expressen.se|skonahem.com
 /scripts/opt/view.analytics.js
@@ -1022,6 +1024,7 @@ arkitekten.se##.post-teaser__wrapper--ad
 arkitektur.se##[class*="panorama"]
 artbannersplus&task=show
 arvikanyheter.se,dalslanningen.se,filipstadstidning.se,fryksdalsbygden.se,hjotidning.se,karlskogatidning.se,kt.se,mariestadstidningen.se,nkp.se,nlt.se,nwt.se,provinstidningen.se,saffletidningen.se,sla.se,varmlandsaffarer.se,vf.se##[id^="nwt-marknadsguiden"]
+assistanskoll.se###annons
 astmaoallergiforbundet.se##.banner-top, .banner-side, .section-top
 atl.nu##a[href*="/atl-tv-annons/"]
 atvmag.se,snowmobile.se##.location-header_before
@@ -1118,13 +1121,13 @@ cyclingplus.se,halsafitness.se,yogaworld.se##.sticky-sidebar
 da.se##div.alignwide[style^="height"]
 dagen.se##.cookie-acceptance
 dagen.se##.video-annons, .native-box
+dagenshultsfred.se,dagenskalmar.nu,dagensvastervik.se,dagensvimmerby.se##.panoramaAnnons, .JobAdDiv, .annonsKolumn, .insideAd, .ingressAd, .familyAds, .annonsWrapper
 dagensinfrastruktur.se##.g-single
 dagensinfrastruktur.se,ratsit.se,sonicmagazine.com##[class^="ad-"]
 dagensjuridik.se##.outher-sidebar, a[href*="/annons/"]
 dagensopinion.se##a[href^="/annons-"]
 dagensps.se##a[href*="/ps-partner/"], .ad-links-module, .dagensps_ad
 dagenstv.com###bt
-dagensvastervik.se,dagensvimmerby.se##.panoramaAnnons, .JobAdDiv, .annonsKolumn, .insideAd, .ingressAd, .familyAds, .annonsWrapper
 danskaspraket.se,digitalavykort.se,viseniorer.se,vmj.se##.cc-cookies
 danskaspraket.se,digitalavykort.se,vmj.se##.topdiv
 danstidningen.se,lira.se,slangopedia.se###ads
@@ -1339,6 +1342,7 @@ lajvo.se###panoramaTop
 land.se,landlantbruk.se,landskogsbruk.se##[class*="--native"], [id^="adwrapper"], .has-sticky-add
 landetsfria.nu,tidningensyre.se##div[style*="verdana; color:#888888"]
 landleyskok.se##.inpostbanner, .banner-leaderboard
+lansposten.se##.sgm-header-start-ad
 lararen.se##a[href*="=annons"]
 laromedia.se##img[alt="Annons"] + .img-flipper
 lchfarkivet.se##.wppopups-whole
@@ -1410,6 +1414,7 @@ nordiskradio.se###cookieWindow
 norpan.se,skrattsajten.com##.cookieScript
 norrahalland.se##.norra-leeads-ads,.egna_annonser_widget
 norrbotten.com##a[href*=".com/annons"], .td-ss-main-sidebar > .td-a-rec
+nouw.com##.washer
 nsk.se,skd.se##.advert-widget
 nsk.se,skd.se##[data-teaser-section*="native"]
 nvp.se##[class*="banner_"], .BottomBannerContainer
@@ -1471,6 +1476,7 @@ siteseeker$script,domain=foretagarna.se
 sjoaguden.se##.av-siteloader-wrap
 skandia.se##div[data-block="CookieBannerBlock"]
 skanesport.se###black-studio-tinymce-3
+skargarden.se###topbanner, #mittbanner
 skidspar.se###videoad
 skillingaryd.nu,xn--vrnamo-bua.nu###more-banners
 skk.se###cookie-button-banner
@@ -1627,6 +1633,7 @@ yelp.se##.js-cookie-iframe
 ||ascontentcloud.com^$third-party
 ||assets.pinterest.com/js/pinit$third-party
 ||assets.tumblr.com/share-button.js$third-party
+||assistanskoll.se/images/banner
 ||atgplay.se^*/stat$xmlhttprequest
 ||auction-release.mlpapi.com/site/LoadPluginSite$script
 ||automation.se/images/*banner
@@ -1705,7 +1712,7 @@ yelp.se##.js-cookie-iframe
 ||conviva.com^$third-party
 ||cookie-disclaimer.onewp.net^$third-party
 ||cookie-script.com^$third-party
-||cookiebot.com^$third-party,domain=bax-shop.se|circlek.se|etc.se|findroommate.se|goteborgdirekt.se|itaboutdoor.se|kingsizemag.se|kurera.se|livetochdiabetes.se|mitti.se|ng.se|skeppsbrons.se|smartsenior.se|swedroid.se|tankesport.se|tn.se|upplysning.se|vasterastidning.se|wesafe.se
+||cookiebot.com^$third-party,domain=advokaten.se|bax-shop.se|circlek.se|etc.se|findroommate.se|goteborgdirekt.se|itaboutdoor.se|kingsizemag.se|kurera.se|livetochdiabetes.se|mitti.se|ng.se|skeppsbrons.se|smartsenior.se|swedroid.se|tankesport.se|tn.se|upplysning.se|vasterastidning.se|wesafe.se
 ||cookieconsent.popupsmart.com^$third-party
 ||cookieinformation.com^$subdocument,third-party
 ||cookieinfoscript.com^$third-party
