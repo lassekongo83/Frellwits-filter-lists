@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2021-07-05 20:34:37 CEST
+! Last modified: 2021-07-06 15:14:53 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -805,7 +805,7 @@
 /rotban.js$domain=peace.ax
 /Script/Ads.js$domain=dagenshultsfred.se|dagenskalmar.nu|dagensvastervik.se|dagensvimmerby.se
 /Scripts/burt/*$script
-/scripts/initLogging$domain=alltomtradgard.se|damernasvarld.se|expressen.se|skonahem.com
+/scripts/initLogging$domain=alltomtradgard.se|expressen.se
 /scripts/opt/view.analytics.js
 /scripts/pb*.js$script,domain=elinskoglund.com|fannystaaf.se|lovisawallin.se|moamattsson.se|nouw.com
 /se-wordpress-agilis-solum/assets/js/ad-collapse.$script
@@ -1013,12 +1013,10 @@ allsvenskan.se,superettan.se##.partners-slideshow-slide, .matches-calendar-spons
 alltforforaldrar.se,bytbil.com,di.se,mammasidan.se,minbebis.com,upphandling24.se##.panorama
 alltforforaldrar.se,mammasidan.se,minbebis.com###partnerMenuContainer, #partnerMenuContainerFiller
 alltforforaldrar.se,mammasidan.se,minbebis.com##.spons-artc, a[href^="/native/"]
-alltihemmet.se,alltomtradgard.se,damernasvarld.se,expressen.se,gardochtorp.se,godsochgardar.se,lantliv.com,skonahem.com,tara.se,teknikensvarld.se,tidningenhembakat.se,topphalsa.se##.gdpr-banner
+alltihemmet.se,alltomtradgard.se,expressen.se,gardochtorp.se,godsochgardar.se,lantliv.com,tara.se,teknikensvarld.se,tidningenhembakat.se,topphalsa.se##.gdpr-banner
 alltomhif.se##.sek-module-inner a[target="_blank"]
 alltomhif.se,lyckasmedbakning.nu,mat-meny.se,pinkprogramming.se,soja.se,tonyhatefnejad.se,vitaestilo.se##.preloader
-alltommat.se,alltomtradgard.se,damernasvarld.se,skonahem.com,teknikensvarld.se##.teaser__third-party, .promotion-banner
-alltommat.se,di.se,dn.se,familyliving.se,privataaffarer.se##.teaser-native
-alltommat.se,familyliving.se,privataaffarer.se##a.teaser[href*="/annonssamarbete/"], a.teaser[href*="/promotion/"]
+alltomtradgard.se,teknikensvarld.se##.teaser__third-party, .promotion-banner
 alpresor.se###toast-container
 arbetarskydd.se,lag-avtal.se,nyteknik.se##.alman-teaser, [id^="almad-"]
 arkitekt.se##.Cookie
@@ -1070,7 +1068,6 @@ bilweb.se###cookie_alert
 bilwebben.ax##.front #secondary-content-wrapper
 birthday.se##.datax
 blocket.se###placement_panorama, .blocket-placement, div[style="height: 240px;"]
-blogg.alltommat.se,isabellalowengrip.se,matplatsen.net,monasuniversum.se###gatsby-focus-wrapper > div[class^="css-"]:last-of-type
 bokadirekt.se##.home-banner, img[alt*="banner"]
 booli.se###app > div:last-child
 booli.se###outer
@@ -1144,6 +1141,7 @@ di.se##.di_panorama-wrapper, .site-header__panorama, .di_panorama__isAdLabel, .d
 di.se##.di_start__teaser-placeholder[data-content-url*="/ads/"]
 di.se##[class^="gdpr-policy"]
 di.se,dn.se,expressen.se###rich-media-ads
+di.se,dn.se,privataaffarer.se##.teaser-native
 diabetes.se##.c-cookies
 djungeltrumman.se###sponsored-posts, #right-banners, .banner-wrapper
 dn.se##.campaign-holder
@@ -1306,6 +1304,7 @@ illvet.se##div[id^="cx_"]
 inblick.se##.cookieBG
 innebandy.se##[class*="banner-container"]
 ipo.se##.tag-sponsrad
+isabellalowengrip.se,matplatsen.net,monasuniversum.se###gatsby-focus-wrapper > div[class^="css-"]:last-of-type
 it-finans.se,it-halsa.se,it-kanalen.se,it-pedagogen.se,it-retail.se##a[onclick^="gtag"]
 it-halsa.se,it-pedagogen.se,it-retail.se##.penci-wrap-gprd-law
 itseniorerna.se##.tm-preload
@@ -1444,6 +1443,7 @@ popularastronomi.se##a.gofollow[data-track]:not([href*="www.popularastronomi.se"
 pricerunner.se###consent
 pricerunner.se##a[href*="&clickarea=sponsored"]
 privataaffarer.se##.category-promotion
+privataaffarer.se##a.teaser[href*="/annonssamarbete/"], a.teaser[href*="/promotion/"]
 proffs.se##.cookie-wrapper
 pussad.se##.g1-popup-newsletter, .g1-slideup-wrap
 radio.se##.topAdSpacer, .topASp
@@ -1703,6 +1703,7 @@ yelp.se##.js-cookie-iframe
 ||citygate.se^*/mainads$xmlhttprequest
 ||citygate.se^*/statistics$xmlhttprequest
 ||ck.page^$third-party
+||claremontspringstreet.com^
 ||cmatch.idg.se^
 ||cms.catena.media/js/cm-tracking.$script
 ||collect.breakit.se^
