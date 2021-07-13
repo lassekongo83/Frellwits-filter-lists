@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2021-07-11 12:22:36 CEST
+! Last modified: 2021-07-13 10:50:09 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -32,6 +32,7 @@
 ###ad-fullscreen:not(body):not(html)
 ###ad-mega-container:not(body):not(html)
 ###ad-wallpaper:not(body):not(html)
+###ad_topScroller:not(body):not(html)
 ###aloq-cookie-warning
 ###annons_head
 ###bottomAnnonsBar
@@ -501,6 +502,8 @@
 /deprecated-linkpulse-tracking.js
 /detroitchicago/cmb.js$domain=~idownloadblog.com
 /discourse-adplugin
+/discourse-prisjakt
+/discourse-revive
 /DO-theme/ads.js
 /docunet_stats.js
 /dovas/ads/*
@@ -941,6 +944,7 @@
 ?url=*impse.tradedoubler.com$image
 @@/ad-block-detection-script$domain=blocket.se
 @@/ad.php$script,~third-party,domain=99mac.se|skogstok.se|temperatur.nu
+@@/admin-ajax.php?action=archive_grid$~third-party,domain=cykla.se
 @@/adserver.$script,~third-party,domain=fotosidan.se|grannar.se|utsidan.se
 @@/advertisement*.js$script,domain=dn.se
 @@/advertisment.js$script,~third-party,domain=wappare.se
@@ -948,6 +952,7 @@
 @@/assets/ads-dm.js$~third-party,domain=affarsliv.com|affarslivgotland.se|corren.se|ekuriren.se|eposten.se|folkbladet.se|gotlandjustnu.se|helagotland.se|kindaposten.se|kkuriren.se|klackspark.com|kuriren.nu|mvt.se|norran.se|norrbottensaffarer.se|nsd.se|nt.se|pt.se|sn.se|strengnastidning.se|unt.se|vimmerbytidning.se|vt.se
 @@/consent.json$domain=forum.macworld.se|idg.se
 @@/css/ad.$stylesheet,domain=sv.geneanet.org
+@@/cykla/assets/js/advertisment.js$~third-party,domain=cykla.se
 @@/jquery.scrollUp$script,domain=explorecurate.com
 @@/js/ad.js$~third-party,domain=sweclockers.com
 @@/js/ads.js$~third-party,domain=freeride.se|fz.se|spela.se
@@ -1119,6 +1124,8 @@ cornucopia.cornubot.se###HTML9, a[href*="://track."]
 cornucopia.cornubot.se##.post-summary a[href*="reklam"], .post-summary a[href*="sponsr"], .post-summary a[href*="samarbete"]
 customerinsider.se,foodetc.se,livetsgoda.se##a[target$="blank"] img
 cyclingplus.se,halsafitness.se,yogaworld.se##.sticky-sidebar
+cykla.se##.featured-post--sponsored, .grid-item--sponsored
+cykla.se#@#.advertisment
 da.se##div.alignwide[style^="height"]
 dagen.se##.cookie-acceptance
 dagen.se##.video-annons, .native-box
