@@ -829,6 +829,7 @@ artbannersplus&task=show
 ###redim-cookiehint-modal
 ###RightOuterBannerDiv
 ###sp-cookie-consent
+###strossle-below-article-thumbnails
 ###trn_cookie_holder
 ##.ad-single-news:not(body):not(html)
 ##.adContainer:not(body):not(html)
@@ -1073,7 +1074,7 @@ whowhatwear.co.uk#@#a[href*="/click.linksynergy"] img
 /glimr$script,domain=aftonbladet.se|blocket.se
 /profile$ping,domain=feber.se|hamnen.se|lawline.se|tasteline.com|tjock.se|veckorevyn.com|arbetarskydd.se|lag-avtal.se|nyteknik.se
 /pum/*$domain=tkj.se|flm.nu|biostock.se
-||cdn.cookielaw.org^$script,domain=cartoonnetwork.se|nvp.se|recept.se|tv4.se|tv4play.se|koket.se|fotbollskanalen.se|flashscore.se|manpower.se|findit.se|ikea.com|hastnet.se|eurosport.se|gaffa.se|mtv.se|natgeotv.com|internetkunskap.se|internetstiftelsen.se|yelp.se
+||cdn.cookielaw.org^$script,domain=cartoonnetwork.se|nvp.se|recept.se|tv4.se|tv4play.se|koket.se|fotbollskanalen.se|flashscore.se|manpower.se|findit.se|ikea.com|hastnet.se|gaffa.se|mtv.se|natgeotv.com|internetkunskap.se|internetstiftelsen.se|yelp.se
 ||cookiebot.com^$third-party,domain=etc.se|goteborgdirekt.se|itaboutdoor.se|kingsizemag.se|ng.se|skeppsbrons.se|swedroid.se|wesafe.se|tankesport.se|smartsenior.se|vasterastidning.se|bax-shop.se|kurera.se|upplysning.se|mitti.se|circlek.se|livetochdiabetes.se|tn.se|findroommate.se|advokaten.se
 ||cookiepro.com^$third-party,domain=sd.se|birthday.se|friendsarena.se|hastnet.se|aktiespararna.se|spela.se|fz.se|sweclockers.com|djurskyddet.se
 ||evidon.com^$third-party,domain=morningstar.se|tripadvisor.se|fasting.nu
@@ -1274,8 +1275,7 @@ egoinas.se,fysikstugan.se,enkelteknik.se,hamnen.se,cannabis.se,ljudochbild.se,ti
 
 ! JWplayer analytics/ad scripts
 ||jwpcdn.com/player/plugins/inference/
-||ssl.p.jwpcdn.com^*/jwpsrv.js$script,important,domain=eurosport.se|aftonbladet.se|svd.se|axess.se|freeride.se|happyride.se|embed.futuresportsmedia.com|streamio.com|laget.se|moviezine.se|fasttrack.webstream.dk|cdn.jwplayer.com|wellness.se|allakorsord.se|allas.se|baaam.se|dromhemochtradgard.se|elle.se|femina.se|hant.se|mabra.com|residencemagazine.se|svenskdam.se|frida.se
-||ssl.p.jwpcdn.com^*/freewheel.js$script,important,domain=eurosport.se
+||ssl.p.jwpcdn.com^*/jwpsrv.js$script,important,domain=aftonbladet.se|svd.se|axess.se|freeride.se|happyride.se|embed.futuresportsmedia.com|streamio.com|laget.se|moviezine.se|fasttrack.webstream.dk|cdn.jwplayer.com|wellness.se|allakorsord.se|allas.se|baaam.se|dromhemochtradgard.se|elle.se|femina.se|hant.se|mabra.com|residencemagazine.se|svenskdam.se|frida.se
 ||ssl.p.jwpcdn.com^*/vast.js$script,important,domain=moviezine.se
 
 ! HTML filters, and other Firefox specific filters
@@ -1815,7 +1815,7 @@ youplay.se##+js(aeld, loadstart)
 tonyhatefnejad.se,soja.se,alltomhif.se,lyckasmedbakning.nu,pinkprogramming.se,mat-meny.se,vitaestilo.se##.preloader
 hockeyguiden.com##.main-loader.loader-bg
 deliquate.se##.ajax_loader
-surfa.se,hemmafixbloggen.se###loader-wrapper
+surfa.se,hemmafixbloggen.se,teknikfreak.se###loader-wrapper
 sjoaguden.se##.av-siteloader-wrap
 delupe.se###preloader
 evalent.se##.loadPage
@@ -1859,12 +1859,12 @@ sweclockers.com,fz.se,fssweden.se##+js(set, adblock, false)
 ||api.hitta.se/statistics
 hitta.se##[data-trackimp], .integration-txt, .section-details--alb
 hitta.se###__next > div[class^="style_notification"]
-hitta.se##[class*="dummyAd"], [class*="StyledAdSlot"], [data-bind*="Ad"], div[class^="GraphicAd_"], [class*="adContainer"]
+hitta.se##[class*="dummyAd"], [class*="StyledAdSlot"], [data-bind*="Ad"], div[class^="GraphicAd_"], [class*="adContainer"], [id*="_panorama"], [id*="_skyscraper"]
 hitta.se##[class^="styleManual_mainContentBox"] > div[style^="min-height"]:first-of-type
 proffs.se##.cookie-wrapper
 /entag.$script,domain=eniro.se|leta.se
 kartor.eniro.se##.e-banner
-leta.se###bookingcom-resor-wrapper, #aktuellaerbjudanden
+leta.se###bookingcom-resor-wrapper, #aktuellaerbjudanden, #sky-left-wide, .topNavItem[href*="casino"], .topNavItem[href*="betting"]
 ||obj.fotosidan.se/obj/pa/$image
 fotosidan.se##.subArticlesponsored, div[style="width:300px;float:right;"], div[style="float:right;width:300px;"]
 letsgoexplore.se##.tipi-tile.active
@@ -2712,3 +2712,6 @@ vasterasvaxer.se,partillevaxer.se##.elementor-widget-heading:has-text(/annons/i)
 vasterasvaxer.se,partillevaxer.se##.elementor-widget-heading:has-text(/annons/i) + .elementor-widget-image + div + div
 maringuiden.se###elGuestTerms
 maringuiden.se##.banner_hoger, .google_ads_mg_frontpage, .footerComercialDiv
+webb-tv.nu##[id^="adservice"]
+tvprogram.se##.backdrop, .fcb
+urlm.se##[class^="adpadtwentypad"]

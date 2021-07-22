@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2021-07-20 10:52:58 CEST
+! Last modified: 2021-07-22 09:34:09 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -88,6 +88,7 @@
 ###redim-cookiehint-modal
 ###RightOuterBannerDiv
 ###sp-cookie-consent
+###strossle-below-article-thumbnails
 ###topBannerAds
 ###trn_cookie_holder
 ##._ning_outer._ning_jss_zone:not(body):not(html)
@@ -1291,14 +1292,14 @@ hd.se,sydsvenskan.se##[class*="teaser-native"]
 hejaolika.se##.partnerinfostyle
 helahisingen.se###custom_html-15, .code-block img
 hemhyra.se##.pageCookies
-hemmafixbloggen.se,surfa.se###loader-wrapper
+hemmafixbloggen.se,surfa.se,teknikfreak.se###loader-wrapper
 hemnet.se###ad_unit_placeholder
 hemtrevligt.se##.row--native
 hemtrevligt.se,tidningenhalsa.se,utemagasinet.se,vagabond.se###facebookSlideIn
 hippson.se##.presentedby, .presentedby ~ *
 hippson.se##.sponsorpuff
 hitta.se###__next > div[class^="style_notification"]
-hitta.se##[class*="dummyAd"], [class*="StyledAdSlot"], [data-bind*="Ad"], div[class^="GraphicAd_"], [class*="adContainer"]
+hitta.se##[class*="dummyAd"], [class*="StyledAdSlot"], [data-bind*="Ad"], div[class^="GraphicAd_"], [class*="adContainer"], [id*="_panorama"], [id*="_skyscraper"]
 hitta.se##[class^="styleManual_mainContentBox"] > div[style^="min-height"]:first-of-type
 hitta.se##[data-trackimp], .integration-txt, .section-details--alb
 hittahem.se##.user-consent.active
@@ -1363,7 +1364,7 @@ laromedia.se##img[alt="Annons"] + .img-flipper
 lchfarkivet.se##.wppopups-whole
 lesscarbs.se##.elementor-image > a
 lesscarbs.se##a[href*="/affiliates/"]
-leta.se###bookingcom-resor-wrapper, #aktuellaerbjudanden
+leta.se###bookingcom-resor-wrapper, #aktuellaerbjudanden, #sky-left-wide, .topNavItem[href*="casino"], .topNavItem[href*="betting"]
 letsgoexplore.se##.tipi-tile.active
 lindasbakskola.se,privataaffarer.se,skk.se##a[href*="/bit.ly/"]
 lindenytt.com,poolforum.se,varmepumpsforum.com##a[target="_blank"] img[alt]
@@ -1563,7 +1564,9 @@ turistmal.se###col_right
 tv.nu###app > div > div[class]:nth-of-type(2)
 tv.nu##a[href*="adform.net"]
 tvmatchen.nu##.bet365, .panorama-wrapper, .tvg-manager-box
+tvprogram.se##.backdrop, .fcb
 uppsalanyheter.se###banner-top-block
+urlm.se##[class^="adpadtwentypad"]
 vagabond.se##.latest-article-native
 varden.se##.cdk-overlay-container, app-cookies
 varldenshaftigaste.se##[id*="annons"], #getFixed
@@ -1587,6 +1590,7 @@ vm-fotboll.se##.category-kampanjer
 vm-fotboll.se##a[href*="/go/"][target]
 voister.se##.campaign, .cookiebanner
 wappare.se##.cookie-consent-modal
+webb-tv.nu##[id^="adservice"]
 webbjobb.io##.cookie
 webbkryss.nu##.skyad-wrapper
 wellness.se##a[href*="campaign"][data-test-tag="external-link"]
@@ -1706,7 +1710,7 @@ yelp.se##.js-cookie-iframe
 ||cdn.advisible.com/accl$script
 ||cdn.advisible.com/adk$third-party
 ||cdn.axiell.com^*/cookie-disclaimer.$script
-||cdn.cookielaw.org^$script,domain=cartoonnetwork.se|eurosport.se|findit.se|flashscore.se|fotbollskanalen.se|gaffa.se|hastnet.se|ikea.com|internetkunskap.se|internetstiftelsen.se|koket.se|manpower.se|mtv.se|natgeotv.com|nvp.se|recept.se|tv4.se|tv4play.se|yelp.se
+||cdn.cookielaw.org^$script,domain=cartoonnetwork.se|findit.se|flashscore.se|fotbollskanalen.se|gaffa.se|hastnet.se|ikea.com|internetkunskap.se|internetstiftelsen.se|koket.se|manpower.se|mtv.se|natgeotv.com|nvp.se|recept.se|tv4.se|tv4play.se|yelp.se
 ||cdn.iubenda.com/iubenda.$script
 ||cdn.livechatinc.com/tracking$domain=~box.co.uk
 ||cdn.svenskalag.se/img/sponsors$image
