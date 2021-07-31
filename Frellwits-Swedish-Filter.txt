@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2021-07-29 11:44:52 CEST
+! Last modified: 2021-07-31 09:14:13 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -67,8 +67,8 @@
 ###cookiejar
 ###cookielawwarning
 ###cookieMsgBlock
-###cookieNotice
 ###CookieNotice
+###cookieNotice
 ###cookies-acceptance .alert.bottom
 ###cookiesInfo
 ###dialog-eu-cookie-law
@@ -194,6 +194,8 @@
 ##.p-cookie-prompt.-display:not(body):not(html)
 ##.pea_cook_more_info_popover:not(body):not(html)
 ##.pea_cook_wrapper:not(body):not(html)
+##.penci-adsense-below-slider:not(body):not(html)
+##.penci-infeed-fullwidth-ads:not(body):not(html)
 ##.plista_widget_outstream:not(body):not(html)
 ##.react-ad:not(body):not(html)
 ##.s-cookies-info:not(body):not(html)
@@ -1320,8 +1322,8 @@ influens.se##[class*="ai-viewport"], .ai_widget
 innebandy.se##[class*="banner-container"]
 ipo.se##.tag-sponsrad
 isabellalowengrip.se,matplatsen.net,monasuniversum.se###gatsby-focus-wrapper > div[class^="css-"]:last-of-type
-it-finans.se,it-halsa.se,it-kanalen.se,it-pedagogen.se,it-retail.se##a[onclick^="gtag"]
-it-halsa.se,it-pedagogen.se,it-retail.se##.penci-wrap-gprd-law
+it-finans.se,it-halsa.se,it-kanalen.se,it-pedagogen.se,it-retail.se##.penci-wrap-gprd-law
+it-finans.se,it-halsa.se,it-kanalen.se,it-pedagogen.se,it-retail.se##a[onclick^="gtag"], .header-banner
 itseniorerna.se##.tm-preload
 jaktjournalen.se##.activate-notifications-container.shown
 jaktplay.se##.jaktplay-ad
@@ -1782,6 +1784,7 @@ yelp.se##.js-cookie-iframe
 ||destination.se^*/elastic-apm-rum.umd.min.js
 ||digikey.se^*/banners/
 ||digikey.se^*/consent
+||digitaloceanspaces.com/ethical.min.js
 ||distansarbete.com^
 ||diu127fbe6pn6.cloudfront.net^*/ga-universal.html$subdocument
 ||dnitv.com^$media,domain=discoveryplus.se
