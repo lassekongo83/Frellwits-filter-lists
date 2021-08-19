@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2021-08-17 08:07:50 CEST
+! Last modified: 2021-08-19 11:24:53 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -198,6 +198,7 @@
 ##.penci-infeed-fullwidth-ads:not(body):not(html)
 ##.plista_widget_outstream:not(body):not(html)
 ##.react-ad:not(body):not(html)
+##.rmss_main-ad:not(body):not(html)
 ##.s-cookies-info:not(body):not(html)
 ##.site-alert--cookies:not(body):not(html)
 ##.sponsrad-artikel:not(body):not(html)
@@ -250,6 +251,7 @@
 ##div#ads_column
 ##div#banner_right
 ##div#cookieBar
+##div#custom_ads_wrapper
 ##div#mega-ad-content
 ##div#outerAd
 ##div#panorama_ad
@@ -675,6 +677,7 @@
 /plugins/cookie-law-info/*$domain=carup.se|gilla.se|hockeybladet.nu|ljudochbild.se|nyadagbladet.se|temadagar.se|tidningenbalans.se|tidningenresultat.se
 /plugins/cookie-notice/*
 /plugins/cookie_consent/*$script
+/plugins/cookies-and-content-security-policy$domain=cannabisifokus.se
 /plugins/cresta-social-share-counter-pro/*
 /plugins/ct-ultimate-gdpr/*
 /plugins/custom-cookie-message-btdm-extension/*$script
@@ -752,6 +755,7 @@
 /plugins/se-wordpress-cookie-notice/*
 /plugins/sea-short-stats/*
 /plugins/share-and-follow/*
+/plugins/simple-social-buttons$script
 /plugins/skydda-advisor/*
 /plugins/social-pug
 /plugins/socialsnap$script
@@ -914,7 +918,7 @@
 /wp-content/themes/keremiya1/js/script.js
 /wp-content/uploads/*/public/assets/js/advanced.js$script
 /wp-content/uploads/*annons$image
-/wp-content/uploads/*banner$image,domain=alltomhif.se|borattforum.se|brollopsmagasinet.se|bussmagasinet.se|customerinsider.se|danstidningen.se|dental24.se|guldkanalen.se|katerinamagasin.se|ljuskultur.se|marsta.nu|polistidningen.se|sff.nu|sportpanelen.se|tekniknytt.se|turismnytt.se|vardfokus.se|viralsweden.com
+/wp-content/uploads/*banner$image,domain=alltomhif.se|borattforum.se|brollopsmagasinet.se|bussmagasinet.se|customerinsider.se|danstidningen.se|dental24.se|guldkanalen.se|katerinamagasin.se|ljuskultur.se|marsta.nu|pakryss.se|polistidningen.se|sff.nu|sportpanelen.se|tekniknytt.se|turismnytt.se|vardfokus.se|viralsweden.com
 /wp-content/uploads/*betfair$image
 /wp-content/uploads/*bethard$image
 /wp-content/uploads/*betting$image,domain=hockeybladet.nu|kulturbloggen.com|newsvoice.se|nyadagbladet.se
@@ -1123,6 +1127,7 @@ camping.se###rightSideAds, .OpenXAd
 campingsverige.se##.banner_window
 cannabis.se##.header-ads-wrapper, .ai-adb-hide, .ai-sticky-widget, .hampaonline
 cannabis.se,ordfrontmagasin.se##.pum-overlay
+cannabisifokus.se##div[id^="canna-"]
 capdesign.se###shareright
 capdesign.se,hd.se,sydsvenskan.se,typkanske.se##.gdpr
 chef.se##.Blurb--native
@@ -1167,6 +1172,7 @@ diabetes.se##.c-cookies
 djungeltrumman.se###sponsored-posts, #right-banners, .banner-wrapper
 dn.se##.campaign-holder
 dn.se##.gdpr-header
+doktorn.com##.js-banner-wrapper
 driva-eget.se,foretagande.se,hockeymagasinet.com,revisionsvarlden.se,runnersworld.se,tidningenbalans.se,travelnews.se,utsidan.se##.sponsored
 drivkraftsverige.se##.policy-disclaimer
 duochjobbet.se###topbanner
@@ -2050,6 +2056,7 @@ yelp.se##.js-cookie-iframe
 ||rabble-res.cloudinary.com^$third-party
 ||radio.se^*/clickperformance
 ||ramses.nu^*/banners/
+||ramses.nu^*/Centralabanners/
 ||reaktion.se^$third-party
 ||realiteti.info^
 ||recirculation.spot.im^$third-party

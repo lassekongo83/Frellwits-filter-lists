@@ -606,6 +606,7 @@ artbannersplus&task=show
 ||nouw.com/campaignpost/reg/$image
 ||rabattkoder.ifragasatt.se^
 ||ramses.nu^*/banners/
+||ramses.nu^*/Centralabanners/
 ||reddit.com/static/button$third-party
 ||rektek.se/widget/extraexposurejobs$third-party
 ||oas.*.se/om/$script
@@ -946,6 +947,7 @@ artbannersplus&task=show
 ##.plista_widget_outstream:not(body):not(html)
 ##.p-cookie-prompt.-display:not(body):not(html)
 ##.react-ad:not(body):not(html)
+##.rmss_main-ad:not(body):not(html)
 ##.site-alert--cookies:not(body):not(html)
 ##.sponsrad-artikel:not(body):not(html)
 ##.swp-ad-strossle:not(body):not(html)
@@ -1026,6 +1028,7 @@ artbannersplus&task=show
 ##div#ads-panorama
 ##div#ads_column
 ##div#cookieBar
+##div#custom_ads_wrapper
 ##div[class^="sqs-cookie-banner"]
 ##footer .ui-optin-wrapper
 ##td#reklam
@@ -1081,7 +1084,7 @@ arkenzoo.se##body:style(overflow:auto!important;)
 
 ! Common site specific blocking
 /wp-content\/uploads\/[0-9]+/$script,domain=villalivet.se|skanesport.se
-/wp-content/uploads/*banner$image,domain=marsta.nu|polistidningen.se|alltomhif.se|brollopsmagasinet.se|bussmagasinet.se|danstidningen.se|guldkanalen.se|katerinamagasin.se|ljuskultur.se|sff.nu|sportpanelen.se|viralsweden.com|vardfokus.se|turismnytt.se|customerinsider.se|borattforum.se|dental24.se|tekniknytt.se
+/wp-content/uploads/*banner$image,domain=marsta.nu|polistidningen.se|alltomhif.se|brollopsmagasinet.se|bussmagasinet.se|danstidningen.se|guldkanalen.se|katerinamagasin.se|ljuskultur.se|sff.nu|sportpanelen.se|viralsweden.com|vardfokus.se|turismnytt.se|customerinsider.se|borattforum.se|dental24.se|tekniknytt.se|pakryss.se
 /wp-content/uploads/*betting$image,domain=nyadagbladet.se|kulturbloggen.com|hockeybladet.nu|newsvoice.se
 /wp-content/uploads/*casino$image,domain=nyadagbladet.se|kulturbloggen.com|newsvoice.se|svenskhistoria.se|battrestadsdel.se|zeromagazine.nu|totallyorebro.se|totallystockholm.se|hockeybladet.nu|djungeltrumman.se|vaken.se|lokalsport.nu|tekniknytt.se|kingsizemag.se|spelrum.net
 /banners$script,domain=magasinetparagraf.se
@@ -1154,6 +1157,7 @@ egoinas.se,fysikstugan.se,enkelteknik.se,hamnen.se,cannabis.se,ljudochbild.se,ti
 /plugins/cookie-bar/*
 /plugins/cookie-law-info/*$domain=nyadagbladet.se|hockeybladet.nu|carup.se|temadagar.se|gilla.se|ljudochbild.se|tidningenbalans.se|tidningenresultat.se
 /plugins/cookie-notice/*
+/plugins/cookies-and-content-security-policy$domain=cannabisifokus.se
 /plugins/cookie_consent/*$script
 /plugins/cresta-social-share-counter-pro/*
 /plugins/ct-ultimate-gdpr/*
@@ -1231,6 +1235,7 @@ egoinas.se,fysikstugan.se,enkelteknik.se,hamnen.se,cannabis.se,ljudochbild.se,ti
 /plugins/se-wordpress-cookie-notice/*
 /plugins/sea-short-stats/*
 /plugins/share-and-follow/*
+/plugins/simple-social-buttons$script
 /plugins/skydda-advisor/*
 /plugins/srs-simple-hits-counter
 /plugins/social-pug
@@ -1804,6 +1809,7 @@ epochtimes.se##.cookie-bar
 autonytt.se,sv.picmix.com,tekniknytt.se##.leaderboard
 aktuellsakerhet.se##.td-a-rec
 letarecept.se###cookie_wrapper
+doktorn.com##.js-banner-wrapper
 
 ! Various annoyances and tracking
 annicaenglund.se,alicestenlof.com,ellinorlofgren.se,linnherbertsson.se,pricerunner.se##.noscroll:style(overflow: initial !important;)
@@ -2743,3 +2749,4 @@ matinspo.se##[id^="matin-"]
 outsidesweden.se##div[style^="font-size: 0.7"]:has-text(Annons:):upward(1)
 /insight.js$domain=nikkasystems.com
 nyatider.nu##a[target][href*="casino"]
+cannabisifokus.se##div[id^="canna-"]
