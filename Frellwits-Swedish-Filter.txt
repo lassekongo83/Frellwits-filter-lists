@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2021-08-20 08:36:37 CEST
+! Last modified: 2021-08-23 10:11:07 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -67,8 +67,8 @@
 ###cookiejar
 ###cookielawwarning
 ###cookieMsgBlock
-###CookieNotice
 ###cookieNotice
+###CookieNotice
 ###cookies-acceptance .alert.bottom
 ###cookiesInfo
 ###dialog-eu-cookie-law
@@ -273,6 +273,7 @@
 ##div.big-mobile-ads
 ##div.block-bean-header-banner
 ##div.borka-ad
+##div.box--squareAd
 ##div.bs-wrap-gdpr-law
 ##div.bsa_pro_ajax_load
 ##div.cli-modal-backdrop
@@ -312,10 +313,19 @@
 ##div.td-more-articles-box
 ##div.topmost-banner
 ##div.wppasrotate
+##div[class^="borka-insider"]
+##div[class^="borka-panorama"]
+##div[class^="borka-widescreen"]
 ##div[class^="holid_desktop"]
 ##div[class^="sqs-cookie-banner"]
 ##div[data-advadstrackbid]
+##div[data-losjs^="borka-insider"]
+##div[data-losjs^="borka-panorama"]
+##div[data-losjs^="borka-widescreen"]
 ##div[id^="ad_insider"]
+##div[id^="borka-insider"]
+##div[id^="borka-panorama"]
+##div[id^="borka-widescreen"]
 ##div[id^="matchads-"]
 ##footer .ui-optin-wrapper
 ##img[alt="Leovegas"]
@@ -1398,7 +1408,6 @@ lokalsport.nu##.art-sidebar1, .art-sidebar2
 loppi.se##.entry__teaser--promotion, .wpcnt
 lovelylife.se##.elementor-image a[href]:not([href*="lovelylife.se/"]) img
 lundagard.se###bdCheckAlso.bdCheckAlsoShow, .topBanner
-luss.se##.sidebar > .widget_text:not(.widget_custom_html)
 macken.xyz##.et_builder_inner_content > .et_pb_section_2
 magasinetparagraf.se###large_banner
 maipenrai.se##.cWidgetContainer > ul > li:first-child, div[style*="border: 1px solid"] a[target="_blank"]
@@ -1926,6 +1935,7 @@ yelp.se##.js-cookie-iframe
 ||kundklubb-se.com^
 ||kyrkoskatten.se^
 ||kyrkskatt.se^
+||laget.se^*/retarget.js
 ||laikabook.se/ib/banner$subdocument
 ||lajvo.se/addImpression
 ||lantbruksnet.se/files/reklan/
