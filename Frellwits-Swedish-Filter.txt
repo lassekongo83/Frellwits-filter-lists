@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2021-08-23 10:11:07 CEST
+! Last modified: 2021-08-24 15:59:31 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -299,6 +299,7 @@
 ##div.o-indenter--ad
 ##div.oc_cb_wrapper.fill_black
 ##div.outsideAdsWrapper
+##div.panorama-ad-standard
 ##div.panoramaAd
 ##div.prebid-ad-slot
 ##div.rotating-junglebogen
@@ -582,6 +583,7 @@
 /insight.js$domain=nikkasystems.com
 /isbanner/ib.js
 /javascript_nbenhadverts/*
+/Jofab_Blog/js/ads.min.js
 /jquery-eu-cookie-law-popup.$script
 /js/acceptCookies.
 /js/adLocker.
@@ -858,6 +860,7 @@
 /skrattnetdotse/js-ck.js
 /skrattnetdotse/js-xdp.js
 /skyskrapa.$image,domain=it-finans.se|it-halsa.se|it-kanalen.se|it-pedagogen.se|it-retail.se
+/Smile_ElasticsuiteTracker/*$script
 /snowfall.jquery.min.js
 /snowfall.min.jquery.js
 /snowplow$script
@@ -1235,6 +1238,8 @@ fightermag.se##a[href*="/sponsra"]
 filmtipset.se###topslider-wrapper + .container > .sidebar
 filmtipset.se##.row.news > div[style^="border"]:last-of-type
 firstclassmagazine.se###leader-wrap, #rpwe_widget-2
+fiskejournalen.se###dt-kiosk-position
+fiskejournalen.se,fotbolldirekt.se,hockeysverige.se,hypeline.se,innebandymagazinet.se,motivation.se,skidresultat.se,uppslaget.se##.annons
 fiskejournalen.se,jaktjournalen.se##.fisher-takeover-container
 flamman.se##.Banner, .TakeOverBanner, .CookieNotice
 flashback.org###top-banner-container, #top-banner-wrapper
@@ -1255,7 +1260,6 @@ forum.robsoft.nu##td[valign="middle"] > a[target="_blank"]
 forum.robsoft.nu,svenskaturistforeningen.se##.cookie-box
 forvaltarforum.se##[id^="ff_banner"], .home .partner_article + .mh-section, .home .payed_article + .mh-section, .home-columns .ticker-title.partner_article, .home-columns .ticker-title.payed_article, .mh-header .widget_sow-slider, .sow-slider-image, .houdini_partner_article
 fotboll.com##.header-static-lg, .fp-partner, .xs-ad, .bo-wrapper
-fotbolldirekt.se,hockeysverige.se,hypeline.se,innebandymagazinet.se,motivation.se,skidresultat.se,uppslaget.se##.annons
 fotbolldirekt.se,hockeysverige.se,innebandymagazinet.se##.site-partnevisment, .h-background--sponsored-light
 fotbollskanalen.se##.brand, .desktop-ad-web
 fotbolltransfers.com##div[class^="ad"], a[href^="https://ads."]
@@ -1895,6 +1899,7 @@ yelp.se##.js-cookie-iframe
 ||idg.se/sharecounter?
 ||idrottonline.se/client-views/cookieinfo$xmlhttprequest
 ||idrottonline.se^*/samarbetspartners$image
+||images.fotboll.com^*/*casino
 ||imgix.net^*/analytics.$script
 ||imp.laget.se^
 ||inevserver.com/~tournreport/$image
