@@ -405,6 +405,7 @@ artbannersplus&task=show
 /orion/loada$script
 /permutive-async.js$script
 /phaser-ads.min.js$script
+/playbuzz-ads-core
 /Portalannonser/*$image
 /popup/follow-us-fb.$xmlhttprequest
 /prod/adform$xmlhttprequest
@@ -1308,7 +1309,7 @@ egoinas.se,fysikstugan.se,enkelteknik.se,hamnen.se,cannabis.se,ljudochbild.se,ti
 
 ! JWplayer analytics/ad scripts
 ||jwpcdn.com/player/plugins/inference/
-||ssl.p.jwpcdn.com^*/jwpsrv.js$script,important,domain=aftonbladet.se|svd.se|axess.se|freeride.se|happyride.se|embed.futuresportsmedia.com|streamio.com|laget.se|moviezine.se|fasttrack.webstream.dk|cdn.jwplayer.com|wellness.se|allakorsord.se|allas.se|baaam.se|dromhemochtradgard.se|elle.se|femina.se|hant.se|mabra.com|residencemagazine.se|svenskdam.se|frida.se
+||ssl.p.jwpcdn.com^*/jwpsrv.js$script,important,domain=aftonbladet.se|svd.se|axess.se|freeride.se|happyride.se|embed.futuresportsmedia.com|streamio.com|laget.se|moviezine.se|fasttrack.webstream.dk|cdn.jwplayer.com|wellness.se|allakorsord.se|allas.se|baaam.se|dromhemochtradgard.se|elle.se|femina.se|hant.se|mabra.com|residencemagazine.se|svenskdam.se|frida.se|motherhood.se
 ||ssl.p.jwpcdn.com^*/vast.js$script,important,domain=moviezine.se
 
 ! HTML filters, and other Firefox specific filters
@@ -1657,17 +1658,19 @@ gamereactor.se##+js(ra, data-autoplay, video, stay)
 
 ! ALLER MEDIA
 ||se-ads-microservice.aws.aller.com^
-allakorsord.se,allas.se,baaam.se,dromhemochtradgard.se,elle.se,femina.se,hant.se,mabra.com,residencemagazine.se,svenskdam.se,frida.se##article[data-type="native"]
-allakorsord.se,allas.se,baaam.se,dromhemochtradgard.se,elle.se,femina.se,hant.se,mabra.com,residencemagazine.se,svenskdam.se,frida.se##.ag-product-wrapper, .product-carousel__container
+allakorsord.se,allas.se,baaam.se,dromhemochtradgard.se,elle.se,femina.se,hant.se,mabra.com,residencemagazine.se,svenskdam.se,frida.se,motherhood.se##article[data-type="native"]
+allakorsord.se,allas.se,baaam.se,dromhemochtradgard.se,elle.se,femina.se,hant.se,mabra.com,residencemagazine.se,svenskdam.se,frida.se,motherhood.se##.ag-product-wrapper, .product-carousel__container
 dromhemochtradgard.se##.native-wrapper:upward(1)
 elle.se##section.c-native_banner:upward(2)
-/AffiliateHelper$domain=allakorsord.se|allas.se|baaam.se|dromhemochtradgard.se|elle.se|femina.se|hant.se|mabra.com|residencemagazine.se|svenskdam.se|frida.se
-/native.html$domain=allakorsord.se|allas.se|baaam.se|dromhemochtradgard.se|elle.se|femina.se|hant.se|mabra.com|residencemagazine.se|svenskdam.se|frida.se
+/AffiliateHelper$domain=allakorsord.se|allas.se|baaam.se|dromhemochtradgard.se|elle.se|femina.se|hant.se|mabra.com|residencemagazine.se|svenskdam.se|frida.se|motherhood.se
+/native.html$domain=allakorsord.se|allas.se|baaam.se|dromhemochtradgard.se|elle.se|femina.se|hant.se|mabra.com|residencemagazine.se|svenskdam.se|frida.se|motherhood.se
 
 ! Story House Egmont
 ||sportfack.se/core/java/facebook
 /marbles/marbles.js
-/cmp.js$domain=livetombord.se|hemtrevligt.se|vagabond.se|tidningenhalsa.se|utemagasinet.se|svenskgolf.se|mestmotor.se|sportfack.se|husohem.se
+/egmont-ads/*
+/cmp.js$domain=livetombord.se|hemtrevligt.se|vagabond.se|tidningenhalsa.se|utemagasinet.se|svenskgolf.se|mestmotor.se|sportfack.se|husohem.se|tidningenjulia.se|minhast.se|goal.se|kalleanka.se|halge.se|bamse.se
+##div.sb-egmont-plugin
 cafe.se,kingmagazine.se,manolo.se##.card-partner
 cafe.se,kingmagazine.se,manolo.se,vagabond.se##.partner
 livetombord.se##[data-spotlight-id]
@@ -1805,7 +1808,7 @@ sverigeskonsumenter.se###cookie-box
 lindasbakskola.se,privataaffarer.se,skk.se##a[href*="/bit.ly/"]
 autonytt.se,konstlistan.se,bilresaieuropa.se##a[href*="/click.adrecord."]
 nvp.se,fplus.se##[class^="banner"]
-baaam.se,dromhemochtradgard.se,elle.se,femina.se,hant.se,mabra.com,residencemagazine.se,svenskdam.se,allas.se###onetrust-banner-sdk
+baaam.se,dromhemochtradgard.se,elle.se,femina.se,hant.se,mabra.com,residencemagazine.se,svenskdam.se,allas.se,motherhood.se###onetrust-banner-sdk
 hant.se##.onetrust-pc-dark-filter
 allakorsord.se###CybotCookiebotDialog
 adecco.se,viafree.se,ica.se,discoveryplus.se###onetrust-consent-sdk
@@ -1843,7 +1846,7 @@ lundagard.se,boktugg.se,outsidesweden.se,morotsliv.com,macken.xyz,affarsstaden.s
 /themes/Jaz/inc/js/*nicescroll
 !#endif
 ! Bye bye annoying autoplay in articles etc :-)
-youplay.se,affarsliv.com,affarslivgotland.se,corren.se,eposten.se,folkbladet.se,helagotland.se,klackspark.com,kuriren.nu,mvt.se,norrbottensaffarer.se,kindaposten.se,nsd.se,norran.se,nt.se,pt.se,unt.se,vt.se,vimmerbytidning.se,vf.se,hjotidning.se,kt.se,sla.se,mariestadstidningen.se,filipstadstidning.se,fryksdalsbygden.se,nwt.se,varmlandsaffarer.se,arvikanyheter.se,nkp.se,saffletidningen.se,provinstidningen.se,dalslanningen.se,karlskogatidning.se,nlt.se,skd.se,nsk.se,affarsvarlden.se,ekuriren.se,kkuriren.se,sn.se,expressen.se,lwcdn.com,barometern.se,blt.se,bt.se,kristianstadsbladet.se,olandsbladet.se,ostrasmaland.se,smp.se,sydostran.se,trelleborgsallehanda.se,ut.se,ystadsallehanda.se,allas.se,hant.se,svenskdam.se,baaam.se,frida.se,elle.se,femina.se,skanesport.se,thelocal.se,goteborgdirekt.se,vasterastidning.se,realtid.se,cafe.se,kingmagazine.se,mestmotor.se,svenskanamn.se,viivilla.se,ibnytt.se,gotland.net,strengnastidning.se,fragbite.se,mitti.se,byrum.se,sverigespringer.se,recept.se,babyhjalp.se,vxonews.se,alekuriren.se,nyheter24.se,modette.se,svenskgolf.se,golfing.se,gotlandjustnu.se##+js(json-prune, autoplay)
+youplay.se,affarsliv.com,affarslivgotland.se,corren.se,eposten.se,folkbladet.se,helagotland.se,klackspark.com,kuriren.nu,mvt.se,norrbottensaffarer.se,kindaposten.se,nsd.se,norran.se,nt.se,pt.se,unt.se,vt.se,vimmerbytidning.se,vf.se,hjotidning.se,kt.se,sla.se,mariestadstidningen.se,filipstadstidning.se,fryksdalsbygden.se,nwt.se,varmlandsaffarer.se,arvikanyheter.se,nkp.se,saffletidningen.se,provinstidningen.se,dalslanningen.se,karlskogatidning.se,nlt.se,skd.se,nsk.se,affarsvarlden.se,ekuriren.se,kkuriren.se,sn.se,expressen.se,lwcdn.com,barometern.se,blt.se,bt.se,kristianstadsbladet.se,olandsbladet.se,ostrasmaland.se,smp.se,sydostran.se,trelleborgsallehanda.se,ut.se,ystadsallehanda.se,allas.se,hant.se,svenskdam.se,baaam.se,frida.se,elle.se,femina.se,motherhood.se,skanesport.se,thelocal.se,goteborgdirekt.se,vasterastidning.se,realtid.se,cafe.se,kingmagazine.se,mestmotor.se,svenskanamn.se,viivilla.se,ibnytt.se,gotland.net,strengnastidning.se,fragbite.se,mitti.se,byrum.se,sverigespringer.se,recept.se,babyhjalp.se,vxonews.se,alekuriren.se,nyheter24.se,modette.se,svenskgolf.se,golfing.se,gotlandjustnu.se##+js(json-prune, autoplay)
 svenskjakt.se,globalportalen.org##+js(ra, autoplay)
 youplay.se##+js(aeld, loadstart)
 ! Don't mess with the default scrollbar!
