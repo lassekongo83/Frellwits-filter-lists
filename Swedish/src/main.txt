@@ -208,6 +208,7 @@ artbannersplus&task=show
 .nu/files/banner/
 .nu/prebid$script
 .nu/gfx/banner/
+.php?annonsid=$image
 .se/_Banners/
 .se/Banners/
 .se/bilder/banners/
@@ -787,6 +788,7 @@ artbannersplus&task=show
 ###ad-mega-container:not(body):not(html)
 ###ad-wallpaper:not(body):not(html)
 ###ad_topScroller:not(body):not(html)
+###advisa-iframe
 ###aloq-cookie-warning
 ###annons_head
 ###bottomAnnonsBar
@@ -1124,7 +1126,7 @@ arkenzoo.se##body:style(overflow:auto!important;)
 ! Common scriptlets
 senses.se##+js(acis, anOptions)
 mobilanyheter.net,lakartidningen.se##+js(set, MonsterInsights, undefined)
-egoinas.se,fysikstugan.se,enkelteknik.se,hamnen.se,cannabis.se,ljudochbild.se,tidningen.djurskyddet.se,influens.se,byggipedia.se##+js(acis, ai_front)
+egoinas.se,fysikstugan.se,enkelteknik.se,hamnen.se,cannabis.se,ljudochbild.se,tidningen.djurskyddet.se,influens.se,byggipedia.se##+js(acis, b2a)
 
 ! Facebook junk
 ||facebook.com/plugins/like$third-party
@@ -2218,8 +2220,9 @@ komponentkoll.se##img[src*="/partner/komplett"]:upward(2)
 affarsstaden.se##+js(acis, jQuery, adblockdetect)
 mmabetz.se##.desktop-homepage-ad, .desktop-main-ad, .latest-betting-campaigns, .best-casino-section, .top-casino
 foreca.se###ckieconsent
+||skk.se/TSPD/
 skk.se###cookie-button-banner
-skk.se##.campaigns, #MainContent_GlobalCampaigns
+skk.se##.campaigns, [id*="GlobalCampaigns"]
 battrenyheter.se##.gbnan, .abnan-single, a[href*="bettingsidor"]
 battrenyheter.se##.home-cat-first:has(a[href$="/sponsrad/"])
 battrenyheter.se##.post-item:has(a[href$="/samarbete/"])
@@ -2768,3 +2771,5 @@ outsidesweden.se##div[style^="font-size: 0.7"]:has-text(Annons:):upward(1)
 /insight.js$domain=nikkasystems.com
 nyatider.nu##a[target][href*="casino"]
 cannabisifokus.se##div[id^="canna-"]
+/images/visningar/*$domain=hundkartan.se
+||hundkartan.se/js/banner.js

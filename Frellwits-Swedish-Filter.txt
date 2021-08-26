@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2021-08-25 10:53:39 CEST
+! Last modified: 2021-08-26 15:11:07 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -33,6 +33,7 @@
 ###ad-mega-container:not(body):not(html)
 ###ad-wallpaper:not(body):not(html)
 ###ad_topScroller:not(body):not(html)
+###advisa-iframe
 ###aloq-cookie-warning
 ###annons_head
 ###bottomAnnonsBar
@@ -349,6 +350,7 @@
 .nu/files/banner/
 .nu/gfx/banner/
 .nu/prebid$script
+.php?annonsid=$image
 .se/*/nativeadvertising/
 .se/_Banners/
 .se/ad-delivery/
@@ -576,6 +578,7 @@
 /iab/iab.js
 /iframeadvloader.$script
 /illustrationer/annons_
+/images/visningar/*$domain=hundkartan.se
 /img/allalanse$image,domain=ekonominyheter.se
 /img/banklan/*$image,domain=ekonominyheter.se
 /img/bettingstugan.
@@ -1531,7 +1534,7 @@ skargarden.se###topbanner, #mittbanner
 skidspar.se###videoad
 skillingaryd.nu,xn--vrnamo-bua.nu###more-banners
 skk.se###cookie-button-banner
-skk.se##.campaigns, #MainContent_GlobalCampaigns
+skk.se##.campaigns, [id*="GlobalCampaigns"]
 skogsforum.se##.masthead, .col-right, a[href^="https://goo.gl/"], a[href*="//bit.ly/"]
 skrattnet.se,webben7.se##.region-sidebar-second
 skyscanner.se###cookie-banner-root
@@ -1898,6 +1901,7 @@ yelp.se##.js-cookie-iframe
 ||hpevoices.com^$third-party
 ||hsleadflows.net^$third-party
 ||humorbrevet.se/externa_bilder
+||hundkartan.se/js/banner.js
 ||iconosquare.com^$third-party
 ||idg.se/sharecounter?
 ||idrottonline.se/client-views/cookieinfo$xmlhttprequest
@@ -2120,6 +2124,7 @@ yelp.se##.js-cookie-iframe
 ||skattamindre.se^
 ||skidspar.se/scripts/html5videovastplugin.js
 ||skidspar.se/scripts/revive.js
+||skk.se/TSPD/
 ||skogsforum.se/sda/
 ||skogsforum.se^$csp=worker-src 'none'
 ||sleeknote.com^$third-party
