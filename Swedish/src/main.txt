@@ -93,6 +93,7 @@
 ||kaloo.ga^$third-party
 ||kingsumo.com^$third-party
 ||kortio.se^$third-party
+||kundvisaren.se^$third-party
 ||leadconnect.ipmaxi.se^$third-party
 ||leadenhancer.com^$third-party
 ||legalmonster.com^$third-party
@@ -254,6 +255,7 @@ artbannersplus&task=show
 .se/revive/www/
 .se/sponsored/$image
 .se/Static/banners/
+.se/track/t.php?
 .se/upload/annons/
 .se/uploads/banners/
 .se/uploads/images/banners/
@@ -761,6 +763,7 @@ artbannersplus&task=show
 ##a[href*="tradedoubler.com/click?"]
 ##a[href*="/click.adrecord"] img
 ##a[href*="/click.linksynergy"] img
+##a[href*="/cvasino.se/"] img
 ##a[data-bid="1"][href*="/linkout"]
 ##a[title="LeoVegas"]
 ##a.card.-sponsored
@@ -992,6 +995,7 @@ artbannersplus&task=show
 ##div.ad.container
 ##div.ad.panorama
 ##div.ad-after-header
+##div.ad-component
 ##div.ad-panorama_dynamic-wrapper
 ##div.ad-toppbanner
 ##div.annonsbox
@@ -1034,6 +1038,7 @@ artbannersplus&task=show
 ##div.big-desktop-ads
 ##div.big-mobile-ads
 ##div.td-more-articles-box
+##div.widget_widget_dfp
 ##div#mega-ad-content
 ##div#panorama_ad
 ##div#panoramaad
@@ -1102,8 +1107,8 @@ arkenzoo.se##body:style(overflow:auto!important;)
 ! Common site specific blocking
 /wp-content\/uploads\/[0-9]+/$script,domain=villalivet.se|skanesport.se
 /wp-content/uploads/*banner$image,domain=marsta.nu|polistidningen.se|alltomhif.se|brollopsmagasinet.se|bussmagasinet.se|danstidningen.se|guldkanalen.se|katerinamagasin.se|ljuskultur.se|sff.nu|sportpanelen.se|viralsweden.com|vardfokus.se|turismnytt.se|customerinsider.se|borattforum.se|dental24.se|tekniknytt.se|pakryss.se
-/wp-content/uploads/*betting$image,domain=nyadagbladet.se|kulturbloggen.com|hockeybladet.nu|newsvoice.se
-/wp-content/uploads/*casino$image,domain=nyadagbladet.se|kulturbloggen.com|newsvoice.se|svenskhistoria.se|battrestadsdel.se|zeromagazine.nu|totallyorebro.se|totallystockholm.se|hockeybladet.nu|djungeltrumman.se|vaken.se|lokalsport.nu|tekniknytt.se|kingsizemag.se|spelrum.net
+/wp-content/uploads/*betting$image,domain=nyadagbladet.se|kulturbloggen.com|hockeybladet.nu|newsvoice.se|spelochfilm.se
+/wp-content/uploads/*casino$image,domain=nyadagbladet.se|kulturbloggen.com|newsvoice.se|svenskhistoria.se|battrestadsdel.se|zeromagazine.nu|totallyorebro.se|totallystockholm.se|hockeybladet.nu|djungeltrumman.se|vaken.se|lokalsport.nu|tekniknytt.se|kingsizemag.se|spelrum.net|spelochfilm.se
 /banners$script,domain=magasinetparagraf.se
 /gdpr/*$domain=capdesign.se|visitlulea.se|se.laowl.com|husbilskompisar.se|rotter.se|momondo.se|borattforum.se
 /glimr$script,domain=aftonbladet.se|blocket.se|wellness.se
@@ -1111,7 +1116,7 @@ arkenzoo.se##body:style(overflow:auto!important;)
 /pum/*$domain=tkj.se|flm.nu|biostock.se
 /videojs.ima.$domain=gamereactor.se|sportbladetplay.se
 ||cdn.cookielaw.org^$script,domain=cartoonnetwork.se|nvp.se|recept.se|tv4.se|tv4play.se|koket.se|fotbollskanalen.se|flashscore.se|manpower.se|findit.se|ikea.com|hastnet.se|gaffa.se|mtv.se|natgeotv.com|internetkunskap.se|internetstiftelsen.se|yelp.se|kokaihop.se
-||cookiebot.com^$third-party,domain=etc.se|goteborgdirekt.se|itaboutdoor.se|kingsizemag.se|ng.se|skeppsbrons.se|swedroid.se|wesafe.se|tankesport.se|smartsenior.se|vasterastidning.se|bax-shop.se|kurera.se|upplysning.se|mitti.se|circlek.se|livetochdiabetes.se|tn.se|findroommate.se|advokaten.se
+||cookiebot.com^$third-party,domain=etc.se|goteborgdirekt.se|itaboutdoor.se|kingsizemag.se|ng.se|skeppsbrons.se|swedroid.se|wesafe.se|tankesport.se|smartsenior.se|vasterastidning.se|bax-shop.se|kurera.se|upplysning.se|mitti.se|circlek.se|livetochdiabetes.se|tn.se|findroommate.se|advokaten.se|sakochliv.se
 ||cookiepro.com^$third-party,domain=sd.se|birthday.se|friendsarena.se|hastnet.se|aktiespararna.se|spela.se|fz.se|sweclockers.com|djurskyddet.se
 ||evidon.com^$third-party,domain=morningstar.se|tripadvisor.se|fasting.nu
 ||mailerlite.com^$third-party,domain=vandringsguiden.se|flm.nu
@@ -1284,7 +1289,7 @@ egoinas.se,fysikstugan.se,enkelteknik.se,hamnen.se,cannabis.se,ljudochbild.se,ti
 /plugins/wp-evolve-gpt/*
 /plugins/wp-gdpr-compliance/*$script
 /plugins/wp-lrf-paywall/*
-/plugins/wp-popups-lite$domain=grillbaronen.se
+/plugins/wp-popups-lite$domain=grillbaronen.se|spelochfilm.se
 /plugins/wp-power-stats/*
 /plugins/wp-sentry-integration/*$domain=chef.se
 /plugins/wp-snow-effect/*
@@ -1847,6 +1852,7 @@ lundagard.se,boktugg.se,outsidesweden.se,morotsliv.com,macken.xyz,affarsstaden.s
 /jquery.smoothwheel/*$script
 /tapatalkdetect.$script,1p
 /themes/Jaz/inc/js/*nicescroll
+/smart-app-banner*/banner.js
 !#endif
 ! Bye bye annoying autoplay in articles etc :-)
 youplay.se,affarsliv.com,affarslivgotland.se,corren.se,eposten.se,folkbladet.se,helagotland.se,klackspark.com,kuriren.nu,mvt.se,norrbottensaffarer.se,kindaposten.se,nsd.se,norran.se,nt.se,pt.se,unt.se,vt.se,vimmerbytidning.se,vf.se,hjotidning.se,kt.se,sla.se,mariestadstidningen.se,filipstadstidning.se,fryksdalsbygden.se,nwt.se,varmlandsaffarer.se,arvikanyheter.se,nkp.se,saffletidningen.se,provinstidningen.se,dalslanningen.se,karlskogatidning.se,nlt.se,skd.se,nsk.se,affarsvarlden.se,ekuriren.se,kkuriren.se,sn.se,expressen.se,lwcdn.com,barometern.se,blt.se,bt.se,kristianstadsbladet.se,olandsbladet.se,ostrasmaland.se,smp.se,sydostran.se,trelleborgsallehanda.se,ut.se,ystadsallehanda.se,allas.se,hant.se,svenskdam.se,baaam.se,frida.se,elle.se,femina.se,motherhood.se,skanesport.se,thelocal.se,goteborgdirekt.se,vasterastidning.se,realtid.se,cafe.se,kingmagazine.se,mestmotor.se,svenskanamn.se,viivilla.se,ibnytt.se,gotland.net,strengnastidning.se,fragbite.se,mitti.se,byrum.se,sverigespringer.se,recept.se,babyhjalp.se,vxonews.se,alekuriren.se,nyheter24.se,modette.se,svenskgolf.se,golfing.se,gotlandjustnu.se##+js(json-prune, autoplay)
@@ -2774,3 +2780,13 @@ nyatider.nu##a[target][href*="casino"]
 cannabisifokus.se##div[id^="canna-"]
 /images/visningar/*$domain=hundkartan.se
 ||hundkartan.se/js/banner.js
+||cdn.convertbox.com^$domain=wernamaten.se
+/detroitchicago/denver.js$domain=wernamaten.se
+/detroitchicago/cmbdv2.js$domain=wernamaten.se
+wernamaten.se###ez-cookie-dialog-wrapper
+sakochliv.se##.cookie-disclaimer-wrap
+sakochliv.se##+js(acis, checkCampaignCookie)
+fotbollskane.se,fotbollsthlm.se##.footer-links
+tidningen.se##.sidebar .widget_widget_code
+spelochfilm.se##a[href*="casino"]:upward(.mh-posts-stacked-wrap)
+spelochfilm.se##.mh-sidebar .textwidget
