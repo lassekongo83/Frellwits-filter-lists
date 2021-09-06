@@ -1405,7 +1405,7 @@ lwcdn.com##+js(aeld, /^(?:adBlocker|contextmenu)$/)
 ||schibsted.com/pulse.$third-party
 ||youbora.com^*/sp.min.js$important,domain=aftonbladet.se|svd.se|wellness.se
 ! SVD
-svd.se###mega-ad-wrapper, .Container--ad, .theme-Native
+svd.se###mega-ad-wrapper, .Container--ad, .theme-Native, .AdWrapper, .AdPositionData
 www.svd.se##+js(aopr, navigator.sendBeacon)
 ||engage-auth.schibsted.media^$script
 ! Aftonbladet
@@ -2222,7 +2222,7 @@ foodora.se##.top-banner-container
 nyheteridag.se##.widget.facebook
 nyheteridag.se##.content > div:not([class]) img, a[href*="www.casino"]
 nyheteridag.se##.article-inner:has(h2:has-text(/samarbetslänkar/i))
-lundagard.se###bdCheckAlso.bdCheckAlsoShow, .topBanner
+lundagard.se###bdCheckAlso.bdCheckAlsoShow, .topBanner, #sidebar .widget_media_image
 knulla.se###cookie-popup
 komponentkoll.se##.gdpr-wide
 komponentkoll.se##img[src*="/partner/komplett"]:upward(2)
@@ -2314,7 +2314,7 @@ friidrott.se###sponsor
 ||annons.lidkopingsnytt.nu^
 familjesidan.se##.cookies-wrapper
 dagen.se##.cookie-acceptance
-dagen.se##.video-annons, .native-box
+dagen.se##.video-annons, .native-box, .arcad-block-container
 sff.nu###sidebar > li:not(.widget_wp_sidebarlogin), li.widget_sp_image
 bandyfeber.com##.widget_sp_image, a[title^="ANNONS"]
 bandyfeber.com##article:has(a[href*="/annons-"])
@@ -2338,6 +2338,7 @@ lokalnytt.se##.panoramaImageBox
 /img/banklan/*$image,domain=ekonominyheter.se
 ||feed.mikle.com^$third-party,domain=ekonominyheter.se
 ekonominyheter.se###lblock-ads
+ekonominyheter.se##.td-fix-index:has(a[href*="casino"])
 vi.se##.cookieNotification
 byggipedia.se##aside .textwidget:has-text(/sponsr|samarbetspartners/i)
 byggipedia.se##.protect_contents-overlay
