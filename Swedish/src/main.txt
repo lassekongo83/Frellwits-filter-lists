@@ -1761,8 +1761,7 @@ nouw.com##.Container_blogPost:has(em:has-text(/reklamsamarbete/i))
 nouw.com,elinskoglund.com,fannystaaf.se,lovisawallin.se,moamattsson.se##[title="Ad space"]
 /cookie_info.$domain=trendenser.se
 trendenser.se##.post_feed_post:has(.sponsor-info)
-trendenser.se##a[href*="/category/reklam"]:upward(.featured-post)
-trendenser.se##a[href*="/category/annons"]:upward(.featured-post)
+trendenser.se##a[href*="/category/reklam"], a[href*="/category/annons"]:upward(.featured-post)
 morotsliv.com###sidebar .et_pb_widget
 ||thestoryof2.se/em_event.html
 /postscribe.$script,domain=linnherbertsson.se
@@ -2069,8 +2068,7 @@ byggahus.se###svartalistan-login-required-overlay
 byggahus.se##body.forum-logged-out .svartalistan-results-login-required:style(height: unset !important;)
 byggahus.se##+js(aeld, /adblockDetector|adsInserted|partnerExternalLinkClick/)
 metromode.se##.slick-item:has(.advert):remove()
-metromode.se##.b-card:has(.advert)
-metromode.se##.b-related__item:has(.advert)
+metromode.se##.b-card, .b-related__item:has(.advert)
 ||foretagande.se/a/$xmlhttprequest
 ||foretagande.se/r/$xmlhttprequest
 foretagande.se##article:has(.sponsored-text)
@@ -2189,9 +2187,7 @@ podplay.com##.site-mw
 ||internetmedicin.se/log.php
 /mod.js$domain=icd.internetmedicin.se
 /ad-render$domain=internetmedicin.se
-piraja.se##.intro:has(.spons)
-piraja.se###hero:has(.spons)
-piraja.se###featholder:has(.spons)
+piraja.se##.intro, #hero, #featholder:has(.spons)
 piraja.se###panoramaholder, #parallax
 _jquery.blockUI.$domain=fssweden.se
 nyadagbladet.se##.third-col
@@ -2325,8 +2321,7 @@ bussmagasinet.se###page > div:not(.left):not(.right)
 bussmagasinet.se###titlebanner
 /magnific-popup$domain=shortcut.se
 shortcut.se##.annons-block, .layout-advertisement
-shortcut.se##.employer:has(.sponsored)
-shortcut.se##article:has(.sponsored)
+shortcut.se##.employer, article:has(.sponsored)
 shortcut.se##.blockquote:has(strong:has-text(/^annons/i))
 arkitektur.se##[class*="panorama"]
 fastighetstidningen.se##.adspace
@@ -2392,10 +2387,8 @@ avanza.se##.section:has(a:has-text(/^annons/i))
 snowmobile.se,atvmag.se##.more-stories
 snowmobile.se,atvmag.se##.location-header_before
 varmepumpsforum.com,poolforum.se,lindenytt.com##a[target="_blank"] img[alt]
-/bilder/foretag/*$domain=falubsbandy.com
 ||sa.svenskalag.se/*/__tm.gif
-falubsbandy.com##.ImageLinkBox
-bandybyn.se,falubsbandy.com###RightDiv
+bandybyn.se###RightDiv
 bandybyn.se,badminton.nu###RightOuterBannerDiv
 bandybyn.se##.StartPageBoxRow > .boxcontainer:nth-child(2) > .StartPageBoxNarrow
 bandybyn.se##.StartPageBoxRow > .boxcontainer:last-child > .StartPageBoxNarrow
@@ -2472,7 +2465,7 @@ lokalsport.nu##.art-sidebar1, .art-sidebar2
 rastaochdalla.se##.widget_advertise
 rastaochdalla.se##.sidebar-right > .widget_social_links
 hockeybladet.nu##.td_mod_wrap a img[data-permalink], a[data-wpel-link="external"][onclick]
-futsalmagasinet.se##.vc_widget_sidebar > .widget_text
+futsalmagasinet.se##.wp-block-column > h2:has-text(/annonser/i) ~ p
 futsalmagasinet.se##.td_block_wrap:has(span:has-text(/annonserat innehåll/i))
 arkitekten.se##.post-teaser__wrapper--ad
 /cookienotice.js$domain=nordic.ign.com
@@ -2651,7 +2644,7 @@ skyscanner.se###cookie-banner-root
 svenskfast.se##.cookie-law__wrapper
 /native?$domain=varden.se
 varden.se##.cdk-overlay-container, app-cookies
-varden.se##app-blog-puff:has(.sponsored-label)
+varden.se##app-native-puff
 ibnytt.se##.widget:has(h3:has-text(Speltips))
 ||svenskfotboll.se/ui/dist/js/ai.
 inblick.se##.cookieBG
@@ -2753,9 +2746,7 @@ inredningsarkitektur.se##.article:has-text(/sponsrad artikel/i)
 inredningsarkitektur.se##body:style(overflow:initial!important)
 campingsverige.se##.banner_window
 campingsverige.se##.post_sponsrad_label:upward(1)
-folkhalsasverige.se##.vicky-fancybar-inner:has-text(/sponsrad/i)
-folkhalsasverige.se##.vicky-post-whitebox:has-text(/sponsrad/i)
-folkhalsasverige.se##.featurette:has-text(/sponsrad/i)
+folkhalsasverige.se##.featurette,.vicky-post-whitebox,.vicky-fancybar-inner:has-text(/sponsrad/i)
 folkhalsasverige.se##+js(acis, showConsentDlg)
 vasterasvaxer.se,partillevaxer.se##.elementor-widget-heading:has-text(/annons/i)
 vasterasvaxer.se,partillevaxer.se##.elementor-widget-heading:has-text(/annons/i) + .elementor-widget-image
