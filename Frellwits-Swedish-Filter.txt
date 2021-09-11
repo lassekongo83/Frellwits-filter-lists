@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2021-09-09 14:27:26 CEST
+! Last modified: 2021-09-11 10:33:41 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -68,8 +68,8 @@
 ###cookiejar
 ###cookielawwarning
 ###cookieMsgBlock
-###cookieNotice
 ###CookieNotice
+###cookieNotice
 ###cookies-acceptance .alert.bottom
 ###cookiesInfo
 ###dialog-eu-cookie-law
@@ -497,6 +497,7 @@
 /bmbDfpUtils.$script
 /bmbFusionUtils.$script
 /bnrscr?$domain=cleannet.se|dagenshandel.se|entreprenad.com|food-supply.se|foodnet.se|fri-kopenskap.se|habit.se|kemivarldenbiotech.se|lifesciencesweden.se|medtechmagazine.se|motormagasinet.se|packnet.se|plastnet.se|processnet.se|recyclingnet.se|rt-forum.se|skyddosakerhet.se|transportnet.se|uochd.se|verkstaderna.se|woodnet.se
+/brand-metrics$domain=hemnet.se
 /bundles/comscore$domain=expressen.se
 /bundles/exp-analytics$domain=expressen.se
 /bundles/ga-$script,domain=expressen.se
@@ -556,6 +557,7 @@
 /evidon*.js$domain=morningstar.se
 /ext/phpbb/ads/*
 /ezoic$domain=temadagar.se
+/facebook_tracking_pixel$script
 /fb_pixel.js
 /fixed-panorama$domain=fiskejournalen.se|jaktjournalen.se
 /flex-mag/js/dfp.js
@@ -655,7 +657,6 @@
 /native.html$domain=allakorsord.se|allas.se|baaam.se|dromhemochtradgard.se|elle.se|femina.se|frida.se|hant.se|mabra.com|motherhood.se|residencemagazine.se|svenskdam.se
 /native?$domain=varden.se
 /native_$script,domain=affarsvarlden.se
-/new_construction_ads/*$domain=hemnet.se
 /news55-ga.js$domain=news55.se
 /noview.$script,domain=gofm.se|trafikdirekt.se|trafikexperten.com|trafikradion.se
 /omniture/s_code.js$domain=~atgplay.se
@@ -1340,7 +1341,6 @@ hitta.se###__next > div[class^="style_notification"]
 hitta.se##[class*="dummyAd"], [class*="StyledAdSlot"], [data-bind*="Ad"], div[class^="GraphicAd_"], [class*="adContainer"], [id*="_panorama"], [id*="_skyscraper"]
 hitta.se##[class^="styleManual_mainContentBox"] > div[style^="min-height"]:first-of-type
 hitta.se##[data-trackimp], .integration-txt, .section-details--alb
-hittahem.se##.user-consent.active
 hockeybladet.nu##.td_mod_wrap a img[data-permalink], a[data-wpel-link="external"][onclick]
 hockeyguiden.com##.main-loader.loader-bg
 hockeymagasinet.com##gdpr-alert
@@ -1448,6 +1448,7 @@ mittkok.expressen.se##.widget-social-media
 mmabetz.se##.desktop-homepage-ad, .desktop-main-ad, .latest-betting-campaigns, .best-casino-section, .top-casino
 mmanytt.se##.front-banner,.front-banner-cover,#text-2,[class*="sponsrat-inlagg"],a[href*="://kampanjer."],.ohmbet_link
 mobil.se,nordichardware.se##.pspy_info
+modernalivet.se##.modal-wrap, .slide-in-box
 modette.se##.true_native_block
 morotsliv.com###sidebar .et_pb_widget
 morotsliv.com##.et_bloom .et_bloom_flyin_center
@@ -1787,7 +1788,7 @@ yelp.se##.js-cookie-iframe
 ||cookieconsent.popupsmart.com^$third-party
 ||cookieinformation.com^$subdocument,third-party
 ||cookieinfoscript.com^$third-party
-||cookielaw.org^$domain=cartoonnetwork.se|fastighetsfolket.se|findit.se|flashscore.se|fotbollskanalen.se|gaffa.se|handelsnytt.se|hastnet.se|ikea.com|internetkunskap.se|internetstiftelsen.se|kokaihop.se|koket.se|manpower.se|mtv.se|natgeotv.com|nvp.se|recept.se|sekotidningen.se|tv4.se|tv4play.se|yelp.se
+||cookielaw.org^$domain=cartoonnetwork.se|fastighetsfolket.se|findit.se|flashscore.se|fotbollskanalen.se|gaffa.se|handelsnytt.se|hastnet.se|ikea.com|internetkunskap.se|internetstiftelsen.se|kokaihop.se|koket.se|manpower.se|mtv.se|natgeotv.com|nvp.se|recept.se|sekotidningen.se|spisa.nu|tv4.se|tv4play.se|yelp.se
 ||cookienotice.co^$third-party
 ||cookiepolicy.peytz.dk^$third-party
 ||cookiepro.com^$third-party,domain=aktiespararna.se|birthday.se|djurskyddet.se|friendsarena.se|fz.se|hastnet.se|sd.se|spela.se|sweclockers.com

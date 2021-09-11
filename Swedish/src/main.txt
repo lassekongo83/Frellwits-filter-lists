@@ -346,6 +346,7 @@ artbannersplus&task=show
 /eu_cookie_compliance/*$script
 /eu-cookie-law.min.js$script
 /ext/phpbb/ads/*
+/facebook_tracking_pixel$script
 /fb_pixel.js
 /flex-mag/js/dfp.js
 /forum/assets/google-tag-manager
@@ -1118,7 +1119,7 @@ arkenzoo.se##body:style(overflow:auto!important;)
 /profile$ping,domain=feber.se|hamnen.se|lawline.se|tasteline.com|tjock.se|veckorevyn.com|arbetarskydd.se|lag-avtal.se|nyteknik.se
 /pum/*$domain=tkj.se|flm.nu|biostock.se
 /videojs.ima.$domain=gamereactor.se|sportbladetplay.se
-||cookielaw.org^$domain=cartoonnetwork.se|nvp.se|recept.se|tv4.se|tv4play.se|koket.se|fotbollskanalen.se|flashscore.se|manpower.se|findit.se|ikea.com|hastnet.se|gaffa.se|mtv.se|natgeotv.com|internetkunskap.se|internetstiftelsen.se|yelp.se|kokaihop.se|sekotidningen.se|handelsnytt.se|fastighetsfolket.se
+||cookielaw.org^$domain=cartoonnetwork.se|nvp.se|recept.se|tv4.se|tv4play.se|koket.se|fotbollskanalen.se|flashscore.se|manpower.se|findit.se|ikea.com|hastnet.se|gaffa.se|mtv.se|natgeotv.com|internetkunskap.se|internetstiftelsen.se|yelp.se|kokaihop.se|sekotidningen.se|handelsnytt.se|fastighetsfolket.se|spisa.nu
 ||cookiebot.com^$third-party,domain=etc.se|goteborgdirekt.se|itaboutdoor.se|kingsizemag.se|ng.se|skeppsbrons.se|swedroid.se|wesafe.se|tankesport.se|smartsenior.se|vasterastidning.se|bax-shop.se|kurera.se|upplysning.se|mitti.se|circlek.se|livetochdiabetes.se|tn.se|findroommate.se|advokaten.se|sakochliv.se
 ||cookiepro.com^$third-party,domain=sd.se|birthday.se|friendsarena.se|hastnet.se|aktiespararna.se|spela.se|fz.se|sweclockers.com|djurskyddet.se
 ||evidon.com^$third-party,domain=morningstar.se|tripadvisor.se|fasting.nu
@@ -2000,16 +2001,14 @@ tasteline.com##.article.related > a[href*="&utm"][target="_blank"]
 spelrum.net##a[href*="casino.com"]
 spelrum.net##.main-container > div.vc_row:last-child
 branschkoll.se##div[id^="brans-"]
-/new_construction_ads/*$domain=hemnet.se
+/brand-metrics$domain=hemnet.se
 /packs/consent$domain=hemnet.se
 ||api.sfnix.net^$image,domain=hemnet.se
+hemnet.se###ad_unit_placeholder
+hemnet.se##.article-news__link, .listing-articles__article-link, .featured-news__link, result-article__link:has([class*="sponsored"])
 hemnet.se##.recent-news__item:has(.recent-news__category:has-text(/sponsrad/i))
-hemnet.se##.article-news__link:has(.news-article--sponsored)
-hemnet.se##.featured-news__link:has(.featured-news__ribbon--sponsored)
-hemnet.se##.result-article__link:has(.article__ribbon--sponsored)
 hemnet.se##.start-page-hero__caption:has(.start-page-hero__caption-category:has-text(/sponsrad av/i))
 hemnet.se##.article-list-post a:has(span:has-text(Sponsrad))
-hemnet.se###ad_unit_placeholder
 fokus.se##.Cookie-notice
 fokus.se##.mediaconnect-protected-content, .mediaconnect-protected-content--show:style(max-height: unset !important; overflow: unset !important;)
 fokus.se##.mediaconnect-protected-content:after:style(background: unset !important;)
@@ -2414,7 +2413,6 @@ spanaren.se##.textwidget a[target="blank"] img
 svenskhistoria.se##.widget_et_ads, .module-etads, #text-13, #block-4, a[target="_blank"][rel="noopener noreferrer"], a > img[width="300"][height="250"], a > img[width="800"][height="175"]
 tittapavideon.se##.adv
 tittapavideon.se###cookcont
-hittahem.se##.user-consent.active
 mygatemagazine.se##.textwidget:has-text(Annons)
 /CookieInfo.js$domain=viddla.se
 bicycling.se,runnersworld.se##.post-card-sponsored
@@ -2785,3 +2783,6 @@ tidningen.se##.sidebar .widget_widget_code
 spelochfilm.se##a[href*="casino"]:upward(.mh-posts-stacked-wrap)
 spelochfilm.se##.mh-sidebar .textwidget
 varldenidag.se##.profile-annons
+modernalivet.se##.modal-wrap, .slide-in-box
+modernalivet.se##body.modal-active:style(overflow:unset!important)
+modernalivet.se##h3:has-text(/annons/i):upward(.sidebar-widget)
