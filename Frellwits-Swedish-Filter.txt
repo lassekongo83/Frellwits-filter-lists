@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2021-09-11 10:35:46 CEST
+! Last modified: 2021-09-13 08:26:11 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -68,8 +68,8 @@
 ###cookiejar
 ###cookielawwarning
 ###cookieMsgBlock
-###cookieNotice
 ###CookieNotice
+###cookieNotice
 ###cookies-acceptance .alert.bottom
 ###cookiesInfo
 ###dialog-eu-cookie-law
@@ -270,6 +270,7 @@
 ##div.ad-toppbanner
 ##div.ad.container
 ##div.ad.panorama
+##div.advads-background
 ##div.annonsbox
 ##div.ashe-preloader-wrap
 ##div.avia-cookiemessage-bottom
@@ -321,6 +322,7 @@
 ##div.topmost-banner
 ##div.widget_widget_dfp
 ##div.wppasrotate
+##div[class$="popup-and-layer-ads"]
 ##div[class^="borka-insider"]
 ##div[class^="borka-panorama"]
 ##div[class^="borka-widescreen"]
@@ -1154,6 +1156,7 @@ cannabis.se##.header-ads-wrapper, .ai-adb-hide, .ai-sticky-widget, .hampaonline
 cannabis.se,ordfrontmagasin.se##.pum-overlay
 cannabisifokus.se##div[id^="canna-"]
 capdesign.se###shareright
+chalmers.se###cookie_directive_container
 chef.se##.Blurb--native
 chef.se##.global-cookie-msg
 chef.se##.Product-modal,.Offer-popup
@@ -1328,7 +1331,7 @@ hastnet.se##.add-wrap, .listings-search-ads, .right_panel
 hbwebben.se##.elementor-widget-container > a > img
 hd.se,sydsvenskan.se##[class*="teaser-native"]
 hd.se,sydsvenskan.se,typkanske.se##.gdpr
-hejaolika.se##.partnerinfostyle
+hejaolika.se##.partnerinfostyle, div[id^="hejao-"]
 helahisingen.se###custom_html-15, .code-block img
 hemhyra.se##.pageCookies
 hemmafixbloggen.se,surfa.se,teknikfreak.se###loader-wrapper
@@ -1901,6 +1904,7 @@ yelp.se##.js-cookie-iframe
 ||hamsterpaj.net/gfx/banners/
 ||happygreen.se^$third-party
 ||hapyak.com^$third-party
+||hejaolika.se/wp-content/ajax-handler.php?ads
 ||helloreco.com^$third-party
 ||heroaffiliates.com^$third-party
 ||herokuapp.com/visit?$image
