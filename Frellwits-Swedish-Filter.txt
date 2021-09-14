@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2021-09-13 08:26:11 CEST
+! Last modified: 2021-09-14 11:14:05 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -68,8 +68,8 @@
 ###cookiejar
 ###cookielawwarning
 ###cookieMsgBlock
-###CookieNotice
 ###cookieNotice
+###CookieNotice
 ###cookies-acceptance .alert.bottom
 ###cookiesInfo
 ###dialog-eu-cookie-law
@@ -665,7 +665,7 @@
 /OneSignalSDKWorker$script
 /orion/loada$script
 /packs/consent$domain=hemnet.se
-/pagead$domain=horoskoptid.se
+/pagead$domain=horoskoptid.se|vilaser.se
 /pages/native$domain=aktuellhallbarhet.se|byggindustrin.se|dagensmedia.se|dagensmedicin.se|dagenssamhalle.se|fastighetsnytt.se|market.se|resume.se
 /pages/tag$domain=aktuellhallbarhet.se|byggindustrin.se|dagensmedia.se|dagensmedicin.se|dagenssamhalle.se|fastighetsnytt.se|market.se|resume.se
 /permutive-async.js$script
@@ -1103,6 +1103,7 @@ bandyplay.se##div[class^="CookieConsent"]
 barnsemester.se##.puffLine
 barometern.se,blt.se,borasdly.se,bt.se,kalmarposten.se,kristianstadsbladet.se,olandsbladet.se,osterlenmagasinet.se,ostrasmaland.se,smp.se,sydostran.se,trelleborgsallehanda.se,ut.se,vxonews.se,ystadsallehanda.se##.component__guide-ads, #fullpage-ad-portal, div[style="min-height: 302px;"]
 barometern.se,blt.se,borasdly.se,bt.se,kalmarposten.se,kristianstadsbladet.se,olandsbladet.se,osterlenmagasinet.se,ostrasmaland.se,smp.se,sydostran.se,trelleborgsallehanda.se,ut.se,vxonews.se,ystadsallehanda.se##.component_gdprMessage__container
+batliv.se,borattforum.se,brollopsmagasinet.se,bussmagasinet.se,globalpolitics.se,nyhetersto.se,svenskbyggtidning.se##a.gofollow[data-track]
 battrenyheter.se##.gbnan, .abnan-single, a[href*="bettingsidor"]
 battrestadsdel.se###top-banner-mobile, #HideBanner, .apd-text, .apds_main, .entry-priomaker, [class^="dls-"]
 battrestadsdel.se,casinoexpo.se,flashback.se,leta.se###top-banner
@@ -1122,7 +1123,6 @@ blocket.se###placement_panorama, .blocket-placement, div[style="height: 240px;"]
 bokadirekt.se##.home-banner, img[alt*="banner"]
 booli.se###app > div:last-child
 booli.se###outer
-borattforum.se,brollopsmagasinet.se,bussmagasinet.se,globalpolitics.se,nyhetersto.se,svenskbyggtidning.se##a.gofollow[data-track]
 borskollen.se##[id^="borskollen_small"],[id^="borskollen_large"],.featured-link
 borssnack.di.se##.bn_advertisement__panorama, .bn_advertisement__container
 borsvarlden.com##.sponsored-articles-container,.nav-sep-blink,.annons-label,.index-side-banner-wrapper
@@ -1270,6 +1270,7 @@ foodora.se##.top-banner-container
 foreca.se###ckieconsent
 foretagarna.se##.c-cookie
 forum.macworld.se,idg.se##.idgcp__layer
+forum.mustangclubsweden.org##a[href*="&do=advertisement&ad=1"]
 forum.robsoft.nu##td[valign="middle"] > a[target="_blank"]
 forum.robsoft.nu,svenskaturistforeningen.se##.cookie-box
 forvaltarforum.se##[id^="ff_banner"], .home .partner_article + .mh-section, .home .payed_article + .mh-section, .home-columns .ticker-title.partner_article, .home-columns .ticker-title.payed_article, .mh-header .widget_sow-slider, .sow-slider-image, .houdini_partner_article
@@ -1628,6 +1629,7 @@ viivilla.se###product-area
 viivilla.se##.afubar-top, .native-ad-md, .sp-article
 viivilla.se##.overlay-bottom
 viktvaktarna.se##div[class*="GDPRBanner"]
+vilaser.se##.Cookie-banner
 villalivet.se##.mtsnb, .villalivet-target
 vimedbarn.se##.annonsinlagg, .annonsen
 vinbanken.se##.push-to-newsletter, .fancybox-overlay
@@ -2140,7 +2142,6 @@ yelp.se##.js-cookie-iframe
 ||skattamindre.se^
 ||skidspar.se/scripts/html5videovastplugin.js
 ||skidspar.se/scripts/revive.js
-||skk.se/TSPD/
 ||skogsforum.se/sda/
 ||skogsforum.se^$csp=worker-src 'none'
 ||sleeknote.com^$third-party
