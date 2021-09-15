@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2021-09-14 11:14:05 CEST
+! Last modified: 2021-09-15 10:46:26 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -280,6 +280,7 @@
 ##div.block-bean-header-banner
 ##div.borka-ad
 ##div.box--squareAd
+##div.brix-ads-by-posttype
 ##div.bs-wrap-gdpr-law
 ##div.bsa_pro_ajax_load
 ##div.cli-modal-backdrop
@@ -300,6 +301,7 @@
 ##div.l-footer__adtext
 ##div.leeads-wrapper-desktop
 ##div.NativeAd
+##div.navbar-ad-section
 ##div.newsletter-cta
 ##div.newsletter-slider
 ##div.o-indenter--ad
@@ -478,7 +480,7 @@
 /atoms/images/*banner$domain=etc.se
 /AudienceTarget$script,domain=morningstar.se
 /avia-snippet-cookieconsent.$script
-/bam-data$xmlhttprequest,domain=allehanda.se|arbetarbladet.se|avestatidning.com|bandypuls.se|bblat.se|dalademokraten.se|dt.se|fagersta-posten.se|falkopingstidning.se|gd.se|jnytt.se|jp.se|lt.se|ltz.se|na.se|norrteljetidning.se|nynashamnsposten.se|op.se|salaallehanda.com|skaraborgslanstidning.se|skovdenyheter.se|smalandsdagblad.se|smalanningen.se|smt.se|st.nu|tidningenharjedalen.se|tranastidning.se|vastgotabladet.se|vetlandaposten.se|vlt.se|vn.se
+/bam-data$xmlhttprequest,domain=allehanda.se|arbetarbladet.se|avestatidning.com|bandypuls.se|bblat.se|dalademokraten.se|dt.se|fagersta-posten.se|falkopingstidning.se|gd.se|helahalsingland.se|jnytt.se|jp.se|lt.se|ltz.se|na.se|norrteljetidning.se|nynashamnsposten.se|op.se|salaallehanda.com|skaraborgslanstidning.se|skovdenyheter.se|smalandsdagblad.se|smalanningen.se|smt.se|st.nu|tidningenharjedalen.se|tranastidning.se|vastgotabladet.se|vetlandaposten.se|vlt.se|vn.se
 /banner/ads/*
 /banners$script,domain=magasinetparagraf.se
 /banners/*casino$image
@@ -557,6 +559,7 @@
 /eu_cookie_compliance/*$script
 /EUModalDialog$script,domain=morningstar.se
 /evidon*.js$domain=morningstar.se
+/exposure$xmlhttprequest,domain=lokalguiden.se
 /ext/phpbb/ads/*
 /ezoic$domain=temadagar.se
 /facebook_tracking_pixel$script
@@ -813,6 +816,7 @@
 /plugins/wp-content-copy-protection/*
 /plugins/wp-copy-protect-with-color-design/*
 /plugins/wp-evolve-gpt/*
+/plugins/wp-facebook-pixel
 /plugins/wp-gdpr-compliance/*$script
 /plugins/wp-lrf-paywall/*
 /plugins/wp-popups-lite$domain=grillbaronen.se|spelochfilm.se
@@ -1055,8 +1059,8 @@ allakorsord.se,allas.se,baaam.se,dromhemochtradgard.se,elle.se,femina.se,frida.s
 allakorsord.se,allas.se,baaam.se,dromhemochtradgard.se,elle.se,femina.se,frida.se,hant.se,mabra.com,motherhood.se,residencemagazine.se,svenskdam.se##article[data-type="native"]
 allas.se,baaam.se,dromhemochtradgard.se,elle.se,femina.se,hant.se,mabra.com,motherhood.se,residencemagazine.se,svenskdam.se###onetrust-banner-sdk
 allatvkanaler.se##.ga
-allehanda.se,arbetarbladet.se,avestatidning.com,bandypuls.se,bblat.se,dalademokraten.se,dt.se,fagersta-posten.se,falkopingstidning.se,gd.se,jnytt.se,jp.se,lt.se,ltz.se,na.se,norrteljetidning.se,nynashamnsposten.se,op.se,salaallehanda.com,skaraborgslanstidning.se,skovdenyheter.se,smalandsdagblad.se,smalanningen.se,smt.se,st.nu,tidningenharjedalen.se,tranastidning.se,vastgotabladet.se,vetlandaposten.se,vlt.se,vn.se##.nps-client-dialogue-footer
-allehanda.se,arbetarbladet.se,avestatidning.com,bandypuls.se,bblat.se,dalademokraten.se,dt.se,fagersta-posten.se,falkopingstidning.se,gd.se,jnytt.se,jp.se,lt.se,ltz.se,na.se,norrteljetidning.se,nynashamnsposten.se,op.se,salaallehanda.com,skaraborgslanstidning.se,skovdenyheter.se,smalandsdagblad.se,smalanningen.se,smt.se,st.nu,tidningenharjedalen.se,tranastidning.se,vastgotabladet.se,vetlandaposten.se,vlt.se,vn.se##.true-native
+allehanda.se,arbetarbladet.se,avestatidning.com,bandypuls.se,bblat.se,dalademokraten.se,dt.se,fagersta-posten.se,falkopingstidning.se,gd.se,helahalsingland.se,jnytt.se,jp.se,lt.se,ltz.se,na.se,norrteljetidning.se,nynashamnsposten.se,op.se,salaallehanda.com,skaraborgslanstidning.se,skovdenyheter.se,smalandsdagblad.se,smalanningen.se,smt.se,st.nu,tidningenharjedalen.se,tranastidning.se,vastgotabladet.se,vetlandaposten.se,vlt.se,vn.se##.nps-client-dialogue-footer
+allehanda.se,arbetarbladet.se,avestatidning.com,bandypuls.se,bblat.se,dalademokraten.se,dt.se,fagersta-posten.se,falkopingstidning.se,gd.se,helahalsingland.se,jnytt.se,jp.se,lt.se,ltz.se,na.se,norrteljetidning.se,nynashamnsposten.se,op.se,salaallehanda.com,skaraborgslanstidning.se,skovdenyheter.se,smalandsdagblad.se,smalanningen.se,smt.se,st.nu,tidningenharjedalen.se,tranastidning.se,vastgotabladet.se,vetlandaposten.se,vlt.se,vn.se##.true-native
 allsvenskan.se,fotosidan.se,kollega.se,merinfo.se,tasteline.com##.ads
 allsvenskan.se,superettan.se##.app-cookie-line
 allsvenskan.se,superettan.se##.partners-slideshow-slide, .matches-calendar-sponsor, .sponsors
@@ -1121,6 +1125,7 @@ bilwebben.ax##.front #secondary-content-wrapper
 birthday.se##.datax
 blocket.se###placement_panorama, .blocket-placement, div[style="height: 240px;"]
 bokadirekt.se##.home-banner, img[alt*="banner"]
+bokmassan.se,svenskamassan.se##.cookie-law
 booli.se###app > div:last-child
 booli.se###outer
 borskollen.se##[id^="borskollen_small"],[id^="borskollen_large"],.featured-link
@@ -1420,7 +1425,7 @@ livetombord.se##[data-spotlight-id]
 livetsgoda.se##.penci-rlt-popup
 ljudochbild.se##.adremark, .coofad, .popup-overlay, .hidead, .phoneads, .pricecomp, .offerz, .type-articleadvertorial, .adblock, .lbplussinfo, .popup-overlayx
 lokalfotboll.se###topbar, .inside-right-sidebar > .really_simple_image_widget
-lokalguiden.se##.applicant-match-container
+lokalguiden.se##.applicant-match-container, .banner-item, .banner-container
 lokalnytt.se##.panoramaImageBox
 lokalsport.nu##.art-sidebar1, .art-sidebar2
 loppi.se##.entry__teaser--promotion, .wpcnt
@@ -1737,6 +1742,7 @@ yelp.se##.js-cookie-iframe
 ||bloggtoppen.fi^$third-party
 ||bloglovin.com/widget/$third-party
 ||bmbstatic.blob.core.windows.net^
+||bokmassan.se/wp-json/*/ad/
 ||bonniergaming.com^$third-party
 ||borsvarlden-banners.azurewebsites.net^
 ||borsvarlden.com/js/cookie-notice
@@ -1749,6 +1755,7 @@ yelp.se##.js-cookie-iframe
 ||bugsnag.com^$third-party,domain=di.se|dn.se|expressen.se
 ||bulletproof-analytics.com^$third-party
 ||buzzador.com^$third-party
+||bwz.se^$third-party
 ||byggahus.se/pixels/
 ||bytbil.com/bundles/js/tracking
 ||bytelab.dk^$third-party
@@ -1849,6 +1856,7 @@ yelp.se##.js-cookie-iframe
 ||ecomm.events/i.js
 ||edgeflyfishing.com^$image,domain=jaktsidan.se
 ||elfsight.com/events/views
+||embed.lpcontent.net/leadboxes$script
 ||emg-services.net/public/scripts/bundles/emg-desktop$script
 ||emotorsport.se/ans/$image
 ||engage-auth.schibsted.media^$script
@@ -1982,7 +1990,7 @@ yelp.se##.js-cookie-iframe
 ||liveagent.se/scripts/track.$script
 ||ljuskompaniet.se^
 ||logger.tv.nu^
-||lokalguiden.se/premises/exposure
+||lokalguiden.se/magasinet/banner
 ||lokus.se^$~image,third-party,domain=~familj.se
 ||look.ufinkln.com^
 ||lwcdn.com/vendor/ima.min.js$script
@@ -2181,6 +2189,7 @@ yelp.se##.js-cookie-iframe
 ||sv.picmix.com/sw.js
 ||sv.picmix.com^$csp=worker-src 'none'
 ||svenskafans.com/menu-logo/bottom
+||svenskamassan.se/*/advertisement/log
 ||svenskarecept.se/pwa-register-sw.js
 ||svenskfotboll.se/ui/dist/js/ai.
 ||swebbtv.se/tracker
@@ -2225,6 +2234,7 @@ yelp.se##.js-cookie-iframe
 ||umami.nordiskehandel.cloud^
 ||unformsy.mobi^$third-party
 ||upsales.com^$third-party
+||uso.svenskamassan.se^
 ||viagogo.se^
 ||video-static.tunnl.com/js/blocker.min.js$script
 ||videoplaza.*/proxy/tracker?
