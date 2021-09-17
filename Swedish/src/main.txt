@@ -1405,9 +1405,9 @@ lwcdn.com##+js(aeld, /^(?:adBlocker|contextmenu)$/)
 ##div.sch-datacontroller--subheader
 ##div.sch-datacontroller--footer
 ##div.schibsted-info-sticky
-/deprecated-linkpulse-tracking.js
-/enrich-pulse-tracking.js
-/appnexus$script,domain=blocket.se|minhembio.com|bytbil.com|aftonbladet.se
+-tracking.js$domain=aftonbladet.se
+/appnexus$script
+/pulsetracking$script
 ||metric-mobil.aftonbladet.se^$image
 ||schibsted.io^*/gdpr-bundle.js
 ||schibsted.com/privacy-notifier.$third-party
@@ -1422,7 +1422,6 @@ www.svd.se##+js(aopr, navigator.sendBeacon)
 /casinoguide$all,domain=aftonbladet.se
 /casinokollen$all,domain=aftonbladet.se
 /rabattkod$domain=aftonbladet.se
-/pulsetracking$script,domain=aftonbladet.se
 /player-plugin-tracking$domain=tv.aftonbladet.se
 /player-plugin-ad$domain=tv.aftonbladet.se
 /player-plugin-sponsor$domain=tv.aftonbladet.se
@@ -2198,7 +2197,7 @@ podplay.com##.site-mw
 piraja.se##.intro, #hero, #featholder:has(.spons)
 piraja.se###panoramaholder, #parallax
 _jquery.blockUI.$domain=fssweden.se
-nyadagbladet.se##.third-col
+nyadagbladet.se##.third-col, article[class*="sponsrad"]
 nyadagbladet.se##.widget_media_image:has-text(/annons/i)
 deliquate.se##[id^="ads300"], [id^="linkcat-"]
 lesscarbs.se###mid section.elementor-section:has(a[href*="/annonssamarbete/"])
@@ -2229,7 +2228,6 @@ nyheteridag.se##.article-inner:has(h2:has-text(/samarbetslänkar/i))
 lundagard.se###bdCheckAlso.bdCheckAlsoShow, .topBanner, #sidebar .widget_media_image
 knulla.se###cookie-popup
 komponentkoll.se##.gdpr-wide
-komponentkoll.se##img[src*="/partner/komplett"]:upward(2)
 affarsstaden.se##+js(acis, jQuery, adblockdetect)
 mmabetz.se##.desktop-homepage-ad, .desktop-main-ad, .latest-betting-campaigns, .best-casino-section, .top-casino
 foreca.se###ckieconsent
@@ -2476,8 +2474,6 @@ futsalmagasinet.se##.wp-block-column > h2:has-text(/annonser/i) ~ p
 futsalmagasinet.se##.td_block_wrap:has(span:has-text(/annonserat innehåll/i))
 arkitekten.se##.post-teaser__wrapper--ad
 /cookienotice.js$domain=nordic.ign.com
-/zad.js$domain=nordic.ign.com
-/zdadkit$script,domain=nordic.ign.com
 alpresor.se###toast-container
 /cookieDirective.js$domain=sdr.se
 xlbygg.se##div[class^="CookieBar"]
@@ -2802,3 +2798,4 @@ forum.mustangclubsweden.org##a[href*="&do=advertisement&ad=1"]
 ||uso.svenskamassan.se^
 ||svenskamassan.se/*/advertisement/log
 ||bokmassan.se/wp-json/*/ad/
+ica.se##.banner-area

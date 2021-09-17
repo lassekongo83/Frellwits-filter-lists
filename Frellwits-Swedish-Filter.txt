@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2021-09-15 15:40:03 CEST
+! Last modified: 2021-09-17 10:48:59 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -68,8 +68,8 @@
 ###cookiejar
 ###cookielawwarning
 ###cookieMsgBlock
-###CookieNotice
 ###cookieNotice
+###CookieNotice
 ###cookies-acceptance .alert.bottom
 ###cookiesInfo
 ###dialog-eu-cookie-law
@@ -348,6 +348,7 @@
 &type=load_offers$xmlhttprequest,domain=illvet.se|pctidningen.se
 *$csp=script-src 'none',domain=svtt.se|ssvd.se|exressen.se|eexpressen.se|sskatteverket.se|aatg.se|atgg.se
 -popup-analytics$script
+-tracking.js$domain=aftonbladet.se
 .ax/ad/
 .ax/images/banners/
 .com/annons.$script,subdocument
@@ -468,7 +469,7 @@
 /api/banners$domain=cykla.se|vatternrundan.se
 /api/plugins/google-analytics$xmlhttprequest
 /app.php/adsview/*$xmlhttprequest
-/appnexus$script,domain=aftonbladet.se|blocket.se|bytbil.com|minhembio.com
+/appnexus$script
 /aria/bentojs.js$domain=nickelodeon.se
 /aria/coda.html$domain=nickelodeon.se
 /artikelannons/*
@@ -532,7 +533,6 @@
 /cpg_ads.$script
 /cs1pc.js$domain=kiaindex.se
 /cx-emediate-userprofile-se.$script
-/deprecated-linkpulse-tracking.js
 /detroitchicago/cmb.js$domain=~idownloadblog.com
 /detroitchicago/cmbdv2.js$domain=wernamaten.se
 /detroitchicago/denver.js$domain=wernamaten.se
@@ -550,7 +550,6 @@
 /elementor/assets/lib/share-link$script
 /emediate-responsive-wp-plugin/*
 /empty.html$subdocument,domain=byggvarlden.se|hotellorestaurang.se
-/enrich-pulse-tracking.js
 /entag.$script,domain=eniro.se|leta.se
 /entryclick;_
 /ess.eurovator.se/*
@@ -836,7 +835,7 @@
 /prod/adform$xmlhttprequest
 /profile$ping,domain=arbetarskydd.se|feber.se|hamnen.se|lag-avtal.se|lawline.se|nyteknik.se|tasteline.com|tjock.se|veckorevyn.com
 /publicPartners$domain=familjehemmet.se|familjehemsbanken.se
-/pulsetracking$script,domain=aftonbladet.se
+/pulsetracking$script
 /pum/*$domain=biostock.se|flm.nu|tkj.se
 /QA.js$domain=qruiser.com
 /questback.popup$script
@@ -975,8 +974,6 @@
 /www.wellness.se\/cnp-assets\/[0-9]+./$script,domain=wellness.se
 /www/images/*$domain=elektronikforumet.com
 /xhr-ads.min.js$script
-/zad.js$domain=nordic.ign.com
-/zdadkit$script,domain=nordic.ign.com
 180.se##[class*="top-ad-"]
 2000tv.se###bannerbox
 8sidor.se##.cookie-accept
@@ -1358,6 +1355,7 @@ hrbloggen.se,hypeline.se##[class^="ad_"]
 hungrig.nu##.ui-widget-overlay, .ui-dialog
 husohem.se,svenskgolf.se##.partnerCard, .partnerContent, .entry-content figure.wp-block-image
 hypeline.se##.sponsrad_ruta
+ica.se##.banner-area
 icagruppen.se##.cookieInfo
 icagruppen.se##div[ng-show*="isUiDisabled"]
 idg.se##.sparticle, .nextArticleSp, .pryltorget, .prisjakt, .prisjaktCompare, .teasers-block.bfteasers
@@ -1484,7 +1482,7 @@ norrbotten.com##a[href*=".com/annons"], .td-ss-main-sidebar > .td-a-rec
 nsk.se,skd.se##.advert-widget
 nsk.se,skd.se##[data-teaser-section*="native"], .slideUp
 nvp.se##[class*="banner_"], .BottomBannerContainer
-nyadagbladet.se##.third-col
+nyadagbladet.se##.third-col, article[class*="sponsrad"]
 nyatider.nu##a[target][href*="casino"]
 nyheter24.se##.lazyload_bar.show, .lazyload_outer.show, .sponsrat, .is_native
 nyheteridag.se##.content > div:not([class]) img, a[href*="www.casino"]
