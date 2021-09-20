@@ -359,6 +359,7 @@ artbannersplus&task=show
 /glimr-static$domain=~klart.se
 /Global/Annons/*
 /gpAnalytics/*$script
+/gtagEventTracker.js
 /headerbidding.js
 /helios/multiad_jquery.$script
 /HSSAnalyticsUtils.js
@@ -617,6 +618,7 @@ artbannersplus&task=show
 ||nouw.com/api/campaignpost$xmlhttprequest
 ||nouw.com/campaignpost/reg/$image
 ||rabattkoder.ifragasatt.se^
+||rackcdn.com/stf.js
 ||ramses.nu^*/banners/
 ||ramses.nu^*/Centralabanners/
 ||reddit.com/static/button$third-party
@@ -1127,7 +1129,7 @@ arkenzoo.se##body:style(overflow:auto!important;)
 /videojs.ima.$domain=gamereactor.se|sportbladetplay.se
 ||cookielaw.org^$domain=cartoonnetwork.se|nvp.se|recept.se|tv4.se|tv4play.se|koket.se|fotbollskanalen.se|flashscore.se|manpower.se|findit.se|ikea.com|hastnet.se|gaffa.se|mtv.se|natgeotv.com|internetkunskap.se|internetstiftelsen.se|yelp.se|kokaihop.se|sekotidningen.se|handelsnytt.se|fastighetsfolket.se|spisa.nu
 ||cookiebot.com^$third-party,domain=etc.se|goteborgdirekt.se|itaboutdoor.se|kingsizemag.se|ng.se|skeppsbrons.se|swedroid.se|wesafe.se|tankesport.se|smartsenior.se|vasterastidning.se|bax-shop.se|kurera.se|upplysning.se|mitti.se|circlek.se|livetochdiabetes.se|tn.se|findroommate.se|advokaten.se|sakochliv.se
-||cookiepro.com^$third-party,domain=sd.se|birthday.se|friendsarena.se|hastnet.se|aktiespararna.se|spela.se|fz.se|sweclockers.com|djurskyddet.se
+||cookiepro.com^$third-party,domain=sd.se|birthday.se|friendsarena.se|hastnet.se|aktiespararna.se|spela.se|fz.se|sweclockers.com|djurskyddet.se|havet.nu
 ||evidon.com^$third-party,domain=morningstar.se|tripadvisor.se|fasting.nu
 ||mailerlite.com^$third-party,domain=vandringsguiden.se|flm.nu
 ||mailmunch.co^$third-party,domain=affarsstaden.se|enkelteknik.se|kingsizemag.se
@@ -1436,7 +1438,7 @@ aftonbladet.se###main > div > div > div:has(h2:has-text(/^annons/i))
 aftonbladet.se##a:has(span:has-text(/^annons/i))
 aftonbladet.se##a:has-text(Kommersiell text, innehåller annonslänkar)
 aftonbladet.se##strong:has-text(/ANNONS/i):upward(p)
-aftonbladet.se##[data-ad-subtype="mega"]:upward(div[style^="opacity"])
+aftonbladet.se##div[class^="css-"]:has([data-ad-subtype="mega"])
 ! css
 www.aftonbladet.se##body:style(overflow:unset!important)
 ! scriptlets
@@ -1843,6 +1845,7 @@ letarecept.se###cookie_wrapper
 doktorn.com##.js-banner-wrapper
 it-finans.se,it-halsa.se,it-kanalen.se,it-pedagogen.se,it-retail.se,espressomedia.se##.penci-wrap-gprd-law
 bokmassan.se,svenskamassan.se##.cookie-law
+chef.se,fokus.se##.Blurb--native
 
 ! Various annoyances and tracking
 annicaenglund.se,alicestenlof.com,ellinorlofgren.se,linnherbertsson.se,pricerunner.se##.noscroll:style(overflow: initial !important;)
@@ -2020,7 +2023,6 @@ fokus.se##.Cookie-notice
 fokus.se##.mediaconnect-protected-content, .mediaconnect-protected-content--show:style(max-height: unset !important; overflow: unset !important;)
 fokus.se##.mediaconnect-protected-content:after:style(background: unset !important;)
 magasinetparagraf.se###large_banner
-chef.se##.Blurb--native
 chef.se##.global-cookie-msg
 chef.se##.Product-modal,.Offer-popup
 flamman.se##.Banner, .TakeOverBanner, .CookieNotice
