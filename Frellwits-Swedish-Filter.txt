@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2021-09-20 10:52:38 CEST
+! Last modified: 2021-09-21 16:08:50 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -532,6 +532,7 @@
 /cookiswarning.$script,domain=visitskargarden.se
 /cpg_ads.$script
 /cs1pc.js$domain=kiaindex.se
+/cts.min.js$domain=recept.se
 /cx-emediate-userprofile-se.$script
 /detroitchicago/cmb.js$domain=~idownloadblog.com
 /detroitchicago/cmbdv2.js$domain=wernamaten.se
@@ -934,7 +935,6 @@
 /wds_nyhetsbrev_popup
 /Web%20Analytics/*$script
 /webbresurser/banner/*
-/widget.hittarecept.se/blogcounter
 /wordads-classes/js/*
 /wp-admin/admin-ajax.php?action=addthis_global_options$script,domain=expressen.se
 /wp-content/banners$image
@@ -1335,7 +1335,7 @@ hastnet.se##.add-wrap, .listings-search-ads, .right_panel
 hbwebben.se##.elementor-widget-container > a > img
 hd.se,sydsvenskan.se##[class*="teaser-native"]
 hd.se,sydsvenskan.se,typkanske.se##.gdpr
-hejaolika.se##.partnerinfostyle, div[id^="hejao-"]
+hejaolika.se##[class*="partnerinfostyle"], div[id^="hejao-"]
 helahisingen.se###custom_html-15, .code-block img
 hemhyra.se##.pageCookies
 hemmafixbloggen.se,surfa.se,teknikfreak.se###loader-wrapper
@@ -1470,8 +1470,7 @@ natursidan.se###sidebar .widget_text a[target]
 netdoktor.se##.article-list__item__link--sponsored
 netflixguiden.se##div.lboard, div.instream-dynamic
 news55.se###newsletter-popup, #premium-bottom-bar, #premium-popup
-news55.se##.after-article-widget
-news55.se##.is-native,.is-native-yes
+news55.se##.is-native, .is-native-yes, .after-article-widget
 newsvoice.se##.td-fix-index a[target="_blank"] img, aside a[target="_blank"] img
 ng.se##.secondary-sidebar > .panel-pane:last-child
 ng.se##.view-partner-articles, [class*="sponsored-article"]
