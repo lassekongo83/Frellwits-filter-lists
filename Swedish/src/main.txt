@@ -1070,7 +1070,7 @@ artbannersplus&task=show
 ##div#reklam
 
 ! Site specific whitelists
-@@/ad.php$script,~third-party,domain=99mac.se|skogstok.se
+@@/ad.php$script,~third-party,domain=99.teknikveckan.se|skogstok.se
 @@/adserver.$script,~third-party,domain=fotosidan.se|utsidan.se
 @@/advertisment.js$script,~third-party,domain=wappare.se
 @@/js/ad.js$~third-party,domain=sweclockers.com
@@ -1371,7 +1371,7 @@ aftonbladet.se##+js(nostif, abAndroidSmartAppBannerActive)
 
 ! IDG
 /prebid$script,domain=idg.se
-idg.se##.sparticle, .nextArticleSp, .pryltorget, .prisjakt, .prisjaktCompare, .teasers-block.bfteasers
+idg.se##.sparticle, .nextArticleSp, .pryltorget, .prisjakt, .prisjaktCompare, .teasers-block.bfteasers, div[data-cmsad]
 @@/consent.json$domain=idg.se|forum.macworld.se
 ||cmatch.idg.se^
 ||idg.se/sharecounter?
@@ -1382,10 +1382,10 @@ idg.se,forum.macworld.se##.idgcp__layer
 idg.se,forum.macworld.se##.idgcp__layer--active, .idgcp__layer--active body:style(overflow: initial !important;)
 
 ! STAMPEN
-alingsastidning.se,bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se,kungsbackaposten.se,kungalvsposten.se,molndalsposten.se,lokaltidningensto.se##.stampenCookieContainer
-alingsastidning.se,bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se,kungsbackaposten.se,kungalvsposten.se,molndalsposten.se,lokaltidningensto.se##.lokus-engine, .seekly, .rabble-widget
+alingsastidning.se,bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se,kungsbackaposten.se,kungalvsposten.se,molndalsposten.se,lokaltidningensto.se,partilletidning.se##.stampenCookieContainer
+alingsastidning.se,bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se,kungsbackaposten.se,kungalvsposten.se,molndalsposten.se,lokaltidningensto.se,partilletidning.se##.lokus-engine, .seekly, .rabble-widget
 ! unbreak logout
-@@||cdn.dynamicyield.com^$domain=alingsastidning.se|bohuslaningen.se|gp.se|hallandsposten.se|hn.se|stromstadstidning.se|ttela.se|kungsbackaposten.se|kungalvsposten.se|molndalsposten.se|lokaltidningensto.se
+@@||cdn.dynamicyield.com^$domain=alingsastidning.se|bohuslaningen.se|gp.se|hallandsposten.se|hn.se|stromstadstidning.se|ttela.se|kungsbackaposten.se|kungalvsposten.se|molndalsposten.se|lokaltidningensto.se|partilletidning.se
 ! hmm ;-P
 !#if !env_mobile
 bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##body.logged-out *> .c-user-menu__title, body.logged-out *> .c-user-menu__status, body.logged-out *> .c-user-menu:before, body.logged-out *> .c-user-menu__item:not(.js-epaper-trigger)
@@ -1394,7 +1394,7 @@ bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##bo
 bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se##body.logged-out.is-header-sticky *> .c-user-menu:style(visibility: hidden !important;)
 !#endif
 ! flowplayer stuff
-lwcdn.com,alingsastidning.se,bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se,kungsbackaposten.se,kungalvsposten.se,molndalsposten.se,lokaltidningensto.se##+js(json-prune, autoplay players.*.ga acl.ads players.*.autoplay)
+lwcdn.com,alingsastidning.se,bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se,kungsbackaposten.se,kungalvsposten.se,molndalsposten.se,lokaltidningensto.se,partilletidning.se##+js(json-prune, autoplay players.*.ga acl.ads players.*.autoplay)
 
 ! Flowplayer/lemonwhale
 ||lwcdn.com/vendor/ima.min.js$script
@@ -1790,7 +1790,7 @@ annicaenglund.se,alicestenlof.com,tjanstebilen.se,mp.se,linnherbertsson.se,ellin
 spela.se,effektmagasin.se,svenskorientering.se,aftonbladet.se,halsasverige.se,nojesmagasinet.nu##.advert
 battrestadsdel.se,casinoexpo.se,flashback.se,leta.se###top-banner
 chef.se,svd.se##.Ad
-99mac.se,di.se,dn.se,mobil.se,skaraborgsbygden.se,skillingaryd.nu,swedroid.se,tidningenbalans.se,xn--vrnamo-bua.nu,bettingstugan.se,expressen.se,dagensopinion.se,driva-eget.se,bioenergitidningen.se,polistidningen.se,ifokus.se,linnherbertsson.se,padelfeber.se,sv.picmix.com,sweclockers.com,ifragasatt.se,tripadvisor.se,fordonsproffs.eu,tandlakartidningen.se,vardfokus.se,ehandel.se,teknikensvarld.se##.ad
+99.teknikveckan.se,di.se,dn.se,mobil.se,skaraborgsbygden.se,skillingaryd.nu,swedroid.se,tidningenbalans.se,xn--vrnamo-bua.nu,bettingstugan.se,expressen.se,dagensopinion.se,driva-eget.se,bioenergitidningen.se,polistidningen.se,ifokus.se,linnherbertsson.se,padelfeber.se,sv.picmix.com,sweclockers.com,ifragasatt.se,tripadvisor.se,fordonsproffs.eu,tandlakartidningen.se,vardfokus.se,ehandel.se,teknikensvarld.se##.ad
 improveme.se,vf.se,hjotidning.se,kt.se,sla.se,mariestadstidningen.se,filipstadstidning.se,fryksdalsbygden.se,nwt.se,varmlandsaffarer.se,arvikanyheter.se,nkp.se,saffletidningen.se,provinstidningen.se,dalslanningen.se,karlskogatidning.se,nlt.se,byggahus.se,expressen.se,filmtopp.se,alekuriren.se,realtid.se##.ad-container
 fotosidan.se,merinfo.se,allsvenskan.se,kollega.se,tasteline.com##.ads
 nyheter24.se,lakartidningen.se,akaviaaspekt.se,modette.se##.advertisement
@@ -1907,9 +1907,8 @@ newsvoice.se##.td-post-author-name > a[href$="/author/underhallning/"]:upward(5)
 newsvoice.se##.td-post-author-name > a[href$="/author/foretagaren/"]:upward(5)
 newsvoice.se##.td-post-author-name > a:has-text(/extern skribent/i):upward(5)
 moviezine.se###home_ans, [name="article-advertisment"]
-99mac.se##.page-gutter.left, .page-gutter.right, [id^="bbPrisjakt"]
-99mac.se##.nitem:has(a[href="/arkiv/kategori/annons"])
-99mac.se##a[href*="annons-"]:upward(.carousel-item)
+99.teknikveckan.se##.page-gutter.left, .page-gutter.right, [id^="bbPrisjakt"]
+99.teknikveckan.se##.carousel-item-link:has-text(Annons:)
 fz.se##.article-facebook
 fz.se##.fp-carousel .fpci-kicker:has-text(/^sponsr/i):upward(.fpc-item)
 fz.se##.card:has(.article-sponsored)
