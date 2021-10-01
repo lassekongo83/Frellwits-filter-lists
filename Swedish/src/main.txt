@@ -46,7 +46,6 @@
 ||cookie-disclaimer.onewp.net^$third-party
 ||cookie-script.com^$third-party
 ||cookieconsent.popupsmart.com^$third-party
-||cookieinformation.com^$third-party,subdocument
 ||cookieinfoscript.com^$third-party
 ||cookienotice.co^$third-party
 ||cookiepolicy.peytz.dk^$third-party
@@ -1136,8 +1135,9 @@ arkenzoo.se##body:style(overflow:auto!important;)
 ||mailmunch.co^$third-party,domain=affarsstaden.se|enkelteknik.se|kingsizemag.se
 ||onetrust.com^$third-party,domain=lantmannen.se|yougov.se
 ||sp-prod.net^$third-party,domain=radioplay.se|radio.se
-||piano.io^$domain=thelocal.se
-||experience.tinypass.com^*/execute$xmlhttprequest,domain=mestmotor.se|thelocal.se|illvet.se
+||piano.io^$domain=thelocal.se|illvet.se|iform.se
+/execute?$xmlhttprequest,domain=mestmotor.se|thelocal.se|illvet.se|iform.se
+/unload?$ping,domain=mestmotor.se|thelocal.se|illvet.se|iform.se
 ||consensu.org^$domain=hockeynews.se|tvmatchen.nu|motormagasinet.se|food-supply.se|skyddosakerhet.se|dagenshandel.se|plastnet.se|habit.se|woodnet.se|foodnet.se|transportnet.se|processnet.se|packnet.se|verkstaderna.se|medtechmagazine.se|recyclingnet.se|rt-forum.se|kemivarldenbiotech.se|uochd.se|lifesciencesweden.se|fri-kopenskap.se|cleannet.se|entreprenad.com|flashback.org
 
 ! Common scriptlets
@@ -1478,7 +1478,7 @@ sportbladetplay.se##body.dimmed:style(overflow:unset!important)
 ! BONNIER
 expressen.se,dn.se,di.se###rich-media-ads
 dn.se##.campaign-holder
-dn.se##body.didomi-popup-open:style(overflow:unset!important)
+dn.se,expressen.se##body.didomi-popup-open:style(overflow:unset!important)
 www.dn.se##+js(acis, DN, initAds)
 www.dn.se##+js(ra, data-auto-play)
 /analytics$script,domain=dn.se
@@ -1512,16 +1512,12 @@ borssnack.di.se##.bn_advertisement__panorama, .bn_advertisement__container
 /tv/annons$domain=expressen.se
 /tv/sponsrat$domain=expressen.se
 ! Cosmetic ad filters
-expressen.se##a[href*="/spel.exp"], a[href*="/lanapengar.exp"], a[href*="/rabattkoder.exp"], a[href*="/annons"], .match-betting
-expressen.se##.teaser > a[href*="/kampanj."], .teaser > a[href*="/brandstudio"], .teaser > a[href*="/brand-studio"]
-expressen.se##figure[data-article-data*="/sponsrat"], figure[data-article-data*="/annons"], figure[data-article-data*="/brand-studio"]
-expressen.se##.teaser--native, .native-article
-expressen.se##.discount-ad, .b-ad__caption, .pressrelease-teaser, .widget-ad-marker, .widget-ad-marker + a, .promotion-banner, .widget--collaboration, .rotator--external, a[data-click-track*="prisjakt"]
+expressen.se##a[href*="/spel.exp"], a[href*="/lanapengar.exp"], a[href*="/rabattkoder.exp"], a[href*="/annons"], .match-betting, .discount-ad, .b-ad__caption, .pressrelease-teaser, .widget-ad-marker, .widget-ad-marker + a, .promotion-banner, .widget--collaboration, .rotator--external, a[data-click-track*="prisjakt"], .linked-image-widget a[href*="/kampanj/"]
+expressen.se##.teaser > a[href*="/kampanj."], .teaser > a[href*="/brandstudio"], .teaser > a[href*="/brand-studio"], figure[data-article-data*="/sponsrat"], figure[data-article-data*="/annons"], figure[data-article-data*="/brand-studio"], .teaser--native, .native-article
 ! Annoyances
 ?autoPlay$frame,removeparam=autoPlay,domain=expressen.se
 ?autoplay=true$frame,removeparam=autoplay,domain=expressen.se
 &autoplay$frame,removeparam=autoplay,domain=expressen.se|di.se
-expressen.se##.pa-dialog
 expressen.se##.campaign
 expressen.se##.html-widget > div[style^="text-align: center; font-size: 10px;"]
 ! scriptlets
@@ -1548,6 +1544,7 @@ hd.se,sydsvenskan.se##[class*="teaser-native"]
 &type=load_offers$xmlhttprequest,domain=illvet.se|pctidningen.se
 illvet.se##div[id^="cx_"]
 illvet.se##.teaser__category:has-text(/annons/i):upward(article)
+illvet.se,pctidningen.se,viivilla.se,popularhistoria.se,digitalfotoforalla.se,militarhistoria.se,iform.se,aktivtraning.se,vinbanken.se##.noScroll, .noScroll body:style(overflow:unset!important)
 ||akkurat.bonniernewslifestyle.se^*/recommendations$xmlhttprequest
 /analytics-bmb$script
 /scripts/initLogging$domain=expressen.se|alltomtradgard.se
@@ -2808,3 +2805,4 @@ ica.se##.banner-area
 varvat.se##.theiaStickySidebar #text-14
 cykelframjandet.se##article.tg-item, .lcp_catlist li:has(a[href*="/annons"])
 ||ka.se/native/
+||dhandel.se/count/
