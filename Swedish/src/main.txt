@@ -165,6 +165,7 @@
 ||spania.no^$third-party
 ||sparkloop.app^$third-party
 ||sprinkletxt.com^$third-party
+||stadiumstage.com^$third-party
 ||stats.easyweb.se^$third-party
 ||step.dk^$third-party
 ||storymedia.se^$third-party
@@ -184,6 +185,7 @@
 ||ubembed.com^$third-party
 ||unformsy.mobi^$third-party
 ||upsales.com^$third-party
+||userneeds.com^$third-party
 ||yieldwrapper.com^$third-party
 ||viforetag.se^$third-party
 ||vinguiden.com^$third-party
@@ -1343,10 +1345,10 @@ dn.se##^#ads-bundle
 di.se##^script:has-text(checkAdBlockEnabled)
 aftonbladet.se##^script:has-text(preLoadAds)
 svd.se##^script:has-text(SvD.ads.preDefineAd)
-newsner.com,humorbibeln.se,sportbibeln.se,ettgottskratt.se,sportpanelen.se,dagensanalys.se,zeinaskitchen.se,dinbyggare.se,kvartal.se,trafiksakerhet.se,boktugg.se,carup.se,lakartidningen.se,villalivet.se,konsolnyheter.se,matsafari.nu##^script:has-text(mi_track_user)
-newsner.com,humorbibeln.se,sportbibeln.se,ettgottskratt.se,sportpanelen.se,dagensanalys.se,zeinaskitchen.se,dinbyggare.se,kvartal.se,trafiksakerhet.se,boktugg.se,carup.se,lakartidningen.se,villalivet.se,konsolnyheter.se,matsafari.nu##^script:has-text(monsterinsights_frontend)
-fysikstugan.se,thorengruppen.se,pppress.se,utslappsratt.se,newsvoice.se,historiskahem.se,bastad.se,heleneholmsif.se,trafikskola.se,melodifestivalklubben.se##^script:has-text(em_track_user)
-fysikstugan.se,thorengruppen.se,pppress.se,utslappsratt.se,newsvoice.se,historiskahem.se,bastad.se,heleneholmsif.se,trafikskola.se,melodifestivalklubben.se##^script:has-text(exactmetrics_frontend)
+newsner.com,humorbibeln.se,sportbibeln.se,ettgottskratt.se,sportpanelen.se,zeinaskitchen.se,dinbyggare.se,trafiksakerhet.se,boktugg.se,carup.se,lakartidningen.se,villalivet.se,konsolnyheter.se,matsafari.nu##^script:has-text(mi_track_user)
+newsner.com,humorbibeln.se,sportbibeln.se,ettgottskratt.se,sportpanelen.se,zeinaskitchen.se,dinbyggare.se,trafiksakerhet.se,boktugg.se,carup.se,lakartidningen.se,villalivet.se,konsolnyheter.se,matsafari.nu##^script:has-text(monsterinsights_frontend)
+thorengruppen.se,pppress.se,utslappsratt.se,newsvoice.se,historiskahem.se,bastad.se,heleneholmsif.se,trafikskola.se,melodifestivalklubben.se##^script:has-text(em_track_user)
+thorengruppen.se,pppress.se,utslappsratt.se,newsvoice.se,historiskahem.se,bastad.se,heleneholmsif.se,trafikskola.se,melodifestivalklubben.se##^script:has-text(exactmetrics_frontend)
 newsvoice.se##^script:has-text(exactmetrics_scroll_tracking_load)
 nyadagbladet.se##^script:has-text(OneSignal)
 futsalmagasinet.se##^script[id^="buy_sell_ads"]
@@ -1354,8 +1356,8 @@ futsalmagasinet.se##^script[id^="buy_sell_ads"]
 
 ! For browsers that aren't firefox
 !#if env_chromium
-newsner.com,humorbibeln.se,sportbibeln.se,ettgottskratt.se,sportpanelen.se,dagensanalys.se,zeinaskitchen.se,dinbyggare.se,kvartal.se,trafiksakerhet.se,boktugg.se,carup.se,lakartidningen.se,villalivet.se,konsolnyheter.se,matsafari.nu##+js(set, mi_track_user, false)
-newsner.com,humorbibeln.se,sportbibeln.se,ettgottskratt.se,sportpanelen.se,dagensanalys.se,zeinaskitchen.se,dinbyggare.se,kvartal.se,trafiksakerhet.se,boktugg.se,carup.se,lakartidningen.se,villalivet.se,konsolnyheter.se,matsafari.nu##+js(acis, monsterinsights_frontend)
+newsner.com,humorbibeln.se,sportbibeln.se,ettgottskratt.se,sportpanelen.se,zeinaskitchen.se,dinbyggare.se,trafiksakerhet.se,boktugg.se,carup.se,lakartidningen.se,villalivet.se,konsolnyheter.se,matsafari.nu##+js(set, mi_track_user, false)
+newsner.com,humorbibeln.se,sportbibeln.se,ettgottskratt.se,sportpanelen.se,zeinaskitchen.se,dinbyggare.se,trafiksakerhet.se,boktugg.se,carup.se,lakartidningen.se,villalivet.se,konsolnyheter.se,matsafari.nu##+js(acis, monsterinsights_frontend)
 fysikstugan.se,thorengruppen.se,pppress.se,utslappsratt.se,newsvoice.se,historiskahem.se,bastad.se,heleneholmsif.se,trafikskola.se,melodifestivalklubben.se##+js(set, em_track_user, false)
 fysikstugan.se,thorengruppen.se,pppress.se,utslappsratt.se,newsvoice.se,historiskahem.se,bastad.se,heleneholmsif.se,trafikskola.se,melodifestivalklubben.se##+js(set, exactmetrics_frontend, undefined)
 newsvoice.se##+js(acis, exactmetrics_scroll_tracking_load)
@@ -2810,3 +2812,5 @@ cykelframjandet.se##article.tg-item, .lcp_catlist li:has(a[href*="/annons"])
 ||ka.se/native/
 ||dhandel.se/count/
 sydnarkenytt.se##.abann_wrapper, #hspalt_s1
+kvartal.se##.email-popup-wrapper
+boktugg.se##[id^="boktu-"]
