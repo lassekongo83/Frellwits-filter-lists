@@ -25,8 +25,6 @@ Left-click on the subscribe link *or* copy the link address above and [follow th
 
 ## Useful tools that I use
 
-[Redundant Rule Checker](https://arestwo.org/famlam/redundantRuleChecker.html) by Famlam.
-
 [PyFunceble](https://github.com/funilrys/PyFunceble) by [funilrys](https://github.com/funilrys).
 
 [FOP](https://hg.adblockplus.org/easylist/file/tip/FOP.py) by Michael/hgweb.
