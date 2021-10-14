@@ -1126,7 +1126,7 @@ arkenzoo.se##body:style(overflow:auto!important;)
 
 ! Common site specific blocking
 /wp-content\/uploads\/[0-9]+/$script,domain=villalivet.se|skanesport.se|dackavisen.se
-/wp-content/uploads/*banner$image,domain=marsta.nu|polistidningen.se|alltomhif.se|brollopsmagasinet.se|bussmagasinet.se|danstidningen.se|guldkanalen.se|katerinamagasin.se|ljuskultur.se|sff.nu|sportpanelen.se|viralsweden.com|vardfokus.se|turismnytt.se|customerinsider.se|borattforum.se|dental24.se|tekniknytt.se|pakryss.se|investerarbrevet.se
+/wp-content/uploads/*banner$image,domain=marsta.nu|polistidningen.se|alltomhif.se|brollopsmagasinet.se|bussmagasinet.se|danstidningen.se|guldkanalen.se|katerinamagasin.se|ljuskultur.se|sff.nu|sportpanelen.se|viralsweden.com|vardfokus.se|turismnytt.se|customerinsider.se|borattforum.se|dental24.se|tekniknytt.se|pakryss.se|investerarbrevet.se|svensktidskrift.se
 /wp-content/uploads/*betting$image,domain=nyadagbladet.se|kulturbloggen.com|hockeybladet.nu|newsvoice.se|spelochfilm.se
 /wp-content/uploads/*casino$image,domain=nyadagbladet.se|kulturbloggen.com|newsvoice.se|svenskhistoria.se|battrestadsdel.se|zeromagazine.nu|totallyorebro.se|totallystockholm.se|hockeybladet.nu|djungeltrumman.se|vaken.se|lokalsport.nu|tekniknytt.se|kingsizemag.se|spelrum.net|spelochfilm.se|macken.xyz
 /banners$script,domain=magasinetparagraf.se
@@ -2164,15 +2164,14 @@ themoviefreak.se##+js(acis, animate)
 /links/*casino*.$domain=emocore.se
 emocore.se###sticky-panorama
 emocore.se###main > #home_start_div ~ .m_t.box:nth-last-child(-n+2)
-||edgeflyfishing.com^$image,domain=jaktsidan.se
-jaktsidan.se###ipsLayout_mainArea > iframe
+jaktsidan.se,edgeflyfishing.com###ipsLayout_mainArea > iframe
 /skrattnetdotse/js-ck.js
 /skrattnetdotse/js-xdp.js
 skrattnet.se,webben7.se##.region-sidebar-second
 ||lajvo.se/addImpression
 lajvo.se###panoramaTop
-lajvo.se##.postCard:has-text(/bonusar|casino|betting/i)
-svensktidskrift.se###bannercolumn
+lajvo.se##.postCard:has-text(/bonusar|casino|betting|spelbranschen/i)
+svensktidskrift.se###bannercolumn, img[title^="Annons"]
 ||skogsforum.se/sda/
 ||skogsforum.se^$csp=worker-src 'none'
 skogsforum.se##.masthead, .col-right, a[href^="https://goo.gl/"], a[href*="//bit.ly/"]
@@ -2353,8 +2352,11 @@ byggipedia.se##+js(acis, jQuery, wizard_accordion)
 byggipedia.se##+js(acis, document.onkeypress)
 byggipedia.se##+js(acis, document.onkeydown, e)
 byggipedia.se##+js(acis, frames, oncontextmenu)
+studocu.com##span:has-text(/använder cookies/i):upward(div[class^="bar-"])
 studocu.com##.new-viewer-wrapper .p2hv:style(pointer-events: auto !important;)
 studocu.com###page-container:style(user-select: auto !important;)
+studocu.com##div[class^="preview-banner"]
+studocu.com##div[data-page-no][style*="filter"]:style(filter: none !important; user-select: auto !important;)
 xn--lnforum-exa.se##.LFRBox
 maipenrai.se##.cWidgetContainer > ul > li:first-child, div[style*="border: 1px solid"] a[target="_blank"]
 aktiespararna.se##.analysguiden-promote-articles
