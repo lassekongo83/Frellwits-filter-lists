@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2021-10-14 15:45:05 CEST
+! Last modified: 2021-10-17 08:34:58 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -257,6 +257,7 @@
 ##div#custom_ads_wrapper
 ##div#mega-ad-content
 ##div#outerAd
+##div#outside-ads
 ##div#panorama_ad
 ##div#panoramaad
 ##div#reklam
@@ -317,6 +318,7 @@
 ##div.sch-datacontroller--subheader
 ##div.schibsted-info-sticky
 ##div.sgm-ad
+##div.sgm-header-start-ad
 ##div.sgm-large-ad
 ##div.sidebar-item .banner-box
 ##div.sol-cookie-message
@@ -596,6 +598,7 @@
 /iab/iab.js
 /iframeadvloader.$script
 /illustrationer/annons_
+/images/*casino$domain=festivalinfo.se
 /images/visningar/*$domain=hundkartan.se
 /img/allalanse$image,domain=ekonominyheter.se
 /img/banklan/*$image,domain=ekonominyheter.se
@@ -1044,7 +1047,7 @@ aftonbladet.se,effektmagasin.se,halsasverige.se,nojesmagasinet.nu,spela.se,svens
 aftonbladet.se,skonhetsredaktorerna.se##.ab_responsive_ads
 aikfotboll.se,vaken.se##.banners
 akaviaaspekt.se##.article-list-item--native
-akaviaaspekt.se,lakartidningen.se,modette.se,nyheter24.se##.advertisement
+akaviaaspekt.se,lakartidningen.se,modette.se,nyheter24.se,tidningenkulturen.se##.advertisement
 aktiespararna.se##.analysguiden-promote-articles
 aktiespararna.se,alekuriren.se,civilekonomen.se##.native
 aktivtraning.se,digitalfotoforalla.se,iform.se,militarhistoria.se,pctidningen.se,popularhistoria.se##.gallery-banner, .horseshoe, [data-ad-type]
@@ -1054,6 +1057,7 @@ aktuellhallbarhet.se,byggindustrin.se,dagensmedia.se,dagensmedicin.se,dagenssamh
 aktuellsakerhet.se##.front-slider-reklamsamarbete, .category-gastkronika-reklamsamarbete
 aktuellsakerhet.se##.td-a-rec
 alandsradio.ax,automobil.se,bike.se,byggnyheter.se,caroftheyear.se,cgi.se,dagensfastigheter.se,dagensnaringsliv.se,endurobloggen.se,energinyheter.se,fof.se,hsr.se,husbilhusvagn.se,industrinyheter.se,infrastrukturnyheter.se,inredningsnyheter.se,jarnvagsnyheter.se,kantarsifo.se,klassiker.nu,kommunal.se,kyrkanstidning.se,metallerochgruvor.se,mopedgaraget.se,papperochmassa.se,plastikoperationsforum.se,publikt.se,realtid.se,riksettan.net,sandaren.se,sjofart.ax,so-rummet.se,solenerginyheter.se,sportochfritidsnyheter.se,spraktidningen.se,stockholmsbyggnyheter.se,testfakta.se,transportochlogistik.se,ungforetagsamhet.se,vibilagare.se,viktvaktarna.se,vindkraftsnyheter.se###sliding-popup
+alba.nu,fiskejournalen.se,fotbolldirekt.se,hockeysverige.se,hypeline.se,innebandymagazinet.se,motivation.se,skidresultat.se,uppslaget.se##.annons
 aldrenytt.se##div[id*="aldrenytt-"], .aldrenytt-adlabel, .aldrenytt-adlabel ~ a
 alekuriren.se###widget_code-6
 alekuriren.se,arvikanyheter.se,byggahus.se,dalslanningen.se,expressen.se,filipstadstidning.se,filmtopp.se,fryksdalsbygden.se,hjotidning.se,improveme.se,karlskogatidning.se,kt-kuriren.se,kt.se,mariestadstidningen.se,nkp.se,nlt.se,nwt.se,provinstidningen.se,realtid.se,saffletidningen.se,sla.se,varmlandsaffarer.se,vf.se##.ad-container
@@ -1080,7 +1084,7 @@ alltforforaldrar.se,mammasidan.se,minbebis.com###partnerMenuContainer, #partnerM
 alltforforaldrar.se,mammasidan.se,minbebis.com##.spons-artc, a[href^="/native/"]
 alltihemmet.se,alltomtradgard.se,expressen.se,gardochtorp.se,godsochgardar.se,lantliv.com,tara.se,teknikensvarld.se,tidningenhembakat.se,topphalsa.se##.gdpr-banner
 alltomhif.se##.sek-module-inner a[target="_blank"]
-alltomhif.se,lyckasmedbakning.nu,mat-meny.se,pinkprogramming.se,soja.se,tonyhatefnejad.se,vitaestilo.se##.preloader
+alltomhif.se,kulturimperiet.se,lyckasmedbakning.nu,mat-meny.se,pinkprogramming.se,soja.se,tonyhatefnejad.se,vitaestilo.se##.preloader
 alltomtradgard.se,teknikensvarld.se##.teaser__third-party, .promotion-banner
 alpresor.se###toast-container
 arbetarskydd.se,lag-avtal.se,nyteknik.se##.alman-teaser, [id^="almad-"]
@@ -1262,13 +1266,13 @@ fastighetssverige.se##a[href*="/banner/out/"], .bnr_box
 fastighetssverige.se##div[class^="panel"][style*="lightgoldenrodyellow"]
 fastighetstidningen.se##.adspace
 feber.se,tjock.se##.burt-unit, .art_ad, adline, f-panorama, f-deals, #rpPopular
+festivalinfo.se##a[title*="Casino"], #top-content
 fightermag.se##a[href*="/sponsra"]
 filmtipset.se###topslider-wrapper + .container > .sidebar
 filmtipset.se##.row.news > div[style^="border"]:last-of-type
 findit.se##.banner-wrapper
 firstclassmagazine.se###leader-wrap, #rpwe_widget-2
 fiskejournalen.se###dt-kiosk-position
-fiskejournalen.se,fotbolldirekt.se,hockeysverige.se,hypeline.se,innebandymagazinet.se,motivation.se,skidresultat.se,uppslaget.se##.annons
 fiskejournalen.se,jaktjournalen.se##.fisher-takeover-container
 flamman.se##.Banner, .TakeOverBanner, .CookieNotice
 flashback.org###top-banner-container, #top-banner-wrapper
@@ -1366,6 +1370,7 @@ hockeyguiden.com##.main-loader.loader-bg
 hockeymagasinet.com##gdpr-alert
 hockeynews.se##[class*="ad-style"], [id^="outsider-"], [id^="banner_"], .ad-mob-container, #mobile-one, #mobile-two, .desktop-horizontal-ad
 hrbloggen.se,hypeline.se##[class^="ad_"]
+hrnytt.se##.d-block div[style*="aspect-ratio"], .d-none div[style*="aspect-ratio"]
 hsb.se##.cookieinformationarea
 hungrig.nu##.ui-widget-overlay, .ui-dialog
 husohem.se,svenskgolf.se##.partnerCard, .partnerContent, .entry-content figure.wp-block-image
@@ -1401,7 +1406,7 @@ klart.se###overlay, .gdpr-onboarding-container
 knulla.se###cookie-popup
 kokaihop.se##.ads-wrapper-main, .InterstitialModal
 koket.se##[class*="list_item_sponsored"], [class*="promotion_bottom_holder_wrapper"], [class*="beverage-recommendation_wrapper"], [class*="list_item_wide_sponsored"]
-kolozzeum.com##td[width="305"]
+kolozzeum.com##td[width="305"], br + a[href*="/casino"]
 kommunal.se###modalBackdrop, #modalContent
 komponentkoll.se##.gdpr-wide
 konsolnyheter.se##.g-particlesjs
@@ -1415,7 +1420,6 @@ lajvo.se###panoramaTop
 land.se,landlantbruk.se,landskogsbruk.se##[class*="--native"], [id^="adwrapper"], .has-sticky-add
 landetsfria.nu,tidningensyre.se##div[style*="verdana; color:#888888"]
 landleyskok.se##.inpostbanner, .banner-leaderboard
-lansposten.se##.sgm-header-start-ad
 lararen.se##a[href*="=annons"]
 laromedia.se##img[alt="Annons"] + .img-flipper
 lchfarkivet.se##.wppopups-whole
