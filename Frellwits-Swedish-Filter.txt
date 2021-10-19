@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2021-10-17 08:34:58 CEST
+! Last modified: 2021-10-19 08:17:00 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -68,8 +68,8 @@
 ###cookiejar
 ###cookielawwarning
 ###cookieMsgBlock
-###cookieNotice
 ###CookieNotice
+###cookieNotice
 ###cookies-acceptance .alert.bottom
 ###cookiesInfo
 ###dialog-eu-cookie-law
@@ -436,6 +436,7 @@
 /Ad/*$domain=hallbyhandboll.se|skiljebosk.nu
 /ad/getNouw.$script
 /ad_acknowledgment$xmlhttprequest
+/ad_fullpage.js$domain=hockeynews.se
 /adblog/hit$domain=byggahus.se
 /adn/adn-setup.$script
 /adnami/macro/*$script
@@ -636,7 +637,6 @@
 /lay/js/background$domain=gamereactor.se
 /lazyad-loader.$script
 /lazyload-ad.$script
-/lbxjquery.dfp.$domain=ljudochbild.se
 /leeads_takeover$script
 /linkpulse/*$script
 /links/*casino*.$domain=emocore.se
@@ -843,6 +843,7 @@
 /Portalannonser/*$image
 /postscribe.$script,domain=linnherbertsson.se
 /prebid$script,domain=idg.se
+/prisjakt$xmlhttprequest,domain=fz.se
 /private-browsing.js$domain=thelocal.se
 /prod/adform$xmlhttprequest
 /profile$ping,domain=arbetarskydd.se|feber.se|hamnen.se|lag-avtal.se|lawline.se|nyteknik.se|tasteline.com|tjock.se|veckorevyn.com
@@ -886,7 +887,6 @@
 /siforesponsivemeasure.js$script
 /site-notifications$script,domain=se.invertalia.net
 /site_media/annons
-/sites/holid-$script,domain=kamerabild.se|mobil.se
 /skolvarlden_theme/js/s_code.js$script
 /skrattnetdotse/js-ck.js
 /skrattnetdotse/js-xdp.js
@@ -1368,7 +1368,7 @@ hitta.se##a[data-trackimp][target], .integration-txt, .section-details--alb
 hockeybladet.nu##.td_mod_wrap a img[data-permalink], a[data-wpel-link="external"][onclick]
 hockeyguiden.com##.main-loader.loader-bg
 hockeymagasinet.com##gdpr-alert
-hockeynews.se##[class*="ad-style"], [id^="outsider-"], [id^="banner_"], .ad-mob-container, #mobile-one, #mobile-two, .desktop-horizontal-ad
+hockeynews.se##[class*="ad-style"], [id^="outsider-"], [id^="banner_"], .ad-mob-container, #mobile-one, #mobile-two, .desktop-horizontal-ad, #article-content img[src*="banner"], #article-content img[src*="prio-hockey"]
 hrbloggen.se,hypeline.se##[class^="ad_"]
 hrnytt.se##.d-block div[style*="aspect-ratio"], .d-none div[style*="aspect-ratio"]
 hsb.se##.cookieinformationarea
