@@ -1082,7 +1082,6 @@ artbannersplus&task=show
 ! Site specific whitelists
 @@/ad.php$script,~third-party,domain=99.teknikveckan.se|skogstok.se
 @@/adserver.$script,~third-party,domain=fotosidan.se|utsidan.se
-@@/advertisment.js$script,~third-party,domain=wappare.se
 @@/js/ad.js$~third-party,domain=sweclockers.com
 @@/js/ads.js$~third-party,domain=freeride.se|fz.se|spela.se
 @@||freeride.nu/js/ads.js$script,domain=happyride.se
@@ -1230,6 +1229,7 @@ egoinas.se,fysikstugan.se,enkelteknik.se,hamnen.se,cannabis.se,ljudochbild.se,ti
 /plugins/ga-in/*
 /plugins/gdpr-cookie-compliance/*$domain=dagensanalys.se|worldkustom.com|goteborgsgolfaren.se|deliquate.se|nyhetersto.se|vaken.se
 /plugins/gdpr-framework/*$script
+/plugins/genesis-simple-share$script
 /plugins/ginger/addon/analytics/*$script
 /plugins/ginger/front/js/cookies-enabler
 /plugins/hemmafix-facebooklike
@@ -1505,7 +1505,7 @@ di.se##+js(acis, Di, initAds)
 di.se##+js(set, getAdblockerStatus, noopFunc)
 di.se##+js(nostif, #triggerModal)
 di.se##+js(ra, data-auto-play,,stay)
-di.se##.di_panorama-wrapper, .site-header__panorama, .di_panorama__isAdLabel, .discount-box, .campaign-ad-box, .di_start__teaser-placeholder, .di_teaser-flak-planbokskoll, .di_teaser-flak-container--native, .native-box, .bandit-box__teaser--native, a[href*="/brandstudio"]
+di.se##.di_panorama-wrapper, .site-header__panorama, .di_panorama__isAdLabel, .discount-box, .campaign-ad-box, .di_start__teaser-placeholder, .di_teaser-flak-planbokskoll, .di_teaser-flak-container--native, .native-box, .bandit-box__teaser--native, a[href*="/brandstudio"], .service-box
 borssnack.di.se##.bn_advertisement__panorama, .bn_advertisement__container
 ! EXPRESSEN
 ||lifestyle.expressen.se^$subdocument
@@ -1550,7 +1550,6 @@ expressen.se##.teaser:has(a[href*="/spel.expressen.se"])
 expressen.se##.vignette--svg + a[href*="teknikensvarld."]:upward(.teaser)
 ! övrigt
 ||bugsnag.com^$third-party,domain=dn.se|di.se|expressen.se
-hd.se,sydsvenskan.se##[class*="teaser-native"]
 &type=load_offers$xmlhttprequest,domain=illvet.se|pctidningen.se
 illvet.se##div[id^="cx_"]
 illvet.se##.teaser__category:has-text(/annons/i):upward(article)
@@ -1594,10 +1593,7 @@ varldenshistoria.se##.campaign-teaser-show
 sportexpressenplay.se##[class^="CookieConsentPopup"]
 
 ! Bonnier Local
-allehanda.se,arbetarbladet.se,avestatidning.com,bblat.se,dalademokraten.se,dt.se,fagersta-posten.se,gd.se,lt.se,ltz.se,na.se,norrteljetidning.se,nynashamnsposten.se,op.se,salaallehanda.com,st.nu,tidningenharjedalen.se,vlt.se,bandypuls.se,falkopingstidning.se,jp.se,skaraborgslanstidning.se,skovdenyheter.se,smalandsdagblad.se,smalanningen.se,smt.se,tranastidning.se,vastgotabladet.se,vetlandaposten.se,vn.se,jnytt.se,helahalsingland.se##.nps-client-dialogue-footer
-allehanda.se,arbetarbladet.se,avestatidning.com,bblat.se,dalademokraten.se,dt.se,fagersta-posten.se,gd.se,lt.se,ltz.se,na.se,norrteljetidning.se,nynashamnsposten.se,op.se,salaallehanda.com,st.nu,tidningenharjedalen.se,vlt.se,bandypuls.se,falkopingstidning.se,jp.se,skaraborgslanstidning.se,skovdenyheter.se,smalandsdagblad.se,smalanningen.se,smt.se,tranastidning.se,vastgotabladet.se,vetlandaposten.se,vn.se,jnytt.se,helahalsingland.se##.true-native
-||ues*.mmcloud.se/api/*/events$third-party
-/bam-data$xmlhttprequest,domain=allehanda.se|arbetarbladet.se|avestatidning.com|bblat.se|dalademokraten.se|dt.se|fagersta-posten.se|gd.se|lt.se|ltz.se|na.se|norrteljetidning.se|nynashamnsposten.se|op.se|salaallehanda.com|st.nu|tidningenharjedalen.se|vlt.se|bandypuls.se|falkopingstidning.se|jp.se|skaraborgslanstidning.se|skovdenyheter.se|smalandsdagblad.se|smalanningen.se|smt.se|tranastidning.se|vastgotabladet.se|vetlandaposten.se|vn.se|jnytt.se|helahalsingland.se
+hd.se,sydsvenskan.se,allehanda.se,arbetarbladet.se,avestatidning.com,bblat.se,dalademokraten.se,dt.se,fagersta-posten.se,gd.se,lt.se,ltz.se,na.se,norrteljetidning.se,nynashamnsposten.se,op.se,salaallehanda.com,st.nu,tidningenharjedalen.se,vlt.se,falkopingstidning.se,jp.se,skaraborgslanstidning.se,skovdenyheter.se,smalandsdagblad.se,smalanningen.se,smt.se,tranastidning.se,vastgotabladet.se,vetlandaposten.se,vn.se,jnytt.se,helahalsingland.se,bandypuls.se##[class*="teaser-native"]
 
 ! TV4
 &browser=MozillaFirefox$xhr,removeparam=/^browser/,domain=fotbollskanalen.se|koket.se|tv4.se|tv4play.se
@@ -1809,7 +1805,7 @@ runnersworld.se,utsidan.se,hockeymagasinet.com,driva-eget.se,foretagande.se,revi
 bettips.se,borskollen.se##.top-banner
 annicaenglund.se,linnherbertsson.se,alicestenlof.com,ellinorlofgren.se##.overlay
 vinochmatguiden.se##.newsletter
-hd.se,sydsvenskan.se,typkanske.se,borattforum.se##.gdpr
+hd.se,sydsvenskan.se,typkanske.se,borattforum.se,bandypuls.se,allehanda.se,arbetarbladet.se,avestatidning.com,bblat.se,dalademokraten.se,dt.se,fagersta-posten.se,gd.se,lt.se,ltz.se,na.se,norrteljetidning.se,nynashamnsposten.se,op.se,salaallehanda.com,st.nu,tidningenharjedalen.se,vlt.se,falkopingstidning.se,jp.se,skaraborgslanstidning.se,skovdenyheter.se,smalandsdagblad.se,smalanningen.se,smt.se,tranastidning.se,vastgotabladet.se,vetlandaposten.se,vn.se,jnytt.se,helahalsingland.se##.gdpr
 civilekonomen.se,aktiespararna.se,alekuriren.se##.native
 svartgul.se,eventeffect.se,executiveeffect.se,saleseffect.se###panorama
 uppslaget.se,hypeline.se,skidresultat.se,fotbolldirekt.se,hockeysverige.se,innebandymagazinet.se,motivation.se,fiskejournalen.se,alba.nu##.annons
@@ -1854,6 +1850,7 @@ doktorn.com##.js-banner-wrapper
 it-finans.se,it-halsa.se,it-kanalen.se,it-pedagogen.se,it-retail.se,espressomedia.se##.penci-wrap-gprd-law
 bokmassan.se,svenskamassan.se##.cookie-law
 chef.se,fokus.se##.Blurb--native
+metalcentral.net,egoinas.se###tm-top-a
 
 ! Various annoyances and tracking
 annicaenglund.se,alicestenlof.com,ellinorlofgren.se,linnherbertsson.se,pricerunner.se##.noscroll:style(overflow: initial !important;)
@@ -2631,7 +2628,7 @@ bandyplay.se##div[class^="CookieConsent"]
 livetsgoda.se##.penci-rlt-popup
 expo.se##div[class*="expo-ads"], div[class*="pane-openx"], .modal, .header-top.show-cookie-block
 ||metalcentral.net/images/*banner
-metalcentral.net##.bannergroupno-padding, #tm-top-a
+metalcentral.net##.bannergroupno-padding
 vm-fotboll.se##a[href*="/go/"][target]
 vm-fotboll.se##.category-kampanjer
 worldkustom.com##.middleban
