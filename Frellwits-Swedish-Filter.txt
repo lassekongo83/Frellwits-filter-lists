@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2021-10-31 08:03:47 CET
+! Last modified: 2021-11-02 10:35:45 CET
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -68,8 +68,8 @@
 ###cookiejar
 ###cookielawwarning
 ###cookieMsgBlock
-###CookieNotice
 ###cookieNotice
+###CookieNotice
 ###cookies-acceptance .alert.bottom
 ###cookiesInfo
 ###dialog-eu-cookie-law
@@ -600,6 +600,7 @@
 /HSSAnalyticsUtils.js
 /html5videovastplugin.$domain=skidspar.se
 /iab/iab.js
+/iaw-babla$domain=sv.bab.la
 /iframeadvloader.$script
 /illustrationer/annons_
 /images/*casino$domain=festivalinfo.se
@@ -641,6 +642,7 @@
 /lazyad-loader.$script
 /lazyload-ad.$script
 /leeads_takeover$script
+/linguee/statistics
 /linkpulse/*$script
 /links/*casino*.$domain=emocore.se
 /live/radarmagazine.se.js$script
@@ -683,6 +685,7 @@
 /pagead$domain=horoskoptid.se|vilaser.se
 /pages/native$domain=aktuellhallbarhet.se|byggindustrin.se|dagensmedia.se|dagensmedicin.se|dagenssamhalle.se|fastighetsnytt.se|market.se|resume.se
 /pages/tag$domain=aktuellhallbarhet.se|byggindustrin.se|dagensmedia.se|dagensmedicin.se|dagenssamhalle.se|fastighetsnytt.se|market.se|resume.se
+/pb-babla$domain=sv.bab.la
 /permutive-async.js$script
 /phaser-ads.min.js$script
 /playbuzz-ads-core
@@ -900,7 +903,6 @@
 /snowfall.jquery.min.js
 /snowfall.min.jquery.js
 /snowplow$script
-/Sponsor/*$domain=grontvader.se
 /sponsored_articles$domain=fastighetssverige.se
 /sponsors$domain=sdhl.se|storvretaibk.se
 /spotlight-ad_$image
@@ -1133,6 +1135,7 @@ battrestadsdel.se###top-banner-mobile, #HideBanner, .apd-text, .apds_main, .entr
 battrestadsdel.se,casinoexpo.se,flashback.se,leta.se###top-banner
 beernews.se##.cookie-consent-wrapper
 bergsmannen.se##.ann-puff, .headerLinks
+betong.se,foodetc.se,livetsgoda.se##a[target$="blank"] img
 bettips.se##.bettips-am
 bettips.se,borskollen.se##.top-banner
 bicycling.se,runnersworld.se##.modal-plus, .modal-backdrop, .footer-newsletter
@@ -1291,7 +1294,6 @@ fn.se,kb.se###cookie
 fokus.se##.Cookie-notice
 folkbladet.nu,vk.se##.vkmui-Text--grey
 folkbladet.nu,vk.se##[class^="adContainer"], div[class^="bordersAndShadows"] > div[style^="min-height"]:only-child
-foodetc.se,livetsgoda.se##a[target$="blank"] img
 foodfolder.se###myModal, .adImage
 foodora.se##.top-banner-container
 foreca.se###ckieconsent
@@ -1342,7 +1344,6 @@ goteborgdirekt.se,mitti.se,vasterastidning.se##.profile-native
 goteborgsgolfaren.se##.sgpb-popup-overlay, #sgpb-popup-dialog-main-div-wrapper
 gotlandswebben.se##.header-ads-wrapper
 grillbloggen.nu##.rstbox
-grontvader.se##app-cookies
 guideAds$xmlhttprequest,domain=barometern.se|blt.se|borasdly.se|bt.se|kalmarposten.se|kristianstadsbladet.se|olandsbladet.se|osterlenmagasinet.se|ostrasmaland.se|smp.se|sydostran.se|trelleborgsallehanda.se|ut.se|vxonews.se|ystadsallehanda.se
 hallbyhandboll.se,skiljebosk.nu##.cookiePush
 hallbyhandboll.se,skiljebosk.nu##.stickyFollow
@@ -1497,7 +1498,7 @@ news55.se###newsletter-popup, #premium-bottom-bar, #premium-popup
 news55.se##.is-native, .is-native-yes, .after-article-widget
 newsvoice.se##.td-fix-index a[target="_blank"] img, aside a[target="_blank"] img
 ng.se##.secondary-sidebar > .panel-pane:last-child
-ng.se##.view-partner-articles, [class*="sponsored-article"]
+ng.se##.view-partner-articles, [class*="sponsored-article"], .tertiary-bottom
 nordfront.se###campaign_area
 nordiskradio.se###cookieWindow
 norpan.se,skrattsajten.com##.cookieScript
@@ -1729,6 +1730,7 @@ yrkesbilen.se##.header-banner-top
 ||api.hitta.se/offer
 ||api.hitta.se/partnerintegration
 ||api.hitta.se/statistics
+||api.mpzmail.com/tracker
 ||api.netb11.com/b/$image
 ||api.sfnix.net^$image,domain=hemnet.se
 ||api.staylive.tv/videos/engagement$xmlhttprequest
@@ -1828,7 +1830,7 @@ yrkesbilen.se##.header-banner-top
 ||cookieconsent.popupsmart.com^$third-party
 ||cookieinformation.com^$domain=minbostad.se|viivilla.se
 ||cookieinfoscript.com^$third-party
-||cookielaw.org^$domain=booli.se|cartoonnetwork.se|fastighetsfolket.se|findit.se|flashscore.se|fotbollskanalen.se|gaffa.se|handelsnytt.se|hastnet.se|ikea.com|ilikeradio.se|internetkunskap.se|internetstiftelsen.se|ka.se|kokaihop.se|koket.se|manpower.se|mtv.se|natgeotv.com|nvp.se|recept.se|sekotidningen.se|spisa.nu|svenskarnaochinternet.se|tv4.se|tv4play.se|yelp.se
+||cookielaw.org^$domain=arbetet.se|booli.se|cartoonnetwork.se|fastighetsfolket.se|findit.se|flashscore.se|fotbollskanalen.se|gaffa.se|handelsnytt.se|hastnet.se|ikea.com|ilikeradio.se|internetkunskap.se|internetstiftelsen.se|ka.se|kokaihop.se|koket.se|malarnasfacktidning.se|manpower.se|mtv.se|natgeotv.com|nvp.se|recept.se|sekotidningen.se|spisa.nu|sv.bab.la|svenskarnaochinternet.se|tidningenelektrikern.se|tv4.se|tv4play.se|yelp.se
 ||cookienotice.co^$third-party
 ||cookiepolicy.peytz.dk^$third-party
 ||cookiepro.com^$third-party,domain=aktiespararna.se|birthday.se|djurskyddet.se|friendsarena.se|fz.se|hastnet.se|havet.nu|sd.se|spela.se|sweclockers.com
@@ -2086,7 +2088,7 @@ yrkesbilen.se##.header-banner-top
 ||nouw.com/campaignpost/reg/$image
 ||oas.*.se/om/$script
 ||obj.fotosidan.se/obj/pa/$image
-||onetrust.com^$third-party,domain=lantmannen.se|yougov.se
+||onetrust.com^$third-party,domain=lantmannen.se|sv.bab.la|yougov.se
 ||onrender.com/tracker.js
 ||opinionstage.com/assets/autoengage.$script
 ||optmn.cloud/hb/
