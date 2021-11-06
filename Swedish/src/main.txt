@@ -1142,7 +1142,7 @@ arkenzoo.se##body:style(overflow:auto!important;)
 /pum/*$domain=tkj.se|flm.nu|biostock.se
 /videojs.ima.$domain=gamereactor.se|sportbladetplay.se
 ||cookielaw.org^$domain=cartoonnetwork.se|tv4.se|tv4play.se|fotbollskanalen.se|koket.se|nvp.se|flashscore.se|findit.se|ikea.com|hastnet.se|recept.se|manpower.se|gaffa.se|mtv.se|natgeotv.com|internetkunskap.se|internetstiftelsen.se|yelp.se|kokaihop.se|spisa.nu|ilikeradio.se|booli.se|svenskarnaochinternet.se|arbetet.se|tidningenelektrikern.se|malarnasfacktidning.se|sekotidningen.se|handelsnytt.se|fastighetsfolket.se|ka.se|sv.bab.la
-||cookiebot.com^$third-party,domain=etc.se|goteborgdirekt.se|itaboutdoor.se|kingsizemag.se|ng.se|skeppsbrons.se|swedroid.se|wesafe.se|tankesport.se|smartsenior.se|vasterastidning.se|bax-shop.se|kurera.se|upplysning.se|mitti.se|circlek.se|livetochdiabetes.se|tn.se|findroommate.se|advokaten.se|sakochliv.se|polistidningen.se|fokus.se
+||cookiebot.com^$third-party,domain=etc.se|goteborgdirekt.se|itaboutdoor.se|kingsizemag.se|ng.se|skeppsbrons.se|swedroid.se|wesafe.se|tankesport.se|smartsenior.se|vasterastidning.se|bax-shop.se|kurera.se|upplysning.se|mitti.se|circlek.se|livetochdiabetes.se|tn.se|findroommate.se|advokaten.se|sakochliv.se|polistidningen.se|fokus.se|spraktidningen.se
 ||cookieinformation.com^$domain=minbostad.se|viivilla.se
 ||cookiepro.com^$third-party,domain=sd.se|birthday.se|friendsarena.se|hastnet.se|aktiespararna.se|spela.se|fz.se|sweclockers.com|djurskyddet.se|havet.nu
 ||evidon.com^$third-party,domain=morningstar.se|tripadvisor.se|fasting.nu
@@ -1450,7 +1450,7 @@ www.svd.se##+js(aopr, navigator.sendBeacon)
 ! Cosmetic ad filters
 aftonbladet.se###megaAd-placeholder, #superright-side, a[href^="/brandstudio"], a[href*="/rabattkod"], a[href*="/casinoguide"], [id^="adPlacement"]
 aftonbladet.se,skonhetsredaktorerna.se##.ab_responsive_ads
-aftonbladet.se##[data-ad-subtype]:upward(1):style(min-height:unset!important)
+aftonbladet.se##[data-ad-subtype]:upward(1):matches-css(min-height:/[0-9]+/)
 aftonbladet.se##aside > div:has(h2:has-text(/^annons/i))
 aftonbladet.se##section > div:has(h2:has-text(/^annons/i))
 aftonbladet.se###main > div > div > div:has(h2:has-text(/^annons/i))
@@ -1584,7 +1584,7 @@ aktuellhallbarhet.se,byggindustrin.se,dagensmedia.se,dagensmedicin.se,fastighets
 aktuellhallbarhet.se,byggindustrin.se,dagensmedia.se,dagensmedicin.se,fastighetsnytt.se,resume.se,dagenssamhalle.se,market.se##a[href^="/annons/"], a[href^="/native/"], .slot-module, .slot-articlemodule
 aktuellhallbarhet.se,byggindustrin.se,dagensmedia.se,dagensmedicin.se,fastighetsnytt.se,resume.se,dagenssamhalle.se,market.se##.slot-panorama:upward(1)
 aktuellhallbarhet.se,byggindustrin.se,dagensmedia.se,dagensmedicin.se,fastighetsnytt.se,resume.se,dagenssamhalle.se,market.se##article:matches-css-after(content:/Annonssamarbete/i)
-resume.se##div[class^="css-"]:matches-css(min-height: /420px|320px/)
+aktuellhallbarhet.se,byggindustrin.se,dagensmedia.se,dagensmedicin.se,fastighetsnytt.se,resume.se,dagenssamhalle.se,market.se##div[class^="css-"]:matches-css(min-height: /420px|320px/)
 resume.se##aside a[href$="/byracoachen/"]:upward(2)
 digitalfotoforalla.se,popularhistoria.se,militarhistoria.se,iform.se,aktivtraning.se,pctidningen.se##.scroll-message
 digitalfotoforalla.se,popularhistoria.se,militarhistoria.se,iform.se,aktivtraning.se,pctidningen.se##.gallery-banner, .horseshoe, [data-ad-type]
@@ -1886,7 +1886,6 @@ tonyhatefnejad.se,soja.se,alltomhif.se,lyckasmedbakning.nu,pinkprogramming.se,ma
 hockeyguiden.com##.main-loader.loader-bg
 deliquate.se##.ajax_loader
 surfa.se,hemmafixbloggen.se,teknikfreak.se###loader-wrapper
-sjoaguden.se##.av-siteloader-wrap
 delupe.se###preloader
 evalent.se##.loadPage
 icagruppen.se##div[ng-show*="isUiDisabled"]
@@ -1977,8 +1976,9 @@ metrojobb.se##.headlines__block:has(.ad-header)
 svt.se###nyh_cookie-message,#svtmat_cookie,section.nyh_share
 svtplay.se###PlayCookieInformationRoot
 ratsit.se##.promo
-goteborgdirekt.se,mitti.se,vasterastidning.se##+js(set, NWS.config.enableAdblockerDetection, false)
 goteborgdirekt.se,mitti.se,vasterastidning.se##.profile-native
+goteborgdirekt.se,mitti.se,vasterastidning.se##h3:has-text(/annons/i):upward(.image-component-unprocessed)
+goteborgdirekt.se,mitti.se,vasterastidning.se##+js(set, NWS.config.enableAdblockerDetection, false)
 ||trafikradion.nu/reklam$image
 ||existenz.se/img/o/
 existenz.se##.wm-nopop, #main > p[style^="color"]
@@ -2352,10 +2352,10 @@ byggipedia.se##+js(acis, jQuery, wizard_accordion)
 byggipedia.se##+js(acis, document.onkeypress)
 byggipedia.se##+js(acis, document.onkeydown, e)
 byggipedia.se##+js(acis, frames, oncontextmenu)
-studocu.com##span:has-text(/använder cookies/i):upward(div[class^="bar-"])
+studocu.com###main-wrapper + div:has-text(/använder cookies/i)
 studocu.com##.new-viewer-wrapper .p2hv:style(pointer-events: auto !important;)
 studocu.com###page-container:style(user-select: auto !important;)
-studocu.com##div[class^="preview-banner"]
+studocu.com##div[role="presentation"] + div:has-text(/förhandsvisning/i)
 studocu.com##div[data-page-no][style*="filter"]:style(filter: none !important; user-select: auto !important;)
 xn--lnforum-exa.se##.LFRBox
 maipenrai.se##.cWidgetContainer > ul > li:first-child, div[style*="border: 1px solid"] a[target="_blank"]
