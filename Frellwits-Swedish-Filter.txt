@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2021-11-09 08:58:07 CET
+! Last modified: 2021-11-09 11:15:08 CET
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -133,7 +133,6 @@
 ##.cc-window.cc-floating:not(body):not(html)
 ##.CMAC_AdChangerWidget:not(body):not(html)
 ##.cms .cookie-alert:not(body):not(html)
-##.comment-ad_wrapper:not(body):not(html)
 ##.component-matchAds:not(body):not(html)
 ##.cookie-banner-section:not(body):not(html)
 ##.Cookie-banner.is-open:not(body):not(html)
@@ -289,6 +288,7 @@
 ##div.bsa_pro_ajax_load
 ##div.cli-modal-backdrop
 ##div.CMACG_AdChangerWidget
+##div.comment-ad_wrapper
 ##div.Container--ad
 ##div.cookie-block
 ##div.cookie-notification-show
@@ -1027,7 +1027,6 @@
 @@/scrollReveal$script,domain=explorecurate.com
 @@/yieldwrapper.min.js$domain=spray.se
 @@_advert.$domain=e-pages.dk
-@@||ccf.admeen.org^*/js/ads/adverts.min.js$domain=spelo.se
 @@||cdn.dynamicyield.com^$domain=alingsastidning.se|bohuslaningen.se|gp.se|hallandsposten.se|hn.se|kungalvsposten.se|kungsbackaposten.se|lokaltidningensto.se|molndalsposten.se|partilletidning.se|stromstadstidning.se|sttidningen.se|ttela.se
 @@||createsend1.com/css/
 @@||feed.meltwater.com^$subdocument
@@ -1161,7 +1160,7 @@ brafiler.se###header-banner
 branschkoll.se##div[id^="brans-"]
 branschstegen.se##[class*="sponsored"]
 bravenewbusiness.se##.site-information-container
-breakit.se##[class*="sponsored"], .videoAd, .js-video-ad
+breakit.se##[class*="sponsored"], [class*="LivepodPuff_sponsored"] + div, .videoAd, .js-video-ad
 brinkenbakar.se,ff.se,nyadagbladet.se##.elementor-popup-modal
 bukefalos.se,friaordet.org,husbilsklubben.se,rollspel.nu,thaisnack.se,xn--lnforum-exa.se##.u-bottomFixer
 bulletin.nu##[class^="newsletter-subscribe"], div[class^="cookie-message"]
@@ -1397,7 +1396,7 @@ influens.se##[class*="ai-viewport"], .ai_widget
 innebandy.se##[class*="banner-container"]
 internetstiftelsen.se,svenskarnaochinternet.se###newsletter-sliding
 ipo.se##.tag-sponsrad
-it-finans.se,it-halsa.se,it-kanalen.se,it-pedagogen.se,it-retail.se##a[onclick^="gtag"], .header-banner
+it-finans.se,it-halsa.se,it-kanalen.se,it-pedagogen.se,it-retail.se##a[onclick^="gtag"], .header-banner, .penci-featured-cat-custom-ads
 itseniorerna.se##.tm-preload
 jaktjournalen.se##.activate-notifications-container.shown
 jaktojagare.se##div.cookie-warning-container
@@ -1500,7 +1499,7 @@ natursidan.se###sidebar .widget_text a[target]
 netdoktor.se##.article-list__item__link--sponsored
 netflixguiden.se##div.lboard, div.instream-dynamic
 news55.se###newsletter-popup, #premium-bottom-bar, #premium-popup
-news55.se##.is-native, .is-native-yes, .after-article-widget
+news55.se##.is-native, .is-ad, .is-native-yes, .after-article-widget
 newsvoice.se##.td-fix-index a[target="_blank"] img, aside a[target="_blank"] img
 ng.se##.secondary-sidebar > .panel-pane:last-child
 ng.se##.view-partner-articles, [class*="sponsored-article"], .tertiary-bottom
@@ -1901,6 +1900,7 @@ ysektionen.se##.yweb-news-paper-banner
 ||episerver.net/*/epi-util/find.js$script
 ||es.loppi.se/api/imp$xmlhttprequest
 ||es.loppi.se/get$script
+||etc.nu/ethical.min.js
 ||eteppy.com^
 ||europe-west1-bonnier-big-data.cloudfunctions.net^$third-party
 ||evertiq.se/bximg/
