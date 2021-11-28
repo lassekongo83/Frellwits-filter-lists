@@ -1209,7 +1209,7 @@ mobilanyheter.net##+js(set, ai_run_scripts, noopFunc)
 /plugins/convertplug/*
 /plugins/convertpro/*
 /plugins/cookie-bar/*
-/plugins/cookie-law-info/*$domain=nyadagbladet.se|hockeybladet.nu|carup.se|temadagar.se|gilla.se|ljudochbild.se|tidningenbalans.se|tidningenresultat.se
+/plugins/cookie-law-info/*$domain=nyadagbladet.se|hockeybladet.nu|carup.se|temadagar.se|gilla.se|ljudochbild.se|tidningenbalans.se|tidningenresultat.se|lundagard.se
 /plugins/cookie-notice/*
 /plugins/cookies-and-content-security-policy$domain=cannabisifokus.se
 /plugins/cookie_consent/*$script
@@ -1453,7 +1453,7 @@ www.svd.se##+js(aopr, navigator.sendBeacon)
 /player-plugin-sponsor$domain=tv.aftonbladet.se
 /vgc/cdn/js/libs/ast/*$script,domain=aftonbladet.se
 ! Cosmetic ad filters
-aftonbladet.se###megaAd-placeholder, #superright-side, a[href^="/brandstudio"], a[href*="/rabattkod"], a[href*="/casinoguide"], [id^="adPlacement"], #main[role="main"] a[href="https://www.aftonbladet.se/black-friday"]
+aftonbladet.se###megaAd-placeholder, #superright-side, a[href^="/brandstudio"], a[href*="/rabattkod"], a[href*="/casinoguide"], [id^="adPlacement"]
 aftonbladet.se,skonhetsredaktorerna.se##.ab_responsive_ads
 aftonbladet.se##[data-ad-subtype]:upward(1):matches-css(min-height:/[0-9]+/)
 aftonbladet.se##aside > div:has(h2:has-text(/^annons/i))
@@ -1475,6 +1475,7 @@ omni.se,omniekonomi.se##+js(aeld, omniPulseLoaded)
 ||logger.tv.nu^
 tv.nu##a[href*="adform.net"]
 tv.nu###app > div > div[class]:nth-of-type(2)
+tv.nu###tv-schedule section:has-text(ANNONS)
 @@/ad-block-detection-script$domain=blocket.se
 ||jobb.blocket.se/blocket_puff.html
 ||jobb.blocket.se^*/tracker.js
@@ -1907,10 +1908,9 @@ friatider.se##.rightbox
 /atoms/images/*banner$domain=etc.se
 ||play.etc.se/sw.js
 ||etc.nu/ethical.min.js
-etc.se###popup, .etc-mobile-app-buttons-wrapper
-etc.se##.article-type-annons, .banner-wrap
-etc.se##.block-content > p img[alt]:not([class])
-etc.se##+js(set, Drupal.behaviors.lock_article, undefined)
+etc.se##[data-controller="ad-container"], .bg-gradient-white
+etc.se##.adaptive:upward(1)
+etc.se##.paywalled.hidden:style(display:unset!important)
 2000tv.se###bannerbox
 newsvoice.se##.td-fix-index a[target="_blank"] img, aside a[target="_blank"] img
 newsvoice.se##h4:has-text(/annonser/i) ~ a
