@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2021-12-01 11:41:54 CET
+! Last modified: 2021-12-03 08:25:36 CET
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -68,8 +68,8 @@
 ###cookiejar
 ###cookielawwarning
 ###cookieMsgBlock
-###cookieNotice
 ###CookieNotice
+###cookieNotice
 ###cookies-acceptance .alert.bottom
 ###cookiesInfo
 ###dialog-eu-cookie-law
@@ -696,6 +696,7 @@
 /plugins/ab_appnexus_ads/*
 /plugins/ab_stats_params/*
 /plugins/ab_tracking$domain=aftonbladet.se
+/plugins/ad-ace
 /plugins/ad-blocking-advisor/*
 /plugins/ad-inserter-pro/*
 /plugins/add-to-any/*$~stylesheet
@@ -952,6 +953,7 @@
 /videojs.ima.$domain=gamereactor.se|sportbladetplay.se
 /view-resources/public/*/js/dfp.
 /view_count/view.php$xmlhttprequest
+/Vizzit/vizzit.$script
 /wdg/iab-active$script
 /wdg_cookie_bar
 /wds_nyhetsbrev_popup
@@ -1021,6 +1023,7 @@
 @@/js/ad.js$~third-party,domain=sweclockers.com
 @@/js/ads.js$~third-party,domain=freeride.se|fz.se|spela.se
 @@/opulens_banner$image,domain=opulens.se
+@@/plugins/ad-ace/*/adblock-detector
 @@/plugins/convertplug/modules/modal/*/cross.png$image,~third-party
 @@/prebid.js$~third-party,domain=feber.se|tjock.se
 @@/scripts/advert_$~third-party,domain=di.se
@@ -1222,7 +1225,7 @@ delupe.se###preloader
 dental24.se##.fp_banners
 designbase.se###page-cookies
 devote.se,familjeliv.se##div[style*="height: 244px;"]
-di.se##.di_panorama-wrapper, .site-header__panorama, .di_panorama__isAdLabel, .discount-box, .campaign-ad-box, .di_start__teaser-placeholder, .di_teaser-flak-planbokskoll, .di_teaser-flak-container--native, .native-box, .bandit-box__teaser--native, a[href*="/brandstudio"], .service-box
+di.se##.di_panorama-wrapper, .site-header__panorama, .di_panorama__isAdLabel, .discount-box, .campaign-ad-box, .di_start__teaser-placeholder, .di_teaser-flak-planbokskoll, .di_teaser-flak-container--native, .native-box, .bandit-box__teaser--native, a[href*="/brandstudio"], .service-box, .brand-studio-box
 di.se,dn.se,expressen.se###rich-media-ads
 di.se,dn.se,privataaffarer.se##.teaser-native
 diabetes.se##.c-cookies
@@ -1424,6 +1427,7 @@ kommunal.se###modalBackdrop, #modalContent
 komponentkoll.se##.gdpr-wide
 komponentkoll.se##aside .prebuilt-systems, #main-content > a[target="_blank"]
 konsolnyheter.se##.g-particlesjs
+kulturama.se##.CookiePopup
 kulturbloggen.com,schack.se##.sidebar .widget_custom_html
 kurera.se##.kurera-register-newsletter-popup
 kvalitetsmagasinet.se,miljo-utveckling.se,telekomidag.se,vdtidningen.se###subscribe_splash
@@ -1450,6 +1454,7 @@ litteraturmagazinet.se###pageContainer > div:first-child:not([id])
 livetochdiabetes.se###text-3
 livetombord.se##[data-spotlight-id]
 livetsgoda.se##.penci-rlt-popup
+livsmedelsverket.se###CookieConsent
 ljudochbild.se##.adremark, .coofad, .popup-overlay, .hidead, .phoneads, .pricecomp, .offerz, .type-articleadvertorial, .adblock, .lbplussinfo, .popup-overlayx
 lokalfotboll.se###topbar, .inside-right-sidebar > .really_simple_image_widget
 lokalguiden.se##.applicant-match-container, .banner-item, .banner-container
@@ -1484,7 +1489,7 @@ missatsamtal.se##.nosnaj
 mmabetz.se##.desktop-homepage-ad, .desktop-main-ad, .latest-betting-campaigns, .best-casino-section, .top-casino
 mmanytt.se##.front-banner,.front-banner-cover,#text-2,[class*="sponsrat-inlagg"],a[href*="://kampanjer."],.ohmbet_link
 mobil.se,nordichardware.se##.pspy_info
-mobilanyheter.net##.jeg_sidebar .textwidget, .sidebar .textwidget
+mobilanyheter.net##.jeg_sidebar .textwidget, .sidebar .textwidget, #secondary .widget_text
 modernalivet.se##.modal-wrap, .slide-in-box
 modette.se##.true_native_block
 morotsliv.com###sidebar .et_pb_widget
