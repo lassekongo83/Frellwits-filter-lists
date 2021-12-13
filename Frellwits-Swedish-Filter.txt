@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2021-12-10 10:16:59 CET
+! Last modified: 2021-12-13 09:00:37 CET
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -367,7 +367,9 @@
 .nu/gfx/banner/
 .nu/prebid$script
 .php?annonsid=$image
+.se/*/gillkom?$xmlhttprequest
 .se/*/nativeadvertising/
+.se/*/postkoll?$xmlhttprequest
 .se/_Banners/
 .se/ad-delivery/
 .se/ad/AdSpaceBlock/
@@ -386,8 +388,6 @@
 .se/cookiesamtykke$script
 .se/counter/
 .se/custom/ad/
-.se/facebook/gillkom$xmlhttprequest
-.se/facebook/postkoll$xmlhttprequest
 .se/fightodds.plugin/fightodds.plugin.$script
 .se/files/annons/$image
 .se/getBannerImage
@@ -482,6 +482,7 @@
 /aria/coda.html$domain=nickelodeon.se
 /artikelannons/*
 /assets/google-universal-analytics$script
+/assets/partnerstat.php?partner=$xmlhttprequest
 /assets/site/modules/ctm-
 /assets/site/modules/gtm_
 /assets/tracking$domain=hornbach.se
@@ -558,6 +559,7 @@
 /elementor/assets/lib/share-link$script
 /emediate-responsive-wp-plugin/*
 /empty.html$subdocument,domain=hotellorestaurang.se
+/enklare-banners/enklare-torgetgruppen
 /entag.$script,domain=eniro.se|leta.se
 /entryclick;_
 /ess.eurovator.se/*
@@ -901,6 +903,7 @@
 /skrattnetdotse/js-xdp.js
 /skyskrapa.$image,domain=it-finans.se|it-halsa.se|it-kanalen.se|it-pedagogen.se|it-retail.se
 /Smile_ElasticsuiteTracker/*$script
+/snowday262.js
 /snowfall.jquery.min.js
 /snowfall.min.jquery.js
 /snowplow$script
@@ -1084,7 +1087,7 @@ allakorsord.se,allas.se,baaam.se,dromhemochtradgard.se,elle.se,femina.se,frida.s
 allakorsord.se,allas.se,baaam.se,dromhemochtradgard.se,elle.se,femina.se,frida.se,hant.se,mabra.com,motherhood.se,residencemagazine.se,svenskdam.se##article[data-type="native"]
 allas.se,baaam.se,dromhemochtradgard.se,elle.se,femina.se,hant.se,mabra.com,motherhood.se,residencemagazine.se,svenskdam.se###onetrust-banner-sdk
 allatvkanaler.se##.ga
-allehanda.se,arbetarbladet.se,avestatidning.com,bandypuls.se,bblat.se,borattforum.se,dalademokraten.se,dt.se,fagersta-posten.se,falkopingstidning.se,gd.se,hd.se,helahalsingland.se,jnytt.se,jp.se,lt.se,ltz.se,na.se,norrteljetidning.se,nynashamnsposten.se,op.se,salaallehanda.com,skaraborgslanstidning.se,skovdenyheter.se,smalandsdagblad.se,smalanningen.se,smt.se,st.nu,sydsvenskan.se,tidningenharjedalen.se,tranastidning.se,typkanske.se,vastgotabladet.se,vetlandaposten.se,vlt.se,vn.se##.gdpr
+allehanda.se,arbetarbladet.se,avestatidning.com,bandypuls.se,bblat.se,borattforum.se,dalademokraten.se,dt.se,fagersta-posten.se,falkopingstidning.se,gd.se,hd.se,helahalsingland.se,jnytt.se,jp.se,lt.se,ltz.se,na.se,norrteljetidning.se,nyan.ax,nynashamnsposten.se,op.se,salaallehanda.com,skaraborgslanstidning.se,skovdenyheter.se,smalandsdagblad.se,smalanningen.se,smt.se,st.nu,sydsvenskan.se,tidningenharjedalen.se,tranastidning.se,typkanske.se,vastgotabladet.se,vetlandaposten.se,vlt.se,vn.se##.gdpr
 allehanda.se,arbetarbladet.se,avestatidning.com,bandypuls.se,bblat.se,dalademokraten.se,dt.se,fagersta-posten.se,falkopingstidning.se,gd.se,hd.se,helahalsingland.se,jnytt.se,jp.se,lt.se,ltz.se,na.se,norrteljetidning.se,nynashamnsposten.se,op.se,salaallehanda.com,skaraborgslanstidning.se,skovdenyheter.se,smalandsdagblad.se,smalanningen.se,smt.se,st.nu,sydsvenskan.se,tidningenharjedalen.se,tranastidning.se,vastgotabladet.se,vetlandaposten.se,vlt.se,vn.se##[class*="teaser-native"]
 allsvenskan.se,fotosidan.se,jaktojagare.se,kollega.se,merinfo.se,tasteline.com##.ads
 allsvenskan.se,superettan.se##.app-cookie-line
@@ -1410,6 +1413,7 @@ jusek.se##.l-advertisement, .m-adform, .m-splash
 kalender.se##.day-nav ~ a:not([href*="kalender.se"])
 kamerabild.se,mobil.se##.storan, .Partner
 kamrat.com###kadDiv, div[style="margin:25px 0;max-width:255px!important;"], #scrollAdj ~ *
+karriarlakare.se##a[target][onclick]
 kartor.eniro.se##.e-banner
 katerinamagasin.se##.adv-area, #right-areas, a[href*=".casino"], body > div.code-block
 kenzas.se##article[data-text*="In collaboration with"]
@@ -1572,6 +1576,7 @@ sexpacket.se##.info_cookies
 sff.nu###sidebar > li:not(.widget_wp_sidebarlogin), li.widget_sp_image
 shoegazing.se###main-sidebar .widget_media_image, #post-sidebar .widget_media_image, #content > .code-block
 shortcut.se##.annons-block, .layout-advertisement
+siljannews.se##a[href^="/annons"]
 sillyseason.se###text-41
 siriusbandy.se,vetlandabk.se##[id$="-ad"]
 siteseeker$script,domain=foretagarna.se
@@ -2019,6 +2024,8 @@ ysektionen.se##.yweb-news-paper-banner
 ||kritiker.se/js/gdpr.js
 ||kundklubb-se.com^
 ||kundvisaren.se^$third-party
+||kvix.se/api/statistic
+||kvix.se/banners
 ||kyrkoskatten.se^
 ||kyrkskatt.se^
 ||laget.se^*/retarget.js
@@ -2223,6 +2230,7 @@ ysektionen.se##.yweb-news-paper-banner
 ||stat-api.tv4play.se^
 ||stat.modette.se^
 ||static.influencersofsweden.se/js/inos.$script
+||statistics-se.talentum.com^
 ||stats.blogg.se^$image
 ||stats.docu.info^
 ||stats.easyweb.se^$third-party
