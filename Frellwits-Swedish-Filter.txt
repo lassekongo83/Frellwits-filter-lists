@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2021-12-13 14:01:50 CET
+! Last modified: 2021-12-14 09:46:10 CET
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -68,8 +68,8 @@
 ###cookiejar
 ###cookielawwarning
 ###cookieMsgBlock
-###cookieNotice
 ###CookieNotice
+###cookieNotice
 ###cookies-acceptance .alert.bottom
 ###cookiesInfo
 ###dialog-eu-cookie-law
@@ -466,6 +466,7 @@
 /annons$image,domain=dagenshultsfred.se|dagenskalmar.nu|dagensvastervik.se|dagensvimmerby.se
 /annons-banner
 /annons.aspx?
+/annons/banner
 /annons_hor.
 /annons_ver.
 /annonsbanners/*
@@ -797,7 +798,7 @@
 /plugins/popup$domain=biostock.se|forvaltarforum.se|ordfrontmagasin.se|snowmobile.se|sverige.nu
 /plugins/popups/*$script,domain=bugburger.se|svenskhistoria.se
 /plugins/pum-$script,domain=snowmobile.se
-/plugins/quantcast-choice/*$script,domain=kimura.se|paulas.me
+/plugins/quantcast-choice/*$script,domain=handbollskanalen.se|kimura.se|paulas.me
 /plugins/r9-analytics
 /plugins/r9-gdpr$script
 /plugins/random-banner/*
@@ -1130,7 +1131,7 @@ badminton.nu,bandybyn.se###RightOuterBannerDiv
 bandybyn.se###RightDiv
 bandybyn.se##.StartPageBoxRow > .boxcontainer:last-child > .StartPageBoxNarrow
 bandybyn.se##.StartPageBoxRow > .boxcontainer:nth-child(2) > .StartPageBoxNarrow
-bandyfeber.com##.widget_sp_image, a[title^="ANNONS"]
+bandyfeber.com##.widget_sp_image, a[title^="ANNONS"], .inner_sidebar .widget_text, .entry-content a[href*="utm_campaign"]
 bandyplay.se##div[class^="CookieConsent"]
 banners$image,domain=gavletravet.se|travsport.se
 barnsemester.se##.puffLine
@@ -1185,7 +1186,7 @@ bytbil.com###privacyModal
 bytbil.com##.available-services
 cafe.se,kingmagazine.se,manolo.se##.card-partner, .partner
 caminomagasin.se###cookie-compliance
-caminomagasin.se##.block--extern-annons
+caminomagasin.se##.block--extern-annons, .view-annonser
 camping.se###CookiesBox
 camping.se###rightSideAds, .OpenXAd, .DfpAd
 campingsverige.se##.banner_window
@@ -1340,8 +1341,6 @@ gamereactor.se##div[style="min-height: 600px; margin-bottom: 20px;"]
 garaget.org##.gorg-side-content > div.small:nth-last-child(2)
 garaget.org##.gorgad
 gavletravet.se,travsport.se##.banner-component, .partners, .cookie-meddelande
-gbgfotboll.se###cookie_bar, #cookie_bar_overlay
-gbgfotboll.se##.teaser > a.image
 gentlemannaguiden.com##.advertising, .sidebar .widget_text, .sidebar .widget_media_image
 glassakademin.se##[class^="adverts-"]
 godare.se##.privacy-information
@@ -1490,7 +1489,7 @@ missatsamtal.se##.nosnaj
 mmabetz.se##.desktop-homepage-ad, .desktop-main-ad, .latest-betting-campaigns, .best-casino-section, .top-casino
 mmanytt.se##.front-banner,.front-banner-cover,#text-2,[class*="sponsrat-inlagg"],a[href*="://kampanjer."],.ohmbet_link
 mobil.se,nordichardware.se##.pspy_info
-mobilanyheter.net##a[href*="rocketpot.io"]
+mobilanyheter.net##a[href*="rocketpot.io"], a[href*="casino"], a[href*="betting"]
 modernalivet.se##.modal-wrap, .slide-in-box
 modette.se##.true_native_block
 morotsliv.com###sidebar .et_pb_widget
@@ -1543,8 +1542,6 @@ proffs.se##.cookie-wrapper
 pussad.se##.g1-popup-newsletter, .g1-slideup-wrap
 quizza.nu###takeover
 radio.se##.topAdSpacer, .topASp
-rastaochdalla.se##.sidebar-right > .widget_social_links
-rastaochdalla.se##.widget_advertise
 ratsit.se##.promo
 ravarumarknaden.se###header > div > div.last
 realm667.com#@##redim-cookiehint
@@ -2001,6 +1998,7 @@ ysektionen.se##.yweb-news-paper-banner
 ||jobba-hemifran.com^
 ||js.hs-banner.com^
 ||js.rating-widget.com/external
+||jst.ai^$third-party
 ||juicer.io/api/page_views$xmlhttprequest
 ||jula.se/CookieConsent
 ||jwpcdn.com/player/plugins/inference/
