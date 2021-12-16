@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2021-12-14 09:46:10 CET
+! Last modified: 2021-12-16 11:45:02 CET
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -733,6 +733,7 @@
 /plugins/custom-cookie-message-btdm-extension/*$script
 /plugins/custom-cookie-message/*$script
 /plugins/daftplug-instantify$domain=se.moyens.net
+/plugins/datafeedr-comparison-sets$domain=gaming365.se
 /plugins/deblocker/js/deblocker$script,domain=~filecr.com
 /plugins/dohi-gdpr/*
 /plugins/dohi-sellbranch/js/popup.$script
@@ -1083,7 +1084,7 @@ alkompis.se##.cdk-overlay-container
 alkompis.se##app-ads
 allabolag.se###company-card_top-banner
 allakorsord.se###CybotCookiebotDialog
-allakorsord.se,allas.se,baaam.se,dromhemochtradgard.se,elle.se,femina.se,frida.se,hant.se,mabra.com,motherhood.se,residencemagazine.se,svenskdam.se##.ag-product-wrapper, .product-carousel__container
+allakorsord.se,allas.se,baaam.se,dromhemochtradgard.se,elle.se,femina.se,frida.se,hant.se,mabra.com,motherhood.se,residencemagazine.se,svenskdam.se##.ag-product-wrapper, .product-carousel__container, .shop_carousel, .editorsPick
 allakorsord.se,allas.se,baaam.se,dromhemochtradgard.se,elle.se,femina.se,frida.se,hant.se,mabra.com,motherhood.se,residencemagazine.se,svenskdam.se##article[data-type="native"]
 allas.se,baaam.se,dromhemochtradgard.se,elle.se,femina.se,hant.se,mabra.com,motherhood.se,residencemagazine.se,svenskdam.se###onetrust-banner-sdk
 allatvkanaler.se##.ga
@@ -1217,7 +1218,7 @@ dagensinfrastruktur.se##.g-single
 dagensinfrastruktur.se,ratsit.se,sonicmagazine.com##[class^="ad-"]
 dagensjuridik.se##.outher-sidebar, a[href*="/annons/"]
 dagensopinion.se##a[href^="/annons-"]
-dagensps.se##a[href*="/ps-partner/"], .ad-links-module, .dagensps_ad
+dagensps.se##a[href*="/ps-partner/"], .ad-links-module, .dagensps_ad, a[href*="ut.dagensps.se"][target]
 dagenstv.com###bt
 danskaspraket.se,digitalavykort.se,viseniorer.se,vmj.se##.cc-cookies
 danskaspraket.se,digitalavykort.se,vmj.se##.topdiv
@@ -1275,7 +1276,7 @@ expo.se##div[class*="expo-ads"], div[class*="pane-openx"], .modal, .header-top.s
 expressen.se##.campaign
 expressen.se##.html-widget > div[style^="text-align: center; font-size: 10px;"]
 expressen.se##.teaser > a[href*="/kampanj."], .teaser > a[href*="/brandstudio"], .teaser > a[href*="/brand-studio"], figure[data-article-data*="/sponsrat"], figure[data-article-data*="/annons"], figure[data-article-data*="/brand-studio"], .teaser--native, .native-article
-expressen.se##a[href*="/spel.exp"], a[href*="/lanapengar.exp"], a[href*="/rabattkoder.exp"], a[href*="/annons"], .match-betting, .discount-ad, .b-ad__caption, .pressrelease-teaser, .widget-ad-marker, .widget-ad-marker + a, .promotion-banner, .widget--collaboration, .rotator--external, a[data-click-track*="prisjakt"], .linked-image-widget a[href*="/kampanj/"]
+expressen.se##a[href*="/spel.exp"], a[href*="/lanapengar.exp"], a[href*="/rabattkoder.exp"], a[href*="/annons"], .match-betting, .discount-ad, .b-ad__caption, .pressrelease-teaser, .widget-ad-marker, .widget-ad-marker + a, .promotion-banner, .widget--collaboration, .rotator--external, a[data-click-track*="prisjakt"], .linked-image-widget a[href*="/kampanj/"], .linked-image-widget a[href*="lifestyle.expressen.se"]
 familjeliv.se##a[href*="/kampanj/"], .flm-kampanj
 familjesidan.se##.cookies-wrapper
 fastighetssverige.se##a[href*="/banner/out/"], .bnr_box
@@ -2065,6 +2066,7 @@ ysektionen.se##.yweb-news-paper-banner
 ||matchesfashion.com^*/ExternalBanners$image,third-party
 ||matorama.se^$csp=img-src 'self' *.wordpress.com *.wp.com *.gravatar.com
 ||mcgtrack.herokuapp.com^$third-party
+||media.dagensps.se/*banner$image
 ||media.golfbladet.se/*banner
 ||media.jw-it.se/b/$image
 ||media.jw-it.se/getip.php
@@ -2192,6 +2194,7 @@ ysektionen.se##.yweb-news-paper-banner
 ||script.e-space.se^$third-party
 ||sdk.pulse.schibsted.com^$script
 ||se-ads-microservice.aws.aller.com^
+||se-affiliate-gallery.aws.aller.com^
 ||seenthis.se^$third-party
 ||service.survio.se^*/registerhit?$image
 ||sexapp.me^
