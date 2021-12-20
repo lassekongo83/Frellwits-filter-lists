@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2021-12-17 16:41:34 CET
+! Last modified: 2021-12-20 07:50:12 CET
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -68,8 +68,8 @@
 ###cookiejar
 ###cookielawwarning
 ###cookieMsgBlock
-###cookieNotice
 ###CookieNotice
+###cookieNotice
 ###cookies-acceptance .alert.bottom
 ###cookiesInfo
 ###dialog-eu-cookie-law
@@ -352,7 +352,6 @@
 ##td#reklam
 ##ul.adsmodern
 &type=load_offers$xmlhttprequest,domain=illvet.se|pctidningen.se
-*$csp=script-src 'none',domain=svtt.se|ssvd.se|exressen.se|eexpressen.se|sskatteverket.se|aatg.se|atgg.se
 -popup-analytics$script
 -tracking.js$domain=aftonbladet.se
 .ax/ad/
@@ -857,6 +856,7 @@
 /Portalannonser/*$image
 /postscribe.$script,domain=linnherbertsson.se
 /prebid$script,domain=idg.se
+/prebid_rtb_call
 /prisjakt$xmlhttprequest,domain=fz.se
 /private-browsing.js$domain=thelocal.se
 /prod/adform$xmlhttprequest
@@ -1731,7 +1731,6 @@ ysektionen.se##.yweb-news-paper-banner
 ||amazonaws.com/metapic-cdn/*/metapic.
 ||amazonaws.com/pfe_im/js/prod/pcc/s_code.js
 ||ana.tunnl.com^
-||analytics-sdk.yle.fi^$script
 ||analytics.barnebys.sh^$image
 ||analytics.ozzi.io^$third-party
 ||analytics.wayke.se^
@@ -2323,7 +2322,6 @@ ysektionen.se##.yweb-news-paper-banner
 ||yelp.se/sit_rep
 ||yieldwrapper.com^$third-party
 ||yle-consent-sdk.yle.fi^
-||yle.fi/*/event$ping
 ||youplay.se^$third-party,domain=dayviews.com|emocore.se|extraextra.se|hamsterpaj.net|kalender.se|kamrat.com
 ||yoursecurecheckout1.com^
 ||ysektionen.se/media/uploads/*banner$image
