@@ -480,6 +480,7 @@ artbannersplus&task=show
 /uploads/bilder/Samarbetspartners/*
 /view_count/view.php$xmlhttprequest
 /view-resources/public/*/js/dfp.
+/visit/v.js?
 /Vizzit/vizzit.$script
 /wdg_cookie_bar
 /wdg/iab-active$script
@@ -792,6 +793,7 @@ artbannersplus&task=show
 ##a[title="LeoVegas"]
 ##a.card.-sponsored
 ##a.cookiecutter[onclick^="cookie"]
+##a#top-banner.banner-holder
 ##article.annons
 ##article.article-sponsored
 ##article.category-reklam
@@ -2553,8 +2555,10 @@ flm.nu##.spons
 schack.se##.schac-widget
 norrahalland.se##.norra-leeads-ads,.egna_annonser_widget
 ?action=get_banners$domain=djungeltrumman.se
-djungeltrumman.se###sponsored-posts, #right-banners, .banner-wrapper
+djungeltrumman.se###sponsored-posts, #right-banners, .banner-wrapper, .top-banner-label, .banner-label
 djungeltrumman.se##.label-sponsored:upward(.post)
+djungeltrumman.se###latest-slider a:has(.label-sponsored):remove()
+djungeltrumman.se##strong:has-text(/samarbete|sponsrat/i):upward(li):remove()
 djungeltrumman.se##+js(nano-sib, dt_fullpage_ad)
 biliaoutlet.se,bilia.se###acceptcookies
 www.google.se##+js(ra, onmousedown|ping, a[href][onmousedown]\, a[href][ping])

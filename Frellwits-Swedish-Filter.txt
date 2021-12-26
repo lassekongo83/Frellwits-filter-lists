@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2021-12-23 08:12:01 CET
+! Last modified: 2021-12-26 07:50:40 CET
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -219,6 +219,7 @@
 ##.widget_ic_ad_widget:not(body):not(html)
 ##[class*="advads_ad_widget"]:not(body):not(html)
 ##[id^="adace_ads"]
+##a#top-banner.banner-holder
 ##a.card.-sponsored
 ##a.cookiecutter[onclick^="cookie"]
 ##a[data-bid="1"][href*="/linkout"]
@@ -959,6 +960,7 @@
 /videojs.ima.$domain=gamereactor.se|sportbladetplay.se
 /view-resources/public/*/js/dfp.
 /view_count/view.php$xmlhttprequest
+/visit/v.js?
 /Vizzit/vizzit.$script
 /wdg/iab-active$script
 /wdg_cookie_bar
@@ -1233,7 +1235,7 @@ di.se##.di_panorama-wrapper, .site-header__panorama, .di_panorama__isAdLabel, .d
 di.se,dn.se,expressen.se###rich-media-ads
 di.se,dn.se,privataaffarer.se##.teaser-native
 diabetes.se##.c-cookies
-djungeltrumman.se###sponsored-posts, #right-banners, .banner-wrapper
+djungeltrumman.se###sponsored-posts, #right-banners, .banner-wrapper, .top-banner-label, .banner-label
 dn.se##.campaign-holder
 doktorn.com##.js-banner-wrapper
 driva-eget.se,foretagande.se,hockeymagasinet.com,revisionsvarlden.se,runnersworld.se,travelnews.se,utsidan.se##.sponsored
