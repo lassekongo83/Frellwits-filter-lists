@@ -72,7 +72,6 @@
 ||gamblingsyndication.com^$third-party
 ||getlevelten.com^$third-party
 ||getsitecontrol.com^$third-party
-||glimr.io^$third-party
 ||gopeach.se^$third-party
 ||greatstoryvideo.se^$third-party
 ||happygreen.se^$third-party
@@ -274,6 +273,7 @@ artbannersplus&task=show
 .se/wdg/tracking
 .se/wp-content/banners/
 .se/xhr/add-impression/
+/*banner-nyhetsbrev*.mp4
 /468adrotate.php
 /?adsforwp_front_js
 /?dtbnrspcid=$xmlhttprequest
@@ -1373,20 +1373,13 @@ mobilanyheter.net##+js(set, ai_run_scripts, noopFunc)
 
 ! HTML filters, and other Firefox specific filters
 !#if !env_chromium
-www.expressen.se##^script:has-text(window.Bau.preloadAds)
 dn.se##^script:has-text(window.DN.initAds)
-dn.se##^.adblock
-dn.se##^#ads-bundle
-di.se##^script:has-text(checkAdBlockEnabled)
-aftonbladet.se##^script:has-text(preLoadAds)
-svd.se##^script:has-text(SvD.ads.preDefineAd)
 newsner.com,humorbibeln.se,sportbibeln.se,ettgottskratt.se,sportpanelen.se,zeinaskitchen.se,dinbyggare.se,trafiksakerhet.se,boktugg.se,carup.se,lakartidningen.se,villalivet.se,konsolnyheter.se,matsafari.nu##^script:has-text(mi_track_user)
 newsner.com,humorbibeln.se,sportbibeln.se,ettgottskratt.se,sportpanelen.se,zeinaskitchen.se,dinbyggare.se,trafiksakerhet.se,boktugg.se,carup.se,lakartidningen.se,villalivet.se,konsolnyheter.se,matsafari.nu##^script:has-text(monsterinsights_frontend)
 thorengruppen.se,pppress.se,utslappsratt.se,newsvoice.se,historiskahem.se,bastad.se,heleneholmsif.se,trafikskola.se,melodifestivalklubben.se##^script:has-text(em_track_user)
 thorengruppen.se,pppress.se,utslappsratt.se,newsvoice.se,historiskahem.se,bastad.se,heleneholmsif.se,trafikskola.se,melodifestivalklubben.se##^script:has-text(exactmetrics_frontend)
 newsvoice.se##^script:has-text(exactmetrics_scroll_tracking_load)
 nyadagbladet.se##^script:has-text(OneSignal)
-futsalmagasinet.se##^script[id^="buy_sell_ads"]
 !#endif
 
 ! For browsers that aren't firefox
@@ -1399,12 +1392,6 @@ newsvoice.se##+js(acis, exactmetrics_scroll_tracking_load)
 nyadagbladet.se##+js(acis, OneSignal)
 proffs.se##*::-webkit-scrollbar:style(display: unset !important;)
 proffs.se##*::-webkit-scrollbar-thumb:style(background: #5e5e5e !important; border: 64px none #ffffff !important; border-radius: 0px !important;)
-di.se##+js(nosiif, runAdBlockPaywall, 1000)
-!#endif
-
-! Firefox mobile filters
-!#if env_mobile
-aftonbladet.se##+js(nostif, abAndroidSmartAppBannerActive)
 !#endif
 
 ! IDG
@@ -1476,6 +1463,7 @@ aftonbladet.se##a:has(span:has-text(/^annons/i))
 aftonbladet.se##a:has-text(Kommersiell text, innehåller annonslänkar)
 aftonbladet.se##strong:has-text(/ANNONS/i):upward(p)
 aftonbladet.se##div[class^="css-"]:has([data-ad-subtype="mega"])
+aftonbladet.se##a[href^="https://kampanj."]:upward(1)
 ! css
 www.aftonbladet.se##body:style(overflow:unset!important)
 ! scriptlets
@@ -1526,8 +1514,9 @@ www.dn.se##+js(ra, data-auto-play)
 /streamsense.$script,important,domain=dn.se
 ! di
 /getnative$xmlhttprequest,domain=di.se
-di.se##+js(acis, Di, initAds)
 di.se##+js(set, getAdblockerStatus, noopFunc)
+di.se##+js(acis, Di, initAds)
+di.se##+js(nosiif, runAdBlockPaywall)
 di.se##+js(nostif, #triggerModal)
 di.se##+js(ra, data-auto-play,,stay)
 di.se##.di_panorama-wrapper, .site-header__panorama, .di_panorama__isAdLabel, .discount-box, .campaign-ad-box, .di_start__teaser-placeholder, .di_teaser-flak-planbokskoll, .di_teaser-flak-container--native, .native-box, .bandit-box__teaser--native, a[href*="/brandstudio"], .service-box, .brand-studio-box
@@ -2259,12 +2248,6 @@ mmabetz.se##.desktop-homepage-ad, .desktop-main-ad, .latest-betting-campaigns, .
 foreca.se###ckieconsent
 skk.se###cookie-button-banner
 skk.se##.campaigns, [id*="GlobalCampaigns"]
-battrenyheter.se##.gbnan, .abnan-single, a[href*="bettingsidor"]
-battrenyheter.se##.home-cat-first:has(a[href$="/sponsrad/"])
-battrenyheter.se##.post-item:has(a[href$="/samarbete/"])
-battrenyheter.se##.post-item:has(a[href$="/sponsrad/"])
-battrenyheter.se##.post-item:has(a[href*="casino"])
-battrenyheter.se##.vc_row.vc_row-flex:has(.abnan-single)
 jusek.se##.l-advertisement, .m-adform, .m-splash
 ||camping.se^*/Js/DFP/
 camping.se###CookiesBox
@@ -2391,7 +2374,7 @@ alltomburgare.se##.newscolumn:has(a[href$="/sponsrat/"])
 ||lokalguiden.se/magasinet/banner
 lokalguiden.se##.applicant-match-container, .banner-item, .banner-container
 fightermag.se##a[href*="/sponsra"]
-forvaltarforum.se##[id^="ff_banner"], .home .partner_article + .mh-section, .home .payed_article + .mh-section, .home-columns .ticker-title.partner_article, .home-columns .ticker-title.payed_article, .mh-header .widget_sow-slider, .sow-slider-image, .houdini_partner_article
+forvaltarforum.se##[id^="ff_banner"], .home .partner_article + .mh-section, .home .payed_article + .mh-section, .home-columns .ticker-title.partner_article, .home-columns .ticker-title.payed_article, .mh-header .widget_sow-slider, .sow-slider-image, .houdini_partner_article, .houdini_video_banner
 gaffa.se##.external-branding
 ||borsvarlden.com/js/cookie-notice
 ||borsvarlden-banners.azurewebsites.net^

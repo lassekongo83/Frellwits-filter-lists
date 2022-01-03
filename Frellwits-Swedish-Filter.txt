@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2022-01-01 08:51:49 CET
+! Last modified: 2022-01-03 08:35:15 CET
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -19,9 +19,6 @@
 !#endif
 !#if !env_chromium
 !#include Swedish/not_chromium.txt
-!#endif
-!#if env_mobile
-!#include Swedish/mobile.txt
 !#endif
 !#if !env_mobile
 !#include Swedish/not_mobile.txt
@@ -68,8 +65,8 @@
 ###cookiejar
 ###cookielawwarning
 ###cookieMsgBlock
-###CookieNotice
 ###cookieNotice
+###CookieNotice
 ###cookies-acceptance .alert.bottom
 ###cookiesInfo
 ###dialog-eu-cookie-law
@@ -422,6 +419,7 @@
 .se/wdg/vda-active
 .se/wp-content/banners/
 .se/xhr/add-impression/
+/*banner-nyhetsbrev*.mp4
 /468adrotate.php
 /?adsforwp_front_js
 /?agg_url=/shopping$domain=nyheter24.se
@@ -1145,7 +1143,6 @@ barnsemester.se##.puffLine
 barometern.se,blt.se,borasdly.se,bt.se,kalmarposten.se,kristianstadsbladet.se,olandsbladet.se,osterlenmagasinet.se,ostrasmaland.se,smp.se,sydostran.se,trelleborgsallehanda.se,ut.se,vxonews.se,ystadsallehanda.se##.component__guide-ads, #fullpage-ad-portal, div[style="min-height: 302px;"]
 barometern.se,blt.se,borasdly.se,bt.se,kalmarposten.se,kristianstadsbladet.se,olandsbladet.se,osterlenmagasinet.se,ostrasmaland.se,smp.se,sydostran.se,trelleborgsallehanda.se,ut.se,vxonews.se,ystadsallehanda.se##.component_gdprMessage__container
 batliv.se,borattforum.se,brollopsmagasinet.se,bussmagasinet.se,elinor.se,em-fotboll.se,fotbollsresultat.com,globalpolitics.se,nyhetersto.se,svenskbyggtidning.se##a.gofollow[data-track]
-battrenyheter.se##.gbnan, .abnan-single, a[href*="bettingsidor"]
 battrestadsdel.se###top-banner-mobile, #HideBanner, .apd-text, .apds_main, .entry-priomaker, [class^="dls-"]
 battrestadsdel.se,casinoexpo.se,flashback.se,leta.se###top-banner
 beernews.se##.cookie-consent-wrapper
@@ -1316,7 +1313,7 @@ forum.macworld.se,idg.se##.idgcp__layer
 forum.mustangclubsweden.org##a[href*="&do=advertisement&ad=1"]
 forum.robsoft.nu##td[valign="middle"] > a[target="_blank"]
 forum.robsoft.nu,svenskaturistforeningen.se##.cookie-box
-forvaltarforum.se##[id^="ff_banner"], .home .partner_article + .mh-section, .home .payed_article + .mh-section, .home-columns .ticker-title.partner_article, .home-columns .ticker-title.payed_article, .mh-header .widget_sow-slider, .sow-slider-image, .houdini_partner_article
+forvaltarforum.se##[id^="ff_banner"], .home .partner_article + .mh-section, .home .payed_article + .mh-section, .home-columns .ticker-title.partner_article, .home-columns .ticker-title.payed_article, .mh-header .widget_sow-slider, .sow-slider-image, .houdini_partner_article, .houdini_video_banner
 fotboll.com##.header-static-lg, .fp-partner, .xs-ad, .bo-wrapper
 fotbolldirekt.se,hockeysverige.se,innebandymagazinet.se##.site-partnevisment, .h-background--sponsored-light, .row .text-center img
 fotbollskanalen.se##.brand, .desktop-ad-web
@@ -1957,7 +1954,6 @@ ysektionen.se##.yweb-news-paper-banner
 ||gamesglue.com/js/gameanalytics/GameAnalytics.$script
 ||getlevelten.com^$third-party
 ||getsitecontrol.com^$third-party
-||glimr.io^$third-party
 ||gnuheter.com/creeper/image$image
 ||gopeach.se^$third-party
 ||greatstoryvideo.se^$third-party
