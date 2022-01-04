@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2022-01-03 08:35:15 CET
+! Last modified: 2022-01-04 12:39:32 CET
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -462,6 +462,7 @@
 /analytics-bmb$script
 /analytics/cts.min.js$script
 /analytics/gallup/*$script
+/angry-golick-$script
 /annons$image,domain=dagenshultsfred.se|dagenskalmar.nu|dagensvastervik.se|dagensvimmerby.se
 /annons-banner
 /annons.aspx?
@@ -979,6 +980,7 @@
 /wp-content/themes/keremiya1/js/jopper.
 /wp-content/themes/keremiya1/js/license.
 /wp-content/themes/keremiya1/js/script.js
+/wp-content/uploads/*-sidebar$image,domain=dagensinfrastruktur.se
 /wp-content/uploads/*/public/assets/js/advanced.js$script
 /wp-content/uploads/*annons$image,domain=~datahjelperne.no
 /wp-content/uploads/*banner$image,domain=alltomhif.se|borattforum.se|brollopsmagasinet.se|bussmagasinet.se|customerinsider.se|danstidningen.se|dental24.se|electronic.se|guldkanalen.se|investerarbrevet.se|katerinamagasin.se|ljuskultur.se|marsta.nu|pakryss.se|sff.nu|sportpanelen.se|svensktidskrift.se|tekniknytt.se|turismnytt.se|vardfokus.se|viralsweden.com
@@ -1658,7 +1660,7 @@ tripadvisor.se##[class$="banner_ad"]
 turismnytt.se##.site-wrap > .row > .col-sm-3
 turistmal.se###col_right
 tv.nu###app > div > div[class]:nth-of-type(2)
-tv.nu##a[href*="adform.net"]
+tv.nu##a[href*="adform.net"], .ad-fullscreenWallpaper__container
 tvmatchen.nu##.bet365, .panorama-wrapper, .tvg-manager-box
 tvprogram.se##.backdrop, .fcb
 uppsalanyheter.se###banner-top-block
@@ -1739,7 +1741,6 @@ ysektionen.se##.yweb-news-paper-banner
 ||analytics.barnebys.sh^$image
 ||analytics.ozzi.io^$third-party
 ||analytics.wayke.se^
-||angry-golick-*.netlify.app/sdk.js
 ||annons.lidkopingsnytt.nu^
 ||api.hitta.se/creepy
 ||api.hitta.se/offer
@@ -1837,7 +1838,7 @@ ysektionen.se##.yweb-news-paper-banner
 ||compricer.se^$third-party
 ||connect.nosto.com^*/behav-popup.$script
 ||connectio.s3.amazonaws.com/connect-retarget.$script
-||consensu.org^$domain=cleannet.se|dagenshandel.se|enkelteknik.se|entreprenad.com|flashback.org|food-supply.se|foodnet.se|fri-kopenskap.se|gbgfotboll.se|habit.se|hockeynews.se|kemivarldenbiotech.se|landleyskok.se|lifesciencesweden.se|medtechmagazine.se|motormagasinet.se|packnet.se|plastnet.se|prevent.se|processnet.se|recyclingnet.se|rt-forum.se|skyddosakerhet.se|transportnet.se|tvmatchen.nu|uochd.se|verkstaderna.se|woodnet.se
+||consensu.org^$domain=cleannet.se|dagenshandel.se|enkelteknik.se|entreprenad.com|ettgottskratt.se|flashback.org|food-supply.se|foodnet.se|fri-kopenskap.se|gbgfotboll.se|habit.se|hockeynews.se|humorbibeln.se|kemivarldenbiotech.se|landleyskok.se|leta.se|lifesciencesweden.se|medtechmagazine.se|motormagasinet.se|newsner.com|packnet.se|plastnet.se|prevent.se|processnet.se|recyclingnet.se|rt-forum.se|skyddosakerhet.se|sportbibeln.se|transportnet.se|tvmatchen.nu|uochd.se|verkstaderna.se|woodnet.se
 ||consent.dk^$third-party,domain=~ekstrabladet.dk
 ||consentframework.com^$domain=luleahockeyforum.com
 ||converdiant.com^$third-party
@@ -2044,7 +2045,6 @@ ysektionen.se##.yweb-news-paper-banner
 ||linksalpha.com^$third-party
 ||liveagent.se/scripts/track.$script
 ||ljuskompaniet.se^
-||logger.tv.nu^
 ||lokalguiden.se/magasinet/banner
 ||lokus.se^$~image,third-party,domain=~familj.se
 ||look.ufinkln.com^

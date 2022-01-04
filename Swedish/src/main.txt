@@ -298,6 +298,7 @@ artbannersplus&task=show
 /artikelannons/*
 /analytics/cts.min.js$script
 /analytics/gallup/*$script
+/angry-golick-$script
 /annons.aspx?
 /annons_hor.
 /annons_ver.
@@ -523,7 +524,6 @@ artbannersplus&task=show
 ||amazonaws.com/pfe_im/js/prod/pcc/s_code.js
 ||ana.tunnl.com^
 ||analytics.barnebys.sh^$image
-||angry-golick-*.netlify.app/sdk.js
 ||api.mpzmail.com/tracker
 ||api.netb11.com/b/$image
 ||api.staylive.tv/videos/engagement$xmlhttprequest
@@ -1170,7 +1170,7 @@ arkenzoo.se,vetzoo.se,animail.se,mustijamirri.fi,petenkoiratarvike.com##body:sty
 ||piano.io^$domain=thelocal.se|illvet.se|iform.se|varldenshistoria.se|militarhistoria.se|popularhistoria.se
 /execute?$xmlhttprequest,domain=mestmotor.se|thelocal.se|illvet.se|iform.se
 /unload?$ping,domain=mestmotor.se|thelocal.se|illvet.se|iform.se
-||consensu.org^$domain=hockeynews.se|tvmatchen.nu|motormagasinet.se|food-supply.se|skyddosakerhet.se|dagenshandel.se|plastnet.se|habit.se|woodnet.se|foodnet.se|transportnet.se|processnet.se|packnet.se|verkstaderna.se|medtechmagazine.se|recyclingnet.se|rt-forum.se|kemivarldenbiotech.se|uochd.se|lifesciencesweden.se|fri-kopenskap.se|cleannet.se|entreprenad.com|flashback.org|landleyskok.se|gbgfotboll.se|enkelteknik.se|prevent.se
+||consensu.org^$domain=hockeynews.se|tvmatchen.nu|motormagasinet.se|food-supply.se|skyddosakerhet.se|dagenshandel.se|plastnet.se|habit.se|woodnet.se|foodnet.se|transportnet.se|processnet.se|packnet.se|verkstaderna.se|medtechmagazine.se|recyclingnet.se|rt-forum.se|kemivarldenbiotech.se|uochd.se|lifesciencesweden.se|fri-kopenskap.se|cleannet.se|entreprenad.com|flashback.org|landleyskok.se|gbgfotboll.se|enkelteknik.se|prevent.se|leta.se|newsner.com|humorbibeln.se|sportbibeln.se|ettgottskratt.se
 
 ! Common scriptlets
 lakartidningen.se##+js(set, MonsterInsights, undefined)
@@ -1473,10 +1473,11 @@ omni.se,omniekonomi.se##.article--sponsored, .resource--sponsored, .component--s
 omni.se,omniekonomi.se##a[href*="article-ad-"]:upward(.resource--link)
 omni.se,omniekonomi.se##.header-banner--regular, .app-banner:style(--banner-offset: 0 !important;)
 omni.se,omniekonomi.se##+js(aeld, omniPulseLoaded)
-||logger.tv.nu^
-tv.nu##a[href*="adform.net"]
+tv.nu##a[href*="adform.net"], .ad-fullscreenWallpaper__container
 tv.nu###app > div > div[class]:nth-of-type(2)
 tv.nu###tv-schedule section:has-text(ANNONS)
+tv.nu##header div:matches-css(z-index:999)
+tv.nu##+js(rc, layout--locked)
 @@/ad-block-detection-script$domain=blocket.se
 ||jobb.blocket.se/blocket_puff.html
 ||jobb.blocket.se^*/tracker.js
@@ -2514,6 +2515,7 @@ esportare.se##a[href*="utm_campaign"]
 morotsliv.com##.et_bloom .et_bloom_flyin_center
 morotsliv.com##a[href*="/?utm_medium=affiliate"]
 180.se##[class*="top-ad-"]
+/wp-content/uploads/*-sidebar$image,domain=dagensinfrastruktur.se
 dagensinfrastruktur.se##.g-single
 /res_ads$domain=res.se
 arkitekt.se##.Cookie
