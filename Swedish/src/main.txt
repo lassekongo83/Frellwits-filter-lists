@@ -593,6 +593,7 @@ artbannersplus&task=show
 ||es.loppi.se/api/imp$xmlhttprequest
 ||es.loppi.se/get$script
 ||execute-api.eu-west-1.amazonaws.com/live/analytics/$xmlhttprequest
+||famobi.com/play/hit/
 ||fast.fonts.com/t/1.css$stylesheet,xmlhttprequest
 ||fast.fonts.net/t/1.css$stylesheet,xmlhttprequest
 ||fast.fonts.net/lt/1.css$stylesheet,xmlhttprequest
@@ -1378,8 +1379,8 @@ mobilanyheter.net##+js(set, ai_run_scripts, noopFunc)
 ! HTML filters, and other Firefox specific filters
 !#if !env_chromium
 dn.se##^script:has-text(window.DN.initAds)
-newsner.com,humorbibeln.se,sportbibeln.se,ettgottskratt.se,sportpanelen.se,zeinaskitchen.se,dinbyggare.se,trafiksakerhet.se,boktugg.se,carup.se,lakartidningen.se,villalivet.se,konsolnyheter.se,matsafari.nu##^script:has-text(mi_track_user)
-newsner.com,humorbibeln.se,sportbibeln.se,ettgottskratt.se,sportpanelen.se,zeinaskitchen.se,dinbyggare.se,trafiksakerhet.se,boktugg.se,carup.se,lakartidningen.se,villalivet.se,konsolnyheter.se,matsafari.nu##^script:has-text(monsterinsights_frontend)
+newsner.com,humorbibeln.se,sportbibeln.se,ettgottskratt.se,sportpanelen.se,zeinaskitchen.se,dinbyggare.se,trafiksakerhet.se,boktugg.se,carup.se,lakartidningen.se,villalivet.se,matsafari.nu##^script:has-text(mi_track_user)
+newsner.com,humorbibeln.se,sportbibeln.se,ettgottskratt.se,sportpanelen.se,zeinaskitchen.se,dinbyggare.se,trafiksakerhet.se,boktugg.se,carup.se,lakartidningen.se,villalivet.se,matsafari.nu##^script:has-text(monsterinsights_frontend)
 thorengruppen.se,pppress.se,utslappsratt.se,newsvoice.se,historiskahem.se,bastad.se,heleneholmsif.se,trafikskola.se,melodifestivalklubben.se##^script:has-text(em_track_user)
 thorengruppen.se,pppress.se,utslappsratt.se,newsvoice.se,historiskahem.se,bastad.se,heleneholmsif.se,trafikskola.se,melodifestivalklubben.se##^script:has-text(exactmetrics_frontend)
 newsvoice.se##^script:has-text(exactmetrics_scroll_tracking_load)
@@ -1388,8 +1389,8 @@ nyadagbladet.se##^script:has-text(OneSignal)
 
 ! For browsers that aren't firefox
 !#if env_chromium
-newsner.com,humorbibeln.se,sportbibeln.se,ettgottskratt.se,sportpanelen.se,zeinaskitchen.se,dinbyggare.se,trafiksakerhet.se,boktugg.se,carup.se,lakartidningen.se,villalivet.se,konsolnyheter.se,matsafari.nu##+js(set, mi_track_user, false)
-newsner.com,humorbibeln.se,sportbibeln.se,ettgottskratt.se,sportpanelen.se,zeinaskitchen.se,dinbyggare.se,trafiksakerhet.se,boktugg.se,carup.se,lakartidningen.se,villalivet.se,konsolnyheter.se,matsafari.nu##+js(acs, monsterinsights_frontend)
+newsner.com,humorbibeln.se,sportbibeln.se,ettgottskratt.se,sportpanelen.se,zeinaskitchen.se,dinbyggare.se,trafiksakerhet.se,boktugg.se,carup.se,lakartidningen.se,villalivet.se,matsafari.nu##+js(set, mi_track_user, false)
+newsner.com,humorbibeln.se,sportbibeln.se,ettgottskratt.se,sportpanelen.se,zeinaskitchen.se,dinbyggare.se,trafiksakerhet.se,boktugg.se,carup.se,lakartidningen.se,villalivet.se,matsafari.nu##+js(acs, monsterinsights_frontend)
 fysikstugan.se,thorengruppen.se,pppress.se,utslappsratt.se,newsvoice.se,historiskahem.se,bastad.se,heleneholmsif.se,trafikskola.se,melodifestivalklubben.se##+js(set, em_track_user, false)
 fysikstugan.se,thorengruppen.se,pppress.se,utslappsratt.se,newsvoice.se,historiskahem.se,bastad.se,heleneholmsif.se,trafikskola.se,melodifestivalklubben.se##+js(set, exactmetrics_frontend, undefined)
 newsvoice.se##+js(acs, exactmetrics_scroll_tracking_load)
@@ -1870,7 +1871,7 @@ metalcentral.net,egoinas.se###tm-top-a
 
 ! Various annoyances and tracking
 annicaenglund.se,alicestenlof.com,ellinorlofgren.se,linnherbertsson.se,pricerunner.se##.noscroll:style(overflow: initial !important;)
-streamio.com,konsolnyheter.se,nyan.ax##+js(aeld, contextmenu)
+streamio.com,nyan.ax##+js(aeld, contextmenu)
 ! Annoying, unecessary, and completely unrelated autoplaying video
 ||delivery.youplay.se/load.js?*&ap=true$script,removeparam=/^ap/
 ||youplay.se^$third-party,domain=hamsterpaj.net|emocore.se|dayviews.com|kamrat.com|extraextra.se|kalender.se
@@ -2127,10 +2128,11 @@ newsner.com,humorbibeln.se,sportbibeln.se,ettgottskratt.se##.ssp_divider:has(.sp
 byggnadsarbetaren.se##[class^="siteAds"], .siteAlerts
 /aria/bentojs.js$domain=nickelodeon.se
 /aria/coda.html$domain=nickelodeon.se
-funnygames.se##.slot
+funnygames.se##.slot-container
 uppsalanyheter.se###banner-top-block
 skillingaryd.nu,xn--vrnamo-bua.nu###more-banners
 ||pomu.se/api/ads.json
+||pomu.se/games/visit/
 pomu.se##[class^="Banner"]
 allatvkanaler.se##.ga
 datormagazin.se##.td_module_wrap:has(a[href*="/annons/"])
@@ -2196,6 +2198,7 @@ garaget.org##.gorg-side-content > div.small:nth-last-child(2)
 professionalsecrets.se##+js(acs, $, fancybox)
 sportpanelen.se###text-html-widget-3
 tekniksmart.se##.code-block, main > div:last-child:not(:only-child), #uid_08313ba73, #uid_ab3738b5a
+tekniksmart.se##center:has-text(/annons/i):upward(1)
 industrinyheter.se,dagensnaringsliv.se,infrastrukturnyheter.se,sportochfritidsnyheter.se,inredningsnyheter.se,byggnyheter.se,dagensfastigheter.se,stockholmsbyggnyheter.se,energinyheter.se,vindkraftsnyheter.se,solenerginyheter.se,jarnvagsnyheter.se,transportochlogistik.se,metallerochgruvor.se,papperochmassa.se##.insider-ads, [id^="mainadvertorial"], [id^="dfptag"], .block-advertorial, .block-views-blockconventus-info-articles-info-article-block
 schoolido.se##.so-cookie__area
 minhembio.com##div[style="height: 120px;"]:not([id]):not([class])
@@ -2215,7 +2218,6 @@ podplay.com##.site-mw
 /ad-render$domain=internetmedicin.se
 piraja.se##.intro, #hero, #featholder:has(.spons)
 piraja.se###panoramaholder, #parallax
-_jquery.blockUI.$domain=fssweden.se
 nyadagbladet.se##.third-col, article[class*="sponsrad"]
 nyadagbladet.se##.widget_media_image:has-text(/annons/i)
 deliquate.se##[id^="ads300"], [id^="linkcat-"]
@@ -2620,8 +2622,8 @@ totallyorebro.se,totallystockholm.se##a[href*="casino"], a[href*="/sponsrat/"], 
 glassakademin.se##[class^="adverts-"]
 laromedia.se##img[alt="Annons"] + .img-flipper
 alekuriren.se###widget_code-6
-konsolnyheter.se##.g-particlesjs
-konsolnyheter.se##+js(acs, stopPrntScr)
+spelhubben.se##.g-particlesjs
+spelhubben.se##+js(acs, stopPrntScr)
 hastnet.se##.add-wrap, .listings-search-ads, .right_panel
 icagruppen.se##.cookieInfo
 kvalitetsmagasinet.se,miljo-utveckling.se,telekomidag.se,vdtidningen.se###subscribe_splash
