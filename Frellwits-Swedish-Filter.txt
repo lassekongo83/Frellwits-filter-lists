@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2022-01-11 09:29:37 CET
+! Last modified: 2022-01-13 07:55:58 CET
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -460,6 +460,7 @@
 /AiMatch$script,domain=morningstar.se
 /ajax.php?action=get_cookies_policy$xmlhttprequest
 /ajax.php?action=get_policy&site=cookie-information$xmlhttprequest
+/ajax/ads.php$domain=garaget.org
 /ajax/docu_stats.jsp$xmlhttprequest
 /analytics$domain=fiskejournalen.se|jaktjournalen.se
 /analytics$script,domain=dn.se
@@ -1129,6 +1130,7 @@ automation.se,metalcentral.net,transportnytt.se,verkstadstidningen.se##.bannergr
 automobil.se,bettips.se,bilsport.se,campingsverige.se,caroftheyear.se,dh.se,djungeltrumman.se,endurobloggen.se,eniro.se,entreprenadaktuellt.se,fightermag.se,frillesasbandy.se,husbilhusvagn.se,ja.se,klassiker.nu,ljuskultur.se,maskinbladet.se,mopedgaraget.se,nyckelspel.se,omni.se,riksettan.net,skik.se,skogsaktuellt.se,spelo.se,svenskjakt.se,vaken.se,vibilagare.se##.banner
 autonytt.se###main > .col-links
 autonytt.se,bilresaieuropa.se,konstlistan.se##a[href*="/click.adrecord."]
+autonytt.se,nyatider.nu,stoppapressarna.se##[href*="casino"][target]
 autonytt.se,sv.picmix.com,tekniknytt.se##.leaderboard
 avanza.se##.cookieMessage
 avanza.se##.noMarginAd
@@ -1525,7 +1527,6 @@ norrbotten.com##a[href*=".com/annons"], .td-ss-main-sidebar > .td-a-rec
 nsk.se,skd.se##[data-teaser-section*="native"], .slideUp
 nvp.se##[class*="banner_"], .BottomBannerContainer
 nyadagbladet.se##.third-col, article[class*="sponsrad"]
-nyatider.nu##a[target][href*="casino"]
 nyheter24.se##.lazyload_bar.show, .lazyload_outer.show, .sponsrat, .is_native
 nyheteridag.se##.content > div:not([class]) img, a[href*="www.casino"]
 nyheteridag.se##.widget.facebook
@@ -1614,7 +1615,6 @@ sporttv.nu##a[onclick*="bannerClick"]
 spray.se##.column-left > .article-partial
 spray.se##[class^="ads-"], [class*="article-casino"]
 startaochdriva.se##.banner-right, .banner-left, .wpb_single_image a[target="_blank"]
-stoppapressarna.se##a[href*="casino"][target]
 surfa.se##div[class*="-promo"], div[class*="prisjakt-"]
 svd.se###mega-ad-wrapper, .Container--ad, .theme-Native, .AdWrapper, .AdPositionData
 svenskafans.com##.puff__ad-heading
