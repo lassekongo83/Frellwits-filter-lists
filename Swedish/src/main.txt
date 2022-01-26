@@ -1388,8 +1388,8 @@ mobilanyheter.net##+js(set, ai_run_scripts, noopFunc)
 dn.se##^script:has-text(window.DN.initAds)
 newsner.com,humorbibeln.se,sportbibeln.se,ettgottskratt.se,sportpanelen.se,zeinaskitchen.se,dinbyggare.se,trafiksakerhet.se,boktugg.se,carup.se,lakartidningen.se,villalivet.se,matsafari.nu##^script:has-text(mi_track_user)
 newsner.com,humorbibeln.se,sportbibeln.se,ettgottskratt.se,sportpanelen.se,zeinaskitchen.se,dinbyggare.se,trafiksakerhet.se,boktugg.se,carup.se,lakartidningen.se,villalivet.se,matsafari.nu##^script:has-text(monsterinsights_frontend)
-thorengruppen.se,pppress.se,utslappsratt.se,newsvoice.se,historiskahem.se,bastad.se,heleneholmsif.se,trafikskola.se,melodifestivalklubben.se##^script:has-text(em_track_user)
-thorengruppen.se,pppress.se,utslappsratt.se,newsvoice.se,historiskahem.se,bastad.se,heleneholmsif.se,trafikskola.se,melodifestivalklubben.se##^script:has-text(exactmetrics_frontend)
+thorengruppen.se,pppress.se,utslappsratt.se,newsvoice.se,historiskahem.se,bastad.se,heleneholmsif.se,trafikskola.se,melodifestivalklubben.se,morotsliv.com##^script:has-text(em_track_user)
+thorengruppen.se,pppress.se,utslappsratt.se,newsvoice.se,historiskahem.se,bastad.se,heleneholmsif.se,trafikskola.se,melodifestivalklubben.se,morotsliv.com##^script:has-text(exactmetrics_frontend)
 newsvoice.se##^script:has-text(exactmetrics_scroll_tracking_load)
 nyadagbladet.se##^script:has-text(OneSignal)
 !#endif
@@ -1398,8 +1398,8 @@ nyadagbladet.se##^script:has-text(OneSignal)
 !#if env_chromium
 newsner.com,humorbibeln.se,sportbibeln.se,ettgottskratt.se,sportpanelen.se,zeinaskitchen.se,dinbyggare.se,trafiksakerhet.se,boktugg.se,carup.se,lakartidningen.se,villalivet.se,matsafari.nu##+js(set, mi_track_user, false)
 newsner.com,humorbibeln.se,sportbibeln.se,ettgottskratt.se,sportpanelen.se,zeinaskitchen.se,dinbyggare.se,trafiksakerhet.se,boktugg.se,carup.se,lakartidningen.se,villalivet.se,matsafari.nu##+js(acs, monsterinsights_frontend)
-fysikstugan.se,thorengruppen.se,pppress.se,utslappsratt.se,newsvoice.se,historiskahem.se,bastad.se,heleneholmsif.se,trafikskola.se,melodifestivalklubben.se##+js(set, em_track_user, false)
-fysikstugan.se,thorengruppen.se,pppress.se,utslappsratt.se,newsvoice.se,historiskahem.se,bastad.se,heleneholmsif.se,trafikskola.se,melodifestivalklubben.se##+js(set, exactmetrics_frontend, undefined)
+fysikstugan.se,thorengruppen.se,pppress.se,utslappsratt.se,newsvoice.se,historiskahem.se,bastad.se,heleneholmsif.se,trafikskola.se,melodifestivalklubben.se,morotsliv.com##+js(set, em_track_user, false)
+fysikstugan.se,thorengruppen.se,pppress.se,utslappsratt.se,newsvoice.se,historiskahem.se,bastad.se,heleneholmsif.se,trafikskola.se,melodifestivalklubben.se,morotsliv.com##+js(set, exactmetrics_frontend, undefined)
 newsvoice.se##+js(acs, exactmetrics_scroll_tracking_load)
 nyadagbladet.se##+js(acs, OneSignal)
 proffs.se##*::-webkit-scrollbar:style(display: unset !important;)
@@ -1474,6 +1474,7 @@ aftonbladet.se##a:has-text(Kommersiell text, innehåller annonslänkar)
 aftonbladet.se##strong:has-text(/ANNONS/i):upward(p)
 aftonbladet.se##div[class^="css-"]:has([data-ad-subtype="mega"])
 aftonbladet.se##a[href^="https://kampanj."]:upward(1)
+aftonbladet.se##main > section > div[class^="css-"]:first-child:has(img[src*="closeButton"])
 ! css
 www.aftonbladet.se##body:style(overflow:unset!important)
 ! scriptlets
@@ -1798,7 +1799,7 @@ nouw.com,elinskoglund.com,fannystaaf.se,lovisawallin.se,moamattsson.se##[title="
 /cookie_info.$domain=trendenser.se
 trendenser.se##.post_feed_post:has(.sponsor-info)
 trendenser.se##a[href*="/category/reklam"], a[href*="/category/annons"]:upward(.featured-post)
-morotsliv.com###sidebar .et_pb_widget
+morotsliv.com##.et_bloom .et_bloom_flyin_center, a[href*="/?utm_medium=affiliate"], a.bigblue[target]
 ||thestoryof2.se/em_event.html
 /postscribe.$script,domain=linnherbertsson.se
 linnherbertsson.se##.content:has(.sponsored-container)
@@ -2174,7 +2175,6 @@ merinfo.se##article[data-customer]
 minsolresa.se,resatillsolen.se##aside#text-5
 /js/external.php$domain=hockeysnack.com
 ||hockeysnack.com/pagespeed_static/1.$image
-gotlandswebben.se##.header-ads-wrapper
 halsafitness.se,yogaworld.se,cyclingplus.se##.post-wrap:has(h3:has-text(/samarbete/i))
 halsafitness.se,yogaworld.se,cyclingplus.se##.sticky-sidebar
 ||external.reseguiden.se/offer
@@ -2523,8 +2523,7 @@ foodfolder.se###myModal, .adImage
 varldenshaftigaste.se##[id*="annons"], #getFixed
 ||fritiden.se/js/cookiealert-standalone.js
 esportare.se##a[href*="utm_campaign"]
-morotsliv.com##.et_bloom .et_bloom_flyin_center
-morotsliv.com##a[href*="/?utm_medium=affiliate"]
+morotsliv.com##.et_bloom .et_bloom_flyin_center, a[href*="/?utm_medium=affiliate"]
 180.se##[class*="top-ad-"]
 /wp-content/uploads/*-sidebar$image,domain=dagensinfrastruktur.se
 dagensinfrastruktur.se##.g-single
