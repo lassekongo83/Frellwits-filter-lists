@@ -1118,7 +1118,6 @@ casino-utan-$image
 @@||freeride.nu/js/ads.js$script,domain=happyride.se
 @@/css/ad.$stylesheet,domain=sv.geneanet.org
 @@||imasdk.googleapis.com/js/sdkloader/ima3.$script,domain=gamereactor.se|screen9.com|atl.nu|sn.se|ekuriren.se|kkuriren.se|strengnastidning.se
-@@/prebid.js$~third-party,domain=feber.se|tjock.se
 @@/scripts/advert_$~third-party,domain=di.se
 
 ! Unbreak
@@ -1170,9 +1169,9 @@ swedbank.se#@#.cookie-banner:not(body):not(html)
 /pum/*$domain=flm.nu|biostock.se
 /videojs.ima.$domain=gamereactor.se|sportbladetplay.se
 ||cookielaw.org^$domain=cartoonnetwork.se|tv4.se|tv4play.se|fotbollskanalen.se|koket.se|nvp.se|flashscore.se|findit.se|ikea.com|hastnet.se|recept.se|manpower.se|gaffa.se|mtv.se|natgeotv.com|internetkunskap.se|internetstiftelsen.se|yelp.se|kokaihop.se|spisa.nu|ilikeradio.se|booli.se|svenskarnaochinternet.se|arbetet.se|tidningenelektrikern.se|malarnasfacktidning.se|sekotidningen.se|handelsnytt.se|fastighetsfolket.se|ka.se|sv.bab.la|tripadvisor.se|sydkusten.es
-||cookiebot.com^$third-party,domain=etc.se|goteborgdirekt.se|itaboutdoor.se|kingsizemag.se|ng.se|skeppsbrons.se|swedroid.se|wesafe.se|tankesport.se|smartsenior.se|vasterastidning.se|bax-shop.se|kurera.se|upplysning.se|mitti.se|circlek.se|livetochdiabetes.se|tn.se|findroommate.se|advokaten.se|sakochliv.se|polistidningen.se|fokus.se|spraktidningen.se|vaningen.se
+||cookiebot.com^$third-party,domain=etc.se|goteborgdirekt.se|itaboutdoor.se|kingsizemag.se|ng.se|skeppsbrons.se|swedroid.se|wesafe.se|tankesport.se|smartsenior.se|vasterastidning.se|bax-shop.se|kurera.se|upplysning.se|mitti.se|circlek.se|livetochdiabetes.se|tn.se|findroommate.se|advokaten.se|sakochliv.se|polistidningen.se|fokus.se|spraktidningen.se|vaningen.se|varden.se
 ||cookieinformation.com^$domain=minbostad.se|viivilla.se
-||cookiepro.com^$third-party,domain=sd.se|birthday.se|friendsarena.se|hastnet.se|aktiespararna.se|spela.se|fz.se|sweclockers.com|djurskyddet.se|havet.nu
+||cookiepro.com^$third-party,domain=sd.se|birthday.se|friendsarena.se|hastnet.se|aktiespararna.se|spela.se|fz.se|sweclockers.com|djurskyddet.se|havet.nu|svenskfast.se
 ||consentframework.com^$domain=luleahockeyforum.com
 ||evidon.com^$third-party,domain=morningstar.se|fasting.nu
 ||mailerlite.com^$third-party,domain=vandringsguiden.se|flm.nu
@@ -1874,7 +1873,7 @@ autonytt.se,sv.picmix.com,tekniknytt.se##.leaderboard
 aktuellsakerhet.se,borattforum.se##.td-a-rec
 letarecept.se###cookie_wrapper
 doktorn.com##.js-banner-wrapper
-it-finans.se,it-halsa.se,it-kanalen.se,it-pedagogen.se,it-retail.se,espressomedia.se##.penci-wrap-gprd-law
+it-finans.se,it-halsa.se,it-kanalen.se,it-pedagogen.se,it-retail.se,espressomedia.se,cornucopia.se##.penci-wrap-gprd-law
 bokmassan.se,svenskamassan.se##.cookie-law
 chef.se,fokus.se##.Blurb--native
 metalcentral.net,egoinas.se###tm-top-a
@@ -1919,6 +1918,8 @@ utm_$document,removeparam=/^utm_/,domain=tv.nu|booli.se|teknikensvarld.se|expres
 
 ! ÖVRIGT
 feber.se,tjock.se##.burt-unit, .art_ad, adline, f-panorama, f-deals, #rpPopular
+feber.se,tjock.se##+js(set, dovideostuffAD, noopFunc)
+feber.se,tjock.se##+js(set, userStatus, undefined)
 nordichardware.se##.td_block_wrap:has(span:has-text(/sponsrat/i))
 nordichardware.se##.td-big-grid-post:has(a[href*="/sponsrat/"])
 friatider.se##.rightbox
@@ -2214,9 +2215,6 @@ minhembio.com##div[style="height: 120px;"]:not([id]):not([class])
 bilsport.se##fl-panorama-top,fl-newsletter-popup
 megafonen.se##[data-article-sponsored="true"], .content-main-adwrapper, .campaign-sidebar
 minimalisterna.se##.post:has(p:has-text(/i samarbete med/i))
-||cornucopia.cornubot.se/js/cookie
-cornucopia.cornubot.se###HTML9, a[href*="://track."]
-cornucopia.cornubot.se##.post-summary a[href*="reklam"], .post-summary a[href*="sponsr"], .post-summary a[href*="samarbete"]
 finansliv.se##+js(aopw, nwlettersignupcheck)
 justwannahavefun.se##.teaser:has(.sub-title:has-text(/sponsrat/i))
 fotbolltransfers.com##div[class^="ad"], a[href^="https://ads."]
@@ -2672,10 +2670,8 @@ oru.se##.no-scroll:style(overflow: initial !important;)
 /cookie-banner$script,domain=skyscanner.se
 /trackolding$script,domain=skyscanner.se
 skyscanner.se###cookie-banner-root
-svenskfast.se##.cookie-law__wrapper
-/native?$domain=varden.se
-varden.se##.cdk-overlay-container, app-cookies
-varden.se##app-native-puff
+varden.se##app-native-puff, .header-top-banners
+varden.se##.carousel-slide:has(.sponsored-label)
 ibnytt.se##.widget:has(h3:has-text(Speltips))
 ||svenskfotboll.se/ui/dist/js/ai.
 inblick.se##div[class^="ads"]
