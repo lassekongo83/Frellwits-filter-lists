@@ -1168,7 +1168,7 @@ swedbank.se#@#.cookie-banner:not(body):not(html)
 /profile$ping,domain=feber.se|hamnen.se|lawline.se|tasteline.com|tjock.se|veckorevyn.com|arbetarskydd.se|lag-avtal.se|nyteknik.se|marcusoscarsson.se
 /pum/*$domain=flm.nu|biostock.se
 /videojs.ima.$domain=gamereactor.se|sportbladetplay.se
-||cookielaw.org^$domain=cartoonnetwork.se|tv4.se|tv4play.se|fotbollskanalen.se|koket.se|nvp.se|flashscore.se|findit.se|ikea.com|hastnet.se|recept.se|manpower.se|gaffa.se|mtv.se|natgeotv.com|internetkunskap.se|internetstiftelsen.se|yelp.se|kokaihop.se|spisa.nu|ilikeradio.se|booli.se|svenskarnaochinternet.se|arbetet.se|tidningenelektrikern.se|malarnasfacktidning.se|sekotidningen.se|handelsnytt.se|fastighetsfolket.se|ka.se|sv.bab.la|tripadvisor.se|sydkusten.es
+||cookielaw.org^$domain=cartoonnetwork.se|tv4.se|tv4play.se|fotbollskanalen.se|koket.se|nvp.se|flashscore.se|findit.se|ikea.com|hastnet.se|recept.se|manpower.se|gaffa.se|mtv.se|natgeotv.com|internetkunskap.se|internetstiftelsen.se|yelp.se|kokaihop.se|spisa.nu|ilikeradio.se|booli.se|svenskarnaochinternet.se|arbetet.se|tidningenelektrikern.se|malarnasfacktidning.se|sekotidningen.se|handelsnytt.se|fastighetsfolket.se|ka.se|sv.bab.la|tripadvisor.se|sydkusten.es|livetochdiabetes.se
 ||cookiebot.com^$third-party,domain=etc.se|goteborgdirekt.se|itaboutdoor.se|kingsizemag.se|ng.se|skeppsbrons.se|swedroid.se|wesafe.se|tankesport.se|smartsenior.se|vasterastidning.se|bax-shop.se|kurera.se|upplysning.se|mitti.se|circlek.se|livetochdiabetes.se|tn.se|findroommate.se|advokaten.se|sakochliv.se|polistidningen.se|fokus.se|spraktidningen.se|vaningen.se|varden.se
 ||cookieinformation.com^$domain=minbostad.se|viivilla.se
 ||cookiepro.com^$third-party,domain=sd.se|birthday.se|friendsarena.se|hastnet.se|aktiespararna.se|spela.se|fz.se|sweclockers.com|djurskyddet.se|havet.nu|svenskfast.se
@@ -1395,10 +1395,12 @@ thorengruppen.se,pppress.se,utslappsratt.se,newsvoice.se,historiskahem.se,bastad
 thorengruppen.se,pppress.se,utslappsratt.se,newsvoice.se,historiskahem.se,bastad.se,heleneholmsif.se,trafikskola.se,melodifestivalklubben.se,morotsliv.com##^script:has-text(exactmetrics_frontend)
 newsvoice.se##^script:has-text(exactmetrics_scroll_tracking_load)
 nyadagbladet.se##^script:has-text(OneSignal)
+temadagar.se##^script:has-text(__ez)
 !#endif
 
 ! For browsers that aren't firefox
 !#if env_chromium
+/detroitchicago/cmbv2.js$domain=temadagar.se
 newsner.com,humorbibeln.se,sportbibeln.se,ettgottskratt.se,sportpanelen.se,zeinaskitchen.se,dinbyggare.se,trafiksakerhet.se,boktugg.se,carup.se,lakartidningen.se,villalivet.se,matsafari.nu##+js(set, mi_track_user, false)
 newsner.com,humorbibeln.se,sportbibeln.se,ettgottskratt.se,sportpanelen.se,zeinaskitchen.se,dinbyggare.se,trafiksakerhet.se,boktugg.se,carup.se,lakartidningen.se,villalivet.se,matsafari.nu##+js(acs, monsterinsights_frontend)
 fysikstugan.se,thorengruppen.se,pppress.se,utslappsratt.se,newsvoice.se,historiskahem.se,bastad.se,heleneholmsif.se,trafikskola.se,melodifestivalklubben.se,morotsliv.com##+js(set, em_track_user, false)
@@ -2698,8 +2700,6 @@ milansverige.se##[alt="ad"], [class^="mom-"] a[target="_blank"]
 ||halsasverige.se/*/banners/
 ||automation.se/images/*banner
 ||brandnews.se/upload/bnrimg/
-||digikey.se^*/consent
-||digikey.se^*/banners/
 /assets/tracking$domain=hornbach.se
 /_t/se.js$domain=hornbach.se
 ||lararen.se/siteassets/lf-puffar
@@ -2721,7 +2721,6 @@ hrnytt.se##.d-block div[style*="aspect-ratio"], .d-none div[style*="aspect-ratio
 hrnytt.se##article:has(.sponsored-article)
 /adsense.index.js$domain=husvagn.se|husbil.se
 gentlemannaguiden.com##.advertising, .sidebar .widget_text, .sidebar .widget_media_image
-svensk-seo.se##+js(noeval)
 arbetaren.se##.text-sm:has-text(/annons/i):upward(a)
 engelholm.se###cookie-consent-wrapper
 travelnews.se##.bottom-bar--animate-in, #job_ads_scroller, .header_banner, .newsletter-popup
@@ -2741,7 +2740,6 @@ bergsmannen.se##.ann-puff, .headerLinks
 akaviaaspekt.se##.article-list-item--native
 helahisingen.se###custom_html-15, .code-block img
 goon.se##.cpt-collab-text-ct1:has-text(/samarbete|annons/i):upward(.cpt-alm-main)
-||tracking.skr.se^
 webbkryss.nu##.skyad-wrapper
 hejaolika.se##[class*="partnerinfostyle"], div[id^="hejao-"]
 hejaolika.se##+js(acs, advads_passive_placements)
@@ -2749,6 +2747,7 @@ hejaolika.se##+js(acs, advads_passive_placements)
 ordguru.se##.visible-lg, .hidden-lg
 bulletin.nu##[class^="newsletter-subscribe"], div[class^="cookie-message"], div[role="presentation"]
 bulletin.nu##body:style(overflow:unset!important)
+/litespeed$script,domain=aktuellsakerhet.se
 aktuellsakerhet.se##.front-slider-reklamsamarbete, .category-gastkronika-reklamsamarbete
 aktuellsakerhet.se##.td-adspot-title-span:upward(1)
 aktuellsakerhet.se##a[href*="reklamsamarbete"]:upward(.td_block_wrap)
