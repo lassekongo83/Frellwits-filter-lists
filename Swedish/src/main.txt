@@ -1566,6 +1566,8 @@ expressen.se##.html-widget > div[style^="text-align: center; font-size: 10px;"]
 www.expressen.se##+js(acs, Bau, preloadAds)
 www.expressen.se##+js(set, detect, noopFunc)
 www.expressen.se##+js(ra, data-start-in-view)
+! Fixar oklickbara kategorier i sektionen allt om mat p.g.a att exp-analytics är blockerat
+www.expressen.se##+js(ra, data-t-label)
 ! Procedural cosmetic filters
 expressen.se##.teaser:has(a[href*="/annons"])
 expressen.se##.teaser:has(a[href*="/brandstudio"])
@@ -1584,11 +1586,11 @@ illvet.se##.teaser__category:has-text(/annons/i):upward(article)
 illvet.se,pctidningen.se,viivilla.se,popularhistoria.se,digitalfotoforalla.se,militarhistoria.se,iform.se,aktivtraning.se,vinbanken.se##.noScroll, .noScroll body:style(overflow:unset!important)
 ||akkurat.bonniernewslifestyle.se^*/recommendations$xmlhttprequest
 /analytics-bmb$script
-/scripts/initLogging$domain=expressen.se|alltomtradgard.se
-expressen.se,topphalsa.se,alltomtradgard.se,tara.se,gardochtorp.se,godsochgardar.se,alltihemmet.se,lantliv.com,teknikensvarld.se,tidningenhembakat.se##.gdpr-banner
-teknikensvarld.se,alltomtradgard.se,expressen.se##.teaser:has(.teaser__bottom--ad-marker)
-teknikensvarld.se,alltomtradgard.se##.teaser__third-party, .promotion-banner
-teknikensvarld.se,alltomtradgard.se##+js(acs, ExpressenAnalytics, push)
+/scripts/initLogging$domain=expressen.se
+teknikensvarld.se##.gdpr-banner
+teknikensvarld.se,expressen.se##.teaser:has(.teaser__bottom--ad-marker)
+teknikensvarld.se##.teaser__third-party, .promotion-banner
+teknikensvarld.se##+js(acs, ExpressenAnalytics, push)
 teknikensvarld.se##.article__body__preview:style(height: auto !important; overflow: visible !important;)
 teknikensvarld.se##.article__body__preview:before:style(background: none !important;)
 privataaffarer.se##a.teaser[href*="/annonssamarbete/"], a.teaser[href*="/promotion/"]
