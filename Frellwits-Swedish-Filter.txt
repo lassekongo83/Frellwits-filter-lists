@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2022-03-04 11:05:54 CET
+! Last modified: 2022-03-07 12:50:42 CET
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -65,8 +65,8 @@
 ###cookiejar
 ###cookielawwarning
 ###cookieMsgBlock
-###CookieNotice
 ###cookieNotice
+###CookieNotice
 ###cookies-acceptance .alert.bottom
 ###cookiesInfo
 ###dialog-eu-cookie-law
@@ -964,6 +964,7 @@
 /uploads/bilder/Samarbetspartners/*
 /usabilla$script,domain=morningstar.se
 /users/2401/*$image,domain=ng.se
+/utag$script,domain=gaffa.se
 /vestigo/*/measure$domain=momondo.se
 /vgc/cdn/js/libs/ast/*$script,domain=aftonbladet.se
 /videojs-preroll.$domain=himlentv7.se
@@ -1343,7 +1344,7 @@ friluftsframjandet.se##[id^="ad-"]
 funnygames.se##.slot-container
 fuska.se##.alert-success
 fz.se##.article-facebook
-gaffa.se##.external-branding
+gaffa.se##.external-branding, .feed-item-link-section
 gamereactor.se###cookielawwarning
 gamereactor.se###eventad, [id^="sky"], [id^="ad_lead"], a[rel="sponsored"], .external_div_bigVideoAd, #mpu, #leftToLogo, .itsanad, .ad_Bumper, div[style="min-height: 600px; margin-bottom: 20px;"]
 garaget.org##.gorg-side-content > div.small:nth-last-child(2)
@@ -1544,7 +1545,7 @@ privataaffarer.se##a.teaser[href*="/annonssamarbete/"], a.teaser[href*="/promoti
 proffs.se##.cookie-wrapper
 pussad.se##.g1-popup-newsletter, .g1-slideup-wrap
 quizza.nu###takeover
-radio.se##.topAdSpacer, .topASp
+radio.se##header + div:not([id])
 ratsit.se##.promo
 ravarumarknaden.se###header > div > div.last, #block-4
 realm667.com#@##redim-cookiehint
