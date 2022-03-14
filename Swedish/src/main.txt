@@ -1248,7 +1248,7 @@ mobilanyheter.net##+js(set, ai_run_scripts, noopFunc)
 /plugins/convertplug/*
 /plugins/convertpro/*
 /plugins/cookie-bar/*
-/plugins/cookie-law-info/*$domain=nyadagbladet.se|hockeybladet.nu|carup.se|temadagar.se|gilla.se|tidningenresultat.se|lundagard.se
+/plugins/cookie-law-info/*$domain=nyadagbladet.se|hockeybladet.nu|carup.se|temadagar.se|gilla.se|tidningenresultat.se|lundagard.se|startaochdriva.se
 /plugins/cookie-notice/*
 /plugins/cookies-and-content-security-policy$domain=cannabisifokus.se
 /plugins/cookie_consent/*$script
@@ -1896,6 +1896,7 @@ bokmassan.se,svenskamassan.se##.cookie-law
 chef.se,fokus.se##.Blurb--native
 metalcentral.net,egoinas.se###tm-top-a
 stoppapressarna.se,nyatider.nu,autonytt.se##[href*="casino"][target]
+varmepumpsforum.com,poolforum.se,lindenytt.com##a[target="_blank"] img[alt]
 
 ! Various annoyances and tracking
 annicaenglund.se,alicestenlof.com,ellinorlofgren.se,linnherbertsson.se,pricerunner.se##.noscroll:style(overflow: initial !important;)
@@ -2347,9 +2348,6 @@ framtid.se###siteflash, #customer-link-container
 byggteknikforlaget.se###text-2.widget_text, .header-widget-area
 ||grillbloggen.nu/media/com_rstbox/
 grillbloggen.nu##.rstbox
-/modules/gdpr-consent$domain=freelancer.se
-/modules/tracking$domain=freelancer.se
-/freelancer-tracking$script,domain=freelancer.se
 /sponsored_articles$domain=fastighetssverige.se
 fastighetssverige.se##a[href*="/banner/out/"], .bnr_box
 fastighetssverige.se##div[class^="panel"][style*="lightgoldenrodyellow"]
@@ -2406,7 +2404,7 @@ aktiespararna.se##.analysguiden-promote-articles
 ||streamio.com/api/*/stats$xmlhttprequest
 veterinarmagazinet.se##.nyhet-ad
 lokalfotboll.se###topbar, .inside-right-sidebar > .really_simple_image_widget
-startaochdriva.se##.banner-right, .banner-left, .wpb_single_image a[target="_blank"]
+startaochdriva.se##.banner-right, .banner-left, .wpb_single_image a[target="_blank"], .tdm-popup-modal-wrap
 startaochdriva.se##.latest-post:has(a[href*="/sponsrat"])
 alltomburgare.se##.newscolumn:has(a[href$="/sponsrat/"])
 /exposure$xmlhttprequest,domain=lokalguiden.se
@@ -2442,7 +2440,6 @@ avanza.se##.noMarginAd
 avanza.se##.section:has(a:has-text(/^annons/i))
 snowmobile.se,atvmag.se##.more-stories
 snowmobile.se,atvmag.se##.location-header_before
-varmepumpsforum.com,poolforum.se,lindenytt.com##a[target="_blank"] img[alt]
 poolforum.se##div.adfit, .cookie_notice, div[style^="width:100%;max-width: 728px;"] > div[align="center"], div[style^="width:100%;max-width: 728px;"] > br
 varmepumpsforum.com##.stopjump
 varmepumpsforum.com##.frontlinks tr:has(a[target])
@@ -2515,8 +2512,7 @@ ridsport.se##.svrf__sticky-ad, .svrf-block__banner
 ||findit.fi/js/prebid
 findit.se##.banner-wrapper
 findit.se##+js(set, testPrebid, noopFunc)
-natursidan.se###container > a:not(:first-child)
-natursidan.se###sidebar .widget_text a[target]
+natursidan.se###container > a:not(:first-child), #sidebar .widget_text a[target]
 drivkraftsverige.se##.policy-disclaimer
 shoegazing.se###main-sidebar .widget_media_image, #post-sidebar .widget_media_image, #content > .code-block
 sportbloggare.com##.partners-box, .cube-bonus-list
@@ -2586,13 +2582,8 @@ djungeltrumman.se##+js(nano-sib, dt_fullpage_ad)
 www.google.se##+js(ra, onmousedown|ping, a[href][onmousedown]\, a[href][ping])
 google.se##mobile-promo
 vibilagare.se##a[href^="/partnermaterial/"]
-senses.se###text-5
-senses.se##.isobrick:has(a[href*="casino"])
-senses.se##.isobrick:has(a[href*="glhf-gg"])
-senses.se##.isobrick:has(a[href*="betting"])
-senses.se##.isobrick:has(a[title^="Reklam:"])
-senses.se##.isobrick:has(a[title^="Sponsrat:"])
-senses.se##.isobrick:has(a[title^="Samarbete:"])
+senses.se##[id^="ct-ultimate-gdpr"]
+senses.se##.item.hentry, .owl-item:has(a[href*="casino"])
 /popup-overlay$domain=ettsthlm.se
 turismnytt.se##.site-wrap > .row > .col-sm-3
 bilresaieuropa.se##.widget_text:has(.widget-title:has-text(/spons/i))
