@@ -196,6 +196,7 @@
 ||yieldwrapper.com^$third-party
 ||viforetag.se^$third-party
 ||vinguiden.com^$third-party
+||wct-1.com^$third-party
 ||webpower.eu^$third-party
 ||webpushs.com^$third-party
 ||websta.me^$third-party
@@ -1586,6 +1587,8 @@ www.expressen.se##+js(set, detect, noopFunc)
 www.expressen.se##+js(ra, data-start-in-view)
 ! Fixar oklickbara kategorier i sektionen allt om mat p.g.a att exp-analytics är blockerat
 www.expressen.se##+js(ra, data-t-label)
+www.expressen.se##+js(ra, data-t-type)
+www.expressen.se##+js(aeld, click, e.preventDefault)
 ! Procedural cosmetic filters
 expressen.se##.teaser:has(a[href*="/annons"])
 expressen.se##.teaser:has(a[href*="/brandstudio"])
@@ -2113,10 +2116,10 @@ flashback.org###top-banner-container, #top-banner-wrapper
 flashback.org##+js(nostif, #top-banner-container)
 mmanytt.se##.front-banner,.front-banner-cover,#text-2,[class*="sponsrat-inlagg"],a[href*="://kampanjer."],.ohmbet_link
 mmanytt.se##.img-featured-posts-image:has(a[href$="/annons/"])
-/news55-ga.js$domain=news55.se
-news55.se###newsletter-popup, #premium-bottom-bar, #premium-popup
-news55.se##.is-native, .is-ad, .is-native-yes, .after-article-widget
+/news55-ga.js$domain=news55.se|e55.se
+news55.se,e55.se###newsletter-popup, #premium-bottom-bar, #premium-popup, .is-native, .is-ad, .is-native-yes, .after-article-widget, .banner-bottom
 news55.se##a[href]:not([href*="/news55.se"]):upward(section.sidebar)
+e55.se##a[href]:not([href*="/e55.se"]):upward(section.sidebar)
 /bcpop.js$domain=businessclass.se
 allabolag.se###company-card_top-banner
 allabolag.se##article:has(.advert__mark)
