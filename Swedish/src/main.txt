@@ -1573,7 +1573,7 @@ borssnack.di.se##.bn_advertisement__panorama, .bn_advertisement__container
 /tv/annons$domain=expressen.se
 /tv/sponsrat$domain=expressen.se
 ! Cosmetic ad filters
-expressen.se##a[href*="/spel.exp"], a[href*="/lanapengar.exp"], a[href*="/rabattkoder.exp"], a[href*="/annons"], .match-betting, .discount-ad, .b-ad__caption, .pressrelease-teaser, .widget-ad-marker, .widget-ad-marker + a, .promotion-banner, .widget--collaboration, .rotator--external, a[data-click-track*="prisjakt"], .linked-image-widget a[href*="/kampanj/"], .linked-image-widget a[href*="lifestyle.expressen.se"]
+expressen.se##a[href*="/spel.exp"], a[href*="/lanapengar.exp"], a[href*="/rabattkoder.exp"], a[href*="/annons"], .match-betting, .discount-ad, .b-ad__caption, .pressrelease-teaser, .widget-ad-marker, .widget-ad-marker + a, .promotion-banner, .widget--collaboration, .rotator--external, a[data-click-track*="prisjakt"], .linked-image-widget a[href*="/kampanj/"], .linked-image-widget a[href*="lifestyle.expressen.se"], #premiumAdWrapper
 expressen.se##.teaser > a[href*="/kampanj."], .teaser > a[href*="/brandstudio"], .teaser > a[href*="/brand-studio"], figure[data-article-data*="/sponsrat"], figure[data-article-data*="/annons"], figure[data-article-data*="/brand-studio"], .teaser--native, .native-article
 ! Annoyances
 ?autoPlay$frame,removeparam=autoPlay,domain=expressen.se
@@ -1590,15 +1590,9 @@ www.expressen.se##+js(ra, data-t-label)
 www.expressen.se##+js(ra, data-t-type)
 www.expressen.se##+js(aeld, click, e.preventDefault)
 ! Procedural cosmetic filters
-expressen.se##.teaser:has(a[href*="/annons"])
-expressen.se##.teaser:has(a[href*="/brandstudio"])
-expressen.se##.teaser:has(a[href*="/brand-studio"])
-expressen.se##.teaser:has(a[href*="/kampanj."])
-expressen.se##.teaser:has(a[href*="/lanapengar."])
-expressen.se##.teaser:has(a[href*="/rabattkoder."])
-expressen.se##.teaser:has(a[href*="/spel.expressen.se"])
-expressen.se##.vignette--svg + a[href*="teknikensvarld."]:upward(.teaser)
+expressen.se##a[href*="/annons"], a[href*="/brandstudio"], a[href*="/brand-studio"], a[href*="/kampanj."], a[href*="/lanapengar."], a[href*="/rabattkoder."], a[href*="/spel.expressen.se"], .vignette--svg + a[href*="teknikensvarld."]:upward(.teaser)
 expressen.se##strong:has-text(/annons:/i):upward(p)
+expressen.se,teknikensvarld.se##.teaser__bottom--ad-marker:upward(.teaser)
 ! övrigt
 ||bugsnag.com^$third-party,domain=dn.se|di.se|expressen.se
 &type=load_offers$xmlhttprequest,domain=illvet.se|pctidningen.se
@@ -1609,17 +1603,15 @@ illvet.se,pctidningen.se,viivilla.se,popularhistoria.se,digitalfotoforalla.se,mi
 /analytics-bmb$script
 /scripts/initLogging$domain=expressen.se
 teknikensvarld.se##.gdpr-banner
-teknikensvarld.se,expressen.se##.teaser:has(.teaser__bottom--ad-marker)
 teknikensvarld.se##.teaser__third-party, .promotion-banner
 teknikensvarld.se##+js(acs, ExpressenAnalytics, push)
 teknikensvarld.se##.article__body__preview:style(height: auto !important; overflow: visible !important;)
 teknikensvarld.se##.article__body__preview:before:style(background: none !important;)
-privataaffarer.se##a.teaser[href*="/annonssamarbete/"], a.teaser[href*="/promotion/"]
 privataaffarer.se,dn.se,di.se##.teaser-native
-privataaffarer.se##.data-grid-teaser:has(.teaser-label:has-text(/^annons/i))
-privataaffarer.se##.category-promotion
+privataaffarer.se##a.teaser[href*="/annonssamarbete/"], a.teaser[href*="/promotion/"], .category-promotion
+privataaffarer.se##.teaser-label:has-text(/^annons/i):upward(.data-grid-teaser)
 tradera.com##ads-takeover
-viivilla.se##.card:has(.article-grid__sponsored)
+viivilla.se##.article-grid__sponsored:upward(.card)
 ||europe-west1-bonnier-big-data.cloudfunctions.net^$third-party
 /fusionadloader.$script
 /iframeadvloader.$script
