@@ -1659,6 +1659,7 @@ battrestadsdel.se###top-banner-mobile, .apd-text, .apds_main, .entry-priomaker, 
 villalivet.se##.mtsnb, .villalivet-target, a[href*="/sponsrat-innehall/"]
 villalivet.se##a:has-text(/sponsra/i):upward(3)
 villalivet.se##span:has-text(SPONSRADE ARTIKLAR):upward(3)
+villatidningen.se##a[href*="/spons"]:upward(.wppsac-post-carousel)
 fastighetstidningen.se##.adspace
 hemhyra.se##.pageCookies
 ||ka.se/native/
@@ -1676,6 +1677,7 @@ siljannews.se##h3:has-text(/^Annons$/) + div
 arvikamagasinet.se##.sticky-sidebar .widget_media_image, #text-4
 /assets/js/ads.js$domain=dagensopinion.se
 arbetet.se,tidningenelektrikern.se,fastighetsfolket.se,handelsnytt.se,ka.se,malarnasfacktidning.se,sekotidningen.se##.Teaser--native, .o-native
+besoksliv.se##a[href*="sponsrat-innehall"]
 
 ! placera.se
 ||avanza.se/_api/placera/visit
@@ -1686,10 +1688,11 @@ avanza.se##.section:has(a:has-text(/^annons/i))
 ! === Tech, gaming, programmering
 
 ! IDG
-idg.se##.sparticle, .nextArticleSp, .pryltorget, .prisjakt, .prisjaktCompare, .teasers-block.bfteasers, div[data-cmsad], .pricespy-container
 @@/consent.json$domain=idg.se|forum.macworld.se
 ||cmatch.idg.se^
 ||idg.se/sharecounter?
+||pricespy.idg.se^
+idg.se##.sparticle, .nextArticleSp, .pryltorget, .prisjakt, .prisjaktCompare, .teasers-block.bfteasers, div[data-cmsad], .pricespy-container
 idg.se##[data-styled="SpLabel"]:upward(article)
 idg.se##+js(nostif, gFail)
 ! make the cookie modal less annoying
@@ -1798,7 +1801,8 @@ hockeynews.se##[class*="ad-style"], [id^="outsider-"], [id^="banner_"], .ad-mob-
 svenskafans.com##.puff__ad-heading
 sporttv.nu##a[onclick*="bannerClick"]
 fotbolldirekt.se,hockeysverige.se,innebandymagazinet.se,padeldirekt.se##.site-partnevisment, .h-background--sponsored-light, .row .text-center img
-fotbolldirekt.se,hockeysverige.se,innebandymagazinet.se##.c-announcement:has(.c-label--sponsored)
+fotbolldirekt.se,hockeysverige.se,innebandymagazinet.se##.c-label--sponsored:upward(.c-announcement)
+fotbolldirekt.se,hockeysverige.se,innebandymagazinet.se##.c-announcement:has-text(/annons/i)
 kittad.se###header-top
 kittad.se##.kittad-label-sponsored:upward(li)
 padeldirekt.se##.h-background--sponsored:upward(.article-row)
@@ -2679,8 +2683,10 @@ djungeltrumman.se##.label-sponsored:upward(.post)
 djungeltrumman.se###latest-slider a:has(.label-sponsored):remove()
 djungeltrumman.se##strong:has-text(/samarbete|sponsrat/i):upward(li):remove()
 djungeltrumman.se##+js(nano-sib, dt_fullpage_ad)
-senses.se##[id^="ct-ultimate-gdpr"]
-senses.se##.item.hentry, .owl-item:has(a[href*="casino"])
+senses.se##.item.hentry, .owl-item, article:has(a[href*="casino"])
+senses.se##.item.hentry, .owl-item, article:has(a[href*="spelsajt"])
+senses.se##.item.hentry, .owl-item, article:has(a[href*="betting"])
+senses.se##aside:has-text(Annonser:)
 /popup-overlay$domain=ettsthlm.se
 alkompis.se##app-ads
 alkompis.se##.cdk-overlay-container
@@ -2855,3 +2861,5 @@ bovision.se##.sponsor-mark:upward(.blog-article-card)
 karriarlakare.se##.cli-barmodal-open:style(overflow:auto!important)
 inpress.com##.anwp-pg-wrap
 butikstrender.se##a[target="_blank"] picture
+nytt.com##.mfp-wrap, .mfp-bg
+nytt.com##html:style(overflow:initial!important)
