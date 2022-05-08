@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2022-05-06 07:44:49 CEST
+! Last modified: 2022-05-08 07:34:15 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -65,8 +65,8 @@
 ###cookiejar
 ###cookielawwarning
 ###cookieMsgBlock
-###CookieNotice
 ###cookieNotice
+###CookieNotice
 ###cookies-acceptance .alert.bottom
 ###cookiesInfo
 ###dialog-eu-cookie-law
@@ -723,6 +723,7 @@
 /plugins/interscroller-ads
 /plugins/interstitial-ads
 /plugins/its-cookies/*$script
+/plugins/jet-popup$domain=javligtgott.se
 /plugins/jetpack/_inc/build/widgets/eu-cookie-law$script
 /plugins/jnews-social-share/*$script
 /plugins/koko-analytics
@@ -755,7 +756,7 @@
 /plugins/popup$domain=biostock.se|forskning.se|forvaltarforum.se|it-kanalen.se|ordfrontmagasin.se|snowmobile.se|sverige.nu
 /plugins/popups/*$script,domain=bugburger.se|svenskhistoria.se
 /plugins/pum-$script,domain=snowmobile.se
-/plugins/quantcast-choice/*$script,domain=handbollskanalen.se|kimura.se|paulas.me
+/plugins/quantcast-choice/*$script,domain=handbollskanalen.se|javligtgott.se|kimura.se|paulas.me
 /plugins/r9-analytics
 /plugins/r9-gdpr$script
 /plugins/random-banner
@@ -1350,8 +1351,7 @@ itseniorerna.se###astroid-preloader
 jaktjournalen.se##.activate-notifications-container.shown
 jaktojagare.se##div.cookie-warning-container, .mb-adarea
 jaktplay.se##.jaktplay-ad
-javligtgott.se##a[href="https://klimatkompensera.se"]
-javligtgott.se#@#.category-samarbeten:not(body):not(html)
+javligtgott.se##.jet-popup
 jennysmatblogg.nu,lindasbakskola.se,mykitchenstories.se,zeinaskitchen.se##.panorama-sticky, .sticky-area
 jusek.se##.l-advertisement, .m-adform, .m-splash
 kalender.se##.day-nav ~ a:not([href*="kalender.se"])
@@ -1385,7 +1385,8 @@ land.se,landlantbruk.se,landskogsbruk.se##[class*="--native"], [id^="adwrapper"]
 landleyskok.se##.inpostbanner, .banner-leaderboard
 lararen.se##a[href*="=annons"]
 laromedia.se##img[alt="Annons"] + .img-flipper
-lesscarbs.se##.elementor-image > a, a[href*="/affiliates/"]
+lesscarbs.se##.elementor-image > a:not([href*="https://lesscarbs.se"]), a[href*="/affiliates/"]
+lesscarbs.se#@#.category-annonssamarbete:not(body):not(html)
 leta.se###bookingcom-resor-wrapper, #aktuellaerbjudanden, #sky-left-wide, .topNavItem[href*="casino"], .topNavItem[href*="betting"]
 letarecept.se###cookie_wrapper
 lindasbakskola.se,privataaffarer.se,realtid.se,skk.se##a[href*="/bit.ly/"]
@@ -1560,7 +1561,6 @@ swehockey.se##[class*="-reklam"], .sif-sponsorer
 sydnarkenytt.se##.abann_wrapper, #hspalt_s1
 synonymer.se##.create-account-banner, .buy-premium-banner
 sysidan.se##.adscolumn
-tankesport.se##.avg-cookiebar
 tasteline.com##.article.related > a[href*="&utm"][target="_blank"]
 tasteline.com##.popup-overlay
 teknikensvarld.se##.teaser__third-party, .promotion-banner
@@ -1759,7 +1759,7 @@ ysektionen.se##.yweb-news-paper-banner
 ||compricer.se^$third-party
 ||connect.nosto.com^*/behav-popup.$script
 ||connectio.s3.amazonaws.com/connect-retarget$script
-||consensu.org^$domain=alekuriren.se|atl.nu|babyhjalp.se|bjarenu.se|blogg.se|butikpris.se|cleannet.se|dagenshandel.se|eniro.se|enkelteknik.se|entreprenad.com|ettgottskratt.se|filmtopp.se|flashback.org|food-supply.se|foodnet.se|forni.se|fri-kopenskap.se|friidrott.se|gbgfotboll.se|habit.se|hippson.se|historier.net|hockeynews.se|humorbibeln.se|innebandy.se|interiorbyvanessa.se|jennysmatblogg.nu|kalender.se|kamerabild.se|kemivarldenbiotech.se|kiacarclub.se|laget.se|land.se|landlantbruk.se|landleyskok.se|landskogsbruk.se|leta.se|lifesciencesweden.se|lindasbakskola.se|listor.se|ljudochbild.se|matklubben.se|medtechmagazine.se|merinfo.se|mobil.se|motormagasinet.se|mykitchenstories.se|mytaste.se|newsner.com|norrahalland.se|oppettiden.se|packnet.se|padelgo.tv|pernillawahlgren.se|plastnet.se|poddtoppen.se|prevent.se|processnet.se|proff.se|recyclingnet.se|res.se|rf.se|rt-forum.se|samnytt.se|skyddosakerhet.se|sportbibeln.se|spray.se|stff.se|stoppapressarna.se|svenskayoutubers.se|svenskfotboll.se|svenskorientering.se|swehockey.se|thelocal.se|themoviefreak.se|tittapavideon.se|transportnet.se|travelnews.se|tvmatchen.nu|uochd.se|vackertvader.se|varldenshaftigaste.se|verkstaderna.se|woodnet.se|zeinaskitchen.se
+||consensu.org^$domain=alekuriren.se|atl.nu|babyhjalp.se|bjarenu.se|blogg.se|butikpris.se|cleannet.se|dagenshandel.se|eniro.se|enkelteknik.se|entreprenad.com|ettgottskratt.se|filmtopp.se|flashback.org|food-supply.se|foodnet.se|forni.se|fri-kopenskap.se|friidrott.se|gbgfotboll.se|habit.se|hippson.se|historier.net|hockeynews.se|humorbibeln.se|innebandy.se|interiorbyvanessa.se|javligtgott.se|jennysmatblogg.nu|kalender.se|kamerabild.se|kemivarldenbiotech.se|kiacarclub.se|laget.se|land.se|landlantbruk.se|landleyskok.se|landskogsbruk.se|leta.se|lifesciencesweden.se|lindasbakskola.se|listor.se|ljudochbild.se|matklubben.se|medtechmagazine.se|merinfo.se|mobil.se|motormagasinet.se|mykitchenstories.se|mytaste.se|newsner.com|norrahalland.se|oppettiden.se|packnet.se|padelgo.tv|pernillawahlgren.se|plastnet.se|poddtoppen.se|prevent.se|processnet.se|proff.se|recyclingnet.se|res.se|rf.se|rt-forum.se|samnytt.se|skyddosakerhet.se|sportbibeln.se|spray.se|stff.se|stoppapressarna.se|svenskayoutubers.se|svenskfotboll.se|svenskorientering.se|swehockey.se|thelocal.se|themoviefreak.se|tittapavideon.se|transportnet.se|travelnews.se|tvmatchen.nu|uochd.se|vackertvader.se|varldenshaftigaste.se|verkstaderna.se|woodnet.se|zeinaskitchen.se
 ||consent.dk^$third-party,domain=~ekstrabladet.dk
 ||consent.podplay.com^
 ||consentframework.com^$domain=luleahockeyforum.com
@@ -1988,6 +1988,7 @@ ysektionen.se##.yweb-news-paper-banner
 ||manatee.dk^$third-party
 ||manatee.io^$third-party
 ||marfeelcache.com^$third-party
+||marker.io/widget/ping
 ||marketale.com^$third-party
 ||marketinghub.zoho.com/hub/js/WebsiteAutomation.js$third-party
 ||marketo.com^$third-party
@@ -2179,7 +2180,6 @@ ysektionen.se##.yweb-news-paper-banner
 ||streamio.com/api/*/stats$xmlhttprequest
 ||strossle.com^$third-party
 ||studads.com^$third-party
-||stumbleupon.com/hostedbadge$domain=javligtgott.se
 ||suntana.se^$third-party
 ||susnet.*/susnetstat.js$script
 ||sv.picmix.com/sw.js
