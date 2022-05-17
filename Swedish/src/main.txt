@@ -1182,7 +1182,7 @@ newsvoice.se##+js(acs, exactmetrics_scroll_tracking_load)
 ! -- Specific annoying elements
 allas.se,baaam.se,frida.se,elle.se,femina.se,hant.se,mabra.com,residencemagazine.se,svenskdam.se,motherhood.se###onetrust-banner-sdk
 hant.se##.onetrust-pc-dark-filter
-adecco.se,viafree.se,ica.se,apotekhjartat.se,tele2.se###onetrust-consent-sdk
+adecco.se,viafree.se,ica.se,apotekhjartat.se,tele2.se,pluto.tv###onetrust-consent-sdk
 sverigeskonsumenter.se###cookie-box
 megafonen.se##.cookie-information
 testfakta.se,plastikoperationsforum.se,riksettan.net,automobil.se,endurobloggen.se,vibilagare.se,mopedgaraget.se,caroftheyear.se,klassiker.nu,bike.se,spraktidningen.se,husbilhusvagn.se,sandaren.se,kyrkanstidning.se,publikt.se,industrinyheter.se,dagensnaringsliv.se,infrastrukturnyheter.se,sportochfritidsnyheter.se,inredningsnyheter.se,byggnyheter.se,dagensfastigheter.se,stockholmsbyggnyheter.se,energinyheter.se,vindkraftsnyheter.se,solenerginyheter.se,jarnvagsnyheter.se,transportochlogistik.se,metallerochgruvor.se,papperochmassa.se,hsr.se,so-rummet.se,kantarsifo.se,ungforetagsamhet.se,cgi.com,alandsradio.ax,sjofart.ax,kommunal.se###sliding-popup
@@ -2014,11 +2014,13 @@ koket.se##[class*="carousel_item"]:has([class*="carousel_sponsored"])
 /client-stream-events$domain=viafree.se
 viafree.se##.pause-ad-container, .pause-ad, .ad-click-through
 viafree.se##.player-wrapper .viafree-player .vjs-tech:style(display:initial!important;)
+! FIXME: Blockerar inte allt. Dessutom långsam start på videos.
+&serverSideAds$xhr,removeparam=serverSideAds,domain=pluto.tv
+advertisingId$xhr,removeparam=advertisingId,domain=pluto.tv
 
 ! Misc
 ||isgprivacy.cbsi.com^$domain=nickelodeon.se
 svt.se###nyh_cookie-message, #svtmat_cookie,section.nyh_share
-svtplay.se###PlayCookieInformationRoot
 jaktplay.se##.jaktplay-ad
 
 ! Flowplayer
