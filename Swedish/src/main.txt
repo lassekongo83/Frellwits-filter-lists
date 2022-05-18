@@ -1146,7 +1146,6 @@ varmepumpsforum.com,poolforum.se,lindenytt.com##a[target="_blank"] img[alt]
 
 ! -- Specific tracking, analytics, etc
 utm_$document,removeparam=/^utm_/,domain=tv.nu|booli.se|expressen.se|aftonbladet.se
-/jwpsrv.js$domain=aftonbladet.se|svd.se|axess.se|freeride.se|happyride.se|embed.futuresportsmedia.com|streamio.com|laget.se|moviezine.se|fasttrack.webstream.dk|cdn.jwplayer.com|wellness.se|allas.se|baaam.se|elle.se|femina.se|hant.se|mabra.com|residencemagazine.se|svenskdam.se|frida.se|motherhood.se
 /vast.js$domain=moviezine.se
 /glimr$script,domain=aftonbladet.se|blocket.se|wellness.se
 /profile$ping,domain=feber.se|hamnen.se|lawline.se|tasteline.com|tjock.se|veckorevyn.com|arbetarskydd.se|lag-avtal.se|nyteknik.se|marcusoscarsson.se|handbollskanalen.se
@@ -1180,12 +1179,10 @@ newsvoice.se##+js(acs, exactmetrics_scroll_tracking_load)
 ||privacy-center.org^$domain=isabellalowengrip.se|johannatoftby.se|fnulan.se|matplatsen.net|monasuniversum.se|aktuellhallbarhet.se|byggindustrin.se|dagensmedia.se|dagensmedicin.se|fastighetsnytt.se|resume.se|dagenssamhalle.se|market.se|180.se
 
 ! -- Specific annoying elements
-allas.se,baaam.se,frida.se,elle.se,femina.se,hant.se,mabra.com,residencemagazine.se,svenskdam.se,motherhood.se###onetrust-banner-sdk
-hant.se##.onetrust-pc-dark-filter
-adecco.se,viafree.se,ica.se,apotekhjartat.se,tele2.se,pluto.tv###onetrust-consent-sdk
+adecco.se,viafree.se,ica.se,apotekhjartat.se,tele2.se###onetrust-consent-sdk
 sverigeskonsumenter.se###cookie-box
 megafonen.se##.cookie-information
-testfakta.se,plastikoperationsforum.se,riksettan.net,automobil.se,endurobloggen.se,vibilagare.se,mopedgaraget.se,caroftheyear.se,klassiker.nu,bike.se,spraktidningen.se,husbilhusvagn.se,sandaren.se,kyrkanstidning.se,publikt.se,industrinyheter.se,dagensnaringsliv.se,infrastrukturnyheter.se,sportochfritidsnyheter.se,inredningsnyheter.se,byggnyheter.se,dagensfastigheter.se,stockholmsbyggnyheter.se,energinyheter.se,vindkraftsnyheter.se,solenerginyheter.se,jarnvagsnyheter.se,transportochlogistik.se,metallerochgruvor.se,papperochmassa.se,hsr.se,so-rummet.se,kantarsifo.se,ungforetagsamhet.se,cgi.com,alandsradio.ax,sjofart.ax,kommunal.se###sliding-popup
+plastikoperationsforum.se,riksettan.net,automobil.se,endurobloggen.se,vibilagare.se,mopedgaraget.se,caroftheyear.se,klassiker.nu,bike.se,spraktidningen.se,husbilhusvagn.se,kantarsifo.se,ungforetagsamhet.se,alandsradio.ax###sliding-popup
 ordfrontmagasin.se,cannabis.se,forskning.se##.pum-overlay
 svenskaturistforeningen.se,forum.robsoft.nu##.cookie-box
 ljuskultur.se,omvarlden.se,hrnytt.se,aapl.se,inredningsarkitektur.se,inblick.se##.cookies
@@ -1453,7 +1450,7 @@ motormagasinet.se,skyddosakerhet.se,dagenshandel.se,food-supply.se,plastnet.se,h
 /annons$image,domain=dagensvimmerby.se|dagensvastervik.se|dagenskalmar.nu|dagenshultsfred.se
 dagensvimmerby.se,dagensvastervik.se,dagenskalmar.nu,dagenshultsfred.se##body:style(margin-top: 0 !important;)
 dagensvimmerby.se,dagensvastervik.se,dagenskalmar.nu,dagenshultsfred.se##.panoramaAnnons, .JobAdDiv, .annonsKolumn, .insideAd, .ingressAd, .familyAds, .annonsWrapper
-industrinyheter.se,dagensnaringsliv.se,infrastrukturnyheter.se,sportochfritidsnyheter.se,inredningsnyheter.se,byggnyheter.se,dagensfastigheter.se,stockholmsbyggnyheter.se,energinyheter.se,vindkraftsnyheter.se,solenerginyheter.se,jarnvagsnyheter.se,transportochlogistik.se,metallerochgruvor.se,papperochmassa.se##.insider-ads, [id^="mainadvertorial"], [id^="dfptag"], .block-advertorial, .block-views-blockconventus-info-articles-info-article-block
+industrinyheter.se,dagensnaringsliv.se,infrastrukturnyheter.se,sportochfritidsnyheter.se,inredningsnyheter.se,byggnyheter.se,dagensfastigheter.se,stockholmsbyggnyheter.se,energinyheter.se,vindkraftsnyheter.se,solenerginyheter.se,jarnvagsnyheter.se,transportochlogistik.se,metallerochgruvor.se,papperochmassa.se##.insider-ads, [id^="mainadvertorial"], [id^="dfptag"], .block-advertorial, .block-views-blockconventus-info-articles-info-article-block, #dfp-tag-before_artikel, #dfp-tag-mobile_before_artikel
 ||statistics-se.talentum.com^
 arbetarskydd.se,lag-avtal.se,nyteknik.se##.alman-teaser, .alman-teaser-flash, [id^="almad-"]
 arbetarskydd.se,lag-avtal.se##+js(no-xhr-if, /tidningen/ method:HEAD)
@@ -2014,9 +2011,6 @@ koket.se##[class*="carousel_item"]:has([class*="carousel_sponsored"])
 /client-stream-events$domain=viafree.se
 viafree.se##.pause-ad-container, .pause-ad, .ad-click-through
 viafree.se##.player-wrapper .viafree-player .vjs-tech:style(display:initial!important;)
-! FIXME: Blockerar inte allt. Dessutom långsam start på videos.
-&serverSideAds$xhr,removeparam=serverSideAds,domain=pluto.tv
-advertisingId$xhr,removeparam=advertisingId,domain=pluto.tv
 
 ! Misc
 ||isgprivacy.cbsi.com^$domain=nickelodeon.se
@@ -2029,6 +2023,12 @@ jaktplay.se##.jaktplay-ad
 ||ptm.flowplayer.com^*/view$xmlhttprequest
 ||ptm.flowplayer.com^*/display$xmlhttprequest
 lwcdn.com##+js(aeld, /^(?:adBlocker|contextmenu)$/)
+
+! Jwplayer
+/jwpsrv.js$domain=aftonbladet.se|svd.se|axess.se|freeride.se|happyride.se|embed.futuresportsmedia.com|streamio.com|laget.se|moviezine.se|fasttrack.webstream.dk|cdn.jwplayer.com|wellness.se|allas.se|baaam.se|elle.se|femina.se|hant.se|mabra.com|residencemagazine.se|svenskdam.se|frida.se|motherhood.se
+||jwpcdn.com/player/*/bidding.js$domain=allas.se|baaam.se|elle.se|femina.se|hant.se|mabra.com|residencemagazine.se|svenskdam.se|frida.se|motherhood.se
+||jwpcdn.com/player/*/googima.js$domain=allas.se|baaam.se|elle.se|femina.se|hant.se|mabra.com|residencemagazine.se|svenskdam.se|frida.se|motherhood.se
+||jwplayer.com/*/advertising$domain=allas.se|baaam.se|elle.se|femina.se|hant.se|mabra.com|residencemagazine.se|svenskdam.se|frida.se|motherhood.se
 
 ! === Livsstil
 
@@ -2665,7 +2665,8 @@ drivkraftsverige.se##.policy-disclaimer
 xlbygg.se##div[class^="CookieBar"]
 /publicPartners$domain=familjehemsbanken.se|familjehemmet.se
 so-rummet.se##.block-rr
-so-rummet.se##.link-list-item:has(img[src*="sponsrad"])
+so-rummet.se##.sponsrad-over:upward(.article-list)
+so-rummet.se##img[src*="sponsrad"]:upward(.link-list-item)
 so-rummet.se##.view-nya-lankar-front:has(h3:has-text(/annonser/i))
 ||salesiq.zoho.com/widget$domain=seodesign.se
 happypancake.se###__next > div > div.bar:first-child
@@ -2741,7 +2742,6 @@ skyscanner.se###cookie-banner-root
 varden.se##app-native-puff, .header-top-banners
 varden.se##.carousel-slide:has(.sponsored-label)
 kalender.se##.day-nav ~ a:not([href*="kalender.se"])
-kommunal.se###modalBackdrop, #modalContent
 ||internetlankar.se/*/Annons/
 ||pellesoft.se/bilder/*/banners/
 ||sbktavling.se/images/front/banners/

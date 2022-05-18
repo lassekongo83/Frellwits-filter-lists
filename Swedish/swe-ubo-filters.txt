@@ -1,6 +1,5 @@
 &autoplay$frame,removeparam=autoplay,domain=di.se|expressen.se
 &browser=MozillaFirefox$removeparam=/^browser/,xhr,domain=fotbollskanalen.se|koket.se|tv4.se|tv4play.se
-&serverSideAds$removeparam=serversideads,xhr,domain=pluto.tv
 /aab/tv4play$redirect=noop.js,script,domain=fotbollskanalen.se|koket.se|tv4.se|tv4play.se
 /aftonbladet/crypt/?lpkey$all
 /casinokollen$all,domain=aftonbladet.se
@@ -15,7 +14,6 @@
 ?autoPlay$frame,removeparam=autoplay,domain=expressen.se
 ?autoplay=true$frame,removeparam=autoplay,domain=expressen.se
 accentmagasin.se##+js(nostif, n.modal)
-advertisingId$removeparam=advertisingid,xhr,domain=pluto.tv
 affarsliv.com,affarslivgotland.se,alekuriren.se,allas.se,arvikanyheter.se,baaam.se,babyhjalp.se,barometern.se,blt.se,borasdly.se,bt.se,byrum.se,cafe.se,corren.se,dalslanningen.se,ekuriren.se,elle.se,eposten.se,expressen.se,familjeliv.se,femina.se,filipstadstidning.se,folkbladet.nu,folkbladet.se,fragbite.se,frida.se,fryksdalsbygden.se,golfing.se,goteborgdirekt.se,gotlandjustnu.se,hant.se,helagotland.se,hjotidning.se,ibnytt.se,idrottensaffarer.se,kalmarposten.se,kindaposten.se,kingmagazine.se,kkuriren.se,klackspark.com,klt.nu,kristianstadsbladet.se,kt-kuriren.se,kt.se,kuriren.nu,mabra.com,mariestadstidningen.se,mellanbygden.nu,meraosterlen.se,mestmotor.se,mitti.se,modette.se,motherhood.se,mvt.se,nkp.se,nlt.se,norrahalland.se,norran.se,norrbottensaffarer.se,nsd.se,nsk.se,nt.se,nwt.se,nyheter24.se,olandsbladet.se,praktisktbatagande.se,provinstidningen.se,pt.se,realtid.se,recept.se,residencemagazine.se,saffletidningen.se,skd.se,sla.se,smp.se,sn.se,stoppapressarna.se,strengnastidning.se,svenskanamn.se,svenskdam.se,svenskgolf.se,sverigespringer.se,sydostran.se,thelocal.se,trelleborgsallehanda.se,unt.se,ut.se,varmlandsaffarer.se,vasterastidning.se,vaxjobladet.se,vf.se,viivilla.se,vimmerbytidning.se,vk.se,vt.se,vxonews.se,youplay.se,ystadsallehanda.se##+js(json-prune, autoplay)
 affarsstaden.se##+js(acs, jQuery, adblockdetect)
 aftonbladet.se###main > div > div > div:has(h2:has-text(/^annons/i))
@@ -326,8 +324,9 @@ siljannews.se##a[target="_blank"]:upward(2)
 siljannews.se##h3:has-text(/^Annons$/) + div
 sillyseason.se##a[href*=".se/odds/"]:upward(li)
 skargarden.se##article:has([title^="Annons"])
-so-rummet.se##.link-list-item:has(img[src*="sponsrad"])
+so-rummet.se##.sponsrad-over:upward(.article-list)
 so-rummet.se##.view-nya-lankar-front:has(h3:has-text(/annonser/i))
+so-rummet.se##img[src*="sponsrad"]:upward(.link-list-item)
 spelhubben.se##+js(acs, stopPrntScr)
 spelochfilm.se##a[href*="casino"]:upward(.mh-posts-stacked-wrap)
 sportbladetplay.se##[class^="CookieConsentPopup"]:upward(.ui.page.dimmer)
