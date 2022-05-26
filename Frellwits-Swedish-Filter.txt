@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2022-05-25 07:38:15 CEST
+! Last modified: 2022-05-26 06:06:24 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -65,8 +65,8 @@
 ###cookiejar
 ###cookielawwarning
 ###cookieMsgBlock
-###CookieNotice
 ###cookieNotice
+###CookieNotice
 ###cookies-acceptance .alert.bottom
 ###cookiesInfo
 ###dialog-eu-cookie-law
@@ -489,7 +489,6 @@
 /census/webtrekk
 /check-paywall$domain=dn.se
 /citygate/payingcompanies$xmlhttprequest
-/client-stream-events$domain=viafree.se
 /closest-native$domain=expressen.se
 /cm-ad-changer-server
 /cmp.js$domain=bamse.se|goal.se|halge.se|hemtrevligt.se|husohem.se|kalleanka.se|mestmotor.se|minhast.se|praktisktbatagande.se|sportfack.se|svenskgolf.se|tidningenhalsa.se|tidningenjulia.se|utemagasinet.se|vagabond.se
@@ -1001,7 +1000,6 @@
 @@||createsend1.com/css/
 @@||feed.meltwater.com^$subdocument
 @@||freeride.nu/js/ads.js
-@@||fwmrm.net^$image,xmlhttprequest,domain=viafree.se
 @@||happyride.se/img/admarket/$~third-party
 @@||imasdk.googleapis.com/js/sdkloader/ima3.$script,domain=ekuriren.se|gamereactor.se|kkuriren.se|padelgo.tv|sn.se|strengnastidning.se
 @@||js.createsend1.com/js/jquery
@@ -1009,7 +1007,7 @@
 @@||kritiker.se^$generichide
 aapl.se,hrnytt.se,inblick.se,inredningsarkitektur.se,ljuskultur.se##.cookies
 accentmagasin.se##.site-cookies
-adecco.se,apotekhjartat.se,ica.se,tele2.se,viafree.se###onetrust-consent-sdk
+adecco.se,apotekhjartat.se,ica.se,tele2.se###onetrust-consent-sdk
 affarsliv.com,affarslivgotland.se,corren.se,ekuriren.se,eposten.se,folkbladet.se,gotlandjustnu.se,helagotland.se,kindaposten.se,kkuriren.se,klackspark.com,kuriren.nu,mvt.se,norran.se,norrbottensaffarer.se,nsd.se,nt.se,pt.se,sn.se,strengnastidning.se,unt.se,vimmerbytidning.se,vt.se##ad-iris-sunt-ad-wrapper, ad-block, .native, ad-full-page-block, .ad-skeleton
 affarsliv.com,affarslivgotland.se,corren.se,ekuriren.se,eposten.se,folkbladet.se,helagotland.se,kindaposten.se,kkuriren.se,klackspark.com,kuriren.nu,mvt.se,norran.se,norrbottensaffarer.se,nsd.se,nt.se,pt.se,sn.se,strengnastidning.se,unt.se,vimmerbytidning.se,vt.se##.cdk-overlay-pane, iris-subscribe-footer
 affarsliv.com,affarslivgotland.se,corren.se,ekuriren.se,eposten.se,folkbladet.se,helagotland.se,kindaposten.se,kkuriren.se,klackspark.com,kuriren.nu,mvt.se,norran.se,norrbottensaffarer.se,nsd.se,nt.se,pt.se,sn.se,strengnastidning.se,unt.se,vimmerbytidning.se,vt.se##widget-family, widget-memorial, widget-marknadsguiden, widget-jobb-plus
@@ -1307,7 +1305,7 @@ grillbloggen.nu##.rstbox
 guideAds$xmlhttprequest,domain=barometern.se|blt.se|borasdly.se|bt.se|kalmarposten.se|klt.nu|kristianstadsbladet.se|meraosterlen.se|nsk.se|olandsbladet.se|smp.se|sydostran.se|trelleborgsallehanda.se|ut.se|vaxjobladet.se|vxonews.se|ystadsallehanda.se
 hallbyhandboll.se,skiljebosk.nu##.cookiePush
 hallbyhandboll.se,skiljebosk.nu##.stickyFollow
-hamnen.se##[class*="annons"], .tag-sponsrad, .pp-modal-wrap
+hamnen.se##[class*="annons"]:not(body), .tag-sponsrad, .pp-modal-wrap
 hamsterpaj.net###accept-cookies
 hamsterpaj.net###sidebar_wrapper > .zone:last-child
 handbollskanalen.se##.hb-adlabel, [id^="hb-"]
@@ -1607,7 +1605,6 @@ veckansmiddag.com###load
 vegomagasinet.se##[class*="ai-viewport"]
 veterinarmagazinet.se##.nyhet-ad
 vi.se##.cookieNotification
-viafree.se##.pause-ad-container, .pause-ad, .ad-click-through
 vibilagare.se##a[href^="/partnermaterial/"]
 villalivet.se##.mtsnb, .villalivet-target, a[href*="/sponsrat-innehall/"]
 vimedbarn.se##.annonsinlagg, .annonsen
@@ -1636,7 +1633,6 @@ ysektionen.se##.yweb-news-paper-banner
 ||123on.com/static/videojs.pulse
 ||172.104.145.13^
 ||1terms.com^
-||2mdn.net^$media,domain=viafree.se
 ||7godscasino.com^$popup,third-party
 ||7hd.org^
 ||aa-cdn.mytaste.org/js/ad.js
@@ -1877,7 +1873,6 @@ ysektionen.se##.yweb-news-paper-banner
 ||foretagande.se/r/$xmlhttprequest
 ||forms.hsforms.com^*/counters.$image
 ||forum.odla.nu/js/bonnier.js
-||freewheel-mtgx-tv.akamaized.net^$media,domain=viafree.se
 ||freyanews.com^*/tracker$script
 ||fritiden.se/js/cookiealert-standalone.js
 ||funnelytics.io^$third-party
@@ -2138,7 +2133,6 @@ ysektionen.se##.yweb-news-paper-banner
 ||schibsted.com/privacy-notifier
 ||schibsted.com/pulse
 ||schibsted.io^*/gdpr-bundle.js
-||screen9.com^$media,domain=viafree.se
 ||script.e-space.se^$third-party
 ||sdk.mrf.io/statics/marfeel-sdk
 ||sdk.pulse.schibsted.com^$script
