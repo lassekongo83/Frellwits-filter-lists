@@ -601,6 +601,7 @@ casino-utan-$image
 /BlogPortal/view/Statistics
 /census.js?bust=release
 /census/webtrekk
+/conversions/tracking.js$third-party
 /cx-emediate-userprofile-se
 /dyTracker.js?bust=release
 /facebook_tracking_pixel$script
@@ -665,7 +666,6 @@ casino-utan-$image
 ||123on.com/static/videojs.pulse
 ||activate.social^$third-party
 ||activehosted.com^$third-party
-||af.analytics.elx.cloud^$third-party
 ||agency360.io^$third-party
 ||amazonaws.com/pfe_im/js/prod/pcc/s_code.js
 ||ana.tunnl.com^
@@ -1155,7 +1155,10 @@ utm_$document,removeparam=/^utm_/,domain=tv.nu|booli.se|expressen.se|aftonbladet
 /vast.js$domain=moviezine.se
 /glimr$script,domain=aftonbladet.se|blocket.se|wellness.se
 /profile$ping,domain=feber.se|hamnen.se|lawline.se|tasteline.com|tjock.se|veckorevyn.com|arbetarskydd.se|lag-avtal.se|nyteknik.se|marcusoscarsson.se|handbollskanalen.se
+/usabilla$script,domain=morningstar.se|telia.se
 /utag$script,domain=gaffa.se
+! Websites with no obvious or visible facebook login. Will just assume it's used for tracking.
+||connect.facebook.net^$domain=friatider.se|fotosidan.se|ng.se|vf.se|hjotidning.se|kt.se|kt-kuriren.se|sla.se|mariestadstidningen.se|filipstadstidning.se|fryksdalsbygden.se|nwt.se|arvikanyheter.se|nkp.se|saffletidningen.se|provinstidningen.se|dalslanningen.se|nlt.se|varmlandsaffarer.se|hammarbyfotboll.se|aktiespararna.se|psykologiguiden.se|lektionsbanken.se|lajvo.se|kvinnatillkvinna.se
 ! Scriptlets
 newsner.com,humorbibeln.se,sportbibeln.se,ettgottskratt.se,sportpanelen.se,zeinaskitchen.se,dinbyggare.se,trafiksakerhet.se,boktugg.se,carup.se,lakartidningen.se,villalivet.se,matsafari.nu##+js(set, mi_track_user, false)
 newsner.com,humorbibeln.se,sportbibeln.se,ettgottskratt.se,sportpanelen.se,zeinaskitchen.se,dinbyggare.se,trafiksakerhet.se,boktugg.se,carup.se,lakartidningen.se,villalivet.se,matsafari.nu##+js(acs, monsterinsights_frontend)
@@ -2434,6 +2437,7 @@ aletorget.se,alingsastorget.se,almhulttorget.se,alvestatorget.se,amaltorget.se,a
 avanza.se#@#a[title="LeoVegas"]
 realm667.com#@##redim-cookiehint
 skandia.se##div[data-block="CookieBannerBlock"]
+kvinnatillkvinna.se##html,body:style(scrollbar-width:initial!important)
 ! ima3
 @@||imasdk.googleapis.com/js/sdkloader/ima3.$script,domain=gamereactor.se|sn.se|ekuriren.se|kkuriren.se|strengnastidning.se|padelgo.tv
 ! https://github.com/AdguardTeam/AdguardFilters/issues/61749
@@ -2711,7 +2715,6 @@ pussad.se##html.g1-popup-visible:style(overflow: initial !important;)
 se.azrhymes.com##.shader, #CookielawBanner, .info-center
 se.azrhymes.com##+js(nostif, .info-center)
 /evidon*.js$domain=morningstar.se
-/usabilla$script,domain=morningstar.se
 /CookieBar$script,domain=morningstar.se
 /AudienceTarget$script,domain=morningstar.se
 /DynamicGAFunctions$script,domain=morningstar.se
