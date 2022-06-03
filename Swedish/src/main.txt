@@ -407,6 +407,7 @@ casino-utan-$image
 ##a[href^="https://www.adsettings.com/scripts/reg_click."]
 ##a[href*="tradedoubler.com/click?"]
 ##a[href*="/cvasino.se/"] img
+##a[href*="utm_content=banner"] img
 ##a[title="LeoVegas"]
 ##a.card.-sponsored
 ##a#top-banner.banner-holder
@@ -1122,7 +1123,7 @@ automation.se,verkstadstidningen.se,transportnytt.se,metalcentral.net##.bannergr
 mammasidan.se,minbebis.com,alltforforaldrar.se,di.se,upphandling24.se,bytbil.com##.panorama
 svartgul.se,eventeffect.se,executiveeffect.se,saleseffect.se###panorama
 teknikveckan.se,di.se,dn.se,fordonsproffs.eu,skillingaryd.nu,xn--vrnamo-bua.nu,tandlakartidningen.se,vardfokus.se,kamerabild.se,mobil.se,tripadvisor.se,skaraborgsbygden.se,swedroid.se,bettingstugan.se,expressen.se,dagensopinion.se,driva-eget.se,bioenergitidningen.se,ifokus.se,linnherbertsson.se,padelfeber.se,sv.picmix.com,ifragasatt.se,ehandel.se,jaktojagare.se,sportbloggare.com,bovision.se##.ad
-svd.se,chef.se,vvsforum.se,elinstallatoren.se##.Ad
+svd.se,chef.se,vvsforum.se,elinstallatoren.se,arkitekten.se##.Ad
 aftonbladet.se,halsasverige.se,svenskorientering.se,nojesmagasinet.nu,stoppapressarna.se,langd.se##.advert
 lakartidningen.se,nyheter24.se,akaviaaspekt.se,tidningenkulturen.se##.advertisement
 fotosidan.se,merinfo.se,allsvenskan.se,kollega.se,tasteline.com,jaktojagare.se,chefstidningen.se##.ads
@@ -1160,6 +1161,7 @@ utm_$document,removeparam=/^utm_/,domain=tv.nu|booli.se|expressen.se|aftonbladet
 /utag$script,domain=gaffa.se
 ! Websites with no obvious or visible facebook login. Will just assume it's used for tracking.
 ||connect.facebook.net^$domain=friatider.se|fotosidan.se|ng.se|vf.se|hjotidning.se|kt.se|kt-kuriren.se|sla.se|mariestadstidningen.se|filipstadstidning.se|fryksdalsbygden.se|nwt.se|arvikanyheter.se|nkp.se|saffletidningen.se|provinstidningen.se|dalslanningen.se|nlt.se|varmlandsaffarer.se|hammarbyfotboll.se|aktiespararna.se|psykologiguiden.se|lektionsbanken.se|lajvo.se|kvinnatillkvinna.se
+||facebook.com/plugins/$domain=norrbotten.com
 ! Scriptlets
 newsner.com,humorbibeln.se,sportbibeln.se,ettgottskratt.se,sportpanelen.se,zeinaskitchen.se,dinbyggare.se,trafiksakerhet.se,boktugg.se,carup.se,lakartidningen.se,villalivet.se,matsafari.nu##+js(set, mi_track_user, false)
 newsner.com,humorbibeln.se,sportbibeln.se,ettgottskratt.se,sportpanelen.se,zeinaskitchen.se,dinbyggare.se,trafiksakerhet.se,boktugg.se,carup.se,lakartidningen.se,villalivet.se,matsafari.nu##+js(acs, monsterinsights_frontend)
@@ -1283,7 +1285,7 @@ hd.se,sydsvenskan.se,allehanda.se,tidningenangermanland.se,arbetarbladet.se,aves
 /tv/sponsrat$domain=expressen.se
 ! Cosmetic ad filters
 expressen.se,dn.se,di.se###rich-media-ads
-expressen.se##a[href*="/spel.exp"], a[href*="/lanapengar.exp"], a[href*="/rabattkoder.exp"], a[href*="/annons"], .match-betting, .discount-ad, .b-ad__caption, .pressrelease-teaser, .widget-ad-marker, .widget-ad-marker + a, .promotion-banner, .widget--collaboration, .rotator--external, a[data-click-track*="prisjakt"], .linked-image-widget a[href*="/kampanj/"], .linked-image-widget a[href*="www.cmore.se"], .linked-image-widget a[href*="lifestyle.expressen.se"], #premiumAdWrapper
+expressen.se##a[href*="/spel.exp"], a[href*="/lanapengar.exp"], a[href*="/rabattkoder.exp"], a[href*="/annons"], .match-betting, .discount-ad, .b-ad__caption, .pressrelease-teaser, .widget-ad-marker, .widget-ad-marker + a, .promotion-banner, .widget--collaboration, .rotator--external, a[data-click-track*="prisjakt"], .linked-image-widget a[href*="/kampanj/"], .linked-image-widget a[href*="www.cmore.se"], .linked-image-widget a[href*="lifestyle.expressen.se"], #premiumAdWrapper, .tapet-popup-overlay, .outsider-ads
 expressen.se##.teaser > a[href*="/kampanj."], .teaser > a[href*="/brandstudio"], .teaser > a[href*="/brand-studio"], figure[data-article-data*="/sponsrat"], figure[data-article-data*="/annons"], figure[data-article-data*="/brand-studio"], .teaser--native, .native-article
 ! Annoyances
 ?autoPlay$frame,removeparam=autoPlay,domain=expressen.se
@@ -1295,6 +1297,7 @@ expressen.se##.html-widget > div[style^="text-align: center; font-size: 10px;"]
 expressen.se##a[href*="/annons"], a[href*="/brandstudio"], a[href*="/brand-studio"], a[href*="/kampanj."], a[href*="/lanapengar."], a[href*="/rabattkoder."], a[href*="/spel.expressen.se"], .vignette--svg + a[href*="teknikensvarld."]:upward(.teaser)
 expressen.se##strong:has-text(/^annons:/i):upward(p)
 expressen.se##.teaser__bottom--ad-marker:upward(.teaser)
+expressen.se##.tapet-popup-js-no-scroll:style(overflow-y:initial!important)
 ! scriptlets
 www.expressen.se##+js(acs, Bau, preloadAds)
 www.expressen.se##+js(set, detect, noopFunc)
@@ -1568,7 +1571,7 @@ ekonominyheter.se###lblock-ads
 ekonominyheter.se##.td-fix-index:has(a[href*="casino"])
 aktiespararna.se##.analysguiden-promote-articles
 veterinarmagazinet.se##.nyhet-ad
-forvaltarforum.se##[id^="ff_banner"], .home .partner_article + .mh-section, .home .payed_article + .mh-section, .home-columns .ticker-title.partner_article, .home-columns .ticker-title.payed_article, .mh-header .widget_sow-slider, .sow-slider-image, .houdini_partner_article, .houdini_video_banner
+forvaltarforum.se##[id^="ff_banner"], .home .partner_article + .mh-section, .home .payed_article + .mh-section, .home-columns .ticker-title.partner_article, .home-columns .ticker-title.payed_article, .mh-header .widget_sow-slider, .sow-slider-image, .houdini_partner_article, .houdini_video_banner, .houdini_produktnytt, #houdini_tjanster-2
 ||borsvarlden.com/js/cookie-notice
 ||borsvarlden-banners.azurewebsites.net^
 borsvarlden.com##.sponsored-articles-container,.nav-sep-blink,.annons-label,.index-side-banner-wrapper
@@ -1591,12 +1594,12 @@ eventeffect.se,executiveeffect.se,saleseffect.se##.post-teaser:has(a[href$="/ann
 eventeffect.se,executiveeffect.se,saleseffect.se###nyhetsbrev-pp-wrapper__container
 eventeffect.se###secondary > .widget:nth-child(2)
 norrbotten.com##a[href*=".com/annons"], .td-ss-main-sidebar > .td-a-rec
-arkitekten.se##.post-teaser__wrapper--ad
+arkitekten.se##div[id^="consent-"]
+arkitekten.se##html:style(--scrollbar-width:initial!important)
+arkitekten.se##.MediaWrapper-content:style(opacity:unset!important)
 tidningen.nu##span:has-text(/^Annons$/):upward(1) + .textwidget
 /wp-content/uploads/*-sidebar$image,domain=dagensinfrastruktur.se
 dagensinfrastruktur.se##.g-single
-aldrenytt.se##div[id*="aldrenytt-"], .aldrenytt-adlabel, .aldrenytt-adlabel ~ a
-norrahalland.se##.norra-leeads-ads,.egna_annonser_widget
 /mod_responsivebannerslider$domain=bjuvsnytt.se
 ||bjuvsnytt.se/images/*annons
 frilagt.se###whitewrap > .wrapper-first:first-child
