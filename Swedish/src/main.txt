@@ -400,6 +400,7 @@ casino-utan-$image
 ##a[href*="/banner/klick/"] img
 ##a[href*="/click.adrecord"] img
 ##a[href*="/click.linksynergy"] img
+##a[href*="/annonsartiklar/"]
 ##a[href*="casinopro.se"][target="_blank"]
 ##a[href*="cyberbetpromo.net/click"][target="_blank"]
 ##a[href*="doktor-se.onelink.me"]
@@ -1516,6 +1517,7 @@ news55.se##a[href]:not([href*="/news55.se"]):upward(section.sidebar)
 e55.se##a[href]:not([href*="/e55.se"]):upward(section.sidebar)
 ||foretagande.se/a/$xmlhttprequest
 ||foretagande.se/r/$xmlhttprequest
+foretagande.se##div[id*="panorama"]
 foretagande.se##article:has(.sponsored-text)
 foretagande.se##div.article:has(a[href$="artiklar-i-samarbete"])
 newsner.com,humorbibeln.se,sportbibeln.se,ettgottskratt.se###wsfb-container, .share-buttons
@@ -1554,6 +1556,7 @@ dagensjuridik.se##.outher-sidebar, a[href*="/annons/"]
 dagensjuridik.se##.card--muted:has(strong:has-text(/^senaste nytt från våra partners/i))
 /sponsored_articles$domain=fastighetssverige.se
 fastighetssverige.se##a[href*="/banner/out/"], .bnr_box, div[class^="panel"][style*="lightgoldenrodyellow"]
+fastighetssverige.se##.badge-partner-text:upward(.featured-article)
 fastighetstidningen.se##.adspace
 /atomic-blocks$script,domain=foretagsverige.se|forskningsverige.se|motorbibeln.se|dinlivsstil.nu|hallbarhetsverige.se|tillvaxtsverige.se|grillbibeln.se|kampenmotcancer.se
 foretagsverige.se,forskningsverige.se,motorbibeln.se,dinlivsstil.nu,hallbarhetsverige.se,tillvaxtsverige.se,grillbibeln.se,kampenmotcancer.se##+js(acs, showConsentDlg)
@@ -1620,14 +1623,14 @@ borskollen.se##img[src$="ad_label.png"]:upward(.outer)
 ||axess.se^*/track-views
 axess.se##.popup--cookie
 motivation.se##.sponsored-item, [class*="banner"], .outsider
-motivation.se##.card:has(.sponsored)
+motivation.se##.sponsored:upward(.card)
 /native_$script,domain=affarsvarlden.se
 affarsvarlden.se##.cookies-wrap, .Modal
 affarsvarlden.se##.article-list-item--native, .advert-notice-box
 litteraturmagazinet.se###pageContainer > div:first-child:not([id])
 ||automation.se/images/*banner
+tidningenglobal.se##.elementor-image a[target="_blank"], .revive-box
 tidningenglobal.se##span:has-text(/annons/i):upward(.elementor-widget-wrap)
-tidningenglobal.se##.elementor-image a[target="_blank"]
 ||powr.io^$important,domain=fria.nu|goteborgsfria.se|friatidningen.se|stockholmsfria.se|sesam.nu
 /twitter_count.php$domain=fria.nu|goteborgsfria.se|friatidningen.se|stockholmsfria.se|sesam.nu
 /gplus.php$script,domain=fria.nu|goteborgsfria.se|friatidningen.se|stockholmsfria.se|sesam.nu
@@ -1636,7 +1639,7 @@ fria.nu,goteborgsfria.se,friatidningen.se,stockholmsfria.se,sesam.nu###cboxOverl
 ||lararen.se/siteassets/lf-puffar
 lararen.se##a[href*="=annons"]
 hrnytt.se##.banner-box
-hrnytt.se##article:has(.sponsored-article)
+hrnytt.se##.sponsored-article:upward(article)
 arbetaren.se##.text-sm:has-text(/annons/i):upward(a)
 duochjobbet.se###topbanner, .adMarking
 duochjobbet.se##.editor_content.post:has(p:has-text(/^annons/i))
