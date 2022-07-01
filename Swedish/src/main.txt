@@ -1227,7 +1227,7 @@ youplay.se,expressen.se,nsk.se,skd.se,barometern.se,blt.se,bt.se,kristianstadsbl
 youplay.se##+js(aeld, loadstart)
 streamio.com,nyan.ax,spelhubben.se,fotosidan.se##+js(aeld, contextmenu)
 svenskjakt.se,globalportalen.org##+js(ra, autoplay)
-goteborgdirekt.se,mitti.se,vasterastidning.se##+js(aeld, scroll, helpers.scroll(id))
+goteborgdirekt.se,mitti.se,vasterastidning.se,barometern.se,blt.se,bt.se,kristianstadsbladet.se,olandsbladet.se,smp.se,sydostran.se,trelleborgsallehanda.se,ut.se,ystadsallehanda.se,borasdly.se,kalmarposten.se,meraosterlen.se,vxonews.se,vaxjobladet.se,nsk.se,klt.nu##+js(aeld, scroll, helpers.scroll(id))
 
 ! Useless preloaders
 hockeyguiden.com##.main-loader.loader-bg
@@ -1273,7 +1273,7 @@ fokus.se,fof.se,elinstallatoren.se,spraktidningen.se##.mediaconnect-protected-co
 
 ! -- Bonnier
 ! Bonnier local
-hd.se,sydsvenskan.se,allehanda.se,tidningenangermanland.se,arbetarbladet.se,avestatidning.com,bblat.se,dalademokraten.se,dt.se,fagersta-posten.se,gd.se,lt.se,ltz.se,na.se,norrteljetidning.se,nynashamnsposten.se,op.se,salaallehanda.com,st.nu,tidningenharjedalen.se,vlt.se,falkopingstidning.se,jp.se,skaraborgslanstidning.se,skovdenyheter.se,smalandsdagblad.se,smalanningen.se,smt.se,tranastidning.se,vastgotabladet.se,vetlandaposten.se,vn.se,jnytt.se,bandypuls.se,ljusdalsposten.se,ljusnan.se,soderhamnskuriren.se,ht.se,moratidning.se,borlangetidning.se,falukuriren.se##[class*="teaser-native"], lcl-ad
+hd.se,sydsvenskan.se,allehanda.se,tidningenangermanland.se,arbetarbladet.se,avestatidning.com,bblat.se,dalademokraten.se,dt.se,fagersta-posten.se,gd.se,lt.se,ltz.se,na.se,norrteljetidning.se,nynashamnsposten.se,op.se,salaallehanda.com,st.nu,tidningenharjedalen.se,vlt.se,falkopingstidning.se,jp.se,skaraborgslanstidning.se,skovdenyheter.se,smalandsdagblad.se,smalanningen.se,smt.se,tranastidning.se,vastgotabladet.se,vetlandaposten.se,vn.se,jnytt.se,bandypuls.se,ljusdalsposten.se,ljusnan.se,soderhamnskuriren.se,ht.se,moratidning.se,borlangetidning.se,falukuriren.se##[class*="teaser-native"], lcl-ad, .ad-welcome
 ! Expressen
 ||brandy.bonniernewslifestyle.se^
 ||lanapengar.expressen.se^
@@ -1382,13 +1382,14 @@ aftonbladet.se##[data-ad-subtype]:upward(1):matches-css(min-height:/[0-9]+/)
 aftonbladet.se##aside > div:has(h2:has-text(/^annons/i))
 aftonbladet.se##section > div:has(h2:has-text(/^annons/i))
 aftonbladet.se###main > div > div > div:has(h2:has-text(/^annons/i))
-aftonbladet.se##a:has(span:has-text(/^annons/i))
+aftonbladet.se##span:has-text(/^annons/i):upward(a)
 aftonbladet.se##a:has-text(Kommersiell text, innehåller annonslänkar)
 aftonbladet.se##strong:has-text(/ANNONS/i):upward(p)
 aftonbladet.se##div[class^="css-"]:has([data-ad-subtype="mega"])
 aftonbladet.se##a[href^="https://kampanj."]:upward(1):not(section):not(div[class^="article-wrapper"])
 aftonbladet.se##main > section > div[class^="css-"]:first-child:has(img[src*="closeButton"])
 aftonbladet.se##p:has-text(/^PRESENTERAS AV$/):upward(1)
+aftonbladet.se##:matches-path(/^/$/) p:has-text(Artikeln innehåller annonslänkar):upward(a)
 ! scriptlets
 www.aftonbladet.se##+js(nostif, TAKEOVER)
 ! css
@@ -1452,6 +1453,7 @@ barometern.se,blt.se,bt.se,kristianstadsbladet.se,olandsbladet.se,smp.se,sydostr
 corren.se,folkbladet.se,mvt.se,nt.se,vt.se,vimmerbytidning.se,kuriren.nu,nsd.se,norran.se,pt.se,ekuriren.se,strengnastidning.se,kkuriren.se,sn.se,eposten.se,unt.se,helagotland.se,affarsliv.com,norrbottensaffarer.se,kindaposten.se,gotlandjustnu.se##.cdk-overlay-container, iris-subscribe-footer
 corren.se,folkbladet.se,mvt.se,nt.se,vt.se,vimmerbytidning.se,kuriren.nu,nsd.se,norran.se,pt.se,ekuriren.se,strengnastidning.se,kkuriren.se,sn.se,eposten.se,unt.se,helagotland.se,affarsliv.com,norrbottensaffarer.se,kindaposten.se,gotlandjustnu.se##ad-iris-sunt-ad-wrapper, ad-block, .native, ad-full-page-block, .ad-skeleton
 corren.se,folkbladet.se,mvt.se,nt.se,vt.se,vimmerbytidning.se,kuriren.nu,nsd.se,norran.se,pt.se,ekuriren.se,strengnastidning.se,kkuriren.se,sn.se,eposten.se,unt.se,helagotland.se,affarsliv.com,norrbottensaffarer.se,kindaposten.se,gotlandjustnu.se##widget-family, widget-memorial, widget-marknadsguiden, widget-jobb-plus
+corren.se,folkbladet.se,mvt.se,nt.se,vt.se,vimmerbytidning.se,kuriren.nu,nsd.se,norran.se,pt.se,ekuriren.se,strengnastidning.se,kkuriren.se,sn.se,eposten.se,unt.se,helagotland.se,affarsliv.com,norrbottensaffarer.se,kindaposten.se,gotlandjustnu.se##.sp-message-open body:style(overflow:unset!important;position:unset!important;)
 
 ! -- NWT
 vf.se,hjotidning.se,kt.se,kt-kuriren.se,sla.se,mariestadstidningen.se,filipstadstidning.se,fryksdalsbygden.se,nwt.se,arvikanyheter.se,nkp.se,saffletidningen.se,provinstidningen.se,dalslanningen.se,nlt.se,varmlandsaffarer.se##[id*="lokus_gallery"], [id*="marknadsguiden"]
