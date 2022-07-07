@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2022-07-06 17:53:28 CEST
+! Last modified: 2022-07-07 08:56:58 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -65,8 +65,8 @@
 ###cookiejar
 ###cookielawwarning
 ###cookieMsgBlock
-###CookieNotice
 ###cookieNotice
+###CookieNotice
 ###cookies-acceptance .alert.bottom
 ###cookiesInfo
 ###dialog-eu-cookie-law
@@ -696,6 +696,7 @@
 /plugins/cookies-and-content-security-policy$domain=cannabisifokus.se
 /plugins/cresta-social-share-counter
 /plugins/ct-ultimate-gdpr/*
+/plugins/custom-banners$domain=skolfamiljen.se
 /plugins/custom-cookie-message$script
 /plugins/daftplug-instantify$domain=se.moyens.net
 /plugins/datafeedr-comparison-sets$domain=gaming365.se
@@ -1029,7 +1030,7 @@ affarsvarlden.se##.article-list-item--native, .advert-notice-box
 affarsvarlden.se##.cookies-wrap, .Modal
 aftonbladet.se###megaAd-placeholder, #superright-side, a[href^="/brandstudio"], a[href*="/casinoguide"], [id^="adPlacement"], a[href^="https://kampanj.aftonbladet"], a[href*="/rabattkod"][data-test-tag="internal-link"]
 aftonbladet.se,autonytt.se,ekonominyheter.se,hockeybladet.nu,lesscarbs.se,matinspo.se,undervarttak.se,xn--snabbalnen-75a.se##a[href*="/track.adtraction."]
-aftonbladet.se,halsasverige.se,langd.se,nojesmagasinet.nu,stoppapressarna.se,svenskorientering.se##.advert
+aftonbladet.se,cfanytt.se,foretagsbladet.se,gestrikemagasinet.se,halsasverige.se,langd.se,nojesmagasinet.nu,pressbladet.se,stoppapressarna.se,svenskorientering.se,svenskpress.se##.advert
 aftonbladet.se,skonhetsredaktorerna.se##.ab_responsive_ads
 aikfotboll.se,vaken.se##.banners
 aip.nu##[class*="feed-ad"]
@@ -1163,6 +1164,7 @@ cannabis.se##.header-ads-wrapper, .ai-adb-hide, .ai-sticky-widget, .hampaonline
 cannabis.se,forskning.se##.pum-overlay
 cannabisifokus.se##div[id^="canna-"]
 casino-utan-$image
+cfanytt.se,foretagsbladet.se,gestrikemagasinet.se,pressbladet.se,svenskpress.se##.isax
 chalmers.se###cookie_directive_container
 chef.se##.global-cookie-msg
 chef.se##.Product-modal,.Offer-popup
@@ -1431,6 +1433,7 @@ maringuiden.se###elGuestTerms
 maringuiden.se##.banner_hoger, .google_ads_mg_frontpage, .footerComercialDiv
 marsta.nu##.outsider, .panel--naringsliv
 matinspo.se##[id^="matin-"]
+matkanalen.se###sidebar .widget_text
 matspar.se##div[style="z-index: 2000;"],div[style="z-index: 2000;"] + div
 mcparken.se##.adsheader
 medibok.se##.annonsmellandiv, .annonssidadiv
@@ -1455,6 +1458,7 @@ motivation.se##.sponsored-item, [class*="banner"], .outsider
 moviezine.se###home_ans, [name="article-advertisment"]
 mytaste.se##[id^="Modal_plugin"]
 mytaste.se##div[id*="panorama_"], [class^="affiliate-container"], .site-header__panorama
+narkive.se##div[onimpression]
 natursidan.se###container > a:not(:first-child), #sidebar .widget_text a[target], #text-5
 netdoktor.se##.article-list__item__link--sponsored
 netflixguiden.se##div.lboard, div.instream-dynamic
@@ -1537,6 +1541,7 @@ skillingaryd.nu,xn--vrnamo-bua.nu###more-banners
 skk.se###cookie-button-banner
 skk.se##.campaigns, [id*="GlobalCampaigns"]
 skogsforum.se##.masthead, .col-right, a[href^="https://goo.gl/"], a[href*="//bit.ly/"]
+skolfamiljen.se##.right-sidebar aside[id^="block"], .right-sidebar aside[id^="adguru"]
 skrattnet.se,webben7.se##.region-sidebar-second
 skyscanner.se###cookie-banner-root
 smartsenior.se##.ss-modal, .modal-mobile-app
@@ -1914,7 +1919,6 @@ ysektionen.se##.yweb-news-paper-banner
 ||helloreco.com^$third-party
 ||heroaffiliates.com^$third-party
 ||herokuapp.com/visit?$image
-||heylink.com^$third-party
 ||hittahem.se^$third-party
 ||hittarecept.se/blogcounter/
 ||hockeymagasinet.com/footer/ad
@@ -2052,6 +2056,7 @@ ysektionen.se##.yweb-news-paper-banner
 ||mtst.io/js/mtst.js
 ||myadmessenger.com^$third-party
 ||mymediaindex.com^$third-party
+||narkive.se/ajax/Telem
 ||network-n.com^$third-party
 ||newsharecounts.*.amazonaws.com/nsc.js
 ||newstats.blogg.se/collector
