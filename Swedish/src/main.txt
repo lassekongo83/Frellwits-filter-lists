@@ -612,6 +612,7 @@ casino-utan-$image
 /conversions/tracking.js$third-party
 /cx-emediate-userprofile-se
 /dyTracker.js?bust=release
+/elasticsuite/tracker
 /facebook_tracking_pixel$script
 /fb_pixel.js
 /forum/assets/google-tag-manager
@@ -821,6 +822,7 @@ casino-utan-$image
 ||streamio.com/api/*/stats$xmlhttprequest
 ||strossle.com^$third-party
 ||susnet.*/susnetstat.js$script
+||t.elasticsuite.io^$third-party
 ||t.fml.rip^$third-party
 ||t.raptorsmartadvisor.com^$image
 ||tc.hometogo.net^$image
@@ -1130,7 +1132,7 @@ spelo.se##.banner-container
 automation.se,verkstadstidningen.se,transportnytt.se,metalcentral.net##.bannergroup
 mammasidan.se,minbebis.com,alltforforaldrar.se,di.se,upphandling24.se,bytbil.com##.panorama
 svartgul.se,eventeffect.se,executiveeffect.se,saleseffect.se###panorama
-teknikveckan.se,macradion.com,di.se,dn.se,fordonsproffs.eu,skillingaryd.nu,xn--vrnamo-bua.nu,tandlakartidningen.se,vardfokus.se,kamerabild.se,mobil.se,tripadvisor.se,skaraborgsbygden.se,swedroid.se,bettingstugan.se,expressen.se,dagensopinion.se,driva-eget.se,bioenergitidningen.se,ifokus.se,linnherbertsson.se,padelfeber.se,sv.picmix.com,ifragasatt.se,ehandel.se,jaktojagare.se,sportbloggare.com,bovision.se,familjeliv.se##.ad
+teknikveckan.se,macradion.com,di.se,dn.se,fordonsproffs.eu,skillingaryd.nu,xn--vrnamo-bua.nu,tandlakartidningen.se,vardfokus.se,kamerabild.se,mobil.se,tripadvisor.se,skaraborgsbygden.se,swedroid.se,bettingstugan.se,expressen.se,dagensopinion.se,driva-eget.se,bioenergitidningen.se,ifokus.se,linnherbertsson.se,padelfeber.se,sv.picmix.com,ifragasatt.se,ehandel.se,jaktojagare.se,sportbloggare.com,bovision.se,familjeliv.se,tidningenridsport.se##.ad
 svd.se,chef.se,vvsforum.se,elinstallatoren.se,arkitekten.se##.Ad
 aftonbladet.se,halsasverige.se,svenskorientering.se,nojesmagasinet.nu,stoppapressarna.se,langd.se,pressbladet.se,svenskpress.se,foretagsbladet.se,gestrikemagasinet.se,cfanytt.se,lasarnas.se,hembostad.nu,sportidrott.se##.advert
 lakartidningen.se,nyheter24.se,akaviaaspekt.se,tidningenkulturen.se##.advertisement
@@ -1917,6 +1919,7 @@ hallbyhandboll.se,skiljebosk.nu##.cookiePush
 hallbyhandboll.se,skiljebosk.nu##.stickyFollow
 tidningenridsport.se##.subscribe_now_popup, .type-native, #captive
 tidningenridsport.se##.entry-content:style(display: initial !important;)
+tidningenridsport.se##+js(rc, cli-barmodal-open)
 fiskejournalen.se,jaktjournalen.se##.fisher-takeover-container
 fiskejournalen.se###dt-kiosk-position
 fiskejournalen.se##.fisher-pinned-post-title.sponsored:upward(1)
@@ -1997,7 +2000,8 @@ kingsizemag.se##a:has(.disclaimer-tag-img)
 gaffa.se##a[href*="/annonser/"]
 gaffa.se##h4:has-text(/sponsrade länkar/i):upward(.link-list)
 ||radio.se^*/clickperformance
-radio.se##header + div:not([id])
+||radio.se/iomm
+radio.se##div:matches-css(height:250px)
 @@||kritiker.se^$generichide
 ||kritiker.se/js/gdpr.js
 kritiker.se##div.recad, div.adhor
