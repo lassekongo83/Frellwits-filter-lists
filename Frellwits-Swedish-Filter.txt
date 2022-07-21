@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2022-07-19 10:15:34 CEST
+! Last modified: 2022-07-21 08:30:10 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -65,8 +65,8 @@
 ###cookiejar
 ###cookielawwarning
 ###cookieMsgBlock
-###cookieNotice
 ###CookieNotice
+###cookieNotice
 ###cookies-acceptance .alert.bottom
 ###cookiesInfo
 ###dialog-eu-cookie-law
@@ -591,6 +591,7 @@
 /javascript_nbenhadverts/*
 /Jofab_Blog/js/ads.min.js
 /jquery-eu-cookie-law-popup
+/jquery.smartbanner.js$domain=kristendate.se
 /js/acceptCookies.
 /js/adLocker.
 /js/aller-ads
@@ -717,6 +718,7 @@
 /plugins/easy-wp-cookie-popup
 /plugins/elfsight-social-share-buttons
 /plugins/eu-cookie-law/*
+/plugins/exit-popup/*$script
 /plugins/facebook-conversion-pixel
 /plugins/facebook-pagelike-widget
 /plugins/facebook-popout-likebox
@@ -841,7 +843,7 @@
 /profile$ping,domain=arbetarskydd.se|feber.se|hamnen.se|handbollskanalen.se|lag-avtal.se|lawline.se|marcusoscarsson.se|nordichardware.se|nyteknik.se|surfa.se|tasteline.com|tjock.se|veckorevyn.com
 /publicPartners$domain=familjehemmet.se|familjehemsbanken.se
 /pulsetracking$script
-/pum/*$domain=biostock.se|flm.nu
+/pum/*$domain=biostock.se|finanstid.se|flm.nu
 /QA.js$domain=qruiser.com
 /questback.popup$script
 /QXA.$script,domain=qruiser.com|qx.se
@@ -959,7 +961,7 @@
 /wp-content/uploads/*-sidebar$image,domain=dagensinfrastruktur.se
 /wp-content/uploads/*/public/assets/js/advanced.js$script
 /wp-content/uploads/*annons$image,domain=~datahjelperne.no|~dataliner.no
-/wp-content/uploads/*banner$image,domain=4health.se|alltomhif.se|borattforum.se|brollopsmagasinet.se|bussmagasinet.se|customerinsider.se|danstidningen.se|dental24.se|electronic.se|guldkanalen.se|investerarbrevet.se|katerinamagasin.se|ljuskultur.se|marsta.nu|opulens.se|pakryss.se|restaurangvarlden.se|sff.nu|sportpanelen.se|svensktidskrift.se|tekniknytt.se|turismnytt.se|vardfokus.se|viralsweden.com
+/wp-content/uploads/*banner$image,domain=4health.se|alltomhif.se|borattforum.se|brollopsmagasinet.se|bussmagasinet.se|customerinsider.se|danstidningen.se|dental24.se|electronic.se|finanstid.se|guldkanalen.se|investerarbrevet.se|katerinamagasin.se|ljuskultur.se|marsta.nu|opulens.se|pakryss.se|restaurangvarlden.se|sff.nu|sportpanelen.se|svensktidskrift.se|tekniknytt.se|turismnytt.se|vardfokus.se|viralsweden.com
 /wp-content/uploads/*betfair$image
 /wp-content/uploads/*bethard$image
 /wp-content/uploads/*betting$image,domain=hockeybladet.nu|kulturbloggen.com|newsvoice.se|nyadagbladet.se|spelochfilm.se
@@ -1165,7 +1167,7 @@ camping.se###CookiesBox
 camping.se###rightSideAds, .OpenXAd, .DfpAd
 campingsverige.se##.banner_window, .banner_label, .card_veckans_pryl, .bg_camping_se
 cannabis.se##.header-ads-wrapper, .ai-adb-hide, .ai-sticky-widget, .hampaonline
-cannabis.se,forskning.se##.pum-overlay
+cannabis.se,finanstid.se,forskning.se##.pum-overlay
 cannabisifokus.se##div[id^="canna-"]
 casino-utan-$image
 cfanytt.se,foretagsbladet.se,gestrikemagasinet.se,hembostad.nu,lasarnas.se,pressbladet.se,sportidrott.se,svenskpress.se##.isax
@@ -1395,6 +1397,7 @@ koket.se##[class*="list_item_sponsored"], [class*="promotion_bottom_holder_wrapp
 kolozzeum.com##td[width="305"], br + a[href*="/casino"]
 komponentkoll.se##.gdpr-wide
 komponentkoll.se##aside .prebuilt-systems, #main-content > a[target="_blank"]
+kristendate.se##div[id^="adv"]
 kritiker.se##div.recad, div.adhor
 kulturama.se##.CookiePopup
 kulturbloggen.com,schack.se##.sidebar .widget_custom_html
@@ -1708,6 +1711,7 @@ ysektionen.se##.yweb-news-paper-banner
 ||apsis.one^$third-party
 ||arctic.nyheter24.se^*/heatmap.js
 ||ascontentcloud.com^$third-party
+||aservice.tools^
 ||assets.pinterest.com/js/pinit$third-party
 ||assets.tumblr.com/share-button.js$third-party
 ||assistanskoll.se/images/banner
@@ -1867,6 +1871,7 @@ ysektionen.se##.yweb-news-paper-banner
 ||etc.nu/ethical.min.js
 ||etc.se/js/analytics-script
 ||eteppy.com^
+||eugamblers.org^$third-party
 ||europe-west1-bonnier-big-data.cloudfunctions.net^$third-party
 ||evertiq.se/bximg/
 ||evidon.com^$third-party,domain=fasting.nu|morningstar.se
@@ -1904,6 +1909,7 @@ ysektionen.se##.yweb-news-paper-banner
 ||freyanews.com^*/tracker$script
 ||fritiden.se/js/cookiealert-standalone.js
 ||funnelytics.io^$third-party
+||gamblersrules.com^$third-party
 ||gamblingsyndication.com^$third-party
 ||gamedistribution.com/libs/gd/analytics
 ||gamereactor.se/exclusive.json
