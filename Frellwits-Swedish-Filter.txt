@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2022-07-25 12:06:19 CEST
+! Last modified: 2022-07-26 08:04:57 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -65,8 +65,8 @@
 ###cookiejar
 ###cookielawwarning
 ###cookieMsgBlock
-###cookieNotice
 ###CookieNotice
+###cookieNotice
 ###cookies-acceptance .alert.bottom
 ###cookiesInfo
 ###dialog-eu-cookie-law
@@ -304,6 +304,7 @@
 ##div[id^="borka-panorama"]
 ##div[id^="borka-widescreen"]
 ##div[id^="matchads-"]
+##footer .sponsors-area
 ##footer .ui-optin-wrapper
 ##img[alt="Leovegas"]
 ##img[alt="Spela på Betsson"]
@@ -498,6 +499,7 @@
 /closest-native$domain=expressen.se
 /cm-ad-changer-server
 /cmp.js$domain=bamse.se|goal.se|halge.se|hemtrevligt.se|husohem.se|kalleanka.se|mestmotor.se|minhast.se|praktisktbatagande.se|sportfack.se|svenskgolf.se|tidningenhalsa.se|tidningenjulia.se|utemagasinet.se|vagabond.se
+/collect?v$domain=thelocal.se
 /conversions/tracking.js$third-party
 /cookie-banner$script,domain=skyscanner.se
 /CookieBar$script,domain=morningstar.se
@@ -840,7 +842,7 @@
 /prisjakt$xmlhttprequest,domain=fz.se
 /private-browsing.js$domain=thelocal.se
 /prod/adform
-/profile$ping,domain=arbetarskydd.se|feber.se|hamnen.se|handbollskanalen.se|lag-avtal.se|lawline.se|marcusoscarsson.se|nordichardware.se|nyteknik.se|surfa.se|tasteline.com|tjock.se|veckorevyn.com
+/profile$ping,domain=feber.se|hamnen.se|handbollskanalen.se|marcusoscarsson.se|nordichardware.se|surfa.se|tasteline.com|tjock.se|veckorevyn.com
 /publicPartners$domain=familjehemmet.se|familjehemsbanken.se
 /pulsetracking$script
 /pum/*$domain=biostock.se|finanstid.se|flm.nu
@@ -1412,6 +1414,7 @@ land.se,landlantbruk.se,landskogsbruk.se##[class*="--native"], [id^="adwrapper"]
 landleyskok.se##.inpostbanner, .banner-leaderboard
 lararen.se##a[href*="=annons"]
 laromedia.se##img[alt="Annons"] + .img-flipper
+lawline.se##[class^="CookiesModal"]
 lchfarkivet.se###timedModal, .modal-backdrop
 lesscarbs.se##.elementor-image > a:not([href*="https://lesscarbs.se"]), a[href*="/affiliates/"]
 lesscarbs.se#@#.category-annonssamarbete:not(body):not(html)
