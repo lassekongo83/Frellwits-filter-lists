@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2022-07-26 08:04:57 CEST
+! Last modified: 2022-07-28 08:22:48 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -65,8 +65,8 @@
 ###cookiejar
 ###cookielawwarning
 ###cookieMsgBlock
-###CookieNotice
 ###cookieNotice
+###CookieNotice
 ###cookies-acceptance .alert.bottom
 ###cookiesInfo
 ###dialog-eu-cookie-law
@@ -850,6 +850,7 @@
 /questback.popup$script
 /QXA.$script,domain=qruiser.com|qx.se
 /rantekartan$subdocument,domain=expressen.se
+/realtid-banner
 /recommendations$xmlhttprequest,domain=expressen.se
 /res_ads$domain=res.se
 /resource.ifragasatt.se/sd-ads
@@ -985,6 +986,7 @@
 /wp-content\/uploads\/[0-9]+/$script,domain=automation.se|dackavisen.se|skanesport.se|villalivet.se
 /wp-json/wp-statistics
 /wp-json/wpstatistics
+/wp-native-ads.json
 /wpbm-banners/*$image
 /ws-tracking$domain=voister.se
 /www.wellness.se\/cnp-assets\/[0-9]+./$script,domain=wellness.se
@@ -1063,9 +1065,8 @@ allabolag.se###company-card_top-banner
 allas.se,baaam.se,elle.se,femina.se,frida.se,hant.se,mabra.com,motherhood.se,residencemagazine.se,svenskdam.se##article[data-type="native"], .ag-product-wrapper, .product-carousel__container, .shop_carousel, .editorsPick
 allatvkanaler.se##.ga
 allehanda.se,arbetarbladet.se,avestatidning.com,bandypuls.se,bblat.se,borlangetidning.se,dalademokraten.se,dt.se,fagersta-posten.se,falkopingstidning.se,falukuriren.se,gd.se,hd.se,ht.se,jnytt.se,jp.se,ljusdalsposten.se,ljusnan.se,lt.se,ltz.se,moratidning.se,na.se,norrteljetidning.se,nynashamnsposten.se,op.se,salaallehanda.com,skaraborgslanstidning.se,skd.se,skovdenyheter.se,smalandsdagblad.se,smalanningen.se,smt.se,soderhamnskuriren.se,st.nu,sydsvenskan.se,tidningenangermanland.se,tidningenharjedalen.se,tranastidning.se,vastgotabladet.se,vetlandaposten.se,vlt.se,vn.se##[class*="teaser-native"], lcl-ad, .ad-welcome
-allsvenskan.se,chefstidningen.se,fotosidan.se,jaktojagare.se,kollega.se,merinfo.se,tasteline.com##.ads
-allsvenskan.se,superettan.se##.app-cookie-line
-allsvenskan.se,superettan.se##.partners-slideshow-slide, .matches-calendar-sponsor, .sponsors
+allsvenskan.se,chefstidningen.se,fotosidan.se,jaktojagare.se,kollega.se,merinfo.se,realtid.se,tasteline.com##.ads
+allsvenskan.se,superettan.se##.app-cookie-line, .partners-slideshow-widgets, .partners-slideshow-slide, .matches-calendar-sponsor, .sponsors, .footer-sponsors
 alltforforaldrar.se,bytbil.com,di.se,mammasidan.se,minbebis.com,upphandling24.se##.panorama
 alltforforaldrar.se,mammasidan.se,minbebis.com###partnerMenuContainer, #partnerMenuContainerFiller
 alltforforaldrar.se,mammasidan.se,minbebis.com##.spons-artc, a[href^="/native/"]
@@ -1119,7 +1120,7 @@ beernews.se##.cookie-consent-wrapper
 bergsmannen.se##.ann-puff, .headerLinks
 besoksliv.se##a[href*="sponsrat-innehall"]
 bestchampagne.se##aside.section-sm
-betong.se,espressomedia.se,foodetc.se,livetsgoda.se##a[target$="blank"] img
+betong.se,espressomedia.se,foodetc.se,livetsgoda.se,realtid.se##a[target$="blank"] img
 bettingstugan.se,bioenergitidningen.se,bovision.se,dagensopinion.se,di.se,dn.se,driva-eget.se,ehandel.se,expressen.se,familjeliv.se,fordonsproffs.eu,ifokus.se,ifragasatt.se,jaktojagare.se,kamerabild.se,linnherbertsson.se,macradion.com,mobil.se,padelfeber.se,skaraborgsbygden.se,skillingaryd.nu,sportbloggare.com,sv.picmix.com,swedroid.se,tandlakartidningen.se,teknikveckan.se,tidningenridsport.se,tripadvisor.se,vardfokus.se,xn--vrnamo-bua.nu##.ad
 bettips.se##.bettips-am
 bettips.se,borskollen.se##.top-banner
@@ -1173,7 +1174,7 @@ cannabis.se##.header-ads-wrapper, .ai-adb-hide, .ai-sticky-widget, .hampaonline
 cannabis.se,finanstid.se,forskning.se##.pum-overlay
 cannabisifokus.se##div[id^="canna-"]
 casino-utan-$image
-cfanytt.se,foretagsbladet.se,gestrikemagasinet.se,hembostad.nu,lasarnas.se,pressbladet.se,sportidrott.se,svenskpress.se##.isax
+cfanytt.se,foretagsbladet.se,gestrikemagasinet.se,halsasverige.se,hembostad.nu,lasarnas.se,nojesmagasinet.nu,pressbladet.se,sportidrott.se,svenskpress.se##.isax
 chalmers.se###cookie_directive_container
 chef.se##.global-cookie-msg
 chef.se##.Product-modal,.Offer-popup
@@ -1397,6 +1398,8 @@ klart.se###overlay, .gdpr-onboarding-container
 knulla.se###cookie-popup
 kokaihop.se##.ads-wrapper-main, .InterstitialModal
 koket.se##[class*="list_item_sponsored"], [class*="promotion_bottom_holder_wrapper"], [class*="beverage-recommendation_wrapper"], [class*="list_item_wide_sponsored"]
+kolla.tv##div[style^="position: fixed; left: 0px; top: 0px; width: 100%; height: 100%; z-index: 999;"]
+kollega.se##.ch2
 kolozzeum.com##td[width="305"], br + a[href*="/casino"]
 komponentkoll.se##.gdpr-wide
 komponentkoll.se##aside .prebuilt-systems, #main-content > a[target="_blank"]
@@ -1878,6 +1881,7 @@ ysektionen.se##.yweb-news-paper-banner
 ||eteppy.com^
 ||eugamblers.org^$third-party
 ||europe-west1-bonnier-big-data.cloudfunctions.net^$third-party
+||events.forzasys.com/get.min.js
 ||evertiq.se/bximg/
 ||evidon.com^$third-party,domain=fasting.nu|morningstar.se
 ||evt-api.ntm.eu/api/*/datacollector
@@ -1927,7 +1931,6 @@ ysektionen.se##.yweb-news-paper-banner
 ||grillbloggen.nu/media/com_rstbox/
 ||gstatic.com/partners/badge$subdocument
 ||guavaaffiliate.blob.core.windows.net/banner$image
-||halsasverige.se/*/banners/
 ||hamsterpaj.net/gfx/banners/
 ||happygreen.se^$third-party
 ||hapyak.com^$third-party
