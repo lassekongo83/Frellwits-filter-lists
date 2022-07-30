@@ -797,7 +797,6 @@ casino-utan-$image
 ||pipedrive.com^*/statistics/seen
 ||pixel.playbuzz.com^
 ||pxl.host^$third-party
-||rackcdn.com/stf.js
 ||recirculation.spot.im^$third-party
 ||referralhero.com^$third-party
 ||rek.ai^$third-party
@@ -1249,6 +1248,7 @@ itseniorerna.se###astroid-preloader
 topdogs.se###af-preloader
 veckansmiddag.com###load
 cineasten.se##.ajax_loader
+gmfk.nu###site-preloader
 
 ! Common adb detection
 .se/scripts/google-funding-choices.js
@@ -2007,6 +2007,7 @@ rocknytt.net##[data-widget_type*="bnnrwidgets"], a[href*="/annons/"]
 kingsizemag.se##div#video-overlay, div.sidebar_frame
 kingsizemag.se##a:has(.disclaimer-tag-img)
 gaffa.se##a[href*="/annonser/"]
+gaffa.se##.gpt--loaded:upward(.article-overview__col)
 gaffa.se##h4:has-text(/sponsrade länkar/i):upward(.link-list)
 ||radio.se^*/clickperformance
 ||radio.se/iomm
@@ -2021,6 +2022,7 @@ netflixguiden.se##+js(aopr, prebidAdUnits)
 ||metalcentral.net/images/*banner
 metalcentral.net##.bannergroupno-padding
 ||stats.poddtoppen.se^
+||poddtoppen.se/api/ad?
 /js/fullpage$domain=poddtoppen.se
 poddtoppen.se##.txs-a
 webb-tv.nu##[id^="adservice"]
@@ -2080,7 +2082,7 @@ lwcdn.com##+js(aeld, /^(?:adBlocker|contextmenu)$/)
 
 ! Livsstil, mode, resor, och mat
 halsafitness.se,yogaworld.se,cyclingplus.se##.post-wrap:has(h3:has-text(/samarbete/i))
-halsafitness.se,yogaworld.se,cyclingplus.se##.sticky-sidebar
+halsafitness.se,yogaworld.se,cyclingplus.se##.sticky-sidebar, #gdpr-container, .slick-carousel
 ||se-affiliate-gallery.aws.aller.com^
 /AffiliateHelper$domain=allas.se|baaam.se|elle.se|femina.se|hant.se|mabra.com|residencemagazine.se|svenskdam.se|frida.se|motherhood.se
 /native.html$domain=allas.se|baaam.se|elle.se|femina.se|hant.se|mabra.com|residencemagazine.se|svenskdam.se|frida.se|motherhood.se
@@ -2957,3 +2959,4 @@ vovve.net##span:has-text(/^i samarbete med/i):upward(2)
 /jquery.smartbanner.js$domain=kristendate.se
 kristendate.se##div[id^="adv"]
 lawline.se##[class^="CookiesModal"]
+gmfk.nu##p:has-text(Annons):upward(.n2-ss-slide)
