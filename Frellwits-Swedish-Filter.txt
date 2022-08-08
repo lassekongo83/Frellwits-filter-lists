@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2022-08-07 17:56:32 CEST
+! Last modified: 2022-08-08 17:27:06 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -65,8 +65,8 @@
 ###cookiejar
 ###cookielawwarning
 ###cookieMsgBlock
-###CookieNotice
 ###cookieNotice
+###CookieNotice
 ###cookies-acceptance .alert.bottom
 ###cookiesInfo
 ###dialog-eu-cookie-law
@@ -1126,8 +1126,7 @@ betong.se,espressomedia.se,foodetc.se,livetsgoda.se,realtid.se##a[target$="blank
 bettingstugan.se,bioenergitidningen.se,bovision.se,dagensopinion.se,di.se,dn.se,driva-eget.se,ehandel.se,expressen.se,familjeliv.se,fordonsproffs.eu,ifokus.se,ifragasatt.se,jaktojagare.se,kamerabild.se,linnherbertsson.se,macradion.com,mobil.se,padelfeber.se,skaraborgsbygden.se,skillingaryd.nu,sportbloggare.com,sv.picmix.com,swedroid.se,tandlakartidningen.se,teknikveckan.se,tidningenridsport.se,tripadvisor.se,vardfokus.se,xn--vrnamo-bua.nu##.ad
 bettips.se##.bettips-am
 bettips.se,borskollen.se##.top-banner
-bicycling.se,runnersworld.se##.modal-plus, .modal-backdrop, .footer-newsletter
-bicycling.se,runnersworld.se##.post-card-sponsored
+bicycling.se,runnersworld.se##.post-card-sponsored, .modal-plus, .modal-backdrop, .footer-newsletter
 bildobubbla.se,nyatider.nu##.annonser
 bilsport.se##fl-panorama-top,fl-newsletter-popup
 bilweb.se###cookie_alert
@@ -1318,9 +1317,8 @@ fuska.se##.alert-success
 fz.se##.article-facebook
 gaffa.se##a[href*="/annonser/"]
 gamereactor.se###cookielawwarning
-gamereactor.se###eventad, [id^="sky"], [id^="ad_lead"], a[rel="sponsored"], .external_div_bigVideoAd, #mpu, #leftToLogo, .itsanad, .ad_Bumper, div[style="min-height: 600px; margin-bottom: 20px;"]
-garaget.org##.gorg-side-content > div.small:nth-last-child(2)
-garaget.org##.gorgad
+gamereactor.se###eventad, [id^="sky"], [id^="ad_lead"], a[rel="sponsored"], .external_div_bigVideoAd, #mpu, #leftToLogo, .itsanad, div[class^="ad_Bumper"], div[style="min-height: 600px; margin-bottom: 20px;"]
+garaget.org##.gorgad, .gorg-side-content > div.small:nth-last-child(2)
 gavletravet.se,travsport.se##.banner-component, .partners, .cookie-meddelande
 gentlemannaguiden.com##.advertising, .sidebar .widget_text, .sidebar .widget_media_image
 glassakademin.se##[class^="adverts-"]
@@ -1345,15 +1343,14 @@ hastlycka.se##.c-placement-top.owl-carousel, .takeover-container
 hastnet.se##.add-wrap, .listings-search-ads, .right_panel
 hbl.fi,ostnyland.fi,vastranyland.fi##.dre-item--feature-advertorial
 hbwebben.se##.elementor-widget-container > a > img
-hejaolika.se##[class*="partnerinfostyle"], div[id^="hejao-"], .kb-advanced-image-link[target]
+hejaolika.se##[class*="partnerinfostyle"], div[id^="hejao-"], .kb-advanced-image-link[target], .category-partnerinformation
 helahisingen.se###custom_html-15, .code-block img
 helgon.se##[id*="banner"], a[href^="https://ad."], a[href^="https://ad2."]
 hemhyra.se##.pageCookies
 hemmafixbloggen.se,surfa.se,teknikfreak.se###loader-wrapper
 hemnet.se###ad_unit_placeholder
 hemtrevligt.se,mestmotor.se##.row--native
-hippson.se##.presentedby, .presentedby ~ *
-hippson.se##.sponsorpuff
+hippson.se##.sponsorpuff, .presentedby, .presentedby ~ *
 historier.net###right_rail.trackable
 hitta.se###__next > div[class^="style_notification"]
 hitta.se##[class*="dummyAd"], [class*="StyledAdSlot"], [data-bind*="Ad"], div[class^="GraphicAd_"], [class*="adContainer"], [id*="_panorama"], [id*="_skyscraper"], div[style="min-height: 250px;"], div[data-track="displayplacering-customer"]
@@ -1469,7 +1466,7 @@ minhembio.com##div[style="height: 120px;"]:not([id]):not([class])
 minsolresa.se,resatillsolen.se##aside#text-5
 missatsamtal.se##.nosnaj
 mmabetz.se##.desktop-homepage-ad, .desktop-main-ad, .latest-betting-campaigns, .best-casino-section, .top-casino
-mmanytt.se##.front-banner,.front-banner-cover,#text-2,[class*="sponsrat-inlagg"],a[href*="://kampanjer."],.ohmbet_link
+mmanytt.se##.front-banner, .front-banner-cover, #text-2, [class*="sponsrat-inlagg"], a[href*="://kampanjer."], .ohmbet_link
 mobil.se,nordichardware.se##.pspy_info
 mobilanyheter.net##a[href*="rocketpot.io"], a[href*="casino"], a[href*="betting"]
 modernalivet.se##.modal-wrap, .slide-in-box
@@ -1815,8 +1812,7 @@ ysektionen.se##.yweb-news-paper-banner
 ||conviva.com^$third-party
 ||cookie-disclaimer.onewp.net^$third-party
 ||cookie-script.com^$third-party
-||cookiebot.com^$domain=bax-shop.se|circlek.se|findroommate.se|fokus.se|goteborgdirekt.se|itaboutdoor.se|kingsizemag.se|konsumentmagasinet.se|kurera.se|mitti.se|ng.se|polistidningen.se|sakochliv.se|smartsenior.se|spraktidningen.se|swedroid.se|trafiken.nu|upplysning.se|vaningen.se|varden.se|vasterastidning.se|wesafe.se
-||cookiebot.eu^$domain=energi.se
+||cookiebot.com^$domain=bax-shop.se|circlek.se|energi.se|findroommate.se|fokus.se|goteborgdirekt.se|itaboutdoor.se|kingsizemag.se|konsumentmagasinet.se|kurera.se|mitti.se|ng.se|polistidningen.se|sakochliv.se|smartsenior.se|spraktidningen.se|swedroid.se|trafiken.nu|upplysning.se|vaningen.se|varden.se|vasterastidning.se|wesafe.se
 ||cookieconsent.popupsmart.com^$third-party
 ||cookieinformation.com^$domain=minbostad.se|viivilla.se
 ||cookieinfoscript.com^$third-party
