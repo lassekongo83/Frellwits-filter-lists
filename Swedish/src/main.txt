@@ -1122,7 +1122,7 @@ casino-utan-$image
 ! ==== SPECIFIC FILTERS ==== !
 
 ! -- Specific ads
-/wp-content\/uploads\/[0-9]+/$script,domain=villalivet.se|skanesport.se|dackavisen.se|automation.se
+/wp-content\/uploads\/[0-9]+/$script,domain=villalivet.se|skanesport.se|dackavisen.se|automation.se|datormagazin.se
 /wp-content/uploads/*banner$image,domain=marsta.nu|alltomhif.se|brollopsmagasinet.se|bussmagasinet.se|danstidningen.se|guldkanalen.se|katerinamagasin.se|ljuskultur.se|sff.nu|sportpanelen.se|viralsweden.com|vardfokus.se|turismnytt.se|customerinsider.se|opulens.se|borattforum.se|dental24.se|tekniknytt.se|pakryss.se|investerarbrevet.se|svensktidskrift.se|electronic.se|4health.se|restaurangvarlden.se|finanstid.se
 /wp-content/uploads/*betting$image,domain=nyadagbladet.se|kulturbloggen.com|hockeybladet.nu|newsvoice.se|spelochfilm.se
 /wp-content/uploads/*casino$image,domain=nyadagbladet.se|kulturbloggen.com|newsvoice.se|svenskhistoria.se|battrestadsdel.se|zeromagazine.nu|totallyorebro.se|totallystockholm.se|hockeybladet.nu|djungeltrumman.se|vaken.se|lokalsport.nu|tekniknytt.se|kingsizemag.se|spelrum.net|spelochfilm.se|macken.xyz|improveme.se
@@ -1993,6 +1993,10 @@ travronden.se##a[href*="/sponsrat/"]
 travronden.se##main > div > div > div > div > div:has(.adunitContainer)
 mcparken.se##.adsheader
 utsidan.se##div.clamzone:matches-css-before(content: /Annons:/i)
+/img/annons$domain=alltomsallskapsspel.se
+/img/banner$domain=alltomsallskapsspel.se
+alltomsallskapsspel.se,alltombrollop.com##a[onclick*="Banner"]
+/bsa.js$domain=alltombrollop.com
 
 ! === Musik, Radio, Film och TV
 voodoofilm.org##.content-news:has(span[id*="Sponsored"])
@@ -2478,7 +2482,7 @@ aletorget.se,alingsastorget.se,almhulttorget.se,alvestatorget.se,amaltorget.se,a
 /plugins/wp-content-copy-protection
 /plugins/wp-gdpr-compliance/*$script
 /plugins/wp-lrf-paywall
-/plugins/wp-popups-lite$domain=grillbaronen.se|spelochfilm.se|sameforeningen-stockholm.se
+/plugins/wp-popups-lite$domain=grillbaronen.se|spelochfilm.se|sameforeningen-stockholm.se|norrkopingshistoria.se
 /plugins/wp-snow-effect
 /plugins/wysija-newsletters
 /plugins/yeloni-free-exit-popup
@@ -2977,3 +2981,6 @@ kalmar.nu,fl-net.se##[data-revive-zoneid]:upward(.thumbnail)
 ||gekas.se/count/
 /takeover.js$domain=gekas.se
 horisontmagasin.se##small:has-text(/annons/i)
+skyltat.se##.sidebar
+kobe.se##a[href*="casino"]:upward(.post)
+kobe.se##p:has-text(/annonser:/i):upward(.widget_block)
