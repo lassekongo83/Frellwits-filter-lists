@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2022-08-19 19:59:14 CEST
+! Last modified: 2022-08-21 08:01:31 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -225,6 +225,7 @@
 ##div.ad-toppbanner
 ##div.ad.container
 ##div.ad.panorama
+##div.adtech_slot
 ##div.advads-background
 ##div.annons-yta
 ##div.annonsbox
@@ -246,6 +247,8 @@
 ##div.CMACG_AdChangerWidget
 ##div.comment-ad_wrapper
 ##div.Container--ad
+##div.content-center-ad
+##div.content_ad_top
 ##div.cookie-block
 ##div.cookie-disclaimer
 ##div.cookie-info
@@ -1106,8 +1109,7 @@ autonytt.se###main > .col-links
 autonytt.se,nyatider.nu##[href*="casino"][target]
 autonytt.se,sv.picmix.com,tekniknytt.se##.leaderboard
 autopower.se,lindenytt.com,poolforum.se,varmepumpsforum.com##a[target="_blank"] img[alt]
-avanza.se##.cookieMessage
-avanza.se##.noMarginAd
+avanza.se##.cookieMessage, .noMarginAd
 avanza.se#@#a[title="LeoVegas"]
 aventyrsresor.se##.newsletter-popup
 axess.se##.popup--cookie
@@ -1207,7 +1209,7 @@ danskaspraket.se##.rightcol
 danskaspraket.se,digitalavykort.se,viseniorer.se,vmj.se##.cc-cookies
 danskaspraket.se,digitalavykort.se,vmj.se##.topdiv
 danstidningen.se,lira.se,slangopedia.se,universitetslararen.se###ads
-dayviews.com##.content-center-ad, .frontPageBox--links
+dayviews.com##.frontPageBox--links
 dekra.de#@##cookie-banner
 deliquate.se##[id^="ads300"], [id^="linkcat-"]
 densistavilan.se###fancybox-wrap, div[id^="densi-"]
@@ -1403,7 +1405,7 @@ kiacarclub.se##.forumlist-main-inner > div[style]
 kimura.se##.bg, a[href*="unibet.com"], a[href*="/kampanjer."], a[href*="utm_campaign"]
 kingsizemag.se##div#video-overlay, div.sidebar_frame
 kittad.se###header-top
-klart.se###overlay, .gdpr-onboarding-container, a[rel*="sponsored"]
+klart.se###overlay, .gdpr-onboarding-container, a[rel*="sponsored"], .-panorama-ad-wrapper
 knulla.se###cookie-popup
 kokaihop.se##.ads-wrapper-main, .InterstitialModal
 koket.se##[class*="list_item_sponsored"], [class*="promotion_bottom_holder_wrapper"], [class*="beverage-recommendation_wrapper"], [class*="list_item_wide_sponsored"]
@@ -1445,7 +1447,7 @@ lokalfotboll.se###topbar, .inside-right-sidebar > .really_simple_image_widget
 lokalguiden.se##.applicant-match-container, .banner-item, .banner-container
 lokalnytt.se##.panoramaImageBox
 lokalsport.nu##.art-sidebar1, .art-sidebar2
-loppi.se##.entry__teaser--promotion, .wpcnt
+loppi.se##.entry__teaser--promotion, .wpcnt, .sunt-widget, .lifeofsvea-widget
 lovelylife.se##.elementor-image a[href]:not([href*="lovelylife.se"]) img
 lundagard.se###bdCheckAlso.bdCheckAlsoShow, .topBanner, #sidebar .widget_media_image
 lysekilsposten.se###archiveAdContainer
@@ -1480,6 +1482,7 @@ mobilanyheter.net##a[href*="rocketpot.io"], a[href*="casino"], a[href*="betting"
 modernalivet.se##.modal-wrap, .slide-in-box
 morotsliv.com##.et_bloom .et_bloom_flyin_center, a[href*="/?utm_medium=affiliate"], a.bigblue[target]
 motivation.se##.sponsored-item, [class*="banner"], .outsider
+motorforum.nu##.pea_cook_wrapper
 moviezine.se###home_ans, [name="article-advertisment"]
 mytaste.se##[id^="Modal_plugin"]
 mytaste.se##div[id*="panorama_"], [class^="affiliate-container"], .site-header__panorama
@@ -1498,7 +1501,7 @@ norpan.se,skrattsajten.com##.cookieScript
 norrbotten.com##a[href*=".com/annons"], .td-ss-main-sidebar > .td-a-rec
 nvp.se##[class*="banner_"], .BottomBannerContainer
 nyadagbladet.se##.third-col, article[class*="sponsrad"]
-nyheter24.se##.lazyload_bar.show, .lazyload_outer.show, .sponsrat, .is_native
+nyheter24.se##.lazyload_bar.show, .lazyload_outer.show, .sponsrat, .is_native, .sticky-scroll
 nyheteridag.se##.content > div:not([class]) img, a[href*="www.casino"]
 nyheteridag.se##.widget.facebook
 nyhetersto.se##header > div.g
