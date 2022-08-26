@@ -57,3 +57,28 @@
         },
     });
 })();
+
+// Imported from:
+// https://github.com/NanoAdblocker/NanoFilters/blob/b6a8a66b83dcf97ec35b5d9d87d0c49540387709/NanoFiltersSource/NanoResources.txt#L161
+// Click elements when the documents gets ready, 1 required argument.
+// selector - The selector for elements to remove, must be a plain CSS selector,
+// pseudo-selectors are not supported.
+/// nano-click-elements-onready.js
+/// alias nceo.js
+(() => {
+	var selector = '{{1}}';
+	if ( selector === '' || selector === '{{1}}' ) {
+		return;
+	}
+	var click = function() {
+		var elements = document.querySelectorAll(selector);
+		for ( var element of elements ) {
+			element.click();
+		}
+	};
+	if ( document.readyState === 'interactive' || document.readyState === 'complete' ) {
+		click();
+	} else {
+		addEventListener('DOMContentLoaded', click);
+	}
+})();
