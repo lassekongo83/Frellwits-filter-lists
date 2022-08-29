@@ -747,6 +747,7 @@ casino-utan-$image
 ||gamedistribution.com/libs/gd/analytics
 ||gamesglue.com/js/gameanalytics/GameAnalytics
 ||gnuheter.com/creeper/image
+||hajper.com^$third-party
 ||hapyak.com^$third-party
 ||herokuapp.com/visit?$image
 ||iconosquare.com^$third-party
@@ -1181,7 +1182,7 @@ utm_$document,removeparam=/^utm_/,domain=tv.nu|booli.se|expressen.se|aftonbladet
 /usabilla$script,domain=morningstar.se|telia.se
 /utag$script,domain=gaffa.se
 ! Websites with no obvious or visible facebook login. Will just assume it's used for tracking.
-||connect.facebook.net^$domain=friatider.se|fotosidan.se|ng.se|vf.se|hjotidning.se|kt.se|kt-kuriren.se|sla.se|mariestadstidningen.se|filipstadstidning.se|fryksdalsbygden.se|nwt.se|arvikanyheter.se|nkp.se|saffletidningen.se|provinstidningen.se|dalslanningen.se|nlt.se|varmlandsaffarer.se|hammarbyfotboll.se|aktiespararna.se|psykologiguiden.se|lektionsbanken.se|lajvo.se|kvinnatillkvinna.se|epochtimes.se|dovastidning.se|newsner.com|humorbibeln.se|sportbibeln.se|ettgottskratt.se|pussad.se|goteborgdirekt.se|vasterastidning.se|mitti.se
+||connect.facebook.net^$domain=friatider.se|fotosidan.se|ng.se|vf.se|hjotidning.se|kt.se|kt-kuriren.se|sla.se|mariestadstidningen.se|filipstadstidning.se|fryksdalsbygden.se|nwt.se|arvikanyheter.se|nkp.se|saffletidningen.se|provinstidningen.se|dalslanningen.se|nlt.se|varmlandsaffarer.se|hammarbyfotboll.se|aktiespararna.se|psykologiguiden.se|lektionsbanken.se|lajvo.se|kvinnatillkvinna.se|epochtimes.se|dovastidning.se|newsner.com|humorbibeln.se|sportbibeln.se|ettgottskratt.se|pussad.se|goteborgdirekt.se|vasterastidning.se|mitti.se|sillyseason.se
 ||facebook.com/plugins/$domain=norrbotten.com
 ! Scriptlets
 newsner.com,humorbibeln.se,sportbibeln.se,ettgottskratt.se,sportpanelen.se,zeinaskitchen.se,dinbyggare.se,trafiksakerhet.se,boktugg.se,carup.se,lakartidningen.se,villalivet.se,matsafari.nu##+js(set, mi_track_user, false)
@@ -1787,7 +1788,7 @@ fz.se##.fp-carousel .fpci-kicker:has-text(/^sponsr/i):upward(.fpc-item)
 fz.se##.article-sponsored:upward(.card)
 fz.se##a[href*="/sponsrat"]:upward(.card)
 fz.se,fssweden.se##+js(set, adblock, false)
-sweclockers.com###prisjakt-popular, .ad:not(.adPanorama)
+sweclockers.com###prisjakt-popular, .ad:not(.adPanorama), .adForumSticker
 sweclockers.com##div[class^="card-info"]:has-text(/spons/i):upward(.card)
 sweclockers.com##.ad.adPanorama:style(height:100px!important; position:absolute!important;)
 kamerabild.se,mobil.se##.storan, .Partner, aside .pane-custom
@@ -1995,11 +1996,12 @@ banners$image,domain=travsport.se|gavletravet.se
 travsport.se,gavletravet.se##.banner-component, .partners, .cookie-meddelande
 flashscore.se##.boxOverContent--a, .otPlaceholder
 fotbollsresultat.com##h2:has-text(Spel och dobbel) ~ p
-sillyseason.se###text-41
+sillyseason.se###text-41, #leader-wrapper
 sillyseason.se##a[href*=".se/odds/"]:upward(li)
+sillyseason.se##strong:has-text(casino):upward(li.sidebar-widget)
 ljungbysporten.se##section.widget_media_image, a[target="_blank"]:not([href*="ljungbysporten.se"])
 golflivet.se##a[href*="/annonssamarbete/"]
-padelfeber.se##.o-ad, .pfm-partners, .pff-partners, .c-widget-ad, .c-teaser--native
+padelfeber.se##.pfm-partners, .pff-partners, .c-widget-ad, .c-teaser--native
 /ui/dist/js/ai.$domain=gbgfotboll.se
 ||usabil.nu/media/*/casino$image
 usabil.nu##.image-post-link[target]
@@ -2032,7 +2034,7 @@ kingsizemag.se##.disclaimer-tag-img:upward(a)
 gaffa.se##a[href*="/annonser/"]
 gaffa.se##.gpt--loaded:upward(.article-overview__col)
 gaffa.se##h4:has-text(/sponsrade länkar/i):upward(.link-list)
-||radio.se^*/clickperformance
+/clickperformance$domain=radio.se
 ||radio.se/iomm
 radio.se##div:matches-css(height:250px)
 @@||kritiker.se^$generichide
@@ -2059,6 +2061,7 @@ filmtipset.se##em:has-text(/sponsrad/i):upward(.row.news)
 filmtipset.se##.row.news > div[style^="border"]:last-of-type
 /images/*casino$domain=festivalinfo.se
 festivalinfo.se##a[title*="Casino"], #top-content
+festivalinfo.se##a[href*="casino"]:upward(.node-news)
 ||filmtopp.se/upload/*/annons$image
 filmtopp.se##.cooperation-banner__container
 svenskahousegruppen.se###eprivacyModal, .modal-backdrop
