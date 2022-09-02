@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2022-08-31 07:40:13 CEST
+! Last modified: 2022-09-02 08:35:36 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -64,8 +64,8 @@
 ###cookiejar
 ###cookielawwarning
 ###cookieMsgBlock
-###CookieNotice
 ###cookieNotice
+###CookieNotice
 ###cookies-acceptance .alert.bottom
 ###cookiesInfo
 ###dialog-eu-cookie-law
@@ -183,6 +183,8 @@
 ##a[href*="https://sexapp.me/"]
 ##a[href*="tradedoubler.com/click?"]
 ##a[href*="utm_content=banner"] img
+##a[href*="www.bildelaronline24.se"][target="_blank"]
+##a[href*="www.reservdelar24.se"][target="_blank"]
 ##a[href^="https://www.adsettings.com/scripts/reg_click."]
 ##a[id^="adBanner"][target="_blank"]
 ##a[title="LeoVegas"]
@@ -708,7 +710,7 @@
 /plugins/convertplug
 /plugins/convertpro
 /plugins/cookie-bar/*
-/plugins/cookie-law-info$script,domain=carup.se|gilla.se|hockeybladet.nu|lundagard.se|nyadagbladet.se|startaochdriva.se|temadagar.se|tidningenresultat.se
+/plugins/cookie-law-info$script,domain=carup.se|gilla.se|hockeybladet.nu|lundagard.se|milansverige.se|nyadagbladet.se|startaochdriva.se|temadagar.se|tidningenresultat.se
 /plugins/cookie-notice/*
 /plugins/cookie_consent/*$script
 /plugins/cookies-and-content-security-policy$domain=cannabisifokus.se|futsalmagasinet.se
@@ -1133,7 +1135,7 @@ bergsmannen.se##.ann-puff, .headerLinks
 besoksliv.se##a[href*="sponsrat-innehall"]
 bestchampagne.se##aside.section-sm
 betong.se,espressomedia.se,foodetc.se,livetsgoda.se,realtid.se##a[target$="blank"] img
-bettingstugan.se,bioenergitidningen.se,bovision.se,dagensopinion.se,di.se,dn.se,driva-eget.se,ehandel.se,expressen.se,familjeliv.se,fordonsproffs.eu,ifokus.se,ifragasatt.se,jaktojagare.se,kamerabild.se,linnherbertsson.se,macradion.com,mobil.se,padelfeber.se,skaraborgsbygden.se,skillingaryd.nu,sportbloggare.com,sv.picmix.com,swedroid.se,tandlakartidningen.se,teknikveckan.se,tidningenridsport.se,tripadvisor.se,vardfokus.se,xn--vrnamo-bua.nu##.ad
+bettingstugan.se,bioenergitidningen.se,bovision.se,dagensopinion.se,di.se,dn.se,driva-eget.se,ehandel.se,expressen.se,familjeliv.se,fordonsproffs.eu,golflivet.se,ifokus.se,ifragasatt.se,jaktojagare.se,kamerabild.se,linnherbertsson.se,macradion.com,mobil.se,padelfeber.se,skaraborgsbygden.se,skillingaryd.nu,sportbloggare.com,sv.picmix.com,swedroid.se,tandlakartidningen.se,teknikveckan.se,tidningenridsport.se,tripadvisor.se,vardfokus.se,xn--vrnamo-bua.nu##.ad
 bettips.se##.bettips-am
 bettips.se,borskollen.se##.top-banner
 bicycling.se,runnersworld.se##.post-card-sponsored, .modal-plus, .modal-backdrop, .footer-newsletter
@@ -1365,7 +1367,7 @@ helgon.se##[id*="banner"], a[href^="https://ad."], a[href^="https://ad2."]
 hemhyra.se##.pageCookies
 hemmafixbloggen.se,surfa.se,teknikfreak.se###loader-wrapper
 hemmanytt.se###sa_slider_shortcode
-hemmanytt.se,karriarlakare.se###cookie-law-info-bar
+hemmanytt.se,karriarlakare.se,teknikhype.se###cookie-law-info-bar
 hemnet.se###ad_unit_placeholder
 hemtrevligt.se,mestmotor.se##.row--native
 hippson.se##.sponsorpuff, .presentedby, .presentedby ~ *
@@ -1526,7 +1528,7 @@ ordguru.se##.visible-lg, .hidden-lg
 orebronyheter.com###top-wrapper
 oru.se##.modal-cookieform
 osterbottenstidning.fi,sydin.fi,vasabladet.fi##.online-teaser--advertorial
-padelfeber.se##.pfm-partners, .pff-partners, .c-widget-ad, .c-teaser--native
+padelfeber.se##.pfm-partners, .pff-partners, .c-widget-ad, .c-teaser--native, #toBanner
 piraja.se###panoramaholder, #parallax
 playradio.se##.sidealtcol
 podcasts.nu##.sponsor-list, .cookie-law-wrapper
@@ -1729,6 +1731,7 @@ ysektionen.se##.yweb-news-paper-banner
 ||amazonaws.com/pfe_im/js/prod/pcc/s_code.js
 ||ana.tunnl.com^
 ||analytics.barnebys.sh^$image
+||analytics.gen.shield.monitoringservice.co^
 ||analytics.ozzi.io^$third-party
 ||analytics.wayke.se^
 ||annons.lidkopingsnytt.nu^
@@ -1828,7 +1831,7 @@ ysektionen.se##.yweb-news-paper-banner
 ||connect.facebook.net^$domain=aktiespararna.se|arvikanyheter.se|dalslanningen.se|dovastidning.se|epochtimes.se|ettgottskratt.se|filipstadstidning.se|fotosidan.se|friatider.se|fryksdalsbygden.se|goteborgdirekt.se|hammarbyfotboll.se|hjotidning.se|humorbibeln.se|kt-kuriren.se|kt.se|kvinnatillkvinna.se|lajvo.se|lektionsbanken.se|mariestadstidningen.se|mitti.se|newsner.com|ng.se|nkp.se|nlt.se|nwt.se|provinstidningen.se|psykologiguiden.se|pussad.se|saffletidningen.se|sillyseason.se|sla.se|sportbibeln.se|varmlandsaffarer.se|vasterastidning.se|vf.se
 ||connect.nosto.com^*/behav-popup.$script
 ||connectio.s3.amazonaws.com/connect-retarget$script
-||consensu.org^$domain=alekuriren.se|alltsvarade.se|autopower.se|bjarenu.se|butikpris.se|byrum.se|cleannet.se|dagenshandel.se|dh.se|eniro.se|enkelteknik.se|entreprenad.com|ettgottskratt.se|filmtopp.se|fl-net.se|food-supply.se|foodnet.se|forni.se|fri-kopenskap.se|friidrott.se|garaget.org|gbgfotboll.se|habit.se|historier.net|hockeynews.se|humorbibeln.se|innebandy.se|interiorbyvanessa.se|jennysmatblogg.nu|kalender.se|kalmar.nu|kamerabild.se|kemivarldenbiotech.se|laget.se|laholmstidning.se|land.se|landlantbruk.se|landskogsbruk.se|langd.se|leta.se|lifesciencesweden.se|lindasbakskola.se|listor.se|ljudochbild.se|lokaltidningenvaxjo.se|matklubben.se|medtechmagazine.se|mobil.se|motormagasinet.se|mykitchenstories.se|mytaste.se|newsner.com|norrahalland.se|oppettiden.se|ostgotatidningen.se|packnet.se|pernillawahlgren.se|plastnet.se|poddtoppen.se|prevent.se|processnet.se|proff.se|recyclingnet.se|res.se|rf.se|rt-forum.se|samnytt.se|skyddosakerhet.se|sportbibeln.se|sporttv.nu|spray.se|stff.se|svenskfotboll.se|svenskorientering.se|swehockey.se|thelocal.se|transportnet.se|travelgrip.se|travelnews.se|tvmatchen.nu|uochd.se|vackertvader.se|verkstaderna.se|woodnet.se|zeinaskitchen.se
+||consensu.org^$domain=alekuriren.se|alltsvarade.se|autopower.se|bjarenu.se|butikpris.se|byrum.se|cleannet.se|dagenshandel.se|dh.se|eniro.se|enkelteknik.se|entreprenad.com|ettgottskratt.se|filmtopp.se|fl-net.se|food-supply.se|foodnet.se|forni.se|fri-kopenskap.se|friidrott.se|garaget.org|gbgfotboll.se|habit.se|historier.net|hockeynews.se|humorbibeln.se|innebandy.se|interiorbyvanessa.se|jennysmatblogg.nu|kalender.se|kalmar.nu|kamerabild.se|kemivarldenbiotech.se|laget.se|laholmstidning.se|land.se|landlantbruk.se|landskogsbruk.se|langd.se|leta.se|lifesciencesweden.se|lindasbakskola.se|listor.se|ljudochbild.se|lokaltidningenvaxjo.se|matklubben.se|medtechmagazine.se|mobil.se|motormagasinet.se|mykitchenstories.se|mytaste.se|newsner.com|norrahalland.se|oppettiden.se|ostgotatidningen.se|packnet.se|pernillawahlgren.se|plastnet.se|poddtoppen.se|prevent.se|processnet.se|proff.se|recyclingnet.se|res.se|rf.se|rt-forum.se|samnytt.se|skyddosakerhet.se|sportbibeln.se|sportlovin.se|sporttv.nu|spray.se|stff.se|svenskfotboll.se|svenskorientering.se|swehockey.se|thelocal.se|transportnet.se|travelgrip.se|travelnews.se|tvmatchen.nu|uochd.se|vackertvader.se|verkstaderna.se|woodnet.se|zeinaskitchen.se
 ||consent.dk^$third-party,domain=~ekstrabladet.dk
 ||consent.podplay.com^
 ||consentframework.com^$domain=luleahockeyforum.com
@@ -1840,7 +1843,7 @@ ysektionen.se##.yweb-news-paper-banner
 ||cookie-script.com^$third-party
 ||cookiebot.com^$domain=bax-shop.se|circlek.se|energi.se|findroommate.se|fokus.se|goteborgdirekt.se|itaboutdoor.se|kingsizemag.se|konsumentmagasinet.se|kurera.se|mitti.se|ng.se|polistidningen.se|sakochliv.se|smartsenior.se|spraktidningen.se|sverigesnatur.org|swedroid.se|trafiken.nu|upplysning.se|vaningen.se|varden.se|vasterastidning.se|vastsverige.com|wesafe.se
 ||cookieconsent.popupsmart.com^$third-party
-||cookieinformation.com^$domain=minbostad.se|viivilla.se
+||cookieinformation.com^$domain=gds.se|minbostad.se|viivilla.se
 ||cookieinfoscript.com^$third-party
 ||cookielaw.org^$domain=arbetet.se|atgplay.se|booli.se|cartoonnetwork.se|fastighetsfolket.se|findit.se|flashscore.se|fotbollskanalen.se|gaffa.se|handelsnytt.se|hastnet.se|ikea.com|ilikeradio.se|internetkunskap.se|internetstiftelsen.se|ka.se|kokaihop.se|koket.se|livetochdiabetes.se|malarnasfacktidning.se|manpower.se|mtv.se|natgeotv.com|nok.se|nvp.se|recept.se|sekotidningen.se|spisa.nu|sv.bab.la|svenskarnaochinternet.se|sydkusten.es|tidningenelektrikern.se|tripadvisor.se|tv4.se|tv4play.se|voister.se|yelp.se
 ||cookienotice.co^$third-party
@@ -2136,7 +2139,7 @@ ysektionen.se##.yweb-news-paper-banner
 ||pensiono.se^$third-party
 ||petrk.com^$third-party
 ||pheegoab.click^
-||piano.io^$domain=dagen.se|iform.se|illvet.se|militarhistoria.se|popularhistoria.se|thelocal.se|varldenshistoria.se
+||piano.io^$domain=dagen.se|gds.se|iform.se|illvet.se|militarhistoria.se|popularhistoria.se|thelocal.se|varldenshistoria.se
 ||pingback.issuu.com/ping
 ||pipedrive.com^*/statistics/seen
 ||pixel.playbuzz.com^
