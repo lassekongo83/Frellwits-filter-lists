@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2022-09-14 08:48:48 CEST
+! Last modified: 2022-09-16 08:54:52 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -64,8 +64,8 @@
 ###cookiejar
 ###cookielawwarning
 ###cookieMsgBlock
-###CookieNotice
 ###cookieNotice
+###CookieNotice
 ###cookies-acceptance .alert.bottom
 ###cookiesInfo
 ###dialog-eu-cookie-law
@@ -495,6 +495,7 @@
 /bundles/exp-analytics$domain=expressen.se
 /bundles/ga-$script,domain=expressen.se
 /bundles/parsely$domain=expressen.se
+/bunsen/events$domain=yelp.se
 /buttonizer$domain=macken.xyz
 /caos/*$domain=sportprat.com
 /casino_utan_licens$image
@@ -1316,7 +1317,7 @@ forum.robsoft.nu##td[valign="middle"] > a[target="_blank"]
 forum.robsoft.nu,svenskaturistforeningen.se##.cookie-box
 forvaltarforum.se##[id^="ff_banner"], .home .partner_article + .mh-section, .home .payed_article + .mh-section, .home-columns .ticker-title.partner_article, .home-columns .ticker-title.payed_article, .mh-header .widget_sow-slider, .sow-slider-image, .houdini_partner_article, .houdini_video_banner, .houdini_produktnytt, #houdini_tjanster-2
 fotboll.com##.header-static-lg, .fp-partner, .xs-ad, .bo-wrapper
-fotbolldirekt.se,hockeysverige.se,innebandymagazinet.se,padeldirekt.se##.site-partnevisment, .h-background--sponsored-light, .row .text-center img
+fotbolldirekt.se,hockeysverige.se,innebandymagazinet.se,padeldirekt.se##.site-partnevisment, .h-background--sponsored-light, .row .text-center img, a[href^="https://hubs.la"], .c-partners
 fotbollskanalen.se##.brand, .desktop-ad-web
 fotbollskane.se,fotbollsthlm.se##.footer-links
 fotbolltransfers.com##div[class^="ad"], a[href^="https://ads."], .header_sponsored
@@ -1610,7 +1611,7 @@ sporttv.nu##a[onclick*="bannerClick"]
 spray.se##.column-left > .article-partial
 spray.se##[class^="ads-"], [class*="article-casino"]
 startaochdriva.se##.banner-right, .banner-left, .wpb_single_image a[target="_blank"], .tdm-popup-modal-wrap
-stegforhalsa.se##[class*="jsx-"][style*="position: sticky"]
+stegforhalsa.se##[class*="jsx-"][style*="position: sticky"], .bc--grey-neutral-50[style^="min-height"]
 stoppapressarna.se##.premium-page-ad, .footer-banner-wrapper
 streamtajm.com,svensktradgard.se###preloader
 surfa.se##div[class*="-promo"], div[class*="prisjakt-"]
@@ -2278,6 +2279,7 @@ ysektionen.se##.yweb-news-paper-banner
 ||stats.poddtoppen.se^
 ||stats.tipser.com^$xmlhttprequest
 ||stayfriends.de/metatag
+||stegforhalsa.se/sw.js
 ||stegforhalsa.se^$csp=worker-src 'none'
 ||step.dk^$third-party
 ||storage.googleapis.com/didna$third-party
