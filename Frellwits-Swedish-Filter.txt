@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2022-09-19 08:10:07 CEST
+! Last modified: 2022-09-19 09:49:08 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -205,6 +205,7 @@
 ##div#ad_global_below_navbar
 ##div#ads-panorama
 ##div#ads_column
+##div#annons_topp
 ##div#banner_right
 ##div#cookieBar
 ##div#custom_ads_wrapper
@@ -246,6 +247,7 @@
 ##div.bsa_pro_ajax_load
 ##div.cli-modal-backdrop
 ##div.CMACG_AdChangerWidget
+##div.column-article.tag-annons
 ##div.comment-ad_wrapper
 ##div.Container--ad
 ##div.content-center-ad
@@ -399,6 +401,7 @@
 /?news=ajaxrequest&bannerlinks
 /?news=ajaxrequest&bannerzone
 /?template=prisjakt$domain=ljudochbild.se
+/?trafikkalla$image,domain=bloggplatsen.se
 /_adsmodern/*$image
 /_graphics/annons
 /_papers_media/banners
@@ -1062,7 +1065,7 @@ affarsvarlden.se##.article-list-item--native, .advert-notice-box
 affarsvarlden.se##.cookies-wrap, .Modal
 aftonbladet.se###megaAd-placeholder, #superright-side, a[href^="/brandstudio"], a[href*="/casinoguide"], [id^="adPlacement"], a[href^="https://kampanj.aftonbladet"], a[href*="/rabattkod"][data-test-tag="internal-link"], a[href^="/sportbladet/speltips/"]
 aftonbladet.se,autonytt.se,ekonominyheter.se,hockeybladet.nu,lesscarbs.se,matinspo.se,undervarttak.se,xn--snabbalnen-75a.se##a[href*="/track.adtraction."]
-aftonbladet.se,cfanytt.se,foretagsbladet.se,gestrikemagasinet.se,halsasverige.se,hembostad.nu,langd.se,lasarnas.se,nojesmagasinet.nu,pressbladet.se,sportidrott.se,stoppapressarna.se,svenskorientering.se,svenskpress.se##.advert
+aftonbladet.se,cfanytt.se,foretagsbladet.se,gestrikemagasinet.se,halsasverige.se,hembostad.nu,langd.se,lasarnas.se,nojesmagasinet.nu,pressbladet.se,skolvarlden.se,sportidrott.se,stoppapressarna.se,svenskorientering.se,svenskpress.se##.advert
 aftonbladet.se,skonhetsredaktorerna.se##.ab_responsive_ads
 aikfotboll.se,vaken.se##.banners
 aip.nu##[class*="feed-ad"]
@@ -1383,7 +1386,7 @@ hitta.se##[class*="dummyAd"], [class*="StyledAdSlot"], [data-bind*="Ad"], div[cl
 hitta.se##[class^="styleManual_mainContentBox"] > div[style^="min-height"]:first-of-type
 hitta.se##a[data-trackimp][target], .hitta-map .integration-txt, .section-details--alb
 hockeybladet.nu##.td_mod_wrap a img[data-permalink], a[data-wpel-link="external"][onclick], a.td-lazy-img[target], a[href*="casino"]
-hockeyettan.se##.club-ad-item
+hockeyettan.se##.club-ad-item, .banner-row
 hockeyguiden.com##.main-loader.loader-bg
 hockeymagasinet.com##gdpr-alert
 hockeynews.se##[class*="ad-style"], [id^="outsider-"], [id^="banner_"], .ad-mob-container, #mobile-one, #mobile-two, .desktop-horizontal-ad, #article-content img[src*="banner"], #article-content img[src*="prio-hockey"]
@@ -1529,7 +1532,7 @@ obsid.se##a[href*="casino"]
 omni.se,omniekonomi.se##.article--sponsored, .resource--sponsored, .component--sticky-sponsor-banner, .pre-banner, .banner--toppanorama, .banner--mobiletoppanorama, .banner--midpanorama
 omnihalsa.com,skanesport.se,sportpanelen.se##.stream-item
 omtanke.today##.featured
-omvarlden.se##.cookieControl
+omvarlden.se,skolvarlden.se##.cookieControl
 opulens.se##.mailpoet_form, #secondary
 ordguru.se##.visible-lg, .hidden-lg
 orebronyheter.com###top-wrapper
@@ -1610,12 +1613,13 @@ sportpanelen.se###text-html-widget-3
 sporttv.nu##a[onclick*="bannerClick"]
 spray.se##.column-left > .article-partial
 spray.se##[class^="ads-"], [class*="article-casino"]
+stallet.se##.pnlAdTop
 startaochdriva.se##.banner-right, .banner-left, .wpb_single_image a[target="_blank"], .tdm-popup-modal-wrap
 stegforhalsa.se##[class*="jsx-"][style*="position: sticky"], .bc--grey-neutral-50[style^="min-height"]
 stoppapressarna.se##.premium-page-ad, .footer-banner-wrapper
 streamtajm.com,svensktradgard.se###preloader
 surfa.se##div[class*="-promo"], div[class*="prisjakt-"]
-svd.se###mega-ad-wrapper, .Container--ad, .theme-Native, .AdWrapper, .AdPositionData, .Teaser--fullAdLabel
+svd.se###mega-ad-wrapper, .Container--ad, .theme-Native, .AdWrapper, .AdPositionData, .Teaser--fullAdLabel, div[data-engage-entity-id="sales-banner-bottom-sticker-wide"]
 svenskafans.com##.puff__ad-heading
 svenskahousegruppen.se###eprivacyModal, .modal-backdrop
 svenskhistoria.se##.widget_et_ads, .module-etads, #text-13, #block-4, a[target="_blank"][rel="noopener noreferrer"], a > img[width="300"][height="250"], a > img[width="800"][height="175"]
@@ -2268,6 +2272,7 @@ ysektionen.se##.yweb-news-paper-banner
 ||srvrtools.com/t.js?
 ||stackpathcdn.com^*/shrMain$script
 ||stadiumstage.com^$third-party
+||stallet.se/scripts/bx-abd.js
 ||stat-api.tv4play.se^
 ||stat.modette.se^
 ||static.influencersofsweden.se/js/inos
