@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2022-09-19 09:49:08 CEST
+! Last modified: 2022-09-21 09:03:04 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -64,8 +64,8 @@
 ###cookiejar
 ###cookielawwarning
 ###cookieMsgBlock
-###cookieNotice
 ###CookieNotice
+###cookieNotice
 ###cookies-acceptance .alert.bottom
 ###cookiesInfo
 ###dialog-eu-cookie-law
@@ -319,6 +319,7 @@
 ##ul.adsmodern
 -popup-analytics
 -tracking.js$domain=aftonbladet.se
+.ads-gdprlock
 .ax/ad/
 .ax/images/banners/
 .com/annons.$script,subdocument
@@ -579,6 +580,7 @@
 /ga_cookie_track.js
 /GA_EEC$domain=osterbottenstidning.fi|sydin.fi|vasabladet.fi
 /gdpr/*$domain=borattforum.se|husbilskompisar.se|rotter.se|se.laowl.com|visitlulea.se
+/gdprlock$third-party
 /get.aspx?AdSlotID$script
 /glimr$script,domain=aftonbladet.se|blocket.se|wellness.se
 /glimr-static$domain=~klart.se
@@ -1212,8 +1214,7 @@ cyclingplus.se,halsafitness.se,yogaworld.se##.sticky-sidebar, #gdpr-container, .
 cykla.se##.featured-post--sponsored, .grid-item--sponsored
 cykla.se#@#.advertisment
 da.se##div.alignwide[style^="height"]
-dagen.se##.cookie-acceptance
-dagen.se##.video-annons, .native-box, .arcad-block-container
+dagen.se##.cookie-acceptance, .video-annons, .native-box, .arcad-block-container
 dagenshultsfred.se,dagenskalmar.nu,dagensvastervik.se,dagensvimmerby.se##.panoramaAnnons, .JobAdDiv, .annonsKolumn, .insideAd, .ingressAd, .familyAds, .annonsWrapper
 dagensinfrastruktur.se##.g-single
 dagensinfrastruktur.se,ratsit.se,sonicmagazine.com##[class^="ad-"]
@@ -1524,8 +1525,7 @@ norrbotten.com##a[href*=".com/annons"], .td-ss-main-sidebar > .td-a-rec
 nvp.se##[class*="banner_"], .BottomBannerContainer
 nyadagbladet.se##.third-col, article[class*="sponsrad"]
 nyheter24.se##.lazyload_bar.show, .lazyload_outer.show, .sponsrat, .is_native, .sticky-scroll
-nyheteridag.se##.content > div:not([class]) img, a[href*="www.casino"]
-nyheteridag.se##.widget.facebook
+nyheteridag.se##.widget.facebook, .content > div:not([class]) img, a[href*="www.casino"]
 nyhetersto.se##header > div.g
 nytt.com##.mfp-wrap, .mfp-bg
 obsid.se##a[href*="casino"]
@@ -1564,7 +1564,7 @@ riktighockey.se###custom_html-2
 rocknytt.net##[data-widget_type*="bnnrwidgets"], a[href*="/annons/"]
 ruthless.se##.notices
 sakochliv.se##.cookie-disclaimer-wrap
-samnytt.se##.c-wysiwyg, a.c-news-post[href*="jackpott"], a.c-news-post[href*="-casino-"], a.c-news-post[href*="-betting-"], .l-header__row.ui-bg--accent-yellow, a[href*="spelguiden.samnytt.se"]
+samnytt.se##.c-wysiwyg, a.c-news-post[href*="jackpott"], a.c-news-post[href*="-casino-"], a.c-news-post[href*="-betting-"], .l-header__row.ui-bg--accent-yellow, a[href*="spelguiden.samnytt.se"], .cp-info-bar
 scanaktier.se###overlay-black
 schack.se##.schac-widget
 schoolido.se##.so-cookie__area
@@ -1666,6 +1666,7 @@ tv.nu##a[href*="adform.net"], .ad-fullscreenWallpaper__container
 tvkanalengodare.se##.privacy-information--visible
 tvmatchen.nu##.bet365, .panorama-wrapper, .tvg-manager-box
 tvprogram.se##.backdrop, .fcb
+ungdomsfotboll.se##div[id^="ungdo-"]
 uppsalanyheter.se###banner-top-block
 uppsatser.se##.results li[style^="margin"]:not(.result)
 usabil.nu##.image-post-link[target]
@@ -1853,7 +1854,7 @@ ysektionen.se##.yweb-news-paper-banner
 ||conviva.com^$third-party
 ||cookie-disclaimer.onewp.net^$third-party
 ||cookie-script.com^$third-party
-||cookiebot.com^$domain=bax-shop.se|circlek.se|energi.se|findroommate.se|fokus.se|goteborgdirekt.se|kingsizemag.se|konsumentmagasinet.se|kreditrapporten.se|kurera.se|mitti.se|ng.se|polistidningen.se|sakochliv.se|smartsenior.se|spraktidningen.se|sverigesnatur.org|swedroid.se|trafiken.nu|upplysning.se|vaningen.se|varden.se|vasterastidning.se|vastsverige.com|wesafe.se
+||cookiebot.com^$domain=bax-shop.se|circlek.se|energi.se|findroommate.se|fokus.se|goteborgdirekt.se|kingsizemag.se|konsumentmagasinet.se|kreditrapporten.se|kurera.se|mitti.se|ng.se|polistidningen.se|sakochliv.se|sis.se|smartsenior.se|spraktidningen.se|sverigesnatur.org|swedroid.se|trafiken.nu|upplysning.se|vaningen.se|varden.se|vasterastidning.se|vastsverige.com|wesafe.se
 ||cookieconsent.popupsmart.com^$third-party
 ||cookieinformation.com^$domain=gds.se|minbostad.se|viivilla.se
 ||cookieinfoscript.com^$third-party

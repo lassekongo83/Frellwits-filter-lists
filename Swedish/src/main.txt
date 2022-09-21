@@ -3,6 +3,7 @@
 ! -- Generic ads and marketing junk
 ! These filters are most likely related to ads or ad related tracking
 ?url=*impse.tradedoubler.com$image
+.ads-gdprlock
 .ax/ad/
 .ax/images/banners/
 .com/annons.$script,subdocument
@@ -633,6 +634,7 @@ casino-utan-$image
 /fb_pixel.js
 /forum/assets/google-tag-manager
 /ga_cookie_track.js
+/gdprlock$third-party
 /glimr-static$domain=~klart.se
 /gpAnalytics$script
 /gtagEventTracker.js
@@ -1209,7 +1211,7 @@ newsvoice.se##+js(acs, exactmetrics_scroll_tracking_load)
 /pum/*$domain=flm.nu|biostock.se|finanstid.se
 ||consensu.org^$domain=hockeynews.se|tvmatchen.nu|motormagasinet.se|food-supply.se|skyddosakerhet.se|dagenshandel.se|plastnet.se|habit.se|woodnet.se|foodnet.se|transportnet.se|processnet.se|packnet.se|verkstaderna.se|medtechmagazine.se|recyclingnet.se|rt-forum.se|kemivarldenbiotech.se|uochd.se|lifesciencesweden.se|fri-kopenskap.se|cleannet.se|entreprenad.com|gbgfotboll.se|enkelteknik.se|prevent.se|leta.se|newsner.com|humorbibeln.se|sportbibeln.se|ettgottskratt.se|norrahalland.se|alekuriren.se|eniro.se|samnytt.se|spray.se|swehockey.se|kalender.se|laget.se|proff.se|rf.se|ljudochbild.se|pernillawahlgren.se|lindasbakskola.se|mykitchenstories.se|jennysmatblogg.nu|zeinaskitchen.se|butikpris.se|forni.se|innebandy.se|land.se|landlantbruk.se|landskogsbruk.se|stff.se|oppettiden.se|listor.se|svenskorientering.se|bjarenu.se|friidrott.se|poddtoppen.se|filmtopp.se|mytaste.se|matklubben.se|res.se|travelnews.se|interiorbyvanessa.se|mobil.se|kamerabild.se|thelocal.se|svenskfotboll.se|vackertvader.se|historier.net|dh.se|byrum.se|autopower.se|langd.se|laholmstidning.se|ostgotatidningen.se|lokaltidningenvaxjo.se|alltsvarade.se|garaget.org|travelgrip.se|kalmar.nu|fl-net.se|sporttv.nu|sportlovin.se|receptfavoriter.se
 ||quantcast.com^$domain=flashback.org|hippson.se|stoppapressarna.se|tittapavideon.se|varldenshaftigaste.se|merinfo.se|themoviefreak.se|babyhjalp.se|svenskayoutubers.se|blogg.se|landleyskok.se|tortureviews.se|kiacarclub.se
-||cookiebot.com^$domain=goteborgdirekt.se|kingsizemag.se|ng.se|swedroid.se|wesafe.se|smartsenior.se|vasterastidning.se|bax-shop.se|kurera.se|upplysning.se|mitti.se|circlek.se|findroommate.se|sakochliv.se|polistidningen.se|fokus.se|spraktidningen.se|vaningen.se|varden.se|trafiken.nu|konsumentmagasinet.se|energi.se|sverigesnatur.org|vastsverige.com|kreditrapporten.se
+||cookiebot.com^$domain=goteborgdirekt.se|kingsizemag.se|ng.se|swedroid.se|wesafe.se|smartsenior.se|vasterastidning.se|bax-shop.se|kurera.se|upplysning.se|mitti.se|circlek.se|findroommate.se|sakochliv.se|polistidningen.se|fokus.se|spraktidningen.se|vaningen.se|varden.se|trafiken.nu|konsumentmagasinet.se|energi.se|sverigesnatur.org|vastsverige.com|kreditrapporten.se|sis.se
 ||cookielaw.org^$domain=cartoonnetwork.se|tv4.se|tv4play.se|fotbollskanalen.se|koket.se|nvp.se|flashscore.se|findit.se|ikea.com|hastnet.se|recept.se|manpower.se|gaffa.se|mtv.se|natgeotv.com|internetkunskap.se|internetstiftelsen.se|yelp.se|kokaihop.se|spisa.nu|ilikeradio.se|booli.se|svenskarnaochinternet.se|arbetet.se|tidningenelektrikern.se|malarnasfacktidning.se|sekotidningen.se|handelsnytt.se|fastighetsfolket.se|ka.se|sv.bab.la|tripadvisor.se|sydkusten.es|livetochdiabetes.se|voister.se|atgplay.se|nok.se
 ||cookiepro.com^$domain=birthday.se|friendsarena.se|hastnet.se|aktiespararna.se|spela.se|fz.se|sweclockers.com|djurskyddet.se|havet.nu|svenskfast.se
 ||cookieinformation.com^$domain=minbostad.se|viivilla.se|gds.se
@@ -2030,6 +2032,7 @@ utsidan.se##div.clamzone:matches-css-before(content: /Annons:/i)
 alltomsallskapsspel.se,alltombrollop.com##a[onclick*="Banner"]
 /bsa.js$domain=alltombrollop.com
 motorforum.nu##.pea_cook_wrapper
+ungdomsfotboll.se##div[id^="ungdo-"]
 
 ! === Musik, Radio, Film och TV
 voodoofilm.org##span[id*="Sponsored"]:upward(.content-news)
@@ -2300,9 +2303,8 @@ nyadagbladet.se##.third-col, article[class*="sponsrad"]
 nyadagbladet.se##.widget_media_image:has-text(/annons/i)
 /OneSignalSDK.js$domain=samnytt.se
 ||spelguiden.samnytt.se^
-samnytt.se##.c-wysiwyg, a.c-news-post[href*="jackpott"], a.c-news-post[href*="-casino-"], a.c-news-post[href*="-betting-"], .l-header__row.ui-bg--accent-yellow, a[href*="spelguiden.samnytt.se"]
-nyheteridag.se##.widget.facebook
-nyheteridag.se##.content > div:not([class]) img, a[href*="www.casino"]
+samnytt.se##.c-wysiwyg, a.c-news-post[href*="jackpott"], a.c-news-post[href*="-casino-"], a.c-news-post[href*="-betting-"], .l-header__row.ui-bg--accent-yellow, a[href*="spelguiden.samnytt.se"], .cp-info-bar
+nyheteridag.se##.widget.facebook, .content > div:not([class]) img, a[href*="www.casino"]
 nyheteridag.se##h2:has-text(/samarbetslänkar/i):upward(.article-inner)
 nyheteridag.se##article:has-text(/sponsrat innehåll/i)
 ||peertube.se^$frame,redirect=click2load.html,domain=nordiskradio.se
@@ -2312,8 +2314,7 @@ nordiskradio.se###cookieWindow
 ||swebbtv.se/tracker
 katerinamagasin.se##.adv-area, #right-areas, a[href*=".casino"], body > div.code-block
 varldenidag.se##.profile-annons
-dagen.se##.cookie-acceptance
-dagen.se##.video-annons, .native-box, .arcad-block-container
+dagen.se##.cookie-acceptance, .video-annons, .native-box, .arcad-block-container
 inblick.se##div[class^="ads"]
 /videojs-preroll$domain=himlentv7.se
 
