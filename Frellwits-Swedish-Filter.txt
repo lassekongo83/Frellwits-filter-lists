@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2022-09-22 14:24:39 CEST
+! Last modified: 2022-09-24 11:45:34 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -64,8 +64,8 @@
 ###cookiejar
 ###cookielawwarning
 ###cookieMsgBlock
-###CookieNotice
 ###cookieNotice
+###CookieNotice
 ###cookies-acceptance .alert.bottom
 ###cookiesInfo
 ###dialog-eu-cookie-law
@@ -185,6 +185,7 @@
 ##a[href*="utm_content=banner"] img
 ##a[href*="www.bildelaronline24.se"][target="_blank"]
 ##a[href*="www.reservdelar24.se"][target="_blank"]
+##a[href^="/banner/click/"] img
 ##a[href^="https://www.adsettings.com/scripts/reg_click."]
 ##a[id^="adBanner"][target="_blank"]
 ##a[title="LeoVegas"]
@@ -1394,8 +1395,9 @@ hockeymagasinet.com##gdpr-alert
 hockeynews.se##[class*="ad-style"], [id^="outsider-"], [id^="banner_"], .ad-mob-container, #mobile-one, #mobile-two, .desktop-horizontal-ad, #article-content img[src*="banner"], #article-content img[src*="prio-hockey"]
 horisontmagasin.se,spanaren.se##.textwidget a[target*="blank"] img
 hotellorestaurang.se###bannnerContainer, #pop_overlay, .banner-s, div.featured
-hrnytt.se##.banner-box
+hrnytt.se,worldinproperty.se##.banner-box
 hungrig.nu##.ui-widget-overlay, .ui-dialog
+husbilsplats.se##div[id^="husbi-"]
 hypeline.se##.sponsrad_ruta
 icagruppen.se##div[ng-controller="CookieConsentCtrl"]
 icagruppen.se##div[ng-show*="isUiDisabled"]
@@ -1639,6 +1641,7 @@ swehockey.se##[class*="-reklam"], .sif-sponsorer
 sydnarkenytt.se##.abann_wrapper, #hspalt_s1
 synonymer.se##.create-account-banner, .buy-premium-banner
 sysidan.se##.adscolumn
+tabyallehanda.se##section[id^="Panorama"]
 tasteline.com##.article.related > a[href*="&utm"][target="_blank"]
 tasteline.com##.popup-overlay
 tekniksmart.se##.code-block, main > div:last-child:not(:only-child), #uid_08313ba73, #uid_ab3738b5a, .jeg_header_wrapper .jeg_midbar
@@ -1716,6 +1719,7 @@ ysektionen.se##.yweb-news-paper-banner
 ||7godscasino.com^$popup,third-party
 ||7hd.org^
 ||aa-cdn.mytaste.org/js/ad.js
+||ab.fastighetsvarlden.se^$script
 ||accesslnk.com^
 ||acookiemonster.herokuapp.com^$third-party
 ||activate.social^$third-party
@@ -2137,6 +2141,8 @@ ysektionen.se##.yweb-news-paper-banner
 ||nouw.com/api/postimpression
 ||nouw.com/api/postview
 ||nouw.com/campaignpost/reg/
+||nyaboendet.se/dist/ga_tag.js?
+||nyaboendet.se/dist/metrics.js
 ||oas.*.se/om/$script
 ||obj.fotosidan.se/obj/pa/$image
 ||offer-go.com^$third-party
