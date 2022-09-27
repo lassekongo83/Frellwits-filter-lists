@@ -609,6 +609,7 @@ casino-utan-$image
 .se/track/t.php?
 .se/wdg/tracking
 .se/xhr/add-impression/
+/adobe/se/target-main-at.js
 /ajax/docu_stats.jsp
 /analytics-bmb
 /analytics/cts.min.js
@@ -810,7 +811,6 @@ casino-utan-$image
 ||petrk.com^$third-party
 ||pliing.com^$third-party
 ||plowking.mecenat.com^
-||plausible.io^$third-party
 ||pingback.issuu.com/ping
 ||pipedrive.com^*/statistics/seen
 ||pixel.playbuzz.com^
@@ -1255,8 +1255,9 @@ it-finans.se,it-halsa.se,it-kanalen.se,it-pedagogen.se,it-retail.se,espressomedi
 bokmassan.se,svenskamassan.se##.cookie-law
 chef.se,fokus.se##.Blurb--native
 naringslivetvgl.se,dalarnasaffarer.se,stockholmsaffarer.se,jamtlandsaffarer.se##.cookies-popup
-karriarlakare.se,hemmanytt.se,teknikhype.se,nongrata.se,livinguppsala.se###cookie-law-info-bar
+karriarlakare.se,hemmanytt.se,teknikhype.se,nongrata.se,livinguppsala.se,natursidan.se###cookie-law-info-bar
 ! CSS to fix annoyances
+oru.se,tui.se##.no-scroll:style(overflow: initial !important;)
 annicaenglund.se,alicestenlof.com,ellinorlofgren.se,linnherbertsson.se,pricerunner.se##.noscroll:style(overflow:initial!important)
 bulletin.nu,cgi.com,inredningsarkitektur.se,fof.se,allas.se,baaam.se,elle.se,femina.se,hant.se,mabra.com,residencemagazine.se,svenskdam.se,frida.se,motherhood.se,aftonbladet.se,lchfarkivet.se,kollega.se##body:style(overflow:initial!important)
 bicycling.se,runnersworld.se,motormagasinet.se,skyddosakerhet.se,dagenshandel.se,food-supply.se,plastnet.se,habit.se,woodnet.se,foodnet.se,transportnet.se,processnet.se,packnet.se,verkstaderna.se,medtechmagazine.se,recyclingnet.se,rt-forum.se,kemivarldenbiotech.se,uochd.se,lifesciencesweden.se,fri-kopenskap.se,cleannet.se,entreprenad.com##.modal-open:style(overflow:initial!important)
@@ -2733,7 +2734,7 @@ foreca.se###ckieconsent
 skk.se###cookie-button-banner
 skk.se##.campaigns, [id*="GlobalCampaigns"]
 jusek.se##.l-advertisement, .m-adform, .m-splash
-||camping.se^*/Js/DFP/
+/Js/DFP$domain=camping.se
 camping.se###CookiesBox
 camping.se###rightSideAds, .OpenXAd, .DfpAd
 skrattsajten.com,norpan.se##.cookieScript
@@ -2779,7 +2780,6 @@ startaochdriva.se##a[href*="/sponsrat"]:upward(.latest-post)
 lokalguiden.se##.applicant-match-container, .banner-item, .banner-container
 tjanstebilen.se##.container-banner-sidebar
 tjanstebilen.se##.sponsored-article:upward(.post-item)
-||capdesign.se^*/agi-annons
 byggfaktadocu.se##.pop_box
 poolforum.se##div.adfit, .cookie_notice, div[style^="width:100%;max-width: 728px;"] > div[align="center"], div[style^="width:100%;max-width: 728px;"] > br
 varmepumpsforum.com##.stopjump
@@ -2847,7 +2847,7 @@ se.azrhymes.com##+js(nostif, .info-center)
 /DynamicGAFunctions$script,domain=morningstar.se
 /EUModalDialog$script,domain=morningstar.se
 /AiMatch$script,domain=morningstar.se
-||mstar.com^*/adReloader
+/adReloader$domain=morningstar.se
 /cs1pc.js$domain=kiaindex.se
 cannabis.se##+js(aopw, Cookies)
 cannabis.se##.header-ads-wrapper, .ai-adb-hide, .ai-sticky-widget, .hampaonline
@@ -2869,14 +2869,13 @@ matspar.se##+js(json-prune, payload.ads campaigns.*)
 forum.robsoft.nu##td[valign="middle"] > a[target="_blank"]
 brafiler.se###header-banner
 oru.se##.modal-cookieform
-oru.se,tui.se##.no-scroll:style(overflow: initial !important;)
 /cookie-banner$script,domain=skyscanner.se
 /trackolding$script,domain=skyscanner.se
 skyscanner.se###cookie-banner-root
 varden.se##app-native-puff, .header-top-banners
 varden.se##.sponsored-label:upward(.carousel-slide)
-kalender.se##.day-nav ~ a:not([href*="kalender.se"])
-||internetlankar.se/*/Annons/
+kalender.se##.day-nav ~ a:not([href*="kalender.se"]), a:not([href*="kalender.se"]) img
+/Annons$domain=internetlankar.se
 /assets/tracking$domain=hornbach.se
 /_t/se.js$domain=hornbach.se
 scanaktier.se###overlay-black
@@ -2888,9 +2887,8 @@ netdoktor.se##.article-list__item__link--sponsored, .ispanorama, #Popup
 sverigesnatur.org##div[id^="sverigesNaturPopup"]
 engelholm.se###cookie-consent-wrapper
 livetochdiabetes.se###text-3
-ehandelstips.se##[href*="/author/sponsradeartiklar/"]:upward(li)
-ehandelstips.se##[href*="/author/sponsradeartiklar/"]:upward(article)
-beernews.se##.cookie-consent-wrapper
+ehandelstips.se##[href*="/author/sponsradeartiklar/"]:upward(li, article)
+beernews.se##.cookie-consent-wrapper, #takeover-outer
 akaviaaspekt.se##.article-list-item--native
 goon.se##.cpt-collab-text-ct1:has-text(/samarbete|annons/i):upward(.cpt-alm-main)
 webbkryss.nu##.skyad-wrapper

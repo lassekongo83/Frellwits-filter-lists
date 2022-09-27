@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2022-09-26 09:29:48 CEST
+! Last modified: 2022-09-27 10:53:01 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -425,6 +425,8 @@
 /adn/adn-setup.$script
 /adnami/macro$script
 /adnuntius_top_scroll
+/adobe/se/target-main-at.js
+/adReloader$domain=morningstar.se
 /ads-dm.js
 /ads.article.js
 /ads.for.me/jsa?$script
@@ -443,6 +445,7 @@
 /analytics/cts.min.js
 /analytics/gallup
 /angry-golick-$script
+/Annons$domain=internetlankar.se
 /annons$image,domain=dagenshultsfred.se|dagenskalmar.nu|dagensvastervik.se|dagensvimmerby.se
 /annons-banner
 /annons.aspx?
@@ -624,6 +627,7 @@
 /js/byside_webcare
 /js/cookie-consent.
 /js/cookienotice.
+/Js/DFP$domain=camping.se
 /js/external.php$domain=hockeysnack.com
 /js/fullpage$domain=poddtoppen.se
 /js/fullpageads.js
@@ -1145,7 +1149,7 @@ barnsemester.se##.puffLine, .d-flex > div[style*="min-height"]
 barometern.se,blt.se,borasdly.se,bt.se,kalmarposten.se,klt.nu,kristianstadsbladet.se,meraosterlen.se,nsk.se,olandsbladet.se,smp.se,sydostran.se,trelleborgsallehanda.se,ut.se,vaxjobladet.se,vxonews.se,ystadsallehanda.se##.component__guide-ads, #fullpage-ad-portal, div[style="min-height: 302px;"]
 battrestadsdel.se###top-banner-mobile, .apd-text, .apds_main, .entry-priomaker, [class^="dls-"]
 battrestadsdel.se,casinoexpo.se,flashback.se,leta.se###top-banner
-beernews.se##.cookie-consent-wrapper
+beernews.se##.cookie-consent-wrapper, #takeover-outer
 bergsmannen.se##.ann-puff, .headerLinks
 besoksliv.se##a[href*="sponsrat-innehall"]
 bestchampagne.se##aside.section-sm
@@ -1379,7 +1383,7 @@ helgon.se##[id*="banner"], a[href^="https://ad."], a[href^="https://ad2."]
 hemhyra.se##.pageCookies
 hemmafixbloggen.se,surfa.se,teknikfreak.se###loader-wrapper
 hemmanytt.se###sa_slider_shortcode
-hemmanytt.se,karriarlakare.se,livinguppsala.se,nongrata.se,teknikhype.se###cookie-law-info-bar
+hemmanytt.se,karriarlakare.se,livinguppsala.se,natursidan.se,nongrata.se,teknikhype.se###cookie-law-info-bar
 hemnet.se###ad_unit_placeholder
 hemtrevligt.se,mestmotor.se##.row--native
 hippson.se##.sponsorpuff, .presentedby, .presentedby ~ *
@@ -1418,7 +1422,7 @@ jaktplay.se##.jaktplay-ad
 javligtgott.se##.jet-popup
 jennysmatblogg.nu,lindasbakskola.se,mykitchenstories.se,zeinaskitchen.se##.panorama-sticky, .sticky-area
 jusek.se##.l-advertisement, .m-adform, .m-splash
-kalender.se##.day-nav ~ a:not([href*="kalender.se"])
+kalender.se##.day-nav ~ a:not([href*="kalender.se"]), a:not([href*="kalender.se"]) img
 kamerabild.se,mobil.se##.storan, .Partner, aside .pane-custom
 kamrat.com###kadDiv, div[style="margin:25px 0;max-width:255px!important;"], #scrollAdj ~ *
 kardemummagumman.se###custom_html-2
@@ -1817,8 +1821,6 @@ ysektionen.se##.yweb-news-paper-banner
 ||bytbil.com/bundles/js/tracking
 ||bytelab.dk^$third-party
 ||cameraeushop.com^
-||camping.se^*/Js/DFP/
-||capdesign.se^*/agi-annons
 ||careerbuilder.se^$third-party
 ||carneoam.com/advert/
 ||casinotoplists.com^$third-party
@@ -2012,7 +2014,6 @@ ysektionen.se##.yweb-news-paper-banner
 ||instiengage.com^$domain=stoppapressarna.se
 ||intagme.com^$third-party
 ||interactiveads.ai^$third-party
-||internetlankar.se/*/Annons/
 ||internetmedicin.se/log.php
 ||investerarbrevet.se^$third-party
 ||inxy.run^
@@ -2121,7 +2122,6 @@ ysektionen.se##.yweb-news-paper-banner
 ||momondo.se/ugtm/
 ||monkey.tunnl.com/identify$subdocument
 ||mraffiliate.com^$third-party
-||mstar.com^*/adReloader
 ||mtpc.se^$third-party
 ||mtst.io/js/mtst.js
 ||myadmessenger.com^$third-party
@@ -2171,7 +2171,6 @@ ysektionen.se##.yweb-news-paper-banner
 ||platform.linkedin.com^$third-party
 ||platform.tumblr.com/*/share.js$third-party
 ||platssajten.se^$third-party
-||plausible.io^$third-party
 ||pliing.com^$third-party
 ||plowking.mecenat.com^
 ||podcasts.nu/adbg.svg
