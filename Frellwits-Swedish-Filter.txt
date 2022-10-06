@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2022-10-05 08:55:27 CEST
+! Last modified: 2022-10-06 07:52:54 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -901,7 +901,6 @@
 /seenthis-hub$script
 /sg_reklam$domain=svampguiden.com
 /sh404sefsocial$script
-/share-buttons$script,domain=gardets.nu
 /shared/crm-campaign-handler.js$script
 /sharedaddy/sharing.$script
 /sharethis.js$domain=allsvenskan.se|superettan.se
@@ -1046,6 +1045,7 @@
 @@/admin-ajax.php?action=archive_grid$~third-party,domain=cykla.se
 @@/adserver.$script,~third-party,domain=fotosidan.se|utsidan.se
 @@/aff/images/*$image,domain=alltforforaldrar.se
+@@/appbanner.jpg$image,domain=guldkanalen.se
 @@/assets/ads-dm.js$~third-party,domain=affarsliv.com|corren.se|ekuriren.se|eposten.se|folkbladet.se|gotlandjustnu.se|helagotland.se|kindaposten.se|kkuriren.se|kuriren.nu|mvt.se|norran.se|norrbottensaffarer.se|nsd.se|nt.se|pt.se|sn.se|strengnastidning.se|unt.se|vimmerbytidning.se|vt.se
 @@/consent.json$domain=forum.macworld.se|idg.se
 @@/css/ad.$stylesheet,domain=sv.geneanet.org
@@ -1366,7 +1366,7 @@ gentlemannaguiden.com##.advertising, .sidebar .widget_text, .sidebar .widget_med
 glassakademin.se##[class^="adverts-"]
 gmfk.nu###site-preloader
 godare.se##.godare-ad-element, a[href*="/brand-studio"], a[href*="/brandstudio"]
-golflivet.se##a[href*="/annonssamarbete/"]
+golflivet.se##a[href*="/annonssamarbete/"], .deals_block_wrapper
 google.se##mobile-promo
 goteborg.com##.cookie-popup, .overlay
 goteborgdirekt.se,mitti.se,vasterastidning.se##.profile-native
@@ -1374,6 +1374,7 @@ goteborgsgolfaren.se##.sgpb-popup-overlay, #sgpb-popup-dialog-main-div-wrapper, 
 grillbaronen.se##a[href*="/click."]
 grillbloggen.nu##.rstbox
 guideAds$xmlhttprequest,domain=barometern.se|blt.se|borasdly.se|bt.se|kalmarposten.se|klt.nu|kristianstadsbladet.se|meraosterlen.se|nsk.se|olandsbladet.se|smp.se|sydostran.se|trelleborgsallehanda.se|ut.se|vaxjobladet.se|vxonews.se|ystadsallehanda.se
+guldkanalen.se##div.grid_container[style*="height:240px;"]
 hallbyhandboll.se,skiljebosk.nu##.cookiePush
 hallbyhandboll.se,skiljebosk.nu##.stickyFollow
 hamnen.se##[class*="annons"]:not(body), .tag-sponsrad, .pp-modal-wrap
@@ -1409,6 +1410,7 @@ horisontmagasin.se,spanaren.se##.textwidget a[target*="blank"] img
 hotellorestaurang.se###bannnerContainer, #pop_overlay, .banner-s, div.featured
 hrnytt.se,worldinproperty.se##.banner-box
 hungrig.nu##.ui-widget-overlay, .ui-dialog
+husbil.se,husvagn.se##.ui-top-adversite
 husbilsplats.se##div[id^="husbi-"]
 hypeline.se##.sponsrad_ruta
 icagruppen.se##div[ng-controller="CookieConsentCtrl"]
