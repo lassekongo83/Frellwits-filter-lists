@@ -1429,6 +1429,7 @@ illvet.se,pctidningen.se,viivilla.se,popularhistoria.se,digitalfotoforalla.se,mi
 ! Aftonbladet
 /ab_tracking$domain=aftonbladet.se
 /ab_stats_params$domain=aftonbladet.se|skonhetsredaktorerna.se
+/ads-countdown.js$domain=aftonbladet.se
 /casinokollen$all,domain=aftonbladet.se
 /player-plugin-tracking$domain=tv.aftonbladet.se
 /player-plugin-ad$domain=tv.aftonbladet.se
@@ -1466,7 +1467,7 @@ omni.se,omniekonomi.se##+js(aeld, omniPulseLoaded)
 ! Klart
 klart.se###overlay, .gdpr-onboarding-container, a[rel*="sponsored"], .-panorama-ad-wrapper
 klart.se##.ad-text:has-text(/annons/i):upward(.content-box-list__item)
-klart.se,tv.nu##+js(set, MEGA_LOADING, unset)
+klart.se##+js(rc, mega-loading, body)
 ! Bytbil
 ||bytbil.com/bundles/js/tracking
 bytbil.com###privacyModal
@@ -1477,12 +1478,13 @@ bytbil.com##html,body:style(overflow: auto !important;)
 tv.nu##a[href*="adform.net"], .ad-fullscreenWallpaper__container
 tv.nu###tv-schedule section:has-text(ANNONS)
 tv.nu##+js(rc, layout--locked)
+tv.nu##+js(rc, takeover-loading, body)
 ! Blocket
 @@/ad-block-detection-script$domain=blocket.se
 ||jobb.blocket.se/blocket_puff.html
 ||jobb.blocket.se^*/tracker.js
 ||jobb.blocket.se^*/xtcore.min.js
-blocket.se###placement_panorama, .blocket-placement, div[style="height: 240px;"], [class*="offering-info-box"]
+blocket.se##.placement_panorama, .blocket-placement, div[style="height: 240px;"], [class*="offering-info-box"]
 ! Övrigt
 /www.wellness.se\/cnp-assets\/[0-9]+./$script,domain=wellness.se
 wellness.se##a[href*="campaign"][data-test-tag="external-link"]
