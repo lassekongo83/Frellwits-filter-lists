@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2022-10-31 11:32:12 CET
+! Last modified: 2022-11-01 14:47:46 CET
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -64,8 +64,8 @@
 ###cookiejar
 ###cookielawwarning
 ###cookieMsgBlock
-###CookieNotice
 ###cookieNotice
+###CookieNotice
 ###cookies-acceptance .alert.bottom
 ###cookiesInfo
 ###dialog-eu-cookie-law
@@ -518,7 +518,7 @@
 /caos/*$domain=sportprat.com
 /casino_utan_licens$image
 /cc.silktide.com/cookieconsent$script
-/cdigo-audit.js$domain=qx.se
+/cdigo-audit.js
 /cecado/advisible.js
 /census.js?bust=release
 /check-paywall$domain=dn.se
@@ -1061,7 +1061,6 @@
 @@/plugins/ad-ace/*/adblock-detector
 @@/plugins/convertplug/modules/modal/*/cross.png$image,~third-party
 @@/scripts/advert_$~third-party,domain=di.se
-@@/yieldwrapper.min.js$domain=spray.se
 @@_advert.$domain=e-pages.dk
 @@||cargodisplayads.com/till_minne/
 @@||citygate.se/common/Memorial/
@@ -1487,7 +1486,7 @@ litteraturmagazinet.se###pageContainer > div:first-child:not([id])
 livetochdiabetes.se###text-3
 livetsgoda.se##.penci-rlt-popup
 livsmedelsverket.se###CookieConsent
-ljudochbild.se##.adremark, .coofad, .popup-overlay, .hidead, .phoneads, .pricecomp, .offerz, .type-articleadvertorial, .adblock, .lbplussinfo, .popup-overlayx
+ljudochbild.se##.adremark, .coofad, .popup-overlay, .hidead, .phoneads, .pricecomp, .offerz, .type-articleadvertorial, .adblock, .lbplussinfo, .popup-overlayx, a[href*="/advertorial"], a[href*="/advertorial"] + .textbox
 ljungbysporten.se##section.widget_media_image, a[target="_blank"]:not([href*="ljungbysporten.se"])
 lokalfotboll.se###topbar, .inside-right-sidebar > .really_simple_image_widget
 lokalguiden.se##.applicant-match-container, .banner-item, .banner-container
@@ -1636,8 +1635,6 @@ sporthalsa.se##.header_top, #media_image-2, #text-6
 sporthalsa.se##a[href*="/annonsering"]
 sportpanelen.se###text-html-widget-3
 sporttv.nu##a[onclick*="bannerClick"]
-spray.se##.column-left > .article-partial
-spray.se##[class^="ads-"], [class*="article-casino"]
 stallet.se##.pnlAdTop
 startaochdriva.se##.banner-right, .banner-left, .wpb_single_image a[target="_blank"], .tdm-popup-modal-wrap
 stegforhalsa.se##[class*="jsx-"][style*="position: sticky"], .bc--grey-neutral-50[style^="min-height"]
@@ -1659,7 +1656,7 @@ sverigespringer.se##.cd-desktop-banner
 svt.se###nyh_cookie-message, #svtmat_cookie,section.nyh_share
 sweclockers.com###prisjakt-popular, .ad:not(.adPanorama), .adForumSticker
 swedroid.se##div[id$="_ad"], div[id$="_ad_mobile"], .externalTopMobile, a[href^="//www.prisjakt.nu/produkt"], #nativendo-mainfeed + aside > .article, .article-footer > h3, .article-footer > .aeChart, .newExternal
-swehockey.se##[class*="-reklam"], .sif-sponsorer
+swehockey.se##[class*="-reklam"], .sif-sponsorer, .teaserblock
 sydnarkenytt.se##.abann_wrapper, #hspalt_s1
 synonymer.se##.create-account-banner, .buy-premium-banner
 sysidan.se##.adscolumn
@@ -2225,7 +2222,7 @@ zeromagazine.nu##div[id^="ads"]
 ||pushpushgo.com^$third-party
 ||pushwhy.com^
 ||pxl.host^$third-party
-||quantcast.com^$domain=babyhjalp.se|blogg.se|eniro.se|flashback.org|foreca.se|forni.se|hippson.se|kiacarclub.se|landleyskok.se|merinfo.se|nyadagbladet.se|stoppapressarna.se|svenskayoutubers.se|thelocal.se|themoviefreak.se|tittapavideon.se|tortureviews.se|varldenshaftigaste.se
+||quantcast.com^$domain=babyhjalp.se|blogg.se|eniro.se|enkelteknik.se|flashback.org|foreca.se|forni.se|hippson.se|kiacarclub.se|landleyskok.se|merinfo.se|nyadagbladet.se|stoppapressarna.se|svenskayoutubers.se|thelocal.se|themoviefreak.se|tittapavideon.se|tortureviews.se|varldenshaftigaste.se
 ||qx.se/view.php$image
 ||rabattkoder.ifragasatt.se^
 ||rabble-res.cloudinary.com^$third-party
