@@ -1270,7 +1270,7 @@ it-finans.se,it-halsa.se,it-kanalen.se,it-pedagogen.se,it-retail.se,espressomedi
 bokmassan.se,svenskamassan.se##.cookie-law
 chef.se,fokus.se##.Blurb--native
 naringslivetvgl.se,dalarnasaffarer.se,stockholmsaffarer.se,jamtlandsaffarer.se##.cookies-popup
-karriarlakare.se,hemmanytt.se,teknikhype.se,nongrata.se,livinguppsala.se,natursidan.se,battrestadsdel.se,butikstrender.se,forskning.se,vardfokus.se,varvat.se,smaspararguiden.se###cookie-law-info-bar
+karriarlakare.se,hemmanytt.se,teknikhype.se,nongrata.se,livinguppsala.se,natursidan.se,battrestadsdel.se,butikstrender.se,forskning.se,vardfokus.se,varvat.se,smaspararguiden.se,aktuellsakerhet.se###cookie-law-info-bar
 motorforum.nu,lakemedelsvarlden.se##div.pea_cook_wrapper
 lakemedelsvarlden.se##.pea_cook_more_info_popover
 ! CSS to fix annoyances
@@ -2672,7 +2672,6 @@ temadagar.se##^script:has-text(__ez)
 ! === Various unsorted websites
 www.google.se##+js(ra, onmousedown|ping, a[href][onmousedown]\, a[href][ping])
 www.google.se##+js(ra, data-jsarwt)
-www.google.se##+js(aeld, /click|auxclick/, a.call)
 google.se##mobile-promo
 /TopBanner$subdocument,domain=hitta.se
 ||api.hitta.se/creepy
@@ -2931,10 +2930,11 @@ akaviaaspekt.se##.article-list-item--native, a.article-topic__list-item[href^="/
 goon.se##.cpt-collab-text-ct1:has-text(/samarbete|annons/i):upward(.cpt-alm-main)
 webbkryss.nu##.skyad-wrapper
 ordguru.se##.visible-lg, .hidden-lg
-/litespeed$script,domain=aktuellsakerhet.se
 aktuellsakerhet.se##.front-slider-reklamsamarbete, .category-gastkronika-reklamsamarbete, .front-top-reklamsamarbete
 aktuellsakerhet.se##.td-adspot-title-span:upward(1)
 aktuellsakerhet.se##a[href*="reklamsamarbete"]:upward(.td_block_wrap)
+aktuellsakerhet.se##.block-title:has-text(Reklamsamarbete):upward(.td_block_wrap)
+aktuellsakerhet.se##.block-title:has-text(Reklamsamarbete):upward(.td_block_wrap) + rs-module-wrap:remove()
 medibok.se##.annonsmellandiv, .annonssidadiv
 medibok.se##+js(noeval-if, Math.round)
 medibok.se##+js(acs, show_msg)
@@ -3078,3 +3078,4 @@ hejauppsala.com##div[class^="u-text"]:has-text(/^Reklam$/):upward(section)
 ordfrontmagasin.se##.oc_cb_wrapper
 skogssallskapet.se##.env-modal-dialog--show, .env-modal-dialog__backdrop
 skogssallskapet.se##body:style(overflow:initial!important; position:initial!important;)
+webhallen.com##.takeover-link
