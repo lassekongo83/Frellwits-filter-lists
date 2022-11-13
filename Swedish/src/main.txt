@@ -996,6 +996,7 @@ casino-utan-$image
 ||webpower.eu^$third-party
 ||webpushs.com^$third-party
 ||widgets.getpocket.com^$third-party
+||wisepops.com^$third-party
 ||wpcc.io^*/cookieconsent$script
 ||xfm.se/cookie/cookie_popup$script
 ||yle-consent-sdk.yle.fi^
@@ -1211,7 +1212,7 @@ hrnytt.se,worldinproperty.se##.banner-box
 utm_$document,removeparam=/^utm_/,domain=tv.nu|booli.se|expressen.se|aftonbladet.se|bostad.blocket.se
 /vast.js$domain=moviezine.se
 /glimr$script,domain=aftonbladet.se|blocket.se|wellness.se|godare.se
-/profile$ping,domain=feber.se|hamnen.se|tasteline.com|tjock.se|veckorevyn.com|marcusoscarsson.se|handbollskanalen.se|surfa.se|nordichardware.se
+/profile$ping,domain=feber.se|hamnen.se|tasteline.com|tjock.se|veckorevyn.com|marcusoscarsson.se|handbollskanalen.se|surfa.se|nordichardware.se|hockeynews.se
 /usabilla$script,domain=morningstar.se|telia.se
 /ui/dist/js/ai.$domain=gbgfotboll.se|stff.se|svenskfotboll.se
 /utag$script,domain=gaffa.se
@@ -1916,7 +1917,7 @@ fuska.nu##span:has-text(/casino/i):upward(li)
 ||svenskafans.com/menu-logo/bottom
 ||tvmatchen.nu^*/smartbanner
 ||tvmatchen.nu/plugins/splash-redirector
-tvmatchen.nu##.bet365, .panorama-wrapper, .tvg-manager-box
+tvmatchen.nu##.bet365, .panorama-wrapper, .tvg-manager-box, img[src*="/tvchannels"][alt*="Snabbare"]
 hockeynews.se##[class*="ad-style"], [id^="outsider-"], [id^="banner_"], .ad-mob-container, #mobile-one, #mobile-two, .desktop-horizontal-ad, #article-content img[src*="banner"], #article-content img[src*="prio-hockey"]
 svenskafans.com##.puff__ad-heading
 sporttv.nu##a[onclick*="bannerClick"]
@@ -2139,9 +2140,9 @@ zeromagazine.nu##div[id^="ads"]
 &browser=MozillaFirefox$xhr,removeparam=/^browser/,domain=fotbollskanalen.se|koket.se|tv4.se|tv4play.se
 /aab/tv4play$script,redirect=noop.js,domain=fotbollskanalen.se|koket.se|tv4.se|tv4play.se
 ||stat-api.tv4play.se^
+fotbollskanalen.se##.brand, .desktop-ad-web, a[href*="telia.se/privat/tv/sport"] img, .mobile-ad-web
 fotbollskanalen.se##.notice__tag_sponsored:upward(1)
 fotbollskanalen.se##.brand-info__ad-text:upward(a)
-fotbollskanalen.se##.brand, .desktop-ad-web, a[href*="telia.se/privat/tv/sport"] img
 /load_ads.js$domain=koket.se
 ||raygun.io^$domain=koket.se
 koket.se##[class*="list_item_sponsored"], [class*="promotion_bottom_holder_wrapper"], [class*="beverage-recommendation_wrapper"], [class*="list_item_wide_sponsored"], [class^="ad_position"]
@@ -2771,7 +2772,7 @@ kamrat.com##+js(set, trap, noopFunc)
 testfakta.se##.row-uppdragstest
 foodora.se##.top-banner-container
 knulla.se###cookie-popup
-mmabetz.se##.desktop-homepage-ad, .desktop-main-ad, .latest-betting-campaigns, .best-casino-section, .top-casino
+mmabetz.se##.desktop-homepage-ad, .desktop-main-ad, .latest-betting-campaigns, .best-casino-section, .top-casino, .mobile-homepage-ad, .mobile-main-ad
 skk.se###cookie-button-banner
 skk.se##.campaigns, [id*="GlobalCampaigns"]
 jusek.se##.l-advertisement, .m-adform, .m-splash
@@ -2797,7 +2798,7 @@ framtid.se###siteflash, #customer-link-container
 familjesidan.se##.cookies-wrapper
 sff.nu###sidebar > li:not(.widget_wp_sidebarlogin), li.widget_sp_image
 shortcut.se##.baner-desktop, .baner-mobile, .banner-wrap
-shortcut.se##.category-tag:has-text(/annons/i):upward(.ArticleListItem)
+shortcut.se##.category-tag:has-text(/annons/i):upward(.ArticleListItem, a)
 shortcut.se##.ArticleListItem:not(:has(.category-tag))
 arkitektur.se##[class*="panorama"]
 siteseeker$script,domain=foretagarna.se
@@ -2851,6 +2852,7 @@ varldenshaftigaste.se##[id*="annons"], #getFixed
 arkitekt.se##.Cookie
 bravenewbusiness.se##.site-information-container, .newsletter-popup-container
 desktop-banner$image,domain=bokadirekt.se
+Mobile-banner$image,domain=bokadirekt.se
 bokadirekt.se##a:not([href*="bokadirekt.se"]):not([href^="/"]) img
 /inlist-InlistSponsored$domain=pricerunner.se
 pricerunner.se##a[href*="&clickarea=sponsored"]
