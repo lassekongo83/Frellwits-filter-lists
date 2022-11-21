@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2022-11-19 19:02:12 CET
+! Last modified: 2022-11-21 08:20:53 CET
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -64,8 +64,8 @@
 ###cookiejar
 ###cookielawwarning
 ###cookieMsgBlock
-###cookieNotice
 ###CookieNotice
+###cookieNotice
 ###cookies-acceptance .alert.bottom
 ###cookiesInfo
 ###dialog-eu-cookie-law
@@ -227,6 +227,7 @@
 ##div.ad-after-header
 ##div.ad-after-post
 ##div.ad-component
+##div.ad-container-lg
 ##div.ad-panorama_dynamic-wrapper
 ##div.ad-toppbanner
 ##div.ad.container
@@ -1116,6 +1117,7 @@ allas.se,baaam.se,elle.se,femina.se,frida.se,hant.se,mabra.com,motherhood.se,res
 allatvkanaler.se##.ga
 allehanda.se,arbetarbladet.se,avestatidning.com,bandypuls.se,bblat.se,borlangetidning.se,dalademokraten.se,fagersta-posten.se,falkopingstidning.se,falukuriren.se,gd.se,hd.se,ht.se,jnytt.se,jp.se,ljusdalsposten.se,ljusnan.se,lt.se,ltz.se,moratidning.se,na.se,norrteljetidning.se,nyaludvikatidning.se,nynashamnsposten.se,op.se,salaallehanda.com,skaraborgslanstidning.se,skd.se,skovdenyheter.se,smalandsdagblad.se,smalanningen.se,smt.se,soderhamnskuriren.se,sodran.se,st.nu,sydsvenskan.se,tidningenangermanland.se,tidningenharjedalen.se,tranastidning.se,vastgotabladet.se,vetlandaposten.se,vlt.se,vn.se##[class*="teaser-native"], lcl-ad, .ad-welcome
 allsvenskan.se,chefstidningen.se,fotosidan.se,jaktojagare.se,kollega.se,merinfo.se,realtid.se,tasteline.com##.ads
+allsvenskan.se,fotboll.com,superettan.se##.smartbanner
 allsvenskan.se,superettan.se##.app-cookie-line, .partners-slideshow-widgets, .partners-slideshow-slide, .matches-calendar-sponsor, .sponsors, .footer-sponsors
 alltforforaldrar.se###partnerMenuContainer, #partnerMenuContainerFiller
 alltforforaldrar.se##.spons-artc, a[href^="/native/"]
@@ -1356,8 +1358,7 @@ fragbite.se##.tn, .zooKeeper, #scraper, .subHeadSponsors
 framtid.se###siteflash, #customer-link-container
 freeride.se##img[src*="/sponsor/"] + br + .boxlogo
 freeride.se,gamereactor.se,happyride.se##.sponsor
-freeride.se,happyride.se###alert_cookieconsent
-freeride.se,happyride.se##[class^="anp"], [class^="ans"]
+freeride.se,happyride.se##.anm1-container, [class^="anp"], [class^="ans"], .box.evergreen ~ .boxtext
 fria.nu,friatidningen.se,goteborgsfria.se,stockholmsfria.se##[class*="annonser"], #cboxOverlay, #cboxWrapper
 friidrott.se###sponsor, .frii-ad
 frilagt.se###whitewrap > .wrapper-first:first-child
@@ -1449,9 +1450,9 @@ karriarlakare.se##a[target][onclick]
 kartor.eniro.se##.e-banner
 katerinamagasin.se##.adv-area, #right-areas, a[href*=".casino"], body > div.code-block
 kiacarclub.se##.forumlist-main-inner > div[style]
-kimura.se##.bg, a[href*="unibet.com"], a[href*="/kampanjer."], a[href*="utm_campaign"]
+kimura.se##.bg, a[href*="unibet.com"], a[href*="/kampanjer."], a[href*="utm_campaign"], .addafterpreview, .addafter1preview
 kingsizemag.se##div#video-overlay, div.sidebar_frame
-kittad.se###header-top
+kittad.se###header-top, div[data-hook="consent-banner-root"]
 klart.se###overlay, .gdpr-onboarding-container, a[rel*="sponsored"], .-panorama-ad-wrapper
 knulla.se###cookie-popup
 kokaihop.se##.ads-wrapper-main, .InterstitialModal
@@ -1660,7 +1661,7 @@ sverigespringer.se##.cd-desktop-banner
 svt.se###nyh_cookie-message, #svtmat_cookie,section.nyh_share
 sweclockers.com###prisjakt-popular, .ad:not(.adPanorama), .adForumSticker
 swedroid.se##div[id$="_ad"], div[id$="_ad_mobile"], .externalTopMobile, a[href^="//www.prisjakt.nu/produkt"], #nativendo-mainfeed + aside > .article, .article-footer > h3, .article-footer > .aeChart, .newExternal
-swehockey.se##[class*="-reklam"], .sif-sponsorer, .teaserblock
+swehockey.se##[class*="-reklam"], .sif-sponsorer, .teaserblock, .commonblock a:not([href^="/"], [href*="/swehockey.se"])
 sydnarkenytt.se##.abann_wrapper, #hspalt_s1
 synonymer.se##.create-account-banner, .buy-premium-banner
 sysidan.se##.adscolumn

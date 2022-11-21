@@ -464,6 +464,7 @@ casino-utan-$image
 ##div.ad-after-header
 ##div.ad-after-post
 ##div.ad-component
+##div.ad-container-lg
 ##div.ad-panorama_dynamic-wrapper
 ##div.ad-toppbanner
 ##div.annons-yta
@@ -1275,6 +1276,7 @@ naringslivetvgl.se,dalarnasaffarer.se,stockholmsaffarer.se,jamtlandsaffarer.se##
 karriarlakare.se,hemmanytt.se,teknikhype.se,nongrata.se,livinguppsala.se,natursidan.se,battrestadsdel.se,butikstrender.se,forskning.se,vardfokus.se,varvat.se,smaspararguiden.se,aktuellsakerhet.se,maklarvarlden.se,kvartal.se,sjostadsbladet.se###cookie-law-info-bar
 motorforum.nu,lakemedelsvarlden.se##div.pea_cook_wrapper
 lakemedelsvarlden.se##.pea_cook_more_info_popover
+fotboll.com,allsvenskan.se,superettan.se##.smartbanner
 ! CSS to fix annoyances
 it-finans.se,it-halsa.se,it-kanalen.se,it-pedagogen.se,it-retail.se##.pum-open:style(overflow:auto!important)
 oru.se,tui.se##.no-scroll:style(overflow: initial !important;)
@@ -1926,16 +1928,16 @@ sporttv.nu##a[onclick*="bannerClick"]
 fotbolldirekt.se,hockeysverige.se,innebandymagazinet.se,padeldirekt.se##.site-partnevisment, .h-background--sponsored-light, .row .text-center img, a[href^="https://hubs.la"], .c-partners
 fotbolldirekt.se,hockeysverige.se,innebandymagazinet.se##.c-label--sponsored:upward(.c-announcement)
 fotbolldirekt.se,hockeysverige.se,innebandymagazinet.se##.c-announcement:has-text(/annons/i)
-kittad.se###header-top
+kittad.se###header-top, div[data-hook="consent-banner-root"]
 kittad.se##.kittad-label-sponsored:upward(li)
 padeldirekt.se##.h-background--sponsored:upward(.article-row)
 padeldirekt.se##a[href*="/sponsrat"]:upward(.c-featured-article)
+padeldirekt.se##h5:has-text(ANNONS:):upward(1)
 
 ! Misc
 @@||freeride.nu/js/ads.js
 @@||happyride.se/img/admarket/$~third-party
-happyride.se,freeride.se###alert_cookieconsent
-happyride.se,freeride.se##[class^="anp"], [class^="ans"]
+happyride.se,freeride.se##.anm1-container, [class^="anp"], [class^="ans"], .box.evergreen ~ .boxtext
 happyride.se##.col-sm-4 > .boxtext
 freeride.se##img[src*="/sponsor/"] + br + .boxlogo
 bicycling.se,runnersworld.se##.post-card-sponsored, .modal-plus, .modal-backdrop, .footer-newsletter
@@ -1950,7 +1952,7 @@ fotosidan.se##.subArticlesponsored, div[style="width:300px;float:right;"], div[s
 hippson.se##.sponsorpuff, .presentedby, .presentedby ~ *
 hippson.se##.toolboxheader:has-text(/aktuella samarbeten/i) ~ a.more
 sysidan.se##.adscolumn
-kimura.se##.bg, a[href*="unibet.com"], a[href*="/kampanjer."], a[href*="utm_campaign"]
+kimura.se##.bg, a[href*="unibet.com"], a[href*="/kampanjer."], a[href*="utm_campaign"], .addafterpreview, .addafter1preview
 kimura.se##img[src$="/sponsrad.png"]:upward(article)
 kimura.se###storknapp:has-text(/^till kampanj/i):upward(article)
 mmanytt.se##.front-banner, .front-banner-cover, #text-2, [class*="sponsrat-inlagg"], a[href*="://kampanjer."], .ohmbet_link, a[href*="adsrv.eacdn.com"]
@@ -1973,10 +1975,11 @@ riktighockey.se###custom_html-2
 fotboll.com##.header-static-lg, .fp-partner, .xs-ad, .bo-wrapper, #betsid, .news-banner-mini
 tennisportalen.se##h4:has-text(/spons/i):upward(.td-pb-row [class*="td-pb-span"])
 /sponsorloggor$domain=swehockey.se
-swehockey.se##[class*="-reklam"], .sif-sponsorer, .teaserblock
+swehockey.se##[class*="-reklam"], .sif-sponsorer, .teaserblock, .commonblock a:not([href^="/"], [href*="/swehockey.se"])
 /sharethis.js$domain=allsvenskan.se|superettan.se
 ||allsvenskan.se/allsvenskan-script-min.js
 allsvenskan.se,superettan.se##.app-cookie-line, .partners-slideshow-widgets, .partners-slideshow-slide, .matches-calendar-sponsor, .sponsors, .footer-sponsors
+allsvenskan.se,superettan.se##+js(rc, smartbanner-show)
 @@/admin-ajax.php?action=archive_grid$~third-party,domain=cykla.se
 @@/cykla/assets/js/advertisment.js$~third-party,domain=cykla.se
 ||cykla.se/api/add-page-view
