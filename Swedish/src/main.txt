@@ -2147,7 +2147,7 @@ zeromagazine.nu##div[id^="ads"]
 /aab/tv4play$script,redirect=noop.js,domain=fotbollskanalen.se|koket.se|tv4.se|tv4play.se
 ||stat-api.tv4play.se^
 fotbollskanalen.se##.brand, .desktop-ad-web, a[href*="telia.se/privat/tv/sport"] img, .mobile-ad-web
-fotbollskanalen.se##.notice__tag_sponsored:upward(1)
+fotbollskanalen.se##.notice__tag_sponsored, .notice__tag:has-text(/sponsrat/i):upward(1)
 fotbollskanalen.se##.brand-info__ad-text:upward(a)
 /load_ads.js$domain=koket.se
 ||raygun.io^$domain=koket.se
@@ -2170,9 +2170,8 @@ jaktplay.se##.jaktplay-ad
 lwcdn.com##+js(aeld, /^(?:adBlocker|contextmenu)$/)
 
 ! Jwplayer
-/jwpsrv.js$domain=aftonbladet.se|svd.se|axess.se|freeride.se|happyride.se|embed.futuresportsmedia.com|streamio.com|laget.se|moviezine.se|fasttrack.webstream.dk|cdn.jwplayer.com|wellness.se|allas.se|baaam.se|elle.se|femina.se|hant.se|mabra.com|residencemagazine.se|svenskdam.se|frida.se|motherhood.se|godare.se
-||jwpcdn.com/player/*/bidding.js$domain=allas.se|baaam.se|elle.se|femina.se|hant.se|mabra.com|residencemagazine.se|svenskdam.se|frida.se|motherhood.se
-||jwpcdn.com/player/*/googima.js$domain=allas.se|baaam.se|elle.se|femina.se|hant.se|mabra.com|residencemagazine.se|svenskdam.se|frida.se|motherhood.se
+/jwpsrv.js$domain=aftonbladet.se|svd.se|axess.se|freeride.se|happyride.se|embed.futuresportsmedia.com|streamio.com|laget.se|moviezine.se|fasttrack.webstream.dk|cdn.jwplayer.com|wellness.se|allas.se|baaam.se|elle.se|femina.se|hant.se|mabra.com|residencemagazine.se|svenskdam.se|frida.se|motherhood.se|godare.se|recept.se
+||jwpcdn.com/player/*/bidding.js$domain=allas.se|baaam.se|elle.se|femina.se|hant.se|mabra.com|residencemagazine.se|svenskdam.se|frida.se|motherhood.se|recept.se
 ||jwplayer.com/*/advertising$domain=allas.se|baaam.se|elle.se|femina.se|hant.se|mabra.com|residencemagazine.se|svenskdam.se|frida.se|motherhood.se
 
 ! === Livsstil
@@ -2186,7 +2185,7 @@ halsafitness.se,yogaworld.se,cyclingplus.se##h3:has-text(/samarbete/i):upward(.p
 /affiliategallery$domain=allas.se|baaam.se|elle.se|femina.se|hant.se|mabra.com|residencemagazine.se|svenskdam.se|frida.se|motherhood.se
 /native.html$domain=allas.se|baaam.se|elle.se|femina.se|hant.se|mabra.com|residencemagazine.se|svenskdam.se|frida.se|motherhood.se
 /se-recommendation-microservice$domain=allas.se|baaam.se|elle.se|femina.se|hant.se|mabra.com|residencemagazine.se|svenskdam.se|frida.se|motherhood.se
-allas.se,baaam.se,elle.se,femina.se,hant.se,mabra.com,residencemagazine.se,svenskdam.se,frida.se,motherhood.se##article[data-type="native"], .ag-product-wrapper, .product-carousel__container, .shop_carousel, .editorsPick
+allas.se,baaam.se,elle.se,femina.se,hant.se,mabra.com,residencemagazine.se,svenskdam.se,frida.se,motherhood.se##article[data-type="native"], .ag-product-wrapper, .product-carousel__container, .shop_carousel, .editorsPick, div[class^="strossle-widget-"]
 allas.se,baaam.se,elle.se,femina.se,hant.se,mabra.com,residencemagazine.se,svenskdam.se,frida.se,motherhood.se##[data-type="Sponsored"]:upward(a)
 elle.se##section.c-native_banner:upward(2)
 allas.se,baaam.se,elle.se,femina.se,hant.se,mabra.com,residencemagazine.se,svenskdam.se,frida.se,motherhood.se##+js(aeld, scroll, t.view.updateBounds)
@@ -2194,7 +2193,7 @@ allas.se,baaam.se,elle.se,femina.se,hant.se,mabra.com,residencemagazine.se,svens
 tasteline.com##.popup-overlay
 tasteline.com##.popup:style(overflow: auto !important;)
 tasteline.com##.article.related > a[href*="&utm"][target="_blank"]
-kurera.se##.kurera-register-newsletter-popup, [class*="show-for-"]
+kurera.se##.kurera-register-newsletter-popup, [class*="show-for-"], a[onclick*="Advert"], div[class*="kurera-mobil"], .ads
 javligtgott.se##.jet-popup
 javligtgott.se##div[id^="ad-panorama"]:upward(.elementor-section)
 kokaihop.se##.ads-wrapper-main, .InterstitialModal
@@ -2210,9 +2209,9 @@ mytaste.se##[id^="Modal_plugin"]
 mytaste.se##.recipe-modal[data-state=default] .modal-container.open, .recipe-modal[data-state=panorama] .modal-container.open:style(padding-top: 0 !important;)
 mytaste.se##.site-wrapper[data-state=panorama], .site-wrapper[data-state=default]:style(padding-top: 40px !important;)
 mytaste.se##body.modal-active.modal-open:before, body.modal-active:before:style(opacity: unset !important; content: unset !important;)
-lindasbakskola.se,mykitchenstories.se,jennysmatblogg.nu,zeinaskitchen.se##.panorama-sticky, .sticky-area
+lindasbakskola.se,mykitchenstories.se,jennysmatblogg.nu,zeinaskitchen.se##.panorama-sticky, .sticky-area, #ad-outofpage_dynamic
 landleyskok.se##.inpostbanner, .banner-leaderboard
-minsolresa.se##aside#text-5
+minsolresa.se##aside#text-5, aside#text-13
 ||external.reseguiden.se/offer
 ||reseguiden.se^*/google-tag
 reseguiden.se##.adsbox-wrapper, .banner-xxl_panorama-container, .banner-top-container
@@ -2258,7 +2257,8 @@ firstclassmagazine.se##.feat-cat:has-text(/annons/i):upward(a)
 turismnytt.se##.site-wrap > .row > .col-sm-3
 bilresaieuropa.se##.widget-title:has-text(/spons/i):upward(.widget_text)
 livetsgoda.se##.penci-rlt-popup
-barnsemester.se##.puffLine, .d-flex > div[style*="min-height"]
+livetsgoda.se##body:style(opacity:unset!important)
+barnsemester.se##.puffLine, .d-flex > div[style*="min-height"], div[style="overflow-x: hidden;background-color:rgb(250,250,250);width:320px;min-height:200px;"], div[style="overflow-x: hidden;background-color:rgb(250,250,250);width:320px;min-height:320px;"]
 babyhjalp.se##.elementor-widget[data-settings*="sticky_"]
 lovelylife.se##.elementor-image a[href]:not([href*="lovelylife.se"]) img
 husvagn.se,husbil.se##.ui-top-adversite
@@ -2269,7 +2269,6 @@ travelnews.se##.bottom-bar--animate-in, #job_ads_scroller, .header_banner, .news
 /cookies-policy-notification-bar$domain=bakasockerfritt.se
 /bigdatapushworker.js$domain=eurocampings.se
 vegomagasinet.se##[class*="ai-viewport"], .full_screen_ad
-matinspo.se##[id^="matin-"]
 /detroitchicago/denver.js$domain=wernamaten.se
 /detroitchicago/cmbdv2.js$domain=wernamaten.se
 wernamaten.se###ez-cookie-dialog-wrapper
@@ -2286,6 +2285,7 @@ nillaskitchen.com##.blossom-newsletter-popup-active
 improveme.se##.banner-center, .banner-center ~ br, div[class^="ad-container"]
 improveme.se##.wp-pagenavi:style(position:unset!important;z-index:unset!important)
 lchfarkivet.se###timedModal, .modal-backdrop
+matinspo.se##[id^="matin-"]
 matinspo.se##+js(rc, with-ads)
 veckorevyn.com##.annons-block
 veckorevyn.com##.category-annonssamarbete:upward(.g1-mosaic-item)
