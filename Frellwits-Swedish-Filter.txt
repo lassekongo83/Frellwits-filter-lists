@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2022-12-02 08:36:59 CET
+! Last modified: 2022-12-03 10:03:40 CET
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -670,6 +670,7 @@
 /logger/logger?
 /logotyper/sponsorer-partners
 /LogRocket.min.js$third-party,domain=~dsc.gg
+/log|$domain=booli.se
 /losad/loada.$script
 /manageBanners$domain=gamereactor.se
 /maps.sponsored-pill.$script,domain=tripadvisor.se
@@ -987,7 +988,7 @@
 /utag$script,domain=gaffa.se
 /utag/aller-media
 /vast.js$domain=moviezine.se
-/vestigo/*/measure$domain=momondo.se
+/vestigo$domain=momondo.se
 /vgc/cdn/js/libs/ast/*$script,domain=aftonbladet.se
 /videojs-preroll$domain=himlentv7.se
 /videojs.ads.$domain=gamereactor.se
@@ -1051,6 +1052,8 @@
 180.se##[class*="top-ad-"]
 2000tv.se###bannerbox
 56kilo.se##.featured-area
+7an.se##.field--name-field-ad-banner-image
+7an.se,skrattnet.se##.region-sidebar-second
 8sidor.se##.cookie-accept
 99.teknikveckan.se##.page-gutter.left, .page-gutter.right, [id^="bbPrisjakt"]
 ://sifomedia.
@@ -1197,7 +1200,6 @@ borattforum.se,nyan.ax,typkanske.se##.gdpr
 borskollen.se##[id^="borskollen_small"], [id^="borskollen_large"], .featured-link, .app-store-box
 borssnack.di.se##.bn_advertisement__panorama, .bn_advertisement__container
 borsvarlden.com##.sponsored-articles-container,.nav-sep-blink,.annons-label,.index-side-banner-wrapper
-bosidan.ax##.op-area
 bovision.se##.banner-image
 brafiler.se###header-banner
 branschkoll.se##div[id^="brans-"], .widget-sponsored-post
@@ -1290,7 +1292,7 @@ electronic.se##.content aside.column-narrow:last-of-type
 elektronikforumet.com##td > a[target="_blank"] img
 elektronikforumet.com,existenz.se,funfunfun.se##a[href*="bannerid"]
 emocore.se###main > #home_start_div ~ .m_t.box:nth-last-child(-n+2)
-emocore.se###sticky-panorama
+emocore.se###sticky-panorama, #mob-wrap
 energi.se##.advertisement--item
 energismartahem.se##.sidebar-widget > .textwidget
 engelholm.se###cookie-consent-wrapper
@@ -1397,6 +1399,7 @@ hamnen.se##[class*="annons"]:not(body), .tag-sponsrad, .pp-modal-wrap
 hamsterpaj.net###accept-cookies
 hamsterpaj.net###sidebar_wrapper > .zone:last-child
 handbollskanalen.se##.hb-adlabel, [id^="hb-"]
+handel.ax###topadmob
 happypancake.se###__next > div > div.bar:first-child
 happyride.se##.col-sm-4 > .boxtext
 hastlycka.se##.c-placement-top.owl-carousel, .takeover-container
@@ -1485,7 +1488,7 @@ lawline.se##[class^="CookiesModal"]
 lchfarkivet.se###timedModal, .modal-backdrop
 lesscarbs.se##.elementor-image > a:not([href*="https://lesscarbs.se"]), a[href*="/affiliates/"]
 lesscarbs.se#@#.category-annonssamarbete:not(body):not(html)
-leta.se###bookingcom-resor-wrapper, #aktuellaerbjudanden, #sky-left-wide, .topNavItem[href*="casino"], .topNavItem[href*="betting"]
+leta.se###bookingcom-resor-wrapper, #aktuellaerbjudanden, #sky-left-wide, .topNavItem[href*="casino"], .topNavItem[href*="betting"], #mobile-banner-top, #mobile-banner-after-content, #mobile-banner-bottom, #bottom-splinks
 letarecept.se###cookie_wrapper
 lindasbakskola.se,privataaffarer.se,realtid.se,skk.se##a[href*="/bit.ly/"]
 linguee.se##div[class*="ad_container"], div[class*="_ads_"]
@@ -1624,9 +1627,8 @@ skidspar.se###videoad
 skillingaryd.nu,xn--vrnamo-bua.nu###more-banners
 skk.se###cookie-button-banner
 skk.se##.campaigns, [id*="GlobalCampaigns"]
-skogsforum.se##.masthead, .col-right, a[href^="https://goo.gl/"], a[href*="//bit.ly/"]
+skogsforum.se##.masthead, .col-right, a[href^="https://goo.gl/"], a[href*="//bit.ly/"], a[target="_blank"][onclick], #ap1
 skolfamiljen.se##.right-sidebar aside[id^="block"], .right-sidebar aside[id^="adguru"]
-skrattnet.se,webben7.se##.region-sidebar-second
 skyltat.se##.sidebar
 skyscanner.se###cookie-banner-root
 smartsenior.se##.ss-modal, .modal-mobile-app
@@ -1887,7 +1889,7 @@ zeromagazine.nu##div[id^="ads"]
 ||conviva.com^$third-party
 ||cookie-disclaimer.onewp.net^$third-party
 ||cookie-script.com^$third-party
-||cookiebot.com^$domain=accentmagasin.se|allsvenskan.se|alltomarbetsmiljo.se|bax-shop.se|circlek.se|energi.se|findroommate.se|fokus.se|goteborgdirekt.se|kingsizemag.se|konsumentmagasinet.se|kreditrapporten.se|kurera.se|mitti.se|ng.se|polistidningen.se|sakochliv.se|sis.se|smartsenior.se|spraktidningen.se|superettan.se|sverigesnatur.org|swedroid.se|tco.se|totallyorebro.se|totallystockholm.se|trafiken.nu|upplysning.se|vaningen.se|varden.se|vasterastidning.se|vastsverige.com|wesafe.se
+||cookiebot.com^$domain=accentmagasin.se|allsvenskan.se|alltomarbetsmiljo.se|bax-shop.se|circlek.se|energi.se|enirobuddy.se|findroommate.se|fokus.se|goteborgdirekt.se|kingsizemag.se|konsumentmagasinet.se|kreditrapporten.se|kurera.se|mitti.se|ng.se|polistidningen.se|sakochliv.se|sis.se|smartsenior.se|spraktidningen.se|superettan.se|sverigesnatur.org|swedroid.se|tco.se|totallyorebro.se|totallystockholm.se|trafiken.nu|upplysning.se|vaningen.se|varden.se|vasterastidning.se|vastsverige.com|wesafe.se
 ||cookieconsent.popupsmart.com^$third-party
 ||cookieinformation.com^$domain=folkofolk.se|gds.se|minbostad.se|viivilla.se
 ||cookieinfoscript.com^$third-party
@@ -2144,6 +2146,7 @@ zeromagazine.nu##div[id^="ads"]
 ||misssite.com/*/published-site-analytics.js
 ||mogenromantik.com^
 ||momondo.se/gtm/
+||momondo.se/mgtm/
 ||momondo.se/ugtm/
 ||monkey.tunnl.com/identify$subdocument
 ||mraffiliate.com^$third-party
@@ -2289,6 +2292,7 @@ zeromagazine.nu##div[id^="ads"]
 ||skattamindre.se^
 ||skidspar.se/scripts/html5videovastplugin.js
 ||skidspar.se/scripts/revive.js
+||skogsforum.se/jq33/
 ||skogsforum.se/sda/
 ||skogsforum.se^$csp=worker-src 'none'
 ||sleeknote.com^$third-party
