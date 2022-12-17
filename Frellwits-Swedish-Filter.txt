@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2022-12-15 08:21:52 CET
+! Last modified: 2022-12-17 14:24:15 CET
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -64,8 +64,8 @@
 ###cookiejar
 ###cookielawwarning
 ###cookieMsgBlock
-###cookieNotice
 ###CookieNotice
+###cookieNotice
 ###cookies-acceptance .alert.bottom
 ###cookiesInfo
 ###dialog-eu-cookie-law
@@ -865,6 +865,7 @@
 /plugins/wordpress-popup$domain=buzzter.se|lesscarbs.se|maklarvarlden.se
 /plugins/wordpress-stats-manager-pro
 /plugins/wp-adsense
+/plugins/wp-analytify
 /plugins/wp-auto-affiliate
 /plugins/wp-banner-manager
 /plugins/wp-click-info
@@ -1624,7 +1625,7 @@ siriusbandy.se,vetlandabk.se##[id$="-ad"]
 siteseeker$script,domain=foretagarna.se
 sjostadsbladet.se##a.td_single_image_bg
 skandia.se##div[data-block="CookieBannerBlock"]
-skanesport.se###black-studio-tinymce-3
+skanesport.se###black-studio-tinymce-3, .menu-item a[target="_blank"]
 skargarden.se###topbanner, #mittbanner, #topbannerm, #mittbannerm
 skidspar.se###videoad
 skillingaryd.nu,xn--vrnamo-bua.nu###more-banners
@@ -1720,7 +1721,7 @@ veterinarmagazinet.se##.nyhet-ad
 vi.se##.cookieNotification
 vibilagare.se##a[href^="/partnermaterial/"]
 viivilla.se##.body-overlay, .article-native-scroll
-villalivet.se##.mtsnb, .villalivet-target, a[href*="/sponsrat-innehall/"], div[data-td-block-uid="tdi_85"]
+villalivet.se##.mtsnb, .villalivet-target, a[href*="/sponsrat-innehall/"], div[data-td-block-uid="tdi_85"], a[href*="utm_campaign"][target="_blank"]
 vimedbarn.se##.annonsinlagg, .annonsen
 vinbanken.se##.push-to-newsletter, .fancybox-overlay
 vinbanken.se##.top-add, .sidebar-adds, .spons-content
@@ -2100,6 +2101,7 @@ zeromagazine.nu##div[id^="ads"]
 ||lifestyle.expressen.se^$subdocument
 ||likebtn.com^$third-party
 ||linksalpha.com^$third-party
+||live-tag.creatopy.net^$third-party
 ||liveagent.se/scripts/track
 ||ljuskompaniet.se^
 ||lokalguiden.se/magasinet/banner
