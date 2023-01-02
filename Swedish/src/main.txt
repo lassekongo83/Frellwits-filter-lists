@@ -1303,7 +1303,6 @@ youplay.se,expressen.se,nsk.se,skd.se,barometern.se,blt.se,bt.se,kristianstadsbl
 youplay.se##+js(aeld, loadstart)
 streamio.com,nyan.ax,spelhubben.se,fotosidan.se,illvet.se,varldenshistoria.se##+js(aeld, contextmenu)
 spelhubben.se,husbilsplats.se##+js(acs, document.oncontextmenu)
-svenskjakt.se,globalportalen.org##+js(ra, autoplay)
 goteborgdirekt.se,mitti.se,vasterastidning.se,barometern.se,blt.se,bt.se,kristianstadsbladet.se,olandsbladet.se,smp.se,sydostran.se,trelleborgsallehanda.se,ut.se,ystadsallehanda.se,borasdly.se,kalmarposten.se,meraosterlen.se,vxonews.se,vaxjobladet.se,nsk.se,klt.nu,lokalti.se,viivilla.se,cafe.se,praktisktbatagande.se,arvikamagasinet.se##+js(aeld, scroll, helpers.scroll(id))
 
 ! Useless preloaders
@@ -1348,7 +1347,7 @@ studocu.com##.new-viewer-wrapper .p2hv:style(pointer-events: auto !important;)
 studocu.com###page-container:style(user-select: auto !important;)
 studocu.com##div[role="presentation"] + div:has-text(/förhandsvisning/i)
 studocu.com##div[data-page-no][style*="filter"]:style(filter: none !important; user-select: auto !important;)
-bioenergitidningen.se##+js(rc, closed)
+bioenergitidningen.se##article:remove-class(closed)
 fokus.se,fof.se,elinstallatoren.se,spraktidningen.se##.mediaconnect-protected-content, .mediaconnect-protected-content--show:style(max-height: unset !important; overflow: unset !important;)
 fokus.se,fof.se,elinstallatoren.se,spraktidningen.se##.mediaconnect-protected-content:after:style(background: unset !important;)
 
@@ -1364,6 +1363,7 @@ hd.se,sydsvenskan.se,allehanda.se,tidningenangermanland.se,arbetarbladet.se,aves
 ||spel.expressen.se^
 ||prylguiden.expressen.se^
 ||widgets.bonniernewslifestyle.se^$subdocument
+||tapet.bonniernews.se^
 /bundles/parsely$domain=expressen.se
 /bundles/exp-analytics$domain=expressen.se
 /bundles/ga-$script,domain=expressen.se
@@ -1392,10 +1392,11 @@ expressen.se##.tapet-popup-js-no-scroll:style(overflow-y:initial!important)
 ! scriptlets
 www.expressen.se##+js(acs, Bau, preloadAds)
 www.expressen.se##+js(set, detect, noopFunc)
-www.expressen.se##+js(ra, data-start-in-view)
+www.expressen.se##.video-player:remove-attr(data-ad-config)
+www.expressen.se##+js(aeld, contextmenu, .disabled)
 ! Fixar oklickbara kategorier i sektionen allt om mat p.g.a att exp-analytics är blockerat
-www.expressen.se##+js(ra, data-t-label)
-www.expressen.se##+js(ra, data-t-type)
+www.expressen.se##a:remove-attr(data-t-label)
+www.expressen.se##a:remove-attr(data-t-type)
 www.expressen.se##+js(aeld, click, e.preventDefault)
 ! DN
 /check-paywall$domain=dn.se
@@ -1407,7 +1408,7 @@ dn.se##.article--native, .teaser-card--native
 dn.se##.campaign-holder
 dn.se##body:style(position:unset!important;overflow-y:scroll!important;)
 dn.se##+js(acs, DN, initAds)
-dn.se##+js(ra, data-auto-play)
+dn.se,di.se##video:remove-attr(data-auto-play)
 ! DI
 /di/analytics/*$domain=di.se
 di.se##.di_panorama-wrapper, .site-header__panorama, .di_panorama__isAdLabel, .discount-box, .campaign-ad-box, .di_start__teaser-placeholder, .di_teaser-flak-planbokskoll, .di_teaser-flak-container--native, .native-box, .bandit-box__teaser--native, a[href*="/brandstudio"], .service-box, .brand-studio-box, .native-article
@@ -1416,7 +1417,6 @@ di.se##+js(set, getAdblockerStatus, noopFunc)
 di.se##+js(acs, Di, initAds)
 di.se##+js(nosiif, runAdBlockPaywall)
 di.se##+js(nostif, #triggerModal)
-di.se##+js(ra, data-auto-play,,stay)
 borssnack.di.se##.bn_advertisement__panorama, .bn_advertisement__container
 ! Övrigt
 privataaffarer.se##a.teaser[href*="/annonssamarbete/"], a.teaser[href*="/promotion/"], .category-promotion
@@ -1491,7 +1491,7 @@ omni.se,omniekonomi.se##+js(aeld, omniPulseLoaded)
 ! Klart
 klart.se###overlay, .gdpr-onboarding-container, a[rel*="sponsored"], .-panorama-ad-wrapper
 klart.se##.ad-text:has-text(/annons/i):upward(.content-box-list__item)
-klart.se##+js(rc, mega-loading, body)
+klart.se##body:remove-class(mega-loading)
 ! Bytbil
 ||bytbil.com/bundles/js/tracking
 bytbil.com###privacyModal
@@ -1501,8 +1501,7 @@ bytbil.com##html,body:style(overflow: auto !important;)
 /messagingNoTcfApi.js$domain=tv.nu|klart.se
 tv.nu##a[href*="adform.net"], .ad-fullscreenWallpaper__container
 tv.nu###tv-schedule section:has-text(ANNONS)
-tv.nu##+js(rc, layout--locked)
-tv.nu##+js(rc, takeover-loading, body)
+tv.nu##body:remove-class(takeover-loading)
 ! Blocket
 @@/ad-block-detection-script$domain=blocket.se
 ||jobb.blocket.se/blocket_puff.html
@@ -1841,9 +1840,9 @@ idg.se,forum.macworld.se##.idgcp__layer--active, .idgcp__layer--active body:styl
 ||gamereactor.se/exclusive.json
 gamereactor.se###cookielawwarning
 gamereactor.se###eventad, [id^="sky"], [id^="ad_lead"], a[rel="sponsored"], .external_div_bigVideoAd, #mpu, #leftToLogo, .itsanad, div[class^="ad_Bumper"], div[style="min-height: 600px; margin-bottom: 20px;"], div[id^="ad_"], div[class^="preAd_"], div[class^="ad_smartphbig"], .adMobileBig, div[class^="preMobileBig"], .external_div_videoAd
+gamereactor.se##video:remove-attr(data-autoplay)
 gamereactor.se###grtvbelt_Sponsored:upward(1)
 gamereactor.se##.ad_interscroller:upward(.wrapper)
-gamereactor.se##+js(ra, data-autoplay, video, stay)
 gamereactor.se##+js(set, detectAdblockUserTEMP, noopFunc)
 
 ! Misc
@@ -1977,7 +1976,7 @@ mmanytt.se##.front-banner, .front-banner-cover, #text-2, [class*="sponsrat-inlag
 mmanytt.se##a[href$="/annons/"]:upward(.img-featured-posts-image)
 ||hockeymagasinet.com/footer/ad
 hockeymagasinet.com##gdpr-alert
-hockeymagasinet.com##+js(rc, modal-open)
+hockeymagasinet.com##body:remove-class(modal-open)
 skanesport.se###black-studio-tinymce-3, .menu-item a[target="_blank"]
 /js/external.php$domain=hockeysnack.com
 ||hockeysnack.com/pagespeed_static/1.$image
@@ -1997,7 +1996,7 @@ swehockey.se##[class*="-reklam"], .sif-sponsorer, .teaserblock, .commonblock a:n
 /sharethis.js$domain=allsvenskan.se|superettan.se
 ||allsvenskan.se/allsvenskan-script-min.js
 allsvenskan.se,superettan.se##.app-cookie-line, .partners-slideshow-widgets, .partners-slideshow-slide, .matches-calendar-sponsor, .sponsors, .footer-sponsors
-allsvenskan.se,superettan.se##+js(rc, smartbanner-show)
+allsvenskan.se,superettan.se##html:remove-class(smartbanner-show)
 @@/admin-ajax.php?action=archive_grid$~third-party,domain=cykla.se
 @@/cykla/assets/js/advertisment.js$~third-party,domain=cykla.se
 ||cykla.se/api/add-page-view
@@ -2022,11 +2021,10 @@ siriusbandy.se,vetlandabk.se##[id$="-ad"]
 hallbyhandboll.se,skiljebosk.nu##.cookiePush, .stickyFollow, .sponsorGroup__item
 tidningenridsport.se##.subscribe_now_popup, .type-native, #captive
 tidningenridsport.se##.entry-content:style(display: initial !important;)
-tidningenridsport.se##+js(rc, cli-barmodal-open)
+tidningenridsport.se##body:remove-class(cli-barmodal-open)
 fiskejournalen.se,jaktjournalen.se##.fisher-takeover-container
 fiskejournalen.se###dt-kiosk-position
 fiskejournalen.se##.fisher-pinned-post-title.sponsored:upward(1)
-fiskejournalen.se##+js(rc, no-scroll)
 jaktjournalen.se##.activate-notifications-container.shown
 jaktjournalen.se##.sponsored:upward(.fisherd_article)
 /templates/ad_$domain=jaktojagare.se
@@ -2041,7 +2039,7 @@ hockeybladet.nu##.td_mod_wrap a img[data-permalink], a[data-wpel-link="external"
 futsalmagasinet.se##.wp-block-column > h2:has-text(/annonser/i) ~ p
 futsalmagasinet.se##span:has-text(/annonserat innehåll/i):upward(.td_block_wrap)
 futsalmagasinet.se##div.modal-cacsp-backdrop, div.modal-cacsp-position
-futsalmagasinet.se##+js(rc, modal-cacsp-open,,stay)
+futsalmagasinet.se##.modal-cacsp-open:style(position:unset!important)
 sportbilen.se###text-4
 sverigespringer.se##.cd-desktop-banner
 sverigespringer.se##.cd-card-bar:has-text(/annons/i):upward(.cd-sidebar-item, .cd-news-card)
@@ -2102,7 +2100,7 @@ allatvkanaler.se##.ga
 ||dagenstv.com/includes/js/s_code.js
 dagenstv.com###bt
 ||instawidget.net^$domain=themoviefreak.se
-themoviefreak.se##+js(ra, oncontextmenu)
+themoviefreak.se##body:remove-attr(oncontextmenu)
 themoviefreak.se##+js(acs, animate)
 ||consent.podplay.com^
 rocknytt.net##[data-widget_type*="bnnrwidgets"], a[href*="/annons/"]
@@ -2301,7 +2299,7 @@ improveme.se##.banner-center, .banner-center ~ br, div[class^="ad-container"]
 improveme.se##.wp-pagenavi:style(position:unset!important;z-index:unset!important)
 lchfarkivet.se###timedModal, .modal-backdrop
 matinspo.se##[id^="matin-"]
-matinspo.se##+js(rc, with-ads)
+matinspo.se##div:remove-class(with-ads)
 veckorevyn.com##.annons-block
 veckorevyn.com##.category-annonssamarbete:upward(.g1-mosaic-item)
 matkanalen.se###sidebar .widget_text
@@ -2358,7 +2356,7 @@ mestmotor.se##.panel-native, a[href*="/artiklar/partner/"]
 mestmotor.se##.text-center, div[style^="text-align"]:has-text(ANNONS)
 mestmotor.se##kris-kross:upward(.text-center)
 mestmotor.se###piano:style(opacity: 1 !important;)
-mestmotor.se##+js(ra, onclick, [onclick^="ANAL"])
+mestmotor.se##a[onclick^="ANAL"]:remove-attr(onclick)
 vagabond.se##.latest-article-native
 svenskgolf.se,husohem.se,tidningenhalsa.se,vagabond.se,praktisktbatagande.se,akaskidor.se,utemagasinet.se,sportfack.se,hemtrevligt.se##.partnerCard, .partnerContent, .entry-content figure.wp-block-image, .category-partner
 svenskgolf.se##.partnerLabel:upward(.highlight)
@@ -2704,8 +2702,9 @@ temadagar.se##^script:has-text(__ez)
 !#endif
 
 ! === Various unsorted websites
-www.google.se##+js(ra, onmousedown|ping, a[href][onmousedown]\, a[href][ping])
-www.google.se##+js(ra, data-jsarwt)
+www.google.se##a[href][onmousedown]:remove-attr(ping)
+www.google.se##a[href][onmousedown]:remove-attr(onmousedown)
+www.google.se##a:remove-attr(data-jsarwt)
 google.se##mobile-promo
 /TopBanner$subdocument,domain=hitta.se
 ||api.hitta.se/creepy
@@ -3080,8 +3079,6 @@ alltomnorrtalje.se##.elementor-heading-title:has-text(/annons/i):upward(section.
 narkive.se##div[onimpression]
 skolfamiljen.se##.right-sidebar aside[id^="block"], .right-sidebar aside[id^="adguru"]
 omtanke.today##.featured
-ingenjorsjobb.se,fen.se##.advert-take-over
-ingenjorsjobb.se,fen.se##+js(rc, advert-take-over-active)
 welma.se##.gpt-slot, .newsletter
 welma.se##.label--black:has-text(/sponsrat/i):upward(article)
 ||vovve.net/i/sponsorer
