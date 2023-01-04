@@ -1224,7 +1224,7 @@ hrnytt.se,worldinproperty.se##.banner-box
 
 ! -- Specific tracking, analytics, etc
 utm_$document,removeparam=/^utm_/,domain=tv.nu|booli.se|expressen.se|aftonbladet.se|bostad.blocket.se
-/vast.js$domain=moviezine.se|aftonbladet.se
+/vast.js$domain=moviezine.se|aftonbladet.se|wellness.se|godare.se|svd.se
 /glimr$script,domain=aftonbladet.se|blocket.se|wellness.se|godare.se
 /profile$ping,domain=feber.se|hamnen.se|tasteline.com|tjock.se|veckorevyn.com|marcusoscarsson.se|handbollskanalen.se|surfa.se|nordichardware.se|hockeynews.se
 /usabilla$script,domain=morningstar.se|telia.se
@@ -1264,6 +1264,7 @@ newsvoice.se##+js(acs, exactmetrics_scroll_tracking_load)
 ||privacypolicies.com^$domain=fl-net.se
 ||cookieyes.com^$domain=magasink.se
 ||cdn-cookieyes.com^$domain=magasink.se|lokalti.se
+||gravito.net^$domain=hitta.se
 
 ! -- Specific annoying elements
 adecco.se,ica.se,apotekhjartat.se,tele2.se###onetrust-consent-sdk
@@ -1447,7 +1448,7 @@ illvet.se,pctidningen.se,viivilla.se,popularhistoria.se,digitalfotoforalla.se,mi
 ##div.sch-datacontroller--subheader
 ##div.sch-datacontroller--footer
 ##div.schibsted-info-sticky
--tracking.js$domain=aftonbladet.se|godare.se
+-tracking.js$domain=aftonbladet.se|godare.se|wellness.se
 ||metric-mobil.aftonbladet.se^$image
 ||youbora.com^*/sp.min.js$important,domain=aftonbladet.se|svd.se|wellness.se|godare.se
 ! Aftonbladet
@@ -1751,6 +1752,7 @@ fof.se##.mediaconnect-protected-content .Carousel:style(opacity:unset!important;
 ||media.dagensps.se/*banner$image
 dagensps.se##a[href*="/ps-partner/"], .ad-links-module, .dagensps_ad, a[href*="ut.dagensps.se"][target], .bottom_banner, .leftsidebanner
 dagensps.se##.dagensps_ad:upward(.container)
+dagensps.se##a[href*="/ps-partner"]:upward(section.cat-post-widget)
 hejaolika.se##[class*="partnerinfostyle"], div[id^="hejao-"], .kb-advanced-image-link[target], .category-partnerinformation, .kt-modal-linkalign-center
 hejaolika.se##+js(acs, advads_passive_placements)
 bulletin.nu##[class^="newsletter-subscribe"], div[class^="cookie-message"], div[role="presentation"]
@@ -2702,7 +2704,7 @@ temadagar.se##^script:has-text(__ez)
 !#endif
 
 ! === Various unsorted websites
-www.google.se##a[href][onmousedown]:remove-attr(ping)
+www.google.se##a[href][ping]:remove-attr(ping)
 www.google.se##a[href][onmousedown]:remove-attr(onmousedown)
 www.google.se##a:remove-attr(data-jsarwt)
 google.se##mobile-promo
@@ -2711,9 +2713,7 @@ google.se##mobile-promo
 ||api.hitta.se/offer
 ||api.hitta.se/partnerintegration
 ||api.hitta.se/statistics
-hitta.se##a[data-trackimp][target], .hitta-map .integration-txt, .section-details--alb
-hitta.se###__next > div[class^="style_notification"]
-hitta.se##[class*="dummyAd"], [class*="StyledAdSlot"], [data-bind*="Ad"], div[class^="GraphicAd_"], [class*="adContainer"], [id*="_panorama"], [id*="_skyscraper"], div[style="min-height: 250px;"], div[data-track="displayplacering-customer"], a[data-test="boostAdLink"]
+hitta.se##a[data-trackimp][target], .hitta-map .integration-txt, .section-details--alb, [class*="dummyAd"], [class*="StyledAdSlot"], [data-bind*="Ad"], div[class^="GraphicAd_"], [class*="adContainer"], [id*="_panorama"], [id*="_skyscraper"], div[style="min-height: 250px;"], div[data-track="displayplacering-customer"], a[data-test="boostAdLink"], div[class^="style_bannerContainer"]
 hitta.se##[class^="styleManual_mainContentBox"] > div[style^="min-height"]:first-of-type
 hitta.se##div[id^="hitta_mobile_"].placeholder:upward(div[class^="height"], div[class^="style_breakout"])
 /entag.$script,domain=eniro.se|leta.se

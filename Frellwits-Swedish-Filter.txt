@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2023-01-02 06:53:53 CET
+! Last modified: 2023-01-04 08:15:58 CET
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -329,7 +329,7 @@
 ##td#reklam
 ##ul.adsmodern
 -popup-analytics
--tracking.js$domain=aftonbladet.se|godare.se
+-tracking.js$domain=aftonbladet.se|godare.se|wellness.se
 .ads-gdprlock
 .ax/ad/
 .ax/images/banners/
@@ -994,7 +994,7 @@
 /users/2401/*$image,domain=ng.se
 /utag$script,domain=gaffa.se
 /utag/aller-media
-/vast.js$domain=aftonbladet.se|moviezine.se
+/vast.js$domain=aftonbladet.se|godare.se|moviezine.se|svd.se|wellness.se
 /vestigo$domain=momondo.se
 /vgc/cdn/js/libs/ast/*$script,domain=aftonbladet.se
 /videojs-preroll$domain=himlentv7.se
@@ -1424,10 +1424,8 @@ hemtrevligt.se##div[id^="hj-"], div[id^="ik-"]
 hemtrevligt.se,mestmotor.se##.row--native
 hippson.se##.sponsorpuff, .presentedby, .presentedby ~ *
 historier.net###right_rail.trackable
-hitta.se###__next > div[class^="style_notification"]
-hitta.se##[class*="dummyAd"], [class*="StyledAdSlot"], [data-bind*="Ad"], div[class^="GraphicAd_"], [class*="adContainer"], [id*="_panorama"], [id*="_skyscraper"], div[style="min-height: 250px;"], div[data-track="displayplacering-customer"], a[data-test="boostAdLink"]
 hitta.se##[class^="styleManual_mainContentBox"] > div[style^="min-height"]:first-of-type
-hitta.se##a[data-trackimp][target], .hitta-map .integration-txt, .section-details--alb
+hitta.se##a[data-trackimp][target], .hitta-map .integration-txt, .section-details--alb, [class*="dummyAd"], [class*="StyledAdSlot"], [data-bind*="Ad"], div[class^="GraphicAd_"], [class*="adContainer"], [id*="_panorama"], [id*="_skyscraper"], div[style="min-height: 250px;"], div[data-track="displayplacering-customer"], a[data-test="boostAdLink"], div[class^="style_bannerContainer"]
 hockeybladet.nu##.td_mod_wrap a img[data-permalink], a[data-wpel-link="external"][onclick], a.td-lazy-img[target], a[href*="casino"]
 hockeyettan.se##.club-ad-item, .banner-row
 hockeyguiden.com##.main-loader.loader-bg
@@ -2016,6 +2014,7 @@ zeromagazine.nu##div[id^="ads"]
 ||getsitecontrol.com^$third-party
 ||gnuheter.com/creeper/image
 ||gopeach.se^$third-party
+||gravito.net^$domain=hitta.se
 ||greatstoryvideo.se^$third-party
 ||grillbloggen.nu/media/com_rstbox/
 ||gstatic.com/partners/badge$subdocument
