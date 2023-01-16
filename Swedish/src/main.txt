@@ -1469,7 +1469,7 @@ illvet.se,pctidningen.se,viivilla.se,popularhistoria.se,digitalfotoforalla.se,mi
 /player-plugin-sponsor$domain=tv.aftonbladet.se
 /vgc/cdn/js/libs/ast/*$script,domain=aftonbladet.se
 ! Cosmetic ad filters
-aftonbladet.se###megaAd-placeholder, #superright-side, a[href^="/brandstudio"], a[href*="/casinoguide"], [id^="adPlacement"], a[href^="https://kampanj.aftonbladet"], a[href*="/rabattkod"][data-test-tag="internal-link"], a[href^="/sportbladet/speltips/"]
+aftonbladet.se###megaAd-placeholder, #superright-side, a[href^="/brandstudio"], a[href*="/casinoguide"], [id^="adPlacement"], a[href^="https://kampanj.aftonbladet"], a[href*="/rabattkod"][data-test-tag="internal-link"], a[href^="/sportbladet/speltips/"], a[href*="aftonbladet.se/kampanj/"]
 aftonbladet.se,skonhetsredaktorerna.se##.ab_responsive_ads
 aftonbladet.se##[data-ad-subtype]:upward(1):matches-css(min-height:/[0-9]+/)
 aftonbladet.se##aside > div:has(h2:has-text(/^annons/i))
@@ -1513,10 +1513,11 @@ tv.nu###tv-schedule section:has-text(ANNONS)
 tv.nu##body:remove-class(takeover-loading)
 ! Blocket
 @@/ad-block-detection-script$domain=blocket.se
+/ast.$script,domain=blocket.se
 ||jobb.blocket.se/blocket_puff.html
 ||jobb.blocket.se^*/tracker.js
 ||jobb.blocket.se^*/xtcore.min.js
-blocket.se##.placement_panorama, .blocket-placement, div[style="height: 240px;"], [class*="offering-info-box"]
+blocket.se##.placement_panorama, .blocket-placement, div[style="height: 240px;"], [class*="offering-info-box"], [data-id="placement_panorama"]
 ! Övrigt
 /www.wellness.se\/cnp-assets\/[0-9]+./$script,domain=wellness.se
 wellness.se##a[href*="campaign"][data-test-tag="external-link"], div[data-ad-subtype]
