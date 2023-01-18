@@ -1,5 +1,5 @@
 &autoplay$frame,removeparam=autoplay,domain=di.se|expressen.se
-&browser=MozillaFirefox$removeparam=/^browser/,xhr,domain=fotbollskanalen.se|koket.se|tv4.se|tv4play.se
+&browser=MozillaFirefox$removeparam=/^browser/,xmlhttprequest,domain=fotbollskanalen.se|koket.se|tv4.se|tv4play.se
 /aab/tv4play$redirect=noop.js,script,domain=fotbollskanalen.se|koket.se|tv4.se|tv4play.se
 /aftonbladet/crypt/?lpkey$all
 /casinokollen$all,domain=aftonbladet.se
@@ -445,6 +445,7 @@ tidningenbalans.se##p:has-text(/i annonssamarbete med/i):upward(.flex.overflow-h
 tidningenglobal.se##span:has-text(/annons/i):upward(.elementor-widget-wrap)
 tidningenridsport.se##.entry-content:style(display: initial !important;)
 tidningenridsport.se##body:remove-class(cli-barmodal-open)
+tidningenskriva.se##.kategori:has-text(Annons):upward(section.widget_text)
 totallyorebro.se,totallystockholm.se##[class*="tot-content-preview-container"]:has(a[href*="casino"]):remove()
 travronden.se##main > div > div > div > div > div:has(.adunitContainer)
 trendenser.se##.sponsor-info:upward(.post_feed_post)
@@ -516,6 +517,7 @@ youplay.se##+js(aeld, loadstart)
 ||player.vimeo.com^$frame,redirect=click2load.html,domain=breakit.se
 ||powr.io^$important,domain=fria.nu|friatidningen.se|goteborgsfria.se|stockholmsfria.se
 ||s.arclk.net/tr?$all
+||se-tv4.videoplaza.tv/proxy/distributor$removeparam=s,xmlhttprequest,domain=tv4play.se
 ||trailer-admin-cdn.a2d.tv^$media,mp4,domain=tv4play.se
 ||youbora.com^*/sp.min.js$important,domain=aftonbladet.se|godare.se|svd.se|wellness.se
 ||youplay.se/*.js*ap=true$removeparam=/^ap/,script

@@ -899,7 +899,6 @@ casino-utan-$image
 ||widget.matklubben.*/tracker
 ||widget.mytaste.*/blogcounter
 ||woomio.com/assets/js/analytics
-||wp.com/wp-content/js/bilmur.min.js
 ||znaptag-tags-se.s3.amazonaws.com^$script
 ||zummy.io^$third-party
 ||zummycloud.com^$third-party
@@ -2172,7 +2171,8 @@ zeromagazine.nu##div[id^="ads"]
 
 ! TV4
 @@||se-tv4.videoplaza.tv/proxy/distributor$domain=tv4play.se
-&browser=MozillaFirefox$xhr,removeparam=/^browser/,domain=fotbollskanalen.se|koket.se|tv4.se|tv4play.se
+||se-tv4.videoplaza.tv/proxy/distributor$xmlhttprequest,removeparam=s,domain=tv4play.se
+&browser=MozillaFirefox$xmlhttprequest,removeparam=/^browser/,domain=fotbollskanalen.se|koket.se|tv4.se|tv4play.se
 /aab/tv4play$script,redirect=noop.js,domain=fotbollskanalen.se|koket.se|tv4.se|tv4play.se
 ||stat-api.tv4play.se^
 ||dbf0a92kfjvxs.cloudfront.net/creatives/assets$image,domain=tv4play.se
@@ -3142,3 +3142,4 @@ webhallen.com##.takeover-link
 ||mis.se/count/
 skolporten.se##a[href*="/sponsrat-innehall"]:upward(.article-short)
 ||stats.helsingborg.se^
+tidningenskriva.se##.kategori:has-text(Annons):upward(section.widget_text)
