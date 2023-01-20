@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2023-01-18 13:28:49 CET
+! Last modified: 2023-01-20 09:28:48 CET
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -480,6 +480,7 @@
 /api/log$domain=bohuslaningen.se|harrydaposten.se|markposten.se|stromstadstidning.se
 /api/natives?$domain=aktuellhallbarhet.se|byggindustrin.se|dagensmedia.se|dagensmedicin.se|dagenssamhalle.se|dagligvarunytt.se|fastighetsnytt.se|market.se|resume.se
 /api/plugins/google-analytics
+/api/tracker?$image
 /app.php/adsview$xmlhttprequest
 /appnexus$script
 /artikelannons/*
@@ -1126,7 +1127,7 @@ aktiespararna.se,alekuriren.se,civilekonomen.se,tidningen.se##.native
 aktivtraning.se,digitalfotoforalla.se,iform.se,militarhistoria.se,pctidningen.se,popularhistoria.se##.scroll-message, .gallery-banner, .horseshoe, [data-ad-type]
 aktuellhallbarhet.se,byggindustrin.se,dagensmedia.se,dagensmedicin.se,dagenssamhalle.se,dagligvarunytt.se,fastighetsnytt.se,market.se,resume.se##a[href^="/annons/"], a[href^="/native/"], .slot-module, .slot-articlemodule
 aktuellsakerhet.se##.front-slider-reklamsamarbete, .category-gastkronika-reklamsamarbete, .front-top-reklamsamarbete
-aktuellsakerhet.se,battrestadsdel.se,butikstrender.se,cookaholic.se,forskning.se,hemmanytt.se,influens.se,karriarlakare.se,kvartal.se,livinguppsala.se,maklarvarlden.se,natursidan.se,nongrata.se,sjostadsbladet.se,smaspararguiden.se,teknikhype.se,tidningenridsport.se,vardfokus.se,varvat.se,vinliv.se###cookie-law-info-bar
+aktuellsakerhet.se,battrestadsdel.se,butikstrender.se,cookaholic.se,forskning.se,hemmanytt.se,influens.se,karriarlakare.se,kvartal.se,livinguppsala.se,maklarvarlden.se,natursidan.se,nongrata.se,raa.se,sjostadsbladet.se,smaspararguiden.se,svenskfilmdatabas.se,teknikhype.se,tidningenridsport.se,vardfokus.se,varvat.se,vinliv.se###cookie-law-info-bar
 aktuellsakerhet.se,borattforum.se,sjostadsbladet.se##.td-a-rec
 alandsradio.ax,automobil.se,bike.se,caroftheyear.se,cgi.com,endurobloggen.se,husbilhusvagn.se,kantarsifo.se,klassiker.nu,mopedgaraget.se,plastikoperationsforum.se,riksettan.net,spraktidningen.se,svjt.se,ungforetagsamhet.se,vibilagare.se###sliding-popup
 alandstidningen.ax##.revive-wrapper
@@ -1989,9 +1990,6 @@ zeromagazine.nu##div[id^="ads"]
 ||fakturino.se^$third-party
 ||famobi.com/play/hit/
 ||fapp.pw^$third-party
-||fast.fonts.com/t/1.css
-||fast.fonts.net/lt/1.css
-||fast.fonts.net/t/1.css
 ||fastout.com/analytics
 ||fasttrack.webstream.dk/statistik
 ||fathom.wheresmar.co/tracker.js
@@ -2207,7 +2205,6 @@ zeromagazine.nu##div[id^="ads"]
 ||optnmnstr.com^$third-party
 ||opulens.se^$csp=worker-src 'none'
 ||organicfruitapps.com/analytics
-||p.typekit.net/p.css
 ||pafpartners.com^$third-party
 ||pensiono.se.$subdocument
 ||pensiono.se^$third-party
