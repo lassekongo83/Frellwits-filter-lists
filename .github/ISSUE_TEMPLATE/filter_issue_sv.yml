@@ -1,0 +1,64 @@
+name: Skandinavisk mall
+description: Använd denna mallen för att rapportera oblockerat innehåll eller felaktigt borttaget innehåll. (På svenska, norska eller danska.)
+body:
+  - type: checkboxes
+    attributes:
+      label: Förutsättningar
+      description: För att utesluta ogiltiga problem, bekräfta och markera var och en av kryssrutorna.
+      options:
+        - label: Detta är inte en supportfråga eller en fråga. För support, frågor eller hjälp, besök [/r/uBlockOrigin](https://www.reddit.com/r/uBlockOrigin/).
+          required: true
+        - label: Jag gjorde en [översiktlig sökning av problemspåraren](https://github.com/lassekongo83/Frellwits-filter-lists/issues?q=is%3Aissue) för att undvika att öppna en dubblett.
+          required: true
+        - label: Jag kör den senaste versionen av uBlock Origin (uBO).
+          required: true
+
+  - type: checkboxes
+    attributes:
+      label: Jag försökte återskapa problemet när...
+      options:
+        - label: uBO är det enda aktiverade webbläsartillägget.
+          required: true
+        - label: uBO använder standardlistor och inställningar.
+          required: true
+
+  - type: textarea
+    attributes:
+      label: Beskrivning
+      description: Ge en tydlig beskrivning av problemet.
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: URL(er) där problemet uppstår.
+      description: |
+        Minst en webbadress till en webbsida där problemet uppstår är **obligatoriskt**.
+        Baklängescitationstecknen (`) kring länkarna är viktiga, det förhindrar att länken går att klicka på. Varna med **NSFW** när innehållet på sidan är olämpligt för arbetsplatser.
+      placeholder: |
+        `https://example.com`
+        `https://example.org`
+        `https://example.net`
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Skärmdump(ar)
+      description: |
+        Skärmdump(ar) är bra att ha om du har svårt att beskriva problemet.
+        Använd **LÄNKAR** istället för inline-bilder om skärmdumpen innehåller **VUXET INNEHÅLL**.
+    validations:
+      required: false
+
+  - type: input
+    attributes:
+      label: uBO version
+    validations:
+      required: true
+
+  - type: input
+    attributes:
+      label: Webbläsarens namn och version
+    validations:
+      required: true
