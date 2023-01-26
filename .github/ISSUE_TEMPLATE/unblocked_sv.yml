@@ -1,5 +1,5 @@
-name: Rapportera felaktigt borttaget innehåll eller ett problem
-description: Använd denna mallen för att rapportera felaktigt borttaget innehåll eller ett problem.
+name: Rapportera oblockerade annonser, spårningar eller innehåll som irriterar
+description: Använd den här mallen för att rapportera oblockerade annonser, spårningar eller innehåll som irriterar.
 body:
   - type: checkboxes
     attributes:
@@ -13,17 +13,6 @@ body:
         - label: Jag försökte återskapa problemet när uBlock Origin använder standardlistor och inställningar.
           required: false
 
-  - type: checkboxes
-    attributes:
-      label: Det felaktigt borttagna innehållet gör **INTE** något av följande: (Lämna tomt om du inte vet.)
-      options:
-        - label: Visar annonser.
-          required: false
-        - label: Spårar användaren på något sätt. (Detta inkluderar även anonym spårning.)
-          required: false
-        - label: Avbryter eller irriterar användaren. (Modala popups till exempel.)
-          required: false
-
   - type: textarea
     attributes:
       label: Beskrivning
@@ -35,7 +24,7 @@ body:
     attributes:
       label: URL(er) där problemet uppstår.
       description: |
-        Minst en webbadress till en webbsida där problemet uppstår är **obligatoriskt**.
+        Minst en webbadress till en webbsida där det oblockerade innehållet finns är **obligatoriskt**.
         Baklängescitationstecknen (`) kring länkarna är viktiga, det förhindrar att länken går att klicka på. Varna med **NSFW** när innehållet på sidan är olämpligt för arbetsplatser.
       placeholder: |
         `https://example.com`

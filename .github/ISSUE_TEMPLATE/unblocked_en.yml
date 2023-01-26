@@ -1,5 +1,5 @@
-name: Report incorrectly removed content or a problem
-description: Use this template to report incorrectly removed content or a problem occuring because of a list.
+name: Report unblocked ads, tracking, or annoyances
+description: Use this template to report unblocked ads, tracking, or annoyances
 body:
   - type: checkboxes
     attributes:
@@ -13,21 +13,10 @@ body:
         - label: I've tried to reproduce the issue with uBlock Origin's default settings.
           required: false
 
-  - type: checkboxes
-    attributes:
-      label: The incorrectly removed content **does NOT**... (Leave blank if you do not know.)
-      options:
-        - label: display ads.
-          required: false
-        - label: track the the user in any way. (This also include anonymous tracking.)
-          required: false
-        - label: interrupts or annoy the user. (Modal popups for example.)
-          required: false
-
   - type: textarea
     attributes:
       label: Description
-      description: Provide a clear and concise description of this filter issue.
+      description: Provide a clear and concise description of this issue.
     validations:
       required: true
 
@@ -35,7 +24,7 @@ body:
     attributes:
       label: URL(s) where the issue occurs.
       description: |
-        At least one URL is **MANDATORY** for an issue affecting a web page.
+        At least one URL to a web page where the unblocked content is located is **mandatory**.
         The backticks (`) surrounding the URL(s) are important, it prevents the URL(s) from being clickable. Warn with **"NSFW"** where applicable.
       placeholder: |
         `https://example.com`
