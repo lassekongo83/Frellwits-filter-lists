@@ -1,0 +1,77 @@
+name: Filter Issue (English template)
+description: File a filter issue.
+body:
+  - type: checkboxes
+    attributes:
+      label: Prerequisites
+      description: To rule out invalid issues, confirm and check each one of the checkboxes.
+      options:
+        - label: This is not a support issue or a question. For support, questions, or help, visit [/r/uBlockOrigin](https://www.reddit.com/r/uBlockOrigin/).
+          required: true
+        - label: I performed a [cursory search of the issue tracker](https://github.com/uBlockOrigin/uAssets/issues?q=is%3Aissue) to avoid opening a duplicate issue.
+          required: true
+        - label: I am running the latest version of uBlock Origin (uBO).
+          required: true
+
+  - type: checkboxes
+    attributes:
+      label: I tried to reproduce the issue when...
+      options:
+        - label: uBO is the only extension.
+          required: true
+        - label: uBO uses default lists and settings.
+          required: true
+        - label: using a new, unmodified browser profile.
+          required: true
+
+  - type: textarea
+    attributes:
+      label: Description
+      description: Provide a clear and concise description of this filter issue.
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: URL(s) where the issue occurs.
+      description: |
+        At least one URL is **MANDATORY** for an issue affecting a web page.
+        The backticks (`) surrounding the URL(s) are important, it prevents the URL(s) from being clickable. Warn with **"NSFW"** where applicable.
+      placeholder: |
+        `https://example.com`
+        `https://example.org`
+        `https://example.net`
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Screenshot(s)
+      description: |
+        Screenshot(s) are **MANDATORY** for hard-to-describe visual issues.
+        Post **LINKS** instead of inline images for screenshots containing **ADULT MATERIAL**.
+    validations:
+      required: false
+
+  - type: input
+    attributes:
+      label: uBO version
+    validations:
+      required: true
+
+  - type: input
+    attributes:
+      label: Browser name and version
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Settings
+      description: List all the changes you have made to uBO's default settings.
+      placeholder: |
+        - Change 1
+        - Change 2
+        - Change 3
+    validations:
+      required: true
