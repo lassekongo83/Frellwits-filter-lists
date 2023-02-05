@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2023-02-03 13:55:25 CET
+! Last modified: 2023-02-05 09:23:01 CET
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -64,8 +64,8 @@
 ###cookiejar
 ###cookielawwarning
 ###cookieMsgBlock
-###CookieNotice
 ###cookieNotice
+###CookieNotice
 ###cookies-acceptance .alert.bottom
 ###cookiesInfo
 ###dialog-eu-cookie-law
@@ -192,6 +192,7 @@
 ##a[href^="/banner/click/"] img
 ##a[href^="https://www.adsettings.com/scripts/reg_click."]
 ##a[id^="adBanner"][target="_blank"]
+##a[onclick*="artikelbanner"]
 ##a[title="LeoVegas"]
 ##article.annons
 ##article.article-sponsored
@@ -1836,6 +1837,7 @@ zeromagazine.nu##div[id^="ads"]
 ||bloglovin.com^$third-party
 ||bmbstatic.blob.core.windows.net^
 ||bokmassan.se/wp-json/*/ad/
+||boktugg.se/wp-content/cache/min/1/pa-
 ||bonniergaming.com^$third-party
 ||borsvarlden-banners.azurewebsites.net^
 ||borsvarlden.com/js/cookie-notice
@@ -1860,7 +1862,7 @@ zeromagazine.nu##div[id^="ads"]
 ||carneoam.com/advert/
 ||casinotoplists.com^$third-party
 ||casono.se^$third-party
-||cdn-cookieyes.com^$domain=lokalti.se|magasink.se
+||cdn-cookieyes.com^$domain=jarnvagar.nu|lokalti.se|magasink.se
 ||cdn-sitegainer.com/sitegainer
 ||cdn.adt*/atag.js?$third-party
 ||cdn.adt*/jsTag?$third-party
@@ -2375,6 +2377,7 @@ zeromagazine.nu##div[id^="ads"]
 ||track.intersport.se^
 ||track.postkodlotteriet.se^
 ||tracking.bonnier.news^
+||tracking.fasab6f.se^
 ||trafikstyrelsen.com^
 ||travellink.se/marketing-channel
 ||travtjansten.se^$third-party
