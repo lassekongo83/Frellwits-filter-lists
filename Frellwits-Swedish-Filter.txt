@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2023-02-24 12:16:55 CET
+! Last modified: 2023-02-26 07:04:20 CET
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -619,6 +619,7 @@
 /gplus.php$script,domain=fria.nu|friatidningen.se|goteborgsfria.se|stockholmsfria.se
 /Grejer.js$domain=dagenshultsfred.se|dagenskalmar.nu|dagensvastervik.se|dagensvimmerby.se
 /gtagEventTracker.js
+/gtm-sokande.js$domain=antagning.se|universityadmissions.se
 /headerbidding.js
 /helios/multiad_jquery
 /hemmafixbloggen/includes/events-tracker
@@ -1160,6 +1161,7 @@ alltomhif.se##.sek-module-inner a[target="_blank"]
 alltomhif.se,luthagsnytt.se,lyckasmedbakning.nu,mat-meny.se,pinkprogramming.se,soja.se,tonyhatefnejad.se,vitaestilo.se##.preloader
 alltsvarade.se##div[class*="desktop-billboard"], div[class*="desktop-rectangle"], div[class*="desktop-hpa"], div[class*="outstream-video"], div[class*="mobile-billboard"], div[class*="mobile-rectangle"]
 alpresor.se###toast-container
+antagning.se,universityadmissions.se###cookiebanner
 arbetet.se,fastighetsfolket.se,handelsnytt.se,ka.se,malarnasfacktidning.se,sekotidningen.se,tidningenelektrikern.se##.Teaser--native, .o-native, [data-controller="ad"]
 arjeplognytt.se##.metaslider
 arjeplognytt.se,autopower.se,lindenytt.com,poolforum.se,varmepumpsforum.com##a[target="_blank"] img[alt]
@@ -1410,7 +1412,6 @@ godare.se##.godare-ad-element, a[href*="/brand-studio"], a[href*="/brandstudio"]
 golflivet.se##a[href*="/annonssamarbete/"], .deals_block_wrapper
 google.se##mobile-promo
 goteborg.com##.cookie-popup, .overlay
-goteborgdirekt.se,mitti.se##.profile-native
 goteborgsgolfaren.se##.sgpb-popup-overlay, #sgpb-popup-dialog-main-div-wrapper, .et_pb_gallery
 grillbaronen.se##a[href*="/click."]
 grillbloggen.nu##.rstbox
@@ -1550,6 +1551,7 @@ milansverige.se##.elementor-image a[target="_blank"], .oc_cb_wrapper
 minhembio.com##div[style="height: 120px;"]:not([id]):not([class])
 minsolresa.se##aside#text-5, aside#text-13
 missatsamtal.se##.nosnaj
+mitti.se##.profile-native
 mmabetz.se##.desktop-homepage-ad, .desktop-main-ad, .latest-betting-campaigns, .best-casino-section, .top-casino, .mobile-homepage-ad, .mobile-main-ad
 mmanytt.se##.front-banner, .front-banner-cover, #text-2, [class*="sponsrat-inlagg"], a[href*="://kampanjer."], .ohmbet_link, a[href*="adsrv.eacdn.com"]
 mobil.se,nordichardware.se##.pspy_info
@@ -1877,6 +1879,7 @@ zeromagazine.nu##div[id^="ads"]
 ||cdn.advisible.com/accl
 ||cdn.advisible.com/adk
 ||cdn.axiell.com^*/cookie-disclaimer$script
+||cdn.clerk.io/clerk.js
 ||cdn.iubenda.com/iubenda.$script
 ||cdn.livechatinc.com/tracking$domain=~box.co.uk
 ||cdn.svenskalag.se/img/sponsors$image
@@ -1895,7 +1898,7 @@ zeromagazine.nu##div[id^="ads"]
 ||collect.breakit.se^
 ||comcast.net/measurements$domain=mtv.se
 ||compricer.se^$third-party
-||connect.facebook.net^$domain=aktiespararna.se|arvikanyheter.se|dalslanningen.se|dovastidning.se|epochtimes.se|ettgottskratt.se|filipstadstidning.se|fotosidan.se|friatider.se|fryksdalsbygden.se|goteborgdirekt.se|hammarbyfotboll.se|hjotidning.se|humorbibeln.se|kt-kuriren.se|kt.se|kvinnatillkvinna.se|kyrkanstidning.se|lajvo.se|lektionsbanken.se|loppi.se|mariestadstidningen.se|mitti.se|newsner.com|ng.se|nkp.se|nlt.se|nwt.se|provinstidningen.se|psykologiguiden.se|pussad.se|saffletidningen.se|sillyseason.se|sla.se|sportbibeln.se|tn.se|vasterastidning.se|vf.se
+||connect.facebook.net^$domain=aktiespararna.se|arvikanyheter.se|dalslanningen.se|dovastidning.se|epochtimes.se|ettgottskratt.se|filipstadstidning.se|fotosidan.se|friatider.se|fryksdalsbygden.se|hammarbyfotboll.se|hjotidning.se|humorbibeln.se|kt-kuriren.se|kt.se|kvinnatillkvinna.se|kyrkanstidning.se|lajvo.se|lektionsbanken.se|loppi.se|mariestadstidningen.se|mitti.se|newsner.com|ng.se|nkp.se|nlt.se|nwt.se|provinstidningen.se|psykologiguiden.se|pussad.se|saffletidningen.se|sillyseason.se|sla.se|sportbibeln.se|tn.se|vasterastidning.se|vf.se
 ||connect.nosto.com^*/behav-popup.$script
 ||connectio.s3.amazonaws.com/connect-retarget$script
 ||consensu.org^$domain=allastudier.se|alltsvarade.se|autopower.se|bjarenu.se|butikpris.se|byrum.se|dh.se|doon.se|enkelteknik.se|ettgottskratt.se|filippoon.se|filmtopp.se|fl-net.se|gbgfotboll.se|historier.net|humorbibeln.se|interiorbyvanessa.se|jennysmatblogg.nu|kalender.se|kamerabild.se|laget.se|laholmstidning.se|land.se|langd.se|leta.se|lindasbakskola.se|listor.se|ljudochbild.se|lokaltidningenvaxjo.se|mobil.se|mykitchenstories.se|news55.se|newsner.com|norrahalland.se|oppettiden.se|ostgotatidningen.se|pernillawahlgren.se|poddtoppen.se|proff.se|receptfavoriter.se|sportbibeln.se|sportlovin.se|sporttv.nu|spray.se|stff.se|svenskfotboll.se|travelnews.se|vackertvader.se|zeinaskitchen.se
@@ -1909,7 +1912,7 @@ zeromagazine.nu##div[id^="ads"]
 ||conviva.com^$third-party
 ||cookie-disclaimer.onewp.net^$third-party
 ||cookie-script.com^$third-party
-||cookiebot.com^$domain=accentmagasin.se|allsvenskan.se|alltomarbetsmiljo.se|bax-shop.se|byggfaktadocu.se|circlek.se|energi.se|enirobuddy.se|findroommate.se|fokus.se|framtid.se|goteborgdirekt.se|husdjur.se|kingsizemag.se|konsumentmagasinet.se|kreditrapporten.se|kurera.se|mitti.se|ng.se|polistidningen.se|sakochliv.se|sis.se|smartsenior.se|spraktidningen.se|superettan.se|sverigesnatur.org|swedroid.se|tco.se|totallyorebro.se|totallystockholm.se|trafiken.nu|upplysning.se|vaningen.se|varden.se|vasterastidning.se|vastsverige.com|wesafe.se
+||cookiebot.com^$domain=accentmagasin.se|allsvenskan.se|alltomarbetsmiljo.se|bax-shop.se|byggfaktadocu.se|circlek.se|energi.se|enirobuddy.se|findroommate.se|fokus.se|framtid.se|husdjur.se|kingsizemag.se|konsumentmagasinet.se|kreditrapporten.se|kurera.se|mitti.se|ng.se|polistidningen.se|sakochliv.se|sis.se|smartsenior.se|spraktidningen.se|superettan.se|sverigesnatur.org|swedroid.se|tco.se|totallyorebro.se|totallystockholm.se|trafiken.nu|upplysning.se|vaningen.se|varden.se|vasterastidning.se|vastsverige.com|wesafe.se
 ||cookieconsent.popupsmart.com^$third-party
 ||cookieinformation.com^$domain=folkofolk.se|gds.se|minbostad.se|viivilla.se
 ||cookieinfoscript.com^$third-party
@@ -2168,6 +2171,7 @@ zeromagazine.nu##div[id^="ads"]
 ||mis.se/count/
 ||missaffiliate.com^$third-party
 ||misssite.com/*/published-site-analytics.js
+||mitti.se/click-
 ||mogenromantik.com^
 ||momondo.se/gtm/
 ||momondo.se/mgtm/
@@ -2245,6 +2249,7 @@ zeromagazine.nu##div[id^="ads"]
 ||privacypolicies.com^$domain=fl-net.se
 ||prod.uidapi.com^$domain=tittapavideon.se
 ||proff.se^$third-party
+||profitmetrics.io^$third-party
 ||proxyas.com^$third-party
 ||prvcy.vkmedia.se^
 ||prylguiden.expressen.se^
@@ -2259,7 +2264,7 @@ zeromagazine.nu##div[id^="ads"]
 ||pushpushgo.com^$third-party
 ||pushwhy.com^
 ||pxl.host^$third-party
-||quantcast.com^$domain=babyhjalp.se|blogg.se|brinkenbakar.se|cleannet.se|dagenshandel.se|eniro.se|enkelteknik.se|entreprenad.com|flashback.org|food-supply.se|foodnet.se|foreca.se|forni.se|fraser.nu|fri-kopenskap.se|garaget.org|habit.se|hippson.se|kemivarldenbiotech.se|kiacarclub.se|landleyskok.se|lifesciencesweden.se|matklubben.se|medtechmagazine.se|merinfo.se|motormagasinet.se|mytaste.se|nyadagbladet.se|packnet.se|plastnet.se|processnet.se|recyclingnet.se|res.se|rt-forum.se|samnytt.se|stoppapressarna.se|svenskayoutubers.se|swehockey.se|themoviefreak.se|tittapavideon.se|tortureviews.se|transportnet.se|travelgrip.se|uochd.se|varldenshaftigaste.se|verkstaderna.se|woodnet.se
+||quantcast.com^$domain=babyhjalp.se|blogg.se|brinkenbakar.se|cleannet.se|dagenshandel.se|eniro.se|enkelteknik.se|entreprenad.com|flashback.org|food-supply.se|foodnet.se|foreca.se|forni.se|fraser.nu|fri-kopenskap.se|garaget.org|habit.se|hippson.se|kemivarldenbiotech.se|kiacarclub.se|landleyskok.se|lifesciencesweden.se|matklubben.se|medtechmagazine.se|merinfo.se|motormagasinet.se|mytaste.se|nyadagbladet.se|packnet.se|plastnet.se|processnet.se|recyclingnet.se|res.se|rt-forum.se|samnytt.se|stoppapressarna.se|svenskayoutubers.se|swehockey.se|themoviefreak.se|tittapavideon.se|tortureviews.se|transportnet.se|travelgrip.se|uochd.se|varldenshaftigaste.se|verkstaderna.se|woodnet.se|woxikon.se
 ||qx.se/view.php$image
 ||rabattkoder.ifragasatt.se^
 ||rabble-res.cloudinary.com^$third-party
@@ -2316,6 +2321,7 @@ zeromagazine.nu##div[id^="ads"]
 ||sharedcount.com^$third-party
 ||sharethis.com^$third-party
 ||simpleoneline.online^
+||sinful.se/sinalytics
 ||sitegainer.com/jsinsert/*/sitegainer$third-party
 ||sjostadsbladet.se/TEXAS$media
 ||skattamindre.se^
