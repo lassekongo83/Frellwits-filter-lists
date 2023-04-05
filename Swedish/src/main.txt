@@ -1518,6 +1518,7 @@ aftonbladet.se##main > section > div[class^="css-"]:first-child:has(img[src*="cl
 aftonbladet.se##p:has-text(/^PRESENTERAS AV$/):upward(1)
 aftonbladet.se##:matches-path(/^/$/) p:has-text(Artikeln innehåller annonslänkar):upward(a)
 aftonbladet.se##main > section > div:first-child:matches-css(box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 24px 0px)
+aftonbladet.se##span:has-text(ANNONS):upward(3)
 ! scriptlets
 www.aftonbladet.se##+js(nostif, TAKEOVER)
 ! css
@@ -1641,7 +1642,7 @@ atl.nu,landlantbruk.se###didomi-host, a[href*="/atl-tv-annons/"], [class^="Ad_"]
 land.se##[class*="--native"], [id^="adwrapper"], .has-sticky-add
 /private-browsing.js$domain=thelocal.se
 /collect?v$domain=thelocal.se
-thelocal.se##.ad-container-section, .article-sponsored
+thelocal.se##.ad-container-section, .article-sponsored, div[data-hasbanner="yes"]
 thelocal.se##.ra-widget-article-tag:has-text(/partner/i):upward(.ra-widget-panel)
 /active-advertorial$domain=hbl.fi|vastranyland.fi|ostnyland.fi
 hbl.fi,vastranyland.fi,ostnyland.fi##.dre-item--feature-advertorial
@@ -1665,7 +1666,7 @@ e55.se##a[href]:not([href*="/e55.se"]):upward(section.sidebar)
 foretagande.se##div[id*="panorama"]
 foretagande.se##.sponsored-text:upward(article)
 foretagande.se##a[href$="artiklar-i-samarbete"]:upward(div.article)
-newsner.com,humorbibeln.se,sportbibeln.se,ettgottskratt.se###wsfb-container, .share-buttons
+newsner.com,humorbibeln.se,sportbibeln.se,ettgottskratt.se###wsfb-container, .share-buttons, .ad-space
 newsner.com,humorbibeln.se,sportbibeln.se,ettgottskratt.se##.sponsored-bar:upward(.ssp_divider)
 byggnadsarbetaren.se##[class^="siteAds"], .siteAlerts
 uppsalanyheter.se###banner-top-block
@@ -2016,7 +2017,6 @@ hockeyettan.se##.club-ad-item, .banner-row
 fotosidan.se##.subArticlesponsored, div[style="width:300px;float:right;"], div[style="float:right;width:300px;"], #partner-box, .adbox-label
 hippson.se##.sponsorpuff, .presentedby, .presentedby ~ *
 hippson.se##.toolboxheader:has-text(/aktuella samarbeten/i) ~ a.more
-sysidan.se##.adscolumn
 kimura.se##.bg, a[href*="unibet.com"], a[href*="/kampanjer."], a[href*="utm_campaign"], .addafterpreview, .addafter1preview, .samarbeten
 kimura.se##img[src$="/sponsrad.png"]:upward(article)
 kimura.se###storknapp:has-text(/^till kampanj/i):upward(article)
@@ -2764,7 +2764,7 @@ proffs.se##*::-webkit-scrollbar-thumb:style(background: #5e5e5e !important; bord
 branschkoll.se,rocknytt.net,upphandling24.se,kimura.se,datormagazin.se,samnytt.se,villalivet.se##^script[id^="advanced-ads"]
 branschkoll.se,rocknytt.net,upphandling24.se,kimura.se,datormagazin.se,samnytt.se,villalivet.se,polistidningen.se##^script:has-text(advads)
 temadagar.se##^script:has-text(__ez)
-||vimedbarn.se^$csp=upgrade-insecure-requests
+|http://vimedbarn.se^$csp=upgrade-insecure-requests
 !#endif
 
 ! === Various unsorted websites
@@ -2878,7 +2878,6 @@ knulla.se###cookie-popup
 mmabetz.se##.desktop-homepage-ad, .desktop-main-ad, .latest-betting-campaigns, .best-casino-section, .top-casino, .mobile-homepage-ad, .mobile-main-ad
 ||skk.se/TSPD/
 skk.se###cookie-button-banner, .campaigns, [id*="GlobalCampaigns"]
-jusek.se##.l-advertisement, .m-adform, .m-splash
 /Js/DFP$domain=camping.se
 camping.se###CookiesBox
 camping.se###rightSideAds, .OpenXAd, .DfpAd
