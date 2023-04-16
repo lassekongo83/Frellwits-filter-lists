@@ -2170,8 +2170,11 @@ gaffa.se##h4:has-text(/sponsrade länkar/i):upward(.link-list)
 radio.se###RAD_D_station_top, #RAD_D_home_top, #RAD_D_home_inhouse, #RAD_D_search_top:upward(3)
 @@||kritiker.se^$generichide
 ||kritiker.se/js/gdpr.js
+||youtube.com/embed/*autoplay$subdocument,removeparam=autoplay,domain=kritiker.se
 kritiker.se##div.recad, div.adhor
 kritiker.se##+js(set, ispremium, trueFunc)
+kritiker.se##+js(set, checkAdblocker, noopFunc)
+kritiker.se##iframe[allow]:remove-attr(allow)
 /trace/*/view$xmlhttprequest,domain=netflixguiden.se
 netflixguiden.se##div.lboard, div.instream-dynamic
 netflixguiden.se##+js(aopr, prebidAdUnits)
