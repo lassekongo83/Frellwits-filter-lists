@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2023-04-27 17:49:27 CEST
+! Last modified: 2023-04-28 08:17:57 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -192,6 +192,7 @@
 ##a[href^="/banner/click/"] img
 ##a[href^="https://www.adsettings.com/scripts/reg_click."]
 ##a[id^="adBanner"][target="_blank"]
+##a[onclick*="AdRotatePro"]
 ##a[onclick*="artikelbanner"]
 ##a[title="LeoVegas"]
 ##article.annons
@@ -1046,7 +1047,7 @@
 /wp-content/themes/keremiya1/js/jopper.
 /wp-content/themes/keremiya1/js/license.
 /wp-content/themes/keremiya1/js/script.js
-/wp-content/uploads/*-sidebar$image,domain=byggastockholm.se|dagensinfrastruktur.se|grontsamhallsbyggande.se|nordiskaprojekt.se|nyaprojekt.se|svenskbyggtidning.se|svenskfastighetsutveckling.se
+/wp-content/uploads/*-sidebar$image,domain=dagensinfrastruktur.se|grontsamhallsbyggande.se|nordiskaprojekt.se|nyaprojekt.se|svenskbyggtidning.se|svenskfastighetsutveckling.se
 /wp-content/uploads/*/public/assets/js/advanced.js$script
 /wp-content/uploads/*annons$image,domain=~annonsere.gulesider.no|~datahjelperne.no|~dataliner.no
 /wp-content/uploads/*banner$image,domain=alltomhif.se|arjeplognytt.se|battregolf.se|bioenergitidningen.se|borattforum.se|branschkoll.se|brollopsmagasinet.se|bussmagasinet.se|dalarnasaffarer.se|danstidningen.se|dental24.se|electronic.se|finanstid.se|guldkanalen.se|investerarbrevet.se|jamtlandsaffarer.se|katerinamagasin.se|ljuskultur.se|marsta.nu|naringslivetvgl.se|opulens.se|pakryss.se|restaurangvarlden.se|sff.nu|sportpanelen.se|stockholmsaffarer.se|svenskhistoria.se|svensktidskrift.se|tekniknytt.se|turismnytt.se|vardfokus.se
@@ -1055,7 +1056,7 @@
 /wp-content/uploads/*betting$image,domain=bandyfeber.com|hockeybladet.nu|kulturbloggen.com|newsvoice.se|nyadagbladet.se|spelochfilm.se
 /wp-content/uploads/*bettingkollen$image
 /wp-content/uploads/*bettingstugan$image
-/wp-content/uploads/*casino$image,domain=bandyfeber.com|battrestadsdel.se|byggastockholm.se|dagensinfrastruktur.se|djungeltrumman.se|grontsamhallsbyggande.se|hockeybladet.nu|improveme.se|kingsizemag.se|kulturbloggen.com|lokalsport.nu|macken.xyz|newsvoice.se|nordiskaprojekt.se|nyadagbladet.se|nyaprojekt.se|spelochfilm.se|spelrum.net|stoppapressarna.se|svenskbyggtidning.se|svenskfastighetsutveckling.se|svenskhistoria.se|tekniknytt.se|totallyorebro.se|totallystockholm.se|vaken.se|zeromagazine.nu
+/wp-content/uploads/*casino$image,domain=bandyfeber.com|battrestadsdel.se|dagensinfrastruktur.se|djungeltrumman.se|grontsamhallsbyggande.se|hockeybladet.nu|improveme.se|kingsizemag.se|kulturbloggen.com|lokalsport.nu|macken.xyz|newsvoice.se|nordiskaprojekt.se|nyadagbladet.se|nyaprojekt.se|spelochfilm.se|spelrum.net|stoppapressarna.se|svenskbyggtidning.se|svenskfastighetsutveckling.se|svenskhistoria.se|tekniknytt.se|totallyorebro.se|totallystockholm.se|vaken.se|zeromagazine.nu
 /wp-content/uploads/*Casinodealen$image
 /wp-content/uploads/*casinoutan$image
 /wp-content/uploads/*kasino$image,domain=improveme.se
@@ -1241,14 +1242,13 @@ bussmagasinet.se###page > div:not(.left):not(.right)
 bussmagasinet.se###titlebanner
 butikstrender.se##a[target="_blank"] picture, div[data-settings*="sticky"]
 byggahus.se##.block-ad, #cookie-consent-dialog, a[href^="/partner/"], .threadMatchedContent, #svartalistan-login-required-overlay
-byggastockholm.se,dagensinfrastruktur.se,grontsamhallsbyggande.se,nordiskaprojekt.se,nyaprojekt.se,ratsit.se,sonicmagazine.com,svenskbyggtidning.se,svenskfastighetsutveckling.se##[class^="ad-"]
-byggastockholm.se,dagensinfrastruktur.se,grontsamhallsbyggande.se,nordiskaprojekt.se,nyaprojekt.se,svenskbyggtidning.se,svenskfastighetsutveckling.se##.g-single, a[onclick*="banner"]
+byggfakta.today,citymark.today,hotellorestaurang.se,omtanke.today###bannnerContainer, #pop_overlay, .banner-s, div.featured
 byggfaktadocu.se##.pop_box
 byggipedia.se##.protect_contents-overlay, .ai_widget
 byggnadsarbetaren.se##[class^="siteAds"], .siteAlerts
 byggnyheter.se,dagensfastigheter.se,dagensnaringsliv.se,energinyheter.se,industrinyheter.se,infrastrukturnyheter.se,inredningsnyheter.se,jarnvagsnyheter.se,metallerochgruvor.se,papperochmassa.se,solenerginyheter.se,sportochfritidsnyheter.se,stockholmsbyggnyheter.se,transportochlogistik.se,vindkraftsnyheter.se##.insider-ads, [id^="mainadvertorial"], [id^="dfptag"], .block-advertorial, .block-views-blockconventus-info-articles-info-article-block, #dfp-tag-before_artikel, #dfp-tag-mobile_before_artikel, #block-views-block-leader-article
 byggteknikforlaget.se###text-2.widget_text, .header-widget-area
-byggvarlden.se##a[href*="/annons/"]
+byggvarlden.se##a[href*="/annons/"], .newsletter-popup-content-overlay, .newsletter-popup, .ai-viewports
 bytbil.com###privacyModal
 bytbil.com##.available-services
 cafe.se,kingmagazine.se,manolo.se,mestmotor.se##.card-partner, .partner
@@ -1267,7 +1267,6 @@ chef.se,fokus.se##.Blurb--native
 chefstidningen.se##[id^="block-views-ad"], .modal-container
 cineasten.se###text-6
 cineasten.se##.ajax_loader
-citymark.today,hotellorestaurang.se###bannnerContainer, #pop_overlay, .banner-s, div.featured
 civilekonomen.se###rollup
 cleannet.se,dagenshandel.se,entreprenad.com,food-supply.se,foodnet.se,fri-kopenskap.se,habit.se,kemivarldenbiotech.se,lifesciencesweden.se,medtechmagazine.se,motormagasinet.se,packnet.se,plastnet.se,processnet.se,recyclingnet.se,rt-forum.se,transportnet.se,uochd.se,verkstaderna.se,woodnet.se##.box-of-announcement, a[href*="campaign"][target="_blank"], div[class*="rotating-"], #bottombanner, #promoPopup, .modal-backdrop, .newsletterPopUp
 cookaholic.se###loftloader-wrapper
@@ -1280,6 +1279,8 @@ cykla.se#@#.advertisment
 da.se##div.alignwide[style^="height"]
 dagen.se##.video-annons, .native-box, .arcad-block-container, #consent-container
 dagenshultsfred.se,dagenskalmar.nu,dagensvastervik.se,dagensvimmerby.se##.panoramaAnnons, .JobAdDiv, .annonsKolumn, .insideAd, .ingressAd, .familyAds, .annonsWrapper
+dagensinfrastruktur.se,grontsamhallsbyggande.se,nordiskaprojekt.se,nyaprojekt.se,ratsit.se,sonicmagazine.com,svenskbyggtidning.se,svenskfastighetsutveckling.se##[class^="ad-"]
+dagensinfrastruktur.se,grontsamhallsbyggande.se,nordiskaprojekt.se,nyaprojekt.se,svenskbyggtidning.se,svenskfastighetsutveckling.se##.g-single, a[onclick*="banner"]
 dagensjuridik.se##.outher-sidebar, a[href*="/annons/"], .dj-inline-ad
 dagensps.se##a[href*="/ps-partner/"], .ad-links-module, .dagensps_ad, a[href*="ut.dagensps.se"][target], .bottom_banner, .leftsidebanner
 dagenstv.com###bt
