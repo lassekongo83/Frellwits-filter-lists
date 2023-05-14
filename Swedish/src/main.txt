@@ -1247,7 +1247,7 @@ aftonbladet.se,halsasverige.se,nojesmagasinet.nu,stoppapressarna.se,langd.se,pre
 lakartidningen.se,nyheter24.se,modette.se,akaviaaspekt.se,tidningenkulturen.se##.advertisement
 fotosidan.se,merinfo.se,allsvenskan.se,kollega.se,tasteline.com,jaktojagare.se,chefstidningen.se,realtid.se,norpan.se##.ads
 lira.se,danstidningen.se,slangopedia.se,universitetslararen.se###ads
-uppslaget.se,hypeline.se,skidresultat.se,fotbolldirekt.se,hockeysverige.se,innebandymagazinet.se,motivation.se,fiskejournalen.se,alba.nu,padeldirekt.se,dagensopinion.se##.annons
+uppslaget.se,skidresultat.se,fotbolldirekt.se,hockeysverige.se,innebandymagazinet.se,motivation.se,fiskejournalen.se,alba.nu,padeldirekt.se,dagensopinion.se##.annons
 evertiq.se,fz.se##.bnr
 freeride.se,gamereactor.se,happyride.se##.sponsor
 battrestadsdel.se,flashback.se,leta.se###top-banner
@@ -1663,6 +1663,7 @@ land.se##[class*="--native"], [id^="adwrapper"], .has-sticky-add
 thelocal.se##.ad-container-section, .article-sponsored, div[data-hasbanner="yes"]
 thelocal.se##.ra-widget-article-tag:has-text(/partner/i):upward(.ra-widget-panel)
 /active-advertorial$domain=hbl.fi|vastranyland.fi|ostnyland.fi
+||ksfmedia.fi/assets/js/programmatic-ads
 hbl.fi,vastranyland.fi,ostnyland.fi##.dre-item--feature-advertorial
 ||vasabladet.fi/6-pack/
 /GA_EEC$domain=osterbottenstidning.fi|sydin.fi|vasabladet.fi
@@ -1800,6 +1801,7 @@ fria.nu,stockholmsfria.se##[class*="annonser"], #cboxOverlay, #cboxWrapper
 tidningenglobal.se,tidningensyre.se,landetsfria.nu,fempers.se##.revive-box
 ||lararen.se/siteassets/lf-puffar
 lararen.se##a[href*="=annons"]
+/hrnytt/banner$domain=hrnytt.se
 hrnytt.se##.sponsored-article:upward(article)
 arbetaren.se##.text-sm:has-text(/annons/i):upward(a)
 ||prismic.io/prismic-toolbar$domain=alltomarbetsmiljo.se
@@ -1958,7 +1960,6 @@ datormagazin.se##div[id^="dator-"], .a-wrap
 datormagazin.se##a[href*="/annons/"]:upward(.td_module_wrap)
 datormagazin.se##a[href*="/samarbete/"]:upward(.td-big-grid-post)
 datormagazin.se##a:has-text(/^annons/i)
-hypeline.se##.sponsrad_ruta
 tekniksmart.se##.code-block, main > div:last-child:not(:only-child), #uid_08313ba73, #uid_ab3738b5a, .jeg_header_wrapper .jeg_midbar
 tekniksmart.se##center:has-text(/annons/i):upward(1)
 tekniksmart.se##a[href*="casino"]:upward(.wpb_row)
@@ -2029,6 +2030,7 @@ padeldirekt.se##h5:has-text(ANNONS:):upward(1)
 @@||happyride.se/img/admarket/$~third-party
 happyride.se,freeride.se##.anm1-container, [class^="anp"], [class^="ans"], .box.evergreen ~ .boxtext
 happyride.se##.col-sm-4 > .boxtext
+happyride.se##a[href*="/category/sponsrat/"]:upward(li)
 freeride.se##img[src*="/sponsor/"] + br + .boxlogo
 bicycling.se,runnersworld.se##.post-card-sponsored, .modal-plus, .modal-backdrop, .footer-newsletter
 /ajax/ads.php$domain=garaget.org
@@ -2104,6 +2106,7 @@ ridsport.se##.svrf__sticky-ad, .svrf-block__banner, .sv-cookie-consent-banner, .
 sportbloggare.com##.partners-box, .cube-bonus-list
 lokalsport.nu##.art-sidebar1, .art-sidebar2
 hockeybladet.nu##.td_mod_wrap a img[data-permalink], a[data-wpel-link="external"][onclick], a.td-lazy-img[target], a[href*="casino"]
+hockeybladet.nu##.vc_row_inner:has-text(casino)
 futsalmagasinet.se##.wp-block-column > h2:has-text(/annonser/i) ~ p
 futsalmagasinet.se##span:has-text(/annonserat innehåll/i):upward(.td_block_wrap)
 futsalmagasinet.se##div.modal-cacsp-backdrop, div.modal-cacsp-position
@@ -2781,7 +2784,7 @@ forcetools-kepmar.eu#@#.cookie-consent:not(body):not(html)
 /themes/Jaz/inc/js/*nicescroll
 /smart-app-banner*/banner.js
 lundagard.se,boktugg.se,morotsliv.com,macken.xyz,affarsstaden.se,kurera.se,nyfiknainvesterare.se##+js(aeld, wheel)
-home2tiny.se##+js(aeld, /mousewheel|DOMMouseScroll/)
+home2tiny.se##+js(aeld, /mousewheel|DOMMouseScroll/, smoothScrollEvent)
 !#endif
 ! Chromium
 !#if env_chromium
