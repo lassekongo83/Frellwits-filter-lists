@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2023-05-19 08:34:39 CEST
+! Last modified: 2023-05-21 08:33:06 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -217,6 +217,7 @@
 ##div#ads_column
 ##div#annons_topp
 ##div#banner_right
+##div#block-adreviveheader
 ##div#cookieBar
 ##div#custom_ads_wrapper
 ##div#mega-ad-content
@@ -827,6 +828,7 @@
 /plugins/no-right-click-images-plugin$script
 /plugins/notificationx$script
 /plugins/ns-facebook-pixel
+/plugins/obsidian-cookie-consent$script,domain=konsumentmagasinet.se
 /plugins/official-facebook-pixel
 /plugins/onesignal-free-web-push-notifications
 /plugins/optin-cat-elite-wp$script
@@ -966,6 +968,7 @@
 /ss_foundation/combined_li_tracking
 /static.marklar.se/*-tracker
 /static/js/loada.js
+/statistics/statistics.php
 /stats$xmlhttprequest,domain=boneo.se
 /stats.wp.com$script
 /stats/ewstats.
@@ -1501,6 +1504,7 @@ kollega.se##.ch2
 kolozzeum.com##td[width="305"], br + a[href*="/casino"]
 komponentkoll.se##.gdpr-wide
 komponentkoll.se##aside .prebuilt-systems, #main-content > a[target="_blank"]
+konsumentmagasinet.se##.pricerunner
 kristendate.se##div[id^="adv"]
 kritiker.se##div.recad, div.adhor
 kulturama.se##.CookiePopup
@@ -1931,7 +1935,7 @@ zeromagazine.nu##div[id^="ads"]
 ||conviva.com^$third-party
 ||cookie-disclaimer.onewp.net^$third-party
 ||cookie-script.com^$third-party
-||cookiebot.com^$domain=accentmagasin.se|allsvenskan.se|alltomarbetsmiljo.se|bax-shop.se|byggfaktadocu.se|chalmers.se|circlek.se|elinstallatoren.se|energi.se|enirobuddy.se|ff.se|findroommate.se|fokus.se|framtid.se|husdjur.se|kingsizemag.se|konsumentmagasinet.se|kreditrapporten.se|kurera.se|mitti.se|modernpsykologi.se|ng.se|polistidningen.se|resfeber.se|sakochliv.se|sis.se|smartsenior.se|spraktidningen.se|superettan.se|sverigesnatur.org|swedroid.se|tco.se|totallyorebro.se|totallystockholm.se|trafiken.nu|upplysning.se|vaningen.se|varden.se|vasterastidning.se|vastsverige.com|wesafe.se
+||cookiebot.com^$domain=accentmagasin.se|allsvenskan.se|alltomarbetsmiljo.se|bax-shop.se|byggfaktadocu.se|chalmers.se|circlek.se|elinstallatoren.se|energi.se|enirobuddy.se|ff.se|findroommate.se|fokus.se|framtid.se|husdjur.se|kingsizemag.se|kreditrapporten.se|kurera.se|mitti.se|modernpsykologi.se|ng.se|polistidningen.se|resfeber.se|sakochliv.se|sis.se|smartsenior.se|spraktidningen.se|superettan.se|sverigesnatur.org|swedroid.se|tco.se|totallyorebro.se|totallystockholm.se|trafiken.nu|upplysning.se|vaningen.se|varden.se|vasterastidning.se|vastsverige.com|wesafe.se
 ||cookieconsent.popupsmart.com^$third-party
 ||cookiehub.net^$domain=da.se
 ||cookieinformation.com^$domain=folkofolk.se|minbostad.se|viivilla.se
@@ -2140,7 +2144,6 @@ zeromagazine.nu##div[id^="ads"]
 ||kritiker.se/js/gdpr.js
 ||ksfmedia.fi/assets/js/programmatic-ads
 ||kundvisaren.se^$third-party
-||kyrkanstidning.se/firstvisit
 ||kyrkoskatten.se^
 ||kyrkskatt.se^
 ||laget.se^*/retarget.js
