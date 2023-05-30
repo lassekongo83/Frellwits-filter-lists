@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2023-05-28 08:24:40 CEST
+! Last modified: 2023-05-30 08:15:50 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -720,7 +720,7 @@
 /noview.$script,domain=gofm.se|trafik24.se|trafikdirekt.se|trafikradion.se
 /nyhetsspalt_banner_js
 /omniture/s_code.js
-/OneSignalSDK.js$domain=1x2.se|arvikamagasinet.se|battrestadsdel.se|beernews.se|cannabis.se|dackavisen.se|dalarnasaffarer.se|driva-eget.se|entreprenadaktuellt.se|ettgottskratt.se|finanstid.se|fokus.se|fotbollskane.se|fotbollsthlm.se|humorbibeln.se|idg.se|ja.se|jamtlandsaffarer.se|macken.xyz|maskinbladet.se|naringslivetvgl.se|netflixguiden.se|newsner.com|nyadagbladet.se|rabattsok.se|samnytt.se|skogsaktuellt.se|sportbibeln.se|stockholmsaffarer.se|ungdomsfotboll.se
+/OneSignalSDK.js$domain=1x2.se|arvikamagasinet.se|battrestadsdel.se|beernews.se|cannabis.se|dackavisen.se|dalarnasaffarer.se|driva-eget.se|entreprenadaktuellt.se|ettgottskratt.se|finanstid.se|fokus.se|fotbollskane.se|fotbollsthlm.se|humorbibeln.se|idg.se|ja.se|jamtlandsaffarer.se|macken.xyz|maskinbladet.se|naringslivetvgl.se|netflixguiden.se|newsner.com|nyadagbladet.se|oskarshamns-nytt.se|rabattsok.se|samnytt.se|skogsaktuellt.se|sportbibeln.se|stockholmsaffarer.se|ungdomsfotboll.se
 /OneSignalSDKWorker$script
 /packs/consent$domain=hemnet.se
 /pagead$domain=horoskoptid.se|vilaser.se
@@ -933,6 +933,7 @@
 /revive/www/images$image
 /sbbi$domain=affarsvarlden.se
 /Script/Ads.js$domain=dagenshultsfred.se|dagenskalmar.nu|dagensvastervik.se|dagensvimmerby.se
+/Scripts/ads/*$domain=osterbottenstidning.fi|sydin.fi|vasabladet.fi
 /Scripts/burt/*
 /scripts/js3caf.js
 /scripts/opt/view.analytics.js
@@ -1120,7 +1121,6 @@
 @@||cargodisplayads.com/till_minne/
 @@||citygate.se/common/Memorial/
 @@||createsend1.com/css/
-@@||elastx.net^$image,stylesheet,domain=orebroarn.se|tranas-posten.se
 @@||feed.meltwater.com^$subdocument
 @@||freeride.nu/js/ads.js
 @@||fwmrm.net/crossdomain.xml$domain=embed.viaplay.com
@@ -1599,6 +1599,7 @@ nordichardware.se##[class^="prisjakt-"]
 nordiskradio.se###cookieWindow
 nordiskskog.se##.templateHelannonsBOX
 norpan.se,skrattsajten.com##.cookieScript
+norrahalland.se##.bannercontent
 norrbotten.com##a[href*=".com/annons"], .td-ss-main-sidebar > .td-a-rec
 notebookcheck.se##.first_incontent
 nvp.se##[class*="banner_"], .BottomBannerContainer, .MobileBannerContainer
@@ -1614,11 +1615,11 @@ omnihalsa.com,skanesport.se,sportpanelen.se##.stream-item
 omtanke.today##.featured
 omvarlden.se,skolvarlden.se##.cookieControl
 opulens.se##.mailpoet_form, #secondary
-ordfrontmagasin.se##.oc_cb_wrapper
+ordfrontmagasin.se##.oc_cb_wrapper, .simple-image a:not([href^="/"]):not([href*="ordfrontmagasin.se"])
 ordguru.se##.visible-lg, .hidden-lg
 orebronyheter.com###top-wrapper
 oru.se##.modal-cookieform
-osterbottenstidning.fi,sydin.fi,vasabladet.fi##.online-teaser--advertorial
+osterbottenstidning.fi,sydin.fi,vasabladet.fi##.online-teaser--advertorial, .online-ad-container
 padelfeber.se##.pfm-partners, .pff-partners, .c-widget-ad, .c-teaser--native, #toBanner
 passagen.se###menu-item-3434
 piraja.se###panoramaholder, #parallax
