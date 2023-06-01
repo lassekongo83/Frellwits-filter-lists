@@ -1300,8 +1300,8 @@ utm_$document,removeparam=/^utm_/,domain=tv.nu|booli.se|expressen.se|aftonbladet
 ! Scriptlets
 newsner.com,humorbibeln.se,sportbibeln.se,ettgottskratt.se,sportpanelen.se,zeinaskitchen.se,dinbyggare.se,trafiksakerhet.se,boktugg.se,lakartidningen.se,villalivet.se,matsafari.nu##+js(set, mi_track_user, false)
 newsner.com,humorbibeln.se,sportbibeln.se,ettgottskratt.se,sportpanelen.se,zeinaskitchen.se,dinbyggare.se,trafiksakerhet.se,boktugg.se,lakartidningen.se,villalivet.se,matsafari.nu##+js(acs, monsterinsights_frontend)
-thorengruppen.se,pppress.se,utslappsratt.se,heleneholmsif.se,trafikskola.se,melodifestivalklubben.se,morotsliv.com##+js(set, em_track_user, false)
-thorengruppen.se,pppress.se,utslappsratt.se,heleneholmsif.se,trafikskola.se,melodifestivalklubben.se,morotsliv.com##+js(set, exactmetrics_frontend, undefined)
+thorengruppen.se,utslappsratt.se,heleneholmsif.se,trafikskola.se,melodifestivalklubben.se,morotsliv.com##+js(set, em_track_user, false)
+thorengruppen.se,utslappsratt.se,heleneholmsif.se,trafikskola.se,melodifestivalklubben.se,morotsliv.com##+js(set, exactmetrics_frontend, undefined)
 
 ! -- Specific annoyances and bloat
 /cookieconsent$domain=voodoofilm.org
@@ -1399,7 +1399,7 @@ cookaholic.se###loftloader-wrapper
 @@/js/ads.js$~third-party,domain=freeride.se|fz.se|spela.se
 @@/scripts/advert_$~third-party,domain=di.se
 thatsup.se##+js(set, canShowAds, true)
-svensktgolfforum.se,polestarclubsweden.se##+js(acs, setTimeout, test)
+svensktgolfforum.se##+js(acs, setTimeout, test)
 egoinas.se,enkelteknik.se,hamnen.se,cannabis.se,tidningen.djurskyddet.se,influens.se,byggipedia.se,byggvarlden.se,vegomagasinet.se##+js(acs, b2a)
 mobilanyheter.net##+js(set, ai_run_scripts, noopFunc)
 
@@ -2221,7 +2221,7 @@ netflixguiden.se##+js(aopr, prebidAdUnits)
 metalcentral.net##.bannergroupno-padding
 ||stats.poddtoppen.se^
 ||poddtoppen.se/api/ad?
-/js/fullpage$domain=poddtoppen.se
+/fullpage$script,domain=poddtoppen.se
 poddtoppen.se##.txs-a
 webb-tv.nu##[id^="adservice"]
 tvprogram.se##.backdrop, .fcb
@@ -3221,7 +3221,7 @@ stallet.se##.pnlAdTop
 ||nyaboendet.se/dist/ga_tag.js?
 biostock.se,hejauppsala.com##.wt-cli-cookie-bar-container
 hejauppsala.com##div[class^="u-text"], h2:has-text(/^Reklam$/):upward(section)
-||youtube.com/embed^$frame,redirect=click2load.html,domain=ordfrontmagasin.se
+||youtube.com/embed$frame,redirect=click2load.html,domain=ordfrontmagasin.se
 ordfrontmagasin.se##.oc_cb_wrapper, .simple-image a:not([href^="/"]):not([href*="ordfrontmagasin.se"])
 skogssallskapet.se,formas.se,rf.se##.env-modal-dialog--show, .env-modal-dialog__backdrop
 skogssallskapet.se,formas.se,rf.se##body:style(overflow:initial!important; position:initial!important;)
@@ -3248,6 +3248,7 @@ hallakonsument.se##section[aria-label="Kakinformation"]
 passagen.se###menu-item-3434
 passagen.se##.text_sidebar_section:has-text(casino)
 passagen.se##.category_badge[href="/lana-pengar/"]:upward(.col_item)
+passagen.se##a[href*="casino"], a[href*="spelansvar"]:upward(.cat_item)
 si.se###cookie-manager
 carup.se##div[id^="carup-"]
 fasting.nu##body:style(display:unset!important)
