@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2023-06-02 07:13:31 CEST
+! Last modified: 2023-06-04 07:53:08 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -371,6 +371,7 @@
 .se/bilder/banners/
 .se/blogcounter/image?
 .se/client-views/cookieinfo?$xmlhttprequest
+.se/common/js/tracking/
 .se/components/cookiebar$script
 .se/cookiesamtykke$script
 .se/counter/
@@ -1008,6 +1009,7 @@
 /trace/*/view$xmlhttprequest,domain=netflixguiden.se
 /trackers/SessionCam-tag
 /tracking/cts.js
+/tracking/fpc.js
 /trackolding$script,domain=skyscanner.se
 /trafikfonden/*
 /TSPD/*$script,domain=corren.se|ekuriren.se|eposten.se|folkbladet.se|gotlandjustnu.se|helagotland.se|kindaposten.se|kkuriren.se|kuriren.nu|mvt.se|norran.se|nsd.se|nt.se|pt.se|sn.se|strengnastidning.se|unt.se|vimmerbytidning.se|vt.se
@@ -1648,9 +1650,8 @@ restaurangvarlden.se##.banner-col, .alt-banner-col
 ridsport.se##.svrf__sticky-ad, .svrf-block__banner, .sv-cookie-consent-banner, .sp-banner-block, .sp-double-ad-block, .sp-head-sponsor-container, .sp-regular-sponsor-container
 riktighockey.se###custom_html-2
 rocknytt.net##[data-widget_type*="bnnrwidgets"], a[href*="/annons/"]
-ruthless.se##.notices
 sakochliv.se##.cookie-disclaimer-wrap, .type-promo, .sector-annons
-samnytt.se##.ant-modal-root
+samnytt.se##.ant-modal-root, a[href*="/casino/"]
 scanaktier.se###overlay-black
 schack.se##.schac-widget
 schoolido.se##.so-cookie__area
