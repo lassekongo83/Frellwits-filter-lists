@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2023-06-04 07:53:08 CEST
+! Last modified: 2023-06-06 08:24:36 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -64,8 +64,8 @@
 ###cookiejar
 ###cookielawwarning
 ###cookieMsgBlock
-###CookieNotice
 ###cookieNotice
+###CookieNotice
 ###cookies-acceptance .alert.bottom
 ###cookiesInfo
 ###dialog-eu-cookie-law
@@ -790,6 +790,7 @@
 /plugins/eu-cookie-law/*
 /plugins/exit-popup/*$script
 /plugins/facebook-conversion-pixel
+/plugins/facebook-ogg-meta-tags
 /plugins/facebook-pagelike-widget
 /plugins/facebook-popout-likebox
 /plugins/fisher/core/js/generated/analytics.js
@@ -1008,6 +1009,7 @@
 /trace$xmlhttprequest,domain=radio.se
 /trace/*/view$xmlhttprequest,domain=netflixguiden.se
 /trackers/SessionCam-tag
+/tracking.php?aid=
 /tracking/cts.js
 /tracking/fpc.js
 /trackolding$script,domain=skyscanner.se
@@ -1062,7 +1064,7 @@
 /wp-content/uploads/*-sidebar$image,domain=dagensinfrastruktur.se|grontsamhallsbyggande.se|nordiskaprojekt.se|nyaprojekt.se|svenskbyggtidning.se|svenskfastighetsutveckling.se
 /wp-content/uploads/*/public/assets/js/advanced.js$script
 /wp-content/uploads/*annons$image,domain=~annonsere.gulesider.no|~datahjelperne.no|~dataliner.no
-/wp-content/uploads/*banner$image,domain=alltomhif.se|arjeplognytt.se|battregolf.se|bioenergitidningen.se|borattforum.se|branschkoll.se|brollopsmagasinet.se|bussmagasinet.se|dalarnasaffarer.se|danstidningen.se|dental24.se|electronic.se|finanstid.se|guldkanalen.se|investerarbrevet.se|jamtlandsaffarer.se|katerinamagasin.se|ljuskultur.se|marsta.nu|naringslivetvgl.se|opulens.se|pakryss.se|restaurangvarlden.se|sff.nu|sportpanelen.se|stockholmsaffarer.se|svenskhistoria.se|svensktidskrift.se|tekniknytt.se|turismnytt.se|vardfokus.se
+/wp-content/uploads/*banner$image,domain=alltomhif.se|arjeplognytt.se|battregolf.se|bioenergitidningen.se|borattforum.se|branschkoll.se|brollopsmagasinet.se|bussmagasinet.se|dalarnasaffarer.se|danstidningen.se|dental24.se|electronic.se|finanstid.se|guldkanalen.se|investerarbrevet.se|jamtlandsaffarer.se|katerinamagasin.se|ljuskultur.se|marsta.nu|naringslivetvgl.se|opulens.se|pakryss.se|restaurangvarlden.se|sportpanelen.se|stockholmsaffarer.se|svenskhistoria.se|svensktidskrift.se|tekniknytt.se|turismnytt.se|vardfokus.se
 /wp-content/uploads/*betfair$image
 /wp-content/uploads/*bethard$image
 /wp-content/uploads/*betting$image,domain=bandyfeber.com|hockeybladet.nu|kulturbloggen.com|newsvoice.se|nyadagbladet.se|spelochfilm.se
@@ -1221,7 +1223,7 @@ bestchampagne.se##aside.section-sm
 betongforeningen.se,espressomedia.se,foodetc.se,livetsgoda.se,ordfrontmagasin.se,realtid.se##a[target$="blank"] img
 bettingstugan.se,bioenergitidningen.se,bovision.se,dagensopinion.se,di.se,dn.se,driva-eget.se,ehandel.se,expressen.se,familjeliv.se,fordonsproffs.eu,golflivet.se,ifokus.se,ifragasatt.se,jaktojagare.se,kamerabild.se,mobil.se,padelfeber.se,skaraborgsbygden.se,skillingaryd.nu,sportbloggare.com,sv.picmix.com,swedroid.se,teknikveckan.se,tidningenridsport.se,tripadvisor.se,vardfokus.se,vemringde.se,xn--vrnamo-bua.nu##.ad
 bettips.se##.bettips-am
-bettips.se,borskollen.se##.top-banner
+bettips.se,borskollen.se,se.azrhymes.com##.top-banner
 bicycling.se,runnersworld.se##.post-card-sponsored, .modal-plus, .modal-backdrop, .footer-newsletter
 bildobubbla.se##.annonser
 bilsport.se##fl-panorama-top,fl-newsletter-popup
@@ -1497,6 +1499,7 @@ kalmar.nu,se.moyens.net###rb-cookie
 kamerabild.se,mobil.se##.storan, .Partner, aside .pane-custom
 kamrat.com###kadDiv, div[style="margin:25px 0;max-width:255px!important;"], #scrollAdj ~ *
 kardemummagumman.se###custom_html-2
+karriarforetagen.se##.cookie-bg
 karriarlakare.se##a[target][onclick]
 kartor.eniro.se##.e-banner
 katerinamagasin.se##.adv-area, #right-areas, a[href*=".casino"], body > div.code-block
@@ -1652,6 +1655,7 @@ riktighockey.se###custom_html-2
 rocknytt.net##[data-widget_type*="bnnrwidgets"], a[href*="/annons/"]
 sakochliv.se##.cookie-disclaimer-wrap, .type-promo, .sector-annons
 samnytt.se##.ant-modal-root, a[href*="/casino/"]
+sbktavling.se##.jcarousel-skin-tango
 scanaktier.se###overlay-black
 schack.se##.schac-widget
 schoolido.se##.so-cookie__area
@@ -1659,14 +1663,13 @@ screen-marknaden.se##.fo-banner, .fp-banner
 sdhl.se,ssl.se,storvretaibk.se##.rmss_module-block-linked_image, a[href*="/spela.svenskaspel.se"]
 selectAdvertiserElement$domain=bebisvarlden.se
 sexpacket.se##.info_cookies
-sff.nu###sidebar > li:not(.widget_wp_sidebarlogin), li.widget_sp_image
 shoegazing.se###main-sidebar .widget_media_image, #post-sidebar .widget_media_image, #content > .code-block
 shop.halebop.se##.cookie-banner-modal
 shortcut.se##.baner-desktop, .baner-mobile, .banner-wrap
 si.se###cookie-manager
 signprint.se##.topbanner
 siljannews.se##a[href^="/annons"]
-sillyseason.se###text-41, #leader-wrapper
+sillyseason.se###text-41, #leader-wrapper, a[href^="/till/"][target="_blank"]
 siriusbandy.se,vetlandabk.se##[id$="-ad"]
 siteseeker$script,domain=foretagarna.se
 sjostadsbladet.se##a.td_single_image_bg
@@ -1906,7 +1909,7 @@ zeromagazine.nu##div[id^="ads"]
 ||casono.se^$third-party
 ||caterpillarsverige.net^
 ||caviera-sverige.shop^
-||cdn-cookieyes.com^$domain=jarnvagar.nu|lokalti.se|magasink.se
+||cdn-cookieyes.com^$domain=jarnvagar.nu|lokalti.se|magasink.se|senses.se
 ||cdn-sitegainer.com/sitegainer
 ||cdn.adt*/atag.js?$third-party
 ||cdn.adt*/jsTag?$third-party
@@ -2055,7 +2058,6 @@ zeromagazine.nu##div[id^="ads"]
 ||foretagande.se/r/$xmlhttprequest
 ||forms.hsforms.com^*/counters.$image
 ||forum.odla.nu/js/bonnier.js
-||fpnpmcdn.net^
 ||fraagesport.com^
 ||freewheel-mtgx-tv.akamaized.net^$media
 ||freyanews.com^*/tracker$script
@@ -2073,6 +2075,7 @@ zeromagazine.nu##div[id^="ads"]
 ||getlevelten.com^$third-party
 ||getsitecontrol.com^$third-party
 ||girohjalm.com.se^
+||glitnoraffiliates.com^$third-party
 ||gnuheter.com/creeper/image
 ||gopeach.se^$third-party
 ||gravito.net^$domain=hitta.se
