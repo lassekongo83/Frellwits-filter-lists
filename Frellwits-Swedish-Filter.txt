@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2023-06-08 08:02:45 CEST
+! Last modified: 2023-06-11 06:53:07 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -64,8 +64,8 @@
 ###cookiejar
 ###cookielawwarning
 ###cookieMsgBlock
-###CookieNotice
 ###cookieNotice
+###CookieNotice
 ###cookies-acceptance .alert.bottom
 ###cookiesInfo
 ###dialog-eu-cookie-law
@@ -522,7 +522,9 @@
 /bilder-for-annonser$image
 /bilder/ads/*
 /bilder/betalannonser
+/bilder/logotyper/partners
 /bitcsys/js/bit.js
+/block/samarbetspartners$image
 /bloggerfy/tracker
 /BlogPortal/view/Statistics
 /blogs/log_pageview
@@ -991,7 +993,6 @@
 /sv_se/metrics/*$script,xmlhttprequest
 /svenska-ridsportforbundet/*banners
 /svff/bannerblock/*
-/svff/bilderblock/logotyper/partners
 /swordfishinc.download.akamai.com/*$script
 /synonymerse-adapter.js$domain=synonymer.se
 /tabs_hits_counter.php$image
@@ -1138,7 +1139,6 @@
 @@||notebookcheck.se/fileadmin/templates/js/nbc-ads-ns.js
 @@||nuthymia-llc.ck.page/*/index.js$domain=nickwignall.com
 @@||se-tv4.videoplaza.tv/proxy/distributor$domain=fotbollskanalen.se|koket.se|tv4.se|tv4play.se
-@@||yieldwrapper.com^$domain=spray.se
 aapl.se,hrnytt.se,inblick.se,inredningsarkitektur.se,ljuskultur.se##.cookies
 adecco.se,apotekhjartat.se,ica.se,tele2.se###onetrust-consent-sdk
 affarsvarlden.se##.cookies-wrap, .Modal, .article-list-item--native, .advert-notice-box, .native-popup, .takeover-wrap
@@ -1695,13 +1695,12 @@ sportbilen.se###text-4
 sportbloggare.com##.partners-box, .cube-bonus-list
 sporthalsa.se##.header_top, #media_image-2, #text-6
 sporthalsa.se##a[href*="/annonsering"]
-sportpanelen.se###text-html-widget-3
 sporttv.nu##a[onclick*="bannerClick"]
+spray.se##section[class*="casino"], a[href*="casino"]
 stallet.se##.pnlAdTop
 startaochdriva.se##.banner-right, .banner-left, .wpb_single_image a[target="_blank"], .tdm-popup-modal-wrap
 stegforhalsa.se##[class*="jsx-"][style*="position: sticky"], .bc--grey-neutral-50[style^="min-height"]
 stoppapressarna.se##.premium-page-ad, .footer-banner-wrapper, div[id^="stopp-"]
-streamtajm.com,svensktradgard.se###preloader
 surfa.se##div[class*="-promo"], div[class*="prisjakt-"]
 svd.se###mega-ad-wrapper, .Container--ad, .theme-Native, .AdWrapper, .AdPositionData, .Teaser--fullAdLabel, div[data-engage-entity-id="sales-banner-bottom-sticker-wide"], [data-id="bottom-sticker-offer"]
 svenskafans.com##.puff__ad-heading
@@ -1709,6 +1708,7 @@ svenskahousegruppen.se###eprivacyModal, .modal-backdrop
 svenskhistoria.se##.widget_et_ads, .module-etads, #text-13, #block-4, a[target="_blank"][rel="noopener noreferrer"], a > img[width="300"][height="250"], a > img[width="800"][height="175"], a[href*="casino"], a[href*="poker"]
 svensktgolfforum.se##[data-ad-id]
 svensktidskrift.se###bannercolumn, img[title^="Annons"]
+svensktradgard.se###preloader
 sverigeskonsumenter.se###cookie-box
 sverigesnatur.org##div[id^="sverigesNaturPopup"]
 sverigespringer.se##.cd-desktop-banner
@@ -1934,7 +1934,7 @@ zeromagazine.nu##div[id^="ads"]
 ||connect.facebook.net^$domain=aktiespararna.se|dovastidning.se|epochtimes.se|ettgottskratt.se|fotosidan.se|friatider.se|hammarbyfotboll.se|humorbibeln.se|kvinnatillkvinna.se|kyrkanstidning.se|lajvo.se|lektionsbanken.se|loppi.se|mitti.se|newsner.com|ng.se|psykologiguiden.se|pussad.se|sillyseason.se|sportbibeln.se|tn.se|vasterastidning.se
 ||connect.nosto.com^*/behav-popup.$script
 ||connectio.s3.amazonaws.com/connect-retarget$script
-||consensu.org^$domain=autopower.se|bjarenu.se|butikpris.se|byrum.se|doon.se|filippoon.se|filmtopp.se|forni.se|garaget.org|gbgfotboll.se|historier.net|jennysmatblogg.nu|kamerabild.se|laget.se|laholmstidning.se|land.se|langd.se|lindasbakskola.se|listor.se|ljudochbild.se|lokaltidningenvaxjo.se|mobil.se|mytaste.se|news55.se|norrahalland.se|oppettiden.se|ostgotatidningen.se|pernillawahlgren.se|poddtoppen.se|proff.se|receptfavoriter.se|sportlovin.se|sporttv.nu|spray.se|stff.se|svenskfotboll.se|travelnews.se|vackertvader.se|zeinaskitchen.se
+||consensu.org^$domain=autopower.se|bjarenu.se|butikpris.se|byrum.se|doon.se|filippoon.se|filmtopp.se|forni.se|garaget.org|gbgfotboll.se|historier.net|jennysmatblogg.nu|kamerabild.se|laget.se|laholmstidning.se|land.se|langd.se|lindasbakskola.se|listor.se|ljudochbild.se|lokaltidningenvaxjo.se|mobil.se|mytaste.se|news55.se|norrahalland.se|oppettiden.se|ostgotatidningen.se|pernillawahlgren.se|poddtoppen.se|proff.se|receptfavoriter.se|sportlovin.se|spray.se|stff.se|svenskfotboll.se|travelnews.se|vackertvader.se|zeinaskitchen.se
 ||consent.dk^$third-party,domain=~ekstrabladet.dk
 ||consent.podplay.com^
 ||consentframework.com^$domain=luleahockeyforum.com
@@ -2331,12 +2331,12 @@ zeromagazine.nu##div[id^="ads"]
 ||pushpushgo.com^$third-party
 ||pushwhy.com^
 ||pxl.host^$third-party
-||quantcast.com^$domain=arbetarskydd.se|babyhjalp.se|blogg.se|brinkenbakar.se|cleannet.se|dagenshandel.se|dh.se|egoinas.se|eniro.se|enkelteknik.se|entreprenad.com|ettgottskratt.se|flashback.org|food-supply.se|foodnet.se|foreca.se|fraser.nu|fri-kopenskap.se|habit.se|hippson.se|humorbibeln.se|kalender.se|kemivarldenbiotech.se|kiacarclub.se|lag-avtal.se|landleyskok.se|lesscarbs.se|leta.se|lifesciencesweden.se|matklubben.se|medtechmagazine.se|merinfo.se|motivation.se|motormagasinet.se|mykitchenstories.se|newsner.com|nyadagbladet.se|nyteknik.se|packnet.se|plastnet.se|poddar.se|processnet.se|recyclingnet.se|res.se|reseguiden.se|rt-forum.se|samnytt.se|sportbibeln.se|stoppapressarna.se|svenskayoutubers.se|swehockey.se|themoviefreak.se|tittapavideon.se|tortureviews.se|transportnet.se|travelgrip.se|uochd.se|varldenshaftigaste.se|verkstaderna.se|woodnet.se|woxikon.se
+||quantcast.com^$domain=arbetarskydd.se|babyhjalp.se|blogg.se|brinkenbakar.se|cleannet.se|dagenshandel.se|dh.se|egoinas.se|eniro.se|enkelteknik.se|entreprenad.com|ettgottskratt.se|flashback.org|food-supply.se|foodnet.se|foreca.se|fraser.nu|fri-kopenskap.se|habit.se|hippson.se|humorbibeln.se|kalender.se|kemivarldenbiotech.se|kiacarclub.se|lag-avtal.se|landleyskok.se|lesscarbs.se|leta.se|lifesciencesweden.se|matklubben.se|medtechmagazine.se|merinfo.se|motivation.se|motormagasinet.se|mykitchenstories.se|newsner.com|nyadagbladet.se|nyteknik.se|packnet.se|plastnet.se|poddar.se|processnet.se|recyclingnet.se|res.se|reseguiden.se|rt-forum.se|samnytt.se|sportbibeln.se|sporttv.nu|stoppapressarna.se|svenskayoutubers.se|swehockey.se|themoviefreak.se|tittapavideon.se|tortureviews.se|transportnet.se|travelgrip.se|uochd.se|varldenshaftigaste.se|verkstaderna.se|woodnet.se|woxikon.se
 ||qx.se/view.php$image
 ||rabble-res.cloudinary.com^$third-party
 ||radio.se/iomm
-||ramses.nu^*/banners/
-||ramses.nu^*/Centralabanners/
+||ramses.nu^*/*annons
+||ramses.nu^*/*banner
 ||raygun.io^$domain=koket.se
 ||reaktion.se^$third-party
 ||realiteti.info^
