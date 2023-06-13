@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2023-06-11 06:53:07 CEST
+! Last modified: 2023-06-13 06:59:33 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -569,7 +569,7 @@
 /ctr-prd.cbs-measurements.
 /cts.min.js$domain=recept.se
 /cx-emediate-userprofile-se
-/detroitchicago$domain=temadagar.se
+/detroitchicago$domain=svenskaorduttryck.se|temadagar.se
 /detroitchicago/*.gif?$image
 /detroitchicago/cmbdv2.js$domain=wernamaten.se
 /detroitchicago/denver.js$domain=wernamaten.se
@@ -998,6 +998,7 @@
 /tabs_hits_counter.php$image
 /takeover-ad.js$domain=ridsport.se
 /takeover.js$domain=gekas.se
+/tarteaucitron$domain=sv.geneanet.org
 /tasteline/templates/popup
 /tbilen/banner/*
 /templates/ad_$domain=jaktojagare.se
@@ -1116,7 +1117,6 @@
 @@/appbanner.jpg$image,domain=guldkanalen.se
 @@/assets/ads-dm.js$~third-party,domain=corren.se|ekuriren.se|eposten.se|folkbladet.se|gotlandjustnu.se|helagotland.se|kindaposten.se|kkuriren.se|kuriren.nu|mvt.se|norran.se|nsd.se|nt.se|pt.se|sn.se|strengnastidning.se|unt.se|vimmerbytidning.se|vt.se
 @@/consent.json$domain=forum.macworld.se|idg.se
-@@/css/ad.$stylesheet,domain=sv.geneanet.org
 @@/cykla/assets/js/advertisment.js$~third-party,domain=cykla.se
 @@/js/ad.js$~third-party,domain=sweclockers.com
 @@/js/ads.js$~third-party,domain=freeride.se|fz.se|spela.se
@@ -1397,8 +1397,8 @@ foretagarna.se##.c-cookie
 formas.se,rf.se,skogssallskapet.se##.env-modal-dialog--show, .env-modal-dialog__backdrop
 forum.macworld.se,idg.se##.idgcp__layer
 forum.mustangclubsweden.org##a[href*="&do=advertisement&ad=1"]
+forum.robsoft.nu##.cookie-box
 forum.robsoft.nu##td[valign="middle"] > a[target="_blank"]
-forum.robsoft.nu,svenskaturistforeningen.se##.cookie-box
 forvaltarforum.se##[id^="ff_banner"], .home .partner_article + .mh-section, .home .payed_article + .mh-section, .home-columns .ticker-title.partner_article, .home-columns .ticker-title.payed_article, .mh-header .widget_sow-slider, .sow-slider-image, .houdini_partner_article, .houdini_video_banner, .houdini_produktnytt, #houdini_tjanster-2, .widget_sow-image a[target]
 fotboll.com##.header-static-lg, .fp-partner, .xs-ad, .bo-wrapper, #betsid, .news-banner-mini
 fotbolldirekt.se,hockeysverige.se,innebandymagazinet.se,padeldirekt.se##.site-partnevisment, .h-background--sponsored-light, .row .text-center img, a[href^="https://hubs.la"], .c-partners
@@ -1702,9 +1702,10 @@ startaochdriva.se##.banner-right, .banner-left, .wpb_single_image a[target="_bla
 stegforhalsa.se##[class*="jsx-"][style*="position: sticky"], .bc--grey-neutral-50[style^="min-height"]
 stoppapressarna.se##.premium-page-ad, .footer-banner-wrapper, div[id^="stopp-"]
 surfa.se##div[class*="-promo"], div[class*="prisjakt-"]
-svd.se###mega-ad-wrapper, .Container--ad, .theme-Native, .AdWrapper, .AdPositionData, .Teaser--fullAdLabel, div[data-engage-entity-id="sales-banner-bottom-sticker-wide"], [data-id="bottom-sticker-offer"]
+svd.se###mega-ad-wrapper, .Container--ad, .theme-Native, .AdWrapper, .AdPositionData, .Teaser--fullAdLabel, div[data-engage-entity-id="sales-banner-bottom-sticker-wide"], [data-id="bottom-sticker-offer"], .Teaser[data-commercial="true"]
 svenskafans.com##.puff__ad-heading
 svenskahousegruppen.se###eprivacyModal, .modal-backdrop
+svenskfarmaci.se##.Dialog[data-dialog-skip-auto-open-for-utm-source-value="Newsletter"]
 svenskhistoria.se##.widget_et_ads, .module-etads, #text-13, #block-4, a[target="_blank"][rel="noopener noreferrer"], a > img[width="300"][height="250"], a > img[width="800"][height="175"], a[href*="casino"], a[href*="poker"]
 svensktgolfforum.se##[data-ad-id]
 svensktidskrift.se###bannercolumn, img[title^="Annons"]
@@ -2068,7 +2069,7 @@ zeromagazine.nu##div[id^="ads"]
 ||gamereactor.se/ads/
 ||gamereactor.se/exclusive.json
 ||gamesglue.com/js/gameanalytics/GameAnalytics
-||gatekeeperconsent.com^$domain=hemmanytt.se
+||gatekeeperconsent.com^$domain=hemmanytt.se|svenskaorduttryck.se
 ||gekas.se/count/
 ||getanewsletter.com/js-forms-assets/popups.js
 ||getlevelten.com^$third-party
@@ -2331,7 +2332,7 @@ zeromagazine.nu##div[id^="ads"]
 ||pushpushgo.com^$third-party
 ||pushwhy.com^
 ||pxl.host^$third-party
-||quantcast.com^$domain=arbetarskydd.se|babyhjalp.se|blogg.se|brinkenbakar.se|cleannet.se|dagenshandel.se|dh.se|egoinas.se|eniro.se|enkelteknik.se|entreprenad.com|ettgottskratt.se|flashback.org|food-supply.se|foodnet.se|foreca.se|fraser.nu|fri-kopenskap.se|habit.se|hippson.se|humorbibeln.se|kalender.se|kemivarldenbiotech.se|kiacarclub.se|lag-avtal.se|landleyskok.se|lesscarbs.se|leta.se|lifesciencesweden.se|matklubben.se|medtechmagazine.se|merinfo.se|motivation.se|motormagasinet.se|mykitchenstories.se|newsner.com|nyadagbladet.se|nyteknik.se|packnet.se|plastnet.se|poddar.se|processnet.se|recyclingnet.se|res.se|reseguiden.se|rt-forum.se|samnytt.se|sportbibeln.se|sporttv.nu|stoppapressarna.se|svenskayoutubers.se|swehockey.se|themoviefreak.se|tittapavideon.se|tortureviews.se|transportnet.se|travelgrip.se|uochd.se|varldenshaftigaste.se|verkstaderna.se|woodnet.se|woxikon.se
+||quantcast.com^$domain=arbetarskydd.se|babyhjalp.se|blogg.se|brinkenbakar.se|cleannet.se|dagenshandel.se|dh.se|egoinas.se|eniro.se|enkelteknik.se|entreprenad.com|ettgottskratt.se|flashback.org|food-supply.se|foodnet.se|foreca.se|fraser.nu|fri-kopenskap.se|habit.se|hippson.se|humorbibeln.se|kalender.se|kemivarldenbiotech.se|kiacarclub.se|lag-avtal.se|landleyskok.se|lesscarbs.se|leta.se|lifesciencesweden.se|matklubben.se|medtechmagazine.se|merinfo.se|motivation.se|motormagasinet.se|mykitchenstories.se|newsner.com|nyadagbladet.se|nyteknik.se|packnet.se|plastnet.se|poddar.se|processnet.se|recyclingnet.se|res.se|reseguiden.se|rt-forum.se|samnytt.se|sportbibeln.se|sporttv.nu|stoppapressarna.se|swehockey.se|themoviefreak.se|tittapavideon.se|tortureviews.se|transportnet.se|travelgrip.se|uochd.se|varldenshaftigaste.se|verkstaderna.se|woodnet.se|woxikon.se
 ||qx.se/view.php$image
 ||rabble-res.cloudinary.com^$third-party
 ||radio.se/iomm
