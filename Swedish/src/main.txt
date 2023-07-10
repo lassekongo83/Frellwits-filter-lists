@@ -1364,7 +1364,7 @@ it-finans.se,it-halsa.se,it-kanalen.se,it-pedagogen.se,it-retail.se,it-hallbarhe
 bokmassan.se,svenskamassan.se##.cookie-law
 chef.se,fokus.se##.Blurb--native
 naringslivetvgl.se,dalarnasaffarer.se,stockholmsaffarer.se,jamtlandsaffarer.se##.cookies-popup
-karriarlakare.se,nongrata.se,livinguppsala.se,battrestadsdel.se,butikstrender.se,forskning.se,vardfokus.se,varvat.se,smaspararguiden.se,aktuellsakerhet.se,maklarvarlden.se,kvartal.se,sjostadsbladet.se,tidningenridsport.se,influens.se,cookaholic.se,vinliv.se,raa.se,svenskfilmdatabas.se,morakniv.se,hammarbyfotboll.se,carup.se,goon.se###cookie-law-info-bar
+karriarlakare.se,nongrata.se,livinguppsala.se,battrestadsdel.se,butikstrender.se,forskning.se,vardfokus.se,varvat.se,smaspararguiden.se,aktuellsakerhet.se,maklarvarlden.se,kvartal.se,sjostadsbladet.se,tidningenridsport.se,influens.se,cookaholic.se,vinliv.se,raa.se,svenskfilmdatabas.se,morakniv.se,hammarbyfotboll.se,carup.se,goon.se,hejaolika.se###cookie-law-info-bar
 motorforum.nu,lakemedelsvarlden.se##div.pea_cook_wrapper
 lakemedelsvarlden.se##.pea_cook_more_info_popover
 fotboll.com,allsvenskan.se,superettan.se,swebbtv.se,hastnet.se##.smartbanner
@@ -1547,7 +1547,7 @@ aftonbladet.se##main > section > div[class^="css-"]:first-child:has(img[src*="cl
 aftonbladet.se##p:has-text(/^PRESENTERAS AV$/):upward(1)
 aftonbladet.se##:matches-path(/^/$/) p:has-text(Artikeln innehåller annonslänkar):upward(a)
 aftonbladet.se##main > section > div:first-child:matches-css(box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 24px 0px)
-aftonbladet.se##span:has-text(ANNONS):upward(3)
+aftonbladet.se##article[class^="article-wrapper"] ~ div:has-text(ANNONS)
 ! scriptlets
 www.aftonbladet.se##+js(nostif, TAKEOVER)
 ! css
@@ -1831,7 +1831,11 @@ dagensps.se##a[href*="/ps-partner/"], .ad-links-module, .dagensps_ad, a[href*="u
 dagensps.se##.dagensps_ad:upward(.container)
 dagensps.se##a[href*="/ps-partner"]:upward(section.cat-post-widget)
 dagensps.se##.sponsored_post:upward(.postbox)
+dagensps.se##.text-text-secondary, span.font-bold:has-text(ANNONS):upward(2)
+dagensps.se##a[href="/ps-partner"]:upward(div[class^="bg-"])
 hejaolika.se##[class*="partnerinfostyle"], div[id^="hejao-"], .kb-advanced-image-link[target], .category-partnerinformation, .kt-modal-linkalign-center, .hejao-target
+hejaolika.se##p[style^="text-transform"]:has-text(/annons/i)
+hejaolika.se##p[style^="text-transform"]:has-text(/annons/i) + .wp-block-kadence-posts
 hejaolika.se##+js(acs, advads_passive_placements)
 bulletin.nu##[class^="newsletter-subscribe"], div[class^="cookie-message"], div[role="presentation"]
 bulletin.nu##div[class*="section-preview"]:has-text(/betalt samarbete/i):upward(4)
