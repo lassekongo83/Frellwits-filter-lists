@@ -2491,10 +2491,13 @@ newsvoice.se##h3:has-text(/annons/i) + .textwidget
 nyadagbladet.se##.third-col, article[class*="sponsrad"], div[id^="nyd-"]
 nyadagbladet.se##.widget_media_image:has-text(/annons/i)
 ||spelguiden.samnytt.se^
-samnytt.se##.ant-modal-root, a[href*="/casino/"]
+/sidebanner$image,domain=samnytt.se
+/casinoguiden$image,domain=samnytt.se
+samnytt.se##.ant-modal-root, a[href*="/casino/"], div[class*="side-banner"], .in-articles
 samnytt.se##div.css-0:has-text(Annons)
 samnytt.se##span:has-text(/^Utvalda länkar$/i):upward(2)
 samnytt.se##body:style(overflow:unset!important)
+samnytt.se##+js(json-prune, analytics googleAnalytics theme.siteOptions.ad_links.* theme.siteOptions.casino_page_description theme.siteOptions.casino_page_partner)
 ||nyheteridag.se/ads/
 nyheteridag.se##.widget.facebook, .content > div:not([class]) img, a[href*="www.casino"], a[href="/karnkraft.php"]
 nyheteridag.se##h2:has-text(/samarbetslänkar/i):upward(.article-inner)
@@ -2825,8 +2828,8 @@ proffs.se##*::-webkit-scrollbar-thumb:style(background: #5e5e5e !important; bord
 ! Not Chromium
 !#if !env_chromium
 ||fast.fonts.net/*/1.css$domain=arkitekt.se|axess.se|diabetes.se
-branschkoll.se,rocknytt.net,upphandling24.se,kimura.se,datormagazin.se,samnytt.se,villalivet.se##^script[id^="advanced-ads"]
-branschkoll.se,rocknytt.net,upphandling24.se,kimura.se,datormagazin.se,samnytt.se,villalivet.se,polistidningen.se##^script:has-text(advads)
+branschkoll.se,rocknytt.net,upphandling24.se,kimura.se,datormagazin.se,villalivet.se##^script[id^="advanced-ads"]
+branschkoll.se,rocknytt.net,upphandling24.se,kimura.se,datormagazin.se,villalivet.se,polistidningen.se##^script:has-text(advads)
 temadagar.se##^script:has-text(__ez)
 |http://vimedbarn.se^$csp=upgrade-insecure-requests
 !#endif
