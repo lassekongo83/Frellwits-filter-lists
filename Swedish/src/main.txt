@@ -1301,7 +1301,7 @@ utm_$document,removeparam=/^utm_/,domain=tv.nu|booli.se|expressen.se|aftonbladet
 /analytics$domain=gbgfotboll.se|stff.se|svenskfotboll.se|di.se|etc.se|vackertvader.se
 /vast.js$domain=moviezine.se|aftonbladet.se|livsstil.se|godare.se|svd.se
 /glimr$script,domain=aftonbladet.se|blocket.se|livsstil.se|godare.se
-/profile$ping,domain=feber.se|hamnen.se|tasteline.com|tjock.se|veckorevyn.com|marcusoscarsson.se|handbollskanalen.se|surfa.se|nordichardware.se|hockeynews.se|tv4.se|teknikveckan.se
+/profile$ping,domain=feber.se|hamnen.se|tasteline.com|tjock.se|veckorevyn.com|marcusoscarsson.se|handbollskanalen.se|surfa.se|nordichardware.se|hockeynews.se|tv4.se|fotbollskanalen.se|koket.se|teknikveckan.se
 /utag$script,domain=gaffa.se
 /tracker$script,domain=vaningen.se
 ! Websites with no obvious or visible facebook login. Will just assume it's used for tracking.
@@ -2265,6 +2265,7 @@ zeromagazine.nu##div[id^="ads"]
 &browser=MozillaFirefox$xmlhttprequest,removeparam=/^browser/,domain=fotbollskanalen.se|koket.se|tv4.se|tv4play.se
 /aab/tv4play$redirect=noop.js,script,domain=fotbollskanalen.se|koket.se|tv4.se|tv4play.se
 ||dbf0a92kfjvxs.cloudfront.net/creatives/assets$image,domain=tv4play.se
+tv4.se##.maxetise:upward(1)
 tv4play.se##button:has-text(Besök annonsör)
 tv4play.se##.avod-web-player-pause:style(background-color:transparent!important;)
 fotbollskanalen.se##.brand, .desktop-ad-web, a[href*="telia.se/privat/tv/sport"] img, .mobile-ad-web
@@ -2493,8 +2494,9 @@ nyadagbladet.se##.widget_media_image:has-text(/annons/i)
 ||spelguiden.samnytt.se^
 /sidebanner$image,domain=samnytt.se
 /casinoguiden$image,domain=samnytt.se
-samnytt.se##.ant-modal-root, a[href*="/casino/"], div[class*="side-banner"], .in-articles
+samnytt.se##.ant-modal-root, a[href*="/casino/"], div[class*="side-banner"], .in-articles, .below-articles
 samnytt.se##div.css-0:has-text(Annons)
+samnytt.se##div:matches-css(background-color: rgba(0, 0, 0, 0.5))
 samnytt.se##span:has-text(/^Utvalda länkar$/i):upward(2)
 samnytt.se##body:style(overflow:unset!important)
 samnytt.se##+js(json-prune, analytics googleAnalytics theme.siteOptions.ad_links.* theme.siteOptions.casino_page_description theme.siteOptions.casino_page_partner)
