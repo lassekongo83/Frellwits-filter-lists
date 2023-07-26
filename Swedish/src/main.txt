@@ -1554,8 +1554,14 @@ aftonbladet.se##main > section > div:first-child:matches-css(box-shadow: rgba(0,
 aftonbladet.se##article[class^="article-wrapper"] ~ div:has-text(ANNONS)
 ! scriptlets
 www.aftonbladet.se##+js(nostif, TAKEOVER)
+! annoyances
+aftonbladet.se##div[id^="sp_message_container"]
+aftonbladet.se##+js(set-local-storage-item, CMP:advertising, 0)
+aftonbladet.se##+js(set-local-storage-item, CMP:analytics, 0)
+aftonbladet.se##+js(set-local-storage-item, CMP:marketing, 0)
+aftonbladet.se##+js(set-local-storage-item, CMP:personalisation, 0)
 ! css
-www.aftonbladet.se##.sp-message-open:style(overflow:initial!important; position:unset!important;)
+aftonbladet.se##.sp-message-open body:style(overflow:initial!important; position:unset!important;)
 ! SVD
 ||vev.design^$script,domain=svd.se
 ||svd.se/api/live-ads/
@@ -1577,7 +1583,6 @@ bytbil.com###privacyModal
 bytbil.com##.available-services
 bytbil.com##html,body:style(overflow: auto !important;)
 ! tv.nu
-/pulse$script,domain=tv.nu
 /messagingNoTcfApi.js$domain=tv.nu|klart.se
 tv.nu##a[href*="adform.net"], .ad-fullscreenWallpaper__container
 tv.nu###tv-schedule section:has-text(ANNONS)
