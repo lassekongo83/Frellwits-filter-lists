@@ -1351,7 +1351,7 @@ thorengruppen.se,utslappsratt.se,heleneholmsif.se,trafikskola.se,melodifestivalk
 ||privacy-center.org^$domain=isabellalowengrip.se|johannatoftby.se|fnulan.se|matplatsen.net|monasuniversum.se|180.se|agriaffaires.se|truckscorner.se|machineryzone.se
 ||privacypolicies.com^$domain=fl-net.se
 ||cookieyes.com^$domain=magasink.se
-||cdn-cookieyes.com^$domain=magasink.se|lokalti.se|jarnvagar.nu|senses.se
+||cdn-cookieyes.com^$domain=magasink.se|lokalti.se|jarnvagar.nu|senses.se|norrmejerier.se
 ||gravito.net^$domain=hitta.se
 ||salesmanago.pl/api/push/notification$domain=aikfotboll.se
 ||consentmanager.net^$domain=allastudier.se|gbgfotboll.se|stff.se|svenskfotboll.se
@@ -1552,7 +1552,8 @@ curateContext=affiliate$domain=aftonbladet.se
 /player-plugin-sponsor$domain=tv.aftonbladet.se
 /vgc/cdn/js/libs/ast/*$script,domain=aftonbladet.se
 ! Cosmetic ad filters
-aftonbladet.se###megaAd-placeholder, #superright-side, a[href^="/brandstudio"], a[href*="/casinoguide"], [id^="adPlacement"], a[href^="https://kampanj.aftonbladet"], a[href*="/rabattkod"][data-test-tag="internal-link"], a[href^="/sportbladet/speltips/"], a[href*="aftonbladet.se/kampanj/"], div[data-test-tag="prisjakt-carousel"]
+aftonbladet.se###megaAd-placeholder, #superright-side, a[href^="/brandstudio"], a[href*="/casinoguide"], [id^="adPlacement"], a[href^="https://kampanj.aftonbladet"], a[href*="/rabattkod"][data-test-tag="internal-link"], a[href^="/sportbladet/speltips/"], a[href*="aftonbladet.se/kampanj/"]
+aftonbladet.se,godare.se,livsstil.se##div[data-test-tag="prisjakt-carousel"]
 aftonbladet.se,skonhetsredaktorerna.se##.ab_responsive_ads
 aftonbladet.se##[data-ad-subtype]:upward(1):matches-css(min-height:/[0-9]+/)
 aftonbladet.se##aside > div:has(h2:has-text(/^annons/i))
@@ -1571,13 +1572,13 @@ aftonbladet.se##article[class^="article-wrapper"] ~ div:has-text(ANNONS)
 ! scriptlets
 www.aftonbladet.se##+js(nostif, TAKEOVER)
 ! annoyances
-aftonbladet.se##div[id^="sp_message_container"]
-aftonbladet.se##+js(set-local-storage-item, CMP:advertising, 0)
-aftonbladet.se##+js(set-local-storage-item, CMP:analytics, 0)
-aftonbladet.se##+js(set-local-storage-item, CMP:marketing, 0)
-aftonbladet.se##+js(set-local-storage-item, CMP:personalisation, 0)
+aftonbladet.se,godare.se,livsstil.se,skonhetsredaktorerna.se##div[id^="sp_message_container"]
+aftonbladet.se,godare.se,livsstil.se,skonhetsredaktorerna.se##+js(set-local-storage-item, CMP:advertising, 0)
+aftonbladet.se,godare.se,livsstil.se,skonhetsredaktorerna.se##+js(set-local-storage-item, CMP:analytics, 0)
+aftonbladet.se,godare.se,livsstil.se,skonhetsredaktorerna.se##+js(set-local-storage-item, CMP:marketing, 0)
+aftonbladet.se,godare.se,livsstil.se,skonhetsredaktorerna.se##+js(set-local-storage-item, CMP:personalisation, 0)
 ! css
-aftonbladet.se##.sp-message-open body:style(overflow:initial!important; position:unset!important; margin-top:unset!important;)
+aftonbladet.se,godare.se,livsstil.se,skonhetsredaktorerna.se##.sp-message-open body:style(overflow:initial!important; position:unset!important; margin-top:unset!important;)
 ! SVD
 ||vev.design^$script,domain=svd.se
 ||svd.se/api/live-ads/
@@ -2026,6 +2027,7 @@ macken.xyz##a[target="_blank"]:not([href^="/"]):not([href*="/macken.xyz"]):upwar
 esportare.se##a[href*="utm_campaign"]
 esportare.se##em:has-text(Annonser):upward(2)
 ||spelhubben.se/?_dnembed$script
+spelhubben.se###slideout
 spelhubben.se##html, .unselectable:style(-moz-user-select:initial!important; -webkit-user-select:initial!important; -webkit-touch-callout:initial!important; user-select:initial!important; -webkit-tap-highlight-color:initial!important; cursor:initial!important;)
 /ws-tracking$domain=voister.se
 voister.se##.campaign
@@ -2606,6 +2608,7 @@ aletorget.se,alingsastorget.se,almhulttorget.se,alvestatorget.se,amaltorget.se,a
 /plugins/better-adsmanager/*$~stylesheet
 /plugins/bmb-dfp-plugin
 /plugins/bsa-plugin-pro-scripteo
+/plugins/cm-takeover-ad
 /plugins/custom-banners$domain=skolfamiljen.se
 /plugins/doubleclick-wp
 /plugins/easy-adsense

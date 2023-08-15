@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2023-08-13 08:20:42 CEST
+! Last modified: 2023-08-15 09:26:36 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -64,8 +64,8 @@
 ###cookiejar
 ###cookielawwarning
 ###cookieMsgBlock
-###cookieNotice
 ###CookieNotice
+###cookieNotice
 ###cookies-acceptance .alert.bottom
 ###cookiesInfo
 ###dialog-eu-cookie-law
@@ -772,6 +772,7 @@
 /plugins/cc-cookie-consent/*$script
 /plugins/chimpy/*
 /plugins/christmas-panda
+/plugins/cm-takeover-ad
 /plugins/complianz-gdpr$domain=arjeplognytt.se|iconmagazine.se|signprint.se|vilaser.se
 /plugins/consent-magic-pro$script,domain=bluum.se|gobokhandeln.se|namnmarkning.se
 /plugins/content-hub-wp-plugin/assets/js/hub-time-spent
@@ -1157,10 +1158,11 @@
 aapl.se,hrnytt.se,inblick.se,inredningsarkitektur.se,ljuskultur.se##.cookies
 adecco.se,apotekhjartat.se,ica.se,tele2.se###onetrust-consent-sdk
 affarsvarlden.se##.cookies-wrap, .Modal, .article-list-item--native, .advert-notice-box, .native-popup, .takeover-wrap
-aftonbladet.se###megaAd-placeholder, #superright-side, a[href^="/brandstudio"], a[href*="/casinoguide"], [id^="adPlacement"], a[href^="https://kampanj.aftonbladet"], a[href*="/rabattkod"][data-test-tag="internal-link"], a[href^="/sportbladet/speltips/"], a[href*="aftonbladet.se/kampanj/"], div[data-test-tag="prisjakt-carousel"]
-aftonbladet.se##div[id^="sp_message_container"]
+aftonbladet.se###megaAd-placeholder, #superright-side, a[href^="/brandstudio"], a[href*="/casinoguide"], [id^="adPlacement"], a[href^="https://kampanj.aftonbladet"], a[href*="/rabattkod"][data-test-tag="internal-link"], a[href^="/sportbladet/speltips/"], a[href*="aftonbladet.se/kampanj/"]
 aftonbladet.se,autonytt.se,ekonominyheter.se,hockeybladet.nu,lesscarbs.se,matinspo.se,undervarttak.se##a[href*="/track.adtraction."]
 aftonbladet.se,cfanytt.se,foretagsbladet.se,gestrikemagasinet.se,halsasverige.se,hembostad.nu,langd.se,lasarnas.se,nojesmagasinet.nu,pressbladet.se,skolvarlden.se,sportidrott.se,stoppapressarna.se,svenskpress.se##.advert
+aftonbladet.se,godare.se,livsstil.se##div[data-test-tag="prisjakt-carousel"]
+aftonbladet.se,godare.se,livsstil.se,skonhetsredaktorerna.se##div[id^="sp_message_container"]
 aftonbladet.se,skonhetsredaktorerna.se##.ab_responsive_ads
 agriaffaires.se,machineryzone.se,truckscorner.se##.dp--mb
 aikfotboll.se,tidningen.djurskyddet.se,vaken.se##.banners
@@ -1717,6 +1719,7 @@ snowmobile.se##.location-header_before
 snowmobile.se##.more-stories
 so-rummet.se##.block-rr
 spelagratis.se##.sidebar-right, .ad_header + p
+spelhubben.se###slideout
 spelo.se##.banner-container
 spelochfilm.se##.mh-sidebar .textwidget
 sportbilen.se###text-4
@@ -1940,7 +1943,7 @@ zeromagazine.nu##div[id^="ads"]
 ||casono.se^$third-party
 ||caterpillarsverige.net^
 ||caviera-sverige.shop^
-||cdn-cookieyes.com^$domain=jarnvagar.nu|lokalti.se|magasink.se|senses.se
+||cdn-cookieyes.com^$domain=jarnvagar.nu|lokalti.se|magasink.se|norrmejerier.se|senses.se
 ||cdn-sitegainer.com/sitegainer
 ||cdn.adt*/atag.js?$third-party
 ||cdn.adt*/jsTag?$third-party
