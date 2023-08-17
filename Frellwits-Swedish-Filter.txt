@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2023-08-15 09:26:36 CEST
+! Last modified: 2023-08-17 07:53:02 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -198,6 +198,7 @@
 ##article.annons
 ##article.article-list-item--sponsored-post
 ##article.article-sponsored
+##article.category-partnerartikel
 ##article.category-promotion
 ##article.category-reklam
 ##article.category-samarbete
@@ -690,6 +691,7 @@
 /js/sticky-mobile-ad
 /js/userneeds.
 /jwpsrv.js$domain=aftonbladet.se|allas.se|axess.se|baaam.se|cdn.jwplayer.com|elle.se|embed.futuresportsmedia.com|fasttrack.webstream.dk|femina.se|freeride.se|frida.se|godare.se|hant.se|happyride.se|hastnet.se|laget.se|livsstil.se|mabra.com|motherhood.se|moviezine.se|recept.se|residencemagazine.se|streamio.com|svd.se|svenskdam.se
+/lasso-performance
 /lazyad-loader.$script
 /lazyload-ad.$script
 /leeads-fullpage.js
@@ -734,7 +736,7 @@
 /noview.$script,domain=gofm.se|trafik24.se|trafikdirekt.se|trafikradion.com|trafikradion.se
 /nyhetsspalt_banner_js
 /omniture/s_code.js
-/OneSignalSDK.js$domain=1x2.se|arvikamagasinet.se|battrestadsdel.se|beernews.se|cannabis.se|dackavisen.se|dalarnasaffarer.se|driva-eget.se|entreprenadaktuellt.se|ettgottskratt.se|finanstid.se|fokus.se|fotbollskane.se|fotbollsthlm.se|humorbibeln.se|idg.se|ja.se|jamtlandsaffarer.se|macken.xyz|maskinbladet.se|naringslivetvgl.se|netflixguiden.se|newsner.com|nyadagbladet.se|oskarshamns-nytt.se|rabattsok.se|samnytt.se|skogsaktuellt.se|skolporten.se|sportbibeln.se|stockholmsaffarer.se|swebbtv.se|thepattayanews.se|ungdomsfotboll.se|vaken.se
+/OneSignalSDK.js$domain=1x2.se|aktieskolan.se|arvikamagasinet.se|battrestadsdel.se|beernews.se|cannabis.se|dackavisen.se|dalarnasaffarer.se|driva-eget.se|entreprenadaktuellt.se|ettgottskratt.se|finanstid.se|fokus.se|fotbollskane.se|fotbollsthlm.se|humorbibeln.se|idg.se|ja.se|jamtlandsaffarer.se|macken.xyz|maskinbladet.se|naringslivetvgl.se|netflixguiden.se|newsner.com|nyadagbladet.se|oskarshamns-nytt.se|rabattsok.se|samnytt.se|skogsaktuellt.se|skolporten.se|sportbibeln.se|stockholmsaffarer.se|swebbtv.se|thepattayanews.se|ungdomsfotboll.se|vaken.se
 /OneSignalSDKWorker$script
 /packs/consent$domain=hemnet.se
 /pagead$domain=eniro.se|horoskoptid.se|vilaser.se
@@ -1692,6 +1694,7 @@ schoolido.se##.so-cookie__area
 screen-marknaden.se##.fo-banner, .fp-banner
 sdhl.se,ssl.se,storvretaibk.se##.rmss_module-block-linked_image, a[href*="/spela.svenskaspel.se"]
 selectAdvertiserElement$domain=bebisvarlden.se
+senses.se##a[href*="casino"], a[href*="spelsajt"], a[href*="betting"]
 sexpacket.se##.info_cookies
 shoegazing.se###main-sidebar .widget_media_image, #post-sidebar .widget_media_image, #content > .code-block
 shop.halebop.se##.cookie-banner-modal
@@ -1858,6 +1861,7 @@ zeromagazine.nu##div[id^="ads"]
 ||alphalete.com.se^
 ||altrasverige.com.se^
 ||amazonaws.com/adn-tag
+||amazonaws.com/adsfallback/
 ||amazonaws.com/metapic-cdn/*/metapic.
 ||amazonaws.com/pfe_im/js/prod/pcc/s_code.js
 ||analytics.barnebys.sh^$image
@@ -2195,6 +2199,7 @@ zeromagazine.nu##div[id^="ads"]
 ||lanapengar.expressen.se^
 ||lantbruksnet.se/files/reklan/
 ||laromedia.se/Annonssystem/
+||lasso.link^$third-party
 ||lcx-embed.bambuser.com^$domain=feber.se|tjock.se
 ||leadconnect.ipmaxi.se^$third-party
 ||leadenhancer.com^$third-party
