@@ -1354,8 +1354,7 @@ thorengruppen.se,utslappsratt.se,heleneholmsif.se,trafikskola.se,melodifestivalk
 ||privacy-mgmt.com^$domain=radio.se
 ||privacy-center.org^$domain=isabellalowengrip.se|johannatoftby.se|fnulan.se|matplatsen.net|monasuniversum.se|180.se|agriaffaires.se|truckscorner.se|machineryzone.se
 ||privacypolicies.com^$domain=fl-net.se
-||cookieyes.com^$domain=magasink.se
-||cdn-cookieyes.com^$domain=magasink.se|lokalti.se|jarnvagar.nu|senses.se|norrmejerier.se
+||cdn-cookieyes.com^$domain=lokalti.se|jarnvagar.nu|senses.se|norrmejerier.se|temadagar.se
 ||gravito.net^$domain=hitta.se
 ||salesmanago.pl/api/push/notification$domain=aikfotboll.se
 ||consentmanager.net^$domain=allastudier.se|gbgfotboll.se|stff.se|svenskfotboll.se
@@ -1386,7 +1385,7 @@ karriarlakare.se,nongrata.se,livinguppsala.se,battrestadsdel.se,butikstrender.se
 motorforum.nu,lakemedelsvarlden.se##div.pea_cook_wrapper
 lakemedelsvarlden.se##.pea_cook_more_info_popover
 fotboll.com,allsvenskan.se,superettan.se,swebbtv.se,hastnet.se##.smartbanner
-wernamaten.se,svenskaorduttryck.se,techmag.se,se.azrhymes.com,hemmanytt.se,lchfarkivet.se###ez-cookie-dialog-wrapper
+wernamaten.se,svenskaorduttryck.se,techmag.se,se.azrhymes.com,hemmanytt.se,lchfarkivet.se,temadagar.se###ez-cookie-dialog-wrapper
 extrakt.se,kalmar.nu,macken.xyz###cmplz-cookiebanner-container
 ! CSS to fix annoyances
 it-finans.se,it-halsa.se,it-kanalen.se,it-pedagogen.se,it-retail.se,it-hallbarhet.se,biostock.se,tobaksfakta.se##.pum-open:style(overflow:auto!important)
@@ -1940,6 +1939,7 @@ magasink.se##[data-magasintrackbid]
 norrahalland.se##.bannercontent
 dagensarena.se##.popup
 finanstid.se##.tdm-descr:has-text(/casino/i)
+lokalti.se##img[src$="a_top.png.webp"]:upward(section.elementor-section)
 
 ! === Tech, gaming, programmering
 
@@ -2320,6 +2320,10 @@ koket.se##[class*="carousel_sponsored"]:upward([class*="carousel_item"])
 jaktplay.se##.jaktplay-ad
 @@||fwmrm.net/crossdomain.xml$domain=embed.viaplay.com
 ||freewheel-mtgx-tv.akamaized.net^$media
+||nyafilmer.*/ajax/banner
+nyafilmer.*##+js(nosiif, _0x39426c)
+nyafilmer.*##.modal-backdrop.show, .modal
+nyafilmer.*##body.modal-open:remove-class(modal-open)
 
 ! Flowplayer
 ||lwcdn.com/vendor/ima.min.js$script
@@ -2881,6 +2885,7 @@ branschkoll.se,rocknytt.net,upphandling24.se,kimura.se,datormagazin.se,villalive
 branschkoll.se,rocknytt.net,upphandling24.se,kimura.se,datormagazin.se,villalivet.se,polistidningen.se##^script:has-text(advads)
 temadagar.se##^script:has-text(__ez)
 |http://vimedbarn.se^$csp=upgrade-insecure-requests
+nyafilmer.*##^script:has-text(_0xf)
 !#endif
 
 ! === Various unsorted websites
