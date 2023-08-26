@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2023-08-25 06:30:00 CEST
+! Last modified: 2023-08-26 13:56:17 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -64,8 +64,8 @@
 ###cookiejar
 ###cookielawwarning
 ###cookieMsgBlock
-###CookieNotice
 ###cookieNotice
+###CookieNotice
 ###cookies-acceptance .alert.bottom
 ###cookiesInfo
 ###dialog-eu-cookie-law
@@ -641,6 +641,7 @@
 /Global/Annons/*
 /google-analytics$domain=teknikveckan.se
 /google-gpt.js$domain=alekuriren.se
+/google-tag-manager$domain=hemnet.se
 /google-universal-analytics$script
 /gpAnalytics$script
 /gplus.php$script,domain=fria.nu|stockholmsfria.se
@@ -738,7 +739,6 @@
 /omniture/s_code.js
 /OneSignalSDK.js$domain=1x2.se|aktieskolan.se|arvikamagasinet.se|battrestadsdel.se|beernews.se|cannabis.se|dackavisen.se|dalarnasaffarer.se|driva-eget.se|entreprenadaktuellt.se|ettgottskratt.se|finanstid.se|fokus.se|fotbollskane.se|fotbollsthlm.se|humorbibeln.se|idg.se|ja.se|jamtlandsaffarer.se|macken.xyz|maskinbladet.se|naringslivetvgl.se|netflixguiden.se|newsner.com|nyadagbladet.se|oskarshamns-nytt.se|rabattsok.se|samnytt.se|skogsaktuellt.se|skolporten.se|sportbibeln.se|stockholmsaffarer.se|swebbtv.se|thepattayanews.se|ungdomsfotboll.se|vaken.se
 /OneSignalSDKWorker$script
-/packs/consent$domain=hemnet.se
 /pagead$domain=eniro.se|horoskoptid.se|vilaser.se
 /pages/native$domain=aktuellhallbarhet.se|byggindustrin.se|dagensmedia.se|dagensmedicin.se|dagenssamhalle.se|dagligvarunytt.se|fastighetsnytt.se|market.se|privataaffarer.se|resume.se
 /pages/tag$domain=aktuellhallbarhet.se|byggindustrin.se|dagensmedia.se|dagensmedicin.se|dagenssamhalle.se|dagligvarunytt.se|fastighetsnytt.se|market.se|privataaffarer.se|resume.se
@@ -1489,7 +1489,7 @@ hemmafixbloggen.se,surfa.se,teknikfreak.se###loader-wrapper
 hemmakvall.se#@##cliSettingsPopup.cli-modal
 hemmanytt.se###sa_slider_shortcode
 hemmanytt.se,lchfarkivet.se,se.azrhymes.com,svenskaorduttryck.se,techmag.se,temadagar.se,wernamaten.se###ez-cookie-dialog-wrapper
-hemnet.se###ad_unit_placeholder
+hemnet.se###ad_unit_placeholder, div[class^="Panorama_panoramaAd"], .listing__panorama-banner, .broker-banner
 hemtrevligt.se##div[id^="hj-"], div[id^="ik-"]
 hemtrevligt.se,mestmotor.se##.row--native
 hifitorget.se##.billboard-style, .between-posts
@@ -2539,6 +2539,7 @@ zeromagazine.nu##div[id^="ads"]
 ||umami.nordiskehandel.cloud^
 ||upsales.com^$third-party
 ||usabil.nu/media/*/casino$image
+||usercentrics.eu^$domain=hemnet.se
 ||userneeds.com^$third-party
 ||vagabondskorrea.com.se^
 ||valentinosverige.com^
