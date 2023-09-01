@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2023-08-30 06:46:37 CEST
+! Last modified: 2023-09-01 06:48:26 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -348,6 +348,8 @@
 .com/annonsmaterial/
 .com/misc/loada.js
 .html$subdocument,domain=flygtorget.se
+.js?cb$domain=lchfarkivet.se
+.js?gcb$domain=lchfarkivet.se
 .nu/annons/
 .nu/banner/
 .nu/files/banner/
@@ -1139,7 +1141,6 @@
 @@/plugins/convertplug/modules/modal/*/cross.png$image,~third-party
 @@/scripts/advert_$~third-party,domain=di.se
 @@_advert.$domain=e-pages.dk
-@@||acdn.adnxs.com/ast/ast.js$script,domain=aftonbladet.se
 @@||cargodisplayads.com/till_minne/
 @@||citygate.se/common/Memorial/
 @@||createsend1.com/css/
@@ -1154,7 +1155,6 @@
 @@||marketo.com^*/form
 @@||notebookcheck.se/fileadmin/templates/js/nbc-ads-ns.js
 @@||nuthymia-llc.ck.page/*/index.js$domain=nickwignall.com
-@@||schibsted-cdn.relevant-digital.com/static/tags/$script,domain=aftonbladet.se
 @@||se-tv4.videoplaza.tv/proxy/distributor$domain=fotbollskanalen.se|koket.se|tv4.se|tv4play.se
 @@||www.googletagmanager.com/gtm.js$script,domain=elgiganten.se
 aapl.se,hrnytt.se,inblick.se,inredningsarkitektur.se,ljuskultur.se##.cookies
@@ -1562,7 +1562,7 @@ land.se##[class*="--native"], [id^="adwrapper"], .has-sticky-add
 landleyskok.se##.inpostbanner, .banner-leaderboard
 laromedia.se##img[alt="Annons"] + .img-flipper
 lawline.se##[class^="CookiesModal"]
-lchfarkivet.se###timedModal, .modal-backdrop
+lchfarkivet.se###timedModal, .modal-backdrop, div#beskrivning[style="font-size: 10px; text-align: center; color: #8E8C8C; max-width: 700px;"]
 lesscarbs.se##.elementor-image > a:not([href*="https://lesscarbs.se"]), a[href*="/affiliates/"]
 lesscarbs.se#@#.category-annonssamarbete:not(body):not(html)
 leta.se###bookingcom-resor-wrapper, #aktuellaerbjudanden, #sky-left-wide, .topNavItem[href*="casino"], .topNavItem[href*="betting"], #mobile-banner-top, #mobile-banner-after-content, #mobile-banner-bottom, #bottom-splinks
@@ -2071,6 +2071,7 @@ zeromagazine.nu##div[id^="ads"]
 ||exitintel.com^$third-party
 ||extellio.com^$third-party
 ||external.reseguiden.se/offer
+||ezoic.net/ezqlog?$xmlhttprequest
 ||facebook.com/*/plugins/like$third-party
 ||facebook.com/plugins/$domain=norrbotten.com
 ||facebook.com/plugins/like$third-party
@@ -2108,7 +2109,7 @@ zeromagazine.nu##div[id^="ads"]
 ||gamereactor.se/ads/
 ||gamereactor.se/exclusive.json
 ||gamesglue.com/js/gameanalytics/GameAnalytics
-||gatekeeperconsent.com^$domain=hemmanytt.se|svenskaorduttryck.se
+||gatekeeperconsent.com^$domain=hemmanytt.se|lchfarkivet.se|svenskaorduttryck.se
 ||gekas.se/count/
 ||getanewsletter.com/js-forms-assets/popups.js
 ||getlevelten.com^$third-party

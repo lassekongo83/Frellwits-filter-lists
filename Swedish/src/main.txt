@@ -803,6 +803,7 @@ casino-utan-$image
 ||execute-api.eu-west-1.amazonaws.com/live/analytics
 ||exitintel.com^$third-party
 ||extellio.com^$third-party
+||ezoic.net/ezqlog?$xmlhttprequest
 ||famobi.com/play/hit/
 ||fapp.pw^$third-party
 ||fastout.com/analytics
@@ -1359,7 +1360,7 @@ thorengruppen.se,utslappsratt.se,heleneholmsif.se,trafikskola.se,melodifestivalk
 ||gravito.net^$domain=hitta.se
 ||salesmanago.pl/api/push/notification$domain=aikfotboll.se
 ||consentmanager.net^$domain=allastudier.se|gbgfotboll.se|stff.se|svenskfotboll.se|coop.se
-||gatekeeperconsent.com^$domain=hemmanytt.se|svenskaorduttryck.se
+||gatekeeperconsent.com^$domain=hemmanytt.se|svenskaorduttryck.se|lchfarkivet.se
 ||cookiehub.net^$domain=da.se
 ||privacymanager.io^$domain=tvmatchen.nu
 
@@ -1543,8 +1544,6 @@ illvet.se,pctidningen.se,viivilla.se,popularhistoria.se,digitalfotoforalla.se,if
 ||schibsted.com/pulse$domain=aftonbladet.se
 ||sdk.pulse.schibsted.com^$script,domain=aftonbladet.se|omni.se|omniekonomi.se
 ! Aftonbladet
-@@||schibsted-cdn.relevant-digital.com/static/tags/$script,domain=aftonbladet.se
-@@||acdn.adnxs.com/ast/ast.js$script,domain=aftonbladet.se
 ||sch.news/ab.js$domain=tv.aftonbladet.se
 curateContext=affiliate$domain=aftonbladet.se
 /ab_tracking$domain=aftonbladet.se
@@ -1640,12 +1639,14 @@ gp.se,hallandsposten.se,hn.se##.lokus-engine, .seekly, .rabble-widget
 lwcdn.com,alingsastidning.se,bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se,kungsbackaposten.se,kungalvsposten.se,molndalsposten.se,partilletidning.se,sttidningen.se,markposten.se,harrydaposten.se##+js(json-prune, autoplay players.*.ga acl.ads players.*.autoplay)
 
 ! -- Göta media
+/marknadsguiden.$frame,domain=barometern.se|blt.se|bt.se|kristianstadsbladet.se|olandsbladet.se|smp.se|sydostran.se|trelleborgsallehanda.se|ut.se|ystadsallehanda.se|kalmarposten.se|meraosterlen.se|vxonews.se|vaxjobladet.se|nsk.se|klt.nu
 guideAds$xmlhttprequest,domain=barometern.se|blt.se|bt.se|kristianstadsbladet.se|olandsbladet.se|smp.se|sydostran.se|trelleborgsallehanda.se|ut.se|ystadsallehanda.se|kalmarposten.se|meraosterlen.se|vxonews.se|vaxjobladet.se|nsk.se|klt.nu
 barometern.se,blt.se,bt.se,kristianstadsbladet.se,olandsbladet.se,smp.se,sydostran.se,trelleborgsallehanda.se,ut.se,ystadsallehanda.se,kalmarposten.se,meraosterlen.se,vxonews.se,vaxjobladet.se,nsk.se,klt.nu##.component_guide-ads, #fullpage-ad-portal, div[style="min-height: 302px;"]
 barometern.se,blt.se,bt.se,kristianstadsbladet.se,olandsbladet.se,smp.se,sydostran.se,trelleborgsallehanda.se,ut.se,ystadsallehanda.se,kalmarposten.se,meraosterlen.se,vxonews.se,vaxjobladet.se,nsk.se,klt.nu##[id*="_panorama"],[id*="_outsider"],[id*="_insider"],[id*="_mobil"]:upward(1)
 barometern.se,blt.se,bt.se,kristianstadsbladet.se,olandsbladet.se,smp.se,sydostran.se,trelleborgsallehanda.se,ut.se,ystadsallehanda.se,kalmarposten.se,meraosterlen.se,vxonews.se,vaxjobladet.se,nsk.se,klt.nu##[id*="_panorama"],[id*="_mobil"]:upward(div[display="block"])
 barometern.se,blt.se,bt.se,kristianstadsbladet.se,olandsbladet.se,smp.se,sydostran.se,trelleborgsallehanda.se,ut.se,ystadsallehanda.se,kalmarposten.se,meraosterlen.se,vxonews.se,vaxjobladet.se,nsk.se,klt.nu###root > div:first-child:matches-css(position: fixed)
 barometern.se,blt.se,bt.se,kristianstadsbladet.se,olandsbladet.se,smp.se,sydostran.se,trelleborgsallehanda.se,ut.se,ystadsallehanda.se,kalmarposten.se,meraosterlen.se,vxonews.se,vaxjobladet.se,nsk.se,klt.nu##div:has-text(/^Annons/):upward(a)
+barometern.se,blt.se,bt.se,kristianstadsbladet.se,olandsbladet.se,smp.se,sydostran.se,trelleborgsallehanda.se,ut.se,ystadsallehanda.se,kalmarposten.se,meraosterlen.se,vxonews.se,vaxjobladet.se,nsk.se,klt.nu##div[class*="AdWrapper"]:upward(1)
 
 ! -- NTM
 /TSPD/*$script,domain=corren.se|folkbladet.se|mvt.se|nt.se|vt.se|vimmerbytidning.se|kuriren.nu|nsd.se|norran.se|pt.se|ekuriren.se|strengnastidning.se|kkuriren.se|sn.se|eposten.se|unt.se|helagotland.se|kindaposten.se|gotlandjustnu.se
@@ -2459,7 +2460,9 @@ maltermagasin.se##.widget_media_image:has-text(/annons/i)
 /detroitchicago/portland.js$domain=hemmanytt.se|lchfarkivet.se|techmag.se
 /detroitchicago/kenai.js$domain=hemmanytt.se|lchfarkivet.se|techmag.se
 /detroitchicago/sidebarwall.js$domain=hemmanytt.se|lchfarkivet.se
-lchfarkivet.se###timedModal, .modal-backdrop
+.js?gcb$domain=lchfarkivet.se
+.js?cb$domain=lchfarkivet.se
+lchfarkivet.se###timedModal, .modal-backdrop, div#beskrivning[style="font-size: 10px; text-align: center; color: #8E8C8C; max-width: 700px;"]
 hemmanytt.se###sa_slider_shortcode
 kardemummagumman.se###custom_html-2
 husbilsplats.se##div[id^="husbi-"]
@@ -2886,7 +2889,7 @@ proffs.se##*::-webkit-scrollbar-thumb:style(background: #5e5e5e !important; bord
 ||fast.fonts.net/*/1.css$domain=arkitekt.se|axess.se|diabetes.se
 branschkoll.se,rocknytt.net,upphandling24.se,kimura.se,datormagazin.se,villalivet.se##^script[id^="advanced-ads"]
 branschkoll.se,rocknytt.net,upphandling24.se,kimura.se,datormagazin.se,villalivet.se,polistidningen.se##^script:has-text(advads)
-temadagar.se##^script:has-text(__ez)
+temadagar.se,lchfarkivet.se##^script:has-text(__ez)
 |http://vimedbarn.se^$csp=upgrade-insecure-requests
 nyafilmer.*##^script:has-text(_0xf)
 !#endif
