@@ -2260,12 +2260,13 @@ radio.se##div[data-testid="regionscloud-container"] a, div[data-testid="taglist-
 @@||kritiker.se^$generichide
 ||kritiker.se/js/gdpr.js
 ||youtube.com/embed/*autoplay$subdocument,removeparam=autoplay,domain=kritiker.se
-kritiker.se##div.recad, div.adhor
+kritiker.se##div.recad, div.adhor, div.stickyad
+kritiker.se##+js(set, checkAdblocker, falseFunc)
 kritiker.se##+js(set, ispremium, trueFunc)
-kritiker.se##+js(set, checkAdblocker, noopFunc)
+kritiker.se##+js(set, slugify, noopFunc)
 kritiker.se##iframe[allow]:remove-attr(allow)
 /trace/*/view$xmlhttprequest,domain=netflixguiden.se
-netflixguiden.se##div.lboard, div.instream-dynamic
+netflixguiden.se##div.lboard, div.instream-dynamic, #top-area-promo, div.secondary div.sticky-widget, .promo, div.top-area
 netflixguiden.se##+js(aopr, prebidAdUnits)
 ||metalcentral.net/images/*banner
 metalcentral.net##.bannergroupno-padding
@@ -2977,7 +2978,6 @@ viseniorer.se##.leftinfo:has-text(/Externa artiklar:|Länktips:/)
 digitalavykort.se##.rightdiv p:has-text(/casino|kasino|lån|betting|odds|lotto/i)
 ||yelp.se/sit_rep
 /bunsen/events$domain=yelp.se
-yelp.se##.js-cookie-iframe
 listor.se###ss-floating-bar, .top-ads-widget, .header-inner center, #sidebar-right .widget_custom_html
 listor.se##a[href*="/annons/"]:upward(article)
 listor.se##article.feed-item:has-text(/låna pengar|casino|betting/i)
