@@ -453,6 +453,7 @@ casino-utan-$image
 ##article.annons
 ##article.article-list-item--sponsored-post
 ##article.article-sponsored
+##article.article--sponsored
 ##article.category-partnerartikel
 ##article.category-promotion
 ##article.category-reklam
@@ -1591,6 +1592,7 @@ aftonbladet.se,godare.se,livsstil.se,skonhetsredaktorerna.se##.sp-message-open b
 ||svd.se/api/live-ads/
 svd.se###mega-ad-wrapper, .Container--ad, .theme-Native, .AdWrapper, .AdPositionData, .Teaser--fullAdLabel, div[data-engage-entity-id="sales-banner-bottom-sticker-wide"], [data-id="bottom-sticker-offer"], .Teaser[data-commercial="true"]
 svd.se##[class*="NativeBarWrapper"]:upward(article)
+svd.se##body:style(visibility:visible!important;)
 ! Omni
 ||omni.se/ads?
 omni.se,omniekonomi.se##.article--sponsored, .resource--sponsored, .component--sticky-sponsor-banner, .pre-banner, .banner--toppanorama, .banner--mobiletoppanorama, .banner--midpanorama, .group--banner
@@ -2358,6 +2360,7 @@ halsafitness.se,yogaworld.se,cyclingplus.se##h3:has-text(/samarbete/i):upward(.p
 /affiliategallery$domain=allas.se|baaam.se|elle.se|femina.se|hant.se|mabra.com|residencemagazine.se|svenskdam.se|frida.se|motherhood.se
 /native.html$domain=allas.se|baaam.se|elle.se|femina.se|hant.se|mabra.com|residencemagazine.se|svenskdam.se|frida.se|motherhood.se
 /se-recommendation-microservice$domain=allas.se|baaam.se|elle.se|femina.se|hant.se|mabra.com|residencemagazine.se|svenskdam.se|frida.se|motherhood.se
+/cts.js$domain=allas.se|baaam.se|elle.se|femina.se|hant.se|mabra.com|residencemagazine.se|svenskdam.se|frida.se|motherhood.se
 /smartBanner.js$domain=svenskdam.se
 allas.se,baaam.se,elle.se,femina.se,hant.se,mabra.com,residencemagazine.se,svenskdam.se,frida.se,motherhood.se##article[data-type="native"], .ag-product-wrapper, .product-carousel__container, .shop_carousel, .editorsPick, div[class^="strossle-widget-"], .ad-min-height
 allas.se,baaam.se,elle.se,femina.se,hant.se,mabra.com,residencemagazine.se,svenskdam.se,frida.se,motherhood.se##[data-type="Sponsored"]:upward(a)
@@ -2367,7 +2370,7 @@ elle.se##section.c-native_banner:upward(2)
 allas.se,baaam.se,elle.se,femina.se,hant.se,mabra.com,residencemagazine.se,svenskdam.se,frida.se,motherhood.se##a.js_commercial-text--link-text:upward(.jwplayer_video-videoArea):remove()
 allas.se,baaam.se,elle.se,femina.se,hant.se,mabra.com,residencemagazine.se,svenskdam.se,frida.se,motherhood.se##+js(aeld, scroll, t.view.updateBounds)
 allas.se,baaam.se,elle.se,femina.se,hant.se,mabra.com,residencemagazine.se,svenskdam.se,frida.se,motherhood.se##+js(aeld, blur, i.focusPlayerElement)
-svenskdam.se##+js(href-sanitizer, a[href*="sjv.io/"], ?u)
+allas.se,baaam.se,elle.se,femina.se,hant.se,mabra.com,residencemagazine.se,svenskdam.se,motherhood.se##+js(href-sanitizer, a[href*=".io/c/"], ?u)
 tasteline.com##.popup-overlay
 tasteline.com##.popup:style(overflow: auto !important;)
 tasteline.com##.article.related > a[href*="&utm"][target="_blank"]
@@ -2394,6 +2397,8 @@ landleyskok.se##.inpostbanner, .banner-leaderboard
 ||reseguiden.se^*/google-tag
 reseguiden.se##.adsbox-wrapper, .banner-xxl_panorama-container, .banner-top-container
 lesscarbs.se##.elementor-image > a:not([href*="https://lesscarbs.se"]), a[href*="/affiliates/"]
+lesscarbs.se##a[href*="/annonssamarbete/"]:upward(article)
+lesscarbs.se##div[data-eael-wrapper-link*="annonssamarbete"]:upward(.e-loop-item)
 lesscarbs.se#@#.category-annonssamarbete:not(body):not(html)
 ||stegforhalsa.se/sw.js
 ||stegforhalsa.se^$csp=worker-src 'none'
