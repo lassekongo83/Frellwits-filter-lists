@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2023-09-12 11:34:47 CEST
+! Last modified: 2023-09-13 08:06:15 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -64,8 +64,8 @@
 ###cookiejar
 ###cookielawwarning
 ###cookieMsgBlock
-###cookieNotice
 ###CookieNotice
+###cookieNotice
 ###cookies-acceptance .alert.bottom
 ###cookiesInfo
 ###dialog-eu-cookie-law
@@ -244,6 +244,8 @@
 ##div.ad-toppbanner
 ##div.ad.container
 ##div.ad.panorama
+##div.adDivLeft
+##div.adDivRight
 ##div.adtech_slot
 ##div.advads-background
 ##div.annons-yta
@@ -524,6 +526,7 @@
 /bannersidor/*
 /beacon$domain=skyscanner.se
 /beams.js$domain=modette.se|nyheter24.se
+/beardeddragon/gilamonster.js$domain=hemmanytt.se
 /betald-exponering$image
 /bigdatapushworker.js$domain=eurocampings.se
 /bilder-for-annonser$image
@@ -602,6 +605,7 @@
 /DynamicGAFunctions$script,domain=morningstar.se
 /dyTracker.js?bust=release
 /EAS_tag$script
+/edmontonalberta/calgary.js$domain=hemmanytt.se
 /egmont-ads/*
 /egmont-continuous-scroll/continuous-scroll-analytics.js
 /elasticsuite/tracker
@@ -1182,7 +1186,7 @@ aktiespararna.se##.analysguiden-promote-articles
 aktiespararna.se,alekuriren.se,civilekonomen.se,tidningen.se##.native
 aktuellhallbarhet.se,byggindustrin.se,dagensmedia.se,dagensmedicin.se,dagenssamhalle.se,dagligvarunytt.se,fastighetsnytt.se,market.se,privataaffarer.se,resume.se##a[href^="/annons/"], a[href^="/native/"], .slot-module, .slot-articlemodule
 aktuellsakerhet.se##.front-slider-reklamsamarbete, .category-gastkronika-reklamsamarbete, .front-top-reklamsamarbete
-aktuellsakerhet.se,battrestadsdel.se,butikstrender.se,carup.se,cookaholic.se,forskning.se,goon.se,hammarbyfotboll.se,hejaolika.se,influens.se,karriarlakare.se,kvartal.se,livinguppsala.se,maklarvarlden.se,morakniv.se,nongrata.se,raa.se,sjostadsbladet.se,smaspararguiden.se,svenskfilmdatabas.se,tidningenridsport.se,vardfokus.se,varvat.se,vinliv.se###cookie-law-info-bar
+aktuellsakerhet.se,arbetsvarlden.se,battrestadsdel.se,butikstrender.se,carup.se,cookaholic.se,forskning.se,goon.se,hammarbyfotboll.se,hejaolika.se,influens.se,karriarlakare.se,kvartal.se,livinguppsala.se,maklarvarlden.se,morakniv.se,nongrata.se,raa.se,sjostadsbladet.se,smaspararguiden.se,svenskfilmdatabas.se,tidningenridsport.se,vardfokus.se,varvat.se,vinliv.se###cookie-law-info-bar
 aktuellsakerhet.se,borattforum.se,sjostadsbladet.se##.td-a-rec
 alandsradio.ax,automobil.se,bike.se,caroftheyear.se,cgi.com,endurobloggen.se,husbilhusvagn.se,kantarsifo.se,klassiker.nu,mopedgaraget.se,plastikoperationsforum.se,riksettan.net,spraktidningen.se,svjt.se,vibilagare.se###sliding-popup
 alandstidningen.ax##.revive-wrapper, div[id^="block-views-block-editorial-ads"]
@@ -1235,7 +1239,7 @@ aventyrsresor.se,travelnews.se##.newsletter-popup
 axess.se##.popup--cookie
 axier.se##.consent
 babyhjalp.se##.elementor-widget[data-settings*="sticky_"]
-backpacking.se,bussmagasinet.se,byggteknikforlaget.se,dialasen.com,livetsgoda.se,nyadagbladet.se,opulens.se,radiotreby.se,ravarumarknaden.se,sporthalsa.se,torbjornstips.se,worldkustom.com##.textwidget a[target="_blank"]
+backpacking.se,bussmagasinet.se,byggteknikforlaget.se,dialasen.com,fiskemagasinet.se,livetsgoda.se,nyadagbladet.se,opulens.se,radiotreby.se,ravarumarknaden.se,sporthalsa.se,torbjornstips.se,worldkustom.com##.textwidget a[target="_blank"]
 bandyfeber.com##.widget_sp_image, a[title^="ANNONS"], .inner_sidebar .widget_text, .entry-content a[href*="utm_campaign"]
 banners$image,domain=gavletravet.se|travsport.se
 barnsemester.se##.puffLine, .d-flex > div[style*="min-height"], div[style="overflow-x: hidden;background-color:rgb(250,250,250);width:320px;min-height:200px;"], div[style="overflow-x: hidden;background-color:rgb(250,250,250);width:320px;min-height:320px;"]
@@ -1694,6 +1698,7 @@ restaurangvarlden.se##.banner-col, .alt-banner-col
 ridsport.se##.svrf__sticky-ad, .svrf-block__banner, .sv-cookie-consent-banner, .sp-banner-block, .sp-double-ad-block, .sp-head-sponsor-container, .sp-regular-sponsor-container
 riktighockey.se###custom_html-2
 rocknytt.net##[data-widget_type*="bnnrwidgets"], a[href*="/annons/"]
+rollinghomes.se##.widget_media_image a[href]:not([href^="/"]):not([href*="rollinghomes.se"])
 sakochliv.se##.cookie-disclaimer-wrap, .type-promo, .sector-annons
 samnytt.se##.ant-modal-root, a[href*="/casino/"], div[class*="side-banner"], .in-articles, .below-articles
 sbktavling.se##.jcarousel-skin-tango
@@ -2077,7 +2082,6 @@ zeromagazine.nu##div[id^="ads"]
 ||exitintel.com^$third-party
 ||extellio.com^$third-party
 ||external.reseguiden.se/offer
-||ezoic.net/ezqlog?$xmlhttprequest
 ||facebook.com/*/plugins/like$third-party
 ||facebook.com/plugins/$domain=norrbotten.com
 ||facebook.com/plugins/like$third-party
