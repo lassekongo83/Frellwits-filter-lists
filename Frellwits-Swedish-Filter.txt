@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2023-09-19 06:45:20 CEST
+! Last modified: 2023-09-20 08:43:09 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -64,8 +64,8 @@
 ###cookiejar
 ###cookielawwarning
 ###cookieMsgBlock
-###cookieNotice
 ###CookieNotice
+###cookieNotice
 ###cookies-acceptance .alert.bottom
 ###cookiesInfo
 ###dialog-eu-cookie-law
@@ -248,6 +248,7 @@
 ##div.adDivRight
 ##div.adtech_slot
 ##div.advads-background
+##div.after-article-ad
 ##div.annons-yta
 ##div.annonsbox
 ##div.article-ad-container
@@ -255,6 +256,7 @@
 ##div.bam-ad-wrapper
 ##div.banner-size.proad
 ##div.bbPrisjakt
+##div.before-article-ad
 ##div.better-ads-listitemad
 ##div.big-desktop-ads
 ##div.big-mobile-ads
@@ -1375,7 +1377,7 @@ emocore.se###sticky-panorama, #mob-wrap
 energi.se##.advertisement--item
 eniro.se##.bg-primary + .lg\:min-h-\[80px\]
 epochtimes.se##.cookie-bar
-epochtimes.se##img[alt*="casino"]
+epochtimes.se##.fixed.bottom-0
 esportare.se##a[href*="utm_campaign"]
 espressomedia.se##div[id^="espre-"]
 espressomedia.se,it-finans.se,it-hallbarhet.se,it-halsa.se,it-kanalen.se,it-pedagogen.se,it-retail.se##.penci-wrap-gprd-law
@@ -1989,7 +1991,7 @@ zeromagazine.nu##div[id^="ads"]
 ||connect.facebook.net^$domain=aktiespararna.se|dovastidning.se|epochtimes.se|ettgottskratt.se|fotosidan.se|friatider.se|hammarbyfotboll.se|humorbibeln.se|kvinnatillkvinna.se|kyrkanstidning.se|lajvo.se|lektionsbanken.se|loppi.se|mitti.se|newsner.com|ng.se|psykologiguiden.se|pussad.se|sillyseason.se|sportbibeln.se|tn.se|vasterastidning.se
 ||connect.nosto.com^*/behav-popup.$script
 ||connectio.s3.amazonaws.com/connect-retarget$script
-||consensu.org^$domain=bjarenu.se|butikpris.se|historier.net|kamerabild.se|laholmstidning.se|listor.se|lokaltidningenvaxjo.se|news55.se|norrahalland.se|oppettiden.se|ostgotatidningen.se|pernillawahlgren.se|spray.se
+||consensu.org^$domain=bjarenu.se|butikpris.se|historier.net|kamerabild.se|laholmstidning.se|lokaltidningenvaxjo.se|oppettiden.se|ostgotatidningen.se|pernillawahlgren.se|spray.se
 ||consent.dk^$third-party,domain=~ekstrabladet.dk
 ||consent.podplay.com^
 ||consentframework.com^$domain=luleahockeyforum.com
@@ -2390,7 +2392,7 @@ zeromagazine.nu##div[id^="ads"]
 ||pushpushgo.com^$third-party
 ||pushwhy.com^
 ||pxl.host^$third-party
-||quantcast.com^$domain=alltomelbil.se|arbetarskydd.se|babyhjalp.se|byrum.se|cancelculture.se|cleannet.se|cornucopia.se|dagenshandel.se|dh.se|doon.se|egoinas.se|eniro.se|enkelteknik.se|entreprenad.com|ettgottskratt.se|expo.se|filmtopp.se|flashback.org|food-supply.se|foodnet.se|foreca.se|forni.se|fraser.nu|fri-kopenskap.se|garaget.org|goforfit.se|habit.se|hippson.se|humorbibeln.se|kalender.se|kemivarldenbiotech.se|kiacarclub.se|kimura.se|lag-avtal.se|laget.se|land.se|landleyskok.se|langd.se|lesscarbs.se|leta.se|lifesciencesweden.se|ljudochbild.se|matklubben.se|medtechmagazine.se|merinfo.se|mobil.se|motivation.se|motormagasinet.se|mykitchenstories.se|mytaste.se|newsner.com|nouw.com|nyadagbladet.se|nyteknik.se|packnet.se|plastnet.se|poddar.se|poddtoppen.se|processnet.se|receptfavoriter.se|recyclingnet.se|res.se|reseguiden.se|rt-forum.se|samnytt.se|sportbibeln.se|sportlovin.se|sporttv.nu|stoppapressarna.se|swehockey.se|tittapavideon.se|transportnet.se|travelgrip.se|travelnews.se|uochd.se|vackertvader.se|varldenshaftigaste.se|verkstaderna.se|woodnet.se|woxikon.se|xn--ordrknare-y2a.se
+||quantcast.com^$domain=alltomelbil.se|arbetarskydd.se|babyhjalp.se|byrum.se|cancelculture.se|cleannet.se|cornucopia.se|dagenshandel.se|dh.se|doon.se|egoinas.se|eniro.se|enkelteknik.se|entreprenad.com|ettgottskratt.se|expo.se|filmtopp.se|flashback.org|food-supply.se|foodnet.se|foreca.se|forni.se|fraser.nu|fri-kopenskap.se|garaget.org|goforfit.se|habit.se|hippson.se|humorbibeln.se|kalender.se|kemivarldenbiotech.se|kiacarclub.se|kimura.se|lag-avtal.se|laget.se|land.se|landleyskok.se|langd.se|lesscarbs.se|leta.se|lifesciencesweden.se|listor.se|ljudochbild.se|matklubben.se|medtechmagazine.se|merinfo.se|mobil.se|motivation.se|motormagasinet.se|mykitchenstories.se|mytaste.se|news55.se|newsner.com|norrahalland.se|nouw.com|nyadagbladet.se|nyteknik.se|packnet.se|plastnet.se|poddar.se|poddtoppen.se|processnet.se|receptfavoriter.se|recyclingnet.se|res.se|reseguiden.se|rt-forum.se|samnytt.se|sportbibeln.se|sportlovin.se|sporttv.nu|stoppapressarna.se|swehockey.se|tittapavideon.se|transportnet.se|travelgrip.se|travelnews.se|uochd.se|vackertvader.se|varldenshaftigaste.se|verkstaderna.se|woodnet.se|woxikon.se|xn--ordrknare-y2a.se
 ||qx.se/view.php$image
 ||rabble-res.cloudinary.com^$third-party
 ||radio.se/iomm
