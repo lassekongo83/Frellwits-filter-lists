@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2023-09-20 08:43:09 CEST
+! Last modified: 2023-09-21 08:51:56 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -64,8 +64,8 @@
 ###cookiejar
 ###cookielawwarning
 ###cookieMsgBlock
-###CookieNotice
 ###cookieNotice
+###CookieNotice
 ###cookies-acceptance .alert.bottom
 ###cookiesInfo
 ###dialog-eu-cookie-law
@@ -214,7 +214,6 @@
 ##article[data-section="sponsrad"]
 ##aside.ad-container
 ##aside.thb-cookie-bar
-##aside.washer.loaded.displayed
 ##body[data-site-namespace="tailsweep"] #premiumAdWrapper
 ##cookie-law-banner
 ##div#ad_global_below_navbar
@@ -765,6 +764,7 @@
 /plugins/ad-ace
 /plugins/ad-blocking-advisor
 /plugins/add-to-any$~stylesheet
+/plugins/adlounge
 /plugins/adsanity
 /plugins/adsense%20click%20proctect
 /plugins/afp-default-pricetable/js/ga-tracking
@@ -855,7 +855,6 @@
 /plugins/metro-affiliate
 /plugins/mitti-adform
 /plugins/ml-adverts
-/plugins/ml-slider$domain=investerarbrevet.se
 /plugins/modal-for-elementor/*$script,domain=miljomagasinet.se
 /plugins/newsletter$script,domain=56kilo.se
 /plugins/newsletter-leads/libs/simplemodal$script
@@ -966,8 +965,8 @@
 /Scripts/ads/*$domain=osterbottenstidning.fi|sydin.fi|vasabladet.fi
 /Scripts/burt/*
 /scripts/js3caf.js
+/scripts/leeads-
 /scripts/opt/view.analytics.js
-/scripts/pb*.js$domain=fannystaaf.se|nouw.com
 /se-ads-microservice
 /se-calico/bundle.js
 /se-ocelot/bundle.js
@@ -1155,6 +1154,7 @@
 @@_advert.$domain=e-pages.dk
 @@||cargodisplayads.com/till_minne/
 @@||citygate.se/common/Memorial/
+@@||content.lwadm.com/lw/js/*/lw.js$domain=fannystaaf.se|nouw.com
 @@||createsend1.com/css/
 @@||feed.meltwater.com^$subdocument
 @@||freeride.nu/js/ads.js
@@ -1164,6 +1164,7 @@
 @@||js.driftt.com^$domain=sanity.io
 @@||klaviyo.com/media/js/public/klaviyo_subscribe.js$domain=solostove.com
 @@||kritiker.se^$generichide
+@@||lwadm.com/lw/pbjs?$script,domain=fannystaaf.se|nouw.com
 @@||marketo.com^*/form
 @@||notebookcheck.se/fileadmin/templates/js/nbc-ads-ns.js
 @@||nuthymia-llc.ck.page/*/index.js$domain=nickwignall.com
@@ -1401,7 +1402,7 @@ expressen.se##a[href*="/spel.exp"], a[href*="/lanapengar.exp"], a[href*="/rabatt
 extrakt.se,hockeyettan.se,kalmar.nu,macken.xyz###cmplz-cookiebanner-container
 familjeliv.se##a[href*="/kampanj/"], .flm-kampanj
 familjesidan.se##.cookies-wrapper
-fannystaaf.se,nouw.com###ConsentBanner
+fannystaaf.se,nouw.com##.washer.loaded.displayed
 fastighetssverige.se##a[href*="/banner/out/"], .bnr_box, div[class^="panel"][style*="lightgoldenrodyellow"]
 fastighetstidningen.se##.adspace
 feber.se,tjock.se##.burt-unit, .art_ad, adline, f-panorama, f-deals, #rpPopular, #maxetiseFull, #outsider, [data-ad="true"]
@@ -1911,6 +1912,7 @@ zeromagazine.nu##div[id^="ads"]
 ||atmtd.com^$third-party
 ||auction-release.mlpapi.com/site/LoadPluginSite
 ||automation.se/images/*banner
+||aventyret.com^$third-party
 ||aweber.com^$third-party
 ||axess.se^*/track-views
 ||axier.se/i/commercials/
@@ -2392,7 +2394,7 @@ zeromagazine.nu##div[id^="ads"]
 ||pushpushgo.com^$third-party
 ||pushwhy.com^
 ||pxl.host^$third-party
-||quantcast.com^$domain=alltomelbil.se|arbetarskydd.se|babyhjalp.se|byrum.se|cancelculture.se|cleannet.se|cornucopia.se|dagenshandel.se|dh.se|doon.se|egoinas.se|eniro.se|enkelteknik.se|entreprenad.com|ettgottskratt.se|expo.se|filmtopp.se|flashback.org|food-supply.se|foodnet.se|foreca.se|forni.se|fraser.nu|fri-kopenskap.se|garaget.org|goforfit.se|habit.se|hippson.se|humorbibeln.se|kalender.se|kemivarldenbiotech.se|kiacarclub.se|kimura.se|lag-avtal.se|laget.se|land.se|landleyskok.se|langd.se|lesscarbs.se|leta.se|lifesciencesweden.se|listor.se|ljudochbild.se|matklubben.se|medtechmagazine.se|merinfo.se|mobil.se|motivation.se|motormagasinet.se|mykitchenstories.se|mytaste.se|news55.se|newsner.com|norrahalland.se|nouw.com|nyadagbladet.se|nyteknik.se|packnet.se|plastnet.se|poddar.se|poddtoppen.se|processnet.se|receptfavoriter.se|recyclingnet.se|res.se|reseguiden.se|rt-forum.se|samnytt.se|sportbibeln.se|sportlovin.se|sporttv.nu|stoppapressarna.se|swehockey.se|tittapavideon.se|transportnet.se|travelgrip.se|travelnews.se|uochd.se|vackertvader.se|varldenshaftigaste.se|verkstaderna.se|woodnet.se|woxikon.se|xn--ordrknare-y2a.se
+||quantcast.com^$domain=alltomelbil.se|arbetarskydd.se|babyhjalp.se|byrum.se|cancelculture.se|cleannet.se|cornucopia.se|dagenshandel.se|dh.se|doon.se|egoinas.se|eniro.se|enkelteknik.se|entreprenad.com|ettgottskratt.se|expo.se|fannystaaf.se|filmtopp.se|flashback.org|food-supply.se|foodnet.se|foreca.se|forni.se|fraser.nu|fri-kopenskap.se|garaget.org|goforfit.se|habit.se|hippson.se|humorbibeln.se|kalender.se|kemivarldenbiotech.se|kiacarclub.se|kimura.se|lag-avtal.se|laget.se|land.se|landleyskok.se|langd.se|lesscarbs.se|leta.se|lifesciencesweden.se|listor.se|ljudochbild.se|matklubben.se|medtechmagazine.se|merinfo.se|mobil.se|motivation.se|motormagasinet.se|mykitchenstories.se|mytaste.se|news55.se|newsner.com|norrahalland.se|nouw.com|nyadagbladet.se|nyteknik.se|packnet.se|plastnet.se|poddar.se|poddtoppen.se|processnet.se|receptfavoriter.se|recyclingnet.se|res.se|reseguiden.se|rt-forum.se|samnytt.se|sportbibeln.se|sportlovin.se|sporttv.nu|stoppapressarna.se|swehockey.se|tittapavideon.se|transportnet.se|travelgrip.se|travelnews.se|uochd.se|vackertvader.se|varldenshaftigaste.se|verkstaderna.se|woodnet.se|woxikon.se|xn--ordrknare-y2a.se
 ||qx.se/view.php$image
 ||rabble-res.cloudinary.com^$third-party
 ||radio.se/iomm
