@@ -1564,8 +1564,8 @@ curateContext=affiliate$domain=aftonbladet.se
 /player-plugin-sponsor$domain=tv.aftonbladet.se
 /vgc/cdn/js/libs/ast/*$script,domain=aftonbladet.se
 ! Cosmetic ad filters
-aftonbladet.se###megaAd-placeholder, #superright-side, a[href^="/brandstudio"], a[href*="/casinoguide"], [id^="adPlacement"], a[href^="https://kampanj.aftonbladet"], a[href*="/rabattkod"][data-test-tag="internal-link"], a[href^="/sportbladet/speltips/"], a[href*="aftonbladet.se/kampanj/"]
-aftonbladet.se,godare.se,livsstil.se##div[data-test-tag="prisjakt-carousel"]
+aftonbladet.se###megaAd-placeholder, #superright-side, a[href*="/casinoguide"], [id^="adPlacement"], a[href^="https://kampanj.aftonbladet"], a[href*="/rabattkod"][data-test-tag="internal-link"], a[href^="/sportbladet/speltips/"], a[href*="aftonbladet.se/kampanj/"]
+aftonbladet.se,godare.se,livsstil.se##div[data-test-tag="prisjakt-carousel"], a[href^="/brandstudio"]
 livsstil.se##div[data-variants*="article-panorama"]:upward(1)
 aftonbladet.se,skonhetsredaktorerna.se##.ab_responsive_ads
 aftonbladet.se##[data-ad-subtype]:upward(1):matches-css(min-height:/[0-9]+/)
@@ -1596,7 +1596,7 @@ aftonbladet.se,godare.se,livsstil.se,skonhetsredaktorerna.se##.sp-message-open b
 ||vev.design^$script,domain=svd.se
 ||svd.se/api/live-ads/
 ||svd.se/api/dr-edition-teasers
-svd.se###mega-ad-wrapper, div[class^="advertory-panorama-wrapper"], .advertory-insider-wrapper, .advertory-toppanorama-wrapper, div[data-custom-ad-handled="true"], span[data-id="bottom-sticker-offer"]
+svd.se###mega-ad-wrapper, div[class^="advertory-panorama-wrapper"], .advertory-insider-wrapper, div[class^="advertory-toppanorama"], div[data-custom-ad-handled="true"], span[data-id="bottom-sticker-offer"], .advertory-widescreen-wrapper, div[data-context-pageview*="native-svd"]
 svd.se##body:style(visibility:visible!important;)
 ! Omni
 ||omni.se/ads?
@@ -1692,7 +1692,7 @@ mitti.se###cruncho_now_iframe:remove()
 mitti.se##h3:has-text(/annons/i):upward(.image-component-unprocessed)
 mitti.se##+js(set, NWS.config.enableAdblockerDetection, false)
 vasterastidning.se##article[data-section="nativeannons"]
-vasterastidning.se##h2:has-text(ANNONS:):upward(article)
+vasterastidning.se##h2, h5, .kicker:has-text(ANNONS):upward(article, div.row)
 vasterastidning.se##a[href*="casino.se"]:upward(.row)
 realtid.se##.realtid-add, .infinite-scroll.native-wrapper
 realtid.se##.meta--add:upward(.link)
@@ -1712,6 +1712,7 @@ breakit.se##section[class*="Sponsored"]:upward(section[class*="Article_layout"])
 @@/adx.js$~third-party,domain=atl.nu|landlantbruk.se
 ||atl.nu/api/mnews
 atl.nu,landlantbruk.se###didomi-host, a[href*="/atl-tv-annons/"], [class^="Ad_"]
+atl.nu,landlantbruk.se#@#.ad-unit:not(.text-ad):not(.textads)
 ||salesmanago.pl/*popup$domain=land.se
 land.se##[class*="--native"], [id^="adwrapper"], .has-sticky-add
 /private-browsing.js$domain=thelocal.se
