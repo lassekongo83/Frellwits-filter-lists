@@ -1586,25 +1586,27 @@ aftonbladet.se##article[class^="article-wrapper"] ~ div:has-text(ANNONS)
 ! scriptlets
 www.aftonbladet.se##+js(nostif, TAKEOVER)
 ! annoyances
-aftonbladet.se,godare.se,livsstil.se,skonhetsredaktorerna.se##div[id^="sp_message_container"]
-aftonbladet.se,godare.se,livsstil.se,skonhetsredaktorerna.se##+js(set-local-storage-item, CMP:advertising, 0)
-aftonbladet.se,godare.se,livsstil.se,skonhetsredaktorerna.se##+js(set-local-storage-item, CMP:analytics, 0)
-aftonbladet.se,godare.se,livsstil.se,skonhetsredaktorerna.se##+js(set-local-storage-item, CMP:marketing, 0)
-aftonbladet.se,godare.se,livsstil.se,skonhetsredaktorerna.se##+js(set-local-storage-item, CMP:personalisation, 0)
+aftonbladet.se,godare.se,livsstil.se,skonhetsredaktorerna.se,omni.se,omniekonomi.se##div[id^="sp_message_container"]
+aftonbladet.se,godare.se,livsstil.se,skonhetsredaktorerna.se,omni.se,omniekonomi.se##+js(set-local-storage-item, CMP:advertising, 0)
+aftonbladet.se,godare.se,livsstil.se,skonhetsredaktorerna.se,omni.se,omniekonomi.se##+js(set-local-storage-item, CMP:analytics, 0)
+aftonbladet.se,godare.se,livsstil.se,skonhetsredaktorerna.se,omni.se,omniekonomi.se##+js(set-local-storage-item, CMP:marketing, 0)
+aftonbladet.se,godare.se,livsstil.se,skonhetsredaktorerna.se,omni.se,omniekonomi.se##+js(set-local-storage-item, CMP:personalisation, 0)
 ! css
-aftonbladet.se,godare.se,livsstil.se,skonhetsredaktorerna.se##.sp-message-open body:style(overflow:initial!important; position:unset!important; margin-top:unset!important;)
+aftonbladet.se,godare.se,livsstil.se,skonhetsredaktorerna.se,omni.se,omniekonomi.se##.sp-message-open body:style(overflow:initial!important; position:unset!important; margin-top:unset!important;)
 ! SVD
 ||vev.design^$script,domain=svd.se
 ||svd.se/api/live-ads/
 ||svd.se/api/dr-edition-teasers
-svd.se###mega-ad-wrapper, div[class^="advertory-panorama-wrapper"], .advertory-insider-wrapper, div[class^="advertory-toppanorama"], div[data-custom-ad-handled="true"], span[data-id="bottom-sticker-offer"], .advertory-widescreen-wrapper, div[data-context-pageview*="native-svd"]
+svd.se###mega-ad-wrapper, div[class*="advertory"], div[data-custom-ad-handled="true"], span[data-id="bottom-sticker-offer"], div[data-context-pageview*="native-svd"]
 svd.se##body:style(visibility:visible!important;)
+svd.se##div[class^="NativeBarWrapper"]:upward(article)
 ! Omni
 ||omni.se/ads?
 omni.se,omniekonomi.se##.article--sponsored, .resource--sponsored, .component--sticky-sponsor-banner, .pre-banner, .banner--toppanorama, .banner--mobiletoppanorama, .banner--midpanorama, .group--banner
 omni.se,omniekonomi.se##a[href*="article-ad-"]:upward(.resource--link)
 omni.se,omniekonomi.se##.header-banner--regular, .app-banner:style(--banner-offset: 0 !important;)
 omni.se,omniekonomi.se##+js(aeld, omniPulseLoaded)
+omni.se,omniekonomi.se##[class*="sponsoredcluster"]:upward(div.group)
 ! Klart
 klart.se###overlay, .gdpr-onboarding-container, a[rel*="sponsored"], .-panorama-ad-wrapper
 klart.se##.ad-text:has-text(/annons/i):upward(.content-box-list__item)
@@ -2984,7 +2986,7 @@ allabolag.se##.strossle-widget:upward(div[style^="min-height"])
 spray.se##section[class*="casino"], a[href*="casino"]
 spray.se##body:style(-webkit-user-select: text !important; user-select: text !important;)
 spray.se##+js(set, googletag, 1)
-spray.se##+js(set, window.WURFL, 1)
+spray.se,vinochmatguiden.se##+js(set, window.WURFL, 1)
 /log|$domain=booli.se
 booli.se###outer
 /vestigo$domain=momondo.se
