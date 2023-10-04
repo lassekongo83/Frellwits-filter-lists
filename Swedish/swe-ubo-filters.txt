@@ -538,7 +538,7 @@ tripadvisor.se##div:has-text(Sponsrat av):upward(div[data-curated-shelf-id])
 tv.nu###tv-schedule section:has-text(ANNONS)
 tv.nu##body:remove-class(takeover-loading)
 tv4play.se##+js(json-prune-fetch-response, bumpers, , propsToMatch, url:/playback2.a2d.tv\/play/)
-tv4play.se##+js(no-fetch-if, /cloudfront.net\/creatives/)
+tv4play.se##+js(xml-prune, MediaFile, , se-tv4.videoplaza.tv/proxy/distributor)
 tv4play.se##.avod-web-player-pause:style(background-color:transparent!important;)
 tv4play.se##button:has-text(Besök annonsör)
 underbaraclaras.se##.jet-listing-dynamic-field__content:has-text(/annonssamarbete|reklamsamarbete/i):upward(.jet-listing-grid__item)
@@ -576,7 +576,6 @@ youplay.se##+js(aeld, loadstart)
 ||best-prizes-now.*^$all
 ||biowebb-data.*.amazonaws$important,third-party
 ||cision.com^$badfilter
-||dbf0a92kfjvxs.cloudfront.net/creatives/assets$media,redirect=noop-0.1s.mp3,domain=tv4play.se
 ||embed.viaplay.com/*autoplay=true$frame,removeparam=autoplay
 ||google-analytics.com^$important,domain=aftonbladet.se|tradera.com|xxl.se
 ||googletagmanager.com^$important,domain=tradera.com|xxl.se
