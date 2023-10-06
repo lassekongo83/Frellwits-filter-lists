@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2023-10-04 08:46:13 CEST
+! Last modified: 2023-10-06 07:50:02 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -64,8 +64,8 @@
 ###cookiejar
 ###cookielawwarning
 ###cookieMsgBlock
-###cookieNotice
 ###CookieNotice
+###cookieNotice
 ###cookies-acceptance .alert.bottom
 ###cookiesInfo
 ###dialog-eu-cookie-law
@@ -230,6 +230,7 @@
 ##div#panorama_ad
 ##div#panoramaad
 ##div#reklam
+##div#rich-media-ads
 ##div#schibsted-data-controller-sticky
 ##div#sliding-popup div[class^="eu-cookie"]
 ##div#toppannons
@@ -353,8 +354,8 @@
 .com/annonsmaterial/
 .com/misc/loada.js
 .html$subdocument,domain=flygtorget.se
-.js?cb$domain=lchfarkivet.se
-.js?gcb$domain=lchfarkivet.se
+.js?cb$domain=hemmanytt.se|lchfarkivet.se
+.js?gcb$domain=hemmanytt.se|lchfarkivet.se
 .nu/annons/
 .nu/banner/
 .nu/files/banner/
@@ -1151,6 +1152,7 @@
 @@/consent.json$domain=forum.macworld.se|idg.se
 @@/cykla/assets/js/advertisment.js$~third-party,domain=cykla.se
 @@/js/ads.js$~third-party,domain=freeride.se|fz.se|spela.se
+@@/lazy_load.js?gcb$domain=hemmanytt.se
 @@/plugins/ad-ace/*/adblock-detector
 @@/plugins/convertplug/modules/modal/*/cross.png$image,~third-party
 @@/scripts/advert_$~third-party,domain=di.se
@@ -1207,7 +1209,7 @@ alkompis.se##app-ads, .cdk-overlay-container
 allabolag.se###company-card_top-banner, .lwad
 allas.se,baaam.se,elle.se,femina.se,frida.se,hant.se,mabra.com,motherhood.se,residencemagazine.se,svenskdam.se##article[data-type="native"], .ag-product-wrapper, .product-carousel__container, .shop_carousel, .editorsPick, div[class^="strossle-widget-"], .ad-min-height
 allatvkanaler.se##.ga
-allehanda.se,arbetarbladet.se,avestatidning.com,bandypuls.se,bblat.se,borlangetidning.se,dalademokraten.se,fagersta-posten.se,falkopingstidning.se,falukuriren.se,gd.se,hd.se,ht.se,jnytt.se,jp.se,ljusdalsposten.se,ljusnan.se,lt.se,ltz.se,moratidning.se,na.se,norrteljetidning.se,nvp.se,nyaludvikatidning.se,nynashamnsposten.se,op.se,salaallehanda.com,skaraborgslanstidning.se,skd.se,skovdenyheter.se,smalandsdagblad.se,smalanningen.se,smt.se,soderhamnskuriren.se,sodran.se,st.nu,sydsvenskan.se,tidningenangermanland.se,tidningenharjedalen.se,tranastidning.se,vastgotabladet.se,vetlandaposten.se,vlt.se,vn.se##[class*="teaser-native"], lcl-ad, .ad-welcome
+allehanda.se,arbetarbladet.se,avestatidning.com,bandypuls.se,bblat.se,borlangetidning.se,dalademokraten.se,fagersta-posten.se,falkopingstidning.se,falukuriren.se,gd.se,hd.se,ht.se,jnytt.se,jp.se,ljusdalsposten.se,ljusnan.se,lt.se,ltz.se,moratidning.se,na.se,norrteljetidning.se,nvp.se,nyaludvikatidning.se,nynashamnsposten.se,op.se,salaallehanda.com,skaraborgslanstidning.se,skd.se,skovdenyheter.se,smalandsdagblad.se,smalanningen.se,smt.se,soderhamnskuriren.se,sodran.se,st.nu,sydsvenskan.se,tidningenangermanland.se,tidningenharjedalen.se,tranastidning.se,vastgotabladet.se,vetlandaposten.se,vlt.se,vn.se##[class*="teaser-native"], lcl-ad, .ad-welcome, .affiliate-links__container
 allsvenskan.se,chefstidningen.se,fotosidan.se,jaktojagare.se,kollega.se,merinfo.se,norpan.se,realtid.se,tasteline.com##.ads
 allsvenskan.se,fotboll.com,hastnet.se,superettan.se,swebbtv.se##.smartbanner
 allsvenskan.se,superettan.se##.app-cookie-line, .partners-slideshow-widgets, .partners-slideshow-slide, .matches-calendar-sponsor, .sponsors, .footer-sponsors
@@ -1355,7 +1357,6 @@ devote.se,familjeliv.se##div[style*="height: 244px;"]
 di.se##.di_panorama-wrapper, .site-header__panorama, .di_panorama__isAdLabel, .discount-box, .campaign-ad-box, .di_start__teaser-placeholder, .di_teaser-flak-planbokskoll, .di_teaser-flak-container--native, .native-box, .bandit-box__teaser--native, a[href*="/brandstudio"], .service-box, .brand-studio-box, .native-article
 di.se##.market-start-top + div:not(.market-container__wrapper)
 di.se,dn.se##.teaser-native
-di.se,dn.se,expressen.se###rich-media-ads
 diabetes.se##.c-cookies
 dietdoctor.com###cookiescript_injected
 digitalfotoforalla.se,iform.se,pctidningen.se,popularhistoria.se,varldenshistoria.se##.scroll-message, .gallery-banner, .horseshoe, [data-ad-type], .bcm-banner
@@ -2128,7 +2129,7 @@ zeromagazine.nu##div[id^="ads"]
 ||gamereactor.se/ads/
 ||gamereactor.se/exclusive.json
 ||gamesglue.com/js/gameanalytics/GameAnalytics
-||gatekeeperconsent.com^$domain=hemmanytt.se|lchfarkivet.se|svenskaorduttryck.se
+||gatekeeperconsent.com^$domain=hemmanytt.se|lchfarkivet.se|svenskaorduttryck.se|wernamaten.se
 ||gekas.se/count/
 ||getanewsletter.com/js-forms-assets/popups.js
 ||getlevelten.com^$third-party
