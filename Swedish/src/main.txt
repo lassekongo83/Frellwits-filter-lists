@@ -1962,13 +1962,16 @@ nyhetsbyranjarva.se##div[style="display: flex; justify-content: center; flex-dir
 
 ! === Tech, gaming, programmering
 
-! IDG
+! Foundry/IDG
 @@/consent.json$domain=idg.se|forum.macworld.se
 ||idg.se/sharecounter?
 ||pricespy.idg.se^
+/cmpv2$domain=m3.se|pcforalla.se|macworld.se
+||ccpa.sp-prod.net^$domain=m3.se|pcforalla.se|macworld.se
 idg.se##.sparticle, .nextArticleSp, .pryltorget, .prisjakt, .prisjaktCompare, .teasers-block.bfteasers, div[data-cmsad], .pricespy-container
 idg.se##[data-styled="SpLabel"]:upward(article)
 idg.se##+js(nostif, gFail)
+m3.se,pcforalla.se,macworld.se##span:has-text(/sponsr/i):upward(article)
 ! make the cookie modal less annoying
 idg.se,forum.macworld.se##.idgcp__layer
 idg.se,forum.macworld.se##.idgcp__layer--active, .idgcp__layer--active body:style(overflow: initial !important;)
@@ -2324,6 +2327,7 @@ tv24.se##li[id^="infeed"]
 ! TV4
 ||se-tv4.videoplaza.tv/proxy/distributor$removeparam=s,xmlhttprequest,domain=fotbollskanalen.se|koket.se|tv4.se
 @@||se-tv4.videoplaza.tv/proxy/distributor$domain=tv4play.se|tv4.se|fotbollskanalen.se|koket.se
+||se-tv4.videoplaza.tv/proxy/distributor*&xpb=1$important,domain=tv4play.se
 tv4play.se##+js(json-prune-fetch-response, bumpers, , propsToMatch, url:/playback2.a2d.tv\/play/)
 tv4play.se##+js(xml-prune, MediaFile, , se-tv4.videoplaza.tv/proxy/distributor)
 ||dbf0a92kfjvxs.cloudfront.net/creatives/assets$image
