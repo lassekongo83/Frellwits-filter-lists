@@ -1368,7 +1368,7 @@ aftonbladet.se,livsstil.se,godare.se,byggahus.se,expressen.se,elle.se,svenskdam.
 ||privacy-mgmt.com^$domain=radio.se
 ||privacy-center.org^$domain=isabellalowengrip.se|johannatoftby.se|fnulan.se|matplatsen.net|monasuniversum.se|180.se|agriaffaires.se|truckscorner.se|machineryzone.se
 ||privacypolicies.com^$domain=fl-net.se
-||cdn-cookieyes.com^$domain=lokalti.se|jarnvagar.nu|senses.se|norrmejerier.se|temadagar.se|smartsenior.se
+||cdn-cookieyes.com^$domain=lokalti.se|jarnvagar.nu|senses.se|norrmejerier.se|temadagar.se|smartsenior.se|tekniknytt.se
 ||gravito.net^$domain=hitta.se|gp.se
 ||salesmanago.pl/api/push/notification$domain=aikfotboll.se
 ||consentmanager.net^$domain=allastudier.se|gbgfotboll.se|stff.se|svenskfotboll.se|coop.se
@@ -1981,6 +1981,7 @@ idg.se,forum.macworld.se##.idgcp__layer--active, .idgcp__layer--active body:styl
 ||gamereactor.se/exclusive.json
 gamereactor.se###cookielawwarning
 gamereactor.se###eventad, [id^="sky"], [id^="ad_lead"], a[rel="sponsored"], .external_div_bigVideoAd, #mpu, #leftToLogo, .itsanad, div[class^="ad_Bumper"], div[style="min-height: 600px; margin-bottom: 20px;"], div[id^="ad_"], div[class^="preAd_"], div[class^="ad_smartphbig"], .adMobileBig, div[class^="preMobileBig"], .external_div_videoAd
+gamereactor.se##.colHomePlayer:has([data-slotads="videoad"]):remove()
 gamereactor.se##video:remove-attr(data-autoplay)
 gamereactor.se###grtvbelt_Sponsored:upward(1)
 gamereactor.se##.ad_interscroller:upward(.wrapper)
@@ -2019,7 +2020,6 @@ nordichardware.se##[class^="prisjakt-"]
 nordichardware.se##span:has-text(/sponsrat/i):upward(.td_block_wrap)
 nordichardware.se##a[href*="/sponsrat/"]:upward(.td-big-grid-post)
 surfa.se##div[class*="-promo"], div[class*="prisjakt-"]
-fuska.se##+js(acs, $, .modal)
 fuska.se##.alert-success
 ||teknikveckan.se^*/ads
 /google-analytics$domain=teknikveckan.se
@@ -2064,6 +2064,8 @@ fragbite.se##.cookieBar
 fragbite.se##.tn, .zooKeeper, #scraper, .subHeadSponsors
 fragbite.se##.category:has-text(/spons/i):upward(article)
 tekniknytt.se##.label:has-text(/samarbete|annons|reklam|presenteras av/i):upward(a)
+tekniknytt.se##a[href*="casino"], a[href*="kasino"]:upward(.article_widget_preview, .article_widget_listing)
+tekniknytt.se##[onclick^="ga("]:remove-attr(onclick)
 varvat.se##.wpb_single_image a[target], .gp-footer-2
 mobilanyheter.net##a[href*="rocketpot.io"], a[href*="casino"], a[href*="betting"]
 electronic.se##.content aside.column-narrow:last-of-type
