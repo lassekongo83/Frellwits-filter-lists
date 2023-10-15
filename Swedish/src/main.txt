@@ -103,6 +103,7 @@
 /banners/annons
 /bannersidor/*
 /banners/*casino$image
+/banners/scripts/adx.js
 /Banners/webbannons
 /betald-exponering$image
 /bilder/ads/*
@@ -185,6 +186,7 @@
 /shared/crm-campaign-handler.js$script
 /sidebar-ads
 /site_media/annons
+/spec/adsm.macro.
 /spotlight-ad_$image
 /static/js/loada.js
 /sticky-ads$script
@@ -1348,7 +1350,7 @@ thorengruppen.se,utslappsratt.se,heleneholmsif.se,trafikskola.se,melodifestivalk
 aftonbladet.se,livsstil.se,godare.se,byggahus.se,expressen.se,elle.se,svenskdam.se,galamagasin.se##+js(href-sanitizer, a[href*="/t?a="], ?url)
 
 ! -- Specific annoyances and bloat
-/cookieconsent$domain=voodoofilm.org
+/cookieconsent$script,domain=akademiskahus.se|lundagard.se|voodoofilm.org
 /gdpr/*$domain=visitlulea.se|se.laowl.com|husbilskompisar.se|rotter.se|borattforum.se
 /OneSignalSDK.js$domain=samnytt.se|arvikamagasinet.se|battrestadsdel.se|beernews.se|ungdomsfotboll.se|rabattsok.se|1x2.se|cannabis.se|dackavisen.se|dalarnasaffarer.se|driva-eget.se|skogsaktuellt.se|maskinbladet.se|entreprenadaktuellt.se|ja.se|newsner.com|humorbibeln.se|sportbibeln.se|ettgottskratt.se|finanstid.se|fokus.se|fotbollskane.se|fotbollsthlm.se|idg.se|macken.xyz|naringslivetvgl.se|dalarnasaffarer.se|stockholmsaffarer.se|jamtlandsaffarer.se|netflixguiden.se|nyadagbladet.se|oskarshamns-nytt.se|skolporten.se|swebbtv.se|thepattayanews.se|vaken.se|aktieskolan.se
 /pum/*$domain=flm.nu|finanstid.se
@@ -1768,7 +1770,7 @@ marsta.nu##.outsider, .panel--naringsliv
 etc.se##[data-controller="ad-container"], .bg-gradient-white
 etc.se##.adaptive:upward(1)
 etc.se##.paywalled.hidden:style(display:unset!important)
-flamman.se##.Banner, .TakeOverBanner, .CookieNotice
+flamman.se##.Banner, .TakeOverBanner, .CookieNotice, div#popup
 lundagard.se###bdCheckAlso.bdCheckAlsoShow, .topBanner, #sidebar .widget_media_image
 affarsstaden.se##+js(acs, jQuery, adblockdetect)
 hbwebben.se##.elementor-widget-container > a > img
@@ -1776,7 +1778,7 @@ etunawebben.se##+js(nostif, ad)
 ehandel.se##.commercial-row, .aside-image-with-link, .post-container-sponsored, aside a[href*="/branschnyheter/"]
 ehandel.se##.aside-list--heading:has-text(/^sponsra/i):upward(.aside-list)
 ehandel.se##.code-block:has-text(/annons/i)
-da.se##div.alignwide[style^="height"]
+da.se##div.alignwide[style^="height"], .container > .mt-3[style*="height"]
 8sidor.se##.cookie-accept
 it-finans.se,it-halsa.se,it-kanalen.se,it-pedagogen.se,it-retail.se,it-hallbarhet.se##a[onclick^="gtag"], .header-banner, .penci-featured-cat-custom-ads
 it-finans.se,it-halsa.se,it-kanalen.se,it-pedagogen.se,it-retail.se,it-hallbarhet.se##.widget-title:has-text(/annons/i):upward(aside)
@@ -1786,7 +1788,7 @@ dagensjuridik.se##strong:has-text(/^senaste nytt från våra partners/i):upward(
 /sponsored_articles$domain=fastighetssverige.se
 fastighetssverige.se##a[href*="/banner/out/"], .bnr_box, div[class^="panel"][style*="lightgoldenrodyellow"]
 fastighetssverige.se##.badge-partner-text:upward(.featured-article)
-fastighetstidningen.se##.adspace
+fastighetstidningen.se##.adspace, a[class*="annons"]
 /atomic-blocks$script,domain=foretagsverige.se|forskningsverige.se|motorbibeln.se|hallbarhetsverige.se|tillvaxtsverige.se|grillbibeln.se|kampenmotcancer.se
 foretagsverige.se,forskningsverige.se,motorbibeln.se,hallbarhetsverige.se,tillvaxtsverige.se,grillbibeln.se,kampenmotcancer.se##+js(acs, showConsentDlg)
 foretagsverige.se,forskningsverige.se,motorbibeln.se,hallbarhetsverige.se,tillvaxtsverige.se,grillbibeln.se,kampenmotcancer.se##div[class*="vicky-whitebox"]:has-text(/spons/i):upward(a)
@@ -1913,7 +1915,6 @@ villalivet.se##.mtsnb, .villalivet-target, a[href*="/sponsrat-innehall/"], div[d
 villalivet.se##a:has-text(/sponsra/i):upward(3)
 villalivet.se##span:has-text(SPONSR):upward(3)
 villatidningen.se##a[href*="/spons"]:upward(.wppsac-post-carousel)
-fastighetstidningen.se##.adspace
 hemhyra.se##.pageCookies, #ad-insider1, #ad-insider2, #ad-mobil-1, #ad-mobil-2, #ad-mobil-3, #ad, #ad1, #ad2, #adform-outstream, .ad__text
 sydnarkenytt.se##.abann_wrapper, #hspalt_s1
 dental24.se##.fp_banners
@@ -3065,7 +3066,6 @@ sexpacket.se##.info_cookies
 sexpacket.se##+js(aeld, /contextmenu|cut|copy|paste/)
 /intercept-survey.js$domain=smhi.se
 smhi.se##.polopolyNotification
-||akademiskahus.se^*/cookieConsent.$script
 ||akademiskahus.se/AddThis?$script
 /www/images/*$domain=elektronikforumet.com
 elektronikforumet.com##td > a[target="_blank"] img

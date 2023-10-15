@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2023-10-13 18:46:35 CEST
+! Last modified: 2023-10-15 06:22:32 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -525,6 +525,7 @@
 /banners$domain=cykla.se|dagenstv.com|dykarna.nu|hamsterpaj.net|magasinetparagraf.se|pellesoft.se|sbktavling.se|sporttv.nu|sydkusten.es|vatternrundan.se
 /banners/*casino$image
 /banners/annons
+/banners/scripts/adx.js
 /Banners/webbannons
 /bannersidor/*
 /beacon$domain=skyscanner.se
@@ -573,7 +574,7 @@
 /conversions/tracking.js$third-party
 /cookie-banner$script,domain=skyscanner.se
 /CookieBar$script,domain=morningstar.se
-/cookieconsent$domain=voodoofilm.org
+/cookieconsent$script,domain=akademiskahus.se|lundagard.se|voodoofilm.org
 /cookieconsent/cookieconsent.min.js
 /cookieconsent2/*
 /cookieconsent3/cookieconsent.min.js
@@ -1002,6 +1003,7 @@
 /snowfall.min.jquery.js
 /snowplow$script,domain=~prolific.co|~rossmann.pl
 /soledad/js/detector.js
+/spec/adsm.macro.
 /sponsored_articles$domain=fastighetssverige.se
 /sponsoredLink.js$domain=fotbolltransfers.com
 /sponsorloggor$domain=swehockey.se
@@ -1329,7 +1331,7 @@ curateContext=affiliate$domain=aftonbladet.se
 cyclingplus.se,halsafitness.se,yogaworld.se##.sticky-sidebar, #gdpr-container, .slick-carousel
 cykla.se##.featured-post--sponsored, .grid-item--sponsored
 cykla.se#@#.advertisment
-da.se##div.alignwide[style^="height"]
+da.se##div.alignwide[style^="height"], .container > .mt-3[style*="height"]
 dagen.se##.video-annons, .native-box, .arcad-block-container, #consent-container
 dagensarena.se##.popup
 dagenshultsfred.se,dagenskalmar.nu,dagensvastervik.se,dagensvimmerby.se##.panoramaAnnons, .JobAdDiv, .annonsKolumn, .insideAd, .ingressAd, .familyAds, .annonsWrapper
@@ -1411,7 +1413,7 @@ familjeliv.se##a[href*="/kampanj/"], .flm-kampanj
 familjesidan.se##.cookies-wrapper
 fannystaaf.se,nouw.com##.washer.loaded.displayed
 fastighetssverige.se##a[href*="/banner/out/"], .bnr_box, div[class^="panel"][style*="lightgoldenrodyellow"]
-fastighetstidningen.se##.adspace
+fastighetstidningen.se##.adspace, a[class*="annons"]
 feber.se,tjock.se##.burt-unit, .art_ad, adline, f-panorama, f-deals, #rpPopular, #maxetiseFull, #outsider, [data-ad="true"]
 fempers.se,landetsfria.nu,tidningenglobal.se,tidningensyre.se##.revive-box
 festivalinfo.se##a[title*="Casino"], #top-content
@@ -1428,7 +1430,7 @@ fiskejournalen.se###dt-kiosk-position
 fiskejournalen.se,jaktjournalen.se##.fisher-takeover-container
 fixpart.*##.fp-cookie-modal
 fl-net.se###spopup
-flamman.se##.Banner, .TakeOverBanner, .CookieNotice
+flamman.se##.Banner, .TakeOverBanner, .CookieNotice, div#popup
 flashback.org###top-banner-container, #top-banner-wrapper
 flashscore.se##.boxOverContent--a, .otPlaceholder, .seoAdWrapper, .adsbackground-wrapper
 flm.nu##.spons
@@ -1882,7 +1884,6 @@ zeromagazine.nu##div[id^="ads"]
 ||affiliator.com^$third-party
 ||agency360.io^$third-party
 ||akademiskahus.se/AddThis?$script
-||akademiskahus.se^*/cookieConsent.$script
 ||alkemi.com.se^
 ||allsvenskan.se/allsvenskan-script-min.js
 ||alphalete.com.se^
