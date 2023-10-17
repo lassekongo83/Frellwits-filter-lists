@@ -303,6 +303,7 @@ casino-utan-$image
 ||embi-media.com^$third-party
 ||entainpartners.com^$third-party
 ||eugamblers.org^$third-party
+||eu-north-1.amazonaws.com/*images/*Banner
 ||fakturino.se^$third-party
 ||feedblitz.com^$third-party
 ||files.cdn.spilcloud.com/pb/$script
@@ -1979,6 +1980,7 @@ idg.se##.sparticle, .nextArticleSp, .pryltorget, .prisjakt, .prisjaktCompare, .t
 idg.se##[data-styled="SpLabel"]:upward(article)
 idg.se##+js(nostif, gFail)
 m3.se,pcforalla.se,macworld.se##span:has-text(/sponsr/i):upward(article)
+m3.se,pcforalla.se,macworld.se##+js(href-sanitizer, a[href*="/idg.digidip.net/"], ?url)
 ! make the cookie modal less annoying
 idg.se,forum.macworld.se##.idgcp__layer
 idg.se,forum.macworld.se##.idgcp__layer--active, .idgcp__layer--active body:style(overflow: initial !important;)
@@ -2067,8 +2069,7 @@ spelhubben.se##html, .unselectable:style(-moz-user-select:initial!important; -we
 /ws-tracking$domain=voister.se
 voister.se##.campaign
 voister.se##.voister .campaign-vignette:upward(.voister .brief)
-fragbite.se##.cookieBar
-fragbite.se##.tn, .zooKeeper, #scraper, .subHeadSponsors
+fragbite.se##.cookieBar, .tn, .zooKeeper, #scraper, .subHeadSponsors
 fragbite.se##.category:has-text(/spons/i):upward(article)
 tekniknytt.se##.label:has-text(/samarbete|annons|reklam|presenteras av/i):upward(a)
 tekniknytt.se##a[href*="casino"], a[href*="kasino"]:upward(.article_widget_preview, .article_widget_listing)
