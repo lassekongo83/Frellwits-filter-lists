@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2023-10-22 08:21:23 CEST
+! Last modified: 2023-10-24 12:54:59 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -245,6 +245,7 @@
 ##div.ad.panorama
 ##div.adDivLeft
 ##div.adDivRight
+##div.adnuntius-ad
 ##div.adtech_slot
 ##div.advads-background
 ##div.after-article-ad
@@ -800,7 +801,7 @@
 /plugins/convertplug
 /plugins/convertpro
 /plugins/cookie-bar/*
-/plugins/cookie-law-info$script,domain=conpot.se|gilla.se|hockeybladet.nu|lundagard.se|milansverige.se|nyadagbladet.se|startaochdriva.se|sverige.nu|synology.com|temadagar.se
+/plugins/cookie-law-info$script,domain=conpot.se|dagenslogistik.se|firstclassmagazine.se|gilla.se|hockeybladet.nu|lundagard.se|milansverige.se|nyadagbladet.se|startaochdriva.se|sverige.nu|synology.com|temadagar.se
 /plugins/cookie-notice/*
 /plugins/cookie_consent/*$script
 /plugins/cookies-and-content-security-policy$domain=cannabisifokus.se|futsalmagasinet.se|sd.se
@@ -957,7 +958,7 @@
 /ps-partner$xmlhttprequest,domain=dagensps.se
 /publicPartners$domain=familjehemmet.se|familjehemsbanken.se
 /pulsetracking$script
-/pum/*$domain=finanstid.se|flm.nu
+/pum/*$domain=dagenslogistik.se|finanstid.se|flm.nu
 /QA.js$domain=qruiser.com
 /questback.popup$script
 /QXA.$script,domain=qruiser.com|qx.se
@@ -1277,7 +1278,7 @@ bildobubbla.se##.annonser
 bilsport.se##fl-panorama-top,fl-newsletter-popup
 bilweb.se###cookie_alert
 bilwebben.ax##.front #secondary-content-wrapper, .banner-wrapper
-biostock.se,cannabis.se,finanstid.se,forskning.se,gullislastips.se,it-finans.se,it-hallbarhet.se,it-halsa.se,it-kanalen.se,it-pedagogen.se,it-retail.se,snowmobile.se,tobaksfakta.se##.pum-overlay
+biostock.se,cannabis.se,dagenslogistik.se,finanstid.se,forskning.se,gullislastips.se,it-finans.se,it-hallbarhet.se,it-halsa.se,it-kanalen.se,it-pedagogen.se,it-retail.se,snowmobile.se,tobaksfakta.se##.pum-overlay
 biostock.se,hejauppsala.com##.wt-cli-cookie-bar-container
 birthday.se##.datax
 bjuvsweek.se##.carouselbanner-wrp
@@ -1342,6 +1343,7 @@ dagenshultsfred.se,dagenskalmar.nu,dagensvastervik.se,dagensvimmerby.se##.panora
 dagensinfrastruktur.se,grontsamhallsbyggande.se,nordiskaprojekt.se,nyaprojekt.se,ratsit.se,sonicmagazine.com,svenskbyggtidning.se##[class^="ad-"]
 dagensinfrastruktur.se,grontsamhallsbyggande.se,nordiskaprojekt.se,nyaprojekt.se,svenskbyggtidning.se##.g-single, a[onclick*="banner"], a[onclick*="advert"]
 dagensjuridik.se##.outher-sidebar, a[href*="/annons/"], .dj-inline-ad
+dagenslogistik.se##div.g, .top-banner
 dagensps.se##a[href*="/ps-partner/"], .ad-links-module, .dagensps_ad, a[href*="ut.dagensps.se"][target], .bottom_banner, .leftsidebanner
 dagenstv.com###bt
 dalarnasaffarer.se,ica.se,jamtlandsaffarer.se,naringslivetvgl.se,stockholmsaffarer.se##.banner-area
@@ -1511,7 +1513,7 @@ hbwebben.se##.elementor-widget-container > a > img
 hejaolika.se##[class*="partnerinfostyle"], div[id^="hejao-"], .kb-advanced-image-link[target], .category-partnerinformation, .kt-modal-linkalign-center, .hejao-target
 helahisingen.se###custom_html-15, .code-block img
 helgon.se##[id*="banner"], a[href^="https://ad."], a[href^="https://ad2."]
-hemhyra.se##.pageCookies, #ad-insider1, #ad-insider2, #ad-mobil-1, #ad-mobil-2, #ad-mobil-3, #ad, #ad1, #ad2, #adform-outstream, .ad__text
+hemhyra.se##.pageCookies, #ad-insider1, #ad-insider2, #ad-mobil-1, #ad-mobil-2, #ad-mobil-3, #ad, #ad1, #ad2, #adform-outstream, .ad__text, .entry__ad
 hemmafixbloggen.se,surfa.se,teknikfreak.se###loader-wrapper
 hemmakvall.se#@##cliSettingsPopup.cli-modal
 hemmanytt.se###sa_slider_shortcode
@@ -1595,6 +1597,7 @@ lchfarkivet.se###timedModal, .modal-backdrop, div#beskrivning[style="font-size: 
 lesscarbs.se##.elementor-image > a:not([href*="https://lesscarbs.se"]), a[href*="/affiliates/"]
 lesscarbs.se#@#.category-annonssamarbete:not(body):not(html)
 leta.se###bookingcom-resor-wrapper, #aktuellaerbjudanden, #sky-left-wide, .topNavItem[href*="casino"], .topNavItem[href*="betting"], #mobile-banner-top, #mobile-banner-after-content, #mobile-banner-bottom, #bottom-splinks
+levandehistoria.se,xlbygg.se##div[class^="CookieBar"]
 lindasbakskola.se,realtid.se,skk.se##a[href*="/bit.ly/"]
 linguee.se##div[class*="ad_container"], div[class*="_ads_"]
 listor.se###ss-floating-bar, .top-ads-widget, .header-inner center, #sidebar-right .widget_custom_html
@@ -1851,7 +1854,6 @@ welma.se##.gpt-slot, .newsletter
 whowhatwear.co.uk#@#a[href*="/click.linksynergy"] img
 worldinproperty.se##.newsletter-modal
 worldkustom.com##.middleban
-xlbygg.se##div[class^="CookieBar"]
 xn--lnforum-exa.se##.LFRBox
 yogafordig.nu##.popup-large, .popup-bottom, .square-banner-wrapper
 ysektionen.se##.yweb-news-paper-banner
@@ -2013,7 +2015,7 @@ zeromagazine.nu##div[id^="ads"]
 ||consent.dk^$third-party,domain=~ekstrabladet.dk
 ||consent.podplay.com^
 ||consentframework.com^$domain=luleahockeyforum.com
-||consentmanager.net^$domain=allastudier.se|coop.se|dagens.se|gbgfotboll.se|stff.se|svenskfotboll.se
+||consentmanager.net^$domain=allastudier.se|coop.se|dagens.se|gbgfotboll.se|mobil.se|stff.se|svenskfotboll.se
 ||converdiant.com^$third-party
 ||convertbox.com^$third-party
 ||convertful.com^$third-party
@@ -2411,7 +2413,7 @@ zeromagazine.nu##div[id^="ads"]
 ||pushpushgo.com^$third-party
 ||pushwhy.com^
 ||pxl.host^$third-party
-||quantcast.com^$domain=alltomelbil.se|arbetarskydd.se|babyhjalp.se|byrum.se|cancelculture.se|cleannet.se|cornucopia.se|dagenshandel.se|dh.se|doon.se|egoinas.se|eniro.se|enkelteknik.se|entreprenad.com|ettgottskratt.se|expo.se|fannystaaf.se|filmtopp.se|flashback.org|food-supply.se|foodnet.se|foreca.se|forni.se|fraser.nu|fri-kopenskap.se|garaget.org|goforfit.se|habit.se|hippson.se|humorbibeln.se|kalender.se|kemivarldenbiotech.se|kiacarclub.se|kimura.se|lag-avtal.se|laget.se|land.se|landleyskok.se|langd.se|lesscarbs.se|leta.se|lifesciencesweden.se|listor.se|ljudochbild.se|matklubben.se|medtechmagazine.se|merinfo.se|mobil.se|motivation.se|motormagasinet.se|mykitchenstories.se|mytaste.se|news55.se|newsner.com|norrahalland.se|nouw.com|nyadagbladet.se|nyteknik.se|packnet.se|plastnet.se|poddar.se|poddtoppen.se|processnet.se|receptfavoriter.se|recyclingnet.se|res.se|reseguiden.se|rt-forum.se|samnytt.se|sportbibeln.se|sportlovin.se|sporttv.nu|stoppapressarna.se|swehockey.se|tittapavideon.se|transportnet.se|travelgrip.se|travelnews.se|uochd.se|vackertvader.se|varldenshaftigaste.se|verkstaderna.se|woodnet.se|woxikon.se|xn--ordrknare-y2a.se
+||quantcast.com^$domain=alltomelbil.se|arbetarskydd.se|babyhjalp.se|byrum.se|cancelculture.se|cleannet.se|cornucopia.se|dagenshandel.se|dh.se|doon.se|egoinas.se|eniro.se|enkelteknik.se|entreprenad.com|ettgottskratt.se|expo.se|fannystaaf.se|filmtopp.se|flashback.org|food-supply.se|foodnet.se|foreca.se|forni.se|fraser.nu|fri-kopenskap.se|garaget.org|goforfit.se|habit.se|hippson.se|humorbibeln.se|kalender.se|kemivarldenbiotech.se|kiacarclub.se|kimura.se|lag-avtal.se|laget.se|land.se|landleyskok.se|langd.se|lesscarbs.se|leta.se|lifesciencesweden.se|listor.se|ljudochbild.se|matklubben.se|medtechmagazine.se|merinfo.se|motivation.se|motormagasinet.se|mykitchenstories.se|mytaste.se|news55.se|newsner.com|norrahalland.se|nouw.com|nyadagbladet.se|nyteknik.se|packnet.se|plastnet.se|poddar.se|poddtoppen.se|processnet.se|receptfavoriter.se|recyclingnet.se|res.se|reseguiden.se|rt-forum.se|samnytt.se|sportbibeln.se|sportlovin.se|sporttv.nu|stoppapressarna.se|swehockey.se|tittapavideon.se|transportnet.se|travelgrip.se|travelnews.se|uochd.se|vackertvader.se|varldenshaftigaste.se|verkstaderna.se|woodnet.se|woxikon.se|xn--ordrknare-y2a.se
 ||qx.se/view.php$image
 ||rabble-res.cloudinary.com^$third-party
 ||radio.se/iomm
