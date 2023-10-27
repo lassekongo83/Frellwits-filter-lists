@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2023-10-25 09:34:51 CEST
+! Last modified: 2023-10-27 08:21:30 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -64,8 +64,8 @@
 ###cookiejar
 ###cookielawwarning
 ###cookieMsgBlock
-###CookieNotice
 ###cookieNotice
+###CookieNotice
 ###cookies-acceptance .alert.bottom
 ###cookiesInfo
 ###dialog-eu-cookie-law
@@ -438,6 +438,7 @@
 /?template=prisjakt$domain=ljudochbild.se
 /?trafikkalla$image,domain=bloggplatsen.se
 /_adsmodern/*$image
+/_api/*/visit$domain=placera.se
 /_graphics/annons
 /_papers_media/banners
 /_sites_media/*/uploads/Banners
@@ -756,7 +757,7 @@
 /noview.$script,domain=gofm.se|trafik24.se|trafikdirekt.se|trafikradion.com|trafikradion.se
 /nyhetsspalt_banner_js
 /omniture/s_code.js
-/OneSignalSDK.js$domain=1x2.se|aktieskolan.se|battrestadsdel.se|beernews.se|cannabis.se|dackavisen.se|dalarnasaffarer.se|driva-eget.se|entreprenadaktuellt.se|ettgottskratt.se|finanstid.se|fokus.se|fotbollskane.se|fotbollsthlm.se|humorbibeln.se|idg.se|ja.se|jamtlandsaffarer.se|macken.xyz|maskinbladet.se|naringslivetvgl.se|netflixguiden.se|newsner.com|nyadagbladet.se|oskarshamns-nytt.se|rabattsok.se|samnytt.se|skogsaktuellt.se|skolporten.se|sportbibeln.se|stockholmsaffarer.se|swebbtv.se|thepattayanews.se|ungdomsfotboll.se|vaken.se
+/OneSignalSDK.$domain=1x2.se|aktieskolan.se|battrestadsdel.se|beernews.se|cannabis.se|dackavisen.se|dalarnasaffarer.se|driva-eget.se|entreprenadaktuellt.se|ettgottskratt.se|fastighetsvarlden.se|finanstid.se|fokus.se|fotbollskane.se|fotbollsthlm.se|humorbibeln.se|idg.se|ja.se|jamtlandsaffarer.se|macken.xyz|maskinbladet.se|naringslivetvgl.se|netflixguiden.se|newsner.com|nyadagbladet.se|oskarshamns-nytt.se|rabattsok.se|samnytt.se|skogsaktuellt.se|skolporten.se|sportbibeln.se|stockholmsaffarer.se|swebbtv.se|thepattayanews.se|ungdomsfotboll.se|vaken.se
 /OneSignalSDKWorker$script
 /pagead$domain=eniro.se|horoskoptid.se|vilaser.se
 /pages/native$domain=aktuellhallbarhet.se|byggindustrin.se|dagensmedia.se|dagensmedicin.se|dagenssamhalle.se|dagligvarunytt.se|fastighetsnytt.se|market.se|privataaffarer.se|resume.se
@@ -1783,7 +1784,7 @@ swehockey.se##[class*="-reklam"], .sif-sponsorer, .teaserblock, .commonblock a:n
 sydnarkenytt.se##.abann_wrapper, #hspalt_s1
 synonymer.se##.create-account-banner, .buy-premium-banner, div[class*="pb-"] > div.text-center
 tabyallehanda.se##section[id^="Panorama"]
-tandlakartidningen.se##[class^="ad-container"], [class^="adbox-single"]
+tandlakartidningen.se##[class^="ad-container"], [class^="adbox-single"], div[id^="takeover-"]
 tasteline.com##.article.related > a[href*="&utm"][target="_blank"]
 tasteline.com##.popup-overlay
 techmag.se##.popup-overlay
@@ -2024,7 +2025,7 @@ zeromagazine.nu##div[id^="ads"]
 ||cookiebot.com^$domain=accentmagasin.se|allsvenskan.se|alltomarbetsmiljo.se|bax-shop.se|byggfaktadocu.se|chalmers.se|circlek.se|elinstallatoren.se|energi.se|enirobuddy.se|ff.se|findroommate.se|fokus.se|framtid.se|hbl.fi|hifitorget.se|husdjur.se|kingsizemag.se|kreditrapporten.se|kurera.se|mitti.se|modernpsykologi.se|ng.se|ostnyland.fi|polistidningen.se|qx.se|resfeber.se|sakochliv.se|sis.se|spraktidningen.se|superettan.se|svensktnaringsliv.se|sverigesnatur.org|swedroid.se|tco.se|totallyorebro.se|totallystockholm.se|trafiken.nu|upplysning.se|vaningen.se|varden.se|vastranyland.fi|vatternrundan.se|vvsforum.se|wesafe.se
 ||cookieconsent.popupsmart.com^$third-party
 ||cookiehub.net^$domain=da.se|kollega.se
-||cookieinformation.com^$domain=folkofolk.se|minbostad.se|viivilla.se
+||cookieinformation.com^$domain=fastighetsvarlden.se|folkofolk.se|minbostad.se|viivilla.se
 ||cookieinfoscript.com^$third-party
 ||cookielaw.org^$domain=booli.se|cartoonnetwork.se|findit.se|flashscore.se|fotbollskanalen.se|gaffa.se|hastnet.se|hm.com|ikea.com|ilikeradio.se|infotorgjuridik.se|internetkunskap.se|internetstiftelsen.se|kokaihop.se|koket.se|livetochdiabetes.se|manpower.se|motesplatsen.se|mtv.se|natgeotv.com|nok.se|nvp.se|placera.se|recept.se|se.trustpilot.com|spisa.nu|sv.bab.la|svenskarnaochinternet.se|sydkusten.es|thelocal.se|travronden.se|tripadvisor.se|tv4.se|voister.se|yelp.se
 ||cookienotice.co^$third-party
@@ -2373,7 +2374,6 @@ zeromagazine.nu##div[id^="ads"]
 ||pipedrive.com^*/statistics/seen
 ||pixel.playbuzz.com^
 ||pji.nu^$third-party,domain=~hintaopas.fi|~ledenicheur.fr|~pricespy.co.nz|~pricespy.co.uk|~prisjagt.dk|~prisjakt.no|~prisjakt.nu
-||placera.se/_api/placera/visit
 ||platform.linkedin.com^$third-party
 ||platform.tumblr.com/*/share.js$third-party
 ||platssajten.se^$third-party
