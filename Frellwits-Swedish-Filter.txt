@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2023-10-29 11:57:41 CET
+! Last modified: 2023-10-31 11:52:46 CET
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -456,7 +456,6 @@
 /Ad/*$domain=hallbyhandboll.se|skiljebosk.nu
 /ad/getNouw.$script
 /ad_acknowledgment$xmlhttprequest
-/ad_fullpage.js$domain=hockeynews.se
 /adform.js$domain=alingsastidning.se|bohuslaningen.se|harrydaposten.se|kungalvsposten.se|kungsbackaposten.se|markposten.se|molndalsposten.se|partilletidning.se|stromstadstidning.se|sttidningen.se|ttela.se
 /adn/adn-setup.$script
 /adnami/macro$script
@@ -1172,7 +1171,6 @@
 @@||content.lwadm.com/lw/js/*/lw.js$domain=fannystaaf.se|nouw.com
 @@||createsend1.com/css/
 @@||feed.meltwater.com^$subdocument
-@@||freeride.nu/js/ads.js
 @@||fwmrm.net/crossdomain.xml$domain=embed.viaplay.com
 @@||happyride.se/img/admarket/$~third-party
 @@||js.createsend1.com/js/jquery
@@ -1467,9 +1465,9 @@ fotbolltransfers.com##div[class^="ad"], a[href^="https://ads."], .header_sponsor
 fotosidan.se##.subArticlesponsored, div[style="width:300px;float:right;"], div[style="float:right;width:300px;"], #partner-box, .adbox-label
 fragbite.se##.cookieBar, .tn, .zooKeeper, #scraper, .subHeadSponsors
 framtid.se###siteflash, #customer-link-container
-freeride.se##img[src*="/sponsor/"] + br + .boxlogo
+freeride.se##img[src*="/sponsor/"] + br + .boxlogo, .sidebar-front .boxen
 freeride.se,gamereactor.se,happyride.se##.sponsor
-freeride.se,happyride.se##.anm1-container, [class^="anp"], [class^="ans"], .box.evergreen ~ .boxtext
+freeride.se,happyride.se##.anm1-container, [class^="anp"], [class^="ans"], .box.evergreen
 fria.nu,stockholmsfria.se##[class*="annonser"], #cboxOverlay, #cboxWrapper
 frilagt.se##.elementor-location-header section.elementor-element:first-child
 friluftsframjandet.se##[id^="ad-"]
@@ -1505,7 +1503,7 @@ hamsterpaj.net###sidebar_wrapper > .zone:last-child, #ui_panorama
 handbollskanalen.se##.hb-adlabel, [id^="hb-"], .ad-placement-side, p > a[target="_blank"]
 handel.ax###topadmob
 happypancake.se###__next > div > div.bar:first-child
-happyride.se##.col-sm-4 > .boxtext
+happyride.se##.col-sm-4 > .boxt
 hastlycka.se##.c-placement-top.owl-carousel, .takeover-container
 hastnet.se##.add-wrap, .listings-search-ads, .right_panel
 hbl.fi,ostnyland.fi,vastranyland.fi##.dre-item--feature-advertorial
@@ -1763,7 +1761,7 @@ sportbilen.se###text-4
 sportbloggare.com##.partners-box, .cube-bonus-list
 sporthalsa.se##.header_top, #media_image-2, #text-6
 sporthalsa.se##a[href*="/annonsering"]
-sporttv.nu##a[onclick*="bannerClick"]
+sporttv.nu##a[onclick*="bannerClick"], #linkus, .details-bet-banner
 spray.se##section[class*="casino"], a[href*="casino"]
 stallet.se##.pnlAdTop
 startaochdriva.se##.banner-right, .banner-left, .wpb_single_image a[target="_blank"], .tdm-popup-modal-wrap
@@ -1811,7 +1809,7 @@ turistmal.se###col_right
 tv.nu##a[href*="adform.net"], .ad-fullscreenWallpaper__container
 tv24.se##li[id^="infeed"]
 tv4.se##.maxetise
-tvmatchen.nu##.bet365, .panorama-wrapper, .tvg-manager-box, img[src*="/tvchannels"][alt*="Snabbare"]
+tvmatchen.nu##.bet365, .panorama-wrapper, .tvg-manager-box, .tv102945, .tv102987, #event_banner, .go-to-partner, .odds, #text-13
 tvprogram.se##.backdrop, .fcb
 ungdomsfotboll.se##div[id^="ungdo-"]
 upphandling24.se##.type-partnerartikel
@@ -2221,7 +2219,6 @@ zeromagazine.nu##div[id^="ads"]
 ||kingsizemag.se/content/
 ||kingsizemag.se/kingrev.php
 ||kingsumo.com^$third-party
-||kittad.se/Scripts/cord/cord.custom-popup.js
 ||klaviyo.com^$third-party,domain=~kmail-lists.com|~myklpages.com
 ||kolozzeum.com/forum/kollos*$script
 ||konzilo.com/mtc.js
