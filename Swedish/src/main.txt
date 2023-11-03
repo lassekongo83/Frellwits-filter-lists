@@ -1504,9 +1504,8 @@ expressen.se##.teaser > a[href*="/kampanj."], .teaser > a[href*="/brandstudio"],
 expressen.se##.campaign
 expressen.se##.html-widget > div[style^="text-align: center; font-size: 10px;"]
 ! Procedural cosmetic filters
-expressen.se##a[href*="/annons"], a[href*="/brandstudio"], a[href*="/brand-studio"], a[href*="/kampanj."], a[href*="/lanapengar."], a[href*="/rabattkoder."], a[href*="/spel.expressen.se"], .vignette--svg + a[href*="teknikensvarld."]:upward(.teaser)
+expressen.se##.teaser:has(a[href*="/annons"], a[href*="/brandstudio"], a[href*="/brand-studio"], a[href*="/kampanj."], a[href*="/lanapengar."], a[href*="/rabattkoder."], a[href*="/spel.expressen.se"], .vignette--svg + a[href*="teknikensvarld."], .teaser__bottom--ad-marker)
 expressen.se##strong:has-text(/^annons:/i):upward(p)
-expressen.se##.teaser__bottom--ad-marker:upward(.teaser)
 expressen.se##.tapet-popup-js-no-scroll, .tapet-no-scroll:style(overflow-y:initial!important; position:unset!important;)
 ! scriptlets
 www.expressen.se##+js(acs, Bau, preloadAds)
@@ -1538,7 +1537,7 @@ borssnack.di.se##.bn_advertisement__panorama, .bn_advertisement__container
 tradera.com##ads-takeover
 /adv_utils$domain=viivilla.se
 viivilla.se##.body-overlay, .article-native-scroll
-viivilla.se##.article-grid__sponsored, .card__sponsored:upward(.card)
+viivilla.se##.card:has(.article-grid__sponsored, .card__sponsored)
 /pages/native$domain=aktuellhallbarhet.se|byggindustrin.se|dagensmedia.se|dagensmedicin.se|fastighetsnytt.se|resume.se|dagenssamhalle.se|market.se|dagligvarunytt.se|privataaffarer.se
 /api/natives?$domain=aktuellhallbarhet.se|byggindustrin.se|dagensmedia.se|dagensmedicin.se|fastighetsnytt.se|resume.se|dagenssamhalle.se|market.se|dagligvarunytt.se|privataaffarer.se
 /pages/tag$domain=aktuellhallbarhet.se|byggindustrin.se|dagensmedia.se|dagensmedicin.se|fastighetsnytt.se|resume.se|dagenssamhalle.se|market.se|dagligvarunytt.se|privataaffarer.se
@@ -1549,7 +1548,7 @@ aktuellhallbarhet.se,byggindustrin.se,dagensmedia.se,dagensmedicin.se,fastighets
 resume.se##aside > div:has(a[href="/affarer/alska-arbetsgivarlivet/"])
 digitalfotoforalla.se,iform.se,pctidningen.se,varldenshistoria.se##.scroll-message, .gallery-banner, .horseshoe, [data-ad-type], .bcm-banner
 digitalfotoforalla.se,iform.se,pctidningen.se,varldenshistoria.se##li:has(.content-label:has-text(/annons/i)):remove()
-digitalfotoforalla.se,iform.se,pctidningen.se,varldenshistoria.se##.teaser__cat--sponsorlabel:upward(.teaser)
+digitalfotoforalla.se,iform.se,pctidningen.se,varldenshistoria.se##.teaser:has(.teaser__cat--sponsorlabel)
 digitalfotoforalla.se,pctidningen.se##.opacity-fade:style(opacity:1!important; transition:none!important; animation:unset!important;)
 livesport.expressen.se##[class^="BauProvider"]
 illvet.se,pctidningen.se,viivilla.se,digitalfotoforalla.se,iform.se,vinbanken.se,varldenshistoria.se,slakthistoria.se##.noScroll, .noScroll body:style(overflow:unset!important)
@@ -1610,17 +1609,16 @@ aftonbladet.se,godare.se,livsstil.se,skonhetsredaktorerna.se,omni.se,omniekonomi
 ||svd.se/api/dr-edition-teasers
 svd.se###mega-ad-wrapper, div[class*="advertory"], div[data-custom-ad-handled="true"], span[data-id="bottom-sticker-offer"], div[data-context-pageview*="native-svd"]
 svd.se##body:style(visibility:visible!important;)
-svd.se##div[class^="NativeBarWrapper"]:upward(article)
+svd.se##article:has(div[class^="NativeBarWrapper"])
 ! Omni
 ||omni.se/ads?
 omni.se,omniekonomi.se##.article--sponsored, .resource--sponsored, .component--sticky-sponsor-banner, .pre-banner, .banner--toppanorama, .banner--mobiletoppanorama, .banner--midpanorama, .group--banner
-omni.se,omniekonomi.se##a[href*="article-ad-"]:upward(.resource--link)
+omni.se,omniekonomi.se##.resource--link:has(a[href*="article-ad-"])
+omni.se,omniekonomi.se##div.group:has([class*="sponsoredcluster"])
 omni.se,omniekonomi.se##.header-banner--regular, .app-banner:style(--banner-offset: 0 !important;)
 omni.se,omniekonomi.se##+js(aeld, omniPulseLoaded)
-omni.se,omniekonomi.se##[class*="sponsoredcluster"]:upward(div.group)
 ! Klart
 klart.se###overlay, .gdpr-onboarding-container, a[rel*="sponsored"], .-panorama-ad-wrapper
-klart.se##.ad-text:has-text(/annons/i):upward(.content-box-list__item)
 klart.se##body:remove-class(mega-loading)
 ! Bytbil
 ||bytbil.com/bundles/js/tracking
@@ -1645,9 +1643,9 @@ livsstil.se##a[href*="campaign"][data-test-tag="external-link"], div[data-ad-sub
 livsstil.se,godare.se##[id^="adPlacement"]:upward(1)
 livsstil.se##p:has-text(/^kommersiellt innehåll/i):upward(article)
 livsstil.se##p:has-text(/^kommersiellt innehåll|^annons$/i):upward(a)
-livsstil.se##.ad:upward(article)
+livsstil.se##article:has(.ad)
 livsstil.se##h3:has-text(/^Annons$/):upward(1)
-sportbladetplay.se##[class^="CookieConsentPopup"]:upward(.ui.page.dimmer)
+sportbladetplay.se##.ui.page.dimmer:has(div[class^="CookieConsentPopup"])
 sportbladetplay.se##body.dimmed:style(overflow:unset!important)
 vinochmatguiden.se##.popup_missa-inget
 godare.se##.godare-ad-element, a[href*="/brand-studio"], a[href*="/brandstudio"], .recipe-ad, a[href*="utm_campaign"][data-test-tag="external-link"]
@@ -1707,9 +1705,9 @@ mitti.se##h3:has-text(/annons/i):upward(.image-component-unprocessed)
 mitti.se##+js(set, NWS.config.enableAdblockerDetection, false)
 vasterastidning.se##article[data-section="nativeannons"]
 vasterastidning.se##h2, h5, .kicker:has-text(ANNONS):upward(article, div.row)
-vasterastidning.se##a[href*="casino.se"]:upward(.row)
+vasterastidning.se##.row:has(a[href*="casino.se"])
 realtid.se##.realtid-add, .infinite-scroll.native-wrapper
-realtid.se##.meta--add:upward(.link)
+realtid.se##.link:has(.meta--add)
 ||prvcy.vkmedia.se^
 ||ues.vk.se^*/events
 /mega.$domain=vk.se|folkbladet.nu|nordsverige.se|mellanbygden.nu|vasterbottningen.se|lokaltidningen.nu
@@ -1721,7 +1719,7 @@ vk.se,folkbladet.nu,nordsverige.se,mellanbygden.nu,vasterbottningen.se,lokaltidn
 ||collect.breakit.se^
 ||player.vimeo.com^$frame,redirect=click2load.html,domain=breakit.se
 breakit.se##[class*="sponsored"], [class*="Sponsored"], [class*="LivepodPuff"], .videoAd, .js-video-ad, [class*="AdkContainer"], div[class^="LivewrappedContainer_root"]
-breakit.se##section[class*="Sponsored"]:upward(section[class*="Article_layout"])
+breakit.se##section[class*="Article_layout"]:has(section[class*="Sponsored"])
 /native-ads$domain=atl.nu|landlantbruk.se
 @@/adx.js$~third-party,domain=atl.nu|landlantbruk.se
 ||atl.nu/api/mnews
@@ -1753,18 +1751,18 @@ evertiq.se##.cc-container, [data-gabnr], #carpet
 evertiq.se##+js(acs, $, banner_loader)
 /news55-ga.js
 news55.se,e55.se,xn--hlsa55-bua.se###newsletter-popup, #premium-bottom-bar, #premium-popup, .is-native, .is-native-yes, .after-article-widget, .banner-bottom, section[page-url*="/native/"]
-news55.se##a[href]:not([href*="/news55.se"]):upward(section.sidebar)
-news55.se##.native-notice:upward(article)
-e55.se##a[href]:not([href*="/e55.se"]):upward(section.sidebar)
+news55.se##section.sidebar:has(a[href]:not([href*="/news55.se"]))
+news55.se##article:has(.native-notice)
+e55.se##section.sidebar:has(a[href]:not([href*="/e55.se"]))
 ||foretagande.se/a/$xmlhttprequest
 ||foretagande.se/r/$xmlhttprequest
 foretagande.se##div[id*="panorama"], .panorama-pos
-foretagande.se##.sponsored-text:upward(article)
-foretagande.se##a[href$="artiklar-i-samarbete"]:upward(div.article)
+foretagande.se##article:has(.sponsored-text)
+foretagande.se##div.article:has(a[href$="artiklar-i-samarbete"])
 /newsner-ad$domain=newsner.com|humorbibeln.se|sportbibeln.se|ettgottskratt.se
 /newsner-stats$domain=newsner.com|humorbibeln.se|sportbibeln.se|ettgottskratt.se
 newsner.com,humorbibeln.se,sportbibeln.se,ettgottskratt.se###wsfb-container, .share-buttons, .ad-space
-newsner.com,humorbibeln.se,sportbibeln.se,ettgottskratt.se##.sponsored-bar:upward(.ssp_divider)
+newsner.com,humorbibeln.se,sportbibeln.se,ettgottskratt.se##.ssp_divider:has(.sponsored-bar)
 byggnadsarbetaren.se##[class^="siteAds"], .siteAlerts, #gan-popup
 uppsalanyheter.se###banner-top-block
 skillingaryd.nu,xn--vrnamo-bua.nu###more-banners
@@ -1797,7 +1795,7 @@ dagensjuridik.se##.outher-sidebar, a[href*="/annons/"], .dj-inline-ad
 dagensjuridik.se##strong:has-text(/^senaste nytt från våra partners/i):upward(.card--muted)
 /sponsored_articles$domain=fastighetssverige.se
 fastighetssverige.se##a[href*="/banner/out/"], .bnr_box, div[class^="panel"][style*="lightgoldenrodyellow"]
-fastighetssverige.se##.badge-partner-text:upward(.featured-article)
+fastighetssverige.se##.featured-article:has(.badge-partner-text)
 fastighetstidningen.se##.adspace, a[class*="annons"]
 /atomic-blocks$script,domain=foretagsverige.se|forskningsverige.se|motorbibeln.se|hallbarhetsverige.se|tillvaxtsverige.se|grillbibeln.se|kampenmotcancer.se
 foretagsverige.se,forskningsverige.se,motorbibeln.se,hallbarhetsverige.se,tillvaxtsverige.se,grillbibeln.se,kampenmotcancer.se##+js(acs, showConsentDlg)
@@ -1812,7 +1810,7 @@ bussmagasinet.se###titlebanner
 /img/banklan/*$image,domain=ekonominyheter.se
 ||feed.mikle.com^$third-party,domain=ekonominyheter.se
 ekonominyheter.se###lblock-ads
-ekonominyheter.se##a[href*="casino"]:upward(.td-fix-index)
+ekonominyheter.se##.td-fix-index:has(a[href*="casino"])
 aktiespararna.se##.analysguiden-promote-articles
 veterinarmagazinet.se##.nyhet-ad
 forvaltarforum.se##[id^="ff_banner"], .home .partner_article + .mh-section, .home .payed_article + .mh-section, .home-columns .ticker-title.partner_article, .home-columns .ticker-title.payed_article, .mh-header .widget_sow-slider, .sow-slider-image, .houdini_partner_article, .houdini_video_banner, .houdini_produktnytt, #houdini_tjanster-2, .widget_sow-image a[target]
@@ -1821,10 +1819,10 @@ forvaltarforum.se##[id^="ff_banner"], .home .partner_article + .mh-section, .hom
 ||borsvarlden.com/banners/
 /popup-subscribe.js$domain=borsvarlden.com
 borsvarlden.com##.sponsored-articles-container, .nav-sep-blink, .annons-label, .index-side-banner-wrapper, .index-top-banners-wrapper, .fullwidthbanner-container, .banner-wrapper
-borsvarlden.com##.border-sponsored:upward(article)
+borsvarlden.com##article:has(.border-sponsored)
 borsvarlden.com##.overlay-label:has-text(/spons/i):upward(.format-thumb-small)
 maklarvarlden.se##.hustle-popup
-maklarvarlden.se##.sponsored-inlist:upward(article)
+maklarvarlden.se##article:has(.sponsored-inlist)
 maklarvarlden.se##.td-post-category:has-text(/spons/i):upward(2)
 maklarvarlden.se##.td-pulldown-size:has-text(/spons/i):upward(3)
 /white_pixel.gif$domain=byggfakta.today
