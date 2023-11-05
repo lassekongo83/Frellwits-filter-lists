@@ -1,6 +1,6 @@
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days
-! Last modified: 2023-11-05 05:40:14 CET
+! Last modified: 2023-11-05 16:46:55 CET
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPL3 - https://github.com/lassekongo83/Frellwits-filter-lists/blob/master/LICENSE
@@ -261,7 +261,7 @@ borskollen.se##.sponsored-chip:matches-css(display: block):upward(a)
 borskollen.se##[id^="borskollen_small"], [id^="borskollen_large"], .featured-link, .app-store-box
 borssnack.di.se##.bn_advertisement__panorama, .bn_advertisement__container
 borsvarlden.com##article:has(.border-sponsored)
-borsvarlden.com##.overlay-label:has-text(/spons/i):upward(.format-thumb-small)
+borsvarlden.com##.label:has-text(/annons/i):upward(.highlighted-article-block)
 borsvarlden.com##.sponsored-articles-container, .nav-sep-blink, .annons-label, .index-side-banner-wrapper, .index-top-banners-wrapper, .fullwidthbanner-container, .banner-wrapper
 bovision.se##a:has(.ad-mark)
 bovision.se##.banner-image
@@ -323,7 +323,6 @@ chef.se##.Cookie-notice, .Product-modal, .Offer-popup, .Toaster
 chef.se,fokus.se##.Blurb--native
 cineasten.se###text-6
 cineasten.se##.ajax_loader
-civilekonomen.se###rollup
 civilekonomen.se,aktiespararna.se,alekuriren.se,tidningen.se##.native
 com.se,~www.com.se##html::before:style(content: "OBS! VARNING! Om denna sida är en butik så är det förmodligen en bluffbutik. Detta är ett meddelande från det svenska filtret i din annonsblockerare." !important; font-size: 18px !important; font-family: sans !important; background-color: red !important; color: white !important; padding: 6px !important; width: 100% !important; display: block !important; text-align: center !important;)
 conpot.se##div:has-text(ANNONS):upward(article:not([id]))
@@ -457,12 +456,11 @@ expo.se##div[class*="expo-ads"], div[class*="pane-openx"], .modal, .header-top.s
 expressen.se##.campaign
 expressen.se##a:remove-attr(data-t-label)
 expressen.se##a:remove-attr(data-t-type)
-expressen.se##a[href*="/spel.exp"], a[href*="/lanapengar.exp"], a[href*="/rabattkoder.exp"], a[href*="/annons"], .match-betting, .discount-ad, .b-ad__caption, .pressrelease-teaser, .widget-ad-marker, .widget-ad-marker + a, .promotion-banner, .widget--collaboration, .rotator--external, a[data-click-track*="prisjakt"], .linked-image-widget a[href*="/kampanj/"], .linked-image-widget a[href*="www.cmore.se"], .linked-image-widget a[href*="lifestyle.expressen.se"], #premiumAdWrapper, .tapet-popup-overlay, .outsider-ads
+expressen.se##a[href*="/spel.exp"], a[href*="/lanapengar.exp"], a[href*="/rabattkoder.exp"], a[href*="/annons"], .match-betting, .discount-ad, .b-ad__caption, .pressrelease-teaser, .widget-ad-marker, .widget-ad-marker + a, .promotion-banner, .widget--collaboration, .rotator--external, a[data-click-track*="prisjakt"], .linked-image-widget a[href*="/kampanj/"], .linked-image-widget a[href*="lifestyle.expressen.se"], #premiumAdWrapper, .tapet-popup-overlay, .outsider-ads, .teaser > a[href*="/kampanj."], .teaser > a[href*="/brandstudio"], .teaser > a[href*="/brand-studio"], figure[data-article-data*="/sponsrat"], figure[data-article-data*="/annons"], figure[data-article-data*="/brand-studio"], .teaser--native, .native-article
 expressen.se##strong:has-text(/^annons:/i):upward(p)
 expressen.se##+js(aeld, click, .preventDefault)
 expressen.se##.html-widget > div[style^="text-align: center; font-size: 10px;"]
 expressen.se##.tapet-popup-js-no-scroll, .tapet-no-scroll:style(overflow-y:initial!important; position:unset!important;)
-expressen.se##.teaser > a[href*="/kampanj."], .teaser > a[href*="/brandstudio"], .teaser > a[href*="/brand-studio"], figure[data-article-data*="/sponsrat"], figure[data-article-data*="/annons"], figure[data-article-data*="/brand-studio"], .teaser--native, .native-article
 expressen.se##.teaser:has(a[href*="/annons"], a[href*="/brandstudio"], a[href*="/brand-studio"], a[href*="/kampanj."], a[href*="/lanapengar."], a[href*="/rabattkoder."], a[href*="/spel.expressen.se"], .vignette--svg + a[href*="teknikensvarld."], .teaser__bottom--ad-marker)
 extrakt.se,kalmar.nu,macken.xyz,hockeyettan.se###cmplz-cookiebanner-container
 familjeliv.se##article:has-text(/annons:/i)
@@ -1787,6 +1785,7 @@ zeromagazine.nu##div[id^="ads"]
 /bigdatapushworker.js$domain=eurocampings.se
 /bilder-for-annonser$image
 /bilder/ads/*
+/bilder/annonser/*
 /bilder/betalannonser
 /bilder/logotyper/partners
 /bitcsys/js/bit.js
@@ -2678,10 +2677,9 @@ zeromagazine.nu##div[id^="ads"]
 ||exitintel.com^$third-party
 ||extellio.com^$third-party
 ||external.reseguiden.se/offer
-||facebook.com/plugins/like$third-party
 ||facebook.com/plugins/share_button$third-party
 ||facebook.com/plugins/$domain=norrbotten.com
-||facebook.com/*/plugins/like$third-party
+||facebook.com^*/plugins/like$third-party
 ||fakturino.se^$third-party
 ||famobi.com/play/hit/
 ||fapp.pw^$third-party
@@ -3166,7 +3164,6 @@ zeromagazine.nu##div[id^="ads"]
 ||userneeds.com^$third-party
 ||vagabondskorrea.com.se^
 ||valentinosverige.com^
-||vasabladet.fi/6-pack/
 ||vejaskorstockholm.com.se^
 ||vejaskor.com.se^
 ||vejasskor.com^
