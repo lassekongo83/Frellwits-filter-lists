@@ -1,9 +1,13 @@
 # Frellwit's filter lists
-Various filter lists for [uBlock Origin](https://github.com/gorhill/uBlock).
+Filter lists for <a href="https://github.com/gorhill/uBlock">uBlock Origin</a> and hosts-file blockers.
 
 ##
 
-<b>IMPORTANT NOTE FOR CHROMIUM-BROWSER USERS:</b> The lists do not, can not, and will not support Chromium's extension Manifest v3 in its current shape and form, due to its exteremly short rule limit, and the possibility of it crippling advanced content blockers which these lists rely on. **If you are using Chrome, Chromium, Edge, Opera, Vivaldi, Brave**, (or any other browser based on chromium), then you may have to start preparing to switch your browser to Firefox (or an updated Firefox fork) if you want to continue to use any of these lists in 2023.
+<strong>Use <a href="https://www.mozilla.org/firefox/browsers/">Firefox</a> or <a href="https://librewolf.net/">Librewolf</a> for the best experience.</strong>
+
+These lists may work fine with Chromium/Blink (Chrome, Chromium, Edge, Opera, Vivaldi, Brave), but I can't guarantee that they will work as intended. It's possible that any list updates will be extremely delayed if you use these lists in a manifest v3 extension.
+
+I strongly discourage people from using Chrome, Opera, Edge, Yandex. It's your choice, but the mentioned browsers are not good if you value your privacy. Using any Chromium/Blink browser is not good if you value an open web.
 
 ## Available lists
 
@@ -13,8 +17,8 @@ Various filter lists for [uBlock Origin](https://github.com/gorhill/uBlock).
     <th>Description</th>
   </tr>
   <tr>
-    <td><a href="https://raw.githubusercontent.com/lassekongo83/Frellwits-filter-lists/master/Frellwits-Swedish-Filter.txt"><strong>Frellwits-Swedish-Filter.txt</strong></a><br/>(<a href="https://subscribe.adblockplus.org/?location=https://raw.githubusercontent.com/lassekongo83/Frellwits-filter-lists/master/Frellwits-Swedish-Filter.txt&title=Frellwit%27s%20Swedish%20Filter">Subscribe</a>)</td>
-    <td>A filter for <a href="https://github.com/gorhill/uBlock">uBlock Origin</a> (uBO) that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat. This is Sweden's regional filter in uBlock Origin located in: <strong>Dashboard -> Filter lists -> Regions, language -> SWE: Frellwit's Swedish Filter</strong>. <br/><br/> uBO enables the region/language-filter that corresponds to the locale of your web browser. This means that <strong>SWE: Frellwit's Swedish Filter</strong> will be enabled by default if your browser has Swedish locale installed, and that you have to enable the filter manually as described above otherwise. <br/><br/> <strong>Swedish:</strong> <a href="https://github.com/lassekongo83/Frellwits-filter-lists/blob/master/Swedish/filter_info_sv.md">Mer information om filtret.</a> / <strong>English:</strong> <a href="https://github.com/lassekongo83/Frellwits-filter-lists/blob/master/Swedish/filter_info_en.md">More information about the filter.</a></td>
+    <td><a href="https://raw.githubusercontent.com/lassekongo83/Frellwits-filter-lists/master/Frellwits-Swedish-Filter.txt"><strong>Frellwits-Swedish-Filter.txt</strong></a></td>
+    <td>A filter for <a href="https://github.com/gorhill/uBlock">uBlock Origin</a> (uBO) that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat. This is Sweden's regional filter in uBlock Origin located in: <strong>Dashboard -> Filter lists -> Regions, language -> SWE: Frellwit's Swedish Filter</strong>. <br/><br/> uBO enables the region/language-filter that corresponds to the locale of your web browser. This means that <strong>SWE: Frellwit's Swedish Filter</strong> will be enabled by default if your browser has Swedish locale installed, and that you have to enable the filter manually as described above otherwise. <br/><br/> <strong>Swedish:</strong> <a href="/filter_info_sv.md">Mer information om filtret.</a> / <strong>English:</strong> <a href="/filter_info_en.md">More information about the filter.</a></td>
   </tr>
   <tr>
     <td><strong><a href="https://raw.githubusercontent.com/lassekongo83/Frellwits-filter-lists/master/Frellwits-Swedish-Hosts-File.txt">Frellwits-Swedish-Hosts-File.txt</a></strong></td>
@@ -22,20 +26,7 @@ Various filter lists for [uBlock Origin](https://github.com/gorhill/uBlock).
   </tr>
 </table>
 
-#### How to subscribe
-
-Left-click on the subscribe link *or* copy the link address above and [follow the guide on how to import external lists in uBlock Origin.](https://github.com/gorhill/uBlock/wiki/Filter-lists-from-around-the-web)
-
-## Useful tools that I use
-
-[PyFunceble](https://github.com/funilrys/PyFunceble) by [funilrys](https://github.com/funilrys).
-
-[FOP](https://hg.adblockplus.org/easylist/file/tip/FOP.py) by Michael/hgweb.
-
-## Special thanks
-
-[ryanbr](https://github.com/ryanbr) for the rules from [Fanboy's Swedish filter](https://github.com/ryanbr/fanboy-adblock/blob/master/firefox-regional/fanboy-adblocklist-swe.txt).
-
-[gorhill](https://github.com/gorhill) for creating [uBlock Origin](https://github.com/gorhill/uBlock).
-
-[DandelionSprout](https://github.com/DandelionSprout) for helping with mirrors.
+## Special thanks to
+* <a href="https://github.com/lassekongo83/Frellwits-filter-lists/graphs/contributors">Contributors</a>.
+* <a href="https://github.com/ryanbr">Ryanbr</a> for the rules from <a href="https://github.com/ryanbr/fanboy-adblock/blob/master/firefox-regional/fanboy-adblocklist-swe.txt">Fanboy's Swedish filter</a>.
+* <a href="https://github.com/gorhill">Gorhill</a> for creating <a href="https://github.com/gorhill/uBlock">uBlock Origin</a>.

@@ -8,6 +8,8 @@ body:
       options:
         - label: I performed a [cursory search of the issue tracker](https://github.com/lassekongo83/Frellwits-filter-lists/issues?q=is%3Aissue) to avoid opening a duplicate issue.
           required: true
+        - label: I use no other ad blockers or privacy blocking tools/extensions other than my preferred one. (To rule out invalid issues it's important to use only one blocker.)
+          required: true
         - label: I've tried to reproduce the issue with uBlock Origin as the only browser extension activated.
           required: false
         - label: I've tried to reproduce the issue with uBlock Origin's default settings.
@@ -38,7 +40,7 @@ body:
       label: Screenshot(s)
       description: |
         Screenshot(s) are good to have for hard-to-describe visual issues.
-        Post **LINKS** instead of inline images for screenshots containing **ADULT MATERIAL**.
+        Post **LINKS** instead of inline images for screenshots containing **NSFW/ADULT MATERIAL**.
     validations:
       required: false
 
@@ -53,3 +55,21 @@ body:
       label: Browser name and version
     validations:
       required: true
+
+  - type: textarea
+    attributes:
+      label: Configuration
+      description: |
+        On the affected site: 🛡️ uBO's icon > 💬 Report > Click "Troubleshooting information" > Select all > Copy > Paste it below.
+      value: |
+        <details>
+        <summary>Details</summary>
+
+        <!-- ⬇️ Paste the troubleshooting information here ⬇️ -->
+        ```yaml
+
+
+        ```
+        </details>    
+    validations:
+      required: false

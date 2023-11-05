@@ -8,6 +8,8 @@ body:
       options:
         - label: Jag gjorde en [översiktlig sökning av problemspåraren](https://github.com/lassekongo83/Frellwits-filter-lists/issues?q=is%3Aissue) för att undvika att öppna en dubblett.
           required: true
+        - label: Jag använder inga andra annonsblockerare eller sekretessblockeringsverktyg annat än den jag föredrar. (För att utesluta ogiltiga problem är det viktigt att endast använda en blockerare.)
+          required: true
         - label: Jag försökte återskapa problemet när uBlock Origin är det enda aktiverade webbläsartillägget.
           required: false
         - label: Jag försökte återskapa problemet när uBlock Origin använder standardlistor och inställningar.
@@ -53,3 +55,21 @@ body:
       label: Webbläsare och version
     validations:
       required: true
+
+  - type: textarea
+    attributes:
+      label: Konfiguration
+      description: |
+        På den berörda webbplatsen: 🛡️ Klicka på uBlock Origins ikon > 💬 Rapportera > Klicka på "Felsökningsinformation" > Välj allt > Kopiera > Klistra in nedan.
+      value: |
+        <details>
+        <summary>Detaljer</summary>
+
+        <!-- ⬇️ Klistra in felsökningsinformationen här ⬇️ -->
+        ```yaml
+
+
+        ```
+        </details>    
+    validations:
+      required: false

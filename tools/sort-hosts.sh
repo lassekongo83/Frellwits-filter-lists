@@ -5,13 +5,11 @@
 # License: GPLv3
 
 date=$(date '+%Y-%m-%d %H:%M:%S %Z')
-lines=$(grep -c '' main-hosts.txt)
-#lines=$(cat main-hosts.txt | sed '/^\s*$/d' | wc -l)
+lines=$(grep -c '' ../lists/main-hosts.txt)
+sort=$(sort -V ../lists/main-hosts.txt)
 
-cat main-hosts.txt | sort -V > output/sorted-hosts.txt
-
-cat > output/hosts-headers.txt <<EOF
-# Aims to get rid of ads, tracking, scams & badware on (mostly) Swedish websites
+host_headers=$(cat <<EOF
+# A hosts file that aims to get rid of ads, tracking, scams & badware on (mostly) Swedish websites
 # ----
 # title:          Frellwit's Swedish Hosts File
 # last updated:   ${date}
@@ -19,7 +17,8 @@ cat > output/hosts-headers.txt <<EOF
 # format:         hosts (hosts -- in hosts file format)
 # homepage:       https://github.com/lassekongo83/Frellwits-filter-lists/
 EOF
+)
 
-cat output/hosts-headers.txt output/sorted-hosts.txt > ../../Frellwits-Swedish-Hosts-File.txt
-
-rm output/*.txt
+echo "$host_headers" > ../Frellwits-Swedish-Hosts-File.txt
+echo "$sort" >> ../Frellwits-Swedish-Hosts-File.txt
+echo "Hosts file sorted."
