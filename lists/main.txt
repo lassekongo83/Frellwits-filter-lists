@@ -99,6 +99,7 @@
 /apester-javascript-sdk.min.js
 /app.php/adsview$xmlhttprequest
 /appnexus$script
+/assets/DynamicAds-
 /banner/ads/*
 /banners/annons
 /bannersidor/*
@@ -379,8 +380,6 @@ casino-utan-$image
 ||proff.se^$third-party
 ||proxyas.com^$third-party
 ||rabble-res.cloudinary.com^$third-party
-||ramses.nu^*/*banner
-||ramses.nu^*/*annons
 ||researchonline.se^$third-party
 ||reaktion.se^$third-party
 ||redeal.se^$third-party
@@ -1235,7 +1234,7 @@ aftonbladet.se,livsstil.se,godare.se,byggahus.se,expressen.se,elle.se,svenskdam.
 ! -- Specific annoyances and bloat
 /cookieconsent$script,domain=akademiskahus.se|lundagard.se|voodoofilm.org
 /gdpr/*$domain=visitlulea.se|se.laowl.com|husbilskompisar.se|rotter.se|borattforum.se
-/OneSignalSDK.$domain=samnytt.se|battrestadsdel.se|beernews.se|ungdomsfotboll.se|rabattsok.se|1x2.se|cannabis.se|dackavisen.se|dalarnasaffarer.se|driva-eget.se|skogsaktuellt.se|maskinbladet.se|entreprenadaktuellt.se|ja.se|newsner.com|humorbibeln.se|sportbibeln.se|ettgottskratt.se|finanstid.se|fokus.se|fotbollskane.se|fotbollsthlm.se|idg.se|macken.xyz|naringslivetvgl.se|dalarnasaffarer.se|stockholmsaffarer.se|jamtlandsaffarer.se|netflixguiden.se|nyadagbladet.se|oskarshamns-nytt.se|skolporten.se|swebbtv.se|thepattayanews.se|vaken.se|aktieskolan.se|fastighetsvarlden.se
+/OneSignalSDK.$domain=samnytt.se|battrestadsdel.se|beernews.se|ungdomsfotboll.se|rabattsok.se|1x2.se|cannabis.se|dackavisen.se|dalarnasaffarer.se|driva-eget.se|skogsaktuellt.se|maskinbladet.se|entreprenadaktuellt.se|ja.se|newsner.com|humorbibeln.se|sportbibeln.se|ettgottskratt.se|finanstid.se|fokus.se|fotbollskane.se|fotbollsthlm.se|idg.se|macken.xyz|naringslivetvgl.se|dalarnasaffarer.se|stockholmsaffarer.se|jamtlandsaffarer.se|netflixguiden.se|nyadagbladet.se|oskarshamns-nytt.se|skolporten.se|swebbtv.se|thepattayanews.se|vaken.se|aktieskolan.se|fastighetsvarlden.se|mcparken.se
 /pum/*$domain=flm.nu|finanstid.se|dagenslogistik.se
 ||consensu.org^$domain=spray.se|pernillawahlgren.se|butikpris.se|oppettiden.se|bjarenu.se|kamerabild.se|historier.net|laholmstidning.se|ostgotatidningen.se|lokaltidningenvaxjo.se
 ||quantcast.com^$domain=flashback.org|hippson.se|stoppapressarna.se|tittapavideon.se|varldenshaftigaste.se|merinfo.se|babyhjalp.se|landleyskok.se|kiacarclub.se|foreca.se|nyadagbladet.se|eniro.se|enkelteknik.se|travelgrip.se|motormagasinet.se|food-supply.se|dagenshandel.se|plastnet.se|habit.se|woodnet.se|foodnet.se|transportnet.se|processnet.se|packnet.se|verkstaderna.se|medtechmagazine.se|recyclingnet.se|rt-forum.se|kemivarldenbiotech.se|uochd.se|lifesciencesweden.se|fri-kopenskap.se|cleannet.se|entreprenad.com|samnytt.se|swehockey.se|matklubben.se|res.se|fraser.nu|woxikon.se|nyteknik.se|lag-avtal.se|arbetarskydd.se|poddar.se|leta.se|kalender.se|reseguiden.se|dh.se|egoinas.se|lesscarbs.se|motivation.se|mykitchenstories.se|newsner.com|humorbibeln.se|sportbibeln.se|ettgottskratt.se|sporttv.nu|goforfit.se|xn--ordrknare-y2a.se|expo.se|land.se|alltomelbil.se|cancelculture.se|filmtopp.se|travelnews.se|laget.se|ljudochbild.se|poddtoppen.se|vackertvader.se|byrum.se|langd.se|sportlovin.se|receptfavoriter.se|doon.se|forni.se|garaget.org|mytaste.se|kimura.se|nouw.com|fannystaaf.se|cornucopia.se|norrahalland.se|listor.se|news55.se
@@ -2113,14 +2112,12 @@ padelfeber.se##.pfm-partners, .pff-partners, .c-widget-ad, .c-teaser--native, #t
 usabil.nu##.image-post-link[target]
 travronden.se##a[href*="/sponsrat/"]
 travronden.se##div:matches-css(visibility: hidden):has-text(ANNONS)
-mcparken.se##.adsheader
 utsidan.se##.betart-marker:matches-css(after, content: /Annons/i):upward(.documentpush-group)
 /img/annons$domain=alltomsallskapsspel.se
 /img/banner$domain=alltomsallskapsspel.se
 alltomsallskapsspel.se,alltombrollop.com##a[onclick*="Banner"]
 /bsa.js$domain=alltombrollop.com
 ungdomsfotboll.se##div[id^="ungdo-"]
-vaxjolakers.se##a[href^="/mainbanner"]
 battregolf.se###leader-wrap, #foot-ad-wrap, a[href*="/sponsrad/"], .a-single
 ||rejsa.nu/ann$image
 rejsa.nu###adsblock, #adsblockfoot, .fpright, div[onclick*="window.open"]
@@ -2136,6 +2133,9 @@ fisheco.se###page-section-2, #page-section-24, .add-special-banner, .g-single
 idrottensaffarer.se###header:style(height:unset!important;)
 rollinghomes.se##.widget_media_image a[href]:not([href^="/"]):not([href*="rollinghomes.se"])
 rollinghomes.se##span:has-text(Annons):upward(.widget_media_image)
+/api/sponsors$domain=aikhockey.se|almtuna.com|bikkarlskoga.se|bjorkloven.com|brynas.se|difhockey.se|frolundahockey.com|farjestadbk.se|hockeyallsvenskan.se|hv71.se|ikoskarshamn.se|kalmarhockey.com|leksandsif.se|lhc.eu|luleahockey.se|malmoredhawks.com|modohockey.se|moraik.se|nybrovikings.com|orebrohockey.se|roglebk.se|shl.se|skellefteaaik.se|sodertaljesk.se|taif.nu|timraik.se|vaxjolakers.se|vikhockey.se|vik.se|ostersundik.com
+/SponsorsList$script,domain=hockeyallsvenskan.se
+aikhockey.se,almtuna.com,bikkarlskoga.se,bjorkloven.com,brynas.se,difhockey.se,frolundahockey.com,farjestadbk.se,hockeyallsvenskan.se,hv71.se,ikoskarshamn.se,kalmarhockey.com,leksandsif.se,lhc.eu,luleahockey.se,malmoredhawks.com,modohockey.se,moraik.se,nybrovikings.com,orebrohockey.se,roglebk.se,shl.se,skellefteaaik.se,sodertaljesk.se,taif.nu,timraik.se,vaxjolakers.se,vikhockey.se,vik.se,ostersundik.com##a[href*="svenskaspel.se"][target]
 
 ! === Musik, Radio, Film och TV
 voodoofilm.org##.content-news:has(span[id*="Sponsored"])
