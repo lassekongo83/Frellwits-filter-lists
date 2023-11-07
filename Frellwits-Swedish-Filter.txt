@@ -1,6 +1,6 @@
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days
-! Last modified: 2023-11-07 12:33:12 CET
+! Last modified: 2023-11-07 14:52:02 CET
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPL3 - https://github.com/lassekongo83/Frellwits-filter-lists/blob/master/LICENSE
@@ -536,9 +536,10 @@ fotbollskane.se,fotbollsthlm.se##.footer-links, .fotbo-target
 fotbollsresultat.com##h2:has-text(Spel och dobbel) ~ p
 fotbollsthlm.se##.fotbollsthlm-image-container:has(.fotbollsthlm-ad-link)
 fotbolltransfers.com##div[class^="ad"], a[href^="https://ads."], .header_sponsored
+fotbolltransfers.com##img[src*="/images/annonser/"]:upward(1)
 fotbolltransfers.com##.smallNewsCategory:has-text(/sponsr/i):upward(.smallNewsLink)
 fotboll-tv.se##.SMBoxContentBanner
-fotboll.com##.header-static-lg, .fp-partner, .xs-ad, .bo-wrapper, #betsid, .news-banner-mini
+fotboll.com##.header-static-lg, .fp-partner, .xs-ad, .bo-wrapper, #betsid, .news-banner-mini, .xs-cblock
 fotboll.com,allsvenskan.se,superettan.se,swebbtv.se,hastnet.se##.smartbanner
 fotosidan.se##.subArticlesponsored, div[style="width:300px;float:right;"], div[style="float:right;width:300px;"], #partner-box, .adbox-label
 fotosidan.se,merinfo.se,allsvenskan.se,tasteline.com,jaktojagare.se,chefstidningen.se,realtid.se,norpan.se,moviezine.se,jaktjournalen.se##.ads
