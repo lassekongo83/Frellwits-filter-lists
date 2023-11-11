@@ -1,6 +1,6 @@
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days
-! Last modified: 2023-11-10 07:02:41 CET
+! Last modified: 2023-11-11 12:56:23 CET
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPL3 - https://github.com/lassekongo83/Frellwits-filter-lists/blob/master/LICENSE
@@ -2065,6 +2065,7 @@ zeromagazine.nu##div[id^="ads"]
 /questback.popup$script
 /rantekartan$subdocument,domain=expressen.se
 /recommendations$xmlhttprequest,domain=expressen.se
+/registerhit?$image
 /renderBanner.do?zoneId=
 /resource.ifragasatt.se/sd-ads
 /retargeting-pixels
@@ -2291,7 +2292,6 @@ zeromagazine.nu##div[id^="ads"]
 ||123on.com/logs
 ||123on.com/static/videojs.pulse
 ||172.104.145.13^
-||aa-cdn.mytaste.org/js/ad.js
 ||ab.fastighetsvarlden.se^$script
 ||accesslnk.com^
 ||activate.social^$third-party
@@ -2304,8 +2304,6 @@ zeromagazine.nu##div[id^="ads"]
 ||adhype.se/js/native
 ||adonsales.com^$third-party
 ||adonstudio.com^$third-party
-||adt511.net^$third-party
-||adt532.com^$third-party
 ||adviral.s3.amazonaws.com/sponsored/
 ||advisa.se^$third-party
 ||advisible.com^$third-party
@@ -2319,7 +2317,6 @@ zeromagazine.nu##div[id^="ads"]
 ||alkemi.com.se^
 ||allsvenskan.se/allsvenskan-script-min.js
 ||alphalete.com.se^
-||altrasverige.com.se^
 ||amazonaws.com/adn-tag
 ||amazonaws.com/adsfallback/
 ||amazonaws.com/metapic-cdn/*/metapic.
@@ -2344,7 +2341,6 @@ zeromagazine.nu##div[id^="ads"]
 ||ascontentcloud.com^$third-party
 ||aservice.tools^
 ||asicsisverige.com^
-||asicsverige.com.se^
 ||assets.pinterest.com/js/pinit$third-party
 ||assets.tumblr.com/share-button.js$third-party
 ||assets.voyado.com/jsfiles/analytics
@@ -2416,7 +2412,6 @@ zeromagazine.nu##div[id^="ads"]
 ||cdn.svenskalag.se/img/sponsors$image
 ||centotag.io^$third-party
 ||cervera.se/t/t?
-||chaco.com.se^
 ||championsverige.com.se^
 ||churnkit.com^$third-party
 ||cision.com^$badfilter
@@ -2434,7 +2429,6 @@ zeromagazine.nu##div[id^="ads"]
 ||connectio.s3.amazonaws.com/connect-retarget$script
 ||connect.facebook.net^$domain=friatider.se|fotosidan.se|ng.se|hammarbyfotboll.se|aktiespararna.se|psykologiguiden.se|lektionsbanken.se|lajvo.se|kvinnatillkvinna.se|epochtimes.se|dovastidning.se|newsner.com|humorbibeln.se|sportbibeln.se|ettgottskratt.se|pussad.se|vasterastidning.se|mitti.se|sillyseason.se|loppi.se|kyrkanstidning.se|tn.se
 ||connect.nosto.com^*/behav-popup.$script
-||consensu.org^$domain=spray.se|pernillawahlgren.se|butikpris.se|oppettiden.se|bjarenu.se|kamerabild.se|historier.net|laholmstidning.se|ostgotatidningen.se|lokaltidningenvaxjo.se
 ||consentframework.com^$domain=luleahockeyforum.com
 ||consentmanager.net^$domain=allastudier.se|gbgfotboll.se|stff.se|svenskfotboll.se|coop.se|dagens.se|mobil.se|kamerabild.se|prevent.se
 ||consent.podplay.com^
@@ -2528,7 +2522,6 @@ zeromagazine.nu##div[id^="ads"]
 ||fapp.pw^$third-party
 ||fastout.com/analytics
 ||fasttrack.webstream.dk/statistik
-||fathom.wheresmar.co/tracker.js
 ||feedblitz.com^$third-party
 ||feeds.feedburner.com^$image
 ||feed.mikle.com^$third-party,domain=ekonominyheter.se
@@ -2571,7 +2564,6 @@ zeromagazine.nu##div[id^="ads"]
 ||grillbloggen.nu/media/com_rstbox/js/engagebox.js
 ||gstatic.com/partners/badge$subdocument
 ||gtm.findroommate.dk^
-||guavaaffiliate.blob.core.windows.net/banner$image
 ||guesssverige.com.se^
 ||gymsharkswedens.com^
 ||gymshark-sweden.com.se^
@@ -2598,7 +2590,6 @@ zeromagazine.nu##div[id^="ads"]
 ||imgix.net^*/analytics.$script
 ||imp.laget.se^
 ||inboxads.com^$third-party
-||inevserver.com/~tournreport/$image
 ||inov-8.com.se^
 ||insertcoin.se^$third-party
 ||insplanet.com^$third-party
@@ -2626,7 +2617,6 @@ zeromagazine.nu##div[id^="ads"]
 ||jwplayer.com/*/advertising$domain=allas.se|baaam.se|elle.se|femina.se|hant.se|mabra.com|residencemagazine.se|svenskdam.se|frida.se|motherhood.se
 ||k5a.io^$script,redirect=noop.js,domain=tv2.no
 ||kajabi-cdn.com^$domain=nillaskitchen.com
-||kaloo.ga^$third-party
 ||kamrat.com/js/cookiescript
 ||kayak.xno.se^$script
 ||keenstockholm.com.se^
@@ -2690,7 +2680,6 @@ zeromagazine.nu##div[id^="ads"]
 ||marketinghub.zoho.com/hub/js/WebsiteAutomation.js$third-party
 ||marketo.com^$third-party
 ||marknadsguiden.nu^$third-party
-||marlin.kumo.at/script.js
 ||marmotsverige.com.se^
 ||masture.mobi^
 ||matchads.net^$third-party
@@ -2724,7 +2713,6 @@ zeromagazine.nu##div[id^="ads"]
 ||mitti.se/click-
 ||mogenromantik.com^
 ||momondo.se/*gtm/
-||monkey.tunnl.com/identify$subdocument
 ||mraffiliate.com^$third-party
 ||mtpc.se^$third-party
 ||mtst.io/js/mtst.js
@@ -2854,6 +2842,7 @@ zeromagazine.nu##div[id^="ads"]
 ||routy.app^$third-party
 ||royapp.com^$third-party
 ||rpofsweden.com^
+||runningshoessverige.com^
 ||runtnc.net^
 ||salesiq.zoho.com/widget$domain=seodesign.se
 ||salesmanago.pl/api/push/notification$domain=aikfotboll.se
@@ -2862,7 +2851,6 @@ zeromagazine.nu##div[id^="ads"]
 ||sa.svenskalag.se/*/__tm.gif
 ||scandicpartners.se^$third-party
 ||schibsted.com/pulse$domain=aftonbladet.se
-||sch.news/ab.js$domain=tv.aftonbladet.se
 ||script.e-space.se^$third-party
 ||sdk.mrf.io/statics/marfeel-sdk
 ||sdk.pulse.schibsted.com^$script,domain=aftonbladet.se|omni.se|omniekonomi.se
@@ -2873,7 +2861,6 @@ zeromagazine.nu##div[id^="ads"]
 ||serenitycandles.com.se^
 ||servg1.net^$third-party
 ||service.force.com^$domain=allabolag.se
-||service.survio.se^*/registerhit?$image
 ||sexapp.me^
 ||se-affiliate-gallery.aws.aller.com^
 ||se-tv4.videoplaza.tv/proxy/distributor$removeparam=s,xmlhttprequest,domain=fotbollskanalen.se|koket.se|tv4.se
@@ -2913,7 +2900,6 @@ zeromagazine.nu##div[id^="ads"]
 ||stadiumstage.com^$third-party
 ||stallet.se/scripts/bx-abd.js
 ||static.hupso.com/share/js/counters.js
-||static.influencersofsweden.se/js/inos
 ||statisticplatform.com^$third-party
 ||stats.blogg.se^$image
 ||stats.docu.info^
@@ -2951,7 +2937,6 @@ zeromagazine.nu##div[id^="ads"]
 ||tibaco.net/scripts/tws.js
 ||top100ruokablogit.com^$third-party
 ||topblogarea.se/tracker
-||topplista24.com/tracker
 ||toppmarkensverige.com^
 ||tourn.co^$third-party
 ||tourn.se^$third-party
@@ -2992,7 +2977,6 @@ zeromagazine.nu##div[id^="ads"]
 ||viadata.store^$third-party
 ||viagogo.se^
 ||videoplaza.*/proxy/tracker?
-||video-static.tunnl.com/js/blocker.min.js
 ||viforetag.se^$third-party
 ||vinguiden.com^$third-party
 ||vovve.net/i/sponsorer
