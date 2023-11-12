@@ -1,6 +1,6 @@
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days
-! Last modified: 2023-11-11 12:56:23 CET
+! Last modified: 2023-11-12 17:39:04 CET
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPL3 - https://github.com/lassekongo83/Frellwits-filter-lists/blob/master/LICENSE
@@ -342,7 +342,6 @@ dagensps.se##div[class^="bg-"]:has(a[href="/ps-partner"])
 dagensps.se##.container:has(.dagensps_ad)
 dagensps.se##.postbox:has(.sponsored_post)
 dagensps.se##.text-text-secondary, span.font-bold:has-text(ANNONS):upward(2)
-dagenstv.com###bt
 dagensvimmerby.se,dagensvastervik.se,dagenskalmar.nu,dagenshultsfred.se##body:style(margin-top: 0 !important;)
 dagensvimmerby.se,dagensvastervik.se,dagenskalmar.nu,dagenshultsfred.se##.panoramaAnnons, .JobAdDiv, .annonsKolumn, .insideAd, .ingressAd, .familyAds, .annonsWrapper
 dagens.se##.item:has(.prebid)
@@ -476,6 +475,7 @@ festivalinfo.se##.node-news:has(a[href*="casino"])
 fightermag.se##article:has(a[href*="betting"], a[href*="casino"], a[href*="kasino"], a[href*="/gastskribent/"])
 fightermag.se##a[href*="/sponsra"], #partners
 filatelisten.se##a[target="_blank"]:not([href^="/"], [href*="filatelisten.se"]):upward(section)
+filmparadiset.se##.jnews-cookie-law-policy, a[href*="casino"], .custom-html-widget a[target="_blank"]
 filmtipset.se##em:has-text(/sponsrad/i):upward(.row.news)
 filmtipset.se###topslider-wrapper + .container > .sidebar, .sidebar a[target="_blank"]
 filmtipset.se##.news:has-text(casino)
@@ -1919,13 +1919,14 @@ zeromagazine.nu##div[id^="ads"]
 /plugins/chimpy/*
 /plugins/christmas-panda
 /plugins/cm-takeover-ad
-/plugins/complianz-gdpr$domain=iconmagazine.se|signprint.se|vilaser.se|arjeplognytt.se
+/plugins/complianz-gdpr$domain=iconmagazine.se|signprint.se|vilaser.se|arjeplognytt.se|aftonkuriren.se
 /plugins/consent-magic-pro$script,domain=namnmarkning.se|bluum.se|gobokhandeln.se
 /plugins/content-hub-wp-plugin/assets/js/hub-time-spent
 /plugins/convertplug
 /plugins/convertpro
 /plugins/cookies-and-content-security-policy$domain=cannabisifokus.se|futsalmagasinet.se|sd.se
 /plugins/cookie-law-info$script,domain=nyadagbladet.se|hockeybladet.nu|temadagar.se|gilla.se|lundagard.se|startaochdriva.se|milansverige.se|sverige.nu|synology.com|conpot.se|firstclassmagazine.se|dagenslogistik.se
+/plugins/cookie-notice$script,domain=zeromagazine.nu
 /plugins/cresta-social-share-counter
 /plugins/custom-banners$domain=skolfamiljen.se
 /plugins/daftplug-instantify$domain=se.moyens.net
@@ -2114,6 +2115,7 @@ zeromagazine.nu##div[id^="ads"]
 /ss_foundation/combined_li_tracking
 /static.marklar.se/*-tracker
 /static/js/loada.js
+/static/media/*casino$domain=dagenstv.com|kolla.tv
 /statistics/statistics.js
 /statistics/statistics.php
 /stats$xmlhttprequest,domain=boneo.se
@@ -2423,6 +2425,7 @@ zeromagazine.nu##div[id^="ads"]
 ||cmp.radioplay.se^
 ||cms.catena.media/js/cm-tracking
 ||cncptx.com^$third-party
+||cncpt-central.com^$third-party
 ||cncpt.dk^$third-party
 ||collect.breakit.se^
 ||compricer.se^$third-party
@@ -2467,7 +2470,6 @@ zeromagazine.nu##div[id^="ads"]
 ||d24rtvkqjwgutp.cloudfront.net/*yb.js
 ||d31djwpx7pcvsr.cloudfront.net/production/*/js/segment.js
 ||dackpartner-web.s3.amazonaws.com^$third-party
-||dagenstv.com/includes/js/s_code.js
 ||dakine.com.se^
 ||dayviews.com/cdn/img/*casino
 ||dayviews.com/p/tourn/
@@ -2793,7 +2795,7 @@ zeromagazine.nu##div[id^="ads"]
 ||privacymanager.io^$domain=tvmatchen.nu
 ||privacypolicies.com^$domain=fl-net.se
 ||privacy-center.org^$domain=isabellalowengrip.se|johannatoftby.se|fnulan.se|matplatsen.net|monasuniversum.se|180.se|agriaffaires.se|truckscorner.se|machineryzone.se
-||privacy-mgmt.com^$domain=radio.se
+||privacy-mgmt.com^$domain=radio.se|dagenstv.com|kolla.tv
 ||prod.uidapi.com^$domain=tittapavideon.se
 ||proff.se^$third-party
 ||proxyas.com^$third-party
@@ -2853,7 +2855,7 @@ zeromagazine.nu##div[id^="ads"]
 ||schibsted.com/pulse$domain=aftonbladet.se
 ||script.e-space.se^$third-party
 ||sdk.mrf.io/statics/marfeel-sdk
-||sdk.pulse.schibsted.com^$script,domain=aftonbladet.se|omni.se|omniekonomi.se
+||sdk.pulse.schibsted.com^$script,domain=aftonbladet.se|omni.se|omniekonomi.se|tv.nu
 ||seenthis.se^$third-party
 ||selectofmychoices.com^
 ||sellingsimplified.net^$third-party
