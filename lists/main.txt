@@ -280,6 +280,7 @@ casino-utan-$image
 ||centotag.io^$third-party
 ||citygate.se^$third-party,~image,domain=~familj.se|~tillminne.se|~lokus.se|~vkmedia.se
 ||cncpt.dk^$third-party
+||cncpt-central.com^$third-party
 ||cncptx.com^$third-party
 ||compricer.se^$third-party
 ||connectio.s3.amazonaws.com/connect-retarget$script
@@ -1209,7 +1210,7 @@ aftonbladet.se,livsstil.se,godare.se,byggahus.se,expressen.se,elle.se,svenskdam.
 ||onetrust.com^$third-party,domain=lantmannen.se|sv.bab.la
 ||youplay.se^$third-party,domain=hamsterpaj.net|emocore.se|dayviews.com|kamrat.com|extraextra.se|kalender.se
 ||youplay.se/*.js*ap=true$script,removeparam=/^ap/
-||privacy-mgmt.com^$domain=radio.se
+||privacy-mgmt.com^$domain=radio.se|dagenstv.com|kolla.tv
 ||privacy-center.org^$domain=isabellalowengrip.se|johannatoftby.se|fnulan.se|matplatsen.net|monasuniversum.se|180.se|agriaffaires.se|truckscorner.se|machineryzone.se
 ||privacypolicies.com^$domain=fl-net.se
 ||cdn-cookieyes.com^$domain=lokalti.se|jarnvagar.nu|senses.se|norrmejerier.se|temadagar.se|smartsenior.se|tekniknytt.se|nordigt.se
@@ -1392,7 +1393,7 @@ illvet.se,pctidningen.se,viivilla.se,digitalfotoforalla.se,iform.se,vinbanken.se
 ||metric-mobil.aftonbladet.se^$image
 ||youbora.com^*/sp.min.js$important,domain=aftonbladet.se|svd.se|livsstil.se|godare.se
 ||schibsted.com/pulse$domain=aftonbladet.se
-||sdk.pulse.schibsted.com^$script,domain=aftonbladet.se|omni.se|omniekonomi.se
+||sdk.pulse.schibsted.com^$script,domain=aftonbladet.se|omni.se|omniekonomi.se|tv.nu
 ! Aftonbladet
 curateContext=affiliate$domain=aftonbladet.se
 /ab_tracking$domain=aftonbladet.se
@@ -2103,8 +2104,7 @@ moviezine.se###home_ans, [name="article-advertisment"]
 moviezine.se##strong:has-text(ANNONS:)
 moviezine.se##.inner_article:has-text(/sponsrat|annons/i)
 allatvkanaler.se##.ga
-||dagenstv.com/includes/js/s_code.js
-dagenstv.com###bt
+/static/media/*casino$domain=dagenstv.com|kolla.tv
 ||consent.podplay.com^
 rocknytt.net##[data-widget_type*="bnnrwidgets"], a[href*="/annons/"]
 ||kingsizemag.se/content/
@@ -2165,6 +2165,7 @@ guldkanalen.se##div.grid_container[style*="height:240px;"]
 zeromagazine.nu##div[id^="ads"]
 /measurements$domain=mtv.se
 tv24.se##li[id^="infeed"]
+filmparadiset.se##.jnews-cookie-law-policy, a[href*="casino"], .custom-html-widget a[target="_blank"]
 
 ! === Video media
 
@@ -2652,7 +2653,7 @@ aletorget.se,alingsastorget.se,almhulttorget.se,alvestatorget.se,amaltorget.se,a
 /wp-content/uploads/addtoany$domain=chefstidningen.se
 /soledad/js/detector.js
 ! Specific wordpress cookie annoyances
-/plugins/complianz-gdpr$domain=iconmagazine.se|signprint.se|vilaser.se|arjeplognytt.se
+/plugins/complianz-gdpr$domain=iconmagazine.se|signprint.se|vilaser.se|arjeplognytt.se|aftonkuriren.se
 /plugins/consent-magic-pro$script,domain=namnmarkning.se|bluum.se|gobokhandeln.se
 /plugins/cookie-law-info$script,domain=nyadagbladet.se|hockeybladet.nu|temadagar.se|gilla.se|lundagard.se|startaochdriva.se|milansverige.se|sverige.nu|synology.com|conpot.se|firstclassmagazine.se|dagenslogistik.se
 /plugins/cookies-and-content-security-policy$domain=cannabisifokus.se|futsalmagasinet.se|sd.se
@@ -2660,6 +2661,7 @@ aletorget.se,alingsastorget.se,almhulttorget.se,alvestatorget.se,amaltorget.se,a
 /plugins/obsidian-cookie-consent$script,domain=konsumentmagasinet.se
 /plugins/quantcast-choice$script,domain=handbollskanalen.se|javligtgott.se|dh.se
 /plugins/webtoffee-gdpr-cookie-consent$domain=forskning.se|hejaolika.se|kvartal.se|biostock.se
+/plugins/cookie-notice$script,domain=zeromagazine.nu
 
 ! -- Unbreak
 @@||cargodisplayads.com/till_minne/
