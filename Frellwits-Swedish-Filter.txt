@@ -1,6 +1,6 @@
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days
-! Last modified: 2023-11-12 17:39:04 CET
+! Last modified: 2023-11-13 15:10:21 CET
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPL3 - https://github.com/lassekongo83/Frellwits-filter-lists/blob/master/LICENSE
@@ -1052,9 +1052,6 @@ sexpacket.se##+js(aeld, /contextmenu|cut|copy|paste/)
 sexpacket.se##.info_cookies
 se.moyens.net,kalmar.nu###rb-cookie
 shoegazing.se###main-sidebar .widget_media_image, #post-sidebar .widget_media_image, #content > .code-block
-shortcut.se##.ArticleListItem:not(:has(.category-tag))
-shortcut.se##.baner-desktop, .baner-mobile, .banner-wrap
-shortcut.se##.category-tag:has-text(/annons/i):upward(.ArticleListItem, a)
 signprint.se##.topbanner
 signprint.se##p:has-text(SPONSR):upward(.elementor-widget-jet-listing-grid)
 siljannews.se##a[href^="/annons"]
@@ -2012,7 +2009,7 @@ zeromagazine.nu##div[id^="ads"]
 /plugins/statebuilt-facebook-page-like-popup
 /plugins/sticky-facebook-banner$script
 /plugins/super-progressive-web-apps/*$domain=temadagar.se
-/plugins/super-socializer$script,domain=shortcut.se|sportbilen.se
+/plugins/super-socializer$script,domain=sportbilen.se
 /plugins/svenskaspel-$script
 /plugins/sw-ad-inserter
 /plugins/sw_ad_inserter
@@ -2304,6 +2301,7 @@ zeromagazine.nu##div[id^="ads"]
 ||adeprimo.se^$third-party
 ||adfenix.com^$third-party
 ||adhype.se/js/native
+||adnordics.com^$third-party
 ||adonsales.com^$third-party
 ||adonstudio.com^$third-party
 ||adviral.s3.amazonaws.com/sponsored/
