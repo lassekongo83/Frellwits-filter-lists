@@ -11,6 +11,8 @@ I strongly discourage people from using Chrome, Opera, Edge, Yandex. It's your c
 
 ## Available lists
 
+<a href="https://github.com/lassekongo83/Frellwits-filter-lists/blob/master/CONTRIBUTING.md">Read if you want to contribute to any of the lists.</a>
+
 <table>
   <tr align="left">
     <th>List</th>
