@@ -1,6 +1,6 @@
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days
-! Last modified: 2023-11-16 16:11:49 CET
+! Last modified: 2023-11-17 08:02:05 CET
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPL3 - https://github.com/lassekongo83/Frellwits-filter-lists/blob/master/LICENSE
@@ -109,7 +109,7 @@ aftonbladet.se###main > div > div > div:has(h2:has-text(/^annons/i))
 aftonbladet.se###megaAd-placeholder, #superright-side, a[href*="/casinoguide"], [id^="adPlacement"], a[href^="https://kampanj.aftonbladet"], a[href*="/rabattkod"][data-test-tag="internal-link"], a[href^="/sportbladet/speltips/"], a[href*="aftonbladet.se/kampanj/"]
 aftonbladet.se##:matches-path(/^/$/) p:has-text(Artikeln innehåller annonslänkar):upward(a)
 aftonbladet.se##[data-ad-subtype]:upward(1):matches-css(min-height:/[0-9]+/)
-aftonbladet.se,godare.se,livsstil.se##div[data-test-tag="prisjakt-carousel"], a[href^="/brandstudio"]
+aftonbladet.se,godare.se,livsstil.se##div[data-test-tag="prisjakt-carousel"], a[href^="/brandstudio"], div[class^="advertory-"]
 aftonbladet.se,godare.se,livsstil.se,skonhetsredaktorerna.se,omni.se,omniekonomi.se,svd.se##div[id^="sp_message_container"]
 aftonbladet.se,godare.se,livsstil.se,skonhetsredaktorerna.se,omni.se,omniekonomi.se,svd.se##+js(set-local-storage-item, CMP:advertising, 0)
 aftonbladet.se,godare.se,livsstil.se,skonhetsredaktorerna.se,omni.se,omniekonomi.se,svd.se##+js(set-local-storage-item, CMP:analytics, 0)
@@ -188,8 +188,9 @@ arkitektur.se##article:has(.Entry-sponsored)
 arkitektur.se##[class*="panorama"]
 artbannersplus&task=show
 assistanskoll.se###annons
-atl.nu,landlantbruk.se###didomi-host, a[href*="/atl-tv-annons/"], [class^="Ad_"]
+atl.nu,landlantbruk.se##a[href*="/atl-tv-annons/"], [class^="Ad_"]
 atl.nu,landlantbruk.se#@#.ad-unit:not(.text-ad):not(.textads)
+atl.nu,landlantbruk.se,di.se,expressen.se,dn.se###didomi-host
 aurumforum.se##span:has-text(Annons):upward(2)
 autolife.se###Banners
 automation.se,verkstadstidningen.se,transportnytt.se,metalcentral.net##.bannergroup
@@ -724,7 +725,8 @@ kingsizemag.se##div#video-overlay, div.sidebar_frame, #affiliates, #affiliates +
 kittad.se##li:has(.kittad-label-sponsored)
 kittad.se###header-top, div[data-hook="consent-banner-root"]
 klart.se##body:remove-class(mega-loading)
-klart.se###overlay, .gdpr-onboarding-container, a[rel*="sponsored"], .-panorama-ad-wrapper
+klart.se###overlay, a[rel*="sponsored"], .-panorama-ad-wrapper
+klart.se,tv.nu##div[id^="sp_message_container"]
 knulla.se###cookie-popup
 kobe.se##p:has-text(/annonser:/i):upward(.widget_block)
 kobe.se##.post:has(a[href*="casino"])
