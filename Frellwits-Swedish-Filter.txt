@@ -1,6 +1,6 @@
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days
-! Last modified: 2023-11-19 06:15:39 CET
+! Last modified: 2023-11-20 07:41:43 CET
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPL3 - https://github.com/lassekongo83/Frellwits-filter-lists/blob/master/LICENSE
@@ -762,7 +762,7 @@ lakartidningen.se,nyheter24.se,modette.se,akaviaaspekt.se,res.se##.advertisement
 lakemedelsvarlden.se##.pea_cook_more_info_popover
 landleyskok.se##.inpostbanner, .banner-leaderboard
 land.se##[class*="--native"], [id^="adwrapper"], .has-sticky-add
-lantbruksnytt.se###startpage-top-right, .ads_text + a, div[class*="square_rotate"], a[target="_blank"][rel="nofollow"]
+lantbruksnytt.se###startpage-top-right, .ads_text + a, div[class*="square_rotate"], a[target="_blank"][rel="nofollow"], #ouibounce-modal
 laromedia.se##img[alt="Annons"] + .img-flipper
 lawline.se##[class^="CookiesModal"]
 lchfarkivet.se###timedModal, .modal-backdrop, div#beskrivning[style="font-size: 10px; text-align: center; color: #8E8C8C; max-width: 700px;"]
@@ -1432,6 +1432,7 @@ zeromagazine.nu##div[id^="ads"]
 ##div.maaw-ad-slots
 ##div.medium-ad
 ##div.mgp-ads
+##div.mosaico-ad
 ##div.navbar-ad-section
 ##div.novashare-buttons
 ##div.o-indenter--ad
@@ -1914,6 +1915,7 @@ zeromagazine.nu##div[id^="ads"]
 /plugins/cardoza-facebook-like-box
 /plugins/chimpy/*
 /plugins/christmas-panda
+/plugins/cm-pop-up-banners
 /plugins/cm-takeover-ad
 /plugins/complianz-gdpr$domain=iconmagazine.se|signprint.se|vilaser.se|arjeplognytt.se|aftonkuriren.se
 /plugins/consent-magic-pro$script,domain=namnmarkning.se|bluum.se|gobokhandeln.se
@@ -1990,6 +1992,7 @@ zeromagazine.nu##div[id^="ads"]
 /plugins/popup$domain=ordfrontmagasin.se|snowmobile.se|sverige.nu|it-kanalen.se|forvaltarforum.se|forskning.se|it-finans.se|it-halsa.se|it-kanalen.se|it-pedagogen.se|it-retail.se
 /plugins/pum-$script,domain=snowmobile.se|it-finans.se|it-halsa.se|it-kanalen.se|it-pedagogen.se|it-retail.se
 /plugins/quantcast-choice$script,domain=handbollskanalen.se|javligtgott.se|dh.se
+/plugins/quick-adsense
 /plugins/r9-analytics
 /plugins/random-banner
 /plugins/sandviks-weblog$script,domain=bebisvarlden.se
@@ -2496,7 +2499,7 @@ zeromagazine.nu##div[id^="ads"]
 ||europe-west1-bonnier-big-data.cloudfunctions.net^$third-party
 ||eu-north-1.amazonaws.com/*images/*Banner
 ||events.forzasys.com/get.min.js
-||evertiq.se/bximg/
+||evertiq.se/bimg/
 ||evidon.com^$third-party,domain=fasting.nu
 ||evtr.nordiskemedier.dk^
 ||evt-api.ntm.eu/api/*/datacollector
@@ -2629,6 +2632,7 @@ zeromagazine.nu##div[id^="ads"]
 ||lajvo.se/addImpression
 ||lanapengar.expressen.se^
 ||lantbruksnet.se/files/reklan/
+||lantbruksnytt.se/includes/$subdocument
 ||laromedia.se/Annonssystem/
 ||lasso.link^$third-party
 ||lcx-embed.bambuser.com^$domain=feber.se|tjock.se
