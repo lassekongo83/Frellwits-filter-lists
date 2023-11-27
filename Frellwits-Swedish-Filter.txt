@@ -1,6 +1,6 @@
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days
-! Last modified: 2023-11-25 09:37:46 CET
+! Last modified: 2023-11-27 07:57:21 CET
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPL3 - https://github.com/lassekongo83/Frellwits-filter-lists/blob/master/LICENSE
@@ -321,6 +321,7 @@ conpot.se##div:has-text(ANNONS):upward(article:not([id]))
 conpot.se##+js(set, square_array1, null)
 conpot.se##+js(set, square_arraytop, null)
 cookaholic.se###loftloader-wrapper
+cookie-consent$domain=upphandling24.se
 cornucopia.se###sponsrade-lankar:upward(aside) + aside.widget_block
 corren.se,folkbladet.se,mvt.se,nt.se,vt.se,vimmerbytidning.se,kuriren.nu,nsd.se,norran.se,pt.se,ekuriren.se,strengnastidning.se,kkuriren.se,sn.se,eposten.se,unt.se,helagotland.se,kindaposten.se,gotlandjustnu.se##ad-iris-sunt-ad-wrapper, ad-block, .native, ad-full-page-block, a[href^="/native"], widget-family, widget-memorial, widget-marknadsguiden, widget-jobb-plus, a.puff-primary-link[href*="/erbjudande/"], .ad-hidden
 corren.se,folkbladet.se,mvt.se,nt.se,vt.se,vimmerbytidning.se,kuriren.nu,nsd.se,norran.se,pt.se,ekuriren.se,strengnastidning.se,kkuriren.se,sn.se,eposten.se,unt.se,helagotland.se,kindaposten.se,gotlandjustnu.se##iris-subscribe-footer
@@ -1001,7 +1002,7 @@ podtail.se##.item-list__item:has-text(/annons från/i)
 pomu.se##[class^="Banner"]
 poolforum.se##div.adfit, .cookie_notice, div[style^="width:100%;max-width: 728px;"] > div[align="center"], div[style^="width:100%;max-width: 728px;"] > br
 popularastronomi.se##a.gofollow[data-track]:not([href*="www.popularastronomi.se"])
-pressbladet.se,svenskpress.se,foretagsbladet.se,gestrikemagasinet.se,cfanytt.se,lasarnas.se,hembostad.nu,sportidrott.se,nojesmagasinet.nu,halsasverige.se##.isax
+pressbladet.se,svenskpress.se,foretagsbladet.se,gestrikemagasinet.se,cfanytt.se,lasarnas.se,hembostad.nu,sportidrott.se,nojesmagasinet.nu,halsasverige.se##.isax, #cookiebar
 pricerunner.se##a[href*="&clickarea=sponsored"]
 pricerunner.se##span:has-text(/^sponsrad$/i):upward([data-cy="deal-carousel"])
 pricerunner.se###consent
@@ -1066,7 +1067,7 @@ siteseeker$script,domain=foretagarna.se
 si.se###cookie-manager
 sjofart.ax##section.huvudsektion:style(margin-top:unset!important)
 sjofart.ax##.sjofa-top-takeover, .sjofa-artikel-pano:upward(section)
-sjostadsbladet.se##a.td_single_image_bg
+sjostadsbladet.se##a.td_single_image_bg, #cookie-notice
 sjostadsbladet.se##.td-category-pos-:has(a[href*="casino"])
 skanesport.se###black-studio-tinymce-3, .menu-item a[target="_blank"], .footer-widgets
 skargarden.se##article:has([title^="Annons"])
@@ -2033,7 +2034,7 @@ zeromagazine.nu##div[id^="ads"]
 /plugins/ultimate-social-media-$image,script
 /plugins/ungrabber
 /plugins/vizzit-analytics
-/plugins/webtoffee-gdpr-cookie-consent$domain=forskning.se|hejaolika.se|kvartal.se|biostock.se
+/plugins/webtoffee-gdpr-cookie-consent$domain=forskning.se|hejaolika.se|kvartal.se|biostock.se|karriarlakare.se
 /plugins/woocommerce-google-adwords
 /plugins/wordpress-popup$domain=buzzter.se|maklarvarlden.se|lesscarbs.se
 /plugins/wordpress-stats-manager-pro
@@ -2177,7 +2178,6 @@ zeromagazine.nu##div[id^="ads"]
 /users/2401/*$image,domain=ng.se
 /utag$script,domain=gaffa.se
 /utag/aller-media
-/vast.js$domain=moviezine.se|aftonbladet.se|livsstil.se|godare.se|svd.se
 /vestigo$domain=momondo.se
 /vgc/cdn/js/libs/ast/*$script,domain=aftonbladet.se
 /videojs-preroll$domain=himlentv7.se
@@ -2870,7 +2870,6 @@ zeromagazine.nu##div[id^="ads"]
 ||sharethis.com^$third-party
 ||sinful.se/sinalytics
 ||sitegainer.com/jsinsert/*/sitegainer$third-party
-||sjostadsbladet.se/TEXAS$media
 ||skattamindre.se^
 ||skidspar.se/scripts/html5videovastplugin.js
 ||skidspar.se/scripts/revive.js
@@ -2979,6 +2978,7 @@ zeromagazine.nu##div[id^="ads"]
 ||vinguiden.com^$third-party
 ||vovve.net/i/sponsorer
 ||walls.io^$domain=svensktgolfforum.se
+||wayke.se^$third-party,domain=siljannews.se
 ||wct-1.com^$third-party
 ||wct-2.com^$third-party
 ||webbannons.ntm.eu^$subdocument
