@@ -1,6 +1,6 @@
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days
-! Last modified: 2023-11-28 14:21:26 CET
+! Last modified: 2023-11-29 17:45:58 CET
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPL3 - https://github.com/lassekongo83/Frellwits-filter-lists/blob/master/LICENSE
@@ -311,6 +311,7 @@ cannabis.se##+js(aopw, Cookies)
 cannabis.se##.header-ads-wrapper, .ai-adb-hide, .ai-sticky-widget, .hampaonline
 cannabis.se,forskning.se,finanstid.se,it-finans.se,it-halsa.se,it-kanalen.se,it-pedagogen.se,it-retail.se,it-hallbarhet.se,biostock.se,gullislastips.se,snowmobile.se,tobaksfakta.se,dagenslogistik.se,magasinetkonkret.se##.pum-overlay
 carup.se##div[id^="carup-"]
+casinoguiden$image,domain=samnytt.se
 casino-utan-$image
 chefstidningen.se##[id^="block-views-ad"], .modal-container
 chef.se##.Cookie-notice, .Product-modal, .Offer-popup, .Toaster
@@ -1036,9 +1037,10 @@ runnersworld.se,motormagasinet.se,dagenshandel.se,food-supply.se,plastnet.se,hab
 runnersworld.se,utsidan.se,hockeymagasinet.com,driva-eget.se,foretagande.se,revisionsvarlden.se,travelnews.se##.sponsored
 sakochliv.se##+js(acs, checkCampaignCookie)
 sakochliv.se##.cookie-disclaimer-wrap, .type-promo, .sector-annons
-samnytt.se##main > section + div + div, a[href*="casino"]
+samnytt.se##a[href*="casino"]
+samnytt.se##div[class=""], .sticky:has-text(/annons/i)
+samnytt.se##div[class=""]:has(div[data-aa-adunit])
 samnytt.se##script[src*="richmediastudio.com"]:upward(1)
-samnytt.se##.sticky, div[class=""]:has(div[data-aa-adunit])
 sbktavling.se##.jcarousel-skin-tango
 scanaktier.se###overlay-black
 schack.se##.schac-widget
@@ -1056,6 +1058,7 @@ se.moyens.net,kalmar.nu###rb-cookie
 shoegazing.se###main-sidebar .widget_media_image, #post-sidebar .widget_media_image, #content > .code-block
 shortcut.se##div[class^="baner"], a[target="_blank"] img
 shortcut.se##.category-tag:has-text(/annons/i):upward(.ArticleListItem)
+sidebanner$image,domain=samnytt.se
 signprint.se##.topbanner
 signprint.se##p:has-text(SPONSR):upward(.elementor-widget-jet-listing-grid)
 siljannews.se##a[href^="/annons"]
@@ -1710,7 +1713,6 @@ zeromagazine.nu##div[id^="ads"]
 /bunsen/events$domain=yelp.se
 /burst-statistics
 /caos$script,domain=veckansnyheter.se
-/casinoguiden$image,domain=samnytt.se
 /casinokollen$all,domain=aftonbladet.se
 /casino_utan_licens$image
 /cdigo-audit.js
@@ -2101,7 +2103,6 @@ zeromagazine.nu##div[id^="ads"]
 /sharedaddy/sharing.$script
 /shared/crm-campaign-handler.js$script
 /sharethis.js$domain=allsvenskan.se|superettan.se
-/sidebanner$image,domain=samnytt.se
 /sidebarwall.js$domain=techmag.se
 /sidebar-ads
 /siforesponsivemeasure
