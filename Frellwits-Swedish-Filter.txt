@@ -1,6 +1,6 @@
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days
-! Last modified: 2023-12-01 11:34:19 CET
+! Last modified: 2023-12-03 06:38:23 CET
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPL3 - https://github.com/lassekongo83/Frellwits-filter-lists/blob/master/LICENSE
@@ -110,7 +110,7 @@ aftonbladet.se###main > div > div > div:has(h2:has-text(/^annons/i))
 aftonbladet.se###megaAd-placeholder, #superright-side, a[href*="/casinoguide"], [id^="adPlacement"], a[href^="https://kampanj.aftonbladet"], a[href*="/rabattkod"][data-test-tag="internal-link"], a[href^="/sportbladet/speltips/"], a[href*="aftonbladet.se/kampanj/"]
 aftonbladet.se##:matches-path(/^/$/) p:has-text(Artikeln innehåller annonslänkar):upward(a)
 aftonbladet.se##[data-ad-subtype]:upward(1):matches-css(min-height:/[0-9]+/)
-aftonbladet.se,godare.se,livsstil.se##div[data-test-tag="prisjakt-carousel"], a[href^="/brandstudio"], div[class^="advertory-"]
+aftonbladet.se,godare.se,livsstil.se##div[data-test-tag="prisjakt-carousel"], a[href^="/brandstudio"], div[class^="advertory-"]:not(.advertory-header-anchor)
 aftonbladet.se,godare.se,livsstil.se,skonhetsredaktorerna.se,omni.se,omniekonomi.se,svd.se##div[id^="sp_message_container"]
 aftonbladet.se,godare.se,livsstil.se,skonhetsredaktorerna.se,omni.se,omniekonomi.se,svd.se##+js(set-local-storage-item, CMP:advertising, 0)
 aftonbladet.se,godare.se,livsstil.se,skonhetsredaktorerna.se,omni.se,omniekonomi.se,svd.se##+js(set-local-storage-item, CMP:analytics, 0)
@@ -327,7 +327,7 @@ cookie-consent$domain=upphandling24.se
 cornucopia.se###sponsrade-lankar:upward(aside) + aside.widget_block
 corren.se,folkbladet.se,mvt.se,nt.se,vt.se,vimmerbytidning.se,kuriren.nu,nsd.se,norran.se,pt.se,ekuriren.se,strengnastidning.se,kkuriren.se,sn.se,eposten.se,unt.se,helagotland.se,kindaposten.se,gotlandjustnu.se##ad-iris-sunt-ad-wrapper, ad-block, .native, ad-full-page-block, a[href^="/native"], widget-family, widget-memorial, widget-marknadsguiden, widget-jobb-plus, a.puff-primary-link[href*="/erbjudande/"], .ad-hidden
 corren.se,folkbladet.se,mvt.se,nt.se,vt.se,vimmerbytidning.se,kuriren.nu,nsd.se,norran.se,pt.se,ekuriren.se,strengnastidning.se,kkuriren.se,sn.se,eposten.se,unt.se,helagotland.se,kindaposten.se,gotlandjustnu.se##iris-subscribe-footer
-corren.se,folkbladet.se,mvt.se,nt.se,vt.se,vimmerbytidning.se,kuriren.nu,nsd.se,norran.se,pt.se,ekuriren.se,strengnastidning.se,kkuriren.se,sn.se,eposten.se,unt.se,helagotland.se,kindaposten.se,gotlandjustnu.se##.sp-message-open body:style(overflow:unset!important;position:unset!important;)
+corren.se,folkbladet.se,mvt.se,nt.se,vt.se,vimmerbytidning.se,kuriren.nu,nsd.se,norran.se,pt.se,ekuriren.se,strengnastidning.se,kkuriren.se,sn.se,eposten.se,unt.se,helagotland.se,kindaposten.se,gotlandjustnu.se,tv.nu##.sp-message-open body:style(overflow:unset!important;position:unset!important;)
 curateContext=affiliate$domain=aftonbladet.se
 cykelframjandet.se##article.tg-item, .lcp_catlist li:has(a[href*="/annons"])
 cykla.se##.featured-post--sponsored, .grid-item--sponsored
@@ -1174,7 +1174,9 @@ tandlakartidningen.se##[class^="ad-container"], [class^="adbox-single"], div[id^
 tasteline.com##.article.related > a[href*="&utm"][target="_blank"]
 tasteline.com##.popup-overlay
 tasteline.com##.popup:style(overflow: auto !important;)
-techmag.se##.popup-overlay
+techmag.se##aside.widget_codewidget:has(div[id^="techmag_com"])
+techmag.se##div[style="clear:both;float:left;width:100%;margin:0 0 20px 0;"]:has(.contentadx)
+techmag.se##.popup-overlay, div[id^="techmag_com_980x300"], .contentadx
 teknifik.se##.post:has(.sponsor)
 tekniknytt.se##.article_widget_preview, .article_widget_listing:has(a[href*="casino"], a[href*="kasino"])
 tekniknytt.se##.label:has-text(/samarbete|annons|reklam|presenteras av/i):upward(a)
@@ -1563,7 +1565,7 @@ zeromagazine.nu##div[id^="ads"]
 &autoplay$frame,removeparam=autoplay,domain=di.se|expressen.se
 &browser=MozillaFirefox$xmlhttprequest,removeparam=/^browser/,domain=fotbollskanalen.se|koket.se|tv4.se|tv4play.se
 -popup-analytics
--tracking.js$domain=aftonbladet.se|godare.se|livsstil.se
+-tracking.js$domain=aftonbladet.se|godare.se|livsstil.se|svd.se
 /468adrotate.php
 /Advertisement$image,domain=sportbloggare.com
 /Ad/*$domain=hallbyhandboll.se|skiljebosk.nu
