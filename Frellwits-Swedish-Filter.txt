@@ -1,6 +1,6 @@
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days
-! Last modified: 2023-12-15 13:10:49 CET
+! Last modified: 2023-12-17 06:47:19 CET
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPL3 - https://github.com/lassekongo83/Frellwits-filter-lists/blob/master/LICENSE
@@ -129,7 +129,7 @@ aip.nu,fotbollsresultat.com,funktionshinderpolitik.se,sjostadsbladet.se###cookie
 akaviaaspekt.se##.article-list-item--native, a.article-topic__list-item[href^="/annons"]
 aktieskolan.se##section.elementor-section:has-text(Huvudsponsorer & partners)
 aktiespararna.se##.analysguiden-promote-articles
-aktiespararna.se,alekuriren.se,tidningen.se##.native
+aktiespararna.se,alekuriren.se,tidningen.se,kurera.se##.native
 aktuellhallbarhet.se,byggindustrin.se,dagensmedia.se,dagensmedicin.se,fastighetsnytt.se,resume.se,dagenssamhalle.se,market.se,dagligvarunytt.se,privataaffarer.se##article:matches-css(after, content:/Annonssamarbete/i)
 aktuellhallbarhet.se,byggindustrin.se,dagensmedia.se,dagensmedicin.se,fastighetsnytt.se,resume.se,dagenssamhalle.se,market.se,dagligvarunytt.se,privataaffarer.se##a[href^="/annons/"], a[href^="/native/"], .slot-module, .slot-articlemodule
 aktuellhallbarhet.se,byggindustrin.se,dagensmedia.se,dagensmedicin.se,fastighetsnytt.se,resume.se,dagenssamhalle.se,market.se,dagligvarunytt.se,privataaffarer.se##div[class^="css-"]:matches-css(content:/Annons/i):upward(article)
@@ -764,7 +764,7 @@ kritiker.se##+js(set, slugify, noopFunc)
 kulturama.se##.CookiePopup
 kulturbloggen.com,schack.se##.sidebar .widget_custom_html
 kultwatch.se##.js-preloader > .document, .js-preloader > .hero-section:style(opacity: 1 !important; visibility: visible !important;)
-kurera.se##.kurera-register-newsletter-popup, [class*="show-for-"], a[onclick*="Advert"], div[class*="kurera-mobil"], .ads
+kurera.se##.pc-das, .newsletter-popup
 kvalitetsmagasinet.se,miljo-utveckling.se,telekomidag.se,vdtidningen.se##article:remove-class(closed)
 kvalitetsmagasinet.se,miljo-utveckling.se,telekomidag.se,vdtidningen.se###subscribe_splash, [class*="nativeadwidget"], .partnermedia
 kvartal.se##.email-popup-wrapper
@@ -909,7 +909,7 @@ moviezine.se###home_ans, [name="article-advertisment"]
 moviezine.se##.inner_article:has-text(/sponsrat|annons/i)
 mygatemagazine.se##.textwidget:has-text(Annons)
 mytaste.se##body.modal-active.modal-open::before, body.modal-active::before:style(opacity: unset !important; content: unset !important;)
-mytaste.se##div[id*="panorama_"], [class^="affiliate-container"], .site-header__panorama
+mytaste.se##div[id*="panorama_"], [class^="affiliate-container"], .site-header__panorama, .alert-cookiedisclaimer
 mytaste.se##.recipe-modal[data-state=default] .modal-container.open, .recipe-modal[data-state=panorama] .modal-container.open:style(padding-top: 0 !important;)
 mytaste.se##.site-wrapper[data-state=panorama], .site-wrapper[data-state=default]:style(padding-top: 40px !important;)
 mytaste.se##[id^="Modal_plugin"]
@@ -2360,6 +2360,7 @@ zeromagazine.nu##div[id^="ads"]
 ||analytics.barnebys.sh^$image
 ||analytics.gen.shield.monitoringservice.co^
 ||analytics.ozzi.io^$third-party
+||analytics.undeco.se^
 ||analytics.wayke.se^
 ||apis.google.com/js/plusone.js$third-party
 ||api.hitta.se/creepy
@@ -2814,7 +2815,7 @@ zeromagazine.nu##div[id^="ads"]
 ||prismic.io/prismic-toolbar$domain=alltomarbetsmiljo.se
 ||privacymanager.io^$domain=tvmatchen.nu
 ||privacypolicies.com^$domain=fl-net.se
-||privacy-center.org^$domain=180.se|agriaffaires.se|truckscorner.se|machineryzone.se|viivilla.se
+||privacy-center.org^$domain=180.se|agriaffaires.se|truckscorner.se|machineryzone.se|viivilla.se|stegforhalsa.se
 ||privacy-mgmt.com^$domain=radio.se|dagenstv.com|kolla.tv
 ||prod.uidapi.com^$domain=tittapavideon.se
 ||proff.se^$third-party
