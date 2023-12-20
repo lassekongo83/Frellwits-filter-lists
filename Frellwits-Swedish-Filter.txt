@@ -1,6 +1,6 @@
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days
-! Last modified: 2023-12-19 19:48:05 CET
+! Last modified: 2023-12-20 10:16:35 CET
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPL3 - https://github.com/lassekongo83/Frellwits-filter-lists/blob/master/LICENSE
@@ -231,6 +231,7 @@ bettips.se##.bettips-am
 bettips.se,borskollen.se,se.azrhymes.com##.top-banner
 biblioteksforeningen.se##body:style(opacity:1!important)
 bildobubbla.se##.annonser
+bilresaieuropa.se###header-image, #block-2
 bilresaieuropa.se##.widget-title:has-text(/spons/i):upward(.widget_text)
 bilsport.se##fl-gdpr, fl-panorama-top, fl-newsletter-popup
 bilsport.se##.includingFeaturedSliderArticle:has(.native-mark)
@@ -587,7 +588,7 @@ gamereactor.se##+js(set, adblockEnabled, falseFunc)
 gamereactor.se##.ad_interscroller:upward(.wrapper)
 gamereactor.se##.colHomePlayer:has([data-slotads="videoad"]):remove()
 garaget.org##.gorgad, .gorg-side-content > div.small:nth-last-child(2)
-gentlemannaguiden.com##.advertising, .sidebar .widget_text, .sidebar .widget_media_image
+gentlemannaguiden.com##.advertising, .sidebar .widget_text, .sidebar .widget_media_image, .has-post-thumbnail.category-okategoriserade
 glassakademin.se##[class^="adverts-"]
 gmfk.nu##p:has-text(Annons):upward(.n2-ss-slide)
 gmfk.nu###site-preloader
@@ -671,7 +672,7 @@ hungrig.nu##.ui-widget-overlay, .ui-dialog
 husbilsplats.se##div[id^="husbi-"]
 husvagnochcamping.se##div[id^="husvagnochcamping-"], .ast-below-header-bar
 husvagn.se,husbil.se##strong:has-text(/samarbete/i):upward(li.item)
-husvagn.se,husbil.se##.ui-top-adversite
+husvagn.se,husbil.se##.ui-top-adversite, #optin-cover, #optin
 ibnytt.se##a[href*="casino"], a[href*="speltips"]:upward(.widget)
 ibnytt.se##h3:has-text(Speltips):upward(.widget)
 icagruppen.se##div[ng-controller="CookieConsentCtrl"]
@@ -685,6 +686,7 @@ idg.se,forum.macworld.se##.idgcp__layer--active, .idgcp__layer--active body:styl
 idrottensaffarer.se###header:style(height:unset!important;)
 illvet.se,pctidningen.se,viivilla.se,digitalfotoforalla.se,iform.se,vinbanken.se,varldenshistoria.se,slakthistoria.se##.noScroll, .noScroll body:style(overflow:unset!important)
 improveme.se##.banner-center, .banner-center ~ br, div[class^="ad-container"]
+improveme.se##.flow_teaser:has(a[href*="casino"], a[href*="poker"], a[href*="cbd-olja"])
 improveme.se##.wp-pagenavi:style(position:unset!important;z-index:unset!important)
 inblick.se##div[class^="ads"]
 indien.nu##.nyhetsochreseartiklar .views-row:has-text(/casino/i)
@@ -846,7 +848,7 @@ maklarvarlden.se##.hustle-popup
 maklarvarlden.se##.td-post-category:has-text(/spons/i):upward(2)
 maklarvarlden.se##.td-pulldown-size:has-text(/spons/i):upward(3)
 malaroarnasnyheter.se##.header-ainfo.float-right
-maltermagasin.se##.mh-sidebar
+maltermagasin.se##.mh-sidebar, .mh-header-columns
 maltermagasin.se##.widget_media_image:has-text(/annons/i)
 maringuiden.se##.banner_hoger, .google_ads_mg_frontpage, .footerComercialDiv
 marsta.nu##.outsider, .panel--naringsliv
@@ -1752,8 +1754,8 @@ zeromagazine.nu##div[id^="ads"]
 /detroitchicago$domain=temadagar.se|svenskaorduttryck.se
 /detroitchicago/cmbdv2.js$domain=wernamaten.se
 /detroitchicago/denver.js$domain=wernamaten.se
-/detroitchicago/kenai.js$domain=hemmanytt.se|lchfarkivet.se|techmag.se
-/detroitchicago/portland.js$domain=hemmanytt.se|lchfarkivet.se|techmag.se
+/detroitchicago/kenai.js$domain=hemmanytt.se|lchfarkivet.se
+/detroitchicago/portland.js$domain=hemmanytt.se|lchfarkivet.se
 /detroitchicago/sidebarwall.js$domain=hemmanytt.se|lchfarkivet.se
 /detroitchicago/*.gif?$image
 /dh-adscale$domain=dh.se
@@ -1951,7 +1953,7 @@ zeromagazine.nu##div[id^="ads"]
 /plugins/convertpro
 /plugins/cookies-and-content-security-policy$domain=cannabisifokus.se|futsalmagasinet.se|sd.se
 /plugins/cookie-law-info$script,domain=nyadagbladet.se|hockeybladet.nu|temadagar.se|gilla.se|lundagard.se|startaochdriva.se|milansverige.se|sverige.nu|synology.com|conpot.se|firstclassmagazine.se|dagenslogistik.se|magasinetkonkret.se|kvalitetsmagasinet.se|miljo-utveckling.se|telekomidag.se|vdtidningen.se|gullislastips.se
-/plugins/cookie-notice$script,domain=bildobubbla.se|zeromagazine.nu|espressomedia.se|skanesport.se|sverigespringer.se|fotbollskane.se|sillyseason.se
+/plugins/cookie-notice$script,domain=bildobubbla.se|zeromagazine.nu|espressomedia.se|skanesport.se|sverigespringer.se|fotbollskane.se|sillyseason.se|gentlemannaguiden.com|husbilsplats.se|matmalin.se
 /plugins/cookie-popup$script,domain=skillingaryd.nu|xn--vrnamo-bua.nu
 /plugins/cresta-social-share-counter
 /plugins/custom-banners$domain=skolfamiljen.se
@@ -1977,7 +1979,7 @@ zeromagazine.nu##div[id^="ads"]
 /plugins/fisher/core/js/generated/infinite-ads
 /plugins/ga-germanized/*
 /plugins/ga-in/*
-/plugins/gdpr-cookie-compliance$domain=worldkustom.com|goteborgsgolfaren.se|nyhetersto.se
+/plugins/gdpr-cookie-compliance$domain=worldkustom.com|goteborgsgolfaren.se|nyhetersto.se|modernalivet.se|baraenkakatill.se
 /plugins/genesis-simple-share$script
 /plugins/ginger/addon/analytics/*
 /plugins/google-analytics-dashboard$important,script
@@ -2709,6 +2711,7 @@ zeromagazine.nu##div[id^="ads"]
 ||masture.mobi^
 ||matchads.net^$third-party
 ||matchesfashion.com^*/ExternalBanners
+||matinspo.se^$ping
 ||matorama.se^$csp=img-src 'self' *.wordpress.com *.wp.com *.gravatar.com
 ||maxetise.net^$script,redirect-rule=noop.js,domain=feber.se|tjock.se
 ||ma.bonnierpublications.se/mtc/event
@@ -2729,6 +2732,7 @@ zeromagazine.nu##div[id^="ads"]
 ||metric-mobil.aftonbladet.se^$image
 ||metromode.se/widget/club/
 ||mikz.com^$third-party
+||miljomat.se/annonser
 ||mindreskatt.se^
 ||missaffiliate.com^$third-party
 ||misssite.com/*/published-site-analytics.js
@@ -2751,6 +2755,7 @@ zeromagazine.nu##div[id^="ads"]
 ||newstats.blogg.se/collector
 ||ng.se/nodecounter/
 ||nichehuset.dk^$third-party
+||nitroscripts.com^
 ||nordiskemedier.dk/banner/
 ||nordiskemedier.dk/bnr/
 ||nordiskemedier.dk/remodal$script
