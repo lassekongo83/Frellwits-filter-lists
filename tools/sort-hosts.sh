@@ -5,8 +5,8 @@
 # License: GPLv3
 
 date=$(date '+%Y-%m-%d %H:%M:%S %Z')
-lines=$(grep -c '' ../lists/main-hosts.txt)
-sort=$(sort -V ../lists/main-hosts.txt)
+lines=$(grep -c '' lists/main-hosts.txt)
+sort=$(sort -V lists/main-hosts.txt)
 
 host_headers=$(cat <<EOF
 # A hosts file that aims to get rid of ads, tracking, scams & badware on (mostly) Swedish websites
@@ -19,6 +19,6 @@ host_headers=$(cat <<EOF
 EOF
 )
 
-echo "$host_headers" > ../Frellwits-Swedish-Hosts-File.txt
-echo "$sort" >> ../Frellwits-Swedish-Hosts-File.txt
+echo "$host_headers" > Frellwits-Swedish-Hosts-File.txt
+echo "$sort" >> Frellwits-Swedish-Hosts-File.txt
 echo "Hosts file sorted."
