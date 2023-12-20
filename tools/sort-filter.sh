@@ -1,7 +1,7 @@
 #!/bin/bash
 
 date=$(date '+%Y-%m-%d %H:%M:%S %Z')
-main='../lists/main.txt'
+main='lists/main.txt'
 
 directives=$(
   sed -n '/^!#if env_chromium/,/^!#endif/p' $main
@@ -29,7 +29,7 @@ EOF
 )
 
 # Merge
-echo "$filter_headers" > ../Frellwits-Swedish-Filter.txt
-echo "$sorted" >> ../Frellwits-Swedish-Filter.txt
-echo "$directives" >> ../Frellwits-Swedish-Filter.txt
+echo "$filter_headers" > Frellwits-Swedish-Filter.txt
+echo "$sorted" >> Frellwits-Swedish-Filter.txt
+echo "$directives" >> Frellwits-Swedish-Filter.txt
 echo "uBO filter sorted."
