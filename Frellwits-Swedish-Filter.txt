@@ -1,6 +1,6 @@
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days
-! Last modified: 2023-12-22 07:55:14 CET
+! Last modified: 2023-12-24 06:44:28 CET
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPL3 - https://github.com/lassekongo83/Frellwits-filter-lists/blob/master/LICENSE
@@ -31,6 +31,7 @@
 .se/Media/Banners/
 .se/Static/banners/
 .se/adson/$subdocument
+.se/adstart.php
 .se/advert$subdocument
 .se/adx.js
 .se/ad-delivery/
@@ -653,7 +654,7 @@ hifitorget.se##.billboard-style, .between-posts
 hippson.se##.sponsorpuff, .presentedby, .presentedby ~ *
 hippson.se##.toolboxheader:has-text(/aktuella samarbeten/i) ~ a.more
 historier.net###right_rail.trackable
-hitta.se##a[data-trackimp][target], .hitta-map .integration-txt, .section-details--alb, [class*="dummyAd"], [class*="StyledAdSlot"], [data-bind*="Ad"], div[class^="GraphicAd_"], [class*="adContainer"], [id*="_panorama"], [id*="_skyscraper"], div[style="min-height: 250px;"], div[data-track="displayplacering-customer"], a[data-test="boostAdLink"], div[class^="style_bannerContainer"]
+hitta.se##a[data-trackimp][target], .hitta-map .integration-txt, .section-details--alb, [class*="dummyAd"], [class*="StyledAdSlot"], [data-bind*="Ad"], div[class^="GraphicAd_"], [class*="adContainer"], [id*="_panorama"], [id*="_skyscraper"], div[style="min-height: 250px;"], div[data-track="displayplacering-customer"], a[data-test="boostAdLink"], div[class^="style_bannerContainer"], [data-track="click-promotion-banner"]
 hitta.se##div[id^="hitta_mobile_"].placeholder:upward(div[class^="height"], div[class^="style_breakout"])
 hitta.se##[class^="styleManual_mainContentBox"] > div[style^="min-height"]:first-of-type
 hockeybladet.nu##.td_mod_wrap a img[data-permalink], a[data-wpel-link="external"][onclick], a.td-lazy-img[target], a[href*="casino"]
@@ -1737,7 +1738,7 @@ zeromagazine.nu##div[id^="ads"]
 /collect?v$domain=thelocal.se
 /conversions/tracking.js$third-party
 /cookieDirective.js$domain=sdr.se
-/cookieconsent$script,domain=akademiskahus.se|lundagard.se|voodoofilm.org|alekuriren.se|tidningen.se|fuska.nu|kiacarclub.se
+/cookieconsent$script,domain=akademiskahus.se|lundagard.se|voodoofilm.org|alekuriren.se|tidningen.se|fuska.nu|kiacarclub.se|nyheteridag.se
 /cookienotice.js$domain=nordic.ign.com
 /cookiespolicynotificationbar$domain=svenskahousegruppen.se
 /cookies-policy-notification-bar$domain=bakasockerfritt.se
@@ -1889,7 +1890,6 @@ zeromagazine.nu##div[id^="ads"]
 /meetrics-tracker
 /mega.$domain=vk.se|folkbladet.nu|nordsverige.se|mellanbygden.nu|vasterbottningen.se|lokaltidningen.nu
 /messagingNoTcfApi.js$domain=tv.nu|klart.se
-/metrics$xmlhttprequest,domain=swebbtv.se
 /metrics/bambuser
 /minbostadstatic/js/partner/*
 /modal.js$script,domain=alltforforaldrar.se
@@ -2113,7 +2113,6 @@ zeromagazine.nu##div[id^="ads"]
 /scripts/leeads-
 /scripts/opt/view.analytics.js
 /seenthis-hub$script
-/server/logs/*$domain=swebbtv.se
 /se-ads-microservice
 /se-calico/bundle.js
 /se-ocelot/bundle.js
@@ -2947,7 +2946,6 @@ zeromagazine.nu##div[id^="ads"]
 ||svenskafans.com/menu-logo/bottom
 ||sv.picmix.com/sw.js
 ||sv.picmix.com^$csp=worker-src 'none'
-||swebbtv.se/tracker
 ||s.arclk.net/tr?$all
 ||tapet.bonniernews.se^
 ||tc.hometogo.net^$image
