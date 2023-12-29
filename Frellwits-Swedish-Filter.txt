@@ -1,6 +1,6 @@
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days
-! Last modified: 2023-12-28 07:12:30 CET
+! Last modified: 2023-12-29 16:37:16 CET
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPL3 - https://github.com/lassekongo83/Frellwits-filter-lists/blob/master/LICENSE
@@ -388,7 +388,6 @@ discoveringtheplanet.com##html:style(user-select:unset!important; -moz-user-sele
 discoveringtheplanet.com##+js(acs, disableEnterKey)
 discoveringtheplanet.com##+js(acs, document.ondragstart)
 discoveringtheplanet.com##.widget-title:has-text(/annons/i) + .textwidget
-di.se##+js(acs, Di, initAds)
 di.se##+js(nosiif, runAdBlockPaywall)
 di.se##+js(nostif, #triggerModal)
 di.se##+js(set, getAdblockerStatus, noopFunc)
@@ -400,7 +399,6 @@ djungeltrumman.se##+js(nano-sib, dt_fullpage_ad)
 djungeltrumman.se##.label-sponsored:upward(#latest-slider a):remove()
 djungeltrumman.se##.post:has(.label-sponsored)
 dn.se##body:style(position:unset!important;overflow-y:scroll!important;)
-dn.se##+js(acs, DN, initAds)
 dn.se##.article--native, .teaser-card--native, .ds-teaser--native, #dnse-popup
 dn.se##.campaign-holder
 dn.se,di.se##video:remove-attr(data-auto-play)
