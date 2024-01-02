@@ -1,6 +1,6 @@
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days
-! Last modified: 2024-01-01 06:36:19 CET
+! Last modified: 2024-01-02 06:50:43 CET
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPL3 - https://github.com/lassekongo83/Frellwits-filter-lists/blob/master/LICENSE
@@ -463,6 +463,7 @@ expressen.se##.html-widget > div[style^="text-align: center; font-size: 10px;"]
 expressen.se##.tapet-popup-js-no-scroll, .tapet-no-scroll:style(overflow-y:initial!important; position:unset!important;)
 expressen.se##.teaser:has(a[href*="/annons"], a[href*="/brandstudio"], a[href*="/brand-studio"], a[href*="/kampanj."], a[href*="/lanapengar."], a[href*="/rabattkoder."], a[href*="/spel.expressen.se"], .vignette--svg + a[href*="teknikensvarld."], .teaser__bottom--ad-marker)
 extrakt.se,kalmar.nu,macken.xyz,hockeyettan.se###cmplz-cookiebanner-container
+familjehemsbanken.se,familjehemmet.se###cookieNotice
 familjeliv.se##article:has-text(/annons:/i)
 familjeliv.se##a[href*="/kampanj/"], .flm-kampanj
 familjesidan.se##.cookies-wrapper
@@ -624,6 +625,7 @@ hamnen.se##[class*="annons"]:not(body), .tag-sponsrad, .pp-modal-wrap
 handbollskanalen.se##.hb-adlabel, [id^="hb-"], .ad-placement-side, p > a[target="_blank"]
 handel.ax###topadmob
 hant.se,svenskdam.se##div.text-center:has(div[ad-placement])
+happypancake.se##a[href*="casino"]:upward(1)
 happypancake.se###__next > div > div.bar:first-child
 happypancake.se##+js(aopr, Object.prototype.adUnits)
 happyride.se##li:has(a[href*="/category/sponsrat/"])
@@ -1245,6 +1247,7 @@ tv.nu##body:remove-class(takeover-loading)
 tv.nu###tv-schedule section:has-text(ANNONS)
 typkanske.se,borattforum.se,nyan.ax##.gdpr
 underbaraclaras.se##.jet-listing-dynamic-field__content:has-text(/annonssamarbete|reklamsamarbete/i):upward(.jet-listing-grid__item)
+undertian.com###cookieNotification, .gad, div[style^="font-size:11px; margin-left"], div[style^="font-size:11px; margin-left"] + div[style]
 ungdomsfotboll.se##div[id^="ungdo-"]
 upphandling24.se##aside .textwidget:has-text(ANNONS)
 upphandling24.se##.type-partnerartikel
@@ -1694,7 +1697,7 @@ zeromagazine.nu##div[id^="ads"]
 /a/jamstalldhetskarta.se$script,domain=jamstalldhetskarta.se
 /a?callback=pfmod.saveadsettings
 /bannersidor/*
-/banners$domain=magasinetparagraf.se|sporttv.nu|cykla.se|vatternrundan.se|dagenstv.com|sydkusten.es|pellesoft.se|sbktavling.se|dykarna.nu
+/banners$domain=magasinetparagraf.se|sporttv.nu|cykla.se|vatternrundan.se|dagenstv.com|sydkusten.es|pellesoft.se|sbktavling.se|dykarna.nu|varmepumpsforum.com|poolforum.se
 /banners/annons
 /banners/scripts/adx.js
 /banners/*casino$image
@@ -2549,6 +2552,7 @@ zeromagazine.nu##div[id^="ads"]
 ||facebook.com/plugins/share_button$third-party
 ||facebook.com^*/plugins/like$third-party
 ||fakturino.se^$third-party
+||familjehemsbanken.se/api/partners
 ||famobi.com/play/hit/
 ||fapp.pw^$third-party
 ||fastout.com/analytics
@@ -3037,7 +3041,7 @@ zeromagazine.nu##div[id^="ads"]
 ||fast.fonts.net/lt/1.css
 !#endif
 !#if !env_chromium
-||fast.fonts.net/*/1.css$domain=arkitekt.se|axess.se|diabetes.se|sverigeslarare.se
+||fast.fonts.net/*/1.css$domain=arkitekt.se|axess.se|diabetes.se|sverigeslarare.se|sdr.se
 branschkoll.se,rocknytt.net,upphandling24.se,kimura.se,datormagazin.se,villalivet.se##^script[id^="advanced-ads"]
 branschkoll.se,rocknytt.net,upphandling24.se,kimura.se,datormagazin.se,villalivet.se,polistidningen.se##^script:has-text(advads)
 temadagar.se,lchfarkivet.se,wernamaten.se##^script:has-text(__ez)
