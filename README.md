@@ -24,7 +24,7 @@ I strongly discourage people from using Chrome, Opera, Edge, Yandex. It's your c
   </tr>
   <tr>
     <td><strong><a href="https://raw.githubusercontent.com/lassekongo83/Frellwits-filter-lists/master/Frellwits-Swedish-Hosts-File.txt">Frellwits-Swedish-Hosts-File.txt</a></strong></td>
-    <td>This file is in hosts file format and works best when used, for example, <a href="https://pi-hole.net/">pi-hole</a>, routers, etc. Its aim is to reduce your exposure to ads, tracking, scams, badware, and occasionally some annoyances on (mostly) Swedish websites. As always with hosts files, use at your own risk and make sure that you know what you're doing. This is <strong>not</strong> as powerful as the filter list for uBO. For the best results, use this hosts file together with <a href="https://pgl.yoyo.org/adservers/serverlist.php?showintro=0;hostformat=hosts">Peter Lowe’s Ad and tracking server list</a>.</td>
+    <td>This file is in hosts file format and works best when used with specific applications or devices, such as <a href="https://pi-hole.net/">pi-hole</a>, routers, etc. Its aim is to reduce your exposure to ads, tracking, scams, badware, and occasionally some annoyances on (mostly) Swedish websites. As always with hosts files, use at your own risk and make sure that you know what you're doing. This is <strong>not</strong> as powerful as the filter list for uBO. For the best results, use this hosts file together with <a href="https://pgl.yoyo.org/adservers/serverlist.php?showintro=0;hostformat=hosts">Peter Lowe’s Ad and tracking server list</a>.</td>
   </tr>
 </table>
 
