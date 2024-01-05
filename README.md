@@ -1,1 +1,1 @@
-Branch for Diff-path.
+Documentation page for the Swedish filter.
