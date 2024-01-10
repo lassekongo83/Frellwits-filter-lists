@@ -56,3 +56,76 @@ jobs:
         git add Frellwits-Swedish-Filter.txt Frellwits-Swedish-Hosts-File.txt
         git commit -m "Update list ${timestamp}"
         git push
+
+ publish:
+   permissions:
+     contents: write  # for Git to git push
+   name: Publish lists
+   needs: paths-filter
+   runs-on: ubuntu-latest
+   if: ${{ needs.paths-filter.outputs.main_txt_changed == 'true' }}
+   steps:
+     - name: Repo check
+       run: |
+         if [[ "$GITHUB_REPOSITORY_OWNER" != "lassekongo83" ]]; then
+           echo "This GitHub Action is meant to deliver filter lists for Frellwit's Swedish Filter."
+           echo "You shouldn't need to run this GitHub Action in your fork."
+           echo "If you do, please customize the cron expression above, and the URLs below."
+           exit 1
+         fi
+         exit 0
+     - name: Clone Swedish Filter
+       uses: actions/checkout@v3
+       with:
+         ref: swefilter
+     - name: Generate version string
+       run: |
+         TAGNAME=$(date -u "+%Y.%-m.%-d.")$(date -u "+%H*60+%M" | bc)
+         echo "TAGNAME=$TAGNAME" >> $GITHUB_ENV
+         echo "Version string is $TAGNAME"
+     - name: Copy shell script from uBlockOrigin/uAssets
+       run: |
+         TMPDIR="$(mktemp -d)"
+         git clone --depth=1 --single-branch --branch=master https://github.com/uBlockOrigin/uAssets.git "$TMPDIR"
+         cp -v "$TMPDIR"/tools/make-diffpatch.sh .
+         cp -v "$TMPDIR"/tools/update-diffpatches.sh .
+     - name: Copy filter lists to swefilter
+       run: |
+         TMPFILE="$(mktemp -d)"
+         git clone --depth=1 https://github.com/lassekongo83/Frellwits-filter-lists.git "$TMPFILE"
+         pushd "$TMPFILE" > /dev/null
+         echo "*** swefilter: Assembling swefilter.min.txt"
+         node ./tools/make-easylist.mjs in=./tools/swefilter.template out=./swefilter.min.txt minify=1
+         popd > /dev/null
+         cp "$TMPFILE"/swefilter.min.txt swefilter.min.txt
+     - name: Patch last-updated field
+       run: |
+         DATE=$(date -Ru)
+         for f in $(git diff --name-only); do
+           STAT=$(git diff --numstat $f | sed -r '/^1\s+1\s+/d')
+           if [[ -n $STAT ]]; then
+             sed -ir "0,/^! Last updated: /s/^\(! Last updated: \)%timestamp%/\\1$DATE/" $f
+           else
+             git checkout -q $f
+           fi
+         done
+     - name: Create new patch
+       run: |
+         chmod 755 ./make-diffpatch.sh
+         PATCHES_DIR="patches"
+         ./make-diffpatch.sh "${{ env.TAGNAME }}" "$PATCHES_DIR"
+     - name: Update existing patch
+       run: |
+         chmod 755 ./update-diffpatches.sh
+         PATCHES_DIR="patches"
+         FILTER_FILES=$(git ls-files --exclude-standard -- swefilter.min.txt)
+         ./update-diffpatches.sh "$GITHUB_REPOSITORY" "$PATCHES_DIR" "$FILTER_FILES"
+     - name: Commit changes (if any)
+       run: |
+         if [[ -z $(git diff --name-only --cached) ]]; then exit 0; fi
+         git config user.name "GitHub-Actions"
+         git config user.email "<>"
+         git commit -m "Update modified filter lists to ${{ env.TAGNAME }}"
+         git push origin swefilter
+         git tag ${{ env.TAGNAME }}
+         git push origin ${{ env.TAGNAME }}
