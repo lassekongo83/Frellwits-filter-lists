@@ -1,6 +1,6 @@
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days
-! Last modified: 2024-01-08 14:50:03 CET
+! Last modified: 2024-01-10 08:10:38 CET
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPL3 - https://github.com/lassekongo83/Frellwits-filter-lists/blob/master/LICENSE
@@ -231,6 +231,7 @@ bestchampagne.se##aside.section-sm
 bettips.se##.bettips-am
 bettips.se,borskollen.se,se.azrhymes.com##.top-banner
 biblioteksforeningen.se##body:style(opacity:1!important)
+biblioteksforeningen.se###cookie-bar
 bildobubbla.se##.annonser
 bilresaieuropa.se###header-image, #block-2
 bilresaieuropa.se##.widget-title:has-text(/spons/i):upward(.widget_text)
@@ -636,7 +637,6 @@ happypancake.se##+js(aopr, Object.prototype.adUnits)
 happyride.se##li:has(a[href*="/category/sponsrat/"])
 happyride.se##.col-sm-4 > .boxt
 happyride.se,freeride.se##.anm1-container, [class^="anp"], [class^="ans"], .box.evergreen
-hastlycka.se##.c-placement-top.owl-carousel, .takeover-container
 hastnet.se##.add-wrap, .listings-search-ads, .right_panel
 hbl.fi,vastranyland.fi,ostnyland.fi##.dre-item--feature-advertorial
 hbwebben.se##.elementor-widget-container > a > img
@@ -1022,7 +1022,7 @@ pricerunner.se###consent
 pricerunner.se##.noscroll:style(overflow:initial!important)
 pussad.se##html.g1-popup-visible:style(overflow: initial !important;)
 pussad.se##.g1-popup-newsletter, .g1-slideup-wrap
-quizza.nu###takeover
+quizza.nu###takeover, .cookie-info
 qx.se##.qxa-container
 radio.se##div[data-testid="regionscloud-container"] a, div[data-testid="taglist-container"] a:style(background-attachment: none !important; background-image: none !important; background-color: rgb(2, 114, 140) !important;)
 radio.se###RAD_D_station_top, #RAD_D_home_top, #RAD_D_home_inhouse, #RAD_D_search_top:upward(3)
@@ -1407,6 +1407,7 @@ zeromagazine.nu##div[id^="ads"]
 ##div#banner_right
 ##div#block-adreviveheader
 ##div#custom_ads_wrapper
+##div#facebook-popup
 ##div#mega-ad-content
 ##div#outerAd
 ##div#outside-ads
@@ -1817,6 +1818,7 @@ zeromagazine.nu##div[id^="ads"]
 /fullpage$script,domain=poddtoppen.se
 /fullpage-ad.js
 /fusionadloader.$script
+/ga.js$domain=helgon.se
 /ga_cookie_track.js
 /gdprlock$third-party
 /gdpr/*$domain=visitlulea.se|se.laowl.com|husbilskompisar.se|rotter.se|borattforum.se
@@ -1843,7 +1845,6 @@ zeromagazine.nu##div[id^="ads"]
 /hrnytt/banner$domain=hrnytt.se
 /html5videovastplugin.js$domain=skidspar.se
 /iab/iab.js
-/iaw-babla$domain=sv.bab.la
 /idle.min.js$domain=180.se
 /iframeadvloader.$script
 /illustrationer/annons_
@@ -1923,7 +1924,6 @@ zeromagazine.nu##div[id^="ads"]
 /pagead$domain=vilaser.se|horoskoptid.se|eniro.se
 /pages/native$domain=aktuellhallbarhet.se|byggindustrin.se|dagensmedia.se|dagensmedicin.se|fastighetsnytt.se|resume.se|dagenssamhalle.se|market.se|dagligvarunytt.se|privataaffarer.se
 /pages/tag$domain=aktuellhallbarhet.se|byggindustrin.se|dagensmedia.se|dagensmedicin.se|fastighetsnytt.se|resume.se|dagenssamhalle.se|market.se|dagligvarunytt.se|privataaffarer.se
-/pb-babla$domain=sv.bab.la
 /permutive-async.js
 /pfizer_analytics
 /phaser-ads.min.js$script
@@ -2208,6 +2208,7 @@ zeromagazine.nu##div[id^="ads"]
 /ub-ads/*$script
 /unica/html-banners
 /unload?$ping,domain=mestmotor.se|thelocal.se|illvet.se|iform.se
+/uploads/annonser
 /uploads/bilder/Banner/*
 /uploads/bilder/Samarbetspartners
 /upload/puff/*$domain=bergsmannen.se|tidningenbyggmaterial.se|tidningendacksnack.se
@@ -2614,7 +2615,6 @@ zeromagazine.nu##div[id^="ads"]
 ||happygreen.se^$third-party
 ||hapyak.com^$third-party
 ||harmonious-station-to-station.podplay.com/script.js
-||helgon.se/_static/j/ga.js
 ||helloreco.com^$third-party
 ||heroaffiliates.com^$third-party
 ||herokuapp.com/visit?$image
