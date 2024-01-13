@@ -1,0 +1,50 @@
+name: Sort Swedish Filter
+on:
+ push:
+   paths:
+     - 'lists/main.txt'
+ pull_request:
+   paths:
+     - 'lists/main.txt'
+
+jobs:
+ build:
+   runs-on: ubuntu-latest
+   steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+      with:
+        persist-credentials: true
+        fetch-depth: 0
+
+    - name: Set timezone
+      uses: szenius/set-timezone@v1.2
+      with:
+        timezoneLinux: "Europe/Stockholm"
+
+    - name: Wait for lock
+      run: |
+        while [[ -f .git/index.lock ]]; do sleep 1; done
+
+    - name: Acquire lock
+      run: touch .git/index.lock
+
+    - name: Run sorting script
+      run: |
+        chmod +x tools/sort-filter.sh
+        sh tools/sort-filter.sh
+
+    - name: Release lock
+      run: rm .git/index.lock
+
+    - name: Fetch latest changes
+      run: git pull origin master
+
+    - name: Commit changes (if any)
+      run: |
+        timestamp=$(date '+%Y%m%d_%H%M%S')
+        git config user.name "GitHub-Actions"
+        git config user.email "<>"
+        git add Frellwits-Swedish-Filter.txt
+        git commit -m "Update list ${timestamp}"
+        git push
