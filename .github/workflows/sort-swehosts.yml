@@ -1,0 +1,50 @@
+name: Sort Swedish Hosts File
+on:
+ push:
+   paths:
+     - 'lists/main-hosts.txt'
+ pull_request:
+   paths:
+     - 'lists/main-hosts.txt'
+
+jobs:
+ build:
+   runs-on: ubuntu-latest
+   steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+      with:
+        persist-credentials: true
+        fetch-depth: 0
+
+    - name: Set timezone
+      uses: szenius/set-timezone@v1.2
+      with:
+        timezoneLinux: "Europe/Stockholm"
+
+    - name: Wait for lock
+      run: |
+        while [[ -f .git/index.lock ]]; do sleep 1; done
+
+    - name: Acquire lock
+      run: touch .git/index.lock
+
+    - name: Run sorting script
+      run: |
+        chmod +x tools/sort-hosts.sh
+        sh tools/sort-hosts.sh
+
+    - name: Release lock
+      run: rm .git/index.lock
+
+    - name: Fetch latest changes
+      run: git pull origin master
+
+    - name: Commit changes (if any)
+      run: |
+        timestamp=$(date '+%Y%m%d_%H%M%S')
+        git config user.name "GitHub-Actions"
+        git config user.email "<>"
+        git add Frellwits-Swedish-Hosts-File.txt
+        git commit -m "Update list ${timestamp}"
+        git push
