@@ -1,7 +1,7 @@
 ! Title: Frellwit's Swedish Filter
-! Last updated: Sat, 13 Jan 2024 11:42:53 +0000
+! Last updated: Mon, 15 Jan 2024 06:52:02 +0000
 ! Expires: 5 days
-! Diff-Path: patches/2024.1.13.702.patch#swefilter
+! Diff-Path: patches/2024.1.15.411.patch#swefilter
 ! Diff-Expires: 6 hours
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
@@ -1183,9 +1183,9 @@ tandlakartidningen.se##[class^="ad-container"], [class^="adbox-single"], div[id^
 tasteline.com##.article.related > a[href*="&utm"][target="_blank"]
 tasteline.com##.popup-overlay
 tasteline.com##.popup:style(overflow: auto !important;)
-techmag.se##aside.widget_codewidget:has(div[id^="techmag_com"])
 techmag.se##div[style="clear:both;float:left;width:100%;margin:0 0 20px 0;"]:has(.contentadx)
-techmag.se##.popup-overlay, div[id^="techmag_com_980x300"], .contentadx
+techmag.se##.popup-overlay, div[id^="techmag_com"], .contentadx
+techmag.se##.widget_codewidget:has(div[id^="techmag_com"])
 teknifik.se##.post:has(.sponsor)
 tekniknytt.se##.article_widget_preview, .article_widget_listing:has(a[href*="casino"], a[href*="kasino"])
 tekniknytt.se##.label:has-text(/samarbete|annons|reklam|presenteras av/i):upward(a)
@@ -1316,7 +1316,7 @@ webbjobb.io##.cookie
 webbkryss.nu##.skyad-wrapper
 webb-tv.nu##[id^="adservice"]
 webhallen.com##.takeover-link
-wernamaten.se,svenskaorduttryck.se,techmag.se,hemmanytt.se,lchfarkivet.se,temadagar.se###ez-cookie-dialog-wrapper
+wernamaten.se,svenskaorduttryck.se,hemmanytt.se,lchfarkivet.se,temadagar.se###ez-cookie-dialog-wrapper
 whowhatwear.co.uk#@#a[href*="/click.linksynergy"] img
 worldinproperty.se##body.newsletter-modal-open:style(overflow:unset!important;)
 worldinproperty.se##.newsletter-modal
@@ -1760,6 +1760,8 @@ zeromagazine.nu##div[id^="ads"]
 /cts.min.js$domain=recept.se
 /cx-emediate-userprofile-se
 /dagensSE-mergedheader$domain=dagens.se
+/data/banner$domain=nyaboendet.se
+/data/track$domain=nyaboendet.se
 /detroitchicago$domain=temadagar.se|svenskaorduttryck.se
 /detroitchicago/cmbdv2.js$domain=wernamaten.se
 /detroitchicago/denver.js$domain=wernamaten.se
@@ -1797,6 +1799,7 @@ zeromagazine.nu##div[id^="ads"]
 /expressen/crypt/?lpkey$all
 /ext/phpbb/ads/*
 /ezoic$domain=temadagar.se
+/ezoic/sa.min.js$domain=techmag.se
 /facebook_tracking_pixel$script
 /fb_pixel.js
 /filarkiv/bilderbanner/*
@@ -1963,7 +1966,7 @@ zeromagazine.nu##div[id^="ads"]
 /plugins/convertplug
 /plugins/convertpro
 /plugins/cookie-law-info$script,domain=nyadagbladet.se|hockeybladet.nu|temadagar.se|gilla.se|lundagard.se|startaochdriva.se|milansverige.se|sverige.nu|synology.com|conpot.se|firstclassmagazine.se|dagenslogistik.se|magasinetkonkret.se|kvalitetsmagasinet.se|miljo-utveckling.se|telekomidag.se|vdtidningen.se|gullislastips.se|nyfiknainvesterare.se
-/plugins/cookie-notice$script,domain=bildobubbla.se|zeromagazine.nu|espressomedia.se|skanesport.se|sverigespringer.se|fotbollskane.se|sillyseason.se|gentlemannaguiden.com|husbilsplats.se|matmalin.se|svensktidskrift.se|byggipedia.se|schack.se|campingsverige.se|matforslag.se|densistavilan.se
+/plugins/cookie-notice$script,domain=bildobubbla.se|zeromagazine.nu|espressomedia.se|skanesport.se|sverigespringer.se|fotbollskane.se|sillyseason.se|gentlemannaguiden.com|husbilsplats.se|matmalin.se|svensktidskrift.se|byggipedia.se|schack.se|campingsverige.se|matforslag.se|densistavilan.se|horisontmagasin.se|kobe.se
 /plugins/cookie-popup$script,domain=skillingaryd.nu|xn--vrnamo-bua.nu
 /plugins/cresta-social-share-counter
 /plugins/custom-banners$domain=skolfamiljen.se
@@ -2574,6 +2577,7 @@ zeromagazine.nu##div[id^="ads"]
 ||findit.fi/js/prebid
 ||flashback.org/rlog.php
 ||flirtmatch.se^
+||fodertipset.se/cookie-info
 ||folkspel.se^$third-party
 ||footjoygolfskorrea.com.se^
 ||foretagande.se/a/$xmlhttprequest
@@ -2775,8 +2779,6 @@ zeromagazine.nu##div[id^="ads"]
 ||nouw.com/campaignpost/reg/
 ||nuance.com/tagserver/logging
 ||nucleusanalytics.io^$third-party
-||nyaboendet.se/dist/ga_tag.js?
-||nyaboendet.se/dist/metrics.js
 ||nyafilmer.*/ajax/banner
 ||nyheteridag.se/ads/
 ||nyhetersto.se/webpushr-sw
@@ -2887,7 +2889,7 @@ zeromagazine.nu##div[id^="ads"]
 ||schibsted.com/pulse$domain=aftonbladet.se
 ||script.e-space.se^$third-party
 ||sdk.mrf.io/statics/marfeel-sdk
-||sdk.pulse.schibsted.com^$script,domain=aftonbladet.se|omni.se|omniekonomi.se|tv.nu
+||sdk.pulse.schibsted.com^$script,domain=aftonbladet.se|omni.se|omniekonomi.se|tv.nu|svd.se
 ||seenthis.se^$third-party
 ||selectofmychoices.com^
 ||sellingsimplified.net^$third-party
