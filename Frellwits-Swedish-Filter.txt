@@ -1,6 +1,6 @@
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days
-! Last modified: 2024-01-23 08:14:00 CET
+! Last modified: 2024-01-24 11:35:06 CET
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPL3 - https://github.com/lassekongo83/Frellwits-filter-lists/blob/master/LICENSE
@@ -48,6 +48,7 @@
 .se/counter/
 .se/custom/ad/
 .se/fightodds.plugin/fightodds.plugin.$script
+.se/files/ads/$image
 .se/files/annons/$image
 .se/getBannerImage
 .se/globalassets/banners/$domain=~tools.se
@@ -566,7 +567,7 @@ fotboll-tv.se##.SMBoxContentBanner, a[data-gaevent*="action=bookmaker_odds"]
 fotboll.com##.header-static-lg, .fp-partner, .xs-ad, .bo-wrapper, #betsid, .news-banner-mini, .xs-cblock, .cookie_consent_bar, #odds, a.bellows-target[href*="/svenskaspel"], a.bellows-target[href*="/betting"]
 fotboll.com,allsvenskan.se,superettan.se,swebbtv.se,hastnet.se##.smartbanner
 fotosidan.se##.subArticlesponsored, div[style="width:300px;float:right;"], div[style="float:right;width:300px;"], #partner-box, .adbox-label
-fotosidan.se,merinfo.se,allsvenskan.se,tasteline.com,jaktojagare.se,chefstidningen.se,realtid.se,norpan.se,moviezine.se,jaktjournalen.se##.ads
+fotosidan.se,merinfo.se,allsvenskan.se,tasteline.com,jaktojagare.se,chefstidningen.se,realtid.se,norpan.se,moviezine.se,jaktjournalen.se,journalisten.se##.ads
 fragbite.se##.category:has-text(/spons/i):upward(article)
 fragbite.se##.cookieBar, .tn, .zooKeeper, #scraper, .subHeadSponsors
 framtidensronneby.se##.elementor-heading-title:has-text(/annons från/i):upward(4)
@@ -606,6 +607,7 @@ gentlemannaguiden.com##.advertising, .sidebar .widget_text, .sidebar .widget_med
 glassakademin.se##[class^="adverts-"]
 gmfk.nu##p:has-text(Annons):upward(.n2-ss-slide)
 gmfk.nu###site-preloader
+godare.se##a p[class^="hyperion-css"]:has-text(INNEHÅLLER ANNONSLÄNKAR):upward(li, a.internal-link)
 godare.se##h3:has-text(Annons):upward(1)
 godare.se##.godare-ad-element, a[href*="/brand-studio"], a[href*="/brandstudio"], .recipe-ad, a[href*="utm_campaign"][data-test-tag="external-link"]
 golflivet.se##a[href*="/annonssamarbete/"], .deals_block_wrapper, .ai-close-fit
@@ -1751,7 +1753,7 @@ zeromagazine.nu##div[id^="ads"]
 /collect?v$domain=thelocal.se
 /conversions/tracking.js$third-party
 /cookieDirective.js$domain=sdr.se
-/cookieconsent$script,domain=akademiskahus.se|lundagard.se|voodoofilm.org|alekuriren.se|tidningen.se|fuska.nu|kiacarclub.se|nyheteridag.se|internetstart.se|svampguiden.com|scanaktier.se|historier.net|worldinproperty.se
+/cookieconsent$script,domain=akademiskahus.se|lundagard.se|voodoofilm.org|alekuriren.se|tidningen.se|fuska.nu|kiacarclub.se|nyheteridag.se|internetstart.se|svampguiden.com|scanaktier.se|historier.net|worldinproperty.se|journalisten.se
 /cookienotice.js$domain=nordic.ign.com
 /cookiespolicynotificationbar$domain=svenskahousegruppen.se
 /cookiespolicynotificationbar$script,domain=jamstalldhetskarta.se
