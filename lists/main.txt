@@ -35,6 +35,7 @@
 .se/custom/ad/
 .se/img/banners/
 .se/fightodds.plugin/fightodds.plugin.$script
+.se/files/ads/$image
 .se/files/annons/$image
 .se/getBannerImage
 .se/globalassets/banners/$domain=~tools.se
@@ -1133,7 +1134,7 @@ teknikveckan.se,di.se,dn.se,fordonsproffs.eu,skillingaryd.nu,xn--vrnamo-bua.nu,v
 svd.se,chef.se,vvsforum.se,elinstallatoren.se,arkitekten.se,natursidan.se,svenskfarmaci.se,da.se##.Ad
 aftonbladet.se,halsasverige.se,nojesmagasinet.nu,stoppapressarna.se,langd.se,pressbladet.se,svenskpress.se,foretagsbladet.se,gestrikemagasinet.se,cfanytt.se,lasarnas.se,hembostad.nu,sportidrott.se,skolvarlden.se##.advert
 lakartidningen.se,nyheter24.se,modette.se,akaviaaspekt.se,res.se##.advertisement
-fotosidan.se,merinfo.se,allsvenskan.se,tasteline.com,jaktojagare.se,chefstidningen.se,realtid.se,norpan.se,moviezine.se,jaktjournalen.se##.ads
+fotosidan.se,merinfo.se,allsvenskan.se,tasteline.com,jaktojagare.se,chefstidningen.se,realtid.se,norpan.se,moviezine.se,jaktjournalen.se,journalisten.se##.ads
 lira.se,danstidningen.se,slangopedia.se,universitetslararen.se###ads
 uppslaget.se,skidresultat.se,fotbolldirekt.se,hockeysverige.se,innebandymagazinet.se,motivation.se,fiskejournalen.se,alba.nu,padeldirekt.se,dagensopinion.se##.annons
 evertiq.se,fz.se##.bnr
@@ -1187,7 +1188,7 @@ aftonbladet.se,livsstil.se,godare.se,byggahus.se,expressen.se,elle.se,svenskdam.
 
 ! -- Specific annoyances and bloat
 /cookie-consent$script,domain=minhembio.com
-/cookieconsent$script,domain=akademiskahus.se|lundagard.se|voodoofilm.org|alekuriren.se|tidningen.se|fuska.nu|kiacarclub.se|nyheteridag.se|internetstart.se|svampguiden.com|scanaktier.se|historier.net|worldinproperty.se
+/cookieconsent$script,domain=akademiskahus.se|lundagard.se|voodoofilm.org|alekuriren.se|tidningen.se|fuska.nu|kiacarclub.se|nyheteridag.se|internetstart.se|svampguiden.com|scanaktier.se|historier.net|worldinproperty.se|journalisten.se
 /gdpr/*$domain=visitlulea.se|se.laowl.com|husbilskompisar.se|rotter.se|borattforum.se
 ||onesignal.com^$domain=samnytt.se|battrestadsdel.se|beernews.se|ungdomsfotboll.se|rabattsok.se|1x2.se|cannabis.se|dackavisen.se|dalarnasaffarer.se|driva-eget.se|skogsaktuellt.se|maskinbladet.se|entreprenadaktuellt.se|ja.se|newsner.com|humorbibeln.se|sportbibeln.se|ettgottskratt.se|finanstid.se|fokus.se|fotbollskane.se|fotbollsthlm.se|idg.se|macken.xyz|naringslivetvgl.se|dalarnasaffarer.se|stockholmsaffarer.se|jamtlandsaffarer.se|netflixguiden.se|nyadagbladet.se|oskarshamns-nytt.se|skolporten.se|swebbtv.se|thepattayanews.se|vaken.se|aktieskolan.se|fastighetsvarlden.se|mcparken.se|gaffa.se|alltomnorrtalje.se
 /pum/*$domain=flm.nu|finanstid.se|dagenslogistik.se
@@ -1487,6 +1488,7 @@ sportbladetplay.se##body.dimmed:style(overflow:unset!important)
 vinochmatguiden.se##.popup_missa-inget
 godare.se##.godare-ad-element, a[href*="/brand-studio"], a[href*="/brandstudio"], .recipe-ad, a[href*="utm_campaign"][data-test-tag="external-link"]
 godare.se##h3:has-text(Annons):upward(1)
+godare.se##a p[class^="hyperion-css"]:has-text(INNEHÅLLER ANNONSLÄNKAR):upward(li, a.internal-link)
 
 ! -- Stampen
 /api/log$domain=bohuslaningen.se|stromstadstidning.se|markposten.se|harrydaposten.se|partilletidning.se|sttidningen.se|molndalsposten.se|kungalvsposten.se|kungsbackaposten.se|alingsastidning.se|ttela.se|gp.se|hallandsposten.se|hn.se
