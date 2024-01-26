@@ -1,7 +1,7 @@
 ! Title: Frellwit's Swedish Filter
-! Last updated: Fri, 26 Jan 2024 07:12:53 +0000
+! Last updated: Fri, 26 Jan 2024 07:14:20 +0000
 ! Expires: 5 days
-! Diff-Path: patches/2024.1.26.432.patch#swefilter
+! Diff-Path: patches/2024.1.26.434.patch#swefilter
 ! Diff-Expires: 24 hours
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
@@ -117,7 +117,7 @@ aftonbladet.se,godare.se,livsstil.se,skonhetsredaktorerna.se,omni.se,omniekonomi
 aftonbladet.se,godare.se,livsstil.se,skonhetsredaktorerna.se,omni.se,omniekonomi.se,svd.se##+js(set-local-storage-item, CMP:personalisation, 0)
 aftonbladet.se,godare.se,livsstil.se,skonhetsredaktorerna.se,omni.se,omniekonomi.se,svd.se##.sp-message-open body:style(overflow:initial!important; position:unset!important; margin-top:unset!important;)
 aftonbladet.se,halsasverige.se,nojesmagasinet.nu,stoppapressarna.se,langd.se,pressbladet.se,svenskpress.se,foretagsbladet.se,gestrikemagasinet.se,cfanytt.se,lasarnas.se,hembostad.nu,sportidrott.se,skolvarlden.se##.advert
-aftonbladet.se,livsstil.se,godare.se,byggahus.se,expressen.se,elle.se,svenskdam.se,galamagasin.se##+js(href-sanitizer, a[href*="/t?a="], ?url)
+aftonbladet.se,livsstil.se,godare.se,byggahus.se,expressen.se,elle.se,svenskdam.se,galamagasin.se,rodeo.net##+js(href-sanitizer, a[href*="/t?a="], ?url)
 aftonbladet.se,skonhetsredaktorerna.se##.ab_responsive_ads
 agriaffaires.se,truckscorner.se,machineryzone.se##.dp--mb
 aikfotboll.se,vaken.se,tidningen.djurskyddet.se##.banners
@@ -550,7 +550,7 @@ fotbolldirekt.se,hockeysverige.se,innebandymagazinet.se##.c-announcement:has(.c-
 fotbolldirekt.se,hockeysverige.se,innebandymagazinet.se##.c-announcement:has-text(/annons/i)
 fotbolldirekt.se,hockeysverige.se,innebandymagazinet.se,padeldirekt.se##.site-partnevisment, .h-background--sponsored-light, .row .text-center img, a[href^="https://hubs.la"], .c-partners
 fotbollskanalen.se##a:has(.brand-info__ad-text)
-fotbollskanalen.se##.brand, .desktop-ad-web, a[href*="telia.se/privat/tv/sport"] img, .mobile-ad-web
+fotbollskanalen.se##.brand, .desktop-ad-web, a[href*="telia.se/privat/tv/sport"] img, .mobile-ad-web, .ad-banner
 fotbollskanalen.se##.notice__tag_sponsored, .notice__tag:has-text(/sponsrat/i):upward(1)
 fotbollskane.se##.footer-widgets .widget_block li
 fotbollskane.se,fotbollsthlm.se##article:has-text(/är en annons/i)
@@ -801,6 +801,7 @@ lesscarbs.se#@#.category-annonssamarbete:not(body):not(html)
 letarecept.se###cookie_wrapper
 leta.se###bookingcom-resor-wrapper, #aktuellaerbjudanden, #sky-left-wide, .topNavItem[href*="casino"], .topNavItem[href*="betting"], #mobile-banner-top, #mobile-banner-after-content, #mobile-banner-bottom, #bottom-splinks
 lexbase.se##+js(cookie-remover, lmt)
+lifeofsvea.se,quizza.nu##.cookie-info
 lindasbakskola.se,jennysmatblogg.nu,zeinaskitchen.se,filippoon.se##.panorama-sticky, .sticky-area, #ad-outofpage_dynamic
 lindasbakskola.se,skk.se,realtid.se,viivilla.se,ungdomsfotboll.se##a[href*="/bit.ly/"]
 linguee.se##div[class*="ad_container"], div[class*="_ads_"]
@@ -1022,7 +1023,7 @@ pricerunner.se###consent
 pricerunner.se##.noscroll:style(overflow:initial!important)
 pussad.se##html.g1-popup-visible:style(overflow: initial !important;)
 pussad.se##.g1-popup-newsletter, .g1-slideup-wrap
-quizza.nu###takeover, .cookie-info
+quizza.nu###takeover
 qx.se##.qxa-container
 radio.se##div[data-testid="regionscloud-container"] a, div[data-testid="taglist-container"] a:style(background-attachment: none !important; background-image: none !important; background-color: rgb(2, 114, 140) !important;)
 radio.se###RAD_D_station_top, #RAD_D_home_top, #RAD_D_home_inhouse, #RAD_D_search_top:upward(3)
@@ -1040,6 +1041,7 @@ res.se##.res-display
 ridsport.se##.svrf__sticky-ad, .svrf-block__banner, .sv-cookie-consent-banner, .sp-banner-block, .sp-double-ad-block, .sp-head-sponsor-container, .sp-regular-sponsor-container
 riktighockey.se###custom_html-2
 rocknytt.net##[data-widget_type*="bnnrwidgets"], a[href*="/annons/"], div[data-widget_type="image.default"] a[target="_blank"]
+rodeo.net##article[data-section="allmänt"]
 rollinghomes.se##span:has-text(Annons):upward(.widget_media_image)
 rollinghomes.se##.widget_media_image a[href]:not([href^="/"]):not([href*="rollinghomes.se"])
 runnersworld.se##.post-card-sponsored, .modal-plus, .modal-backdrop, .footer-newsletter
@@ -1145,6 +1147,7 @@ studocu.com##.new-viewer-wrapper .p2hv:style(pointer-events: auto !important;)
 surfa.se##div[class*="-promo"], div[class*="prisjakt-"]
 surfa.se,hemmafixbloggen.se,teknikfreak.se###loader-wrapper
 svampguiden.com##.label-sponsor:upward(.panel)
+svartgul.se##li.embedded
 svartgul.se,eventeffect.se,executiveeffect.se,saleseffect.se###panorama
 svd.se##article:has(div[class^="NativeBarWrapper"])
 svd.se##body:style(visibility:visible!important;)
@@ -1198,7 +1201,7 @@ tekniksmart.se##center:has-text(/annons/i):upward(1)
 tekniksmart.se##.code-block, main > div:last-child:not(:only-child), #uid_08313ba73, #uid_ab3738b5a, .jeg_header_wrapper .jeg_midbar
 tekniksmart.se##.wpb_row:has(a[href*="casino"])
 teknikveckan.se##.pill:has-text(/spons/i):upward(.grid-item, .pinned, .articleFlow-item)
-teknikveckan.se,di.se,dn.se,fordonsproffs.eu,skillingaryd.nu,xn--vrnamo-bua.nu,vardfokus.se,kamerabild.se,tripadvisor.se,skaraborgsbygden.se,swedroid.se,bettingstugan.se,expressen.se,dagensopinion.se,driva-eget.se,bioenergitidningen.se,ifokus.se,padelfeber.se,sv.picmix.com,ifragasatt.se,ehandel.se,jaktojagare.se,sportbloggare.com,bovision.se,familjeliv.se,tidningenridsport.se,golflivet.se,vemringde.se,brollopstorget.se,fastighetsvarlden.se##.ad
+teknikveckan.se,di.se,dn.se,skillingaryd.nu,xn--vrnamo-bua.nu,vardfokus.se,kamerabild.se,tripadvisor.se,skaraborgsbygden.se,swedroid.se,bettingstugan.se,expressen.se,dagensopinion.se,driva-eget.se,bioenergitidningen.se,ifokus.se,padelfeber.se,sv.picmix.com,ifragasatt.se,ehandel.se,jaktojagare.se,sportbloggare.com,bovision.se,familjeliv.se,tidningenridsport.se,golflivet.se,vemringde.se,brollopstorget.se,fastighetsvarlden.se##.ad
 temadagar.se##+js(noeval-if, targetele)
 temadagar.se##.ez-sidebar-wall
 temperatur.nu##.holidAds:upward(1)
@@ -2327,6 +2330,8 @@ zeromagazine.nu##div[id^="ads"]
 @@/scripts/advert_$~third-party,domain=di.se
 @@_advert.$domain=e-pages.dk
 @@||cargodisplayads.com/till_minne/
+@@||cdn.play.showheroes.com/part/partimage$image
+@@||cdn.play.showheroes.com/part/rendered$media
 @@||createsend1.com/css/
 @@||feed.meltwater.com^$subdocument
 @@||fwmrm.net/crossdomain.xml$domain=embed.viaplay.com
