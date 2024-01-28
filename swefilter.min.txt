@@ -1,7 +1,7 @@
 ! Title: Frellwit's Swedish Filter
-! Last updated: Sun, 28 Jan 2024 05:54:59 +0000
+! Last updated: Sun, 28 Jan 2024 13:06:25 +0000
 ! Expires: 5 days
-! Diff-Path: patches/2024.1.28.354.patch#swefilter
+! Diff-Path: patches/2024.1.28.786.patch#swefilter
 ! Diff-Expires: 24 hours
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
@@ -323,7 +323,7 @@ cannabis.se##+js(aopw, Cookies)
 cannabis.se##.header-ads-wrapper, .ai-adb-hide, .ai-sticky-widget, .hampaonline
 cannabis.se,forskning.se,finanstid.se,it-finans.se,it-halsa.se,it-kanalen.se,it-pedagogen.se,it-retail.se,it-hallbarhet.se,biostock.se,gullislastips.se,snowmobile.se,tobaksfakta.se,dagenslogistik.se,magasinetkonkret.se##.pum-overlay
 carup.se##div[id^="carup-"]
-casinoguiden$image,domain=samnytt.se
+casinoguiden$image,domain=samnytt.se|samnytt.nu
 casino-utan-$image
 chefstidningen.se##[id^="block-views-ad"], .modal-container
 chef.se##.Cookie-notice, .Product-modal, .Offer-popup, .Toaster
@@ -1050,10 +1050,9 @@ runnersworld.se,motormagasinet.se,dagenshandel.se,food-supply.se,plastnet.se,hab
 runnersworld.se,utsidan.se,hockeymagasinet.com,driva-eget.se,foretagande.se,revisionsvarlden.se,travelnews.se##.sponsored
 sakochliv.se##+js(acs, checkCampaignCookie)
 sakochliv.se##.cookie-disclaimer-wrap, .type-promo, .sector-annons
-samnytt.se##a[href*="casino"], body > div.bg-opacity-50:first-of-type
-samnytt.se##div[class=""], .sticky:has-text(/annons/i)
-samnytt.se##div[class=""]:has(div[data-aa-adunit])
-samnytt.se##script[src*="richmediastudio.com"]:upward(1)
+samnytt.se,samnytt.nu##a[href*="casino"], .sticky > div.bg-opacity-50:first-of-type
+samnytt.se,samnytt.nu##div[class=""], a, .sticky > div[style="display:grid"], .post-content > div.mx-auto:has-text(/annons/i)
+samnytt.se,samnytt.nu##script[src*="richmediastudio.com"]:upward(1)
 sbf.se##.sv-cookie-consent-banner, .hiq-partners-banner
 sbktavling.se##.jcarousel-skin-tango
 scanaktier.se###overlay-black
@@ -1070,7 +1069,7 @@ se.azrhymes.com##div[id^="azrhymes_com_between_content"]
 shoegazing.se###main-sidebar .widget_media_image, #post-sidebar .widget_media_image, #content > .code-block
 shortcut.se##div[class^="baner"], a[target="_blank"] img
 shortcut.se##.category-tag:has-text(/annons/i):upward(.ArticleListItem)
-sidebanner$image,domain=samnytt.se
+sidebanner$image,domain=samnytt.se|samnytt.nu
 signprint.se##.topbanner
 signprint.se##p:has-text(SPONSR):upward(.elementor-widget-jet-listing-grid)
 siljannews.se##a[href^="/annons"]
