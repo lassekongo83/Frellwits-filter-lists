@@ -1130,7 +1130,7 @@ spelo.se##.banner-container
 metalcentral.net##.bannergroup
 alltforforaldrar.se,di.se,upphandling24.se,bytbil.com,sverigesnatur.org,tv24.se##.panorama
 svartgul.se,eventeffect.se,executiveeffect.se,saleseffect.se###panorama
-teknikveckan.se,di.se,dn.se,skillingaryd.nu,xn--vrnamo-bua.nu,vardfokus.se,kamerabild.se,tripadvisor.se,skaraborgsbygden.se,swedroid.se,bettingstugan.se,expressen.se,dagensopinion.se,driva-eget.se,bioenergitidningen.se,ifokus.se,padelfeber.se,sv.picmix.com,ifragasatt.se,ehandel.se,jaktojagare.se,sportbloggare.com,bovision.se,familjeliv.se,tidningenridsport.se,golflivet.se,vemringde.se,brollopstorget.se,fastighetsvarlden.se##.ad
+teknikveckan.se,di.se,dn.se,skillingaryd.nu,xn--vrnamo-bua.nu,vardfokus.se,kamerabild.se,tripadvisor.se,swedroid.se,bettingstugan.se,expressen.se,dagensopinion.se,driva-eget.se,bioenergitidningen.se,ifokus.se,padelfeber.se,sv.picmix.com,ifragasatt.se,ehandel.se,jaktojagare.se,sportbloggare.com,bovision.se,familjeliv.se,tidningenridsport.se,golflivet.se,vemringde.se,brollopstorget.se,fastighetsvarlden.se##.ad
 svd.se,chef.se,vvsforum.se,elinstallatoren.se,arkitekten.se,natursidan.se,svenskfarmaci.se,da.se##.Ad
 aftonbladet.se,halsasverige.se,nojesmagasinet.nu,stoppapressarna.se,langd.se,pressbladet.se,svenskpress.se,foretagsbladet.se,gestrikemagasinet.se,cfanytt.se,lasarnas.se,hembostad.nu,sportidrott.se,skolvarlden.se##.advert
 lakartidningen.se,nyheter24.se,modette.se,akaviaaspekt.se,res.se##.advertisement
@@ -1184,7 +1184,7 @@ newsner.com,humorbibeln.se,sportbibeln.se,ettgottskratt.se,zeinaskitchen.se,dinb
 newsner.com,humorbibeln.se,sportbibeln.se,ettgottskratt.se,zeinaskitchen.se,dinbyggare.se,trafiksakerhet.se,boktugg.se,lakartidningen.se,villalivet.se,matsafari.nu,forexgruppen.se##+js(acs, monsterinsights_frontend)
 thorengruppen.se,utslappsratt.se,heleneholmsif.se,trafikskola.se,melodifestivalklubben.se,morotsliv.com##+js(set, em_track_user, false)
 thorengruppen.se,utslappsratt.se,heleneholmsif.se,trafikskola.se,melodifestivalklubben.se,morotsliv.com##+js(set, exactmetrics_frontend, undefined)
-aftonbladet.se,livsstil.se,godare.se,byggahus.se,expressen.se,elle.se,svenskdam.se,galamagasin.se,rodeo.net##+js(href-sanitizer, a[href*="/t?a="], ?url)
+aftonbladet.se,livsstil.se,godare.se,byggahus.se,expressen.se,elle.se,svenskdam.se,galamagasin.se,rodeo.net,familjeliv.se##+js(href-sanitizer, a[href*="/t?a="], ?url)
 
 ! -- Specific annoyances and bloat
 /cookie-consent$script,domain=minhembio.com
@@ -1864,9 +1864,10 @@ feber.se,tjock.se##+js(nosiif, checkGDPRInt)
 feber.se,tjock.se##+js(set, setYinYang, noopFunc)
 feber.se,tjock.se##+js(set, checkYin, noopFunc)
 feber.se,tjock.se##+js(set, checkYinPlaus, noopFunc)
-swedroid.se##div[id$="_ad"], div[id$="_ad_mobile"], .externalTopMobile, a[href^="//www.prisjakt.nu/produkt"], #nativendo-mainfeed + aside > .article, .article-footer > h3, .article-footer > .aeChart, #newExternal
+swedroid.se##div[id$="_ad"], div[id$="_ad_mobile"], .externalTopMobile, #externalTopMobile, a[href^="//www.prisjakt.nu/produkt"], #nativendo-mainfeed + aside > .article, .article-footer > h3, .article-footer > .aeChart, #newExternal
 swedroid.se##a[target="_blank"]:upward(li.Notice):remove()
 swedroid.se##span:has-text(/sponsr/i):upward(.article)
+swedroid.se##.puff:has(script[src*="lwadm.com"])
 swedroid.se##+js(set, checkAdsBlocked, noopFunc)
 /prisjakt$xmlhttprequest,domain=fz.se
 fz.se##.article-facebook
@@ -2319,7 +2320,7 @@ mygatemagazine.se##.textwidget:has-text(Annons)
 ||tripadvisor.se/PVLog
 ||tripadvisor.se/data/*/rum
 tripadvisor.se##[class$="banner_ad"]
-tripadvisor.se##div:has-text(Sponsrat av):upward(div[data-curated-shelf-id])
+tripadvisor.se##a:has-text(Sponsrat av)
 /track.js$domain=destination.se|sistaminuten.se
 destination.se,sistaminuten.se##+js(set-cookie, CM_cookieConsent, 0)
 shoegazing.se###main-sidebar .widget_media_image, #post-sidebar .widget_media_image, #content > .code-block
