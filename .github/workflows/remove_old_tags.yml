@@ -1,0 +1,16 @@
+name: Remove old tags
+
+on:
+  workflow_dispatch:
+
+jobs:
+ cleanup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Fetch all tags
+        run: git fetch --tags
+      - name: Delete old tags
+        run: |
+          git tag -l | sort -Vr | tail -n +22 | xargs -I {} git push origin :{}
