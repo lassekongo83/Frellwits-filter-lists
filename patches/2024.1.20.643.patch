@@ -1,10 +1,10 @@
-diff name:swefilter lines:223 checksum:3d28a81698
+diff name:swefilter lines:238 checksum:418f93a889
 d2 1
 a2 1
-! Last updated: Sun, 04 Feb 2024 06:11:34 +0000
+! Last updated: Mon, 05 Feb 2024 09:51:55 +0000
 d4 1
 a4 1
-! Diff-Path: patches/2024.2.4.371.patch#swefilter
+! Diff-Path: patches/2024.2.5.591.patch#swefilter
 a47 1
 .se/files/ads/$image
 a85 1
@@ -27,6 +27,12 @@ d219 2
 a220 2
 barometern.se,blt.se,bt.se,kristianstadsbladet.se,olandsbladet.se,smp.se,sydostran.se,trelleborgsallehanda.se,ut.se,ystadsallehanda.se,kalmarposten.se,meraosterlen.se,vxonews.se,vaxjobladet.se,nsk.se,klt.nu##:is([id*="_panorama"],[id*="_mobil"]):upward(div[display="block"])
 barometern.se,blt.se,bt.se,kristianstadsbladet.se,olandsbladet.se,smp.se,sydostran.se,trelleborgsallehanda.se,ut.se,ystadsallehanda.se,kalmarposten.se,meraosterlen.se,vxonews.se,vaxjobladet.se,nsk.se,klt.nu##:is([id*="_panorama"],[id*="_outsider"],[id*="_insider"],[id*="_mobil"]):upward(1)
+a259 1
+borskollen.se##.main > div[class^="jsx-"]:last-of-type:has(img[src*="borskollen_appen"])
+d262 1
+a262 2
+borskollen.se##.wrapper > div[class^="jsx-"] > .outer:has(a[href*="casino"])
+borskollen.se##[id^="borskollen_small"], [id^="borskollen_large"], .featured-link, .app-store-box, #borskollen_desktop-side, #borskollen_desktop-panorama, div[id^="borskollen_mobile-detaljsida"]
 d283 1
 a283 1
 bulletin.nu,cgi.com,inredningsarkitektur.se,fof.se,allas.se,elle.se,femina.se,hant.se,mabra.com,residencemagazine.se,svenskdam.se,motherhood.se,aftonbladet.se,lchfarkivet.se,kollega.se,folkofolk.se,xlbygg.se,skyscanner.se,dagensarena.se,bokadirekt.se,barometern.se,blt.se,bt.se,kristianstadsbladet.se,olandsbladet.se,smp.se,sydostran.se,trelleborgsallehanda.se,ut.se,ystadsallehanda.se,kalmarposten.se,meraosterlen.se,vxonews.se,vaxjobladet.se,nsk.se,klt.nu##body:style(overflow:initial!important)
@@ -87,6 +93,9 @@ d686 1
 a687 1
 ibnytt.se##:is(a[href*="casino"], a[href*="speltips"]):upward(.widget)
 d786 1
+d795 1
+a795 1
+lesscarbs.se##.elementor-image > a:not([href*="https://lesscarbs.se"]), a[href*="/affiliates/"], div[id^="1"][style*="250px"]
 a800 1
 lifeofsvea.se,quizza.nu##.cookie-info
 d804 1
@@ -160,7 +169,7 @@ tekniknytt.se##:is(.article_widget_preview, .article_widget_listing):has(a[href*
 tekniknytt.se##:is(.top-news, .big_article):has(img[src*="casino"], img[src*="surfeo"])
 d1197 1
 a1197 1
-teknikveckan.se,di.se,dn.se,skillingaryd.nu,xn--vrnamo-bua.nu,vardfokus.se,kamerabild.se,tripadvisor.se,swedroid.se,bettingstugan.se,expressen.se,dagensopinion.se,driva-eget.se,bioenergitidningen.se,ifokus.se,padelfeber.se,sv.picmix.com,ifragasatt.se,ehandel.se,jaktojagare.se,sportbloggare.com,bovision.se,familjeliv.se,tidningenridsport.se,golflivet.se,vemringde.se,brollopstorget.se,fastighetsvarlden.se##.ad
+teknikveckan.se,di.se,dn.se,skillingaryd.nu,xn--vrnamo-bua.nu,vardfokus.se,kamerabild.se,tripadvisor.se,swedroid.se,bettingstugan.se,expressen.se,dagensopinion.se,driva-eget.se,bioenergitidningen.se,ifokus.se,padelfeber.se,sv.picmix.com,ifragasatt.se,ehandel.se,jaktojagare.se,sportbloggare.com,bovision.se,familjeliv.se,tidningenridsport.se,golflivet.se,vemringde.se,brollopstorget.se,fastighetsvarlden.se,borskollen.se##.ad
 d1237 1
 a1237 1
 tripadvisor.se##a:has-text(Sponsrat av)
@@ -169,6 +178,8 @@ a1243 1
 tv4play.se##+js(xml-prune, Ad, , se-tv4.videoplaza.tv/proxy/distributor)
 a1244 1
 tv4play.se##.fmYBSE:style(mask-image:unset!important;)
+a1254 1
+undervarttak.se##.middle-banner
 a1255 1
 universitetslararen.se##div[id^="unive-"]
 d1260 1
@@ -184,6 +195,10 @@ www.aftonbladet.se,www.godare.se,www.livsstil.se,www.skonhetsredaktorerna.se,omn
 www.aftonbladet.se,www.godare.se,www.livsstil.se,www.skonhetsredaktorerna.se,omni.se,omniekonomi.se,www.svd.se##+js(set-local-storage-item, CMP:analytics, 0)
 www.aftonbladet.se,www.godare.se,www.livsstil.se,www.skonhetsredaktorerna.se,omni.se,omniekonomi.se,www.svd.se##+js(set-local-storage-item, CMP:marketing, 0)
 www.aftonbladet.se,www.godare.se,www.livsstil.se,www.skonhetsredaktorerna.se,omni.se,omniekonomi.se,www.svd.se##+js(set-local-storage-item, CMP:personalisation, 0)
+a1390 1
+##div.adSidebar
+a1416 1
+##div#topBannerMobile
 a1483 1
 ##div.vue-ad-wrapper
 d1698 1

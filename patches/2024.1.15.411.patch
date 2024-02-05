@@ -1,10 +1,10 @@
-diff name:swefilter lines:298 checksum:3d28a81698
+diff name:swefilter lines:313 checksum:418f93a889
 d2 1
 a2 1
-! Last updated: Sun, 04 Feb 2024 06:11:34 +0000
+! Last updated: Mon, 05 Feb 2024 09:51:55 +0000
 d4 2
 a5 2
-! Diff-Path: patches/2024.2.4.371.patch#swefilter
+! Diff-Path: patches/2024.2.5.591.patch#swefilter
 ! Diff-Expires: 24 hours
 a47 1
 .se/files/ads/$image
@@ -37,6 +37,12 @@ barometern.se,blt.se,bt.se,kristianstadsbladet.se,olandsbladet.se,smp.se,sydostr
 barometern.se,blt.se,bt.se,kristianstadsbladet.se,olandsbladet.se,smp.se,sydostran.se,trelleborgsallehanda.se,ut.se,ystadsallehanda.se,kalmarposten.se,meraosterlen.se,vxonews.se,vaxjobladet.se,nsk.se,klt.nu##:is([id*="_panorama"],[id*="_outsider"],[id*="_insider"],[id*="_mobil"]):upward(1)
 a239 1
 bioenergitidningen.se###cookieinfo
+a257 1
+borskollen.se##.main > div[class^="jsx-"]:last-of-type:has(img[src*="borskollen_appen"])
+d260 1
+a260 2
+borskollen.se##.wrapper > div[class^="jsx-"] > .outer:has(a[href*="casino"])
+borskollen.se##[id^="borskollen_small"], [id^="borskollen_large"], .featured-link, .app-store-box, #borskollen_desktop-side, #borskollen_desktop-panorama, div[id^="borskollen_mobile-detaljsida"]
 d281 1
 a281 1
 bulletin.nu,cgi.com,inredningsarkitektur.se,fof.se,allas.se,elle.se,femina.se,hant.se,mabra.com,residencemagazine.se,svenskdam.se,motherhood.se,aftonbladet.se,lchfarkivet.se,kollega.se,folkofolk.se,xlbygg.se,skyscanner.se,dagensarena.se,bokadirekt.se,barometern.se,blt.se,bt.se,kristianstadsbladet.se,olandsbladet.se,smp.se,sydostran.se,trelleborgsallehanda.se,ut.se,ystadsallehanda.se,kalmarposten.se,meraosterlen.se,vxonews.se,vaxjobladet.se,nsk.se,klt.nu##body:style(overflow:initial!important)
@@ -110,6 +116,9 @@ d684 1
 a685 1
 ibnytt.se##:is(a[href*="casino"], a[href*="speltips"]):upward(.widget)
 d784 1
+d793 1
+a793 1
+lesscarbs.se##.elementor-image > a:not([href*="https://lesscarbs.se"]), a[href*="/affiliates/"], div[id^="1"][style*="250px"]
 d796 1
 a796 1
 letarecept.se###cookie_wrapper
@@ -194,7 +203,7 @@ tekniknytt.se##:is(.article_widget_preview, .article_widget_listing):has(a[href*
 tekniknytt.se##:is(.top-news, .big_article):has(img[src*="casino"], img[src*="surfeo"])
 d1197 1
 a1197 1
-teknikveckan.se,di.se,dn.se,skillingaryd.nu,xn--vrnamo-bua.nu,vardfokus.se,kamerabild.se,tripadvisor.se,swedroid.se,bettingstugan.se,expressen.se,dagensopinion.se,driva-eget.se,bioenergitidningen.se,ifokus.se,padelfeber.se,sv.picmix.com,ifragasatt.se,ehandel.se,jaktojagare.se,sportbloggare.com,bovision.se,familjeliv.se,tidningenridsport.se,golflivet.se,vemringde.se,brollopstorget.se,fastighetsvarlden.se##.ad
+teknikveckan.se,di.se,dn.se,skillingaryd.nu,xn--vrnamo-bua.nu,vardfokus.se,kamerabild.se,tripadvisor.se,swedroid.se,bettingstugan.se,expressen.se,dagensopinion.se,driva-eget.se,bioenergitidningen.se,ifokus.se,padelfeber.se,sv.picmix.com,ifragasatt.se,ehandel.se,jaktojagare.se,sportbloggare.com,bovision.se,familjeliv.se,tidningenridsport.se,golflivet.se,vemringde.se,brollopstorget.se,fastighetsvarlden.se,borskollen.se##.ad
 d1217 2
 a1218 3
 tidningenridsport.se##.subscribe_now_popup, .type-native, #captive, .hldr_takeover_nl.show, .hldr_takeover
@@ -208,6 +217,8 @@ a1242 1
 tv4play.se##+js(xml-prune, Ad, , se-tv4.videoplaza.tv/proxy/distributor)
 a1243 1
 tv4play.se##.fmYBSE:style(mask-image:unset!important;)
+a1253 1
+undervarttak.se##.middle-banner
 a1254 1
 universitetslararen.se##div[id^="unive-"]
 d1259 1
@@ -228,6 +239,10 @@ www.aftonbladet.se,www.godare.se,www.livsstil.se,www.skonhetsredaktorerna.se,omn
 www.aftonbladet.se,www.godare.se,www.livsstil.se,www.skonhetsredaktorerna.se,omni.se,omniekonomi.se,www.svd.se##+js(set-local-storage-item, CMP:analytics, 0)
 www.aftonbladet.se,www.godare.se,www.livsstil.se,www.skonhetsredaktorerna.se,omni.se,omniekonomi.se,www.svd.se##+js(set-local-storage-item, CMP:marketing, 0)
 www.aftonbladet.se,www.godare.se,www.livsstil.se,www.skonhetsredaktorerna.se,omni.se,omniekonomi.se,www.svd.se##+js(set-local-storage-item, CMP:personalisation, 0)
+a1388 1
+##div.adSidebar
+a1414 1
+##div#topBannerMobile
 a1481 1
 ##div.vue-ad-wrapper
 d1662 1
