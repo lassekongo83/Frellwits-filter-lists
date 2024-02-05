@@ -1,6 +1,6 @@
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days
-! Last modified: 2024-02-04 07:11:12 CET
+! Last modified: 2024-02-05 10:51:37 CET
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPL3 - https://github.com/lassekongo83/Frellwits-filter-lists/blob/master/LICENSE
@@ -259,9 +259,11 @@ borskollen.se##img[src*="/borskollen_newsletter"]:upward(1)
 borskollen.se##.colorized:has-text(/annons/i):upward(a)
 borskollen.se##.elevated-button:has-text(/^Cookie/):upward(.container)
 borskollen.se##.label:has-text(/annons/i):upward(1)
+borskollen.se##.main > div[class^="jsx-"]:last-of-type:has(img[src*="borskollen_appen"])
 borskollen.se##.outer:has(img[src$="ad_label.png"])
 borskollen.se##.sponsored-chip:matches-css(display: block):upward(a)
-borskollen.se##[id^="borskollen_small"], [id^="borskollen_large"], .featured-link, .app-store-box
+borskollen.se##.wrapper > div[class^="jsx-"] > .outer:has(a[href*="casino"])
+borskollen.se##[id^="borskollen_small"], [id^="borskollen_large"], .featured-link, .app-store-box, #borskollen_desktop-side, #borskollen_desktop-panorama, div[id^="borskollen_mobile-detaljsida"]
 borssnack.di.se##.bn_advertisement__panorama, .bn_advertisement__container
 borsvarlden.com##article:has(.border-sponsored)
 borsvarlden.com##.label:has-text(/annons/i):upward(.highlighted-article-block)
@@ -792,7 +794,7 @@ laromedia.se##img[alt="Annons"] + .img-flipper
 lawline.se##[class^="CookiesModal"]
 lchfarkivet.se###timedModal, .modal-backdrop, div#beskrivning[style="font-size: 10px; text-align: center; color: #8E8C8C; max-width: 700px;"]
 lesscarbs.se##article:has(a[href*="/annonssamarbete/"])
-lesscarbs.se##.elementor-image > a:not([href*="https://lesscarbs.se"]), a[href*="/affiliates/"]
+lesscarbs.se##.elementor-image > a:not([href*="https://lesscarbs.se"]), a[href*="/affiliates/"], div[id^="1"][style*="250px"]
 lesscarbs.se##.e-loop-item:has(div[data-eael-wrapper-link*="annonssamarbete"])
 lesscarbs.se#@#.category-annonssamarbete:not(body):not(html)
 letarecept.se###cookie_wrapper
@@ -1193,7 +1195,7 @@ tekniksmart.se##center:has-text(/annons/i):upward(1)
 tekniksmart.se##.code-block, main > div:last-child:not(:only-child), #uid_08313ba73, #uid_ab3738b5a, .jeg_header_wrapper .jeg_midbar
 tekniksmart.se##.wpb_row:has(a[href*="casino"])
 teknikveckan.se##.pill:has-text(/spons/i):upward(.grid-item, .pinned, .articleFlow-item)
-teknikveckan.se,di.se,dn.se,skillingaryd.nu,xn--vrnamo-bua.nu,vardfokus.se,kamerabild.se,tripadvisor.se,swedroid.se,bettingstugan.se,expressen.se,dagensopinion.se,driva-eget.se,bioenergitidningen.se,ifokus.se,padelfeber.se,sv.picmix.com,ifragasatt.se,ehandel.se,jaktojagare.se,sportbloggare.com,bovision.se,familjeliv.se,tidningenridsport.se,golflivet.se,vemringde.se,brollopstorget.se,fastighetsvarlden.se##.ad
+teknikveckan.se,di.se,dn.se,skillingaryd.nu,xn--vrnamo-bua.nu,vardfokus.se,kamerabild.se,tripadvisor.se,swedroid.se,bettingstugan.se,expressen.se,dagensopinion.se,driva-eget.se,bioenergitidningen.se,ifokus.se,padelfeber.se,sv.picmix.com,ifragasatt.se,ehandel.se,jaktojagare.se,sportbloggare.com,bovision.se,familjeliv.se,tidningenridsport.se,golflivet.se,vemringde.se,brollopstorget.se,fastighetsvarlden.se,borskollen.se##.ad
 temadagar.se##+js(noeval-if, targetele)
 temadagar.se##.ez-sidebar-wall
 temperatur.nu##.holidAds:upward(1)
@@ -1252,6 +1254,7 @@ tv.nu###tv-schedule section:has-text(ANNONS)
 typkanske.se,nyan.ax##.gdpr
 underbaraclaras.se##.jet-listing-dynamic-field__content:has-text(/annonssamarbete|reklamsamarbete/i):upward(.jet-listing-grid__item)
 undertian.com###cookieNotification, .gad, div[style^="font-size:11px; margin-left"], div[style^="font-size:11px; margin-left"] + div[style]
+undervarttak.se##.middle-banner
 ungdomsfotboll.se##div[id^="ungdo-"]
 universitetslararen.se##div[id^="unive-"]
 upphandling24.se##aside .textwidget:has-text(ANNONS)
@@ -1392,6 +1395,7 @@ zeromagazine.nu##div[id^="ads"]
 ##div.adDivLeft
 ##div.adDivRight
 ##div.adLinkInner
+##div.adSidebar
 ##div.ad.container
 ##div.ad.panorama
 ##div.annonsbox
@@ -1418,6 +1422,7 @@ zeromagazine.nu##div[id^="ads"]
 ##div#rich-media-ads
 ##div#schibsted-data-controller-sticky
 ##div#snow-container[style*="z-index: 999999"]
+##div#topBannerMobile
 ##div#toppannons
 ##div#topreklam
 ##div#zox-lead-bot
