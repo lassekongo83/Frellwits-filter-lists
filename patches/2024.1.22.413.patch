@@ -1,10 +1,10 @@
-diff name:swefilter lines:236 checksum:418f93a889
+diff name:swefilter lines:250 checksum:46809d3c3f
 d2 1
 a2 1
-! Last updated: Mon, 05 Feb 2024 09:51:55 +0000
+! Last updated: Wed, 07 Feb 2024 07:30:23 +0000
 d4 1
 a4 1
-! Diff-Path: patches/2024.2.5.591.patch#swefilter
+! Diff-Path: patches/2024.2.7.450.patch#swefilter
 a47 1
 .se/files/ads/$image
 a85 1
@@ -135,6 +135,9 @@ radio.se##:is(#RAD_D_station_top, #RAD_D_home_top, #RAD_D_home_inhouse, #RAD_D_s
 d1030 1
 a1030 1
 realtid.se##.realtid-add, .realtid-ad, .infinite-scroll.native-wrapper
+d1032 1
+a1032 1
+recept.se##div[class*="ad-wrapper"]
 a1040 1
 rodeo.net##article[data-section="allmänt"]
 d1048 4
@@ -193,10 +196,15 @@ www.aftonbladet.se,www.godare.se,www.livsstil.se,www.skonhetsredaktorerna.se,omn
 www.aftonbladet.se,www.godare.se,www.livsstil.se,www.skonhetsredaktorerna.se,omni.se,omniekonomi.se,www.svd.se##+js(set-local-storage-item, CMP:analytics, 0)
 www.aftonbladet.se,www.godare.se,www.livsstil.se,www.skonhetsredaktorerna.se,omni.se,omniekonomi.se,www.svd.se##+js(set-local-storage-item, CMP:marketing, 0)
 www.aftonbladet.se,www.godare.se,www.livsstil.se,www.skonhetsredaktorerna.se,omni.se,omniekonomi.se,www.svd.se##+js(set-local-storage-item, CMP:personalisation, 0)
+d1339 1
+a1339 1
+youplay.se,expressen.se,di.se,nsk.se,skd.se,nvp.se,barometern.se,blt.se,bt.se,kristianstadsbladet.se,olandsbladet.se,smp.se,sydostran.se,trelleborgsallehanda.se,ut.se,ystadsallehanda.se,kalmarposten.se,meraosterlen.se,corren.se,folkbladet.se,mvt.se,nt.se,vt.se,klt.nu,vimmerbytidning.se,kuriren.nu,nsd.se,norran.se,pt.se,ekuriren.se,strengnastidning.se,kkuriren.se,sn.se,eposten.se,unt.se,helagotland.se,kindaposten.se,folkbladet.nu,vk.se,vasterbottningen.se,mellanbygden.nu,nordsverige.se,lokaltidningen.nu,vasterastidning.se,mitti.se,thelocal.se,byrum.se,sverigespringer.se,recept.se,viivilla.se,mestmotor.se,babyhjalp.se,fragbite.se,ibnytt.se,realtid.se,cafe.se,kingmagazine.se,vxonews.se,vaxjobladet.se,alekuriren.se,nyheter24.se,svenskgolf.se,golfing.se,gotlandjustnu.se,familjeliv.se,praktisktbatagande.se,norrahalland.se,lokalti.se,lchfarkivet.se,alltforforaldrar.se,idrottensaffarer.se,vf.se,hjotidning.se,kt.se,kt-kuriren.se,sla.se,mariestadstidningen.se,filipstadstidning.se,fryksdalsbygden.se,nwt.se,arvikanyheter.se,nkp.se,saffletidningen.se,provinstidningen.se,dalslanningen.se,nlt.se##+js(json-prune, autoplay)
 a1391 1
 ##div.adSidebar
 a1417 1
 ##div#topBannerMobile
+a1464 1
+##div.mobile-ads-wrapper
 a1484 1
 ##div.vue-ad-wrapper
 d1699 1
@@ -205,6 +213,9 @@ a1699 1
 d1750 1
 a1750 1
 /cookieconsent$script,domain=akademiskahus.se|lundagard.se|voodoofilm.org|alekuriren.se|tidningen.se|fuska.nu|kiacarclub.se|nyheteridag.se|internetstart.se|svampguiden.com|scanaktier.se|historier.net|worldinproperty.se|journalisten.se
+d1763 1
+a1814 1
+/fptools.js$domain=allas.se|elle.se|femina.se|hant.se|mabra.com|residencemagazine.se|svenskdam.se|motherhood.se
 d1965 1
 a1965 1
 /plugins/complianz-gdpr$domain=iconmagazine.se|signprint.se|vilaser.se|arjeplognytt.se|aftonkuriren.se|tidningenglobal.se|tidningensyre.se|landetsfria.nu|fempers.se|macken.xyz|hockeyettan.se|webb-tv.nu|kalmar.nu|brollopsmagasinet.se|megafonen.se|villalivet.se
@@ -222,9 +233,12 @@ d2452 1
 d2454 1
 a2454 1
 ||cdn-cookieyes.com^$domain=lokalti.se|jarnvagar.nu|senses.se|norrmejerier.se|temadagar.se|smartsenior.se|tekniknytt.se|nordigt.se|autonytt.se|vm-fotboll.se|kak.se|smhi.se|borattforum.se|mis.se|universitetslararen.se
+d2492 1
+a2492 1
+||cookiepro.com^$domain=birthday.se|hastnet.se|fz.se|sweclockers.com|djurskyddet.se|havet.nu|svenskfast.se|fiskejournalen.se
 d2638 1
 a2638 1
-||inmobi.com^$domain=alltomelbil.se|rikatillsammans.se|egoinas.se|land.se|moviezine.se|netflixguiden.se|travelnews.se|varldenshaftigaste.se|merinfo.se|foreca.se|matklubben.se|reseguiden.se|newsner.com|humorbibeln.se|sportbibeln.se|ettgottskratt.se|laget.se|byrum.se|sportlovin.se|receptfavoriter.se|forni.se|kimura.se|cornucopia.se|norrahalland.se|elevspel.se
+||inmobi.com^$domain=alltomelbil.se|rikatillsammans.se|egoinas.se|land.se|moviezine.se|netflixguiden.se|travelnews.se|varldenshaftigaste.se|merinfo.se|foreca.se|matklubben.se|reseguiden.se|newsner.com|humorbibeln.se|sportbibeln.se|ettgottskratt.se|laget.se|byrum.se|sportlovin.se|receptfavoriter.se|forni.se|kimura.se|cornucopia.se|norrahalland.se|elevspel.se|foretagande.se
 a2881 1
 ||rpofsweden.se^
 d2898 1
