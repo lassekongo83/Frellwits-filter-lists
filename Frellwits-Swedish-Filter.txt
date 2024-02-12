@@ -1,6 +1,6 @@
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days
-! Last modified: 2024-02-11 05:30:46 CET
+! Last modified: 2024-02-12 13:47:53 CET
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPL3 - https://github.com/lassekongo83/Frellwits-filter-lists/blob/master/LICENSE
@@ -1242,10 +1242,7 @@ tripadvisor.se##[class$="banner_ad"]
 turismnytt.se##.site-wrap > .row > .col-sm-3
 turistmal.se###col_right
 tv4play.se##button:has-text(Besök annonsör)
-tv4play.se##+js(json-prune-fetch-response, bumpers, , propsToMatch, url:/playback2.a2d.tv\/play/)
-tv4play.se##+js(xml-prune, Ad, , se-tv4.videoplaza.tv/proxy/distributor)
 tv4play.se##.avod-web-player-pause:style(background-color:transparent!important;)
-tv4play.se##.fmYBSE:style(mask-image:unset!important;)
 tv4.se##.maxetise
 tv24.se##li[id^="infeed"]
 tvmatchen.nu##.bet365, .panorama-wrapper, .tvg-manager-box, .tv102945, .tv102987, #event_banner, .go-to-partner, .odds, #text-13
@@ -1634,7 +1631,6 @@ zeromagazine.nu##div[id^="ads"]
 /TopBanner$subdocument,domain=hitta.se
 /Vizzit/vizzit.$script
 /Web%20Analytics/*$script
-/aab/tv4play$redirect=noop.js,script,domain=fotbollskanalen.se|koket.se|tv4.se|tv4play.se
 /ab_appnexus_ads
 /ab_stats_params$domain=aftonbladet.se|skonhetsredaktorerna.se
 /ab_tracking$domain=aftonbladet.se
@@ -2340,6 +2336,7 @@ zeromagazine.nu##div[id^="ads"]
 @@||cdn.play.showheroes.com/part/rendered$media
 @@||createsend1.com/css/
 @@||feed.meltwater.com^$subdocument
+@@||fwmrm.net/ad/g/$xhr,domain=tv4play.se
 @@||fwmrm.net/crossdomain.xml$domain=embed.viaplay.com
 @@||happyride.se/img/admarket/$~third-party
 @@||js.createsend1.com/js/jquery
@@ -2349,7 +2346,7 @@ zeromagazine.nu##div[id^="ads"]
 @@||marketo.com^*/form
 @@||nuthymia-llc.ck.page/*/index.js$domain=nickwignall.com
 @@||pricespy-75b8.kxcdn.com/g/ftg_logos$image
-@@||se-tv4.videoplaza.tv/proxy/distributor$domain=tv4play.se|tv4.se|fotbollskanalen.se|koket.se
+@@||se-tv4.videoplaza.tv/proxy/distributor$domain=tv4.se|fotbollskanalen.se|koket.se
 @@||www.googletagmanager.com/gtm.js$script,domain=elgiganten.se
 ||1terms.com^
 ||123on.com/images/pixel
@@ -2531,7 +2528,6 @@ zeromagazine.nu##div[id^="ads"]
 ||d31djwpx7pcvsr.cloudfront.net/production/*/js/segment.js
 ||dackpartner-web.s3.amazonaws.com^$third-party
 ||dakine.com.se^
-||dbf0a92kfjvxs.cloudfront.net/creatives/assets$image
 ||deals.innocode.no^$third-party
 ||delivery.youplay.se/api/player_metrics?
 ||delivery.youplay.se/report?$image
@@ -2645,6 +2641,7 @@ zeromagazine.nu##div[id^="ads"]
 ||ifragasatt.se/stats/
 ||images-ads.aland.com^
 ||images.fotboll.com/*casino
+||images.woo.a2d.tv/creative_assets$image,domain=tv4play.se
 ||imgix.net^*/analytics.$script
 ||imgsct.cookiebot.com/1.gif
 ||imp.laget.se^
@@ -2915,7 +2912,6 @@ zeromagazine.nu##div[id^="ads"]
 ||sexapp.me^
 ||se-affiliate-gallery.aws.aller.com^
 ||se-tv4.videoplaza.tv/proxy/distributor$removeparam=s,xmlhttprequest,domain=fotbollskanalen.se|koket.se|tv4.se
-||se-tv4.videoplaza.tv/proxy/distributor*&xpb=1$important,domain=tv4play.se
 ||shareaholic.com^$third-party
 ||shareaholic.net^$third-party
 ||sharedcount.com^$third-party
@@ -3003,6 +2999,7 @@ zeromagazine.nu##div[id^="ads"]
 ||turistmal.se/js/popup-controller.js
 ||tvmatchen.nu/plugins/splash-redirector
 ||tvmatchen.nu^*/smartbanner
+||tvm-tv4-freewheel.akamaized.net^
 ||twingly.com^$third-party
 ||twitcount.com^$third-party
 ||t.atmng.io^
