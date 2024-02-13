@@ -1,10 +1,10 @@
-diff name:swefilter lines:272 checksum:405932cac8
+diff name:swefilter lines:283 checksum:9eef3572e8
 d2 1
 a2 1
-! Last updated: Mon, 12 Feb 2024 12:48:09 +0000
+! Last updated: Tue, 13 Feb 2024 07:40:45 +0000
 d4 1
 a4 1
-! Diff-Path: patches/2024.2.12.768.patch#swefilter
+! Diff-Path: patches/2024.2.13.460.patch#swefilter
 d114 5
 d121 1
 a121 1
@@ -45,6 +45,8 @@ cykelframjandet.se##:is(article.tg-item, .lcp_catlist li):has(a[href*="/annons"]
 d358 1
 a358 1
 dagensps.se##:is(.text-text-secondary, span.font-bold):has-text(ANNONS):upward(2)
+a416 1
+doktorn.com##.js-cookie-disclaimer
 d424 1
 a424 1
 ehandelstips.se##:is(li, article):has([href*="/sponsradeartiklar/"])
@@ -122,6 +124,9 @@ motorsportbladet.se##:is(article, li):has(a[href*="casino"], a[href*="kasino"])
 d939 1
 a939 1
 naringslivetvgl.se,dalarnasaffarer.se,stockholmsaffarer.se,jamtlandsaffarer.se##:is(.slick-slide, .article-item__line-bottom):has(.sponsored-badge)
+a974 2
+nyatider.nu##section.dce-visibility-event:has(a[href*="casino"])
+nyatider.nu##.elementor-popup-modal:has(a[href="/integritetspolicy"])
 d1000 1
 a1000 1
 oskarshamns-nytt.se##:is(.adsbygoogle, a[href*="casino"]):upward(.elementor-section)
@@ -144,9 +149,10 @@ samnytt.se,samnytt.nu##:is(div[class=""], a, .sticky > div[style="display:grid"]
 d1073 1
 a1073 1
 sidebanner$image,domain=samnytt.se|samnytt.nu
-d1085 1
-a1085 1
+d1085 2
+a1086 2
 sjofart.ax##:is(.sjofa-top-takeover, .sjofa-artikel-pano):upward(section)
+sjostadsbladet.se##a.td_single_image_bg, span.td_single_image_bg[data-img-url*="Annons"]
 d1128 1
 a1128 1
 sporthalsa.se##.header_top, #media_image-2, #text-6, article[class*="veckans-produkt"]
@@ -169,7 +175,10 @@ teknikveckan.se,di.se,dn.se,skillingaryd.nu,xn--vrnamo-bua.nu,vardfokus.se,kamer
 d1245 1
 a1245 1
 tripadvisor.se##a:has-text(Sponsrat av)
-d1250 2
+d1249 4
+a1252 2
+tv4play.se,tv4.se##button:has-text(Besök annonsör)
+tv4play.se,tv4.se##.avod-web-player-pause:style(background-color:transparent!important;)
 a1262 1
 undervarttak.se##.middle-banner
 a1263 1
@@ -229,15 +238,15 @@ a2162 1
 /snowplow$script,domain=~rossmann.pl|~prolific.co|~nrk.no
 d2255 1
 a2255 1
-/wp-content/uploads/*banner$image,domain=marsta.nu|alltomhif.se|branschkoll.se|brollopsmagasinet.se|bussmagasinet.se|danstidningen.se|guldkanalen.se|katerinamagasin.se|ljuskultur.se|sportpanelen.se|turismnytt.se|opulens.se|borattforum.se|dental24.se|tekniknytt.se|pakryss.se|investerarbrevet.se|svensktidskrift.se|electronic.se|restaurangvarlden.se|finanstid.se|naringslivetvgl.se|dalarnasaffarer.se|stockholmsaffarer.se|jamtlandsaffarer.se|battregolf.se|svenskhistoria.se|arjeplognytt.se|bioenergitidningen.se|fisheco.se|autonytt.se|zeromagazine.nu|improveme.se|dagensinfrastruktur.se|nordiskaprojekt.se|svenskbyggtidning.se|grontsamhallsbyggande.se|alekuriren.se
+/wp-content/uploads/*banner$image,domain=marsta.nu|alltomhif.se|branschkoll.se|brollopsmagasinet.se|bussmagasinet.se|danstidningen.se|guldkanalen.se|katerinamagasin.se|ljuskultur.se|sportpanelen.se|turismnytt.se|opulens.se|borattforum.se|dental24.se|tekniknytt.se|pakryss.se|investerarbrevet.se|svensktidskrift.se|electronic.se|restaurangvarlden.se|finanstid.se|naringslivetvgl.se|dalarnasaffarer.se|stockholmsaffarer.se|jamtlandsaffarer.se|battregolf.se|svenskhistoria.se|arjeplognytt.se|bioenergitidningen.se|fisheco.se|autonytt.se|zeromagazine.nu|improveme.se|dagensinfrastruktur.se|nordiskaprojekt.se|svenskbyggtidning.se|grontsamhallsbyggande.se|alekuriren.se|realtid.se
 d2274 1
 a2274 1
 /wp-content\/uploads\/[0-9]+/$script,domain=villalivet.se|skanesport.se|dackavisen.se|automation.se|tidningenproffs.se|densistavilan.se|universitetslararen.se|alekuriren.se
 a2337 1
-@@||fwmrm.net/ad/g/$xhr,domain=tv4play.se
+@@||fwmrm.net/ad/g/$xhr,domain=tv4play.se|tv4.se
 d2347 1
 a2347 1
-@@||se-tv4.videoplaza.tv/proxy/distributor$domain=tv4.se|fotbollskanalen.se|koket.se
+@@||se-tv4.videoplaza.tv/proxy/distributor$domain=fotbollskanalen.se|koket.se
 d2456 1
 a2459 1
 ||casinoutankonto.net^$third-party
@@ -254,14 +263,16 @@ a2503 2
 ||cookie-script.com^$domain=axess.se|dagensjuridik.se|foodfolder.se|arkitektur.se|internetlankar.se|friluftsframjandet.se
 d2529 1
 a2642 1
-||images.woo.a2d.tv/creative_assets$image,domain=tv4play.se
+||images.woo.a2d.tv/creative_assets$image,domain=tv4play.se|tv4.se
 d2647 1
 a2647 1
 ||inmobi.com^$domain=alltomelbil.se|rikatillsammans.se|egoinas.se|land.se|moviezine.se|netflixguiden.se|travelnews.se|varldenshaftigaste.se|merinfo.se|foreca.se|matklubben.se|reseguiden.se|newsner.com|humorbibeln.se|sportbibeln.se|ettgottskratt.se|laget.se|byrum.se|sportlovin.se|receptfavoriter.se|forni.se|kimura.se|cornucopia.se|norrahalland.se|elevspel.se|foretagande.se
 a2890 1
 ||rpofsweden.se^
 d2907 1
-d2913 1
+d2912 2
+a2913 1
+||se-tv4.videoplaza.tv/proxy/distributor$removeparam=s,xmlhttprequest,domain=fotbollskanalen.se|koket.se
 a3000 1
 ||tvm-tv4-freewheel.akamaized.net^
 a3012 1
