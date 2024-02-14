@@ -1,6 +1,6 @@
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days
-! Last modified: 2024-02-13 08:40:31 CET
+! Last modified: 2024-02-14 06:45:36 CET
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPL3 - https://github.com/lassekongo83/Frellwits-filter-lists/blob/master/LICENSE
@@ -200,6 +200,7 @@ autonytt.se###main > .col-links
 autonytt.se##.label:has-text(/sponsrad/i):upward(a)
 autonytt.se##.sidebar_content:has(a[href*="casino"])
 autonytt.se,sv.picmix.com,tekniknytt.se##.leaderboard
+autopower.se##.card:has(.adsbygoogle)
 avanza.se#@#a[title="LeoVegas"]
 aventyrsresor.se,travelnews.se##.newsletter-popup
 axess.se##.popup--cookie
@@ -1030,7 +1031,7 @@ qx.se##.qxa-container
 radiotreby.se##.mobileHide, .mobile-show
 radio.se##div[data-testid="regionscloud-container"] a, div[data-testid="taglist-container"] a:style(background-attachment: none !important; background-image: none !important; background-color: rgb(2, 114, 140) !important;)
 radio.se##:is(#RAD_D_station_top, #RAD_D_home_top, #RAD_D_home_inhouse, #RAD_D_search_top):upward(3)
-ratsit.se,skaraborgsbygden.se##.promo
+ratsit.se##.promo
 ravarumarknaden.se###header > div > div.last, #block-4, #mvp-leader-wrap
 realtid.se##.link:has(.meta--add)
 realtid.se##.realtid-add, .realtid-ad, .infinite-scroll.native-wrapper
@@ -1325,7 +1326,7 @@ webhallen.com##.takeover-link, .cookie-consent
 wernamaten.se,svenskaorduttryck.se,hemmanytt.se,lchfarkivet.se,temadagar.se###ez-cookie-dialog-wrapper
 whowhatwear.co.uk#@#a[href*="/click.linksynergy"] img
 worldinproperty.se##body.newsletter-modal-open:style(overflow:unset!important;)
-worldinproperty.se##.newsletter-modal
+worldinproperty.se##.newsletter-modal, .newsletter-mobile-banner
 www.aftonbladet.se##+js(nostif, TAKEOVER)
 www.aftonbladet.se,www.godare.se,www.livsstil.se,www.skonhetsredaktorerna.se,omni.se,omniekonomi.se,www.svd.se##div[id^="sp_message_container"]
 www.aftonbladet.se,www.godare.se,www.livsstil.se,www.skonhetsredaktorerna.se,omni.se,omniekonomi.se,www.svd.se##+js(set-local-storage-item, CMP:advertising, 0)
