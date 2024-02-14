@@ -1,7 +1,7 @@
 ! Title: Frellwit's Swedish Filter
-! Last updated: Wed, 14 Feb 2024 05:45:48 +0000
+! Last updated: Wed, 14 Feb 2024 11:29:46 +0000
 ! Expires: 5 days
-! Diff-Path: patches/2024.2.14.345.patch#swefilter
+! Diff-Path: patches/2024.2.14.689.patch#swefilter
 ! Diff-Expires: 24 hours
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
@@ -1242,8 +1242,8 @@ tripadvisor.se##a:has-text(Sponsrat av)
 tripadvisor.se##[class$="banner_ad"]
 turismnytt.se##.site-wrap > .row > .col-sm-3
 turistmal.se###col_right
-tv4play.se,tv4.se##button:has-text(Besök annonsör)
-tv4play.se,tv4.se##.avod-web-player-pause:style(background-color:transparent!important;)
+tv4play.se,tv4.se,fotbollskanalen.se,koket.se##button:has-text(Besök annonsör)
+tv4play.se,tv4.se,fotbollskanalen.se,koket.se##.avod-web-player-pause:style(background-color:transparent!important;)
 tv4.se##.maxetise
 tv24.se##li[id^="infeed"]
 tvmatchen.nu##.bet365, .panorama-wrapper, .tvg-manager-box, .tv102945, .tv102987, #event_banner, .go-to-partner, .odds, #text-13
@@ -2337,7 +2337,7 @@ zeromagazine.nu##div[id^="ads"]
 @@||cdn.play.showheroes.com/part/rendered$media
 @@||createsend1.com/css/
 @@||feed.meltwater.com^$subdocument
-@@||fwmrm.net/ad/g/$xhr,domain=tv4play.se|tv4.se
+@@||fwmrm.net/ad/g/$xhr,domain=tv4play.se|tv4.se|fotbollskanalen.se|koket.se
 @@||fwmrm.net/crossdomain.xml$domain=embed.viaplay.com
 @@||happyride.se/img/admarket/$~third-party
 @@||js.createsend1.com/js/jquery
@@ -2642,7 +2642,7 @@ zeromagazine.nu##div[id^="ads"]
 ||ifragasatt.se/stats/
 ||images-ads.aland.com^
 ||images.fotboll.com/*casino
-||images.woo.a2d.tv/creative_assets$image,domain=tv4play.se|tv4.se
+||images.woo.a2d.tv/creative_assets$image,domain=tv4play.se|tv4.se|fotbollskanalen.se|koket.se
 ||imgix.net^*/analytics.$script
 ||imgsct.cookiebot.com/1.gif
 ||imp.laget.se^
