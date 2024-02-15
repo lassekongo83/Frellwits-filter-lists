@@ -1,6 +1,6 @@
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days
-! Last modified: 2024-02-14 12:29:28 CET
+! Last modified: 2024-02-15 14:01:45 CET
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPL3 - https://github.com/lassekongo83/Frellwits-filter-lists/blob/master/LICENSE
@@ -667,7 +667,7 @@ hifitorget.se##.billboard-style, .between-posts
 hippson.se##.sponsorpuff, .presentedby, .presentedby ~ *
 hippson.se##.toolboxheader:has-text(/aktuella samarbeten/i) ~ a.more
 historier.net###right_rail.trackable
-historier.net,kristendate.se,vackertvader.se##.cc-banner.cc-bottom
+historier.net,kristendate.se##.cc-banner.cc-bottom
 hitta.se##a[data-trackimp][target], .hitta-map .integration-txt, .section-details--alb, [class*="dummyAd"], [class*="StyledAdSlot"], [data-bind*="Ad"], div[class^="GraphicAd_"], [class*="adContainer"], [id*="_panorama"], [id*="_skyscraper"], div[style="min-height: 250px;"], div[data-track="displayplacering-customer"], a[data-test="boostAdLink"], div[class^="style_bannerContainer"], [data-track="click-promotion-banner"]
 hitta.se##div[id^="hitta_mobile_"].placeholder:upward(div[class^="height"], div[class^="style_breakout"])
 hitta.se##[class^="styleManual_mainContentBox"] > div[style^="min-height"]:first-of-type
@@ -1157,6 +1157,7 @@ svenskahousegruppen.se###eprivacyModal, .modal-backdrop
 svenskarnaochinternet.se,internetstiftelsen.se###newsletter-sliding
 svenskbyggtidning.se,nyhetersto.se,bussmagasinet.se,brollopsmagasinet.se,borattforum.se,globalpolitics.se,batliv.se,em-fotboll.se,elinor.se,fotbollsresultat.com,automation.se,vm-fotboll.se,husbyggaren.se,vildmarken.se,fisheco.se,nyhetsbyranjarva.se,it-finans.se,it-halsa.se,it-kanalen.se,it-pedagogen.se,it-retail.se,it-hallbarhet.se,battregolf.se,sporthalsa.se##a.gofollow[data-track]
 svenskfarmaci.se##.Dialog[data-dialog-skip-auto-open-for-utm-source-value="Newsletter"]
+svenskfotboll.se##.news-multi-link--sponsor
 svenskgolf.se##.highlight:has(.partnerLabel)
 svenskgolf.se,husohem.se,tidningenhalsa.se,vagabond.se,praktisktbatagande.se,akaskidor.se,utemagasinet.se,sportfack.se,hemtrevligt.se,mestmotor.se##.partnerCard, .partnerContent, .entry-content figure.wp-block-image, .category-partner, .ams-playad-injected
 svenskhistoria.se##.widget_et_ads, .module-etads, #text-13, #block-4, a[target="_blank"][rel="noopener noreferrer"], a > img[width="300"][height="250"], a > img[width="800"][height="175"], a[href*="casino"], a[href*="poker"], a[href*="kasino"], a img[width="1000"][height="300"]
@@ -1223,7 +1224,6 @@ tidningenridsport.se##body:remove-class(cli-barmodal-open)
 tidningenridsport.se##.entry-content:style(display: initial !important;)
 tidningenridsport.se##.subscribe_now_popup, .type-native, #captive, .hldr_takeover_nl.show, .hldr_takeover
 tidningenskriva.se##section.widget_text:has(div[id^="ad-"])
-tidningenskriva.se##.cc-window
 tidningen.djurskyddet.se##.ai-track
 tidningen.nu##span:has-text(/^Annons$/):upward(1) + .textwidget
 tidningen.se##.sidebar .widget_widget_code
@@ -1270,6 +1270,7 @@ utm_$document,removeparam=/^utm_/,domain=tv.nu|booli.se|expressen.se|aftonbladet
 utsidan.se##.clamzone
 utsidan.se##.betart-marker:matches-css(after, content: /Annons/i):upward(.documentpush-group)
 vackertvader.se##div[class^="ad-300x250"], div[class^="ad_300x250"]
+vackertvader.se,tidningenskriva.se,veckansnyheter.se##.cc-window
 vagabond.se##.latest-article-native
 varden.se##app-native-puff, .header-top-banners
 varden.se##.carousel-slide:has(.sponsored-label)
@@ -1706,6 +1707,7 @@ zeromagazine.nu##div[id^="ads"]
 /assets/site/modules/GTM_
 /assets/site/modules/ctm-
 /assets/tracking$domain=hornbach.se
+/assets/yb_$domain=vackertvader.se
 /ast.$script,domain=blocket.se
 /atomic-blocks$script,domain=foretagsverige.se|forskningsverige.se|motorbibeln.se|hallbarhetsverige.se|tillvaxtsverige.se|grillbibeln.se|kampenmotcancer.se|folkhalsasverige.se
 /atoms/images/*banner$domain=etc.se
@@ -1726,6 +1728,7 @@ zeromagazine.nu##div[id^="ads"]
 /bilder/annonser/*
 /bilder/betalannonser
 /bilder/logotyper/partners
+/bilder/sponsorer
 /bitcsys/js/bit.js
 /block/samarbetspartners$image
 /bloggerfy/tracker
@@ -1744,7 +1747,6 @@ zeromagazine.nu##div[id^="ads"]
 /bundles/parsely$domain=expressen.se
 /bunsen/events$domain=yelp.se
 /burst-statistics
-/caos$script,domain=veckansnyheter.se
 /casinokollen$all,domain=aftonbladet.se
 /casino_utan_licens$image
 /cdigo-audit.js
@@ -2140,6 +2142,7 @@ zeromagazine.nu##div[id^="ads"]
 /scripts/js3caf.js
 /scripts/leeads-
 /scripts/opt/view.analytics.js
+/script.js$3p,domain=spelkritik.se
 /seenthis-hub$script
 /se-ads-microservice
 /se-calico/bundle.js
@@ -2286,7 +2289,6 @@ zeromagazine.nu##div[id^="ads"]
 /www/images/*$domain=elektronikforumet.com
 /xhr-ads.min.js
 /xhr/b/s$domain=skyscanner.se
-/yb_madmen_chain$domain=vackertvader.se
 /zad.js$domain=nordic.ign.com
 /zdadkit$domain=nordic.ign.com
 /*banner-nyhetsbrev*.mp4
@@ -2350,7 +2352,6 @@ zeromagazine.nu##div[id^="ads"]
 @@||marketo.com^*/form
 @@||nuthymia-llc.ck.page/*/index.js$domain=nickwignall.com
 @@||pricespy-75b8.kxcdn.com/g/ftg_logos$image
-@@||se-tv4.videoplaza.tv/proxy/distributor$domain=fotbollskanalen.se|koket.se
 @@||www.googletagmanager.com/gtm.js$script,domain=elgiganten.se
 ||1terms.com^
 ||123on.com/images/pixel
@@ -2775,7 +2776,6 @@ zeromagazine.nu##div[id^="ads"]
 ||myadmessenger.com^$third-party
 ||mymediaindex.com^$third-party
 ||narkive.se/ajax/Telem
-||netlify.app/script.js$domain=spelkritik.se
 ||network-n.com^$third-party
 ||newsharecounts.*.amazonaws.com/nsc.js
 ||newstag.com/t/e$xmlhttprequest
@@ -2915,7 +2915,6 @@ zeromagazine.nu##div[id^="ads"]
 ||service.force.com^$domain=allabolag.se
 ||sexapp.me^
 ||se-affiliate-gallery.aws.aller.com^
-||se-tv4.videoplaza.tv/proxy/distributor$removeparam=s,xmlhttprequest,domain=fotbollskanalen.se|koket.se
 ||shareaholic.com^$third-party
 ||shareaholic.net^$third-party
 ||sharedcount.com^$third-party
@@ -3024,7 +3023,6 @@ zeromagazine.nu##div[id^="ads"]
 ||vejasskor.com^
 ||viadata.store^$third-party
 ||viagogo.se^
-||videoplaza.*/proxy/tracker?
 ||viforetag.se^$third-party
 ||vinguiden.com^$third-party
 ||viralize.tv/t-bid
