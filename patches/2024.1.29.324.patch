@@ -1,10 +1,10 @@
-diff name:swefilter lines:277 checksum:d80bd80f0e
+diff name:swefilter lines:291 checksum:c838770658
 d2 1
 a2 1
-! Last updated: Wed, 14 Feb 2024 11:29:46 +0000
+! Last updated: Thu, 15 Feb 2024 13:02:00 +0000
 d4 1
 a4 1
-! Diff-Path: patches/2024.2.14.689.patch#swefilter
+! Diff-Path: patches/2024.2.15.781.patch#swefilter
 d114 5
 d121 1
 a121 1
@@ -85,6 +85,9 @@ d661 1
 a663 2
 hemnet.se##:is(article, li):has([class*="SponsoredLabel"], .article-card__sponsored-text)
 hemnet.se##:is(small, span):has-text(/sponsrad/i):upward(article, li, a)
+d670 1
+a670 1
+historier.net,kristendate.se##.cc-banner.cc-bottom
 d691 1
 a692 1
 ibnytt.se##:is(a[href*="casino"], a[href*="speltips"]):upward(.widget)
@@ -155,6 +158,8 @@ d1137 1
 a1137 1
 startaochdriva.se##:is(.latest-post, .td-cpt-post):has(a[href*="/sponsrat"])
 d1142 5
+a1161 1
+svenskfotboll.se##.news-multi-link--sponsor
 d1179 1
 a1179 1
 swedroid.se##div[id$="_ad"], div[id$="_ad_mobile"], .externalTopMobile, #externalTopMobile, a[href^="//www.prisjakt.nu/produkt"], #nativendo-mainfeed + aside > .article, .article-footer > h3, .article-footer > .aeChart, #newExternal
@@ -167,6 +172,7 @@ tekniknytt.se##:is(.top-news, .big_article):has(img[src*="casino"], img[src*="su
 d1204 1
 a1204 1
 teknikveckan.se,di.se,dn.se,skillingaryd.nu,xn--vrnamo-bua.nu,vardfokus.se,kamerabild.se,tripadvisor.se,swedroid.se,bettingstugan.se,expressen.se,dagensopinion.se,driva-eget.se,bioenergitidningen.se,ifokus.se,padelfeber.se,sv.picmix.com,ifragasatt.se,ehandel.se,jaktojagare.se,sportbloggare.com,bovision.se,familjeliv.se,tidningenridsport.se,golflivet.se,vemringde.se,brollopstorget.se,fastighetsvarlden.se,borskollen.se##.ad
+d1226 1
 d1244 1
 a1244 1
 tripadvisor.se##a:has-text(Sponsrat av)
@@ -179,6 +185,8 @@ undervarttak.se##.middle-banner
 a1262 1
 universitetslararen.se##div[id^="unive-"]
 d1267 1
+a1273 1
+vackertvader.se,tidningenskriva.se,veckansnyheter.se##.cc-window
 d1277 1
 a1277 1
 vardfokus.se,tidningenridsport.se,morakniv.se##.cli-modal-backdrop
@@ -209,9 +217,14 @@ a1470 1
 a1490 1
 ##div.vue-ad-wrapper
 d1632 1
+a1703 1
+/assets/yb_$domain=vackertvader.se
 d1705 1
 a1705 1
 /atomic-blocks$script,domain=foretagsverige.se|forskningsverige.se|motorbibeln.se|hallbarhetsverige.se|tillvaxtsverige.se|grillbibeln.se|kampenmotcancer.se|folkhalsasverige.se
+a1723 1
+/bilder/sponsorer
+d1742 1
 d1756 1
 a1756 1
 /cookieconsent$script,domain=akademiskahus.se|lundagard.se|voodoofilm.org|tidningen.se|fuska.nu|kiacarclub.se|nyheteridag.se|internetstart.se|svampguiden.com|scanaktier.se|historier.net|worldinproperty.se|journalisten.se
@@ -230,6 +243,8 @@ a1977 2
 d2003 1
 a2003 1
 /plugins/gdpr-cookie-compliance$domain=goteborgsgolfaren.se|nyhetersto.se|modernalivet.se|baraenkakatill.se|vildmarken.se
+a2136 1
+/script.js$3p,domain=spelkritik.se
 d2161 1
 a2161 1
 /snowplow$script,domain=~rossmann.pl|~prolific.co|~nrk.no
@@ -239,11 +254,10 @@ a2254 1
 d2273 1
 a2273 1
 /wp-content\/uploads\/[0-9]+/$script,domain=villalivet.se|skanesport.se|dackavisen.se|automation.se|tidningenproffs.se|densistavilan.se|universitetslararen.se|alekuriren.se
+d2283 1
 a2336 1
 @@||fwmrm.net/ad/g/$xhr,domain=tv4play.se|tv4.se|fotbollskanalen.se|koket.se
 d2346 1
-a2346 1
-@@||se-tv4.videoplaza.tv/proxy/distributor$domain=fotbollskanalen.se|koket.se
 d2455 1
 a2458 1
 ||casinoutankonto.net^$third-party
@@ -264,15 +278,15 @@ a2641 1
 d2646 1
 a2646 1
 ||inmobi.com^$domain=alltomelbil.se|rikatillsammans.se|egoinas.se|land.se|moviezine.se|netflixguiden.se|travelnews.se|varldenshaftigaste.se|merinfo.se|foreca.se|matklubben.se|reseguiden.se|newsner.com|humorbibeln.se|sportbibeln.se|ettgottskratt.se|laget.se|byrum.se|sportlovin.se|receptfavoriter.se|forni.se|kimura.se|cornucopia.se|norrahalland.se|elevspel.se|foretagande.se
+d2771 1
 a2889 1
 ||rpofsweden.se^
 d2906 1
 d2911 2
-a2912 1
-||se-tv4.videoplaza.tv/proxy/distributor$removeparam=s,xmlhttprequest,domain=fotbollskanalen.se|koket.se
 a2999 1
 ||tvm-tv4-freewheel.akamaized.net^
 a3011 1
 ||usefathom.com^$domain=fz.se|sweclockers.com
+d3019 1
 a3023 1
 ||voyager-widgets.aftonbladet.se/widgets/sports

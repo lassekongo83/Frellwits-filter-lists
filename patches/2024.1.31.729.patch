@@ -1,10 +1,10 @@
-diff name:swefilter lines:258 checksum:d80bd80f0e
+diff name:swefilter lines:272 checksum:c838770658
 d2 1
 a2 1
-! Last updated: Wed, 14 Feb 2024 11:29:46 +0000
+! Last updated: Thu, 15 Feb 2024 13:02:00 +0000
 d4 1
 a4 1
-! Diff-Path: patches/2024.2.14.689.patch#swefilter
+! Diff-Path: patches/2024.2.15.781.patch#swefilter
 d114 5
 d145 1
 a145 1
@@ -77,6 +77,9 @@ d662 1
 a664 2
 hemnet.se##:is(article, li):has([class*="SponsoredLabel"], .article-card__sponsored-text)
 hemnet.se##:is(small, span):has-text(/sponsrad/i):upward(article, li, a)
+d671 1
+a671 1
+historier.net,kristendate.se##.cc-banner.cc-bottom
 d692 1
 a693 1
 ibnytt.se##:is(a[href*="casino"], a[href*="speltips"]):upward(.widget)
@@ -147,6 +150,8 @@ d1138 1
 a1138 1
 startaochdriva.se##:is(.latest-post, .td-cpt-post):has(a[href*="/sponsrat"])
 d1143 5
+a1162 1
+svenskfotboll.se##.news-multi-link--sponsor
 d1199 1
 a1200 2
 tekniknytt.se##:is(.article_widget_preview, .article_widget_listing):has(a[href*="casino"], a[href*="kasino"])
@@ -154,6 +159,7 @@ tekniknytt.se##:is(.top-news, .big_article):has(img[src*="casino"], img[src*="su
 d1206 1
 a1206 1
 teknikveckan.se,di.se,dn.se,skillingaryd.nu,xn--vrnamo-bua.nu,vardfokus.se,kamerabild.se,tripadvisor.se,swedroid.se,bettingstugan.se,expressen.se,dagensopinion.se,driva-eget.se,bioenergitidningen.se,ifokus.se,padelfeber.se,sv.picmix.com,ifragasatt.se,ehandel.se,jaktojagare.se,sportbloggare.com,bovision.se,familjeliv.se,tidningenridsport.se,golflivet.se,vemringde.se,brollopstorget.se,fastighetsvarlden.se,borskollen.se##.ad
+d1228 1
 d1250 4
 a1253 2
 tv4play.se,tv4.se,fotbollskanalen.se,koket.se##button:has-text(Besök annonsör)
@@ -163,6 +169,8 @@ undervarttak.se##.middle-banner
 a1264 1
 universitetslararen.se##div[id^="unive-"]
 d1269 1
+a1275 1
+vackertvader.se,tidningenskriva.se,veckansnyheter.se##.cc-window
 d1279 1
 a1279 1
 vardfokus.se,tidningenridsport.se,morakniv.se##.cli-modal-backdrop
@@ -191,9 +199,14 @@ a1425 1
 a1472 1
 ##div.mobile-ads-wrapper
 d1635 1
+a1706 1
+/assets/yb_$domain=vackertvader.se
 d1708 1
 a1708 1
 /atomic-blocks$script,domain=foretagsverige.se|forskningsverige.se|motorbibeln.se|hallbarhetsverige.se|tillvaxtsverige.se|grillbibeln.se|kampenmotcancer.se|folkhalsasverige.se
+a1726 1
+/bilder/sponsorer
+d1745 1
 d1759 1
 a1759 1
 /cookieconsent$script,domain=akademiskahus.se|lundagard.se|voodoofilm.org|tidningen.se|fuska.nu|kiacarclub.se|nyheteridag.se|internetstart.se|svampguiden.com|scanaktier.se|historier.net|worldinproperty.se|journalisten.se
@@ -211,6 +224,8 @@ a1979 1
 d2006 1
 a2006 1
 /plugins/gdpr-cookie-compliance$domain=goteborgsgolfaren.se|nyhetersto.se|modernalivet.se|baraenkakatill.se|vildmarken.se
+a2139 1
+/script.js$3p,domain=spelkritik.se
 d2164 1
 a2164 1
 /snowplow$script,domain=~rossmann.pl|~prolific.co|~nrk.no
@@ -220,11 +235,10 @@ a2257 1
 d2276 1
 a2276 1
 /wp-content\/uploads\/[0-9]+/$script,domain=villalivet.se|skanesport.se|dackavisen.se|automation.se|tidningenproffs.se|densistavilan.se|universitetslararen.se|alekuriren.se
+d2286 1
 a2339 1
 @@||fwmrm.net/ad/g/$xhr,domain=tv4play.se|tv4.se|fotbollskanalen.se|koket.se
 d2349 1
-a2349 1
-@@||se-tv4.videoplaza.tv/proxy/distributor$domain=fotbollskanalen.se|koket.se
 d2458 1
 a2461 1
 ||casinoutankonto.net^$third-party
@@ -245,15 +259,15 @@ a2644 1
 d2649 1
 a2649 1
 ||inmobi.com^$domain=alltomelbil.se|rikatillsammans.se|egoinas.se|land.se|moviezine.se|netflixguiden.se|travelnews.se|varldenshaftigaste.se|merinfo.se|foreca.se|matklubben.se|reseguiden.se|newsner.com|humorbibeln.se|sportbibeln.se|ettgottskratt.se|laget.se|byrum.se|sportlovin.se|receptfavoriter.se|forni.se|kimura.se|cornucopia.se|norrahalland.se|elevspel.se|foretagande.se
+d2774 1
 a2892 1
 ||rpofsweden.se^
 d2909 1
 d2914 2
-a2915 1
-||se-tv4.videoplaza.tv/proxy/distributor$removeparam=s,xmlhttprequest,domain=fotbollskanalen.se|koket.se
 a3002 1
 ||tvm-tv4-freewheel.akamaized.net^
 a3014 1
 ||usefathom.com^$domain=fz.se|sweclockers.com
+d3022 1
 a3026 1
 ||voyager-widgets.aftonbladet.se/widgets/sports
