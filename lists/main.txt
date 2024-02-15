@@ -114,6 +114,7 @@
 /bilder/annonser/*
 /bilder/betalannonser
 /bilder/logotyper/partners
+/bilder/sponsorer
 /bilder-for-annonser$image
 /block/samarbetspartners$image
 /bmb-related-teasers$xmlhttprequest
@@ -952,7 +953,6 @@ casino-utan-$image
 ||umami.nordiskehandel.cloud^
 ||upsales.com^$third-party
 ||userneeds.com^$third-party
-||videoplaza.*/proxy/tracker?
 ||viralize.tv/t-bid
 ||wct-1.com^$third-party
 ||wct-2.com^$third-party
@@ -1174,14 +1174,13 @@ automation.se,verkstadstidningen.se,transportnytt.se,datormagazin.se##.a-wrap
 ! -- Specific tracking, analytics, etc
 ||rek.ai^$third-party,domain=ng.se
 ||rekai.se^$third-party,domain=folkpool.se
-||netlify.app/script.js$domain=spelkritik.se
 ||usefathom.com^$domain=fz.se|sweclockers.com
 utm_$document,removeparam=/^utm_/,domain=tv.nu|booli.se|expressen.se|aftonbladet.se|bostad.blocket.se|dagensps.se
 /analytics$domain=gbgfotboll.se|stff.se|svenskfotboll.se|di.se|etc.se|vackertvader.se|skogsforum.se|skolporten.se
-/caos$script,domain=veckansnyheter.se
 /glimr$script,domain=aftonbladet.se|blocket.se|livsstil.se|godare.se
 /profile$ping,domain=feber.se|hamnen.se|tasteline.com|tjock.se|veckorevyn.com|marcusoscarsson.se|handbollskanalen.se|surfa.se|nordichardware.se|hockeynews.se|tv4.se|fotbollskanalen.se|koket.se|teknikveckan.se|56kilo.se
 /utag$script,domain=gaffa.se
+/script.js$3p,domain=spelkritik.se
 ! Websites with no obvious or visible facebook login. Will just assume it's used for tracking.
 ||connect.facebook.net^$domain=friatider.se|fotosidan.se|ng.se|hammarbyfotboll.se|aktiespararna.se|psykologiguiden.se|lektionsbanken.se|lajvo.se|kvinnatillkvinna.se|epochtimes.se|dovastidning.se|newsner.com|humorbibeln.se|sportbibeln.se|ettgottskratt.se|pussad.se|vasterastidning.se|mitti.se|sillyseason.se|loppi.se|kyrkanstidning.se|tn.se
 ! Scriptlets
@@ -1257,10 +1256,11 @@ barnistan.se,welma.se,ingenjorsjobb.se##.cookie-notice
 forexgruppen.se##.cky-consent-container
 dinvinguide.se###gdpr
 bioenergitidningen.se###cookieinfo
-historier.net,kristendate.se,vackertvader.se##.cc-banner.cc-bottom
+historier.net,kristendate.se##.cc-banner.cc-bottom
 lifeofsvea.se,quizza.nu##.cookie-info
 lira.se###cookies-accept
 doktorn.com##.js-cookie-disclaimer
+vackertvader.se,tidningenskriva.se,veckansnyheter.se##.cc-window
 ! CSS to fix annoyances
 it-finans.se,it-halsa.se,it-kanalen.se,it-pedagogen.se,it-retail.se,it-hallbarhet.se,biostock.se,tobaksfakta.se##.pum-open:style(overflow:auto!important)
 oru.se,tui.se##.no-scroll:style(overflow: initial !important;)
@@ -2138,6 +2138,7 @@ sbf.se##.sv-cookie-consent-banner, .hiq-partners-banner
 tidningendacksnack.se##.ann-puff
 svartgul.se##li.embedded
 motorsportbladet.se##:is(article, li):has(a[href*="casino"], a[href*="kasino"])
+svenskfotboll.se##.news-multi-link--sponsor
 
 ! === Musik, Radio, Film och TV
 voodoofilm.org##.content-news:has(span[id*="Sponsored"])
@@ -2214,8 +2215,6 @@ autopower.se##.card:has(.adsbygoogle)
 ! === Video media
 
 ! TV4
-||se-tv4.videoplaza.tv/proxy/distributor$removeparam=s,xmlhttprequest,domain=fotbollskanalen.se|koket.se
-@@||se-tv4.videoplaza.tv/proxy/distributor$domain=fotbollskanalen.se|koket.se
 @@||fwmrm.net/ad/g/$xhr,domain=tv4play.se|tv4.se|fotbollskanalen.se|koket.se
 ||tvm-tv4-freewheel.akamaized.net^
 ||images.woo.a2d.tv/creative_assets$image,domain=tv4play.se|tv4.se|fotbollskanalen.se|koket.se
@@ -3187,12 +3186,11 @@ ordfrontmagasin.se##.oc_cb_wrapper, .simple-image a:not([href^="/"]):not([href*=
 skogssallskapet.se,formas.se,rf.se##.env-modal-dialog--show, .env-modal-dialog__backdrop
 skogssallskapet.se,formas.se,rf.se##body:style(overflow:initial!important; position:initial!important;)
 webhallen.com##.takeover-link, .cookie-consent
-/yb_madmen_chain$domain=vackertvader.se
+/assets/yb_$domain=vackertvader.se
 vackertvader.se##div[class^="ad-300x250"], div[class^="ad_300x250"]
 ||mis.se/count/
 skolporten.se##.article-short:has(a[href*="/sponsrat-innehall"])
 ||stats.helsingborg.se^
-tidningenskriva.se##.cc-window
 tidningenskriva.se##section.widget_text:has(div[id^="ad-"])
 elevspel.se##.rok-unit, .rok-desktop, .rok-mobile
 elevspel.se##+js(set, wedoitright, noopFunc)
