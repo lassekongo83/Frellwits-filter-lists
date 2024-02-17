@@ -1,10 +1,13 @@
-diff name:swefilter lines:196 checksum:177c6c61e1
+diff name:swefilter lines:215 checksum:a17680f1c5
 d2 1
 a2 1
-! Last updated: Fri, 16 Feb 2024 07:52:09 +0000
+! Last updated: Sat, 17 Feb 2024 11:56:52 +0000
 d4 1
 a4 1
-! Diff-Path: patches/2024.2.16.472.patch#swefilter
+! Diff-Path: patches/2024.2.17.716.patch#swefilter
+d115 1
+a115 1
+aftonbladet.se,halsasverige.se,nojesmagasinet.nu,stoppapressarna.se,langd.se,pressbladet.se,svenskpress.se,foretagsbladet.se,gestrikemagasinet.se,cfanytt.se,lasarnas.se,hembostad.nu,sportidrott.se,skolvarlden.se,computersweden.se##.advert
 d140 1
 a140 1
 alekuriren.se##div[id^="aleku-"], #carouselVideoAd, #carouselVideoAdMobile, .native-bg, .casino
@@ -25,11 +28,17 @@ bussmagasinet.se,byggteknikforlaget.se,dialasen.com,torbjornstips.se,backpacking
 d294 1
 a294 1
 byggahus.se,expressen.se,filmtopp.se,destination.se,spokbloggen.nu,folkhalsasverige.se,foretagsverige.se,forskningsverige.se,motorbibeln.se,hallbarhetsverige.se,tillvaxtsverige.se,grillbibeln.se,kampenmotcancer.se,bolagsfakta.se##.ad-container
+a328 2
+computersweden.se##.nativo
+computersweden.se##.latest-content__card-secondary:has(.nativo)
 a412 1
 doktorn.com##.js-cookie-disclaimer
 d470 1
 a470 1
 extrakt.se,macken.xyz,hockeyettan.se,dialasen.com###cmplz-cookiebanner-container
+a535 2
+forum.macworld.se##.idgcp__layer
+forum.macworld.se##.idgcp__layer--active, .idgcp__layer--active body:style(overflow: initial !important;)
 d627 1
 a627 1
 hammarbyfotboll.se###seasonalTakeover, div[class*="sponsorBarContainer"], div[class*="footerSponsors"], .slick-slide a[target="_blank"]
@@ -39,6 +48,7 @@ historier.net,kristendate.se##.cc-banner.cc-bottom
 d678 1
 a678 1
 humorbibeln.se,newsner.com,sportbibeln.se,ettgottskratt.se,djurbibeln.se##.inline-share-buttons
+d689 5
 a790 1
 lektionsbanken.se,runnersworld.se##.footer-newsletter
 d792 1
@@ -157,6 +167,9 @@ d2268 1
 a2268 1
 /wp-content\/uploads\/[0-9]+/$script,domain=villalivet.se|skanesport.se|dackavisen.se|automation.se|tidningenproffs.se|densistavilan.se|universitetslararen.se|alekuriren.se
 d2278 1
+d2318 1
+a2318 1
+@@/consent.json$domain=forum.macworld.se
 a2331 1
 @@||fwmrm.net/ad/g/$xhr,domain=tv4play.se|tv4.se|fotbollskanalen.se|koket.se
 d2341 1
@@ -165,8 +178,9 @@ a2356 2
 ||adhype-assets.com/images/*casino
 a2452 1
 ||casinoutankonto.net^$third-party
-d2455 1
-a2455 1
+d2454 2
+a2455 2
+||ccpa.sp-prod.net^$domain=m3.se|pcforalla.se|macworld.se|computersweden.se
 ||cdn-cookieyes.com^$domain=lokalti.se|jarnvagar.nu|senses.se|norrmejerier.se|temadagar.se|smartsenior.se|tekniknytt.se|nordigt.se|autonytt.se|vm-fotboll.se|kak.se|smhi.se|borattforum.se|mis.se|universitetslararen.se|em-fotboll.se
 d2479 1
 a2479 1
@@ -182,6 +196,7 @@ a2495 2
 ||cookie-script.com/analytics
 ||cookie-script.com^$domain=axess.se|dagensjuridik.se|foodfolder.se|arkitektur.se|internetlankar.se|friluftsframjandet.se
 d2521 1
+d2631 1
 a2634 1
 ||images.woo.a2d.tv/creative_assets$image,domain=tv4play.se|tv4.se|fotbollskanalen.se|koket.se
 d2639 1
@@ -190,7 +205,11 @@ a2639 1
 d2764 1
 d2790 1
 a2790 1
-||onesignal.com^$domain=samnytt.se|battrestadsdel.se|beernews.se|ungdomsfotboll.se|rabattsok.se|1x2.se|cannabis.se|dackavisen.se|dalarnasaffarer.se|driva-eget.se|skogsaktuellt.se|maskinbladet.se|entreprenadaktuellt.se|ja.se|newsner.com|humorbibeln.se|sportbibeln.se|ettgottskratt.se|djurbibeln.se|finanstid.se|fokus.se|fotbollskane.se|fotbollsthlm.se|idg.se|macken.xyz|naringslivetvgl.se|dalarnasaffarer.se|stockholmsaffarer.se|jamtlandsaffarer.se|netflixguiden.se|nyadagbladet.se|oskarshamns-nytt.se|skolporten.se|swebbtv.se|thepattayanews.se|vaken.se|aktieskolan.se|fastighetsvarlden.se|mcparken.se|gaffa.se|alltomnorrtalje.se
+||onesignal.com^$domain=samnytt.se|battrestadsdel.se|beernews.se|ungdomsfotboll.se|rabattsok.se|1x2.se|cannabis.se|dackavisen.se|dalarnasaffarer.se|driva-eget.se|skogsaktuellt.se|maskinbladet.se|entreprenadaktuellt.se|ja.se|newsner.com|humorbibeln.se|sportbibeln.se|ettgottskratt.se|djurbibeln.se|finanstid.se|fokus.se|fotbollskane.se|fotbollsthlm.se|macken.xyz|naringslivetvgl.se|dalarnasaffarer.se|stockholmsaffarer.se|jamtlandsaffarer.se|netflixguiden.se|nyadagbladet.se|oskarshamns-nytt.se|skolporten.se|swebbtv.se|thepattayanews.se|vaken.se|aktieskolan.se|fastighetsvarlden.se|mcparken.se|gaffa.se|alltomnorrtalje.se
+d2828 1
+d2835 1
+a2835 1
+||privacy-mgmt.com^$domain=radio.se|dagenstv.com|kolla.tv|computersweden.se
 d2904 2
 a2992 1
 ||tvm-tv4-freewheel.akamaized.net^
