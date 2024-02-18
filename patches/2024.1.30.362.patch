@@ -1,10 +1,10 @@
-diff name:swefilter lines:337 checksum:a17680f1c5
+diff name:swefilter lines:348 checksum:45f0bc545f
 d2 1
 a2 1
-! Last updated: Sat, 17 Feb 2024 11:56:52 +0000
+! Last updated: Sun, 18 Feb 2024 07:14:09 +0000
 d4 1
 a4 1
-! Diff-Path: patches/2024.2.17.716.patch#swefilter
+! Diff-Path: patches/2024.2.18.434.patch#swefilter
 d114 5
 d120 1
 a120 1
@@ -45,6 +45,13 @@ cykelframjandet.se##:is(article.tg-item, .lcp_catlist li):has(a[href*="/annons"]
 d359 1
 a359 1
 dagensps.se##:is(.text-text-secondary, span.font-bold):has-text(ANNONS):upward(2)
+a393 6
+dinbyggare.se##article.category-leverantorer
+dinbyggare.se##p[style="text-align: center;"]:has(a[target] > img)
+dinbyggare.se##*:style(-webkit-touch-callout: default !important; -webkit-user-select: text !important; -moz-user-select: text !important; -ms-user-select: text !important; user-select: text !important;)
+dinbyggare.se##+js(rmnt, noscript)
+dinbyggare.se##+js(rmnt, script, /wccp_pro/)
+dinbyggare.se##::selection:style(background-color:#007aff!important;)
 a417 1
 doktorn.com##.js-cookie-disclaimer
 d425 1
@@ -140,11 +147,9 @@ d940 1
 a940 1
 naringslivetvgl.se,dalarnasaffarer.se,stockholmsaffarer.se,jamtlandsaffarer.se##:is(.slick-slide, .article-item__line-bottom):has(.sponsored-badge)
 d949 4
-a952 4
+a952 2
 newsner.com,humorbibeln.se,sportbibeln.se,ettgottskratt.se,djurbibeln.se###wsfb-container, .share-buttons, .ad-space
 newsner.com,humorbibeln.se,sportbibeln.se,ettgottskratt.se,djurbibeln.se##.ssp_divider:has(.sponsored-bar)
-newsner.com,humorbibeln.se,sportbibeln.se,ettgottskratt.se,djurbibeln.se,zeinaskitchen.se,dinbyggare.se,trafiksakerhet.se,boktugg.se,lakartidningen.se,villalivet.se,matsafari.nu,forexgruppen.se##+js(acs, monsterinsights_frontend)
-newsner.com,humorbibeln.se,sportbibeln.se,ettgottskratt.se,djurbibeln.se,zeinaskitchen.se,dinbyggare.se,trafiksakerhet.se,boktugg.se,lakartidningen.se,villalivet.se,matsafari.nu,forexgruppen.se##+js(set, mi_track_user, false)
 a975 2
 nyatider.nu##section.dce-visibility-event:has(a[href*="casino"])
 nyatider.nu##.elementor-popup-modal:has(a[href="/integritetspolicy"])
@@ -230,6 +235,9 @@ www.aftonbladet.se,www.godare.se,www.livsstil.se,www.skonhetsredaktorerna.se,omn
 d1347 1
 a1347 1
 youplay.se,expressen.se,di.se,nsk.se,skd.se,nvp.se,barometern.se,blt.se,bt.se,kristianstadsbladet.se,olandsbladet.se,smp.se,sydostran.se,trelleborgsallehanda.se,ut.se,ystadsallehanda.se,kalmarposten.se,meraosterlen.se,corren.se,folkbladet.se,mvt.se,nt.se,vt.se,klt.nu,vimmerbytidning.se,kuriren.nu,nsd.se,norran.se,pt.se,ekuriren.se,strengnastidning.se,kkuriren.se,sn.se,eposten.se,unt.se,helagotland.se,kindaposten.se,folkbladet.nu,vk.se,vasterbottningen.se,mellanbygden.nu,nordsverige.se,lokaltidningen.nu,vasterastidning.se,mitti.se,thelocal.se,byrum.se,sverigespringer.se,recept.se,viivilla.se,mestmotor.se,babyhjalp.se,fragbite.se,ibnytt.se,realtid.se,cafe.se,kingmagazine.se,vxonews.se,vaxjobladet.se,alekuriren.se,nyheter24.se,svenskgolf.se,golfing.se,gotlandjustnu.se,familjeliv.se,praktisktbatagande.se,norrahalland.se,lokalti.se,lchfarkivet.se,alltforforaldrar.se,idrottensaffarer.se,vf.se,hjotidning.se,kt.se,kt-kuriren.se,sla.se,mariestadstidningen.se,filipstadstidning.se,fryksdalsbygden.se,nwt.se,arvikanyheter.se,nkp.se,saffletidningen.se,provinstidningen.se,dalslanningen.se,nlt.se##+js(json-prune, autoplay)
+a1348 2
+zeinaskitchen.se,trafiksakerhet.se,boktugg.se,lakartidningen.se,villalivet.se,matsafari.nu,forexgruppen.se##+js(acs, monsterinsights_frontend)
+zeinaskitchen.se,trafiksakerhet.se,boktugg.se,lakartidningen.se,villalivet.se,matsafari.nu,forexgruppen.se##+js(set, mi_track_user, false)
 a1399 1
 ##div.adSidebar
 a1425 1
@@ -260,12 +268,15 @@ a1930 2
 d1974 1
 a1974 1
 /plugins/complianz-gdpr$domain=iconmagazine.se|signprint.se|vilaser.se|arjeplognytt.se|aftonkuriren.se|tidningenglobal.se|tidningensyre.se|landetsfria.nu|fempers.se|macken.xyz|hockeyettan.se|webb-tv.nu|kalmar.nu|brollopsmagasinet.se|megafonen.se|villalivet.se|radiotreby.se
-d1979 1
-a1979 1
+d1979 2
+a1980 2
 /plugins/cookie-law-info$script,domain=nyadagbladet.se|hockeybladet.nu|temadagar.se|gilla.se|lundagard.se|startaochdriva.se|milansverige.se|sverige.nu|synology.com|conpot.se|firstclassmagazine.se|dagenslogistik.se|magasinetkonkret.se|kvalitetsmagasinet.se|miljo-utveckling.se|telekomidag.se|vdtidningen.se|gullislastips.se|nyfiknainvesterare.se|discoveringtheplanet.com|bussmagasinet.se|torbjornstips.se
+/plugins/cookie-notice$script,domain=bildobubbla.se|zeromagazine.nu|espressomedia.se|skanesport.se|sverigespringer.se|fotbollskane.se|sillyseason.se|gentlemannaguiden.com|husbilsplats.se|matmalin.se|svensktidskrift.se|byggipedia.se|schack.se|campingsverige.se|matforslag.se|densistavilan.se|horisontmagasin.se|kobe.se|dagenslogistik.se|tidningenproffs.se|svenskjakt.se|jaktojagare.se|dinbyggare.se
 d2006 1
 a2006 1
 /plugins/gdpr-cookie-compliance$domain=goteborgsgolfaren.se|nyhetersto.se|modernalivet.se|baraenkakatill.se|vildmarken.se
+a2085 1
+/plugins/wccp-pro$domain=dinbyggare.se
 a2139 1
 /script.js$3p,domain=spelkritik.se
 d2164 1
