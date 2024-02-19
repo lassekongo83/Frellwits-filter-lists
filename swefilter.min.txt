@@ -1,7 +1,7 @@
 ! Title: Frellwit's Swedish Filter
-! Last updated: Sun, 18 Feb 2024 07:14:09 +0000
+! Last updated: Mon, 19 Feb 2024 12:10:22 +0000
 ! Expires: 5 days
-! Diff-Path: patches/2024.2.18.434.patch#swefilter
+! Diff-Path: patches/2024.2.19.730.patch#swefilter
 ! Diff-Expires: 24 hours
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
@@ -1272,7 +1272,7 @@ uppsalanyheter.se###banner-top-block
 uppsatser.se##.results li[style^="margin"]:not(.result)
 upptack-sverige.se##.front-cta:has-text(/sponsrat innehåll/i)
 usabil.nu##.image-post-link[target]
-utm_$document,removeparam=/^utm_/,domain=tv.nu|booli.se|expressen.se|aftonbladet.se|bostad.blocket.se|dagensps.se
+utm_$document,removeparam=/^utm_/,domain=tv.nu|booli.se|expressen.se|aftonbladet.se|bostad.blocket.se|dagensps.se|prisjakt.nu
 utsidan.se##.clamzone
 utsidan.se##.betart-marker:matches-css(after, content: /Annons/i):upward(.documentpush-group)
 vackertvader.se##div[class^="ad-300x250"], div[class^="ad_300x250"]
@@ -2322,6 +2322,7 @@ zeromagazine.nu##div[id^="ads"]
 /_vercel/insights/*
 ://gtm.*.js?id=GTM
 ://gtm.*/g/collect?
+://impression-tracker-service
 ://sifomedia.
 ?action=advanced-ads-tracking-track
 ?action=get_banners$domain=djungeltrumman.se
@@ -2360,7 +2361,6 @@ zeromagazine.nu##div[id^="ads"]
 @@||kritiker.se^$generichide
 @@||marketo.com^*/form
 @@||nuthymia-llc.ck.page/*/index.js$domain=nickwignall.com
-@@||pricespy-75b8.kxcdn.com/g/ftg_logos$image
 @@||www.googletagmanager.com/gtm.js$script,domain=elgiganten.se
 ||1terms.com^
 ||123on.com/images/pixel
@@ -2835,7 +2835,7 @@ zeromagazine.nu##div[id^="ads"]
 ||pingback.issuu.com/ping
 ||pipedrive.com^*/statistics/seen
 ||pixel.playbuzz.com^
-||pji.nu^$third-party,domain=~prisjakt.nu|~prisjakt.no|~pricespy.co.uk|~ledenicheur.fr|~prisjagt.dk|~pricespy.co.nz|~hintaopas.fi
+||pji.nu/libs/pjpixel
 ||platform.linkedin.com^$third-party
 ||platform.tumblr.com/*/share.js$third-party
 ||platssajten.se^$third-party
@@ -2848,7 +2848,6 @@ zeromagazine.nu##div[id^="ads"]
 ||pomu.se/games/visit/
 ||portalhc.com^$third-party
 ||pricerunner.com/publisher-widgets$third-party
-||pricespy-75b8.kxcdn.com^$third-party,domain=~prisjakt.nu|~prisjakt.no|~pricespy.co.uk|~ledenicheur.fr|~prisjagt.dk|~pricespy.co.nz|~hintaopas.fi
 ||prisjakt-a.$third-party,domain=~prisjakt.nu|~prisjakt.no|~pricespy.co.uk|~ledenicheur.fr|~prisjagt.dk|~pricespy.co.nz|~hintaopas.fi
 ||prisjakt.nu^$third-party
 ||prismic.io/prismic-toolbar$domain=alltomarbetsmiljo.se
