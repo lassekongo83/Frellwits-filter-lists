@@ -1,10 +1,10 @@
-diff name:swefilter lines:430 checksum:5449260524
+diff name:swefilter lines:432 checksum:fa4f78f508
 d2 1
 a2 1
-! Last updated: Fri, 23 Feb 2024 10:55:14 +0000
+! Last updated: Sat, 24 Feb 2024 11:04:56 +0000
 d4 1
 a4 1
-! Diff-Path: patches/2024.2.23.655.patch#swefilter
+! Diff-Path: patches/2024.2.24.664.patch#swefilter
 a31 1
 .se/advertisement_script
 d114 5
@@ -146,9 +146,10 @@ listor.se##:is(a[href*="casino"], a[href*="betting"], a[href*="poker"]):upward(.
 d824 1
 a824 1
 livetsgoda.se,betongforeningen.se,espressomedia.se,realtid.se,ordfrontmagasin.se,europaportalen.se,motorsportbladet.se,battregolf.se##a[target$="blank"] img
-d843 1
-a843 1
+d843 2
+a844 2
 ljuskultur.se,bettips.se,spelo.se,skogsaktuellt.se,maskinbladet.se,entreprenadaktuellt.se,ja.se,husbilhusvagn.se,klassiker.nu,mopedgaraget.se,vibilagare.se,caroftheyear.se,automobil.se,endurobloggen.se,riksettan.net,fightermag.se,frillesasbandy.se,dh.se,djungeltrumman.se,skik.se,omni.se,campingsverige.se,eniro.se,svenskjakt.se,realtid.se,restaurangvarlden.se,naringslivetvgl.se,dalarnasaffarer.se,stockholmsaffarer.se,jamtlandsaffarer.se,nyheteridag.se,epochtimes.se,alekuriren.se##.banner
+ljuskultur.se,hrnytt.se,aapl.se,inredningsarkitektur.se,inblick.se,matklubben.se##.cookies
 d847 1
 a847 1
 lokalti.se##:is(img[src$="a_top.png.webp"], a[href*="casino"]):upward(section.elementor-section)
@@ -257,12 +258,6 @@ voodoofilm.org##.page-panorama
 d1336 2
 a1337 1
 worldinproperty.se##.newsletter-modal, .newsletter-mobile-banner
-a1338 5
-www.aftonbladet.se,www.godare.se,www.livsstil.se,www.skonhetsredaktorerna.se,omni.se,omniekonomi.se,www.svd.se##div[id^="sp_message_container"]
-www.aftonbladet.se,www.godare.se,www.livsstil.se,www.skonhetsredaktorerna.se,omni.se,omniekonomi.se,www.svd.se##+js(set-local-storage-item, CMP:advertising, 0)
-www.aftonbladet.se,www.godare.se,www.livsstil.se,www.skonhetsredaktorerna.se,omni.se,omniekonomi.se,www.svd.se##+js(set-local-storage-item, CMP:analytics, 0)
-www.aftonbladet.se,www.godare.se,www.livsstil.se,www.skonhetsredaktorerna.se,omni.se,omniekonomi.se,www.svd.se##+js(set-local-storage-item, CMP:marketing, 0)
-www.aftonbladet.se,www.godare.se,www.livsstil.se,www.skonhetsredaktorerna.se,omni.se,omniekonomi.se,www.svd.se##+js(set-local-storage-item, CMP:personalisation, 0)
 d1350 1
 a1350 1
 youplay.se,expressen.se,di.se,nsk.se,skd.se,nvp.se,barometern.se,blt.se,bt.se,kristianstadsbladet.se,olandsbladet.se,smp.se,sydostran.se,trelleborgsallehanda.se,ut.se,ystadsallehanda.se,kalmarposten.se,meraosterlen.se,corren.se,folkbladet.se,mvt.se,nt.se,vt.se,klt.nu,vimmerbytidning.se,kuriren.nu,nsd.se,norran.se,pt.se,ekuriren.se,strengnastidning.se,kkuriren.se,sn.se,eposten.se,unt.se,helagotland.se,kindaposten.se,folkbladet.nu,vk.se,vasterbottningen.se,mellanbygden.nu,nordsverige.se,lokaltidningen.nu,vasterastidning.se,mitti.se,thelocal.se,byrum.se,sverigespringer.se,recept.se,viivilla.se,mestmotor.se,babyhjalp.se,fragbite.se,ibnytt.se,realtid.se,cafe.se,kingmagazine.se,vxonews.se,vaxjobladet.se,alekuriren.se,nyheter24.se,svenskgolf.se,golfing.se,gotlandjustnu.se,familjeliv.se,praktisktbatagande.se,norrahalland.se,lokalti.se,lchfarkivet.se,alltforforaldrar.se,idrottensaffarer.se,vf.se,hjotidning.se,kt.se,kt-kuriren.se,sla.se,mariestadstidningen.se,filipstadstidning.se,fryksdalsbygden.se,nwt.se,arvikanyheter.se,nkp.se,saffletidningen.se,provinstidningen.se,dalslanningen.se,nlt.se##+js(json-prune, autoplay)
@@ -277,6 +272,8 @@ a1433 1
 ##div.External-ad
 a1434 1
 ##div.ads-sticky-container
+a1466 1
+##div.inner_advertisement
 a1475 1
 ##div.mobile-ads-wrapper
 a1512 1
@@ -337,8 +334,9 @@ a2030 1
 a2088 1
 /plugins/wccp-pro$domain=dinbyggare.se
 d2127 1
-a2127 1
+a2127 2
 /pum/*$domain=flm.nu|finanstid.se|dagenslogistik.se|battrestadsdel.se
+/qc_cmp$domain=reseguiden.se
 a2142 1
 /script.js$3p,domain=spelkritik.se
 d2167 1
@@ -369,6 +367,10 @@ d2351 2
 a2367 2
 ||adhype-assets.com/images/*betting
 ||adhype-assets.com/images/*casino
+a2380 1
+||ajs-assets.ftstatic.com/ftUtils.js
+a2397 1
+||api-sa.rikatillsammans.se^
 a2463 1
 ||casinoutankonto.net^$third-party
 d2465 2
@@ -397,7 +399,7 @@ a2645 1
 ||images.woo.a2d.tv/creative_assets$image,domain=tv4play.se|tv4.se|fotbollskanalen.se|koket.se
 d2650 1
 a2650 1
-||inmobi.com^$domain=alltomelbil.se|rikatillsammans.se|egoinas.se|land.se|moviezine.se|netflixguiden.se|travelnews.se|varldenshaftigaste.se|merinfo.se|foreca.se|matklubben.se|reseguiden.se|newsner.com|humorbibeln.se|sportbibeln.se|ettgottskratt.se|djurbibeln.se|laget.se|byrum.se|sportlovin.se|receptfavoriter.se|forni.se|kimura.se|cornucopia.se|norrahalland.se|elevspel.se|foretagande.se|finanstid.se|tittapavideon.se|motormagasinet.se|food-supply.se|dagenshandel.se|plastnet.se|habit.se|woodnet.se|foodnet.se|transportnet.se|processnet.se|packnet.se|verkstaderna.se|medtechmagazine.se|recyclingnet.se|rt-forum.se|uochd.se|lifesciencesweden.se|fri-kopenskap.se|cleannet.se|entreprenad.com|mykitchenstories.se|cancelculture.se|mytaste.se
+||inmobi.com^$domain=alltomelbil.se|rikatillsammans.se|egoinas.se|land.se|moviezine.se|travelnews.se|varldenshaftigaste.se|merinfo.se|foreca.se|matklubben.se|reseguiden.se|newsner.com|humorbibeln.se|sportbibeln.se|ettgottskratt.se|djurbibeln.se|laget.se|byrum.se|sportlovin.se|receptfavoriter.se|forni.se|kimura.se|cornucopia.se|norrahalland.se|elevspel.se|foretagande.se|finanstid.se|tittapavideon.se|motormagasinet.se|food-supply.se|dagenshandel.se|plastnet.se|habit.se|woodnet.se|foodnet.se|transportnet.se|processnet.se|packnet.se|verkstaderna.se|medtechmagazine.se|recyclingnet.se|rt-forum.se|uochd.se|lifesciencesweden.se|fri-kopenskap.se|cleannet.se|entreprenad.com|mykitchenstories.se|cancelculture.se|mytaste.se
 d2775 1
 d2779 1
 a2779 1
