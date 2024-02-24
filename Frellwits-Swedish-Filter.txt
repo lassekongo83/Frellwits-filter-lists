@@ -1,6 +1,6 @@
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days
-! Last modified: 2024-02-23 11:54:54 CET
+! Last modified: 2024-02-24 12:04:38 CET
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPL3 - https://github.com/lassekongo83/Frellwits-filter-lists/blob/master/LICENSE
@@ -849,7 +849,7 @@ ljudochbild.se##.wp-caption:style(display:initial!important)
 ljungbysporten.se##section.widget_media_image, a[target="_blank"]:not([href*="ljungbysporten.se"])
 ljuskultur.se##body.private:remove-class(private)
 ljuskultur.se,bettips.se,spelo.se,skogsaktuellt.se,maskinbladet.se,entreprenadaktuellt.se,ja.se,husbilhusvagn.se,klassiker.nu,mopedgaraget.se,vibilagare.se,caroftheyear.se,automobil.se,endurobloggen.se,riksettan.net,fightermag.se,frillesasbandy.se,dh.se,djungeltrumman.se,skik.se,omni.se,campingsverige.se,eniro.se,svenskjakt.se,realtid.se,restaurangvarlden.se,naringslivetvgl.se,dalarnasaffarer.se,stockholmsaffarer.se,jamtlandsaffarer.se,nyheteridag.se,epochtimes.se,alekuriren.se##.banner
-ljuskultur.se,hrnytt.se,aapl.se,inredningsarkitektur.se,inblick.se##.cookies
+ljuskultur.se,hrnytt.se,aapl.se,inredningsarkitektur.se,inblick.se,matklubben.se##.cookies
 lokalguiden.se##.applicant-match-container, .banner-item, .banner-container
 lokalnytt.se##.panoramaImageBox
 lokalti.se##:is(img[src$="a_top.png.webp"], a[href*="casino"]):upward(section.elementor-section)
@@ -1348,11 +1348,6 @@ whowhatwear.co.uk#@#a[href*="/click.linksynergy"] img
 worldinproperty.se##body.newsletter-modal-open:style(overflow:unset!important;)
 worldinproperty.se##.newsletter-modal, .newsletter-mobile-banner
 www.aftonbladet.se##+js(nostif, TAKEOVER)
-www.aftonbladet.se,www.godare.se,www.livsstil.se,www.skonhetsredaktorerna.se,omni.se,omniekonomi.se,www.svd.se##div[id^="sp_message_container"]
-www.aftonbladet.se,www.godare.se,www.livsstil.se,www.skonhetsredaktorerna.se,omni.se,omniekonomi.se,www.svd.se##+js(set-local-storage-item, CMP:advertising, 0)
-www.aftonbladet.se,www.godare.se,www.livsstil.se,www.skonhetsredaktorerna.se,omni.se,omniekonomi.se,www.svd.se##+js(set-local-storage-item, CMP:analytics, 0)
-www.aftonbladet.se,www.godare.se,www.livsstil.se,www.skonhetsredaktorerna.se,omni.se,omniekonomi.se,www.svd.se##+js(set-local-storage-item, CMP:marketing, 0)
-www.aftonbladet.se,www.godare.se,www.livsstil.se,www.skonhetsredaktorerna.se,omni.se,omniekonomi.se,www.svd.se##+js(set-local-storage-item, CMP:personalisation, 0)
 www.expressen.se##+js(acs, Bau, preloadAds)
 www.expressen.se##+js(set, detect, noopFunc)
 www.expressen.se##.video-player:remove-attr(data-ad-config)
@@ -1487,6 +1482,7 @@ zeromagazine.nu##div[id^="ads"]
 ##div.feed_ad
 ##div.fs-holid-live-widescreen
 ##div.helsida-ad
+##div.inner_advertisement
 ##div.in-post-ad-wrap
 ##div.jeg_ad
 ##div.js-top-banner-container
@@ -2159,6 +2155,7 @@ zeromagazine.nu##div[id^="ads"]
 /publicPartners$domain=familjehemsbanken.se|familjehemmet.se
 /pulsetracking$script
 /pum/*$domain=flm.nu|finanstid.se|dagenslogistik.se|battrestadsdel.se
+/qc_cmp$domain=reseguiden.se
 /questback.popup$script
 /rantekartan$subdocument,domain=expressen.se
 /recommendations$xmlhttprequest,domain=expressen.se
@@ -2416,6 +2413,7 @@ zeromagazine.nu##div[id^="ads"]
 ||aff.bstatic.com^$third-party
 ||aftonbladet.se.*.$document
 ||agency360.io^$third-party
+||ajs-assets.ftstatic.com/ftUtils.js
 ||akademiskahus.se/AddThis?$script
 ||alkemi.com.se^
 ||allastudier.se/TrackingSearch
@@ -2433,6 +2431,7 @@ zeromagazine.nu##div[id^="ads"]
 ||analytics.undeco.se^
 ||analytics.wayke.se^
 ||apis.google.com/js/plusone.js$third-party
+||api-sa.rikatillsammans.se^
 ||api.hitta.se/creepy
 ||api.hitta.se/offer
 ||api.hitta.se/partnerintegration
@@ -2686,7 +2685,7 @@ zeromagazine.nu##div[id^="ads"]
 ||imgsct.cookiebot.com/1.gif
 ||imp.laget.se^
 ||inboxads.com^$third-party
-||inmobi.com^$domain=alltomelbil.se|rikatillsammans.se|egoinas.se|land.se|moviezine.se|netflixguiden.se|travelnews.se|varldenshaftigaste.se|merinfo.se|foreca.se|matklubben.se|reseguiden.se|newsner.com|humorbibeln.se|sportbibeln.se|ettgottskratt.se|djurbibeln.se|laget.se|byrum.se|sportlovin.se|receptfavoriter.se|forni.se|kimura.se|cornucopia.se|norrahalland.se|elevspel.se|foretagande.se|finanstid.se|tittapavideon.se|motormagasinet.se|food-supply.se|dagenshandel.se|plastnet.se|habit.se|woodnet.se|foodnet.se|transportnet.se|processnet.se|packnet.se|verkstaderna.se|medtechmagazine.se|recyclingnet.se|rt-forum.se|uochd.se|lifesciencesweden.se|fri-kopenskap.se|cleannet.se|entreprenad.com|mykitchenstories.se|cancelculture.se|mytaste.se
+||inmobi.com^$domain=alltomelbil.se|rikatillsammans.se|egoinas.se|land.se|moviezine.se|travelnews.se|varldenshaftigaste.se|merinfo.se|foreca.se|matklubben.se|reseguiden.se|newsner.com|humorbibeln.se|sportbibeln.se|ettgottskratt.se|djurbibeln.se|laget.se|byrum.se|sportlovin.se|receptfavoriter.se|forni.se|kimura.se|cornucopia.se|norrahalland.se|elevspel.se|foretagande.se|finanstid.se|tittapavideon.se|motormagasinet.se|food-supply.se|dagenshandel.se|plastnet.se|habit.se|woodnet.se|foodnet.se|transportnet.se|processnet.se|packnet.se|verkstaderna.se|medtechmagazine.se|recyclingnet.se|rt-forum.se|uochd.se|lifesciencesweden.se|fri-kopenskap.se|cleannet.se|entreprenad.com|mykitchenstories.se|cancelculture.se|mytaste.se
 ||insertcoin.se^$third-party
 ||insplanet.com^$third-party
 ||instaforex.com^$third-party
