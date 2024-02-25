@@ -1,10 +1,10 @@
-diff name:swefilter lines:251 checksum:6193c23b9b
+diff name:swefilter lines:265 checksum:b034f6d9ec
 d2 1
 a2 1
-! Last updated: Sat, 24 Feb 2024 14:50:05 +0000
+! Last updated: Sun, 25 Feb 2024 11:19:00 +0000
 d4 1
 a4 1
-! Diff-Path: patches/2024.2.24.890.patch#swefilter
+! Diff-Path: patches/2024.2.25.678.patch#swefilter
 a31 1
 .se/advertisement_script
 d115 1
@@ -32,6 +32,10 @@ dinbyggare.se##*:style(-webkit-touch-callout: default !important; -webkit-user-s
 dinbyggare.se##+js(rmnt, noscript)
 dinbyggare.se##+js(rmnt, script, /wccp_pro/)
 dinbyggare.se##::selection:style(background-color:#007aff!important;)
+d433 2
+a434 2
+elevspel.se##div[class^="rok"]
+elevspel.se##+js(rmnt, script, window.adsbygoogle)
 d449 1
 a449 1
 etn.se,uppsalanyheter.se,rotter.se##.banneritem
@@ -95,6 +99,9 @@ d945 4
 a948 2
 newsner.com,humorbibeln.se,sportbibeln.se,ettgottskratt.se,djurbibeln.se###wsfb-container, .share-buttons, .ad-space
 newsner.com,humorbibeln.se,sportbibeln.se,ettgottskratt.se,djurbibeln.se##.ssp_divider:has(.sponsored-bar)
+d953 1
+a953 1
+ng.se##.view-partner-articles, [class*="sponsored-article"], .tertiary-bottom, div[class*="nojesguidenads"]
 a982 2
 obosdamallsvenskan.se,elitettan.se##.cc_banner-wrapper, .rmss_module-sponsors, .rmss_ap-top-ad, .rmss_ad-panorama, .rmss_t-momenu__sponsors-area
 obosdamallsvenskan.se,elitettan.se##.rmss_ap-top-ad + .rmss_t-ap-grid-stripe:has(a[href*="svenskaspel"])
@@ -103,6 +110,8 @@ a1048 1
 runnersworld.se##.post-card-sponsored, .modal-plus, .modal-backdrop
 a1117 1
 sponsor$image,domain=obosdamallsvenskan.se|elitettan.se
+a1127 1
+sportlovin.se##.visible-xs, .visible-lg
 a1155 2
 svenskelitfotboll.se##custom-ad
 svenskelitfotboll.se##.image-block:has(a[class*="sponsor"])
@@ -112,7 +121,7 @@ a1168 1
 swebbtv.se##.modal, .modal-backdrop
 d1201 1
 a1201 1
-teknikveckan.se,di.se,dn.se,skillingaryd.nu,xn--vrnamo-bua.nu,vardfokus.se,kamerabild.se,tripadvisor.se,swedroid.se,bettingstugan.se,expressen.se,dagensopinion.se,driva-eget.se,bioenergitidningen.se,ifokus.se,padelfeber.se,sv.picmix.com,ifragasatt.se,ehandel.se,jaktojagare.se,sportbloggare.com,bovision.se,familjeliv.se,tidningenridsport.se,golflivet.se,vemringde.se,brollopstorget.se,fastighetsvarlden.se,borskollen.se,aktiespararna.se##.ad
+teknikveckan.se,di.se,dn.se,skillingaryd.nu,xn--vrnamo-bua.nu,vardfokus.se,kamerabild.se,tripadvisor.se,swedroid.se,bettingstugan.se,expressen.se,dagensopinion.se,driva-eget.se,bioenergitidningen.se,ifokus.se,padelfeber.se,sv.picmix.com,ifragasatt.se,ehandel.se,jaktojagare.se,sportbloggare.com,bovision.se,familjeliv.se,tidningenridsport.se,golflivet.se,vemringde.se,brollopstorget.se,fastighetsvarlden.se,borskollen.se,aktiespararna.se,receptfavoriter.se##.ad
 d1223 1
 d1266 1
 a1266 1
@@ -148,6 +157,8 @@ a1728 2
 /blogpoststatistic/impression
 /blogpoststatistic/view
 d1744 1
+a1755 1
+/content_images/*casino$image,domain=ng.se
 d1758 1
 a1758 1
 /cookieconsent$script,domain=akademiskahus.se|lundagard.se|fuska.nu|kiacarclub.se|nyheteridag.se|internetstart.se|svampguiden.com|scanaktier.se|historier.net|worldinproperty.se|obosdamallsvenskan.se|elitettan.se
@@ -219,10 +230,13 @@ a2499 1
 d2501 1
 a2501 1
 ||cookieinformation.com^$domain=folkofolk.se|dental24.se
+d2503 1
+a2503 1
+||cookiepro.com^$domain=birthday.se|hastnet.se|fz.se|sweclockers.com|djurskyddet.se|havet.nu|svenskfast.se|fiskejournalen.se|upplysning.se
 d2641 1
 d2650 1
 a2650 1
-||inmobi.com^$domain=alltomelbil.se|rikatillsammans.se|egoinas.se|land.se|moviezine.se|travelnews.se|varldenshaftigaste.se|merinfo.se|foreca.se|matklubben.se|reseguiden.se|newsner.com|humorbibeln.se|sportbibeln.se|ettgottskratt.se|djurbibeln.se|laget.se|byrum.se|sportlovin.se|receptfavoriter.se|forni.se|kimura.se|cornucopia.se|norrahalland.se|elevspel.se|foretagande.se|finanstid.se|tittapavideon.se|motormagasinet.se|food-supply.se|dagenshandel.se|plastnet.se|habit.se|woodnet.se|foodnet.se|transportnet.se|processnet.se|packnet.se|verkstaderna.se|medtechmagazine.se|recyclingnet.se|rt-forum.se|uochd.se|lifesciencesweden.se|fri-kopenskap.se|cleannet.se|entreprenad.com|mykitchenstories.se|cancelculture.se|mytaste.se
+||inmobi.com^$domain=alltomelbil.se|rikatillsammans.se|egoinas.se|land.se|moviezine.se|travelnews.se|varldenshaftigaste.se|merinfo.se|foreca.se|matklubben.se|reseguiden.se|newsner.com|humorbibeln.se|sportbibeln.se|ettgottskratt.se|djurbibeln.se|laget.se|byrum.se|sportlovin.se|receptfavoriter.se|forni.se|kimura.se|cornucopia.se|norrahalland.se|elevspel.se|finanstid.se|tittapavideon.se|motormagasinet.se|food-supply.se|dagenshandel.se|plastnet.se|habit.se|woodnet.se|foodnet.se|transportnet.se|processnet.se|packnet.se|verkstaderna.se|medtechmagazine.se|recyclingnet.se|rt-forum.se|uochd.se|lifesciencesweden.se|fri-kopenskap.se|cleannet.se|entreprenad.com|mykitchenstories.se|cancelculture.se|mytaste.se
 d2775 1
 d2779 1
 a2779 1
