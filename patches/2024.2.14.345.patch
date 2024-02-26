@@ -1,10 +1,10 @@
-diff name:swefilter lines:275 checksum:b034f6d9ec
+diff name:swefilter lines:299 checksum:d90cf4fe9c
 d2 1
 a2 1
-! Last updated: Sun, 25 Feb 2024 11:19:00 +0000
+! Last updated: Mon, 26 Feb 2024 11:27:01 +0000
 d4 1
 a4 1
-! Diff-Path: patches/2024.2.25.678.patch#swefilter
+! Diff-Path: patches/2024.2.26.687.patch#swefilter
 a31 1
 .se/advertisement_script
 d115 1
@@ -22,6 +22,10 @@ battrestadsdel.se###top-banner-mobile, .apd-text, .apds_main, .entry-priomaker, 
 d232 1
 a232 1
 biblioteksforeningen.se,psykologiguiden.se,rabattsok.se###cookie-bar
+d311 1
+a311 2
+byggvarlden.se,omtanke.today##a[href*="/annons/"], .newsletter-popup-content-overlay, .newsletter-popup, .ai-viewports
+byggvarlden.se,omtanke.today##.post:has(a[href*="/annons/"])
 a331 2
 computersweden.se##.nativo
 computersweden.se##.latest-content__card-secondary:has(.nativo)
@@ -32,6 +36,12 @@ dinbyggare.se##*:style(-webkit-touch-callout: default !important; -webkit-user-s
 dinbyggare.se##+js(rmnt, noscript)
 dinbyggare.se##+js(rmnt, script, /wccp_pro/)
 dinbyggare.se##::selection:style(background-color:#007aff!important;)
+d406 1
+a417 1
+dust2.se##html[data-impression-tracking-endpoint]:remove-attr(data-impression-tracking-endpoint)
+d419 1
+a419 1
+dust2.se##.target-banner, div[data-type="BANNER"]
 d433 2
 a434 2
 elevspel.se##div[class^="rok"]
@@ -49,8 +59,8 @@ a524 1
 fof.se###CybotCookiebotDialog, #CybotCookiebotDialogBodyUnderlay
 d526 2
 a527 4
-fof.se,elinstallatoren.se,spraktidningen.se,modernpsykologi.se##.mediaconnect-protected-content, .mediaconnect-protected-content--show:style(max-height: unset !important; overflow: unset !important;)
-fof.se,elinstallatoren.se,spraktidningen.se,modernpsykologi.se##.mediaconnect-protected-content::after:style(background: unset !important;)
+fof.se,elinstallatoren.se,spraktidningen.se,modernpsykologi.se,vvsforum.se##.mediaconnect-protected-content, .mediaconnect-protected-content--show:style(max-height: unset !important; overflow: unset !important;)
+fof.se,elinstallatoren.se,spraktidningen.se,modernpsykologi.se,vvsforum.se##.mediaconnect-protected-content::after:style(background: unset !important;)
 fokus.se##.sesamy-protected-content.active::after:style(background:unset!important;)
 fokus.se##.sesamy-protected-content:style(max-height:unset!important;overflow:unset!important;)
 a539 2
@@ -59,7 +69,7 @@ forum.macworld.se##.idgcp__layer--active, .idgcp__layer--active body:style(overf
 d554 3
 d566 1
 a566 1
-fotosidan.se,merinfo.se,allsvenskan.se,tasteline.com,jaktojagare.se,chefstidningen.se,realtid.se,norpan.se,moviezine.se,jaktjournalen.se##.ads
+fotosidan.se,merinfo.se,allsvenskan.se,tasteline.com,jaktojagare.se,chefstidningen.se,realtid.se,norpan.se,moviezine.se,jaktjournalen.se,byggvarlden.se,omtanke.today##.ads
 a602 3
 gasetten.se##.footer-widgets .widget_block li
 gasetten.se,fotbollsthlm.se##article:has-text(/är en annons/i)
@@ -67,6 +77,8 @@ gasetten.se,fotbollsthlm.se##.footer-links, .fotbo-target
 d631 1
 a631 1
 hammarbyfotboll.se###seasonalTakeover, div[class*="sponsorBarContainer"], div[class*="footerSponsors"], .slick-slide a[target="_blank"]
+a663 1
+hifitorget.se##.row[style*="height"]:has(.adsbygoogle)
 d667 1
 a667 1
 historier.net,kristendate.se##.cc-banner.cc-bottom
@@ -123,6 +135,9 @@ d1201 1
 a1201 1
 teknikveckan.se,di.se,dn.se,skillingaryd.nu,xn--vrnamo-bua.nu,vardfokus.se,kamerabild.se,tripadvisor.se,swedroid.se,bettingstugan.se,expressen.se,dagensopinion.se,driva-eget.se,bioenergitidningen.se,ifokus.se,padelfeber.se,sv.picmix.com,ifragasatt.se,ehandel.se,jaktojagare.se,sportbloggare.com,bovision.se,familjeliv.se,tidningenridsport.se,golflivet.se,vemringde.se,brollopstorget.se,fastighetsvarlden.se,borskollen.se,aktiespararna.se,receptfavoriter.se##.ad
 d1223 1
+d1230 1
+a1230 1
+totallyorebro.se,totallystockholm.se##[class*="tot-content-preview-container"]:has(a[href*="casino"], a[href*="kasino"], a[href*="betting"], a[href*="spel"]):remove()
 d1245 2
 a1246 2
 tv4play.se,tv4.se,fotbollskanalen.se,koket.se##button:has-text(Besök annonsör)
@@ -146,8 +161,14 @@ a1430 1
 ##div.ads-sticky-container
 a1462 1
 ##div.inner_advertisement
+a1465 1
+##div.landscape-ad-space
 a1478 1
 ##div.partnership-ads
+a1492 1
+##div.top-mobile-ad
+a1495 1
+##div[class*="ai-viewport"][data-insertion-position]
 a1509 1
 ##iframe#compricer_iframe
 a1656 1
@@ -191,7 +212,7 @@ a2008 1
 /plugins/google-analytics
 d2027 1
 a2027 1
-/plugins/mediaconnect$domain=fof.se|spraktidningen.se|elinstallatoren.se|modernpsykologi.se
+/plugins/mediaconnect$domain=fof.se|spraktidningen.se|elinstallatoren.se|modernpsykologi.se|vvsforum.se
 a2085 1
 /plugins/wccp-pro$domain=dinbyggare.se
 d2124 1
@@ -207,6 +228,9 @@ a2203 1
 /trace$xhr,domain=netflixguiden.se
 a2205 1
 /tracker/socket$domain=swebbtv.se
+d2264 1
+a2264 1
+/wp-content/uploads/*casino$image,domain=nyadagbladet.se|kulturbloggen.com|newsvoice.se|svenskhistoria.se|battrestadsdel.se|zeromagazine.nu|totallyorebro.se|totallystockholm.se|djungeltrumman.se|vaken.se|tekniknytt.se|kingsizemag.se|spelochfilm.se|macken.xyz|improveme.se|bandyfeber.com|stoppapressarna.se|dagensinfrastruktur.se|nyaprojekt.se|nordiskaprojekt.se|svenskbyggtidning.se|grontsamhallsbyggande.se|sjostadsbladet.se|autonytt.se
 d2286 1
 a2310 1
 ://impression-tracker-service
@@ -233,7 +257,7 @@ a2489 1
 ||connect.facebook.net^$domain=friatider.se|fotosidan.se|ng.se|psykologiguiden.se|lektionsbanken.se|lajvo.se|kvinnatillkvinna.se|epochtimes.se|newsner.com|humorbibeln.se|sportbibeln.se|ettgottskratt.se|djurbibeln.se|sillyseason.se|loppi.se|kyrkanstidning.se|tn.se
 d2499 1
 a2499 1
-||cookiebot.com^$domain=ng.se|swedroid.se|wesafe.se|bax-shop.se|kurera.se|upplysning.se|mitti.se|circlek.se|findroommate.se|sakochliv.se|polistidningen.se|fokus.se|spraktidningen.se|varden.se|trafiken.nu|energi.se|sverigesnatur.org|kreditrapporten.se|sis.se|accentmagasin.se|allsvenskan.se|superettan.se|alltomarbetsmiljo.se|tco.se|totallyorebro.se|totallystockholm.se|enirobuddy.se|framtid.se|byggfaktadocu.se|husdjur.se|chalmers.se|elinstallatoren.se|ff.se|modernpsykologi.se|qx.se|hbl.fi|vastranyland.fi|ostnyland.fi|vatternrundan.se|vvsforum.se|hifitorget.se|svensktnaringsliv.se|naturvetarna.se|skolporten.se|dust2.se|ehandel.se|byggvarlden.se|varldenidag.se|influens.se|omtanke.today|konsumentmagasinet.se|svenskelitfotboll.se|journalisten.se|fastighetsvarlden.se
+||cookiebot.com^$domain=ng.se|swedroid.se|wesafe.se|bax-shop.se|kurera.se|upplysning.se|mitti.se|circlek.se|findroommate.se|sakochliv.se|polistidningen.se|fokus.se|spraktidningen.se|varden.se|trafiken.nu|energi.se|sverigesnatur.org|kreditrapporten.se|sis.se|accentmagasin.se|allsvenskan.se|superettan.se|alltomarbetsmiljo.se|tco.se|totallyorebro.se|totallystockholm.se|enirobuddy.se|framtid.se|byggfaktadocu.se|husdjur.se|chalmers.se|elinstallatoren.se|ff.se|modernpsykologi.se|qx.se|hbl.fi|vastranyland.fi|ostnyland.fi|vatternrundan.se|vvsforum.se|naturvetarna.se|skolporten.se|dust2.se|ehandel.se|byggvarlden.se|varldenidag.se|influens.se|omtanke.today|konsumentmagasinet.se|svenskelitfotboll.se|journalisten.se|fastighetsvarlden.se
 d2501 1
 a2501 1
 ||cookieinformation.com^$domain=folkofolk.se|dental24.se
