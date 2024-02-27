@@ -1,7 +1,7 @@
 ! Title: Frellwit's Swedish Filter
-! Last updated: Mon, 26 Feb 2024 11:27:01 +0000
+! Last updated: Tue, 27 Feb 2024 11:22:06 +0000
 ! Expires: 5 days
-! Diff-Path: patches/2024.2.26.687.patch#swefilter
+! Diff-Path: patches/2024.2.27.681.patch#swefilter
 ! Diff-Expires: 24 hours
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
@@ -523,7 +523,7 @@ fiskejournalen.se,jaktjournalen.se##.fisher-takeover-container
 flamman.se##.Banner, .TakeOverBanner, .CookieNotice, div#popup
 flashback.org###top-banner-container, #top-banner-wrapper
 flashback.org##+js(nostif, #top-banner-container)
-flashscore.se##.boxOverContent--a, .otPlaceholder, .seoAdWrapper, .adsbackground-wrapper
+flashscore.se##.boxOverContent--a, .otPlaceholder, .seoAdWrapper, .adsbackground-wrapper, .prematchOddsBonus__bonus, .prematchLink[target]
 flm.nu##.spons
 flygtorget.se###PreHeader
 fl-net.se##a:has-text(/lån|casino|kasino/i):upward(p)
@@ -653,7 +653,8 @@ happypancake.se##+js(aopr, Object.prototype.adUnits)
 happyride.se##li:has(a[href*="/category/sponsrat/"])
 happyride.se##.col-sm-4 > .boxt, .ant, .bo2
 happyride.se,freeride.se##.anm1-container, [class^="anp"], [class^="ans"], .box.evergreen
-hastnet.se##.add-wrap, .listings-search-ads, .right_panel
+hastnet.se##div[style*="--mobile-height"]:has(div[id^="div-gpt"])
+hastnet.se##.add-wrap, .listings-search-ads, .right_panel, #pmg-widget-root
 hbl.fi,vastranyland.fi,ostnyland.fi##.dre-item--feature-advertorial
 hbwebben.se##.elementor-widget-container > a > img
 hd.se,sydsvenskan.se,allehanda.se,tidningenangermanland.se,arbetarbladet.se,avestatidning.com,bblat.se,dalademokraten.se,fagersta-posten.se,gd.se,lt.se,ltz.se,na.se,norrteljetidning.se,nynashamnsposten.se,op.se,salaallehanda.com,st.nu,tidningenharjedalen.se,vlt.se,falkopingstidning.se,jp.se,skaraborgslanstidning.se,skovdenyheter.se,smalandsdagblad.se,smalanningen.se,smt.se,tranastidning.se,vastgotabladet.se,vetlandaposten.se,vn.se,jnytt.se,bandypuls.se,ljusdalsposten.se,ljusnan.se,soderhamnskuriren.se,ht.se,moratidning.se,borlangetidning.se,falukuriren.se,sodran.se,nyaludvikatidning.se,skd.se,nvp.se##[class*="teaser-native"], lcl-ad, .ad-welcome, .affiliate-links__container
@@ -943,6 +944,8 @@ mytaste.se##div[id*="panorama_"], [class^="affiliate-container"], .site-header__
 mytaste.se##.recipe-modal[data-state=default] .modal-container.open, .recipe-modal[data-state=panorama] .modal-container.open:style(padding-top: 0 !important;)
 mytaste.se##.site-wrapper[data-state=panorama], .site-wrapper[data-state=default]:style(padding-top: 40px !important;)
 mytaste.se##[id^="Modal_plugin"]
+m.yelp.se##div[class^="overlay-color-cohort"]:has(a[aria-label="Download the Yelp app"])
+m.yelp.se##html:style(overflow:unset!important; position:unset!important;)
 naringslivetvgl.se,dalarnasaffarer.se,stockholmsaffarer.se,jamtlandsaffarer.se###dr-preloader
 naringslivetvgl.se,dalarnasaffarer.se,stockholmsaffarer.se,jamtlandsaffarer.se##.cookies-popup
 naringslivetvgl.se,dalarnasaffarer.se,stockholmsaffarer.se,jamtlandsaffarer.se##.header-menu__wrapp:style(position:unset!important)
@@ -1692,6 +1695,7 @@ zeromagazine.nu##div[id^="ads"]
 /ad-$subdocument,domain=forum.odla.nu
 /ad.aspx?bid
 /ad/getNouw.$script
+/ad?platform$domain=ilikeradio.se
 /ad_acknowledgment$xmlhttprequest
 /affiliategallery$domain=allas.se|elle.se|femina.se|hant.se|mabra.com|residencemagazine.se|svenskdam.se|motherhood.se
 /aftonbladet/crypt/?lpkey$all
@@ -2543,8 +2547,8 @@ zeromagazine.nu##div[id^="ads"]
 ||cookiebot.com^$domain=ng.se|swedroid.se|wesafe.se|bax-shop.se|kurera.se|upplysning.se|mitti.se|circlek.se|findroommate.se|sakochliv.se|polistidningen.se|fokus.se|spraktidningen.se|varden.se|trafiken.nu|energi.se|sverigesnatur.org|kreditrapporten.se|sis.se|accentmagasin.se|allsvenskan.se|superettan.se|alltomarbetsmiljo.se|tco.se|totallyorebro.se|totallystockholm.se|enirobuddy.se|framtid.se|byggfaktadocu.se|husdjur.se|chalmers.se|elinstallatoren.se|ff.se|modernpsykologi.se|qx.se|hbl.fi|vastranyland.fi|ostnyland.fi|vatternrundan.se|vvsforum.se|naturvetarna.se|skolporten.se|dust2.se|ehandel.se|byggvarlden.se|varldenidag.se|influens.se|omtanke.today|konsumentmagasinet.se|svenskelitfotboll.se|journalisten.se|fastighetsvarlden.se
 ||cookiehub.net^$domain=da.se|kollega.se
 ||cookieinformation.com^$domain=folkofolk.se|dental24.se
-||cookielaw.org^$domain=cartoonnetwork.se|tv4.se|fotbollskanalen.se|koket.se|nvp.se|flashscore.se|findit.se|ikea.com|hastnet.se|recept.se|manpower.se|gaffa.se|mtv.se|natgeotv.com|internetkunskap.se|internetstiftelsen.se|yelp.se|kokaihop.se|spisa.nu|ilikeradio.se|booli.se|svenskarnaochinternet.se|sv.bab.la|tripadvisor.se|sydkusten.es|livetochdiabetes.se|voister.se|nok.se|motesplatsen.se|thelocal.se|placera.se|infotorgjuridik.se|hm.com|se.trustpilot.com|travronden.se|hammarbyfotboll.se
-||cookiepro.com^$domain=birthday.se|hastnet.se|fz.se|sweclockers.com|djurskyddet.se|havet.nu|svenskfast.se|fiskejournalen.se|upplysning.se
+||cookielaw.org^$domain=cartoonnetwork.se|tv4.se|fotbollskanalen.se|koket.se|flashscore.se|ikea.com|recept.se|manpower.se|mtv.se|natgeotv.com|internetkunskap.se|internetstiftelsen.se|yelp.se|spisa.nu|ilikeradio.se|booli.se|svenskarnaochinternet.se|sv.bab.la|tripadvisor.se|sydkusten.es|livetochdiabetes.se|voister.se|nok.se|motesplatsen.se|thelocal.se|placera.se|infotorgjuridik.se|hm.com|se.trustpilot.com|travronden.se|hammarbyfotboll.se
+||cookiepro.com^$domain=birthday.se|fz.se|sweclockers.com|djurskyddet.se|havet.nu|svenskfast.se|fiskejournalen.se|upplysning.se
 ||cookietractor.com^$domain=innebandy.se|orientering.se|friidrott.se|pluggakuten.se
 ||cookie-script.com/analytics
 ||cookie-script.com^$domain=axess.se|dagensjuridik.se|foodfolder.se|arkitektur.se|internetlankar.se|friluftsframjandet.se
@@ -2690,7 +2694,7 @@ zeromagazine.nu##div[id^="ads"]
 ||imgsct.cookiebot.com/1.gif
 ||imp.laget.se^
 ||inboxads.com^$third-party
-||inmobi.com^$domain=alltomelbil.se|rikatillsammans.se|egoinas.se|land.se|moviezine.se|travelnews.se|varldenshaftigaste.se|merinfo.se|foreca.se|matklubben.se|reseguiden.se|newsner.com|humorbibeln.se|sportbibeln.se|ettgottskratt.se|djurbibeln.se|laget.se|byrum.se|sportlovin.se|receptfavoriter.se|forni.se|kimura.se|cornucopia.se|norrahalland.se|elevspel.se|finanstid.se|tittapavideon.se|motormagasinet.se|food-supply.se|dagenshandel.se|plastnet.se|habit.se|woodnet.se|foodnet.se|transportnet.se|processnet.se|packnet.se|verkstaderna.se|medtechmagazine.se|recyclingnet.se|rt-forum.se|uochd.se|lifesciencesweden.se|fri-kopenskap.se|cleannet.se|entreprenad.com|mykitchenstories.se|cancelculture.se|mytaste.se
+||inmobi.com^$domain=alltomelbil.se|rikatillsammans.se|egoinas.se|land.se|moviezine.se|travelnews.se|varldenshaftigaste.se|merinfo.se|foreca.se|matklubben.se|reseguiden.se|newsner.com|humorbibeln.se|sportbibeln.se|ettgottskratt.se|djurbibeln.se|laget.se|byrum.se|sportlovin.se|receptfavoriter.se|forni.se|kimura.se|cornucopia.se|norrahalland.se|elevspel.se|finanstid.se|tittapavideon.se|motormagasinet.se|food-supply.se|dagenshandel.se|plastnet.se|habit.se|woodnet.se|foodnet.se|transportnet.se|processnet.se|packnet.se|verkstaderna.se|medtechmagazine.se|recyclingnet.se|rt-forum.se|uochd.se|lifesciencesweden.se|fri-kopenskap.se|cleannet.se|entreprenad.com|mykitchenstories.se|cancelculture.se|mytaste.se|findit.se
 ||insertcoin.se^$third-party
 ||insplanet.com^$third-party
 ||instaforex.com^$third-party
@@ -2881,10 +2885,10 @@ zeromagazine.nu##div[id^="ads"]
 ||prisjakt-a.$third-party,domain=~prisjakt.nu|~prisjakt.no|~pricespy.co.uk|~ledenicheur.fr|~prisjagt.dk|~pricespy.co.nz|~hintaopas.fi
 ||prisjakt.nu^$third-party
 ||prismic.io/prismic-toolbar$domain=alltomarbetsmiljo.se
-||privacymanager.io^$domain=tvmatchen.nu
+||privacymanager.io^$domain=tvmatchen.nu|hastnet.se
 ||privacypolicies.com^$domain=fl-net.se
 ||privacy-center.org^$domain=180.se|agriaffaires.se|truckscorner.se|machineryzone.se|viivilla.se|stegforhalsa.se
-||privacy-mgmt.com^$domain=radio.se|dagenstv.com|kolla.tv|computersweden.se|woxikon.se
+||privacy-mgmt.com^$domain=radio.se|dagenstv.com|kolla.tv|computersweden.se|woxikon.se|kokaihop.se
 ||prod.uidapi.com^$domain=tittapavideon.se
 ||proff.se^$third-party
 ||proxyas.com^$third-party
