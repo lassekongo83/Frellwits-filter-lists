@@ -1,7 +1,7 @@
 ! Title: Frellwit's Swedish Filter
-! Last updated: Fri, 08 Mar 2024 08:38:07 +0000
+! Last updated: Sat, 09 Mar 2024 07:39:03 +0000
 ! Expires: 5 days
-! Diff-Path: patches/2024.3.8.518.patch#swefilter
+! Diff-Path: patches/2024.3.9.458.patch#swefilter
 ! Diff-Expires: 24 hours
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
@@ -400,8 +400,7 @@ dinbyggare.se##*:style(-webkit-touch-callout: default !important; -webkit-user-s
 dinbyggare.se##+js(rmnt, noscript)
 dinbyggare.se##+js(rmnt, script, /wccp_pro/)
 dinbyggare.se##::selection:style(background-color:#007aff!important;)
-dinvinguide.se##p:has-text(/hämtar annons/i):upward(div.items-center)
-dinvinguide.se###gdpr
+dinvinguide.se##.contain:has(a[target="_blank"])
 discoveringtheplanet.com##body:remove-class(unselectable)
 discoveringtheplanet.com##html:style(user-select:unset!important; -moz-user-select:unset!important; -webkit-user-select:unset!important;)
 discoveringtheplanet.com##+js(acs, disableEnterKey)
