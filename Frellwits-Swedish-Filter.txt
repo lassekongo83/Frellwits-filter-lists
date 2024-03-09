@@ -1,6 +1,6 @@
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days
-! Last modified: 2024-03-08 09:37:53 CET
+! Last modified: 2024-03-09 08:38:44 CET
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPL3 - https://github.com/lassekongo83/Frellwits-filter-lists/blob/master/LICENSE
@@ -403,8 +403,7 @@ dinbyggare.se##*:style(-webkit-touch-callout: default !important; -webkit-user-s
 dinbyggare.se##+js(rmnt, noscript)
 dinbyggare.se##+js(rmnt, script, /wccp_pro/)
 dinbyggare.se##::selection:style(background-color:#007aff!important;)
-dinvinguide.se##p:has-text(/hämtar annons/i):upward(div.items-center)
-dinvinguide.se###gdpr
+dinvinguide.se##.contain:has(a[target="_blank"])
 discoveringtheplanet.com##body:remove-class(unselectable)
 discoveringtheplanet.com##html:style(user-select:unset!important; -moz-user-select:unset!important; -webkit-user-select:unset!important;)
 discoveringtheplanet.com##+js(acs, disableEnterKey)
