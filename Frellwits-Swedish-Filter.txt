@@ -1,6 +1,6 @@
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days
-! Last modified: 2024-03-09 08:38:44 CET
+! Last modified: 2024-03-11 10:42:50 CET
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPL3 - https://github.com/lassekongo83/Frellwits-filter-lists/blob/master/LICENSE
@@ -409,8 +409,6 @@ discoveringtheplanet.com##html:style(user-select:unset!important; -moz-user-sele
 discoveringtheplanet.com##+js(acs, disableEnterKey)
 discoveringtheplanet.com##+js(acs, document.ondragstart)
 discoveringtheplanet.com##.widget-title:has-text(/annons/i) + .textwidget
-di.se##+js(nosiif, runAdBlockPaywall)
-di.se##+js(nostif, #triggerModal)
 di.se##+js(set, getAdblockerStatus, noopFunc)
 di.se##.di_panorama-wrapper, .site-header__panorama, .di_panorama__isAdLabel, .discount-box, .campaign-ad-box, .di_start__teaser-placeholder, .di_teaser-flak-planbokskoll, .di_teaser-flak-container--native, .native-box, .bandit-box__teaser--native, a[href*="/brandstudio"], .service-box, .brand-studio-box, .native-article
 di.se##.market-start-top + div:not(.market-container__wrapper)
@@ -1012,7 +1010,7 @@ ordfrontmagasin.se##.oc_cb_wrapper, .simple-image a:not([href^="/"]):not([href*=
 ordguru.se##.visible-lg, .hidden-lg
 orebronyheter.com###top-wrapper
 oru.se##.modal-cookieform
-oru.se,tui.se##.no-scroll:style(overflow: initial !important;)
+oru.se##.no-scroll:style(overflow: initial !important;)
 oskarshamns-nytt.se##:is(.adsbygoogle, a[href*="casino"]):upward(.elementor-section)
 osterbottenstidning.fi,sydin.fi,vasabladet.fi##.online-teaser--advertorial, .online-ad-container
 padeldirekt.se##h5:has-text(ANNONS:):upward(1)
@@ -1035,10 +1033,7 @@ pomu.se##[class^="Banner"]
 poolforum.se##div.adfit, .cookie_notice, div[style^="width:100%;max-width: 728px;"] > div[align="center"], div[style^="width:100%;max-width: 728px;"] > br
 popularastronomi.se##a.gofollow[data-track]:not([href*="www.popularastronomi.se"])
 pressbladet.se,svenskpress.se,foretagsbladet.se,gestrikemagasinet.se,cfanytt.se,lasarnas.se,hembostad.nu,sportidrott.se,nojesmagasinet.nu,halsasverige.se##.isax, #cookiebar
-pricerunner.se##a[href*="&clickarea=sponsored"]
-pricerunner.se##span:has-text(/^sponsrad$/i):upward([data-cy="deal-carousel"])
-pricerunner.se###consent
-pricerunner.se##.noscroll:style(overflow:initial!important)
+pricerunner.se##h2:has-text(/sponsra/i):upward(div[class$="Container-root"])
 pussad.se##html.g1-popup-visible:style(overflow: initial !important;)
 pussad.se##.g1-popup-newsletter, .g1-slideup-wrap
 quizza.nu###takeover
@@ -1898,7 +1893,6 @@ zeromagazine.nu##div[id^="ads"]
 /img/banner$domain=alltomsallskapsspel.se
 /img/bettingstugan.$image
 /img/compricer$image,domain=ekonominyheter.se
-/inlist-InlistSponsored$domain=pricerunner.se
 /isbanner/ib.js
 /javascript_nbenhadverts/*
 /jquery.smartbanner.js$domain=kristendate.se
@@ -2015,7 +2009,7 @@ zeromagazine.nu##div[id^="ads"]
 /plugins/convertplug
 /plugins/convertpro
 /plugins/cookie-law-info$script,domain=nyadagbladet.se|hockeybladet.nu|temadagar.se|gilla.se|lundagard.se|startaochdriva.se|milansverige.se|sverige.nu|synology.com|conpot.se|firstclassmagazine.se|dagenslogistik.se|magasinetkonkret.se|kvalitetsmagasinet.se|miljo-utveckling.se|telekomidag.se|vdtidningen.se|gullislastips.se|nyfiknainvesterare.se|discoveringtheplanet.com|bussmagasinet.se|torbjornstips.se|affarsstaden.se
-/plugins/cookie-notice$script,domain=bildobubbla.se|zeromagazine.nu|espressomedia.se|skanesport.se|sverigespringer.se|gasetten.se|sillyseason.se|gentlemannaguiden.com|husbilsplats.se|matmalin.se|svensktidskrift.se|byggipedia.se|schack.se|campingsverige.se|matforslag.se|densistavilan.se|horisontmagasin.se|kobe.se|dagenslogistik.se|tidningenproffs.se|svenskjakt.se|jaktojagare.se|dinbyggare.se
+/plugins/cookie-notice$script,domain=bildobubbla.se|zeromagazine.nu|espressomedia.se|skanesport.se|sverigespringer.se|gasetten.se|sillyseason.se|gentlemannaguiden.com|husbilsplats.se|matmalin.se|svensktidskrift.se|byggipedia.se|schack.se|campingsverige.se|matforslag.se|densistavilan.se|horisontmagasin.se|kobe.se|dagenslogistik.se|tidningenproffs.se|svenskjakt.se|jaktojagare.se|dinbyggare.se|tobaksfakta.se
 /plugins/cookie-popup$script,domain=skillingaryd.nu|xn--vrnamo-bua.nu
 /plugins/cresta-social-share-counter
 /plugins/custom-banners$domain=skolfamiljen.se
@@ -2546,7 +2540,7 @@ zeromagazine.nu##div[id^="ads"]
 ||cookiebot.com^$domain=ng.se|swedroid.se|wesafe.se|bax-shop.se|kurera.se|upplysning.se|mitti.se|circlek.se|findroommate.se|sakochliv.se|polistidningen.se|fokus.se|spraktidningen.se|varden.se|trafiken.nu|energi.se|sverigesnatur.org|kreditrapporten.se|sis.se|accentmagasin.se|allsvenskan.se|superettan.se|alltomarbetsmiljo.se|tco.se|totallyorebro.se|totallystockholm.se|enirobuddy.se|framtid.se|byggfaktadocu.se|husdjur.se|chalmers.se|elinstallatoren.se|ff.se|modernpsykologi.se|qx.se|hbl.fi|vastranyland.fi|ostnyland.fi|vatternrundan.se|vvsforum.se|naturvetarna.se|skolporten.se|dust2.se|ehandel.se|byggvarlden.se|varldenidag.se|influens.se|omtanke.today|konsumentmagasinet.se|svenskelitfotboll.se|journalisten.se|fastighetsvarlden.se|jaktjournalen.se|friidrott.se
 ||cookiehub.net^$domain=da.se
 ||cookieinformation.com^$domain=folkofolk.se|dental24.se
-||cookielaw.org^$domain=cartoonnetwork.se|tv4.se|fotbollskanalen.se|koket.se|flashscore.se|ikea.com|recept.se|manpower.se|mtv.se|natgeotv.com|internetkunskap.se|internetstiftelsen.se|yelp.se|spisa.nu|ilikeradio.se|booli.se|svenskarnaochinternet.se|sv.bab.la|tripadvisor.se|sydkusten.es|livetochdiabetes.se|voister.se|nok.se|motesplatsen.se|thelocal.se|placera.se|infotorgjuridik.se|se.trustpilot.com|travronden.se|hammarbyfotboll.se
+||cookielaw.org^$domain=cartoonnetwork.se|tv4.se|fotbollskanalen.se|koket.se|flashscore.se|ikea.com|recept.se|manpower.se|mtv.se|natgeotv.com|internetkunskap.se|internetstiftelsen.se|yelp.se|spisa.nu|ilikeradio.se|booli.se|svenskarnaochinternet.se|sv.bab.la|tripadvisor.se|sydkusten.es|livetochdiabetes.se|voister.se|nok.se|motesplatsen.se|thelocal.se|placera.se|infotorgjuridik.se|se.trustpilot.com|travronden.se|hammarbyfotboll.se|pricerunner.se
 ||cookiepro.com^$domain=birthday.se|fz.se|sweclockers.com|djurskyddet.se|havet.nu|svenskfast.se|fiskejournalen.se|upplysning.se
 ||cookietractor.com^$domain=innebandy.se|orientering.se|pluggakuten.se
 ||cookie-script.com/analytics
