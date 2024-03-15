@@ -1,7 +1,7 @@
 ! Title: Frellwit's Swedish Filter
-! Last updated: Wed, 13 Mar 2024 05:39:57 +0000
+! Last updated: Fri, 15 Mar 2024 08:13:54 +0000
 ! Expires: 5 days
-! Diff-Path: patches/2024.3.13.339.patch#swefilter
+! Diff-Path: patches/2024.3.15.493.patch#swefilter
 ! Diff-Expires: 24 hours
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
@@ -114,7 +114,7 @@ aftonbladet.se##[data-ad-subtype]:upward(1):matches-css(min-height:/[0-9]+/)
 aftonbladet.se,godare.se,livsstil.se##div[data-test-tag="prisjakt-carousel"], a[href^="/brandstudio"], div[class^="advertory-"]:not(.advertory-header-anchor)
 aftonbladet.se,godare.se,livsstil.se,skonhetsredaktorerna.se,omni.se,omniekonomi.se,svd.se##.sp-message-open body:style(overflow:initial!important; position:unset!important; margin-top:unset!important;)
 aftonbladet.se,halsasverige.se,nojesmagasinet.nu,stoppapressarna.se,langd.se,pressbladet.se,svenskpress.se,foretagsbladet.se,gestrikemagasinet.se,cfanytt.se,lasarnas.se,hembostad.nu,sportidrott.se,skolvarlden.se,computersweden.se##.advert
-aftonbladet.se,livsstil.se,godare.se,byggahus.se,expressen.se,elle.se,femina.se,svenskdam.se,galamagasin.se,rodeo.net,familjeliv.se##+js(href-sanitizer, a[href*="/t?a="], ?url)
+aftonbladet.se,livsstil.se,godare.se,byggahus.se,expressen.se,elle.se,femina.se,svenskdam.se,galamagasin.se,rodeo.net,familjeliv.se,vitaestilo.se##+js(href-sanitizer, a[href*="/t?a="], ?url)
 aftonbladet.se,skonhetsredaktorerna.se##.ab_responsive_ads
 agriaffaires.se,truckscorner.se,machineryzone.se##.dp--mb
 aikfotboll.se,vaken.se,tidningen.djurskyddet.se##.banners
@@ -172,7 +172,6 @@ alltomelbil.se###zox-lead-top-wrap
 alltomelbil.se##:is(.p-list, div[class*="post-"]):has(a[href*="/annons"])
 alltomhif.se##a:has-text(/betting|utan registrering|casino/i):upward(article, .slide-item):remove()
 alltomhif.se##.sek-module-inner a[target="_blank"]
-alltomhif.se,luthagsnytt.se,tonyhatefnejad.se,lyckasmedbakning.nu,pinkprogramming.se,mat-meny.se,vitaestilo.se##.preloader
 alltomnorrtalje.se##.allto-widget, .allto-before-content, .allto-after-content, article[class*="sponsrad"]
 alltomsallskapsspel.se,alltombrollop.com##a[onclick*="Banner"]
 alpresor.se###toast-container
@@ -721,6 +720,7 @@ innebandy.se##[class*="banner-container"], .sponsorsswipeblock
 inredningsarkitektur.se##.article:has-text(/sponsrad artikel/i)
 ipo.se##.tag-sponsrad
 itseniorerna.se###astroid-preloader
+itseniorerna.se###redim-cookiehint-modal
 it-finans.se,it-halsa.se,it-kanalen.se,it-pedagogen.se,it-retail.se,it-hallbarhet.se##a[onclick^="gtag"], .header-banner, .penci-featured-cat-custom-ads
 it-finans.se,it-halsa.se,it-kanalen.se,it-pedagogen.se,it-retail.se,it-hallbarhet.se##.widget-title:has-text(/annons/i):upward(aside)
 it-finans.se,it-halsa.se,it-kanalen.se,it-pedagogen.se,it-retail.se,it-hallbarhet.se,espressomedia.se##.penci-wrap-gprd-law
@@ -1151,7 +1151,7 @@ stoppapressarna.se##.premium-page-ad, .footer-banner-wrapper, div[id^="stopp-"]
 streamat.se##img[src*="/Biz.png"]:upward(.elementor-widget-image) ~ .elementor-widget-html
 streamio.com,nyan.ax,spelhubben.se,fotosidan.se,illvet.se,varldenshistoria.se##+js(aeld, contextmenu)
 surfa.se##div[class*="-promo"], div[class*="prisjakt-"]
-surfa.se,hemmafixbloggen.se,teknikfreak.se###loader-wrapper
+surfa.se,teknikfreak.se###loader-wrapper
 svampguiden.com##.label-sponsor:upward(.panel)
 svartgul.se##li.embedded
 svartgul.se,eventeffect.se,executiveeffect.se,saleseffect.se###panorama
@@ -1239,6 +1239,7 @@ tidningen.nu##span:has-text(/^Annons$/):upward(1) + .textwidget
 tidningen.se##.sidebar .widget_widget_code
 tina.se##div[data-ai]
 tittapavideon.se##.adv
+tonyhatefnejad.se,lyckasmedbakning.nu,pinkprogramming.se##.preloader
 totallyorebro.se,totallystockholm.se##div.tot-content-preview-container-small[style*="border-top:4px solid #ffb200;"], .content-overlay--black, a[href*="casino"], a[href*="/sponsrat/"], a[href*="/sponsrat/"] + p.tot-content-preview--meta, .newaddiv, .tot-sidebar
 totallyorebro.se,totallystockholm.se##[class*="tot-content-preview-container"]:has(a[href*="casino"], a[href*="kasino"], a[href*="betting"], a[href*="spel"]):remove()
 tradera.com##ads-takeover
