@@ -1,6 +1,6 @@
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days
-! Last modified: 2024-03-15 09:13:38 CET
+! Last modified: 2024-03-17 06:34:40 CET
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPL3 - https://github.com/lassekongo83/Frellwits-filter-lists/blob/master/LICENSE
@@ -116,7 +116,7 @@ aftonbladet.se##:matches-path(/^/$/) p:has-text(Artikeln innehåller annonslänk
 aftonbladet.se##[data-ad-subtype]:upward(1):matches-css(min-height:/[0-9]+/)
 aftonbladet.se,godare.se,livsstil.se##div[data-test-tag="prisjakt-carousel"], a[href^="/brandstudio"], div[class^="advertory-"]:not(.advertory-header-anchor)
 aftonbladet.se,godare.se,livsstil.se,skonhetsredaktorerna.se,omni.se,omniekonomi.se,svd.se##.sp-message-open body:style(overflow:initial!important; position:unset!important; margin-top:unset!important;)
-aftonbladet.se,halsasverige.se,nojesmagasinet.nu,stoppapressarna.se,langd.se,pressbladet.se,svenskpress.se,foretagsbladet.se,gestrikemagasinet.se,cfanytt.se,lasarnas.se,hembostad.nu,sportidrott.se,skolvarlden.se,computersweden.se##.advert
+aftonbladet.se,halsasverige.se,nojesmagasinet.nu,stoppapressarna.se,langd.se,pressbladet.se,svenskpress.se,foretagsbladet.se,gestrikemagasinet.se,cfanytt.se,lasarnas.se,hembostad.nu,sportidrott.se,skolvarlden.se,computersweden.se,thatsup.se##.advert
 aftonbladet.se,livsstil.se,godare.se,byggahus.se,expressen.se,elle.se,femina.se,svenskdam.se,galamagasin.se,rodeo.net,familjeliv.se,vitaestilo.se##+js(href-sanitizer, a[href*="/t?a="], ?url)
 aftonbladet.se,skonhetsredaktorerna.se##.ab_responsive_ads
 agriaffaires.se,truckscorner.se,machineryzone.se##.dp--mb
@@ -1176,8 +1176,7 @@ svenskgolf.se,husohem.se,tidningenhalsa.se,vagabond.se,praktisktbatagande.se,aka
 svenskhistoria.se##.widget_et_ads, .module-etads, #text-13, #block-4, a[target="_blank"][rel="noopener noreferrer"], a > img[width="300"][height="250"], a > img[width="800"][height="175"], a[href*="casino"], a[href*="poker"], a[href*="kasino"], a img[width="1000"][height="300"]
 svenskhistoria.se##.widget_text:has(a[href*="casino"])
 svenskjakt.se###survey-dialog
-svensktgolfforum.se##+js(acs, setTimeout, test)
-svensktgolfforum.se##[data-ad-id]
+svensktgolfforum.se##[data-ad-id], .darkenwrapper
 svensktidskrift.se###bannercolumn, img[title^="Annons"]
 svensktidskrift.se##.tf_svg_lazy:style(transition:none!important; filter:none!important; transform:none!important;)
 sverigesnatur.org##div[id^="sverigesNaturPopup"]
@@ -1963,6 +1962,7 @@ zeromagazine.nu##div[id^="ads"]
 /nyhetsspalt_banner_js
 /omniture/s_code.js
 /one-signal$domain=swebbtv.se
+/opus-analytics
 /pagead$domain=vilaser.se|horoskoptid.se|eniro.se
 /pages/native$domain=aktuellhallbarhet.se|byggindustrin.se|dagensmedia.se|dagensmedicin.se|fastighetsnytt.se|resume.se|dagenssamhalle.se|market.se|dagligvarunytt.se|privataaffarer.se
 /pages/tag$domain=aktuellhallbarhet.se|byggindustrin.se|dagensmedia.se|dagensmedicin.se|fastighetsnytt.se|resume.se|dagenssamhalle.se|market.se|dagligvarunytt.se|privataaffarer.se
@@ -2359,14 +2359,12 @@ zeromagazine.nu##div[id^="ads"]
 @@/advert.js$1p,domain=aktuellhallbarhet.se|byggindustrin.se|dagensmedia.se|dagensmedicin.se|fastighetsnytt.se|resume.se|dagenssamhalle.se|market.se|dagligvarunytt.se|privataaffarer.se
 @@/adx.js$~third-party,domain=atl.nu|landlantbruk.se
 @@/ad-block-detection-script$domain=blocket.se
-@@/ad.php$script,~third-party,domain=99.teknikveckan.se
 @@/aff/images/*$image,domain=alltforforaldrar.se
 @@/appbanner.jpg$image,domain=guldkanalen.se
 @@/assets/ads-dm.js$~third-party,domain=corren.se|folkbladet.se|mvt.se|nt.se|vt.se|vimmerbytidning.se|kuriren.nu|nsd.se|norran.se|pt.se|ekuriren.se|strengnastidning.se|kkuriren.se|sn.se|eposten.se|unt.se|helagotland.se|kindaposten.se|gotlandjustnu.se
 @@/consent.json$domain=forum.macworld.se
 @@/cykla/assets/js/advertisment.js$~third-party,domain=cykla.se
 @@/freemium/di/analytics$script,domain=di.se
-@@/js/ads.js$~third-party,domain=freeride.se|fz.se|spela.se
 @@/lazy_load.js?gcb$domain=hemmanytt.se
 @@/plugins/ad-ace/*/adblock-detector
 @@/plugins/convertplug/modules/modal/*/cross.png$image,~third-party
@@ -2433,6 +2431,7 @@ zeromagazine.nu##div[id^="ads"]
 ||analytics.barnebys.sh^$image
 ||analytics.gen.shield.monitoringservice.co^
 ||analytics.ozzi.io^$third-party
+||analytics.teknikveckan.se^
 ||analytics.undeco.se^
 ||analytics.wayke.se^
 ||apis.google.com/js/plusone.js$third-party
@@ -2873,6 +2872,7 @@ zeromagazine.nu##div[id^="ads"]
 ||player.vimeo.com^$frame,redirect=click2load.html,domain=breakit.se
 ||pliing.com^$third-party
 ||plowking.mecenat.com^
+||pm.azerioncircle.com^
 ||podcasts.nu/adbg.svg
 ||poddtoppen.se/api/ad?
 ||pomu.se/api/ads.json
