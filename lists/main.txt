@@ -737,6 +737,7 @@ casino-utan-$image
 /mediehuset-gront/img/*banner
 /metrics/bambuser
 /meetrics-tracker
+/opus-analytics
 /peertube-plugin-google-analytics
 /permutive-async.js
 /plugins-mu/analytics
@@ -908,6 +909,7 @@ casino-utan-$image
 ||pipedrive.com^*/statistics/seen
 ||pixel.playbuzz.com^
 ||pji.nu/libs/pjpixel
+||pm.azerioncircle.com^
 ||pt.dwcdn.net/*/datawrapper.gif
 ||pxl.host^$third-party
 ||recirculation.spot.im^$third-party
@@ -1150,7 +1152,7 @@ alltforforaldrar.se,di.se,upphandling24.se,bytbil.com,sverigesnatur.org,tv24.se,
 svartgul.se,eventeffect.se,executiveeffect.se,saleseffect.se###panorama
 teknikveckan.se,di.se,dn.se,skillingaryd.nu,xn--vrnamo-bua.nu,vardfokus.se,kamerabild.se,tripadvisor.se,swedroid.se,bettingstugan.se,expressen.se,dagensopinion.se,driva-eget.se,bioenergitidningen.se,ifokus.se,padelfeber.se,sv.picmix.com,ifragasatt.se,ehandel.se,jaktojagare.se,sportbloggare.com,bovision.se,familjeliv.se,tidningenridsport.se,golflivet.se,vemringde.se,brollopstorget.se,fastighetsvarlden.se,borskollen.se,aktiespararna.se,receptfavoriter.se,tyda.se##.ad
 svd.se,chef.se,vvsforum.se,elinstallatoren.se,arkitekten.se,natursidan.se,svenskfarmaci.se,da.se##.Ad
-aftonbladet.se,halsasverige.se,nojesmagasinet.nu,stoppapressarna.se,langd.se,pressbladet.se,svenskpress.se,foretagsbladet.se,gestrikemagasinet.se,cfanytt.se,lasarnas.se,hembostad.nu,sportidrott.se,skolvarlden.se,computersweden.se##.advert
+aftonbladet.se,halsasverige.se,nojesmagasinet.nu,stoppapressarna.se,langd.se,pressbladet.se,svenskpress.se,foretagsbladet.se,gestrikemagasinet.se,cfanytt.se,lasarnas.se,hembostad.nu,sportidrott.se,skolvarlden.se,computersweden.se,thatsup.se##.advert
 fotosidan.se,merinfo.se,allsvenskan.se,tasteline.com,jaktojagare.se,chefstidningen.se,realtid.se,norpan.se,moviezine.se,jaktjournalen.se,byggvarlden.se,omtanke.today##.ads
 lira.se,danstidningen.se,slangopedia.se,tidningen.se###ads
 fotbolldirekt.se,hockeysverige.se,innebandymagazinet.se,motivation.se,fiskejournalen.se,alba.nu,padeldirekt.se,dagensopinion.se##.annons
@@ -1305,12 +1307,9 @@ pilsner.nu##.overlay-loader
 
 ! Common adb detection
 .se/scripts/google-funding-choices.js
-@@/ad.php$script,~third-party,domain=99.teknikveckan.se
 @@/adserver.$script,~third-party,domain=fotosidan.se|utsidan.se
-@@/js/ads.js$~third-party,domain=freeride.se|fz.se|spela.se
 @@/scripts/advert_$~third-party,domain=di.se
 thatsup.se##+js(set, canShowAds, true)
-svensktgolfforum.se##+js(acs, setTimeout, test)
 egoinas.se,enkelteknik.se,hamnen.se,cannabis.se,tidningen.djurskyddet.se,influens.se,byggipedia.se,byggvarlden.se,vegomagasinet.se,golflivet.se##+js(acs, b2a)
 mobilanyheter.net##+js(set, ai_run_scripts, noopFunc)
 
@@ -1893,6 +1892,7 @@ nordichardware.se##span:has-text(/sponsrat/i):upward(.td_block_wrap)
 nordichardware.se##.td-big-grid-post:has(a[href*="/sponsrat/"])
 surfa.se##div[class*="-promo"], div[class*="prisjakt-"]
 fuska.se##.alert-success
+||analytics.teknikveckan.se^
 /google-analytics$domain=teknikveckan.se
 /maxetise$domain=teknikveckan.se
 teknikveckan.se##.pill:has-text(/spons/i):upward(.grid-item, .pinned, .articleFlow-item)
@@ -2079,7 +2079,7 @@ sverigespringer.se##.cd-card-bar:has-text(/annons/i):upward(.cd-sidebar-item, .c
 ||emotorsport.se/ans/$image
 vibilagare.se##a[href^="/partnermaterial/"]
 ||walls.io^$domain=svensktgolfforum.se
-svensktgolfforum.se##[data-ad-id]
+svensktgolfforum.se##[data-ad-id], .darkenwrapper
 /revive.js$domain=skidspar.se
 /html5videovastplugin.js$domain=skidspar.se
 eu-cookie$domain=skidspar.se
