@@ -1196,7 +1196,7 @@ chef.se,fokus.se##.Blurb--native
 utm_$document,removeparam=/^utm_/,domain=tv.nu|booli.se|expressen.se|aftonbladet.se|bostad.blocket.se|dagensps.se|prisjakt.nu
 /analytics$domain=gbgfotboll.se|stff.se|svenskfotboll.se|di.se|etc.se|vackertvader.se|skogsforum.se|skolporten.se
 /glimr$script,domain=aftonbladet.se|blocket.se|livsstil.se|godare.se
-/profile$ping,domain=feber.se|hamnen.se|tasteline.com|tjock.se|veckorevyn.com|marcusoscarsson.se|handbollskanalen.se|surfa.se|nordichardware.se|hockeynews.se|tv4.se|fotbollskanalen.se|koket.se|teknikveckan.se|56kilo.se
+/profile$ping,domain=feber.se|skippo.se|tasteline.com|tjock.se|veckorevyn.com|marcusoscarsson.se|handbollskanalen.se|surfa.se|nordichardware.se|hockeynews.se|tv4.se|fotbollskanalen.se|koket.se|teknikveckan.se|56kilo.se
 /utag$script,domain=gaffa.se
 /script.js$3p,domain=spelkritik.se
 ! Websites with no obvious or visible facebook login. Will just assume it's used for tracking.
@@ -1228,7 +1228,7 @@ aftonbladet.se,livsstil.se,godare.se,byggahus.se,expressen.se,elle.se,femina.se,
 ||onetrust.com^$third-party,domain=lantmannen.se
 ||youplay.se^$third-party,domain=emocore.se|dayviews.com|kamrat.com|extraextra.se|kalender.se|tyda.se
 ||youplay.se/*.js*ap=true$script,removeparam=/^ap/
-||privacy-mgmt.com^$domain=radio.se|dagenstv.com|kolla.tv|computersweden.se|woxikon.se|kokaihop.se
+||privacy-mgmt.com^$domain=radio.se|dagenstv.com|kolla.tv|computersweden.se|woxikon.se|kokaihop.se|dagen.se
 ||privacy-center.org^$domain=180.se|agriaffaires.se|truckscorner.se|machineryzone.se|viivilla.se|stegforhalsa.se
 ||privacypolicies.com^$domain=fl-net.se
 ||cdn-cookieyes.com^$domain=lokalti.se|jarnvagar.nu|senses.se|norrmejerier.se|temadagar.se|smartsenior.se|tekniknytt.se|nordigt.se|autonytt.se|vm-fotboll.se|kak.se|smhi.se|borattforum.se|mis.se|universitetslararen.se|em-fotboll.se|lakemedelsvarlden.se
@@ -1310,7 +1310,6 @@ pilsner.nu##.overlay-loader
 @@/adserver.$script,~third-party,domain=fotosidan.se|utsidan.se
 @@/scripts/advert_$~third-party,domain=di.se
 thatsup.se##+js(set, canShowAds, true)
-egoinas.se,enkelteknik.se,hamnen.se,cannabis.se,tidningen.djurskyddet.se,influens.se,byggipedia.se,byggvarlden.se,vegomagasinet.se,golflivet.se##+js(acs, b2a)
 mobilanyheter.net##+js(set, ai_run_scripts, noopFunc)
 
 ! Fake walls
@@ -2021,7 +2020,6 @@ sportpanelen.se##.textwidget:has(a[href*="casino"])
 fotbolltransfers.com##div[class^="ad"], a[href^="https://ads."], .header_sponsored
 fotbolltransfers.com##img[src*="/images/annonser/"]:upward(1)
 fotbolltransfers.com##.smallNewsCategory:has-text(/sponsr/i):upward(.smallNewsLink)
-hamnen.se##[class*="annons"]:not(body), .tag-sponsrad, .pp-modal-wrap
 riktighockey.se###custom_html-2
 ||images.fotboll.com/*casino
 fotboll.com##.header-static-lg, .fp-partner, .xs-ad, .bo-wrapper, #betsid, .news-banner-mini, .xs-cblock, .cookie_consent_bar, #odds, a.bellows-target[href*="/svenskaspel"], a.bellows-target[href*="/betting"]
@@ -2267,7 +2265,7 @@ nyafilmer.*##body.modal-open:remove-class(modal-open)
 lwcdn.com##+js(aeld, /^(?:adBlocker|contextmenu)$/)
 
 ! Jwplayer
-/jwpsrv.js$domain=aftonbladet.se|svd.se|axess.se|freeride.se|happyride.se|embed.futuresportsmedia.com|streamio.com|laget.se|moviezine.se|fasttrack.webstream.dk|cdn.jwplayer.com|livsstil.se|allas.se|elle.se|femina.se|hant.se|mabra.com|residencemagazine.se|svenskdam.se|motherhood.se|godare.se|recept.se|hastnet.se
+/jwpsrv.js$domain=aftonbladet.se|svd.se|axess.se|freeride.se|happyride.se|embed.futuresportsmedia.com|streamio.com|laget.se|moviezine.se|fasttrack.webstream.dk|cdn.jwplayer.com|livsstil.se|allas.se|elle.se|femina.se|hant.se|mabra.com|residencemagazine.se|svenskdam.se|motherhood.se|godare.se|recept.se|hastnet.se|skippo.se
 ||jwpcdn.com/player/*/bidding.js$domain=allas.se|elle.se|femina.se|hant.se|mabra.com|residencemagazine.se|svenskdam.se|motherhood.se|recept.se
 ||jwplayer.com/*/advertising$domain=allas.se|elle.se|femina.se|hant.se|mabra.com|residencemagazine.se|svenskdam.se|motherhood.se
 
@@ -2506,7 +2504,7 @@ nordfront.se###campaign_area
 nordiskradio.se###cookieWindow
 katerinamagasin.se##.adv-area, #right-areas, a[href*=".casino"], body > div.code-block
 varldenidag.se##.profile-annons
-dagen.se##.video-annons, .native-box, .arcad-block-container, #consent-container
+dagen.se##.video-annons, .native-box, .arcad-block-container
 inblick.se##div[class^="ads"]
 /videojs-preroll$domain=himlentv7.se
 ||kyrkanstidning.se/firstvisit$xhr,empty
@@ -2657,7 +2655,7 @@ aletorget.se,alingsastorget.se,almhulttorget.se,alvestatorget.se,amaltorget.se,a
 /plugins/arscode-social-slider
 /plugins/bfp-popup$script,domain=omtanke.today
 /plugins/boxzilla$script,domain=dialasen.com|arbetaren.se|doktorn.com
-/plugins/bravepopup$script,domain=matkasse.se|hamnen.se|tidningenglobal.se
+/plugins/bravepopup$script,domain=matkasse.se|tidningenglobal.se
 /plugins/cardoza-facebook-like-box
 /plugins/chimpy/*
 /plugins/christmas-panda
@@ -2958,7 +2956,6 @@ byggipedia.se##aside .textwidget:has-text(/sponsr|samarbetspartners/i)
 byggipedia.se##.protect_contents-overlay, .ai_widget
 byggipedia.se##*:style(user-select: auto !important;)
 byggipedia.se##+js(acs, jQuery, contextmenu)
-byggipedia.se##+js(acs, jQuery, wizard_accordion)
 byggipedia.se##+js(acs, document.onkeypress)
 byggipedia.se##+js(acs, document.onkeydown, e)
 byggipedia.se##+js(acs, frames, oncontextmenu)
