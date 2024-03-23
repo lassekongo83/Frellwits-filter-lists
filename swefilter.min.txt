@@ -1,7 +1,7 @@
 ! Title: Frellwit's Swedish Filter
-! Last updated: Fri, 22 Mar 2024 06:35:26 +0000
+! Last updated: Sat, 23 Mar 2024 05:48:15 +0000
 ! Expires: 5 days
-! Diff-Path: patches/2024.3.22.395.patch#swefilter
+! Diff-Path: patches/2024.3.23.348.patch#swefilter
 ! Diff-Expires: 24 hours
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
@@ -547,9 +547,9 @@ forum.macworld.se##.idgcp__layer--active, .idgcp__layer--active body:style(overf
 forum.mustangclubsweden.org##a[href*="&do=advertisement&ad=1"]
 forum.robsoft.nu##td[valign="middle"] > a[target="_blank"]
 forum.robsoft.nu##.cookie-box
+forvaltarforum.se##.ff_sponsored_articles, .widget_sow-image a[target="_blank"], .ff_banners_widget_widget
 forvaltarforum.se##.ticker-title:has-text(/partner/i)
 forvaltarforum.se##.ticker-title:has-text(/partner/i) + .mh-section
-forvaltarforum.se##[id^="ff_banner"], .home .partner_article + .mh-section, .home .payed_article + .mh-section, .home-columns .ticker-title.partner_article, .home-columns .ticker-title.payed_article, .mh-header .widget_sow-slider, .sow-slider-image, .houdini_partner_article, .houdini_video_banner, .houdini_produktnytt, #houdini_tjanster-2, .widget_sow-image a[target]
 fotbolldirekt.se,hockeysverige.se,innebandymagazinet.se##.c-announcement:has(.c-label--sponsored)
 fotbolldirekt.se,hockeysverige.se,innebandymagazinet.se##.c-announcement:has-text(/annons/i)
 fotbolldirekt.se,hockeysverige.se,innebandymagazinet.se##.pdcw-item--code:has(img[src*="bet365"])
@@ -688,6 +688,8 @@ horisontmagasin.se##small:has-text(/annons/i)
 hotellorestaurang.se,citymark.today,byggfakta.today###bannnerContainer, #pop_overlay, .banner-s, div.featured
 hrnytt.se##article:has(.sponsored-article)
 hrnytt.se,worldinproperty.se##.banner-box
+hrsvepet.se##.cookie-banner, .desktopbanner
+hrsvepet.se##.mini-title-link:not(.w-condition-invisible):has-text(/sponsra/i):upward(1)
 humorbibeln.se,newsner.com,sportbibeln.se,ettgottskratt.se,djurbibeln.se##.inline-share-buttons
 hungrig.nu##.ui-widget-overlay, .ui-dialog
 husbilsplats.se##div[id^="husbi-"]
@@ -886,6 +888,7 @@ medibok.se##style:has-text(body * :not):remove()
 medibok.se##+js(acs, show_msg)
 medibok.se##.annonsmellandiv, .annonssidadiv
 megafonen.se##[data-article-sponsored="true"], .content-main-adwrapper, .campaign-sidebar
+meningokockfonden.se###page_preloader
 merinfo.se##article[data-customer]
 mestmotor.se##a[onclick^="ANAL"]:remove-attr(onclick)
 mestmotor.se###piano:style(opacity: 1 !important;)
@@ -1237,6 +1240,7 @@ tonyhatefnejad.se,lyckasmedbakning.nu,pinkprogramming.se##.preloader
 totallyorebro.se,totallystockholm.se##div.tot-content-preview-container-small[style*="border-top:4px solid #ffb200;"], .content-overlay--black, a[href*="casino"], a[href*="/sponsrat/"], a[href*="/sponsrat/"] + p.tot-content-preview--meta, .newaddiv, .tot-sidebar
 totallyorebro.se,totallystockholm.se##[class*="tot-content-preview-container"]:has(a[href*="casino"], a[href*="kasino"], a[href*="betting"], a[href*="spel"]):remove()
 trafikradion.com##.right
+tranakampsport.se##.w-dyn-item:has(.sponsrad-artikel-wrapper:not(.w-condition-invisible))
 traning40plus.se##[id^="bunyad"]
 travelnews.se##.bottom-bar--animate-in, #job_ads_scroller, .header_banner
 travronden.se##a[href*="/sponsrat/"]
@@ -2522,7 +2526,7 @@ zeromagazine.nu##div[id^="ads"]
 ||connect.facebook.net^$domain=friatider.se|fotosidan.se|ng.se|psykologiguiden.se|lektionsbanken.se|lajvo.se|kvinnatillkvinna.se|epochtimes.se|newsner.com|humorbibeln.se|sportbibeln.se|ettgottskratt.se|djurbibeln.se|sillyseason.se|loppi.se|kyrkanstidning.se|tn.se
 ||connect.nosto.com^*/behav-popup.$script
 ||consentframework.com^$domain=luleahockeyforum.com
-||consentmanager.net^$domain=allastudier.se|gbgfotboll.se|stff.se|svenskfotboll.se|coop.se|dagens.se|mobil.se|kamerabild.se|prevent.se|utsidan.se|inpress.com
+||consentmanager.net^$domain=allastudier.se|gbgfotboll.se|stff.se|svenskfotboll.se|coop.se|dagens.se|mobil.se|kamerabild.se|prevent.se|utsidan.se|inpress.com|studentum.se
 ||consent.podplay.com^
 ||converdiant.com^$third-party
 ||convertbox.com^$third-party
@@ -3005,6 +3009,7 @@ zeromagazine.nu##div[id^="ads"]
 ||sv.picmix.com/sw.js
 ||sv.picmix.com^$csp=worker-src 'none'
 ||s.arclk.net/tr?$all
+||tally.so^$domain=tranakampsport.se
 ||tapet.bonniernews.se^
 ||tc.hometogo.net^$image
 ||telemetry.bambuser.io^
