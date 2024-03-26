@@ -1,6 +1,6 @@
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days
-! Last modified: 2024-03-25 07:36:00 CET
+! Last modified: 2024-03-26 07:29:15 CET
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPL3 - https://github.com/lassekongo83/Frellwits-filter-lists/blob/master/LICENSE
@@ -377,7 +377,6 @@ datormagazin.se##.td-big-grid-post:has(a[href*="/samarbete/"])
 datormagazin.se##.td_module_wrap:has(a[href*="/annons/"])
 dayviews.com##.frontPageBox--links
 da.se##.Advert
-da.se##div.alignwide[style^="height"], .container > .mt-3[style*="height"]
 deliquate.se##[id^="ads300"], [id^="linkcat-"]
 densistavilan.se##div[data-advadstrackid]:upward(.x-bar-footer)
 densistavilan.se##h3:has-text(Advertorial):upward(1)
@@ -509,8 +508,6 @@ filmtipset.se##.news:has-text(casino)
 filmtipset.se##.row.news > div[style^="border"]:last-of-type
 filmtopp.se##body:style(overflow:initial!important)
 filmtopp.se##.cooperation-banner__container, .takeover-desktop, .takeover-mobile, #discover-banner
-finansliv.se##+js(aopw, nwlettersignupcheck)
-finansliv.se##.m-blockAd
 finanstid.se##.tdm-descr:has-text(/casino/i)
 findit.se##+js(set, testPrebid, noopFunc)
 findit.se##.banner-wrapper, .col-banner
@@ -867,7 +864,6 @@ m3.se,pcforalla.se,macworld.se##.amazon_lightning_deals_wrapper
 mabra.com,motherhood.se##article.grid:has-text(/annonssamarbete/i)
 macken.xyz##a[target="_blank"]:not([href^="/"]):not([href*="/macken.xyz"])
 macken.xyz##.et_pb_section:style(opacity:1!important; animation-duration:unset!important; animation-fill-mode:unset!important;)
-magasinetkonkret.se##.konkret-ad-container
 magasinetparagraf.se###large_banner
 magasink.se##[data-magasintrackbid]
 maipenrai.se##.cWidgetContainer > ul > li:first-child, div[style*="border: 1px solid"] a[target="_blank"]
@@ -2295,6 +2291,7 @@ zeromagazine.nu##div[id^="ads"]
 /webbresurser/banner/*
 /white_pixel.gif$domain=byggfakta.today
 /wordads-classes/js/*
+/workbox-offline-ga$domain=magasinetkonkret.se
 /wpbm-banners/*$image
 /wp-content/banners$image
 /wp-content/plugins/addthis/*
