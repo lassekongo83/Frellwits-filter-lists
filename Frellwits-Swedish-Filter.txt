@@ -1,6 +1,6 @@
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days
-! Last modified: 2024-03-30 07:38:31 CET
+! Last modified: 2024-03-31 11:53:37 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPL3 - https://github.com/lassekongo83/Frellwits-filter-lists/blob/master/LICENSE
@@ -293,8 +293,8 @@ bussmagasinet.se###titlebanner
 bussmagasinet.se,byggteknikforlaget.se,dialasen.com,torbjornstips.se,backpacking.se,kanadaresa.se,usa.se,sporthalsa.se,ravarumarknaden.se,livetsgoda.se,opulens.se,radiotreby.se,nyadagbladet.se,fiskemagasinet.se##.textwidget a[target="_blank"]
 butikstrender.se##a[target="_blank"] picture, div[data-settings*="sticky"], div[id^="butik-"]
 butikstrender.se##body > .elementor > .elementor-section:first-child:has-text(Annons)
-byggahus.se##a.click-track-attachment-preview:remove-class(click-track-attachment-preview)
-byggahus.se##a.click-track:remove-class(click-track)
+byggahus.se##a.click-track, img.click-track:remove-class(click-track)
+byggahus.se##a.click-track-attachment-preview, img.click-track-attachment-preview:remove-class(click-track-attachment-preview)
 byggahus.se##body.forum-logged-out .svartalistan-results-login-required:style(height: unset !important;)
 byggahus.se##+js(aeld, /adblockDetector|adsInserted|partnerExternalLinkClick/)
 byggahus.se##.attachmentPreviewActive img:style(-webkit-filter: none !important; filter: none !important;)
@@ -1204,7 +1204,7 @@ swedroid.se##+js(set, checkAdsBlocked, noopFunc)
 swedroid.se##.puff:has(script[src*="lwadm.com"])
 swehockey.se##[class*="-reklam"], .sif-sponsorer, .teaserblock, .commonblock a:not([href^="/"], [href*="/swehockey.se"])
 sydasien.se##.thb-cookie-bar
-sydnarkenytt.se##.abann_wrapper, #hspalt_s1, #cookie_consent
+sydnarkenytt.se##.toppbanner-outer, .reklamplats_hspalt, .egenbanner
 synonymer.se##+js(cookie-remover, /^ev_did|ev_sid/)
 synonymer.se##.create-account-banner, .buy-premium-banner, div[class*="pb-"] > div.text-center
 tabyallehanda.se##p:has-text(ANNONS)
@@ -1249,7 +1249,7 @@ tidningenridsport.se##.subscribe_now_popup, .type-native, #captive, .hldr_takeov
 tidningenskriva.se##section.widget_text:has(div[id^="ad-"])
 tidningen.djurskyddet.se##.ai-track
 tidningen.nu##span:has-text(/^Annons$/):upward(1) + .textwidget
-tidningen.se##.sidebar .widget_widget_code
+tidningen.se##.sidebar .widget_widget_code, .casino
 tina.se##div[data-ai]
 tittapavideon.se##.adv
 tonyhatefnejad.se,lyckasmedbakning.nu,pinkprogramming.se##.preloader
@@ -1800,6 +1800,7 @@ zeromagazine.nu##div[id^="ads"]
 /cookieDirective.js$domain=sdr.se
 /cookieconsent$script,domain=akademiskahus.se|lundagard.se|fuska.nu|kiacarclub.se|nyheteridag.se|internetstart.se|svampguiden.com|scanaktier.se|historier.net|worldinproperty.se|obosdamallsvenskan.se|elitettan.se|bike.se|runnersworld.se
 /cookienotice.js$domain=nordic.ign.com
+/cookiesCon.js$domain=sydnarkenytt.se
 /cookiespolicynotificationbar$domain=svenskahousegruppen.se
 /cookiespolicynotificationbar$script,domain=jamstalldhetskarta.se
 /cookies-and-content-security-policy$script,domain=cannabisifokus.se|futsalmagasinet.se|sd.se
@@ -1966,6 +1967,7 @@ zeromagazine.nu##div[id^="ads"]
 /monetization/pixel-sdk/*
 /mp_emediate/inc/annons.html
 /mrbet_banner
+/native$domain=sydnarkenytt.se
 /native-ads$domain=atl.nu|landlantbruk.se
 /native.html$domain=allas.se|elle.se|femina.se|hant.se|mabra.com|residencemagazine.se|svenskdam.se|motherhood.se
 /news55-ga.js
@@ -2019,7 +2021,7 @@ zeromagazine.nu##div[id^="ads"]
 /plugins/christmas-panda
 /plugins/cm-pop-up-banners
 /plugins/cm-takeover-ad
-/plugins/complianz-gdpr$domain=iconmagazine.se|signprint.se|vilaser.se|arjeplognytt.se|aftonkuriren.se|tidningenglobal.se|tidningensyre.se|landetsfria.nu|fempers.se|macken.xyz|webb-tv.nu|kalmar.nu|brollopsmagasinet.se|megafonen.se|villalivet.se|radiotreby.se
+/plugins/complianz-gdpr$domain=iconmagazine.se|signprint.se|vilaser.se|arjeplognytt.se|aftonkuriren.se|tidningenglobal.se|tidningensyre.se|landetsfria.nu|fempers.se|macken.xyz|webb-tv.nu|kalmar.nu|brollopsmagasinet.se|megafonen.se|radiotreby.se
 /plugins/consent-magic-pro$script,domain=namnmarkning.se|bluum.se|gobokhandeln.se
 /plugins/content-hub-wp-plugin/assets/js/hub-time-spent
 /plugins/convertplug
@@ -2250,6 +2252,7 @@ zeromagazine.nu##div[id^="ads"]
 /thumbnail_bettingstugan$image
 /thumbs/webbannons$image
 /tinypass-gtp.min.js
+/toppbanner.js$domain=sydnarkenytt.se
 /toppbanner_snippet_js
 /torgen/banner.stat
 /trace$xhr,domain=netflixguiden.se
@@ -2326,7 +2329,7 @@ zeromagazine.nu##div[id^="ads"]
 /wp-content/uploads/*unibet$image
 /wp-content/uploads/*-sidebar$image,domain=dagensinfrastruktur.se|nyaprojekt.se|nordiskaprojekt.se|svenskbyggtidning.se|grontsamhallsbyggande.se
 /wp-content/uploads/*/public/assets/js/advanced.js$script
-/wp-content\/uploads\/[0-9]+/$script,domain=villalivet.se|skanesport.se|dackavisen.se|automation.se|tidningenproffs.se|densistavilan.se|universitetslararen.se|alekuriren.se
+/wp-content\/uploads\/[0-9]+/$script,domain=skanesport.se|dackavisen.se|automation.se|tidningenproffs.se|densistavilan.se|universitetslararen.se|alekuriren.se
 /wp-json/wpstatistics
 /wp-json/wp-statistics
 /wp-native-ads.json
@@ -2701,7 +2704,7 @@ zeromagazine.nu##div[id^="ads"]
 ||img.upsales.com/*/visit$script,important
 ||imp.laget.se^
 ||inboxads.com^$third-party
-||inmobi.com^$domain=alltomelbil.se|rikatillsammans.se|egoinas.se|land.se|moviezine.se|travelnews.se|varldenshaftigaste.se|merinfo.se|foreca.se|matklubben.se|reseguiden.se|newsner.com|humorbibeln.se|sportbibeln.se|ettgottskratt.se|djurbibeln.se|laget.se|byrum.se|sportlovin.se|receptfavoriter.se|forni.se|kimura.se|cornucopia.se|norrahalland.se|elevspel.se|finanstid.se|tittapavideon.se|motormagasinet.se|food-supply.se|dagenshandel.se|plastnet.se|habit.se|woodnet.se|foodnet.se|transportnet.se|processnet.se|packnet.se|verkstaderna.se|medtechmagazine.se|recyclingnet.se|rt-forum.se|uochd.se|lifesciencesweden.se|fri-kopenskap.se|cleannet.se|framtidensbygg.se|entreprenad.com|mykitchenstories.se|cancelculture.se|mytaste.se|findit.se|lchfarkivet.se|brinkenbakar.se|foretagande.se|fotbolltransfers.com|affarsvarlden.se
+||inmobi.com^$domain=alltomelbil.se|rikatillsammans.se|egoinas.se|land.se|moviezine.se|travelnews.se|varldenshaftigaste.se|merinfo.se|foreca.se|matklubben.se|reseguiden.se|newsner.com|humorbibeln.se|sportbibeln.se|ettgottskratt.se|djurbibeln.se|laget.se|byrum.se|sportlovin.se|receptfavoriter.se|forni.se|kimura.se|cornucopia.se|norrahalland.se|elevspel.se|finanstid.se|tittapavideon.se|motormagasinet.se|food-supply.se|dagenshandel.se|plastnet.se|habit.se|woodnet.se|foodnet.se|transportnet.se|processnet.se|packnet.se|verkstaderna.se|medtechmagazine.se|recyclingnet.se|rt-forum.se|uochd.se|lifesciencesweden.se|fri-kopenskap.se|cleannet.se|framtidensbygg.se|entreprenad.com|mykitchenstories.se|cancelculture.se|mytaste.se|findit.se|lchfarkivet.se|brinkenbakar.se|foretagande.se|fotbolltransfers.com|affarsvarlden.se|villalivet.se
 ||insertcoin.se^$third-party
 ||insplanet.com^$third-party
 ||instaforex.com^$third-party
