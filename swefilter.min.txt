@@ -1,7 +1,7 @@
 ! Title: Frellwit's Swedish Filter
-! Last updated: Tue, 02 Apr 2024 09:55:34 +0000
+! Last updated: Tue, 02 Apr 2024 18:05:33 +0000
 ! Expires: 5 days
-! Diff-Path: patches/2024.4.2.595.patch#swefilter
+! Diff-Path: patches/2024.4.2.1085.patch#swefilter
 ! Diff-Expires: 24 hours
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
@@ -1036,6 +1036,7 @@ poolforum.se##div.adfit, .cookie_notice, div[style^="width:100%;max-width: 728px
 popularastronomi.se##a.gofollow[data-track]:not([href*="www.popularastronomi.se"])
 pressbladet.se,svenskpress.se,foretagsbladet.se,gestrikemagasinet.se,cfanytt.se,lasarnas.se,hembostad.nu,sportidrott.se,nojesmagasinet.nu,halsasverige.se##.isax, #cookiebar
 pricerunner.se##h2:has-text(/sponsra/i):upward(div[class$="Container-root"])
+prisjakt.nu##.pjra-relative
 pussad.se##html.g1-popup-visible:style(overflow: initial !important;)
 pussad.se##.g1-popup-newsletter, .g1-slideup-wrap
 quizza.nu###takeover
@@ -2950,7 +2951,7 @@ zeromagazine.nu##div[id^="ads"]
 ||schibsted.com/pulse$domain=aftonbladet.se
 ||script.e-space.se^$third-party
 ||sdk.mrf.io/statics/marfeel-sdk
-||sdk.pulse.schibsted.com^$script,domain=aftonbladet.se|omni.se|omniekonomi.se|tv.nu|svd.se
+||sdk.pulse.schibsted.com^$script,domain=aftonbladet.se|omni.se|omniekonomi.se|tv.nu|svd.se|prisjakt.nu
 ||seenthis.se^$third-party
 ||selectofmychoices.com^
 ||sellingsimplified.net^$third-party
