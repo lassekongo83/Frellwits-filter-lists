@@ -1,7 +1,7 @@
 ! Title: Frellwit's Swedish Filter
-! Last updated: Wed, 03 Apr 2024 07:25:08 +0000
+! Last updated: Wed, 03 Apr 2024 11:42:26 +0000
 ! Expires: 5 days
-! Diff-Path: patches/2024.4.3.445.patch#swefilter
+! Diff-Path: patches/2024.4.3.702.patch#swefilter
 ! Diff-Expires: 24 hours
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
@@ -246,7 +246,8 @@ birthday.se##.datax
 bjuvsweek.se##.carouselbanner-wrp
 blocket.se##.placement_panorama, .blocket-placement, div[style="height: 240px;"], [class*="offering-info-box"], [data-id="placement_panorama"]
 bohuslaningen.se,stromstadstidning.se,markposten.se,harrydaposten.se,partilletidning.se,sttidningen.se,molndalsposten.se,kungalvsposten.se,kungsbackaposten.se,alingsastidning.se,ttela.se,gp.se,hallandsposten.se,hn.se##.c-ad__panorama, .c-ad__insider, #outsiderTop, div[data-k5a-pos^="panorama"]
-bokadirekt.se##.ReactModalPortal, a:not([href*="bokadirekt.se"]):not([href^="/"]) img
+bokadirekt.se##a:not([href*="bokadirekt.se"]):not([href^="/"]) img
+bokadirekt.se##.ReactModalPortal:has(a[href="/articles/cookies"])
 bokmassan.se,svenskamassan.se##.cookie-law
 boktugg.se##.elementor-section:has(.sponsor, .elementor-post.category-sponsrat)
 boktugg.se##[id^="boktu-"]
