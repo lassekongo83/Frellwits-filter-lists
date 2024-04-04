@@ -1,6 +1,6 @@
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days
-! Last modified: 2024-04-03 13:42:11 CEST
+! Last modified: 2024-04-04 12:19:10 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPL3 - https://github.com/lassekongo83/Frellwits-filter-lists/blob/master/LICENSE
@@ -493,10 +493,7 @@ fastighetstidningen.se##.adspace, a[class*="annons"]
 fasting.nu##body:style(display:unset!important)
 feber.se,tjock.se##f-internallinks-new:has-text(Annons)
 feber.se,tjock.se##+js(nosiif, checkGDPRInt)
-feber.se,tjock.se##+js(set, checkYinPlaus, noopFunc)
-feber.se,tjock.se##+js(set, checkYin, noopFunc)
 feber.se,tjock.se##+js(set, dovideostuffAD, noopFunc)
-feber.se,tjock.se##+js(set, setYinYang, noopFunc)
 feber.se,tjock.se##.burt-unit, .art_ad, adline, f-panorama, f-deals, #rpPopular, #maxetiseFull, #outsider, [data-ad="true"]
 festivalinfo.se##a[title*="Casino"], #top-content
 festivalinfo.se##.node-news:has(a[href*="casino"])
@@ -2878,6 +2875,7 @@ zeromagazine.nu##div[id^="ads"]
 ||platform.linkedin.com^$third-party
 ||platform.tumblr.com/*/share.js$third-party
 ||platssajten.se^$third-party
+||plausible.io^$script,redirect-rule=noop.js,domain=feber.se|tjock.se
 ||player.vimeo.com^$frame,redirect=click2load.html,domain=breakit.se
 ||pliing.com^$third-party
 ||plowking.mecenat.com^
