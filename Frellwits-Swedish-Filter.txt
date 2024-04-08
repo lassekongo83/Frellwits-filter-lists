@@ -1,6 +1,6 @@
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days
-! Last modified: 2024-04-06 09:12:28 CEST
+! Last modified: 2024-04-08 07:29:03 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPL3 - https://github.com/lassekongo83/Frellwits-filter-lists/blob/master/LICENSE
@@ -465,7 +465,8 @@ evergreengarden.se##article.elementor-grid-item:has-text(reklamsamarbete)
 evertiq.se##+js(acs, $, banner_loader)
 evertiq.se##.cc-container, [data-gabnr], #carpet
 evertiq.se,fz.se##.bnr
-everysport.com##div[class^="Ad_"], a[class^="SponsorLink"]
+everysport.com##div[id^="everysport_sky"], img[alt="X3000"], img[alt="Casinofeber"]
+everysport.com##:is(div[id^="everysport_pano"], div[id^="everysport_rektangel"]):upward(1)
 existenz.se###slidebox
 existenz.se##.link:has(a[href*="bannerid="])
 existenz.se##.wm-nopop, #main > p[style^="color"]
@@ -683,7 +684,7 @@ hockeyettan.se##.club-ad-item, .banner-row
 hockeyguiden.com##.main-loader.loader-bg
 hockeymagasinet.com##body:remove-class(modal-open)
 hockeymagasinet.com##gdpr-alert
-hockeynews.se##[class*="ad-style"], [id^="outsider-"], [id^="banner_"], .ad-mob-container, #mobile-one, #mobile-two, .desktop-horizontal-ad, #article-content img[src*="banner"], #article-content img[src*="prio-hockey"]
+hockeynews.se##[class*="ad-style"], [id^="outsider-"], [id^="banner_"], .ad-mob-container, #mobile-one, #mobile-two, .desktop-horizontal-ad, #article-content img[src*="banner"], #article-content img[src*="prio-hockey"], a[rel*="sponsored"]
 horisontmagasin.se##small:has-text(/annons/i)
 hotellorestaurang.se,citymark.today,byggfakta.today###bannnerContainer, #pop_overlay, .banner-s, div.featured
 hrnytt.se##article:has(.sponsored-article)
@@ -791,8 +792,8 @@ kvartal.se##.square-format:has(.kv-ad-label)
 kwiss.me##.square-item:has(.qz-quiz-sponsored)
 lajvo.se###panoramaTop
 lajvo.se##.postCard:has-text(/bonusar|casino|betting|spelbranschen/i)
-lakartidningen.se##.advertisement
 lakartidningen.se##.screen-sm, .screen-md
+lakartidningen.se,hockeynews.se##.advertisement
 landleyskok.se##.inpostbanner, .banner-leaderboard
 land.se##[class*="--native"], [id^="adwrapper"], .has-sticky-add
 lantbruksnytt.se###startpage-top-right, .ads_text + a, div[class*="square_rotate"], a[target="_blank"][rel="nofollow"], #ouibounce-modal
@@ -1168,7 +1169,7 @@ svd.se##article:has(div[class^="NativeBarWrapper"])
 svd.se##body:style(visibility:visible!important;)
 svd.se###mega-ad-wrapper, div[class*="advertory"], div[data-custom-ad-handled="true"], span[data-id="bottom-sticker-offer"], div[data-context-pageview*="native-svd"]
 svd.se,chef.se,vvsforum.se,elinstallatoren.se,arkitekten.se,natursidan.se,svenskfarmaci.se,da.se##.Ad
-svenskafans.com##.puff__ad-heading
+svenskafans.com##.puff__ad-heading, ad-skyscraper__wrapper, iframe[title*="Bet 365"]
 svenskahousegruppen.se##body.modal-open:style(overflow:initial!important)
 svenskahousegruppen.se###eprivacyModal, .modal-backdrop
 svenskarnaochinternet.se,internetstiftelsen.se###newsletter-sliding
