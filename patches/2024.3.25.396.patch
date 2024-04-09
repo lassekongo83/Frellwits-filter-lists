@@ -1,10 +1,10 @@
-diff name:swefilter lines:128 checksum:70fab0290b
+diff name:swefilter lines:133 checksum:12b6ed3c4f
 d2 1
 a2 1
-! Last updated: Mon, 08 Apr 2024 05:29:17 +0000
+! Last updated: Tue, 09 Apr 2024 06:39:39 +0000
 d4 1
 a4 1
-! Diff-Path: patches/2024.4.8.329.patch#swefilter
+! Diff-Path: patches/2024.4.9.399.patch#swefilter
 d127 1
 d205 1
 d251 1
@@ -127,3 +127,8 @@ d2961 1
 a2961 1
 ||sdk.pulse.schibsted.com^$script,domain=aftonbladet.se|omni.se|omniekonomi.se|tv.nu|svd.se|prisjakt.nu
 d2982 1
+a3124 4
+!#endif
+!#if env_mobile
+||d2189b0dij3l7v.cloudfront.net/p/$domain=tv4play.se|tv4.se|fotbollskanalen.se|koket.se
+tv4play.se,tv4.se,fotbollskanalen.se,koket.se##+js(m3u-prune, .mp4, yospace.com)

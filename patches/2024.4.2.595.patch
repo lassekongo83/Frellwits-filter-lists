@@ -1,10 +1,10 @@
-diff name:swefilter lines:49 checksum:70fab0290b
+diff name:swefilter lines:54 checksum:12b6ed3c4f
 d2 1
 a2 1
-! Last updated: Mon, 08 Apr 2024 05:29:17 +0000
+! Last updated: Tue, 09 Apr 2024 06:39:39 +0000
 d4 1
 a4 1
-! Diff-Path: patches/2024.4.8.329.patch#swefilter
+! Diff-Path: patches/2024.4.9.399.patch#swefilter
 d249 1
 a249 2
 bokadirekt.se##a:not([href*="bokadirekt.se"]):not([href^="/"]) img
@@ -48,3 +48,8 @@ a2876 1
 d2953 1
 a2953 1
 ||sdk.pulse.schibsted.com^$script,domain=aftonbladet.se|omni.se|omniekonomi.se|tv.nu|svd.se|prisjakt.nu
+a3115 4
+!#endif
+!#if env_mobile
+||d2189b0dij3l7v.cloudfront.net/p/$domain=tv4play.se|tv4.se|fotbollskanalen.se|koket.se
+tv4play.se,tv4.se,fotbollskanalen.se,koket.se##+js(m3u-prune, .mp4, yospace.com)
