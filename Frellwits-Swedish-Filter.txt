@@ -1,6 +1,6 @@
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days
-! Last modified: 2024-04-08 07:29:03 CEST
+! Last modified: 2024-04-09 08:39:25 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPL3 - https://github.com/lassekongo83/Frellwits-filter-lists/blob/master/LICENSE
@@ -3112,6 +3112,10 @@ zeromagazine.nu##div[id^="ads"]
 ||fast.fonts.com/t/1.css
 ||fast.fonts.net/t/1.css
 ||fast.fonts.net/lt/1.css
+!#endif
+!#if env_mobile
+||d2189b0dij3l7v.cloudfront.net/p/$domain=tv4play.se|tv4.se|fotbollskanalen.se|koket.se
+tv4play.se,tv4.se,fotbollskanalen.se,koket.se##+js(m3u-prune, .mp4, yospace.com)
 !#endif
 !#if !env_chromium
 ||fast.fonts.net/*/1.css$domain=arkitekt.se|axess.se|diabetes.se|sverigeslarare.se|sdr.se|ljuskultur.se|electronic.se
