@@ -5,11 +5,12 @@ main='lists/main.txt'
 
 directives=$(
   sed -n '/^!#if env_chromium/,/^!#endif/p' $main
+  sed -n '/^!#if env_mobile/,/^!#endif/p' $main
   sed -n '/^!#if !env_chromium/,/^!#endif/p' $main
   sed -n '/^!#if !env_mobile/,/^!#endif/p' $main
 )
 
-sorted=$(sed -e '/^!#if env_chromium/,/^!#endif/d' -e '/^!#if !env_chromium/,/^!#endif/d' -e '/^!#if !env_mobile/,/^!#endif/d' -e '/^\s*$/d; /^!/d' $main | sort -V)
+sorted=$(sed -e '/^!#if env_chromium/,/^!#endif/d' -e '/^!#if !env_chromium/,/^!#endif/d' -e '/^!#if !env_mobile/,/^!#endif/d' -e '/^!#if env_mobile/,/^!#endif/d' -e '/^\s*$/d; /^!/d' $main | sort -V)
 
 # Header content
 filter_headers=$(cat <<EOF
