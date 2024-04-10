@@ -1,7 +1,7 @@
 ! Title: Frellwit's Swedish Filter
-! Last updated: Tue, 09 Apr 2024 07:55:51 +0000
+! Last updated: Wed, 10 Apr 2024 09:15:58 +0000
 ! Expires: 5 days
-! Diff-Path: patches/2024.4.9.475.patch#swefilter
+! Diff-Path: patches/2024.4.10.555.patch#swefilter
 ! Diff-Expires: 24 hours
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
@@ -918,6 +918,7 @@ mitti.se,cafe.se,praktisktbatagande.se##+js(aeld, scroll, helpers.scroll(id))
 mmabetz.se##.desktop-homepage-ad, .desktop-main-ad, .latest-betting-campaigns, .best-casino-section, .top-casino, .mobile-homepage-ad, .mobile-main-ad
 mmanytt.se##.front-banner, .front-banner-cover, #text-2, [class*="sponsrat-inlagg"], a[href*="://kampanjer."], .ohmbet_link, a[href*="adsrv.eacdn.com"], .jeg_postblock + .wpb_content_element, .spelbolag-text, .adbox, .fight-odds-aggressive
 mmanytt.se##.img-featured-posts-image:has(a[href$="/annons/"])
+mmanytt.se##.tablepress:has(a[href*="expekt"])
 mobilanyheter.net##a[href*="rocketpot.io"], a[href*="casino"], a[href*="betting"]
 mobilanyheter.net##+js(set, ai_run_scripts, noopFunc)
 mobil.se,kamerabild.se##.markupbox:has(a[href*="casino"])
@@ -2639,6 +2640,7 @@ zeromagazine.nu##div[id^="ads"]
 ||footjoygolfskorrea.com.se^
 ||forms.hsforms.com^*/counters.$image
 ||forum.odla.nu/js/bonnier.js
+||fotboll.com/*casino$image
 ||fraagesport.com^
 ||freewheel-mtgx-tv.akamaized.net^$media
 ||freyanews.com^*/tracker$script
@@ -2685,7 +2687,6 @@ zeromagazine.nu##div[id^="ads"]
 ||iconosquare.com^$third-party
 ||ifragasatt.se/stats/
 ||images-ads.aland.com^
-||images.fotboll.com/*casino
 ||images.woo.a2d.tv/creative_assets$image,domain=tv4play.se|tv4.se|fotbollskanalen.se|koket.se
 ||imgix.net^*/analytics.$script
 ||imgsct.cookiebot.com/1.gif
