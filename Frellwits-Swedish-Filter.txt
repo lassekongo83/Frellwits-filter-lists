@@ -1,6 +1,6 @@
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days
-! Last modified: 2024-04-10 11:15:39 CEST
+! Last modified: 2024-04-12 13:52:18 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPL3 - https://github.com/lassekongo83/Frellwits-filter-lists/blob/master/LICENSE
@@ -161,8 +161,6 @@ allas.se,elle.se,femina.se,hant.se,mabra.com,residencemagazine.se,svenskdam.se,m
 allas.se,elle.se,femina.se,hant.se,mabra.com,residencemagazine.se,svenskdam.se,motherhood.se##+js(href-sanitizer, a[href*=".io/c/"], ?u)
 allatvkanaler.se##.gda, .cookie-notification
 allsvenskan.se##a[href*="track.adform"]
-allsvenskan.se,superettan.se##html:remove-class(smartbanner-show)
-allsvenskan.se,superettan.se##.app-cookie-line, .partners-slideshow-widgets, .partners-slideshow-slide, .matches-calendar-sponsor, .sponsors, .footer-sponsors, a[target="_blank"] img
 alltforforaldrar.se###partnerMenuContainer, #partnerMenuContainerFiller
 alltforforaldrar.se##.spons-artc, a[href^="/native/"]
 alltforforaldrar.se##.unslider-wrap.unslider-carousel>li:has(.preamble-category:has-text(/^annons/i))
@@ -350,7 +348,6 @@ corren.se,folkbladet.se,mvt.se,nt.se,vt.se,vimmerbytidning.se,kuriren.nu,nsd.se,
 curateContext=affiliate$domain=aftonbladet.se
 cykelframjandet.se##:is(article.tg-item, .lcp_catlist li):has(a[href*="/annons"])
 cykla.se##.featured-post--sponsored, .grid-item--sponsored
-cykla.se#@#.advertisment
 dagensarena.se##.popup
 dagensinfrastruktur.se,nyaprojekt.se,nordiskaprojekt.se,svenskbyggtidning.se,grontsamhallsbyggande.se##.g-single, a[onclick*="banner"], a[onclick*="advert"], .adrotate
 dagensjuridik.se##strong:has-text(/^senaste nytt från våra partners/i):upward(.card--muted)
@@ -998,8 +995,8 @@ nyheteridag.se##h2:has-text(/samarbetslänkar/i):upward(.article-inner)
 nyheteridag.se##.widget.facebook, .content > div:not([class]) img, a[href*="www.casino"], a[href="/karnkraft.php"]
 nyhetersto.se##.site-branding a ~ p, .wp-block-jetpack-slideshow
 nyhetsbyranjarva.se##div[style="display: flex; justify-content: center; flex-direction: column; align-items: center;"], .g
-obosdamallsvenskan.se,elitettan.se##.cc_banner-wrapper, .rmss_module-sponsors, .rmss_ap-top-ad, .rmss_ad-panorama, .rmss_t-momenu__sponsors-area
 obosdamallsvenskan.se,elitettan.se##.rmss_ap-top-ad + .rmss_t-ap-grid-stripe:has(a[href*="svenskaspel"])
+obosdamallsvenskan.se,elitettan.se##.rmss_module-sponsors, .rmss_ap-top-ad, .rmss_ad-panorama, .rmss_t-momenu__sponsors-area
 obsid.se##a[href*="casino"]
 omnihalsa.com,skanesport.se,sportpanelen.se##.stream-item
 omni.se,omniekonomi.se##div.group:has([class*="sponsoredcluster"])
@@ -1080,7 +1077,8 @@ scanaktier.se###overlay-black
 schack.se##.schac-widget
 schoolido.se##.so-cookie__area
 screen-marknaden.se##.fo-banner, .fp-banner
-sdhl.se,ssl.se,storvretaibk.se##.rmss_module-block-linked_image, a[href*="/spela.svenskaspel.se"], .cc_banner-wrapper
+sdhl.se,ssl.se,storvretaibk.se##.rmss_module-block-linked_image, a[href*="/spela.svenskaspel.se"]
+sdhl.se,ssl.se,storvretaibk.se,obosdamallsvenskan.se,elitettan.se,ifiske.se##.cc_banner-wrapper
 selectAdvertiserElement$domain=bebisvarlden.se
 senses.se##aside:has-text(Annonser:)
 senses.se##a[href*="casino"], a[href*="spelsajt"], a[href*="betting"]
@@ -1175,6 +1173,7 @@ svd.se,chef.se,vvsforum.se,elinstallatoren.se,arkitekten.se,natursidan.se,svensk
 svenskafans.com##.puff__ad-heading, ad-skyscraper__wrapper, iframe[title*="Bet 365"]
 svenskahousegruppen.se##body.modal-open:style(overflow:initial!important)
 svenskahousegruppen.se###eprivacyModal, .modal-backdrop
+svenskalag.se##.cookie-overlay, .cookie-box
 svenskarnaochinternet.se,internetstiftelsen.se###newsletter-sliding
 svenskbyggtidning.se,nyhetersto.se,bussmagasinet.se,brollopsmagasinet.se,borattforum.se,globalpolitics.se,batliv.se,em-fotboll.se,elinor.se,fotbollsresultat.com,automation.se,vm-fotboll.se,husbyggaren.se,vildmarken.se,fisheco.se,nyhetsbyranjarva.se,it-finans.se,it-halsa.se,it-kanalen.se,it-pedagogen.se,it-retail.se,it-hallbarhet.se,battregolf.se,sporthalsa.se##a.gofollow[data-track]
 svenskelitfotboll.se##custom-ad
@@ -2366,7 +2365,6 @@ zeromagazine.nu##div[id^="ads"]
 ?autoPlay$frame,removeparam=autoPlay,domain=expressen.se
 ?autoplay=true$frame,removeparam=autoplay,domain=expressen.se
 ?url=*impse.tradedoubler.com$image
-@@/admin-ajax.php?action=archive_grid$~third-party,domain=cykla.se
 @@/adserver.$script,~third-party,domain=fotosidan.se|utsidan.se
 @@/advert.js$1p,domain=aktuellhallbarhet.se|byggindustrin.se|dagensmedia.se|dagensmedicin.se|fastighetsnytt.se|resume.se|dagenssamhalle.se|market.se|dagligvarunytt.se|privataaffarer.se
 @@/adx.js$~third-party,domain=atl.nu|landlantbruk.se
@@ -2375,7 +2373,6 @@ zeromagazine.nu##div[id^="ads"]
 @@/appbanner.jpg$image,domain=guldkanalen.se
 @@/assets/ads-dm.js$~third-party,domain=corren.se|folkbladet.se|mvt.se|nt.se|vt.se|vimmerbytidning.se|kuriren.nu|nsd.se|norran.se|pt.se|ekuriren.se|strengnastidning.se|kkuriren.se|sn.se|eposten.se|unt.se|helagotland.se|kindaposten.se|gotlandjustnu.se
 @@/consent.json$domain=forum.macworld.se
-@@/cykla/assets/js/advertisment.js$~third-party,domain=cykla.se
 @@/freemium/di/analytics$script,domain=di.se
 @@/lazy_load.js?gcb$domain=hemmanytt.se
 @@/plugins/ad-ace/*/adblock-detector
