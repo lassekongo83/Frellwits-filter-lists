@@ -1,6 +1,6 @@
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days
-! Last modified: 2024-04-13 07:38:40 CEST
+! Last modified: 2024-04-14 14:13:36 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPL3 - https://github.com/lassekongo83/Frellwits-filter-lists/blob/master/LICENSE
@@ -915,7 +915,7 @@ mitti.se###cruncho_now_iframe:remove()
 mitti.se##+js(set, NWS.config.enableAdblockerDetection, false)
 mitti.se##.profile-native
 mitti.se,cafe.se,praktisktbatagande.se##+js(aeld, scroll, helpers.scroll(id))
-mmabetz.se##.desktop-homepage-ad, .desktop-main-ad, .latest-betting-campaigns, .best-casino-section, .top-casino, .mobile-homepage-ad, .mobile-main-ad
+mmabetz.se##.desktop-homepage-ad, .desktop-main-ad, .latest-betting-campaigns, .best-casino-section, .top-casino
 mmanytt.se##.front-banner, .front-banner-cover, #text-2, [class*="sponsrat-inlagg"], a[href*="://kampanjer."], .ohmbet_link, a[href*="adsrv.eacdn.com"], .jeg_postblock + .wpb_content_element, .spelbolag-text, .adbox, .fight-odds-aggressive
 mmanytt.se##.img-featured-posts-image:has(a[href$="/annons/"])
 mmanytt.se##.tablepress:has(a[href*="expekt"])
@@ -1000,7 +1000,7 @@ obosdamallsvenskan.se,elitettan.se##.rmss_module-sponsors, .rmss_ap-top-ad, .rms
 obsid.se##a[href*="casino"]
 omnihalsa.com,skanesport.se,sportpanelen.se##.stream-item
 omni.se,omniekonomi.se##div.group:has([class*="sponsoredcluster"])
-omni.se,omniekonomi.se##.article--sponsored, .resource--sponsored, .component--sticky-sponsor-banner, .pre-banner, .banner--toppanorama, .banner--mobiletoppanorama, .banner--midpanorama, .group--banner
+omni.se,omniekonomi.se##.article--sponsored, .resource--sponsored, .component--sticky-sponsor-banner, .pre-banner, .banner--toppanorama, .banner--midpanorama, .group--banner
 omni.se,omniekonomi.se##.header-banner--regular, .app-banner:style(--banner-offset: 0 !important;)
 omni.se,omniekonomi.se##.resource--link:has(a[href*="article-ad-"])
 omtanke.today##.featured
@@ -1271,6 +1271,7 @@ tripadvisor.se##[class$="banner_ad"]
 turismnytt.se##.site-wrap > .row > .col-sm-3
 turistmal.se###col_right
 tv4play.se,tv4.se,fotbollskanalen.se,koket.se##button:has-text(Besök annonsör)
+tv4play.se,tv4.se,fotbollskanalen.se,koket.se##+js(m3u-prune, /vod.streaming.a2d.tv\/ys/, yospace.com)
 tv4play.se,tv4.se,fotbollskanalen.se,koket.se##.avod-web-player-pause:style(background-color:transparent!important;)
 tv4.se##.maxetise
 tv24.se##li[id^="infeed"]
@@ -1629,7 +1630,6 @@ zeromagazine.nu##div[id^="ads"]
 ##[class*="advads_ad_widget"]:not(body):not(html)
 ##[id^="adace_ads"]
 &autoplay$frame,removeparam=autoplay,domain=di.se|expressen.se
-&browser=MozillaFirefox$xmlhttprequest,removeparam=/^browser/,domain=fotbollskanalen.se|koket.se|tv4.se|tv4play.se
 *$ping,domain=fiskejournalen.se
 -popup-analytics
 -tracking.js$domain=aftonbladet.se|godare.se|livsstil.se|svd.se
@@ -2575,6 +2575,7 @@ zeromagazine.nu##div[id^="ads"]
 ||d16fx559zbp759.cloudfront.net/sites
 ||d24rtvkqjwgutp.cloudfront.net/*yb.js
 ||d31djwpx7pcvsr.cloudfront.net/production/*/js/segment.js
+||d2189b0dij3l7v.cloudfront.net/p/$domain=tv4play.se|tv4.se|fotbollskanalen.se|koket.se
 ||dackpartner-web.s3.amazonaws.com^$third-party
 ||deals.innocode.no^$third-party
 ||delivery.youplay.se/api/player_metrics?
@@ -3113,8 +3114,9 @@ zeromagazine.nu##div[id^="ads"]
 ||fast.fonts.net/lt/1.css
 !#endif
 !#if env_mobile
-||d2189b0dij3l7v.cloudfront.net/p/$domain=tv4play.se|tv4.se|fotbollskanalen.se|koket.se
-tv4play.se,tv4.se,fotbollskanalen.se,koket.se##+js(m3u-prune, .mp4, yospace.com)
+##.banner--mobiletoppanorama
+##.mobile-homepage-ad
+##.mobile-main-ad
 !#endif
 !#if !env_chromium
 ||fast.fonts.net/*/1.css$domain=arkitekt.se|axess.se|diabetes.se|sverigeslarare.se|sdr.se|ljuskultur.se|electronic.se
