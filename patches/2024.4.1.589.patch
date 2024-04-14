@@ -1,10 +1,10 @@
-diff name:swefilter lines:89 checksum:a4ac2c23a3
+diff name:swefilter lines:101 checksum:1c4ea51d67
 d2 1
 a2 1
-! Last updated: Sat, 13 Apr 2024 05:39:00 +0000
+! Last updated: Sun, 14 Apr 2024 12:13:51 +0000
 d4 1
 a4 1
-! Diff-Path: patches/2024.4.13.338.patch#swefilter
+! Diff-Path: patches/2024.4.14.733.patch#swefilter
 d161 2
 d249 1
 a249 2
@@ -40,11 +40,17 @@ lakartidningen.se,hockeynews.se##.advertisement
 d908 1
 a908 1
 milansverige.se##.elementor-image a[target="_blank"], .oc_cb_wrapper, .elementor-widget-image a[target="_blank"]
+d919 1
+a919 1
+mmabetz.se##.desktop-homepage-ad, .desktop-main-ad, .latest-betting-campaigns, .best-casino-section, .top-casino
 a921 1
 mmanytt.se##.tablepress:has(a[href*="expekt"])
 d998 1
 a999 1
 obosdamallsvenskan.se,elitettan.se##.rmss_module-sponsors, .rmss_ap-top-ad, .rmss_ad-panorama, .rmss_t-momenu__sponsors-area
+d1003 1
+a1003 1
+omni.se,omniekonomi.se##.article--sponsored, .resource--sponsored, .component--sticky-sponsor-banner, .pre-banner, .banner--toppanorama, .banner--midpanorama, .group--banner
 a1014 1
 oskarshamns-nytt.se##article.category-shoppingguide
 a1037 1
@@ -58,6 +64,9 @@ a1170 1
 svenskafans.com##.puff__ad-heading, ad-skyscraper__wrapper, iframe[title*="Bet 365"]
 a1172 1
 svenskalag.se##.cookie-overlay, .cookie-box
+a1269 1
+tv4play.se,tv4.se,fotbollskanalen.se,koket.se##+js(m3u-prune, /vod.streaming.a2d.tv\/ys/, yospace.com)
+d1628 1
 d1797 1
 d1850 1
 a1888 1
@@ -69,6 +78,8 @@ a2313 1
 d2366 1
 d2375 1
 d2389 1
+a2578 1
+||d2189b0dij3l7v.cloudfront.net/p/$domain=tv4play.se|tv4.se|fotbollskanalen.se|koket.se
 a2643 1
 ||fotboll.com/*casino$image
 d2690 1
@@ -83,8 +94,9 @@ a2874 1
 d2951 1
 a2951 1
 ||sdk.pulse.schibsted.com^$script,domain=aftonbladet.se|omni.se|omniekonomi.se|tv.nu|svd.se|prisjakt.nu
-a3113 4
+a3113 5
 !#endif
 !#if env_mobile
-||d2189b0dij3l7v.cloudfront.net/p/$domain=tv4play.se|tv4.se|fotbollskanalen.se|koket.se
-tv4play.se,tv4.se,fotbollskanalen.se,koket.se##+js(m3u-prune, .mp4, yospace.com)
+##.banner--mobiletoppanorama
+##.mobile-homepage-ad
+##.mobile-main-ad

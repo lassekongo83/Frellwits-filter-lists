@@ -1,10 +1,10 @@
-diff name:swefilter lines:71 checksum:a4ac2c23a3
+diff name:swefilter lines:83 checksum:1c4ea51d67
 d2 1
 a2 1
-! Last updated: Sat, 13 Apr 2024 05:39:00 +0000
+! Last updated: Sun, 14 Apr 2024 12:13:51 +0000
 d4 1
 a4 1
-! Diff-Path: patches/2024.4.13.338.patch#swefilter
+! Diff-Path: patches/2024.4.14.733.patch#swefilter
 d161 2
 d350 1
 d465 1
@@ -32,11 +32,17 @@ lakartidningen.se,hockeynews.se##.advertisement
 d909 1
 a909 1
 milansverige.se##.elementor-image a[target="_blank"], .oc_cb_wrapper, .elementor-widget-image a[target="_blank"]
+d920 1
+a920 1
+mmabetz.se##.desktop-homepage-ad, .desktop-main-ad, .latest-betting-campaigns, .best-casino-section, .top-casino
 a922 1
 mmanytt.se##.tablepress:has(a[href*="expekt"])
 d999 1
 a1000 1
 obosdamallsvenskan.se,elitettan.se##.rmss_module-sponsors, .rmss_ap-top-ad, .rmss_ad-panorama, .rmss_t-momenu__sponsors-area
+d1004 1
+a1004 1
+omni.se,omniekonomi.se##.article--sponsored, .resource--sponsored, .component--sticky-sponsor-banner, .pre-banner, .banner--toppanorama, .banner--midpanorama, .group--banner
 d1081 1
 a1081 2
 sdhl.se,ssl.se,storvretaibk.se##.rmss_module-block-linked_image, a[href*="svenskaspel.se"]
@@ -46,6 +52,9 @@ a1173 1
 svenskafans.com##.puff__ad-heading, ad-skyscraper__wrapper, iframe[title*="Bet 365"]
 a1175 1
 svenskalag.se##.cookie-overlay, .cookie-box
+a1272 1
+tv4play.se,tv4.se,fotbollskanalen.se,koket.se##+js(m3u-prune, /vod.streaming.a2d.tv\/ys/, yospace.com)
+d1631 1
 d1800 1
 d1853 1
 d2200 1
@@ -55,6 +64,8 @@ a2317 1
 d2370 1
 d2379 1
 d2393 1
+a2582 1
+||d2189b0dij3l7v.cloudfront.net/p/$domain=tv4play.se|tv4.se|fotbollskanalen.se|koket.se
 a2647 1
 ||fotboll.com/*casino$image
 d2694 1
@@ -65,8 +76,9 @@ a2874 1
 ||pji.nu^$third-party,domain=minhembio.com|ljudochbild.se
 a2877 1
 ||plausible.io^$script,redirect-rule=noop.js,domain=feber.se|tjock.se
-a3116 4
+a3116 5
 !#endif
 !#if env_mobile
-||d2189b0dij3l7v.cloudfront.net/p/$domain=tv4play.se|tv4.se|fotbollskanalen.se|koket.se
-tv4play.se,tv4.se,fotbollskanalen.se,koket.se##+js(m3u-prune, .mp4, yospace.com)
+##.banner--mobiletoppanorama
+##.mobile-homepage-ad
+##.mobile-main-ad

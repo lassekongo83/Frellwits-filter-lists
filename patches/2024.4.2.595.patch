@@ -1,10 +1,10 @@
-diff name:swefilter lines:85 checksum:a4ac2c23a3
+diff name:swefilter lines:97 checksum:1c4ea51d67
 d2 1
 a2 1
-! Last updated: Sat, 13 Apr 2024 05:39:00 +0000
+! Last updated: Sun, 14 Apr 2024 12:13:51 +0000
 d4 1
 a4 1
-! Diff-Path: patches/2024.4.13.338.patch#swefilter
+! Diff-Path: patches/2024.4.14.733.patch#swefilter
 d161 2
 d249 1
 a249 2
@@ -40,11 +40,17 @@ lakartidningen.se,hockeynews.se##.advertisement
 d908 1
 a908 1
 milansverige.se##.elementor-image a[target="_blank"], .oc_cb_wrapper, .elementor-widget-image a[target="_blank"]
+d919 1
+a919 1
+mmabetz.se##.desktop-homepage-ad, .desktop-main-ad, .latest-betting-campaigns, .best-casino-section, .top-casino
 a921 1
 mmanytt.se##.tablepress:has(a[href*="expekt"])
 d998 1
 a999 1
 obosdamallsvenskan.se,elitettan.se##.rmss_module-sponsors, .rmss_ap-top-ad, .rmss_ad-panorama, .rmss_t-momenu__sponsors-area
+d1003 1
+a1003 1
+omni.se,omniekonomi.se##.article--sponsored, .resource--sponsored, .component--sticky-sponsor-banner, .pre-banner, .banner--toppanorama, .banner--midpanorama, .group--banner
 a1038 1
 prisjakt.nu##.pjra-relative
 d1079 1
@@ -56,6 +62,9 @@ a1171 1
 svenskafans.com##.puff__ad-heading, ad-skyscraper__wrapper, iframe[title*="Bet 365"]
 a1173 1
 svenskalag.se##.cookie-overlay, .cookie-box
+a1270 1
+tv4play.se,tv4.se,fotbollskanalen.se,koket.se##+js(m3u-prune, /vod.streaming.a2d.tv\/ys/, yospace.com)
+d1629 1
 d1798 1
 d1851 1
 d2198 1
@@ -65,6 +74,8 @@ a2315 1
 d2368 1
 d2377 1
 d2391 1
+a2580 1
+||d2189b0dij3l7v.cloudfront.net/p/$domain=tv4play.se|tv4.se|fotbollskanalen.se|koket.se
 a2645 1
 ||fotboll.com/*casino$image
 d2692 1
@@ -79,8 +90,9 @@ a2876 1
 d2953 1
 a2953 1
 ||sdk.pulse.schibsted.com^$script,domain=aftonbladet.se|omni.se|omniekonomi.se|tv.nu|svd.se|prisjakt.nu
-a3115 4
+a3115 5
 !#endif
 !#if env_mobile
-||d2189b0dij3l7v.cloudfront.net/p/$domain=tv4play.se|tv4.se|fotbollskanalen.se|koket.se
-tv4play.se,tv4.se,fotbollskanalen.se,koket.se##+js(m3u-prune, .mp4, yospace.com)
+##.banner--mobiletoppanorama
+##.mobile-homepage-ad
+##.mobile-main-ad

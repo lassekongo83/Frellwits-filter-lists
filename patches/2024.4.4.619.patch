@@ -1,10 +1,10 @@
-diff name:swefilter lines:67 checksum:a4ac2c23a3
+diff name:swefilter lines:79 checksum:1c4ea51d67
 d2 1
 a2 1
-! Last updated: Sat, 13 Apr 2024 05:39:00 +0000
+! Last updated: Sun, 14 Apr 2024 12:13:51 +0000
 d4 1
 a4 1
-! Diff-Path: patches/2024.4.13.338.patch#swefilter
+! Diff-Path: patches/2024.4.14.733.patch#swefilter
 d161 2
 d350 1
 d465 1
@@ -30,11 +30,17 @@ lakartidningen.se,hockeynews.se##.advertisement
 d906 1
 a906 1
 milansverige.se##.elementor-image a[target="_blank"], .oc_cb_wrapper, .elementor-widget-image a[target="_blank"]
+d917 1
+a917 1
+mmabetz.se##.desktop-homepage-ad, .desktop-main-ad, .latest-betting-campaigns, .best-casino-section, .top-casino
 a919 1
 mmanytt.se##.tablepress:has(a[href*="expekt"])
 d996 1
 a997 1
 obosdamallsvenskan.se,elitettan.se##.rmss_module-sponsors, .rmss_ap-top-ad, .rmss_ad-panorama, .rmss_t-momenu__sponsors-area
+d1001 1
+a1001 1
+omni.se,omniekonomi.se##.article--sponsored, .resource--sponsored, .component--sticky-sponsor-banner, .pre-banner, .banner--toppanorama, .banner--midpanorama, .group--banner
 d1078 1
 a1078 2
 sdhl.se,ssl.se,storvretaibk.se##.rmss_module-block-linked_image, a[href*="svenskaspel.se"]
@@ -44,6 +50,9 @@ a1170 1
 svenskafans.com##.puff__ad-heading, ad-skyscraper__wrapper, iframe[title*="Bet 365"]
 a1172 1
 svenskalag.se##.cookie-overlay, .cookie-box
+a1269 1
+tv4play.se,tv4.se,fotbollskanalen.se,koket.se##+js(m3u-prune, /vod.streaming.a2d.tv\/ys/, yospace.com)
+d1628 1
 d1797 1
 d1850 1
 d2197 1
@@ -53,6 +62,8 @@ a2314 1
 d2367 1
 d2376 1
 d2390 1
+a2579 1
+||d2189b0dij3l7v.cloudfront.net/p/$domain=tv4play.se|tv4.se|fotbollskanalen.se|koket.se
 a2644 1
 ||fotboll.com/*casino$image
 d2691 1
@@ -61,8 +72,9 @@ a2698 1
 ||inmobi.com^$domain=alltomelbil.se|rikatillsammans.se|egoinas.se|land.se|moviezine.se|travelnews.se|varldenshaftigaste.se|merinfo.se|foreca.se|matklubben.se|reseguiden.se|newsner.com|humorbibeln.se|sportbibeln.se|ettgottskratt.se|djurbibeln.se|laget.se|byrum.se|sportlovin.se|receptfavoriter.se|forni.se|kimura.se|cornucopia.se|norrahalland.se|elevspel.se|finanstid.se|tittapavideon.se|motormagasinet.se|food-supply.se|dagenshandel.se|plastnet.se|habit.se|woodnet.se|foodnet.se|transportnet.se|processnet.se|packnet.se|verkstaderna.se|medtechmagazine.se|recyclingnet.se|rt-forum.se|uochd.se|lifesciencesweden.se|fri-kopenskap.se|cleannet.se|framtidensbygg.se|entreprenad.com|mykitchenstories.se|cancelculture.se|mytaste.se|findit.se|lchfarkivet.se|brinkenbakar.se|foretagande.se|fotbolltransfers.com|affarsvarlden.se|villalivet.se|branschaktuellt.se|nordic.ign.com|fragbite.se
 a2871 1
 ||pji.nu^$third-party,domain=minhembio.com|ljudochbild.se
-a3114 4
+a3114 5
 !#endif
 !#if env_mobile
-||d2189b0dij3l7v.cloudfront.net/p/$domain=tv4play.se|tv4.se|fotbollskanalen.se|koket.se
-tv4play.se,tv4.se,fotbollskanalen.se,koket.se##+js(m3u-prune, .mp4, yospace.com)
+##.banner--mobiletoppanorama
+##.mobile-homepage-ad
+##.mobile-main-ad
