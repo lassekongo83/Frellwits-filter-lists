@@ -73,7 +73,7 @@
 /_papers_media/banners
 /_sites_media/*/uploads/Banners
 /a?callback=pfmod.saveadsettings
-/ad.aspx?bid
+/ad.aspx?
 /ad/getNouw.$script
 /ad_acknowledgment$xmlhttprequest
 /adnami/macro$script
@@ -371,6 +371,7 @@ casino-utan-$image
 ||pafpartners.com^$third-party
 ||pensiono.se^$third-party
 ||pensiono.se.$subdocument
+||pixel.bet^$third-party
 ||platssajten.se^$third-party
 ||portalhc.com^$third-party
 ||pricerunner.com/publisher-widgets$third-party
@@ -1264,7 +1265,7 @@ motorforum.nu##div.pea_cook_wrapper
 fotboll.com,allsvenskan.se,superettan.se,swebbtv.se,hastnet.se##.smartbanner
 extrakt.se,macken.xyz,dialasen.com,lakartidningen.se###cmplz-cookiebanner-container
 atl.nu,landlantbruk.se,di.se,expressen.se,dn.se###didomi-host
-aip.nu,funktionshinderpolitik.se,sjostadsbladet.se###cookie-notice
+aip.nu,funktionshinderpolitik.se,sjostadsbladet.se,fotbollsresultat.com###cookie-notice
 barnistan.se,welma.se,ingenjorsjobb.se##.cookie-notice
 8sidor.se###cookie-banner
 forexgruppen.se##.cky-consent-container
@@ -2103,7 +2104,7 @@ alltomelbil.se##:is(.p-list, div[class*="post-"]):has(a[href*="/annons"])
 banners$image,domain=travsport.se|gavletravet.se
 travsport.se,gavletravet.se##.banner-component, .partners, .cookie-meddelande
 /frontendLogger$domain=flashscore.se
-flashscore.se##.boxOverContent--a, .otPlaceholder, .seoAdWrapper, .adsbackground-wrapper, .prematchOddsBonus__bonus, .prematchLink[target]
+flashscore.se##.boxOverContent--a, .otPlaceholder, .seoAdWrapper, .adsbackground-wrapper, .prematchOddsBonus__bonus, .prematchLink[target], .detailLeaderboardSkeleton
 fotbollsresultat.com##h2:has-text(Spel och dobbel) ~ p
 sillyseason.se###text-41, #leader-wrapper, a[href^="/till/"][target="_blank"]
 sillyseason.se##li:has(a[href*=".se/odds/"], a[href*="/betting/"], a[href*="kasino"], a[href*="/promomen/"])
@@ -2118,9 +2119,7 @@ travronden.se##a[href*="/sponsrat/"]
 travronden.se##div:matches-css(visibility: hidden):has-text(ANNONS)
 utsidan.se##.clamzone
 utsidan.se##.betart-marker:matches-css(after, content: /Annons/i):upward(.documentpush-group)
-/img/annons$domain=alltomsallskapsspel.se
-/img/banner$domain=alltomsallskapsspel.se
-alltomsallskapsspel.se,alltombrollop.com##a[onclick*="Banner"]
+alltomsallskapsspel.se##.bannersRight
 ungdomsfotboll.se##div[id^="ungdo-"]
 battregolf.se##.elementor-element[data-widget_type="image.default"]
 battregolf.se##article.elementor-post:has(a[href*="casino"], a[href*="bonus"], a[href*="betting"], a[href*="/noje/"])
@@ -2128,6 +2127,7 @@ battregolf.se##article.elementor-post:has(a[href*="casino"], a[href*="bonus"], a
 rejsa.nu###adsblock, #adsblockfoot, .fpright, div[onclick*="window.open"]
 lundgiants.se##.cookieAlert
 lundgiants.se##strong:has-text(Detta är en annons):upward(.inner)
+lundgiants.se###LoggaDiv:style(position:unset!important;)
 golf.se##.partner-area
 svenskelitfotboll.se##custom-ad
 svenskelitfotboll.se##.image-block:has(a[class*="sponsor"])
@@ -2136,7 +2136,7 @@ hammarbyfotboll.se##body[data-modal-open]:style(overflow-y:unset!important;)
 sponsor$image,domain=obosdamallsvenskan.se|elitettan.se
 obosdamallsvenskan.se,elitettan.se##.rmss_module-sponsors, .rmss_ap-top-ad, .rmss_ad-panorama, .rmss_t-momenu__sponsors-area
 obosdamallsvenskan.se,elitettan.se##.rmss_ap-top-ad + .rmss_t-ap-grid-stripe:has(a[href*="svenskaspel"])
-fotboll-tv.se##.SMBoxContentBanner, a[data-gaevent*="action=bookmaker_odds"]
+fotboll-tv.se##.SMBoxContentBanner, a[data-gaevent*="action=bookmaker_odds"], #ouibounce-modal, .SMGameAtomSingleGameOddsComponent
 ||lok.se/pic/sponsor/
 fisheco.se###page-section-2, #page-section-24, .add-special-banner, .g-single
 idrottensaffarer.se###header:style(height:unset!important;)
@@ -2236,8 +2236,8 @@ autopower.se##.card:has(.adsbygoogle)
 ||tvm-tv4-freewheel.akamaized.net^
 ||images.woo.a2d.tv/creative_assets$image,domain=tv4play.se|tv4.se|fotbollskanalen.se|koket.se
 ||d2189b0dij3l7v.cloudfront.net/p/$domain=tv4play.se|tv4.se|fotbollskanalen.se|koket.se
-tv4play.se,tv4.se,fotbollskanalen.se,koket.se##+js(m3u-prune, /vod.streaming.a2d.tv\/ys/, yospace.com)
-tv4play.se,tv4.se,fotbollskanalen.se,koket.se##+js(xml-prune, xpath(//*[name()="yospace:AdBreak"]), , /yospace.com\/csm\/access/)
+tv4play.se,tv4.se,fotbollskanalen.se,koket.se##+js(json-prune-fetch-response, playbackItem.isStitched, , propsToMatch, url:a2d.tv/play)
+tv4play.se,tv4.se,fotbollskanalen.se,koket.se##+js(xml-prune, Ad, , /fwmrm.net\/ad\/g/)
 tv4.se##.maxetise
 tv4play.se,tv4.se,fotbollskanalen.se,koket.se##button:has-text(Besök annonsör)
 tv4play.se,tv4.se,fotbollskanalen.se,koket.se##.avod-web-player-pause:style(background-color:transparent!important;)
