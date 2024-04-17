@@ -1,7 +1,7 @@
 ! Title: Frellwit's Swedish Filter
-! Last updated: Mon, 15 Apr 2024 05:58:12 +0000
+! Last updated: Wed, 17 Apr 2024 07:39:51 +0000
 ! Expires: 5 days
-! Diff-Path: patches/2024.4.15.358.patch#swefilter
+! Diff-Path: patches/2024.4.17.459.patch#swefilter
 ! Diff-Expires: 24 hours
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
@@ -121,7 +121,7 @@ aikfotboll.se,vaken.se,tidningen.djurskyddet.se##.banners
 aikhockey.se,almtuna.com,bikkarlskoga.se,bjorkloven.com,brynas.se,difhockey.se,frolundahockey.com,farjestadbk.se,hockeyallsvenskan.se,hv71.se,ikoskarshamn.se,kalmarhockey.com,leksandsif.se,lhc.eu,luleahockey.se,malmoredhawks.com,modohockey.se,moraik.se,nybrovikings.com,orebrohockey.se,roglebk.se,shl.se,skellefteaaik.se,sodertaljesk.se,taif.nu,timraik.se,vaxjolakers.se,vikhockey.se,vik.se,ostersundik.com##a[href*="svenskaspel.se"][target]
 aip.nu##body.cookies-not-set:style(overflow:unset!important)
 aip.nu##[class*="feed-ad"]
-aip.nu,funktionshinderpolitik.se,sjostadsbladet.se###cookie-notice
+aip.nu,funktionshinderpolitik.se,sjostadsbladet.se,fotbollsresultat.com###cookie-notice
 akaviaaspekt.se##.article-list-item--native, a.article-topic__list-item[href^="/annons"]
 aktieskolan.se##section.elementor-section:has-text(Huvudsponsorer & partners)
 aktiespararna.se,alekuriren.se,tidningen.se,kurera.se##.native
@@ -170,7 +170,7 @@ alltomelbil.se##:is(.p-list, div[class*="post-"]):has(a[href*="/annons"])
 alltomhif.se##a:has-text(/betting|utan registrering|casino/i):upward(article, .slide-item):remove()
 alltomhif.se##.sek-module-inner a[target="_blank"]
 alltomnorrtalje.se##.allto-widget, .allto-before-content, .allto-after-content, article[class*="sponsrad"]
-alltomsallskapsspel.se,alltombrollop.com##a[onclick*="Banner"]
+alltomsallskapsspel.se##.bannersRight
 alpresor.se###toast-container
 altinget.se##a[href^="/sponsrade"]
 antagning.se,universityadmissions.se###cookiebanner
@@ -511,7 +511,7 @@ fisheco.se###page-section-2, #page-section-24, .add-special-banner, .g-single
 flamman.se##.Banner, .TakeOverBanner, .CookieNotice, div#popup
 flashback.org###top-banner-container, #top-banner-wrapper
 flashback.org##+js(nostif, #top-banner-container)
-flashscore.se##.boxOverContent--a, .otPlaceholder, .seoAdWrapper, .adsbackground-wrapper, .prematchOddsBonus__bonus, .prematchLink[target]
+flashscore.se##.boxOverContent--a, .otPlaceholder, .seoAdWrapper, .adsbackground-wrapper, .prematchOddsBonus__bonus, .prematchLink[target], .detailLeaderboardSkeleton
 flm.nu##.spons
 flygtorget.se###PreHeader
 fl-net.se##a:has-text(/lån|casino|kasino/i):upward(p)
@@ -558,7 +558,7 @@ fotbolltransfers.com##div[class^="ad"], a[href^="https://ads."], .header_sponsor
 fotbolltransfers.com##div[style^="min-height"]:has(div[id^="fotbolltransfers_mpu"], div[id^="fotbolltransfers_mobil"])
 fotbolltransfers.com##img[src*="/images/annonser/"]:upward(1)
 fotbolltransfers.com##.smallNewsCategory:has-text(/sponsr/i):upward(.smallNewsLink)
-fotboll-tv.se##.SMBoxContentBanner, a[data-gaevent*="action=bookmaker_odds"]
+fotboll-tv.se##.SMBoxContentBanner, a[data-gaevent*="action=bookmaker_odds"], #ouibounce-modal, .SMGameAtomSingleGameOddsComponent
 fotboll.com##.header-static-lg, .fp-partner, .xs-ad, .bo-wrapper, #betsid, .news-banner-mini, .xs-cblock, .cookie_consent_bar, #odds, a.bellows-target[href*="/svenskaspel"], a.bellows-target[href*="/betting"]
 fotboll.com,allsvenskan.se,superettan.se,swebbtv.se,hastnet.se##.smartbanner
 fotosidan.se##.subArticlesponsored, div[style="width:300px;float:right;"], div[style="float:right;width:300px;"], #partner-box, .adbox-label
@@ -849,6 +849,7 @@ luleahockeyforum.com##main > div:first-child:has(.banniere)
 lundagard.se###bdCheckAlso.bdCheckAlsoShow, .topBanner, #sidebar .widget_media_image
 lundgiants.se##.cookieAlert
 lundgiants.se##strong:has-text(Detta är en annons):upward(.inner)
+lundgiants.se###LoggaDiv:style(position:unset!important;)
 lwcdn.com##+js(aeld, /^(?:adBlocker|contextmenu)$/)
 lwcdn.com,alingsastidning.se,bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se,kungsbackaposten.se,kungalvsposten.se,molndalsposten.se,partilletidning.se,sttidningen.se,markposten.se,harrydaposten.se##+js(json-prune, autoplay players.*.ga acl.ads players.*.autoplay)
 lysekilsposten.se###archiveAdContainer, .casino-wrapper
@@ -1268,8 +1269,8 @@ tripadvisor.se##[class$="banner_ad"]
 turismnytt.se##.site-wrap > .row > .col-sm-3
 turistmal.se###col_right
 tv4play.se,tv4.se,fotbollskanalen.se,koket.se##button:has-text(Besök annonsör)
-tv4play.se,tv4.se,fotbollskanalen.se,koket.se##+js(m3u-prune, /vod.streaming.a2d.tv\/ys/, yospace.com)
-tv4play.se,tv4.se,fotbollskanalen.se,koket.se##+js(xml-prune, xpath(//*[name()="yospace:AdBreak"]), , /yospace.com\/csm\/access/)
+tv4play.se,tv4.se,fotbollskanalen.se,koket.se##+js(json-prune-fetch-response, playbackItem.isStitched, , propsToMatch, url:a2d.tv/play)
+tv4play.se,tv4.se,fotbollskanalen.se,koket.se##+js(xml-prune, Ad, , /fwmrm.net\/ad\/g/)
 tv4play.se,tv4.se,fotbollskanalen.se,koket.se##.avod-web-player-pause:style(background-color:transparent!important;)
 tv4.se##.maxetise
 tv24.se##li[id^="infeed"]
@@ -1697,7 +1698,7 @@ zeromagazine.nu##div[id^="ads"]
 /ad-widget
 /ad-$image,domain=schack.se
 /ad-$subdocument,domain=forum.odla.nu
-/ad.aspx?bid
+/ad.aspx?
 /ad/getNouw.$script
 /ad?platform$domain=ilikeradio.se
 /ad_acknowledgment$xmlhttprequest
@@ -1899,9 +1900,7 @@ zeromagazine.nu##div[id^="ads"]
 /illustrationer/annons_
 /images/*casino$domain=festivalinfo.se
 /img/allalanse$image,domain=ekonominyheter.se
-/img/annons$domain=alltomsallskapsspel.se
 /img/banklan/*$image,domain=ekonominyheter.se
-/img/banner$domain=alltomsallskapsspel.se
 /img/bettingstugan.$image
 /img/compricer$image,domain=ekonominyheter.se
 /isbanner/ib.js
@@ -2864,6 +2863,7 @@ zeromagazine.nu##div[id^="ads"]
 ||piano.io^$domain=thelocal.se|illvet.se|iform.se|varldenshistoria.se|popularhistoria.se|dagen.se|gds.se|slakthistoria.se
 ||pingback.issuu.com/ping
 ||pipedrive.com^*/statistics/seen
+||pixel.bet^$third-party
 ||pixel.playbuzz.com^
 ||pji.nu/libs/pjpixel
 ||pji.nu^$third-party,domain=minhembio.com|ljudochbild.se

@@ -1,16 +1,28 @@
-diff name:swefilter lines:68 checksum:44127071f4
+diff name:swefilter lines:89 checksum:334ec1c6ac
 d2 1
 a2 1
-! Last updated: Mon, 15 Apr 2024 05:58:12 +0000
+! Last updated: Wed, 17 Apr 2024 07:39:51 +0000
 d4 1
 a4 1
-! Diff-Path: patches/2024.4.15.358.patch#swefilter
+! Diff-Path: patches/2024.4.17.459.patch#swefilter
+d124 1
+a124 1
+aip.nu,funktionshinderpolitik.se,sjostadsbladet.se,fotbollsresultat.com###cookie-notice
 d161 2
+d175 1
+a175 1
+alltomsallskapsspel.se##.bannersRight
 d350 1
 d465 1
 a465 2
 everysport.com##div[id^="everysport_sky"], img[alt="X3000"], img[alt="Casinofeber"]
 everysport.com##:is(div[id^="everysport_pano"], div[id^="everysport_rektangel"]):upward(1)
+d516 1
+a516 1
+flashscore.se##.boxOverContent--a, .otPlaceholder, .seoAdWrapper, .adsbackground-wrapper, .prematchOddsBonus__bonus, .prematchLink[target], .detailLeaderboardSkeleton
+d563 1
+a563 1
+fotboll-tv.se##.SMBoxContentBanner, a[data-gaevent*="action=bookmaker_odds"], #ouibounce-modal, .SMGameAtomSingleGameOddsComponent
 a574 1
 freeride.se##.sidebar-front .widget_text.dark ~ p
 d603 1
@@ -23,6 +35,8 @@ hockeynews.se##[class*="ad-style"], [id^="outsider-"], [id^="banner_"], .ad-mob-
 d791 1
 a792 1
 lakartidningen.se,hockeynews.se##.advertisement
+a851 1
+lundgiants.se###LoggaDiv:style(position:unset!important;)
 d904 1
 a904 1
 milansverige.se##.elementor-image a[target="_blank"], .oc_cb_wrapper, .elementor-widget-image a[target="_blank"]
@@ -47,9 +61,14 @@ svenskafans.com##.puff__ad-heading, ad-skyscraper__wrapper, iframe[title*="Bet 3
 a1170 1
 svenskalag.se##.cookie-overlay, .cookie-box
 a1267 2
-tv4play.se,tv4.se,fotbollskanalen.se,koket.se##+js(m3u-prune, /vod.streaming.a2d.tv\/ys/, yospace.com)
-tv4play.se,tv4.se,fotbollskanalen.se,koket.se##+js(xml-prune, xpath(//*[name()="yospace:AdBreak"]), , /yospace.com\/csm\/access/)
+tv4play.se,tv4.se,fotbollskanalen.se,koket.se##+js(json-prune-fetch-response, playbackItem.isStitched, , propsToMatch, url:a2d.tv/play)
+tv4play.se,tv4.se,fotbollskanalen.se,koket.se##+js(xml-prune, Ad, , /fwmrm.net\/ad\/g/)
 d1626 1
+d1696 1
+a1696 1
+/ad.aspx?
+d1898 1
+d1900 1
 d2309 1
 a2309 1
 /wp-content/uploads/*casino$image,domain=nyadagbladet.se|kulturbloggen.com|newsvoice.se|svenskhistoria.se|battrestadsdel.se|zeromagazine.nu|totallyorebro.se|totallystockholm.se|djungeltrumman.se|vaken.se|tekniknytt.se|kingsizemag.se|spelochfilm.se|macken.xyz|improveme.se|bandyfeber.com|stoppapressarna.se|dagensinfrastruktur.se|nyaprojekt.se|nordiskaprojekt.se|svenskbyggtidning.se|grontsamhallsbyggande.se|sjostadsbladet.se|autonytt.se|hockeybladet.nu
@@ -61,6 +80,8 @@ a2574 1
 a2639 1
 ||fotboll.com/*casino$image
 d2686 1
+a2864 1
+||pixel.bet^$third-party
 a3110 5
 !#endif
 !#if env_mobile

@@ -1,18 +1,32 @@
-diff name:swefilter lines:55 checksum:44127071f4
+diff name:swefilter lines:76 checksum:334ec1c6ac
 d2 1
 a2 1
-! Last updated: Mon, 15 Apr 2024 05:58:12 +0000
+! Last updated: Wed, 17 Apr 2024 07:39:51 +0000
 d4 1
 a4 1
-! Diff-Path: patches/2024.4.15.358.patch#swefilter
+! Diff-Path: patches/2024.4.17.459.patch#swefilter
+d124 1
+a124 1
+aip.nu,funktionshinderpolitik.se,sjostadsbladet.se,fotbollsresultat.com###cookie-notice
 d161 2
+d175 1
+a175 1
+alltomsallskapsspel.se##.bannersRight
 d350 1
+d517 1
+a517 1
+flashscore.se##.boxOverContent--a, .otPlaceholder, .seoAdWrapper, .adsbackground-wrapper, .prematchOddsBonus__bonus, .prematchLink[target], .detailLeaderboardSkeleton
+d564 1
+a564 1
+fotboll-tv.se##.SMBoxContentBanner, a[data-gaevent*="action=bookmaker_odds"], #ouibounce-modal, .SMGameAtomSingleGameOddsComponent
 a575 1
 freeride.se##.sidebar-front .widget_text.dark ~ p
 d604 1
 a604 2
 garaget.org##+js(rmnt, #text, casino)
 garaget.org##.gorgad, .gorg-side-content > div.small:nth-last-child(2), .gorg-side-content .bottom-buffer ~ *
+a852 1
+lundgiants.se###LoggaDiv:style(position:unset!important;)
 d905 1
 a905 1
 milansverige.se##.elementor-image a[target="_blank"], .oc_cb_wrapper, .elementor-widget-image a[target="_blank"]
@@ -34,9 +48,14 @@ sdhl.se,ssl.se,storvretaibk.se,obosdamallsvenskan.se,elitettan.se,ifiske.se##.cc
 a1171 1
 svenskalag.se##.cookie-overlay, .cookie-box
 a1268 2
-tv4play.se,tv4.se,fotbollskanalen.se,koket.se##+js(m3u-prune, /vod.streaming.a2d.tv\/ys/, yospace.com)
-tv4play.se,tv4.se,fotbollskanalen.se,koket.se##+js(xml-prune, xpath(//*[name()="yospace:AdBreak"]), , /yospace.com\/csm\/access/)
+tv4play.se,tv4.se,fotbollskanalen.se,koket.se##+js(json-prune-fetch-response, playbackItem.isStitched, , propsToMatch, url:a2d.tv/play)
+tv4play.se,tv4.se,fotbollskanalen.se,koket.se##+js(xml-prune, Ad, , /fwmrm.net\/ad\/g/)
 d1627 1
+d1697 1
+a1697 1
+/ad.aspx?
+d1899 1
+d1901 1
 d2310 1
 a2310 1
 /wp-content/uploads/*casino$image,domain=nyadagbladet.se|kulturbloggen.com|newsvoice.se|svenskhistoria.se|battrestadsdel.se|zeromagazine.nu|totallyorebro.se|totallystockholm.se|djungeltrumman.se|vaken.se|tekniknytt.se|kingsizemag.se|spelochfilm.se|macken.xyz|improveme.se|bandyfeber.com|stoppapressarna.se|dagensinfrastruktur.se|nyaprojekt.se|nordiskaprojekt.se|svenskbyggtidning.se|grontsamhallsbyggande.se|sjostadsbladet.se|autonytt.se|hockeybladet.nu
@@ -48,6 +67,8 @@ a2575 1
 a2640 1
 ||fotboll.com/*casino$image
 d2687 1
+a2865 1
+||pixel.bet^$third-party
 a3111 5
 !#endif
 !#if env_mobile
