@@ -1,6 +1,6 @@
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days
-! Last modified: 2024-04-17 09:39:36 CEST
+! Last modified: 2024-04-18 08:30:47 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPL3 - https://github.com/lassekongo83/Frellwits-filter-lists/blob/master/LICENSE
@@ -1043,8 +1043,8 @@ pussad.se##.g1-popup-newsletter, .g1-slideup-wrap
 quizza.nu###takeover
 qx.se##.qxa-container
 radiotreby.se##.mobileHide, .mobile-show
-radio.se##div[data-testid="regionscloud-container"] a, div[data-testid="taglist-container"] a:style(background-attachment: none !important; background-image: none !important; background-color: rgb(2, 114, 140) !important;)
-radio.se##:is(#RAD_D_station_top, #RAD_D_home_top, #RAD_D_home_inhouse, #RAD_D_search_top):upward(3)
+radio.se##:is(a[data-testid="region-tag"], a[data-testid="taglist-item-topic"], a[data-testid="taglist-item-genre"]):style(background-image:none!important; background:rgb(2, 114, 140)!important;)
+radio.se##:is(.md\:min-h-\[90px\], .lg\:min-h-\[250px\]):has(#RAD_D_station_top, #RAD_D_home_top, #RAD_D_home_inhouse, #RAD_D_search_top)
 ratsit.se##.promo
 ravarumarknaden.se###header > div > div.last, #block-4, #mvp-leader-wrap
 realtid.se##.link:has(.meta--add)
