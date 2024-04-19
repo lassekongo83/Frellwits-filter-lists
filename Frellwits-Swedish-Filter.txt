@@ -1,6 +1,6 @@
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days
-! Last modified: 2024-04-18 08:30:47 CEST
+! Last modified: 2024-04-19 09:06:52 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPL3 - https://github.com/lassekongo83/Frellwits-filter-lists/blob/master/LICENSE
@@ -500,7 +500,7 @@ fightermag.se##a[href*="/sponsra"], #partners
 filatelisten.se##:is(a[target="_blank"]:not([href^="/"], [href*="filatelisten.se"])):upward(section)
 filmparadiset.se##.jnews-cookie-law-policy, a[href*="casino"], .custom-html-widget a[target="_blank"]
 filmtipset.se##em:has-text(/sponsrad/i):upward(.row.news)
-filmtipset.se###topslider-wrapper + .container > .sidebar, .sidebar a[target="_blank"]
+filmtipset.se###topslider-wrapper + .container > .sidebar, .sidebar a[target="_blank"], .sidebar a[href*="casino"], .sidebar a[href*="betting"], .sidebar a[href*="automater"]
 filmtipset.se##.news:has-text(casino)
 filmtipset.se##.row.news > div[style^="border"]:last-of-type
 filmtopp.se##body:style(overflow:initial!important)
@@ -777,9 +777,10 @@ konsumentmagasinet.se##.pricerunner
 kristendate.se##div[id^="adv"]
 kritiker.se##div.recad, div.adhor, div.stickyad
 kritiker.se##iframe[allow]:remove-attr(allow)
-kritiker.se##+js(set, checkAdblocker, falseFunc)
-kritiker.se##+js(set, ispremium, trueFunc)
-kritiker.se##+js(set, slugify, noopFunc)
+kritiker.se##+js(set, checkAdblocker, noopFunc)
+kritiker.se##+js(set, checkAdsBlocked, noopFunc)
+kritiker.se##+js(set, premium, trueFunc)
+kritiker.se##+js(set, p, true)
 kulturama.se##.CookiePopup
 kulturbloggen.com,schack.se##.sidebar .widget_custom_html
 kultwatch.se##.js-preloader > .document, .js-preloader > .hero-section:style(opacity: 1 !important; visibility: visible !important;)
@@ -1947,7 +1948,6 @@ zeromagazine.nu##div[id^="ads"]
 /marknadsguiden.$frame,domain=barometern.se|blt.se|bt.se|kristianstadsbladet.se|olandsbladet.se|smp.se|sydostran.se|trelleborgsallehanda.se|ut.se|ystadsallehanda.se|kalmarposten.se|vxonews.se|vaxjobladet.se|nsk.se|klt.nu
 /maxetise$domain=teknikveckan.se
 /mb-admanager.js?
-/measurements$domain=mtv.se
 /media/eventad/*
 /media/partners$domain=hockeynews.se|tvmatchen.nu
 /mediehuset-gront/img/*annons
@@ -2890,7 +2890,7 @@ zeromagazine.nu##div[id^="ads"]
 ||privacymanager.io^$domain=hastnet.se
 ||privacypolicies.com^$domain=fl-net.se
 ||privacy-center.org^$domain=180.se|agriaffaires.se|truckscorner.se|machineryzone.se|viivilla.se|stegforhalsa.se
-||privacy-mgmt.com^$domain=radio.se|dagenstv.com|kolla.tv|computersweden.se|woxikon.se|kokaihop.se|dagen.se
+||privacy-mgmt.com^$domain=radio.se|dagenstv.com|kolla.tv|computersweden.se|woxikon.se|kokaihop.se|dagen.se|filmtopp.se
 ||prod.uidapi.com^$domain=tittapavideon.se
 ||proff.se^$third-party
 ||proxyas.com^$third-party
@@ -2906,7 +2906,7 @@ zeromagazine.nu##div[id^="ads"]
 ||pushwhy.com^
 ||pxl.host^$third-party
 ||qimtek.se^$third-party
-||quantcast.com^$domain=flashback.org|hippson.se|stoppapressarna.se|babyhjalp.se|nyadagbladet.se|eniro.se|enkelteknik.se|travelgrip.se|samnytt.se|swehockey.se|nyteknik.se|lag-avtal.se|arbetarskydd.se|leta.se|kalender.se|lesscarbs.se|motivation.se|sporttv.nu|goforfit.se|expo.se|filmtopp.se|ljudochbild.se|poddtoppen.se|vackertvader.se|langd.se|doon.se|garaget.org|nouw.com|listor.se|news55.se
+||quantcast.com^$domain=flashback.org|hippson.se|stoppapressarna.se|babyhjalp.se|nyadagbladet.se|eniro.se|enkelteknik.se|travelgrip.se|samnytt.se|swehockey.se|nyteknik.se|lag-avtal.se|arbetarskydd.se|leta.se|kalender.se|lesscarbs.se|motivation.se|sporttv.nu|goforfit.se|expo.se|ljudochbild.se|poddtoppen.se|vackertvader.se|langd.se|doon.se|garaget.org|nouw.com|listor.se|news55.se
 ||qx.se/view.php$image
 ||rabble-res.cloudinary.com^$third-party
 ||radio.se/iomm
