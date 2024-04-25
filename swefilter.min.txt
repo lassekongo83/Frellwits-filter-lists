@@ -1,7 +1,7 @@
 ! Title: Frellwit's Swedish Filter
-! Last updated: Wed, 24 Apr 2024 06:12:58 +0000
+! Last updated: Thu, 25 Apr 2024 05:53:12 +0000
 ! Expires: 5 days
-! Diff-Path: patches/2024.4.24.372.patch#swefilter
+! Diff-Path: patches/2024.4.25.353.patch#swefilter
 ! Diff-Expires: 24 hours
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
@@ -434,8 +434,9 @@ ekonominyheter.se##.td-fix-index:has(a[href*="casino"])
 ekonominyheter.se,autonytt.se,undervarttak.se,aftonbladet.se,lesscarbs.se,hockeybladet.nu,matinspo.se##a[href*="/track.adtraction."]
 electronic.se##.content aside.column-narrow:last-of-type
 elektronikforumet.com##td > a[target="_blank"] img
-elevspel.se##div[class^="rok"]
-elevspel.se##+js(rmnt, script, window.adsbygoogle)
+elevspel.se##div[class*="-unit"]:has(a[href="/medlem/plusmedlem.html"])
+elevspel.se##+js(set, adsBlocked, false)
+elevspel.se##+js(set, isHolid, true)
 elle.se##section.c-native_banner:upward(2)
 emocore.se###main > #home_start_div ~ .m_t.box:nth-last-child(-n+2)
 emocore.se###sticky-panorama, #mob-wrap
@@ -2008,7 +2009,7 @@ zeromagazine.nu##div[id^="ads"]
 /plugins/blog-analytics
 /plugins/bmb-dfp-plugin
 /plugins/borlabs-cookie$script,domain=alltombrollop.com
-/plugins/boxzilla$script,domain=dialasen.com|arbetaren.se|doktorn.com
+/plugins/boxzilla$script,domain=dialasen.com|arbetaren.se
 /plugins/bravepopup$script,domain=matkasse.se|tidningenglobal.se
 /plugins/bsa-plugin-pro-scripteo
 /plugins/cardoza-facebook-like-box
@@ -2148,7 +2149,6 @@ zeromagazine.nu##div[id^="ads"]
 /plugins/wp-lrf-paywall
 /plugins/wp-popups-lite$domain=grillbaronen.se|spelochfilm.se|sameforeningen-stockholm.se|norrkopingshistoria.se
 /plugins/wp-power-stats
-/plugins/wp-sentry-integration$domain=chef.se
 /plugins/wp-snow-effect
 /plugins/wp-statistics
 /plugins/wp-stats-manager
@@ -2530,11 +2530,12 @@ zeromagazine.nu##div[id^="ads"]
 ||cncpt-central.com^$third-party
 ||cncpt.dk^$third-party
 ||collect.breakit.se^
+||compado.com^$third-party
 ||compricer.se^$third-party
 ||connectio.s3.amazonaws.com/connect-retarget$script
 ||connect.facebook.net^$domain=friatider.se|fotosidan.se|ng.se|psykologiguiden.se|lektionsbanken.se|lajvo.se|kvinnatillkvinna.se|epochtimes.se|newsner.com|humorbibeln.se|sportbibeln.se|ettgottskratt.se|djurbibeln.se|sillyseason.se|loppi.se|kyrkanstidning.se|tn.se
 ||connect.nosto.com^*/behav-popup.$script
-||consentframework.com^$domain=luleahockeyforum.com
+||consentframework.com^$domain=luleahockeyforum.com|se.moyens.net
 ||consentmanager.net^$domain=allastudier.se|gbgfotboll.se|stff.se|svenskfotboll.se|coop.se|dagens.se|mobil.se|kamerabild.se|prevent.se|utsidan.se|inpress.com|studentum.se|utbildning.se
 ||consent.podplay.com^
 ||converdiant.com^$third-party
