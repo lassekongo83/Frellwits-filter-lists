@@ -817,6 +817,7 @@ casino-utan-$image
 ||cervera.se/t/t?
 ||ck.page^$third-party
 ||cms.catena.media/js/cm-tracking
+||compado.com^$third-party
 ||converdiant.com^$third-party
 ||convertkit.com^$third-party
 ||conviva.com^$third-party
@@ -1225,7 +1226,7 @@ aftonbladet.se,livsstil.se,godare.se,byggahus.se,expressen.se,elle.se,femina.se,
 ||cookiepro.com^$domain=birthday.se|fz.se|sweclockers.com|djurskyddet.se|havet.nu|svenskfast.se|fiskejournalen.se|upplysning.se
 ||cookieinformation.com^$domain=folkofolk.se|dental24.se|vinbanken.se
 ||cookietractor.com^$domain=innebandy.se|orientering.se|pluggakuten.se
-||consentframework.com^$domain=luleahockeyforum.com
+||consentframework.com^$domain=luleahockeyforum.com|se.moyens.net
 ||evidon.com^$third-party,domain=fasting.nu
 ||mailerlite.com^$third-party,domain=vandringsguiden.se|flm.nu
 ||mailmunch.co^$third-party,domain=affarsstaden.se|enkelteknik.se
@@ -2647,7 +2648,6 @@ aletorget.se,alingsastorget.se,almhulttorget.se,alvestatorget.se,amaltorget.se,a
 /plugins/wp-evolve-gpt
 /plugins/wp-facebook-pixel
 /plugins/wp-power-stats
-/plugins/wp-sentry-integration$domain=chef.se
 /plugins/wp-stats-manager
 /plugins/wp-statistics
 /plugins/yuzo/public/assets/js/pixel-geo
@@ -2658,7 +2658,7 @@ aletorget.se,alingsastorget.se,almhulttorget.se,alvestatorget.se,amaltorget.se,a
 /plugins/appbanners/*
 /plugins/arscode-social-slider
 /plugins/bfp-popup$script,domain=omtanke.today
-/plugins/boxzilla$script,domain=dialasen.com|arbetaren.se|doktorn.com
+/plugins/boxzilla$script,domain=dialasen.com|arbetaren.se
 /plugins/bravepopup$script,domain=matkasse.se|tidningenglobal.se
 /plugins/cardoza-facebook-like-box
 /plugins/chimpy/*
@@ -3232,8 +3232,9 @@ vackertvader.se##div[class^="ad-300x250"], div[class^="ad_300x250"]
 skolporten.se##.article-short:has(a[href*="/sponsrat-innehall"])
 ||stats.helsingborg.se^
 tidningenskriva.se##section.widget_text:has(div[id^="ad-"])
-elevspel.se##div[class^="rok"]
-elevspel.se##+js(rmnt, script, window.adsbygoogle)
+elevspel.se##div[class*="-unit"]:has(a[href="/medlem/plusmedlem.html"])
+elevspel.se##+js(set, adsBlocked, false)
+elevspel.se##+js(set, isHolid, true)
 vilaser.se##.Internal-ad
 doon.se##.doon-promotion, a.link[target="_blank"]
 /bnrimg$domain=nordiskskog.se
