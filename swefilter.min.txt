@@ -1,7 +1,7 @@
 ! Title: Frellwit's Swedish Filter
-! Last updated: Fri, 03 May 2024 11:40:37 +0000
+! Last updated: Sat, 04 May 2024 05:53:36 +0000
 ! Expires: 5 days
-! Diff-Path: patches/2024.5.3.700.patch#swefilter
+! Diff-Path: patches/2024.5.4.353.patch#swefilter
 ! Diff-Expires: 24 hours
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
@@ -320,7 +320,7 @@ cafe.se,kingmagazine.se##.card-partner:upward(1)
 cafe.se,kingmagazine.se,mestmotor.se##.card-partner, .partner
 campingsverige.se##.banner_window, .banner_label, .card_veckans_pryl, .bg_camping_se
 campingsverige.se##.post_sponsrad_label:upward(1)
-camping.se##.ads-above-header, .ads-teaser, .paragraph--type--ad-script, div[about*="/annons/"]
+camping.se##.ads-above-header, .ads-teaser, .paragraph--type--ad-script, div[about*="/annons/"], a[href*="/sv/annons"]
 cannabisifokus.se##div[id^="canna-"]
 cannabis.se##+js(aopw, Cookies)
 cannabis.se##.header-ads-wrapper, .ai-adb-hide, .ai-sticky-widget, .hampaonline
@@ -440,7 +440,7 @@ elevspel.se##+js(set, adsBlocked, false)
 elevspel.se##+js(set, isHolid, true)
 elle.se##section.c-native_banner:upward(2)
 emocore.se###main > #home_start_div ~ .m_t.box:nth-last-child(-n+2)
-emocore.se###sticky-panorama, #mob-wrap
+emocore.se###sticky-panorama-container, #mob-wrap
 energi.se##.advertisement--item
 eniro.se##article:has(#marketing)
 eniro.se##div.rounded-4xl:has(a[href$="/firma#marketing"])
@@ -1112,7 +1112,7 @@ skogssallskapet.se,formas.se,rf.se##body:style(overflow:initial!important; posit
 skogssallskapet.se,formas.se,rf.se##.env-modal-dialog--show, .env-modal-dialog__backdrop
 skolfamiljen.se##.right-sidebar aside[id^="block"], .right-sidebar aside[id^="adguru"]
 skolporten.se##.article-short:has(a[href*="/sponsrat-innehall"])
-skrattnet.se,7an.se##.region-sidebar-second
+skrattnet.se##.region-sidebar-second
 skrattsajten.com,norpan.se##.cookieScript
 skrattsajten.com,norpan.se##+js(acs, $, e.preventDefault)
 skyltat.se##.sidebar
@@ -2690,6 +2690,7 @@ zeromagazine.nu##div[id^="ads"]
 ||iphonecasinon.com^$third-party
 ||isgprivacy.cbsi.com^$domain=nickelodeon.se
 ||jajja.com^$third-party
+||jitsu.com/p.js
 ||jobba-hemifran.com^
 ||jobb.blocket.se/blocket_puff.html
 ||jobb.blocket.se^*/tracker.js
