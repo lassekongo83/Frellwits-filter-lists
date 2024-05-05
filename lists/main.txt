@@ -704,6 +704,7 @@ casino-utan-$image
 /burst-statistics
 /cdigo-audit.js
 /census.js?bust=release
+/clicktracking.siteseeker
 /conversions/tracking.js$third-party
 /ctr-prd.cbs-measurements.
 /cx-emediate-userprofile-se
@@ -1240,7 +1241,7 @@ aftonbladet.se,livsstil.se,godare.se,byggahus.se,expressen.se,elle.se,femina.se,
 ||privacymanager.io^$domain=hastnet.se
 ||cookie-script.com^$domain=axess.se|dagensjuridik.se|foodfolder.se|arkitektur.se|internetlankar.se|friluftsframjandet.se|lchfarkivet.se|bakasockerfritt.se
 ||cmp.setupcmp.com^$domain=se.azrhymes.com
-||usercentrics.eu^$domain=hemnet.se|kantarsifo.se
+||usercentrics.eu^$domain=hemnet.se|kantarsifo.se|foretagarna.se
 
 ! -- Specific annoying elements
 adecco.se,ica.se,apotekhjartat.se,tele2.se###onetrust-consent-sdk
@@ -2927,7 +2928,6 @@ sexpacket.se##+js(aeld, /contextmenu|cut|copy|paste/)
 ||akademiskahus.se/AddThis?$script
 /www/images/*$domain=elektronikforumet.com
 elektronikforumet.com##td > a[target="_blank"] img
-bilweb.se###cookie_alert
 byggteknikforlaget.se###text-2.widget_text, .header-widget-area
 framtid.se###siteflash, #customer-link-container
 ||humorbrevet.se/externa_bilder
@@ -2935,7 +2935,7 @@ familjesidan.se##.cookies-wrapper
 filatelisten.se##:is(a[target="_blank"]:not([href^="/"], [href*="filatelisten.se"])):upward(section)
 arkitektur.se##[class*="panorama"]
 arkitektur.se##article:has(.Entry-sponsored)
-foretagarna.se##.c-cookie
+/foretagarna.usercentrics.js$domain=foretagarna.se
 lokalnytt.se##.panoramaImageBox
 vi.se###westander-cookie-dialog, .Cookie-consent__backdrop
 vi.se##body.cookie-modal-open:style(overflow:unset!important;)
@@ -2949,10 +2949,9 @@ byggipedia.se##+js(acs, document.onkeydown, e)
 byggipedia.se##+js(acs, frames, oncontextmenu)
 byggipedia.se##+js(set, ai_set_cookie, noopFunc)
 xn--lnforum-exa.se##.LFRBox
-maipenrai.se##.cWidgetContainer > ul > li:first-child, div[style*="border: 1px solid"] a[target="_blank"]
+maipenrai.se##.cWidgetContainer > ul > li:first-child, div[style*="border: 1px solid"] a[target="_blank"], div[data-role="sidebarAd"], a[href*="&ad="]
 startaochdriva.se##.banner-right, .banner-left, .wpb_single_image a[target="_blank"], .tdm-popup-modal-wrap
 startaochdriva.se##:is(.latest-post, .td-cpt-post):has(a[href*="/sponsrat"])
-startaochdriva.se##+js(noeval)
 /exposure$xmlhttprequest,domain=lokalguiden.se
 ||lokalguiden.se/magasinet/banner
 lokalguiden.se##.applicant-match-container, .banner-item
@@ -2962,6 +2961,7 @@ poolforum.se##div.adfit, .cookie_notice, div[style^="width:100%;max-width: 728px
 varmepumpsforum.com##.stopjump
 varmepumpsforum.com##a[target]:upward(.frontlinks tr)
 ipo.se##.tag-sponsrad
+/cookie_popup$script,domain=trafikradion.com|trafik24.se
 /noview.$script,domain=trafikradion.com|gofm.se|trafik24.se
 trafikradion.com##.right
 ||prod.uidapi.com^$domain=tittapavideon.se
