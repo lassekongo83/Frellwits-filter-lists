@@ -1,6 +1,6 @@
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days
-! Last modified: 2024-05-04 07:53:19 CEST
+! Last modified: 2024-05-05 07:39:28 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPL3 - https://github.com/lassekongo83/Frellwits-filter-lists/blob/master/LICENSE
@@ -239,7 +239,6 @@ bilresaieuropa.se##.widget-title:has-text(/spons/i):upward(.widget_text)
 bilsport.se##fl-gdpr, fl-panorama-top, fl-newsletter-popup
 bilsport.se##.includingFeaturedSliderArticle:has(.native-mark)
 bilwebben.ax##.front #secondary-content-wrapper, .banner-wrapper, .content-prefix-banner-wrapper
-bilweb.se###cookie_alert
 bioenergitidningen.se##article:remove-class(closed)
 bioenergitidningen.se###cookieinfo
 biostock.se,hejauppsala.com,svenskfilmdatabas.se##.wt-cli-cookie-bar-container
@@ -536,7 +535,6 @@ foodfolder.se###myModal, .adImage
 foretagande.se##article:has(.sponsored-text)
 foretagande.se##div.article:has(a[href$="artiklar-i-samarbete"])
 foretagande.se##div[id*="panorama"], .panorama-pos
-foretagarna.se##.c-cookie
 foretagsverige.se,forskningsverige.se,motorbibeln.se,hallbarhetsverige.se,tillvaxtsverige.se,grillbibeln.se,kampenmotcancer.se,folkhalsasverige.se##:is(div[class*="vicky-whitebox"], .vicky-category-label, .vicky-video-infobox-label, .vicky-post-headline-container__category__inner):has-text(/spons/i):upward(a, .carousel-caption, .featurette, article)
 forexgruppen.se##div[data-widget_type="image.default"] a:not([href*="forexgruppen.se"], [href^="/"]), .widget_media_image a:not([href*="forexgruppen.se"], [href^="/"])
 forexgruppen.se##+js(noeval-if, adbEnableForPage)
@@ -867,7 +865,7 @@ macken.xyz##a[target="_blank"]:not([href^="/"]):not([href*="/macken.xyz"])
 macken.xyz##.et_pb_section:style(opacity:1!important; animation-duration:unset!important; animation-fill-mode:unset!important;)
 magasinetparagraf.se###large_banner
 magasink.se##[data-magasintrackbid]
-maipenrai.se##.cWidgetContainer > ul > li:first-child, div[style*="border: 1px solid"] a[target="_blank"]
+maipenrai.se##.cWidgetContainer > ul > li:first-child, div[style*="border: 1px solid"] a[target="_blank"], div[data-role="sidebarAd"], a[href*="&ad="]
 maklarvarlden.se##article:has(.sponsored-inlist)
 maklarvarlden.se##.hustle-popup
 maklarvarlden.se##.td-post-category:has-text(/spons/i):upward(2)
@@ -1154,7 +1152,6 @@ spray.se##section[class*="casino"], a[href*="casino"]
 spray.se##+js(set, googletag, 1)
 spray.se,vinochmatguiden.se##+js(set, window.WURFL, 1)
 stallet.se##.pnlAdTop
-startaochdriva.se##+js(noeval)
 startaochdriva.se##.banner-right, .banner-left, .wpb_single_image a[target="_blank"], .tdm-popup-modal-wrap
 startaochdriva.se##:is(.latest-post, .td-cpt-post):has(a[href*="/sponsrat"])
 stegforhalsa.se##[class*="jsx-"][style*="position: sticky"], .bc--grey-neutral-50[style^="min-height"]
@@ -1787,6 +1784,7 @@ zeromagazine.nu##div[id^="ads"]
 /cecado/advisible.js
 /census.js?bust=release
 /clickperformance$domain=radio.se
+/clicktracking.siteseeker
 /closest-native$domain=expressen.se
 /cmpv2$domain=m3.se|pcforalla.se|macworld.se
 /cmp.js$domain=praktisktbatagande.se|hemtrevligt.se|vagabond.se|tidningenhalsa.se|utemagasinet.se|svenskgolf.se|mestmotor.se|sportfack.se|husohem.se|minhast.se|kalleanka.se|halge.se|bamse.se|akaskidor.se|husvagnochcamping.se
@@ -1803,6 +1801,7 @@ zeromagazine.nu##div[id^="ads"]
 /cookie-consent$script,domain=minhembio.com
 /cookie_consent.js$domain=djungeltrumman.se
 /cookie_policy.js$domain=nasdaqomxnordic.com
+/cookie_popup$script,domain=trafikradion.com|trafik24.se
 /cpg_ads.$script
 /cs1pc.js$domain=kiaindex.se
 /ctr-prd.cbs-measurements.
@@ -1852,6 +1851,7 @@ zeromagazine.nu##div[id^="ads"]
 /firebase-analytics.js$domain=stoppapressarna.se
 /flex-mag/js/dfp.js
 /footer/ad|
+/foretagarna.usercentrics.js$domain=foretagarna.se
 /forumannons.$subdocument,image,script
 /forum/assets/google-tag-manager
 /forum/images/_banners
@@ -3046,7 +3046,7 @@ zeromagazine.nu##div[id^="ads"]
 ||usefathom.com^$domain=fz.se|sweclockers.com
 ||usercentrics.eu/1.gif
 ||usercentrics.eu/uct?$image
-||usercentrics.eu^$domain=hemnet.se|kantarsifo.se
+||usercentrics.eu^$domain=hemnet.se|kantarsifo.se|foretagarna.se
 ||userneeds.com^$third-party
 ||valentinosverige.com^
 ||vejaskor.com.se^
