@@ -1,7 +1,7 @@
 ! Title: Frellwit's Swedish Filter
-! Last updated: Mon, 06 May 2024 10:30:04 +0000
+! Last updated: Tue, 07 May 2024 06:15:04 +0000
 ! Expires: 5 days
-! Diff-Path: patches/2024.5.6.630.patch#swefilter
+! Diff-Path: patches/2024.5.7.375.patch#swefilter
 ! Diff-Expires: 24 hours
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
@@ -271,6 +271,7 @@ bovision.se##a:has(.ad-mark)
 bovision.se##.banner-image
 bovision.se##.blog-article-card:has(.sponsor-mark)
 brafiler.se###header-banner, #cboxOverlay, #colorbox, .adv-inner, #sidebar-banner
+brafiler.se##.rlt-top-pro:has(a[href*="casino"])
 branschaktuellt.se##span:has-text(Sponsrad):upward(.article)
 branschaktuellt.se##.popup-signup
 branschkoll.se##div[id^="brans-"], .widget-sponsored-post
@@ -433,9 +434,9 @@ ekonominyheter.se##.td-fix-index:has(a[href*="casino"])
 ekonominyheter.se,autonytt.se,undervarttak.se,aftonbladet.se,lesscarbs.se,hockeybladet.nu,matinspo.se##a[href*="/track.adtraction."]
 electronic.se##.content aside.column-narrow:last-of-type
 elektronikforumet.com##td > a[target="_blank"] img
+elevspel.se##div#cookie_wrapper
 elevspel.se##div[class*="-unit"]:has(a[href="/medlem/plusmedlem.html"])
-elevspel.se##+js(set, adsBlocked, false)
-elevspel.se##+js(set, isHolid, true)
+elevspel.se##+js(rmnt, script, cloned.removeAttr)
 elle.se##section.c-native_banner:upward(2)
 emocore.se###main > #home_start_div ~ .m_t.box:nth-last-child(-n+2)
 emocore.se###sticky-panorama-container, #mob-wrap
@@ -882,6 +883,7 @@ matmalin.se##div[id^="matma-"]
 matochpyssel.nu##.loading:style(opacity:1!important)
 matpriskollen.se###kd-preloader
 matspar.se##div[style="z-index: 2000;"],div[style="z-index: 2000;"] + div
+matspar.se###ad-panorama-category:upward(1)
 matspar.se##+js(json-prune, payload.ads campaigns.*)
 matspar.se##.overflow-hidden:style(overflow-y: initial !important;)
 medibok.se##noscript:has-text(mdp-deblocker-js-disabled):remove()
@@ -2130,6 +2132,7 @@ zeromagazine.nu##div[id^="ads"]
 /plugins/wp-copy-protect
 /plugins/wp-evolve-gpt
 /plugins/wp-facebook-pixel
+/plugins/wp-gdpr-compliance$script,domain=pussad.se
 /plugins/wp-lrf-paywall
 /plugins/wp-popups-lite$domain=grillbaronen.se|spelochfilm.se|sameforeningen-stockholm.se|norrkopingshistoria.se
 /plugins/wp-power-stats
@@ -2673,7 +2676,7 @@ zeromagazine.nu##div[id^="ads"]
 ||img.upsales.com/*/visit$script,important
 ||imp.laget.se^
 ||inboxads.com^$third-party
-||inmobi.com^$domain=alltomelbil.se|rikatillsammans.se|egoinas.se|land.se|moviezine.se|travelnews.se|varldenshaftigaste.se|merinfo.se|foreca.se|matklubben.se|reseguiden.se|newsner.com|humorbibeln.se|sportbibeln.se|ettgottskratt.se|djurbibeln.se|laget.se|byrum.se|sportlovin.se|receptfavoriter.se|forni.se|kimura.se|cornucopia.se|norrahalland.se|elevspel.se|finanstid.se|tittapavideon.se|motormagasinet.se|food-supply.se|dagenshandel.se|plastnet.se|habit.se|woodnet.se|foodnet.se|transportnet.se|processnet.se|packnet.se|verkstaderna.se|medtechmagazine.se|recyclingnet.se|rt-forum.se|uochd.se|lifesciencesweden.se|fri-kopenskap.se|cleannet.se|framtidensbygg.se|entreprenad.com|mykitchenstories.se|cancelculture.se|mytaste.se|findit.se|lchfarkivet.se|brinkenbakar.se|foretagande.se|fotbolltransfers.com|affarsvarlden.se|villalivet.se|branschaktuellt.se|nordic.ign.com|fragbite.se|lindasbakskola.se|jennysmatblogg.nu|filippoon.se|lesscarbs.se|eniro.se
+||inmobi.com^$domain=alltomelbil.se|rikatillsammans.se|egoinas.se|land.se|moviezine.se|travelnews.se|varldenshaftigaste.se|merinfo.se|foreca.se|matklubben.se|reseguiden.se|newsner.com|humorbibeln.se|sportbibeln.se|ettgottskratt.se|djurbibeln.se|laget.se|byrum.se|sportlovin.se|receptfavoriter.se|forni.se|kimura.se|cornucopia.se|norrahalland.se|elevspel.se|finanstid.se|tittapavideon.se|motormagasinet.se|food-supply.se|dagenshandel.se|plastnet.se|habit.se|woodnet.se|foodnet.se|transportnet.se|processnet.se|packnet.se|verkstaderna.se|medtechmagazine.se|recyclingnet.se|rt-forum.se|uochd.se|lifesciencesweden.se|fri-kopenskap.se|cleannet.se|framtidensbygg.se|entreprenad.com|mykitchenstories.se|cancelculture.se|mytaste.se|findit.se|lchfarkivet.se|brinkenbakar.se|foretagande.se|fotbolltransfers.com|affarsvarlden.se|villalivet.se|branschaktuellt.se|nordic.ign.com|fragbite.se|lindasbakskola.se|jennysmatblogg.nu|filippoon.se|lesscarbs.se|eniro.se|matspar.se
 ||insertcoin.se^$third-party
 ||insplanet.com^$third-party
 ||instaforex.com^$third-party
