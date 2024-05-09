@@ -1,10 +1,10 @@
-diff name:swefilter lines:236 checksum:e300fe7c4d
+diff name:swefilter lines:250 checksum:f7601c5932
 d2 1
 a2 1
-! Last updated: Wed, 08 May 2024 05:58:35 +0000
+! Last updated: Thu, 09 May 2024 05:53:16 +0000
 d4 1
 a4 1
-! Diff-Path: patches/2024.5.8.358.patch#swefilter
+! Diff-Path: patches/2024.5.9.353.patch#swefilter
 d139 1
 a139 1
 alandstidningen.ax##.revive-wrapper, div[id^="block-views-block-editorial-ads"], div[id^="block-blockbanner"]
@@ -31,6 +31,10 @@ byggipedia.se##.code-block:has(.adsbygoogle)
 d320 1
 a320 1
 camping.se##.ads-above-header, .ads-teaser, .paragraph--type--ad-script, div[about*="/annons/"], a[href*="/sv/annons"]
+d380 1
+a380 2
+designbase.se##html,body:style(overflow:unset!important;)
+designbase.se##.banner-hidden, .z-newsletter-modal, .z-newsletter-popup
 d417 1
 a417 1
 dn.se,di.se,expressen.se,atl.nu,landlantbruk.se,hd.se,sydsvenskan.se,allehanda.se,tidningenangermanland.se,arbetarbladet.se,avestatidning.com,bblat.se,dalademokraten.se,fagersta-posten.se,gd.se,lt.se,ltz.se,na.se,norrteljetidning.se,nynashamnsposten.se,op.se,salaallehanda.com,st.nu,tidningenharjedalen.se,vlt.se,falkopingstidning.se,jp.se,skaraborgslanstidning.se,skovdenyheter.se,smalandsdagblad.se,smalanningen.se,smt.se,tranastidning.se,vastgotabladet.se,vetlandaposten.se,vn.se,bandypuls.se,ljusdalsposten.se,ljusnan.se,soderhamnskuriren.se,ht.se,moratidning.se,borlangetidning.se,falukuriren.se,sodran.se,nyaludvikatidning.se,skd.se,nvp.se,netdoktorpro.se,popularhistoria.se,aktuellhallbarhet.se,byggindustrin.se,dagensmedia.se,dagensmedicin.se,fastighetsnytt.se,resume.se,dagenssamhalle.se,market.se,dagligvarunytt.se,privataaffarer.se,barometern.se,blt.se,bt.se,kristianstadsbladet.se,olandsbladet.se,smp.se,sydostran.se,trelleborgsallehanda.se,ut.se,ystadsallehanda.se,kalmarposten.se,vxonews.se,vaxjobladet.se,nsk.se,klt.nu##body.didomi-popup-open:style(overflow:unset!important)
@@ -65,12 +69,15 @@ hd.se,sydsvenskan.se,allehanda.se,tidningenangermanland.se,arbetarbladet.se,aves
 d667 1
 a667 1
 hemtrevligt.se##.article:has(.annons)
+d672 2
 a716 1
 internetmedicin.se##[itemtype="https://schema.org/WPAdBlock"]
 d743 1
 a743 1
 karriarlakare.se,livinguppsala.se,battrestadsdel.se,butikstrender.se,forskning.se,vardfokus.se,varvat.se,smaspararguiden.se,aktuellsakerhet.se,maklarvarlden.se,kvartal.se,sjostadsbladet.se,tidningenridsport.se,cookaholic.se,vinliv.se,raa.se,svenskfilmdatabas.se,hejaolika.se,arbetsvarlden.se,hockeybladet.nu###cookie-law-info-bar
 d745 1
+a774 1
+kristendate.se##.cc-banner.cc-bottom
 d777 3
 a779 4
 kritiker.se##+js(set, checkAdblocker, noopFunc)
@@ -82,6 +89,9 @@ a798 1
 lchfarkivet.se##.lchf-modal--wrapper, div#beskrivning[style="font-size: 10px; text-align: center; color: #8E8C8C; max-width: 700px;"]
 a804 1
 levandehistoria.se##div[class^="CookieBar"]
+d840 1
+a840 1
+ljuskultur.se,bettips.se,spelo.se,skogsaktuellt.se,maskinbladet.se,entreprenadaktuellt.se,ja.se,husbilhusvagn.se,klassiker.nu,mopedgaraget.se,vibilagare.se,caroftheyear.se,automobil.se,endurobloggen.se,riksettan.net,fightermag.se,frillesasbandy.se,dh.se,djungeltrumman.se,skik.se,omni.se,campingsverige.se,eniro.se,svenskjakt.se,realtid.se,restaurangvarlden.se,naringslivetvgl.se,dalarnasaffarer.se,stockholmsaffarer.se,jamtlandsaffarer.se,nyheteridag.se,epochtimes.se,alekuriren.se,omniekonomi.se##.banner
 d864 1
 a864 1
 maipenrai.se##.cWidgetContainer > ul > li:first-child, div[style*="border: 1px solid"] a[target="_blank"], div[data-role="sidebarAd"], a[href*="&ad="]
@@ -140,10 +150,14 @@ a1735 1
 /artiklar/partner$xhr,domain=mestmotor.se
 a1790 1
 /clicktracking.siteseeker
-d1798 1
+d1798 2
+a1799 1
+/cookieconsent$script,domain=akademiskahus.se|lundagard.se|fuska.nu|kiacarclub.se|nyheteridag.se|internetstart.se|svampguiden.com|scanaktier.se|obosdamallsvenskan.se|elitettan.se|bike.se|runnersworld.se
 d1803 2
 a1804 1
 /cookie-banner$script,domain=sprintchallenge.se|halsafitness.se
+a1805 1
+/cookie.min.js$domain=assistanskoll.se
 a1807 1
 /cookie_popup$script,domain=trafikradion.com|trafik24.se
 d1832 1
@@ -161,7 +175,7 @@ a2010 1
 d2023 2
 a2024 2
 /plugins/cookie-law-info$script,domain=gilla.se|startaochdriva.se|sverige.nu|conpot.se|firstclassmagazine.se|magasinetkonkret.se|kvalitetsmagasinet.se|miljo-utveckling.se|telekomidag.se|vdtidningen.se|gullislastips.se|nyfiknainvesterare.se|discoveringtheplanet.com|bussmagasinet.se|torbjornstips.se|affarsstaden.se|marknadschefer.se|automation.se|dinbyggare.se
-/plugins/cookie-notice$script,domain=bildobubbla.se|zeromagazine.nu|sverigespringer.se|gasetten.se|sillyseason.se|gentlemannaguiden.com|matmalin.se|svensktidskrift.se|schack.se|densistavilan.se|horisontmagasin.se|kobe.se|tidningenproffs.se|jaktojagare.se|tobaksfakta.se|bebisvarlden.se|underbaraclaras.se
+/plugins/cookie-notice$script,domain=bildobubbla.se|zeromagazine.nu|sverigespringer.se|gasetten.se|sillyseason.se|gentlemannaguiden.com|matmalin.se|svensktidskrift.se|schack.se|densistavilan.se|horisontmagasin.se|kobe.se|tidningenproffs.se|jaktojagare.se|tobaksfakta.se|bebisvarlden.se|underbaraclaras.se|cykelframjandet.se
 d2028 1
 d2050 1
 a2050 1
