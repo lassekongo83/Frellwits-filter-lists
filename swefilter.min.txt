@@ -1,7 +1,7 @@
 ! Title: Frellwit's Swedish Filter
-! Last updated: Thu, 09 May 2024 05:53:16 +0000
+! Last updated: Fri, 10 May 2024 05:52:14 +0000
 ! Expires: 5 days
-! Diff-Path: patches/2024.5.9.353.patch#swefilter
+! Diff-Path: patches/2024.5.10.352.patch#swefilter
 ! Diff-Expires: 24 hours
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
@@ -273,7 +273,7 @@ bovision.se##.blog-article-card:has(.sponsor-mark)
 brafiler.se###header-banner, #cboxOverlay, #colorbox, .adv-inner, #sidebar-banner
 brafiler.se##.rlt-top-pro:has(a[href*="casino"])
 branschaktuellt.se##span:has-text(Sponsrad):upward(.article)
-branschaktuellt.se##.popup-signup
+branschaktuellt.se##.popup-signup, .takeover
 branschkoll.se##div[id^="brans-"], .widget-sponsored-post
 branschstegen.se##.container:has(a[href*="casino"])
 branschstegen.se##[class*="sponsored"], #watcherPop, .modal-backdrop
@@ -1154,7 +1154,6 @@ startaochdriva.se##:is(.latest-post, .td-cpt-post):has(a[href*="/sponsrat"])
 stegforhalsa.se##[class*="jsx-"][style*="position: sticky"], .bc--grey-neutral-50[style^="min-height"]
 stockholmsnytt.se##.sh-page-notice, #text-4
 stoppapressarna.se##.premium-page-ad, .footer-banner-wrapper, div[id^="stopp-"]
-streamat.se##img[src*="/Biz.png"]:upward(.elementor-widget-image) ~ .elementor-widget-html
 streamio.com,nyan.ax,spelhubben.se,fotosidan.se,illvet.se,varldenshistoria.se##+js(aeld, contextmenu)
 surfa.se##div[class*="-promo"], div[class*="prisjakt-"]
 surfa.se,teknikfreak.se###loader-wrapper
@@ -1829,7 +1828,6 @@ zeromagazine.nu##div[id^="ads"]
 /egmont-continuous-scroll/continuous-scroll-analytics.js
 /elasticsuite/tracker
 /emediate-responsive-wp-plugin
-/emg-dfp$domain=allastudier.se
 /empty.html$subdocument,domain=hotellorestaurang.se|byggfakta.today|omtanke.today|citymark.today
 /enklare-banners/enklare-torgetgruppen
 /entag.$script,domain=leta.se
@@ -2424,7 +2422,6 @@ zeromagazine.nu##div[id^="ads"]
 ||analytics.ozzi.io^$third-party
 ||analytics.teknikveckan.se^
 ||analytics.undeco.se^
-||analytics.wayke.se^
 ||apis.google.com/js/plusone.js$third-party
 ||api-sa.rikatillsammans.se^
 ||api.hitta.se/creepy
