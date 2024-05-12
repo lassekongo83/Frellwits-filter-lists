@@ -1,7 +1,7 @@
 ! Title: Frellwit's Swedish Filter
-! Last updated: Fri, 10 May 2024 05:52:14 +0000
+! Last updated: Sun, 12 May 2024 03:45:38 +0000
 ! Expires: 5 days
-! Diff-Path: patches/2024.5.10.352.patch#swefilter
+! Diff-Path: patches/2024.5.12.225.patch#swefilter
 ! Diff-Expires: 24 hours
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
@@ -119,9 +119,9 @@ aftonbladet.se,skonhetsredaktorerna.se##.ab_responsive_ads
 agriaffaires.se,truckscorner.se,machineryzone.se##.dp--mb
 aikfotboll.se,vaken.se,tidningen.djurskyddet.se##.banners
 aikhockey.se,almtuna.com,bikkarlskoga.se,bjorkloven.com,brynas.se,difhockey.se,frolundahockey.com,farjestadbk.se,hockeyallsvenskan.se,hv71.se,ikoskarshamn.se,kalmarhockey.com,leksandsif.se,lhc.eu,luleahockey.se,malmoredhawks.com,modohockey.se,moraik.se,nybrovikings.com,orebrohockey.se,roglebk.se,shl.se,skellefteaaik.se,sodertaljesk.se,taif.nu,timraik.se,vaxjolakers.se,vikhockey.se,vik.se,ostersundik.com##a[href*="svenskaspel.se"][target]
-aip.nu##body.cookies-not-set:style(overflow:unset!important)
 aip.nu##[class*="feed-ad"]
-aip.nu,funktionshinderpolitik.se,sjostadsbladet.se,fotbollsresultat.com###cookie-notice
+aip.nu,funktionshinderpolitik.se,sjostadsbladet.se,fotbollsresultat.com,lansposten.se###cookie-notice
+aip.nu,lansposten.se##body.cookies-not-set:style(overflow:unset!important)
 akaviaaspekt.se##.article-list-item--native, a.article-topic__list-item[href^="/annons"]
 aktieskolan.se##section.elementor-section:has-text(Huvudsponsorer & partners)
 aktiespararna.se,alekuriren.se,tidningen.se,kurera.se##.native
@@ -327,6 +327,7 @@ cannabis.se,biostock.se,snowmobile.se,tobaksfakta.se,dagenslogistik.se,magasinet
 carup.se##div[id^="carup-"]
 casinoguiden$image,domain=samnytt.se|samnytt.nu
 casino-utan-$image
+cfosvepet.se##.recent-post-item:has(a[href="#"]:not(.w-condition-invisible))
 chefstidningen.se##[id^="block-views-ad"], .modal-container
 chef.se##.Cookie-notice, .Product-modal, .Offer-popup, .Toaster
 chef.se,fokus.se##.Blurb--native
@@ -359,6 +360,9 @@ dagensps.se##div[class^="bg-"]:has(a[href="/ps-partner"])
 dagensps.se##.container:has(.dagensps_ad)
 dagensps.se##.postbox:has(.sponsored_post)
 dagensps.se##:is(.text-text-secondary, span.font-bold):has-text(ANNONS):upward(2)
+dagenstech.se##a[href^="https://dagenstech.se/articles/"]:upward(1):has-text(SPONSRAT)
+dagenstech.se##.banner-desk, .banner-mob
+dagenstech.se##.text-right:has-text(ANNONS)
 dagenstv.com##.slick-slide:has-text(/casino/i)
 dagenstv.com,kolla.tv##.grid-add-container
 dagensvimmerby.se,dagensvastervik.se,dagenskalmar.nu,dagenshultsfred.se##body:style(margin-top: 0 !important;)
@@ -607,7 +611,6 @@ gasetten.se,fotbollsthlm.se##article:has-text(/är en annons/i)
 gasetten.se,fotbollsthlm.se##.footer-links, .fotbo-target
 gentlemannaguiden.com##.advertising, .sidebar .widget_text, .sidebar .widget_media_image, .has-post-thumbnail.category-okategoriserade
 glassakademin.se##[class^="adverts-"]
-gmfk.nu##p:has-text(Annons):upward(.n2-ss-slide)
 gmfk.nu###site-preloader
 godare.se##a p[class^="hyperion-css"]:has-text(INNEHÅLLER ANNONSLÄNKAR):upward(li, a.internal-link)
 godare.se##h3:has-text(Annons):upward(1)
@@ -682,8 +685,8 @@ horisontmagasin.se##small:has-text(/annons/i)
 hotellorestaurang.se,citymark.today,byggfakta.today###bannnerContainer, #pop_overlay, .banner-s, div.featured
 hrnytt.se##article:has(.sponsored-article)
 hrnytt.se##.banner-box
-hrsvepet.se##.cookie-banner, .desktopbanner
 hrsvepet.se##.mini-title-link:not(.w-condition-invisible):has-text(/sponsra/i):upward(1)
+hrsvepet.se,cfosvepet.se##.cookie-banner, .desktopbanner
 humorbibeln.se,newsner.com,sportbibeln.se,ettgottskratt.se,djurbibeln.se##.inline-share-buttons
 hungrig.nu##.ui-widget-overlay, .ui-dialog
 husbilsplats.se##div[id^="husbi-"]
@@ -1233,7 +1236,7 @@ thelocal.se##.ad-container-section, .article-sponsored, div[data-hasbanner="yes"
 thelocal.se##.ra-widget-article-tag:has-text(/partner/i):upward(.ra-widget-panel)
 thelocal.se##.single-article-related.single-article-related-short:style(height:unset!important; overflow:unset!important;)
 thelocal.se##.single-article-related.single-article-related-short::after:style(background:unset!important;)
-thepattayanews.se##a.td_single_image_bg:not([href*="thepattayanews.se"])
+thepattayanews.se##a.td_single_image_bg:not([href*="thepattayanews.se"]), #tnp-modal
 thorengruppen.se,utslappsratt.se,heleneholmsif.se,trafikskola.se,melodifestivalklubben.se,morotsliv.com##+js(set, em_track_user, false)
 thorengruppen.se,utslappsratt.se,heleneholmsif.se,trafikskola.se,melodifestivalklubben.se,morotsliv.com##+js(set, exactmetrics_frontend, undefined)
 tidningenbalans.se##div[style*="z-index: 999; background-color: rgba(0, 0, 0, 0.5)"], .bg-grey.hideOnPrint, .bg-adYellow
@@ -2013,7 +2016,7 @@ zeromagazine.nu##div[id^="ads"]
 /plugins/convertplug
 /plugins/convertpro
 /plugins/cookie-law-info$script,domain=gilla.se|startaochdriva.se|sverige.nu|conpot.se|firstclassmagazine.se|magasinetkonkret.se|kvalitetsmagasinet.se|miljo-utveckling.se|telekomidag.se|vdtidningen.se|gullislastips.se|nyfiknainvesterare.se|discoveringtheplanet.com|bussmagasinet.se|torbjornstips.se|affarsstaden.se|marknadschefer.se|automation.se|dinbyggare.se
-/plugins/cookie-notice$script,domain=bildobubbla.se|zeromagazine.nu|sverigespringer.se|gasetten.se|sillyseason.se|gentlemannaguiden.com|matmalin.se|svensktidskrift.se|schack.se|densistavilan.se|horisontmagasin.se|kobe.se|tidningenproffs.se|jaktojagare.se|tobaksfakta.se|bebisvarlden.se|underbaraclaras.se|cykelframjandet.se
+/plugins/cookie-notice$script,domain=bildobubbla.se|zeromagazine.nu|sverigespringer.se|gasetten.se|sillyseason.se|gentlemannaguiden.com|matmalin.se|svensktidskrift.se|schack.se|densistavilan.se|horisontmagasin.se|kobe.se|tidningenproffs.se|jaktojagare.se|tobaksfakta.se|bebisvarlden.se|underbaraclaras.se|cykelframjandet.se|lansposten.se
 /plugins/cookie-popup$script,domain=skillingaryd.nu|xn--vrnamo-bua.nu
 /plugins/cresta-social-share-counter
 /plugins/custom-banners$domain=skolfamiljen.se
@@ -2635,7 +2638,6 @@ zeromagazine.nu##div[id^="ads"]
 ||gamereactor.se/exclusive.json
 ||gamesglue.com/js/gameanalytics/GameAnalytics
 ||gatekeeperconsent.com^$domain=hemmanytt.se|svenskaorduttryck.se|wernamaten.se
-||gekas.se/count/
 ||getanewsletter.com/js-forms-assets/popups.js
 ||getlevelten.com^$third-party
 ||getsitecontrol.com^$third-party
