@@ -1,7 +1,7 @@
 ! Title: Frellwit's Swedish Filter
-! Last updated: Tue, 21 May 2024 05:39:51 +0000
+! Last updated: Wed, 22 May 2024 06:00:24 +0000
 ! Expires: 5 days
-! Diff-Path: patches/2024.5.21.339.patch#swefilter
+! Diff-Path: patches/2024.5.22.360.patch#swefilter
 ! Diff-Expires: 24 hours
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
@@ -1944,6 +1944,7 @@ zeromagazine.nu##div[id^="ads"]
 /logs/client$domain=swebbtv.se
 /log/hublytics
 /log|$domain=booli.se
+/log|$domain=vk.se|folkbladet.nu|nordsverige.se|mellanbygden.nu|vasterbottningen.se|lokaltidningen.nu
 /losad/loada.$script
 /maps.sponsored-pill.$script,domain=tripadvisor.se
 /marbles/marbles.js
@@ -2372,6 +2373,7 @@ zeromagazine.nu##div[id^="ads"]
 @@/plugins/convertplug/modules/modal/*/cross.png$image,~third-party
 @@/scripts/advert_$~third-party,domain=di.se
 @@_advert.$domain=e-pages.dk
+@@||cargodisplayads.com/gota/api/v1/adImage$image,domain=barometern.se|blt.se|bt.se|kristianstadsbladet.se|olandsbladet.se|smp.se|sydostran.se|trelleborgsallehanda.se|ut.se|ystadsallehanda.se|kalmarposten.se|vxonews.se|vaxjobladet.se|nsk.se|klt.nu
 @@||cargodisplayads.com/till_minne/
 @@||cdn.play.showheroes.com/part/partimage$image
 @@||cdn.play.showheroes.com/part/rendered$media
@@ -2659,6 +2661,7 @@ zeromagazine.nu##div[id^="ads"]
 ||gopeach.se^$third-party
 ||gravito.net^$domain=hitta.se|gp.se|bohuslaningen.se|stromstadstidning.se|markposten.se|harrydaposten.se|partilletidning.se|sttidningen.se|molndalsposten.se|kungalvsposten.se|kungsbackaposten.se|alingsastidning.se|ttela.se|hallandsposten.se|hn.se
 ||grillbloggen.nu/media/com_rstbox/js/engagebox.js
+||growthbook.io^$domain=allas.se|elle.se|femina.se|hant.se|mabra.com|residencemagazine.se|svenskdam.se|motherhood.se
 ||gstatic.com/partners/badge$subdocument
 ||gtm.findroommate.dk^
 ||guesssverige.com.se^
