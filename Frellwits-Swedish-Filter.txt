@@ -1,6 +1,6 @@
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days
-! Last modified: 2024-05-22 08:00:09 CEST
+! Last modified: 2024-05-24 08:15:38 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPL3 - https://github.com/lassekongo83/Frellwits-filter-lists/blob/master/LICENSE
@@ -151,7 +151,7 @@ allabolag.se###company-card_top-banner, .lwad
 allabolag.se##.strossle-widget:upward(div[style^="min-height"])
 allas.se,elle.se,femina.se,hant.se,mabra.com,residencemagazine.se,svenskdam.se,motherhood.se##article.grid:has(a[href="/creative-studio"])
 allas.se,elle.se,femina.se,hant.se,mabra.com,residencemagazine.se,svenskdam.se,motherhood.se##article.grid:has-text(/annonssamarbete/i)
-allas.se,elle.se,femina.se,hant.se,mabra.com,residencemagazine.se,svenskdam.se,motherhood.se##article[data-type="native"], .ag-product-wrapper, .product-carousel__container, .shop_carousel, .editorsPick, div[class^="strossle-widget-"], .ad-min-height
+allas.se,elle.se,femina.se,hant.se,mabra.com,residencemagazine.se,svenskdam.se,motherhood.se##article[data-type="native"], .ag-product-wrapper, .product-carousel__container, .shop_carousel, .editorsPick, div[class^="strossle-widget-"], .ad-min-height, a.cts-impression-item[data-cts-label*="banner"]
 allas.se,elle.se,femina.se,hant.se,mabra.com,residencemagazine.se,svenskdam.se,motherhood.se##a.js_commercial-text--link-text:upward(.jwplayer_video-videoArea):remove()
 allas.se,elle.se,femina.se,hant.se,mabra.com,residencemagazine.se,svenskdam.se,motherhood.se##a:has([data-type="Sponsored"])
 allas.se,elle.se,femina.se,hant.se,mabra.com,residencemagazine.se,svenskdam.se,motherhood.se##div.wings-gray-200:has-text(Annons)
@@ -723,6 +723,8 @@ inkopsradet.se##div[id^="inkop-"]
 innebandy.se##[class*="banner-container"], .sponsorsswipeblock
 inredningsarkitektur.se##.article:has-text(/sponsrad artikel/i)
 internetmedicin.se##[itemtype="https://schema.org/WPAdBlock"]
+internetodontologi.se##.overlay
+internetodontologi.se##+js(aeld, /contextmenu|keydown/, e.preventDefault)
 ipo.se##.tag-sponsrad
 itseniorerna.se###astroid-preloader
 itseniorerna.se###redim-cookiehint-modal
@@ -751,8 +753,8 @@ karriarlakare.se##a:has(.annons-label)
 karriarlakare.se##a[target][onclick], #cliSettingsPopup
 karriarlakare.se,livinguppsala.se,battrestadsdel.se,butikstrender.se,forskning.se,vardfokus.se,varvat.se,smaspararguiden.se,aktuellsakerhet.se,maklarvarlden.se,kvartal.se,sjostadsbladet.se,tidningenridsport.se,cookaholic.se,vinliv.se,raa.se,svenskfilmdatabas.se,hejaolika.se,arbetsvarlden.se,hockeybladet.nu###cookie-law-info-bar
 kartor.eniro.se##.e-banner
-kb.se,dansportalen.se##body:style(overflow:unset!important; position:unset!important;)
-kb.se,dansportalen.se##.sv-marketplace-sitevision-cookie-consent, .sv-cookie-consent-modal, .env-modal-dialog__backdrop, .env-modal-dialog__backdrop--in
+kb.se,dansportalen.se,hh.se##body:style(overflow:unset!important; position:unset!important;)
+kb.se,dansportalen.se,hh.se##.sv-marketplace-sitevision-cookie-consent, .sv-cookie-consent-modal, .env-modal-dialog__backdrop, .env-modal-dialog__backdrop--in
 kiacarclub.se##.forumlist-main-inner > div[style]
 kiacarclub.se##.sidebar-block:has-text(/annons|sponsor/i)
 kimura.se##article:has(img[src$="/sponsrad.png"])
@@ -1264,7 +1266,7 @@ tidningen.djurskyddet.se##.ai-track
 tidningen.nu##span:has-text(/^Annons$/):upward(1) + .textwidget
 tidningen.se##.sidebar .widget_widget_code, .casino
 tittapavideon.se##.adv
-tonyhatefnejad.se,lyckasmedbakning.nu,pinkprogramming.se##.preloader
+tonyhatefnejad.se,lyckasmedbakning.nu,pinkprogramming.se,brl.se##.preloader
 totallyorebro.se,totallystockholm.se##div.tot-content-preview-container-small[style*="border-top:4px solid #ffb200;"], .content-overlay--black, a[href*="casino"], a[href*="/sponsrat/"], a[href*="/sponsrat/"] + p.tot-content-preview--meta, .newaddiv, .tot-sidebar
 totallyorebro.se,totallystockholm.se##[class*="tot-content-preview-container"]:has(a[href*="casino"], a[href*="kasino"], a[href*="betting"], a[href*="spel"]):remove()
 trafikradion.com##.right
