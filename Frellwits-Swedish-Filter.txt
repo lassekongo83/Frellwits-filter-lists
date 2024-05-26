@@ -1,6 +1,6 @@
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days
-! Last modified: 2024-05-24 08:15:38 CEST
+! Last modified: 2024-05-26 05:56:29 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPL3 - https://github.com/lassekongo83/Frellwits-filter-lists/blob/master/LICENSE
@@ -98,7 +98,7 @@ accentmagasin.se##+js(nostif, n.modal)
 adecco.se,ica.se,apotekhjartat.se,tele2.se###onetrust-consent-sdk
 affarsstaden.se##+js(acs, jQuery, adblockdetect)
 affarsvarlden.se##.article-tag-header:has-text(/Annons/i):upward(article)
-affarsvarlden.se##.cookies-wrap, .Modal, .article-list-item--native, .advert-notice-box, .native-popup, .takeover-wrap, .native-notice-box
+affarsvarlden.se##.cookies-wrap, .Modal, .article-list-item--native, .advert-notice-box, .native-popup, .takeover-wrap, .native-notice-box, .darwin--content
 aftonbladet.se##article[class^="article-wrapper"] ~ div:has-text(ANNONS)
 aftonbladet.se##aside > div:has(h2:has-text(/^annons/i))
 aftonbladet.se##a:has-text(Kommersiell text, innehåller annonslänkar)
@@ -1706,6 +1706,7 @@ zeromagazine.nu##div[id^="ads"]
 /ad/getNouw.$script
 /ad?platform$domain=ilikeradio.se
 /ad_acknowledgment$xmlhttprequest
+/ad_in_article$script,domain=affarsvarlden.se
 /affiliategallery$domain=allas.se|elle.se|femina.se|hant.se|mabra.com|residencemagazine.se|svenskdam.se|motherhood.se
 /aftonbladet/crypt/?lpkey$all
 /ajax-hit-reg.php?
@@ -1911,6 +1912,7 @@ zeromagazine.nu##div[id^="ads"]
 /img/banklan/*$image,domain=ekonominyheter.se
 /img/bettingstugan.$image
 /img/compricer$image,domain=ekonominyheter.se
+/impression$script,domain=affarsvarlden.se
 /integrations/adwords$important,domain=dagen.se
 /integrations/facebook-pixel$important,domain=dagen.se
 /integrations/google-$important,domain=dagen.se
@@ -2661,7 +2663,7 @@ zeromagazine.nu##div[id^="ads"]
 ||girohjalm.com.se^
 ||glitnoraffiliates.com^$third-party
 ||gnuheter.com/creeper/image
-||googletagmanager.com^$important,domain=tradera.com|xxl.se
+||googletagmanager.com^$important,domain=tradera.com|xxl.se|prisjakt.nu
 ||google-analytics.com^$important,domain=aftonbladet.se|tradera.com|xxl.se
 ||gopeach.se^$third-party
 ||gravito.net^$domain=hitta.se|gp.se|bohuslaningen.se|stromstadstidning.se|markposten.se|harrydaposten.se|partilletidning.se|sttidningen.se|molndalsposten.se|kungalvsposten.se|kungsbackaposten.se|alingsastidning.se|ttela.se|hallandsposten.se|hn.se
