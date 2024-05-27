@@ -1,7 +1,7 @@
 ! Title: Frellwit's Swedish Filter
-! Last updated: Sun, 26 May 2024 03:56:44 +0000
+! Last updated: Mon, 27 May 2024 04:46:07 +0000
 ! Expires: 5 days
-! Diff-Path: patches/2024.5.26.236.patch#swefilter
+! Diff-Path: patches/2024.5.27.286.patch#swefilter
 ! Diff-Expires: 24 hours
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
@@ -143,6 +143,7 @@ alexandrabylund.se,helahisingen.se###af-preloader
 alghundklubben.com#@#.category-annons:not(body):not(html)
 alkompis.se##app-ads, .cdk-overlay-container
 alkompis.se##.cdk-global-scrollblock:style(overflow-y: initial !important; position: unset !important;)
+allaaktier.se##div[id^="ad-"]
 allabolag.se##article:has(.advert__mark)
 allabolag.se###company-card_top-banner, .lwad
 allabolag.se##.strossle-widget:upward(div[style^="min-height"])
@@ -2024,7 +2025,7 @@ zeromagazine.nu##div[id^="ads"]
 /plugins/christmas-panda
 /plugins/cm-pop-up-banners
 /plugins/cm-takeover-ad
-/plugins/complianz-gdpr$domain=iconmagazine.se|signprint.se|vilaser.se|arjeplognytt.se|aftonkuriren.se|tidningenglobal.se|tidningensyre.se|landetsfria.nu|fempers.se|macken.xyz|webb-tv.nu|kalmar.nu|brollopsmagasinet.se|megafonen.se|radiotreby.se|revisionsvarlden.se
+/plugins/complianz-gdpr$domain=iconmagazine.se|signprint.se|vilaser.se|arjeplognytt.se|aftonkuriren.se|tidningenglobal.se|tidningensyre.se|landetsfria.nu|fempers.se|macken.xyz|webb-tv.nu|kalmar.nu|brollopsmagasinet.se|megafonen.se|radiotreby.se|revisionsvarlden.se|kyrka.se
 /plugins/consent-magic-pro$script,domain=namnmarkning.se|bluum.se|gobokhandeln.se
 /plugins/content-hub-wp-plugin/assets/js/hub-time-spent
 /plugins/convertplug
@@ -2426,6 +2427,7 @@ zeromagazine.nu##div[id^="ads"]
 ||ajs-assets.ftstatic.com/ftUtils.js
 ||akademiskahus.se/AddThis?$script
 ||alkemi.com.se^
+||allaaktier.se/ads/
 ||allastudier.se/TrackingSearch
 ||allastudier.se/search-sponsor
 ||allsvenskan.se/allsvenskan-script-min.js
