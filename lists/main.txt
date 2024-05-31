@@ -1227,7 +1227,7 @@ aftonbladet.se,livsstil.se,godare.se,byggahus.se,expressen.se,elle.se,femina.se,
 ||onetrust.com^$third-party,domain=lantmannen.se
 ||youplay.se^$third-party,domain=emocore.se|dayviews.com|kamrat.com|extraextra.se|kalender.se|tyda.se
 ||youplay.se/*.js*ap=true$script,removeparam=/^ap/
-||privacy-mgmt.com^$domain=radio.se|dagenstv.com|kolla.tv|computersweden.se|woxikon.se|kokaihop.se|dagen.se|filmtopp.se
+||privacy-mgmt.com^$domain=radio.se|dagenstv.com|kolla.tv|computersweden.se|woxikon.se|kokaihop.se|dagen.se|filmtopp.se|upday.com
 ||privacy-center.org^$domain=180.se|agriaffaires.se|truckscorner.se|machineryzone.se|viivilla.se|stegforhalsa.se|netdoktor.se|netdoktorpro.se
 ||privacypolicies.com^$domain=fl-net.se
 ||cdn-cookieyes.com^$domain=lokalti.se|jarnvagar.nu|senses.se|norrmejerier.se|temadagar.se|smartsenior.se|tekniknytt.se|nordigt.se|autonytt.se|vm-fotboll.se|kak.se|smhi.se|borattforum.se|mis.se|universitetslararen.se|em-fotboll.se|lakemedelsvarlden.se|samfalligheterna.se|husbilsplats.se|katerinamagasin.se|dagenslogistik.se|biostock.se
@@ -1976,7 +1976,7 @@ dagenstech.se##a[href^="https://dagenstech.se/articles/"]:upward(1):has-text(SPO
 everysport.com##div[id^="everysport_sky"], img[alt="X3000"], img[alt="Casinofeber"]
 everysport.com##:is(div[id^="everysport_pano"], div[id^="everysport_rektangel"]):upward(1)
 tvmatchen.nu##.bet365, .panorama-wrapper, .tvg-manager-box, .tv102945, .tv102987, #event_banner, .go-to-partner, .odds, #text-13
-hockeynews.se##[class*="ad-style"], [id^="outsider-"], [id^="banner_"], .ad-mob-container, #mobile-one, #mobile-two, .desktop-horizontal-ad, #article-content img[src*="banner"], #article-content img[src*="prio-hockey"], a[rel*="sponsored"]
+hockeynews.se##.items-center:has(a[target="_blank"])
 svenskafans.com##.puff__ad-heading, ad-skyscraper__wrapper, iframe[title*="Bet 365"]
 sporttv.nu##a[onclick*="bannerClick"], #linkus, .details-bet-banner
 fotbolldirekt.se,hockeysverige.se,innebandymagazinet.se,padeldirekt.se##.site-partnevisment, .h-background--sponsored-light, .row .text-center img, a[href^="https://hubs.la"], .c-partners, iframe[srcdoc*="_ad_div"], .annons-text
@@ -1987,7 +1987,7 @@ kittad.se###header-top, div[data-hook="consent-banner-root"]
 kittad.se##li:has(.kittad-label-sponsored)
 padeldirekt.se##.article-row:has(.h-background--sponsored)
 padeldirekt.se##.c-featured-article:has(a[href*="/sponsrat"])
-padeldirekt.se##h5:has-text(ANNONS:):upward(1)
+padeldirekt.se##.text-center:has(div[id^="padeldirekt"])
 sportlovin.se##.visible-xs, .visible-lg
 
 ! Misc
@@ -2185,8 +2185,8 @@ gaffa.se##h4:has-text(/sponsrade länkar/i):upward(.link-list)
 /clickperformance$domain=radio.se
 /trace$xmlhttprequest,domain=radio.se
 ||radio.se/iomm
-radio.se##:is(.md\:min-h-\[90px\], .lg\:min-h-\[250px\]):has(#RAD_D_station_top, #RAD_D_home_top, #RAD_D_home_inhouse, #RAD_D_search_top)
-radio.se##:is(a[data-testid="region-tag"], a[data-testid="taglist-item-topic"], a[data-testid="taglist-item-genre"]):style(background-image:none!important; background:rgb(2, 114, 140)!important;)
+radio.se##:is(.md\:min-h-\[90px\], .lg\:min-h-\[250px\], .h-\[250px\], .justify-between.md\:mx-10):has(div[id^="RAD_D"], div[id^="RAD_M"])
+radio.se##:is(a[data-testid="region-tag"], a[data-testid="taglist-item-topic"], a[data-testid="taglist-item-genre"], a[data-testid="taglist-item-podcast"]):style(background-image:none!important; background:rgb(2, 114, 140)!important;)
 @@||kritiker.se^$generichide
 ||kritiker.se/js/gdpr.js
 ||youtube.com/embed/*autoplay$subdocument,removeparam=autoplay,domain=kritiker.se
