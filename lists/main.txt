@@ -1226,7 +1226,7 @@ aftonbladet.se,livsstil.se,godare.se,byggahus.se,expressen.se,elle.se,femina.se,
 ||privacy-mgmt.com^$domain=radio.se|dagenstv.com|kolla.tv|computersweden.se|woxikon.se|kokaihop.se|dagen.se|filmtopp.se|upday.com
 ||privacy-center.org^$domain=180.se|agriaffaires.se|truckscorner.se|machineryzone.se|viivilla.se|stegforhalsa.se|netdoktor.se|netdoktorpro.se
 ||privacypolicies.com^$domain=fl-net.se
-||cdn-cookieyes.com^$domain=lokalti.se|jarnvagar.nu|senses.se|norrmejerier.se|temadagar.se|smartsenior.se|tekniknytt.se|nordigt.se|autonytt.se|vm-fotboll.se|kak.se|smhi.se|borattforum.se|mis.se|universitetslararen.se|em-fotboll.se|lakemedelsvarlden.se|samfalligheterna.se|husbilsplats.se|katerinamagasin.se|dagenslogistik.se|biostock.se|skellefteaworks.se
+||cdn-cookieyes.com^$domain=lokalti.se|jarnvagar.nu|senses.se|norrmejerier.se|temadagar.se|smartsenior.se|tekniknytt.se|nordigt.se|autonytt.se|vm-fotboll.se|kak.se|smhi.se|borattforum.se|mis.se|universitetslararen.se|em-fotboll.se|lakemedelsvarlden.se|samfalligheterna.se|husbilsplats.se|katerinamagasin.se|dagenslogistik.se|biostock.se|skellefteaworks.se|datormagazin.se
 ||gravito.net^$domain=hitta.se|gp.se|bohuslaningen.se|stromstadstidning.se|markposten.se|harrydaposten.se|partilletidning.se|sttidningen.se|molndalsposten.se|kungalvsposten.se|kungsbackaposten.se|alingsastidning.se|ttela.se|hallandsposten.se|hn.se
 ||salesmanago.pl/api/push/notification$domain=aikfotboll.se
 ||consentmanager.net^$domain=allastudier.se|gbgfotboll.se|stff.se|svenskfotboll.se|coop.se|dagens.se|mobil.se|kamerabild.se|prevent.se|utsidan.se|inpress.com|studentum.se|utbildning.se
@@ -1262,7 +1262,7 @@ atl.nu,landlantbruk.se,land.se,di.se,expressen.se,dn.se###didomi-host
 aip.nu,funktionshinderpolitik.se,sjostadsbladet.se,fotbollsresultat.com,lansposten.se,dalabygden.se###cookie-notice
 barnistan.se,welma.se,ingenjorsjobb.se##.cookie-notice
 8sidor.se###cookie-banner
-forexgruppen.se##.cky-consent-container
+forexgruppen.se,datormagazin.se##.cky-consent-container
 bioenergitidningen.se###cookieinfo
 kristendate.se##.cc-banner.cc-bottom
 lifeofsvea.se,quizza.nu,trendenser.se##.cookie-info
@@ -1870,10 +1870,11 @@ feber.se,tjock.se##.burt-unit, .art_ad, adline, f-panorama, f-deals, #rpPopular,
 feber.se,tjock.se##f-internallinks-new:has-text(Annons)
 feber.se,tjock.se##+js(set, dovideostuffAD, noopFunc)
 feber.se,tjock.se##+js(nosiif, checkGDPRInt)
-swedroid.se##div[id$="_ad"], div[id$="_ad_mobile"], .externalTopMobile, #externalTopMobile, a[href^="//www.prisjakt.nu/produkt"], #nativendo-mainfeed + aside > .article, .article-footer > h3, .article-footer > .aeChart, #newExternal
+swedroid.se##div[id$="_ad"], div[id$="_ad_mobile"], .externalTopMobile, #externalTopMobile, .externalBottomMobile, a[href^="//www.prisjakt.nu/produkt"], #nativendo-mainfeed + aside > .article, .article-footer > h3, .article-footer > .aeChart, #newExternal
 swedroid.se##a[target="_blank"]:upward(li.Notice):remove()
 swedroid.se##span:has-text(/sponsr/i):upward(.article)
 swedroid.se##.puff:has(script[src*="lwadm.com"])
+swedroid.se##.mostReadMobile:has-text(/annons/i)
 swedroid.se##+js(set, checkAdsBlocked, noopFunc)
 /prisjakt$xmlhttprequest,domain=fz.se
 fz.se##.article-facebook
@@ -1903,6 +1904,7 @@ pomu.se##[class^="Banner"]
 datormagazin.se##div[id^="dator-"]
 datormagazin.se##.td_module_wrap:has(a[href*="/annons/"])
 datormagazin.se##.td-big-grid-post:has(a[href*="/samarbete/"])
+datormagazin.se##.heading:has-text(/samarbete/i):upward(.elementor-widget-smartmag-featgrid)
 datormagazin.se##a:has-text(/^annons/i)
 tekniksmart.se##.code-block, main > div:last-child:not(:only-child), #uid_08313ba73, #uid_ab3738b5a, .jeg_header_wrapper .jeg_midbar
 tekniksmart.se##center:has-text(/annons/i):upward(1)
@@ -2125,7 +2127,7 @@ lundgiants.se##.cookieAlert
 lundgiants.se##strong:has-text(Detta är en annons):upward(.inner)
 lundgiants.se###LoggaDiv:style(position:unset!important;)
 golf.se##.partner-area
-svenskelitfotboll.se##custom-ad
+svenskelitfotboll.se##custom-ad, sponsors
 svenskelitfotboll.se##.image-block:has(a[class*="sponsor"])
 hammarbyfotboll.se###seasonalTakeover, div[class*="sponsorBarContainer"], div[class*="footerSponsors"], .slick-slide a[target="_blank"]
 hammarbyfotboll.se##body[data-modal-open]:style(overflow-y:unset!important;)
@@ -2151,6 +2153,7 @@ tranakampsport.se##.w-dyn-item:has(.sponsrad-artikel-wrapper:not(.w-condition-in
 autopower.se##.card:has(.adsbygoogle)
 firstfoto.se##article.status-publish:has-text(/annonssamarbete/i)
 offside.org###opab-modal, .opab-footer-offer
+langd.se##.single-entry__ads
 
 ! === Musik, Radio, Film och TV
 voodoofilm.org##.page-panorama
