@@ -564,6 +564,7 @@ casino-utan-$image
 ##div.sidebar-item .banner-box
 ##div.strossle-widget
 ##div.td-a-rec img
+##div.td-banner-bg
 ##div.topmost-banner
 ##div.toppannons
 ##div.vue-ad-wrapper
@@ -1286,7 +1287,7 @@ hejauppsala.com##.cli-barmodal-open:style(overflow:auto!important)
 ! Scriptlets for annoyances
 youplay.se,expressen.se,di.se,nsk.se,skd.se,nvp.se,nuiosteraker.se,barometern.se,blt.se,bt.se,kristianstadsbladet.se,olandsbladet.se,smp.se,sydostran.se,trelleborgsallehanda.se,ut.se,ystadsallehanda.se,kalmarposten.se,corren.se,folkbladet.se,mvt.se,nt.se,vt.se,klt.nu,vimmerbytidning.se,kuriren.nu,nsd.se,norran.se,pt.se,ekuriren.se,strengnastidning.se,kkuriren.se,sn.se,eposten.se,unt.se,helagotland.se,kindaposten.se,folkbladet.nu,vk.se,vasterbottningen.se,mellanbygden.nu,nordsverige.se,lokaltidningen.nu,vasterastidning.se,mitti.se,thelocal.se,byrum.se,sverigespringer.se,recept.se,viivilla.se,mestmotor.se,babyhjalp.se,fragbite.se,ibnytt.se,realtid.se,cafe.se,kingmagazine.se,vxonews.se,vaxjobladet.se,alekuriren.se,nyheter24.se,svenskgolf.se,golfing.se,gotlandjustnu.se,familjeliv.se,praktisktbatagande.se,norrahalland.se,lokalti.se,lchfarkivet.se,alltforforaldrar.se,idrottensaffarer.se,vf.se,hjotidning.se,kt.se,kt-kuriren.se,sla.se,mariestadstidningen.se,filipstadstidning.se,fryksdalsbygden.se,nwt.se,arvikanyheter.se,nkp.se,saffletidningen.se,provinstidningen.se,dalslanningen.se,nlt.se,skaraborgsbygden.se##+js(json-prune, autoplay)
 youplay.se##+js(aeld, loadstart)
-streamio.com,nyan.ax,spelhubben.se,fotosidan.se,illvet.se,varldenshistoria.se##+js(aeld, contextmenu)
+streamio.com,nyan.ax,spelhubben.se,illvet.se,varldenshistoria.se##+js(aeld, contextmenu)
 spelhubben.se,husbilsplats.se##+js(acs, document.oncontextmenu)
 mitti.se,cafe.se,praktisktbatagande.se##+js(aeld, scroll, helpers.scroll(id))
 
@@ -1938,7 +1939,7 @@ tekniknytt.se##:is(.article_widget_preview, .article_widget_listing):has(a[href*
 tekniknytt.se##:is(.top-news, .big_article):has(img[src*="casino"], img[src*="surfeo"])
 tekniknytt.se##[onclick^="ga("]:remove-attr(onclick)
 varvat.se##.wpb_single_image a[target], .gp-footer-2
-mobilanyheter.net##a[href*="rocketpot.io"], a[href*="casino"], a[href*="betting"]
+mobilanyheter.net##a[href*="rocketpot.io"], a[href*="casino"], a[href*="betting"], .a-wrap
 electronic.se##.content aside.column-narrow:last-of-type
 fuska.nu##.list:has(a[href*="casino"])
 fuska.nu##span:has-text(/casino/i):upward(li)
@@ -2004,6 +2005,7 @@ bilsport.se##.includingFeaturedSliderArticle:has(.native-mark)
 hockeyettan.se##.club-ad-item, .banner-row
 ||obj.fotosidan.se/obj/pa/$image
 fotosidan.se##.subArticlesponsored, div[style="width:300px;float:right;"], div[style="float:right;width:300px;"], #partner-box, .adbox-label
+fotosidan.se##+js(aeld, contextmenu, , showCopyrightBox)
 hippson.se##.sponsorpuff, .presentedby, .presentedby ~ *
 hippson.se##.toolboxheader:has-text(/aktuella samarbeten/i) ~ a.more
 kimura.se##.bg, a[href*="unibet.com"], a[href*="/kampanjer."], a[href*="utm_campaign"], .addafterpreview, .addafter1preview, .samarbeten, .kimura-sponsors, .kimura-sponsors + .text-center
@@ -2033,7 +2035,8 @@ swehockey.se##[class*="-reklam"], .sif-sponsorer, .teaserblock, .commonblock a:n
 /sharethis.js$domain=allsvenskan.se|superettan.se
 ||allsvenskan.se/allsvenskan-script-min.js
 /add-page-view$domain=cykla.se
-cykla.se##.featured-post--sponsored, .grid-item--sponsored
+cykla.se##.featured-post--sponsored, .grid-item--sponsored, #advert-once-banner-fullskarm
+cykla.se#@#.advertisment
 handbollskanalen.se##.hb-adlabel, [id^="hb-"], .ad-placement-side, p > a[target="_blank"]
 bandyfeber.com##.widget_sp_image, a[title^="ANNONS"], .inner_sidebar .widget_text, .entry-content a[href*="utm_campaign"]
 bandyfeber.com##article:has(a[href*="/annons-"])
