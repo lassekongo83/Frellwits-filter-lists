@@ -1,6 +1,6 @@
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days
-! Last modified: 2024-06-09 04:59:03 CEST
+! Last modified: 2024-06-10 06:27:22 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPL3 - https://github.com/lassekongo83/Frellwits-filter-lists/blob/master/LICENSE
@@ -352,7 +352,8 @@ corren.se,folkbladet.se,mvt.se,nt.se,vt.se,vimmerbytidning.se,kuriren.nu,nsd.se,
 corren.se,folkbladet.se,mvt.se,nt.se,vt.se,vimmerbytidning.se,kuriren.nu,nsd.se,norran.se,pt.se,ekuriren.se,strengnastidning.se,kkuriren.se,sn.se,eposten.se,unt.se,helagotland.se,kindaposten.se,gotlandjustnu.se,tv.nu,klart.se##.sp-message-open body:style(overflow:unset!important;position:unset!important;)
 curateContext=affiliate$domain=aftonbladet.se
 cykelframjandet.se##:is(article.tg-item, .lcp_catlist li):has(a[href*="/annons"])
-cykla.se##.featured-post--sponsored, .grid-item--sponsored
+cykla.se##.featured-post--sponsored, .grid-item--sponsored, #advert-once-banner-fullskarm
+cykla.se#@#.advertisment
 dagensarena.se##.popup
 dagensinfrastruktur.se,nyaprojekt.se,nordiskaprojekt.se,svenskbyggtidning.se,grontsamhallsbyggande.se##.g-single, a[onclick*="banner"], a[onclick*="advert"], .adrotate
 dagensjuridik.se##strong:has-text(/^senaste nytt från våra partners/i):upward(.card--muted)
@@ -576,6 +577,7 @@ fotbolltransfers.com##.smallNewsCategory:has-text(/sponsr/i):upward(.smallNewsLi
 fotboll-tv.se##.SMBoxContentBanner, a[data-gaevent*="action=bookmaker_odds"], #ouibounce-modal, .SMGameAtomSingleGameOddsComponent
 fotboll.com##.header-static-lg, .fp-partner, .xs-ad, .bo-wrapper, #betsid, .news-banner-mini, .xs-cblock, .cookie_consent_bar, #odds, a.bellows-target[href*="/svenskaspel"], a.bellows-target[href*="/betting"]
 fotboll.com,allsvenskan.se,superettan.se,swebbtv.se,hastnet.se##.smartbanner
+fotosidan.se##+js(aeld, contextmenu, , showCopyrightBox)
 fotosidan.se##.subArticlesponsored, div[style="width:300px;float:right;"], div[style="float:right;width:300px;"], #partner-box, .adbox-label
 fotosidan.se,merinfo.se,allsvenskan.se,tasteline.com,jaktojagare.se,chefstidningen.se,realtid.se,norpan.se,moviezine.se,jaktjournalen.se,byggvarlden.se,omtanke.today,akademikern.se##.ads
 fragbite.se##.category:has-text(/spons/i):upward(article)
@@ -933,7 +935,7 @@ mmabetz.se##.desktop-homepage-ad, .desktop-main-ad, .latest-betting-campaigns, .
 mmanytt.se##.front-banner, .front-banner-cover, #text-2, [class*="sponsrat-inlagg"], a[href*="://kampanjer."], .ohmbet_link, a[href*="adsrv.eacdn.com"], .jeg_postblock + .wpb_content_element, .spelbolag-text, .adbox, .fight-odds-aggressive
 mmanytt.se##.img-featured-posts-image:has(a[href$="/annons/"])
 mmanytt.se##.tablepress:has(a[href*="expekt"])
-mobilanyheter.net##a[href*="rocketpot.io"], a[href*="casino"], a[href*="betting"]
+mobilanyheter.net##a[href*="rocketpot.io"], a[href*="casino"], a[href*="betting"], .a-wrap
 mobilanyheter.net##+js(set, ai_run_scripts, noopFunc)
 mobil.se,kamerabild.se##.markupbox:has(a[href*="casino"])
 modernalivet.se##body.modal-active:style(overflow:unset!important)
@@ -1175,7 +1177,7 @@ startaochdriva.se##.banner-right, .banner-left, .wpb_single_image a[target="_bla
 startaochdriva.se##:is(.latest-post, .td-cpt-post):has(a[href*="/sponsrat"])
 stegforhalsa.se##[class*="jsx-"][style*="position: sticky"], .bc--grey-neutral-50[style^="min-height"]
 stoppapressarna.se##.premium-page-ad, .footer-banner-wrapper, div[id^="stopp-"]
-streamio.com,nyan.ax,spelhubben.se,fotosidan.se,illvet.se,varldenshistoria.se##+js(aeld, contextmenu)
+streamio.com,nyan.ax,spelhubben.se,illvet.se,varldenshistoria.se##+js(aeld, contextmenu)
 surfa.se##div[class*="-promo"], div[class*="prisjakt-"]
 surfa.se,teknikfreak.se###loader-wrapper
 svampguiden.com##.label-sponsor:upward(.panel)
@@ -1532,6 +1534,7 @@ zeromagazine.nu##div[id^="ads"]
 ##div.sidebar-item .banner-box
 ##div.strossle-widget
 ##div.td-a-rec img
+##div.td-banner-bg
 ##div.topmost-banner
 ##div.vue-ad-wrapper
 ##div.widget_widget_dfp
