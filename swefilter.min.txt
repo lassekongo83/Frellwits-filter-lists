@@ -1,7 +1,7 @@
 ! Title: Frellwit's Swedish Filter
-! Last updated: Sun, 16 Jun 2024 04:38:39 +0000
+! Last updated: Mon, 17 Jun 2024 03:56:21 +0000
 ! Expires: 5 days
-! Diff-Path: patches/2024.6.16.278.patch#swefilter
+! Diff-Path: patches/2024.6.17.236.patch#swefilter
 ! Diff-Expires: 24 hours
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
@@ -634,6 +634,7 @@ google.se##mobile-promo
 goteborgsgolfaren.se##.sgpb-popup-overlay, #sgpb-popup-dialog-main-div-wrapper, .et_pb_gallery
 goteborg.com##body:style(overflow-y:initial!important)
 goteborg.com##.cookie-popup, .overlay
+grandtech.se##aside#secondary:has(.adsbygoogle)
 grillbaronen.se##a[href*="/click."], #block-2, #block-4
 grillbaronen.se##.post:has(a[href*="casino"], a[href*="kasino"], a[href*="betting"])
 grillbloggen.nu##.rstbox
@@ -938,6 +939,7 @@ mmanytt.se##.img-featured-posts-image:has(a[href$="/annons/"])
 mmanytt.se##.tablepress:has(a[href*="expekt"])
 mobilanyheter.net##a[href*="rocketpot.io"], a[href*="casino"], a[href*="betting"], .a-wrap
 mobilanyheter.net##+js(set, ai_run_scripts, noopFunc)
+mobil.se,kamerabild.se##a[href^="/partner"]
 mobil.se,kamerabild.se##.markupbox:has(a[href*="casino"])
 modernalivet.se##body.modal-active:style(overflow:unset!important)
 modernalivet.se##h3:has-text(/annons/i):upward(.sidebar-widget)
@@ -2046,7 +2048,7 @@ zeromagazine.nu##div[id^="ads"]
 /plugins/convertplug
 /plugins/convertpro
 /plugins/cookie-law-info$script,domain=gilla.se|startaochdriva.se|sverige.nu|conpot.se|firstclassmagazine.se|magasinetkonkret.se|kvalitetsmagasinet.se|miljo-utveckling.se|telekomidag.se|vdtidningen.se|gullislastips.se|nyfiknainvesterare.se|discoveringtheplanet.com|bussmagasinet.se|torbjornstips.se|affarsstaden.se|marknadschefer.se|automation.se|dinbyggare.se|aktieskolan.se
-/plugins/cookie-notice$script,domain=bildobubbla.se|zeromagazine.nu|sverigespringer.se|gasetten.se|sillyseason.se|gentlemannaguiden.com|matmalin.se|svensktidskrift.se|schack.se|densistavilan.se|horisontmagasin.se|kobe.se|tidningenproffs.se|jaktojagare.se|tobaksfakta.se|bebisvarlden.se|underbaraclaras.se|cykelframjandet.se|dalabygden.se|lansposten.se|sormlandsbygden.se
+/plugins/cookie-notice$script,domain=bildobubbla.se|zeromagazine.nu|sverigespringer.se|gasetten.se|sillyseason.se|gentlemannaguiden.com|matmalin.se|svensktidskrift.se|schack.se|densistavilan.se|horisontmagasin.se|kobe.se|tidningenproffs.se|jaktojagare.se|tobaksfakta.se|bebisvarlden.se|underbaraclaras.se|cykelframjandet.se|dalabygden.se|lansposten.se|sormlandsbygden.se|vaguiden.se|grandtech.se
 /plugins/cookie-popup$script,domain=skillingaryd.nu|xn--vrnamo-bua.nu
 /plugins/cresta-social-share-counter
 /plugins/custom-banners$domain=skolfamiljen.se
@@ -2276,6 +2278,7 @@ zeromagazine.nu##div[id^="ads"]
 /tracking/cts.js
 /tracking/fpc.js
 /track.js$domain=destination.se|sistaminuten.se
+/track/view?webInteractiveId$image
 /trafikfonden/*
 /tvg-legacy-splash-redirector/public/t/*
 /tvg-redirector/public/t/*
