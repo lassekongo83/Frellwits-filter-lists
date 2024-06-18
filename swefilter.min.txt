@@ -1,7 +1,7 @@
 ! Title: Frellwit's Swedish Filter
-! Last updated: Mon, 17 Jun 2024 03:56:21 +0000
+! Last updated: Tue, 18 Jun 2024 04:55:34 +0000
 ! Expires: 5 days
-! Diff-Path: patches/2024.6.17.236.patch#swefilter
+! Diff-Path: patches/2024.6.18.295.patch#swefilter
 ! Diff-Expires: 24 hours
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
@@ -125,7 +125,7 @@ aip.nu,funktionshinderpolitik.se,sjostadsbladet.se,fotbollsresultat.com,lanspost
 aip.nu,lansposten.se,dalabygden.se,sormlandsbygden.se##body.cookies-not-set:style(overflow:unset!important)
 akaviaaspekt.se##.article-list-item--native, a.article-topic__list-item[href^="/annons"]
 aktieskolan.se##section.elementor-section:has-text(Huvudsponsorer & partners)
-aktiespararna.se,alekuriren.se,tidningen.se,kurera.se##.native
+aktiespararna.se,alekuriren.se,tidningen.se,kurera.se,vinbanken.se##.native
 aktuellhallbarhet.se,byggindustrin.se,dagensmedia.se,dagensmedicin.se,fastighetsnytt.se,resume.se,dagenssamhalle.se,market.se,dagligvarunytt.se,privataaffarer.se##article:matches-css(after, content:/Annonssamarbete/i)
 aktuellhallbarhet.se,byggindustrin.se,dagensmedia.se,dagensmedicin.se,fastighetsnytt.se,resume.se,dagenssamhalle.se,market.se,dagligvarunytt.se,privataaffarer.se##a[href^="/annons/"], a[href^="/native/"], .slot-module, .slot-articlemodule
 aktuellhallbarhet.se,byggindustrin.se,dagensmedia.se,dagensmedicin.se,fastighetsnytt.se,resume.se,dagenssamhalle.se,market.se,dagligvarunytt.se,privataaffarer.se##div[class^="css-"]:matches-css(content:/Annons/i):upward(article)
@@ -401,6 +401,7 @@ digitalfotoforalla.se,iform.se,pctidningen.se,varldenshistoria.se##li:has(.conte
 digitalfotoforalla.se,iform.se,pctidningen.se,varldenshistoria.se##.scroll-message, .gallery-banner, .horseshoe, [data-ad-type], .bcm-banner
 digitalfotoforalla.se,iform.se,pctidningen.se,varldenshistoria.se##.teaser:has(.teaser__cat--sponsorlabel)
 digitalfotoforalla.se,pctidningen.se##.opacity-fade:style(opacity:1!important; transition:none!important; animation:unset!important;)
+dinamediciner.se##.top-header:has(.adsbygoogle)
 dinbyggare.se##article.category-leverantorer, div[style^="\[banner-style\]"]
 dinbyggare.se##p[style="text-align: center;"]:has(a[target] > img)
 dinbyggare.se##*:style(-webkit-touch-callout: default !important; -webkit-user-select: text !important; -moz-user-select: text !important; -ms-user-select: text !important; user-select: text !important;)
@@ -1272,6 +1273,8 @@ tidningen.djurskyddet.se##.ai-track
 tidningen.nu##span:has-text(/^Annons$/):upward(1) + .textwidget
 tidningen.se##.sidebar .widget_widget_code, .casino
 tittapavideon.se##.adv
+tlnt.se##div[id^="ad-block"]
+tlnt.se##.fakta-list:has-text(/annons/i)
 tonyhatefnejad.se,lyckasmedbakning.nu,pinkprogramming.se,brl.se##.preloader
 totallyorebro.se,totallystockholm.se##div.tot-content-preview-container-small[style*="border-top:4px solid #ffb200;"], .content-overlay--black, a[href*="casino"], a[href*="/sponsrat/"], a[href*="/sponsrat/"] + p.tot-content-preview--meta, .newaddiv, .tot-sidebar
 totallyorebro.se,totallystockholm.se##[class*="tot-content-preview-container"]:has(a[href*="casino"], a[href*="kasino"], a[href*="betting"], a[href*="spel"]):remove()
@@ -2042,7 +2045,7 @@ zeromagazine.nu##div[id^="ads"]
 /plugins/christmas-panda
 /plugins/cm-pop-up-banners
 /plugins/cm-takeover-ad
-/plugins/complianz-gdpr$domain=iconmagazine.se|signprint.se|vilaser.se|arjeplognytt.se|aftonkuriren.se|tidningenglobal.se|tidningensyre.se|landetsfria.nu|fempers.se|macken.xyz|webb-tv.nu|kalmar.nu|brollopsmagasinet.se|megafonen.se|radiotreby.se|revisionsvarlden.se|kyrka.se|nuiroslagen.se
+/plugins/complianz-gdpr$domain=iconmagazine.se|signprint.se|vilaser.se|arjeplognytt.se|aftonkuriren.se|tidningenglobal.se|tidningensyre.se|landetsfria.nu|fempers.se|macken.xyz|webb-tv.nu|kalmar.nu|brollopsmagasinet.se|megafonen.se|radiotreby.se|revisionsvarlden.se|kyrka.se|nuiroslagen.se|tlnt.se
 /plugins/consent-magic-pro$script,domain=namnmarkning.se|bluum.se|gobokhandeln.se
 /plugins/content-hub-wp-plugin/assets/js/hub-time-spent
 /plugins/convertplug
