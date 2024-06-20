@@ -1,10 +1,10 @@
-diff name:swefilter lines:196 checksum:b7e6595cc8
+diff name:swefilter lines:225 checksum:686fba23f3
 d2 1
 a2 1
-! Last updated: Wed, 19 Jun 2024 04:29:55 +0000
+! Last updated: Thu, 20 Jun 2024 04:31:16 +0000
 d4 1
 a4 1
-! Diff-Path: patches/2024.6.19.269.patch#swefilter
+! Diff-Path: patches/2024.6.20.271.patch#swefilter
 a95 1
 affarerinorr.se##a[href^="/nyheter/native-artiklar/"]
 d123 2
@@ -17,12 +17,19 @@ aktiespararna.se,alekuriren.se,tidningen.se,kurera.se,vinbanken.se##.native
 d151 1
 a151 1
 allas.se,elle.se,femina.se,hant.se,mabra.com,residencemagazine.se,svenskdam.se,motherhood.se##article[data-type="native"], .ag-product-wrapper, .product-carousel__container, .shop_carousel, .editorsPick, div[class^="strossle-widget-"], .ad-min-height, a.cts-impression-item[data-cts-label*="banner"], section[data-cts-label="affiliate-carousel"]
+a171 1
+alltomkungligt.se###banner-holder
 d245 1
 a245 1
 bohuslaningen.se,stromstadstidning.se,markposten.se,harrydaposten.se,partilletidning.se,sttidningen.se,molndalsposten.se,kungalvsposten.se,kungsbackaposten.se,alingsastidning.se,ttela.se,gp.se,hallandsposten.se,hn.se,mellerudsnyheter.se##.c-ad__panorama, .c-ad__insider, #outsiderTop, div[data-k5a-pos^="panorama"]
+d289 1
+a289 1
+bussmagasinet.se,byggteknikforlaget.se,dialasen.com,torbjornstips.se,backpacking.se,kanadaresa.se,usa.se,sporthalsa.se,ravarumarknaden.se,livetsgoda.se,opulens.se,radiotreby.se,nyadagbladet.se,fiskemagasinet.se,etunanytt.se##.textwidget a[target="_blank"]
 d298 1
 a298 1
 byggahus.se,expressen.se,filmtopp.se,destination.se,spokbloggen.nu,folkhalsasverige.se,foretagsverige.se,forskningsverige.se,motorbibeln.se,hallbarhetsverige.se,tillvaxtsverige.se,grillbibeln.se,kampenmotcancer.se,bolagsfakta.se,affarsvarlden.se,affarerinorr.se##.ad-container
+a322 1
+canariajournalen.se##.highlighted:has(.advertisement)
 d326 1
 a326 1
 cannabis.se,biostock.se,snowmobile.se,tobaksfakta.se,dagenslogistik.se,magasinetkonkret.se,skaneplus.se##.pum-overlay
@@ -38,6 +45,10 @@ a428 1
 driva-eget.se##.sponsored_content
 a454 1
 esportsacademy.se###preloader
+a460 1
+etunanytt.se##.textwidget:has-text(ANNONS)
+a472 1
+exakt24.se##section[data-ha-element-link*="kampanj"], .elementor-element-686a3aa6, .elementor-popup-modal
 d546 1
 a546 1
 forexgruppen.se,datormagazin.se##.cky-consent-container
@@ -55,8 +66,13 @@ a645 1
 handelsnytt.com##.headerannons, .sidebarannonsseg, .footerannons
 a713 1
 industritorget.se###pnlCookie, .campaign-top, .campaigns-right
+a767 1
+klimatnytt.se##.tm-cookie-banner
 a779 1
 kompanjoner.se##.site-loader
+d802 1
+a802 1
+lakartidningen.se,hockeynews.se,canariajournalen.se##.advertisement
 a803 1
 langd.se##.single-entry__ads
 d832 1
@@ -86,6 +102,12 @@ recept.se##div[class*="ad-wrapper"], button#cookiePreferences, .c-modal-backdrop
 d1072 1
 a1072 1
 runnersworld.se,utsidan.se,hockeymagasinet.com,driva-eget.se,foretagande.se,revisionsvarlden.se,travelnews.se,mittforetag.com##.sponsored
+d1103 1
+a1103 1
+siljannews.se##article:has(a[href^="/annons"])
+d1105 1
+a1105 1
+siljannews.se##h3:has-text(/Annons/i) + div
 a1114 1
 skaneplus.se##div[style="padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;flex-basis:50%"]:has(a:not([href*="skaneplus.se"]):not([href^="/"]) > img)
 a1132 1
@@ -144,11 +166,15 @@ a1904 1
 /images/site/annonser
 a1973 1
 /native-article-campaigns$domain=allas.se|elle.se|femina.se|hant.se|mabra.com|residencemagazine.se|svenskdam.se|motherhood.se
+d2018 1
+a2018 1
+/plugins/bravepopup$script,domain=matkasse.se|tidningenglobal.se|fempers.se
 d2025 1
 a2025 1
 /plugins/complianz-gdpr$domain=iconmagazine.se|signprint.se|vilaser.se|arjeplognytt.se|aftonkuriren.se|tidningenglobal.se|tidningensyre.se|landetsfria.nu|fempers.se|macken.xyz|webb-tv.nu|kalmar.nu|brollopsmagasinet.se|megafonen.se|radiotreby.se|revisionsvarlden.se|kyrka.se|nuiroslagen.se|tlnt.se
-d2031 1
-a2031 1
+d2030 2
+a2031 2
+/plugins/cookie-law-info$script,domain=gilla.se|startaochdriva.se|sverige.nu|conpot.se|firstclassmagazine.se|magasinetkonkret.se|kvalitetsmagasinet.se|miljo-utveckling.se|telekomidag.se|vdtidningen.se|gullislastips.se|nyfiknainvesterare.se|discoveringtheplanet.com|bussmagasinet.se|torbjornstips.se|affarsstaden.se|marknadschefer.se|automation.se|dinbyggare.se|aktieskolan.se|insikt24.se
 /plugins/cookie-notice$script,domain=bildobubbla.se|zeromagazine.nu|sverigespringer.se|gasetten.se|sillyseason.se|gentlemannaguiden.com|matmalin.se|svensktidskrift.se|schack.se|densistavilan.se|horisontmagasin.se|kobe.se|tidningenproffs.se|jaktojagare.se|tobaksfakta.se|bebisvarlden.se|underbaraclaras.se|cykelframjandet.se|dalabygden.se|lansposten.se|sormlandsbygden.se|vaguiden.se|grandtech.se
 a2045 1
 /plugins/embedpress/assets/js/ads.js
@@ -185,6 +211,9 @@ a2553 1
 d2666 1
 a2666 1
 ||gravito.net^$domain=hitta.se|gp.se|bohuslaningen.se|stromstadstidning.se|markposten.se|harrydaposten.se|partilletidning.se|sttidningen.se|molndalsposten.se|kungalvsposten.se|kungsbackaposten.se|alingsastidning.se|ttela.se|hallandsposten.se|hn.se|mellerudsnyheter.se
+d2697 1
+a2697 1
+||inmobi.com^$domain=alltomelbil.se|rikatillsammans.se|egoinas.se|land.se|moviezine.se|travelnews.se|varldenshaftigaste.se|merinfo.se|foreca.se|matklubben.se|reseguiden.se|newsner.com|humorbibeln.se|sportbibeln.se|ettgottskratt.se|djurbibeln.se|laget.se|byrum.se|sportlovin.se|receptfavoriter.se|forni.se|kimura.se|cornucopia.se|norrahalland.se|elevspel.se|finanstid.se|tittapavideon.se|motormagasinet.se|food-supply.se|dagenshandel.se|plastnet.se|habit.se|woodnet.se|foodnet.se|transportnet.se|processnet.se|packnet.se|verkstaderna.se|medtechmagazine.se|recyclingnet.se|rt-forum.se|uochd.se|lifesciencesweden.se|fri-kopenskap.se|cleannet.se|metal-supply.se|framtidensbygg.se|entreprenad.com|mykitchenstories.se|cancelculture.se|mytaste.se|findit.se|lchfarkivet.se|brinkenbakar.se|foretagande.se|fotbolltransfers.com|affarsvarlden.se|villalivet.se|branschaktuellt.se|nordic.ign.com|fragbite.se|lindasbakskola.se|jennysmatblogg.nu|filippoon.se|lesscarbs.se|eniro.se|matspar.se|xnytt.se|alltomkungligt.se
 a2824 1
 ||nitroz.se/banners.min.js
 d2838 1
