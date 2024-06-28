@@ -1150,7 +1150,7 @@ alltforforaldrar.se,di.se,upphandling24.se,bytbil.com,sverigesnatur.org,tv24.se,
 svartgul.se,eventeffect.se,executiveeffect.se,saleseffect.se###panorama
 teknikveckan.se,di.se,dn.se,skillingaryd.nu,xn--vrnamo-bua.nu,vardfokus.se,kamerabild.se,tripadvisor.se,swedroid.se,bettingstugan.se,expressen.se,dagensopinion.se,driva-eget.se,bioenergitidningen.se,ifokus.se,padelfeber.se,sv.picmix.com,ifragasatt.se,ehandel.se,jaktojagare.se,sportbloggare.com,bovision.se,familjeliv.se,tidningenridsport.se,golflivet.se,vemringde.se,brollopstorget.se,fastighetsvarlden.se,borskollen.se,aktiespararna.se,receptfavoriter.se,tyda.se,mittforetag.com##.ad
 svd.se,chef.se,vvsforum.se,elinstallatoren.se,arkitekten.se,natursidan.se,svenskfarmaci.se,da.se,frisor.se##.Ad
-aftonbladet.se,halsasverige.se,nojesmagasinet.nu,stoppapressarna.se,langd.se,pressbladet.se,svenskpress.se,foretagsbladet.se,gestrikemagasinet.se,cfanytt.se,lasarnas.se,hembostad.nu,sportidrott.se,skolvarlden.se,computersweden.se,thatsup.se##.advert
+aftonbladet.se,halsasverige.se,nojesmagasinet.nu,stoppapressarna.se,langd.se,pressbladet.se,svenskpress.se,foretagsbladet.se,gestrikemagasinet.se,cfanytt.se,lasarnas.se,hembostad.nu,sportidrott.se,skolvarlden.se,computersweden.se,thatsup.se,arbetaren.se##.advert
 fotosidan.se,merinfo.se,allsvenskan.se,tasteline.com,jaktojagare.se,chefstidningen.se,realtid.se,norpan.se,moviezine.se,jaktjournalen.se,byggvarlden.se,omtanke.today,akademikern.se,socionomen.se##.ads
 lira.se,danstidningen.se,slangopedia.se,tidningen.se###ads
 fotbolldirekt.se,hockeysverige.se,innebandymagazinet.se,motivation.se,fiskejournalen.se,alba.nu,padeldirekt.se,dagensopinion.se##.annons
@@ -1732,11 +1732,11 @@ hrnytt.se##article:has(.sponsored-article)
 hrsvepet.se,cfosvepet.se##.cookie-banner, .desktopbanner
 hrsvepet.se##.mini-title-link:not(.w-condition-invisible):has-text(/sponsra/i):upward(1)
 cfosvepet.se##.recent-post-item:has(a[href="#"]:not(.w-condition-invisible))
-arbetaren.se##.text-sm:has-text(/annons/i):upward(.border-b)
+arbetaren.se##.text-sm:has-text(/annons/i):upward(.border-b, a[target])
 ||prismic.io/prismic-toolbar$domain=alltomarbetsmiljo.se
 alltomarbetsmiljo.se##.bg-native
-alltomarbetsmiljo.se##h3:has-text(Prenumerera!):upward(div:not([id]):not([class]))
-espressomedia.se##div[id^="espre-"]
+alltomarbetsmiljo.se##main > div:not([id]):not([class]):has(a[href$="nyhetsbrevet"])
+espressomedia.se##div[id^="espre-"], .category-native
 espressomedia.se##.penci-block-vc:has([href*="casino"])
 /upload/puff/*$domain=bergsmannen.se|tidningenbyggmaterial.se|tidningendacksnack.se
 bergsmannen.se,tidningenbyggmaterial.se##.ann-puff, .headerLinks
@@ -1745,7 +1745,7 @@ fof.se###CybotCookiebotDialog, #CybotCookiebotDialogBodyUnderlay
 fof.se##.mediaconnect-protected-content .Carousel:style(opacity:unset!important;)
 ||media.dagensps.se/*banner$image
 /ps-partner$xmlhttprequest,domain=dagensps.se
-dagensps.se##a[href*="/ps-partner/"], .ad-links-module, .dagensps_ad, a[href*="ut.dagensps.se"][target], .bottom_banner, .leftsidebanner
+dagensps.se##a[href*="/ps-partner/"], .ad-links-module, .dagensps_ad, a[href*="ut.dagensps.se"][target], .bottom_banner, .leftsidebanner, .c-external-notice
 dagensps.se##.container:has(.dagensps_ad)
 dagensps.se##a[href*="/ps-partner"]:upward(section.cat-post-widget)
 dagensps.se##.postbox:has(.sponsored_post)
@@ -1761,17 +1761,18 @@ bulletin.nu##div[class*="section-preview"]:has-text(/betalt samarbete/i):upward(
 kvartal.se##.email-popup-wrapper
 kvartal.se##.square-format:has(.kv-ad-label)
 skargarden.se###topbanner, #mittbanner, #topbannerm, #mittbannerm
-skargarden.se##article:has([title^="Annons"])
+skargarden.se##article:has([title^="Annons"], a[href*="/annons"])
 sakochliv.se##.cookie-disclaimer-wrap, .type-promo, .sector-annons
 sakochliv.se##+js(acs, checkCampaignCookie)
 tidningen.se##.sidebar .widget_widget_code, .casino
 /view_count/view$domain=byggahus.se
 byggahus.se##.block-ad, #cookie-consent-dialog, a[href^="/partner/"], .threadMatchedContent, #svartalistan-login-required-overlay
-byggahus.se##.attachmentPreviewActive img:style(-webkit-filter: none !important; filter: none !important;)
+byggahus.se##.bbImageWrapper--preview.active img:style(-webkit-filter:none!important; filter:none!important; transform:none!important; -webkit-transform:none!important;)
 byggahus.se##body.forum-logged-out .svartalistan-results-login-required:style(height: unset !important;)
 byggahus.se##+js(aeld, /adblockDetector|adsInserted|partnerExternalLinkClick/)
 byggahus.se##a.click-track-attachment-preview, img.click-track-attachment-preview:remove-class(click-track-attachment-preview)
 byggahus.se##a.click-track, img.click-track:remove-class(click-track)
+byggahus.se##img[data-click-track]:remove-attr(data-click-track)
 battrestadsdel.se###top-banner-mobile, .apd-text, .apds_main, .entry-priomaker, [class^="dls-"], .csmi
 villalivet.se##.mtsnb, .villalivet-target, a[href*="/sponsrat-innehall/"], div[data-td-block-uid="tdi_85"], a[href*="utm_campaign"][target="_blank"], div[data-td-block-uid="tdi_87"]
 villalivet.se##:is(a, span):has-text(/sponsr/i):upward(3)
