@@ -1,6 +1,6 @@
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days
-! Last modified: 2024-07-04 06:46:50 CEST
+! Last modified: 2024-07-06 05:54:38 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPL3 - https://github.com/lassekongo83/Frellwits-filter-lists/blob/master/LICENSE
@@ -683,6 +683,7 @@ helgon.se##[id*="banner"], a[href^="https://ad."], a[href^="https://ad2."]
 hemhyra.se##.pageCookies, #ad-insider1, #ad-insider2, #ad-mobil-1, #ad-mobil-2, #ad-mobil-3, #ad, #ad1, #ad2, #adform-outstream, .ad__text, .entry__ad, .entry__related__sponsored, .module__sponsored
 hemmafixbloggen.se##.post-item:has(.sponsor-summary)
 hemmanytt.se###sa_slider_shortcode
+hemmanytt.se##.annonsnotis + span + span + div.td-pb-row:has(a[href*="adtr.co"])
 hemnet.se##body:style(overflow:unset!important)
 hemnet.se##div[data-testid="living-cost-logos-section"]:has(span[aria-label="annons"])
 hemnet.se##span:has-text(/annons från/i):upward(div[class^="ArticleContent_articlePage"])
@@ -1239,6 +1240,7 @@ sverigesindustri.se##.article-item:has(.article-label--sponsored, .article-item-
 sverigesnatur.org##div[id^="sverigesNaturPopup"]
 sverigespringer.se##.cd-card-bar:has-text(/annons/i):upward(.cd-sidebar-item, .cd-news-card)
 sverigespringer.se##.cd-desktop-banner
+sverige.nu##a[href*="casino"]
 sweclockers.com##div[class^="card-info"]:has-text(/spons/i):upward(.card)
 sweclockers.com###prisjakt-popular, .ad:not(.adPanorama), .adForumSticker, .dark-mode__sponsor
 sweclockers.com##.ad.adPanorama:style(height:100px!important; position:absolute!important;)
@@ -1807,7 +1809,6 @@ zeromagazine.nu##div[id^="ads"]
 /banner$domain=thepattayanews.se
 /banner/ads/*
 /banner?cg$xhr,domain=blocket.se
-/beardeddragon/gilamonster.js$domain=hemmanytt.se
 /betald-exponering$image
 /bigdatapushworker.js$domain=eurocampings.se
 /bilder-for-annonser$image
@@ -1871,9 +1872,6 @@ zeromagazine.nu##div[id^="ads"]
 /detroitchicago$domain=temadagar.se|svenskaorduttryck.se
 /detroitchicago/cmbdv2.js$domain=wernamaten.se
 /detroitchicago/denver.js$domain=wernamaten.se
-/detroitchicago/kenai.js$domain=hemmanytt.se
-/detroitchicago/portland.js$domain=hemmanytt.se
-/detroitchicago/sidebarwall.js$domain=hemmanytt.se
 /detroitchicago/*.gif?$image
 /dh-adscale$domain=dh.se
 /dh-adsticky$domain=dh.se
@@ -1887,7 +1885,6 @@ zeromagazine.nu##div[id^="ads"]
 /downloads.mailchimp.com/js/signup-forms/popup
 /dyTracker.js?bust=release
 /dynamic-yield/report/pageview
-/edmontonalberta/calgary.js$domain=hemmanytt.se
 /egmont-ads/*
 /egmont-continuous-scroll/continuous-scroll-analytics.js
 /elasticsuite/tracker
@@ -2605,7 +2602,7 @@ zeromagazine.nu##div[id^="ads"]
 ||cookieinformation.com^$domain=folkofolk.se|dental24.se|vinbanken.se|handelskammarenvarmland.se|enahabo.se|bostadsportal.se
 ||cookieinfoscript.com^$domain=webbkryss.nu
 ||cookielaw.org^$domain=cartoonnetwork.se|tv4.se|fotbollskanalen.se|koket.se|flashscore.se|ikea.com|recept.se|manpower.se|mtv.se|natgeotv.com|internetkunskap.se|internetstiftelsen.se|yelp.se|spisa.nu|viaplayradio.se|booli.se|svenskarnaochinternet.se|sv.bab.la|tripadvisor.se|sydkusten.es|livetochdiabetes.se|voister.se|nok.se|motesplatsen.se|thelocal.se|placera.se|infotorgjuridik.se|se.trustpilot.com|travronden.se|travrondenspel.se|hammarbyfotboll.se|pricerunner.se|billetto.se|lidl.se
-||cookiepro.com^$domain=birthday.se|fz.se|sweclockers.com|djurskyddet.se|havet.nu|svenskfast.se|fiskejournalen.se|upplysning.se
+||cookiepro.com^$domain=birthday.se|djurskyddet.se|havet.nu|svenskfast.se|fiskejournalen.se|upplysning.se
 ||cookietractor.com^$domain=innebandy.se|orientering.se|pluggakuten.se|munskankarna.se
 ||cookie-script.com/analytics
 ||cookie-script.com^$domain=axess.se|dagensjuridik.se|foodfolder.se|arkitektur.se|internetlankar.se|friluftsframjandet.se|lchfarkivet.se|bakasockerfritt.se|handelsradet.se
