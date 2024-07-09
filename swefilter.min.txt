@@ -1,7 +1,7 @@
 ! Title: Frellwit's Swedish Filter
-! Last updated: Mon, 08 Jul 2024 04:32:53 +0000
+! Last updated: Tue, 09 Jul 2024 04:45:04 +0000
 ! Expires: 5 days
-! Diff-Path: patches/2024.7.8.272.patch#swefilter
+! Diff-Path: patches/2024.7.9.285.patch#swefilter
 ! Diff-Expires: 24 hours
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
@@ -1019,6 +1019,7 @@ nyheter24.se##.breadtext_content.paywall_breadtext p:first-child::before
 nyheter24.se##.lazyload_bar.show, .lazyload_outer.show, .sponsrat, .is_native, .sticky-scroll, .flow_ad
 nyheteridag.se##article:has-text(/sponsrat innehåll/i)
 nyheteridag.se##h2:has-text(/samarbetslänkar/i):upward(.article-inner)
+nyheteridag.se##li:has(a[href*="kasino"], a[href*="casino"], a[href*="-slot-"])
 nyheteridag.se##.widget.facebook, .content > div:not([class]) img, a[href*="www.casino"], a[href="/karnkraft.php"]
 nyhetersto.se##.site-branding a ~ p, .wp-block-jetpack-slideshow
 nyhetsbyranjarva.se##div[style="display: flex; justify-content: center; flex-direction: column; align-items: center;"]
@@ -1102,10 +1103,8 @@ samfalligheterna.se##.tds-locked-content:style(display:unset!important;)
 samfalligheterna.se##.tds-locked-content[hidden]:remove-attr(hidden)
 samfalligheterna.se##.td-cpt-post:has(a[href*="/sponsra"])
 samfalligheterna.se##.td_block_wrap:has-text(Annons)
-samnytt.se,samnytt.nu##a[href*="casino"], a[target="_blank"] img:not([class^="tweet-"])
-samnytt.se,samnytt.nu##a[target]:has(img[width="340"][height="680"])
-samnytt.se,samnytt.nu##span:has-text(/Ann​ons|Ann​ons/i):upward(1)
-samnytt.se,samnytt.nu##.sticky div[class*="bg-opacity-"].items-center
+samnytt.se,samnytt.nu##a[href*="casino"], a[target="_blank"] img:not([class^="tweet-"]), a img[src^="/butik"]
+samnytt.se,samnytt.nu##.sticky > div:has(img[src^="/butik"])
 sanghafte.se##.widget_cooperations
 sanghafte.se##.wp-show-posts-single:has(a[href*="casino"], a[href*="kasino"], a[href*="betting"])
 sbf.se##.sv-cookie-consent-banner, .hiq-partners-banner
