@@ -2508,14 +2508,13 @@ nyadagbladet.se##.widget_media_image:has-text(/annons/i)
 ||spelguiden.samnytt.se^
 sidebanner$image,domain=samnytt.se|samnytt.nu
 casinoguiden$image,domain=samnytt.se|samnytt.nu
-samnytt.se,samnytt.nu##a[href*="casino"], a[target="_blank"] img:not([class^="tweet-"])
-samnytt.se,samnytt.nu##a[target]:has(img[width="340"][height="680"])
-samnytt.se,samnytt.nu##.sticky div[class*="bg-opacity-"].items-center
-samnytt.se,samnytt.nu##span:has-text(/Ann​ons|Ann​ons/i):upward(1)
+samnytt.se,samnytt.nu##a[href*="casino"], a[target="_blank"] img:not([class^="tweet-"]), a img[src^="/butik"]
+samnytt.se,samnytt.nu##.sticky > div:has(img[src^="/butik"])
 ||nyheteridag.se/ads/
 nyheteridag.se##.widget.facebook, .content > div:not([class]) img, a[href*="www.casino"], a[href="/karnkraft.php"]
 nyheteridag.se##h2:has-text(/samarbetslänkar/i):upward(.article-inner)
 nyheteridag.se##article:has-text(/sponsrat innehåll/i)
+nyheteridag.se##li:has(a[href*="kasino"], a[href*="casino"], a[href*="-slot-"])
 ||peertube.se^$frame,redirect=click2load.html,domain=nordiskradio.se
 nordfront.se##span:not(.post-content):has-text(/annons/i):upward(.post)
 nordfront.se###campaign_area
