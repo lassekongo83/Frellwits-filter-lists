@@ -1,6 +1,6 @@
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days
-! Last modified: 2024-07-12 09:11:41 CEST
+! Last modified: 2024-07-14 06:39:50 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPL3 - https://github.com/lassekongo83/Frellwits-filter-lists/blob/master/LICENSE
@@ -242,7 +242,7 @@ bilsport.se##.includingFeaturedSliderArticle:has(.native-mark)
 bilwebben.ax##.front #secondary-content-wrapper, .banner-wrapper, .content-prefix-banner-wrapper
 bioenergitidningen.se##article:remove-class(closed)
 bioenergitidningen.se###cookieinfo
-biostock.se,hejauppsala.com,svenskfilmdatabas.se##.wt-cli-cookie-bar-container
+biostock.se,hejauppsala.com,svenskfilmdatabas.se,bredband.se##.wt-cli-cookie-bar-container
 biostock.se,tobaksfakta.se##.pum-open:style(overflow:auto!important)
 birthday.se##.datax
 bjuvsweek.se##.carouselbanner-wrp
@@ -677,10 +677,11 @@ hejaolika.se##p[style^="text-transform"]:has-text(/annons/i)
 hejaolika.se##p[style^="text-transform"]:has-text(/annons/i) + .wp-block-kadence-posts
 hejaolika.se##+js(acs, advads_passive_placements)
 hejaolika.se##[class*="partnerinfostyle"], div[id^="hejao-"], .kb-advanced-image-link[target], .category-partnerinformation, .kt-modal-linkalign-center, .hejao-target
-hejauppsala.com##.cli-barmodal-open:style(overflow:auto!important)
 hejauppsala.com##:is(div[class^="u-text"], h2):has-text(/^Reklam$/):upward(section)
+hejauppsala.com,bredband.se##.cli-barmodal-open:style(overflow:auto!important)
 helahisingen.se###custom_html-15, .code-block img, .banner-promotions-wrapper
 helgon.se##[id*="banner"], a[href^="https://ad."], a[href^="https://ad2."]
+hellofresh.se##a[data-test-id^="top-banner-ad"], div[data-test-id="exit-intent-banner"], div[data-test-id="urgency-banner-modal"]
 hemhyra.se##.pageCookies, #ad-insider1, #ad-insider2, #ad-mobil-1, #ad-mobil-2, #ad-mobil-3, #ad, #ad1, #ad2, #adform-outstream, .ad__text, .entry__ad, .entry__related__sponsored, .module__sponsored
 hemmafixbloggen.se##.post-item:has(.sponsor-summary)
 hemmanytt.se###sa_slider_shortcode
@@ -986,7 +987,7 @@ narkive.se##div[onimpression]
 nasdaqomxnordic.com##+js(acs, $, shuffle)
 naturvetarna.se##.Advertisement
 netdoktor.se,netdoktorpro.se##.article-list__item__link--sponsored, .ispanorama, #Popup, .ElementAdvertisement
-netflixguiden.se##div.lboard, div.instream-dynamic, #top-area-promo, div.secondary div.sticky-widget, .promo, .lboard-desktop, .lboard-mobile
+netflixguiden.se##div.lboard, div.instream-dynamic, #top-area-promo, div.sidebar div.sticky, .promo, .lboard-desktop, .lboard-mobile, #bottom-sticky-promo
 news55.se##div.container:has(a[href="/author/news55-partner/"])
 news55.se##div.justify-center:has(div[id^="news55_pano"], div[id^="news55_tws"], div[id^="news55_mobil"])
 newsner.com,humorbibeln.se,sportbibeln.se,ettgottskratt.se,djurbibeln.se###wsfb-container, .share-buttons, .ad-space
@@ -2177,7 +2178,7 @@ zeromagazine.nu##div[id^="ads"]
 /plugins/ungrabber
 /plugins/vizzit-analytics
 /plugins/wccp-pro$domain=dinbyggare.se
-/plugins/webtoffee-gdpr-cookie-consent$domain=forskning.se|hejaolika.se|kvartal.se|karriarlakare.se|svenskfilmdatabas.se
+/plugins/webtoffee-gdpr-cookie-consent$domain=forskning.se|hejaolika.se|kvartal.se|karriarlakare.se|svenskfilmdatabas.se|bredband.se
 /plugins/wf-cookie-consent$script,domain=spelochfilm.se
 /plugins/woocommerce-google-adwords
 /plugins/wordpress-stats-manager-pro
@@ -2731,6 +2732,7 @@ zeromagazine.nu##div[id^="ads"]
 ||harmonious-station-to-station.podplay.com/script.js
 ||hastnet.se/adtech
 ||hejauppsala.com/*banner$image
+||helix.svt.se/events
 ||helloreco.com^$third-party
 ||heroaffiliates.com^$third-party
 ||herokuapp.com/visit?$image
@@ -3073,6 +3075,7 @@ zeromagazine.nu##div[id^="ads"]
 ||tc.hometogo.net^$image
 ||telemetry.bambuser.io^
 ||tibaco.net/scripts/tws.js
+||toolcontentcloud.com/*/asjs$domain=bredband.se
 ||top100ruokablogit.com^$third-party
 ||topblogarea.se/tracker
 ||toppmarkensverige.com^
@@ -3183,6 +3186,7 @@ branschkoll.se,rocknytt.net,upphandling24.se,kimura.se,datormagazin.se,villalive
 branschkoll.se,rocknytt.net,upphandling24.se,kimura.se,datormagazin.se,villalivet.se,polistidningen.se,densistavilan.se##^script:has-text(advanced_ads)
 branschkoll.se,rocknytt.net,upphandling24.se,kimura.se,datormagazin.se,villalivet.se,polistidningen.se,densistavilan.se##^script:has-text(advads)
 temadagar.se,lchfarkivet.se,wernamaten.se,sanghafte.se##^script:has-text(__ez)
+svt.se###nyh_a11y-primary-navigation-list:style(float:unset!important;)
 !#endif
 !#if !env_mobile
 /assets/js/modules/plugins/smoothPageScroll
