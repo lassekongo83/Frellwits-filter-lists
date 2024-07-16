@@ -1,6 +1,6 @@
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days
-! Last modified: 2024-07-15 10:30:19 CEST
+! Last modified: 2024-07-16 09:57:08 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPL3 - https://github.com/lassekongo83/Frellwits-filter-lists/blob/master/LICENSE
@@ -698,8 +698,7 @@ hemtrevligt.se##div[id^="hj-"], div[id^="ik-"]
 hemtrevligt.se##.article:has(.annons)
 hifitorget.se##.billboard-style, .between-posts
 hifitorget.se##.row[style*="height"]:has(.adsbygoogle)
-hippson.se##.sponsorpuff, .presentedby, .presentedby ~ *
-hippson.se##.toolboxheader:has-text(/aktuella samarbeten/i) ~ a.more
+hippson.se##.main-article-container:has-text(/Sponsrad Artikel/i)
 hitta.se##a[data-trackimp][target], .hitta-map .integration-txt, .section-details--alb, [class*="dummyAd"], [class*="StyledAdSlot"], [data-bind*="Ad"], div[class^="GraphicAd_"], [class*="adContainer"], [id*="_panorama"], [id*="_skyscraper"], div[style="min-height: 250px;"], div[data-track="displayplacering-customer"], a[data-test="boostAdLink"], div[class^="style_bannerContainer"], [data-track="click-promotion-banner"], div[class*="adWrapper"]
 hitta.se##div[id^="hitta_mobile_"].placeholder:upward(div[class^="height"], div[class^="style_breakout"])
 hitta.se##[class^="styleManual_mainContentBox"] > div[style^="min-height"]:first-of-type
@@ -2969,7 +2968,7 @@ zeromagazine.nu##div[id^="ads"]
 ||pushwhy.com^
 ||pxl.host^$third-party
 ||qimtek.se^$third-party
-||quantcast.com^$domain=flashback.org|hippson.se|stoppapressarna.se|babyhjalp.se|nyadagbladet.se|enkelteknik.se|travelgrip.se|samnytt.se|nyteknik.se|lag-avtal.se|arbetarskydd.se|leta.se|motivation.se|sporttv.nu|goforfit.se|expo.se|poddtoppen.se|langd.se|doon.se|garaget.org|nouw.com|listor.se
+||quantcast.com^$domain=flashback.org|babyhjalp.se|nyadagbladet.se|enkelteknik.se|travelgrip.se|samnytt.se|nyteknik.se|lag-avtal.se|arbetarskydd.se|leta.se|motivation.se|sporttv.nu|goforfit.se|expo.se|poddtoppen.se|langd.se|doon.se|garaget.org|nouw.com|listor.se
 ||qx.se/view.php$image
 ||rabble-res.cloudinary.com^$third-party
 ||radio.se/iomm
@@ -3187,11 +3186,12 @@ zeromagazine.nu##div[id^="ads"]
 !#endif
 !#if !env_chromium
 ||fast.fonts.net/*/1.css$domain=arkitekt.se|axess.se|diabetes.se|sverigeslarare.se|ljuskultur.se|electronic.se
-branschkoll.se,rocknytt.net,upphandling24.se,kimura.se,datormagazin.se,villalivet.se,classicmotor.se,tidningenhalsa.se,husohem.se,guiden.se##^script[id^="advanced-ads"]
-branschkoll.se,rocknytt.net,upphandling24.se,kimura.se,datormagazin.se,villalivet.se,classicmotor.se,tidningenhalsa.se,husohem.se,guiden.se##^script[id^="advanced_ads"]
-branschkoll.se,rocknytt.net,upphandling24.se,kimura.se,datormagazin.se,villalivet.se,classicmotor.se,tidningenhalsa.se,husohem.se,guiden.se##^script[id^="advads"]
-branschkoll.se,rocknytt.net,upphandling24.se,kimura.se,datormagazin.se,villalivet.se,polistidningen.se,densistavilan.se,classicmotor.se,tidningenhalsa.se,husohem.se,guiden.se##^script:has-text(advanced_ads)
-branschkoll.se,rocknytt.net,upphandling24.se,kimura.se,datormagazin.se,villalivet.se,polistidningen.se,densistavilan.se,classicmotor.se,tidningenhalsa.se,husohem.se,guiden.se##^script:has-text(advads)
+branschkoll.se,rocknytt.net,upphandling24.se,kimura.se,datormagazin.se,villalivet.se,classicmotor.se,tidningenhalsa.se,husohem.se,guiden.se,nyadagbladet.se,enkelteknik.se,stoppapressarna.se##^script[id^="advanced-ads"]
+branschkoll.se,rocknytt.net,upphandling24.se,kimura.se,datormagazin.se,villalivet.se,classicmotor.se,tidningenhalsa.se,husohem.se,guiden.se,nyadagbladet.se,enkelteknik.se##^script[id^="advanced_ads"]
+branschkoll.se,rocknytt.net,upphandling24.se,kimura.se,datormagazin.se,villalivet.se,classicmotor.se,tidningenhalsa.se,husohem.se,guiden.se,nyadagbladet.se,enkelteknik.se##^script[id^="advads"]
+branschkoll.se,rocknytt.net,upphandling24.se,kimura.se,datormagazin.se,villalivet.se,polistidningen.se,densistavilan.se,classicmotor.se,tidningenhalsa.se,husohem.se,guiden.se,nyadagbladet.se,enkelteknik.se##^script:has-text(advanced_ads)
+branschkoll.se,rocknytt.net,upphandling24.se,kimura.se,datormagazin.se,villalivet.se,polistidningen.se,densistavilan.se,classicmotor.se,tidningenhalsa.se,husohem.se,guiden.se,nyadagbladet.se,enkelteknik.se##^script:has-text(advads)
+stoppapressarna.se##^script[data-src*="advads"]
 temadagar.se,lchfarkivet.se,wernamaten.se,sanghafte.se##^script:has-text(__ez)
 svt.se###nyh_a11y-primary-navigation-list:style(float:unset!important;)
 !#endif
