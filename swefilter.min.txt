@@ -1,7 +1,7 @@
 ! Title: Frellwit's Swedish Filter
-! Last updated: Fri, 19 Jul 2024 04:34:10 +0000
+! Last updated: Sat, 20 Jul 2024 06:02:43 +0000
 ! Expires: 5 days
-! Diff-Path: patches/2024.7.19.274.patch#swefilter
+! Diff-Path: patches/2024.7.20.362.patch#swefilter
 ! Diff-Expires: 24 hours
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
@@ -1167,6 +1167,7 @@ so-rummet.se##.link-list-item:has(img[src*="sponsrad"])
 spanaren.se,horisontmagasin.se,shoegazing.se##.textwidget a[target*="blank"] img
 spelagratis.se##.sidebar-right, .ad_header + p
 spelhubben.se##html, .unselectable:style(-moz-user-select:initial!important; -webkit-user-select:initial!important; -webkit-touch-callout:initial!important; user-select:initial!important; -webkit-tap-highlight-color:initial!important; cursor:initial!important;)
+spelhubben.se###loadfade:style(animation:unset!important; -moz-animation:unset!important; -webkit-animation:unset!important;)
 spelhubben.se###slideout
 spelhubben.se,husbilsplats.se##+js(acs, document.oncontextmenu)
 spelochfilm.se##a[href*="casino"]:upward(.mh-posts-stacked-wrap)
@@ -2602,7 +2603,7 @@ zeromagazine.nu##div[id^="ads"]
 ||cookiepro.com^$domain=birthday.se|djurskyddet.se|havet.nu|svenskfast.se|fiskejournalen.se|upplysning.se
 ||cookietractor.com^$domain=innebandy.se|orientering.se|pluggakuten.se|munskankarna.se
 ||cookie-script.com/analytics
-||cookie-script.com^$domain=axess.se|dagensjuridik.se|foodfolder.se|arkitektur.se|internetlankar.se|friluftsframjandet.se|lchfarkivet.se|bakasockerfritt.se|handelsradet.se|cirkulation.se
+||cookie-script.com^$domain=axess.se|dagensjuridik.se|foodfolder.se|arkitektur.se|internetlankar.se|friluftsframjandet.se|lchfarkivet.se|bakasockerfritt.se|handelsradet.se|cirkulation.se|arkitekt.se
 ||covatic.io^$third-party
 ||createsend1.com^$third-party,~image
 ||createsend.com^$third-party
@@ -2680,6 +2681,7 @@ zeromagazine.nu##div[id^="ads"]
 ||famobi.com/play/hit/
 ||fastout.com/analytics
 ||fasttrack.webstream.dk/statistik
+||fast.fonts.net/*/1.css$stylesheet,redirect=noop.css
 ||feedblitz.com^$third-party
 ||feeds.feedburner.com^$image
 ||feed.mikle.com^$third-party,domain=ekonominyheter.se
@@ -2739,6 +2741,7 @@ zeromagazine.nu##div[id^="ads"]
 ||hockeysnack.com/pagespeed_static/1.$image
 ||hoomemakleri.se^$third-party
 ||humorbrevet.se/externa_bilder
+||hu-manity.co^$domain=topics.se
 ||iconosquare.com^$third-party
 ||ifragasatt.se/stats/
 ||images-ads.aland.com^
@@ -3158,9 +3161,8 @@ zeromagazine.nu##div[id^="ads"]
 ||zummycloud.com^$third-party
 ||zummy.io^$third-party
 !#if env_chromium
-||fast.fonts.com/t/1.css
-||fast.fonts.net/t/1.css
-||fast.fonts.net/lt/1.css
+branschkoll.se,rocknytt.net,upphandling24.se,kimura.se,datormagazin.se,villalivet.se,polistidningen.se,densistavilan.se,classicmotor.se,tidningenhalsa.se,husohem.se,guiden.se,nyadagbladet.se,enkelteknik.se##+js(acs, advads)
+branschkoll.se,rocknytt.net,upphandling24.se,kimura.se,datormagazin.se,villalivet.se,polistidningen.se,densistavilan.se,classicmotor.se,tidningenhalsa.se,husohem.se,guiden.se,nyadagbladet.se,enkelteknik.se##+js(acs, advanced_ads)
 !#endif
 !#if env_mobile
 ##.banner--mobiletoppanorama
@@ -3177,7 +3179,6 @@ zeromagazine.nu##div[id^="ads"]
 ##div#topBannerMobile
 !#endif
 !#if !env_chromium
-||fast.fonts.net/*/1.css$domain=arkitekt.se|axess.se|diabetes.se|sverigeslarare.se|ljuskultur.se|electronic.se
 branschkoll.se,rocknytt.net,upphandling24.se,kimura.se,datormagazin.se,villalivet.se,classicmotor.se,tidningenhalsa.se,husohem.se,guiden.se,nyadagbladet.se,enkelteknik.se,stoppapressarna.se##^script[id^="advanced-ads"]
 branschkoll.se,rocknytt.net,upphandling24.se,kimura.se,datormagazin.se,villalivet.se,classicmotor.se,tidningenhalsa.se,husohem.se,guiden.se,nyadagbladet.se,enkelteknik.se##^script[id^="advanced_ads"]
 branschkoll.se,rocknytt.net,upphandling24.se,kimura.se,datormagazin.se,villalivet.se,classicmotor.se,tidningenhalsa.se,husohem.se,guiden.se,nyadagbladet.se,enkelteknik.se##^script[id^="advads"]
