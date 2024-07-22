@@ -1328,9 +1328,9 @@ thatsup.se##+js(set, canShowAds, true)
 mobilanyheter.net##+js(set, ai_run_scripts, noopFunc)
 
 ! Fake walls
-||piano.io^$domain=thelocal.se|illvet.se|iform.se|varldenshistoria.se|popularhistoria.se|dagen.se|gds.se|slakthistoria.se|digitalfotoforalla.se
-thelocal.se##.single-article-related.single-article-related-short:style(height:unset!important; overflow:unset!important;)
-thelocal.se##.single-article-related.single-article-related-short::after:style(background:unset!important;)
+||piano.io^$domain=illvet.se|iform.se|varldenshistoria.se|popularhistoria.se|gds.se|slakthistoria.se|digitalfotoforalla.se
+||tinypass.com^$domain=thelocal.se
+/swg-gaa.js$domain=thelocal.se
 lexbase.se##+js(cookie-remover, lmt)
 synonymer.se##+js(cookie-remover, /^ev_did|ev_sid/)
 bioenergitidningen.se##article:remove-class(closed)
@@ -1548,7 +1548,7 @@ motormagasinet.se,dagenshandel.se,food-supply.se,plastnet.se,habit.se,woodnet.se
 /annons$image,domain=dagensvimmerby.se|dagensvastervik.se|dagenskalmar.nu|dagenshultsfred.se
 /Grejer.js$domain=dagensvimmerby.se|dagensvastervik.se|dagenskalmar.nu|dagenshultsfred.se
 dagensvimmerby.se,dagensvastervik.se,dagenskalmar.nu,dagenshultsfred.se##body:style(margin-top: 0 !important;)
-dagensvimmerby.se,dagensvastervik.se,dagenskalmar.nu,dagenshultsfred.se##.panoramaAnnons, .JobAdDiv, .annonsKolumn, .insideAd, .ingressAd, .familyAds, .annonsWrapper
+dagensvimmerby.se,dagensvastervik.se,dagenskalmar.nu,dagenshultsfred.se##.panoramaAnnons, .JobAdDiv, .annonsKolumn, .insideAd, .ingressAd, .familyAds, .annonsWrapper, #indexLinks
 industrinyheter.se,dagensnaringsliv.se,infrastrukturnyheter.se,sportochfritidsnyheter.se,inredningsnyheter.se,byggnyheter.se,dagensfastigheter.se,stockholmsbyggnyheter.se,energinyheter.se,vindkraftsnyheter.se,solenerginyheter.se,jarnvagsnyheter.se,transportochlogistik.se,metallerochgruvor.se,papperochmassa.se,miningmetalnews.com##.insider-ads, [id^="mainadvertorial"], [id^="dfptag"], .block-advertorial, .block-views-blockconventus-info-articles-info-article-block, #dfp-tag-before_artikel, #dfp-tag-mobile_before_artikel, #block-views-block-leader-article
 ||mitti.se/click-
 ||mitti.se/agstatistics-
@@ -1561,6 +1561,7 @@ vasterastidning.se##:is(h2, h5, .kicker):has-text(ANNONS):upward(article, div.ro
 vasterastidning.se##.row:has(a[href*="casino.se"])
 realtid.se##.realtid-add, .realtid-ad, .infinite-scroll.native-wrapper
 realtid.se##.link:has(.meta--add)
+realtid.se##footer > div[style]:has(a[href*="casino"])
 ||prvcy.vkmedia.se^
 ||ues.vk.se^*/events
 /log|$domain=vk.se|folkbladet.nu|nordsverige.se|mellanbygden.nu|vasterbottningen.se|lokaltidningen.nu
@@ -1587,7 +1588,7 @@ conpot.se##+js(set, square_arraytop, null)
 conpot.se##div:has-text(ANNONS):upward(article:not([id]))
 /private-browsing.js$domain=thelocal.se
 /collect?v$domain=thelocal.se
-thelocal.se##.ad-container-section, .article-sponsored, div[data-hasbanner="yes"]
+thelocal.se##.ad-container-section, .article-sponsored, div[data-hasbanner="yes"], .thelocal-here-be-magic
 thelocal.se##.ra-widget-article-tag:has-text(/partner/i):upward(.ra-widget-panel)
 /Scripts/ads/*$domain=osterbottenstidning.fi|sydin.fi|vasabladet.fi
 /GA_EEC$domain=osterbottenstidning.fi|sydin.fi|vasabladet.fi
