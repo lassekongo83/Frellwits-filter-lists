@@ -1,10 +1,10 @@
-diff name:swefilter lines:266 checksum:66692ed980
+diff name:swefilter lines:278 checksum:a91d7e6e27
 d2 1
 a2 1
-! Last updated: Sat, 20 Jul 2024 06:02:43 +0000
+! Last updated: Mon, 22 Jul 2024 05:39:00 +0000
 d4 1
 a4 1
-! Diff-Path: patches/2024.7.20.362.patch#swefilter
+! Diff-Path: patches/2024.7.22.338.patch#swefilter
 a95 1
 advokaten.se##.cookieconsent-optin-marketing
 d117 1
@@ -38,6 +38,9 @@ byggahus.se,expressen.se,filmtopp.se,destination.se,spokbloggen.nu,folkhalsasver
 d330 1
 a330 1
 cannabis.se,biostock.se,snowmobile.se,tobaksfakta.se,dagenslogistik.se,magasinetkonkret.se,skaneplus.se,battrestadsdel.se##.pum-overlay
+d375 1
+a375 1
+dagensvimmerby.se,dagensvastervik.se,dagenskalmar.nu,dagenshultsfred.se##.panoramaAnnons, .JobAdDiv, .annonsKolumn, .insideAd, .ingressAd, .familyAds, .annonsWrapper, #indexLinks
 d432 1
 a432 1
 dn.se,di.se,expressen.se,atl.nu,landlantbruk.se,land.se,hd.se,sydsvenskan.se,allehanda.se,tidningenangermanland.se,arbetarbladet.se,avestatidning.com,bblat.se,dalademokraten.se,fagersta-posten.se,gd.se,lt.se,ltz.se,na.se,norrteljetidning.se,nynashamnsposten.se,op.se,salaallehanda.com,st.nu,tidningenharjedalen.se,vlt.se,falkopingstidning.se,jp.se,skaraborgslanstidning.se,skovdenyheter.se,smalandsdagblad.se,smalanningen.se,smt.se,tranastidning.se,vastgotabladet.se,vetlandaposten.se,vn.se,bandypuls.se,ljusdalsposten.se,ljusnan.se,soderhamnskuriren.se,ht.se,moratidning.se,borlangetidning.se,falukuriren.se,sodran.se,nyaludvikatidning.se,skd.se,nvp.se,nuiosteraker.se,netdoktorpro.se,popularhistoria.se,aktuellhallbarhet.se,byggindustrin.se,dagensmedia.se,dagensmedicin.se,fastighetsnytt.se,resume.se,dagenssamhalle.se,market.se,dagligvarunytt.se,privataaffarer.se,barometern.se,blt.se,bt.se,kristianstadsbladet.se,olandsbladet.se,smp.se,sydostran.se,trelleborgsallehanda.se,ut.se,ystadsallehanda.se,vxonews.se,vaxjobladet.se,nsk.se,klt.nu,illvet.se,pctidningen.se,digitalfotoforalla.se,iform.se,varldenshistoria.se,slakthistoria.se##body.didomi-popup-open:style(overflow:unset!important)
@@ -103,6 +106,8 @@ pressbladet.se,svenskpress.se,foretagsbladet.se,gestrikemagasinet.se,cfanytt.se,
 d1078 1
 a1078 1
 radio.se##:is(a[data-testid="region-tag"], a[data-testid^="taglist-item"]):style(background-image:none!important; background:rgb(2,114,140)!important;)
+a1081 1
+realtid.se##footer > div[style]:has(a[href*="casino"])
 d1095 1
 a1095 1
 runnersworld.se,motormagasinet.se,dagenshandel.se,food-supply.se,plastnet.se,habit.se,woodnet.se,foodnet.se,transportnet.se,processnet.se,packnet.se,verkstaderna.se,medtechmagazine.se,recyclingnet.se,rt-forum.se,uochd.se,lifesciencesweden.se,fri-kopenskap.se,cleannet.se,metal-supply.se,framtidensbygg.se,entreprenad.com,branschstegen.se,skogsforum.se,bio.se##.modal-open:style(overflow:initial!important)
@@ -131,6 +136,10 @@ d1270 1
 a1270 2
 temaarkiv.se##.md\:mt-\[100px\]:has(script[data-adfscript])
 temadagar.se##+js(acs, chp_adblock_browser)
+d1276 1
+a1276 1
+thelocal.se##.ad-container-section, .article-sponsored, div[data-hasbanner="yes"], .thelocal-here-be-magic
+d1278 2
 a1286 1
 tidningennara.se,odenochaventyr.se##.cookie-bar
 d1368 2
@@ -189,6 +198,8 @@ a2178 1
 d2220 1
 a2220 1
 /raven$script,domain=mitti.se|travnet.se|nyheter24.se|tyda.se
+a2284 1
+/swg-gaa.js$domain=thelocal.se
 d2427 1
 a2427 1
 @@||cargodisplayads.com/gota/api/v1/adImage$image,domain=barometern.se|blt.se|bt.se|kristianstadsbladet.se|olandsbladet.se|smp.se|sydostran.se|trelleborgsallehanda.se|ut.se|ystadsallehanda.se|vxonews.se|vaxjobladet.se|nsk.se|klt.nu
@@ -230,7 +241,7 @@ a2775 1
 d2790 1
 d2914 1
 a2914 1
-||piano.io^$domain=thelocal.se|illvet.se|iform.se|varldenshistoria.se|popularhistoria.se|dagen.se|gds.se|slakthistoria.se|digitalfotoforalla.se
+||piano.io^$domain=illvet.se|iform.se|varldenshistoria.se|popularhistoria.se|gds.se|slakthistoria.se|digitalfotoforalla.se
 d2939 1
 d2941 1
 a2941 1
@@ -244,7 +255,8 @@ a3000 1
 a3013 1
 ||skogsforum.pro/analytics
 d3067 1
-a3070 1
+a3070 2
+||tinypass.com^$domain=thelocal.se
 ||toolcontentcloud.com/*/asjs$domain=bredband.se
 a3119 1
 ||viralize.tv^$domain=tyda.se
