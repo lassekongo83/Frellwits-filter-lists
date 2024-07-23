@@ -343,6 +343,7 @@ casino-utan-$image
 ||kortio.se^$third-party
 ||laget.se^*/retarget.js
 ||leadenhancer.com^$third-party
+||lendo.se^$third-party
 ||lib.atomik.vip/loader.min.js
 ||lifeofsvea.se/production/borka/
 ||lifeofsvea.se/production/losjs/
@@ -1392,7 +1393,6 @@ dn.se##.campaign-holder
 dn.se##body:style(position:unset!important;overflow-y:scroll!important;)
 dn.se,di.se##video:remove-attr(data-auto-play)
 ! DI
-@@/freemium/di/analytics$script,domain=di.se
 di.se##.di_panorama-wrapper, .site-header__panorama, .di_panorama__isAdLabel, .discount-box, .campaign-ad-box, .di_start__teaser-placeholder, .di_teaser-flak-planbokskoll, .di_teaser-flak-container--native, .native-box, .bandit-box__teaser--native, a[href*="/brandstudio"], .service-box, .brand-studio-box, .native-article, .listing-box-native
 di.se##.market-start-top + div:not(.market-container__wrapper)
 di.se##+js(set, getAdblockerStatus, noopFunc)
@@ -1422,7 +1422,7 @@ livesport.expressen.se##[class^="BauProvider"]
 -tracking.js$domain=aftonbladet.se|godare.se|livsstil.se|svd.se
 ||youbora.com^*/sp.min.js$important,domain=aftonbladet.se|svd.se|livsstil.se|godare.se|tv.nu
 ||schibsted.com/pulse$domain=aftonbladet.se
-||sdk.pulse.schibsted.com^$script,domain=aftonbladet.se|omni.se|omniekonomi.se|svd.se|prisjakt.nu
+||sdk.pulse.schibsted.com^$script,domain=aftonbladet.se|omni.se|omniekonomi.se|svd.se|prisjakt.nu|bytbil.com
 ! Aftonbladet
 ||voyager-widgets.aftonbladet.se/widgets/sports
 curateContext=affiliate$domain=aftonbladet.se
@@ -1436,7 +1436,7 @@ curateContext=affiliate$domain=aftonbladet.se
 /vgc/cdn/js/libs/ast/*$script,domain=aftonbladet.se
 ! Cosmetic ad filters
 aftonbladet.se###megaAd-placeholder, #superright-side, a[href*="/casinoguide"], [id^="adPlacement"], a[href^="https://kampanj.aftonbladet"], a[href*="/rabattkod"][data-test-tag="internal-link"], a[href^="/sportbladet/speltips/"], a[href*="aftonbladet.se/kampanj/"]
-aftonbladet.se,godare.se,livsstil.se##div[data-test-tag="prisjakt-carousel"], a[href^="/brandstudio"], div[class^="advertory-"]:not(.advertory-header-anchor)
+aftonbladet.se,godare.se,livsstil.se##[data-test-tag="prisjakt-carousel"], a[href^="/brandstudio"], div[class^="advertory-"]:not(.advertory-header-anchor)
 livsstil.se##div[data-variants*="article-panorama"]:upward(1)
 aftonbladet.se,skonhetsredaktorerna.se##.ab_responsive_ads
 aftonbladet.se##[data-ad-subtype]:upward(1):matches-css(min-height:/[0-9]+/)
@@ -1474,9 +1474,9 @@ klart.se###overlay, a[rel*="sponsored"], .-panorama-ad-wrapper
 klart.se##body:remove-class(mega-loading)
 ! Bytbil
 ||bytbil.com/bundles/js/tracking
-bytbil.com###privacyModal
-bytbil.com##.available-services
-bytbil.com##html,body:style(overflow: auto !important;)
+bytbil.com##.listpage-banner, .available-services
+bytbil.com##html,body:style(overflow:auto!important;)
+bytbil.com##.newcars-widget:has(a[href*="bit.ly"], a[href*="content-ad"])
 ! tv.nu
 tv.nu##a[href*="adform.net"], .ad-fullscreenWallpaper__container
 tv.nu###tv-schedule section:has-text(ANNONS)
@@ -1491,7 +1491,7 @@ tv.nu##body:remove-class(takeover-loading)
 blocket.se##.placement_panorama, .blocket-placement, div[style="height: 240px;"], [class*="offering-info-box"], [data-id="placement_panorama"], div[class*="BannerLink"]
 ! Övrigt
 /www.livsstil.se\/cnp-assets\/[0-9]+./$script,domain=livsstil.se
-livsstil.se##a[href*="campaign"][data-test-tag="external-link"], div[data-ad-subtype], [data-test-tag="prisjakt-carousel"]
+livsstil.se##a[href*="campaign"][data-test-tag="external-link"], div[data-ad-subtype]
 livsstil.se,godare.se##[id^="adPlacement"]:upward(1)
 livsstil.se##p:has-text(/^kommersiellt innehåll/i):upward(article)
 livsstil.se##p:has-text(/^kommersiellt innehåll|^annons$/i):upward(a)
@@ -2152,8 +2152,10 @@ svenskelitfotboll.se##.image-block:has(a[class*="sponsor"])
 hammarbyfotboll.se###seasonalTakeover, div[class*="sponsorBarContainer"], div[class*="footerSponsors"], .slick-slide a[target="_blank"]
 hammarbyfotboll.se##body[data-modal-open]:style(overflow-y:unset!important;)
 sponsor$image,domain=obosdamallsvenskan.se|elitettan.se
-obosdamallsvenskan.se,elitettan.se##.rmss_module-sponsors, .rmss_ap-top-ad, .rmss_ad-panorama, .rmss_t-momenu__sponsors-area
+obosdamallsvenskan.se,elitettan.se##.rmss_module-sponsors, .rmss_ap-top-ad, .rmss_ad-panorama, .rmss_t-momenu__sponsors-area, a[target][href*="svenskaspel"], .sponsor-img
 obosdamallsvenskan.se,elitettan.se##.rmss_ap-top-ad + .rmss_t-ap-grid-stripe:has(a[href*="svenskaspel"])
+obosdamallsvenskan.se,elitettan.se##.iframe-section-container:has(iframe[src*="bannerflow"])
+obosdamallsvenskan.se,elitettan.se##.linked-image-section:has(a[target="_blank"])
 fotboll-tv.se##.SMBoxContentBanner, a[data-gaevent*="action=bookmaker_odds"], #ouibounce-modal, .SMGameAtomSingleGameOddsComponent
 ||lok.se/pic/sponsor/
 fisheco.se###page-section-2, #page-section-24, .add-special-banner, .g-single
@@ -2230,6 +2232,7 @@ filmtipset.se###topslider-wrapper + .container > .sidebar, .sidebar a[target="_b
 filmtipset.se##em:has-text(/sponsrad/i):upward(.row.news)
 filmtipset.se##.row.news > div[style^="border"]:last-of-type
 filmtipset.se##.news:has-text(casino)
+filmtipset.se##.news:has(a[href*="casino"], a[href*="free-spins"])
 /images/*casino$domain=festivalinfo.se
 festivalinfo.se##a[title*="Casino"], #top-content
 festivalinfo.se##.node-news:has(a[href*="casino"])
