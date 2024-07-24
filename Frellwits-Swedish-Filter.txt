@@ -1,6 +1,6 @@
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days
-! Last modified: 2024-07-23 05:49:05 CEST
+! Last modified: 2024-07-24 06:03:16 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPL3 - https://github.com/lassekongo83/Frellwits-filter-lists/blob/master/LICENSE
@@ -534,6 +534,8 @@ firstclassmagazine.se###leader-wrap, #rpwe_widget-2
 firstclassmagazine.se##.feat-cat:has-text(/annons/i):upward(a)
 firstfoto.se##article.status-publish:has-text(/annonssamarbete/i)
 firstfoto.se###cookie-consent-banner
+firstfoto.se###master.cookie-consenting:style(margin-top:0!important;)
+firstfoto.se###penthouse-ads
 fisheco.se###page-section-2, #page-section-24, .add-special-banner, .g-single
 flamman.se##.Banner, .TakeOverBanner, .CookieNotice, div#popup
 flashback.org###top-banner-container, #top-banner-wrapper
@@ -1194,6 +1196,7 @@ sporthalsa.se##h4:has-text(veckans produkt):upward(3)
 sporthalsa.se##.header_top, #media_image-2, #text-6, article[class*="veckans-produkt"]
 sportlovin.se##.visible-xs, .visible-lg
 sportpanelen.se##.textwidget:has(a[href*="casino"])
+sportsnews.se,xn--sporthnt-5za.se##a[href*="casino"]
 sportsnews.se,xn--sporthnt-5za.se###secondary:has(a[href*="casino"])
 sporttv.nu##a[onclick*="bannerClick"], #linkus, .details-bet-banner
 spray.se##body:style(-webkit-user-select: text !important; user-select: text !important;)
@@ -1294,7 +1297,7 @@ thorengruppen.se,utslappsratt.se,heleneholmsif.se,trafikskola.se,melodifestivalk
 thorengruppen.se,utslappsratt.se,heleneholmsif.se,trafikskola.se,melodifestivalklubben.se,morotsliv.com##+js(set, exactmetrics_frontend, undefined)
 tidningenbalans.se##div[style*="z-index: 999; background-color: rgba(0, 0, 0, 0.5)"], .bg-grey.hideOnPrint, .bg-adYellow
 tidningenbalans.se##p:has-text(/i annonssamarbete med/i):upward(.flex.overflow-hidden)
-tidningendacksnack.se##.ann-puff
+tidningendacksnack.se##.ann-puff, .cookiesInfo
 tidningenglobal.se,tidningensyre.se,landetsfria.nu,fempers.se##.revive-box
 tidningennara.se,odenochaventyr.se##.cookie-bar
 tidningenridsport.se##body:remove-class(cli-barmodal-open)
@@ -1315,7 +1318,7 @@ trafikradion.com##.right
 tranakampsport.se##.w-dyn-item:has(.sponsrad-artikel-wrapper:not(.w-condition-invisible))
 traning40plus.se##[id^="bunyad"]
 travelnews.se##.bottom-bar--animate-in, #job_ads_scroller, .header_banner
-travnet.se##.hidden:has(div[id^="travnet_"])
+travnet.se##:is(.hidden, div[class="lg:hidden"]):has(div[id^="travnet_"])
 travronden.se##a[href*="/sponsrat/"]
 travronden.se##div:matches-css(visibility: hidden):has-text(ANNONS)
 travsport.se,gavletravet.se##.banner-component, .partners, .cookie-meddelande
