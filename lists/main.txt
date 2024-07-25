@@ -1289,6 +1289,7 @@ biostock.se,hejauppsala.com,svenskfilmdatabas.se,bredband.se##.wt-cli-cookie-bar
 firstfoto.se###cookie-consent-banner
 frihet.se##.CookieBar
 tidningennara.se,odenochaventyr.se##.cookie-bar
+aventyrsresor.se,travelnews.se,kurera.se,byggvarlden.se,omtanke.today,jaktjournalen.se##.newsletter-popup
 ! CSS to fix annoyances
 biostock.se,tobaksfakta.se##.pum-open:style(overflow:auto!important)
 oru.se##.no-scroll:style(overflow: initial !important;)
@@ -1673,7 +1674,7 @@ maklarvarlden.se##.td-pulldown-size:has-text(/spons/i):upward(3)
 hotellorestaurang.se,citymark.today,byggfakta.today###bannnerContainer, #pop_overlay, .banner-s, div.featured
 byggfakta.today,citymark.today,hotellorestaurang.se##.cookie_popup_box
 omtanke.today##.featured
-byggvarlden.se,omtanke.today##a[href*="/annons/"], .newsletter-popup-content-overlay, .newsletter-popup, .ai-viewports
+byggvarlden.se,omtanke.today##a[href*="/annons/"], .newsletter-popup-content-overlay, .ai-viewports
 byggvarlden.se,omtanke.today##.post:has(a[href*="/annons/"])
 ||nyhetersto.se/webpushr-sw
 nyhetersto.se##.site-branding a ~ p, .wp-block-jetpack-slideshow
@@ -2071,7 +2072,7 @@ tidningenridsport.se##.subscribe_now_popup, .type-native, #captive, .hldr_takeov
 tidningenridsport.se##.entry-content:style(display: initial !important;)
 tidningenridsport.se##body:remove-class(cli-barmodal-open)
 *$ping,domain=fiskejournalen.se
-jaktjournalen.se##.activate-notifications-container.shown, .newsletter-popup-content-overlay, .newsletter-popup, [class*="ai-viewport"]
+jaktjournalen.se##.activate-notifications-container.shown, .newsletter-popup-content-overlay, [class*="ai-viewport"]
 jaktjournalen.se##.post:has(.post__category--sponsored)
 /templates/ad_$domain=jaktojagare.se
 jaktojagare.se##div.cookie-warning-container, .mb-adarea
@@ -2215,11 +2216,8 @@ radio.se##:is(a[data-testid="region-tag"], a[data-testid^="taglist-item"]):style
 ||kritiker.se/js/gdpr.js
 ||youtube.com/embed/*autoplay$subdocument,removeparam=autoplay,domain=kritiker.se
 kritiker.se##div.recad, div.adhor, div.stickyad
-kritiker.se##+js(set, checkAdsBlocked, noopFunc)
-kritiker.se##+js(set, checkAdblocker, noopFunc)
-kritiker.se##+js(set, premium, trueFunc)
-kritiker.se##+js(set, p, true)
 kritiker.se##iframe[allow]:remove-attr(allow)
+kritiker.se##+js(prevent-xhr, adsbygoogle)
 netflixguiden.se##div.lboard, div.instream-dynamic, #top-area-promo, div.sidebar div.sticky, .promo, .lboard-desktop, .lboard-mobile, #bottom-sticky-promo
 ||metalcentral.net/images/*banner
 metalcentral.net##.bannergroupno-padding
@@ -2339,7 +2337,8 @@ mabra.com,motherhood.se##article.grid:has-text(/annonssamarbete/i)
 tasteline.com##.popup-overlay
 tasteline.com##.popup:style(overflow: auto !important;)
 tasteline.com##.article.related > a[href*="&utm"][target="_blank"]
-kurera.se##.pc-das, .newsletter-popup
+kurera.se##.pc-das, [data-ad-type]
+kurera.se##.post-card:has(a[href*="ad=native"])
 javligtgott.se##.jet-popup
 javligtgott.se##div[id^="ad-panorama"]:upward(.elementor-section)
 kokaihop.se##.ads-wrapper-main, .InterstitialModal
@@ -2389,7 +2388,6 @@ flygtorget.se###PreHeader
 sporthalsa.se##.header_top, #media_image-2, #text-6, article[class*="veckans-produkt"]
 sporthalsa.se##a[href*="/annonsering"]
 sporthalsa.se##h4:has-text(veckans produkt):upward(3)
-aventyrsresor.se,travelnews.se##.newsletter-popup
 firstclassmagazine.se###leader-wrap, #rpwe_widget-2
 firstclassmagazine.se##.feat-cat:has-text(/annons/i):upward(a)
 turismnytt.se##.site-wrap > .row > .col-sm-3
