@@ -1,6 +1,6 @@
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days
-! Last modified: 2024-07-24 06:03:16 CEST
+! Last modified: 2024-07-25 13:31:15 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPL3 - https://github.com/lassekongo83/Frellwits-filter-lists/blob/master/LICENSE
@@ -204,7 +204,7 @@ autonytt.se##.sidebar_content:has(a[href*="casino"])
 autonytt.se,sv.picmix.com,tekniknytt.se##.leaderboard
 autopower.se##.card:has(.adsbygoogle)
 avanza.se#@#a[title="LeoVegas"]
-aventyrsresor.se,travelnews.se##.newsletter-popup
+aventyrsresor.se,travelnews.se,kurera.se,byggvarlden.se,omtanke.today,jaktjournalen.se##.newsletter-popup
 babyhjalp.se##.elementor-widget[data-settings*="sticky_"], div[id^="babyhjalp_panorama"], div[id^="babyhjalp_mobil"], div[id^="stagi"]
 bakasockerfritt.se###cookiescript_injected_wrapper
 bandyfeber.com##article:has(a[href*="/annons-"])
@@ -317,7 +317,7 @@ byggipedia.se##.protect_contents-overlay, .ai_widget
 byggkontakt.nu##a:has-text(/poker|casino|kasino|betting/i):upward(li)
 byggnadsarbetaren.se##[class^="siteAds"], .siteAlerts, #gan-popup
 byggteknikforlaget.se###text-2.widget_text, .header-widget-area
-byggvarlden.se,omtanke.today##a[href*="/annons/"], .newsletter-popup-content-overlay, .newsletter-popup, .ai-viewports
+byggvarlden.se,omtanke.today##a[href*="/annons/"], .newsletter-popup-content-overlay, .ai-viewports
 byggvarlden.se,omtanke.today##.post:has(a[href*="/annons/"])
 bytbil.com##html,body:style(overflow:auto!important;)
 bytbil.com##.listpage-banner, .available-services
@@ -755,7 +755,7 @@ itseniorerna.se###redim-cookiehint-modal
 it-finans.se,it-halsa.se,it-kanalen.se,it-pedagogen.se,it-retail.se,it-hallbarhet.se##a[onclick^="gtag"], .header-banner, .penci-featured-cat-custom-ads
 it-finans.se,it-halsa.se,it-kanalen.se,it-pedagogen.se,it-retail.se,it-hallbarhet.se##.widget-title:has-text(/annons/i):upward(aside)
 it-finans.se,it-halsa.se,it-kanalen.se,it-pedagogen.se,it-retail.se,it-hallbarhet.se,espressomedia.se##.penci-wrap-gprd-law
-jaktjournalen.se##.activate-notifications-container.shown, .newsletter-popup-content-overlay, .newsletter-popup, [class*="ai-viewport"]
+jaktjournalen.se##.activate-notifications-container.shown, .newsletter-popup-content-overlay, [class*="ai-viewport"]
 jaktjournalen.se##.post:has(.post__category--sponsored)
 jaktojagare.se##div.cookie-warning-container, .mb-adarea
 jaktplay.se##.jaktplay-ad
@@ -810,14 +810,12 @@ kristendate.se##div[id^="adv"]
 kristendate.se##.cc-banner.cc-bottom
 kritiker.se##div.recad, div.adhor, div.stickyad
 kritiker.se##iframe[allow]:remove-attr(allow)
-kritiker.se##+js(set, checkAdblocker, noopFunc)
-kritiker.se##+js(set, checkAdsBlocked, noopFunc)
-kritiker.se##+js(set, premium, trueFunc)
-kritiker.se##+js(set, p, true)
+kritiker.se##+js(prevent-xhr, adsbygoogle)
 kulturama.se##.CookiePopup
 kulturbloggen.com,schack.se##.sidebar .widget_custom_html
 kultwatch.se##.js-preloader > .document, .js-preloader > .hero-section:style(opacity: 1 !important; visibility: visible !important;)
-kurera.se##.pc-das, .newsletter-popup
+kurera.se##.pc-das, [data-ad-type]
+kurera.se##.post-card:has(a[href*="ad=native"])
 kvalitetsmagasinet.se,miljo-utveckling.se,telekomidag.se,vdtidningen.se##article:remove-class(closed)
 kvalitetsmagasinet.se,miljo-utveckling.se,telekomidag.se,vdtidningen.se###subscribe_splash, [class*="nativeadwidget"], .partnermedia, .annonswidget
 kvartal.se##.email-popup-wrapper
