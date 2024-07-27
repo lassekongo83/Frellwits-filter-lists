@@ -1,7 +1,7 @@
 ! Title: Frellwit's Swedish Filter
-! Last updated: Thu, 25 Jul 2024 11:31:30 +0000
+! Last updated: Sat, 27 Jul 2024 04:08:00 +0000
 ! Expires: 5 days
-! Diff-Path: patches/2024.7.25.691.patch#swefilter
+! Diff-Path: patches/2024.7.27.247.patch#swefilter
 ! Diff-Expires: 24 hours
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
@@ -1255,6 +1255,7 @@ swedroid.se##.puff:has(script[src*="lwadm.com"])
 swehockey.se##[class*="-reklam"], .sif-sponsorer, .teaserblock, .commonblock a:not([href^="/"], [href*="/swehockey.se"])
 sydasien.se##.thb-cookie-bar
 sydnarkenytt.se##.toppbanner-outer, .reklamplats_hspalt, .egenbanner
+synonyma.se##amp-user-notification.cookie
 synonymer.se##+js(cookie-remover, /^ev_did|ev_sid/)
 synonymer.se##.create-account-banner, .buy-premium-banner, div[class*="pb-"] > div.text-center
 tabyallehanda.se##p:has-text(ANNONS)
@@ -1275,6 +1276,7 @@ tekniknytt.se##[onclick^="ga("]:remove-attr(onclick)
 tekniksmart.se##center:has-text(/annons/i):upward(1)
 tekniksmart.se##.code-block, main > div:last-child:not(:only-child), #uid_08313ba73, #uid_ab3738b5a, .jeg_header_wrapper .jeg_midbar
 tekniksmart.se##.wpb_row:has(a[href*="casino"])
+teknikveckan.se##.no-ad
 teknikveckan.se##.pill:has-text(/spons/i):upward(.grid-item, .pinned, .articleFlow-item)
 teknikveckan.se,di.se,dn.se,skillingaryd.nu,xn--vrnamo-bua.nu,vardfokus.se,kamerabild.se,tripadvisor.se,swedroid.se,bettingstugan.se,expressen.se,dagensopinion.se,driva-eget.se,bioenergitidningen.se,ifokus.se,padelfeber.se,sv.picmix.com,ifragasatt.se,ehandel.se,jaktojagare.se,sportbloggare.com,bovision.se,familjeliv.se,tidningenridsport.se,golflivet.se,vemringde.se,brollopstorget.se,fastighetsvarlden.se,borskollen.se,aktiespararna.se,receptfavoriter.se,tyda.se,mittforetag.com##.ad
 teknologiexperten.se##a:has(img[src*=".se-www"]), a[href*="casino"]
@@ -1303,6 +1305,7 @@ tidningen.djurskyddet.se##.ai-track
 tidningen.nu##span:has-text(/^Annons$/):upward(1) + .textwidget
 tidningen.se##.sidebar .widget_widget_code, .casino
 tillnyktrad.se,webhallen.com##.cookie-consent
+tinyurl.se##+js(set, adblock, false)
 tittapavideon.se##.adv
 tlnt.se##div[id^="ad-block"]
 tlnt.se##.fakta-list:has-text(/annons/i)
@@ -1352,7 +1355,7 @@ utm_$document,removeparam=/^utm_/,domain=tv.nu|booli.se|expressen.se|aftonbladet
 utsidan.se##.clamzone
 utsidan.se##.betart-marker:matches-css(after, content: /Annons/i):upward(.documentpush-group)
 vackertvader.se##div[class^="ad-300x250"], div[class^="ad_300x250"]
-vackertvader.se,tidningenskriva.se,veckansnyheter.se,eventeffect.se,executiveeffect.se,saleseffect.se##.cc-window
+vackertvader.se,tidningenskriva.se,veckansnyheter.se,eventeffect.se,executiveeffect.se,saleseffect.se,kemisamfundet.se##.cc-window
 vadvivet.se##html.has-intro-popup:remove-class(has-intro-popup)
 vadvivet.se##html.show-intro-popup:remove-class(show-intro-popup)
 vadvivet.se##.intro-popup
