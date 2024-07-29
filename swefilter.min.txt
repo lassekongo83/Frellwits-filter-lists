@@ -1,7 +1,7 @@
 ! Title: Frellwit's Swedish Filter
-! Last updated: Sun, 28 Jul 2024 03:56:10 +0000
+! Last updated: Mon, 29 Jul 2024 06:00:22 +0000
 ! Expires: 5 days
-! Diff-Path: patches/2024.7.28.236.patch#swefilter
+! Diff-Path: patches/2024.7.29.360.patch#swefilter
 ! Diff-Expires: 24 hours
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
@@ -795,6 +795,7 @@ klimatnytt.se##.tm-cookie-banner
 knulla.se###cookie-popup
 kobe.se##p:has-text(/annonser:/i):upward(.widget_block)
 kobe.se##.post:has(a[href*="casino"])
+kodboken.se##.CookieConsent
 kokaihop.se##body:style(overflow-y: auto !important;)
 kokaihop.se##.ads-wrapper-main, .InterstitialModal
 kokaihop.se##.cookieBarWrapper:remove()
@@ -1024,6 +1025,7 @@ nyheteridag.se##h2:has-text(/samarbetslänkar/i):upward(.article-inner)
 nyheteridag.se##li:has(a[href*="kasino"], a[href*="casino"], a[href*="-slot-"])
 nyheteridag.se##.widget.facebook, .content > div:not([class]) img, a[href*="www.casino"], a[href="/karnkraft.php"]
 nyhetersto.se##.site-branding a ~ p, .wp-block-jetpack-slideshow
+nyheter.swebbtv.se##.wp-block-image a[target], #moove_gdpr_cookie_info_bar
 nyhetsbyranjarva.se##div[style="display: flex; justify-content: center; flex-direction: column; align-items: center;"]
 nyhetsbyranjarva.se,nyan.ax,tv-kanal.se,golfguidenonline.se##.g
 obosdamallsvenskan.se,elitettan.se##.iframe-section-container:has(iframe[src*="bannerflow"])
@@ -1081,6 +1083,7 @@ quizza.nu###takeover
 qx.se##.qxa-container
 racenews.se###block-2
 radiotreby.se##.mobileHide, .mobile-show
+radio-sveriges.se###original_taboola
 radio.se##:is(a[data-testid="region-tag"], a[data-testid^="taglist-item"]):style(background-image:none!important; background:rgb(2,114,140)!important;)
 radio.se##:is(.md\:min-h-\[90px\], .lg\:min-h-\[250px\], .h-\[250px\], .justify-between.md\:mx-10):has(div[id^="RAD_D"], div[id^="RAD_M"])
 ratsit.se##.promo
@@ -2086,7 +2089,7 @@ zeromagazine.nu##div[id^="ads"]
 /plugins/convertplug
 /plugins/convertpro
 /plugins/cookie-law-info$script,domain=gilla.se|startaochdriva.se|sverige.nu|conpot.se|firstclassmagazine.se|magasinetkonkret.se|kvalitetsmagasinet.se|miljo-utveckling.se|telekomidag.se|vdtidningen.se|gullislastips.se|nyfiknainvesterare.se|discoveringtheplanet.com|bussmagasinet.se|torbjornstips.se|affarsstaden.se|marknadschefer.se|automation.se|dinbyggare.se|aktieskolan.se|insikt24.se|skogen.se
-/plugins/cookie-notice$script,domain=bildobubbla.se|zeromagazine.nu|sverigespringer.se|gasetten.se|sillyseason.se|gentlemannaguiden.com|matmalin.se|svensktidskrift.se|schack.se|densistavilan.se|horisontmagasin.se|kobe.se|tidningenproffs.se|jaktojagare.se|tobaksfakta.se|bebisvarlden.se|underbaraclaras.se|cykelframjandet.se|dalabygden.se|lansposten.se|sormlandsbygden.se|vaguiden.se|grandtech.se
+/plugins/cookie-notice$script,domain=bildobubbla.se|zeromagazine.nu|sverigespringer.se|gasetten.se|sillyseason.se|gentlemannaguiden.com|matmalin.se|svensktidskrift.se|schack.se|densistavilan.se|horisontmagasin.se|kobe.se|tidningenproffs.se|jaktojagare.se|tobaksfakta.se|bebisvarlden.se|underbaraclaras.se|cykelframjandet.se|dalabygden.se|lansposten.se|sormlandsbygden.se|vaguiden.se|grandtech.se|bluff.se
 /plugins/cookie-popup$script,domain=skillingaryd.nu|xn--vrnamo-bua.nu
 /plugins/cresta-social-share-counter
 /plugins/custom-banners$domain=skolfamiljen.se
@@ -2726,7 +2729,7 @@ zeromagazine.nu##div[id^="ads"]
 ||getsitecontrol.com^$third-party
 ||girohjalm.com.se^
 ||glitnoraffiliates.com^$third-party
-||gnuheter.com/creeper/image
+||gnuheter.com/creeper/image$image,redirect=32x32.png
 ||googletagmanager.com^$important,domain=tradera.com|xxl.se|prisjakt.nu
 ||google-analytics.com^$important,domain=aftonbladet.se|tradera.com|xxl.se
 ||gopeach.se^$third-party
@@ -3200,7 +3203,6 @@ branschkoll.se,rocknytt.net,upphandling24.se,kimura.se,datormagazin.se,villalive
 branschkoll.se,rocknytt.net,upphandling24.se,kimura.se,datormagazin.se,villalivet.se,polistidningen.se,densistavilan.se,classicmotor.se,tidningenhalsa.se,husohem.se,guiden.se,nyadagbladet.se,enkelteknik.se##^script:has-text(advads)
 stoppapressarna.se##^script[data-src*="advads"]
 temadagar.se,lchfarkivet.se,wernamaten.se,sanghafte.se##^script:has-text(__ez)
-svt.se###nyh_a11y-primary-navigation-list:style(float:unset!important;)
 !#endif
 !#if !env_mobile
 /assets/js/modules/plugins/smoothPageScroll
