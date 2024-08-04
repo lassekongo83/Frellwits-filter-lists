@@ -1,6 +1,6 @@
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days
-! Last modified: 2024-08-02 07:54:44 CEST
+! Last modified: 2024-08-04 07:36:51 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPL3 - https://github.com/lassekongo83/Frellwits-filter-lists/blob/master/LICENSE
@@ -465,7 +465,7 @@ energi.se##.advertisement--item
 eniro.se##article:has(#marketing)
 eniro.se##div.rounded-4xl:has(a[href$="/firma#marketing"])
 enterprisemagazine.se###ew-cookiebar-full, #ew-cookiebar-manage
-epochtimes.se##.fixed.bottom-0
+epochtimes.se##.fixed.bottom-0, a[target="_blank"][href*="utm_campaign"]
 esportare.se##a[href*="utm_campaign"]
 esportare.se##em:has-text(Annonser):upward(2)
 esportsacademy.se###preloader
@@ -506,7 +506,7 @@ expressen.se##.teaser:has(a[href*="/annons"], a[href*="/brandstudio"], a[href*="
 expressen.se,di.se,nsk.se,skd.se,nvp.se,nuiosteraker.se,barometern.se,blt.se,bt.se,kristianstadsbladet.se,olandsbladet.se,smp.se,sydostran.se,trelleborgsallehanda.se,ut.se,ystadsallehanda.se,corren.se,folkbladet.se,mvt.se,nt.se,vt.se,klt.nu,vimmerbytidning.se,kuriren.nu,nsd.se,norran.se,pt.se,ekuriren.se,strengnastidning.se,kkuriren.se,sn.se,eposten.se,unt.se,helagotland.se,kindaposten.se,folkbladet.nu,vk.se,vasterbottningen.se,mellanbygden.nu,nordsverige.se,lokaltidningen.nu,vasterastidning.se,mitti.se,thelocal.se,byrum.se,sverigespringer.se,recept.se,viivilla.se,mestmotor.se,babyhjalp.se,fragbite.se,ibnytt.se,realtid.se,cafe.se,kingmagazine.se,vxonews.se,vaxjobladet.se,alekuriren.se,nyheter24.se,svenskgolf.se,golfing.se,gotlandjustnu.se,familjeliv.se,praktisktbatagande.se,norrahalland.se,lokalti.se,lchfarkivet.se,alltforforaldrar.se,idrottensaffarer.se,vf.se,hjotidning.se,kt.se,kt-kuriren.se,sla.se,mariestadstidningen.se,filipstadstidning.se,fryksdalsbygden.se,nwt.se,arvikanyheter.se,nkp.se,saffletidningen.se,provinstidningen.se,dalslanningen.se,nlt.se,skaraborgsbygden.se##+js(json-prune, autoplay)
 extraextra.se##.sm-text:has(.adsbygoogle)
 extrakt.se,macken.xyz,dialasen.com,lakartidningen.se,ordmedzcxy.se###cmplz-cookiebanner-container
-familjehemsbanken.se,familjehemmet.se###cookieNotice
+familjehemmet.se###cookieNotice
 familjeliv.se##article:has-text(/annons:/i)
 familjeliv.se##a[href*="/kampanj/"], .flm-kampanj
 familjesidan.se##.cookies-wrapper
@@ -1117,7 +1117,7 @@ samfalligheterna.se##.tds-locked-content:style(display:unset!important;)
 samfalligheterna.se##.tds-locked-content[hidden]:remove-attr(hidden)
 samfalligheterna.se##.td-cpt-post:has(a[href*="/sponsra"])
 samfalligheterna.se##.td_block_wrap:has-text(Annons)
-samnytt.se,samnytt.nu##a[href*="casino"], a[target="_blank"] img:not([class^="tweet-"]), a img[src^="/butik"]
+samnytt.se,samnytt.nu##a[href*="casino"], a[target="_blank"] img:not([class^="tweet-"]), a img[src^="/butik"], main > section + div + div img, div[class^="samnytt-widget"] + .sticky img
 samnytt.se,samnytt.nu##.sticky > div:has(img[src^="/butik"])
 sanghafte.se##.widget_cooperations
 sanghafte.se##.wp-show-posts-single:has(a[href*="casino"], a[href*="kasino"], a[href*="betting"])
@@ -1796,6 +1796,7 @@ zeromagazine.nu##div[id^="ads"]
 /api/a/b$domain=borskollen.se
 /api/log$domain=bohuslaningen.se|stromstadstidning.se|markposten.se|harrydaposten.se|partilletidning.se|sttidningen.se|molndalsposten.se|kungalvsposten.se|kungsbackaposten.se|alingsastidning.se|ttela.se|gp.se|hallandsposten.se|hn.se|mellerudsnyheter.se
 /api/natives?$domain=aktuellhallbarhet.se|byggindustrin.se|dagensmedia.se|dagensmedicin.se|fastighetsnytt.se|resume.se|dagenssamhalle.se|market.se|dagligvarunytt.se|privataaffarer.se
+/api/partners$domain=familjehemsbanken.se
 /api/sponsors$domain=aikhockey.se|almtuna.com|bikkarlskoga.se|bjorkloven.com|brynas.se|difhockey.se|frolundahockey.com|farjestadbk.se|hockeyallsvenskan.se|hv71.se|ikoskarshamn.se|kalmarhockey.com|leksandsif.se|lhc.eu|luleahockey.se|malmoredhawks.com|modohockey.se|moraik.se|nybrovikings.com|orebrohockey.se|roglebk.se|shl.se|skellefteaaik.se|sodertaljesk.se|taif.nu|timraik.se|vaxjolakers.se|vik.se|ostersundik.com
 /api/s/track$xhr,domain=eniro.se
 /api/tracker?$image
@@ -1862,6 +1863,7 @@ zeromagazine.nu##div[id^="ads"]
 /cdigo-audit.js
 /cecado/advisible.js
 /census.js?bust=release
+/chartbeat_mab.js
 /clickperformance$domain=radio.se
 /clicktracking.siteseeker
 /closest-native$domain=expressen.se
@@ -2045,6 +2047,7 @@ zeromagazine.nu##div[id^="ads"]
 /newsner-ad$domain=newsner.com|humorbibeln.se|sportbibeln.se|ettgottskratt.se|djurbibeln.se
 /newsner-stats$domain=newsner.com|humorbibeln.se|sportbibeln.se|ettgottskratt.se|djurbibeln.se
 /noview.$script,domain=trafikradion.com|gofm.se|trafik24.se
+/nyheter/native.json$domain=epochtimes.se
 /nyhetsspalt_banner_js
 /omniture/s_code.js
 /one-signal$domain=swebbtv.se
@@ -2239,7 +2242,6 @@ zeromagazine.nu##div[id^="ads"]
 /profile$ping,domain=feber.se|skippo.se|tasteline.com|tjock.se|veckorevyn.com|marcusoscarsson.se|handbollskanalen.se|surfa.se|nordichardware.se|hockeynews.se|tv4.se|fotbollskanalen.se|koket.se|teknikveckan.se|56kilo.se
 /promoted_ads$domain=bostadsportal.se
 /ps-partner$xmlhttprequest,domain=dagensps.se
-/publicPartners$domain=familjehemsbanken.se|familjehemmet.se
 /public/log$domain=kalender.se
 /pulsetracking$script
 /pum/*$domain=flm.nu|dagenslogistik.se|battrestadsdel.se|skaneplus.se
@@ -2270,6 +2272,7 @@ zeromagazine.nu##div[id^="ads"]
 /sharedaddy/sharing.$script
 /shared/crm-campaign-handler.js$script
 /sharethis.js$domain=allsvenskan.se|superettan.se
+/showads.js$domain=familjehemsbanken.se
 /sidebar-ads
 /siforesponsivemeasure
 /sifo-tracking.js
@@ -2333,6 +2336,7 @@ zeromagazine.nu##div[id^="ads"]
 /tracking.php?aid=
 /tracking/cts.js
 /tracking/fpc.js
+/track$ping,xhr,domain=epochtimes.se
 /track.js$domain=destination.se|sistaminuten.se
 /track/view?webInteractiveId$image
 /trafikfonden/*
@@ -2702,7 +2706,6 @@ zeromagazine.nu##div[id^="ads"]
 ||facebook.com/plugins/share_button$third-party
 ||facebook.com^*/plugins/like$third-party
 ||fakturino.se^$third-party
-||familjehemsbanken.se/api/partners
 ||famobi.com/play/hit/
 ||fastout.com/analytics
 ||fasttrack.webstream.dk/statistik
@@ -3024,6 +3027,7 @@ zeromagazine.nu##div[id^="ads"]
 ||salesmanago.pl/api/push/notification$domain=aikfotboll.se
 ||salesmanago.pl/*popup$domain=land.se
 ||sales.agriprim.com/Banners
+||samnytt.se/b/$image
 ||sannsyn.com^$third-party
 ||sa.svenskalag.se/*/__tm.gif
 ||scandicpartners.se^$third-party
