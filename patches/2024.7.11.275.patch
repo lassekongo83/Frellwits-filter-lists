@@ -1,10 +1,10 @@
-diff name:swefilter lines:273 checksum:385c9833ff
+diff name:swefilter lines:292 checksum:7a5a476225
 d2 1
 a2 1
-! Last updated: Fri, 02 Aug 2024 05:55:03 +0000
+! Last updated: Sun, 04 Aug 2024 05:37:09 +0000
 d4 1
 a4 1
-! Diff-Path: patches/2024.8.2.355.patch#swefilter
+! Diff-Path: patches/2024.8.4.337.patch#swefilter
 a95 1
 advokaten.se##.cookieconsent-optin-marketing
 a96 2
@@ -43,14 +43,17 @@ d349 1
 d375 1
 a375 1
 dagensvimmerby.se,dagensvastervik.se,dagenskalmar.nu,dagenshultsfred.se##.panoramaAnnons, .JobAdDiv, .annonsKolumn, .insideAd, .ingressAd, .familyAds, .annonsWrapper, #indexLinks
-a459 1
+d460 1
+a460 2
 enterprisemagazine.se###ew-cookiebar-full, #ew-cookiebar-manage
+epochtimes.se##.fixed.bottom-0, a[target="_blank"][href*="utm_campaign"]
 d489 1
 a489 1
 expo.se##.ad-image, .bottom-popup, .conversion
-d500 1
-a500 1
+d500 2
+a501 2
 extrakt.se,macken.xyz,dialasen.com,lakartidningen.se,ordmedzcxy.se###cmplz-cookiebanner-container
+familjehemmet.se###cookieNotice
 a520 1
 filmtipset.se##.news:has(a[href*="casino"], a[href*="free-spins"])
 a531 2
@@ -133,6 +136,9 @@ realtid.se##footer > div[style]:has(a[href*="casino"])
 d1090 1
 a1090 1
 ridsport.se##.svrf__sticky-ad, .svrf-block__banner, .sv-cookie-consent-banner, .sp-banner-block, .sp-double-ad-block, .sp-head-sponsor-container, .sp-regular-sponsor-container, .sp-ad
+d1104 1
+a1104 1
+samnytt.se,samnytt.nu##a[href*="casino"], a[target="_blank"] img:not([class^="tweet-"]), a img[src^="/butik"], main > section + div + div img, div[class^="samnytt-widget"] + .sticky img
 a1136 1
 sistersinlaw.se###annonser
 a1171 1
@@ -179,10 +185,13 @@ a1736 1
 /ads?$domain=cirkulation.se
 d1754 1
 d1774 1
-a1774 1
+a1774 2
+/api/partners$domain=familjehemsbanken.se
 /api/sponsors$domain=aikhockey.se|almtuna.com|bikkarlskoga.se|bjorkloven.com|brynas.se|difhockey.se|frolundahockey.com|farjestadbk.se|hockeyallsvenskan.se|hv71.se|ikoskarshamn.se|kalmarhockey.com|leksandsif.se|lhc.eu|luleahockey.se|malmoredhawks.com|modohockey.se|moraik.se|nybrovikings.com|orebrohockey.se|roglebk.se|shl.se|skellefteaaik.se|sodertaljesk.se|taif.nu|timraik.se|vaxjolakers.se|vik.se|ostersundik.com
 a1791 1
 /async-gdpr-cookie$script,domain=sistersinlaw.se
+a1838 1
+/chartbeat_mab.js
 d1843 1
 a1843 1
 /cmp.js$domain=praktisktbatagande.se|hemtrevligt.se|vagabond.se|tidningenhalsa.se|utemagasinet.se|svenskgolf.se|mestmotor.se|sportfack.se|husohem.se|minhast.se|kalleanka.se|halge.se|bamse.se|akaskidor.se|husvagnochcamping.se|classicmotor.se|scandinavianretro.com
@@ -194,6 +203,8 @@ a1881 1
 /egmont-ads
 a1882 1
 /egmont-streamlined-ads
+a2020 1
+/nyheter/native.json$domain=epochtimes.se
 a2024 1
 /ordmedzcxy_files/ads$domain=ordmedzcxy.se
 d2068 1
@@ -212,8 +223,13 @@ a2177 1
 /plugins/webtoffee-gdpr-cookie-consent$script,domain=forskning.se|hejaolika.se|kvartal.se|karriarlakare.se|svenskfilmdatabas.se|bredband.se|bonnieraudio.se
 a2202 1
 /popup-overlay$script,domain=sistersinlaw.se
+d2212 1
+a2242 1
+/showads.js$domain=familjehemsbanken.se
 a2283 1
 /swg-gaa.js$domain=thelocal.se
+a2304 1
+/track$ping,xhr,domain=epochtimes.se
 d2420 1
 d2440 1
 a2440 1
@@ -225,6 +241,7 @@ a2594 1
 d2602 1
 a2602 1
 ||cookie-script.com^$domain=axess.se|dagensjuridik.se|foodfolder.se|arkitektur.se|internetlankar.se|friluftsframjandet.se|lchfarkivet.se|bakasockerfritt.se|handelsradet.se|cirkulation.se|arkitekt.se
+d2676 1
 a2679 1
 ||fast.fonts.net/*/1.css$stylesheet,redirect=noop.css
 d2713 1
@@ -250,6 +267,8 @@ a2943 1
 d2960 1
 a2960 1
 ||quantcast.com^$domain=flashback.org|babyhjalp.se|nyadagbladet.se|enkelteknik.se|travelgrip.se|samnytt.se|nyteknik.se|lag-avtal.se|arbetarskydd.se|leta.se|motivation.se|sporttv.nu|goforfit.se|expo.se|poddtoppen.se|langd.se|doon.se|garaget.org|nouw.com|listor.se
+a2995 1
+||samnytt.se/b/$image
 d3002 1
 a3002 1
 ||sdk.pulse.schibsted.com^$script,domain=aftonbladet.se|omni.se|omniekonomi.se|svd.se|prisjakt.nu|bytbil.com

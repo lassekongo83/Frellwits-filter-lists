@@ -1,10 +1,10 @@
-diff name:swefilter lines:198 checksum:385c9833ff
+diff name:swefilter lines:219 checksum:7a5a476225
 d2 1
 a2 1
-! Last updated: Fri, 02 Aug 2024 05:55:03 +0000
+! Last updated: Sun, 04 Aug 2024 05:37:09 +0000
 d4 1
 a4 1
-! Diff-Path: patches/2024.8.2.355.patch#swefilter
+! Diff-Path: patches/2024.8.4.337.patch#swefilter
 a97 2
 affarsstaden.se##section.elementor-section:has(a[href="https://stodlinjen.se/"][target="_blank"])
 affarsstaden.se##section.elementor-section:has(a[href="https://stodlinjen.se/"][target="_blank"]) + section.elementor-section
@@ -38,8 +38,13 @@ d350 1
 d376 1
 a376 1
 dagensvimmerby.se,dagensvastervik.se,dagenskalmar.nu,dagenshultsfred.se##.panoramaAnnons, .JobAdDiv, .annonsKolumn, .insideAd, .ingressAd, .familyAds, .annonsWrapper, #indexLinks
-a460 1
+d461 1
+a461 2
 enterprisemagazine.se###ew-cookiebar-full, #ew-cookiebar-manage
+epochtimes.se##.fixed.bottom-0, a[target="_blank"][href*="utm_campaign"]
+d502 1
+a502 1
+familjehemmet.se###cookieNotice
 a521 1
 filmtipset.se##.news:has(a[href*="casino"], a[href*="free-spins"])
 a532 2
@@ -91,6 +96,9 @@ realtid.se##footer > div[style]:has(a[href*="casino"])
 d1088 1
 a1088 1
 ridsport.se##.svrf__sticky-ad, .svrf-block__banner, .sv-cookie-consent-banner, .sp-banner-block, .sp-double-ad-block, .sp-head-sponsor-container, .sp-regular-sponsor-container, .sp-ad
+d1102 1
+a1102 1
+samnytt.se,samnytt.nu##a[href*="casino"], a[target="_blank"] img:not([class^="tweet-"]), a img[src^="/butik"], main > section + div + div img, div[class^="samnytt-widget"] + .sticky img
 a1134 1
 sistersinlaw.se###annonser
 a1169 1
@@ -121,13 +129,18 @@ vackertvader.se,tidningenskriva.se,veckansnyheter.se,eventeffect.se,executiveeff
 a1377 1
 vildmarken.se##.g-single:upward(section[data-settings*="background_background"])
 d1775 1
-a1775 1
+a1775 2
+/api/partners$domain=familjehemsbanken.se
 /api/sponsors$domain=aikhockey.se|almtuna.com|bikkarlskoga.se|bjorkloven.com|brynas.se|difhockey.se|frolundahockey.com|farjestadbk.se|hockeyallsvenskan.se|hv71.se|ikoskarshamn.se|kalmarhockey.com|leksandsif.se|lhc.eu|luleahockey.se|malmoredhawks.com|modohockey.se|moraik.se|nybrovikings.com|orebrohockey.se|roglebk.se|shl.se|skellefteaaik.se|sodertaljesk.se|taif.nu|timraik.se|vaxjolakers.se|vik.se|ostersundik.com
 a1792 1
 /async-gdpr-cookie$script,domain=sistersinlaw.se
+a1839 1
+/chartbeat_mab.js
 d1849 1
 a1849 1
 /cookieconsent$script,domain=akademiskahus.se|lundagard.se|fuska.nu|kiacarclub.se|nyheteridag.se|internetstart.se|svampguiden.com|scanaktier.se|obosdamallsvenskan.se|elitettan.se|bike.se|runnersworld.se|offside.org|racemagazine.se
+a2022 1
+/nyheter/native.json$domain=epochtimes.se
 d2071 1
 a2071 1
 /plugins/complianz-gdpr$script,domain=iconmagazine.se|signprint.se|vilaser.se|arjeplognytt.se|aftonkuriren.se|tidningenglobal.se|tidningensyre.se|landetsfria.nu|fempers.se|macken.xyz|webb-tv.nu|kalmar.nu|brollopsmagasinet.se|megafonen.se|radiotreby.se|revisionsvarlden.se|kyrka.se|nuiroslagen.se|tlnt.se|sjofartstidningen.se|pensionarsliv.se|aktuellsakerhet.se
@@ -144,8 +157,13 @@ a2180 1
 /plugins/webtoffee-gdpr-cookie-consent$script,domain=forskning.se|hejaolika.se|kvartal.se|karriarlakare.se|svenskfilmdatabas.se|bredband.se|bonnieraudio.se
 a2205 1
 /popup-overlay$script,domain=sistersinlaw.se
+d2215 1
+a2245 1
+/showads.js$domain=familjehemsbanken.se
 a2286 1
 /swg-gaa.js$domain=thelocal.se
+a2307 1
+/track$ping,xhr,domain=epochtimes.se
 d2423 1
 d2489 1
 d2597 1
@@ -154,6 +172,7 @@ a2597 1
 d2605 1
 a2605 1
 ||cookie-script.com^$domain=axess.se|dagensjuridik.se|foodfolder.se|arkitektur.se|internetlankar.se|friluftsframjandet.se|lchfarkivet.se|bakasockerfritt.se|handelsradet.se|cirkulation.se|arkitekt.se
+d2679 1
 a2682 1
 ||fast.fonts.net/*/1.css$stylesheet,redirect=noop.css
 d2716 1
@@ -176,6 +195,8 @@ a2920 1
 d2946 1
 a2946 1
 ||privacy-center.org^$domain=180.se|agriaffaires.se|truckscorner.se|machineryzone.se|stegforhalsa.se|netdoktor.se|netdoktorpro.se|news55.se|hastnet.se|kvd.se
+a2998 1
+||samnytt.se/b/$image
 d3005 1
 a3005 1
 ||sdk.pulse.schibsted.com^$script,domain=aftonbladet.se|omni.se|omniekonomi.se|svd.se|prisjakt.nu|bytbil.com
