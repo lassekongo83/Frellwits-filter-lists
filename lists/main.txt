@@ -706,6 +706,7 @@ casino-utan-$image
 /burst-statistics
 /cdigo-audit.js
 /census.js?bust=release
+/chartbeat_mab.js
 /clicktracking.siteseeker
 /conversions/tracking.js$third-party
 /ctr-prd.cbs-measurements.
@@ -2521,7 +2522,8 @@ nyadagbladet.se##.widget_media_image:has-text(/annons/i)
 ||spelguiden.samnytt.se^
 sidebanner$image,domain=samnytt.se|samnytt.nu
 casinoguiden$image,domain=samnytt.se|samnytt.nu
-samnytt.se,samnytt.nu##a[href*="casino"], a[target="_blank"] img:not([class^="tweet-"]), a img[src^="/butik"]
+||samnytt.se/b/$image
+samnytt.se,samnytt.nu##a[href*="casino"], a[target="_blank"] img:not([class^="tweet-"]), a img[src^="/butik"], main > section + div + div img, div[class^="samnytt-widget"] + .sticky img
 samnytt.se,samnytt.nu##.sticky > div:has(img[src^="/butik"])
 ||nyheteridag.se/ads/
 nyheteridag.se##.widget.facebook, .content > div:not([class]) img, a[href*="www.casino"], a[href="/karnkraft.php"]
@@ -2539,7 +2541,9 @@ dagen.se##.video-annons, .native-box, .arcad-block-container
 inblick.se##div[class^="ads"]
 /videojs-preroll$domain=himlentv7.se
 ||kyrkanstidning.se/firstvisit$xhr,empty
-epochtimes.se##.fixed.bottom-0
+/track$ping,xhr,domain=epochtimes.se
+/nyheter/native.json$domain=epochtimes.se
+epochtimes.se##.fixed.bottom-0, a[target="_blank"][href*="utm_campaign"]
 nyatider.nu##.elementor-popup-modal:has(a[href="/integritetspolicy"])
 nyatider.nu##section.dce-visibility-event:has(a[href*="casino"])
 /one-signal$domain=swebbtv.se
@@ -3030,9 +3034,9 @@ screen-marknaden.se##.fo-banner, .fp-banner
 findit.se##.banner-wrapper, .col-banner
 findit.se##+js(set, testPrebid, noopFunc)
 levandehistoria.se##div[class^="CookieBar"]
-||familjehemsbanken.se/api/partners
-/publicPartners$domain=familjehemsbanken.se|familjehemmet.se
-familjehemsbanken.se,familjehemmet.se###cookieNotice
+/api/partners$domain=familjehemsbanken.se
+/showads.js$domain=familjehemsbanken.se
+familjehemmet.se###cookieNotice
 so-rummet.se##.block-rr
 so-rummet.se##.article-list:has(.sponsrad-over)
 so-rummet.se##.link-list-item:has(img[src*="sponsrad"])
