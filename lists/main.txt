@@ -1240,7 +1240,7 @@ aftonbladet.se,livsstil.se,godare.se,byggahus.se,expressen.se,elle.se,femina.se,
 ||consentmanager.net^$domain=allastudier.se|gbgfotboll.se|stff.se|svenskfotboll.se|coop.se|dagens.se|mobil.se|kamerabild.se|prevent.se|utsidan.se|inpress.com|studentum.se|utbildning.se
 ||gatekeeperconsent.com^$domain=hemmanytt.se|svenskaorduttryck.se|wernamaten.se|sanghafte.se
 ||cookiehub.net^$domain=da.se
-||cookie-script.com^$domain=axess.se|dagensjuridik.se|foodfolder.se|arkitektur.se|internetlankar.se|friluftsframjandet.se|lchfarkivet.se|bakasockerfritt.se|handelsradet.se|cirkulation.se|arkitekt.se
+||cookie-script.com^$domain=axess.se|dagensjuridik.se|foodfolder.se|arkitektur.se|internetlankar.se|friluftsframjandet.se|lchfarkivet.se|bakasockerfritt.se|handelsradet.se|cirkulation.se|arkitekt.se|webb-tv.nu
 ||cmp.setupcmp.com^$domain=se.azrhymes.com
 ||usercentrics.eu^$domain=hemnet.se|kantarsifo.se|foretagarna.se
 ||cookieinfoscript.com^$domain=webbkryss.nu
@@ -1371,6 +1371,8 @@ expressen.se##a[href*="/spel.exp"], a[href*="/lanapengar.exp"], a[href*="/rabatt
 ?autoPlay$frame,removeparam=autoPlay,domain=expressen.se
 ?autoplay=true$frame,removeparam=autoplay,domain=expressen.se
 &autoplay$frame,removeparam=autoplay,domain=di.se|expressen.se
+www.expressen.se##.video-player:remove-attr(data-ad-config)
+www.expressen.se##video[autoplay]:remove-attr(autoplay)
 expressen.se##.campaign
 expressen.se##.html-widget > div[style^="text-align: center; font-size: 10px;"]
 ! Procedural cosmetic filters
@@ -1379,7 +1381,6 @@ expressen.se##strong:has-text(/^annons:/i):upward(p)
 expressen.se##.tapet-popup-js-no-scroll, .tapet-no-scroll:style(overflow-y:initial!important; position:unset!important;)
 ! scriptlets
 www.expressen.se##+js(set, detect, noopFunc)
-www.expressen.se##.video-player:remove-attr(data-ad-config)
 www.expressen.se,di.se##+js(aeld, contextmenu, .disabled)
 ! Fixar oklickbara kategorier i sektionen allt om mat p.g.a att exp-analytics är blockerat
 expressen.se##a:remove-attr(data-t-label)
@@ -2202,7 +2203,7 @@ dagenstv.com,kolla.tv##.grid-add-container
 dagenstv.com##.slick-slide:has-text(/casino/i)
 ||consent.podplay.com^
 ||harmonious-station-to-station.podplay.com/script.js
-rocknytt.net##[data-widget_type*="bnnrwidgets"], a[href*="/annons/"], div[data-widget_type="image.default"] a[target="_blank"]
+rocknytt.net##[data-widget_type*="bnnrwidgets"], a[href*="/annons/"], div[data-widget_type="image.default"] a[target="_blank"], div[data-pid^="ad"], .essb-mobile-sharebottom
 ||kingsizemag.se/content/
 ||kingsizemag.se/kingrev.php
 kingsizemag.se##div#video-overlay, div.sidebar_frame, #affiliates, #affiliates + .text, #popup-interstitial-overlay, .cu_banner, #interstitial-overlay, .kingsize-native
@@ -2756,7 +2757,7 @@ aletorget.se,alingsastorget.se,almhulttorget.se,alvestatorget.se,amaltorget.se,a
 /wp-content/uploads/*/public/assets/js/advanced.js$script
 /soledad/js/detector.js
 ! Specific wordpress cookie annoyances
-/plugins/complianz-gdpr$script,domain=iconmagazine.se|signprint.se|vilaser.se|arjeplognytt.se|aftonkuriren.se|tidningenglobal.se|tidningensyre.se|landetsfria.nu|fempers.se|macken.xyz|webb-tv.nu|kalmar.nu|brollopsmagasinet.se|megafonen.se|radiotreby.se|revisionsvarlden.se|kyrka.se|nuiroslagen.se|tlnt.se|sjofartstidningen.se|pensionarsliv.se|aktuellsakerhet.se
+/plugins/complianz-gdpr$script,domain=iconmagazine.se|signprint.se|vilaser.se|arjeplognytt.se|aftonkuriren.se|tidningenglobal.se|tidningensyre.se|landetsfria.nu|fempers.se|macken.xyz|kalmar.nu|brollopsmagasinet.se|megafonen.se|radiotreby.se|revisionsvarlden.se|kyrka.se|nuiroslagen.se|tlnt.se|sjofartstidningen.se|pensionarsliv.se|aktuellsakerhet.se
 /plugins/consent-magic-pro$script,domain=namnmarkning.se|bluum.se|gobokhandeln.se
 /plugins/cookie-law-info$script,domain=gilla.se|startaochdriva.se|sverige.nu|conpot.se|firstclassmagazine.se|magasinetkonkret.se|kvalitetsmagasinet.se|miljo-utveckling.se|telekomidag.se|vdtidningen.se|gullislastips.se|nyfiknainvesterare.se|discoveringtheplanet.com|bussmagasinet.se|torbjornstips.se|affarsstaden.se|marknadschefer.se|automation.se|dinbyggare.se|aktieskolan.se|insikt24.se|skogen.se
 /cookies-and-content-security-policy$script,domain=cannabisifokus.se|futsalmagasinet.se|sd.se
@@ -2852,6 +2853,7 @@ temadagar.se,lchfarkivet.se,wernamaten.se,sanghafte.se##^script:has-text(__ez)
 !#endif
 ! Mobile
 !#if env_mobile
+tv.nu##header + div[class]:has(a[href*="play.google.com"])
 ##.banner--mobiletoppanorama
 ##.mobile-homepage-ad
 ##.mobile-main-ad
@@ -3263,8 +3265,7 @@ vackertvader.se##div[class^="ad-300x250"], div[class^="ad_300x250"]
 skolporten.se##.article-short:has(a[href*="/sponsrat-innehall"])
 ||stats.helsingborg.se^
 tidningenskriva.se##section.widget_text:has(div[id^="ad-"])
-elevspel.se##div#cookie_wrapper
-elevspel.se##div[class*="-unit"]:has(a[href="/medlem/plusmedlem.html"])
+elevspel.se##div#cookie_wrapper, .blockedContentNotice
 elevspel.se##+js(rmnt, script, cloned.removeAttr)
 vilaser.se##.Internal-ad
 doon.se##.doon-promotion, a.link[target="_blank"]
