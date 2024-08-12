@@ -1,7 +1,7 @@
 ! Title: Frellwit's Swedish Filter
-! Last updated: Fri, 09 Aug 2024 06:06:31 +0000
+! Last updated: Mon, 12 Aug 2024 05:57:03 +0000
 ! Expires: 5 days
-! Diff-Path: patches/2024.8.9.366.patch#swefilter
+! Diff-Path: patches/2024.8.12.357.patch#swefilter
 ! Diff-Expires: 24 hours
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
@@ -405,6 +405,7 @@ devote.se,familjeliv.se##div[style*="height: 244px;"]
 digitalavykort.se##.rightdiv p:has-text(/casino|kasino|lån|betting|odds|lotto/i)
 digitalfotoforalla.se,iform.se,pctidningen.se,varldenshistoria.se##li:has(.content-label:has-text(/annons/i)):remove()
 digitalfotoforalla.se,iform.se,pctidningen.se,varldenshistoria.se##.scroll-message, .gallery-banner, .horseshoe, [data-ad-type], .bcm-banner
+digitalfotoforalla.se,iform.se,pctidningen.se,varldenshistoria.se##.standard.mobile-rows:has(a[data-ad-domain])
 digitalfotoforalla.se,iform.se,pctidningen.se,varldenshistoria.se##.teaser:has(.teaser__cat--sponsorlabel)
 digitalfotoforalla.se,pctidningen.se##.opacity-fade:style(opacity:1!important; transition:none!important; animation:unset!important;)
 dinamediciner.se##.top-header:has(.adsbygoogle)
@@ -715,6 +716,7 @@ hockeymagasinet.com##body:remove-class(modal-open)
 hockeymagasinet.com##gdpr-alert
 hockeynews.se##.items-center:has(a[target="_blank"])
 horisontmagasin.se##small:has-text(/annons/i)
+horisontmagasin.se##.custom-html-widget a[href]:not([href^="/"]):not([href*="horisontmagasin.se"]) img
 hotellorestaurang.se,citymark.today,byggfakta.today###bannnerContainer, #pop_overlay, .banner-s, div.featured
 hrnytt.se##article:has(.sponsored-article)
 hrnytt.se##.banner-box
@@ -809,8 +811,7 @@ kolozzeum.com##td[width="305"], br + a[href*="/casino"]
 kompanjoner.se##.site-loader
 komponentkoll.se##.gdpr-wide
 konsumentmagasinet.se##.pricerunner
-kristendate.se##div[id^="adv"]
-kristendate.se##.cc-banner.cc-bottom
+kristendate.se##div[id^="adv"], #site-right-col-wrapper a[target] img
 kritiker.se##div.recad, div.adhor, div.stickyad
 kritiker.se##iframe[allow]:remove-attr(allow)
 kritiker.se##+js(prevent-xhr, adsbygoogle)
@@ -1460,6 +1461,7 @@ zeromagazine.nu##div[id^="ads"]
 ##article.type-partnerartikel
 ##article[data-section="sponsrad"]
 ##aside.ad-container
+##aside.annonser-widget
 ##a#top-banner.banner-holder
 ##a.adv-link
 ##a.card.-sponsored
@@ -2589,7 +2591,7 @@ zeromagazine.nu##div[id^="ads"]
 ||casinoutankonto.net^$third-party
 ||casono.se^$third-party
 ||ccpa.sp-prod.net^$domain=m3.se|pcforalla.se|macworld.se|computersweden.se
-||cdn-cookieyes.com^$domain=lokalti.se|jarnvagar.nu|senses.se|norrmejerier.se|temadagar.se|smartsenior.se|tekniknytt.se|nordigt.se|autonytt.se|vm-fotboll.se|kak.se|smhi.se|borattforum.se|mis.se|universitetslararen.se|em-fotboll.se|lakemedelsvarlden.se|samfalligheterna.se|husbilsplats.se|katerinamagasin.se|dagenslogistik.se|biostock.se|skellefteaworks.se|datormagazin.se|travnet.se|malarbok.nu|barn-filmer.se|matmenyer.se|sunnenytt.se
+||cdn-cookieyes.com^$domain=lokalti.se|jarnvagar.nu|senses.se|norrmejerier.se|temadagar.se|smartsenior.se|tekniknytt.se|nordigt.se|autonytt.se|vm-fotboll.se|kak.se|smhi.se|borattforum.se|mis.se|universitetslararen.se|em-fotboll.se|lakemedelsvarlden.se|samfalligheterna.se|husbilsplats.se|katerinamagasin.se|dagenslogistik.se|biostock.se|skellefteaworks.se|datormagazin.se|travnet.se|malarbok.nu|barn-filmer.se|matmenyer.se|sunnenytt.se|kristendate.se
 ||cdn-sitegainer.com/sitegainer
 ||cdn.adt*/atag.js?$third-party
 ||cdn.adt*/jsTag?$third-party
