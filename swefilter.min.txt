@@ -1,7 +1,7 @@
 ! Title: Frellwit's Swedish Filter
-! Last updated: Wed, 14 Aug 2024 03:33:28 +0000
+! Last updated: Thu, 15 Aug 2024 03:43:53 +0000
 ! Expires: 5 days
-! Diff-Path: patches/2024.8.14.213.patch#swefilter
+! Diff-Path: patches/2024.8.15.223.patch#swefilter
 ! Diff-Expires: 24 hours
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
@@ -373,6 +373,7 @@ dagensps.se##:is(.text-text-secondary, span.font-bold):has-text(ANNONS):upward(2
 dagenstech.se##a[href^="https://dagenstech.se/articles/"]:upward(1):has-text(SPONSRAT)
 dagenstech.se##.banner-desk, .banner-mob
 dagenstech.se##.text-right:has-text(ANNONS)
+dagenstech.se##:is(.sticky.-top-4, .container > div[class=""]):has(a[href*=".se/ads/"])
 dagenstv.com##.slick-slide:has-text(/casino/i)
 dagenstv.com,kolla.tv##.grid-add-container
 dagensvimmerby.se,dagensvastervik.se,dagenskalmar.nu,dagenshultsfred.se##body:style(margin-top: 0 !important;)
@@ -485,7 +486,7 @@ evertiq.se##+js(acs, $, banner_loader)
 evertiq.se##.cc-container, [data-gabnr], #carpet
 evertiq.se,fz.se##.bnr
 everysport.com##div[id^="everysport_sky"], img[alt="X3000"], img[alt="Casinofeber"]
-everysport.com##:is(div[id^="everysport_pano"], div[id^="everysport_rektangel"]):upward(1)
+everysport.com##:is(div[id^="everysport_pano"], div[id^="everysport_mobil"], div[id^="everysport_rektangel"]):upward(1)
 exakt24.se##section[data-ha-element-link*="kampanj"], .elementor-element-686a3aa6, .elementor-popup-modal
 existenz.se##.link:has(a[href*="bannerid="])
 existenz.se##.wm-nopop, #main > p[style^="color"], #slidebox
@@ -876,7 +877,7 @@ livsstil.se,godare.se##[id^="adPlacement"]:upward(1)
 ljudochbild.se##div[class^="col-md"][style*="border-radius"]:has(a[href*="/advertorial"])
 ljudochbild.se###MoreLink_content-container:style(height:unset!important;)
 ljudochbild.se###MoreLink_fade-out-div
-ljudochbild.se##.adremark, .coofad, .popup-overlay, .hidead, .phoneads, .pricecomp, .offerz, .type-articleadvertorial, .adblock, .lbplussinfo, .popup-overlayx, a[href*="/advertorial"], a[href*="/advertorial"] + .textbox, .prisjakt, #stickleft, #stickright
+ljudochbild.se##.adremark, .coofad, .popup-overlay, .hidead, .phoneads, .pricecomp, .offerz, .type-articleadvertorial, .adblock, .lbplussinfo, .popup-overlayx, a[href*="/advertorial"], a[href*="/advertorial"] + .textbox, .prisjakt, #stickleft, #stickright, .adbox
 ljudochbild.se##.thecontent, .entry-content:style(max-height: unset !important; overflow: initial !important; height: unset !important;)
 ljudochbild.se##.wp-caption:style(display:initial!important)
 ljungbysporten.se##section.widget_media_image, a[target="_blank"]:not([href*="ljungbysporten.se"])
@@ -1233,7 +1234,10 @@ svd.se##article:has(div[class^="NativeBarWrapper"])
 svd.se##body:style(visibility:visible!important;)
 svd.se###mega-ad-wrapper, div[class*="advertory"], div[data-custom-ad-handled="true"], span[data-id="bottom-sticker-offer"], div[data-context-pageview*="native-svd"]
 svd.se,chef.se,vvsforum.se,elinstallatoren.se,arkitekten.se,natursidan.se,svenskfarmaci.se,da.se,frisor.se##.Ad
-svenskafans.com##.puff__ad-heading, ad-skyscraper__wrapper, iframe[title*="Bet 365"]
+svenskafans.com##iframe[srcdoc*="ad_div"]:upward(1)
+svenskafans.com##.puff__ad-heading, ad-skyscraper__wrapper, iframe[title*="Bet 365"], iframe[srcdoc*="ad_div"]
+svenskafans.com##:is(.min-h-80, .w-64.absolute):has(div[id^="svenskafans_"])
+svenskafans.com##:is(.min-h-\[400px\], .min-h-96):has(.ad-slot)
 svenskahousegruppen.se##body.modal-open:style(overflow:initial!important)
 svenskahousegruppen.se###eprivacyModal, .modal-backdrop
 svenskalag.se##.cookie-overlay, .cookie-box
@@ -1388,7 +1392,7 @@ varmepumpsforum.com##.stopjump
 varmepumpsforum.com##a[target]:upward(.frontlinks tr)
 varmepumpsforum.com,poolforum.se,lindenytt.com,autopower.se,arjeplognytt.se,jaktsidan.se##a[target="_blank"] img[alt]
 vartgoteborg.se##div[class^="Popup"], div[class^="CookieBanner"]
-varvat.se##.wpb_single_image a[target], .gp-footer-2
+varvat.se##.wpb_single_image a[target="_blank"], .gp-footer-2
 vasterastidning.se##article[data-section="nativeannons"]
 vasterastidning.se##.row:has(a[href*="casino.se"])
 vasterastidning.se##:is(h2, h5, .kicker):has-text(ANNONS):upward(article, div.row)
@@ -2161,6 +2165,7 @@ zeromagazine.nu##div[id^="ads"]
 /plugins/mitti-adform
 /plugins/ml-adverts
 /plugins/monsterinsights$script
+/plugins/montania-cookies$script,domain=electronic.se
 /plugins/newsletter$script,domain=56kilo.se
 /plugins/newsletter-leads/libs/simplemodal$script
 /plugins/newsner-lead-tracking
@@ -2633,7 +2638,7 @@ zeromagazine.nu##div[id^="ads"]
 ||cookiehub.net^$domain=da.se
 ||cookieinformation.com^$domain=folkofolk.se|dental24.se|vinbanken.se|handelskammarenvarmland.se|enahabo.se|bostadsportal.se
 ||cookieinfoscript.com^$domain=webbkryss.nu
-||cookielaw.org^$domain=cartoonnetwork.se|tv4.se|fotbollskanalen.se|koket.se|flashscore.se|ikea.com|recept.se|manpower.se|mtv.se|natgeotv.com|internetkunskap.se|internetstiftelsen.se|yelp.se|spisa.nu|viaplayradio.se|booli.se|svenskarnaochinternet.se|sv.bab.la|tripadvisor.se|sydkusten.es|livetochdiabetes.se|voister.se|nok.se|motesplatsen.se|thelocal.se|placera.se|infotorgjuridik.se|se.trustpilot.com|travronden.se|travrondenspel.se|hammarbyfotboll.se|pricerunner.se|billetto.se|lidl.se|pwc.se
+||cookielaw.org^$domain=cartoonnetwork.se|tv4.se|fotbollskanalen.se|koket.se|flashscore.se|ikea.com|recept.se|manpower.se|mtv.se|natgeotv.com|internetkunskap.se|internetstiftelsen.se|yelp.se|spisa.nu|viaplayradio.se|booli.se|svenskarnaochinternet.se|sv.bab.la|tripadvisor.se|sydkusten.es|livetochdiabetes.se|voister.se|nok.se|motesplatsen.se|thelocal.se|placera.se|infotorgjuridik.se|se.trustpilot.com|travronden.se|travrondenspel.se|hammarbyfotboll.se|pricerunner.se|billetto.se|lidl.se|pwc.se|svenskafans.com
 ||cookiepro.com^$domain=birthday.se|djurskyddet.se|havet.nu|svenskfast.se|fiskejournalen.se|upplysning.se
 ||cookietractor.com^$domain=innebandy.se|orientering.se|pluggakuten.se|munskankarna.se
 ||cookie-script.com/analytics
@@ -3026,6 +3031,7 @@ zeromagazine.nu##div[id^="ads"]
 ||royapp.com^$third-party
 ||rpofsweden.com^
 ||rpofsweden.se^
+||rudderstack.com^$third-party
 ||runtnc.net^
 ||salesiq.zoho.com/widget$domain=seodesign.se
 ||salesmanago.pl/api/push/notification$domain=aikfotboll.se
@@ -3099,7 +3105,6 @@ zeromagazine.nu##div[id^="ads"]
 ||suntana.se^$third-party
 ||svd.se/api/dr-edition-teasers
 ||svd.se/api/live-ads/
-||svenskafans.com/menu-logo/bottom
 ||sv.picmix.com/sw.js
 ||sv.picmix.com^$csp=worker-src 'none'
 ||s.arclk.net/tr?$all

@@ -1,10 +1,10 @@
-diff name:swefilter lines:201 checksum:f696e88c56
+diff name:swefilter lines:226 checksum:aa6aee6c13
 d2 1
 a2 1
-! Last updated: Wed, 14 Aug 2024 03:33:28 +0000
+! Last updated: Thu, 15 Aug 2024 03:43:53 +0000
 d4 1
 a4 1
-! Diff-Path: patches/2024.8.14.213.patch#swefilter
+! Diff-Path: patches/2024.8.15.223.patch#swefilter
 a97 2
 affarsstaden.se##section.elementor-section:has(a[href="https://stodlinjen.se/"][target="_blank"])
 affarsstaden.se##section.elementor-section:has(a[href="https://stodlinjen.se/"][target="_blank"]) + section.elementor-section
@@ -27,6 +27,8 @@ com.se,~www.com.se,~pagalnew.com.se##html::before:style(content: "OBS! VARNING! 
 d350 3
 a352 1
 corren.se,folkbladet.se,mvt.se,nt.se,vt.se,vimmerbytidning.se,kuriren.nu,nsd.se,norran.se,pt.se,ekuriren.se,strengnastidning.se,kkuriren.se,sn.se,eposten.se,unt.se,helagotland.se,kindaposten.se,gotlandjustnu.se##ad-iris-sunt-ad-wrapper, ad-block, .native, ad-full-page-block, a[href^="/native"], widget-family, widget-memorial, widget-marknadsguiden, widget-jobb-plus, a.puff-primary-link[href*="/erbjudande/"], .ad-hidden, iris-puff-native, iris-subscribe-footer
+a372 1
+dagenstech.se##:is(.sticky.-top-4, .container > div[class=""]):has(a[href*=".se/ads/"])
 a405 1
 digitalfotoforalla.se,iform.se,pctidningen.se,varldenshistoria.se##.standard.mobile-rows:has(a[data-ad-domain])
 d452 2
@@ -38,6 +40,9 @@ d461 1
 a461 2
 enterprisemagazine.se###ew-cookiebar-full, #ew-cookiebar-manage
 epochtimes.se##.fixed.bottom-0, a[target="_blank"][href*="utm_campaign"]
+d483 1
+a483 1
+everysport.com##:is(div[id^="everysport_pano"], div[id^="everysport_mobil"], div[id^="everysport_rektangel"]):upward(1)
 d502 1
 a502 1
 familjehemmet.se###cookieNotice
@@ -71,6 +76,9 @@ lektionsbanken.se###partners_inside, #partners_right, #partners_top
 d855 1
 a855 1
 livetsgoda.se,betongforeningen.se,espressomedia.se,realtid.se,ordfrontmagasin.se,europaportalen.se,motorsportbladet.se,battregolf.se,nitroz.se,magasinethockey.se,twostrokerider.se,bjjtv.se,eqotime.com,newsvoice.se##a[target$="blank"] img:not([class^="tweet"])
+d869 1
+a869 1
+ljudochbild.se##.adremark, .coofad, .popup-overlay, .hidead, .phoneads, .pricecomp, .offerz, .type-articleadvertorial, .adblock, .lbplussinfo, .popup-overlayx, a[href*="/advertorial"], a[href*="/advertorial"] + .textbox, .prisjakt, #stickleft, #stickright, .adbox
 a983 1
 netdoktor.se,netdoktorpro.se##.article-list__item:has(.bam-ad-slot)
 a1021 1
@@ -93,12 +101,21 @@ a1138 1
 sistersinlaw.se###annonser
 a1209 1
 studeravidare.se##.premium-carousel-wrapper
+d1219 1
+a1219 4
+svenskafans.com##iframe[srcdoc*="ad_div"]:upward(1)
+svenskafans.com##.puff__ad-heading, ad-skyscraper__wrapper, iframe[title*="Bet 365"], iframe[srcdoc*="ad_div"]
+svenskafans.com##:is(.min-h-80, .w-64.absolute):has(div[id^="svenskafans_"])
+svenskafans.com##:is(.min-h-\[400px\], .min-h-96):has(.ad-slot)
 d1263 1
 a1263 2
 tandlakartidningen.se##:is(header, .article-single-page, .single #content):style(margin-top:unset!important;)
 tandlakartidningen.se##[class^="ad-container"], [class^="adbox-single"], div[id^="takeover-"], .top-bar-container
 a1345 1
 ungdomar.se##.post-item:has(a[href*="casino"], a[href*="-lan-"], a[href*="kasino"], a[href*="kredit"])
+d1372 1
+a1372 1
+varvat.se##.wpb_single_image a[target="_blank"], .gp-footer-2
 a1384 1
 vildmarken.se##.g-single:upward(section[data-settings*="background_background"])
 a1417 1
@@ -138,6 +155,8 @@ a2110 1
 /plugins/gdpr-cookie-compliance$script,domain=goteborgsgolfaren.se|nyhetersto.se|modernalivet.se
 a2127 1
 /plugins/machete/inc/cookies$script,domain=falskacitat.com
+a2136 1
+/plugins/montania-cookies$script,domain=electronic.se
 d2187 1
 a2187 1
 /plugins/webtoffee-gdpr-cookie-consent$script,domain=forskning.se|hejaolika.se|kvartal.se|karriarlakare.se|svenskfilmdatabas.se|bredband.se|bonnieraudio.se
@@ -161,6 +180,9 @@ a2569 1
 d2604 1
 a2604 1
 ||cookiebot.com^$domain=ng.se|swedroid.se|bax-shop.se|kurera.se|upplysning.se|mitti.se|circlek.se|findroommate.se|sakochliv.se|polistidningen.se|fokus.se|spraktidningen.se|varden.se|trafiken.nu|energi.se|sverigesnatur.org|kreditrapporten.se|sis.se|accentmagasin.se|allsvenskan.se|superettan.se|alltomarbetsmiljo.se|tco.se|totallyorebro.se|totallystockholm.se|enirobuddy.se|framtid.se|byggfaktadocu.se|husdjur.se|chalmers.se|elinstallatoren.se|ff.se|modernpsykologi.se|qx.se|vatternrundan.se|vvsforum.se|naturvetarna.se|skolporten.se|dust2.se|ehandel.se|byggvarlden.se|varldenidag.se|influens.se|omtanke.today|konsumentmagasinet.se|svenskelitfotboll.se|journalisten.se|fastighetsvarlden.se|jaktjournalen.se|friidrott.se|dagensps.se|vildmarken.se|kyrkanstidning.se|tmf.se|sokbat.se|bilkompaniet.se|driva-eget.se|hv.se|folkhalsomyndigheten.se|dinpsykiskahalsa.se|ekonomifakta.se|hyresbostader.se|rsyd.se|byggforetagen.se|vasterastidning.se|storyhouseegmont.se|mytaste.se|smartbizz.se|tandlakartidningen.se
+d2608 1
+a2608 1
+||cookielaw.org^$domain=cartoonnetwork.se|tv4.se|fotbollskanalen.se|koket.se|flashscore.se|ikea.com|recept.se|manpower.se|mtv.se|natgeotv.com|internetkunskap.se|internetstiftelsen.se|yelp.se|spisa.nu|viaplayradio.se|booli.se|svenskarnaochinternet.se|sv.bab.la|tripadvisor.se|sydkusten.es|livetochdiabetes.se|voister.se|nok.se|motesplatsen.se|thelocal.se|placera.se|infotorgjuridik.se|se.trustpilot.com|travronden.se|travrondenspel.se|hammarbyfotboll.se|pricerunner.se|billetto.se|lidl.se|pwc.se|svenskafans.com
 d2612 1
 a2612 1
 ||cookie-script.com^$domain=axess.se|dagensjuridik.se|foodfolder.se|arkitektur.se|internetlankar.se|friluftsframjandet.se|lchfarkivet.se|bakasockerfritt.se|handelsradet.se|cirkulation.se|arkitekt.se|webb-tv.nu
@@ -179,6 +201,8 @@ a2910 1
 d2956 1
 a2956 1
 ||privacy-center.org^$domain=180.se|agriaffaires.se|truckscorner.se|machineryzone.se|stegforhalsa.se|netdoktor.se|netdoktorpro.se|news55.se|hastnet.se|kvd.se
+a3003 1
+||rudderstack.com^$third-party
 a3008 1
 ||samnytt.se/b/$image
 d3017 1
@@ -186,6 +210,7 @@ a3052 1
 ||static.sporthoj.com/js/ads/
 d3069 1
 d3075 1
+d3078 1
 d3172 2
 a3173 2
 branschkoll.se,rocknytt.net,upphandling24.se,kimura.se,datormagazin.se,villalivet.se,polistidningen.se,densistavilan.se,classicmotor.se,tidningenhalsa.se,husohem.se,guiden.se,nyadagbladet.se,enkelteknik.se,vadhanderisverige.se##+js(acs, advads)
