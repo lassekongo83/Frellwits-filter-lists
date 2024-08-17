@@ -1,7 +1,7 @@
 ! Title: Frellwit's Swedish Filter
-! Last updated: Thu, 15 Aug 2024 17:59:17 +0000
+! Last updated: Sat, 17 Aug 2024 03:54:48 +0000
 ! Expires: 5 days
-! Diff-Path: patches/2024.8.15.1079.patch#swefilter
+! Diff-Path: patches/2024.8.17.234.patch#swefilter
 ! Diff-Expires: 24 hours
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
@@ -706,7 +706,7 @@ hemtrevligt.se##div[id^="hj-"], div[id^="ik-"]
 hemtrevligt.se##.article:has(.annons)
 hifitorget.se##.billboard-style, .between-posts
 hifitorget.se##.row[style*="height"]:has(.adsbygoogle)
-hippson.se##.main-article-container:has-text(/Sponsrad Artikel/i)
+hippson.se##:is(.main-article-container, section > div.flex.items-center.gap-4):has-text(/Sponsrad Artikel/i)
 hitta.se##a[data-trackimp][target], .hitta-map .integration-txt, .section-details--alb, [class*="dummyAd"], [class*="StyledAdSlot"], [data-bind*="Ad"], div[class^="GraphicAd_"], [class*="adContainer"], [id*="_panorama"], [id*="_skyscraper"], div[style="min-height: 250px;"], div[data-track="displayplacering-customer"], a[data-test="boostAdLink"], div[class^="style_bannerContainer"], [data-track="click-promotion-banner"], div[class*="adWrapper"]
 hitta.se##div[id^="hitta_mobile_"].placeholder:upward(div[class^="height"], div[class^="style_breakout"])
 hitta.se##[class^="styleManual_mainContentBox"] > div[style^="min-height"]:first-of-type
@@ -788,6 +788,7 @@ kb.se,dansportalen.se,hh.se##.sv-marketplace-sitevision-cookie-consent, .sv-cook
 kiacarclub.se##.forumlist-main-inner > div[style]
 kiacarclub.se##.sidebar-block:has-text(/annons|sponsor/i)
 kimura.se##a[href*="unibet.com"], a[href*="/kampanjer."], a[href*="utm_campaign"], div[class^="yw-"], a[data-wpel-link="external"][target="_blank"]
+kimura.se##:is(div[data-elementor-type="loop-item"].post, .post > .e-con > .e-con > .e-con:not([data-settings])):has(.yw-midbanner)
 kingsizemag.se##a:has(.disclaimer-tag-img)
 kingsizemag.se##div#video-overlay, div.sidebar_frame, #affiliates, #affiliates + .text, #popup-interstitial-overlay, .cu_banner, #interstitial-overlay, .kingsize-native
 kittad.se##li:has(.kittad-label-sponsored)
@@ -2665,6 +2666,7 @@ zeromagazine.nu##div[id^="ads"]
 ||d16fx559zbp759.cloudfront.net/common
 ||d16fx559zbp759.cloudfront.net/sites
 ||d24rtvkqjwgutp.cloudfront.net/*yb.js
+||d31djwpx7pcvsr.cloudfront.net/production/*/js/rudderstack.js
 ||d31djwpx7pcvsr.cloudfront.net/production/*/js/segment.js
 ||d2189b0dij3l7v.cloudfront.net/p/$domain=tv4play.se|tv4.se|fotbollskanalen.se|koket.se
 ||dackpartner-web.s3.amazonaws.com^$third-party
@@ -3187,6 +3189,7 @@ zeromagazine.nu##div[id^="ads"]
 ||wishpond.net^$third-party
 ||woomio.com/assets/js/analytics
 ||workhaus.se^$third-party
+||www-kittad-se.filesusr.com^$frame
 ||yelp.se/sit_rep
 ||yieldwrapper.com^$third-party
 ||youbora.com^*/sp.min.js$important,domain=aftonbladet.se|svd.se|livsstil.se|godare.se|tv.nu
