@@ -1,6 +1,6 @@
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days
-! Last modified: 2024-08-19 12:00:06 CEST
+! Last modified: 2024-08-21 07:31:08 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPL3 - https://github.com/lassekongo83/Frellwits-filter-lists/blob/master/LICENSE
@@ -868,7 +868,7 @@ livesport.expressen.se##[class^="BauProvider"]
 livetochdiabetes.se###text-3
 livetsgoda.se##body:style(opacity:unset!important)
 livetsgoda.se##.penci-rlt-popup
-livetsgoda.se,betongforeningen.se,espressomedia.se,realtid.se,ordfrontmagasin.se,europaportalen.se,motorsportbladet.se,battregolf.se,nitroz.se,magasinethockey.se,twostrokerider.se,bjjtv.se,eqotime.com,newsvoice.se##a[target$="blank"] img:not([class^="tweet"])
+livetsgoda.se,betongforeningen.se,espressomedia.se,realtid.se,ordfrontmagasin.se,europaportalen.se,motorsportbladet.se,battregolf.se,nitroz.se,magasinethockey.se,twostrokerider.se,bjjtv.se,eqotime.com,newsvoice.se,tranakampsport.se##a[target$="blank"] img:not([class^="tweet"])
 livinguppsala.se##.fusion-post-content-container:has-text(/^annons/i):upward(article)
 livsmedelsverket.se###CookieConsent
 livsmedelsverket.se##.lock-scroll:style(overflow:unset!important)
@@ -900,6 +900,7 @@ lundagard.se###bdCheckAlso.bdCheckAlsoShow, .topBanner, #sidebar .widget_media_i
 lundextra.se,huddingeextra.se,sundsvallextra.se,goteborgextra.se,sollentunaextra.se##.category-partners
 lundgiants.se##strong:has-text(Detta är en annons):upward(.inner)
 lundgiants.se###LoggaDiv:style(position:unset!important;)
+lundgiants.se###annonsPelareMobil
 lundgiants.se,hallbyhandboll.se,skiljebosk.nu##.cookieAlert
 lwcdn.com##+js(aeld, /^(?:adBlocker|contextmenu)$/)
 lwcdn.com,alingsastidning.se,bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se,kungsbackaposten.se,kungalvsposten.se,molndalsposten.se,partilletidning.se,sttidningen.se,markposten.se,harrydaposten.se,mellerudsnyheter.se##+js(json-prune, autoplay players.*.ga acl.ads players.*.autoplay)
@@ -1339,6 +1340,7 @@ tonyhatefnejad.se,lyckasmedbakning.nu,pinkprogramming.se,brl.se,naturnaraskogsbr
 totallyorebro.se,totallystockholm.se##div.tot-content-preview-container-small[style*="border-top:4px solid #ffb200;"], .content-overlay--black, a[href*="casino"], a[href*="/sponsrat/"], a[href*="/sponsrat/"] + p.tot-content-preview--meta, .newaddiv, .tot-sidebar
 totallyorebro.se,totallystockholm.se##[class*="tot-content-preview-container"]:has(a[href*="casino"], a[href*="kasino"], a[href*="betting"], a[href*="spel"]):remove()
 trafikradion.com##.right
+tranakampsport.se##a[class*="annons"], .annonser-sektion
 tranakampsport.se##.w-dyn-item:has(.sponsrad-artikel-wrapper:not(.w-condition-invisible))
 traning40plus.se##[id^="bunyad"]
 travelnews.se##.bottom-bar--animate-in, #job_ads_scroller, .header_banner
@@ -1379,8 +1381,8 @@ uppsatser.se##.results li[style^="margin"]:not(.result)
 upptack-sverige.se##.front-cta:has-text(/sponsrat innehåll/i)
 usabil.nu##.image-post-link[target]
 utm_$document,removeparam=/^utm_/,domain=tv.nu|booli.se|expressen.se|aftonbladet.se|bostad.blocket.se|dagensps.se|prisjakt.nu|vinborsen.se
-utsidan.se##.clamzone
 utsidan.se##.betart-marker:matches-css(after, content: /Annons/i):upward(.documentpush-group)
+utsidan.se##.clamzone, .component-adzone
 vackertvader.se##div[class^="ad-300x250"], div[class^="ad_300x250"]
 vackertvader.se,tidningenskriva.se,veckansnyheter.se,eventeffect.se,executiveeffect.se,saleseffect.se,kemisamfundet.se##.cc-window
 vadvivet.se##html.has-intro-popup:remove-class(has-intro-popup)
@@ -1953,7 +1955,7 @@ zeromagazine.nu##div[id^="ads"]
 /fullpage$script,domain=poddtoppen.se
 /fullpage-ad.js
 /fusionadloader.$script
-/ga.js$domain=helgon.se
+/ga.js$domain=helgon.se|gamemonetize.com
 /ga_cookie_track.js
 /gdprlock$third-party
 /gdpr/*$domain=visitlulea.se|husbilskompisar.se|rotter.se|luleabusinessregion.se
@@ -3121,6 +3123,7 @@ zeromagazine.nu##div[id^="ads"]
 ||tinypass.com^$domain=thelocal.se
 ||toolcontentcloud.com/*/asjs$domain=bredband.se
 ||top100ruokablogit.com^$third-party
+||topbar.svenskelitfotboll.se/top-bar-script
 ||topblogarea.se/tracker
 ||toppmarkensverige.com^
 ||tourn.co^$third-party
