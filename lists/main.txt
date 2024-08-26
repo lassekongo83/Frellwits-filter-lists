@@ -1370,7 +1370,7 @@ hd.se,sydsvenskan.se,allehanda.se,tidningenangermanland.se,arbetarbladet.se,aves
 /tv/annons$domain=expressen.se
 /tv/sponsrat$domain=expressen.se
 ! Cosmetic ad filters
-expressen.se##a[href*="/spel.exp"], a[href*="/lanapengar.exp"], a[href*="/rabattkoder.exp"], a[href*="/annons"], .match-betting, .discount-ad, .b-ad__caption, .pressrelease-teaser, .widget-ad-marker, .widget-ad-marker + a, .promotion-banner, .widget--collaboration, .rotator--external, a[data-click-track*="prisjakt"], .linked-image-widget a[href*="/kampanj/"], .linked-image-widget a[href*="lifestyle.expressen.se"], #premiumAdWrapper, .tapet-popup-overlay, .outsider-ads, .teaser > a[href*="/kampanj."], .teaser > a[href*="/brandstudio"], .teaser > a[href*="/brand-studio"], figure[data-article-data*="/sponsrat"], figure[data-article-data*="/annons"], figure[data-article-data*="/brand-studio"], .teaser--native, .native-article
+expressen.se##a[href*="/spel.exp"], a[href*="/lanapengar.exp"], a[href*="/rabattkoder.exp"], a[href*="/annons"], .match-betting, .discount-ad, .b-ad__caption, .pressrelease-teaser, .widget-ad-marker, .widget-ad-marker + a, .promotion-banner, .widget--collaboration, .rotator--external, a[data-click-track*="prisjakt"], .linked-image-widget a[href*="/kampanj/"], .linked-image-widget a[href*="lifestyle.expressen.se"], #premiumAdWrapper, .tapet-popup-overlay, .outsider-ads, .teaser > a[href*="/kampanj."], .teaser > a[href*="/brandstudio"], .teaser > a[href*="/brand-studio"], figure[data-article-data*="/sponsrat"], figure[data-article-data*="/annons"], figure[data-article-data*="/brand-studio"], .teaser--native, .native-article, .branded-content
 ! Annoyances
 ?autoPlay$frame,removeparam=autoPlay,domain=expressen.se
 ?autoplay=true$frame,removeparam=autoplay,domain=expressen.se
@@ -2457,7 +2457,7 @@ maltermagasin.se##.widget_media_image:has-text(/annons/i)
 @@/lazy_load.js?gcb$domain=hemmanytt.se
 hemmanytt.se###sa_slider_shortcode
 hemmanytt.se##.annonsnotis + span + span + div.td-pb-row:has(a[href*="adtr.co"])
-lchfarkivet.se##.lchf-modal--wrapper, div#beskrivning[style="font-size: 10px; text-align: center; color: #8E8C8C; max-width: 700px;"]
+lchfarkivet.se##.modal-wrapper, div#beskrivning[style="font-size: 10px; text-align: center; color: #8E8C8C; max-width: 700px;"]
 kardemummagumman.se###custom_html-2
 husbilsplats.se##div[id^="husbi-"]
 matmalin.se##div[id^="matma-"]
@@ -3286,9 +3286,8 @@ vackertvader.se##div[class^="ad-300x250"], div[class^="ad_300x250"]
 skolporten.se##.article-short:has(a[href*="/sponsrat-innehall"])
 ||stats.helsingborg.se^
 tidningenskriva.se##section.widget_text:has(div[id^="ad-"])
-elevspel.se##div#cookie_wrapper, .blockedContentNotice
-elevspel.se##:is(h1[itemprop="name"] + div, .sidebar1 div.Block[class*="-"]):has(a[href^="/medlem"])
-elevspel.se##+js(rmnt, script, cloned.removeAttr)
+elevspel.se##:is(div.Block, div[style^="display: table"], h1[itemprop="name"] ~ div:not(.content)):has(a[href*="medlem"])
+elevspel.se##+js(rmnt, script, Math.random)
 vilaser.se##.Internal-ad
 doon.se##.doon-promotion, a.link[target="_blank"]
 /bnrimg$domain=nordiskskog.se
