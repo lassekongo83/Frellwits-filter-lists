@@ -722,6 +722,7 @@ casino-utan-$image
 /facebook_tracking_pixel$script
 /fb_pixel.js
 /forum/assets/google-tag-manager
+/frosmo.easy.js
 /ga_cookie_track.js
 /gdprlock$third-party
 /glimr-static$domain=~klart.se
@@ -1154,7 +1155,7 @@ spelo.se,lokalguiden.se,svenskverkstad.se##.banner-container
 metalcentral.net,rotter.se##.bannergroup
 alltforforaldrar.se,di.se,upphandling24.se,bytbil.com,sverigesnatur.org,tv24.se,nyan.ax##.panorama
 svartgul.se,eventeffect.se,executiveeffect.se,saleseffect.se###panorama
-teknikveckan.se,di.se,dn.se,skillingaryd.nu,xn--vrnamo-bua.nu,vardfokus.se,kamerabild.se,tripadvisor.se,swedroid.se,bettingstugan.se,expressen.se,dagensopinion.se,driva-eget.se,bioenergitidningen.se,ifokus.se,padelfeber.se,sv.picmix.com,ifragasatt.se,ehandel.se,jaktojagare.se,sportbloggare.com,bovision.se,familjeliv.se,tidningenridsport.se,golflivet.se,vemringde.se,brollopstorget.se,fastighetsvarlden.se,borskollen.se,aktiespararna.se,receptfavoriter.se,tyda.se,mittforetag.com##.ad
+teknikveckan.se,di.se,dn.se,skillingaryd.nu,xn--vrnamo-bua.nu,vardfokus.se,kamerabild.se,tripadvisor.se,swedroid.se,bettingstugan.se,expressen.se,dagensopinion.se,driva-eget.se,bioenergitidningen.se,ifokus.se,padelfeber.se,sv.picmix.com,ifragasatt.se,ehandel.se,jaktojagare.se,sportbloggare.com,bovision.se,familjeliv.se,tidningenridsport.se,golflivet.se,vemringde.se,brollopstorget.se,fastighetsvarlden.se,borskollen.se,aktiespararna.se,receptfavoriter.se,tyda.se,mittforetag.com,lajvo.se##.ad
 svd.se,chef.se,vvsforum.se,elinstallatoren.se,arkitekten.se,natursidan.se,svenskfarmaci.se,da.se,frisor.se##.Ad
 aftonbladet.se,halsasverige.se,mandarinmedia.se,nojesmagasinet.nu,stoppapressarna.se,langd.se,pressbladet.se,svenskpress.se,foretagsbladet.se,gestrikemagasinet.se,cfanytt.se,lasarnas.se,hembostad.nu,sportidrott.se,skolvarlden.se,computersweden.se,thatsup.se,arbetaren.se,sjofartstidningen.se##.advert
 fotosidan.se,merinfo.se,allsvenskan.se,tasteline.com,jaktojagare.se,chefstidningen.se,realtid.se,norpan.se,moviezine.se,jaktjournalen.se,byggvarlden.se,omtanke.today,akademikern.se,socionomen.se##.ads
@@ -2487,10 +2488,9 @@ alltforforaldrar.se###partnerMenuContainer, #partnerMenuContainerFiller
 alltforforaldrar.se##.unslider-wrap.unslider-carousel>li:has(.preamble-category:has-text(/^annons/i))
 dayviews.com##.frontPageBox--links
 devote.se,familjeliv.se##div[style*="height: 244px;"]
-devote.se##.slick-slider
+devote.se##div[class^="ad_"]
 devote.se##div[data-losjs^="borka"]:upward(1)
-devote.se##article.tile:has-text(/annons|spel|casino|kasino/i)
-devote.se##+js(aeld, click)
+devote.se##article.tile:has-text(/annons|spel|casino|kasino|extrapengar|investera|boka|strategier/i)
 familjeliv.se##a[href*="/kampanj/"], .flm-kampanj
 familjeliv.se##article:has-text(/annons:/i)
 kwiss.me##.square-item:has(.qz-quiz-sponsored)
@@ -2501,10 +2501,11 @@ nyheter24.se##.breadtext_content.paywall_breadtext p:first-child::before
 vimedbarn.se##.annonsinlagg, .annonsen
 vimedbarn.se##button:has-text(/annons/i):upward(.owl-item):remove()
 modette.se##.true_native_block
+||d2wzl9lnvjz3bh.cloudfront.net/sites/folkofolk_se.js
 folkofolk.se##div[class^="MuiDialog-root"]
 rodeo.net##article[data-section="allmänt"]
 ||lajvo.se/addImpression
-lajvo.se###panoramaTop
+lajvo.se###panoramaTop, .facebook
 lajvo.se##.postCard:has-text(/bonusar|casino|betting|spelbranschen/i)
 tyda.se##.frontpage_article:has(a[href*="casino"], a[href*="kasino"], a[href*="betting"], img[data-cfsrc*="Sponsra"])
 
@@ -2519,8 +2520,9 @@ tyda.se##.frontpage_article:has(a[href*="casino"], a[href*="kasino"], a[href*="b
 ##div.sb-egmont-plugin
 storyhouseegmont.se##body.freeze-scroll:remove-class(freeze-scroll)
 storyhouseegmont.se##div[class^="Navigation__Overlay"]
-cafe.se,kingmagazine.se,mestmotor.se##.card-partner, .partner
-cafe.se,kingmagazine.se##.card-partner:upward(1)
+kingmagazine.se##.card-partner, .partner
+kingmagazine.se##.card-partner:upward(1)
+cafe.se##article:has(a[href*="/partner/"])
 hemtrevligt.se##div[id^="hj-"], div[id^="ik-"]
 hemtrevligt.se##.article:has(.annons)
 mestmotor.se##.advInsideSticky
@@ -2888,6 +2890,7 @@ tv.nu##header + div[class]:has(a[href*="play.google.com"])
 ##div.mobileads
 ##div.big-mobile-ads
 ##div#topBannerMobile
+##div#mobileTopAd
 !#endif
 
 ! === Various unsorted websites
