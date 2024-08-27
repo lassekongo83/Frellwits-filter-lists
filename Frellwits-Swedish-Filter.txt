@@ -1,6 +1,6 @@
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days
-! Last modified: 2024-08-26 06:36:54 CEST
+! Last modified: 2024-08-27 06:22:27 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPL3 - https://github.com/lassekongo83/Frellwits-filter-lists/blob/master/LICENSE
@@ -327,8 +327,7 @@ byggvarlden.se,omtanke.today##.post:has(a[href*="/annons/"])
 bytbil.com##html,body:style(overflow:auto!important;)
 bytbil.com##.listpage-banner, .available-services
 bytbil.com##.newcars-widget:has(a[href*="bit.ly"], a[href*="content-ad"])
-cafe.se,kingmagazine.se##.card-partner:upward(1)
-cafe.se,kingmagazine.se,mestmotor.se##.card-partner, .partner
+cafe.se##article:has(a[href*="/partner/"])
 campingsverige.se##.banner_window, .banner_label, .card_veckans_pryl, .bg_camping_se
 campingsverige.se##.post_sponsrad_label:upward(1)
 camping.se##.ads-above-header, .ads-teaser, .paragraph--type--ad-script, div[about*="/annons/"], a[href*="/sv/annons"]
@@ -402,10 +401,9 @@ designbase.se##html,body:style(overflow:unset!important;)
 designbase.se##.banner-hidden, .z-newsletter-modal, .z-newsletter-popup
 desktop-banner$image,domain=bokadirekt.se
 destination.se,sistaminuten.se##+js(set-cookie, CM_cookieConsent, 0)
-devote.se##article.tile:has-text(/annons|spel|casino|kasino/i)
+devote.se##article.tile:has-text(/annons|spel|casino|kasino|extrapengar|investera|boka|strategier/i)
+devote.se##div[class^="ad_"]
 devote.se##div[data-losjs^="borka"]:upward(1)
-devote.se##+js(aeld, click)
-devote.se##.slick-slider
 devote.se,familjeliv.se##div[style*="height: 244px;"]
 digitalavykort.se##.rightdiv p:has-text(/casino|kasino|lån|betting|odds|lotto/i)
 digitalfotoforalla.se,iform.se,pctidningen.se,varldenshistoria.se##li:has(.content-label:has-text(/annons/i)):remove()
@@ -793,6 +791,8 @@ kiacarclub.se##.forumlist-main-inner > div[style]
 kiacarclub.se##.sidebar-block:has-text(/annons|sponsor/i)
 kimura.se##a[href*="unibet.com"], a[href*="/kampanjer."], a[href*="utm_campaign"], div[class^="yw-"], a[data-wpel-link="external"][target="_blank"]
 kimura.se##:is(div[data-elementor-type="loop-item"].post, .post > .e-con > .e-con > .e-con:not([data-settings])):has(.yw-midbanner)
+kingmagazine.se##.card-partner, .partner
+kingmagazine.se##.card-partner:upward(1)
 kingsizemag.se##a:has(.disclaimer-tag-img)
 kingsizemag.se##div#video-overlay, div.sidebar_frame, #affiliates, #affiliates + .text, #popup-interstitial-overlay, .cu_banner, #interstitial-overlay, .kingsize-native
 kittad.se##li:has(.kittad-label-sponsored)
@@ -833,7 +833,7 @@ kvalitetsmagasinet.se,miljo-utveckling.se,telekomidag.se,vdtidningen.se###subscr
 kvartal.se##.email-popup-wrapper
 kvartal.se##.square-format:has(.kv-ad-label)
 kwiss.me##.square-item:has(.qz-quiz-sponsored)
-lajvo.se###panoramaTop
+lajvo.se###panoramaTop, .facebook
 lajvo.se##.postCard:has-text(/bonusar|casino|betting|spelbranschen/i)
 lakartidningen.se##.screen-sm, .screen-md
 lakartidningen.se,hockeynews.se,canariajournalen.se##.advertisement
@@ -1307,7 +1307,7 @@ tekniksmart.se##.code-block, main > div:last-child:not(:only-child), #uid_08313b
 tekniksmart.se##.wpb_row:has(a[href*="casino"])
 teknikveckan.se##.no-ad
 teknikveckan.se##.pill:has-text(/spons/i):upward(.grid-item, .pinned, .articleFlow-item)
-teknikveckan.se,di.se,dn.se,skillingaryd.nu,xn--vrnamo-bua.nu,vardfokus.se,kamerabild.se,tripadvisor.se,swedroid.se,bettingstugan.se,expressen.se,dagensopinion.se,driva-eget.se,bioenergitidningen.se,ifokus.se,padelfeber.se,sv.picmix.com,ifragasatt.se,ehandel.se,jaktojagare.se,sportbloggare.com,bovision.se,familjeliv.se,tidningenridsport.se,golflivet.se,vemringde.se,brollopstorget.se,fastighetsvarlden.se,borskollen.se,aktiespararna.se,receptfavoriter.se,tyda.se,mittforetag.com##.ad
+teknikveckan.se,di.se,dn.se,skillingaryd.nu,xn--vrnamo-bua.nu,vardfokus.se,kamerabild.se,tripadvisor.se,swedroid.se,bettingstugan.se,expressen.se,dagensopinion.se,driva-eget.se,bioenergitidningen.se,ifokus.se,padelfeber.se,sv.picmix.com,ifragasatt.se,ehandel.se,jaktojagare.se,sportbloggare.com,bovision.se,familjeliv.se,tidningenridsport.se,golflivet.se,vemringde.se,brollopstorget.se,fastighetsvarlden.se,borskollen.se,aktiespararna.se,receptfavoriter.se,tyda.se,mittforetag.com,lajvo.se##.ad
 teknologiexperten.se##a:has(img[src*=".se-www"]), a[href*="casino"]
 temaarkiv.se##.md\:mt-\[100px\]:has(script[data-adfscript])
 temadagar.se##+js(acs, chp_adblock_browser)
@@ -1954,6 +1954,7 @@ zeromagazine.nu##div[id^="ads"]
 /forum/img/banners
 /fptools.js$domain=allas.se|elle.se|femina.se|hant.se|mabra.com|residencemagazine.se|svenskdam.se|motherhood.se
 /frontendLogger$domain=flashscore.se
+/frosmo.easy.js
 /fullpageAd.js
 /fullpage$script,domain=poddtoppen.se
 /fullpage-ad.js
@@ -2665,6 +2666,7 @@ zeromagazine.nu##div[id^="ads"]
 ||d2m8uxg4w7uelx.cloudfront.net/fpa.js
 ||d2m8uxg4w7uelx.cloudfront.net/fullpageads
 ||d2qrdklrsxowl2.cloudfront.net/js/hapyak.js
+||d2wzl9lnvjz3bh.cloudfront.net/sites/folkofolk_se.js
 ||d9v72urx9pbbc.cloudfront.net/LoadSlotLocator
 ||d9v72urx9pbbc.cloudfront.net/channel
 ||d10lumateci472.cloudfront.net/?amuld$script
@@ -3228,6 +3230,7 @@ tv.nu##header + div[class]:has(a[href*="play.google.com"])
 ##div.mobileads
 ##div.big-mobile-ads
 ##div#topBannerMobile
+##div#mobileTopAd
 !#endif
 !#if !env_chromium
 branschkoll.se,rocknytt.net,upphandling24.se,kimura.se,datormagazin.se,villalivet.se,classicmotor.se,tidningenhalsa.se,husohem.se,guiden.se,nyadagbladet.se,enkelteknik.se,stoppapressarna.se,vadhanderisverige.se##^script[id^="advanced-ads"]
