@@ -1,6 +1,6 @@
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days
-! Last modified: 2024-08-27 06:22:27 CEST
+! Last modified: 2024-08-28 05:46:42 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPL3 - https://github.com/lassekongo83/Frellwits-filter-lists/blob/master/LICENSE
@@ -455,8 +455,9 @@ ekonominyheter.se##.td-fix-index:has(a[href*="casino"])
 ekonominyheter.se,autonytt.se,undervarttak.se,aftonbladet.se,lesscarbs.se,hockeybladet.nu,matinspo.se##a[href*="/track.adtraction."]
 electronic.se##.content aside.column-narrow:last-of-type
 elektronikforumet.com##td > a[target="_blank"] img
-elevspel.se##+js(rmnt, script, Math.random)
-elevspel.se##:is(div.Block, div[style^="display: table"], h1[itemprop="name"] ~ div:not(.content)):has(a[href*="medlem"])
+elevspel.se###cookie_wrapper, a[href*="medlem"] > div
+elevspel.se##+js(rmnt, script, removeAttr('id'))
+elevspel.se##:is(div.Block, div[style^="display: table"]):has(a[href*="medlem"], .adsbygoogle)
 elle.se##section.c-native_banner:upward(2)
 emocore.se###main > #home_start_div ~ .m_t.box:nth-last-child(-n+2)
 emocore.se###sticky-panorama-container, #mob-wrap
@@ -1891,7 +1892,8 @@ zeromagazine.nu##div[id^="ads"]
 /collect?v$domain=thelocal.se
 /content_images/*casino$image,domain=ng.se
 /conversions/tracking.js$third-party
-/cookieconsent$script,domain=akademiskahus.se|lundagard.se|fuska.nu|kiacarclub.se|nyheteridag.se|internetstart.se|svampguiden.com|scanaktier.se|obosdamallsvenskan.se|elitettan.se|bike.se|runnersworld.se|offside.org|racemagazine.se
+/cookieControl$domain=akademiskahus.se
+/cookieconsent$script,domain=akademiskahus.se|lundagard.se|fuska.nu|kiacarclub.se|nyheteridag.se|internetstart.se|svampguiden.com|scanaktier.se|obosdamallsvenskan.se|elitettan.se|bike.se|runnersworld.se|offside.org|racemagazine.se|tidningenskriva.se
 /cookiesCon.js$domain=sydnarkenytt.se
 /cookiespolicynotificationbar$domain=svenskahousegruppen.se
 /cookies-and-content-security-policy$script,domain=cannabisifokus.se|futsalmagasinet.se|sd.se
@@ -2268,7 +2270,7 @@ zeromagazine.nu##div[id^="ads"]
 /qc_cmp$domain=reseguiden.se
 /questback.popup$script
 /rantekartan$subdocument,domain=expressen.se
-/raven$script,domain=mitti.se|travnet.se|nyheter24.se|tyda.se|egoinas.se
+/raven$script,domain=mitti.se|travnet.se|nyheter24.se|tyda.se|egoinas.se|hemtrevligt.se
 /recommendations$xmlhttprequest,domain=expressen.se
 /registerhit?$image
 /renderBanner.do?zoneId=
@@ -2465,6 +2467,7 @@ zeromagazine.nu##div[id^="ads"]
 ?action=get_banners$domain=djungeltrumman.se
 ?autoPlay$frame,removeparam=autoPlay,domain=expressen.se
 ?autoplay=true$frame,removeparam=autoplay,domain=expressen.se
+?t=$xhr,empty,domain=kyrkanstidning.se
 ?url=*impse.tradedoubler.com$image
 @@/adserver.$script,~third-party,domain=fotosidan.se|utsidan.se
 @@/advert.js$1p,domain=aktuellhallbarhet.se|byggindustrin.se|dagensmedia.se|dagensmedicin.se|fastighetsnytt.se|resume.se|dagenssamhalle.se|market.se|dagligvarunytt.se|privataaffarer.se
@@ -2846,7 +2849,6 @@ zeromagazine.nu##div[id^="ads"]
 ||kortio.se^$third-party
 ||kritiker.se/js/gdpr.js
 ||kundvisaren.se^$third-party
-||kyrkanstidning.se/firstvisit$xhr,empty
 ||laget.se^*/retarget.js
 ||lajvo.se/addImpression
 ||lanapengar.expressen.se^
