@@ -1204,7 +1204,7 @@ utm_$document,removeparam=/^utm_/,domain=tv.nu|booli.se|expressen.se|aftonbladet
 /firebase-analytics.js$domain=stoppapressarna.se|zeinaskitchen.se|jennysmatblogg.nu|filippoon.se|lindasbakskola.se
 /glimr$script,domain=aftonbladet.se|blocket.se|livsstil.se|godare.se
 /profile$ping,domain=feber.se|skippo.se|tasteline.com|tjock.se|veckorevyn.com|marcusoscarsson.se|handbollskanalen.se|surfa.se|nordichardware.se|hockeynews.se|tv4.se|fotbollskanalen.se|koket.se|teknikveckan.se|56kilo.se
-/raven$script,domain=mitti.se|travnet.se|nyheter24.se|tyda.se|egoinas.se
+/raven$script,domain=mitti.se|travnet.se|nyheter24.se|tyda.se|egoinas.se|hemtrevligt.se
 /script.js$3p,domain=spelkritik.se
 /ga.js$domain=helgon.se|gamemonetize.com
 ! Websites with no obvious or visible facebook login. Will just assume it's used for tracking.
@@ -1219,7 +1219,7 @@ aftonbladet.se,livsstil.se,godare.se,byggahus.se,expressen.se,elle.se,femina.se,
 ! -- Specific annoyances and bloat
 /cookie-banner$script,domain=sprintchallenge.se|halsafitness.se
 /cookie-consent$script,domain=minhembio.com
-/cookieconsent$script,domain=akademiskahus.se|lundagard.se|fuska.nu|kiacarclub.se|nyheteridag.se|internetstart.se|svampguiden.com|scanaktier.se|obosdamallsvenskan.se|elitettan.se|bike.se|runnersworld.se|offside.org|racemagazine.se
+/cookieconsent$script,domain=akademiskahus.se|lundagard.se|fuska.nu|kiacarclub.se|nyheteridag.se|internetstart.se|svampguiden.com|scanaktier.se|obosdamallsvenskan.se|elitettan.se|bike.se|runnersworld.se|offside.org|racemagazine.se|tidningenskriva.se
 /eu_cookie_compliance$script,domain=industrinyheter.se|dagensnaringsliv.se|infrastrukturnyheter.se|sportochfritidsnyheter.se|inredningsnyheter.se|byggnyheter.se|dagensfastigheter.se|stockholmsbyggnyheter.se|energinyheter.se|vindkraftsnyheter.se|solenerginyheter.se|jarnvagsnyheter.se|transportochlogistik.se|metallerochgruvor.se|papperochmassa.se|miningmetalnews.com|visitskane.com|ergo.nu|ki.se|sxk.se|europaportalen.se
 /gdpr/*$domain=visitlulea.se|husbilskompisar.se|rotter.se|luleabusinessregion.se
 ||onesignal.com^$domain=samnytt.se|battrestadsdel.se|beernews.se|ungdomsfotboll.se|rabattsok.se|1x2.se|cannabis.se|dackavisen.se|driva-eget.se|skogsaktuellt.se|maskinbladet.se|entreprenadaktuellt.se|ja.se|newsner.com|humorbibeln.se|sportbibeln.se|ettgottskratt.se|djurbibeln.se|finanstid.se|fokus.se|gasetten.se|fotbollsthlm.se|macken.xyz|naringslivetvgl.se|dalarnasaffarer.se|stockholmsaffarer.se|jamtlandsaffarer.se|hallandsnaringsliv.se|sjuharadsnaringsliv.se|netflixguiden.se|nyadagbladet.se|oskarshamns-nytt.se|swebbtv.se|thepattayanews.se|vaken.se|aktieskolan.se|fastighetsvarlden.se|mcparken.se|gaffa.se|alltomnorrtalje.se|morotsliv.com|it-finans.se|it-halsa.se|it-kanalen.se|it-pedagogen.se|it-retail.se|skaneplus.se|mittforetag.com|studeravidare.se
@@ -2562,7 +2562,7 @@ nordiskradio.se###cookieWindow
 dagen.se##.video-annons, .native-box, .arcad-block-container
 inblick.se##div[class^="ads"]
 /videojs-preroll$domain=himlentv7.se
-||kyrkanstidning.se/firstvisit$xhr,empty
+?t=$xhr,empty,domain=kyrkanstidning.se
 /track$ping,xhr,domain=epochtimes.se
 /nyheter/native.json$domain=epochtimes.se
 epochtimes.se##.fixed.bottom-0, a[target="_blank"][href*="utm_campaign"]
@@ -3009,6 +3009,7 @@ skrattsajten.com,norpan.se##+js(acs, $, e.preventDefault)
 sexpacket.se##.info_cookies
 sexpacket.se##+js(aeld, /contextmenu|cut|copy|paste/)
 ||analytics-smhise.smhi.se^
+/cookieControl$domain=akademiskahus.se
 ||akademiskahus.se/AddThis?$script
 /www/images/*$domain=elektronikforumet.com
 elektronikforumet.com##td > a[target="_blank"] img
@@ -3289,8 +3290,9 @@ vackertvader.se##div[class^="ad-300x250"], div[class^="ad_300x250"]
 skolporten.se##.article-short:has(a[href*="/sponsrat-innehall"])
 ||stats.helsingborg.se^
 tidningenskriva.se##section.widget_text:has(div[id^="ad-"])
-elevspel.se##:is(div.Block, div[style^="display: table"], h1[itemprop="name"] ~ div:not(.content)):has(a[href*="medlem"])
-elevspel.se##+js(rmnt, script, Math.random)
+elevspel.se###cookie_wrapper, a[href*="medlem"] > div
+elevspel.se##:is(div.Block, div[style^="display: table"]):has(a[href*="medlem"], .adsbygoogle)
+elevspel.se##+js(rmnt, script, removeAttr('id'))
 vilaser.se##.Internal-ad
 doon.se##.doon-promotion, a.link[target="_blank"]
 /bnrimg$domain=nordiskskog.se
