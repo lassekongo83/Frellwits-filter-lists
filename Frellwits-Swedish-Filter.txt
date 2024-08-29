@@ -1,6 +1,6 @@
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days
-! Last modified: 2024-08-28 05:46:42 CEST
+! Last modified: 2024-08-29 05:54:54 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPL3 - https://github.com/lassekongo83/Frellwits-filter-lists/blob/master/LICENSE
@@ -457,13 +457,14 @@ electronic.se##.content aside.column-narrow:last-of-type
 elektronikforumet.com##td > a[target="_blank"] img
 elevspel.se###cookie_wrapper, a[href*="medlem"] > div
 elevspel.se##+js(rmnt, script, removeAttr('id'))
-elevspel.se##:is(div.Block, div[style^="display: table"]):has(a[href*="medlem"], .adsbygoogle)
+elevspel.se##:is(div.Block, div[style^="display: table"], h1[itemprop="name"] + div):has(a[href*="medlem"], .adsbygoogle)
 elle.se##section.c-native_banner:upward(2)
 emocore.se###main > #home_start_div ~ .m_t.box:nth-last-child(-n+2)
 emocore.se###sticky-panorama-container, #mob-wrap
 energi.se##.advertisement--item
 eniro.se##article:has(#marketing)
 eniro.se##div.rounded-4xl:has(a[href$="/firma#marketing"])
+eniro.se##:is(.grid.place-items-center, div[style^="height"].items-center):has(div[id*="LeaderBoard"], div[id*="Leaderboard"])
 enterprisemagazine.se###ew-cookiebar-full, #ew-cookiebar-manage
 epochtimes.se##.fixed.bottom-0, a[target="_blank"][href*="utm_campaign"]
 esportare.se##a[href*="utm_campaign"]
@@ -1221,7 +1222,7 @@ sportsnews.se,xn--sporthnt-5za.se##a[href*="casino"]
 sportsnews.se,xn--sporthnt-5za.se###secondary:has(a[href*="casino"])
 sporttv.nu##a[onclick*="bannerClick"], #linkus, .details-bet-banner
 spray.se##body:style(-webkit-user-select: text !important; user-select: text !important;)
-spray.se##section[class*="casino"], a[href*="casino"]
+spray.se##section[class*="casino"], a[href*="casino"], .ads-header-partial
 spray.se##+js(set, googletag, 1)
 spray.se,vinochmatguiden.se##+js(set, window.WURFL, 1)
 stallet.se##.pnlAdTop
@@ -1937,6 +1938,7 @@ zeromagazine.nu##div[id^="ads"]
 /entryclick;_
 /ess.eurovator.se/*
 /eu_cookie_compliance$script,domain=industrinyheter.se|dagensnaringsliv.se|infrastrukturnyheter.se|sportochfritidsnyheter.se|inredningsnyheter.se|byggnyheter.se|dagensfastigheter.se|stockholmsbyggnyheter.se|energinyheter.se|vindkraftsnyheter.se|solenerginyheter.se|jarnvagsnyheter.se|transportochlogistik.se|metallerochgruvor.se|papperochmassa.se|miningmetalnews.com|visitskane.com|ergo.nu|ki.se|sxk.se|europaportalen.se
+/eu_cookie_notice$domain=yelp.se
 /evidon*.js$domain=morningstar.se
 /exposure$xmlhttprequest,domain=lokalguiden.se
 /expressen/crypt/?lpkey$all
@@ -3063,7 +3065,6 @@ zeromagazine.nu##div[id^="ads"]
 ||sellingsimplified.net^$third-party
 ||seonify.com^$third-party
 ||servg1.net^$third-party
-||service.force.com^$domain=allabolag.se
 ||se-affiliate-gallery.aws.aller.com^
 ||shareaholic.com^$third-party
 ||shareaholic.net^$third-party
