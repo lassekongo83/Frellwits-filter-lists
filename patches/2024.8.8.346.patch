@@ -1,10 +1,10 @@
-diff name:swefilter lines:181 checksum:f9e3df911e
+diff name:swefilter lines:185 checksum:a3d887783a
 d2 1
 a2 1
-! Last updated: Thu, 29 Aug 2024 03:55:14 +0000
+! Last updated: Fri, 30 Aug 2024 06:27:00 +0000
 d4 1
 a4 1
-! Diff-Path: patches/2024.8.29.235.patch#swefilter
+! Diff-Path: patches/2024.8.30.386.patch#swefilter
 d155 1
 a155 1
 allas.se,elle.se,femina.se,hant.se,mabra.com,residencemagazine.se,svenskdam.se,motherhood.se##article[data-type="native"], .ag-product-wrapper, .product-carousel__container, .shop_carousel, .editorsPick, div[class^="strossle-widget-"], .ad-min-height, a.cts-impression-item[data-cts-label*="banner"], section[data-cts-label="affiliate-carousel"], .ad-row-column
@@ -12,6 +12,8 @@ d216 1
 a216 2
 barnistan.se,welma.se##.featured-teaser:has(a[onclick*="adClick"])
 barnistan.se,welma.se##.newsletter, a[onclick*="adClick"], .gpt-slot
+a246 1
+bioenergitidningen.se##.flowad, .nativepuff
 d326 2
 a327 1
 cafe.se##article:has(a[href*="/partner/"])
@@ -27,8 +29,8 @@ digitalfotoforalla.se,iform.se,pctidningen.se,varldenshistoria.se##.standard.mob
 d454 2
 a455 3
 elevspel.se###cookie_wrapper, a[href*="medlem"] > div
-elevspel.se##+js(rmnt, script, removeAttr('id'))
-elevspel.se##:is(div.Block, div[style^="display: table"], h1[itemprop="name"] + div):has(a[href*="medlem"], .adsbygoogle)
+elevspel.se##+js(rmnt, script, removeAttr)
+elevspel.se##:is(div.Block, div[style^="display: table"], h1[itemprop="name"] ~ div:not([style="display:none;"]):not([class^="content"][class$="content"])):has(a[href*="medlem"], [onclick*="medlem"], .adsbygoogle)
 a461 1
 eniro.se##:is(.grid.place-items-center, div[style^="height"].items-center):has(div[id*="LeaderBoard"], div[id*="Leaderboard"])
 d485 1
@@ -102,6 +104,8 @@ d1234 1
 d1255 1
 a1255 1
 sverigespringer.se##.cd-desktop-banner, .cd-mobile-banner, .cd-header-banner-wrapper
+a1271 1
+synonymer.se##+js(set-local-storage-item, /^ev_did|ev_sid/, $remove$)
 d1275 1
 a1275 2
 tandlakartidningen.se##:is(header, .article-single-page, .single #content):style(margin-top:unset!important;)

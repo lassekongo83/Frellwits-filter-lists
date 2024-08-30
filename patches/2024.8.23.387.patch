@@ -1,10 +1,10 @@
-diff name:swefilter lines:2079 checksum:f9e3df911e
+diff name:swefilter lines:2083 checksum:a3d887783a
 d2 1
 a2 1
-! Last updated: Thu, 29 Aug 2024 03:55:14 +0000
+! Last updated: Fri, 30 Aug 2024 06:27:00 +0000
 d4 1
 a4 1
-! Diff-Path: patches/2024.8.29.235.patch#swefilter
+! Diff-Path: patches/2024.8.30.386.patch#swefilter
 d11 2
 d15 2
 d19 2
@@ -156,6 +156,8 @@ d477 1
 d479 2
 d483 1
 d485 2
+a486 1
+bioenergitidningen.se##.flowad, .nativepuff
 d489 1
 d491 2
 d495 1
@@ -293,8 +295,8 @@ d901 1
 d903 8
 a910 3
 elevspel.se###cookie_wrapper, a[href*="medlem"] > div
-elevspel.se##+js(rmnt, script, removeAttr('id'))
-elevspel.se##:is(div.Block, div[style^="display: table"], h1[itemprop="name"] + div):has(a[href*="medlem"], .adsbygoogle)
+elevspel.se##+js(rmnt, script, removeAttr)
+elevspel.se##:is(div.Block, div[style^="display: table"], h1[itemprop="name"] ~ div:not([style="display:none;"]):not([class^="content"][class$="content"])):has(a[href*="medlem"], [onclick*="medlem"], .adsbygoogle)
 d913 1
 d915 2
 d919 1
@@ -832,6 +834,8 @@ d2549 2
 d2553 2
 d2557 2
 d2561 1
+a2561 1
+synonymer.se##+js(set-local-storage-item, /^ev_did|ev_sid/, $remove$)
 d2563 2
 d2567 1
 d2569 2

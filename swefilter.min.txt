@@ -1,7 +1,7 @@
 ! Title: Frellwit's Swedish Filter
-! Last updated: Thu, 29 Aug 2024 03:55:14 +0000
+! Last updated: Fri, 30 Aug 2024 06:27:00 +0000
 ! Expires: 5 days
-! Diff-Path: patches/2024.8.29.235.patch#swefilter
+! Diff-Path: patches/2024.8.30.386.patch#swefilter
 ! Diff-Expires: 24 hours
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
@@ -245,6 +245,7 @@ bilsport.se##.includingFeaturedSliderArticle:has(.native-mark)
 bilwebben.ax##.front #secondary-content-wrapper, .banner-wrapper, .content-prefix-banner-wrapper
 bioenergitidningen.se##article:remove-class(closed)
 bioenergitidningen.se###cookieinfo
+bioenergitidningen.se##.flowad, .nativepuff
 biostock.se,hejauppsala.com,svenskfilmdatabas.se,bredband.se##.wt-cli-cookie-bar-container
 biostock.se,tobaksfakta.se##.pum-open:style(overflow:auto!important)
 birthday.se##.datax
@@ -453,8 +454,8 @@ ekonominyheter.se,autonytt.se,undervarttak.se,aftonbladet.se,lesscarbs.se,hockey
 electronic.se##.content aside.column-narrow:last-of-type
 elektronikforumet.com##td > a[target="_blank"] img
 elevspel.se###cookie_wrapper, a[href*="medlem"] > div
-elevspel.se##+js(rmnt, script, removeAttr('id'))
-elevspel.se##:is(div.Block, div[style^="display: table"], h1[itemprop="name"] + div):has(a[href*="medlem"], .adsbygoogle)
+elevspel.se##+js(rmnt, script, removeAttr)
+elevspel.se##:is(div.Block, div[style^="display: table"], h1[itemprop="name"] ~ div:not([style="display:none;"]):not([class^="content"][class$="content"])):has(a[href*="medlem"], [onclick*="medlem"], .adsbygoogle)
 elle.se##section.c-native_banner:upward(2)
 emocore.se###main > #home_start_div ~ .m_t.box:nth-last-child(-n+2)
 emocore.se###sticky-panorama-container, #mob-wrap
@@ -1284,6 +1285,7 @@ sydasien.se##.thb-cookie-bar
 sydnarkenytt.se##.toppbanner-outer, .reklamplats_hspalt, .egenbanner
 synonyma.se##amp-user-notification.cookie
 synonymer.se##+js(cookie-remover, /^ev_did|ev_sid/)
+synonymer.se##+js(set-local-storage-item, /^ev_did|ev_sid/, $remove$)
 synonymer.se##.create-account-banner, .buy-premium-banner, div[class*="pb-"] > div.text-center
 tabyallehanda.se##p:has-text(ANNONS)
 tabyallehanda.se##section[id^="Panorama"]

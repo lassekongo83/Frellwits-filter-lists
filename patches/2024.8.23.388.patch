@@ -1,10 +1,12 @@
-diff name:swefilter lines:58 checksum:f9e3df911e
+diff name:swefilter lines:62 checksum:a3d887783a
 d2 1
 a2 1
-! Last updated: Thu, 29 Aug 2024 03:55:14 +0000
+! Last updated: Fri, 30 Aug 2024 06:27:00 +0000
 d4 1
 a4 1
-! Diff-Path: patches/2024.8.29.235.patch#swefilter
+! Diff-Path: patches/2024.8.30.386.patch#swefilter
+a247 1
+bioenergitidningen.se##.flowad, .nativepuff
 d327 2
 a328 1
 cafe.se##article:has(a[href*="/partner/"])
@@ -16,8 +18,8 @@ d404 2
 d457 3
 a459 3
 elevspel.se###cookie_wrapper, a[href*="medlem"] > div
-elevspel.se##+js(rmnt, script, removeAttr('id'))
-elevspel.se##:is(div.Block, div[style^="display: table"], h1[itemprop="name"] + div):has(a[href*="medlem"], .adsbygoogle)
+elevspel.se##+js(rmnt, script, removeAttr)
+elevspel.se##:is(div.Block, div[style^="display: table"], h1[itemprop="name"] ~ div:not([style="display:none;"]):not([class^="content"][class$="content"])):has(a[href*="medlem"], [onclick*="medlem"], .adsbygoogle)
 a465 1
 eniro.se##:is(.grid.place-items-center, div[style^="height"].items-center):has(div[id*="LeaderBoard"], div[id*="Leaderboard"])
 d500 1
@@ -35,6 +37,8 @@ lchfarkivet.se##.modal-wrapper, div#beskrivning[style="font-size: 10px; text-ali
 d1221 1
 a1221 1
 spray.se##section[class*="casino"], a[href*="casino"], .ads-header-partial
+a1285 1
+synonymer.se##+js(set-local-storage-item, /^ev_did|ev_sid/, $remove$)
 d1308 1
 a1308 1
 teknikveckan.se,di.se,dn.se,skillingaryd.nu,xn--vrnamo-bua.nu,vardfokus.se,kamerabild.se,tripadvisor.se,swedroid.se,bettingstugan.se,expressen.se,dagensopinion.se,driva-eget.se,bioenergitidningen.se,ifokus.se,padelfeber.se,sv.picmix.com,ifragasatt.se,ehandel.se,jaktojagare.se,sportbloggare.com,bovision.se,familjeliv.se,tidningenridsport.se,golflivet.se,vemringde.se,brollopstorget.se,fastighetsvarlden.se,borskollen.se,aktiespararna.se,receptfavoriter.se,tyda.se,mittforetag.com,lajvo.se##.ad
