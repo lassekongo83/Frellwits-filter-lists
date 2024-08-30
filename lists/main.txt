@@ -1339,6 +1339,7 @@ mobilanyheter.net##+js(set, ai_run_scripts, noopFunc)
 /swg-gaa.js$domain=thelocal.se
 lexbase.se##+js(cookie-remover, lmt)
 synonymer.se##+js(cookie-remover, /^ev_did|ev_sid/)
+synonymer.se##+js(set-local-storage-item, /^ev_did|ev_sid/, $remove$)
 bioenergitidningen.se##article:remove-class(closed)
 /plugins/mediaconnect$domain=fof.se|spraktidningen.se|elinstallatoren.se|modernpsykologi.se|vvsforum.se
 fof.se,elinstallatoren.se,spraktidningen.se,modernpsykologi.se,vvsforum.se##.mediaconnect-protected-content, .mediaconnect-protected-content--show:style(max-height: unset !important; overflow: unset !important;)
@@ -1868,6 +1869,7 @@ affarerinorr.se##a[href^="/nyheter/native-artiklar/"]
 etunanytt.se##.textwidget:has-text(ANNONS)
 sjofartstidningen.se###newsletter-overlay, #newsletter-modal
 advokaten.se##.cookieconsent-optin-marketing
+bioenergitidningen.se##.flowad, .nativepuff
 
 ! === Tech, gaming, programmering
 
@@ -3292,8 +3294,8 @@ skolporten.se##.article-short:has(a[href*="/sponsrat-innehall"])
 ||stats.helsingborg.se^
 tidningenskriva.se##section.widget_text:has(div[id^="ad-"])
 elevspel.se###cookie_wrapper, a[href*="medlem"] > div
-elevspel.se##:is(div.Block, div[style^="display: table"], h1[itemprop="name"] + div):has(a[href*="medlem"], .adsbygoogle)
-elevspel.se##+js(rmnt, script, removeAttr('id'))
+elevspel.se##:is(div.Block, div[style^="display: table"], h1[itemprop="name"] ~ div:not([style="display:none;"]):not([class^="content"][class$="content"])):has(a[href*="medlem"], [onclick*="medlem"], .adsbygoogle)
+elevspel.se##+js(rmnt, script, removeAttr)
 vilaser.se##.Internal-ad
 doon.se##.doon-promotion, a.link[target="_blank"]
 /bnrimg$domain=nordiskskog.se
