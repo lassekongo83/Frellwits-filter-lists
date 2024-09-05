@@ -1,10 +1,10 @@
-diff name:swefilter lines:149 checksum:14f4b8a414
+diff name:swefilter lines:175 checksum:8d18632f9a
 d2 1
 a2 1
-! Last updated: Tue, 03 Sep 2024 05:46:55 +0000
+! Last updated: Thu, 05 Sep 2024 05:39:53 +0000
 d4 1
 a4 1
-! Diff-Path: patches/2024.9.3.346.patch#swefilter
+! Diff-Path: patches/2024.9.5.339.patch#swefilter
 d120 1
 a120 1
 aftonbladet.se,halsasverige.se,mandarinmedia.se,nojesmagasinet.nu,stoppapressarna.se,langd.se,pressbladet.se,svenskpress.se,foretagsbladet.se,gestrikemagasinet.se,cfanytt.se,lasarnas.se,hembostad.nu,sportidrott.se,computersweden.se,thatsup.se,arbetaren.se,sjofartstidningen.se##.advert
@@ -36,9 +36,17 @@ expressen.se##strong:has-text(/annons:/i):upward(p)
 a499 1
 expressen.se##.html-widget[data-vendor]:has(script[data-vendor])
 d666 2
+a717 2
+hockeynews.se##html.overflow-hidden:style(overflow:unset!important;)
+hockeynews.se##.fixed.z-50:has(a[href="/plus"])
+a718 1
+hockeynews.se##:is(.sticky, .hidden.lg\:block):has([id^="hockeynews_"])
 d783 1
 a783 1
 karriarlakare.se,livinguppsala.se,battrestadsdel.se,butikstrender.se,forskning.se,vardfokus.se,varvat.se,smaspararguiden.se,sjostadsbladet.se,tidningenridsport.se,cookaholic.se,vinliv.se,raa.se,svenskfilmdatabas.se,hockeybladet.nu,frihetsnytt.se###cookie-law-info-bar
+d836 1
+a836 1
+lakartidningen.se,canariajournalen.se##.advertisement
 d854 1
 a854 1
 lindasbakskola.se,jennysmatblogg.nu,zeinaskitchen.se,filippoon.se,niiinis.se##.panorama-sticky, .sticky-area, #ad-outofpage_dynamic
@@ -47,7 +55,9 @@ a868 1
 livetsgoda.se,betongforeningen.se,espressomedia.se,realtid.se,ordfrontmagasin.se,europaportalen.se,motorsportbladet.se,battregolf.se,nitroz.se,magasinethockey.se,twostrokerider.se,bjjtv.se,eqotime.com,newsvoice.se,tranakampsport.se,thepattayanews.se##a[target$="blank"] img:not([class^="tweet"])
 a1028 1
 nyemissioner.se##.jet-listing-grid__item[data-post-id]:has-text(/sponsrad artikel/i)
-a1039 1
+d1039 1
+a1039 2
+nyhetsbyranjarva.se,nyan.ax,tv-kanal.se,golfguidenonline.se,rockbladet.se##.g
 nyteknik.se,lag-avtal.se,arbetarskydd.se##article:has(a[href*="/sponsrad"])
 d1052 1
 a1067 1
@@ -63,6 +73,9 @@ skaneridsport.se##.sp-banner-block
 d1220 1
 a1220 1
 spray.se##section[class*="casino"], a[href*="casino"], .ads-header-partial
+a1247 2
+svenskamagasinet.nu##legend:has-text(Annons)
+svenskamagasinet.nu##.et_pb_code_inner:has(.svm-target)
 a1284 1
 synonymer.se##+js(set-local-storage-item, /^ev_did|ev_sid/, $remove$)
 d1311 1
@@ -82,6 +95,8 @@ a1572 1
 ##div.flow_ad
 a1627 1
 ##gwd-google-ad
+a1869 1
+/braze$domain=tvmatchen.nu
 d1891 1
 a1891 2
 /cookieControl$domain=akademiskahus.se
@@ -99,15 +114,23 @@ a1934 1
 d1971 1
 a1971 1
 /google-analytics-premium$important,script,domain=~elevspel.se
+d2045 1
+a2045 1
+/media/partners$domain=tvmatchen.nu
 d2065 1
 a2065 1
 /noview.$script,domain=trafikradion.com|gofm.se
+a2075 1
+/partners?$domain=hockeynews.se
 d2115 1
 a2115 1
-/plugins/complianz-gdpr$script,domain=iconmagazine.se|signprint.se|vilaser.se|arjeplognytt.se|aftonkuriren.se|tidningenglobal.se|tidningensyre.se|landetsfria.nu|fempers.se|macken.xyz|kalmar.nu|brollopsmagasinet.se|megafonen.se|radiotreby.se|revisionsvarlden.se|kyrka.se|nuiroslagen.se|tlnt.se|sjofartstidningen.se|pensionarsliv.se|aktuellsakerhet.se|betongforeningen.se|maklarvarlden.se
+/plugins/complianz-gdpr$script,domain=iconmagazine.se|signprint.se|vilaser.se|arjeplognytt.se|aftonkuriren.se|tidningenglobal.se|tidningensyre.se|landetsfria.nu|fempers.se|macken.xyz|kalmar.nu|brollopsmagasinet.se|megafonen.se|radiotreby.se|revisionsvarlden.se|kyrka.se|nuiroslagen.se|tlnt.se|sjofartstidningen.se|pensionarsliv.se|aktuellsakerhet.se|betongforeningen.se|maklarvarlden.se|sjomannen.se
 d2121 1
 a2121 1
-/plugins/cookie-notice$script,domain=bildobubbla.se|zeromagazine.nu|sverigespringer.se|gasetten.se|sillyseason.se|gentlemannaguiden.com|matmalin.se|svensktidskrift.se|schack.se|densistavilan.se|horisontmagasin.se|kobe.se|tidningenproffs.se|jaktojagare.se|tobaksfakta.se|bebisvarlden.se|underbaraclaras.se|cykelframjandet.se|dalabygden.se|lansposten.se|sormlandsbygden.se|vaguiden.se|grandtech.se|bluff.se|bjjtv.se|svmf.se
+/plugins/cookie-notice$script,domain=bildobubbla.se|zeromagazine.nu|sverigespringer.se|gasetten.se|sillyseason.se|gentlemannaguiden.com|matmalin.se|svensktidskrift.se|schack.se|densistavilan.se|horisontmagasin.se|kobe.se|tidningenproffs.se|jaktojagare.se|tobaksfakta.se|bebisvarlden.se|underbaraclaras.se|cykelframjandet.se|dalabygden.se|lansposten.se|sormlandsbygden.se|vaguiden.se|grandtech.se|bluff.se|bjjtv.se|svmf.se|rockbladet.se
+d2259 1
+a2259 1
+/profile$ping,domain=feber.se|skippo.se|tasteline.com|tjock.se|veckorevyn.com|marcusoscarsson.se|handbollskanalen.se|surfa.se|nordichardware.se|tv4.se|fotbollskanalen.se|koket.se|teknikveckan.se|56kilo.se
 d2268 1
 a2268 1
 /raven$script,domain=mitti.se|travnet.se|nyheter24.se|tyda.se|egoinas.se|hemtrevligt.se
@@ -123,6 +146,9 @@ a2564 1
 ||aventyret.se^$third-party
 a2574 1
 ||bettingutansvensklicens.co^$third-party
+d2610 1
+a2610 1
+||cdn-cookieyes.com^$domain=lokalti.se|jarnvagar.nu|senses.se|norrmejerier.se|temadagar.se|smartsenior.se|tekniknytt.se|nordigt.se|autonytt.se|vm-fotboll.se|kak.se|smhi.se|borattforum.se|mis.se|universitetslararen.se|em-fotboll.se|lakemedelsvarlden.se|samfalligheterna.se|husbilsplats.se|katerinamagasin.se|dagenslogistik.se|biostock.se|skellefteaworks.se|datormagazin.se|travnet.se|malarbok.nu|barn-filmer.se|matmenyer.se|sunnenytt.se|kristendate.se|hockeynews.se
 d2645 1
 a2645 1
 ||cookiebot.com^$domain=ng.se|swedroid.se|bax-shop.se|kurera.se|upplysning.se|mitti.se|circlek.se|findroommate.se|sakochliv.se|polistidningen.se|fokus.se|spraktidningen.se|varden.se|trafiken.nu|energi.se|sverigesnatur.org|kreditrapporten.se|sis.se|accentmagasin.se|allsvenskan.se|superettan.se|alltomarbetsmiljo.se|tco.se|totallyorebro.se|totallystockholm.se|enirobuddy.se|framtid.se|byggfaktadocu.se|husdjur.se|chalmers.se|elinstallatoren.se|ff.se|modernpsykologi.se|qx.se|vatternrundan.se|vvsforum.se|naturvetarna.se|skolporten.se|dust2.se|ehandel.se|byggvarlden.se|varldenidag.se|influens.se|omtanke.today|konsumentmagasinet.se|svenskelitfotboll.se|journalisten.se|fastighetsvarlden.se|jaktjournalen.se|friidrott.se|vildmarken.se|kyrkanstidning.se|tmf.se|sokbat.se|bilkompaniet.se|driva-eget.se|hv.se|folkhalsomyndigheten.se|dinpsykiskahalsa.se|ekonomifakta.se|hyresbostader.se|rsyd.se|byggforetagen.se|vasterastidning.se|storyhouseegmont.se|mytaste.se|smartbizz.se|tandlakartidningen.se
