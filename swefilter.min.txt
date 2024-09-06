@@ -1,7 +1,7 @@
 ! Title: Frellwit's Swedish Filter
-! Last updated: Thu, 05 Sep 2024 05:39:53 +0000
+! Last updated: Fri, 06 Sep 2024 05:48:22 +0000
 ! Expires: 5 days
-! Diff-Path: patches/2024.9.5.339.patch#swefilter
+! Diff-Path: patches/2024.9.6.348.patch#swefilter
 ! Diff-Expires: 24 hours
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
@@ -887,7 +887,7 @@ livsstil.se,godare.se##[id^="adPlacement"]:upward(1)
 ljudochbild.se##div[class^="col-md"][style*="border-radius"]:has(a[href*="/advertorial"])
 ljudochbild.se###MoreLink_content-container:style(height:unset!important;)
 ljudochbild.se###MoreLink_fade-out-div
-ljudochbild.se##.adremark, .coofad, .popup-overlay, .hidead, .phoneads, .pricecomp, .offerz, .type-articleadvertorial, .adblock, .lbplussinfo, .popup-overlayx, a[href*="/advertorial"], a[href*="/advertorial"] + .textbox, .prisjakt, #stickleft, #stickright, .adbox
+ljudochbild.se##.adremark, .coofad, .popup-overlay, .hidead, .phoneads, .pricecomp, .offerz, .type-articleadvertorial, .adblock, .lbplussinfo, .popup-overlayx, a[href*="/advertorial"], a[href*="/advertorial"] + .textbox, .prisjakt, #stickleft, #stickright, .adbox, .mainbanner
 ljudochbild.se##.thecontent, .entry-content:style(max-height: unset !important; overflow: initial !important; height: unset !important;)
 ljudochbild.se##.wp-caption:style(display:initial!important)
 ljungbysporten.se##section.widget_media_image, a[target="_blank"]:not([href*="ljungbysporten.se"])
@@ -1422,6 +1422,7 @@ veckorevyn.com##.g1-mosaic-item:has(.category-annonssamarbete)
 veterinarmagazinet.se##.nyhet-ad
 vf.se,hjotidning.se,kt.se,kt-kuriren.se,sla.se,mariestadstidningen.se,filipstadstidning.se,fryksdalsbygden.se,nwt.se,arvikanyheter.se,nkp.se,saffletidningen.se,provinstidningen.se,dalslanningen.se,nlt.se,skaraborgsbygden.se##[data-testid="ad-area"], footer + div.shadow-lg.fixed
 vibilagare.se##a[href^="/partnermaterial/"]
+viivilla.se##gen-article-wrapper:has(.article__header-native-banner)
 viivilla.se###rich-media-wrapper
 viivilla.se##.teaser:has(.teaser__native-marker)
 vilaser.se##.Internal-ad
@@ -2284,6 +2285,7 @@ zeromagazine.nu##div[id^="ads"]
 /promoted_ads$domain=bostadsportal.se
 /ps-partner$xmlhttprequest,domain=dagensps.se
 /public/log$domain=kalender.se
+/publisher/asjs?$domain=bredband.se
 /pulsetracking$script
 /pum/*$domain=flm.nu|dagenslogistik.se|battrestadsdel.se|skaneplus.se
 /qc_cmp$domain=reseguiden.se
@@ -3147,7 +3149,6 @@ zeromagazine.nu##div[id^="ads"]
 ||termsfeed.com^$domain=travsport.se
 ||tibaco.net/scripts/tws.js
 ||tinypass.com^$domain=thelocal.se
-||toolcontentcloud.com/*/asjs$domain=bredband.se
 ||top100ruokablogit.com^$third-party
 ||topbar.svenskelitfotboll.se/top-bar-script
 ||topblogarea.se/tracker
