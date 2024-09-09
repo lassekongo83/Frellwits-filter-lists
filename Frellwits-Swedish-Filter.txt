@@ -1,6 +1,6 @@
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days
-! Last modified: 2024-09-08 07:46:49 CEST
+! Last modified: 2024-09-09 07:21:08 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPL3 - https://github.com/lassekongo83/Frellwits-filter-lists/blob/master/LICENSE
@@ -233,7 +233,7 @@ battregolf.se##.elementor-element[data-widget_type="image.default"]
 battrestadsdel.se###top-banner-mobile, .apd-text, .apds_main, .entry-priomaker, [class^="dls-"], .csmi
 battrestadsdel.se,flashback.se,leta.se###top-banner
 beernews.se##.cookie-consent-wrapper, #takeover-outer
-bergsmannen.se,tidningenbyggmaterial.se##.ann-puff, .headerLinks
+bergsmannen.se,tidningenbyggmaterial.se,taxiidag.se,tidningendacksnack.se##.ann-puff, .headerLinks, .cookiesInfo
 besoksliv.se##a[href*="sponsrat-innehall"], div[class$="-promotion"]
 bestchampagne.se##aside.section-sm
 bettips.se##.bettips-am
@@ -1307,6 +1307,8 @@ tandlakartidningen.se##[class^="ad-container"], [class^="adbox-single"], div[id^
 tasteline.com##.article.related > a[href*="&utm"][target="_blank"]
 tasteline.com##.popup-overlay
 tasteline.com##.popup:style(overflow: auto !important;)
+taxiidag.se##body.compensate-for-scrollbar:style(overflow:unset!important;)
+taxiidag.se##.fancybox-container, #newsletterSubLink
 techmag.se##div[style="clear:both;float:left;width:100%;margin:0 0 20px 0;"]:has(.contentadx)
 techmag.se##.popup-overlay, div[id^="techmag_com"], .contentadx
 techmag.se##.widget_codewidget:has(div[id^="techmag_com"])
@@ -1338,7 +1340,6 @@ thorengruppen.se,utslappsratt.se,heleneholmsif.se,trafikskola.se,melodifestivalk
 thorengruppen.se,utslappsratt.se,heleneholmsif.se,trafikskola.se,melodifestivalklubben.se,morotsliv.com##+js(set, exactmetrics_frontend, undefined)
 tidningenbalans.se##div[style*="z-index: 999; background-color: rgba(0, 0, 0, 0.5)"], .bg-grey.hideOnPrint, .bg-adYellow
 tidningenbalans.se##p:has-text(/i annonssamarbete med/i):upward(.flex.overflow-hidden)
-tidningendacksnack.se##.ann-puff, .cookiesInfo
 tidningenglobal.se,tidningensyre.se,landetsfria.nu,fempers.se##.revive-box
 tidningennara.se,odenochaventyr.se##.cookie-bar
 tidningenridsport.se##body:remove-class(cli-barmodal-open)
@@ -2398,7 +2399,7 @@ zeromagazine.nu##div[id^="ads"]
 /uploads/annonser
 /uploads/bilder/Banner/*
 /uploads/bilder/Samarbetspartners
-/upload/puff/*$domain=bergsmannen.se|tidningenbyggmaterial.se|tidningendacksnack.se
+/upload/puff/*$domain=bergsmannen.se|tidningenbyggmaterial.se|tidningendacksnack.se|taxiidag.se
 /usabilla$script
 /users/2401/*$image,domain=ng.se
 /user_behaviour_data$domain=skyscanner.se
