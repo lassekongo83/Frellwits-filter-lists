@@ -1,7 +1,7 @@
 ! Title: Frellwit's Swedish Filter
-! Last updated: Thu, 12 Sep 2024 04:15:33 +0000
+! Last updated: Thu, 12 Sep 2024 10:29:38 +0000
 ! Expires: 5 days
-! Diff-Path: patches/2024.9.12.255.patch#swefilter
+! Diff-Path: patches/2024.9.12.629.patch#swefilter
 ! Diff-Expires: 24 hours
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
@@ -366,6 +366,7 @@ dagensjuridik.se##strong:has-text(/^senaste nytt från våra partners/i):upward(
 dagensjuridik.se##.outher-sidebar, a[href*="/annons/"], .dj-inline-ad
 dagenslogistik.se##div.g, .top-banner
 dagenslogistik.se##small:has-text(/annons/i):upward(.elementor-column)
+dagensnamn.nu##div[id^="dagensnamn_"], .dagensnamn_nu_billboard_middle, a[href*="kohantering"]
 dagensps.se##a[href*="/ps-partner"]:upward(section.cat-post-widget)
 dagensps.se##a[href*="/ps-partner/"], .ad-links-module, .dagensps_ad, a[href*="ut.dagensps.se"][target], .bottom_banner, .leftsidebanner, .c-external-notice
 dagensps.se##div[class^="bg-"]:has(a[href="/ps-partner"])
@@ -418,6 +419,7 @@ dinbyggare.se##*:style(-webkit-touch-callout: default !important; -webkit-user-s
 dinbyggare.se##+js(rmnt, noscript)
 dinbyggare.se##+js(rmnt, script, /wccp_pro/)
 dinbyggare.se##::selection:style(background-color:#007aff!important;color:#fff!important;)
+dinstartsida.se,raggningsboken.se,minip.nu,snapsvisor.eu###cookies-eu-banner
 dinvinguide.se##.contain:has(a[target="_blank"])
 discoveringtheplanet.com##body:remove-class(unselectable)
 discoveringtheplanet.com##html:style(user-select:unset!important; -moz-user-select:unset!important; -webkit-user-select:unset!important;)
@@ -1108,6 +1110,7 @@ radiotreby.se##.mobileHide, .mobile-show
 radio-sveriges.se###original_taboola
 radio.se##:is(a[data-testid="region-tag"], a[data-testid^="taglist-item"]):style(background-image:none!important; background:rgb(2,114,140)!important;)
 radio.se##:is(.md\:min-h-\[90px\], .lg\:min-h-\[250px\], .h-\[250px\], .justify-between.md\:mx-10):has(div[id^="RAD_D"], div[id^="RAD_M"])
+raggningsboken.se,minip.nu,snapsvisor.eu##div[style^="min-height"]:has(.adsbygoogle)
 ratsit.se##.promo
 ravarumarknaden.se###header > div > div.last, #block-4, #mvp-leader-wrap
 realtid.se##footer > div[style]:has(a[href*="casino"])
@@ -1402,7 +1405,7 @@ utm_$document,removeparam=/^utm_/,domain=tv.nu|booli.se|expressen.se|aftonbladet
 utsidan.se##.betart-marker:matches-css(after, content: /Annons/i):upward(.documentpush-group)
 utsidan.se##.clamzone, .component-adzone
 vackertvader.se##div[class^="ad-300x250"], div[class^="ad_300x250"]
-vackertvader.se,tidningenskriva.se,veckansnyheter.se,eventeffect.se,executiveeffect.se,saleseffect.se,kemisamfundet.se##.cc-window
+vackertvader.se,tidningenskriva.se,veckansnyheter.se,eventeffect.se,executiveeffect.se,saleseffect.se,kemisamfundet.se,knep.se##.cc-window
 vadvivet.se##html.has-intro-popup:remove-class(has-intro-popup)
 vadvivet.se##html.show-intro-popup:remove-class(show-intro-popup)
 vadvivet.se##.intro-popup
@@ -2660,7 +2663,7 @@ zeromagazine.nu##div[id^="ads"]
 ||cision.com^$third-party
 ||ck.page^$third-party
 ||cmp.radioplay.se^
-||cmp.setupcmp.com^$domain=se.azrhymes.com
+||cmp.setupcmp.com^$domain=se.azrhymes.com|dagensnamn.nu
 ||cms.catena.media/js/cm-tracking
 ||cncptx.com^$third-party
 ||cncpt-central.com^$third-party
@@ -2793,7 +2796,7 @@ zeromagazine.nu##div[id^="ads"]
 ||gamereactor.se/ads/
 ||gamereactor.se/exclusive.json
 ||gamesglue.com/js/gameanalytics/GameAnalytics
-||gatekeeperconsent.com^$domain=hemmanytt.se|svenskaorduttryck.se|wernamaten.se|sanghafte.se
+||gatekeeperconsent.com^$domain=hemmanytt.se|svenskaorduttryck.se|wernamaten.se|sanghafte.se|xn--gtboken-exa.se
 ||getanewsletter.com/js-forms-assets/popups.js
 ||getlevelten.com^$third-party
 ||getsitecontrol.com^$third-party
@@ -3268,7 +3271,7 @@ branschkoll.se,rocknytt.net,upphandling24.se,kimura.se,datormagazin.se,villalive
 branschkoll.se,rocknytt.net,upphandling24.se,kimura.se,datormagazin.se,villalivet.se,polistidningen.se,densistavilan.se,classicmotor.se,tidningenhalsa.se,husohem.se,guiden.se,nyadagbladet.se,enkelteknik.se,vadhanderisverige.se,passioneffect.se##^script:has-text(advanced_ads)
 branschkoll.se,rocknytt.net,upphandling24.se,kimura.se,datormagazin.se,villalivet.se,polistidningen.se,densistavilan.se,classicmotor.se,tidningenhalsa.se,husohem.se,guiden.se,nyadagbladet.se,enkelteknik.se,vadhanderisverige.se,passioneffect.se##^script:has-text(advads)
 stoppapressarna.se##^script[data-src*="advads"]
-temadagar.se,lchfarkivet.se,wernamaten.se,sanghafte.se##^script:has-text(__ez)
+temadagar.se,lchfarkivet.se,wernamaten.se,sanghafte.se,xn--gtboken-exa.se##^script:has-text(__ez)
 !#endif
 !#if !env_mobile
 /assets/js/modules/plugins/smoothPageScroll
