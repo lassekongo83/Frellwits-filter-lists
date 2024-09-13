@@ -1,6 +1,6 @@
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days
-! Last modified: 2024-09-12 12:29:19 CEST
+! Last modified: 2024-09-13 06:33:55 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPL3 - https://github.com/lassekongo83/Frellwits-filter-lists/blob/master/LICENSE
@@ -801,7 +801,7 @@ kb.se,dansportalen.se,hh.se##.sv-marketplace-sitevision-cookie-consent, .sv-cook
 kiacarclub.se##.forumlist-main-inner > div[style]
 kiacarclub.se##.sidebar-block:has-text(/annons|sponsor/i)
 kimura.se##a[href*="unibet.com"], a[href*="/kampanjer."], a[href*="utm_campaign"], div[class^="yw-"], a[data-wpel-link="external"][target="_blank"]
-kimura.se##:is(div[data-elementor-type="loop-item"].post, .post > .e-con > .e-con > .e-con:not([data-settings])):has(.yw-midbanner)
+kimura.se##.post:not([data-elementor-type="single-post"]):has(div[class$="annonser"])
 kingmagazine.se##.card-partner, .partner
 kingmagazine.se##.card-partner:upward(1)
 kingsizemag.se##a:has(.disclaimer-tag-img)
@@ -1566,6 +1566,7 @@ zeromagazine.nu##div[id^="ads"]
 ##div.CMACG_AdChangerWidget
 ##div.Container--ad
 ##div.External-ad
+##div.I-artiklar-annonser
 ##div.adform-container
 ##div.adnuntius-ad
 ##div.ads-sticky-container
@@ -1580,6 +1581,7 @@ zeromagazine.nu##div[id^="ads"]
 ##div.after-article-ad
 ##div.annons-yta
 ##div.article-ad-container
+##div.artikelflode-annonser
 ##div.ashe-preloader-wrap
 ##div.bam-ad-wrapper
 ##div.banner-size.proad
@@ -1618,6 +1620,7 @@ zeromagazine.nu##div[id^="ads"]
 ##div.o-indenter--ad
 ##div.panorama-ad
 ##div.panorama-ad-standard
+##div.panorama-annonser
 ##div.partnership-ads
 ##div.phpbb-ads-center
 ##div.prebid-ad-slot
@@ -1634,6 +1637,7 @@ zeromagazine.nu##div[id^="ads"]
 ##div.td-a-rec img
 ##div.td-banner-bg
 ##div.topmost-banner
+##div.tower-annonser
 ##div.view-annons-banner
 ##div.vue-ad-wrapper
 ##div.widget_widget_dfp
@@ -2149,7 +2153,7 @@ zeromagazine.nu##div[id^="ads"]
 /plugins/christmas-panda
 /plugins/cm-pop-up-banners
 /plugins/cm-takeover-ad
-/plugins/complianz-gdpr$script,domain=iconmagazine.se|signprint.se|vilaser.se|arjeplognytt.se|aftonkuriren.se|tidningenglobal.se|tidningensyre.se|landetsfria.nu|fempers.se|macken.xyz|kalmar.nu|brollopsmagasinet.se|megafonen.se|radiotreby.se|revisionsvarlden.se|kyrka.se|nuiroslagen.se|tlnt.se|sjofartstidningen.se|pensionarsliv.se|aktuellsakerhet.se|betongforeningen.se|maklarvarlden.se|sjomannen.se
+/plugins/complianz-gdpr$script,domain=iconmagazine.se|signprint.se|vilaser.se|arjeplognytt.se|aftonkuriren.se|tidningenglobal.se|tidningensyre.se|landetsfria.nu|fempers.se|macken.xyz|kalmar.nu|brollopsmagasinet.se|megafonen.se|radiotreby.se|revisionsvarlden.se|kyrka.se|nuiroslagen.se|tlnt.se|sjofartstidningen.se|pensionarsliv.se|aktuellsakerhet.se|betongforeningen.se|maklarvarlden.se|sjomannen.se|home2tiny.se
 /plugins/consent-magic-pro$script,domain=namnmarkning.se|bluum.se|gobokhandeln.se
 /plugins/content-hub-wp-plugin/assets/js/hub-time-spent
 /plugins/convertplug
@@ -3248,8 +3252,8 @@ zeromagazine.nu##div[id^="ads"]
 ||zummycloud.com^$third-party
 ||zummy.io^$third-party
 !#if env_chromium
-branschkoll.se,rocknytt.net,upphandling24.se,kimura.se,datormagazin.se,villalivet.se,polistidningen.se,densistavilan.se,classicmotor.se,tidningenhalsa.se,husohem.se,guiden.se,nyadagbladet.se,enkelteknik.se,vadhanderisverige.se,passioneffect.se##+js(acs, advads)
-branschkoll.se,rocknytt.net,upphandling24.se,kimura.se,datormagazin.se,villalivet.se,polistidningen.se,densistavilan.se,classicmotor.se,tidningenhalsa.se,husohem.se,guiden.se,nyadagbladet.se,enkelteknik.se,vadhanderisverige.se,passioneffect.se##+js(acs, advanced_ads)
+branschkoll.se,rocknytt.net,upphandling24.se,datormagazin.se,villalivet.se,polistidningen.se,densistavilan.se,classicmotor.se,tidningenhalsa.se,husohem.se,guiden.se,nyadagbladet.se,enkelteknik.se,vadhanderisverige.se,passioneffect.se##+js(acs, advads)
+branschkoll.se,rocknytt.net,upphandling24.se,datormagazin.se,villalivet.se,polistidningen.se,densistavilan.se,classicmotor.se,tidningenhalsa.se,husohem.se,guiden.se,nyadagbladet.se,enkelteknik.se,vadhanderisverige.se,passioneffect.se##+js(acs, advanced_ads)
 !#endif
 !#if env_mobile
 tv.nu##header + div[class]:has(a[href*="play.google.com"])
@@ -3268,11 +3272,11 @@ tv.nu##header + div[class]:has(a[href*="play.google.com"])
 ##div#mobileTopAd
 !#endif
 !#if !env_chromium
-branschkoll.se,rocknytt.net,upphandling24.se,kimura.se,datormagazin.se,villalivet.se,classicmotor.se,tidningenhalsa.se,husohem.se,guiden.se,nyadagbladet.se,enkelteknik.se,stoppapressarna.se,vadhanderisverige.se,passioneffect.se##^script[id^="advanced-ads"]
-branschkoll.se,rocknytt.net,upphandling24.se,kimura.se,datormagazin.se,villalivet.se,classicmotor.se,tidningenhalsa.se,husohem.se,guiden.se,nyadagbladet.se,enkelteknik.se,vadhanderisverige.se,passioneffect.se##^script[id^="advanced_ads"]
-branschkoll.se,rocknytt.net,upphandling24.se,kimura.se,datormagazin.se,villalivet.se,classicmotor.se,tidningenhalsa.se,husohem.se,guiden.se,nyadagbladet.se,enkelteknik.se,vadhanderisverige.se,passioneffect.se##^script[id^="advads"]
-branschkoll.se,rocknytt.net,upphandling24.se,kimura.se,datormagazin.se,villalivet.se,polistidningen.se,densistavilan.se,classicmotor.se,tidningenhalsa.se,husohem.se,guiden.se,nyadagbladet.se,enkelteknik.se,vadhanderisverige.se,passioneffect.se##^script:has-text(advanced_ads)
-branschkoll.se,rocknytt.net,upphandling24.se,kimura.se,datormagazin.se,villalivet.se,polistidningen.se,densistavilan.se,classicmotor.se,tidningenhalsa.se,husohem.se,guiden.se,nyadagbladet.se,enkelteknik.se,vadhanderisverige.se,passioneffect.se##^script:has-text(advads)
+branschkoll.se,rocknytt.net,upphandling24.se,datormagazin.se,villalivet.se,classicmotor.se,tidningenhalsa.se,husohem.se,guiden.se,nyadagbladet.se,enkelteknik.se,stoppapressarna.se,vadhanderisverige.se,passioneffect.se##^script[id^="advanced-ads"]
+branschkoll.se,rocknytt.net,upphandling24.se,datormagazin.se,villalivet.se,classicmotor.se,tidningenhalsa.se,husohem.se,guiden.se,nyadagbladet.se,enkelteknik.se,vadhanderisverige.se,passioneffect.se##^script[id^="advanced_ads"]
+branschkoll.se,rocknytt.net,upphandling24.se,datormagazin.se,villalivet.se,classicmotor.se,tidningenhalsa.se,husohem.se,guiden.se,nyadagbladet.se,enkelteknik.se,vadhanderisverige.se,passioneffect.se##^script[id^="advads"]
+branschkoll.se,rocknytt.net,upphandling24.se,datormagazin.se,villalivet.se,polistidningen.se,densistavilan.se,classicmotor.se,tidningenhalsa.se,husohem.se,guiden.se,nyadagbladet.se,enkelteknik.se,vadhanderisverige.se,passioneffect.se##^script:has-text(advanced_ads)
+branschkoll.se,rocknytt.net,upphandling24.se,datormagazin.se,villalivet.se,polistidningen.se,densistavilan.se,classicmotor.se,tidningenhalsa.se,husohem.se,guiden.se,nyadagbladet.se,enkelteknik.se,vadhanderisverige.se,passioneffect.se##^script:has-text(advads)
 stoppapressarna.se##^script[data-src*="advads"]
 temadagar.se,lchfarkivet.se,wernamaten.se,sanghafte.se,xn--gtboken-exa.se##^script:has-text(__ez)
 !#endif
