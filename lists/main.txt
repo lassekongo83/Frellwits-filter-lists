@@ -549,6 +549,7 @@ casino-utan-$image
 ##div.maaw-ad-slots
 ##div.medium-ad
 ##div.NativeAd
+##div.outsider-ads
 ##div.panoramaAd
 ##div.l-footer__adtext
 ##div.landscape-ad-space
@@ -1285,7 +1286,7 @@ aip.nu,funktionshinderpolitik.se,sjostadsbladet.se,fotbollsresultat.com,lanspost
 barnistan.se,welma.se,ingenjorsjobb.se##.cookie-notice
 8sidor.se###cookie-banner
 tillnyktrad.se,webhallen.com##.cookie-consent
-forexgruppen.se,datormagazin.se,skogen.se,studeravidare.se##.cky-consent-container
+forexgruppen.se,datormagazin.se,skogen.se,studeravidare.se,kvalitetsmagasinet.se,miljo-utveckling.se,telekomidag.se,vdtidningen.se##.cky-consent-container
 bioenergitidningen.se###cookieinfo
 lifeofsvea.se,quizza.nu,trendenser.se##.cookie-info
 lira.se###cookies-accept
@@ -1392,7 +1393,6 @@ www.expressen.se##video[autoplay]:remove-attr(autoplay)
 expressen.se##.campaign
 expressen.se##.html-widget > div[style^="text-align: center; font-size: 10px;"]
 ! scriptlets
-www.expressen.se##+js(set, detect, noopFunc)
 www.expressen.se,di.se##+js(aeld, contextmenu, .disabled)
 ! Fixar oklickbara kategorier i sektionen allt om mat p.g.a att exp-analytics är blockerat
 expressen.se##a:remove-attr(data-t-label)
@@ -1408,7 +1408,7 @@ dn.se,di.se##video:remove-attr(data-auto-play)
 ! DI
 di.se##.di_panorama-wrapper, .site-header__panorama, .di_panorama__isAdLabel, .discount-box, .campaign-ad-box, .di_start__teaser-placeholder, .di_teaser-flak-planbokskoll, .di_teaser-flak-container--native, .native-box, .bandit-box__teaser--native, a[href*="/brandstudio"], .service-box, .brand-studio-box, .native-article, .listing-box-native
 di.se##.market-start-top + div:not(.market-container__wrapper)
-di.se##+js(set, getAdblockerStatus, noopFunc)
+di.se##+js(rmnt, script, adblockerStatus)
 borssnack.di.se##.bn_advertisement__panorama, .bn_advertisement__container
 ! Övrigt
 viivilla.se###rich-media-wrapper
@@ -1472,6 +1472,7 @@ aftonbladet.se##p:has-text(/^PRESENTERAS AV$/):upward(1)
 aftonbladet.se##:matches-path(/^/$/) p:has-text(Artikeln innehåller annonslänkar):upward(a)
 aftonbladet.se##main > section > div:first-child:matches-css(box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 24px 0px)
 aftonbladet.se##article[class^="article-wrapper"] ~ div:has-text(ANNONS)
+aftonbladet.se##div[class^="hyperion-css"]:matches-css(margin:/32px/):has(iframe[src*="tize.no"])
 ! scriptlets
 www.aftonbladet.se##+js(nostif, TAKEOVER)
 ! css
@@ -1670,7 +1671,7 @@ bussmagasinet.se###titlebanner
 ||feed.mikle.com^$third-party,domain=ekonominyheter.se
 ekonominyheter.se###lblock-ads
 ekonominyheter.se##.td-fix-index:has(a[href*="casino"])
-veterinarmagazinet.se##.nyhet-ad
+veterinarmagazinet.se##.nyhet-ad, .vm-ad-wrap, .adtop__mobile
 forvaltarforum.se##.ff_sponsored_articles, .widget_sow-image a[target="_blank"], .ff_banners_widget_widget
 forvaltarforum.se##.ticker-title:has-text(/partner/i)
 forvaltarforum.se##.ticker-title:has-text(/partner/i) + .mh-section
@@ -1732,7 +1733,6 @@ borskollen.se##.label:has-text(/annons/i):upward(1)
 borskollen.se##.main > div[class^="jsx-"]:last-of-type:has(img[src*="borskollen_appen"])
 borskollen.se##.wrapper > div[class^="jsx-"] > .outer:has(a[href*="casino"])
 borskollen.se##.adlabel:upward(1)
-||axess.se^*/track-views
 motivation.se##.sponsored-item, [class*="banner"], .outsider
 motivation.se##.card:has(.sponsored)
 /ad_in_article$script,domain=affarsvarlden.se
@@ -2880,6 +2880,7 @@ alghundklubben.com#@#.category-annons:not(body):not(html)
 /smart-app-banner*/banner.js
 lundagard.se,boktugg.se,morotsliv.com,affarsstaden.se,kurera.se,nyfiknainvesterare.se##+js(aeld, wheel)
 home2tiny.se##+js(aeld, /mousewheel|DOMMouseScroll/, smoothScrollEvent)
+veterinarmagazinet.se##.banner-spacer
 !#endif
 ! Chromium
 !#if env_chromium
@@ -3317,7 +3318,7 @@ tidningenskriva.se##section.widget_text:has(div[id^="ad-"])
 ||ads.holid.io^$script,redirect=noop.js,domain=elevspel.se
 ||inmobi.com^$script,redirect=noop.js,domain=elevspel.se
 @@$script,1p,domain=elevspel.se
-elevspel.se###cookie_wrapper, a[href*="medlem"] > div
+elevspel.se###cookie_wrapper, a[href*="medlem"] > div, .ryk-top
 elevspel.se##:is(div.Block, div[style^="display: table"], h1[itemprop="name"] ~ div:not([style="display:none;"]):not([class^="content"][class$="content"])):has(a[href*="medlem"], [onclick*="medlem"], .adsbygoogle)
 vilaser.se##.Internal-ad
 doon.se##.doon-promotion, a.link[target="_blank"]
