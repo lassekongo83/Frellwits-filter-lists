@@ -1,7 +1,7 @@
 ! Title: Frellwit's Swedish Filter
-! Last updated: Fri, 13 Sep 2024 08:36:41 +0000
+! Last updated: Sun, 15 Sep 2024 10:15:03 +0000
 ! Expires: 5 days
-! Diff-Path: patches/2024.9.13.516.patch#swefilter
+! Diff-Path: patches/2024.9.15.615.patch#swefilter
 ! Diff-Expires: 24 hours
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
@@ -105,6 +105,7 @@ aftonbladet.se##aside > div:has(h2:has-text(/^annons/i))
 aftonbladet.se##a:has-text(Kommersiell text, innehåller annonslänkar)
 aftonbladet.se##a[href^="https://kampanj."]:upward(1):not(section):not(div[class^="article-wrapper"])
 aftonbladet.se##div[class^="css-"]:has([data-ad-subtype="mega"])
+aftonbladet.se##div[class^="hyperion-css"]:matches-css(margin:/32px/):has(iframe[src*="tize.no"])
 aftonbladet.se##main > section > div:first-child:matches-css(box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 24px 0px)
 aftonbladet.se##main > section > div[class^="css-"]:first-child:has(img[src*="closeButton"])
 aftonbladet.se##p:has-text(/^PRESENTERAS AV$/):upward(1)
@@ -426,7 +427,7 @@ discoveringtheplanet.com##html:style(user-select:unset!important; -moz-user-sele
 discoveringtheplanet.com##+js(acs, disableEnterKey)
 discoveringtheplanet.com##+js(acs, document.ondragstart)
 discoveringtheplanet.com##.widget-title:has-text(/annons/i) + .textwidget
-di.se##+js(set, getAdblockerStatus, noopFunc)
+di.se##+js(rmnt, script, adblockerStatus)
 di.se##.di_panorama-wrapper, .site-header__panorama, .di_panorama__isAdLabel, .discount-box, .campaign-ad-box, .di_start__teaser-placeholder, .di_teaser-flak-planbokskoll, .di_teaser-flak-container--native, .native-box, .bandit-box__teaser--native, a[href*="/brandstudio"], .service-box, .brand-studio-box, .native-article, .listing-box-native
 di.se##.market-start-top + div:not(.market-container__wrapper)
 djungeltrumman.se##strong:has-text(/samarbete|sponsrat/i):upward(li):remove()
@@ -457,7 +458,7 @@ ekonominyheter.se##.td-fix-index:has(a[href*="casino"])
 ekonominyheter.se,autonytt.se,undervarttak.se,aftonbladet.se,lesscarbs.se,hockeybladet.nu,matinspo.se##a[href*="/track.adtraction."]
 electronic.se##.content aside.column-narrow:last-of-type
 elektronikforumet.com##td > a[target="_blank"] img
-elevspel.se###cookie_wrapper, a[href*="medlem"] > div
+elevspel.se###cookie_wrapper, a[href*="medlem"] > div, .ryk-top
 elevspel.se##:is(div.Block, div[style^="display: table"], h1[itemprop="name"] ~ div:not([style="display:none;"]):not([class^="content"][class$="content"])):has(a[href*="medlem"], [onclick*="medlem"], .adsbygoogle)
 elle.se##section.c-native_banner:upward(2)
 elprisetjustnu.se##.bg-sponsor
@@ -572,7 +573,7 @@ foretagande.se##div[id*="panorama"], .panorama-pos
 foretagsverige.se,forskningsverige.se,motorbibeln.se,hallbarhetsverige.se,tillvaxtsverige.se,grillbibeln.se,kampenmotcancer.se,folkhalsasverige.se##:is(div[class*="vicky-whitebox"], .vicky-category-label, .vicky-video-infobox-label, .vicky-post-headline-container__category__inner):has-text(/spons/i):upward(a, .carousel-caption, .featurette, article)
 forexgruppen.se##div[data-widget_type="image.default"] a:not([href*="forexgruppen.se"], [href^="/"]), .widget_media_image a:not([href*="forexgruppen.se"], [href^="/"])
 forexgruppen.se##+js(noeval-if, adbEnableForPage)
-forexgruppen.se,datormagazin.se,skogen.se,studeravidare.se##.cky-consent-container
+forexgruppen.se,datormagazin.se,skogen.se,studeravidare.se,kvalitetsmagasinet.se,miljo-utveckling.se,telekomidag.se,vdtidningen.se##.cky-consent-container
 forni.se##.recent-articles:has(.collaboration-brand)
 forskning.se##.cli-modal
 forstasidorna.se##body.tingle-enabled:remove-class(tingle-enabled)
@@ -1426,7 +1427,7 @@ vasterastidning.se##:is(h2, h5, .kicker):has-text(ANNONS):upward(article, div.ro
 veckansmiddag.com###load
 veckorevyn.com##.annons-block
 veckorevyn.com##.g1-mosaic-item:has(.category-annonssamarbete)
-veterinarmagazinet.se##.nyhet-ad
+veterinarmagazinet.se##.nyhet-ad, .vm-ad-wrap, .adtop__mobile
 vf.se,hjotidning.se,kt.se,kt-kuriren.se,sla.se,mariestadstidningen.se,filipstadstidning.se,fryksdalsbygden.se,nwt.se,arvikanyheter.se,nkp.se,saffletidningen.se,provinstidningen.se,dalslanningen.se,nlt.se,skaraborgsbygden.se##[data-testid="ad-area"], footer + div.shadow-lg.fixed
 vibilagare.se##a[href^="/partnermaterial/"]
 viivilla.se##gen-article-wrapper:has(.article__header-native-banner)
@@ -1468,7 +1469,6 @@ webhallen.com##.takeover-link
 whowhatwear.co.uk#@#a[href*="/click.linksynergy"] img
 www.aftonbladet.se##+js(nostif, TAKEOVER)
 www.expressen.se##video[autoplay]:remove-attr(autoplay)
-www.expressen.se##+js(set, detect, noopFunc)
 www.expressen.se##.video-player:remove-attr(data-ad-config)
 www.expressen.se,di.se##+js(aeld, contextmenu, .disabled)
 xn--lnforum-exa.se##.LFRBox
@@ -1614,6 +1614,7 @@ zeromagazine.nu##div[id^="ads"]
 ##div.mosaico-ad
 ##div.navbar-ad-section
 ##div.novashare-buttons
+##div.outsider-ads
 ##div.o-indenter--ad
 ##div.panorama-ad
 ##div.panorama-ad-standard
@@ -2606,7 +2607,6 @@ zeromagazine.nu##div[id^="ads"]
 ||auction-release.mlpapi.com/site/LoadPluginSite
 ||aventyret.se^$third-party
 ||aweber.com^$third-party
-||axess.se^*/track-views
 ||azurewebsites.net/partnerArticle
 ||bannerutbyte.se^$third-party
 ||barbours.com.se^
@@ -3289,4 +3289,5 @@ temadagar.se,lchfarkivet.se,wernamaten.se,sanghafte.se,xn--gtboken-exa.se##^scri
 /smart-app-banner*/banner.js
 lundagard.se,boktugg.se,morotsliv.com,affarsstaden.se,kurera.se,nyfiknainvesterare.se##+js(aeld, wheel)
 home2tiny.se##+js(aeld, /mousewheel|DOMMouseScroll/, smoothScrollEvent)
+veterinarmagazinet.se##.banner-spacer
 !#endif
