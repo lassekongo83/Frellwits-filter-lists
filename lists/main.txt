@@ -1408,7 +1408,7 @@ dn.se,di.se##video:remove-attr(data-auto-play)
 ! DI
 di.se##.di_panorama-wrapper, .site-header__panorama, .di_panorama__isAdLabel, .discount-box, .campaign-ad-box, .di_start__teaser-placeholder, .di_teaser-flak-planbokskoll, .di_teaser-flak-container--native, .native-box, .bandit-box__teaser--native, a[href*="/brandstudio"], .service-box, .brand-studio-box, .native-article, .listing-box-native
 di.se##.market-start-top + div:not(.market-container__wrapper)
-di.se##+js(rmnt, script, adblockerStatus)
+di.se##+js(acs, Di, initAds)
 borssnack.di.se##.bn_advertisement__panorama, .bn_advertisement__container
 ! Övrigt
 viivilla.se###rich-media-wrapper
@@ -1744,7 +1744,7 @@ litteraturmagazinet.se###pageContainer > div:first-child:not([id]), #topContaine
 /googleanalytics.js$domain=fria.nu|stockholmsfria.se
 /twitter_count.php$domain=fria.nu|stockholmsfria.se
 /gplus.php$script,domain=fria.nu|stockholmsfria.se
-fria.nu,stockholmsfria.se##[class*="annonser"], #cboxOverlay, #cboxWrapper
+fria.nu,stockholmsfria.se##[class*="annonser"], #cboxOverlay, #cboxWrapper, a[href*="=banner"][target]
 tidningenglobal.se,tidningensyre.se,landetsfria.nu,fempers.se##.revive-box
 /hrnytt/banner$domain=hrnytt.se
 hrnytt.se##article:has(.sponsored-article)
@@ -1859,11 +1859,12 @@ norrahalland.se##.bannercontent
 dagensarena.se##.popup
 finanstid.se##.tdm-descr:has-text(/casino/i)
 lokalti.se##:is(img[src$="a_top.png.webp"], a[href*="casino"]):upward(section.elementor-section)
+lokalti.se##div.has-post-thumbnail.category-extramaterial:has(a[href*="laneformed"], a[href*="casino"])
 nyhetsbyranjarva.se##div[style="display: flex; justify-content: center; flex-direction: column; align-items: center;"]
 inkopsradet.se##div[id^="inkop-"]
 naturvetarna.se##.Advertisement
 journalisten.se##.o-blockCarousel--placementAd, .o-blockArea__item--block-ad, .m-blockAd
-europaportalen.se##.view-multiply-top
+europaportalen.se##.view-multiply-top, .frontpage-multiply-main, .right-column-multiply-container
 kollega.se##.block--gamw
 svenskverkstad.se##app-exposure-small
 svenskverkstad.se##svv-short-news-widget:has(.native-news-link)
