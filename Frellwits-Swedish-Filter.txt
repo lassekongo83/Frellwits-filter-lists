@@ -1,6 +1,6 @@
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days
-! Last modified: 2024-09-16 07:29:30 CEST
+! Last modified: 2024-09-17 07:21:21 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPL3 - https://github.com/lassekongo83/Frellwits-filter-lists/blob/master/LICENSE
@@ -633,8 +633,9 @@ futsalmagasinet.se##html.modal-cacsp-open:style(position:unset!important)
 futsalmagasinet.se##span:has-text(/annonserat innehåll/i):upward(.td_block_wrap)
 futsalmagasinet.se##.wp-block-column > h2:has-text(/annonser/i) ~ p
 futsalmagasinet.se,newsvoice.se,obsid.se##aside.widget:has(a[href*="casino"])
-fz.se##.article-facebook
+fz.se##.article-facebook, .col-outer-side
 fz.se##.card:has(.article-sponsored, a[href*="/sponsrat"])
+fz.se##.col-content+.col-side,.col-content-extra-wide:style(margin-right: unset !important;)
 fz.se##.fp-carousel .fpci-kicker:has-text(/^sponsr/i):upward(.fpc-item)
 fz.se,fssweden.se##+js(set, adblock, false)
 gaffa.se##a[href*="/annonser/"], a[href*="/sponsrat-"], div[id^="cncpt-"]
@@ -984,7 +985,8 @@ mmanytt.se##.img-featured-posts-image:has(a[href$="/annons/"])
 mmanytt.se##.tablepress:has(a[href*="expekt"])
 mobilanyheter.net##a[href*="rocketpot.io"], a[href*="casino"], a[href*="betting"], .a-wrap
 mobilanyheter.net##+js(set, ai_run_scripts, noopFunc)
-mobil.se,kamerabild.se##a[href^="/partner"]
+mobil.se,kamerabild.se##article:has(a[href*="/partner"])
+mobil.se,kamerabild.se##a[href*="/partner"]
 mobil.se,kamerabild.se##.markupbox:has(a[href*="casino"])
 modernalivet.se##body.modal-active:style(overflow:unset!important)
 modernalivet.se##h3:has-text(/annons/i):upward(.sidebar-widget)
