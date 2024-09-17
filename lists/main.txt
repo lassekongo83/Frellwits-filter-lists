@@ -1920,15 +1920,17 @@ swedroid.se##.puff:has(script[src*="lwadm.com"])
 swedroid.se##.mostReadMobile:has-text(/annons/i)
 swedroid.se##+js(set, checkAdsBlocked, noopFunc)
 /prisjakt$xmlhttprequest,domain=fz.se
-fz.se##.article-facebook
+fz.se##.article-facebook, .col-outer-side
 fz.se##.fp-carousel .fpci-kicker:has-text(/^sponsr/i):upward(.fpc-item)
 fz.se##.card:has(.article-sponsored, a[href*="/sponsrat"])
+fz.se##.col-content+.col-side,.col-content-extra-wide:style(margin-right: unset !important;)
 fz.se,fssweden.se##+js(set, adblock, false)
 sweclockers.com###prisjakt-popular, .ad:not(.adPanorama), .adForumSticker, .dark-mode__sponsor
 sweclockers.com##div[class^="card-info"]:has-text(/spons/i):upward(.card)
 sweclockers.com##.bbSize:has-text(Sponsormeddelande):upward(.bbRelatedBox)
 sweclockers.com##.ad.adPanorama:style(height:100px!important; position:absolute!important;)
-mobil.se,kamerabild.se##a[href^="/partner"]
+mobil.se,kamerabild.se##a[href*="/partner"]
+mobil.se,kamerabild.se##article:has(a[href*="/partner"])
 mobil.se,kamerabild.se##.markupbox:has(a[href*="casino"])
 nordichardware.se##.pspy_info, [class^="prisjakt-"]
 nordichardware.se##span:has-text(/sponsrat/i):upward(.td_block_wrap)
