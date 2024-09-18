@@ -1,7 +1,7 @@
 ! Title: Frellwit's Swedish Filter
-! Last updated: Tue, 17 Sep 2024 05:21:41 +0000
+! Last updated: Wed, 18 Sep 2024 05:33:15 +0000
 ! Expires: 5 days
-! Diff-Path: patches/2024.9.17.321.patch#swefilter
+! Diff-Path: patches/2024.9.18.333.patch#swefilter
 ! Diff-Expires: 24 hours
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
@@ -492,6 +492,7 @@ evertiq.se##+js(acs, $, banner_loader)
 evertiq.se##.cc-container, [data-gabnr], #carpet
 evertiq.se,fz.se##.bnr
 everysport.com##div[id^="everysport_sky"], img[alt="X3000"], img[alt="Casinofeber"]
+everysport.com##footer > div:has(a[href*="casino"])
 everysport.com##:is(div[id^="everysport_pano"], div[id^="everysport_mobil"], div[id^="everysport_rektangel"]):upward(1)
 exakt24.se##section[data-ha-element-link*="kampanj"], .elementor-element-686a3aa6, .elementor-popup-modal
 existenz.se##.link:has(a[href*="bannerid="])
@@ -600,7 +601,7 @@ fotbolltransfers.com##img[src*="/images/annonser/"]:upward(1)
 fotbolltransfers.com##.border-b:has(#vi-ad, div[data-adk-container], div[id^="fotbolltransfers_mpu"])
 fotbolltransfers.com##.smallNewsCategory:has-text(/sponsr/i):upward(.smallNewsLink)
 fotboll-tv.se##.SMBoxContentBanner, a[data-gaevent*="action=bookmaker_odds"], #ouibounce-modal, .SMGameAtomSingleGameOddsComponent
-fotboll.com##.header-static-lg, .fp-partner, .xs-ad, .bo-wrapper, #betsid, .news-banner-mini, .xs-cblock, .cookie_consent_bar, #odds, a.bellows-target[href*="/svenskaspel"], a.bellows-target[href*="/betting"], a[href*="/go/"][onclick]
+fotboll.com##.header-static-lg, .fp-partner, .xs-ad, .bo-wrapper, #betsid, .news-banner-mini, .xs-cblock, .cookie_consent_bar, #odds, a.bellows-target[href*="/svenskaspel"], a.bellows-target[href*="/betting"], a[href*="/go/"][onclick], #lg-box-scyscraper
 fotboll.com##:is(div.text-center, div.d-none):has(a[href*="/go/"][onclick], .fotboll_content_wrapper[data-id])
 fotboll.com,allsvenskan.se,superettan.se,swebbtv.se,hastnet.se##.smartbanner
 fotosidan.se##+js(aeld, contextmenu, , showCopyrightBox)
@@ -622,8 +623,7 @@ frilagt.se##.elementor-location-header section.elementor-element:first-child
 friluftsframjandet.se##[id^="ad-"]
 funktionshinderpolitik.se##.topp-banner, .annons-mark
 funnygames.se,nyckelspel.se##.slot-container
-fuska.nu##span:has-text(/casino/i):upward(li)
-fuska.nu##.list:has(a[href*="casino"])
+fuska.nu##.elementor-widget-text-editor:has(a[href*="casino"])
 fuska.se##.alert-success
 futsalmagasinet.se##div.modal-cacsp-backdrop, div.modal-cacsp-position
 futsalmagasinet.se##html.modal-cacsp-open:style(position:unset!important)
@@ -1231,7 +1231,7 @@ sportbloggare.com##.section-body-plus .body-block:has(a[href*="betting"])
 sporthalsa.se##a[href*="/annonsering"]
 sporthalsa.se##h4:has-text(veckans produkt):upward(3)
 sporthalsa.se##.header_top, #media_image-2, #text-6, article[class*="veckans-produkt"]
-sportlovin.se##.visible-xs, .visible-lg
+sportlovin.se##div[style*="min-height"]:has(div[id^="sportlovin_"])
 sportpanelen.se##.textwidget:has(a[href*="casino"])
 sportsnews.se,xn--sporthnt-5za.se##a[href*="casino"]
 sportsnews.se,xn--sporthnt-5za.se###secondary:has(a[href*="casino"])
@@ -1315,9 +1315,6 @@ tasteline.com##.popup-overlay
 tasteline.com##.popup:style(overflow: auto !important;)
 taxiidag.se##body.compensate-for-scrollbar:style(overflow:unset!important;)
 taxiidag.se##.fancybox-container, #newsletterSubLink
-techmag.se##div[style="clear:both;float:left;width:100%;margin:0 0 20px 0;"]:has(.contentadx)
-techmag.se##.popup-overlay, div[id^="techmag_com"], .contentadx
-techmag.se##.widget_codewidget:has(div[id^="techmag_com"])
 teknifik.se##.post:has(.sponsor)
 teknikguiden.se##:is(.vce-sticky, .vce-content-bottom):has(a[target])
 tekniknytt.se##.label:has-text(/samarbete|annons|reklam|presenteras av/i):upward(a)
@@ -1401,6 +1398,7 @@ ungdomsfotboll.se##div[id^="ungdo-"]
 universitetslararen.se##div[id^="unive-"]
 upphandling24.se##aside .textwidget:has-text(ANNONS)
 upphandling24.se##.type-partnerartikel
+upplysning.se##.buy-items, div[style*="min-height"]:has(#topbanner, script[data-pbid], [id^="nativendo"], div[id^="upplysning_outstream"])
 uppsalanyheter.se###banner-top-block
 uppsatser.se##.results li[style^="margin"]:not(.result), .spahotels
 upptack-sverige.se##.front-cta:has-text(/sponsrat innehåll/i)
@@ -2654,7 +2652,7 @@ zeromagazine.nu##div[id^="ads"]
 ||casinoutankonto.net^$third-party
 ||casono.se^$third-party
 ||ccpa.sp-prod.net^$domain=m3.se|pcforalla.se|macworld.se|computersweden.se
-||cdn-cookieyes.com^$domain=lokalti.se|jarnvagar.nu|senses.se|norrmejerier.se|temadagar.se|smartsenior.se|tekniknytt.se|nordigt.se|autonytt.se|vm-fotboll.se|kak.se|smhi.se|borattforum.se|mis.se|universitetslararen.se|em-fotboll.se|lakemedelsvarlden.se|samfalligheterna.se|husbilsplats.se|katerinamagasin.se|dagenslogistik.se|biostock.se|skellefteaworks.se|datormagazin.se|travnet.se|malarbok.nu|barn-filmer.se|matmenyer.se|sunnenytt.se|kristendate.se|hockeynews.se
+||cdn-cookieyes.com^$domain=lokalti.se|jarnvagar.nu|senses.se|norrmejerier.se|temadagar.se|smartsenior.se|tekniknytt.se|nordigt.se|autonytt.se|vm-fotboll.se|kak.se|smhi.se|borattforum.se|mis.se|universitetslararen.se|em-fotboll.se|lakemedelsvarlden.se|samfalligheterna.se|husbilsplats.se|katerinamagasin.se|dagenslogistik.se|biostock.se|skellefteaworks.se|datormagazin.se|travnet.se|malarbok.nu|barn-filmer.se|matmenyer.se|sunnenytt.se|kristendate.se|hockeynews.se|swe3.se
 ||cdn-sitegainer.com/sitegainer
 ||cdn.adt*/atag.js?$third-party
 ||cdn.adt*/jsTag?$third-party
