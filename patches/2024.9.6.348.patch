@@ -1,10 +1,10 @@
-diff name:swefilter lines:176 checksum:b26932283d
+diff name:swefilter lines:191 checksum:80bcb61114
 d2 1
 a2 1
-! Last updated: Fri, 20 Sep 2024 05:56:30 +0000
+! Last updated: Sat, 21 Sep 2024 05:58:39 +0000
 d4 1
 a4 1
-! Diff-Path: patches/2024.9.20.356.patch#swefilter
+! Diff-Path: patches/2024.9.21.358.patch#swefilter
 a107 1
 aftonbladet.se##div[class^="hyperion-css"]:matches-css(margin:/32px/):has(iframe[src*="tize.no"])
 d115 1
@@ -57,6 +57,11 @@ a798 1
 kimura.se##.post:not([data-elementor-type="single-post"]):has(div[class$="annonser"])
 a846 1
 lantbruksnytt.se##article:has(.ads_text)
+d876 1
+a876 1
+livetsgoda.se,betongforeningen.se,espressomedia.se,realtid.se,ordfrontmagasin.se,europaportalen.se,motorsportbladet.se,battregolf.se,nitroz.se,magasinethockey.se,twostrokerider.se,bjjtv.se,eqotime.com,newsvoice.se,tranakampsport.se,thepattayanews.se,forsvarssektorn.se##a[target$="blank"] img:not([class^="tweet"])
+a879 1
+livsstil.se##article + div[class^="hyperion"]:has(iframe[src*="tize.no"])
 a898 1
 lokalti.se##div.has-post-thumbnail.category-extramaterial:has(a[href*="laneformed"], a[href*="casino"])
 d978 1
@@ -65,7 +70,9 @@ mobil.se,kamerabild.se##article:has(a[href*="/partner"])
 mobil.se,kamerabild.se##a[href*="/partner"]
 a1108 1
 raggningsboken.se,minip.nu,snapsvisor.eu##div[style^="min-height"]:has(.adsbygoogle)
-a1202 2
+d1202 1
+a1202 3
+spanaren.se,horisontmagasin.se,shoegazing.se,ekonomifokus.se##.textwidget a[target*="blank"] img
 spanienforum.se##a:not([href^="/"], [href*="spanienforum.se"]) img[src*="/media/"]
 spanienforum.se##.secondaryContent:has(a:not([href^="/"], [href*="spanienforum.se"]))
 d1225 1
@@ -110,6 +117,8 @@ a1778 1
 d1814 1
 a1814 1
 /analytics$domain=gbgfotboll.se|stff.se|svenskfotboll.se|di.se|etc.se|vackertvader.se|skogsforum.se|skolporten.se|sjf.se
+a1866 1
+/beat-be$domain=blocket.se
 a1915 1
 /cookies-and-content$script,domain=freedomtravel.se
 d1918 1
@@ -124,6 +133,8 @@ a2146 2
 /plugins/cookie-notice$script,domain=bildobubbla.se|zeromagazine.nu|sverigespringer.se|gasetten.se|sillyseason.se|gentlemannaguiden.com|matmalin.se|svensktidskrift.se|schack.se|densistavilan.se|horisontmagasin.se|kobe.se|tidningenproffs.se|jaktojagare.se|tobaksfakta.se|bebisvarlden.se|underbaraclaras.se|cykelframjandet.se|dalabygden.se|lansposten.se|sormlandsbygden.se|vaguiden.se|grandtech.se|bluff.se|bjjtv.se|svmf.se|rockbladet.se|globalbar.se
 a2169 1
 /plugins/ft-takeover-ads
+a2250 1
+/plugins/webtoffee-cookie-consent$script,domain=ekonomifokus.se
 d2290 1
 a2290 1
 /pum/*$domain=flm.nu|dagenslogistik.se|battrestadsdel.se|skaneplus.se|globalbar.se
@@ -132,6 +143,7 @@ a2385 1
 d2397 1
 a2397 1
 /upload/puff/*$domain=bergsmannen.se|tidningenbyggmaterial.se|tidningendacksnack.se|taxiidag.se
+d2455 1
 a2455 1
 /www.swedbank-*/telegram$all
 d2594 1
@@ -144,6 +156,8 @@ a2655 1
 d2674 1
 a2674 1
 ||cookiebot.com^$domain=ng.se|swedroid.se|bax-shop.se|kurera.se|upplysning.se|mitti.se|circlek.se|findroommate.se|sakochliv.se|polistidningen.se|fokus.se|spraktidningen.se|varden.se|trafiken.nu|energi.se|sverigesnatur.org|kreditrapporten.se|sis.se|accentmagasin.se|allsvenskan.se|superettan.se|alltomarbetsmiljo.se|tco.se|totallyorebro.se|totallystockholm.se|enirobuddy.se|framtid.se|byggfaktadocu.se|husdjur.se|chalmers.se|elinstallatoren.se|ff.se|modernpsykologi.se|qx.se|vatternrundan.se|vvsforum.se|naturvetarna.se|skolporten.se|dust2.se|ehandel.se|byggvarlden.se|varldenidag.se|influens.se|omtanke.today|konsumentmagasinet.se|svenskelitfotboll.se|journalisten.se|fastighetsvarlden.se|jaktjournalen.se|friidrott.se|vildmarken.se|kyrkanstidning.se|tmf.se|sokbat.se|bilkompaniet.se|driva-eget.se|hv.se|folkhalsomyndigheten.se|dinpsykiskahalsa.se|ekonomifakta.se|hyresbostader.se|rsyd.se|byggforetagen.se|vasterastidning.se|storyhouseegmont.se|mytaste.se|smartbizz.se|tandlakartidningen.se|fastighetssverige.se|turisterna.se
+a2717 1
+||directory.cookieyes.com/api/v1/ip
 d2788 1
 a2788 1
 ||gatekeeperconsent.com^$domain=hemmanytt.se|svenskaorduttryck.se|wernamaten.se|sanghafte.se|xn--gtboken-exa.se
@@ -152,11 +166,12 @@ a2831 1
 ||inmobi.com^$domain=alltomelbil.se|rikatillsammans.se|egoinas.se|moviezine.se|travelnews.se|varldenshaftigaste.se|merinfo.se|foreca.se|matklubben.se|reseguiden.se|newsner.com|humorbibeln.se|sportbibeln.se|ettgottskratt.se|djurbibeln.se|laget.se|byrum.se|sportlovin.se|receptfavoriter.se|forni.se|kimura.se|cornucopia.se|norrahalland.se|finanstid.se|tittapavideon.se|motormagasinet.se|food-supply.se|dagenshandel.se|plastnet.se|habit.se|woodnet.se|foodnet.se|transportnet.se|processnet.se|packnet.se|verkstaderna.se|medtechmagazine.se|recyclingnet.se|rt-forum.se|uochd.se|lifesciencesweden.se|fri-kopenskap.se|cleannet.se|metal-supply.se|framtidensbygg.se|entreprenad.com|mykitchenstories.se|cancelculture.se|findit.se|lchfarkivet.se|brinkenbakar.se|foretagande.se|fotbolltransfers.com|affarsvarlden.se|villalivet.se|branschaktuellt.se|nordic.ign.com|fragbite.se|lindasbakskola.se|jennysmatblogg.nu|filippoon.se|niiinis.se|lesscarbs.se|eniro.se|matspar.se|xnytt.se|alltomkungligt.se|swehockey.se|vackertvader.se|newly.se|nyheter2.se|klendr.se|elsasentourage.se|zeinaskitchen.se|svenskalag.se|tvsporten.nu
 d3028 1
 d3075 1
-a3081 1
-||sdkconfig.pulse.schibsted.io^$domain=aftonbladet.se|omni.se|omniekonomi.se|svd.se|prisjakt.nu|bytbil.com|livsstil.se|godare.se
+a3081 2
+||sdkconfig.pulse.m10s.io^$domain=blocket.se
+||sdkconfig.pulse.schibsted.io^$domain=aftonbladet.se|omni.se|omniekonomi.se|svd.se|prisjakt.nu|bytbil.com|livsstil.se|godare.se|klart.se|skonhetsredaktorerna.se
 d3083 1
 a3083 1
-||sdk.pulse.schibsted.com^$script,domain=aftonbladet.se|omni.se|omniekonomi.se|svd.se|prisjakt.nu|bytbil.com|livsstil.se|godare.se
+||sdk.pulse.schibsted.com^$script,domain=aftonbladet.se|omni.se|omniekonomi.se|svd.se|prisjakt.nu|bytbil.com|livsstil.se|godare.se|skonhetsredaktorerna.se
 a3092 1
 ||shopi.tize.no/afton$3p
 d3238 2
