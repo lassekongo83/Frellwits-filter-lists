@@ -1,6 +1,6 @@
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days
-! Last modified: 2024-09-20 07:56:15 CEST
+! Last modified: 2024-09-21 07:58:19 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPL3 - https://github.com/lassekongo83/Frellwits-filter-lists/blob/master/LICENSE
@@ -883,10 +883,11 @@ livesport.expressen.se##[class^="BauProvider"]
 livetochdiabetes.se###text-3
 livetsgoda.se##body:style(opacity:unset!important)
 livetsgoda.se##.penci-rlt-popup
-livetsgoda.se,betongforeningen.se,espressomedia.se,realtid.se,ordfrontmagasin.se,europaportalen.se,motorsportbladet.se,battregolf.se,nitroz.se,magasinethockey.se,twostrokerider.se,bjjtv.se,eqotime.com,newsvoice.se,tranakampsport.se,thepattayanews.se##a[target$="blank"] img:not([class^="tweet"])
+livetsgoda.se,betongforeningen.se,espressomedia.se,realtid.se,ordfrontmagasin.se,europaportalen.se,motorsportbladet.se,battregolf.se,nitroz.se,magasinethockey.se,twostrokerider.se,bjjtv.se,eqotime.com,newsvoice.se,tranakampsport.se,thepattayanews.se,forsvarssektorn.se##a[target$="blank"] img:not([class^="tweet"])
 livinguppsala.se##.fusion-post-content-container:has-text(/^annons/i):upward(article)
 livsmedelsverket.se###CookieConsent
 livsmedelsverket.se##.lock-scroll:style(overflow:unset!important)
+livsstil.se##article + div[class^="hyperion"]:has(iframe[src*="tize.no"])
 livsstil.se##article:has(.ad)
 livsstil.se##a[href*="campaign"][data-test-tag="external-link"], div[data-ad-subtype]
 livsstil.se##div[data-variants*="article-panorama"]:upward(1)
@@ -1212,7 +1213,7 @@ so-rummet.se##h3:has-text(/annonser/i):upward(.view-nya-lankar-front)
 so-rummet.se##.article-list:has(.sponsrad-over)
 so-rummet.se##.block-rr
 so-rummet.se##.link-list-item:has(img[src*="sponsrad"])
-spanaren.se,horisontmagasin.se,shoegazing.se##.textwidget a[target*="blank"] img
+spanaren.se,horisontmagasin.se,shoegazing.se,ekonomifokus.se##.textwidget a[target*="blank"] img
 spanienforum.se##a:not([href^="/"], [href*="spanienforum.se"]) img[src*="/media/"]
 spanienforum.se##.secondaryContent:has(a:not([href^="/"], [href*="spanienforum.se"]))
 spelagratis.se##.sidebar-right, .ad_header + p
@@ -1885,6 +1886,7 @@ zeromagazine.nu##div[id^="ads"]
 /banner$domain=thepattayanews.se
 /banner/ads/*
 /banner?cg$xhr,domain=blocket.se
+/beat-be$domain=blocket.se
 /betald-exponering$image
 /bigdatapushworker.js$domain=eurocampings.se
 /bilder-for-annonser$image
@@ -2271,6 +2273,7 @@ zeromagazine.nu##div[id^="ads"]
 /plugins/ungrabber
 /plugins/vizzit-analytics
 /plugins/wccp-pro$domain=dinbyggare.se
+/plugins/webtoffee-cookie-consent$script,domain=ekonomifokus.se
 /plugins/webtoffee-gdpr-cookie-consent$script,domain=forskning.se|hejaolika.se|kvartal.se|karriarlakare.se|svenskfilmdatabas.se|bredband.se|bonnieraudio.se
 /plugins/wf-cookie-consent$script,domain=spelochfilm.se
 /plugins/woocommerce-google-adwords
@@ -2476,7 +2479,6 @@ zeromagazine.nu##div[id^="ads"]
 /wp-native-ads.json
 /ws-tracking$domain=voister.se
 /ws-tracking.js$domain=tidningenbalans.se
-/www.livsstil.se\/cnp-assets\/[0-9]+./$script,domain=livsstil.se
 /www.swedbank-*/telegram$all
 /www/images/*$domain=elektronikforumet.com
 /xhr-ads.min.js
@@ -2739,6 +2741,7 @@ zeromagazine.nu##div[id^="ads"]
 ||digitaliseringsinitiativet.se^
 ||digitaloceanspaces.com/ethical.min.js
 ||dinbilgaranti.se^
+||directory.cookieyes.com/api/v1/ip
 ||distansarbete.com^
 ||diu127fbe6pn6.cloudfront.net^*/ga-universal.html
 ||doktor-se.onelink.me^$image
@@ -3101,9 +3104,10 @@ zeromagazine.nu##div[id^="ads"]
 ||scandicpartners.se^$third-party
 ||schibsted.com/pulse$domain=aftonbladet.se
 ||script.e-space.se^$third-party
-||sdkconfig.pulse.schibsted.io^$domain=aftonbladet.se|omni.se|omniekonomi.se|svd.se|prisjakt.nu|bytbil.com|livsstil.se|godare.se
+||sdkconfig.pulse.m10s.io^$domain=blocket.se
+||sdkconfig.pulse.schibsted.io^$domain=aftonbladet.se|omni.se|omniekonomi.se|svd.se|prisjakt.nu|bytbil.com|livsstil.se|godare.se|klart.se|skonhetsredaktorerna.se
 ||sdk.mrf.io/statics/marfeel-sdk
-||sdk.pulse.schibsted.com^$script,domain=aftonbladet.se|omni.se|omniekonomi.se|svd.se|prisjakt.nu|bytbil.com|livsstil.se|godare.se
+||sdk.pulse.schibsted.com^$script,domain=aftonbladet.se|omni.se|omniekonomi.se|svd.se|prisjakt.nu|bytbil.com|livsstil.se|godare.se|skonhetsredaktorerna.se
 ||seenthis.se^$third-party
 ||sellingsimplified.net^$third-party
 ||seonify.com^$third-party
