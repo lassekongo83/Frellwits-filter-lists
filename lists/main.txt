@@ -240,6 +240,7 @@
 /xhr-ads.min.js
 artbannersplus&task=show
 casino-utan-$image
+Video-Ad-$media,3p
 ||ad.iplayer.org^$third-party
 ||adeprimo.se^$third-party
 ||adfenix.com^$third-party
@@ -379,7 +380,7 @@ casino-utan-$image
 ||platssajten.se^$third-party
 ||portalhc.com^$third-party
 ||pricerunner.com/publisher-widgets$third-party
-||prisjakt.nu^$third-party
+||prisjakt.nu^$third-party,domain=~prisjakt.no|~pricespy.co.uk|~ledenicheur.fr|~prisjagt.dk|~pricespy.co.nz|~hintaopas.fi
 ||prisjakt-a.$third-party,domain=~prisjakt.nu|~prisjakt.no|~pricespy.co.uk|~ledenicheur.fr|~prisjagt.dk|~pricespy.co.nz|~hintaopas.fi
 ||proff.se^$third-party
 ||proxyas.com^$third-party
@@ -1114,9 +1115,9 @@ casino-utan-$image
 ||toppmarkensverige.com^
 ||fraagesport.com^
 ! Warn users about suspicious websites starting with .com.se
-com.se,~www.com.se,~pagalnew.com.se##html::before:style(content: "OBS! VARNING! Om denna sida är en butik så är det förmodligen en bluffbutik. Detta är ett meddelande från det svenska filtret i din annonsblockerare." !important; font-size: 18px !important; font-family: sans !important; background-color: red !important; color: white !important; padding: 6px !important; width: 100% !important; display: block !important; text-align: center !important;)
+com.se,~www.com.se,~pagalnew.com.se##html::before:style(content: "OBS! VARNING! Om denna sida är en butik så är det förmodligen en bluffbutik. Detta är ett meddelande från den svenska listan i din annonsblockerare." !important; font-size: 18px !important; font-family: sans !important; background-color: red !important; color: white !important; padding: 6px !important; width: 100% !important; display: block !important; text-align: center !important;)
 ! hide fake shops on google.se ending with .com.se
-google.se##div.g:has(a[href*=".com.se/"]):has-text(/återförsäljare|rea|garanti|lågt pris|nöjd|priser|shop|bra pris|kläder|skor|outlet|frakt|butik|betala/i)
+google.se##div.g:has(a[href*=".com.se/"]):has-text(/återförsäljare|rea|garanti|lågt pris|nöjd|priser|shop|bra pris|kläder|skor|outlet|frakt|butik|betala|kundkorg|varukorg/i)
 ! https://www.fotosidan.se/forum/showthread.php?threadid=172681
 ||s.arclk.net/tr?$all
 ! https://www.svt.se/nyheter/konsument/biljettsajt-saljer-dyra-och-falska-biljetter
@@ -1141,7 +1142,7 @@ google.se##div.g:has(a[href*=".com.se/"]):has-text(/återförsäljare|rea|garant
 
 ! -- Specific ads
 /wp-content\/uploads\/[0-9]+/$script,domain=skanesport.se|dackavisen.se|automation.se|tidningenproffs.se|densistavilan.se|universitetslararen.se|alekuriren.se
-/wp-content/uploads/*banner$image,domain=marsta.nu|alltomhif.se|branschkoll.se|brollopsmagasinet.se|bussmagasinet.se|danstidningen.se|guldkanalen.se|katerinamagasin.se|ljuskultur.se|sportpanelen.se|turismnytt.se|opulens.se|borattforum.se|dental24.se|tekniknytt.se|pakryss.se|investerarbrevet.se|svensktidskrift.se|electronic.se|restaurangvarlden.se|finanstid.se|naringslivetvgl.se|dalarnasaffarer.se|stockholmsaffarer.se|jamtlandsaffarer.se|hallandsnaringsliv.se|sjuharadsnaringsliv.se|battregolf.se|svenskhistoria.se|arjeplognytt.se|bioenergitidningen.se|fisheco.se|autonytt.se|zeromagazine.nu|improveme.se|dagensinfrastruktur.se|nordiskaprojekt.se|svenskbyggtidning.se|grontsamhallsbyggande.se|alekuriren.se|realtid.se|golfguidenonline.se
+/wp-content/uploads/*banner$image,domain=marsta.nu|alltomhif.se|branschkoll.se|brollopsmagasinet.se|bussmagasinet.se|danstidningen.se|guldkanalen.se|ljuskultur.se|sportpanelen.se|turismnytt.se|opulens.se|tekniknytt.se|pakryss.se|investerarbrevet.se|svensktidskrift.se|electronic.se|restaurangvarlden.se|finanstid.se|naringslivetvgl.se|dalarnasaffarer.se|stockholmsaffarer.se|jamtlandsaffarer.se|hallandsnaringsliv.se|sjuharadsnaringsliv.se|battregolf.se|svenskhistoria.se|arjeplognytt.se|bioenergitidningen.se|fisheco.se|autonytt.se|zeromagazine.nu|improveme.se|dagensinfrastruktur.se|nordiskaprojekt.se|svenskbyggtidning.se|grontsamhallsbyggande.se|alekuriren.se|realtid.se|golfguidenonline.se
 /wp-content/uploads/*betting$image,domain=nyadagbladet.se|kulturbloggen.com|hockeybladet.nu|newsvoice.se|spelochfilm.se|bandyfeber.com|battrestadsdel.se
 /wp-content/uploads/*casino$image,domain=nyadagbladet.se|kulturbloggen.com|newsvoice.se|svenskhistoria.se|battrestadsdel.se|zeromagazine.nu|totallyorebro.se|totallystockholm.se|djungeltrumman.se|vaken.se|tekniknytt.se|kingsizemag.se|spelochfilm.se|macken.xyz|improveme.se|bandyfeber.com|stoppapressarna.se|dagensinfrastruktur.se|nyaprojekt.se|nordiskaprojekt.se|svenskbyggtidning.se|grontsamhallsbyggande.se|sjostadsbladet.se|autonytt.se|hockeybladet.nu|tv-kanal.se
 /wp-content/uploads/*kasino$image,domain=improveme.se|sjostadsbladet.se
@@ -2784,6 +2785,7 @@ aletorget.se,alingsastorget.se,almhulttorget.se,alvestatorget.se,amaltorget.se,a
 /plugins/statebuilt-facebook-page-like-popup
 /plugins/sticky-facebook-banner$script
 /plugins/super-socializer$script,domain=sportbilen.se
+/plugins/themify-popup$script,domain=opulens.se
 /plugins/trackable-social-share-icons
 /plugins/ultimate-social-deux$script,domain=totallyorebro.se|totallystockholm.se
 /plugins/ultimate-social-media-$image,script
@@ -3231,6 +3233,7 @@ cykelframjandet.se##:is(article.tg-item, .lcp_catlist li):has(a[href*="/annons"]
 ||boktugg.se/wp-content/cache/min/1/pa-
 boktugg.se##[id^="boktu-"]
 boktugg.se##.elementor-section:has(.sponsor, .elementor-post.category-sponsrat)
+/cdn-cookieyes.com$domain=borattforum.se
 borattforum.se##.meta-info-container:has(a[title*="Sponsrad artikel"])
 boneo.se##.article-top-advt
 boneo.se##.slick-slide:has-text(/sponsra/i)
