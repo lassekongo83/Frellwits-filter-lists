@@ -7,7 +7,7 @@ Filter lists for <a href="https://github.com/gorhill/uBlock">uBlock Origin</a> a
 
 These lists may work fine with Chromium/Blink (Chrome, Chromium, Edge, Opera, Vivaldi, Brave), but I can't guarantee that they will work as intended. It's possible that any list updates will be extremely delayed if you use these lists in a manifest v3 extension.
 
-I strongly discourage people from using Chrome, Opera, Edge, Yandex. It's your choice, but the mentioned browsers are not good if you value your privacy. Using any Chromium/Blink browser is not good if you value an open web.
+I strongly discourage people from using Chrome, Opera, Edge, Yandex. It's your choice, but the mentioned browsers are not good if you value your privacy. <strong>Using any Chromium/Blink browser is not good if you value an open web</strong> where you are free to block ads and change webpages to your preferences, whether it is to remove annoyances or for accessibility reasons.
 
 ## Available lists
 
