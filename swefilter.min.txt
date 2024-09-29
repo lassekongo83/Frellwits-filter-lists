@@ -1,7 +1,7 @@
 ! Title: Frellwit's Swedish Filter
-! Last updated: Sat, 28 Sep 2024 05:46:28 +0000
+! Last updated: Sun, 29 Sep 2024 11:12:01 +0000
 ! Expires: 5 days
-! Diff-Path: patches/2024.9.28.346.patch#swefilter
+! Diff-Path: patches/2024.9.29.672.patch#swefilter
 ! Diff-Expires: 24 hours
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
@@ -329,6 +329,7 @@ bytbil.com##.listpage-banner, .available-services
 bytbil.com##.newcars-widget:has(a[href*="bit.ly"], a[href*="content-ad"])
 cafekartan.se,restaurangkartan.se,hotellkartan.se,pizzakartan.se,sushikartan.se,badkartan.se,campingkartan.se,vandrarhemskartan.se,slottskartan.se,kyrkokartan.se,vintagekartan.se,wifikartan.se##[id^="google_ad"]
 cafe.se##article:has(a[href*="/partner/"])
+cafe.se###newsletterPopup
 campingsverige.se##.banner_window, .banner_label, .card_veckans_pryl, .bg_camping_se
 campingsverige.se##.post_sponsrad_label:upward(1)
 camping.se##.ads-above-header, .ads-teaser, .paragraph--type--ad-script, div[about*="/annons/"], a[href*="/sv/annons"]
@@ -402,8 +403,7 @@ designbase.se##html,body:style(overflow:unset!important;)
 designbase.se##.banner-hidden, .z-newsletter-modal, .z-newsletter-popup
 desktop-banner$image,domain=bokadirekt.se
 destination.se,sistaminuten.se##+js(set-cookie, CM_cookieConsent, 0)
-devote.se##article.tile:has-text(/annons|spel|casino|kasino|extrapengar|investera|boka|strategier/i)
-devote.se##div[class^="ad_"]
+devote.se##div[class^="ad_"], a[href*="annons"], a[href*="spel"], a[href*="casino"], a[href*="kasino"], a[href*="extrapengar"], a[href*="investera"], a[href*="boka"], a[href*="strategier"], a[href*="buda-"]
 devote.se##div[data-losjs^="borka"]:upward(1)
 devote.se,familjeliv.se##div[style*="height: 244px;"]
 digitalavykort.se##.rightdiv p:has-text(/casino|kasino|lån|betting|odds|lotto/i)
@@ -2319,7 +2319,7 @@ zeromagazine.nu##div[id^="ads"]
 /qc_cmp$domain=reseguiden.se
 /questback.popup$script
 /rantekartan$subdocument,domain=expressen.se
-/raven$script,domain=mitti.se|travnet.se|nyheter24.se|tyda.se|egoinas.se|hemtrevligt.se
+/raven$script,domain=mitti.se|travnet.se|nyheter24.se|tyda.se|devote.se|egoinas.se|hemtrevligt.se
 /recommendations$xmlhttprequest,domain=expressen.se
 /registerhit?$image
 /renderBanner.do?zoneId=
@@ -3160,6 +3160,7 @@ zeromagazine.nu##div[id^="ads"]
 ||stats.poddtoppen.se^
 ||stats.proff.se^
 ||stats.tipser.com^$xmlhttprequest
+||stat.devote.se^
 ||stat.modette.se^
 ||stayfriends.de/metatag
 ||step.dk^$third-party
