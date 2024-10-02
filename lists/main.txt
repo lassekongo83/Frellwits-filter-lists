@@ -577,6 +577,7 @@ Video-Ad-$media,3p
 ##div.sidebar-annons
 ##div.sidebar-item .banner-box
 ##div.strossle-widget
+##div.Takeover-ad
 ##div.td-a-rec img
 ##div.td-banner-bg
 ##div.topmost-banner
@@ -1357,6 +1358,8 @@ fokus.se##.sesamy-protected-content:style(max-height:unset!important;overflow:un
 fokus.se##.sesamy-protected-content.active::after:style(background:unset!important;)
 ljuskultur.se##body.private:remove-class(private)
 expo.se##div.flowy-wp-protected-content:remove-class(flowy-wp-protected-content)
+/admin-ajax$domain=chef.se
+chef.se##+js(remove-cookie, ca_public_page_views)
 
 ! === Media groups
 
@@ -1410,7 +1413,6 @@ dn.se,di.se##video:remove-attr(data-auto-play)
 ! DI
 di.se##.di_panorama-wrapper, .site-header__panorama, .di_panorama__isAdLabel, .discount-box, .campaign-ad-box, .di_start__teaser-placeholder, .di_teaser-flak-planbokskoll, .di_teaser-flak-container--native, .native-box, .bandit-box__teaser--native, a[href*="/brandstudio"], .service-box, .brand-studio-box, .native-article, .listing-box-native
 di.se##.market-start-top + div:not(.market-container__wrapper)
-di.se##+js(acs, Di, initAds)
 borssnack.di.se##.bn_advertisement__panorama, .bn_advertisement__container
 ! Övrigt
 viivilla.se###rich-media-wrapper
@@ -2906,6 +2908,7 @@ branschkoll.se,rocknytt.net,upphandling24.se,datormagazin.se,villalivet.se,polis
 branschkoll.se,rocknytt.net,upphandling24.se,datormagazin.se,villalivet.se,polistidningen.se,densistavilan.se,classicmotor.se,tidningenhalsa.se,husohem.se,guiden.se,nyadagbladet.se,enkelteknik.se,vadhanderisverige.se,passioneffect.se##^script:has-text(advads)
 stoppapressarna.se##^script[data-src*="advads"]
 temadagar.se,lchfarkivet.se,wernamaten.se,sanghafte.se,xn--gtboken-exa.se##^script:has-text(__ez)
+di.se##^script:has-text(Di.initAds)
 !#endif
 ! Mobile
 !#if env_mobile
