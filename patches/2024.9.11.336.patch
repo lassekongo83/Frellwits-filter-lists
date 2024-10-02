@@ -1,10 +1,10 @@
-diff name:swefilter lines:236 checksum:d275c133d2
+diff name:swefilter lines:240 checksum:abdaeee042
 d2 1
 a2 1
-! Last updated: Tue, 01 Oct 2024 05:43:01 +0000
+! Last updated: Wed, 02 Oct 2024 06:07:52 +0000
 d4 1
 a4 1
-! Diff-Path: patches/2024.10.1.343.patch#swefilter
+! Diff-Path: patches/2024.10.2.367.patch#swefilter
 a93 1
 Video-Ad-$media,3p
 a107 1
@@ -15,6 +15,8 @@ a229 1
 battregolf.se##.elementor-element[data-widget_type="image.default"], .aeywhae-single
 a330 1
 cafe.se###newsletterPopup
+a344 1
+chef.se##+js(remove-cookie, ca_public_page_views)
 d351 1
 a351 1
 com.se,~www.com.se,~pagalnew.com.se##html::before:style(content: "OBS! VARNING! Om denna sida är en butik så är det förmodligen en bluffbutik. Detta är ett meddelande från den svenska listan i din annonsblockerare." !important; font-size: 18px !important; font-family: sans !important; background-color: red !important; color: white !important; padding: 6px !important; width: 100% !important; display: block !important; text-align: center !important;)
@@ -27,8 +29,6 @@ devote.se##div[class^="ad_"], a[href*="annons"], a[href*="spel"], a[href*="casin
 a420 1
 dinstartsida.se,raggningsboken.se,minip.nu,snapsvisor.eu###cookies-eu-banner
 d427 1
-a427 1
-di.se##+js(acs, Di, initAds)
 a455 1
 eksjoco.se##.container:has(.ad)
 d458 1
@@ -124,8 +124,9 @@ d1447 1
 a1447 1
 vk.se,folkbladet.nu,nordsverige.se,mellanbygden.nu,vasterbottningen.se,lokaltidningen.nu##.vkmui-Text--grey, [class^="adContainer"], div[class^="bordersAndShadows"] > div[style^="min-height"]:only-child, div[data-track-id="family.Familjeannonser"], div[class*="adElement"], div[id^="vk_panorama"]
 d1467 1
-a1561 1
+a1561 2
 ##div.I-artiklar-annonser
+##div.Takeover-ad
 a1575 1
 ##div.artikelflode-annonser
 a1607 1
@@ -138,6 +139,8 @@ a1629 1
 ##div.tower-annonser
 a1741 1
 -samarbete$image,domain=hockeyettan.se
+a1786 1
+/admin-ajax$domain=chef.se
 a1871 1
 /beat-be$domain=blocket.se
 a1904 1
@@ -231,7 +234,8 @@ branschkoll.se,rocknytt.net,upphandling24.se,datormagazin.se,villalivet.se,class
 branschkoll.se,rocknytt.net,upphandling24.se,datormagazin.se,villalivet.se,polistidningen.se,densistavilan.se,classicmotor.se,tidningenhalsa.se,husohem.se,guiden.se,nyadagbladet.se,enkelteknik.se,vadhanderisverige.se,passioneffect.se##^script:has-text(advanced_ads)
 branschkoll.se,rocknytt.net,upphandling24.se,datormagazin.se,villalivet.se,polistidningen.se,densistavilan.se,classicmotor.se,tidningenhalsa.se,husohem.se,guiden.se,nyadagbladet.se,enkelteknik.se,vadhanderisverige.se,passioneffect.se##^script:has-text(advads)
 d3271 1
-a3271 1
+a3271 2
 temadagar.se,lchfarkivet.se,wernamaten.se,sanghafte.se,xn--gtboken-exa.se##^script:has-text(__ez)
+di.se##^script:has-text(Di.initAds)
 a3283 1
 veterinarmagazinet.se##.banner-spacer

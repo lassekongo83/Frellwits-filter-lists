@@ -1,7 +1,7 @@
 ! Title: Frellwit's Swedish Filter
-! Last updated: Tue, 01 Oct 2024 05:43:01 +0000
+! Last updated: Wed, 02 Oct 2024 06:07:52 +0000
 ! Expires: 5 days
-! Diff-Path: patches/2024.10.1.343.patch#swefilter
+! Diff-Path: patches/2024.10.2.367.patch#swefilter
 ! Diff-Expires: 24 hours
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
@@ -344,6 +344,7 @@ casino$domain=pirkt.se
 casino-utan-$image
 cfosvepet.se##.recent-post-item:has(a[href="#"]:not(.w-condition-invisible))
 chefstidningen.se##[id^="block-views-ad"], .modal-container
+chef.se##+js(remove-cookie, ca_public_page_views)
 chef.se##.Cookie-notice, .Product-modal, .Offer-popup, .Toaster
 chef.se,fokus.se##.Blurb--native
 cineasten.se###text-6, .theiaStickySidebar .category-uncategorized
@@ -426,7 +427,6 @@ discoveringtheplanet.com##html:style(user-select:unset!important; -moz-user-sele
 discoveringtheplanet.com##+js(acs, disableEnterKey)
 discoveringtheplanet.com##+js(acs, document.ondragstart)
 discoveringtheplanet.com##.widget-title:has-text(/annons/i) + .textwidget
-di.se##+js(acs, Di, initAds)
 di.se##.di_panorama-wrapper, .site-header__panorama, .di_panorama__isAdLabel, .discount-box, .campaign-ad-box, .di_start__teaser-placeholder, .di_teaser-flak-planbokskoll, .di_teaser-flak-container--native, .native-box, .bandit-box__teaser--native, a[href*="/brandstudio"], .service-box, .brand-studio-box, .native-article, .listing-box-native
 di.se##.market-start-top + div:not(.market-container__wrapper)
 djungeltrumman.se##strong:has-text(/samarbete|sponsrat/i):upward(li):remove()
@@ -1573,6 +1573,7 @@ zeromagazine.nu##div[id^="ads"]
 ##div.Container--ad
 ##div.External-ad
 ##div.I-artiklar-annonser
+##div.Takeover-ad
 ##div.adform-container
 ##div.adnuntius-ad
 ##div.ads-sticky-container
@@ -1804,6 +1805,7 @@ zeromagazine.nu##div[id^="ads"]
 /add-ads.js$domain=fria.nu|stockholmsfria.se
 /add-page-view$domain=cykla.se
 /adform.js$domain=bohuslaningen.se|stromstadstidning.se|markposten.se|harrydaposten.se|partilletidning.se|sttidningen.se|molndalsposten.se|kungalvsposten.se|kungsbackaposten.se|alingsastidning.se|ttela.se|gp.se|hallandsposten.se|hn.se|mellerudsnyheter.se
+/admin-ajax$domain=chef.se
 /adnami/macro$script
 /adnuntius_top_scroll
 /adn/adn-setup.$script
@@ -3294,6 +3296,7 @@ branschkoll.se,rocknytt.net,upphandling24.se,datormagazin.se,villalivet.se,polis
 branschkoll.se,rocknytt.net,upphandling24.se,datormagazin.se,villalivet.se,polistidningen.se,densistavilan.se,classicmotor.se,tidningenhalsa.se,husohem.se,guiden.se,nyadagbladet.se,enkelteknik.se,vadhanderisverige.se,passioneffect.se##^script:has-text(advads)
 stoppapressarna.se##^script[data-src*="advads"]
 temadagar.se,lchfarkivet.se,wernamaten.se,sanghafte.se,xn--gtboken-exa.se##^script:has-text(__ez)
+di.se##^script:has-text(Di.initAds)
 !#endif
 !#if !env_mobile
 /assets/js/modules/plugins/smoothPageScroll
