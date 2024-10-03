@@ -9,6 +9,8 @@ These lists may work fine with Chromium/Blink (Chrome, Chromium, Edge, Opera, Vi
 
 I strongly discourage people from using Chrome, Opera, Edge, Yandex. It's your choice, but the mentioned browsers are not good if you value your privacy. <strong>Using any Chromium/Blink browser is not good if you value an open web</strong> where you are free to block ads and change webpages to your preferences, whether it is to remove annoyances or for accessibility reasons.
 
+Note: <strong>uBlock Origin Lite</strong> is partly supported by this list. I won't fix any issues that may require me to allowlist anything for specific individuals who use that extension through a group policy. If you need something allowlisted you should either deactivate the list or switch the users to Firefox with the full uBlock Origin extension that allows you to create your own allowlists.
+
 ## Available lists
 
 <a href="https://github.com/lassekongo83/Frellwits-filter-lists/blob/master/CONTRIBUTING.md">Read if you want to contribute to any of the lists.</a>
