@@ -1,10 +1,10 @@
-diff name:swefilter lines:140 checksum:6277aa563e
+diff name:swefilter lines:152 checksum:5ea40bbaa6
 d2 1
 a2 1
-! Last updated: Sun, 06 Oct 2024 03:43:29 +0000
+! Last updated: Mon, 07 Oct 2024 04:08:18 +0000
 d4 1
 a4 1
-! Diff-Path: patches/2024.10.6.223.patch#swefilter
+! Diff-Path: patches/2024.10.7.248.patch#swefilter
 a93 1
 Video-Ad-$media,3p
 d164 1
@@ -48,7 +48,8 @@ ljuskultur.se,bettips.se,spelo.se,skogsaktuellt.se,maskinbladet.se,entreprenadak
 d920 1
 a920 1
 lwcdn.com,alingsastidning.se,bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se,kungsbackaposten.se,kungalvsposten.se,molndalsposten.se,partilletidning.se,sttidningen.se,markposten.se,harrydaposten.se,mellerudsnyheter.se##+js(json-prune-fetch-response, autoplay, , propsToMatch, url:ljsp.lwcdn.com)
-a937 1
+a937 2
+marketmate.se##div[id^="marke-"]
 marketplace.se##.td-cpt-post:has(a[href*="/annons/"])
 d1000 1
 a1000 1
@@ -83,6 +84,9 @@ a1618 1
 ##div.mobile-ad-format
 a1755 1
 -samarbete$image,domain=hockeyettan.se
+a1757 2
+/APTrackingService$domain=lidl.se
+/ATrackingGA$domain=lidl.se
 a1800 1
 /admin-ajax$domain=chef.se
 a1919 1
@@ -92,8 +96,12 @@ a2007 1
 /gdpr/*$domain=visitlulea.se|husbilskompisar.se|rotter.se|arkeologikonsult.se
 a2038 1
 /imatrics/read$domain=vk.se|folkbladet.nu|nordsverige.se|mellanbygden.nu|vasterbottningen.se|lokaltidningen.nu
+a2085 1
+/marketmate-prod$frame,domain=marketmate.se
 a2120 1
 /pageviews$domain=vk.se|folkbladet.nu|nordsverige.se|mellanbygden.nu|vasterbottningen.se|lokaltidningen.nu
+a2125 1
+/ping$domain=kimura.se
 d2161 1
 a2161 1
 /plugins/complianz-gdpr$script,domain=iconmagazine.se|signprint.se|vilaser.se|arjeplognytt.se|aftonkuriren.se|tidningenglobal.se|tidningensyre.se|landetsfria.nu|fempers.se|macken.xyz|kalmar.nu|brollopsmagasinet.se|megafonen.se|radiotreby.se|revisionsvarlden.se|kyrka.se|nuiroslagen.se|tlnt.se|sjofartstidningen.se|pensionarsliv.se|aktuellsakerhet.se|betongforeningen.se|maklarvarlden.se|sjomannen.se|home2tiny.se|marketplace.se
@@ -108,6 +116,8 @@ a2307 1
 d2317 1
 a2317 1
 /raven$script,domain=mitti.se|travnet.se|nyheter24.se|tyda.se|devote.se|egoinas.se|hemtrevligt.se
+a2415 1
+/t/gtm$domain=lidl.se
 d2454 1
 a2454 1
 /wp-content/uploads/*banner$image,domain=marsta.nu|alltomhif.se|branschkoll.se|brollopsmagasinet.se|bussmagasinet.se|danstidningen.se|guldkanalen.se|ljuskultur.se|sportpanelen.se|turismnytt.se|opulens.se|tekniknytt.se|pakryss.se|investerarbrevet.se|svensktidskrift.se|electronic.se|restaurangvarlden.se|finanstid.se|naringslivetvgl.se|dalarnasaffarer.se|stockholmsaffarer.se|jamtlandsaffarer.se|hallandsnaringsliv.se|sjuharadsnaringsliv.se|battregolf.se|svenskhistoria.se|arjeplognytt.se|bioenergitidningen.se|fisheco.se|autonytt.se|zeromagazine.nu|improveme.se|alekuriren.se|realtid.se|golfguidenonline.se
@@ -118,10 +128,12 @@ d2471 1
 d2555 1
 a2589 1
 ||analytics.ciseway.se^$third-party
+a2611 1
+||asset.schwarz/track$domain=lidl.se
 d2735 1
 d2855 1
 a2855 1
-||inmobi.com^$domain=alltomelbil.se|rikatillsammans.se|egoinas.se|moviezine.se|travelnews.se|varldenshaftigaste.se|merinfo.se|foreca.se|matklubben.se|reseguiden.se|newsner.com|humorbibeln.se|sportbibeln.se|ettgottskratt.se|djurbibeln.se|laget.se|byrum.se|sportlovin.se|receptfavoriter.se|forni.se|kimura.se|cornucopia.se|norrahalland.se|finanstid.se|tittapavideon.se|motormagasinet.se|food-supply.se|dagenshandel.se|plastnet.se|habit.se|woodnet.se|foodnet.se|transportnet.se|processnet.se|packnet.se|verkstaderna.se|medtechmagazine.se|recyclingnet.se|rt-forum.se|uochd.se|lifesciencesweden.se|fri-kopenskap.se|cleannet.se|metal-supply.se|framtidensbygg.se|entreprenad.com|mykitchenstories.se|cancelculture.se|findit.se|lchfarkivet.se|brinkenbakar.se|foretagande.se|fotbolltransfers.com|affarsvarlden.se|villalivet.se|branschaktuellt.se|nordic.ign.com|fragbite.se|lindasbakskola.se|jennysmatblogg.nu|filippoon.se|niiinis.se|lesscarbs.se|eniro.se|matspar.se|xnytt.se|alltomkungligt.se|swehockey.se|vackertvader.se|newly.se|nyheter2.se|klendr.se|elsasentourage.se|zeinaskitchen.se|svenskalag.se|tvsporten.nu|frillesasbandy.se|skik.se
+||inmobi.com^$domain=alltomelbil.se|rikatillsammans.se|egoinas.se|moviezine.se|travelnews.se|varldenshaftigaste.se|merinfo.se|foreca.se|matklubben.se|reseguiden.se|newsner.com|humorbibeln.se|sportbibeln.se|ettgottskratt.se|djurbibeln.se|laget.se|byrum.se|sportlovin.se|receptfavoriter.se|forni.se|kimura.se|cornucopia.se|norrahalland.se|finanstid.se|tittapavideon.se|motormagasinet.se|food-supply.se|dagenshandel.se|plastnet.se|habit.se|woodnet.se|foodnet.se|transportnet.se|processnet.se|packnet.se|verkstaderna.se|medtechmagazine.se|recyclingnet.se|rt-forum.se|uochd.se|lifesciencesweden.se|fri-kopenskap.se|cleannet.se|metal-supply.se|framtidensbygg.se|entreprenad.com|mykitchenstories.se|cancelculture.se|findit.se|lchfarkivet.se|brinkenbakar.se|foretagande.se|fotbolltransfers.com|affarsvarlden.se|villalivet.se|branschaktuellt.se|nordic.ign.com|fragbite.se|lindasbakskola.se|jennysmatblogg.nu|filippoon.se|niiinis.se|lesscarbs.se|eniro.se|matspar.se|xnytt.se|alltomkungligt.se|swehockey.se|vackertvader.se|newly.se|nyheter2.se|klendr.se|elsasentourage.se|zeinaskitchen.se|svenskalag.se|tvsporten.nu|frillesasbandy.se|skik.se|marketmate.se
 d2861 1
 d2888 1
 d2940 1
