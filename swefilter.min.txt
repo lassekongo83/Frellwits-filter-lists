@@ -1,7 +1,7 @@
 ! Title: Frellwit's Swedish Filter
-! Last updated: Mon, 07 Oct 2024 04:08:18 +0000
+! Last updated: Tue, 08 Oct 2024 05:32:53 +0000
 ! Expires: 5 days
-! Diff-Path: patches/2024.10.7.248.patch#swefilter
+! Diff-Path: patches/2024.10.8.332.patch#swefilter
 ! Diff-Expires: 24 hours
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
@@ -1039,7 +1039,7 @@ nordiskskog.se##.templateHelannonsBOX
 norrahalland.se##.bannercontent
 nouw.com##.washer.loaded.displayed
 nouw.com##.badge:has-text(/annons/i):upward(li)
-nyadagbladet.se##.third-col, article[class*="sponsrad"], div[id^="nyd-"], .below_header_front_page, div[data-aeon-news-trackbid="1"]
+nyadagbladet.se##.third-col, article[class*="sponsrad"], div[id^="nyd-"], .below_header_front_page, div[data-aeon-news-trackbid="1"], .aeon-news-widget, div[id^="aeon-news"]
 nyadagbladet.se##.widget_media_image:has-text(/annons/i)
 nyadagbladet.se,ff.se,rocknytt.net,magasink.se,evergreengarden.se,butikstrender.se,mykitchenstories.se,transportnytt.se,inpress.com##.elementor-popup-modal
 nyan.ax##.gdpr
@@ -2332,7 +2332,7 @@ zeromagazine.nu##div[id^="ads"]
 /qc_cmp$domain=reseguiden.se
 /questback.popup$script
 /rantekartan$subdocument,domain=expressen.se
-/raven$script,domain=mitti.se|travnet.se|nyheter24.se|tyda.se|devote.se|egoinas.se|hemtrevligt.se
+/raven$script,domain=mitti.se|travnet.se|nyheter24.se|tyda.se|devote.se|egoinas.se|hemtrevligt.se|alltforforaldrar.se|familjeliv.se|brollopstorget.se|blogg.se
 /recommendations$xmlhttprequest,domain=expressen.se
 /registerhit?$image
 /renderBanner.do?zoneId=
@@ -2525,6 +2525,7 @@ zeromagazine.nu##div[id^="ads"]
 ://gtm.*/g/collect?
 ://impression-tracker-service
 ://sifomedia.
+://stat.$domain=alltforforaldrar.se|modette.se|devote.se|familjeliv.se|brollopstorget.se|blogg.se|rodeo.net
 ?action=advanced-ads-tracking-track
 ?action=get_banners$domain=djungeltrumman.se
 ?autoPlay$frame,removeparam=autoPlay,domain=expressen.se
@@ -3170,8 +3171,6 @@ zeromagazine.nu##div[id^="ads"]
 ||stats.poddtoppen.se^
 ||stats.proff.se^
 ||stats.tipser.com^$xmlhttprequest
-||stat.devote.se^
-||stat.modette.se^
 ||stayfriends.de/metatag
 ||step.dk^$third-party
 ||stm.eniro.se^
