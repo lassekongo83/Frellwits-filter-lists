@@ -1,10 +1,10 @@
-diff name:swefilter lines:90 checksum:fa23f9f6be
+diff name:swefilter lines:100 checksum:b0a136adc0
 d2 1
 a2 1
-! Last updated: Wed, 09 Oct 2024 03:50:31 +0000
+! Last updated: Thu, 10 Oct 2024 05:35:02 +0000
 d4 1
 a4 1
-! Diff-Path: patches/2024.10.9.230.patch#swefilter
+! Diff-Path: patches/2024.10.10.334.patch#swefilter
 d165 1
 a165 1
 allatvkanaler.se##.gda, .cookie-notification, .iy.first
@@ -29,6 +29,11 @@ a1041 1
 nyadagbladet.se##.third-col, article[class*="sponsrad"], div[id^="nyd-"], .below_header_front_page, div[data-aeon-news-trackbid="1"], .aeon-news-widget, div[id^="aeon-news"]
 a1057 1
 nyhetersto.se,bussmagasinet.se,brollopsmagasinet.se,borattforum.se,globalpolitics.se,batliv.se,em-fotboll.se,elinor.se,fotbollsresultat.com,automation.se,vm-fotboll.se,husbyggaren.se,vildmarken.se,fisheco.se,nyhetsbyranjarva.se,it-finans.se,it-halsa.se,it-kanalen.se,it-pedagogen.se,it-retail.se,it-hallbarhet.se,battregolf.se,sporthalsa.se,revisionsvarlden.se##a.gofollow[data-track]
+a1118 1
+radio.se###always-visible-banner-desktop-banner
+d1262 1
+a1262 1
+svartgul.se##li.embedded, footer li.long
 d1271 1
 a1271 1
 svenskafans.com##:is(.min-h-\[400px\], .min-h-96, .hidden.min-h-60):has(.ad-slot)
@@ -43,6 +48,9 @@ a1461 1
 vk.se,folkbladet.nu,nordsverige.se,mellanbygden.nu,vasterbottningen.se,lokaltidningen.nu##.vkmui-Text--grey, [class^="adContainer"], div[class^="bordersAndShadows"] > div[style^="min-height"]:only-child, div[data-track-id="family.Familjeannonser"], div[class*="adElement"], div[id*="_panorama"], div[data-track-id*="panoramaAd"]
 a1575 1
 ##div.Takeover-ad
+a1605 2
+##div.dfp-ads-container
+##div.dfp-ads-container-middle
 a1763 2
 /APTrackingService$domain=lidl.se
 /ATrackingGA$domain=lidl.se
@@ -55,6 +63,8 @@ a2045 1
 /imatrics/read$domain=vk.se|folkbladet.nu|nordsverige.se|mellanbygden.nu|vasterbottningen.se|lokaltidningen.nu
 a2092 1
 /marketmate-prod$frame,domain=marketmate.se
+a2113 1
+/native-video-campaigns$domain=allas.se|elle.se|femina.se|hant.se|mabra.com|residencemagazine.se|svenskdam.se|motherhood.se
 a2127 1
 /pageviews$domain=vk.se|folkbladet.nu|nordsverige.se|mellanbygden.nu|vasterbottningen.se|lokaltidningen.nu
 a2132 1
@@ -80,7 +90,7 @@ a2619 1
 d2743 1
 d2863 1
 a2863 1
-||inmobi.com^$domain=alltomelbil.se|rikatillsammans.se|egoinas.se|moviezine.se|travelnews.se|varldenshaftigaste.se|merinfo.se|foreca.se|matklubben.se|reseguiden.se|newsner.com|humorbibeln.se|sportbibeln.se|ettgottskratt.se|djurbibeln.se|laget.se|byrum.se|sportlovin.se|receptfavoriter.se|forni.se|kimura.se|cornucopia.se|norrahalland.se|finanstid.se|tittapavideon.se|motormagasinet.se|food-supply.se|dagenshandel.se|plastnet.se|habit.se|woodnet.se|foodnet.se|transportnet.se|processnet.se|packnet.se|verkstaderna.se|medtechmagazine.se|recyclingnet.se|rt-forum.se|uochd.se|lifesciencesweden.se|fri-kopenskap.se|cleannet.se|metal-supply.se|framtidensbygg.se|entreprenad.com|mykitchenstories.se|cancelculture.se|findit.se|lchfarkivet.se|brinkenbakar.se|foretagande.se|fotbolltransfers.com|affarsvarlden.se|villalivet.se|branschaktuellt.se|nordic.ign.com|fragbite.se|lindasbakskola.se|jennysmatblogg.nu|filippoon.se|niiinis.se|lesscarbs.se|eniro.se|matspar.se|xnytt.se|alltomkungligt.se|swehockey.se|vackertvader.se|newly.se|nyheter2.se|klendr.se|elsasentourage.se|zeinaskitchen.se|svenskalag.se|tvsporten.nu|frillesasbandy.se|skik.se|marketmate.se
+||inmobi.com^$domain=alltomelbil.se|rikatillsammans.se|egoinas.se|moviezine.se|travelnews.se|varldenshaftigaste.se|merinfo.se|foreca.se|matklubben.se|reseguiden.se|newsner.com|humorbibeln.se|sportbibeln.se|ettgottskratt.se|djurbibeln.se|laget.se|byrum.se|sportlovin.se|receptfavoriter.se|forni.se|kimura.se|cornucopia.se|norrahalland.se|finanstid.se|tittapavideon.se|motormagasinet.se|food-supply.se|dagenshandel.se|plastnet.se|habit.se|woodnet.se|foodnet.se|transportnet.se|processnet.se|packnet.se|verkstaderna.se|medtechmagazine.se|recyclingnet.se|rt-forum.se|uochd.se|lifesciencesweden.se|fri-kopenskap.se|cleannet.se|metal-supply.se|framtidensbygg.se|entreprenad.com|mykitchenstories.se|cancelculture.se|findit.se|lchfarkivet.se|brinkenbakar.se|foretagande.se|fotbolltransfers.com|affarsvarlden.se|villalivet.se|branschaktuellt.se|nordic.ign.com|fragbite.se|lindasbakskola.se|jennysmatblogg.nu|filippoon.se|niiinis.se|lesscarbs.se|eniro.se|matspar.se|xnytt.se|alltomkungligt.se|swehockey.se|vackertvader.se|newly.se|nyheter2.se|klendr.se|elsasentourage.se|zeinaskitchen.se|svenskalag.se|tvsporten.nu|frillesasbandy.se|skik.se|marketmate.se|svartgul.se
 d2869 1
 d2896 1
 d2948 1

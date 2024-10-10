@@ -1,7 +1,7 @@
 ! Title: Frellwit's Swedish Filter
-! Last updated: Wed, 09 Oct 2024 03:50:31 +0000
+! Last updated: Thu, 10 Oct 2024 05:35:02 +0000
 ! Expires: 5 days
-! Diff-Path: patches/2024.10.9.230.patch#swefilter
+! Diff-Path: patches/2024.10.10.334.patch#swefilter
 ! Diff-Expires: 24 hours
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
@@ -1119,6 +1119,7 @@ racemagazine.se##article + div:has(.ad-inner)
 racenews.se###block-2
 radiotreby.se##.mobileHide, .mobile-show
 radio-sveriges.se###original_taboola
+radio.se###always-visible-banner-desktop-banner
 radio.se##:is(a[data-testid="region-tag"], a[data-testid^="taglist-item"]):style(background-image:none!important; background:rgb(2,114,140)!important;)
 radio.se##:is(.md\:min-h-\[90px\], .lg\:min-h-\[250px\], .h-\[250px\], .justify-between.md\:mx-10):has(div[id^="RAD_D"], div[id^="RAD_M"])
 raggningsboken.se,minip.nu,snapsvisor.eu##div[style^="min-height"]:has(.adsbygoogle)
@@ -1262,7 +1263,7 @@ studeravidare.se##.premium-carousel-wrapper
 surfa.se##div[class*="-promo"], div[class*="prisjakt-"]
 surfa.se,teknikfreak.se###loader-wrapper
 svampguiden.com##.label-sponsor:upward(.panel)
-svartgul.se##li.embedded
+svartgul.se##li.embedded, footer li.long
 svartgul.se,eventeffect.se,executiveeffect.se,saleseffect.se###panorama
 svd.se##article:has(div[class^="NativeBarWrapper"])
 svd.se##body:style(visibility:visible!important;)
@@ -1607,6 +1608,8 @@ zeromagazine.nu##div[id^="ads"]
 ##div.comment-ad_wrapper
 ##div.content-center-ad
 ##div.content_ad_top
+##div.dfp-ads-container
+##div.dfp-ads-container-middle
 ##div.elementor-widget-wp-widget-adrotate_widgets
 ##div.elementor-widget-wp-widget-advads_ad_widget
 ##div.feed_ad
@@ -2120,6 +2123,7 @@ zeromagazine.nu##div[id^="ads"]
 /native$domain=sydnarkenytt.se
 /native-ads$domain=atl.nu|landlantbruk.se|land.se
 /native-article-campaigns$domain=allas.se|elle.se|femina.se|hant.se|mabra.com|residencemagazine.se|svenskdam.se|motherhood.se
+/native-video-campaigns$domain=allas.se|elle.se|femina.se|hant.se|mabra.com|residencemagazine.se|svenskdam.se|motherhood.se
 /native.html$domain=allas.se|elle.se|femina.se|hant.se|mabra.com|residencemagazine.se|svenskdam.se|motherhood.se
 /newsner-ad$domain=newsner.com|humorbibeln.se|sportbibeln.se|ettgottskratt.se|djurbibeln.se
 /newsner-stats$domain=newsner.com|humorbibeln.se|sportbibeln.se|ettgottskratt.se|djurbibeln.se
@@ -2873,7 +2877,7 @@ zeromagazine.nu##div[id^="ads"]
 ||img.upsales.com/*/visit$script,important
 ||imp.laget.se^
 ||inboxads.com^$third-party
-||inmobi.com^$domain=alltomelbil.se|rikatillsammans.se|egoinas.se|moviezine.se|travelnews.se|varldenshaftigaste.se|merinfo.se|foreca.se|matklubben.se|reseguiden.se|newsner.com|humorbibeln.se|sportbibeln.se|ettgottskratt.se|djurbibeln.se|laget.se|byrum.se|sportlovin.se|receptfavoriter.se|forni.se|kimura.se|cornucopia.se|norrahalland.se|finanstid.se|tittapavideon.se|motormagasinet.se|food-supply.se|dagenshandel.se|plastnet.se|habit.se|woodnet.se|foodnet.se|transportnet.se|processnet.se|packnet.se|verkstaderna.se|medtechmagazine.se|recyclingnet.se|rt-forum.se|uochd.se|lifesciencesweden.se|fri-kopenskap.se|cleannet.se|metal-supply.se|framtidensbygg.se|entreprenad.com|mykitchenstories.se|cancelculture.se|findit.se|lchfarkivet.se|brinkenbakar.se|foretagande.se|fotbolltransfers.com|affarsvarlden.se|villalivet.se|branschaktuellt.se|nordic.ign.com|fragbite.se|lindasbakskola.se|jennysmatblogg.nu|filippoon.se|niiinis.se|lesscarbs.se|eniro.se|matspar.se|xnytt.se|alltomkungligt.se|swehockey.se|vackertvader.se|newly.se|nyheter2.se|klendr.se|elsasentourage.se|zeinaskitchen.se|svenskalag.se|tvsporten.nu|frillesasbandy.se|skik.se|marketmate.se
+||inmobi.com^$domain=alltomelbil.se|rikatillsammans.se|egoinas.se|moviezine.se|travelnews.se|varldenshaftigaste.se|merinfo.se|foreca.se|matklubben.se|reseguiden.se|newsner.com|humorbibeln.se|sportbibeln.se|ettgottskratt.se|djurbibeln.se|laget.se|byrum.se|sportlovin.se|receptfavoriter.se|forni.se|kimura.se|cornucopia.se|norrahalland.se|finanstid.se|tittapavideon.se|motormagasinet.se|food-supply.se|dagenshandel.se|plastnet.se|habit.se|woodnet.se|foodnet.se|transportnet.se|processnet.se|packnet.se|verkstaderna.se|medtechmagazine.se|recyclingnet.se|rt-forum.se|uochd.se|lifesciencesweden.se|fri-kopenskap.se|cleannet.se|metal-supply.se|framtidensbygg.se|entreprenad.com|mykitchenstories.se|cancelculture.se|findit.se|lchfarkivet.se|brinkenbakar.se|foretagande.se|fotbolltransfers.com|affarsvarlden.se|villalivet.se|branschaktuellt.se|nordic.ign.com|fragbite.se|lindasbakskola.se|jennysmatblogg.nu|filippoon.se|niiinis.se|lesscarbs.se|eniro.se|matspar.se|xnytt.se|alltomkungligt.se|swehockey.se|vackertvader.se|newly.se|nyheter2.se|klendr.se|elsasentourage.se|zeinaskitchen.se|svenskalag.se|tvsporten.nu|frillesasbandy.se|skik.se|marketmate.se|svartgul.se
 ||inmobi.com^$script,redirect=noop.js,domain=elevspel.se
 ||insertcoin.se^$third-party
 ||insplanet.com^$third-party
