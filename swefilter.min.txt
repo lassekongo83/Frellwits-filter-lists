@@ -1,7 +1,7 @@
 ! Title: Frellwit's Swedish Filter
-! Last updated: Thu, 10 Oct 2024 05:35:02 +0000
+! Last updated: Fri, 11 Oct 2024 06:07:47 +0000
 ! Expires: 5 days
-! Diff-Path: patches/2024.10.10.334.patch#swefilter
+! Diff-Path: patches/2024.10.11.367.patch#swefilter
 ! Diff-Expires: 24 hours
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
@@ -1069,10 +1069,7 @@ obosdamallsvenskan.se,elitettan.se##.rmss_module-sponsors, .rmss_ap-top-ad, .rms
 obsid.se##a[href*="casino"]
 offside.org###opab-modal, .opab-footer-offer
 omnihalsa.com,skanesport.se,sportpanelen.se##.stream-item
-omni.se,omniekonomi.se##div.group:has([class*="sponsoredcluster"])
-omni.se,omniekonomi.se##.article--sponsored, .resource--sponsored, .component--sticky-sponsor-banner, .pre-banner, .banner--toppanorama, .banner--midpanorama, .group--banner
-omni.se,omniekonomi.se##.header-banner--regular, .app-banner:style(--banner-offset: 0 !important;)
-omni.se,omniekonomi.se##.resource--link:has(a[href*="article-ad-"])
+omni.se,omniekonomi.se##div[class^="TopPanoramaAd"], div[class^="StickySideAd"], div[class*="_native"], div[class^="Ad_placement"], div[class*="PanoramaAd_"]
 omtanke.today##.featured
 opulens.se##.mailpoet_form, #secondary
 ordbokpro.se##+js(set, ab_disp, noopFunc)
