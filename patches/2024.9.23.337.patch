@@ -1,10 +1,10 @@
-diff name:swefilter lines:171 checksum:df05aa01bc
+diff name:swefilter lines:180 checksum:23b351fb8b
 d2 1
 a2 1
-! Last updated: Fri, 11 Oct 2024 06:07:47 +0000
+! Last updated: Sun, 13 Oct 2024 05:48:08 +0000
 d4 1
 a4 1
-! Diff-Path: patches/2024.10.11.367.patch#swefilter
+! Diff-Path: patches/2024.10.13.348.patch#swefilter
 a93 1
 Video-Ad-$media,3p
 d164 1
@@ -18,12 +18,16 @@ a331 1
 cafe.se###newsletterPopup
 a345 1
 chef.se##+js(remove-cookie, ca_public_page_views)
-a349 1
+a349 2
 citattorget.se##.adsense-main
+citiboard.se##div[adunit]
 d352 1
 a352 1
 com.se,~www.com.se,~pagalnew.com.se##html::before:style(content: "OBS! VARNING! Om denna sida är en butik så är det förmodligen en bluffbutik. Detta är ett meddelande från den svenska listan i din annonsblockerare." !important; font-size: 18px !important; font-family: sans !important; background-color: red !important; color: white !important; padding: 6px !important; width: 100% !important; display: block !important; text-align: center !important;)
 d365 1
+d367 1
+a367 1
+dagensjuridik.se##.outher-sidebar, a[href*="/annons/"], .dj-inline-ad, .sticky
 d406 2
 a407 1
 devote.se##div[class^="ad_"], a[href*="annons"], a[href*="spel"], a[href*="casino"], a[href*="kasino"], a[href*="extrapengar"], a[href*="investera"], a[href*="boka"], a[href*="strategier"], a[href*="buda-"]
@@ -99,6 +103,8 @@ a1604 2
 ##div.dfp-ads-container-middle
 a1621 1
 ##div.mobile-ad-format
+a1649 1
+##div.wp-block-ad
 a1758 1
 -samarbete$image,domain=hockeyettan.se
 a1760 2
@@ -121,9 +127,10 @@ a2123 1
 /pageviews$domain=vk.se|folkbladet.nu|nordsverige.se|mellanbygden.nu|vasterbottningen.se|lokaltidningen.nu
 a2128 1
 /ping$domain=kimura.se
-d2169 1
-a2169 1
+d2169 2
+a2170 2
 /plugins/cookie-law-info$script,domain=gilla.se|startaochdriva.se|sverige.nu|conpot.se|firstclassmagazine.se|magasinetkonkret.se|kvalitetsmagasinet.se|miljo-utveckling.se|telekomidag.se|vdtidningen.se|gullislastips.se|nyfiknainvesterare.se|discoveringtheplanet.com|bussmagasinet.se|torbjornstips.se|affarsstaden.se|marknadschefer.se|automation.se|dinbyggare.se|aktieskolan.se|insikt24.se|skogen.se|sulkysport.se|bitzmagasin.se|battrestadsdel.se|automatos.se
+/plugins/cookie-notice$script,domain=bildobubbla.se|zeromagazine.nu|sverigespringer.se|gasetten.se|sillyseason.se|gentlemannaguiden.com|matmalin.se|svensktidskrift.se|schack.se|densistavilan.se|horisontmagasin.se|kobe.se|tidningenproffs.se|jaktojagare.se|tobaksfakta.se|bebisvarlden.se|underbaraclaras.se|cykelframjandet.se|dalabygden.se|lansposten.se|sormlandsbygden.se|vaguiden.se|grandtech.se|bluff.se|bjjtv.se|svmf.se|rockbladet.se|globalbar.se|seniornet.se
 a2265 1
 /plugins/themify-popup$script,domain=opulens.se
 d2310 1
@@ -134,8 +141,9 @@ a2320 1
 /raven$script,domain=mitti.se|travnet.se|nyheter24.se|tyda.se|devote.se|egoinas.se|hemtrevligt.se|alltforforaldrar.se|familjeliv.se|brollopstorget.se|blogg.se
 a2418 1
 /t/gtm$domain=lidl.se
-d2457 1
-a2457 1
+d2456 2
+a2457 2
+/wp-content/uploads/*annons$image,domain=~datahjelperne.no|~dataliner.no|~annonsere.gulesider.no|~annonsmarknan.se
 /wp-content/uploads/*banner$image,domain=marsta.nu|alltomhif.se|branschkoll.se|brollopsmagasinet.se|bussmagasinet.se|danstidningen.se|guldkanalen.se|ljuskultur.se|sportpanelen.se|turismnytt.se|opulens.se|tekniknytt.se|pakryss.se|investerarbrevet.se|svensktidskrift.se|electronic.se|restaurangvarlden.se|finanstid.se|naringslivetvgl.se|dalarnasaffarer.se|stockholmsaffarer.se|jamtlandsaffarer.se|hallandsnaringsliv.se|sjuharadsnaringsliv.se|battregolf.se|svenskhistoria.se|arjeplognytt.se|bioenergitidningen.se|fisheco.se|autonytt.se|zeromagazine.nu|improveme.se|alekuriren.se|realtid.se|golfguidenonline.se
 d2464 1
 a2464 1
@@ -143,8 +151,9 @@ a2464 1
 d2474 1
 a2512 1
 ://stat.$domain=alltforforaldrar.se|modette.se|devote.se|familjeliv.se|brollopstorget.se|blogg.se|rodeo.net
-a2535 1
+a2535 2
 @@||citattorget.se^$ghide
+@@||citiboard.se^$ghide
 d2558 1
 a2592 1
 ||analytics.ciseway.se^$third-party
