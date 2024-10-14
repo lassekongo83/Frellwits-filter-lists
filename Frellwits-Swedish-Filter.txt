@@ -1,6 +1,6 @@
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days
-! Last modified: 2024-10-13 07:47:52 CEST
+! Last modified: 2024-10-14 05:41:42 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPL3 - https://github.com/lassekongo83/Frellwits-filter-lists/blob/master/LICENSE
@@ -192,8 +192,10 @@ arbetet.se,tidningenelektrikern.se,fastighetsfolket.se,handelsnytt.se,ka.se,seko
 arbetsvarlden.se##.nl_popup
 arjeplognytt.se##.metaslider
 arjeplognytt.se##p:has-text(ANNONS):upward(.et_pb_text)
+arkitekten.se##div[data-native-ad-position]:has(.Ad)
 arkitekten.se##div[id^="consent-"]
 arkitekten.se##html:style(--scrollbar-width:initial!important)
+arkitekten.se##.ContentItemList-item:has(.Teaser--nativeAd)
 arkitekten.se##.MediaWrapper-content:style(opacity:unset!important)
 arkitektur.se##article:has(.Entry-sponsored)
 arkitektur.se##[class*="panorama"]
@@ -576,6 +578,7 @@ foodfolder.se###myModal, .adImage
 foretagande.se##article:has(.sponsored-text)
 foretagande.se##div.article:has(a[href$="artiklar-i-samarbete"])
 foretagande.se##div[id*="panorama"], .panorama-pos
+foretagsverige.se,forskningsverige.se,motorbibeln.se,hallbarhetsverige.se,tillvaxtsverige.se,grillbibeln.se,kampenmotcancer.se,folkhalsasverige.se##.whitebox-container:has-text(/sponsra/i)
 foretagsverige.se,forskningsverige.se,motorbibeln.se,hallbarhetsverige.se,tillvaxtsverige.se,grillbibeln.se,kampenmotcancer.se,folkhalsasverige.se##:is(div[class*="vicky-whitebox"], .vicky-category-label, .vicky-video-infobox-label, .vicky-post-headline-container__category__inner):has-text(/spons/i):upward(a, .carousel-caption, .featurette, article)
 forexgruppen.se##div[data-widget_type="image.default"] a:not([href*="forexgruppen.se"], [href^="/"]), .widget_media_image a:not([href*="forexgruppen.se"], [href^="/"])
 forexgruppen.se##+js(noeval-if, adbEnableForPage)
@@ -590,6 +593,7 @@ forum.robsoft.nu##.cookie-box
 forvaltarforum.se##.ff_sponsored_articles, .widget_sow-image a[target="_blank"], .ff_banners_widget_widget
 forvaltarforum.se##.ticker-title:has-text(/partner/i)
 forvaltarforum.se##.ticker-title:has-text(/partner/i) + .mh-section
+forvaltarforum.se##.video-banner:remove()
 fotbolldirekt.se,hockeysverige.se,innebandymagazinet.se##.c-announcement:has(.c-label--sponsored)
 fotbolldirekt.se,hockeysverige.se,innebandymagazinet.se##.c-announcement:has-text(/annons/i)
 fotbolldirekt.se,hockeysverige.se,innebandymagazinet.se##.pdcw-item--code:has(img[src*="bet365"])
@@ -1804,6 +1808,7 @@ zeromagazine.nu##div[id^="ads"]
 /Smile_ElasticsuiteTracker/*$script
 /SponsorsList$script,domain=hockeyallsvenskan.se
 /TopBanner$subdocument,domain=hitta.se
+/Toppbanner$domain=forvaltarforum.se
 /TrackPageView$domain=mestmotor.se
 /Vizzit/vizzit.$script
 /Web%20Analytics/*$script
@@ -2460,7 +2465,6 @@ zeromagazine.nu##div[id^="ads"]
 /wdg/iab-active
 /wds_nyhetsbrev_popup
 /webbresurser/banner/*
-/white_pixel.gif$domain=byggfakta.today
 /wordads-classes/js/*
 /workbox-offline-ga$domain=magasinetkonkret.se
 /wpbm-banners/*$image
