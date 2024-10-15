@@ -1,10 +1,14 @@
-diff name:swefilter lines:48 checksum:b5ddc4fa83
+diff name:swefilter lines:66 checksum:4963f49e26
 d2 1
 a2 1
-! Last updated: Mon, 14 Oct 2024 03:41:59 +0000
+! Last updated: Tue, 15 Oct 2024 04:29:14 +0000
 d4 1
 a4 1
-! Diff-Path: patches/2024.10.14.221.patch#swefilter
+! Diff-Path: patches/2024.10.15.269.patch#swefilter
+a76 1
+.se/widgets/ads/
+a119 1
+aftonbladet.se,godare.se,livsstil.se##div[style*="min-height:240px"]:has(iframe[src*="/widgets/ads/"])
 a191 1
 arkitekten.se##div[data-native-ad-position]:has(.Ad)
 a193 1
@@ -18,11 +22,16 @@ a574 1
 foretagsverige.se,forskningsverige.se,motorbibeln.se,hallbarhetsverige.se,tillvaxtsverige.se,grillbibeln.se,kampenmotcancer.se,folkhalsasverige.se##.whitebox-container:has-text(/sponsra/i)
 a588 1
 forvaltarforum.se##.video-banner:remove()
+a804 2
+killsteal.se##a[href*="casino"], a[href*="kasino"]
+killsteal.se##.avgransare ~ p:has-text(casino)
 d1072 4
 a1075 1
 omni.se,omniekonomi.se##div[class^="TopPanoramaAd"], div[class^="StickySideAd"], div[class*="_native"], div[class^="Ad_placement"], div[class*="PanoramaAd_"]
 a1121 1
 radio.se###always-visible-banner-desktop-banner
+a1232 1
+sportapp.travsport.se##div[class^="CookieDisclaimer"]
 d1265 1
 a1265 1
 svartgul.se##li.embedded, footer li.long
@@ -33,17 +42,26 @@ a1655 1
 ##div.wp-block-ad
 a1801 1
 /Toppbanner$domain=forvaltarforum.se
+a1957 1
+/count?$xhr,domain=feber.se|tjock.se
+a2063 1
+/jnews/ad-insertion-between-posts
 a2122 1
 /native-video-campaigns$domain=allas.se|elle.se|femina.se|hant.se|mabra.com|residencemagazine.se|svenskdam.se|motherhood.se
 d2185 1
 a2185 1
 /plugins/cookie-notice$script,domain=bildobubbla.se|zeromagazine.nu|sverigespringer.se|gasetten.se|sillyseason.se|gentlemannaguiden.com|matmalin.se|svensktidskrift.se|schack.se|densistavilan.se|horisontmagasin.se|kobe.se|tidningenproffs.se|jaktojagare.se|tobaksfakta.se|bebisvarlden.se|underbaraclaras.se|cykelframjandet.se|dalabygden.se|lansposten.se|sormlandsbygden.se|vaguiden.se|grandtech.se|bluff.se|bjjtv.se|svmf.se|rockbladet.se|globalbar.se|seniornet.se
+a2323 1
+/prisjakt-ad-carousel$frame
 d2457 1
 d2473 1
 a2473 1
 /wp-content/uploads/*annons$image,domain=~datahjelperne.no|~dataliner.no|~annonsere.gulesider.no|~annonsmarknan.se
 a2553 1
 @@||citiboard.se^$ghide
+d2725 1
+a2725 1
+||cookietractor.com^$domain=innebandy.se|orientering.se|pluggakuten.se|munskankarna.se|burgerdudes.se
 d2876 1
 a2876 1
 ||inmobi.com^$domain=alltomelbil.se|rikatillsammans.se|egoinas.se|moviezine.se|travelnews.se|varldenshaftigaste.se|merinfo.se|foreca.se|matklubben.se|reseguiden.se|newsner.com|humorbibeln.se|sportbibeln.se|ettgottskratt.se|djurbibeln.se|laget.se|byrum.se|sportlovin.se|receptfavoriter.se|forni.se|kimura.se|cornucopia.se|norrahalland.se|finanstid.se|tittapavideon.se|motormagasinet.se|food-supply.se|dagenshandel.se|plastnet.se|habit.se|woodnet.se|foodnet.se|transportnet.se|processnet.se|packnet.se|verkstaderna.se|medtechmagazine.se|recyclingnet.se|rt-forum.se|uochd.se|lifesciencesweden.se|fri-kopenskap.se|cleannet.se|metal-supply.se|framtidensbygg.se|entreprenad.com|mykitchenstories.se|cancelculture.se|findit.se|lchfarkivet.se|brinkenbakar.se|foretagande.se|fotbolltransfers.com|affarsvarlden.se|villalivet.se|branschaktuellt.se|nordic.ign.com|fragbite.se|lindasbakskola.se|jennysmatblogg.nu|filippoon.se|niiinis.se|lesscarbs.se|eniro.se|matspar.se|xnytt.se|alltomkungligt.se|swehockey.se|vackertvader.se|newly.se|nyheter2.se|klendr.se|elsasentourage.se|zeinaskitchen.se|svenskalag.se|tvsporten.nu|frillesasbandy.se|skik.se|marketmate.se|svartgul.se

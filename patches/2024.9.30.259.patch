@@ -1,10 +1,14 @@
-diff name:swefilter lines:125 checksum:b5ddc4fa83
+diff name:swefilter lines:143 checksum:4963f49e26
 d2 1
 a2 1
-! Last updated: Mon, 14 Oct 2024 03:41:59 +0000
+! Last updated: Tue, 15 Oct 2024 04:29:14 +0000
 d4 1
 a4 1
-! Diff-Path: patches/2024.10.14.221.patch#swefilter
+! Diff-Path: patches/2024.10.15.269.patch#swefilter
+a76 1
+.se/widgets/ads/
+a119 1
+aftonbladet.se,godare.se,livsstil.se##div[style*="min-height:240px"]:has(iframe[src*="/widgets/ads/"])
 d165 1
 a165 1
 allatvkanaler.se##.gda, .cookie-notification, .iy.first
@@ -28,6 +32,9 @@ a573 1
 foretagsverige.se,forskningsverige.se,motorbibeln.se,hallbarhetsverige.se,tillvaxtsverige.se,grillbibeln.se,kampenmotcancer.se,folkhalsasverige.se##.whitebox-container:has-text(/sponsra/i)
 a587 1
 forvaltarforum.se##.video-banner:remove()
+a803 2
+killsteal.se##a[href*="casino"], a[href*="kasino"]
+killsteal.se##.avgransare ~ p:has-text(casino)
 d921 1
 a921 1
 lwcdn.com,alingsastidning.se,bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se,kungsbackaposten.se,kungalvsposten.se,molndalsposten.se,partilletidning.se,sttidningen.se,markposten.se,harrydaposten.se,mellerudsnyheter.se##+js(json-prune-fetch-response, autoplay, , propsToMatch, url:ljsp.lwcdn.com)
@@ -46,6 +53,8 @@ a1072 1
 omni.se,omniekonomi.se##div[class^="TopPanoramaAd"], div[class^="StickySideAd"], div[class*="_native"], div[class^="Ad_placement"], div[class*="PanoramaAd_"]
 a1118 1
 radio.se###always-visible-banner-desktop-banner
+a1229 1
+sportapp.travsport.se##div[class^="CookieDisclaimer"]
 d1262 1
 a1262 1
 svartgul.se##li.embedded, footer li.long
@@ -75,11 +84,15 @@ a1795 1
 /Toppbanner$domain=forvaltarforum.se
 a1806 1
 /admin-ajax$domain=chef.se
+a1950 1
+/count?$xhr,domain=feber.se|tjock.se
 d2014 1
 a2014 1
 /gdpr/*$domain=visitlulea.se|husbilskompisar.se|rotter.se|arkeologikonsult.se
 a2045 1
 /imatrics/read$domain=vk.se|folkbladet.nu|nordsverige.se|mellanbygden.nu|vasterbottningen.se|lokaltidningen.nu
+a2055 1
+/jnews/ad-insertion-between-posts
 a2092 1
 /marketmate-prod$frame,domain=marketmate.se
 a2113 1
@@ -92,6 +105,8 @@ d2173 2
 a2174 2
 /plugins/cookie-law-info$script,domain=gilla.se|startaochdriva.se|sverige.nu|conpot.se|firstclassmagazine.se|magasinetkonkret.se|kvalitetsmagasinet.se|miljo-utveckling.se|telekomidag.se|vdtidningen.se|gullislastips.se|nyfiknainvesterare.se|discoveringtheplanet.com|bussmagasinet.se|torbjornstips.se|affarsstaden.se|marknadschefer.se|automation.se|dinbyggare.se|aktieskolan.se|insikt24.se|skogen.se|sulkysport.se|bitzmagasin.se|battrestadsdel.se|automatos.se
 /plugins/cookie-notice$script,domain=bildobubbla.se|zeromagazine.nu|sverigespringer.se|gasetten.se|sillyseason.se|gentlemannaguiden.com|matmalin.se|svensktidskrift.se|schack.se|densistavilan.se|horisontmagasin.se|kobe.se|tidningenproffs.se|jaktojagare.se|tobaksfakta.se|bebisvarlden.se|underbaraclaras.se|cykelframjandet.se|dalabygden.se|lansposten.se|sormlandsbygden.se|vaguiden.se|grandtech.se|bluff.se|bjjtv.se|svmf.se|rockbladet.se|globalbar.se|seniornet.se
+a2312 1
+/prisjakt-ad-carousel$frame
 d2315 1
 a2315 1
 /profile$ping,domain=feber.se|skippo.se|tasteline.com|tjock.se|veckorevyn.com|marcusoscarsson.se|handbollskanalen.se|surfa.se|nordichardware.se|tv4.se|fotbollskanalen.se|koket.se|teknikveckan.se|56kilo.se|langd.se
@@ -112,6 +127,9 @@ a2539 2
 d2562 1
 a2619 1
 ||asset.schwarz/track$domain=lidl.se
+d2711 1
+a2711 1
+||cookietractor.com^$domain=innebandy.se|orientering.se|pluggakuten.se|munskankarna.se|burgerdudes.se
 d2743 1
 d2863 1
 a2863 1

@@ -1,10 +1,14 @@
-diff name:swefilter lines:32 checksum:b5ddc4fa83
+diff name:swefilter lines:50 checksum:4963f49e26
 d2 1
 a2 1
-! Last updated: Mon, 14 Oct 2024 03:41:59 +0000
+! Last updated: Tue, 15 Oct 2024 04:29:14 +0000
 d4 1
 a4 1
-! Diff-Path: patches/2024.10.14.221.patch#swefilter
+! Diff-Path: patches/2024.10.15.269.patch#swefilter
+a76 1
+.se/widgets/ads/
+a119 1
+aftonbladet.se,godare.se,livsstil.se##div[style*="min-height:240px"]:has(iframe[src*="/widgets/ads/"])
 a191 1
 arkitekten.se##div[data-native-ad-position]:has(.Ad)
 a193 1
@@ -18,16 +22,30 @@ a574 1
 foretagsverige.se,forskningsverige.se,motorbibeln.se,hallbarhetsverige.se,tillvaxtsverige.se,grillbibeln.se,kampenmotcancer.se,folkhalsasverige.se##.whitebox-container:has-text(/sponsra/i)
 a588 1
 forvaltarforum.se##.video-banner:remove()
+a804 2
+killsteal.se##a[href*="casino"], a[href*="kasino"]
+killsteal.se##.avgransare ~ p:has-text(casino)
+a1230 1
+sportapp.travsport.se##div[class^="CookieDisclaimer"]
 a1655 1
 ##div.wp-block-ad
 a1801 1
 /Toppbanner$domain=forvaltarforum.se
+a1957 1
+/count?$xhr,domain=feber.se|tjock.se
+a2063 1
+/jnews/ad-insertion-between-posts
 d2186 1
 a2186 1
 /plugins/cookie-notice$script,domain=bildobubbla.se|zeromagazine.nu|sverigespringer.se|gasetten.se|sillyseason.se|gentlemannaguiden.com|matmalin.se|svensktidskrift.se|schack.se|densistavilan.se|horisontmagasin.se|kobe.se|tidningenproffs.se|jaktojagare.se|tobaksfakta.se|bebisvarlden.se|underbaraclaras.se|cykelframjandet.se|dalabygden.se|lansposten.se|sormlandsbygden.se|vaguiden.se|grandtech.se|bluff.se|bjjtv.se|svmf.se|rockbladet.se|globalbar.se|seniornet.se
+a2324 1
+/prisjakt-ad-carousel$frame
 d2458 1
 d2474 1
 a2474 1
 /wp-content/uploads/*annons$image,domain=~datahjelperne.no|~dataliner.no|~annonsere.gulesider.no|~annonsmarknan.se
 a2554 1
 @@||citiboard.se^$ghide
+d2726 1
+a2726 1
+||cookietractor.com^$domain=innebandy.se|orientering.se|pluggakuten.se|munskankarna.se|burgerdudes.se
