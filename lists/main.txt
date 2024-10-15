@@ -57,6 +57,7 @@
 .se/upload/annons/
 .se/uploads/banners/
 .se/uploads/images/banners/
+.se/widgets/ads/
 .se/wdg/vda-active
 .se/wp-content/banners/
 .se/wp-content/uploads/_banners/
@@ -157,6 +158,7 @@
 /img/bettingstugan.$image
 /isbanner/ib.js
 /javascript_nbenhadverts/*
+/jnews/ad-insertion-between-posts
 /Jofab_Blog/js/ads.min.js
 /js/adLocker.
 /js/annons.js
@@ -185,6 +187,7 @@
 /playbuzz-ads-core
 /Portalannonser/*$image
 /prebid_rtb_call
+/prisjakt-ad-carousel$frame
 /prod/adform
 /renderBanner.do?zoneId=
 /resource.ifragasatt.se/sd-ads
@@ -1242,7 +1245,7 @@ aftonbladet.se,livsstil.se,godare.se,byggahus.se,expressen.se,elle.se,femina.se,
 ||cookielaw.org^$domain=cartoonnetwork.se|tv4.se|fotbollskanalen.se|koket.se|flashscore.se|ikea.com|recept.se|manpower.se|mtv.se|natgeotv.com|internetkunskap.se|internetstiftelsen.se|yelp.se|spisa.nu|viaplayradio.se|booli.se|svenskarnaochinternet.se|sv.bab.la|tripadvisor.se|sydkusten.es|livetochdiabetes.se|voister.se|nok.se|motesplatsen.se|thelocal.se|placera.se|infotorgjuridik.se|se.trustpilot.com|travronden.se|travrondenspel.se|hammarbyfotboll.se|pricerunner.se|billetto.se|lidl.se|pwc.se|svenskafans.com|eurocampings.se
 ||cookiepro.com^$domain=birthday.se|djurskyddet.se|havet.nu|svenskfast.se|fiskejournalen.se|upplysning.se
 ||cookieinformation.com^$domain=folkofolk.se|dental24.se|vinbanken.se|handelskammarenvarmland.se|enahabo.se|bostadsportal.se
-||cookietractor.com^$domain=innebandy.se|orientering.se|pluggakuten.se|munskankarna.se
+||cookietractor.com^$domain=innebandy.se|orientering.se|pluggakuten.se|munskankarna.se|burgerdudes.se
 ||consentframework.com^$domain=luleahockeyforum.com|se.moyens.net
 ||evidon.com^$third-party,domain=fasting.nu
 ||mailmunch.co^$third-party,domain=affarsstaden.se|enkelteknik.se
@@ -1463,6 +1466,7 @@ curateContext=affiliate$domain=aftonbladet.se
 ! Cosmetic ad filters
 aftonbladet.se###megaAd-placeholder, #superright-side, a[href*="/casinoguide"], [id^="adPlacement"], a[href^="https://kampanj.aftonbladet"], a[href*="/rabattkod"][data-test-tag="internal-link"], a[href^="/sportbladet/speltips/"], a[href*="aftonbladet.se/kampanj/"], div[class*="stickyloginoverlay"]
 aftonbladet.se,godare.se,livsstil.se##[data-test-tag="prisjakt-carousel"], a[href^="/brandstudio"], div[class^="advertory-"]:not(.advertory-header-anchor)
+aftonbladet.se,godare.se,livsstil.se##div[style*="min-height:240px"]:has(iframe[src*="/widgets/ads/"])
 livsstil.se##div[data-variants*="article-panorama"]:upward(1)
 aftonbladet.se,skonhetsredaktorerna.se##.ab_responsive_ads
 aftonbladet.se##[data-ad-subtype]:upward(1):matches-css(min-height:/[0-9]+/)
@@ -1918,6 +1922,7 @@ gamereactor.se##+js(set, adblockEnabled, falseFunc)
 ! Misc
 ||maxetise.net^$script,redirect-rule=noop.js,domain=feber.se|tjock.se
 ||plausible.io^$script,redirect-rule=noop.js,domain=feber.se|tjock.se
+/count?$xhr,domain=feber.se|tjock.se
 feber.se,tjock.se##.burt-unit, .art_ad, adline, f-panorama, f-deals, #rpPopular, #maxetiseFull, #outsider, [data-ad="true"]
 feber.se,tjock.se##f-internallinks-new:has-text(Annons)
 feber.se,tjock.se##+js(set, dovideostuffAD, noopFunc)
@@ -2005,6 +2010,8 @@ dagenstech.se##:is(.sticky.-top-4, .container > div[class=""]):has(a[href*=".se/
 dagenstech.se##.text-right:has-text(ANNONS)
 dagenstech.se##a[href^="https://dagenstech.se/articles/"]:upward(1):has-text(SPONSRAT)
 teknikguiden.se##:is(.vce-sticky, .vce-content-bottom):has(a[target])
+killsteal.se##.avgransare ~ p:has-text(casino)
+killsteal.se##a[href*="casino"], a[href*="kasino"]
 
 ! === Sport, motor & hobby
 
@@ -2169,6 +2176,7 @@ alltomelbil.se###zox-lead-top-wrap
 alltomelbil.se##:is(.p-list, div[class*="post-"]):has(a[href*="/annons"])
 banners$image,domain=travsport.se|gavletravet.se
 travsport.se,gavletravet.se##.banner-component, .partners, .cookie-meddelande
+sportapp.travsport.se##div[class^="CookieDisclaimer"]
 /frontendLogger$domain=flashscore.se
 flashscore.se##.boxOverContent--a, .otPlaceholder, .seoAdWrapper, .adsbackground-wrapper, .prematchOddsBonus__bonus, .prematchLink[target], .detailLeaderboardSkeleton
 fotbollsresultat.com##h2:has-text(Spel och dobbel) ~ p
