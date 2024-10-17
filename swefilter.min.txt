@@ -1,7 +1,7 @@
 ! Title: Frellwit's Swedish Filter
-! Last updated: Wed, 16 Oct 2024 05:37:44 +0000
+! Last updated: Thu, 17 Oct 2024 06:01:54 +0000
 ! Expires: 5 days
-! Diff-Path: patches/2024.10.16.337.patch#swefilter
+! Diff-Path: patches/2024.10.17.361.patch#swefilter
 ! Diff-Expires: 24 hours
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
@@ -148,8 +148,8 @@ alekuriren.se##div[id^="aleku-"], #carouselVideoAd, #carouselVideoAdMobile, .nat
 aletorget.se,alingsastorget.se,almhulttorget.se,alvestatorget.se,amaltorget.se,angelholmtorget.se,arbogatorget.se,arvikatorget.se,askersundtorget.se,askersundtorget.se,avestatorget.se,bastadtorget.se,bengtsforstorget.se,bjuvtorget.se,bodentorget.se,bollebygdtorget.se,bollnastorget.se,borastorget.se,borlangetorget.se,botkyrkatorget.se,bromollatorget.se,eksjotorget.se,enkopingtorget.se,eskilstunatorget.se,eslovtorget.se,fagerstatorget.se,falkenbergtorget.se,falkopingtorget.se,faluntorget.se,filipstadtorget.se,flentorget.se,forshagatorget.se,gallivaretorget.se,gavletorget.se,gislavedstorget.se,goteborgtorget.se,gotenetorget.se,gotlandtorget.se,hagforstorget.se,hallsbergtorget.se,hallsbergtorget.se,hallstahammartorget.se,halmstadtorget.se,haningetorget.se,harnosandtorget.se,harrydatorget.se,hassleholmtorget.se,hebytorget.se,hedemoratorget.se,helsingborgtorget.se,herrljungatorget.se,hoforstorget.se,hoganastorget.se,hoortorget.se,horbytorget.se,huddingetorget.se,hudiksvalltorget.se,hultsfredtorget.se,hyltetorget.se,jonkopingtorget.se,kalixtorget.se,kalmartorget.se,karlshamntorget.se,karlskogatorget.se,karlskogatorget.se,karlskronatorget.se,karlstadtorget.se,katrineholmtorget.se,kavlingetorget.se,kiltorget.se,kirunatorget.se,klippantorget.se,kopingtorget.se,kramforstorget.se,kristianstadtorget.se,kristinehamntorget.se,krokomtorget.se,kumlatorget.se,kungalvtorget.se,kungsbackatorget.se,laholmtorget.se,landskronatorget.se,leksandtorget.se,lidkopingtorget.se,ljungbytorget.se,ljusdaltorget.se,ludvikatorget.se,luleatorget.se,lundtorget.se,lyckseletorget.se,lysekiltorget.se,malmotorget.se,mariestadstorget.se,markarydtorget.se,marktorget.se,moratorget.se,nackatorget.se,nassjotorget.se,norrtaljetorget.se,nybrotorget.se,nykopingtorget.se,nynashamntorget.se,olandtorget.se,olofstromtorget.se,orebrotorget.se,orebrotorget.se,ornskoldsvikstorget.se,orusttorget.se,osbytorget.se,oskarshamntorget.se,ostersundtorget.se,osthammartorget.se,partilletorget.se,piteatorget.se,ronnebytorget.se,saffletorget.se,salatorget.se,sandvikentorget.se,sigtunatorget.se,simrishamntorget.se,sjobotorget.se,skaratorget.se,skellefteatorget.se,skovdetorget.se,skuruptorget.se,soderhamntorget.se,sodertaljetorget.se,sollefteatorget.se,sollentunatorget.se,solnatorget.se,solvesborgtorget.se,staffanstorptorget.se,stenungsundtorget.se,stockholmtorget.se,strangnastorget.se,stromstadtorget.se,sundsvalltorget.se,sunnetorget.se,svenljungatorget.se,tabytorget.se,tanumtorget.se,tidaholmtorget.se,tierptorget.se,timratorget.se,tingsrydtorget.se,tjorntorget.se,tomelillatorget.se,torsbytorget.se,tranastorget.se,tranemotorget.se,trelleborgtorget.se,trollhattantorget.se,trosatorget.se,uddevallatorget.se,ulricehamntorget.se,umeatorget.se,uppsalatorget.se,vallentunatorget.se,vanersborgtorget.se,varatorget.se,varbergtorget.se,varnamotorget.se,vasterastorget.se,vasterviktorget.se,vaxjotorget.se,vellingetorget.se,vetlandatorget.se,vimmerbytorget.se,ystadtorget.se##.collapse.row.jobb.annonslista,#sponsored,#banners-right,.mittenbanner,#banners-top,#banners-bottom
 alexandrabylund.se,helahisingen.se,sportsnews.se,xn--sporthnt-5za.se###af-preloader
 alghundklubben.com#@#.category-annons:not(body):not(html)
-alkompis.se##app-ads, .cdk-overlay-container
-alkompis.se##.cdk-global-scrollblock:style(overflow-y: initial !important; position: unset !important;)
+alkompis.se##app-ads
+alkompis.se##.mat-card:has(.ad-word)
 allaaktier.se##div[id^="ad-"]
 allabolag.se##article:has(.advert__mark)
 allabolag.se###company-card_top-banner, .lwad
@@ -391,6 +391,7 @@ dagensvimmerby.se,dagensvastervik.se,dagenskalmar.nu,dagenshultsfred.se##body:st
 dagensvimmerby.se,dagensvastervik.se,dagenskalmar.nu,dagenshultsfred.se##.panoramaAnnons, .JobAdDiv, .annonsKolumn, .insideAd, .ingressAd, .familyAds, .annonsWrapper, #indexLinks
 dagens.se##.item:has(.prebid, div[data-ad-unit-id], a[href*="casino"])
 dagen.se##.video-annons, .native-box, .arcad-block-container
+dansbandsnytt.se##.ai-rotate, .two-ads-wide-container
 danskaspraket.se##.rightcol
 darkside.se##a[href*="?aktion=bannerclick"]
 datormagazin.se##a:has-text(/^annons/i)
@@ -714,6 +715,7 @@ hemhyra.se##.pageCookies, #ad-insider1, #ad-insider2, #ad-mobil-1, #ad-mobil-2, 
 hemmafixbloggen.se##.post-item:has(.sponsor-summary)
 hemmanytt.se###sa_slider_shortcode
 hemmanytt.se##.annonsnotis + span + span + div.td-pb-row:has(a[href*="adtr.co"])
+hemnet.se##article[class^="ArticleCard"]:has-text(/sponsrad/i)
 hemnet.se##body:style(overflow:unset!important)
 hemnet.se##div[data-testid="living-cost-logos-section"]:has(span[aria-label="annons"])
 hemnet.se##span:has-text(/annons från/i):upward(div[class^="ArticleContent_articlePage"])
@@ -804,7 +806,7 @@ karinrahm.se##.thb-page-transition-on:style(opacity:1!important)
 karlskogavaxer.se##.elementor-heading-title:has-text(/annons/i):upward(.elementor-column)
 karriarlakare.se##a:has(.annons-label)
 karriarlakare.se##a[target][onclick], #cliSettingsPopup
-karriarlakare.se,livinguppsala.se,battrestadsdel.se,butikstrender.se,forskning.se,vardfokus.se,varvat.se,smaspararguiden.se,sjostadsbladet.se,tidningenridsport.se,cookaholic.se,vinliv.se,raa.se,svenskfilmdatabas.se,hockeybladet.nu,frihetsnytt.se###cookie-law-info-bar
+karriarlakare.se,livinguppsala.se,battrestadsdel.se,butikstrender.se,forskning.se,vardfokus.se,varvat.se,smaspararguiden.se,sjostadsbladet.se,tidningenridsport.se,cookaholic.se,vinliv.se,raa.se,svenskfilmdatabas.se,hockeybladet.nu,frihetsnytt.se,alltomhusbilen.se###cookie-law-info-bar
 kartor.eniro.se##.e-banner
 kb.se,dansportalen.se,hh.se##body:style(overflow:unset!important; position:unset!important;)
 kb.se,dansportalen.se,hh.se##.sv-marketplace-sitevision-cookie-consent, .sv-cookie-consent-modal, .env-modal-dialog__backdrop, .env-modal-dialog__backdrop--in
@@ -883,6 +885,7 @@ lindasbakskola.se,skk.se,realtid.se,viivilla.se,ungdomsfotboll.se##a[href*="/bit
 linguee.se##div[class*="ad_container"], div[class*="_ads_"]
 lira.se###cookies-accept
 lira.se,danstidningen.se,slangopedia.se,tidningen.se###ads
+listaroo.se##.ct-link[target="_blank"], a[href*="casino"], a[href*="spellicens"]
 listor.se##article.feed-item:has-text(/låna pengar|casino|betting/i)
 listor.se##article:has(a[href*="/annons/"])
 listor.se###ss-floating-bar, .top-ads-widget, .header-inner center, #sidebar-right .widget_custom_html
@@ -1120,7 +1123,7 @@ proshop.se##body:style(background-image: none !important;)
 proshop.se##.site-background-banner
 pussad.se##html.g1-popup-visible:style(overflow: initial !important;)
 pussad.se##.g1-popup-newsletter, .g1-slideup-wrap
-quizza.nu###takeover
+quizza.nu,elbilen.se###takeover
 qx.se##.qxa-container
 racemagazine.se##article + div:has(.ad-inner)
 racenews.se###block-2
@@ -1625,6 +1628,7 @@ zeromagazine.nu##div[id^="ads"]
 ##div.fs-holid-live-widescreen
 ##div.helsida-ad
 ##div.inner_advertisement
+##div.in-feed-ad
 ##div.in-post-ad-wrap
 ##div.jeg_ad
 ##div.js-top-banner-container
@@ -1661,6 +1665,7 @@ zeromagazine.nu##div[id^="ads"]
 ##div.td-banner-bg
 ##div.topmost-banner
 ##div.tower-annonser
+##div.uder-tags-ad
 ##div.view-annons-banner
 ##div.vue-ad-wrapper
 ##div.widget_widget_dfp
@@ -1838,6 +1843,7 @@ zeromagazine.nu##div[id^="ads"]
 /ads/adnami-conf.js
 /ads/global-conf.js
 /ads/load-dm.js
+/ads/*?track_this=1
 /ads?$domain=cirkulation.se
 /adtracker$domain=beernews.se
 /advertisement-dfp$script
@@ -2305,7 +2311,7 @@ zeromagazine.nu##div[id^="ads"]
 /plugins/vizzit-analytics
 /plugins/wccp-pro$domain=dinbyggare.se
 /plugins/webtoffee-cookie-consent$script,domain=ekonomifokus.se
-/plugins/webtoffee-gdpr-cookie-consent$script,domain=forskning.se|hejaolika.se|kvartal.se|karriarlakare.se|svenskfilmdatabas.se|bredband.se|bonnieraudio.se
+/plugins/webtoffee-gdpr-cookie-consent$script,domain=forskning.se|hejaolika.se|kvartal.se|karriarlakare.se|svenskfilmdatabas.se|bredband.se|bonnieraudio.se|dansbandsnytt.se
 /plugins/wf-cookie-consent$script,domain=spelochfilm.se
 /plugins/woocommerce-google-adwords
 /plugins/wordpress-stats-manager-pro
@@ -2638,7 +2644,7 @@ zeromagazine.nu##div[id^="ads"]
 ||api.staylive.tv/videos/engagement
 ||applets.ebxcdn.com/ebx.js$domain=stoppapressarna.se
 ||applicationinsights.azure.com/*track
-||app.termly.io^$domain=soderkopingsposten.se
+||app.termly.io^$domain=soderkopingsposten.se|alkompis.se
 ||apsis.one^$third-party
 ||ascontentcloud.com^$third-party
 ||aservice.tools^

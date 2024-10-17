@@ -1,14 +1,18 @@
-diff name:swefilter lines:201 checksum:03a9a18585
+diff name:swefilter lines:229 checksum:b611469fd4
 d2 1
 a2 1
-! Last updated: Wed, 16 Oct 2024 05:37:44 +0000
+! Last updated: Thu, 17 Oct 2024 06:01:54 +0000
 d4 1
 a4 1
-! Diff-Path: patches/2024.10.16.337.patch#swefilter
+! Diff-Path: patches/2024.10.17.361.patch#swefilter
 a76 1
 .se/widgets/ads/
 a119 1
 aftonbladet.se,godare.se,livsstil.se##div[style*="min-height:240px"]:has(iframe[src*="/widgets/ads/"])
+d149 2
+a150 2
+alkompis.se##app-ads
+alkompis.se##.mat-card:has(.ad-word)
 d165 1
 a165 1
 allatvkanaler.se##.gda, .cookie-notification, .iy.first
@@ -31,6 +35,8 @@ d366 1
 d368 1
 a368 1
 dagensjuridik.se##.outher-sidebar, a[href*="/annons/"], .dj-inline-ad, .sticky
+a387 1
+dansbandsnytt.se##.ai-rotate, .two-ads-wide-container
 d407 2
 a408 1
 devote.se##div[class^="ad_"], a[href*="annons"], a[href*="spel"], a[href*="casino"], a[href*="kasino"], a[href*="extrapengar"], a[href*="investera"], a[href*="boka"], a[href*="strategier"], a[href*="buda-"]
@@ -53,11 +59,18 @@ a657 1
 globalpolitics.se##aside .textwidget a img
 a677 1
 haaf.se##.stream-item:has(.adsbygoogle)
+a709 1
+hemnet.se##article[class^="ArticleCard"]:has-text(/sponsrad/i)
 a743 1
 husbilhusvagn.se##.article-native
+d799 1
+a799 1
+karriarlakare.se,livinguppsala.se,battrestadsdel.se,butikstrender.se,forskning.se,vardfokus.se,varvat.se,smaspararguiden.se,sjostadsbladet.se,tidningenridsport.se,cookaholic.se,vinliv.se,raa.se,svenskfilmdatabas.se,hockeybladet.nu,frihetsnytt.se,alltomhusbilen.se###cookie-law-info-bar
 a804 2
 killsteal.se##a[href*="casino"], a[href*="kasino"]
 killsteal.se##.avgransare ~ p:has-text(casino)
+a875 1
+listaroo.se##.ct-link[target="_blank"], a[href*="casino"], a[href*="spellicens"]
 d905 1
 a905 1
 ljuskultur.se,bettips.se,spelo.se,skogsaktuellt.se,maskinbladet.se,entreprenadaktuellt.se,ja.se,husbilhusvagn.se,klassiker.nu,mopedgaraget.se,vibilagare.se,caroftheyear.se,automobil.se,endurobloggen.se,riksettan.net,frillesasbandy.se,dh.se,djungeltrumman.se,skik.se,omni.se,campingsverige.se,eniro.se,realtid.se,restaurangvarlden.se,naringslivetvgl.se,dalarnasaffarer.se,stockholmsaffarer.se,jamtlandsaffarer.se,hallandsnaringsliv.se,sjuharadsnaringsliv.se,nyheteridag.se,alekuriren.se,omniekonomi.se,sverigesindustri.se,onkologiisverige.se,svenskalag.se##.banner
@@ -83,6 +96,9 @@ nyhetersto.se,bussmagasinet.se,brollopsmagasinet.se,borattforum.se,globalpolitic
 d1070 4
 a1073 1
 omni.se,omniekonomi.se##div[class^="TopPanoramaAd"], div[class^="StickySideAd"], div[class*="_native"], div[class^="Ad_placement"], div[class*="PanoramaAd_"]
+d1114 1
+a1114 1
+quizza.nu,elbilen.se###takeover
 a1119 1
 radio.se###always-visible-banner-desktop-banner
 d1211 1
@@ -112,8 +128,12 @@ a1575 1
 a1605 2
 ##div.dfp-ads-container
 ##div.dfp-ads-container-middle
+a1612 1
+##div.in-feed-ad
 a1622 1
 ##div.mobile-ad-format
+a1647 1
+##div.uder-tags-ad
 a1650 1
 ##div.wp-block-ad
 a1759 1
@@ -125,6 +145,8 @@ a1793 1
 /Toppbanner$domain=forvaltarforum.se
 a1804 1
 /admin-ajax$domain=chef.se
+a1818 1
+/ads/*?track_this=1
 a1948 1
 /count?$xhr,domain=feber.se|tjock.se
 d2012 1
@@ -147,6 +169,9 @@ d2171 2
 a2172 2
 /plugins/cookie-law-info$script,domain=gilla.se|startaochdriva.se|sverige.nu|conpot.se|firstclassmagazine.se|magasinetkonkret.se|kvalitetsmagasinet.se|miljo-utveckling.se|telekomidag.se|vdtidningen.se|gullislastips.se|nyfiknainvesterare.se|discoveringtheplanet.com|bussmagasinet.se|torbjornstips.se|affarsstaden.se|marknadschefer.se|automation.se|dinbyggare.se|aktieskolan.se|insikt24.se|skogen.se|sulkysport.se|bitzmagasin.se|battrestadsdel.se|automatos.se|80-talet.se
 /plugins/cookie-notice$script,domain=bildobubbla.se|zeromagazine.nu|sverigespringer.se|gasetten.se|sillyseason.se|gentlemannaguiden.com|matmalin.se|svensktidskrift.se|schack.se|densistavilan.se|horisontmagasin.se|kobe.se|tidningenproffs.se|jaktojagare.se|tobaksfakta.se|bebisvarlden.se|underbaraclaras.se|cykelframjandet.se|dalabygden.se|lansposten.se|sormlandsbygden.se|vaguiden.se|grandtech.se|bluff.se|bjjtv.se|svmf.se|rockbladet.se|globalbar.se|seniornet.se
+d2280 1
+a2280 1
+/plugins/webtoffee-gdpr-cookie-consent$script,domain=forskning.se|hejaolika.se|kvartal.se|karriarlakare.se|svenskfilmdatabas.se|bredband.se|bonnieraudio.se|dansbandsnytt.se
 a2310 1
 /prisjakt-ad-carousel$frame
 d2313 1
@@ -178,6 +203,9 @@ d2549 1
 d2561 1
 a2595 1
 ||analytics.ciseway.se^$third-party
+d2611 1
+a2611 1
+||app.termly.io^$domain=soderkopingsposten.se|alkompis.se
 a2617 1
 ||asset.schwarz/track$domain=lidl.se
 d2709 1

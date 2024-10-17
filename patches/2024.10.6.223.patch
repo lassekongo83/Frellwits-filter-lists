@@ -1,14 +1,18 @@
-diff name:swefilter lines:104 checksum:03a9a18585
+diff name:swefilter lines:132 checksum:b611469fd4
 d2 1
 a2 1
-! Last updated: Wed, 16 Oct 2024 05:37:44 +0000
+! Last updated: Thu, 17 Oct 2024 06:01:54 +0000
 d4 1
 a4 1
-! Diff-Path: patches/2024.10.16.337.patch#swefilter
+! Diff-Path: patches/2024.10.17.361.patch#swefilter
 a76 1
 .se/widgets/ads/
 a119 1
 aftonbladet.se,godare.se,livsstil.se##div[style*="min-height:240px"]:has(iframe[src*="/widgets/ads/"])
+d149 2
+a150 2
+alkompis.se##app-ads
+alkompis.se##.mat-card:has(.ad-word)
 a191 1
 arkitekten.se##div[data-native-ad-position]:has(.Ad)
 a193 1
@@ -19,6 +23,8 @@ citiboard.se##div[adunit]
 d368 1
 a368 1
 dagensjuridik.se##.outher-sidebar, a[href*="/annons/"], .dj-inline-ad, .sticky
+a387 1
+dansbandsnytt.se##.ai-rotate, .two-ads-wide-container
 d545 1
 a545 1
 firstclassmagazine.se###leader-wrap, #rpwe_widget-2, .side-widget .textwidget
@@ -28,9 +34,16 @@ a587 1
 forvaltarforum.se##.video-banner:remove()
 a675 1
 haaf.se##.stream-item:has(.adsbygoogle)
+a707 1
+hemnet.se##article[class^="ArticleCard"]:has-text(/sponsrad/i)
+d798 1
+a798 1
+karriarlakare.se,livinguppsala.se,battrestadsdel.se,butikstrender.se,forskning.se,vardfokus.se,varvat.se,smaspararguiden.se,sjostadsbladet.se,tidningenridsport.se,cookaholic.se,vinliv.se,raa.se,svenskfilmdatabas.se,hockeybladet.nu,frihetsnytt.se,alltomhusbilen.se###cookie-law-info-bar
 a803 2
 killsteal.se##a[href*="casino"], a[href*="kasino"]
 killsteal.se##.avgransare ~ p:has-text(casino)
+a874 1
+listaroo.se##.ct-link[target="_blank"], a[href*="casino"], a[href*="spellicens"]
 a938 1
 marketmate.se##div[id^="marke-"]
 d1041 1
@@ -39,6 +52,9 @@ nyadagbladet.se##.third-col, article[class*="sponsrad"], div[id^="nyd-"], .below
 d1070 4
 a1073 1
 omni.se,omniekonomi.se##div[class^="TopPanoramaAd"], div[class^="StickySideAd"], div[class*="_native"], div[class^="Ad_placement"], div[class*="PanoramaAd_"]
+d1114 1
+a1114 1
+quizza.nu,elbilen.se###takeover
 a1119 1
 radio.se###always-visible-banner-desktop-banner
 a1230 1
@@ -52,6 +68,10 @@ svenskafans.com##:is(.min-h-\[400px\], .min-h-96, .hidden.min-h-60):has(.ad-slot
 a1607 2
 ##div.dfp-ads-container
 ##div.dfp-ads-container-middle
+a1614 1
+##div.in-feed-ad
+a1650 1
+##div.uder-tags-ad
 a1653 1
 ##div.wp-block-ad
 a1765 2
@@ -59,6 +79,8 @@ a1765 2
 /ATrackingGA$domain=lidl.se
 a1797 1
 /Toppbanner$domain=forvaltarforum.se
+a1823 1
+/ads/*?track_this=1
 a1953 1
 /count?$xhr,domain=feber.se|tjock.se
 a2059 1
@@ -74,6 +96,9 @@ d2178 2
 a2179 2
 /plugins/cookie-law-info$script,domain=gilla.se|startaochdriva.se|sverige.nu|conpot.se|firstclassmagazine.se|magasinetkonkret.se|kvalitetsmagasinet.se|miljo-utveckling.se|telekomidag.se|vdtidningen.se|gullislastips.se|nyfiknainvesterare.se|discoveringtheplanet.com|bussmagasinet.se|torbjornstips.se|affarsstaden.se|marknadschefer.se|automation.se|dinbyggare.se|aktieskolan.se|insikt24.se|skogen.se|sulkysport.se|bitzmagasin.se|battrestadsdel.se|automatos.se|80-talet.se
 /plugins/cookie-notice$script,domain=bildobubbla.se|zeromagazine.nu|sverigespringer.se|gasetten.se|sillyseason.se|gentlemannaguiden.com|matmalin.se|svensktidskrift.se|schack.se|densistavilan.se|horisontmagasin.se|kobe.se|tidningenproffs.se|jaktojagare.se|tobaksfakta.se|bebisvarlden.se|underbaraclaras.se|cykelframjandet.se|dalabygden.se|lansposten.se|sormlandsbygden.se|vaguiden.se|grandtech.se|bluff.se|bjjtv.se|svmf.se|rockbladet.se|globalbar.se|seniornet.se
+d2287 1
+a2287 1
+/plugins/webtoffee-gdpr-cookie-consent$script,domain=forskning.se|hejaolika.se|kvartal.se|karriarlakare.se|svenskfilmdatabas.se|bredband.se|bonnieraudio.se|dansbandsnytt.se
 a2317 1
 /prisjakt-ad-carousel$frame
 d2330 1
@@ -94,6 +119,9 @@ a2544 2
 @@||citattorget.se^$ghide
 @@||citiboard.se^$ghide
 d2555 1
+d2617 1
+a2617 1
+||app.termly.io^$domain=soderkopingsposten.se|alkompis.se
 a2623 1
 ||asset.schwarz/track$domain=lidl.se
 d2715 1
