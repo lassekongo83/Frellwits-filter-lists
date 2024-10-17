@@ -548,6 +548,7 @@ Video-Ad-$media,3p
 ##div.helsida-ad
 ##div.I-artiklar-annonser
 ##div.in-post-ad-wrap
+##div.in-feed-ad
 ##div.inner_advertisement
 ##div.jeg_ad
 ##div.js-top-banner-container
@@ -588,6 +589,7 @@ Video-Ad-$media,3p
 ##div.topmost-banner
 ##div.toppannons
 ##div.tower-annonser
+##div.uder-tags-ad
 ##div.view-annons-banner
 ##div.vue-ad-wrapper
 ##div.widget_widget_dfp
@@ -708,6 +710,7 @@ Video-Ad-$media,3p
 .se/wdg/tracking
 .se/xhr/add-impression/
 /adobe/se/target-main-at.js
+/ads/*?track_this=1
 /ajax/docu_stats.jsp
 /ajax-hit-reg.php?
 /analytics-bmb
@@ -1261,7 +1264,7 @@ aftonbladet.se,livsstil.se,godare.se,byggahus.se,expressen.se,elle.se,femina.se,
 ||cmp.setupcmp.com^$domain=se.azrhymes.com|dagensnamn.nu
 ||usercentrics.eu^$domain=hemnet.se|kantarsifo.se|foretagarna.se
 ||cookieinfoscript.com^$domain=webbkryss.nu
-||app.termly.io^$domain=soderkopingsposten.se
+||app.termly.io^$domain=soderkopingsposten.se|alkompis.se
 ||hu-manity.co^$domain=topics.se
 ||termsfeed.com^$domain=travsport.se
 ! Unrelated video bloat
@@ -1281,7 +1284,7 @@ biblioteksforeningen.se,psykologiguiden.se,rabattsok.se###cookie-bar
 it-finans.se,it-halsa.se,it-kanalen.se,it-pedagogen.se,it-retail.se,it-hallbarhet.se,espressomedia.se##.penci-wrap-gprd-law
 bokmassan.se,svenskamassan.se##.cookie-law
 naringslivetvgl.se,dalarnasaffarer.se,stockholmsaffarer.se,jamtlandsaffarer.se,sverigesindustri.se,hallandsnaringsliv.se,sjuharadsnaringsliv.se,onkologiisverige.se##.cookies-popup
-karriarlakare.se,livinguppsala.se,battrestadsdel.se,butikstrender.se,forskning.se,vardfokus.se,varvat.se,smaspararguiden.se,sjostadsbladet.se,tidningenridsport.se,cookaholic.se,vinliv.se,raa.se,svenskfilmdatabas.se,hockeybladet.nu,frihetsnytt.se###cookie-law-info-bar
+karriarlakare.se,livinguppsala.se,battrestadsdel.se,butikstrender.se,forskning.se,vardfokus.se,varvat.se,smaspararguiden.se,sjostadsbladet.se,tidningenridsport.se,cookaholic.se,vinliv.se,raa.se,svenskfilmdatabas.se,hockeybladet.nu,frihetsnytt.se,alltomhusbilen.se###cookie-law-info-bar
 forskning.se##.cli-modal
 vardfokus.se,tidningenridsport.se##.cli-modal-backdrop
 fotboll.com,allsvenskan.se,superettan.se,swebbtv.se,hastnet.se##.smartbanner
@@ -2323,6 +2326,7 @@ radiotreby.se##.mobileHide, .mobile-show
 /ad?platform$domain=viaplayradio.se
 ||bio.se/js/googleAnalytics.js
 radio-sveriges.se###original_taboola
+dansbandsnytt.se##.ai-rotate, .two-ads-wide-container
 
 ! === Video media
 
@@ -2831,7 +2835,7 @@ aletorget.se,alingsastorget.se,almhulttorget.se,alvestatorget.se,amaltorget.se,a
 /cookies-and-content-security-policy$script,domain=cannabisifokus.se|futsalmagasinet.se|sd.se
 /plugins/gdpr-cookie-compliance$script,domain=goteborgsgolfaren.se|nyhetersto.se|modernalivet.se
 /plugins/quantcast-choice$script,domain=handbollskanalen.se|javligtgott.se|dh.se
-/plugins/webtoffee-gdpr-cookie-consent$script,domain=forskning.se|hejaolika.se|kvartal.se|karriarlakare.se|svenskfilmdatabas.se|bredband.se|bonnieraudio.se
+/plugins/webtoffee-gdpr-cookie-consent$script,domain=forskning.se|hejaolika.se|kvartal.se|karriarlakare.se|svenskfilmdatabas.se|bredband.se|bonnieraudio.se|dansbandsnytt.se
 /plugins/webtoffee-cookie-consent$script,domain=ekonomifokus.se
 /plugins/cookie-notice$script,domain=bildobubbla.se|zeromagazine.nu|sverigespringer.se|gasetten.se|sillyseason.se|gentlemannaguiden.com|matmalin.se|svensktidskrift.se|schack.se|densistavilan.se|horisontmagasin.se|kobe.se|tidningenproffs.se|jaktojagare.se|tobaksfakta.se|bebisvarlden.se|underbaraclaras.se|cykelframjandet.se|dalabygden.se|lansposten.se|sormlandsbygden.se|vaguiden.se|grandtech.se|bluff.se|bjjtv.se|svmf.se|rockbladet.se|globalbar.se|seniornet.se
 /plugins/cookie-popup$script,domain=skillingaryd.nu|xn--vrnamo-bua.nu
@@ -3140,8 +3144,8 @@ djungeltrumman.se##.label-sponsored:upward(#latest-slider a):remove()
 djungeltrumman.se##strong:has-text(/samarbete|sponsrat/i):upward(li):remove()
 senses.se##a[href*="casino"], a[href*="spelsajt"], a[href*="betting"]
 senses.se##aside:has-text(Annonser:)
-alkompis.se##app-ads, .cdk-overlay-container
-alkompis.se##.cdk-global-scrollblock:style(overflow-y: initial !important; position: unset !important;)
+alkompis.se##app-ads
+alkompis.se##.mat-card:has(.ad-word)
 popularastronomi.se##a.gofollow[data-track]:not([href*="www.popularastronomi.se"])
 pussad.se##.g1-popup-newsletter, .g1-slideup-wrap
 pussad.se##html.g1-popup-visible:style(overflow: initial !important;)
@@ -3242,6 +3246,7 @@ cannabisifokus.se##div[id^="canna-"]
 hemnet.se###ad_unit_placeholder, div[class^="Panorama_panoramaAd"], .listing__panorama-banner, .broker-banner, div[class^="BrokerBanner"], div[class^="PanoramaMobile"]
 hemnet.se##:is(article, li):has([class*="SponsoredLabel"], .article-card__sponsored-text)
 hemnet.se##:is(small, span):has-text(/sponsrad/i):upward(article, li, a)
+hemnet.se##article[class^="ArticleCard"]:has-text(/sponsrad/i)
 hemnet.se##:is(div[class^="Carousel"], #top_listing):has(div[class^="PaidPlacementLabel"])
 hemnet.se##div[data-testid="living-cost-logos-section"]:has(span[aria-label="annons"])
 hemnet.se##span:has-text(/annons från/i):upward(div[class^="ArticleContent_articlePage"])
@@ -3262,7 +3267,7 @@ branschstegen.se##.container:has(a[href*="casino"])
 branschaktuellt.se##.popup-signup, .takeover
 branschaktuellt.se##span:has-text(Sponsrad):upward(.article)
 svenskarnaochinternet.se,internetstiftelsen.se###newsletter-sliding
-quizza.nu###takeover
+quizza.nu,elbilen.se###takeover
 biblioteksforeningen.se##body:style(opacity:1!important)
 helgon.se##[id*="banner"], a[href^="https://ad."], a[href^="https://ad2."]
 dykarna.nu###rightbanners
@@ -3492,3 +3497,4 @@ citattorget.se##.adsense-main
 @@||citiboard.se^$ghide
 citiboard.se##div[adunit]
 haaf.se##.stream-item:has(.adsbygoogle)
+listaroo.se##.ct-link[target="_blank"], a[href*="casino"], a[href*="spellicens"]
