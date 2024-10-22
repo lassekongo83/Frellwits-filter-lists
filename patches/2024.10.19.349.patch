@@ -1,19 +1,56 @@
-diff name:swefilter lines:52 checksum:b1c5a66357
+diff name:swefilter lines:101 checksum:486d919438
 d2 1
 a2 1
-! Last updated: Mon, 21 Oct 2024 05:51:06 +0000
+! Last updated: Tue, 22 Oct 2024 05:56:18 +0000
 d4 1
 a4 1
-! Diff-Path: patches/2024.10.21.351.patch#swefilter
+! Diff-Path: patches/2024.10.22.356.patch#swefilter
+d252 1
+a252 1
+bioenergitidningen.se##article.closed:remove-class(closed)
 a372 1
 dagensinnovation.se,nyheter.swebbtv.se###moove_gdpr_cookie_info_bar
+d432 1
+a432 1
+discoveringtheplanet.com##body.unselectable:remove-class(unselectable)
+d446 1
+a446 1
+dn.se,di.se##video[data-auto-play]:remove-attr(data-auto-play)
 a482 1
 esportnytt.se###text-2
+d513 2
+a514 2
+expressen.se##a[data-t-label]:remove-attr(data-t-label)
+expressen.se##a[data-t-type]:remove-attr(data-t-type)
+a516 1
+expressen.se##video[autoplay]:remove-attr(autoplay)
+a520 2
+expressen.se##.video-player[data-ad-config]:remove-attr(data-ad-config)
+expressen.se,di.se##+js(aeld, contextmenu, .disabled)
 d523 1
 a523 1
 extrakt.se,macken.xyz,dialasen.com,lakartidningen.se,ordmedzcxy.se,gamingtips.se###cmplz-cookiebanner-container
-a650 1
+d651 1
+a651 2
 gais.se##.cookie--wrapper
+gamereactor.se##video[data-autoplay]:remove-attr(data-autoplay)
+d739 1
+a739 1
+hockeymagasinet.com##body.modal-open:remove-class(modal-open)
+d776 1
+a776 1
+ingenjorsjobb.se##body.advert-take-over-active:remove-class(advert-take-over-active)
+d826 1
+a826 1
+klart.se##body.mega-loading:remove-class(mega-loading)
+d857 1
+a857 1
+kvalitetsmagasinet.se,miljo-utveckling.se,telekomidag.se,vdtidningen.se##article.closed:remove-class(closed)
+d961 1
+a961 1
+matinspo.se##div.with-ads:remove-class(with-ads)
+a1020 1
+musikermagasinet.se##a[href^="/redirect-ad"]
 a1042 1
 nextconomy.se##.list-item:has(.news-spot-medium__ad-title)
 d1075 1
@@ -23,9 +60,21 @@ a1207 1
 skellefteamedia.se###tdi_51, .td-content-more-articles-box
 a1209 1
 skippo.se##a[href*="/sponsra"]
+a1371 4
+tidningencurie.se##body[style*="hidden"]:style(overflow:unset!important;position:unset!important;top:unset!important;)
+tidningencurie.se##html.sv-no-touch:remove-class(sv-no-touch)
+tidningencurie.se##+js(nostif, .showModal)
+tidningencurie.se##.sv-marketplace-sitevision-cookie-consent, .sv-vr-popup, .env-modal-dialog, .env-modal-dialog__backdrop
+d1374 1
+a1374 1
+tidningenridsport.se##body.cli-barmodal-open:remove-class(cli-barmodal-open)
 a1388 2
 tradevenue.se##footer + div.fixed
 tradevenue.se##.c-block-manager > .container:first-child:has(.gpt-ad-slot)
+d1415 1
+a1415 1
+tv.nu##body.takeover-loading:remove-class(takeover-loading)
+d1499 3
 a1668 1
 ##div.td-a-rec-id-custom-spot
 a1969 1
@@ -36,7 +85,7 @@ a1976 2
 /cookie-law-info$script,domain=gilla.se|startaochdriva.se|sverige.nu|conpot.se|firstclassmagazine.se|magasinetkonkret.se|kvalitetsmagasinet.se|miljo-utveckling.se|telekomidag.se|vdtidningen.se|gullislastips.se|nyfiknainvesterare.se|discoveringtheplanet.com|bussmagasinet.se|torbjornstips.se|affarsstaden.se|marknadschefer.se|automation.se|dinbyggare.se|aktieskolan.se|insikt24.se|skogen.se|sulkysport.se|bitzmagasin.se|battrestadsdel.se|automatos.se|80-talet.se|goteborgnyheter.se
 d2209 2
 a2210 1
-/plugins/cookie-notice$script,domain=bildobubbla.se|zeromagazine.nu|sverigespringer.se|gasetten.se|sillyseason.se|gentlemannaguiden.com|matmalin.se|svensktidskrift.se|schack.se|densistavilan.se|horisontmagasin.se|kobe.se|tidningenproffs.se|jaktojagare.se|tobaksfakta.se|bebisvarlden.se|underbaraclaras.se|cykelframjandet.se|dalabygden.se|lansposten.se|sormlandsbygden.se|vaguiden.se|grandtech.se|bluff.se|bjjtv.se|svmf.se|rockbladet.se|globalbar.se|seniornet.se|gaming365.se|skellefteamedia.se
+/plugins/cookie-notice$script,domain=bildobubbla.se|zeromagazine.nu|sverigespringer.se|gasetten.se|sillyseason.se|gentlemannaguiden.com|matmalin.se|svensktidskrift.se|schack.se|densistavilan.se|horisontmagasin.se|kobe.se|tidningenproffs.se|jaktojagare.se|tobaksfakta.se|bebisvarlden.se|underbaraclaras.se|cykelframjandet.se|dalabygden.se|lansposten.se|sormlandsbygden.se|vaguiden.se|grandtech.se|bluff.se|bjjtv.se|svmf.se|rockbladet.se|globalbar.se|seniornet.se|gaming365.se|skellefteamedia.se|musikverket.se
 a2482 1
 /wordpress-popup$script,domain=goteborgnyheter.se
 d2498 1
@@ -47,7 +96,7 @@ a2505 1
 /wp-content/uploads/*casino$image,domain=nyadagbladet.se|kulturbloggen.com|newsvoice.se|svenskhistoria.se|battrestadsdel.se|zeromagazine.nu|totallyorebro.se|totallystockholm.se|djungeltrumman.se|vaken.se|tekniknytt.se|kingsizemag.se|spelochfilm.se|macken.xyz|improveme.se|bandyfeber.com|stoppapressarna.se|sjostadsbladet.se|autonytt.se|hockeybladet.nu|tv-kanal.se|esportnytt.se
 d2709 1
 a2709 1
-||cdn-cookieyes.com^$domain=lokalti.se|jarnvagar.nu|senses.se|norrmejerier.se|temadagar.se|smartsenior.se|tekniknytt.se|nordigt.se|autonytt.se|vm-fotboll.se|kak.se|smhi.se|borattforum.se|mis.se|universitetslararen.se|em-fotboll.se|lakemedelsvarlden.se|samfalligheterna.se|husbilsplats.se|katerinamagasin.se|dagenslogistik.se|biostock.se|skellefteaworks.se|datormagazin.se|travnet.se|malarbok.nu|barn-filmer.se|matmenyer.se|sunnenytt.se|kristendate.se|hockeynews.se|swe3.se|spelbloggen.se
+||cdn-cookieyes.com^$domain=lokalti.se|jarnvagar.nu|senses.se|norrmejerier.se|temadagar.se|smartsenior.se|tekniknytt.se|nordigt.se|autonytt.se|vm-fotboll.se|kak.se|smhi.se|borattforum.se|mis.se|universitetslararen.se|em-fotboll.se|lakemedelsvarlden.se|samfalligheterna.se|husbilsplats.se|katerinamagasin.se|dagenslogistik.se|biostock.se|skellefteaworks.se|datormagazin.se|travnet.se|malarbok.nu|barn-filmer.se|matmenyer.se|sunnenytt.se|kristendate.se|hockeynews.se|swe3.se|spelbloggen.se|matinspo.se
 d2744 1
 a2744 1
 ||cookiebot.com^$domain=ng.se|swedroid.se|bax-shop.se|kurera.se|upplysning.se|mitti.se|circlek.se|findroommate.se|sakochliv.se|polistidningen.se|fokus.se|spraktidningen.se|varden.se|trafiken.nu|energi.se|sverigesnatur.org|kreditrapporten.se|sis.se|accentmagasin.se|allsvenskan.se|superettan.se|alltomarbetsmiljo.se|tco.se|totallyorebro.se|totallystockholm.se|enirobuddy.se|framtid.se|byggfaktadocu.se|husdjur.se|chalmers.se|elinstallatoren.se|ff.se|modernpsykologi.se|qx.se|vatternrundan.se|vvsforum.se|naturvetarna.se|skolporten.se|dust2.se|ehandel.se|byggvarlden.se|varldenidag.se|influens.se|omtanke.today|konsumentmagasinet.se|svenskelitfotboll.se|journalisten.se|fastighetsvarlden.se|jaktjournalen.se|friidrott.se|vildmarken.se|kyrkanstidning.se|tmf.se|sokbat.se|bilkompaniet.se|driva-eget.se|hv.se|folkhalsomyndigheten.se|dinpsykiskahalsa.se|ekonomifakta.se|hyresbostader.se|rsyd.se|byggforetagen.se|vasterastidning.se|storyhouseegmont.se|mytaste.se|smartbizz.se|tandlakartidningen.se|fastighetssverige.se|turisterna.se|byggfakta.se|svenskfordonsladdning.se|nextconomy.se|riksteatern.se
