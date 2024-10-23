@@ -1,10 +1,10 @@
-diff name:swefilter lines:220 checksum:486d919438
+diff name:swefilter lines:248 checksum:51a04c8516
 d2 1
 a2 1
-! Last updated: Tue, 22 Oct 2024 05:56:18 +0000
+! Last updated: Wed, 23 Oct 2024 05:36:41 +0000
 d4 1
 a4 1
-! Diff-Path: patches/2024.10.22.356.patch#swefilter
+! Diff-Path: patches/2024.10.23.336.patch#swefilter
 a76 1
 .se/widgets/ads/
 a119 1
@@ -17,12 +17,23 @@ a191 1
 arkitekten.se##div[data-native-ad-position]:has(.Ad)
 a193 1
 arkitekten.se##.ContentItemList-item:has(.Teaser--nativeAd)
+d222 7
+a228 5
+barometern.se,blt.se,bt.se,olandsbladet.se,smp.se,sydostran.se,ut.se,vxonews.se##div[class*="fluffy-Overlay"]:has(img[src*="-ad/"], img[src*="Checkout"])
+barometern.se,blt.se,bt.se,olandsbladet.se,smp.se,sydostran.se,ut.se,vxonews.se##div[id*="_mobil"]:upward(1)
+barometern.se,blt.se,bt.se,olandsbladet.se,smp.se,sydostran.se,ut.se,vxonews.se###root > div:first-child:matches-css(position: fixed)
+barometern.se,blt.se,bt.se,olandsbladet.se,smp.se,sydostran.se,ut.se,vxonews.se##.component_guide-ads, #fullpage-ad-portal, div[style="min-height: 302px;"], a[href*="/annons/"]
+barometern.se,blt.se,bt.se,olandsbladet.se,smp.se,sydostran.se,ut.se,vxonews.se##:is(div[class*="styles__Wrapper-sc"][height], #content > div > div > div[display="block"]):has(div[class*="AdWrapper"], div[id*="_mobil"])
 d248 1
 a248 1
 bioenergitidningen.se##article.closed:remove-class(closed)
 a351 2
 citattorget.se##.adsense-main
 citiboard.se##div[adunit]
+d360 2
+a361 2
+corren.se,folkbladet.se,mvt.se,nt.se,vt.se,vimmerbytidning.se,kuriren.nu,nsd.se,norran.se,pt.se,ekuriren.se,strengnastidning.se,kkuriren.se,sn.se,eposten.se,unt.se,helagotland.se##ad-iris-sunt-ad-wrapper, ad-block, .native, ad-full-page-block, a[href^="/native"], widget-family, widget-memorial, widget-marknadsguiden, widget-jobb-plus, a.puff-primary-link[href*="/erbjudande/"], .ad-hidden, iris-puff-native, iris-subscribe-footer
+corren.se,folkbladet.se,mvt.se,nt.se,vt.se,vimmerbytidning.se,kuriren.nu,nsd.se,norran.se,pt.se,ekuriren.se,strengnastidning.se,kkuriren.se,sn.se,eposten.se,unt.se,helagotland.se,tv.nu,klart.se##.sp-message-open body:style(overflow:unset!important;position:unset!important;)
 a366 1
 dagensinnovation.se,nyheter.swebbtv.se###moove_gdpr_cookie_info_bar
 d368 1
@@ -46,9 +57,11 @@ expressen.se##a[data-t-label]:remove-attr(data-t-label)
 expressen.se##a[data-t-type]:remove-attr(data-t-type)
 a508 1
 expressen.se##video[autoplay]:remove-attr(autoplay)
-a512 2
+d513 1
+a513 3
 expressen.se##.video-player[data-ad-config]:remove-attr(data-ad-config)
 expressen.se,di.se##+js(aeld, contextmenu, .disabled)
+expressen.se,di.se,nsk.se,skd.se,nvp.se,nuiosteraker.se,barometern.se,blt.se,bt.se,kristianstadsbladet.se,olandsbladet.se,smp.se,sydostran.se,trelleborgsallehanda.se,ut.se,ystadsallehanda.se,corren.se,folkbladet.se,mvt.se,nt.se,vt.se,klt.nu,vimmerbytidning.se,kuriren.nu,nsd.se,norran.se,pt.se,ekuriren.se,strengnastidning.se,kkuriren.se,sn.se,eposten.se,unt.se,helagotland.se,folkbladet.nu,vk.se,vasterbottningen.se,mellanbygden.nu,nordsverige.se,lokaltidningen.nu,vasterastidning.se,mitti.se,thelocal.se,byrum.se,sverigespringer.se,recept.se,viivilla.se,mestmotor.se,babyhjalp.se,fragbite.se,ibnytt.se,realtid.se,cafe.se,kingmagazine.se,vxonews.se,vaxjobladet.se,alekuriren.se,nyheter24.se,svenskgolf.se,golfing.se,familjeliv.se,praktisktbatagande.se,norrahalland.se,lokalti.se,lchfarkivet.se,alltforforaldrar.se,idrottensaffarer.se,vf.se,hjotidning.se,kt.se,kt-kuriren.se,sla.se,mariestadstidningen.se,filipstadstidning.se,fryksdalsbygden.se,nwt.se,arvikanyheter.se,nkp.se,saffletidningen.se,provinstidningen.se,dalslanningen.se,nlt.se,skaraborgsbygden.se##+js(json-prune, autoplay)
 d515 1
 a515 1
 extrakt.se,macken.xyz,dialasen.com,lakartidningen.se,ordmedzcxy.se,gamingtips.se###cmplz-cookiebanner-container
@@ -63,8 +76,14 @@ d641 1
 a641 2
 gais.se##.cookie--wrapper
 gamereactor.se##video[data-autoplay]:remove-attr(data-autoplay)
+d673 1
+a673 1
+guideAds$xmlhttprequest,domain=barometern.se|blt.se|bt.se|olandsbladet.se|smp.se|sydostran.se|ut.se|vxonews.se
 a675 1
 haaf.se##.stream-item:has(.adsbygoogle)
+d694 1
+a694 1
+hd.se,sydsvenskan.se,allehanda.se,tidningenangermanland.se,arbetarbladet.se,avestatidning.com,bblat.se,dalademokraten.se,fagersta-posten.se,gd.se,lt.se,ltz.se,na.se,norrteljetidning.se,nynashamnsposten.se,op.se,salaallehanda.com,st.nu,tidningenharjedalen.se,vlt.se,falkopingstidning.se,jp.se,skaraborgslanstidning.se,skovdenyheter.se,smalandsdagblad.se,smalanningen.se,smt.se,tranastidning.se,vastgotabladet.se,vetlandaposten.se,vn.se,bandypuls.se,ljusdalsposten.se,ljusnan.se,soderhamnskuriren.se,ht.se,moratidning.se,borlangetidning.se,falukuriren.se,sodran.se,nyaludvikatidning.se,skd.se,nvp.se,nuiosteraker.se,hbl.fi,vastranyland.fi,bbl.fi,vaxjobladet.se,nsk.se,klt.nu,ystadsallehanda.se,trelleborgsallehanda.se,kristianstadsbladet.se##[class*="teaser-native"], lcl-ad, .ad-welcome, .affiliate-links__container, .x-bonnier-news-links__container
 a707 1
 hemnet.se##article[class^="ArticleCard"]:has-text(/sponsrad/i)
 d727 1
@@ -165,6 +184,9 @@ a1956 1
 a2062 1
 /jnews/ad-insertion-between-posts
 d2079 1
+d2101 1
+a2101 1
+/marknadsguiden.$frame,domain=barometern.se|blt.se|bt.se|olandsbladet.se|smp.se|sydostran.se|ut.se|vxonews.se
 a2121 1
 /native-video-campaigns$domain=allas.se|elle.se|femina.se|hant.se|mabra.com|residencemagazine.se|svenskdam.se|motherhood.se
 d2183 2
@@ -191,8 +213,14 @@ a2480 1
 /wp-content/uploads/*casino$image,domain=nyadagbladet.se|kulturbloggen.com|newsvoice.se|svenskhistoria.se|battrestadsdel.se|zeromagazine.nu|totallyorebro.se|totallystockholm.se|djungeltrumman.se|vaken.se|tekniknytt.se|kingsizemag.se|spelochfilm.se|macken.xyz|improveme.se|bandyfeber.com|stoppapressarna.se|sjostadsbladet.se|autonytt.se|hockeybladet.nu|tv-kanal.se|esportnytt.se
 a2527 1
 ://stat.$domain=alltforforaldrar.se|modette.se|devote.se|familjeliv.se|brollopstorget.se|blogg.se|rodeo.net
+d2541 1
+a2541 1
+@@/assets/ads-dm.js$~third-party,domain=corren.se|folkbladet.se|mvt.se|nt.se|vt.se|vimmerbytidning.se|kuriren.nu|nsd.se|norran.se|pt.se|ekuriren.se|strengnastidning.se|kkuriren.se|sn.se|eposten.se|unt.se|helagotland.se
 a2545 1
 @@/viralize_player_content$script,xhr,domain=nyheter24.se|modette.se|familjeliv.se|alltomforaldrar.se|loppi.se|devote.se|vimedbarn.se|brollopstorget.se|rodeo.net
+d2547 1
+a2547 1
+@@||cargodisplayads.com/gota/api/v1/adImage$image,domain=barometern.se|blt.se|bt.se|olandsbladet.se|smp.se|sydostran.se|ut.se|vxonews.se
 a2550 2
 @@||citattorget.se^$ghide
 @@||citiboard.se^$ghide
