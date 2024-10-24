@@ -1,10 +1,22 @@
-diff name:swefilter lines:129 checksum:51a04c8516
+diff name:swefilter lines:139 checksum:80b271ae2b
 d2 1
 a2 1
-! Last updated: Wed, 23 Oct 2024 05:36:41 +0000
+! Last updated: Thu, 24 Oct 2024 04:14:49 +0000
 d4 1
 a4 1
-! Diff-Path: patches/2024.10.23.336.patch#swefilter
+! Diff-Path: patches/2024.10.24.254.patch#swefilter
+d105 5
+a109 3
+aftonbladet.se##article[class^="article-wrapper"] ~ div[class^="hyperion"]:has(a[href*="/t?a="], a[href*="/click"], a[href^="http"][nofollow], a[href^="http"][rel*="nofollow"])
+aftonbladet.se##aside > div[class^="hyperion"]:has(a[href*="/rabattkod"], a[href*="/kampanj"], a[href*="/brandstudio"], a[href*="/brand-studio"])
+aftonbladet.se##a:has-text(innehåller annonslänkar)
+d112 8
+a119 2
+aftonbladet.se###superright-side, a[href*="/casinoguide"], [id^="adPlacement"], a[href^="https://kampanj."], a[href*="/rabattkod"][data-test-tag="internal-link"], a[href^="/sportbladet/speltips/"], a[href*="aftonbladet.se/kampanj/"], div[class*="stickyloginoverlay"], #takeover-container
+aftonbladet.se##:is(main > section > div[class^="hyperion"], #main > section > div[class^="hyperion"]):has(a[href*="/brandstudio"], a[href*="/brand-studio"])
+d122 1
+a122 1
+aftonbladet.se,godare.se,livsstil.se##[data-test-tag="prisjakt-carousel"], a[href*="/brandstudio"], a[href*="/brand-studio"], div[class^="advertory-"]:not(.advertory-header-anchor)
 d226 7
 a232 5
 barometern.se,blt.se,bt.se,olandsbladet.se,smp.se,sydostran.se,ut.se,vxonews.se##div[class*="fluffy-Overlay"]:has(img[src*="-ad/"], img[src*="Checkout"])
@@ -30,9 +42,6 @@ dn.se,di.se##video[data-auto-play]:remove-attr(data-auto-play)
 a482 1
 esportnytt.se###text-2
 d513 2
-a514 2
-expressen.se##a[data-t-label]:remove-attr(data-t-label)
-expressen.se##a[data-t-type]:remove-attr(data-t-type)
 a516 1
 expressen.se##video[autoplay]:remove-attr(autoplay)
 d521 1
@@ -65,6 +74,7 @@ klart.se##body.mega-loading:remove-class(mega-loading)
 d857 1
 a857 1
 kvalitetsmagasinet.se,miljo-utveckling.se,telekomidag.se,vdtidningen.se##article.closed:remove-class(closed)
+d906 1
 d961 1
 a961 1
 matinspo.se##div.with-ads:remove-class(with-ads)
