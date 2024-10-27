@@ -1690,13 +1690,14 @@ forvaltarforum.se##.video-banner:remove()
 ||borsvarlden-banners.azurewebsites.net^
 ||borsvarlden.com/banners/
 /popup-subscribe.js$domain=borsvarlden.com
+/fancybox$script,domain=borsvarlden.com
 borsvarlden.com##.sponsored-articles-container, .nav-sep-blink, .annons-label, .index-side-banner-wrapper, .index-top-banners-wrapper, .fullwidthbanner-container, .banner-wrapper
 borsvarlden.com##article:has(.border-sponsored)
 borsvarlden.com##.label:has-text(/annons/i):upward(.highlighted-article-block)
-maklarvarlden.se##.hustle-popup
+maklarvarlden.se##.hustle-popup, div[class$="-sponsrat"]
 maklarvarlden.se##article:has(.sponsored-inlist)
-maklarvarlden.se##.td-post-category:has-text(/spons/i):upward(2)
-maklarvarlden.se##.td-pulldown-size:has-text(/spons/i):upward(3)
+maklarvarlden.se##div[data-td-block-uid]:has(a[href*="/kategori/sponsra"])
+maklarvarlden.se##.td_module_wrap:has(div[class$="-sponsrat"])
 /adpage$domain=hotellorestaurang.se|byggfakta.today|citymark.today
 /empty.html$subdocument,domain=hotellorestaurang.se|byggfakta.today|omtanke.today|citymark.today
 hotellorestaurang.se,citymark.today,byggfakta.today###bannnerContainer, #pop_overlay, .banner-s, div.featured
@@ -1748,7 +1749,7 @@ motivation.se##.card:has(.sponsored)
 /ad_in_article$script,domain=affarsvarlden.se
 /impression$script,domain=affarsvarlden.se
 affarsvarlden.se##.cookies-wrap, .Modal, .article-list-item--native, .advert-notice-box, .native-popup, .takeover-wrap, .native-notice-box, .darwin--content
-affarsvarlden.se##.article-tag-header:has-text(/Annons/i):upward(article)
+affarsvarlden.se##article.article-list-item:has(a[href*="/native/"])
 litteraturmagazinet.se###pageContainer > div:first-child:not([id]), #topContainer a:not([href="/"], a[href="/sitesearch"])
 /add-ads.js$domain=fria.nu|stockholmsfria.se
 /googleanalytics.js$domain=fria.nu|stockholmsfria.se
@@ -1759,8 +1760,7 @@ tidningenglobal.se,tidningensyre.se,landetsfria.nu,fempers.se##.revive-box
 /hrnytt/banner$domain=hrnytt.se
 hrnytt.se##article:has(.sponsored-article)
 hrsvepet.se,cfosvepet.se##.cookie-banner, .desktopbanner
-hrsvepet.se##.mini-title-link:not(.w-condition-invisible):has-text(/sponsra/i):upward(1)
-cfosvepet.se##.recent-post-item:has(a[href="#"]:not(.w-condition-invisible))
+hrsvepet.se,cfosvepet.se##.recent-post-item:has(a[href="#"]:not(.w-condition-invisible))
 arbetaren.se##.text-sm:has-text(/annons/i):upward(.border-b, a[target])
 ||prismic.io/prismic-toolbar$domain=alltomarbetsmiljo.se
 alltomarbetsmiljo.se##.bg-native
@@ -1772,6 +1772,7 @@ bergsmannen.se,tidningenbyggmaterial.se,taxiidag.se,tidningendacksnack.se##.ann-
 taxiidag.se##.fancybox-container, #newsletterSubLink
 taxiidag.se##body.compensate-for-scrollbar:style(overflow:unset!important;)
 helahisingen.se###custom_html-15, .code-block img, .banner-promotions-wrapper
+helahisingen.se##.latest-posts-grid:has(a[href*="/annons/"])
 fof.se###CybotCookiebotDialog, #CybotCookiebotDialogBodyUnderlay
 fof.se##.mediaconnect-protected-content .Carousel:style(opacity:unset!important;)
 hejaolika.se##[class*="partnerinfostyle"], div[id^="hejao-"], .kb-advanced-image-link[target], .category-partnerinformation, .kt-modal-linkalign-center, .hejao-target
