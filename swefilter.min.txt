@@ -1,7 +1,7 @@
 ! Title: Frellwit's Swedish Filter
-! Last updated: Sun, 27 Oct 2024 05:31:08 +0000
+! Last updated: Mon, 28 Oct 2024 05:11:46 +0000
 ! Expires: 5 days
-! Diff-Path: patches/2024.10.27.331.patch#swefilter
+! Diff-Path: patches/2024.10.28.311.patch#swefilter
 ! Diff-Expires: 24 hours
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
@@ -1144,8 +1144,7 @@ rodeo.net##article[data-section="allmänt"], .flow_article[href*="/samarbete/"]
 runnersworld.se##.post-card-sponsored, .modal-plus, .modal-backdrop
 runnersworld.se,motormagasinet.se,dagenshandel.se,food-supply.se,plastnet.se,habit.se,woodnet.se,foodnet.se,transportnet.se,processnet.se,packnet.se,verkstaderna.se,medtechmagazine.se,recyclingnet.se,rt-forum.se,uochd.se,lifesciencesweden.se,fri-kopenskap.se,cleannet.se,metal-supply.se,framtidensbygg.se,entreprenad.com,branschstegen.se,skogsforum.se,bio.se##.modal-open:style(overflow:initial!important)
 runnersworld.se,utsidan.se,hockeymagasinet.com,driva-eget.se,foretagande.se,revisionsvarlden.se,travelnews.se,mittforetag.com##.sponsored
-sakochliv.se##+js(acs, checkCampaignCookie)
-sakochliv.se##.cookie-disclaimer-wrap, .type-promo, .sector-annons
+sakochliv.se##.cookie-disclaimer-wrap, .type-promo, .sector-annons, .sticky-footer
 samfalligheterna.se##.tdm-popup-modal-wrap
 samfalligheterna.se##.tds-locked-content:style(display:unset!important;)
 samfalligheterna.se##.tds-locked-content[hidden]:remove-attr(hidden)
@@ -2604,6 +2603,7 @@ zeromagazine.nu##div[id^="ads"]
 ||addtoany.com^$third-party
 ||adeprimo.se^$third-party
 ||adfenix.com^$third-party
+||adfin.in.bosbec.io/visitor_info
 ||adhype-assets.com/images/*betting
 ||adhype-assets.com/images/*casino
 ||adhype.se/js/native
