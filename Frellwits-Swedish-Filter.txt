@@ -1,6 +1,6 @@
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days
-! Last modified: 2024-10-28 06:11:29 CET
+! Last modified: 2024-10-29 07:28:07 CET
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPL3 - https://github.com/lassekongo83/Frellwits-filter-lists/blob/master/LICENSE
@@ -480,7 +480,7 @@ etc.se##.paywalled.hidden:style(display:unset!important)
 etc.se##[data-controller="ad-container"], .bg-gradient-white
 etfmarknaden.se##.mvp-side-widget a[_blank\"]
 etn.se,uppsalanyheter.se,rotter.se##.banneritem
-etunanytt.se##.textwidget:has-text(ANNONS)
+etunanytt.se##.textwidget:has(a[target="_blank"])
 etunawebben.se##+js(nostif, ad)
 europaportalen.se##.view-multiply-top, .frontpage-multiply-main, .right-column-multiply-container
 eu-cookie$domain=skidspar.se
@@ -802,7 +802,7 @@ karinrahm.se##.thb-page-transition-on:style(opacity:1!important)
 karlskogavaxer.se##.elementor-heading-title:has-text(/annons/i):upward(.elementor-column)
 karriarlakare.se##a:has(.annons-label)
 karriarlakare.se##a[target][onclick], #cliSettingsPopup
-karriarlakare.se,livinguppsala.se,battrestadsdel.se,butikstrender.se,forskning.se,vardfokus.se,varvat.se,smaspararguiden.se,sjostadsbladet.se,tidningenridsport.se,cookaholic.se,vinliv.se,raa.se,svenskfilmdatabas.se,hockeybladet.nu,frihetsnytt.se,alltomhusbilen.se###cookie-law-info-bar
+karriarlakare.se,livinguppsala.se,battrestadsdel.se,butikstrender.se,forskning.se,vardfokus.se,varvat.se,smaspararguiden.se,sjostadsbladet.se,tidningenridsport.se,cookaholic.se,vinliv.se,raa.se,svenskfilmdatabas.se,hockeybladet.nu,frihetsnytt.se,alltomhusbilen.se,etunanytt.se###cookie-law-info-bar
 kartor.eniro.se##.e-banner
 kb.se,dansportalen.se,hh.se##body:style(overflow:unset!important; position:unset!important;)
 kb.se,dansportalen.se,hh.se##.sv-marketplace-sitevision-cookie-consent, .sv-cookie-consent-modal, .env-modal-dialog__backdrop, .env-modal-dialog__backdrop--in
@@ -1328,7 +1328,7 @@ synonyma.se##amp-user-notification.cookie
 synonymer.se##+js(cookie-remover, /^ev_did|ev_sid/)
 synonymer.se##+js(set-local-storage-item, /^ev_did|ev_sid/, $remove$)
 synonymer.se##.create-account-banner, .buy-premium-banner, div[class*="pb-"] > div.text-center
-tabyallehanda.se##p:has-text(ANNONS)
+tabyallehanda.se##p[align="center"]:has(.adsbygoogle)
 tabyallehanda.se##section[id^="Panorama"]
 tandlakartidningen.se##:is(header, .article-single-page, .single #content):style(margin-top:unset!important;)
 tandlakartidningen.se##[class^="ad-container"], [class^="adbox-single"], div[id^="takeover-"], .top-bar-container
@@ -3338,6 +3338,7 @@ branschkoll.se,rocknytt.net,upphandling24.se,datormagazin.se,villalivet.se,polis
 stoppapressarna.se##^script[data-src*="advads"]
 temadagar.se,lchfarkivet.se,wernamaten.se,sanghafte.se,xn--gtboken-exa.se##^script:has-text(__ez)
 di.se##^script:has-text(Di.initAds)
+tabyallehanda.se##^script[src$="adsbygoogle.js"]
 !#endif
 !#if !env_mobile
 /assets/js/modules/plugins/smoothPageScroll
