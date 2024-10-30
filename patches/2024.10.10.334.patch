@@ -1,10 +1,10 @@
-diff name:swefilter lines:276 checksum:87a073bcc6
+diff name:swefilter lines:296 checksum:237443c3d4
 d2 1
 a2 1
-! Last updated: Tue, 29 Oct 2024 17:21:13 +0000
+! Last updated: Wed, 30 Oct 2024 08:04:50 +0000
 d4 1
 a4 1
-! Diff-Path: patches/2024.10.29.1041.patch#swefilter
+! Diff-Path: patches/2024.10.30.484.patch#swefilter
 a76 1
 .se/widgets/ads/
 d102 1
@@ -92,6 +92,13 @@ expressen.se,di.se,nsk.se,skd.se,nvp.se,nuiosteraker.se,barometern.se,blt.se,bt.
 d516 1
 a516 1
 extrakt.se,macken.xyz,dialasen.com,lakartidningen.se,ordmedzcxy.se,gamingtips.se###cmplz-cookiebanner-container
+d525 1
+a525 2
+feber.se,tjock.se##a[onclick^="plausible"]:remove-attr(onclick)
+feber.se,tjock.se##f-internallink:has(a[href="#"])
+d528 1
+a528 1
+feber.se,tjock.se##.burt-unit, .art_ad, adline, f-panorama, f-deals, #rpPopular, #maxetiseFull, #outsider, [data-ad="true"], f-internallink[adid]
 a574 1
 foretagsverige.se,forskningsverige.se,motorbibeln.se,hallbarhetsverige.se,tillvaxtsverige.se,grillbibeln.se,kampenmotcancer.se,folkhalsasverige.se##.whitebox-container:has-text(/sponsra/i)
 a588 1
@@ -100,6 +107,9 @@ d642 1
 a642 2
 gais.se##.cookie--wrapper
 gamereactor.se##video[data-autoplay]:remove-attr(data-autoplay)
+d644 1
+a647 1
+gamereactor.se##.rightbox:has(#grtvbelt_Sponsored)
 d674 1
 a674 1
 guideAds$xmlhttprequest,domain=barometern.se|blt.se|bt.se|olandsbladet.se|smp.se|sydostran.se|ut.se|vxonews.se
@@ -151,6 +161,10 @@ a1025 1
 newsner.com,humorbibeln.se,sportbibeln.se,ettgottskratt.se,djurbibeln.se###wsfb-container, .share-buttons, .ad-space, div[id^="ad-"]
 a1028 1
 nextconomy.se##.list-item:has(.news-spot-medium__ad-title)
+d1035 1
+d1037 1
+a1037 1
+nordichardware.se##:is(.td-big-grid-post, .td_block_inner):has(a[href*="/sponsrat/"])
 d1061 1
 a1061 1
 nyheter.swebbtv.se##.wp-block-image a[target]
@@ -173,9 +187,13 @@ a1282 3
 svenskbyggmarknad.se##div[consent-skip-blocker]:remove()
 svenskbyggmarknad.se##html,body:style(overflow:unset!important;)
 svenskbyggmarknad.se##.widget_block:has(a[href*="/t/t?"])
+d1305 1
 d1320 1
 a1320 1
 tabyallehanda.se##p[align="center"]:has(.adsbygoogle)
+d1335 3
+a1337 1
+tekniksmart.se##.elementor-widget-container:has(a[href*="casino"])
 d1349 1
 a1349 1
 thelocal.se##.ad-container-section, .article-sponsored, div[data-hasbanner="yes"], .thelocal-here-be-magic, #articleBody > .ml-manual-widget-container:empty
@@ -254,6 +272,8 @@ a2557 1
 d2568 1
 a2584 1
 ||adfin.in.bosbec.io/visitor_info
+a2590 1
+||ads.google.com^$third-party
 d2630 1
 a2630 1
 ||app.termly.io^$domain=soderkopingsposten.se|alkompis.se

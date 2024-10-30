@@ -1,10 +1,10 @@
-diff name:swefilter lines:254 checksum:87a073bcc6
+diff name:swefilter lines:274 checksum:237443c3d4
 d2 1
 a2 1
-! Last updated: Tue, 29 Oct 2024 17:21:13 +0000
+! Last updated: Wed, 30 Oct 2024 08:04:50 +0000
 d4 1
 a4 1
-! Diff-Path: patches/2024.10.29.1041.patch#swefilter
+! Diff-Path: patches/2024.10.30.484.patch#swefilter
 a76 1
 .se/widgets/ads/
 d102 1
@@ -85,10 +85,20 @@ expressen.se,di.se,nsk.se,skd.se,nvp.se,nuiosteraker.se,barometern.se,blt.se,bt.
 d519 1
 a519 1
 extrakt.se,macken.xyz,dialasen.com,lakartidningen.se,ordmedzcxy.se,gamingtips.se###cmplz-cookiebanner-container
+d528 1
+a528 2
+feber.se,tjock.se##a[onclick^="plausible"]:remove-attr(onclick)
+feber.se,tjock.se##f-internallink:has(a[href="#"])
+d531 1
+a531 1
+feber.se,tjock.se##.burt-unit, .art_ad, adline, f-panorama, f-deals, #rpPopular, #maxetiseFull, #outsider, [data-ad="true"], f-internallink[adid]
 d647 1
 a647 2
 gais.se##.cookie--wrapper
 gamereactor.se##video[data-autoplay]:remove-attr(data-autoplay)
+d649 1
+a652 1
+gamereactor.se##.rightbox:has(#grtvbelt_Sponsored)
 d679 1
 a679 1
 guideAds$xmlhttprequest,domain=barometern.se|blt.se|bt.se|olandsbladet.se|smp.se|sydostran.se|ut.se|vxonews.se
@@ -140,6 +150,10 @@ a1030 1
 newsner.com,humorbibeln.se,sportbibeln.se,ettgottskratt.se,djurbibeln.se###wsfb-container, .share-buttons, .ad-space, div[id^="ad-"]
 a1033 1
 nextconomy.se##.list-item:has(.news-spot-medium__ad-title)
+d1040 1
+d1042 1
+a1042 1
+nordichardware.se##:is(.td-big-grid-post, .td_block_inner):has(a[href*="/sponsrat/"])
 d1066 1
 a1066 1
 nyheter.swebbtv.se##.wp-block-image a[target]
@@ -159,9 +173,13 @@ a1284 3
 svenskbyggmarknad.se##div[consent-skip-blocker]:remove()
 svenskbyggmarknad.se##html,body:style(overflow:unset!important;)
 svenskbyggmarknad.se##.widget_block:has(a[href*="/t/t?"])
+d1307 1
 d1322 1
 a1322 1
 tabyallehanda.se##p[align="center"]:has(.adsbygoogle)
+d1337 3
+a1339 1
+tekniksmart.se##.elementor-widget-container:has(a[href*="casino"])
 d1351 1
 a1351 1
 thelocal.se##.ad-container-section, .article-sponsored, div[data-hasbanner="yes"], .thelocal-here-be-magic, #articleBody > .ml-manual-widget-container:empty
@@ -232,6 +250,8 @@ a2556 1
 d2572 1
 a2588 1
 ||adfin.in.bosbec.io/visitor_info
+a2594 1
+||ads.google.com^$third-party
 d2634 1
 a2634 1
 ||app.termly.io^$domain=soderkopingsposten.se|alkompis.se
