@@ -256,6 +256,7 @@ Video-Ad-$media,3p
 ||adnordics.com^$third-party
 ||adonsales.com^$third-party
 ||adonstudio.com^$third-party
+||ads.google.com^$third-party
 ||aff.bstatic.com^$third-party
 ||affiliatable.io^$third-party
 ||affiliator.com^$third-party
@@ -1904,7 +1905,7 @@ m3.se,pcforalla.se,macworld.se##+js(href-sanitizer, a[href*="/idg.digidip.net/"]
 gamereactor.se###cookielawwarning, #eventad, [id^="sky"], [id^="ad_lead"], a[rel="sponsored"], .external_div_bigVideoAd, #mpu, #leftToLogo, .itsanad, div[class^="ad_Bumper"], div[style="min-height: 600px; margin-bottom: 20px;"], div[id^="ad_"], div[class^="preAd_"], div[class^="ad_smartphbig"], .adMobileBig, div[class^="preMobileBig"], .external_div_videoAd, .ad_mobilebigwrap
 gamereactor.se##.colHomePlayer:has([data-slotads="videoad"]):remove()
 gamereactor.se##video[data-autoplay]:remove-attr(data-autoplay)
-gamereactor.se###grtvbelt_Sponsored:upward(1)
+gamereactor.se##.rightbox:has(#grtvbelt_Sponsored)
 gamereactor.se##.ad_interscroller:upward(.wrapper)
 gamereactor.se##+js(set, adblockEnabled, falseFunc)
 
@@ -1912,8 +1913,9 @@ gamereactor.se##+js(set, adblockEnabled, falseFunc)
 ||maxetise.net^$script,redirect-rule=noop.js,domain=feber.se|tjock.se
 ||plausible.io^$script,redirect-rule=noop.js,domain=feber.se|tjock.se
 /count?$xhr,domain=feber.se|tjock.se
-feber.se,tjock.se##.burt-unit, .art_ad, adline, f-panorama, f-deals, #rpPopular, #maxetiseFull, #outsider, [data-ad="true"]
-feber.se,tjock.se##f-internallinks-new:has-text(Annons)
+feber.se,tjock.se##.burt-unit, .art_ad, adline, f-panorama, f-deals, #rpPopular, #maxetiseFull, #outsider, [data-ad="true"], f-internallink[adid]
+feber.se,tjock.se##f-internallink:has(a[href="#"])
+feber.se,tjock.se##a[onclick^="plausible"]:remove-attr(onclick)
 feber.se,tjock.se##+js(set, dovideostuffAD, noopFunc)
 feber.se,tjock.se##+js(nosiif, checkGDPRInt)
 swedroid.se##div[id$="_ad"], div[id$="_ad_mobile"], .externalTopMobile, #externalTopMobile, .externalBottomMobile, a[href^="//www.prisjakt.nu/produkt"], #nativendo-mainfeed + aside > .article, .article-footer > h3, .article-footer > .aeChart, #newExternal
@@ -1930,13 +1932,11 @@ fz.se,fssweden.se##+js(set, adblock, false)
 sweclockers.com###prisjakt-popular, .ad:not(.adPanorama), .adForumSticker, .dark-mode__sponsor
 sweclockers.com##div[class^="card-info"]:has-text(/spons/i):upward(.card)
 sweclockers.com##.bbSize:has-text(Sponsormeddelande):upward(.bbRelatedBox)
-sweclockers.com##.ad.adPanorama:style(height:100px!important; position:absolute!important;)
 mobil.se,kamerabild.se##a[href*="/partner"]
 mobil.se,kamerabild.se##article:has(a[href*="/partner"])
 mobil.se,kamerabild.se##.markupbox:has(a[href*="casino"])
 nordichardware.se##.pspy_info, [class^="prisjakt-"]
-nordichardware.se##span:has-text(/sponsrat/i):upward(.td_block_wrap)
-nordichardware.se##.td-big-grid-post:has(a[href*="/sponsrat/"])
+nordichardware.se##:is(.td-big-grid-post, .td_block_inner):has(a[href*="/sponsrat/"])
 surfa.se##div[class*="-promo"], div[class*="prisjakt-"]
 fuska.se##.alert-success
 ||analytics.teknikveckan.se^
@@ -1955,9 +1955,7 @@ datormagazin.se##.td_module_wrap:has(a[href*="/annons/"])
 datormagazin.se##.td-big-grid-post:has(a[href*="/samarbete/"])
 datormagazin.se##.heading:has-text(/samarbete/i):upward(.elementor-widget-smartmag-featgrid)
 datormagazin.se##a:has-text(/^annons/i)
-tekniksmart.se##.code-block, main > div:last-child:not(:only-child), #uid_08313ba73, #uid_ab3738b5a, .jeg_header_wrapper .jeg_midbar
-tekniksmart.se##center:has-text(/annons/i):upward(1)
-tekniksmart.se##.wpb_row:has(a[href*="casino"])
+tekniksmart.se##.elementor-widget-container:has(a[href*="casino"])
 minhembio.com##div[style="height: 120px;"]:not([id]):not([class])
 komponentkoll.se##.gdpr-wide
 /?template=prisjakt$domain=ljudochbild.se
