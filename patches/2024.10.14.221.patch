@@ -1,10 +1,10 @@
-diff name:swefilter lines:301 checksum:a0d0c26b6f
+Diff name:swefilter lines:315 checksum:63c7c55a52
 d2 1
 a2 1
-! Last updated: Fri, 01 Nov 2024 05:21:08 +0000
+! Last updated: Sun, 03 Nov 2024 06:55:36 +0000
 d4 1
 a4 1
-! Diff-Path: patches/2024.11.1.321.patch#swefilter
+! Diff-Path: patches/2024.11.3.415.patch#swefilter
 a76 1
 .se/widgets/ads/
 d102 1
@@ -174,6 +174,9 @@ a1066 1
 nyheter.swebbtv.se##.wp-block-image a[target]
 a1094 1
 pilsner.nu##+js(rmnt, script, decodeURIComponent)
+d1113 1
+a1113 1
+prisjakt.nu##.pjra-relative, .outsider-ads, div[class^="AdPlacementWrapper"]
 d1118 1
 a1118 1
 quizza.nu,elbilen.se###takeover
@@ -219,6 +222,10 @@ tv.nu##body.takeover-loading:remove-class(takeover-loading)
 a1421 2
 utslappsratt.se,heleneholmsif.se,trafikskola.se,melodifestivalklubben.se,morotsliv.com##+js(set, em_track_user, false)
 utslappsratt.se,heleneholmsif.se,trafikskola.se,melodifestivalklubben.se,morotsliv.com##+js(set, exactmetrics_frontend, undefined)
+a1473 3
+vokabel.se##.column:has(.adsbygoogle)
+vokabel.se##.hero-body > .container > div[style^="min-height: 300px"], .column:empty
+vokabel.se##.hero[style^="height"]:style(height:unset!important;)
 d1486 3
 a1621 1
 ##div.in-feed-ad
@@ -276,25 +283,32 @@ a2588 1
 ||adfin.in.bosbec.io/visitor_info
 a2594 1
 ||ads.google.com^$third-party
+d2602 1
+d2604 1
 d2634 1
 a2634 1
 ||app.termly.io^$domain=soderkopingsposten.se|alkompis.se
-d2692 1
-a2692 1
+d2692 2
+a2693 1
 ||cdn-cookieyes.com^$domain=lokalti.se|jarnvagar.nu|senses.se|norrmejerier.se|temadagar.se|smartsenior.se|tekniknytt.se|nordigt.se|autonytt.se|vm-fotboll.se|kak.se|smhi.se|borattforum.se|mis.se|universitetslararen.se|em-fotboll.se|lakemedelsvarlden.se|samfalligheterna.se|husbilsplats.se|katerinamagasin.se|dagenslogistik.se|biostock.se|skellefteaworks.se|datormagazin.se|travnet.se|malarbok.nu|barn-filmer.se|matmenyer.se|sunnenytt.se|kristendate.se|hockeynews.se|swe3.se|spelbloggen.se|matinspo.se
 d2727 1
-a2727 2
-||cookiebot.com^$domain=ng.se|swedroid.se|bax-shop.se|kurera.se|upplysning.se|mitti.se|circlek.se|findroommate.se|sakochliv.se|polistidningen.se|fokus.se|spraktidningen.se|varden.se|trafiken.nu|energi.se|sverigesnatur.org|kreditrapporten.se|sis.se|accentmagasin.se|allsvenskan.se|superettan.se|alltomarbetsmiljo.se|tco.se|totallyorebro.se|totallystockholm.se|enirobuddy.se|framtid.se|byggfaktadocu.se|husdjur.se|chalmers.se|elinstallatoren.se|ff.se|modernpsykologi.se|qx.se|vatternrundan.se|vvsforum.se|naturvetarna.se|skolporten.se|dust2.se|ehandel.se|byggvarlden.se|varldenidag.se|omtanke.today|konsumentmagasinet.se|svenskelitfotboll.se|journalisten.se|fastighetsvarlden.se|jaktjournalen.se|friidrott.se|vildmarken.se|kyrkanstidning.se|tmf.se|sokbat.se|bilkompaniet.se|driva-eget.se|hv.se|folkhalsomyndigheten.se|dinpsykiskahalsa.se|ekonomifakta.se|hyresbostader.se|rsyd.se|byggforetagen.se|vasterastidning.se|storyhouseegmont.se|mytaste.se|smartbizz.se|tandlakartidningen.se|fastighetssverige.se|turisterna.se|byggfakta.se|svenskfordonsladdning.se|nextconomy.se|riksteatern.se
+a2727 3
+||cookiebot.com^$domain=ng.se|swedroid.se|bax-shop.se|kurera.se|upplysning.se|mitti.se|circlek.se|findroommate.se|sakochliv.se|polistidningen.se|fokus.se|spraktidningen.se|varden.se|trafiken.nu|energi.se|sverigesnatur.org|kreditrapporten.se|sis.se|accentmagasin.se|allsvenskan.se|superettan.se|alltomarbetsmiljo.se|tco.se|totallyorebro.se|totallystockholm.se|enirobuddy.se|framtid.se|byggfaktadocu.se|husdjur.se|chalmers.se|elinstallatoren.se|ff.se|modernpsykologi.se|qx.se|vatternrundan.se|vvsforum.se|naturvetarna.se|skolporten.se|dust2.se|ehandel.se|byggvarlden.se|varldenidag.se|omtanke.today|konsumentmagasinet.se|svenskelitfotboll.se|journalisten.se|fastighetsvarlden.se|jaktjournalen.se|friidrott.se|vildmarken.se|kyrkanstidning.se|tmf.se|sokbat.se|bilkompaniet.se|driva-eget.se|hv.se|folkhalsomyndigheten.se|dinpsykiskahalsa.se|ekonomifakta.se|hyresbostader.se|rsyd.se|byggforetagen.se|vasterastidning.se|storyhouseegmont.se|mytaste.se|smartbizz.se|tandlakartidningen.se|fastighetssverige.se|turisterna.se|byggfakta.se|svenskfordonsladdning.se|nextconomy.se|riksteatern.se|scenochfilm.se|transport.se|saco.se
 ||cookiebot.eu^$domain=normal.se
+||cookiehub.eu^$domain=kommunal.se
 d2733 1
 a2733 1
 ||cookietractor.com^$domain=innebandy.se|orientering.se|pluggakuten.se|munskankarna.se|burgerdudes.se
+d2791 1
 d2871 1
+d2890 1
 d3028 1
 a3028 1
 ||onesignal.com^$domain=samnytt.se|battrestadsdel.se|beernews.se|ungdomsfotboll.se|rabattsok.se|1x2.se|cannabis.se|dackavisen.se|driva-eget.se|skogsaktuellt.se|maskinbladet.se|entreprenadaktuellt.se|ja.se|newsner.com|humorbibeln.se|sportbibeln.se|ettgottskratt.se|djurbibeln.se|finanstid.se|fokus.se|gasetten.se|fotbollsthlm.se|macken.xyz|naringslivetvgl.se|dalarnasaffarer.se|stockholmsaffarer.se|jamtlandsaffarer.se|hallandsnaringsliv.se|sjuharadsnaringsliv.se|netflixguiden.se|nyadagbladet.se|oskarshamns-nytt.se|swebbtv.se|thepattayanews.se|vaken.se|aktieskolan.se|fastighetsvarlden.se|mcparken.se|gaffa.se|alltomnorrtalje.se|morotsliv.com|it-finans.se|it-halsa.se|it-kanalen.se|it-pedagogen.se|it-retail.se|skaneplus.se|mittforetag.com|studeravidare.se|thephuketexpress.se
+d3035 1
 d3150 1
-d3247 1
+d3190 1
+d3247 2
 a3253 1
 ||visme.co/formsPlayer$domain=ai-idag.se
 d3288 1
