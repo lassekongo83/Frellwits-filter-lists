@@ -1,10 +1,10 @@
-diff name:swefilter lines:129 checksum:2674741703
+diff name:swefilter lines:177 checksum:c19093a23f
 d2 1
 a2 1
-! Last updated: Wed, 06 Nov 2024 06:29:53 +0000
+! Last updated: Thu, 07 Nov 2024 07:01:10 +0000
 d4 1
 a4 1
-! Diff-Path: patches/2024.11.6.389.patch#swefilter
+! Diff-Path: patches/2024.11.7.421.patch#swefilter
 d145 3
 a147 2
 allabolag.se##div[style^="text-align:center;min-height"]:has(div[id^="adwrapper"])
@@ -14,15 +14,41 @@ d184 1
 d360 1
 a360 1
 dagensinnovation.se,nyheter.swebbtv.se,modernalivet.se###moove_gdpr_cookie_info_bar
+d394 2
+a395 2
+densistavilan.se##footer .x-bar:has(div[id^="densi-"])
+densistavilan.se##h3.h-custom-headline:has-text(Advertorial):upward(1)
 a446 1
 edukatus.se###g-preloader
 d450 1
 a450 1
 ehandel.se##.commercial-row, .aside-image-with-link, .post-container-sponsored, aside a[href*="/branschnyheter/"], .e-loop-nothing-found-message
+a502 3
+expressen.se##a[data-t-category]:remove-attr(data-t-category)
+expressen.se##a[data-t-label]:remove-attr(data-t-label)
+expressen.se##a[data-t-type]:remove-attr(data-t-type)
+d598 1
+a598 1
+fotbollsresultat.com##h2.fusion-responsive-typography-calculated:has-text(Spel och dobbel) ~ p
+d633 1
+a633 1
+futsalmagasinet.se##.td-block-title > span:has-text(/annonserat innehåll/i):upward(.td_block_wrap)
+d641 1
+a642 1
+gaffa.se##.link-list:has(a[href*="casino"])
+d660 2
+a662 1
+godare.se##:is(p[class^="teasersmall-sectionLabel"], p[class^="teasermedium-sectionLabel"]):has-text(/annons/i):upward(a.internal-link, li)
+d667 2
 d732 1
 d753 1
 a753 1
 husvagn.se,husbil.se##.articleintroduction strong:has-text(/samarbete/i):upward(li.item)
+d755 1
+a755 1
+ibnytt.se##.col-md-4 .widget:has(a[href*="spelbonus"])
+a756 1
+ibnytt.se##:is(.article-list li, .post):has(a[href*="betting"], a[href*="casino"])
 d769 3
 d813 1
 a813 1
@@ -33,11 +59,13 @@ kobe.se###footer #block-7
 d859 1
 a859 1
 lajvo.se##.postCard:has-text(/bonusar|casino|betting|spelbranschen|spelupplevelse/i)
-d903 2
-d936 1
+d902 3
+d933 1
+d935 2
 d986 1
 a986 1
 minimalisterna.se##p.has-text-align-center:has-text(/i samarbete med/i):upward(.post)
+d989 3
 d1004 1
 a1006 1
 modernalivet.se##.sidebar-widget h3:has-text(/annons/i):upward(.sidebar-widget)
@@ -59,17 +87,27 @@ racemagazine.se##article + div.bg-white:has(.ad-inner)
 racemagazine.se##.landing-ad
 d1163 1
 d1179 2
+d1183 1
+d1223 1
+a1226 1
+so-rummet.se##.view-header > h3:has-text(/annonser/i):upward(.view-nya-lankar-front)
 d1251 1
+d1320 1
+d1355 1
 d1362 2
 d1365 1
 a1365 1
 tidningenbalans.se##p.uppercase:has-text(/i annonssamarbete med/i):upward(.flex.overflow-hidden)
+d1377 1
 d1401 1
 a1401 1
 tripadvisor.se##a[target]:has-text(/Sponsrat av|i samarbete med/i)
 a1434 2
 utslappsratt.se,heleneholmsif.se,trafikskola.se,melodifestivalklubben.se,morotsliv.com##+js(set, em_track_user, false)
 utslappsratt.se,heleneholmsif.se,trafikskola.se,melodifestivalklubben.se,morotsliv.com##+js(set, exactmetrics_frontend, undefined)
+a1451 1
+vasterastidning.se##article.column:has(a[data-k5a-url="/a/null"])
+d1454 1
 a1486 3
 vokabel.se##.column:has(.adsbygoogle)
 vokabel.se##.hero-body > .container > div[style^="min-height: 300px"], .column:empty
@@ -91,6 +129,10 @@ d2573 1
 a2573 1
 @@/viralize_player_content$script,xhr,domain=nyheter24.se|modette.se|familjeliv.se|alltforforaldrar.se|loppi.se|devote.se|vimedbarn.se|brollopstorget.se|rodeo.net
 d2590 1
+a2610 1
+||adnami.io^$script,redirect=noop.js,domain=swedroid.se
+a2617 1
+||advisible.com^$script,redirect=noop.js,domain=swedroid.se
 d2622 1
 d2624 1
 d2653 1
@@ -108,15 +150,21 @@ d2855 1
 d2892 1
 d2911 1
 d2927 1
+a2975 1
+||lwadm.com^$script,redirect=noop.js,domain=swedroid.se
 d2987 1
 d3037 5
-d3048 1
+d3048 2
+a3049 1
+||onesignal.com^$domain=samnytt.se|battrestadsdel.se|beernews.se|ungdomsfotboll.se|rabattsok.se|1x2.se|cannabis.se|dackavisen.se|driva-eget.se|skogsaktuellt.se|maskinbladet.se|entreprenadaktuellt.se|ja.se|newsner.com|humorbibeln.se|sportbibeln.se|ettgottskratt.se|djurbibeln.se|finanstid.se|fokus.se|gasetten.se|fotbollsthlm.se|macken.xyz|naringslivetvgl.se|dalarnasaffarer.se|stockholmsaffarer.se|jamtlandsaffarer.se|hallandsnaringsliv.se|sjuharadsnaringsliv.se|netflixguiden.se|nyadagbladet.se|oskarshamns-nytt.se|swebbtv.se|thepattayanews.se|vaken.se|aktieskolan.se|fastighetsvarlden.se|mcparken.se|gaffa.se|alltomnorrtalje.se|morotsliv.com|it-finans.se|it-halsa.se|it-kanalen.se|it-pedagogen.se|it-retail.se|skaneplus.se|mittforetag.com|studeravidare.se|thephuketexpress.se|ibnytt.se
 d3056 1
 d3059 1
 d3069 1
 d3073 1
 d3154 1
 d3159 1
+a3170 1
+||sleeknote.com^$domain=gaffa.se
 d3184 1
 d3192 1
 d3203 1
