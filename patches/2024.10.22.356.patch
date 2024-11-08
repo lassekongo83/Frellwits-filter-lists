@@ -1,10 +1,10 @@
-diff name:swefilter lines:297 checksum:c19093a23f
+diff name:swefilter lines:341 checksum:81b8a0f425
 d2 1
 a2 1
-! Last updated: Thu, 07 Nov 2024 07:01:10 +0000
+! Last updated: Fri, 08 Nov 2024 05:24:58 +0000
 d4 1
 a4 1
-! Diff-Path: patches/2024.11.7.421.patch#swefilter
+! Diff-Path: patches/2024.11.8.324.patch#swefilter
 d103 1
 a103 1
 affarsvarlden.se##article.article-list-item:has(a[href*="/native/"])
@@ -30,6 +30,10 @@ allabolag.se##div[style^="text-align:center;min-height"]:has(div[id^="adwrapper"
 allabolag.se##.topbanner-wrapper
 d163 1
 d193 1
+d206 1
+a206 2
+aurumforum.se##.bottom-liner span:has-text(Annons):upward(2)
+aurumforum.se##.top-add
 d226 7
 a232 5
 barometern.se,blt.se,bt.se,olandsbladet.se,smp.se,sydostran.se,ut.se,vxonews.se##div[class*="fluffy-Overlay"]:has(img[src*="-ad/"], img[src*="Checkout"])
@@ -37,8 +41,14 @@ barometern.se,blt.se,bt.se,olandsbladet.se,smp.se,sydostran.se,ut.se,vxonews.se#
 barometern.se,blt.se,bt.se,olandsbladet.se,smp.se,sydostran.se,ut.se,vxonews.se###root > div:first-child:matches-css(position: fixed)
 barometern.se,blt.se,bt.se,olandsbladet.se,smp.se,sydostran.se,ut.se,vxonews.se##.component_guide-ads, #fullpage-ad-portal, div[style="min-height: 302px;"], a[href*="/annons/"]
 barometern.se,blt.se,bt.se,olandsbladet.se,smp.se,sydostran.se,ut.se,vxonews.se##:is(div[class*="styles__Wrapper-sc"][height], #content > div > div > div[display="block"]):has(div[class*="AdWrapper"], div[id*="_mobil"])
+d290 1
+a290 1
+branschaktuellt.se##.article__properties-breadcrumbs span:has-text(/Sponsrad|annons/i):upward(.article)
 d326 1
 d349 1
+d361 1
+a363 1
+conpot.se##.post > div[style]:has-text(ANNONS):upward(article:not([id]))
 d366 2
 a367 2
 corren.se,folkbladet.se,mvt.se,nt.se,vt.se,vimmerbytidning.se,kuriren.nu,nsd.se,norran.se,pt.se,ekuriren.se,strengnastidning.se,kkuriren.se,sn.se,eposten.se,unt.se,helagotland.se##ad-iris-sunt-ad-wrapper, ad-block, .native, ad-full-page-block, a[href^="/native"], widget-family, widget-memorial, widget-marknadsguiden, widget-jobb-plus, a.puff-primary-link[href*="/erbjudande/"], .ad-hidden, iris-puff-native, iris-subscribe-footer
@@ -81,6 +91,10 @@ feber.se,tjock.se##f-internallink:has(a[href="#"])
 d540 1
 a540 1
 feber.se,tjock.se##.burt-unit, .art_ad, adline, f-panorama, f-deals, #rpPopular, #maxetiseFull, #outsider, [data-ad="true"], f-internallink[adid]
+d603 5
+a607 2
+fotbolldirekt.se,hockeysverige.se,innebandymagazinet.se,motivation.se,fiskejournalen.se,alba.nu,padeldirekt.se,formeldirekt.se,dagensopinion.se,golfing.se##.annons
+fotbolldirekt.se,hockeysverige.se,innebandymagazinet.se,padeldirekt.se,formeldirekt.se##.site-partnevisment, .h-background--sponsored-light, .row .text-center img, a[href^="https://hubs.la"], .c-partners, iframe[srcdoc*="_ad_div"], .annons-text
 d611 1
 a611 1
 fotbollsresultat.com##h2.fusion-responsive-typography-calculated:has-text(Spel och dobbel) ~ p
@@ -96,15 +110,26 @@ gamereactor.se##.rightbox:has(#grtvbelt_Sponsored)
 d673 2
 a675 1
 godare.se##:is(p[class^="teasersmall-sectionLabel"], p[class^="teasermedium-sectionLabel"]):has-text(/annons/i):upward(a.internal-link, li)
+a676 1
+golfing.se##.c-partners__item
 d680 2
 d689 1
 a689 1
 guideAds$xmlhttprequest,domain=barometern.se|blt.se|bt.se|olandsbladet.se|smp.se|sydostran.se|ut.se|vxonews.se
+d705 1
+a705 1
+happyride.se##a[href*="/category/sponsrat/"]:upward(li[class=""])
+d707 1
+a707 1
+happyride.se,freeride.se##.anm1-container, [class^="anp"], [class^="ans"], .box.evergreen, #a-midscroll
 d711 1
 a711 1
 hd.se,sydsvenskan.se,allehanda.se,tidningenangermanland.se,arbetarbladet.se,avestatidning.com,bblat.se,dalademokraten.se,fagersta-posten.se,gd.se,lt.se,ltz.se,na.se,norrteljetidning.se,nynashamnsposten.se,op.se,salaallehanda.com,st.nu,tidningenharjedalen.se,vlt.se,falkopingstidning.se,jp.se,skaraborgslanstidning.se,skovdenyheter.se,smalandsdagblad.se,smalanningen.se,smt.se,tranastidning.se,vastgotabladet.se,vetlandaposten.se,vn.se,bandypuls.se,ljusdalsposten.se,ljusnan.se,soderhamnskuriren.se,ht.se,moratidning.se,borlangetidning.se,falukuriren.se,sodran.se,nyaludvikatidning.se,skd.se,nvp.se,nuiosteraker.se,hbl.fi,vastranyland.fi,bbl.fi,vaxjobladet.se,nsk.se,klt.nu,ystadsallehanda.se,trelleborgsallehanda.se,kristianstadsbladet.se##[class*="teaser-native"], lcl-ad, .ad-welcome, .affiliate-links__container, .x-bonnier-news-links__container
 a718 1
 helahisingen.se##.latest-posts-grid:has(a[href*="/annons/"])
+d728 1
+a728 1
+hemnet.se##span[class^="ArticleContent_articleDateBox"]:has-text(/annons från/i):upward(div[class^="ArticleContent_articlePage"])
 d744 1
 a747 1
 hockeynews.se##.bg-white:has(iframe[allow*="autoplay"]):remove()
@@ -128,6 +153,7 @@ karriarlakare.se,livinguppsala.se,battrestadsdel.se,butikstrender.se,forskning.s
 d823 1
 a823 1
 killsteal.se##:is(a[href*="casino"], a[href*="kasino"], a[href*="passagen.se"]):upward(p)
+d830 1
 d838 1
 a838 1
 kobe.se###footer #block-7
@@ -165,9 +191,13 @@ nouw.com##.washer
 d1077 2
 a1079 1
 nyheteridag.se##.teaser:has(a[href*="casino"])
+d1106 2
+a1108 2
+padeldirekt.se,formeldirekt.se##.article-row:has(.h-background--sponsored)
+padeldirekt.se,formeldirekt.se##.c-featured-article:has(a[href*="/sponsrat"])
 a1111 1
 pilsner.nu##+js(rmnt, script, decodeURIComponent)
-d1130 1
+d1129 2
 a1130 1
 prisjakt.nu##.pjra-relative, .outsider-ads, div[class^="AdPlacementWrapper"]
 d1137 1
@@ -180,12 +210,18 @@ sakochliv.se##.cookie-disclaimer-wrap, .type-promo, .sector-annons, .sticky-foot
 d1176 1
 d1192 2
 d1196 1
+d1200 2
+a1202 2
+sillyseason.se##.sidebar-widget > .textwidget strong:has-text(casino):upward(li.sidebar-widget)
+sillyseason.se##:is(.sidebar-widget, .archive-list li):has(a[href*=".se/odds/"], a[href*="/betting/"], a[href*="kasino"], a[href*="/promomen/"])
 d1236 1
 a1239 1
 so-rummet.se##.view-header > h3:has-text(/annonser/i):upward(.view-nya-lankar-front)
 d1264 1
 d1330 1
-d1334 1
+d1334 2
+a1335 1
+swedroid.se##+js(rmnt, script, checkAdsBlocked)
 d1345 1
 a1345 1
 tabyallehanda.se##p[align="center"]:has(.adsbygoogle)
@@ -214,7 +250,12 @@ a1502 3
 vokabel.se##.column:has(.adsbygoogle)
 vokabel.se##.hero-body > .container > div[style^="min-height: 300px"], .column:empty
 vokabel.se##.hero[style^="height"]:style(height:unset!important;)
+d1506 1
+a1506 1
+vovve.net##span.arialtext11[style^="float:left"]:has-text(/^i samarbete med/i):upward(2)
 d1517 1
+a1856 1
+/adsm.macro$script
 a1948 1
 /blogpoststatistic/events
 d1985 1
@@ -227,11 +268,20 @@ a2142 1
 /marknadsguiden.$frame,domain=barometern.se|blt.se|bt.se|olandsbladet.se|smp.se|sydostran.se|ut.se|vxonews.se
 a2230 1
 /plugins/dohi-gdpr$script,domain=yogaworld.se|cyclingplus.se
+a2370 1
+/public/t/*$domain=tvmatchen.nu
 d2377 1
 a2377 1
 /raven$script,domain=mitti.se|travnet.se|nyheter24.se|tyda.se|devote.se|egoinas.se|hemtrevligt.se|alltforforaldrar.se|familjeliv.se|brollopstorget.se|blogg.se|nouw.com
+d2470 1
 a2482 1
 /useBlogStatistics$domain=nouw.com
+d2519 1
+a2519 1
+/wp-content/uploads/*betting$image,domain=nyadagbladet.se|kulturbloggen.com|hockeybladet.nu|newsvoice.se|spelochfilm.se|bandyfeber.com|battrestadsdel.se|sillyseason.se
+d2521 1
+a2521 1
+/wp-content/uploads/*casino$image,domain=nyadagbladet.se|kulturbloggen.com|newsvoice.se|svenskhistoria.se|battrestadsdel.se|zeromagazine.nu|totallyorebro.se|totallystockholm.se|djungeltrumman.se|vaken.se|tekniknytt.se|kingsizemag.se|spelochfilm.se|macken.xyz|improveme.se|bandyfeber.com|stoppapressarna.se|sjostadsbladet.se|autonytt.se|hockeybladet.nu|tv-kanal.se|esportnytt.se|sillyseason.se
 d2583 1
 a2583 1
 @@/assets/ads-dm.js$~third-party,domain=corren.se|folkbladet.se|mvt.se|nt.se|vt.se|vimmerbytidning.se|kuriren.nu|nsd.se|norran.se|pt.se|ekuriren.se|strengnastidning.se|kkuriren.se|sn.se|eposten.se|unt.se|helagotland.se
@@ -244,12 +294,8 @@ a2590 1
 d2605 1
 a2621 1
 ||adfin.in.bosbec.io/visitor_info
-a2624 1
-||adnami.io^$script,redirect=noop.js,domain=swedroid.se
 a2627 1
 ||ads.google.com^$third-party
-a2630 1
-||advisible.com^$script,redirect=noop.js,domain=swedroid.se
 d2635 1
 d2637 1
 d2666 1
@@ -267,8 +313,6 @@ d2868 1
 d2905 1
 d2924 1
 d2940 1
-a2988 1
-||lwadm.com^$script,redirect=noop.js,domain=swedroid.se
 d3000 1
 d3050 5
 d3061 2

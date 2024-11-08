@@ -1,10 +1,10 @@
-diff name:swefilter lines:347 checksum:c19093a23f
+diff name:swefilter lines:391 checksum:81b8a0f425
 d2 1
 a2 1
-! Last updated: Thu, 07 Nov 2024 07:01:10 +0000
+! Last updated: Fri, 08 Nov 2024 05:24:58 +0000
 d4 1
 a4 1
-! Diff-Path: patches/2024.11.7.421.patch#swefilter
+! Diff-Path: patches/2024.11.8.324.patch#swefilter
 d103 1
 a103 1
 affarsvarlden.se##article.article-list-item:has(a[href*="/native/"])
@@ -30,6 +30,10 @@ allabolag.se##div[style^="text-align:center;min-height"]:has(div[id^="adwrapper"
 allabolag.se##.topbanner-wrapper
 d163 1
 d193 1
+d206 1
+a206 2
+aurumforum.se##.bottom-liner span:has-text(Annons):upward(2)
+aurumforum.se##.top-add
 d226 7
 a232 5
 barometern.se,blt.se,bt.se,olandsbladet.se,smp.se,sydostran.se,ut.se,vxonews.se##div[class*="fluffy-Overlay"]:has(img[src*="-ad/"], img[src*="Checkout"])
@@ -40,8 +44,14 @@ barometern.se,blt.se,bt.se,olandsbladet.se,smp.se,sydostran.se,ut.se,vxonews.se#
 d252 1
 a252 1
 bioenergitidningen.se##article.closed:remove-class(closed)
+d290 1
+a290 1
+branschaktuellt.se##.article__properties-breadcrumbs span:has-text(/Sponsrad|annons/i):upward(.article)
 d326 1
 d349 1
+d361 1
+a363 1
+conpot.se##.post > div[style]:has-text(ANNONS):upward(article:not([id]))
 d366 2
 a367 2
 corren.se,folkbladet.se,mvt.se,nt.se,vt.se,vimmerbytidning.se,kuriren.nu,nsd.se,norran.se,pt.se,ekuriren.se,strengnastidning.se,kkuriren.se,sn.se,eposten.se,unt.se,helagotland.se##ad-iris-sunt-ad-wrapper, ad-block, .native, ad-full-page-block, a[href^="/native"], widget-family, widget-memorial, widget-marknadsguiden, widget-jobb-plus, a.puff-primary-link[href*="/erbjudande/"], .ad-hidden, iris-puff-native, iris-subscribe-footer
@@ -97,6 +107,10 @@ feber.se,tjock.se##f-internallink:has(a[href="#"])
 d537 1
 a537 1
 feber.se,tjock.se##.burt-unit, .art_ad, adline, f-panorama, f-deals, #rpPopular, #maxetiseFull, #outsider, [data-ad="true"], f-internallink[adid]
+d600 5
+a604 2
+fotbolldirekt.se,hockeysverige.se,innebandymagazinet.se,motivation.se,fiskejournalen.se,alba.nu,padeldirekt.se,formeldirekt.se,dagensopinion.se,golfing.se##.annons
+fotbolldirekt.se,hockeysverige.se,innebandymagazinet.se,padeldirekt.se,formeldirekt.se##.site-partnevisment, .h-background--sponsored-light, .row .text-center img, a[href^="https://hubs.la"], .c-partners, iframe[srcdoc*="_ad_div"], .annons-text
 d608 1
 a608 1
 fotbollsresultat.com##h2.fusion-responsive-typography-calculated:has-text(Spel och dobbel) ~ p
@@ -115,15 +129,26 @@ gamereactor.se##.rightbox:has(#grtvbelt_Sponsored)
 d670 2
 a672 1
 godare.se##:is(p[class^="teasersmall-sectionLabel"], p[class^="teasermedium-sectionLabel"]):has-text(/annons/i):upward(a.internal-link, li)
+a673 1
+golfing.se##.c-partners__item
 d677 2
 d686 1
 a686 1
 guideAds$xmlhttprequest,domain=barometern.se|blt.se|bt.se|olandsbladet.se|smp.se|sydostran.se|ut.se|vxonews.se
+d702 1
+a702 1
+happyride.se##a[href*="/category/sponsrat/"]:upward(li[class=""])
+d704 1
+a704 1
+happyride.se,freeride.se##.anm1-container, [class^="anp"], [class^="ans"], .box.evergreen, #a-midscroll
 d708 1
 a708 1
 hd.se,sydsvenskan.se,allehanda.se,tidningenangermanland.se,arbetarbladet.se,avestatidning.com,bblat.se,dalademokraten.se,fagersta-posten.se,gd.se,lt.se,ltz.se,na.se,norrteljetidning.se,nynashamnsposten.se,op.se,salaallehanda.com,st.nu,tidningenharjedalen.se,vlt.se,falkopingstidning.se,jp.se,skaraborgslanstidning.se,skovdenyheter.se,smalandsdagblad.se,smalanningen.se,smt.se,tranastidning.se,vastgotabladet.se,vetlandaposten.se,vn.se,bandypuls.se,ljusdalsposten.se,ljusnan.se,soderhamnskuriren.se,ht.se,moratidning.se,borlangetidning.se,falukuriren.se,sodran.se,nyaludvikatidning.se,skd.se,nvp.se,nuiosteraker.se,hbl.fi,vastranyland.fi,bbl.fi,vaxjobladet.se,nsk.se,klt.nu,ystadsallehanda.se,trelleborgsallehanda.se,kristianstadsbladet.se##[class*="teaser-native"], lcl-ad, .ad-welcome, .affiliate-links__container, .x-bonnier-news-links__container
 a715 1
 helahisingen.se##.latest-posts-grid:has(a[href*="/annons/"])
+d725 1
+a725 1
+hemnet.se##span[class^="ArticleContent_articleDateBox"]:has-text(/annons från/i):upward(div[class^="ArticleContent_articlePage"])
 d741 2
 a742 1
 hockeymagasinet.com##body.modal-open:remove-class(modal-open)
@@ -151,6 +176,7 @@ karriarlakare.se,livinguppsala.se,battrestadsdel.se,butikstrender.se,forskning.s
 d820 1
 a820 1
 killsteal.se##:is(a[href*="casino"], a[href*="kasino"], a[href*="passagen.se"]):upward(p)
+d827 1
 d829 1
 a829 1
 klart.se##body.mega-loading:remove-class(mega-loading)
@@ -199,9 +225,13 @@ nouw.com##.washer
 d1073 2
 a1075 1
 nyheteridag.se##.teaser:has(a[href*="casino"])
+d1102 2
+a1104 2
+padeldirekt.se,formeldirekt.se##.article-row:has(.h-background--sponsored)
+padeldirekt.se,formeldirekt.se##.c-featured-article:has(a[href*="/sponsrat"])
 a1107 1
 pilsner.nu##+js(rmnt, script, decodeURIComponent)
-d1126 1
+d1125 2
 a1126 1
 prisjakt.nu##.pjra-relative, .outsider-ads, div[class^="AdPlacementWrapper"]
 d1133 1
@@ -214,12 +244,18 @@ sakochliv.se##.cookie-disclaimer-wrap, .type-promo, .sector-annons, .sticky-foot
 d1172 1
 d1188 2
 d1192 1
+d1196 2
+a1198 2
+sillyseason.se##.sidebar-widget > .textwidget strong:has-text(casino):upward(li.sidebar-widget)
+sillyseason.se##:is(.sidebar-widget, .archive-list li):has(a[href*=".se/odds/"], a[href*="/betting/"], a[href*="kasino"], a[href*="/promomen/"])
 d1232 1
 a1235 1
 so-rummet.se##.view-header > h3:has-text(/annonser/i):upward(.view-nya-lankar-front)
 d1260 1
 d1326 1
-d1330 1
+d1330 2
+a1331 1
+swedroid.se##+js(rmnt, script, checkAdsBlocked)
 d1341 1
 a1341 1
 tabyallehanda.se##p[align="center"]:has(.adsbygoogle)
@@ -258,8 +294,13 @@ a1494 3
 vokabel.se##.column:has(.adsbygoogle)
 vokabel.se##.hero-body > .container > div[style^="min-height: 300px"], .column:empty
 vokabel.se##.hero[style^="height"]:style(height:unset!important;)
+d1498 1
+a1498 1
+vovve.net##span.arialtext11[style^="float:left"]:has-text(/^i samarbete med/i):upward(2)
 d1507 3
 d1512 1
+a1851 1
+/adsm.macro$script
 a1943 1
 /blogpoststatistic/events
 d1980 1
@@ -275,11 +316,20 @@ a2220 1
 /plugins/cookie-notice$script,domain=bildobubbla.se|zeromagazine.nu|sverigespringer.se|gasetten.se|sillyseason.se|gentlemannaguiden.com|matmalin.se|svensktidskrift.se|schack.se|densistavilan.se|horisontmagasin.se|kobe.se|tidningenproffs.se|jaktojagare.se|tobaksfakta.se|bebisvarlden.se|underbaraclaras.se|cykelframjandet.se|dalabygden.se|lansposten.se|sormlandsbygden.se|vaguiden.se|grandtech.se|bluff.se|bjjtv.se|svmf.se|rockbladet.se|globalbar.se|seniornet.se|gaming365.se|skellefteamedia.se|musikverket.se
 a2225 1
 /plugins/dohi-gdpr$script,domain=yogaworld.se|cyclingplus.se
+a2365 1
+/public/t/*$domain=tvmatchen.nu
 d2372 1
 a2372 1
 /raven$script,domain=mitti.se|travnet.se|nyheter24.se|tyda.se|devote.se|egoinas.se|hemtrevligt.se|alltforforaldrar.se|familjeliv.se|brollopstorget.se|blogg.se|nouw.com
+d2465 1
 a2477 1
 /useBlogStatistics$domain=nouw.com
+d2514 1
+a2514 1
+/wp-content/uploads/*betting$image,domain=nyadagbladet.se|kulturbloggen.com|hockeybladet.nu|newsvoice.se|spelochfilm.se|bandyfeber.com|battrestadsdel.se|sillyseason.se
+d2516 1
+a2516 1
+/wp-content/uploads/*casino$image,domain=nyadagbladet.se|kulturbloggen.com|newsvoice.se|svenskhistoria.se|battrestadsdel.se|zeromagazine.nu|totallyorebro.se|totallystockholm.se|djungeltrumman.se|vaken.se|tekniknytt.se|kingsizemag.se|spelochfilm.se|macken.xyz|improveme.se|bandyfeber.com|stoppapressarna.se|sjostadsbladet.se|autonytt.se|hockeybladet.nu|tv-kanal.se|esportnytt.se|sillyseason.se
 d2578 1
 a2578 1
 @@/assets/ads-dm.js$~third-party,domain=corren.se|folkbladet.se|mvt.se|nt.se|vt.se|vimmerbytidning.se|kuriren.nu|nsd.se|norran.se|pt.se|ekuriren.se|strengnastidning.se|kkuriren.se|sn.se|eposten.se|unt.se|helagotland.se
@@ -292,12 +342,8 @@ a2585 1
 d2600 1
 a2616 1
 ||adfin.in.bosbec.io/visitor_info
-a2619 1
-||adnami.io^$script,redirect=noop.js,domain=swedroid.se
 a2622 1
 ||ads.google.com^$third-party
-a2625 1
-||advisible.com^$script,redirect=noop.js,domain=swedroid.se
 d2630 1
 d2632 1
 d2661 1
@@ -317,8 +363,6 @@ d2863 1
 d2900 1
 d2919 1
 d2935 1
-a2983 1
-||lwadm.com^$script,redirect=noop.js,domain=swedroid.se
 d2995 1
 d3045 5
 d3056 2
