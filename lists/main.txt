@@ -865,6 +865,7 @@ Video-Ad-$media,3p
 ||emg-services.net/public/scripts/bundles/emg-desktop
 ||emg-services.net/public/scripts/bundles/emg-dfp
 ||episerver.net/*/epi-util/find.js
+||epollstats.infotheme.net/js/fingerprint
 ||es.loppi.se^
 ||events.forzasys.com/get.min.js
 ||execute-api.eu-west-1.amazonaws.com/live/analytics
@@ -1228,7 +1229,7 @@ aftonbladet.se,livsstil.se,godare.se,byggahus.se,expressen.se,elle.se,femina.se,
 ||privacy-mgmt.com^$domain=radio.se|dagenstv.com|kolla.tv|computersweden.se|woxikon.se|kokaihop.se|dagen.se|filmtopp.se|upday.com|gaffa.se
 ||privacy-center.org^$domain=180.se|agriaffaires.se|truckscorner.se|machineryzone.se|stegforhalsa.se|netdoktor.se|netdoktorpro.se|news55.se|hastnet.se|kvd.se|dagensps.se
 ||privacypolicies.com^$domain=fl-net.se
-||cdn-cookieyes.com^$domain=lokalti.se|jarnvagar.nu|senses.se|norrmejerier.se|temadagar.se|smartsenior.se|tekniknytt.se|nordigt.se|autonytt.se|vm-fotboll.se|kak.se|smhi.se|borattforum.se|mis.se|universitetslararen.se|em-fotboll.se|lakemedelsvarlden.se|samfalligheterna.se|husbilsplats.se|katerinamagasin.se|dagenslogistik.se|biostock.se|skellefteaworks.se|datormagazin.se|travnet.se|malarbok.nu|barn-filmer.se|matmenyer.se|sunnenytt.se|kristendate.se|hockeynews.se|swe3.se|spelbloggen.se|matinspo.se|trendenser.se
+||cdn-cookieyes.com^$domain=lokalti.se|jarnvagar.nu|senses.se|norrmejerier.se|temadagar.se|smartsenior.se|tekniknytt.se|nordigt.se|autonytt.se|vm-fotboll.se|kak.se|smhi.se|borattforum.se|mis.se|universitetslararen.se|em-fotboll.se|lakemedelsvarlden.se|samfalligheterna.se|husbilsplats.se|katerinamagasin.se|dagenslogistik.se|biostock.se|skellefteaworks.se|datormagazin.se|travnet.se|malarbok.nu|barn-filmer.se|matmenyer.se|sunnenytt.se|kristendate.se|hockeynews.se|swe3.se|spelbloggen.se|matinspo.se|trendenser.se|kattannonser.se
 ||gravito.net^$domain=hitta.se|gp.se|bohuslaningen.se|stromstadstidning.se|markposten.se|harrydaposten.se|partilletidning.se|sttidningen.se|molndalsposten.se|kungalvsposten.se|kungsbackaposten.se|alingsastidning.se|ttela.se|hallandsposten.se|hn.se|mellerudsnyheter.se
 ||salesmanago.pl/api/push/notification$domain=aikfotboll.se
 ||consentmanager.net^$domain=allastudier.se|gbgfotboll.se|stff.se|svenskfotboll.se|coop.se|dagens.se|mobil.se|kamerabild.se|prevent.se|utsidan.se|inpress.com|studentum.se|utbildning.se
@@ -1327,6 +1328,7 @@ edukatus.se###g-preloader
 @@/scripts/advert_$~third-party,domain=di.se
 thatsup.se##+js(set, canShowAds, true)
 mobilanyheter.net##+js(set, ai_run_scripts, noopFunc)
+forexgruppen.se,kattannonser.se##+js(noeval-if, adbEnableForPage)
 
 ! Fake walls
 ||piano.io^$domain=illvet.se|iform.se|varldenshistoria.se|popularhistoria.se|gds.se|slakthistoria.se|digitalfotoforalla.se|pctidningen.se
@@ -1596,6 +1598,7 @@ dagensps.se,news55.se##div[class^="bg-"]:has(a[href="/ps-partner"])
 dagensps.se,news55.se##.infinite-scroll-component > .container:has(a[href*="/ut.dagensps.se/"], .grid:empty)
 dagensps.se,news55.se##div.justify-center:has(div[id*="_pano"], div[id*="_tws"], div[id*="_mobil"])
 dagensps.se,news55.se##.text-sm:has(a[href*="casino"])
+dagensps.se,news55.se##.text-xs:has-text(ANNONS):upward(1)
 dagensps.se##.container:has(.dagensps_ad)
 news55.se##div.container:has(a[href="/author/news55-partner/"])
 foretagande.se##div[id*="panorama"], .panorama-pos
@@ -2183,7 +2186,9 @@ firstfoto.se##article.status-publish:has-text(/annonssamarbete/i)
 firstfoto.se###master.cookie-consenting:style(margin-top:0!important;)
 offside.org###opab-modal, .opab-footer-offer
 langd.se##.single-entry__ads
+||travnet.se/sulkysport$frame
 travnet.se##:is(.hidden, div[class="lg:hidden"]):has(div[id^="travnet_"])
+travnet.se##div.text-\[8px\].text-center:has-text(ANNONS):upward(1)
 sportal.se##.cookie-div, a[href$="/banner/"]
 sportsnews.se,xn--sporthnt-5za.se##a[href*="casino"]
 sportsnews.se,xn--sporthnt-5za.se###secondary:has(a[href*="casino"])
@@ -2426,7 +2431,6 @@ modernalivet.se##.modal-wrap, .slide-in-box
 modernalivet.se##body.modal-active:style(overflow:unset!important)
 modernalivet.se##.sidebar-widget h3:has-text(/annons/i):upward(.sidebar-widget)
 modernalivet.se##.excerpt:has-text(/annons/i):upward(article)
-upptack-sverige.se##.front-cta:has-text(/sponsrat innehåll/i)
 grillbaronen.se##a[href*="/click."], #block-2, #block-4
 grillbaronen.se##.post:has(a[href*="casino"], a[href*="kasino"], a[href*="betting"])
 /async-gdpr$domain=matochpyssel.nu
@@ -2782,7 +2786,7 @@ aletorget.se,alingsastorget.se,almhulttorget.se,alvestatorget.se,amaltorget.se,a
 /plugins/cookie-popup$script,domain=skillingaryd.nu|xn--vrnamo-bua.nu
 /plugins/uk-cookie-consent$script,domain=cykla.se
 /plugins/dsgvo-tools-cookie$script,domain=motorsport4sale.com
-/plugins/borlabs-cookie$script,domain=alltombrollop.com
+/plugins/borlabs-cookie$script,domain=alltombrollop.com|digiteket.se
 /plugins/wf-cookie-consent$script,domain=spelochfilm.se
 /plugins/beautiful-and-responsive-cookie-consent$script,domain=melodifestivalklubben.se
 /plugins/wp-gdpr-compliance$script,domain=pussad.se
@@ -2827,7 +2831,7 @@ alghundklubben.com#@#.category-annons:not(body):not(html)
 @@||img.upsales.com^
 ||img.upsales.com/*/visit$script,important
 ! Unbreaks viralize.tv player
-@@/viralize_player_content$script,xhr,domain=nyheter24.se|modette.se|familjeliv.se|alltforforaldrar.se|loppi.se|devote.se|vimedbarn.se|brollopstorget.se|rodeo.net
+@@/viralize_player_content$script,xhr,domain=nyheter24.se|modette.se|familjeliv.se|alltforforaldrar.se|loppi.se|devote.se|vimedbarn.se|brollopstorget.se|rodeo.net|travnet.se
 
 ! -- Override EasyList/EasyPrivacy whitelists
 /google-analytics-for-wordpress$important,script,xmlhttprequest
@@ -3326,7 +3330,6 @@ shortcut.se##.category-tag:has-text(/annons/i):upward(.ArticleListItem)
 ||ljudoljus.net/images/banner/
 jobsinsweden.se##+js(set, eazy_ad_unblocker, null)
 fraser.nu##div[aria-label="Annonser"]
-forexgruppen.se##+js(noeval-if, adbEnableForPage)
 forexgruppen.se##div[data-widget_type="image.default"] a:not([href*="forexgruppen.se"], [href^="/"]), .widget_media_image a:not([href*="forexgruppen.se"], [href^="/"])
 sydasien.se##.thb-cookie-bar
 pakryss.se##div[id*="ad_banner"]
