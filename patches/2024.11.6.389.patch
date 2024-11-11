@@ -1,10 +1,10 @@
-diff name:swefilter lines:149 checksum:80d813fc4c
+diff name:swefilter lines:167 checksum:1ce6bf889b
 d2 1
 a2 1
-! Last updated: Sun, 10 Nov 2024 06:46:56 +0000
+! Last updated: Mon, 11 Nov 2024 06:42:59 +0000
 d4 1
 a4 1
-! Diff-Path: patches/2024.11.10.406.patch#swefilter
+! Diff-Path: patches/2024.11.11.402.patch#swefilter
 d107 1
 a110 1
 aftonbladet.se##:is(main > section a[data-test-tag="internal-link"], main > aside a[data-test-tag="internal-link"]):has-text(innehåller annonslänkar)
@@ -22,6 +22,8 @@ branschaktuellt.se##.article__properties-breadcrumbs span:has-text(/Sponsrad|ann
 d345 1
 a347 1
 conpot.se##.post > div[style]:has-text(ANNONS):upward(article:not([id]))
+a368 1
+dagensps.se,news55.se##.text-xs:has-text(ANNONS):upward(1)
 d383 1
 d391 2
 a392 2
@@ -45,6 +47,9 @@ filmtipset.se##.postmeta em:has-text(/sponsrad/i):upward(.row.news)
 d556 1
 a556 1
 fl-net.se##a[href*="casino"]:upward(p)
+d575 1
+a576 1
+forexgruppen.se,kattannonser.se##+js(noeval-if, adbEnableForPage)
 d588 5
 a592 2
 fotbolldirekt.se,hockeysverige.se,innebandymagazinet.se,motivation.se,fiskejournalen.se,alba.nu,padeldirekt.se,formeldirekt.se,dagensopinion.se,golfing.se##.annons
@@ -114,9 +119,12 @@ a1306 1
 swedroid.se##+js(rmnt, script, checkAdsBlocked)
 d1340 1
 d1360 1
+a1376 1
+travnet.se##div.text-\[8px\].text-center:has-text(ANNONS):upward(1)
 d1381 1
 a1381 1
 trendenser.se##a[href=""].uppercase:has-text(REKLAM):upward(.popular-post)
+d1413 1
 d1418 2
 a1419 2
 utslappsratt.se,heleneholmsif.se,trafikskola.se,melodifestivalklubben.se,morotsliv.com,nyadagbladet.se##+js(set, em_track_user, false)
@@ -129,6 +137,9 @@ a1478 1
 vovve.net##span.arialtext11[style^="float:left"]:has-text(/^i samarbete med/i):upward(2)
 a1827 1
 /adsm.macro$script
+d2184 1
+a2184 1
+/plugins/borlabs-cookie$script,domain=alltombrollop.com|digiteket.se
 a2344 1
 /public/t/*$domain=tvmatchen.nu
 d2444 1
@@ -138,13 +149,20 @@ a2494 1
 d2496 1
 a2496 1
 /wp-content/uploads/*casino$image,domain=nyadagbladet.se|kulturbloggen.com|newsvoice.se|svenskhistoria.se|battrestadsdel.se|zeromagazine.nu|totallyorebro.se|totallystockholm.se|djungeltrumman.se|vaken.se|tekniknytt.se|kingsizemag.se|spelochfilm.se|macken.xyz|improveme.se|bandyfeber.com|stoppapressarna.se|sjostadsbladet.se|autonytt.se|hockeybladet.nu|tv-kanal.se|esportnytt.se|sillyseason.se
+d2563 1
+a2563 1
+@@/viralize_player_content$script,xhr,domain=nyheter24.se|modette.se|familjeliv.se|alltforforaldrar.se|loppi.se|devote.se|vimedbarn.se|brollopstorget.se|rodeo.net|travnet.se
 d2698 1
 a2698 1
-||cdn-cookieyes.com^$domain=lokalti.se|jarnvagar.nu|senses.se|norrmejerier.se|temadagar.se|smartsenior.se|tekniknytt.se|nordigt.se|autonytt.se|vm-fotboll.se|kak.se|smhi.se|borattforum.se|mis.se|universitetslararen.se|em-fotboll.se|lakemedelsvarlden.se|samfalligheterna.se|husbilsplats.se|katerinamagasin.se|dagenslogistik.se|biostock.se|skellefteaworks.se|datormagazin.se|travnet.se|malarbok.nu|barn-filmer.se|matmenyer.se|sunnenytt.se|kristendate.se|hockeynews.se|swe3.se|spelbloggen.se|matinspo.se|trendenser.se
+||cdn-cookieyes.com^$domain=lokalti.se|jarnvagar.nu|senses.se|norrmejerier.se|temadagar.se|smartsenior.se|tekniknytt.se|nordigt.se|autonytt.se|vm-fotboll.se|kak.se|smhi.se|borattforum.se|mis.se|universitetslararen.se|em-fotboll.se|lakemedelsvarlden.se|samfalligheterna.se|husbilsplats.se|katerinamagasin.se|dagenslogistik.se|biostock.se|skellefteaworks.se|datormagazin.se|travnet.se|malarbok.nu|barn-filmer.se|matmenyer.se|sunnenytt.se|kristendate.se|hockeynews.se|swe3.se|spelbloggen.se|matinspo.se|trendenser.se|kattannonser.se
 a2745 1
 ||ctm.bonnier.cloud^$domain=digitalfotoforalla.se|iform.se|pctidningen.se|varldenshistoria.se
+a2796 1
+||epollstats.infotheme.net/js/fingerprint
 d3020 1
 a3020 1
 ||onesignal.com^$domain=samnytt.se|battrestadsdel.se|beernews.se|ungdomsfotboll.se|rabattsok.se|1x2.se|cannabis.se|dackavisen.se|driva-eget.se|skogsaktuellt.se|maskinbladet.se|entreprenadaktuellt.se|ja.se|newsner.com|humorbibeln.se|sportbibeln.se|ettgottskratt.se|djurbibeln.se|finanstid.se|fokus.se|gasetten.se|fotbollsthlm.se|macken.xyz|naringslivetvgl.se|dalarnasaffarer.se|stockholmsaffarer.se|jamtlandsaffarer.se|hallandsnaringsliv.se|sjuharadsnaringsliv.se|netflixguiden.se|nyadagbladet.se|oskarshamns-nytt.se|swebbtv.se|thepattayanews.se|vaken.se|aktieskolan.se|fastighetsvarlden.se|mcparken.se|gaffa.se|alltomnorrtalje.se|morotsliv.com|it-finans.se|it-halsa.se|it-kanalen.se|it-pedagogen.se|it-retail.se|skaneplus.se|mittforetag.com|studeravidare.se|thephuketexpress.se|ibnytt.se
 a3135 1
 ||sleeknote.com^$domain=gaffa.se
+a3195 1
+||travnet.se/sulkysport$frame
