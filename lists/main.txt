@@ -1449,12 +1449,12 @@ aftonbladet.se,godare.se,livsstil.se##[data-test-tag="prisjakt-carousel"], a[hre
 aftonbladet.se,godare.se,livsstil.se##div[style*="min-height:240px"]:has(iframe[src*="/widgets/ads/"])
 aftonbladet.se,skonhetsredaktorerna.se##.ab_responsive_ads
 aftonbladet.se##[data-ad-subtype]:upward(1):matches-css(min-height:/[0-9]+/)
-aftonbladet.se##:is(main > section a[data-test-tag="internal-link"], main > aside a[data-test-tag="internal-link"]):has-text(innehåller annonslänkar)
-aftonbladet.se##:is(main > section > div[class^="hyperion"], #main > section > div[class^="hyperion"]):has(a[href*="/brandstudio"], a[href*="/brand-studio"])
+aftonbladet.se##:is(main > section a[data-test-tag="internal-link"], #main > section a[data-test-tag="internal-link"], main > aside a[data-test-tag="internal-link"]):has-text(innehåller annonslänkar)
+aftonbladet.se##:is(main > section > div[class^="hyperion"], #main > section > div[class^="hyperion"]):has(a[href*="/brandstudio"], a[href*="/brand-studio"], a[href*="/rabattkod/"], a[href*="/casinoguide/"])
 aftonbladet.se##aside > div[class^="hyperion"]:has(a[href*="/rabattkod"], a[href*="/kampanj"], a[href*="/brandstudio"], a[href*="/brand-studio"])
 aftonbladet.se##article[class^="article-wrapper"] ~ div[class^="hyperion"]:has(a[href*="/t?a="], a[href*="/click"], a[href^="http"][nofollow], a[href^="http"][rel*="nofollow"])
 aftonbladet.se##main > section > div:first-child:matches-css(box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 24px 0px)
-aftonbladet.se##div[class^="hyperion-css"]:matches-css(margin:/32px/):has(iframe[src*="tize.no"])
+aftonbladet.se##section[class*="layout-main"] > div[class^="hyperion-css"]:has(a[href*="/produkt/"]:not(a[href^="/"]), a[href*="/varumarken/"]:not(a[href^="/"]), a[href*="/prisjakt.nu"])
 ! scriptlets
 www.aftonbladet.se##+js(nostif, TAKEOVER)
 ! css
@@ -1494,8 +1494,8 @@ livsstil.se##a[href*="campaign"][data-test-tag="external-link"], div[data-ad-sub
 livsstil.se,godare.se##[id^="adPlacement"]:upward(1)
 livsstil.se##article:has(.ad)
 livsstil.se##article + div[class^="hyperion"]:has(iframe[src*="tize.no"])
-sportbladetplay.se##.ui.page.dimmer:has(div[class^="CookieConsentPopup"])
-sportbladetplay.se##body.dimmed:style(overflow:unset!important)
+||wurfl.io^$domain=vinochmatguiden.se
+/ad.html$domain=vinochmatguiden.se
 vinochmatguiden.se##.popup_missa-inget
 godare.se##.godare-ad-element, a[href*="/brand-studio"], a[href*="/brandstudio"], .recipe-ad, a[href*="utm_campaign"][data-test-tag="external-link"]
 godare.se##:is(p[class^="teasersmall-sectionLabel"], p[class^="teasermedium-sectionLabel"]):has-text(/annons/i):upward(a.internal-link, li)
