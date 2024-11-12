@@ -1,13 +1,17 @@
-diff name:swefilter lines:258 checksum:1ce6bf889b
+diff name:swefilter lines:267 checksum:cb8c0d202d
 d2 1
 a2 1
-! Last updated: Mon, 11 Nov 2024 06:42:59 +0000
+! Last updated: Tue, 12 Nov 2024 05:12:30 +0000
 d4 1
 a4 1
-! Diff-Path: patches/2024.11.11.402.patch#swefilter
-d107 1
-a110 1
-aftonbladet.se##:is(main > section a[data-test-tag="internal-link"], main > aside a[data-test-tag="internal-link"]):has-text(innehåller annonslänkar)
+! Diff-Path: patches/2024.11.12.312.patch#swefilter
+d107 2
+a109 1
+aftonbladet.se##section[class*="layout-main"] > div[class^="hyperion-css"]:has(a[href*="/produkt/"]:not(a[href^="/"]), a[href*="/varumarken/"]:not(a[href^="/"]), a[href*="/prisjakt.nu"])
+d111 1
+a111 2
+aftonbladet.se##:is(main > section a[data-test-tag="internal-link"], #main > section a[data-test-tag="internal-link"], main > aside a[data-test-tag="internal-link"]):has-text(innehåller annonslänkar)
+aftonbladet.se##:is(main > section > div[class^="hyperion"], #main > section > div[class^="hyperion"]):has(a[href*="/brandstudio"], a[href*="/brand-studio"], a[href*="/rabattkod/"], a[href*="/casinoguide/"])
 d153 1
 d161 1
 d168 1
@@ -150,6 +154,7 @@ sillyseason.se##:is(.sidebar-widget, .archive-list li):has(a[href*=".se/odds/"],
 d1218 1
 a1221 1
 so-rummet.se##.view-header > h3:has-text(/annonser/i):upward(.view-nya-lankar-front)
+d1239 2
 d1246 1
 d1315 2
 a1316 1
@@ -185,6 +190,8 @@ vovve.net##span.arialtext11[style^="float:left"]:has-text(/^i samarbete med/i):u
 d1496 1
 a1835 1
 /adsm.macro$script
+a1851 1
+/ad.html$domain=vinochmatguiden.se
 a1927 1
 /blogpoststatistic/events
 d2191 1
@@ -257,3 +264,5 @@ d3261 1
 a3264 1
 ||viralize.tv/display/$domain=nouw.com
 d3273 1
+a3290 1
+||wurfl.io^$domain=vinochmatguiden.se

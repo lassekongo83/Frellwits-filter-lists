@@ -1,22 +1,23 @@
-diff name:swefilter lines:362 checksum:1ce6bf889b
+diff name:swefilter lines:368 checksum:cb8c0d202d
 d2 1
 a2 1
-! Last updated: Mon, 11 Nov 2024 06:42:59 +0000
+! Last updated: Tue, 12 Nov 2024 05:12:30 +0000
 d4 1
 a4 1
-! Diff-Path: patches/2024.11.11.402.patch#swefilter
+! Diff-Path: patches/2024.11.12.312.patch#swefilter
 d103 1
 a103 1
 affarsvarlden.se##article.article-list-item:has(a[href*="/native/"])
-d105 5
-a109 2
+d105 6
+a110 2
 aftonbladet.se##article[class^="article-wrapper"] ~ div[class^="hyperion"]:has(a[href*="/t?a="], a[href*="/click"], a[href^="http"][nofollow], a[href^="http"][rel*="nofollow"])
 aftonbladet.se##aside > div[class^="hyperion"]:has(a[href*="/rabattkod"], a[href*="/kampanj"], a[href*="/brandstudio"], a[href*="/brand-studio"])
 d112 8
-a119 3
+a119 4
+aftonbladet.se##section[class*="layout-main"] > div[class^="hyperion-css"]:has(a[href*="/produkt/"]:not(a[href^="/"]), a[href*="/varumarken/"]:not(a[href^="/"]), a[href*="/prisjakt.nu"])
 aftonbladet.se###superright-side, a[href*="/casinoguide"], [id^="adPlacement"], a[href^="https://kampanj."], a[href*="/rabattkod"][data-test-tag="internal-link"], a[href^="/sportbladet/speltips/"], a[href*="aftonbladet.se/kampanj/"], div[class*="stickyloginoverlay"], #takeover-container
-aftonbladet.se##:is(main > section a[data-test-tag="internal-link"], main > aside a[data-test-tag="internal-link"]):has-text(innehåller annonslänkar)
-aftonbladet.se##:is(main > section > div[class^="hyperion"], #main > section > div[class^="hyperion"]):has(a[href*="/brandstudio"], a[href*="/brand-studio"])
+aftonbladet.se##:is(main > section a[data-test-tag="internal-link"], #main > section a[data-test-tag="internal-link"], main > aside a[data-test-tag="internal-link"]):has-text(innehåller annonslänkar)
+aftonbladet.se##:is(main > section > div[class^="hyperion"], #main > section > div[class^="hyperion"]):has(a[href*="/brandstudio"], a[href*="/brand-studio"], a[href*="/rabattkod/"], a[href*="/casinoguide/"])
 d122 1
 a122 1
 aftonbladet.se,godare.se,livsstil.se##[data-test-tag="prisjakt-carousel"], a[href*="/brandstudio"], a[href*="/brand-studio"], div[class^="advertory-"]:not(.advertory-header-anchor)
@@ -230,6 +231,7 @@ sillyseason.se##:is(.sidebar-widget, .archive-list li):has(a[href*=".se/odds/"],
 d1234 1
 a1237 1
 so-rummet.se##.view-header > h3:has-text(/annonser/i):upward(.view-nya-lankar-front)
+d1255 2
 d1262 1
 d1328 1
 d1332 2
@@ -275,6 +277,8 @@ vovve.net##span.arialtext11[style^="float:left"]:has-text(/^i samarbete med/i):u
 d1515 1
 a1854 1
 /adsm.macro$script
+a1870 1
+/ad.html$domain=vinochmatguiden.se
 a1946 1
 /blogpoststatistic/events
 d1983 1
@@ -358,6 +362,8 @@ d3279 2
 a3283 1
 ||viralize.tv/display/$domain=nouw.com
 d3292 1
+a3309 1
+||wurfl.io^$domain=vinochmatguiden.se
 d3321 1
 a3350 1
 tabyallehanda.se##^script[src$="adsbygoogle.js"]
