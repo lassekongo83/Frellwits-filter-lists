@@ -1,10 +1,10 @@
-diff name:swefilter lines:364 checksum:cb8c0d202d
+diff name:swefilter lines:390 checksum:69920e6cf9
 d2 1
 a2 1
-! Last updated: Tue, 12 Nov 2024 05:12:30 +0000
+! Last updated: Wed, 13 Nov 2024 05:18:32 +0000
 d4 1
 a4 1
-! Diff-Path: patches/2024.11.12.312.patch#swefilter
+! Diff-Path: patches/2024.11.13.318.patch#swefilter
 d103 1
 a103 1
 affarsvarlden.se##article.article-list-item:has(a[href*="/native/"])
@@ -47,13 +47,13 @@ dagensinnovation.se,nyheter.swebbtv.se,modernalivet.se###moove_gdpr_cookie_info_
 d369 3
 d373 2
 a374 7
-dagensps.se,news55.se##a[href*="/ps-partner/"], .ad-links-module, .dagensps_ad, a[href*="ut.dagensps.se"][target], .bottom_banner, .leftsidebanner, .c-external-notice
-dagensps.se,news55.se##div.justify-center:has(div[id*="_pano"], div[id*="_tws"], div[id*="_mobil"])
-dagensps.se,news55.se##div[class^="bg-"]:has(a[href="/ps-partner"])
-dagensps.se,news55.se##.infinite-scroll-component > .container:has(a[href*="/ut.dagensps.se/"], .grid:empty)
-dagensps.se,news55.se##.postbox:has(.sponsored_post)
-dagensps.se,news55.se##.text-sm:has(a[href*="casino"])
-dagensps.se,news55.se##.text-xs:has-text(ANNONS):upward(1)
+dagensps.se,news55.se,realtid.se##a[href*="/-partner/"], .ad-links-module, .dagensps_ad, a[href*="ut.dagensps.se"][target], .bottom_banner, .leftsidebanner, .c-external-notice
+dagensps.se,news55.se,realtid.se##div.justify-center:has(div[id*="_pano"], div[id*="_tws"], div[id*="_mobil"])
+dagensps.se,news55.se,realtid.se##div[class^="bg-"]:has(a[href="/ps-partner"])
+dagensps.se,news55.se,realtid.se##.infinite-scroll-component > .container:has(a[href*="/ut.dagensps.se/"], .grid:empty)
+dagensps.se,news55.se,realtid.se##.postbox:has(.sponsored_post)
+dagensps.se,news55.se,realtid.se##.text-sm:has(a[href*="casino"])
+dagensps.se,news55.se,realtid.se##.text-xs:has-text(ANNONS):upward(1)
 a376 1
 dagenstech.se##.label:has-text(SPONSRAT):upward(.swiper-slide):remove()
 d388 1
@@ -104,6 +104,9 @@ fotbolldirekt.se,hockeysverige.se,innebandymagazinet.se,padeldirekt.se,formeldir
 d599 1
 a599 1
 fotbollsresultat.com##h2.fusion-responsive-typography-calculated:has-text(Spel och dobbel) ~ p
+d612 1
+a612 1
+fotosidan.se,merinfo.se,allsvenskan.se,tasteline.com,jaktojagare.se,chefstidningen.se,norpan.se,moviezine.se,jaktjournalen.se,byggvarlden.se,omtanke.today,akademikern.se,socionomen.se##.ads
 d634 1
 a634 1
 futsalmagasinet.se##.td-block-title > span:has-text(/annonserat innehåll/i):upward(.td_block_wrap)
@@ -163,7 +166,16 @@ lajvo.se##.postCard:has-text(/bonusar|casino|betting|spelbranschen|spelupplevels
 d877 1
 a877 1
 lifeofsvea.se,quizza.nu##.cookie-info
+d879 1
+a879 1
+lindasbakskola.se,skk.se,viivilla.se,ungdomsfotboll.se##a[href*="/bit.ly/"]
+d893 1
+a893 1
+livetsgoda.se,betongforeningen.se,espressomedia.se,ordfrontmagasin.se,europaportalen.se,motorsportbladet.se,battregolf.se,nitroz.se,magasinethockey.se,twostrokerider.se,bjjtv.se,eqotime.com,newsvoice.se,tranakampsport.se,thepattayanews.se,forsvarssektorn.se##a[target$="blank"] img:not([class^="tweet"])
 d900 3
+d912 1
+a912 1
+ljuskultur.se,bettips.se,spelo.se,skogsaktuellt.se,maskinbladet.se,entreprenadaktuellt.se,ja.se,husbilhusvagn.se,klassiker.nu,mopedgaraget.se,vibilagare.se,caroftheyear.se,automobil.se,endurobloggen.se,riksettan.net,frillesasbandy.se,dh.se,djungeltrumman.se,skik.se,omni.se,campingsverige.se,eniro.se,restaurangvarlden.se,naringslivetvgl.se,dalarnasaffarer.se,stockholmsaffarer.se,jamtlandsaffarer.se,hallandsnaringsliv.se,sjuharadsnaringsliv.se,nyheteridag.se,alekuriren.se,omniekonomi.se,sverigesindustri.se,onkologiisverige.se,svenskalag.se##.banner
 d924 1
 d931 1
 d933 2
@@ -214,6 +226,7 @@ d1124 1
 a1124 2
 racemagazine.se##article + div.bg-white:has(.ad-inner)
 racemagazine.se##.landing-ad
+d1134 3
 d1150 2
 a1151 1
 sakochliv.se##.cookie-disclaimer-wrap, .type-promo, .sector-annons, .sticky-footer
@@ -229,6 +242,7 @@ a1226 1
 so-rummet.se##.view-header > h3:has-text(/annonser/i):upward(.view-nya-lankar-front)
 d1244 2
 d1251 1
+d1258 4
 d1317 1
 d1321 2
 a1322 1
@@ -256,6 +270,8 @@ trendenser.se##a[href=""].uppercase:has-text(REKLAM):upward(.popular-post)
 d1404 1
 a1404 1
 tripadvisor.se##a[target]:has-text(/Sponsrat av|i samarbete med/i)
+a1418 1
+tv.nu###modal div[itemtype][itemscope] > div[class]:has(a[href*="doubleclick"])
 d1433 1
 a1437 2
 utslappsratt.se,heleneholmsif.se,trafikskola.se,melodifestivalklubben.se,morotsliv.com,nyadagbladet.se##+js(set, em_track_user, false)
@@ -263,6 +279,10 @@ utslappsratt.se,heleneholmsif.se,trafikskola.se,melodifestivalklubben.se,morotsl
 a1454 1
 vasterastidning.se##article.column:has(a[data-k5a-url="/a/null"])
 d1457 1
+a1477 1
+vinochmatguiden.se##+js(set, window.WURFL, 1)
+a1482 1
+vk.se,folkbladet.nu,nordsverige.se,mellanbygden.nu,vasterbottningen.se,lokaltidningen.nu##+js(set, manualAutoplay_, noopFunc)
 a1489 3
 vokabel.se##.column:has(.adsbygoogle)
 vokabel.se##.hero-body > .container > div[style^="min-height: 300px"], .column:empty
@@ -295,6 +315,9 @@ a2364 1
 d2457 1
 a2469 1
 /useBlogStatistics$domain=nouw.com
+d2501 1
+a2501 1
+/wp-content/uploads/*banner$image,domain=marsta.nu|alltomhif.se|branschkoll.se|brollopsmagasinet.se|bussmagasinet.se|danstidningen.se|guldkanalen.se|ljuskultur.se|sportpanelen.se|turismnytt.se|opulens.se|tekniknytt.se|pakryss.se|investerarbrevet.se|svensktidskrift.se|electronic.se|restaurangvarlden.se|finanstid.se|naringslivetvgl.se|dalarnasaffarer.se|stockholmsaffarer.se|jamtlandsaffarer.se|hallandsnaringsliv.se|sjuharadsnaringsliv.se|battregolf.se|svenskhistoria.se|arjeplognytt.se|bioenergitidningen.se|fisheco.se|autonytt.se|zeromagazine.nu|improveme.se|alekuriren.se|golfguidenonline.se|esportnytt.se
 d2506 1
 a2506 1
 /wp-content/uploads/*betting$image,domain=nyadagbladet.se|kulturbloggen.com|hockeybladet.nu|newsvoice.se|spelochfilm.se|bandyfeber.com|battrestadsdel.se|sillyseason.se
@@ -341,6 +364,9 @@ d3056 1
 d3059 1
 d3069 1
 d3073 1
+d3094 1
+a3094 1
+||privacy-center.org^$domain=180.se|agriaffaires.se|truckscorner.se|machineryzone.se|stegforhalsa.se|netdoktor.se|netdoktorpro.se|news55.se|hastnet.se|kvd.se|dagensps.se|realtid.se
 d3154 1
 d3159 1
 d3171 1
