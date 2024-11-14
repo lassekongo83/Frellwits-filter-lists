@@ -1,10 +1,10 @@
-diff name:swefilter lines:135 checksum:fe328ad0c2
+diff name:swefilter lines:166 checksum:819d1f7c10
 d2 1
 a2 1
-! Last updated: Thu, 14 Nov 2024 04:58:53 +0000
+! Last updated: Thu, 14 Nov 2024 17:23:21 +0000
 d4 1
 a4 1
-! Diff-Path: patches/2024.11.14.298.patch#swefilter
+! Diff-Path: patches/2024.11.14.1043.patch#swefilter
 d107 2
 d110 2
 a111 4
@@ -16,10 +16,17 @@ d115 1
 a115 1
 aftonbladet.se,godare.se,livsstil.se,omni.se,omniekonomi.se,svd.se##.sp-message-open body:style(overflow:initial!important; position:unset!important; margin-top:unset!important;)
 d118 1
+d151 1
 d160 1
 d167 1
 a168 1
 alltomhif.se##:is(article.category-gastinlagg, .widget_recent_entries li):has(a[href*="spelbolag"], a[href*="casino"], a[href*="-betta"], a[href*="betting"])
+d257 1
+a265 1
+borskollen.se##.sponsored:upward(a)
+d272 2
+a273 1
+bovision.se##.banner-image, .bvads-container, .a-full-width, .ads-container
 d300 1
 a300 1
 byggahus.se##.block-ad, a[href^="/partner/"], .threadMatchedContent, #svartalistan-login-required-overlay
@@ -50,9 +57,24 @@ fl-net.se##a[href*="casino"]:upward(p)
 d579 1
 a580 1
 forexgruppen.se,kattannonser.se##+js(noeval-if, adbEnableForPage)
+d594 1
+a594 1
+fotbollskanalen.se##div[class$="sponsortitle"]:upward(.desktop-side-widget)
+d596 1
+a596 2
+fotbollskanalen.se##.notice:has(span[class$="sponsored"])
+fotbollskanalen.se##:is(.sponsored, .theme-news_sponsored_container):upward(.theme-news)
 d610 1
 a610 1
 fotosidan.se,merinfo.se,allsvenskan.se,tasteline.com,jaktojagare.se,chefstidningen.se,norpan.se,moviezine.se,jaktjournalen.se,byggvarlden.se,omtanke.today,akademikern.se,socionomen.se##.ads
+d798 1
+a799 1
+karriarlakare.se##.annons-label:upward(a)
+d812 1
+d827 1
+a827 1
+koket.se##div[class*="mosaic_item_wrapper"]:has(div[class*="sponsorLabel"])
+d829 1
 d872 1
 a872 1
 lifeofsvea.se,quizza.nu##.cookie-info
@@ -81,11 +103,18 @@ d1234 4
 d1298 1
 a1298 1
 swedroid.se##.puff:has(script[src*="lwadm.com"], .pjSidebar)
+d1325 1
+a1325 2
+teknologiexperten.se##a[href*="casino"]
+teknologiexperten.se##.item:has(img[src*=".se-www"])
 a1364 1
 travnet.se##div.text-\[8px\].text-center:has-text(ANNONS):upward(1)
 d1369 1
 a1369 1
 trendenser.se##a[href=""].uppercase:has-text(REKLAM):upward(.popular-post)
+d1376 1
+a1379 1
+tv4play.se,tv4.se,fotbollskanalen.se,koket.se##.visit-advertiser-link
 a1386 1
 tv.nu###modal div[itemtype][itemscope] > div[class]:has(a[href*="doubleclick"])
 d1401 1
@@ -111,6 +140,8 @@ a2478 1
 d2552 1
 a2552 1
 @@/viralize_player_content$script,xhr,domain=nyheter24.se|modette.se|familjeliv.se|alltforforaldrar.se|loppi.se|devote.se|vimedbarn.se|brollopstorget.se|rodeo.net|travnet.se
+a2676 1
+||bvads.bovision.se^
 d2687 1
 a2687 1
 ||cdn-cookieyes.com^$domain=lokalti.se|jarnvagar.nu|senses.se|norrmejerier.se|temadagar.se|smartsenior.se|tekniknytt.se|nordigt.se|autonytt.se|vm-fotboll.se|kak.se|smhi.se|borattforum.se|mis.se|universitetslararen.se|em-fotboll.se|lakemedelsvarlden.se|samfalligheterna.se|husbilsplats.se|katerinamagasin.se|dagenslogistik.se|biostock.se|skellefteaworks.se|datormagazin.se|travnet.se|malarbok.nu|barn-filmer.se|matmenyer.se|sunnenytt.se|kristendate.se|hockeynews.se|swe3.se|spelbloggen.se|matinspo.se|trendenser.se|kattannonser.se

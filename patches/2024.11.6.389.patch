@@ -1,10 +1,10 @@
-diff name:swefilter lines:231 checksum:fe328ad0c2
+diff name:swefilter lines:258 checksum:819d1f7c10
 d2 1
 a2 1
-! Last updated: Thu, 14 Nov 2024 04:58:53 +0000
+! Last updated: Thu, 14 Nov 2024 17:23:21 +0000
 d4 1
 a4 1
-! Diff-Path: patches/2024.11.14.298.patch#swefilter
+! Diff-Path: patches/2024.11.14.1043.patch#swefilter
 d107 2
 d110 2
 a111 4
@@ -16,6 +16,7 @@ d115 1
 a115 1
 aftonbladet.se,godare.se,livsstil.se,omni.se,omniekonomi.se,svd.se##.sp-message-open body:style(overflow:initial!important; position:unset!important; margin-top:unset!important;)
 d118 1
+d151 1
 d160 1
 d167 1
 a168 1
@@ -24,6 +25,12 @@ d194 1
 a194 2
 aurumforum.se##.bottom-liner span:has-text(Annons):upward(2)
 aurumforum.se##.top-add
+d256 1
+a264 1
+borskollen.se##.sponsored:upward(a)
+d271 2
+a272 1
+bovision.se##.banner-image, .bvads-container, .a-full-width, .ads-container
 d276 1
 a276 1
 branschaktuellt.se##.article__properties-breadcrumbs span:has-text(/Sponsrad|annons/i):upward(.article)
@@ -68,12 +75,15 @@ fl-net.se##a[href*="casino"]:upward(p)
 d575 1
 a576 1
 forexgruppen.se,kattannonser.se##+js(noeval-if, adbEnableForPage)
-d588 5
-a592 2
+d588 6
+a593 3
 fotbolldirekt.se,hockeysverige.se,innebandymagazinet.se,motivation.se,fiskejournalen.se,alba.nu,padeldirekt.se,formeldirekt.se,dagensopinion.se,golfing.se##.annons
 fotbolldirekt.se,hockeysverige.se,innebandymagazinet.se,padeldirekt.se,formeldirekt.se##.site-partnevisment, .h-background--sponsored-light, .row .text-center img, a[href^="https://hubs.la"], .c-partners, iframe[srcdoc*="_ad_div"], .annons-text
-d596 1
-a596 1
+fotbollskanalen.se##div[class$="sponsortitle"]:upward(.desktop-side-widget)
+d595 2
+a596 3
+fotbollskanalen.se##.notice:has(span[class$="sponsored"])
+fotbollskanalen.se##:is(.sponsored, .theme-news_sponsored_container):upward(.theme-news)
 fotbollsresultat.com##h2.fusion-responsive-typography-calculated:has-text(Spel och dobbel) ~ p
 d609 1
 a609 1
@@ -104,7 +114,15 @@ a752 1
 ibnytt.se##.col-md-4 .widget:has(a[href*="spelbonus"])
 a753 1
 ibnytt.se##:is(.article-list li, .post):has(a[href*="betting"], a[href*="casino"])
+d798 1
+a799 1
+karriarlakare.se##.annons-label:upward(a)
+d812 1
 d814 1
+d828 1
+a828 1
+koket.se##div[class*="mosaic_item_wrapper"]:has(div[class*="sponsorLabel"])
+d830 1
 d873 1
 a873 1
 lifeofsvea.se,quizza.nu##.cookie-info
@@ -153,6 +171,10 @@ swedroid.se##+js(rmnt, script, checkAdsBlocked)
 d1308 1
 a1308 1
 swedroid.se##.puff:has(script[src*="lwadm.com"], .pjSidebar)
+d1335 1
+a1335 2
+teknologiexperten.se##a[href*="casino"]
+teknologiexperten.se##.item:has(img[src*=".se-www"])
 d1340 1
 d1360 1
 a1376 1
@@ -160,6 +182,9 @@ travnet.se##div.text-\[8px\].text-center:has-text(ANNONS):upward(1)
 d1381 1
 a1381 1
 trendenser.se##a[href=""].uppercase:has-text(REKLAM):upward(.popular-post)
+d1388 1
+a1391 1
+tv4play.se,tv4.se,fotbollskanalen.se,koket.se##.visit-advertiser-link
 a1398 1
 tv.nu###modal div[itemtype][itemscope] > div[class]:has(a[href*="doubleclick"])
 d1413 1
@@ -202,6 +227,8 @@ a2496 1
 d2563 1
 a2563 1
 @@/viralize_player_content$script,xhr,domain=nyheter24.se|modette.se|familjeliv.se|alltforforaldrar.se|loppi.se|devote.se|vimedbarn.se|brollopstorget.se|rodeo.net|travnet.se
+a2687 1
+||bvads.bovision.se^
 d2698 1
 a2698 1
 ||cdn-cookieyes.com^$domain=lokalti.se|jarnvagar.nu|senses.se|norrmejerier.se|temadagar.se|smartsenior.se|tekniknytt.se|nordigt.se|autonytt.se|vm-fotboll.se|kak.se|smhi.se|borattforum.se|mis.se|universitetslararen.se|em-fotboll.se|lakemedelsvarlden.se|samfalligheterna.se|husbilsplats.se|katerinamagasin.se|dagenslogistik.se|biostock.se|skellefteaworks.se|datormagazin.se|travnet.se|malarbok.nu|barn-filmer.se|matmenyer.se|sunnenytt.se|kristendate.se|hockeynews.se|swe3.se|spelbloggen.se|matinspo.se|trendenser.se|kattannonser.se

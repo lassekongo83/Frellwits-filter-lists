@@ -1,10 +1,10 @@
-diff name:swefilter lines:396 checksum:fe328ad0c2
+diff name:swefilter lines:422 checksum:819d1f7c10
 d2 1
 a2 1
-! Last updated: Thu, 14 Nov 2024 04:58:53 +0000
+! Last updated: Thu, 14 Nov 2024 17:23:21 +0000
 d4 1
 a4 1
-! Diff-Path: patches/2024.11.14.298.patch#swefilter
+! Diff-Path: patches/2024.11.14.1043.patch#swefilter
 d103 1
 a103 1
 affarsvarlden.se##article.article-list-item:has(a[href*="/native/"])
@@ -23,6 +23,7 @@ d145 3
 a147 2
 allabolag.se##div[style^="text-align:center;min-height"]:has(div[id^="adwrapper"])
 allabolag.se##.topbanner-wrapper
+d152 1
 d154 1
 d162 1
 d169 1
@@ -33,6 +34,12 @@ d197 1
 a197 2
 aurumforum.se##.bottom-liner span:has-text(Annons):upward(2)
 aurumforum.se##.top-add
+d259 1
+a267 1
+borskollen.se##.sponsored:upward(a)
+d274 2
+a275 1
+bovision.se##.banner-image, .bvads-container, .a-full-width, .ads-container
 d279 1
 a279 1
 branschaktuellt.se##.article__properties-breadcrumbs span:has-text(/Sponsrad|annons/i):upward(.article)
@@ -98,12 +105,15 @@ fl-net.se##a[href*="casino"]:upward(p)
 d576 1
 a577 1
 forexgruppen.se,kattannonser.se##+js(noeval-if, adbEnableForPage)
-d589 5
-a593 2
+d589 6
+a594 3
 fotbolldirekt.se,hockeysverige.se,innebandymagazinet.se,motivation.se,fiskejournalen.se,alba.nu,padeldirekt.se,formeldirekt.se,dagensopinion.se,golfing.se##.annons
 fotbolldirekt.se,hockeysverige.se,innebandymagazinet.se,padeldirekt.se,formeldirekt.se##.site-partnevisment, .h-background--sponsored-light, .row .text-center img, a[href^="https://hubs.la"], .c-partners, iframe[srcdoc*="_ad_div"], .annons-text
-d597 1
-a597 1
+fotbollskanalen.se##div[class$="sponsortitle"]:upward(.desktop-side-widget)
+d596 2
+a597 3
+fotbollskanalen.se##.notice:has(span[class$="sponsored"])
+fotbollskanalen.se##:is(.sponsored, .theme-news_sponsored_container):upward(.theme-news)
 fotbollsresultat.com##h2.fusion-responsive-typography-calculated:has-text(Spel och dobbel) ~ p
 d610 1
 a610 1
@@ -151,16 +161,23 @@ ibnytt.se##.col-md-4 .widget:has(a[href*="spelbonus"])
 a752 1
 ibnytt.se##:is(.article-list li, .post):has(a[href*="betting"], a[href*="casino"])
 d765 3
+d800 1
 d802 1
-a802 1
+a802 2
+karriarlakare.se##.annons-label:upward(a)
 karriarlakare.se,livinguppsala.se,battrestadsdel.se,butikstrender.se,forskning.se,vardfokus.se,varvat.se,smaspararguiden.se,sjostadsbladet.se,tidningenridsport.se,cookaholic.se,vinliv.se,raa.se,svenskfilmdatabas.se,hockeybladet.nu,frihetsnytt.se,alltomhusbilen.se,etunanytt.se###cookie-law-info-bar
 d809 1
 a809 1
 killsteal.se##:is(a[href*="casino"], a[href*="kasino"], a[href*="passagen.se"]):upward(p)
+d814 1
 d816 1
 d824 1
 a824 1
 kobe.se###footer #block-7
+d830 1
+a830 1
+koket.se##div[class*="mosaic_item_wrapper"]:has(div[class*="sponsorLabel"])
+d832 1
 d855 1
 a855 1
 lajvo.se##.postCard:has-text(/bonusar|casino|betting|spelbranschen|spelupplevelse/i)
@@ -254,6 +271,10 @@ tabyallehanda.se##p[align="center"]:has(.adsbygoogle)
 d1344 3
 a1346 1
 tekniksmart.se##.elementor-widget-container:has(a[href*="casino"])
+d1350 1
+a1350 2
+teknologiexperten.se##a[href*="casino"]
+teknologiexperten.se##.item:has(img[src*=".se-www"])
 d1355 1
 d1362 2
 d1365 1
@@ -268,6 +289,9 @@ trendenser.se##a[href=""].uppercase:has-text(REKLAM):upward(.popular-post)
 d1401 1
 a1401 1
 tripadvisor.se##a[target]:has-text(/Sponsrat av|i samarbete med/i)
+d1405 1
+a1408 1
+tv4play.se,tv4.se,fotbollskanalen.se,koket.se##.visit-advertiser-link
 a1415 1
 tv.nu###modal div[itemtype][itemscope] > div[class]:has(a[href*="doubleclick"])
 d1430 1
@@ -336,6 +360,8 @@ a2611 1
 d2619 1
 d2621 1
 d2650 1
+a2698 1
+||bvads.bovision.se^
 d2709 2
 a2710 1
 ||cdn-cookieyes.com^$domain=lokalti.se|jarnvagar.nu|senses.se|norrmejerier.se|temadagar.se|smartsenior.se|tekniknytt.se|nordigt.se|autonytt.se|vm-fotboll.se|kak.se|smhi.se|borattforum.se|mis.se|universitetslararen.se|em-fotboll.se|lakemedelsvarlden.se|samfalligheterna.se|husbilsplats.se|katerinamagasin.se|dagenslogistik.se|biostock.se|skellefteaworks.se|datormagazin.se|travnet.se|malarbok.nu|barn-filmer.se|matmenyer.se|sunnenytt.se|kristendate.se|hockeynews.se|swe3.se|spelbloggen.se|matinspo.se|trendenser.se|kattannonser.se
