@@ -1,10 +1,10 @@
-diff name:swefilter lines:166 checksum:819d1f7c10
+diff name:swefilter lines:203 checksum:613a1f7114
 d2 1
 a2 1
-! Last updated: Thu, 14 Nov 2024 17:23:21 +0000
+! Last updated: Sat, 16 Nov 2024 04:58:03 +0000
 d4 1
 a4 1
-! Diff-Path: patches/2024.11.14.1043.patch#swefilter
+! Diff-Path: patches/2024.11.16.298.patch#swefilter
 d107 2
 d110 2
 a111 4
@@ -67,6 +67,10 @@ fotbollskanalen.se##:is(.sponsored, .theme-news_sponsored_container):upward(.the
 d610 1
 a610 1
 fotosidan.se,merinfo.se,allsvenskan.se,tasteline.com,jaktojagare.se,chefstidningen.se,norpan.se,moviezine.se,jaktjournalen.se,byggvarlden.se,omtanke.today,akademikern.se,socionomen.se##.ads
+d649 2
+a650 2
+garaget.org##.gorgad
+garaget.org##.gorg-content-side .mt-3:has(a[href*="casino"])
 d798 1
 a799 1
 karriarlakare.se##.annons-label:upward(a)
@@ -98,6 +102,12 @@ d1087 1
 a1087 1
 placera.se##.vignette.XLText a:has-text(/^annons/i):upward(.section)
 d1116 3
+a1138 1
+samnytt.se,samnytt.nu##.samnytt-card:has(a[href*="spela"][href*="jackpot"], a[href*="casino"][href*="bonus"])
+d1141 2
+a1142 2
+sanghafte.se##aside.widget_text_widget_startpage_only:has(a[href*="casino"], a[href*="kasino"], a[href*="betting"])
+sanghafte.se##.widget_cooperations, .dfrcs
 d1221 2
 d1234 4
 d1298 1
@@ -107,6 +117,9 @@ d1325 1
 a1325 2
 teknologiexperten.se##a[href*="casino"]
 teknologiexperten.se##.item:has(img[src*=".se-www"])
+d1354 1
+a1354 1
+tlnt.se##h2.elementor-heading-title:has-text(/annons/i):upward(.e-con-boxed[data-settings^="{\"background"])
 a1364 1
 travnet.se##div.text-\[8px\].text-center:has-text(ANNONS):upward(1)
 d1369 1
@@ -126,6 +139,8 @@ a1447 1
 vinochmatguiden.se##+js(set, window.WURFL, 1)
 a1452 1
 vk.se,folkbladet.nu,nordsverige.se,mellanbygden.nu,vasterbottningen.se,lokaltidningen.nu##+js(set, manualAutoplay_, noopFunc)
+a1474 1
+xn--gtboken-exa.se##span[id^="ezoic-pub-ad"]:upward(.row)
 d1801 1
 a1801 1
 /ab_stats_params$domain=aftonbladet.se
@@ -134,6 +149,9 @@ a1832 1
 d2173 1
 a2173 1
 /plugins/borlabs-cookie$script,domain=alltombrollop.com|digiteket.se
+d2341 1
+a2341 1
+/raven$script,domain=mitti.se|travnet.se|nyheter24.se|tyda.se|devote.se|egoinas.se|hemtrevligt.se|alltforforaldrar.se|familjeliv.se|brollopstorget.se|blogg.se|nouw.com|lchfarkivet.se
 d2478 1
 a2478 1
 /wp-content/uploads/*banner$image,domain=marsta.nu|alltomhif.se|branschkoll.se|brollopsmagasinet.se|bussmagasinet.se|danstidningen.se|guldkanalen.se|ljuskultur.se|sportpanelen.se|turismnytt.se|opulens.se|tekniknytt.se|pakryss.se|investerarbrevet.se|svensktidskrift.se|electronic.se|restaurangvarlden.se|finanstid.se|naringslivetvgl.se|dalarnasaffarer.se|stockholmsaffarer.se|jamtlandsaffarer.se|hallandsnaringsliv.se|sjuharadsnaringsliv.se|battregolf.se|svenskhistoria.se|arjeplognytt.se|bioenergitidningen.se|fisheco.se|autonytt.se|zeromagazine.nu|improveme.se|alekuriren.se|golfguidenonline.se|esportnytt.se
@@ -152,11 +170,27 @@ a2734 1
 ||ctm.bonnier.cloud^$domain=digitalfotoforalla.se|iform.se|pctidningen.se|varldenshistoria.se
 a2785 1
 ||epollstats.infotheme.net/js/fingerprint
+d2832 1
+a2832 1
+||gatekeeperconsent.com^$domain=hemmanytt.se|wernamaten.se|sanghafte.se|xn--gtboken-exa.se|telefonforsaljare.nu
+a2841 1
+||go.ezodn.com/hb/$domain=temadagar.se|wernamaten.se|sanghafte.se|xn--gtboken-exa.se|telefonforsaljare.nu
+a2849 1
+||g.ezodn.com/cmp/$domain=temadagar.se
+d2874 1
+a2874 1
+||inmobi.com^$domain=alltomelbil.se|rikatillsammans.se|egoinas.se|moviezine.se|travelnews.se|varldenshaftigaste.se|merinfo.se|foreca.se|matklubben.se|reseguiden.se|newsner.com|humorbibeln.se|sportbibeln.se|ettgottskratt.se|djurbibeln.se|laget.se|byrum.se|sportlovin.se|receptfavoriter.se|forni.se|kimura.se|cornucopia.se|norrahalland.se|finanstid.se|tittapavideon.se|motormagasinet.se|food-supply.se|dagenshandel.se|plastnet.se|habit.se|woodnet.se|foodnet.se|transportnet.se|processnet.se|packnet.se|verkstaderna.se|medtechmagazine.se|recyclingnet.se|rt-forum.se|uochd.se|lifesciencesweden.se|fri-kopenskap.se|cleannet.se|metal-supply.se|framtidensbygg.se|entreprenad.com|mykitchenstories.se|cancelculture.se|findit.se|lchfarkivet.se|brinkenbakar.se|foretagande.se|fotbolltransfers.com|affarsvarlden.se|villalivet.se|branschaktuellt.se|nordic.ign.com|fragbite.se|lindasbakskola.se|jennysmatblogg.nu|filippoon.se|niiinis.se|lesscarbs.se|eniro.se|matspar.se|xnytt.se|alltomkungligt.se|swehockey.se|vackertvader.se|newly.se|nyheter2.se|klendr.se|elsasentourage.se|zeinaskitchen.se|svenskalag.se|tvsporten.nu|frillesasbandy.se|skik.se|marketmate.se|svartgul.se|langd.se|babyhjalp.se
+d3009 1
+a3009 1
+||onesignal.com^$domain=samnytt.se|battrestadsdel.se|beernews.se|ungdomsfotboll.se|rabattsok.se|1x2.se|cannabis.se|dackavisen.se|driva-eget.se|skogsaktuellt.se|maskinbladet.se|entreprenadaktuellt.se|ja.se|newsner.com|humorbibeln.se|sportbibeln.se|ettgottskratt.se|djurbibeln.se|finanstid.se|fokus.se|gasetten.se|fotbollsthlm.se|macken.xyz|naringslivetvgl.se|dalarnasaffarer.se|stockholmsaffarer.se|jamtlandsaffarer.se|hallandsnaringsliv.se|sjuharadsnaringsliv.se|netflixguiden.se|nyadagbladet.se|oskarshamns-nytt.se|swebbtv.se|thepattayanews.se|vaken.se|aktieskolan.se|fastighetsvarlden.se|mcparken.se|gaffa.se|alltomnorrtalje.se|morotsliv.com|it-finans.se|it-halsa.se|it-kanalen.se|it-pedagogen.se|it-retail.se|skaneplus.se|mittforetag.com|studeravidare.se|thephuketexpress.se|ibnytt.se|garaget.org
 a3043 1
 ||popupsmart.com^$third-party
 d3050 1
 a3050 1
 ||privacy-center.org^$domain=180.se|agriaffaires.se|truckscorner.se|machineryzone.se|stegforhalsa.se|netdoktor.se|netdoktorpro.se|news55.se|hastnet.se|kvd.se|dagensps.se|realtid.se
+d3066 1
+a3066 1
+||quantcast.com^$domain=flashback.org|nyadagbladet.se|enkelteknik.se|travelgrip.se|samnytt.se|nyteknik.se|lag-avtal.se|arbetarskydd.se|leta.se|motivation.se|sporttv.nu|goforfit.se|expo.se|poddtoppen.se|doon.se|garaget.org|nouw.com|listor.se
 d3109 2
 a3110 2
 ||sdkconfig.pulse.schibsted.io^$domain=aftonbladet.se|omni.se|omniekonomi.se|svd.se|prisjakt.nu|bytbil.com|livsstil.se|godare.se|klart.se
@@ -165,3 +199,6 @@ a3185 1
 ||travnet.se/sulkysport$frame
 a3244 1
 ||wurfl.io^$domain=vinochmatguiden.se
+d3283 1
+a3283 1
+temadagar.se,wernamaten.se,sanghafte.se,xn--gtboken-exa.se,telefonforsaljare.nu##^script:has-text(__ez)

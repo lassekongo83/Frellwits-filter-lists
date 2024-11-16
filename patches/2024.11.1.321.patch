@@ -1,10 +1,10 @@
-diff name:swefilter lines:345 checksum:819d1f7c10
+diff name:swefilter lines:376 checksum:613a1f7114
 d2 1
 a2 1
-! Last updated: Thu, 14 Nov 2024 17:23:21 +0000
+! Last updated: Sat, 16 Nov 2024 04:58:03 +0000
 d4 1
 a4 1
-! Diff-Path: patches/2024.11.14.1043.patch#swefilter
+! Diff-Path: patches/2024.11.16.298.patch#swefilter
 d107 2
 d110 2
 a111 4
@@ -99,6 +99,10 @@ futsalmagasinet.se##.td-block-title > span:has-text(/annonserat innehåll/i):upw
 d641 1
 a642 1
 gaffa.se##.link-list:has(a[href*="casino"])
+d650 2
+a651 2
+garaget.org##.gorgad
+garaget.org##.gorg-content-side .mt-3:has(a[href*="casino"])
 d660 2
 a662 1
 godare.se##:is(p[class^="teasersmall-sectionLabel"], p[class^="teasermedium-sectionLabel"]):has-text(/annons/i):upward(a.internal-link, li)
@@ -190,6 +194,12 @@ a1121 2
 racemagazine.se##article + div.bg-white:has(.ad-inner)
 racemagazine.se##.landing-ad
 d1131 3
+a1153 1
+samnytt.se,samnytt.nu##.samnytt-card:has(a[href*="spela"][href*="jackpot"], a[href*="casino"][href*="bonus"])
+d1156 2
+a1157 2
+sanghafte.se##aside.widget_text_widget_startpage_only:has(a[href*="casino"], a[href*="kasino"], a[href*="betting"])
+sanghafte.se##.widget_cooperations, .dfrcs
 d1174 2
 d1178 1
 d1182 2
@@ -217,6 +227,9 @@ d1358 1
 a1358 1
 tidningenbalans.se##p.uppercase:has-text(/i annonssamarbete med/i):upward(.flex.overflow-hidden)
 d1370 1
+d1376 1
+a1376 1
+tlnt.se##h2.elementor-heading-title:has-text(/annons/i):upward(.e-con-boxed[data-settings^="{\"background"])
 a1386 1
 travnet.se##div.text-\[8px\].text-center:has-text(ANNONS):upward(1)
 d1391 1
@@ -249,6 +262,8 @@ vokabel.se##.hero[style^="height"]:style(height:unset!important;)
 d1485 1
 a1485 1
 vovve.net##span.arialtext11[style^="float:left"]:has-text(/^i samarbete med/i):upward(2)
+a1493 1
+xn--gtboken-exa.se##span[id^="ezoic-pub-ad"]:upward(.row)
 d1496 1
 d1821 1
 a1821 1
@@ -268,7 +283,7 @@ a2350 1
 /public/t/*$domain=tvmatchen.nu
 d2357 1
 a2357 1
-/raven$script,domain=mitti.se|travnet.se|nyheter24.se|tyda.se|devote.se|egoinas.se|hemtrevligt.se|alltforforaldrar.se|familjeliv.se|brollopstorget.se|blogg.se|nouw.com
+/raven$script,domain=mitti.se|travnet.se|nyheter24.se|tyda.se|devote.se|egoinas.se|hemtrevligt.se|alltforforaldrar.se|familjeliv.se|brollopstorget.se|blogg.se|nouw.com|lchfarkivet.se
 d2450 1
 a2462 1
 /useBlogStatistics$domain=nouw.com
@@ -307,13 +322,23 @@ a2808 1
 ||epollstats.infotheme.net/js/fingerprint
 d2812 1
 d2850 1
+d2857 1
+a2857 1
+||gatekeeperconsent.com^$domain=hemmanytt.se|wernamaten.se|sanghafte.se|xn--gtboken-exa.se|telefonforsaljare.nu
+a2866 1
+||go.ezodn.com/hb/$domain=temadagar.se|wernamaten.se|sanghafte.se|xn--gtboken-exa.se|telefonforsaljare.nu
+a2874 1
+||g.ezodn.com/cmp/$domain=temadagar.se
+d2899 1
+a2899 1
+||inmobi.com^$domain=alltomelbil.se|rikatillsammans.se|egoinas.se|moviezine.se|travelnews.se|varldenshaftigaste.se|merinfo.se|foreca.se|matklubben.se|reseguiden.se|newsner.com|humorbibeln.se|sportbibeln.se|ettgottskratt.se|djurbibeln.se|laget.se|byrum.se|sportlovin.se|receptfavoriter.se|forni.se|kimura.se|cornucopia.se|norrahalland.se|finanstid.se|tittapavideon.se|motormagasinet.se|food-supply.se|dagenshandel.se|plastnet.se|habit.se|woodnet.se|foodnet.se|transportnet.se|processnet.se|packnet.se|verkstaderna.se|medtechmagazine.se|recyclingnet.se|rt-forum.se|uochd.se|lifesciencesweden.se|fri-kopenskap.se|cleannet.se|metal-supply.se|framtidensbygg.se|entreprenad.com|mykitchenstories.se|cancelculture.se|findit.se|lchfarkivet.se|brinkenbakar.se|foretagande.se|fotbolltransfers.com|affarsvarlden.se|villalivet.se|branschaktuellt.se|nordic.ign.com|fragbite.se|lindasbakskola.se|jennysmatblogg.nu|filippoon.se|niiinis.se|lesscarbs.se|eniro.se|matspar.se|xnytt.se|alltomkungligt.se|swehockey.se|vackertvader.se|newly.se|nyheter2.se|klendr.se|elsasentourage.se|zeinaskitchen.se|svenskalag.se|tvsporten.nu|frillesasbandy.se|skik.se|marketmate.se|svartgul.se|langd.se|babyhjalp.se
 d2905 1
 d2921 1
 d2981 1
 d3031 5
 d3042 2
 a3043 1
-||onesignal.com^$domain=samnytt.se|battrestadsdel.se|beernews.se|ungdomsfotboll.se|rabattsok.se|1x2.se|cannabis.se|dackavisen.se|driva-eget.se|skogsaktuellt.se|maskinbladet.se|entreprenadaktuellt.se|ja.se|newsner.com|humorbibeln.se|sportbibeln.se|ettgottskratt.se|djurbibeln.se|finanstid.se|fokus.se|gasetten.se|fotbollsthlm.se|macken.xyz|naringslivetvgl.se|dalarnasaffarer.se|stockholmsaffarer.se|jamtlandsaffarer.se|hallandsnaringsliv.se|sjuharadsnaringsliv.se|netflixguiden.se|nyadagbladet.se|oskarshamns-nytt.se|swebbtv.se|thepattayanews.se|vaken.se|aktieskolan.se|fastighetsvarlden.se|mcparken.se|gaffa.se|alltomnorrtalje.se|morotsliv.com|it-finans.se|it-halsa.se|it-kanalen.se|it-pedagogen.se|it-retail.se|skaneplus.se|mittforetag.com|studeravidare.se|thephuketexpress.se|ibnytt.se
+||onesignal.com^$domain=samnytt.se|battrestadsdel.se|beernews.se|ungdomsfotboll.se|rabattsok.se|1x2.se|cannabis.se|dackavisen.se|driva-eget.se|skogsaktuellt.se|maskinbladet.se|entreprenadaktuellt.se|ja.se|newsner.com|humorbibeln.se|sportbibeln.se|ettgottskratt.se|djurbibeln.se|finanstid.se|fokus.se|gasetten.se|fotbollsthlm.se|macken.xyz|naringslivetvgl.se|dalarnasaffarer.se|stockholmsaffarer.se|jamtlandsaffarer.se|hallandsnaringsliv.se|sjuharadsnaringsliv.se|netflixguiden.se|nyadagbladet.se|oskarshamns-nytt.se|swebbtv.se|thepattayanews.se|vaken.se|aktieskolan.se|fastighetsvarlden.se|mcparken.se|gaffa.se|alltomnorrtalje.se|morotsliv.com|it-finans.se|it-halsa.se|it-kanalen.se|it-pedagogen.se|it-retail.se|skaneplus.se|mittforetag.com|studeravidare.se|thephuketexpress.se|ibnytt.se|garaget.org
 d3050 1
 d3053 1
 d3063 1
@@ -323,6 +348,9 @@ a3081 1
 d3088 1
 a3088 1
 ||privacy-center.org^$domain=180.se|agriaffaires.se|truckscorner.se|machineryzone.se|stegforhalsa.se|netdoktor.se|netdoktorpro.se|news55.se|hastnet.se|kvd.se|dagensps.se|realtid.se
+d3104 1
+a3104 1
+||quantcast.com^$domain=flashback.org|nyadagbladet.se|enkelteknik.se|travelgrip.se|samnytt.se|nyteknik.se|lag-avtal.se|arbetarskydd.se|leta.se|motivation.se|sporttv.nu|goforfit.se|expo.se|poddtoppen.se|doon.se|garaget.org|nouw.com|listor.se
 d3147 3
 a3149 2
 ||sdkconfig.pulse.schibsted.io^$domain=aftonbladet.se|omni.se|omniekonomi.se|svd.se|prisjakt.nu|bytbil.com|livsstil.se|godare.se|klart.se
@@ -344,3 +372,6 @@ a3264 1
 d3273 1
 a3290 1
 ||wurfl.io^$domain=vinochmatguiden.se
+d3329 1
+a3329 1
+temadagar.se,wernamaten.se,sanghafte.se,xn--gtboken-exa.se,telefonforsaljare.nu##^script:has-text(__ez)
