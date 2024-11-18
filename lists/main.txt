@@ -1573,8 +1573,10 @@ breakit.se##section[class*="Article_layout"]:has(section[class*="Sponsored"])
 atl.nu,landlantbruk.se,land.se##a[href*="/atl-tv-annons/"], [class^="Ad_"], div[class^="WidgetCTASticky"], a[class^="CTA_ctaWrapperCampaignBase"]
 atl.nu,landlantbruk.se,land.se#@#.ad-unit:not(.text-ad):not(.textads)
 ||lantbruksnytt.se/includes/$subdocument
-lantbruksnytt.se###startpage-top-right, .ads_text + a, div[class*="square_rotate"], a[target="_blank"][rel="nofollow"], #ouibounce-modal
+lantbruksnytt.se###startpage-top-right, .ads_text + a, div[class*="square_rotate"], a[target="_blank"][rel="nofollow"], #ouibounce-modal, iframe[src*="iframebanner"], .widget_maskinstationer_widget
 lantbruksnytt.se##article:has(.ads_text)
+lantbruksnytt.se##aside.enhanced-text-widget:has(div[class^="square_rotate"])
+lantbruksnytt.se##aside.side-box:has(.adsbygoogle)
 conpot.se##+js(set, square_array1, null)
 conpot.se##+js(set, square_arraytop, null)
 conpot.se##.post > div[style]:has-text(ANNONS):upward(article:not([id]))
@@ -1819,13 +1821,11 @@ tandlakartidningen.se##:is(header, .article-single-page, .single #content):style
 lakartidningen.se##.screen-sm, .screen-md
 cookie-consent$domain=upphandling24.se
 upphandling24.se##.type-partnerartikel
-upphandling24.se##aside .textwidget:has-text(ANNONS)
-/_api/*/visit$domain=placera.se
+/visit$xhr,domain=placera.se
 placera.se##.noMarginAd
-placera.se##.vignette.XLText a:has-text(/^annons/i):upward(.section)
+placera.se##.vignette.XLText :is(a[href*="/externa-tjanster"], a[href*="promoted"]):upward(.section)
 arjeplognytt.se##.metaslider
 jarnvagar.nu##.et_pb_module:matches-css(before, content: "Annons:")
-magasink.se##[data-magasintrackbid]
 norrahalland.se##.bannercontent
 dagensarena.se##.popup
 finanstid.se##.tdm-descr:has-text(/casino/i)
@@ -1884,6 +1884,7 @@ feber.se,tjock.se##f-internallink:has(a[href="#"])
 feber.se,tjock.se##a[onclick^="plausible"]:remove-attr(onclick)
 feber.se,tjock.se##+js(set, dovideostuffAD, noopFunc)
 feber.se,tjock.se##+js(nosiif, checkGDPRInt)
+/DAC.js$domain=swedroid.se
 swedroid.se##div[id$="_ad"], div[id$="_ad_mobile"], .externalTopMobile, #externalTopMobile, .externalBottomMobile, a[href^="//www.prisjakt.nu/produkt"], #nativendo-mainfeed + aside > .article, .article-footer > h3, .article-footer > .aeChart, #newExternal
 swedroid.se##a[target="_blank"]:upward(li.Notice):remove()
 swedroid.se##.puff:has(script[src*="lwadm.com"], .pjSidebar)
@@ -2237,12 +2238,11 @@ kritiker.se##+js(prevent-xhr, adsbygoogle)
 netflixguiden.se##div.lboard, div.instream-dynamic, #top-area-promo, div.sidebar div.sticky, .promo, .lboard-desktop, .lboard-mobile, #bottom-sticky-promo
 ||metalcentral.net/images/*banner
 metalcentral.net##.bannergroupno-padding
+metalcentral.net##.bannergroup:upward(.uk-panel-box)
 ||stats.poddtoppen.se^
 ||poddtoppen.se/api/ad?
 /fullpage$script,domain=poddtoppen.se
 poddtoppen.se##.txs-a
-webb-tv.nu##[id^="adservice"]
-tvprogram.se##.backdrop, .fcb
 spelochfilm.se##a[href*="casino"]:upward(.mh-posts-stacked-wrap)
 spelochfilm.se##li.mh-slider-item:has(a[href*="casino"]):remove()
 spelochfilm.se##div.widget_text:has(a[href*="casino"], a[href*="casivo"])
