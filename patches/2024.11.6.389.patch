@@ -1,10 +1,10 @@
-diff name:swefilter lines:306 checksum:9fcf9bea4c
+diff name:swefilter lines:322 checksum:c3298214be
 d2 1
 a2 1
-! Last updated: Sun, 17 Nov 2024 06:42:34 +0000
+! Last updated: Mon, 18 Nov 2024 06:19:54 +0000
 d4 1
 a4 1
-! Diff-Path: patches/2024.11.17.402.patch#swefilter
+! Diff-Path: patches/2024.11.18.379.patch#swefilter
 d107 2
 d110 2
 a111 4
@@ -127,6 +127,11 @@ d828 1
 a828 1
 koket.se##div[class*="mosaic_item_wrapper"]:has(div[class*="sponsorLabel"])
 d830 1
+d859 1
+a859 3
+lantbruksnytt.se##aside.enhanced-text-widget:has(div[class^="square_rotate"])
+lantbruksnytt.se##aside.side-box:has(.adsbygoogle)
+lantbruksnytt.se###startpage-top-right, .ads_text + a, div[class*="square_rotate"], a[target="_blank"][rel="nofollow"], #ouibounce-modal, iframe[src*="iframebanner"], .widget_maskinstationer_widget
 d873 1
 a873 1
 lifeofsvea.se,quizza.nu##.cookie-info
@@ -143,6 +148,9 @@ ljuskultur.se,bettips.se,spelo.se,skogsaktuellt.se,maskinbladet.se,entreprenadak
 d918 1
 d925 1
 d927 1
+d931 1
+a966 1
+metalcentral.net##.bannergroup:upward(.uk-panel-box)
 d980 3
 a1040 1
 nyadagbladet.se##.site-main > div.widget_custom_html p[style^="text-align: center;"]:has-text(/annonssamarbete/i):upward(div.widget_custom_html)
@@ -156,7 +164,7 @@ padeldirekt.se,formeldirekt.se##.article-row:has(.h-background--sponsored)
 padeldirekt.se,formeldirekt.se##.c-featured-article:has(a[href*="/sponsrat"])
 d1094 1
 a1094 1
-placera.se##.vignette.XLText a:has-text(/^annons/i):upward(.section)
+placera.se##.vignette.XLText :is(a[href*="/externa-tjanster"], a[href*="promoted"]):upward(.section)
 d1105 1
 d1124 3
 a1146 1
@@ -201,8 +209,10 @@ trendenser.se##a[href=""].uppercase:has-text(REKLAM):upward(.popular-post)
 d1388 1
 a1391 1
 tv4play.se,tv4.se,fotbollskanalen.se,koket.se##.visit-advertiser-link
+d1395 1
 a1398 1
 tv.nu###modal div[itemtype][itemscope] > div[class]:has(a[href*="doubleclick"])
+d1408 1
 d1413 1
 d1418 2
 a1419 2
@@ -218,8 +228,11 @@ vk.se,folkbladet.nu,nordsverige.se,mellanbygden.nu,vasterbottningen.se,lokaltidn
 d1478 1
 a1478 1
 vovve.net##span.arialtext11[style^="float:left"]:has-text(/^i samarbete med/i):upward(2)
+d1483 1
 a1486 1
 xn--gtboken-exa.se##span[id^="ezoic-pub-ad"]:upward(.row)
+a1785 1
+/DAC.js$domain=swedroid.se
 d1813 1
 a1813 1
 /ab_stats_params$domain=aftonbladet.se
@@ -244,6 +257,8 @@ d2351 1
 a2351 1
 /raven$script,domain=mitti.se|travnet.se|nyheter24.se|tyda.se|devote.se|egoinas.se|hemtrevligt.se|alltforforaldrar.se|familjeliv.se|brollopstorget.se|blogg.se|nouw.com|lchfarkivet.se
 d2444 1
+a2467 1
+/visit$xhr,domain=placera.se
 d2489 1
 a2489 1
 /wp-content/uploads/*banner$image,domain=marsta.nu|alltomhif.se|branschkoll.se|brollopsmagasinet.se|bussmagasinet.se|danstidningen.se|guldkanalen.se|ljuskultur.se|sportpanelen.se|turismnytt.se|opulens.se|tekniknytt.se|pakryss.se|investerarbrevet.se|svensktidskrift.se|electronic.se|restaurangvarlden.se|finanstid.se|naringslivetvgl.se|dalarnasaffarer.se|stockholmsaffarer.se|jamtlandsaffarer.se|hallandsnaringsliv.se|sjuharadsnaringsliv.se|battregolf.se|svenskhistoria.se|arjeplognytt.se|bioenergitidningen.se|fisheco.se|autonytt.se|zeromagazine.nu|improveme.se|alekuriren.se|golfguidenonline.se|esportnytt.se
@@ -253,6 +268,7 @@ a2494 1
 d2496 1
 a2496 1
 /wp-content/uploads/*casino$image,domain=nyadagbladet.se|kulturbloggen.com|newsvoice.se|svenskhistoria.se|battrestadsdel.se|zeromagazine.nu|totallyorebro.se|totallystockholm.se|djungeltrumman.se|vaken.se|tekniknytt.se|kingsizemag.se|spelochfilm.se|macken.xyz|improveme.se|bandyfeber.com|stoppapressarna.se|sjostadsbladet.se|autonytt.se|hockeybladet.nu|tv-kanal.se|esportnytt.se|sillyseason.se
+d2533 1
 d2563 1
 a2563 1
 @@/viralize_player_content$script,xhr,domain=nyheter24.se|modette.se|familjeliv.se|alltforforaldrar.se|loppi.se|devote.se|vimedbarn.se|brollopstorget.se|rodeo.net|travnet.se

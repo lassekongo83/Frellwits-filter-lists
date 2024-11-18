@@ -1,10 +1,10 @@
-diff name:swefilter lines:435 checksum:9fcf9bea4c
+diff name:swefilter lines:451 checksum:c3298214be
 d2 1
 a2 1
-! Last updated: Sun, 17 Nov 2024 06:42:34 +0000
+! Last updated: Mon, 18 Nov 2024 06:19:54 +0000
 d4 1
 a4 1
-! Diff-Path: patches/2024.11.17.402.patch#swefilter
+! Diff-Path: patches/2024.11.18.379.patch#swefilter
 d107 2
 d110 2
 a111 4
@@ -170,6 +170,11 @@ d832 1
 d855 1
 a855 1
 lajvo.se##.postCard:has-text(/bonusar|casino|betting|spelbranschen|spelupplevelse/i)
+d861 1
+a861 3
+lantbruksnytt.se##aside.enhanced-text-widget:has(div[class^="square_rotate"])
+lantbruksnytt.se##aside.side-box:has(.adsbygoogle)
+lantbruksnytt.se###startpage-top-right, .ads_text + a, div[class*="square_rotate"], a[target="_blank"][rel="nofollow"], #ouibounce-modal, iframe[src*="iframebanner"], .widget_maskinstationer_widget
 d875 1
 a875 1
 lifeofsvea.se,quizza.nu##.cookie-info
@@ -186,6 +191,9 @@ ljuskultur.se,bettips.se,spelo.se,skogsaktuellt.se,maskinbladet.se,entreprenadak
 d922 1
 d929 1
 d931 2
+d936 1
+a971 1
+metalcentral.net##.bannergroup:upward(.uk-panel-box)
 d982 1
 a982 1
 minimalisterna.se##p.has-text-align-center:has-text(/i samarbete med/i):upward(.post)
@@ -217,7 +225,7 @@ a1095 1
 pilsner.nu##+js(rmnt, script, decodeURIComponent)
 d1102 1
 a1102 1
-placera.se##.vignette.XLText a:has-text(/^annons/i):upward(.section)
+placera.se##.vignette.XLText :is(a[href*="/externa-tjanster"], a[href*="promoted"]):upward(.section)
 d1113 2
 a1114 1
 prisjakt.nu##.pjra-relative, .outsider-ads, div[class^="AdPlacementWrapper"]
@@ -282,8 +290,10 @@ tripadvisor.se##a[target]:has-text(/Sponsrat av|i samarbete med/i)
 d1404 1
 a1407 1
 tv4play.se,tv4.se,fotbollskanalen.se,koket.se##.visit-advertiser-link
+d1411 1
 a1414 1
 tv.nu###modal div[itemtype][itemscope] > div[class]:has(a[href*="doubleclick"])
+d1424 1
 d1429 1
 a1433 2
 utslappsratt.se,heleneholmsif.se,trafikskola.se,melodifestivalklubben.se,morotsliv.com,nyadagbladet.se##+js(set, em_track_user, false)
@@ -302,9 +312,12 @@ vokabel.se##.hero[style^="height"]:style(height:unset!important;)
 d1489 1
 a1489 1
 vovve.net##span.arialtext11[style^="float:left"]:has-text(/^i samarbete med/i):upward(2)
+d1494 1
 a1497 1
 xn--gtboken-exa.se##span[id^="ezoic-pub-ad"]:upward(.row)
 d1500 1
+a1797 1
+/DAC.js$domain=swedroid.se
 d1825 1
 a1825 1
 /ab_stats_params$domain=aftonbladet.se
@@ -338,6 +351,8 @@ a2361 1
 d2454 1
 a2466 1
 /useBlogStatistics$domain=nouw.com
+a2476 1
+/visit$xhr,domain=placera.se
 d2498 1
 a2498 1
 /wp-content/uploads/*banner$image,domain=marsta.nu|alltomhif.se|branschkoll.se|brollopsmagasinet.se|bussmagasinet.se|danstidningen.se|guldkanalen.se|ljuskultur.se|sportpanelen.se|turismnytt.se|opulens.se|tekniknytt.se|pakryss.se|investerarbrevet.se|svensktidskrift.se|electronic.se|restaurangvarlden.se|finanstid.se|naringslivetvgl.se|dalarnasaffarer.se|stockholmsaffarer.se|jamtlandsaffarer.se|hallandsnaringsliv.se|sjuharadsnaringsliv.se|battregolf.se|svenskhistoria.se|arjeplognytt.se|bioenergitidningen.se|fisheco.se|autonytt.se|zeromagazine.nu|improveme.se|alekuriren.se|golfguidenonline.se|esportnytt.se
@@ -347,6 +362,7 @@ a2503 1
 d2505 1
 a2505 1
 /wp-content/uploads/*casino$image,domain=nyadagbladet.se|kulturbloggen.com|newsvoice.se|svenskhistoria.se|battrestadsdel.se|zeromagazine.nu|totallyorebro.se|totallystockholm.se|djungeltrumman.se|vaken.se|tekniknytt.se|kingsizemag.se|spelochfilm.se|macken.xyz|improveme.se|bandyfeber.com|stoppapressarna.se|sjostadsbladet.se|autonytt.se|hockeybladet.nu|tv-kanal.se|esportnytt.se|sillyseason.se
+d2542 1
 d2572 1
 a2572 1
 @@/viralize_player_content$script,xhr,domain=nyheter24.se|modette.se|familjeliv.se|alltforforaldrar.se|loppi.se|devote.se|vimedbarn.se|brollopstorget.se|rodeo.net|travnet.se
