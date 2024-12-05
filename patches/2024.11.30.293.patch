@@ -1,10 +1,13 @@
-diff name:swefilter lines:65 checksum:8b8482d643
+diff name:swefilter lines:89 checksum:4a20190d87
 d2 1
 a2 1
-! Last updated: Wed, 04 Dec 2024 11:10:25 +0000
+! Last updated: Thu, 05 Dec 2024 06:40:13 +0000
 d4 1
 a4 1
-! Diff-Path: patches/2024.12.4.670.patch#swefilter
+! Diff-Path: patches/2024.12.5.400.patch#swefilter
+d119 1
+a119 1
+agriaffaires.se,truckscorner.se,machineryzone.se##.dp--mb, .dp--pave, .dp--ga, body#lg-annonces .right-container
 d214 5
 d248 1
 a248 1
@@ -24,12 +27,31 @@ dn.se,di.se,expressen.se,atl.nu,landlantbruk.se,land.se,hd.se,sydsvenskan.se,all
 d513 1
 a513 1
 expressen.se,di.se,nsk.se,skd.se,nvp.se,nuiosteraker.se,barometern.se,blt.se,bt.se,kristianstadsbladet.se,olandsbladet.se,smp.se,sydostran.se,trelleborgsallehanda.se,ut.se,ystadsallehanda.se,corren.se,folkbladet.se,mvt.se,nt.se,vt.se,klt.nu,vimmerbytidning.se,kuriren.nu,nsd.se,norran.se,pt.se,ekuriren.se,strengnastidning.se,kkuriren.se,sn.se,eposten.se,unt.se,helagotland.se,folkbladet.nu,vk.se,vasterbottningen.se,mellanbygden.nu,nordsverige.se,lokaltidningen.nu,vasterastidning.se,mitti.se,thelocal.se,byrum.se,sverigespringer.se,recept.se,viivilla.se,mestmotor.se,babyhjalp.se,fragbite.se,ibnytt.se,realtid.se,cafe.se,kingmagazine.se,vaxjobladet.se,alekuriren.se,nyheter24.se,svenskgolf.se,golfing.se,familjeliv.se,praktisktbatagande.se,norrahalland.se,lokalti.se,lchfarkivet.se,alltforforaldrar.se,idrottensaffarer.se,vf.se,hjotidning.se,kt.se,kt-kuriren.se,sla.se,mariestadstidningen.se,filipstadstidning.se,fryksdalsbygden.se,nwt.se,arvikanyheter.se,nkp.se,saffletidningen.se,provinstidningen.se,dalslanningen.se,nlt.se,skaraborgsbygden.se##+js(json-prune, autoplay)
+d588 1
+a588 1
+forvaltarforum.se##.ff_sponsored_articles, .widget_sow-image a:not([href^="/"]):not([href*="forvaltarforum.se"]), .ff_banners_widget_widget
+d591 1
+a591 1
+forvaltarforum.se##:is(.topwidget, .video-banner):remove()
 d675 1
 d698 1
 a698 1
 hd.se,sydsvenskan.se,allehanda.se,tidningenangermanland.se,arbetarbladet.se,avestatidning.com,bblat.se,dalademokraten.se,fagersta-posten.se,gd.se,lt.se,ltz.se,na.se,norrteljetidning.se,nynashamnsposten.se,op.se,salaallehanda.com,st.nu,tidningenharjedalen.se,vlt.se,falkopingstidning.se,jp.se,skaraborgslanstidning.se,skovdenyheter.se,smalandsdagblad.se,smalanningen.se,smt.se,tranastidning.se,vastgotabladet.se,vetlandaposten.se,vn.se,bandypuls.se,ljusdalsposten.se,ljusnan.se,soderhamnskuriren.se,ht.se,moratidning.se,borlangetidning.se,falukuriren.se,sodran.se,nyaludvikatidning.se,skd.se,nvp.se,nuiosteraker.se,hbl.fi,vastranyland.fi,bbl.fi,vaxjobladet.se,nsk.se,klt.nu,ystadsallehanda.se,trelleborgsallehanda.se,kristianstadsbladet.se,folkracepuls.se,barometern.se,blt.se,bt.se,olandsbladet.se,smp.se,sydostran.se,ut.se##[class*="teaser-native"], lcl-ad, .ad-welcome, .affiliate-links__container, .x-bonnier-news-links__container
+d703 1
+a703 1
+hejauppsala.com##:is(div[class^="u-text"], .u-font-brand):has-text(/^Reklam$/):upward(section)
+a714 1
+hemnet.se##div[class^="ArticleCard_"] small:has-text(/sponsrad/i):upward(article, li, a)
+d720 1
+d723 2
+a724 2
+hifitorget.se##.billboard_container, .billboard-style
+hifitorget.se##.row[style^="min-height"]:has(.adsbygoogle, .billboard_container)
 a844 1
 kulturdelen.nu##:is(.vl-post-item, .vl-thumb):has(a[href*="casino"], a[href*="betting"])
+d1158 1
+a1159 1
+senses.se##.footer-widget-wrapper aside:has(a[href*="casino"])
 d1298 1
 a1298 1
 swedroid.se##div[id$="_ad"], div[id$="_ad_mobile"], .externalTopMobile, #externalTopMobile, #nativendo-mainfeed + aside > .article, .article-footer > h3, .article-footer > .aeChart, #newExternal, div[onclick*="prisjakt.nu/produkt"]
@@ -52,6 +74,8 @@ xn--lgenhet-5wa.nu###block-7, a[href*="lana-pengar"]
 d1483 1
 a2007 1
 /event-tracker$domain=corren.se|folkbladet.se|mvt.se|nt.se|vt.se|vimmerbytidning.se|kuriren.nu|nsd.se|norran.se|pt.se|ekuriren.se|strengnastidning.se|kkuriren.se|sn.se|eposten.se|unt.se|helagotland.se
+a2057 1
+/high-impact$domain=hemnet.se
 d2117 1
 d2206 1
 a2206 1
