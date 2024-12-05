@@ -1661,10 +1661,10 @@ ekonominyheter.se###lblock-ads
 ekonominyheter.se##.td-fix-index:has(a[href*="casino"])
 veterinarmagazinet.se##.nyhet-ad, .vm-ad-wrap, .adtop__mobile
 /Toppbanner$domain=forvaltarforum.se
-forvaltarforum.se##.ff_sponsored_articles, .widget_sow-image a[target="_blank"], .ff_banners_widget_widget
+forvaltarforum.se##.ff_sponsored_articles, .widget_sow-image a:not([href^="/"]):not([href*="forvaltarforum.se"]), .ff_banners_widget_widget
 forvaltarforum.se##.ticker-title:has-text(/partner/i)
 forvaltarforum.se##.ticker-title:has-text(/partner/i) + .mh-section
-forvaltarforum.se##.video-banner:remove()
+forvaltarforum.se##:is(.topwidget, .video-banner):remove()
 ||borsvarlden.com/js/cookie-notice
 ||borsvarlden-banners.azurewebsites.net^
 ||borsvarlden.com/banners/
@@ -3088,7 +3088,7 @@ djungeltrumman.se###sponsored-posts, #right-banners, .banner-wrapper, .top-banne
 djungeltrumman.se##.post:has(.label-sponsored)
 djungeltrumman.se##.label-sponsored:upward(#latest-slider a):remove()
 senses.se##a[href*="casino"], a[href*="spelsajt"], a[href*="betting"]
-senses.se##aside:has-text(Annonser:)
+senses.se##.footer-widget-wrapper aside:has(a[href*="casino"])
 alkompis.se##app-ads
 alkompis.se##.mat-card:has(.ad-word)
 popularastronomi.se##a.gofollow[data-track]:not([href*="www.popularastronomi.se"])
@@ -3184,9 +3184,10 @@ cannabisifokus.se##div[id^="canna-"]
 ||bokmassan.se/wp-json/*/ad/
 /brand-metrics$domain=hemnet.se
 /google-tag-manager$domain=hemnet.se
+/high-impact$domain=hemnet.se
 hemnet.se###ad_unit_placeholder, div[class^="Panorama_panoramaAd"], .listing__panorama-banner, .broker-banner, div[class^="BrokerBanner"], div[class^="PanoramaMobile"]
 hemnet.se##:is(article, li):has([class*="SponsoredLabel"], .article-card__sponsored-text)
-hemnet.se##:is(small, span):has-text(/sponsrad/i):upward(article, li, a)
+hemnet.se##div[class^="ArticleCard_"] small:has-text(/sponsrad/i):upward(article, li, a)
 hemnet.se##article[class^="ArticleCard"]:has-text(/sponsrad/i)
 hemnet.se##:is(div[class^="Carousel"], #top_listing):has(div[class^="PaidPlacementLabel"])
 hemnet.se##div[data-testid="living-cost-logos-section"]:has(span[aria-label="annons"])
@@ -3275,7 +3276,7 @@ stallet.se##+js(alert-buster)
 /data/banner$domain=nyaboendet.se
 /data/track$domain=nyaboendet.se
 ||hejauppsala.com/*banner$image
-hejauppsala.com##:is(div[class^="u-text"], h2):has-text(/^Reklam$/):upward(section)
+hejauppsala.com##:is(div[class^="u-text"], .u-font-brand):has-text(/^Reklam$/):upward(section)
 ||youtube.com/embed$frame,redirect=click2load.html,domain=ordfrontmagasin.se
 ordfrontmagasin.se##.oc_cb_wrapper, .simple-image a:not([href^="/"]):not([href*="ordfrontmagasin.se"])
 skogssallskapet.se,formas.se,rf.se##.env-modal-dialog--show, .env-modal-dialog__backdrop
@@ -3312,9 +3313,9 @@ indien.nu##.nyhetsochreseartiklar .views-row:has-text(/casino/i)
 pilsner.nu##:is(.et_pb_fullwidth_image, .et_pb_image) a:not([href^="/"]):not([href*="pilsner.nu"]), .mctb-position-bottom
 pilsner.nu##+js(rmnt, script, decodeURIComponent)
 ||stats.proff.se^
-hifitorget.se##.billboard-style, .between-posts
-hifitorget.se##.row[style*="height"]:has(.adsbygoogle)
-agriaffaires.se,truckscorner.se,machineryzone.se##.dp--mb
+hifitorget.se##.billboard_container, .billboard-style
+hifitorget.se##.row[style^="min-height"]:has(.adsbygoogle, .billboard_container)
+agriaffaires.se,truckscorner.se,machineryzone.se##.dp--mb, .dp--pave, .dp--ga, body#lg-annonces .right-container
 discoveringtheplanet.com##+js(acs, document.ondragstart)
 discoveringtheplanet.com##+js(acs, disableEnterKey)
 discoveringtheplanet.com##body.unselectable:remove-class(unselectable)
