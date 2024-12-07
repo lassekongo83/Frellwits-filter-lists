@@ -1200,7 +1200,7 @@ utm_$document,removeparam=/^utm_/,domain=tv.nu|booli.se|expressen.se|aftonbladet
 /firebase-analytics.js$domain=stoppapressarna.se|zeinaskitchen.se|jennysmatblogg.nu|filippoon.se|lindasbakskola.se
 /glimr$script,domain=aftonbladet.se|blocket.se|livsstil.se|godare.se
 /profile$ping,domain=feber.se|skippo.se|tasteline.com|tjock.se|veckorevyn.com|marcusoscarsson.se|handbollskanalen.se|surfa.se|nordichardware.se|tv4.se|fotbollskanalen.se|koket.se|teknikveckan.se|langd.se
-/raven$script,domain=mitti.se|travnet.se|nyheter24.se|tyda.se|devote.se|egoinas.se|hemtrevligt.se|alltforforaldrar.se|familjeliv.se|brollopstorget.se|blogg.se|nouw.com|lchfarkivet.se|fotbolltransfers.com|norrahalland.se
+/raven$script,domain=mitti.se|travnet.se|nyheter24.se|tyda.se|devote.se|egoinas.se|hemtrevligt.se|alltforforaldrar.se|familjeliv.se|brollopstorget.se|blogg.se|nouw.com|lchfarkivet.se|fotbolltransfers.com|norrahalland.se|svenskgolf.se
 /script.js$3p,domain=spelkritik.se
 /ga.js$domain=helgon.se|gamemonetize.com
 ! Websites with no obvious or visible facebook login. Will just assume it's used for tracking.
@@ -2528,13 +2528,13 @@ kingmagazine.se##.card-partner:upward(1)
 cafe.se###newsletterPopup
 cafe.se##article:has(a[href*="/partner/"])
 hemtrevligt.se##div[id^="hj-"], div[id^="ik-"]
-hemtrevligt.se##.article:has(.annons)
+hemtrevligt.se,tidningenhalsa.se##.article:has(.annons)
 mestmotor.se##.advInsideSticky
 mestmotor.se##ul.wp-block-post-template:has(a[href*="/kategori/partner/"])
 vagabond.se##.latest-article-native
-svenskgolf.se,husohem.se,tidningenhalsa.se,vagabond.se,praktisktbatagande.se,akaskidor.se,utemagasinet.se,sportfack.se##.partnerCard, .partnerContent, .entry-content figure.wp-block-image, .category-partner, .ams-playad-injected
+svenskgolf.se,husohem.se,tidningenhalsa.se,vagabond.se,praktisktbatagande.se,akaskidor.se,utemagasinet.se,sportfack.se##.partnerCard, .partnerContent, .entry-content figure.wp-block-image, .category-partner, .ams-playad-injected, .partner
 svenskgolf.se##.highlight:has(.partnerLabel)
-husvagnochcamping.se##div[id^="husvagnochcamping-"], .ast-below-header-bar
+husvagnochcamping.se##div[id^="husvagnochcamping-"], .ast-below-header-bar, #hollistay
 
 ! ==== MISC ==== !
 
@@ -2548,6 +2548,7 @@ nyadagbladet.se##.site-main > div.widget_custom_html p[style^="text-align: cente
 sidebanner$image,domain=samnytt.se|samnytt.nu
 casinoguiden$image,domain=samnytt.se|samnytt.nu
 ||samnytt.se/b/$image
+||samnytt.se/monitoring
 samnytt.se,samnytt.nu##a[href*="casino"], a[target="_blank"] img:not([class^="tweet-"]), a img[src^="/butik"], main > section + div + div img, div[class^="samnytt-widget"] + .sticky img
 samnytt.se,samnytt.nu##.sticky > div.fixed[class*="bg-opacity"]
 samnytt.se,samnytt.nu##.sticky > div:has(img[src^="/butik"])
@@ -2595,7 +2596,6 @@ minimalisterna.se##p.has-text-align-center:has-text(/i samarbete med/i):upward(.
 deliquate.se##[id^="ads300"], [id^="linkcat-"]
 teknifik.se##.post:has(.sponsor)
 ||grillbloggen.nu/media/com_rstbox/js/engagebox.js
-grillbloggen.nu##.rstbox
 morotsliv.com##.et_bloom .et_bloom_flyin_center, a[href*="/?utm_medium=affiliate"], a.bigblue[target]
 ||matorama.se^$csp=img-src 'self' *.wordpress.com *.wp.com *.gravatar.com
 /hemmafixbloggen/includes/events-tracker
@@ -2714,6 +2714,7 @@ aletorget.se,alingsastorget.se,almhulttorget.se,alvestatorget.se,amaltorget.se,a
 /plugins/wp-statistics
 /plugins/yuzo/public/assets/js/pixel-geo
 /plugins/fisher/core/js/generated/analytics.js
+/plugins/wp-sentry$domain=cafe.se|kingmagazine.se|vagabond.se|svenskgolf.se|husohem.se|tidningenhalsa.se|praktisktbatagande.se|akaskidor.se|utemagasinet.se|husvagnochcamping.se|classicmotor.se
 ! annoyances / bloat
 /plugins/ad-blocking-advisor
 /plugins/add-to-any$script
