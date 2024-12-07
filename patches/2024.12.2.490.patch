@@ -1,10 +1,10 @@
-diff name:swefilter lines:54 checksum:4a20190d87
+diff name:swefilter lines:66 checksum:f34edb92ca
 d2 1
 a2 1
-! Last updated: Thu, 05 Dec 2024 06:40:13 +0000
+! Last updated: Sat, 07 Dec 2024 06:40:59 +0000
 d4 1
 a4 1
-! Diff-Path: patches/2024.12.5.400.patch#swefilter
+! Diff-Path: patches/2024.12.7.400.patch#swefilter
 d119 1
 a119 1
 agriaffaires.se,truckscorner.se,machineryzone.se##.dp--mb, .dp--pave, .dp--ga, body#lg-annonces .right-container
@@ -21,21 +21,29 @@ forvaltarforum.se##.ff_sponsored_articles, .widget_sow-image a:not([href^="/"]):
 d587 1
 a587 1
 forvaltarforum.se##:is(.topwidget, .video-banner):remove()
+d670 1
 d698 1
 a698 1
 hejauppsala.com##:is(div[class^="u-text"], .u-font-brand):has-text(/^Reklam$/):upward(section)
 a709 1
 hemnet.se##div[class^="ArticleCard_"] small:has-text(/sponsrad/i):upward(article, li, a)
 d715 1
-d718 2
-a719 2
+d717 3
+a719 3
+hemtrevligt.se,tidningenhalsa.se##.article:has(.annons)
 hifitorget.se##.billboard_container, .billboard-style
 hifitorget.se##.row[style^="min-height"]:has(.adsbygoogle, .billboard_container)
+d747 1
+a747 1
+husvagnochcamping.se##div[id^="husvagnochcamping-"], .ast-below-header-bar, #hollistay
 a839 1
 kulturdelen.nu##:is(.vl-post-item, .vl-thumb):has(a[href*="casino"], a[href*="betting"])
 d1153 1
 a1154 1
 senses.se##.footer-widget-wrapper aside:has(a[href*="casino"])
+d1274 1
+a1274 1
+svenskgolf.se,husohem.se,tidningenhalsa.se,vagabond.se,praktisktbatagande.se,akaskidor.se,utemagasinet.se,sportfack.se##.partnerCard, .partnerContent, .entry-content figure.wp-block-image, .category-partner, .ams-playad-injected, .partner
 a1428 1
 vf.se,hjotidning.se,kt.se,kt-kuriren.se,sla.se,mariestadstidningen.se,filipstadstidning.se,fryksdalsbygden.se,nwt.se,arvikanyheter.se,nkp.se,saffletidningen.se,provinstidningen.se,dalslanningen.se,nlt.se,skaraborgsbygden.se##div.hidden:has(figure[data-testid="ad-area"])
 a1434 1
@@ -50,6 +58,10 @@ a2001 1
 /event-tracker$domain=corren.se|folkbladet.se|mvt.se|nt.se|vt.se|vimmerbytidning.se|kuriren.nu|nsd.se|norran.se|pt.se|ekuriren.se|strengnastidning.se|kkuriren.se|sn.se|eposten.se|unt.se|helagotland.se
 a2051 1
 /high-impact$domain=hemnet.se
+a2319 1
+/plugins/wp-sentry$domain=cafe.se|kingmagazine.se|vagabond.se|svenskgolf.se|husohem.se|tidningenhalsa.se|praktisktbatagande.se|akaskidor.se|utemagasinet.se|husvagnochcamping.se|classicmotor.se
 d2348 1
 a2348 1
-/raven$script,domain=mitti.se|travnet.se|nyheter24.se|tyda.se|devote.se|egoinas.se|hemtrevligt.se|alltforforaldrar.se|familjeliv.se|brollopstorget.se|blogg.se|nouw.com|lchfarkivet.se|fotbolltransfers.com|norrahalland.se
+/raven$script,domain=mitti.se|travnet.se|nyheter24.se|tyda.se|devote.se|egoinas.se|hemtrevligt.se|alltforforaldrar.se|familjeliv.se|brollopstorget.se|blogg.se|nouw.com|lchfarkivet.se|fotbolltransfers.com|norrahalland.se|svenskgolf.se
+a3119 1
+||samnytt.se/monitoring
