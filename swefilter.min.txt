@@ -1,7 +1,7 @@
 ! Title: Frellwit's Swedish Filter
-! Last updated: Sun, 08 Dec 2024 04:54:42 +0000
+! Last updated: Mon, 09 Dec 2024 12:31:43 +0000
 ! Expires: 5 days
-! Diff-Path: patches/2024.12.8.294.patch#swefilter
+! Diff-Path: patches/2024.12.9.751.patch#swefilter
 ! Diff-Expires: 24 hours
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
@@ -601,7 +601,7 @@ fotbolltransfers.com##div[style^="min-height"]:has(div[id^="fotbolltransfers_mpu
 fotbolltransfers.com##img[src*="/images/annonser/"]:upward(1)
 fotbolltransfers.com##.border-b:has(#vi-ad, div[data-adk-container], div[id^="fotbolltransfers_mpu"])
 fotbolltransfers.com##.smallNewsCategory:has-text(/sponsr/i):upward(.smallNewsLink)
-fotboll-tv.se##.SMBoxContentBanner, a[data-gaevent*="action=bookmaker_odds"], #ouibounce-modal, .SMGameAtomSingleGameOddsComponent
+fotboll-tv.se##.SMBoxContentBanner, a[data-gaevent*="action=bookmaker_odds"], #ouibounce-modal, .SMGameAtomSingleGameOddsComponent, #headBanner, #SMSalesPromoSlotContainerHeaderWrapper
 fotboll.com##.header-static-lg, .fp-partner, .xs-ad, .bo-wrapper, #betsid, .news-banner-mini, .xs-cblock, .cookie_consent_bar, #odds, a.bellows-target[href*="/svenskaspel"], a.bellows-target[href*="/betting"], a[href*="/go/"][onclick], #lg-box-scyscraper
 fotboll.com##:is(div.text-center, div.d-none):has(a[href*="/go/"][onclick], .fotboll_content_wrapper[data-id])
 fotboll.com,allsvenskan.se,superettan.se,swebbtv.se,hastnet.se##.smartbanner
@@ -1364,8 +1364,9 @@ traning40plus.se##[id^="bunyad"]
 travelnews.se##.bottom-bar--animate-in, #job_ads_scroller, .header_banner
 travnet.se##div.text-\[8px\].text-center:has-text(ANNONS):upward(1)
 travnet.se##:is(.hidden, div[class="lg:hidden"]):has(div[id^="travnet_"])
-travronden.se##a[href*="/sponsrat/"]
-travronden.se##div:matches-css(visibility: hidden):has-text(ANNONS)
+travrondenspel.se###root div[id]:not([id^="checkout"]):empty:upward(2)
+travronden.se##a[href*="/sponsrat/"], div[class*="strossle-widget"]
+travronden.se##main div[id]:not([id^="checkout"]):empty:upward(2)
 travsport.se,gavletravet.se##.banner-component, .partners, .cookie-meddelande
 trendenser.se##a[href=""].uppercase:has-text(REKLAM):upward(.popular-post)
 trendenser.se##.featured-post:has(a[href*="/category/reklam"], a[href*="/category/annons"])
