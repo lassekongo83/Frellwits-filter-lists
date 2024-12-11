@@ -1201,7 +1201,7 @@ utm_$document,removeparam=/^utm_/,domain=tv.nu|booli.se|expressen.se|aftonbladet
 /firebase-analytics.js$domain=stoppapressarna.se|zeinaskitchen.se|jennysmatblogg.nu|filippoon.se|lindasbakskola.se
 /glimr$script,domain=aftonbladet.se|blocket.se|livsstil.se|godare.se
 /profile$ping,domain=feber.se|skippo.se|tasteline.com|tjock.se|veckorevyn.com|marcusoscarsson.se|handbollskanalen.se|surfa.se|nordichardware.se|tv4.se|fotbollskanalen.se|koket.se|teknikveckan.se|langd.se
-/raven$script,domain=mitti.se|travnet.se|nyheter24.se|tyda.se|devote.se|egoinas.se|hemtrevligt.se|alltforforaldrar.se|familjeliv.se|brollopstorget.se|blogg.se|nouw.com|lchfarkivet.se|fotbolltransfers.com|norrahalland.se|svenskgolf.se
+/raven$script,domain=mitti.se|travnet.se|nyheter24.se|tyda.se|devote.se|egoinas.se|hemtrevligt.se|alltforforaldrar.se|familjeliv.se|brollopstorget.se|blogg.se|nouw.com|lchfarkivet.se|fotbolltransfers.com|norrahalland.se|svenskgolf.se|vimedbarn.se|modette.se
 /script.js$3p,domain=spelkritik.se
 /ga.js$domain=helgon.se|gamemonetize.com
 ! Websites with no obvious or visible facebook login. Will just assume it's used for tracking.
@@ -2507,8 +2507,9 @@ loppi.se##.entry__teaser--promotion, .wpcnt, .sunt-widget, .lifeofsvea-widget
 loppi.se##a[href="https://loppi.se/promotion"]:upward(.page__section)
 nyheter24.se##.lazyload_bar.show, .lazyload_outer.show, .sponsrat, .is_native, .sticky-scroll, .flow_ad
 nyheter24.se##.breadtext_content.paywall_breadtext p:first-child::before
-vimedbarn.se##.annonsinlagg, .annonsen
-vimedbarn.se##button:has-text(/annons/i):upward(.owl-item):remove()
+/?agg_url=/vimedbarn/artiklar/info
+vimedbarn.se##.annonsinlagg, .annonsen, a[href^="/artiklar/info/"]
+vimedbarn.se##.toplist_article:has(a[href^="/artiklar/info/"])
 modette.se##.true_native_block
 ||d2wzl9lnvjz3bh.cloudfront.net/sites/folkofolk_se.js
 folkofolk.se##div[class^="MuiDialog-root"]
@@ -2858,7 +2859,6 @@ alghundklubben.com#@#.category-annons:not(body):not(html)
 /plugins/google-analytics-dashboard$important,script
 ||google-analytics.com^$important,domain=aftonbladet.se|tradera.com|xxl.se
 ||googletagmanager.com^$important,domain=tradera.com|xxl.se|prisjakt.nu
-||lwadm.com^$important,domain=sydostran.se
 
 ! -- Browser / device specific
 ! Not mobile
@@ -2922,9 +2922,10 @@ hitta.se##div[id^="hitta_mobile_"].placeholder:upward(div[class^="height"], div[
 /api/s/track$xhr,domain=eniro.se
 ||stm.eniro.se^
 ||eniro.se/scoop.js
+||guv-bounce.eniro.com^
 eniro.se##div.rounded-4xl:has(a[href$="/firma#marketing"])
 eniro.se##article:has(#marketing)
-eniro.se##:is(.grid.place-items-center, div[style^="height"].items-center):has(div[id*="LeaderBoard"], div[id*="Leaderboard"])
+eniro.se##:is(.grid.place-items-center, div[style^="height"].items-center, div[style^="min-height"].items-center):has(div[id*="LeaderBoard"], div[id*="Leaderboard"], div[id^="LandingPage"])
 kartor.eniro.se##.e-banner
 /entag.$script,domain=leta.se
 leta.se###bookingcom-resor-wrapper, #aktuellaerbjudanden, #sky-left-wide, .topNavItem[href*="casino"], .topNavItem[href*="betting"], #bottom-splinks, #momondoBoxRightCol
@@ -2934,6 +2935,7 @@ leta.se###bookingcom-resor-wrapper, #aktuellaerbjudanden, #sky-left-wide, .topNa
 ng.se##.view-partner-articles, [class*="sponsored-article"], .tertiary-bottom, div[class*="nojesguidenads"]
 ng.se##.secondary-sidebar > .panel-pane:last-child
 ng.se###nativendo-mainfeed:upward(1):remove()
+ng.se##.views-row:has(.sponsored-article)
 ||existenz.se/img/o/
 existenz.se##.wm-nopop, #main > p[style^="color"], #slidebox
 existenz.se##.link:has(a[href*="bannerid="])
@@ -2945,7 +2947,8 @@ nyan.ax##a[onclick*="banner"], .ad-follower
 /at_banners$domain=alandstidningen.ax
 alandstidningen.ax##.revive-wrapper, div[id^="block-views-block-editorial-ads"], div[id^="block-blockbanner"]
 bilwebben.ax##.front #secondary-content-wrapper, .banner-wrapper, .content-prefix-banner-wrapper
-handel.ax###topadmob
+handel.ax###topadmob, div[id^="hande-"]:empty
+sjofart.ax##div[id^="sjofa-"]:empty
 sjofart.ax##:is(.sjofa-top-takeover, .sjofa-artikel-pano):upward(section)
 sjofart.ax##section.huvudsektion:style(margin-top:unset!important)
 /QXA.$script,domain=qx.se|qruiser.com
