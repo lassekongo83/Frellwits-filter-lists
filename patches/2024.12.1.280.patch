@@ -1,10 +1,10 @@
-diff name:swefilter lines:110 checksum:742b879069
+diff name:swefilter lines:129 checksum:c2fd4ac8e5
 d2 1
 a2 1
-! Last updated: Tue, 10 Dec 2024 06:26:14 +0000
+! Last updated: Wed, 11 Dec 2024 06:27:01 +0000
 d4 1
 a4 1
-! Diff-Path: patches/2024.12.10.386.patch#swefilter
+! Diff-Path: patches/2024.12.11.387.patch#swefilter
 d119 1
 a119 1
 agriaffaires.se,truckscorner.se,machineryzone.se##.dp--mb, .dp--pave, .dp--ga, body#lg-annonces .right-container
@@ -18,6 +18,9 @@ a398 1
 devote.se##article.article-object:has(.article_slideshow img[src*="samarbete"])
 a400 1
 devote.se##:is(.tag_articles_item, .toplist_article):has(img[src*="samarbete"])
+d461 1
+a461 1
+eniro.se##:is(.grid.place-items-center, div[style^="height"].items-center, div[style^="min-height"].items-center):has(div[id*="LeaderBoard"], div[id*="Leaderboard"], div[id^="LandingPage"])
 d584 1
 a584 1
 forvaltarforum.se##.ff_sponsored_articles, .widget_sow-image a:not([href^="/"]):not([href*="forvaltarforum.se"]), .ff_banners_widget_widget
@@ -28,6 +31,9 @@ d602 1
 a602 1
 fotboll-tv.se##.SMBoxContentBanner, a[data-gaevent*="action=bookmaker_odds"], #ouibounce-modal, .SMGameAtomSingleGameOddsComponent, #headBanner, #SMSalesPromoSlotContainerHeaderWrapper
 d670 1
+d682 1
+a682 1
+handel.ax###topadmob, div[id^="hande-"]:empty
 d698 1
 a698 1
 hejauppsala.com##:is(div[class^="u-text"], .u-font-brand):has-text(/^Reklam$/):upward(section)
@@ -48,9 +54,13 @@ a924 3
 magazin24.se##.ad-pad
 magazin24.se##.special_ad_video:remove()
 magazin24.se##.widget_custom_html:has(.ad-pad, a[href*="casino"], a[href*="filmtopp.se"])
+a1022 1
+ng.se##.views-row:has(.sponsored-article)
 d1153 1
 a1154 1
 senses.se##.footer-widget-wrapper aside:has(a[href*="casino"])
+a1173 1
+sjofart.ax##div[id^="sjofa-"]:empty
 a1198 1
 skyttesport.se##.main-partners, .cooperation-partners
 d1255 1
@@ -86,6 +96,10 @@ vilarare.se##.adcontainer
 d1438 1
 a1438 1
 villalivet.se##.td-block-title span:has-text(/sponsr/i):upward(3)
+d1440 2
+a1441 2
+vimedbarn.se##.annonsinlagg, .annonsen, a[href^="/artiklar/info/"]
+vimedbarn.se##.toplist_article:has(a[href^="/artiklar/info/"])
 a1475 2
 xn--lgenhet-5wa.nu##section.elementor-section:has(a[href*="casino"])
 xn--lgenhet-5wa.nu###block-7, a[href*="lana-pengar"]
@@ -97,13 +111,18 @@ a2319 1
 /plugins/wp-sentry$domain=cafe.se|kingmagazine.se|vagabond.se|svenskgolf.se|husohem.se|tidningenhalsa.se|praktisktbatagande.se|akaskidor.se|utemagasinet.se|husvagnochcamping.se|classicmotor.se
 d2348 1
 a2348 1
-/raven$script,domain=mitti.se|travnet.se|nyheter24.se|tyda.se|devote.se|egoinas.se|hemtrevligt.se|alltforforaldrar.se|familjeliv.se|brollopstorget.se|blogg.se|nouw.com|lchfarkivet.se|fotbolltransfers.com|norrahalland.se|svenskgolf.se
+/raven$script,domain=mitti.se|travnet.se|nyheter24.se|tyda.se|devote.se|egoinas.se|hemtrevligt.se|alltforforaldrar.se|familjeliv.se|brollopstorget.se|blogg.se|nouw.com|lchfarkivet.se|fotbolltransfers.com|norrahalland.se|svenskgolf.se|vimedbarn.se|modette.se
+a2523 1
+/?agg_url=/vimedbarn/artiklar/info
 a2623 1
 ||analytics.ahrefs.com^
+a2863 1
+||guv-bounce.eniro.com^
 d2890 1
 a2890 1
 ||inmobi.com^$domain=alltomelbil.se|rikatillsammans.se|egoinas.se|moviezine.se|travelnews.se|varldenshaftigaste.se|merinfo.se|foreca.se|matklubben.se|reseguiden.se|newsner.com|humorbibeln.se|sportbibeln.se|ettgottskratt.se|djurbibeln.se|laget.se|byrum.se|sportlovin.se|receptfavoriter.se|forni.se|kimura.se|cornucopia.se|norrahalland.se|finanstid.se|tittapavideon.se|motormagasinet.se|food-supply.se|dagenshandel.se|plastnet.se|habit.se|woodnet.se|foodnet.se|transportnet.se|processnet.se|packnet.se|verkstaderna.se|medtechmagazine.se|recyclingnet.se|rt-forum.se|uochd.se|lifesciencesweden.se|fri-kopenskap.se|cleannet.se|metal-supply.se|framtidensbygg.se|entreprenad.com|mykitchenstories.se|cancelculture.se|findit.se|lchfarkivet.se|brinkenbakar.se|foretagande.se|fotbolltransfers.com|affarsvarlden.se|villalivet.se|branschaktuellt.se|nordic.ign.com|fragbite.se|lindasbakskola.se|jennysmatblogg.nu|filippoon.se|niiinis.se|lesscarbs.se|eniro.se|matspar.se|xnytt.se|alltomkungligt.se|swehockey.se|vackertvader.se|newly.se|nyheter2.se|klendr.se|elsasentourage.se|zeinaskitchen.se|svenskalag.se|tvsporten.nu|frillesasbandy.se|skik.se|marketmate.se|svartgul.se|langd.se|babyhjalp.se|breakit.se|kokaihop.se|skyttesport.se
 d2917 1
+d2958 1
 d3068 1
 a3068 1
 ||privacy-mgmt.com^$domain=radio.se|dagenstv.com|kolla.tv|computersweden.se|woxikon.se|dagen.se|filmtopp.se|upday.com|gaffa.se
