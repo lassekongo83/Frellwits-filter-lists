@@ -2240,6 +2240,7 @@ allatvkanaler.se##.gda, .cookie-notification, .iy.first
 /static/media/*casino$domain=dagenstv.com|kolla.tv
 dagenstv.com,kolla.tv##.grid-add-container
 dagenstv.com##.slick-slide:has-text(/casino/i)
+kolla.tv##div[style^="position: fixed; left: 0px; top: 0px; width: 100%; height: 100%; z-index: 999;"]
 ||consent.podplay.com^
 ||harmonious-station-to-station.podplay.com/script.js
 rocknytt.net##[data-widget_type*="bnnrwidgets"], a[href*="/annons/"], div[data-widget_type="image.default"] a[target="_blank"], div[data-pid^="ad"], .essb-mobile-sharebottom
@@ -2275,8 +2276,8 @@ spelochfilm.se##.mh-sidebar .textwidget
 filmtipset.se###topslider-wrapper + .container > .sidebar, .sidebar a[target="_blank"], .sidebar a[href*="casino"], .sidebar a[href*="betting"], .sidebar a[href*="automater"]
 filmtipset.se##.postmeta em:has-text(/sponsrad/i):upward(.row.news)
 filmtipset.se##.row.news > div[style^="border"]:last-of-type
-filmtipset.se##.news:has-text(casino)
-filmtipset.se##.news:has(a[href*="casino"], a[href*="free-spins"])
+filmtipset.se##:is(.news, a[href^="nyhet"]):has-text(/casino|kasino|poker/i)
+filmtipset.se##:is(.news, .outer):has(a[href*="casino"], a[href*="free-spins"])
 /images/*casino$domain=festivalinfo.se
 festivalinfo.se##a[title*="Casino"], #top-content
 festivalinfo.se##.node-news:has(a[href*="casino"])
@@ -2290,7 +2291,6 @@ playradio.se##.sidealtcol
 cineasten.se###text-6, .theiaStickySidebar .category-uncategorized
 podtail.se##.item-list__item:has-text(/annons från/i)
 podtail.se##aside a[href*="utm_campaign"]
-kolla.tv##div[style^="position: fixed; left: 0px; top: 0px; width: 100%; height: 100%; z-index: 999;"]
 ||podcasts.nu/adbg.svg
 podcasts.nu##.sponsor-list, .cookie-law-wrapper, .big-ad-placeholder, .affiliate-wrapper
 @@/appbanner.jpg$image,domain=guldkanalen.se
@@ -2395,6 +2395,8 @@ metromode.se##.b-topshop
 metromode.se##.advert:upward(.slick-item):remove()
 metromode.se##:is(.b-card, .b-related__item):has(.advert)
 metromode.se##+js(href-sanitizer, a[href*="metromode.se/bouncer"], ?url)
+mytaste.se##section[data-enter="load_recommended_products"]
+mytaste.se##section.ball:has(a[href*="systembolaget.se"])
 mytaste.se##div[style^="max-width"]:has(div[id^="ad-"])
 lindasbakskola.se,jennysmatblogg.nu,zeinaskitchen.se,filippoon.se,niiinis.se##.panorama-sticky, .sticky-area, #ad-outofpage_dynamic, .desktop-only
 landleyskok.se##.inpostbanner, .banner-leaderboard
