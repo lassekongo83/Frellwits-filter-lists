@@ -1,10 +1,10 @@
-diff name:swefilter lines:285 checksum:2b72921b7b
+diff name:swefilter lines:299 checksum:9e768b749e
 d2 1
 a2 1
-! Last updated: Sat, 28 Dec 2024 04:26:03 +0000
+! Last updated: Sun, 29 Dec 2024 04:36:41 +0000
 d4 1
 a4 1
-! Diff-Path: patches/2024.12.28.266.patch#swefilter
+! Diff-Path: patches/2024.12.29.276.patch#swefilter
 d103 1
 d111 1
 a111 1
@@ -31,6 +31,9 @@ d303 4
 a306 2
 byggipedia.se##+js(rmnt, script, contextmenu)
 byggipedia.se##+js(rmnt, script, e.keyCode)
+d356 1
+a356 1
+dagensinnovation.se,nyheter.swebbtv.se,modernalivet.se,nyhetersto.se###moove_gdpr_cookie_info_bar
 a360 1
 dagensopinion.se##.post-block:has(a[href*="/annons/"])
 a379 2
@@ -80,9 +83,9 @@ hellofresh.se##a[data-test-id^="top-banner-ad"], div[data-test-id="exit-intent-b
 hembygd.se##bs-modal-backdrop
 a711 1
 hemnet.se##div[class^="ArticleCard_"] small:has-text(/sponsrad/i):upward(article, li, a)
-d717 1
-d719 3
-a721 3
+d717 5
+a721 4
+hemtrevligt.se##div[id^="hj-"], div[id^="ik-"], #banner-container
 hemtrevligt.se,tidningenhalsa.se##.article:has(.annons)
 hifitorget.se##.billboard_container, .billboard-style
 hifitorget.se##.row[style^="min-height"]:has(.adsbygoogle, .billboard_container)
@@ -133,7 +136,7 @@ nyheter.swebbtv.se##.recent-posts-widget-with-thumbnails:has-text(/annonssamarbe
 nyheter.swebbtv.se##.wp-block-image a[target]:not([href*="nyheter.swebbtv.se"]), .mh-sidebar-2 .indexlink
 d1057 1
 a1057 1
-nyhetsbyranjarva.se,nyan.ax,tv-kanal.se,golfguidenonline.se,rockbladet.se,vildmarken.se##.g
+nyhetsbyranjarva.se,nyan.ax,tv-kanal.se,golfguidenonline.se,rockbladet.se,vildmarken.se,nyhetersto.se##.g
 a1109 2
 qasa.se##div[data-state="open"]:empty
 qasa.se##+js(aeld, wheel)
@@ -219,8 +222,17 @@ a2143 1
 d2202 1
 a2202 1
 /plugins/cookie-notice$script,domain=bildobubbla.se|zeromagazine.nu|sverigespringer.se|gasetten.se|sillyseason.se|gentlemannaguiden.com|matmalin.se|svensktidskrift.se|schack.se|densistavilan.se|kobe.se|tidningenproffs.se|jaktojagare.se|tobaksfakta.se|bebisvarlden.se|underbaraclaras.se|cykelframjandet.se|dalabygden.se|lansposten.se|sormlandsbygden.se|vaguiden.se|grandtech.se|bluff.se|bjjtv.se|svmf.se|rockbladet.se|globalbar.se|seniornet.se|gaming365.se|skellefteamedia.se|musikverket.se
+d2229 1
+a2229 1
+/plugins/gdpr-cookie-compliance$script,domain=goteborgsgolfaren.se|modernalivet.se
+d2274 1
+a2274 1
+/plugins/quantcast-choice$script,domain=javligtgott.se|dh.se
+d2324 1
+a2324 1
+/plugins/wp-gdpr-compliance$script,domain=pussad.se|nyhetersto.se
 a2327 1
-/plugins/wp-sentry$domain=cafe.se|kingmagazine.se|vagabond.se|svenskgolf.se|husohem.se|tidningenhalsa.se|praktisktbatagande.se|akaskidor.se|utemagasinet.se|husvagnochcamping.se|classicmotor.se
+/plugins/wp-sentry$domain=cafe.se|kingmagazine.se|vagabond.se|svenskgolf.se|husohem.se|tidningenhalsa.se|praktisktbatagande.se|akaskidor.se|utemagasinet.se|husvagnochcamping.se|classicmotor.se|hemtrevligt.se
 d2356 1
 a2356 1
 /raven$script,domain=mitti.se|travnet.se|nyheter24.se|tyda.se|devote.se|egoinas.se|hemtrevligt.se|alltforforaldrar.se|familjeliv.se|brollopstorget.se|blogg.se|nouw.com|lchfarkivet.se|fotbolltransfers.com|norrahalland.se|svenskgolf.se|vimedbarn.se|modette.se|vf.se|hjotidning.se|kt.se|kt-kuriren.se|sla.se|mariestadstidningen.se|filipstadstidning.se|fryksdalsbygden.se|nwt.se|arvikanyheter.se|nkp.se|saffletidningen.se|provinstidningen.se|dalslanningen.se|nlt.se|skaraborgsbygden.se|alltomnorrtalje.se
@@ -268,7 +280,7 @@ a3054 1
 ||pji.nu^$third-party,domain=minhembio.com|ljudochbild.se|gp.se
 d3076 1
 a3076 1
-||privacy-mgmt.com^$domain=radio.se|dagenstv.com|kolla.tv|computersweden.se|woxikon.se|dagen.se|filmtopp.se|upday.com|gaffa.se
+||privacy-mgmt.com^$domain=radio.se|dagenstv.com|kolla.tv|computersweden.se|woxikon.se|dagen.se|filmtopp.se|upday.com|gaffa.se|handbollskanalen.se
 d3090 1
 a3090 1
 ||quantcast.com^$domain=travelgrip.se|samnytt.se|nyteknik.se|lag-avtal.se|arbetarskydd.se|leta.se|motivation.se|sporttv.nu|goforfit.se|expo.se|poddtoppen.se|doon.se|garaget.org|nouw.com|listor.se
@@ -284,3 +296,5 @@ a3203 1
 ||tracing.yelp.com^
 a3249 1
 ||visbymaklarna.se^$third-party
+a3314 1
+woxikon.se##^head > script

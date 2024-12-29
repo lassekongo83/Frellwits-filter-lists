@@ -1,10 +1,10 @@
-diff name:swefilter lines:219 checksum:2b72921b7b
+diff name:swefilter lines:242 checksum:9e768b749e
 d2 1
 a2 1
-! Last updated: Sat, 28 Dec 2024 04:26:03 +0000
+! Last updated: Sun, 29 Dec 2024 04:36:41 +0000
 d4 1
 a4 1
-! Diff-Path: patches/2024.12.28.266.patch#swefilter
+! Diff-Path: patches/2024.12.29.276.patch#swefilter
 d103 1
 d111 1
 a111 1
@@ -25,6 +25,9 @@ d303 4
 a306 2
 byggipedia.se##+js(rmnt, script, contextmenu)
 byggipedia.se##+js(rmnt, script, e.keyCode)
+d356 1
+a356 1
+dagensinnovation.se,nyheter.swebbtv.se,modernalivet.se,nyhetersto.se###moove_gdpr_cookie_info_bar
 a360 1
 dagensopinion.se##.post-block:has(a[href*="/annons/"])
 a379 2
@@ -61,6 +64,9 @@ d704 1
 a704 2
 hellofresh.se##a[data-test-id^="top-banner-ad"], div[data-test-id="exit-intent-banner"], div[data-test-id="urgency-banner-modal"], a[data-test-id="side-banner-ad-link"]
 hembygd.se##bs-modal-backdrop
+d717 1
+a717 1
+hemtrevligt.se##div[id^="hj-"], div[id^="ik-"], #banner-container
 d722 1
 a722 1
 hitta.se##a[data-trackimp][target], .hitta-map .integration-txt, .section-details--alb, [class*="dummyAd"], [class*="StyledAdSlot"], [data-bind*="Ad"], div[class^="GraphicAd_"], [class*="adContainer"], [id*="_panorama"], [id*="_skyscraper"], div[style="min-height: 250px;"], div[data-track="displayplacering-customer"], a[data-test="boostAdLink"], div[class^="style_bannerContainer"], [data-track="click-promotion-banner"], div[class*="adWrapper"], div[class*="hittaAdContainer"]
@@ -101,7 +107,7 @@ nyheter.swebbtv.se##.recent-posts-widget-with-thumbnails:has-text(/annonssamarbe
 nyheter.swebbtv.se##.wp-block-image a[target]:not([href*="nyheter.swebbtv.se"]), .mh-sidebar-2 .indexlink
 d1059 1
 a1059 1
-nyhetsbyranjarva.se,nyan.ax,tv-kanal.se,golfguidenonline.se,rockbladet.se,vildmarken.se##.g
+nyhetsbyranjarva.se,nyan.ax,tv-kanal.se,golfguidenonline.se,rockbladet.se,vildmarken.se,nyhetersto.se##.g
 a1111 2
 qasa.se##div[data-state="open"]:empty
 qasa.se##+js(aeld, wheel)
@@ -163,6 +169,18 @@ a2150 1
 d2209 1
 a2209 1
 /plugins/cookie-notice$script,domain=bildobubbla.se|zeromagazine.nu|sverigespringer.se|gasetten.se|sillyseason.se|gentlemannaguiden.com|matmalin.se|svensktidskrift.se|schack.se|densistavilan.se|kobe.se|tidningenproffs.se|jaktojagare.se|tobaksfakta.se|bebisvarlden.se|underbaraclaras.se|cykelframjandet.se|dalabygden.se|lansposten.se|sormlandsbygden.se|vaguiden.se|grandtech.se|bluff.se|bjjtv.se|svmf.se|rockbladet.se|globalbar.se|seniornet.se|gaming365.se|skellefteamedia.se|musikverket.se
+d2236 1
+a2236 1
+/plugins/gdpr-cookie-compliance$script,domain=goteborgsgolfaren.se|modernalivet.se
+d2281 1
+a2281 1
+/plugins/quantcast-choice$script,domain=javligtgott.se|dh.se
+d2331 1
+a2331 1
+/plugins/wp-gdpr-compliance$script,domain=pussad.se|nyhetersto.se
+d2335 1
+a2335 1
+/plugins/wp-sentry$domain=cafe.se|kingmagazine.se|vagabond.se|svenskgolf.se|husohem.se|tidningenhalsa.se|praktisktbatagande.se|akaskidor.se|utemagasinet.se|husvagnochcamping.se|classicmotor.se|hemtrevligt.se
 d2364 1
 a2364 1
 /raven$script,domain=mitti.se|travnet.se|nyheter24.se|tyda.se|devote.se|egoinas.se|hemtrevligt.se|alltforforaldrar.se|familjeliv.se|brollopstorget.se|blogg.se|nouw.com|lchfarkivet.se|fotbolltransfers.com|norrahalland.se|svenskgolf.se|vimedbarn.se|modette.se|vf.se|hjotidning.se|kt.se|kt-kuriren.se|sla.se|mariestadstidningen.se|filipstadstidning.se|fryksdalsbygden.se|nwt.se|arvikanyheter.se|nkp.se|saffletidningen.se|provinstidningen.se|dalslanningen.se|nlt.se|skaraborgsbygden.se|alltomnorrtalje.se
@@ -205,6 +223,9 @@ d2974 1
 d3062 1
 a3062 1
 ||pji.nu^$third-party,domain=minhembio.com|ljudochbild.se|gp.se
+d3084 1
+a3084 1
+||privacy-mgmt.com^$domain=radio.se|dagenstv.com|kolla.tv|computersweden.se|woxikon.se|dagen.se|filmtopp.se|upday.com|gaffa.se|handbollskanalen.se
 d3098 1
 a3098 1
 ||quantcast.com^$domain=travelgrip.se|samnytt.se|nyteknik.se|lag-avtal.se|arbetarskydd.se|leta.se|motivation.se|sporttv.nu|goforfit.se|expo.se|poddtoppen.se|doon.se|garaget.org|nouw.com|listor.se
@@ -218,3 +239,5 @@ a3212 1
 ||tracing.yelp.com^
 a3258 1
 ||visbymaklarna.se^$third-party
+a3323 1
+woxikon.se##^head > script
