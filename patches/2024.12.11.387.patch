@@ -1,10 +1,10 @@
-diff name:swefilter lines:256 checksum:86da179f8d
+diff name:swefilter lines:267 checksum:0058640ecb
 d2 1
 a2 1
-! Last updated: Thu, 02 Jan 2025 04:35:17 +0000
+! Last updated: Sat, 04 Jan 2025 04:25:39 +0000
 d4 1
 a4 1
-! Diff-Path: patches/2025.1.2.275.patch#swefilter
+! Diff-Path: patches/2025.1.4.265.patch#swefilter
 d103 1
 d111 1
 a111 1
@@ -12,6 +12,9 @@ aftonbladet.se##:is(main > section a[data-test-tag="internal-link"], #main > sec
 d145 1
 a145 1
 allabolag.se##div[style*="min-height"]:has(div[id^="adwrapper"])
+a147 2
+allastudier.se##.am-container-side:has(.adunit)
+allastudier.se##.wide-page_ads, .lcb-AdLcb
 d150 1
 a150 1
 allas.se,elle.se,femina.se,hant.se,mabra.com,residencemagazine.se,svenskdam.se,motherhood.se##article[data-type="native"], .ag-product-wrapper, .product-carousel__container, .shop_carousel, .editorsPick, div[class^="strossle-widget-"], .ad-min-height, a.cts-impression-item[data-cts-label*="banner"], section[data-cts-label="affiliate-carousel"], .ad-row-column, section[data-cts-object-category="promotion_banner"]
@@ -90,9 +93,13 @@ investeramera.se###dialog-locked
 investeramera.se##.post-single-content p em:has-text(Annons:)
 a817 1
 klimatnytt.se##div[id^="builderwidget"]:has(img[width="980"][height="120"])
+d819 1
+a819 1
+knulla.se,kulturama.se###cookie-popup
 d837 1
 a837 1
 kritiker.se,bio-link.se,web-tools.se,medibok.se##+js(prevent-xhr, adsbygoogle)
+d839 1
 a854 1
 landskronadirekt.com###companies-slider, #ads-nyhetsbanner
 d862 1
@@ -150,6 +157,10 @@ vadvivet.se##.intro-popup, div[class*="subscribeDialog"], div[class^="_backgroun
 d1447 1
 a1447 1
 vilarare.se,tidningenridsport.se##.adcontainer
+a1484 3
+webhallen.com##+js(set-local-storage-item, marketingConsent, false)
+webhallen.com##+js(set-local-storage-item, necessaryConsent, true)
+webhallen.com##+js(set-local-storage-item, personalisationConsent, false)
 a1659 1
 ##div.top-annons
 a1809 1
@@ -231,7 +242,7 @@ d2900 1
 d2911 1
 a2911 2
 ||ingest.analytics.nation.dev^
-||inmobi.com^$domain=alltomelbil.se|rikatillsammans.se|egoinas.se|moviezine.se|travelnews.se|varldenshaftigaste.se|merinfo.se|foreca.se|matklubben.se|reseguiden.se|newsner.com|humorbibeln.se|sportbibeln.se|ettgottskratt.se|djurbibeln.se|laget.se|byrum.se|sportlovin.se|receptfavoriter.se|forni.se|kimura.se|cornucopia.se|norrahalland.se|finanstid.se|tittapavideon.se|motormagasinet.se|food-supply.se|dagenshandel.se|plastnet.se|habit.se|woodnet.se|foodnet.se|transportnet.se|processnet.se|packnet.se|verkstaderna.se|medtechmagazine.se|recyclingnet.se|rt-forum.se|uochd.se|lifesciencesweden.se|fri-kopenskap.se|cleannet.se|metal-supply.se|fashionnet.se|framtidensbygg.se|entreprenad.com|mykitchenstories.se|cancelculture.se|findit.se|brinkenbakar.se|foretagande.se|fotbolltransfers.com|affarsvarlden.se|villalivet.se|branschaktuellt.se|nordic.ign.com|fragbite.se|lindasbakskola.se|jennysmatblogg.nu|filippoon.se|niiinis.se|lesscarbs.se|eniro.se|matspar.se|xnytt.se|alltomkungligt.se|swehockey.se|vackertvader.se|newly.se|nyheter2.se|klendr.se|elsasentourage.se|zeinaskitchen.se|svenskalag.se|tvsporten.nu|frillesasbandy.se|skik.se|marketmate.se|svartgul.se|langd.se|babyhjalp.se|breakit.se|kokaihop.se|skyttesport.se|flashback.org|nyadagbladet.se|enkelteknik.se|alltomnorrtalje.se
+||inmobi.com^$domain=alltomelbil.se|rikatillsammans.se|egoinas.se|moviezine.se|travelnews.se|varldenshaftigaste.se|merinfo.se|foreca.se|matklubben.se|reseguiden.se|newsner.com|humorbibeln.se|sportbibeln.se|ettgottskratt.se|djurbibeln.se|laget.se|byrum.se|sportlovin.se|receptfavoriter.se|forni.se|kimura.se|cornucopia.se|norrahalland.se|finanstid.se|tittapavideon.se|motormagasinet.se|food-supply.se|dagenshandel.se|plastnet.se|habit.se|woodnet.se|foodnet.se|transportnet.se|processnet.se|packnet.se|verkstaderna.se|medtechmagazine.se|recyclingnet.se|rt-forum.se|uochd.se|lifesciencesweden.se|fri-kopenskap.se|cleannet.se|metal-supply.se|fashionnet.se|framtidensbygg.se|entreprenad.com|mykitchenstories.se|cancelculture.se|findit.se|brinkenbakar.se|foretagande.se|fotbolltransfers.com|affarsvarlden.se|villalivet.se|branschaktuellt.se|nordic.ign.com|fragbite.se|lindasbakskola.se|jennysmatblogg.nu|filippoon.se|niiinis.se|lesscarbs.se|eniro.se|matspar.se|xnytt.se|alltomkungligt.se|swehockey.se|vackertvader.se|newly.se|nyheter2.se|klendr.se|elsasentourage.se|zeinaskitchen.se|svenskalag.se|tvsporten.nu|frillesasbandy.se|skik.se|marketmate.se|svartgul.se|langd.se|babyhjalp.se|breakit.se|kokaihop.se|skyttesport.se|flashback.org|nyadagbladet.se|enkelteknik.se|alltomnorrtalje.se|stoppapressarna.se
 d2925 3
 d3065 1
 a3065 1
