@@ -592,6 +592,7 @@ Video-Ad-$media,3p
 ##div.wp-block-ad
 ##div.wppasrotate
 ##div#ad_global_below_navbar
+##div#ad_top_page
 ##div#ads_column
 ##div#ads-panorama
 ##div#annons_topp
@@ -965,7 +966,7 @@ Video-Ad-$media,3p
 ||srvrtools.com/t.js?
 ||static.hupso.com/share/js/counters.js
 ||static.web-repository.com/scripts/common/hit.js
-||stats.blogg.se^$image
+||stats.blogg.se^
 ||stats.docu.info^
 ||stats.easyweb.se^$third-party
 ||stats.jibber.social^
@@ -1266,7 +1267,7 @@ aftonbladet.se,livsstil.se,godare.se,byggahus.se,expressen.se,elle.se,femina.se,
 
 ! -- Specific annoying elements
 adecco.se,ica.se,apotekhjartat.se,tele2.se###onetrust-consent-sdk
-plastikoperationsforum.se,riksettan.net,automobil.se,endurobloggen.se,vibilagare.se,mopedgaraget.se,caroftheyear.se,klassiker.nu,alandsradio.ax,svjt.se,so-rummet.se###sliding-popup
+plastikoperationsforum.se,riksettan.net,automobil.se,endurobloggen.se,vibilagare.se,mopedgaraget.se,caroftheyear.se,klassiker.nu,alandsradio.ax,svjt.se,so-rummet.se,skatter.se###sliding-popup
 cannabis.se,biostock.se,snowmobile.se,tobaksfakta.se,dagenslogistik.se,magasinetkonkret.se,skaneplus.se,battrestadsdel.se##.pum-overlay
 forum.robsoft.nu##.cookie-box
 ljuskultur.se,hrnytt.se,aapl.se,inredningsarkitektur.se,inblick.se,matklubben.se##.cookies
@@ -1872,6 +1873,7 @@ arbetsvarlden.se##.nl_popup
 magazin24.se##.ad-pad
 magazin24.se##.widget_custom_html:has(.ad-pad, a[href*="casino"], a[href*="filmtopp.se"])
 magazin24.se##.special_ad_video:remove()
+||wp3.xyz/tdw.js$domain=lakemedelsvarlden.se
 
 ! === Tech, gaming, programmering
 
@@ -2074,6 +2076,7 @@ riktighockey.se###custom_html-2
 ||fotboll.com/*casino$image
 fotboll.com##.header-static-lg, .fp-partner, .xs-ad, .bo-wrapper, #betsid, .news-banner-mini, .xs-cblock, .cookie_consent_bar, #odds, a.bellows-target[href*="/svenskaspel"], a.bellows-target[href*="/betting"], a[href*="/go/"][onclick], #lg-box-scyscraper
 fotboll.com##:is(div.text-center, div.d-none):has(a[href*="/go/"][onclick], .fotboll_content_wrapper[data-id])
+fotboll.com##a[href*="casino"]:upward(.content)
 /sponsorloggor$domain=swehockey.se
 swehockey.se##[class*="-reklam"], .sif-sponsorer, .teaserblock, .commonblock a:not([href^="/"], [href*="/swehockey.se"])
 /sharethis.js$domain=allsvenskan.se|superettan.se
@@ -2893,7 +2896,9 @@ stoppapressarna.se##^script[data-src*="advads"]
 temadagar.se,wernamaten.se,sanghafte.se,xn--gtboken-exa.se,telefonforsaljare.nu##^script:has-text(__ez)
 di.se##^script:has-text(Di.initAds)
 tabyallehanda.se##^script[src$="adsbygoogle.js"]
-woxikon.se##^head > script
+woxikon.se##^script[src^="https://html-load.com/"]
+woxikon.se##^script:has-text(googletag)
+woxikon.se##^script:has-text(window._sp_)
 !#endif
 ! Mobile
 !#if env_mobile
@@ -3501,3 +3506,4 @@ hembygd.se##bs-modal-backdrop
 ratio.se###consent-portal
 landskronadirekt.com###companies-slider, #ads-nyhetsbanner
 skogsindustrierna.se###cookieOverlay
+/tarteaucitron.js$domain=sv.geneanet.org
