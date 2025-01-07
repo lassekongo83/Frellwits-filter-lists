@@ -1,10 +1,10 @@
-diff name:swefilter lines:231 checksum:09781fe7e6
+diff name:swefilter lines:247 checksum:4ba688ea66
 d2 1
 a2 1
-! Last updated: Mon, 06 Jan 2025 04:36:09 +0000
+! Last updated: Tue, 07 Jan 2025 04:14:04 +0000
 d4 1
 a4 1
-! Diff-Path: patches/2025.1.6.276.patch#swefilter
+! Diff-Path: patches/2025.1.7.254.patch#swefilter
 a146 2
 allastudier.se##.am-container-side:has(.adunit)
 allastudier.se##.wide-page_ads, .lcb-AdLcb
@@ -45,6 +45,8 @@ d531 2
 a534 2
 filmtipset.se##:is(.news, a[href^="nyhet"]):has-text(/casino|kasino|poker/i)
 filmtipset.se##:is(.news, .outer):has(a[href*="casino"], a[href*="free-spins"])
+a600 1
+fotboll.com##a[href*="casino"]:upward(.content)
 d606 1
 a606 1
 fotosidan.se,merinfo.se,allsvenskan.se,tasteline.com,jaktojagare.se,chefstidningen.se,norpan.se,moviezine.se,jaktjournalen.se,byggvarlden.se,omtanke.today,akademikern.se,socionomen.se,culturezone.se,lchfarkivet.se##.ads
@@ -97,6 +99,9 @@ nyheter.swebbtv.se##.wp-block-image a[target]:not([href*="nyheter.swebbtv.se"]),
 d1059 1
 a1059 1
 nyhetsbyranjarva.se,nyan.ax,tv-kanal.se,golfguidenonline.se,rockbladet.se,vildmarken.se,nyhetersto.se##.g
+d1094 1
+a1094 1
+plastikoperationsforum.se,riksettan.net,automobil.se,endurobloggen.se,vibilagare.se,mopedgaraget.se,caroftheyear.se,klassiker.nu,alandsradio.ax,svjt.se,so-rummet.se,skatter.se###sliding-popup
 a1111 2
 qasa.se##div[data-state="open"]:empty
 qasa.se##+js(aeld, wheel)
@@ -135,6 +140,8 @@ a1483 3
 webhallen.com##+js(set-local-storage-item, marketingConsent, false)
 webhallen.com##+js(set-local-storage-item, necessaryConsent, true)
 webhallen.com##+js(set-local-storage-item, personalisationConsent, false)
+a1559 1
+##div#ad_top_page
 a1658 1
 ##div.top-annons
 a1808 1
@@ -183,6 +190,8 @@ a2336 1
 d2365 1
 a2365 1
 /raven$script,domain=mitti.se|travnet.se|nyheter24.se|tyda.se|devote.se|egoinas.se|hemtrevligt.se|alltforforaldrar.se|familjeliv.se|brollopstorget.se|blogg.se|nouw.com|lchfarkivet.se|fotbolltransfers.com|norrahalland.se|svenskgolf.se|vimedbarn.se|modette.se|vf.se|hjotidning.se|kt.se|kt-kuriren.se|sla.se|mariestadstidningen.se|filipstadstidning.se|fryksdalsbygden.se|nwt.se|arvikanyheter.se|nkp.se|saffletidningen.se|provinstidningen.se|dalslanningen.se|nlt.se|skaraborgsbygden.se|alltomnorrtalje.se
+a2437 1
+/tarteaucitron.js$domain=sv.geneanet.org
 d2539 3
 a2541 4
 /?agg_url=/shopping$domain=nyheter24.se|alltforforaldrar.se|modette.se|devote.se|familjeliv.se|brollopstorget.se|blogg.se|rodeo.net|vimedbarn.se|loppi.se
@@ -227,6 +236,13 @@ a3180 1
 ||static.fastcmp.com^$domain=lchfarkivet.se
 a3182 1
 ||static.web-repository.com/scripts/common/hit.js
+d3185 1
+a3185 1
+||stats.blogg.se^
 d3193 1
-a3330 1
-woxikon.se##^head > script
+a3288 1
+||wp3.xyz/tdw.js$domain=lakemedelsvarlden.se
+a3330 3
+woxikon.se##^script[src^="https://html-load.com/"]
+woxikon.se##^script:has-text(googletag)
+woxikon.se##^script:has-text(window._sp_)
