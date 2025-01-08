@@ -458,6 +458,7 @@ Video-Ad-$media,3p
 ##a.adv-link
 ##a.card.-sponsored
 ##a.is-native-ad
+##a.Teaser[data-content-item-category="Annons"]
 ##a#top-banner.banner-holder
 ##article.annons
 ##article.article-list-item--sponsored-post
@@ -1141,7 +1142,6 @@ google.se##div.g:has(a[href*=".com.se/"]):has-text(/återförsäljare|rea|garant
 /wp-content/uploads/*casino$image,domain=nyadagbladet.se|kulturbloggen.com|newsvoice.se|svenskhistoria.se|battrestadsdel.se|zeromagazine.nu|totallyorebro.se|totallystockholm.se|djungeltrumman.se|vaken.se|tekniknytt.se|kingsizemag.se|spelochfilm.se|macken.xyz|improveme.se|bandyfeber.com|stoppapressarna.se|sjostadsbladet.se|autonytt.se|hockeybladet.nu|tv-kanal.se|esportnytt.se|sillyseason.se|rakapuckar.com
 /wp-content/uploads/*kasino$image,domain=improveme.se|sjostadsbladet.se
 /wp-content/uploads/*reklam$image,domain=hockeyettan.se
-/banner$domain=revisionsvarlden.se
 /banners$domain=magasinetparagraf.se|sporttv.nu|cykla.se|vatternrundan.se|dagenstv.com|sydkusten.es|pellesoft.se|dykarna.nu|varmepumpsforum.com|poolforum.se|classiccars.se
 /videojs.ima.$domain=sportbladetplay.se|staylive.tv
 /pagead$domain=vilaser.se|horoskoptid.se|eniro.se
@@ -1158,7 +1158,7 @@ metalcentral.net,rotter.se##.bannergroup
 alltforforaldrar.se,di.se,upphandling24.se,bytbil.com,sverigesnatur.org,tv24.se,nyan.ax,passioneffect.se##.panorama
 svartgul.se,eventeffect.se,executiveeffect.se,saleseffect.se###panorama
 teknikveckan.se,di.se,dn.se,skillingaryd.nu,xn--vrnamo-bua.nu,vardfokus.se,kamerabild.se,tripadvisor.se,swedroid.se,bettingstugan.se,expressen.se,dagensopinion.se,driva-eget.se,ifokus.se,sv.picmix.com,ifragasatt.se,sportbloggare.com,bovision.se,familjeliv.se,tidningenridsport.se,golflivet.se,vemringde.se,brollopstorget.se,fastighetsvarlden.se,borskollen.se,aktiespararna.se,receptfavoriter.se,tyda.se,mittforetag.com,lajvo.se,magazin24.se##.ad
-svd.se,chef.se,vvsforum.se,elinstallatoren.se,arkitekten.se,natursidan.se,svenskfarmaci.se,da.se,frisor.se##.Ad
+svd.se,chef.se,vvsforum.se,elinstallatoren.se,arkitekten.se,natursidan.se,svenskfarmaci.se,da.se,frisor.se,revisionsvarlden.se##.Ad
 aftonbladet.se,halsasverige.se,mandarinmedia.se,nojesmagasinet.nu,stoppapressarna.se,langd.se,pressbladet.se,svenskpress.se,foretagsbladet.se,gestrikemagasinet.se,cfanytt.se,lasarnas.se,hembostad.nu,sportidrott.se,computersweden.se,thatsup.se,arbetaren.se,sjofartstidningen.se##.advert
 fotosidan.se,merinfo.se,allsvenskan.se,tasteline.com,jaktojagare.se,chefstidningen.se,norpan.se,moviezine.se,jaktjournalen.se,byggvarlden.se,omtanke.today,akademikern.se,socionomen.se,culturezone.se,lchfarkivet.se##.ads
 lira.se,danstidningen.se,slangopedia.se,tidningen.se###ads
@@ -1921,8 +1921,10 @@ mobil.se,kamerabild.se##a[href*="/partner"]
 mobil.se,kamerabild.se##article:has(a[href*="/partner"])
 mobil.se,kamerabild.se##.markupbox:has(a[href*="casino"])
 nordichardware.se##.pspy_info, [class^="prisjakt-"]
-nordichardware.se##:is(.td-big-grid-post, .td_block_inner):has(a[href*="/sponsrat/"])
-surfa.se##div[class*="-promo"], div[class*="prisjakt-"]
+nordichardware.se##:is(.td-big-grid-post, .td_block_inner):has(a[href*="/sponsrat/"], a[href$="/sponsor/"])
+nordichardware.se##.su-label:has-text(/sponsra/i):upward(.wpb_text_column)
+nordichardware.se##.td-excerpt:has-text(/sponsra/i):upward(.meta-info-container)
+surfa.se##div[class*="-promo"], div[class*="prisjakt-"], .td-banner-wrap-full
 fuska.se##.alert-success
 ||analytics.teknikveckan.se^
 /google-analytics$domain=teknikveckan.se
@@ -2817,6 +2819,7 @@ aletorget.se,alingsastorget.se,almhulttorget.se,alvestatorget.se,amaltorget.se,a
 /plugins/wp-gdpr-compliance$script,domain=pussad.se|nyhetersto.se
 /plugins/machete/inc/cookies$script,domain=falskacitat.com
 /plugins/montania-cookies$script,domain=electronic.se
+/plugins/pressidium-cookie-consent$script,domain=undervarttak.se
 /cookies-and-content$script,domain=freedomtravel.se
 /wordpress-popup$script,domain=goteborgnyheter.se
 
@@ -3321,7 +3324,7 @@ doon.se##.doon-promotion, a.link[target="_blank"]
 nordiskskog.se##.templateHelannonsBOX
 /gtm-sokande.js$domain=antagning.se|universityadmissions.se
 antagning.se,universityadmissions.se###cookiebanner
-/arto/api/event$domain=arkitekten.se|natursidan.se|svenskfarmaci.se
+/arto/api/event$domain=arkitekten.se|natursidan.se|svenskfarmaci.se|revisionsvarlden.se
 svenskfarmaci.se##.Dialog[data-dialog-skip-auto-open-for-utm-source-value="Newsletter"]
 ||media.arto.se/*annons$image,domain=natursidan.se
 hallakonsument.se##section[aria-label="Kakinformation"]
@@ -3467,6 +3470,7 @@ tradevenue.se##footer + div.fixed
 tradevenue.se##.c-block-manager > .container:first-child:has(.gpt-ad-slot)
 /cookiebot$domain=riksteatern.se
 skippo.se##a[href*="/sponsra"]
+batliv.se##.add_div
 skellefteamedia.se###tdi_51, .td-content-more-articles-box
 tidningencurie.se##.sv-marketplace-sitevision-cookie-consent, .sv-vr-popup, .env-modal-dialog, .env-modal-dialog__backdrop
 tidningencurie.se##html.sv-no-touch:remove-class(sv-no-touch)
