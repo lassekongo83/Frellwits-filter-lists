@@ -1,7 +1,7 @@
 ! Title: Frellwit's Swedish Filter
-! Last updated: Wed, 08 Jan 2025 04:37:23 +0000
+! Last updated: Thu, 09 Jan 2025 06:20:59 +0000
 ! Expires: 5 days
-! Diff-Path: patches/2025.1.8.277.patch#swefilter
+! Diff-Path: patches/2025.1.9.380.patch#swefilter
 ! Diff-Expires: 24 hours
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
@@ -330,7 +330,6 @@ casinoguiden$image,domain=samnytt.se|samnytt.nu
 casino$domain=pirkt.se
 casino-utan-$image
 chefstidningen.se##[id^="block-views-ad"], .modal-container
-chef.se##+js(remove-cookie, ca_public_page_views)
 chef.se##.Cookie-notice, .Product-modal, .Offer-popup, .Toaster
 chef.se,fokus.se##.Blurb--native
 cineasten.se###text-6, .theiaStickySidebar .category-uncategorized
@@ -871,7 +870,6 @@ lesscarbs.se##.e-loop-item:has(div[data-eael-wrapper-link*="annonssamarbete"])
 lesscarbs.se#@#.category-annonssamarbete:not(body):not(html)
 leta.se###bookingcom-resor-wrapper, #aktuellaerbjudanden, #sky-left-wide, .topNavItem[href*="casino"], .topNavItem[href*="betting"], #bottom-splinks, #momondoBoxRightCol
 levandehistoria.se##div[class^="CookieBar"]
-lexbase.se##+js(cookie-remover, lmt)
 lidingonyheter.se##.moban
 lifeofsvea.se,quizza.nu##.cookie-info
 lindasbakskola.se,jennysmatblogg.nu,zeinaskitchen.se,filippoon.se,niiinis.se##.panorama-sticky, .sticky-area, #ad-outofpage_dynamic, .desktop-only
@@ -991,6 +989,7 @@ modernalivet.se##body.modal-active:style(overflow:unset!important)
 modernalivet.se##.excerpt:has-text(/annons/i):upward(article)
 modernalivet.se##.modal-wrap, .slide-in-box
 modernalivet.se##.sidebar-widget h3:has-text(/annons/i):upward(.sidebar-widget)
+modernpsykologi.se##.ads-container
 morotsliv.com##.et_bloom .et_bloom_flyin_center, a[href*="/?utm_medium=affiliate"], a.bigblue[target]
 motivation.se##.card:has(.sponsored)
 motivation.se##.sponsored-item, [class*="banner"], .outsider
@@ -1277,9 +1276,6 @@ svenskamagasinet.nu##legend:has-text(Annons)
 svenskamagasinet.nu##.et_pb_code_inner:has(.svm-target)
 svenskanomader.se###ajax-loading-screen
 svenskarnaochinternet.se,internetstiftelsen.se###newsletter-sliding
-svenskbyggmarknad.se##div[consent-skip-blocker]:remove()
-svenskbyggmarknad.se##html,body:style(overflow:unset!important;)
-svenskbyggmarknad.se##.widget_block:has(a[href*="/t/t?"])
 svenskelitfotboll.se##custom-ad, sponsors
 svenskelitfotboll.se##.image-block:has(a[class*="sponsor"])
 svenskfarmaci.se##.Dialog[data-dialog-skip-auto-open-for-utm-source-value="Newsletter"]
@@ -1420,7 +1416,7 @@ utsidan.se##.clamzone, .component-adzone
 utslappsratt.se,heleneholmsif.se,trafikskola.se,melodifestivalklubben.se,morotsliv.com,nyadagbladet.se##+js(set, em_track_user, false)
 utslappsratt.se,heleneholmsif.se,trafikskola.se,melodifestivalklubben.se,morotsliv.com,nyadagbladet.se##+js(set, exactmetrics_frontend, undefined)
 vackertvader.se##div[class^="ad-300x250"], div[class^="ad_300x250"]
-vackertvader.se,tidningenskriva.se,veckansnyheter.se,eventeffect.se,executiveeffect.se,saleseffect.se,kemisamfundet.se,knep.se,ledarsidorna.se##.cc-window
+vackertvader.se,tidningenskriva.se,veckansnyheter.se,eventeffect.se,executiveeffect.se,saleseffect.se,kemisamfundet.se,knep.se,ledarsidorna.se,lexbase.se##.cc-window
 vadvivet.se##html.has-intro-popup:remove-class(has-intro-popup)
 vadvivet.se##html.show-intro-popup:remove-class(show-intro-popup)
 vadvivet.se##.intro-popup, div[class*="subscribeDialog"], div[class^="_background"][style*="opacity"]
@@ -1835,7 +1831,6 @@ zeromagazine.nu##div[id^="ads"]
 /add-ads.js$domain=fria.nu|stockholmsfria.se
 /add-page-view$domain=cykla.se
 /adform.js$domain=bohuslaningen.se|stromstadstidning.se|markposten.se|harrydaposten.se|partilletidning.se|sttidningen.se|molndalsposten.se|kungalvsposten.se|kungsbackaposten.se|alingsastidning.se|ttela.se|gp.se|hallandsposten.se|hn.se|mellerudsnyheter.se
-/admin-ajax$domain=chef.se
 /adnami/macro$script
 /adnuntius_top_scroll
 /adn/adn-setup.$script
@@ -2443,7 +2438,7 @@ zeromagazine.nu##div[id^="ads"]
 /svenska-ridsportforbundet/*banners
 /svff/bannerblock/*
 /sv_se/metrics/*$script,xmlhttprequest
-/swg-gaa.js$domain=thelocal.se
+/swg$script,domain=thelocal.se
 /swordfishinc.download.akamai.com/*$script
 /synonymerse-adapter.js$domain=synonymer.se
 /tabs_hits_counter.php$image
