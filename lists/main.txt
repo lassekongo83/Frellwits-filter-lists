@@ -1425,6 +1425,7 @@ di.se##.di_panorama-wrapper, .site-header__panorama, .di_panorama__isAdLabel, .d
 di.se##.market-start-top + div:not(.market-container__wrapper)
 borssnack.di.se##.bn_advertisement__panorama, .bn_advertisement__container
 ! Övrigt
+/rum-reporter$domain=viivilla.se
 viivilla.se###rich-media-wrapper
 viivilla.se##gen-article-wrapper:has(.article__header-native-banner)
 viivilla.se##.teaser:has(.teaser__native-marker)
@@ -1443,12 +1444,14 @@ netdoktor.se,netdoktorpro.se##.article-list__item:has(.bam-ad-slot, .article-lis
 ||breakit.se/js/hotjar
 ||breakit.se/js/facebook
 ||breakit.se/js/google-analytics
+||breakit.se/js/inmobi
 ||collect.breakit.se^
 ||player.vimeo.com^$frame,redirect=click2load.html,domain=breakit.se
 breakit.se##[class*="sponsored"], [class*="Sponsored"], [class*="LivepodPuff"], .videoAd, .js-video-ad, [class*="AdkContainer"], div[class^="LivewrappedContainer_root"]
 breakit.se##section[class*="Article_layout"]:has(section[class*="Sponsored"])
 /Scripts/ads/*$domain=osterbottenstidning.fi|sydin.fi|vasabladet.fi
 /GA_EEC$domain=osterbottenstidning.fi|sydin.fi|vasabladet.fi
+/tracking_scripts$domain=osterbottenstidning.fi|sydin.fi|vasabladet.fi
 osterbottenstidning.fi,sydin.fi,vasabladet.fi##.online-teaser--advertorial, .online-ad-container
 
 ! -- Schibsted
@@ -1519,8 +1522,9 @@ tv.nu###modal div[itemtype][itemscope] > div[class]:has(a[href*="doubleclick"])
 /banner?cg$xhr,domain=blocket.se
 blocket.se##.placement_panorama, .blocket-placement, div[style="height: 240px;"], [class*="offering-info-box"], [data-id="placement_panorama"], div[class*="BannerLink"], div[class*="GamBannerContainer"]
 ! Övrigt
-livsstil.se##a[href*="campaign"][data-test-tag="external-link"], div[data-ad-subtype]
+livsstil.se##a[href*="campaign"][data-test-tag="external-link"], div[data-ad-subtype], a[rel*="sponsored"]
 livsstil.se,godare.se##[id^="adPlacement"]:upward(1)
+livsstil.se,godare.se##div[style="min-height:350px"]:has(iframe[title="Annons"])
 livsstil.se##article:has(.ad)
 livsstil.se##article + div[class^="hyperion"]:has(iframe[src*="tize.no"])
 ||wurfl.io^$domain=vinochmatguiden.se
@@ -2314,6 +2318,7 @@ musikermagasinet.se##a[href^="/redirect-ad"]
 ||tvm-tv4-freewheel.akamaized.net^
 ||images.woo.a2d.tv/creative_assets$image,domain=tv4play.se|tv4.se|fotbollskanalen.se|koket.se
 ||d2189b0dij3l7v.cloudfront.net/p/$domain=tv4play.se|tv4.se|fotbollskanalen.se|koket.se
+||insights.tv4.a2d.tv^
 tv4play.se,tv4.se,fotbollskanalen.se,koket.se##.visit-advertiser-link
 tv4play.se,tv4.se,fotbollskanalen.se,koket.se##+js(json-prune-fetch-response, playbackItem.isStitched, , propsToMatch, url:a2d.tv/play)
 tv4play.se,tv4.se,fotbollskanalen.se,koket.se##+js(xml-prune, Ad, , /fwmrm.net\/ad\/g/)
