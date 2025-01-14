@@ -1197,6 +1197,7 @@ automation.se,verkstadstidningen.se,transportnytt.se,datormagazin.se##.a-wrap
 lakartidningen.se,canariajournalen.se##.advertisement
 chef.se,fokus.se##.Blurb--native
 vilarare.se,tidningenridsport.se##.adcontainer
+tv4.se,skippo.se##.maxetise
 
 ! -- Specific tracking, analytics, etc
 ||rek.ai^$third-party,domain=ng.se
@@ -1258,7 +1259,7 @@ aftonbladet.se,livsstil.se,godare.se,byggahus.se,expressen.se,elle.se,femina.se,
 ||cookieinfoscript.com^$domain=webbkryss.nu
 ||app.termly.io^$domain=soderkopingsposten.se|alkompis.se
 ||sleeknote.com^$domain=gaffa.se
-||termsfeed.com^$domain=travsport.se
+||termsfeed.com^$domain=travsport.se|gavletravet.se
 ||freeprivacypolicy.com^$domain=riks.se
 ||static.fastcmp.com^$domain=lchfarkivet.se
 ! Unrelated video/3d bloat
@@ -2158,12 +2159,13 @@ alltomelbil.se##:is(.p-list, div[class*="post-"]):has(a[href*="/annons"])
 /Sidobanner$image,domain=elbilen.se
 elbilen.se##a[id^="sidebar-banner"]
 banners$image,domain=travsport.se|gavletravet.se
-travsport.se,gavletravet.se##.banner-component, .partners, .cookie-meddelande
+travsport.se,gavletravet.se##.banner-component, .partners
+travsport.se,gavletravet.se##.main-content__item:has(.banner-component)
 sportapp.travsport.se##div[class^="CookieDisclaimer"]
 /frontendLogger$domain=flashscore.se
 flashscore.se##.boxOverContent--a, .otPlaceholder, .seoAdWrapper, .adsbackground-wrapper, .prematchOddsBonus__bonus, .prematchLink[target], .detailLeaderboardSkeleton
 fotbollsresultat.com##h2.fusion-responsive-typography-calculated:has-text(Spel och dobbel) ~ p
-sillyseason.se###text-41, #leader-wrapper, a[href^="/till/"][target="_blank"]
+sillyseason.se###text-41, #leader-wrapper, a[href^="/till/"]
 sillyseason.se##:is(.sidebar-widget, .archive-list li):has(a[href*=".se/odds/"], a[href*="/betting/"], a[href*="kasino"], a[href*="/promomen/"])
 sillyseason.se##.sidebar-widget > .textwidget strong:has-text(casino):upward(li.sidebar-widget)
 ljungbysporten.se##section.widget_media_image, a[target="_blank"]:not([href*="ljungbysporten.se"])
@@ -2188,6 +2190,7 @@ lundgiants.se###LoggaDiv:style(position:unset!important;)
 golf.se##.partner-area
 ||topbar.svenskelitfotboll.se/top-bar-script
 svenskelitfotboll.se##custom-ad, sponsors
+unicoach.se##sponsor-block
 svenskelitfotboll.se##.image-block:has(a[class*="sponsor"])
 hammarbyfotboll.se###seasonalTakeover, div[class*="sponsorBarContainer"], div[class*="footerSponsors"], .slick-slide a[target="_blank"]
 hammarbyfotboll.se##body[data-modal-open]:style(overflow-y:unset!important;)
@@ -2312,7 +2315,6 @@ radio-sveriges.se###original_taboola
 dansbandsnytt.se##.ai-rotate, .two-ads-wide-container
 musikermagasinet.se##a[href^="/redirect-ad"]
 ||ph.goteborgfilmfestival.se^
-/cookie_info.js$domain=goteborgfilmfestival.se
 
 ! === Video media
 
@@ -2326,9 +2328,8 @@ musikermagasinet.se##a[href^="/redirect-ad"]
 tv4play.se,tv4.se,fotbollskanalen.se,koket.se##.visit-advertiser-link
 tv4play.se,tv4.se,fotbollskanalen.se,koket.se##+js(json-prune-fetch-response, playbackItem.isStitched, , propsToMatch, url:a2d.tv/play)
 tv4play.se,tv4.se,fotbollskanalen.se,koket.se,embed.viaplay.com##+js(xml-prune, Ad, , /fwmrm.net\/ad\/g/)
-tv4.se##.maxetise
 tv4play.se,tv4.se,fotbollskanalen.se,koket.se##.avod-web-player-pause:style(background-color:transparent!important;)
-fotbollskanalen.se##.brand, .desktop-ad-web, a[href*="telia.se/privat/tv/sport"] img, .mobile-ad-web, .ad-banner
+fotbollskanalen.se##.brand, .desktop-ad-web, a[href*="telia.se/privat/tv/sport"] img, .mobile-ad-web, .ad-banner, .fbk-ad-container
 fotbollskanalen.se##.notice:has(span[class$="sponsored"])
 fotbollskanalen.se##:is(.sponsored, .theme-news_sponsored_container):upward(.theme-news)
 fotbollskanalen.se##div[class$="sponsortitle"]:upward(.desktop-side-widget)
