@@ -1,10 +1,10 @@
-diff name:swefilter lines:93 checksum:1f11ba1a2b
+diff name:swefilter lines:119 checksum:4c12fe9702
 d2 1
 a2 1
-! Last updated: Sun, 19 Jan 2025 04:34:26 +0000
+! Last updated: Mon, 20 Jan 2025 04:27:24 +0000
 d4 1
 a4 1
-! Diff-Path: patches/2025.1.19.274.patch#swefilter
+! Diff-Path: patches/2025.1.20.267.patch#swefilter
 d105 1
 a105 1
 aftonbladet.se##article[class^="article-wrapper"] ~ div[class^="hyperion"]:has(a[href*="/t?a="], a[href*="/click"], a[href^="http"][nofollow], a[href^="http"][rel*="nofollow"], iframe[src*="pricerunner"])
@@ -14,16 +14,23 @@ dagen.se##.video-annons, .native-box, .arcad-block-container, #ribbon
 d428 1
 a428 1
 dn.se,di.se,expressen.se,atl.nu,landlantbruk.se,land.se,hd.se,sydsvenskan.se,allehanda.se,tidningenangermanland.se,arbetarbladet.se,avestatidning.com,bblat.se,dalademokraten.se,fagersta-posten.se,gd.se,lt.se,ltz.se,na.se,norrteljetidning.se,nynashamnsposten.se,op.se,salaallehanda.com,st.nu,tidningenharjedalen.se,vlt.se,falkopingstidning.se,jp.se,skaraborgslanstidning.se,skovdenyheter.se,smalandsdagblad.se,smalanningen.se,smt.se,tranastidning.se,vastgotabladet.se,vetlandaposten.se,vn.se,bandypuls.se,ljusdalsposten.se,ljusnan.se,soderhamnskuriren.se,ht.se,moratidning.se,borlangetidning.se,falukuriren.se,sodran.se,nyaludvikatidning.se,skd.se,nvp.se,nuiosteraker.se,netdoktorpro.se,popularhistoria.se,aktuellhallbarhet.se,byggindustrin.se,dagensmedia.se,dagensmedicin.se,fastighetsnytt.se,resume.se,dagenssamhalle.se,market.se,dagligvarunytt.se,privataaffarer.se,barometern.se,blt.se,bt.se,kristianstadsbladet.se,olandsbladet.se,smp.se,sydostran.se,trelleborgsallehanda.se,ut.se,ystadsallehanda.se,vaxjobladet.se,nsk.se,klt.nu,illvet.se,pctidningen.se,digitalfotoforalla.se,iform.se,varldenshistoria.se,slakthistoria.se,vk.se,folkbladet.nu,nordsverige.se,mellanbygden.nu,vasterbottningen.se,lokaltidningen.nu##body.didomi-popup-open:style(overflow:unset!important)
+d507 1
+a507 1
+extrakt.se,macken.xyz,dialasen.com,lakartidningen.se,ordmedzcxy.se,gamingtips.se,veckansnyheter.se###cmplz-cookiebanner-container
 a534 1
 finanstid.se##.annon-title, .annon-title + div
 d587 1
 a587 1
-fotbollskanalen.se##.brand, .desktop-ad-web, a[href*="telia.se/privat/tv/sport"] img, .mobile-ad-web, .ad-banner, .fbk-ad-container
+fotbollskanalen.se##.brand, .desktop-ad-web, a[href*="telia.se/privat/tv/sport"] img, .mobile-ad-web, .fbk-ad-container
 d590 1
 a590 1
 fotbollsresultat.com##.fusion-flex-container:has(a[href*="casino"])
 a605 1
 fragbite.se##.messageHolder ~ div[id*="viralize"][class*="brand-showheroes"]:remove()
+d717 1
+a717 2
+hippson.se##.my-8:empty
+hippson.se##:is(.rounded-xl, .main-article-container):has(a[href="/sponsrad-artikel"])
 a906 2
 lokalfotboll.se###topbar, .really_simple_image_widget:empty
 lokalfotboll.se##.widget-title:has-text(ANNONS:):upward(.really_simple_image_widget)
@@ -65,10 +72,15 @@ tv4play.se,tv4.se,fotbollskanalen.se,koket.se,embed.viaplay.com##+js(xml-prune, 
 tv4.se,skippo.se##.maxetise
 a1405 1
 unicoach.se##sponsor-block
+d1418 1
+a1418 1
+vackertvader.se,tidningenskriva.se,eventeffect.se,executiveeffect.se,saleseffect.se,kemisamfundet.se,knep.se,ledarsidorna.se,lexbase.se##.cc-window
 d1474 1
 a1474 2
 voister.se##.ot-sdk-show-settings
 voister.se##:is(div[class^="articles_articleBrief"], article):has(div[class*="articles_campaign"])
+a1596 1
+##div.ad-banner
 d1844 1
 a1844 1
 /ads.js$domain=flashback.org|onkologiisverige.se|sjofartstidningen.se
@@ -78,17 +90,31 @@ d1981 1
 d2372 1
 a2372 1
 /raven$script,domain=mitti.se|travnet.se|nyheter24.se|tyda.se|devote.se|egoinas.se|hemtrevligt.se|alltforforaldrar.se|familjeliv.se|brollopstorget.se|blogg.se|nouw.com|lchfarkivet.se|fotbolltransfers.com|norrahalland.se|svenskgolf.se|vimedbarn.se|modette.se|vf.se|hjotidning.se|kt.se|kt-kuriren.se|sla.se|mariestadstidningen.se|filipstadstidning.se|fryksdalsbygden.se|nwt.se|arvikanyheter.se|nkp.se|saffletidningen.se|provinstidningen.se|dalslanningen.se|nlt.se|skaraborgsbygden.se|alltomnorrtalje.se|fragbite.se
+a2407 1
+/smartbanner$domain=tvmatchen.nu
+a2414 1
+/splash-redirector$domain=tvmatchen.nu
 d2591 1
 a2591 1
 @@/viralize_player_content$script,xhr,domain=nyheter24.se|modette.se|familjeliv.se|alltforforaldrar.se|loppi.se|devote.se|vimedbarn.se|brollopstorget.se|rodeo.net|travnet.se|fragbite.se
 d2601 2
 a2602 1
 @@||fwmrm.net/ad/g/$xhr,domain=tv4play.se|tv4.se|fotbollskanalen.se|koket.se|embed.viaplay.com
+d2770 1
+a2770 1
+||cookiepro.com^$domain=birthday.se|djurskyddet.se|havet.nu|upplysning.se
 a2801 1
 ||daxkryss.se^$third-party
+d2923 1
+a2923 1
+||inmobi.com^$domain=alltomelbil.se|rikatillsammans.se|egoinas.se|moviezine.se|travelnews.se|varldenshaftigaste.se|merinfo.se|foreca.se|matklubben.se|reseguiden.se|newsner.com|humorbibeln.se|sportbibeln.se|ettgottskratt.se|djurbibeln.se|laget.se|byrum.se|sportlovin.se|receptfavoriter.se|forni.se|kimura.se|cornucopia.se|norrahalland.se|finanstid.se|tittapavideon.se|motormagasinet.se|food-supply.se|dagenshandel.se|plastnet.se|habit.se|woodnet.se|foodnet.se|transportnet.se|processnet.se|packnet.se|verkstaderna.se|medtechmagazine.se|recyclingnet.se|rt-forum.se|uochd.se|lifesciencesweden.se|fri-kopenskap.se|cleannet.se|metal-supply.se|fashionnet.se|framtidensbygg.se|entreprenad.com|mykitchenstories.se|cancelculture.se|findit.se|brinkenbakar.se|foretagande.se|fotbolltransfers.com|affarsvarlden.se|villalivet.se|branschaktuellt.se|nordic.ign.com|fragbite.se|lindasbakskola.se|jennysmatblogg.nu|filippoon.se|niiinis.se|lesscarbs.se|eniro.se|matspar.se|xnytt.se|alltomkungligt.se|swehockey.se|vackertvader.se|newly.se|nyheter2.se|klendr.se|elsasentourage.se|zeinaskitchen.se|svenskalag.se|tvsporten.nu|frillesasbandy.se|skik.se|marketmate.se|svartgul.se|langd.se|babyhjalp.se|breakit.se|kokaihop.se|skyttesport.se|flashback.org|nyadagbladet.se|enkelteknik.se|alltomnorrtalje.se|stoppapressarna.se|sporttv.nu|nyteknik.se|arbetarskydd.se|leta.se|poddtoppen.se
 d3097 1
 a3097 1
 ||privacy-mgmt.com^$domain=radio.se|dagenstv.com|kolla.tv|computersweden.se|woxikon.se|dagen.se|filmtopp.se|upday.com|gaffa.se|handbollskanalen.se|stayfriends.se
+d3110 1
+a3110 1
+||quantcast.com^$domain=travelgrip.se|samnytt.se|motivation.se|goforfit.se|expo.se|doon.se|garaget.org|nouw.com|listor.se
 d3218 1
 a3218 1
 ||termsfeed.com^$domain=travsport.se|gavletravet.se
+d3244 2
