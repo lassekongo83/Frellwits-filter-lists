@@ -1,10 +1,10 @@
-diff name:swefilter lines:135 checksum:ccc10d06d1
+diff name:swefilter lines:156 checksum:62a3b011c8
 d2 1
 a2 1
-! Last updated: Tue, 28 Jan 2025 05:05:40 +0000
+! Last updated: Wed, 29 Jan 2025 06:19:43 +0000
 d4 1
 a4 1
-! Diff-Path: patches/2025.1.28.305.patch#swefilter
+! Diff-Path: patches/2025.1.29.379.patch#swefilter
 d116 1
 a116 1
 aftonbladet.se,halsasverige.se,mandarinmedia.se,nojesmagasinet.nu,stoppapressarna.se,langd.se,pressbladet.se,svenskpress.se,foretagsbladet.se,gestrikemagasinet.se,cfanytt.se,lasarnas.se,hembostad.nu,sportidrott.se,computersweden.se,thatsup.se,arbetaren.se,sjofartstidningen.se,restaurangvarlden.se##.advert
@@ -61,6 +61,8 @@ d944 1
 d970 1
 a970 1
 metalcentral.net,rotter.se,ifboat.se##.bannergroup
+a1010 1
+m.yelp.se##div[class^="banner"]
 d1067 1
 a1067 1
 nyhetsbyranjarva.se,nyan.ax,tv-kanal.se,golfguidenonline.se,rockbladet.se,vildmarken.se,nyhetersto.se,dagenslogistik.se##.g
@@ -84,12 +86,25 @@ d1307 1
 d1343 1
 a1344 1
 telgenytt.se##.tn-ad
+d1377 1
+a1377 1
+totallyorebro.se,totallystockholm.se##[class*="tot-content-preview-container"]:has(a[href*="casino"], a[href*="kasino"], a[href*="betting"], a[href*="spel"], .sponsoredarticles):remove()
 a1419 1
 universitetsmedia.se##.discounts-container
 a1605 1
 ##div.ads-above-post
 a1729 1
 ##.ad-inside-single-article:not(body):not(html)
+d1892 1
+a1892 1
+/annons$image,domain=dagensvimmerby.se|dagensvastervik.se|dagenskalmar.nu|dagenshultsfred.se|filmtopp.se|webbkameror.se|omkonst.com
+d1928 1
+a1928 1
+/banners$domain=magasinetparagraf.se|sporttv.nu|cykla.se|vatternrundan.se|dagenstv.com|sydkusten.es|pellesoft.se|dykarna.nu|varmepumpsforum.com|poolforum.se|classiccars.se|borsvarlden.com|nitroz.se
+d1932 1
+a1932 1
+/banner$domain=assistanskoll.se|thepattayanews.se|hrnytt.se|lokalguiden.se|nyaboendet.se|ljudoljus.net
+d1941 1
 a1944 1
 /bilder/*annons$domain=sfft.se
 d1986 1
@@ -101,7 +116,9 @@ a1991 1
 d1994 1
 a1994 1
 /cookie-law-info$script,domain=gilla.se|startaochdriva.se|sverige.nu|conpot.se|firstclassmagazine.se|magasinetkonkret.se|kvalitetsmagasinet.se|miljo-utveckling.se|telekomidag.se|vdtidningen.se|gullislastips.se|nyfiknainvesterare.se|discoveringtheplanet.com|bussmagasinet.se|torbjornstips.se|affarsstaden.se|automation.se|dinbyggare.se|aktieskolan.se|insikt24.se|skogen.se|sulkysport.se|bitzmagasin.se|battrestadsdel.se|automatos.se|80-talet.se|goteborgnyheter.se|elitepadel.se|vetenskaphalsa.se|rakapuckar.com|konstperspektiv.nu|56kilo.se|surveyors.se|maximumsports.se|rucksack.se|ingridochmaria.se|frihetsnytt.se|globalportalen.org|juligen.se
+d2004 1
 d2013 1
+d2091 1
 d2191 1
 a2191 1
 /pixel/impression$image
@@ -125,12 +142,16 @@ a2637 1
 ||addtoany.com^$third-party,domain=~ghgprotocol.org
 a2667 1
 ||amazonaws.com/*banner$domain=goteborgfilmfestival.se
+d2693 1
+d2723 1
 d2745 1
 a2745 1
 ||cdn-cookieyes.com^$domain=lokalti.se|jarnvagar.nu|senses.se|norrmejerier.se|temadagar.se|tekniknytt.se|nordigt.se|autonytt.se|vm-fotboll.se|kak.se|smhi.se|borattforum.se|mis.se|universitetslararen.se|em-fotboll.se|lakemedelsvarlden.se|samfalligheterna.se|husbilsplats.se|katerinamagasin.se|dagenslogistik.se|biostock.se|skellefteaworks.se|datormagazin.se|travnet.se|malarbok.nu|barn-filmer.se|matmenyer.se|sunnenytt.se|kristendate.se|hockeynews.se|swe3.se|spelbloggen.se|matinspo.se|trendenser.se|kattannonser.se|56kilo.se|horisontmagasin.se|automobilly.com|nordicmanufacturing.net|nationalekonomi.se
 d2779 1
 a2779 1
 ||cookiebot.com^$domain=ng.se|swedroid.se|bax-shop.se|kurera.se|upplysning.se|mitti.se|circlek.se|findroommate.se|sakochliv.se|polistidningen.se|fokus.se|spraktidningen.se|varden.se|trafiken.nu|energi.se|sverigesnatur.org|kreditrapporten.se|sis.se|accentmagasin.se|allsvenskan.se|superettan.se|alltomarbetsmiljo.se|tco.se|totallyorebro.se|totallystockholm.se|enirobuddy.se|framtid.se|byggfaktadocu.se|husdjur.se|chalmers.se|elinstallatoren.se|ff.se|modernpsykologi.se|qx.se|vatternrundan.se|vvsforum.se|naturvetarna.se|skolporten.se|dust2.se|ehandel.se|byggvarlden.se|varldenidag.se|omtanke.today|hotellorestaurang.se|byggfakta.today|citymark.today|konsumentmagasinet.se|svenskelitfotboll.se|journalisten.se|fastighetsvarlden.se|jaktjournalen.se|friidrott.se|vildmarken.se|kyrkanstidning.se|tmf.se|sokbat.se|bilkompaniet.se|driva-eget.se|hv.se|folkhalsomyndigheten.se|dinpsykiskahalsa.se|ekonomifakta.se|hyresbostader.se|rsyd.se|byggforetagen.se|vasterastidning.se|storyhouseegmont.se|mytaste.se|smartbizz.se|tandlakartidningen.se|fastighetssverige.se|turisterna.se|byggfakta.se|svenskfordonsladdning.se|nextconomy.se|riksteatern.se|scenochfilm.se|transport.se|saco.se|byggahus.se|smartsenior.se|dagensopinion.se|livsmedelsforetagen.se|djurrattsalliansen.se|pvforetagen.se
-a3069 1
-||omkonst.com/annons/
+d2874 1
+d2996 1
+d2999 1
+d3057 1
 d3087 1
