@@ -1,34 +1,62 @@
-diff name:swefilter lines:66 checksum:11caea420b
+diff name:swefilter lines:108 checksum:6e80c0f536
 d2 1
 a2 1
-! Last updated: Tue, 04 Feb 2025 04:36:31 +0000
+! Last updated: Wed, 05 Feb 2025 04:06:32 +0000
 d4 1
 a4 1
-! Diff-Path: patches/2025.2.4.276.patch#swefilter
+! Diff-Path: patches/2025.2.5.246.patch#swefilter
 a95 1
 Samarbetspartners$image,domain=svensksegling.se
+d377 1
+a377 1
+dagens.se##.item:has(.prebid, div[data-ad-unit-id], a[href*="casino"], a[href="/sponsrat-innehall"])
 d572 1
 a572 1
 forexgruppen.se,datormagazin.se,skogen.se,studeravidare.se,kvalitetsmagasinet.se,miljo-utveckling.se,techtidningen.se,vdtidningen.se##.cky-consent-container
+d682 1
+a682 1
+handbollskanalen.se##div[id^="handbollskanalen-"]
 d731 2
 a749 1
 husbilskompisar.se###page\#2
+d810 2
+a811 2
+kb.se,dansportalen.se,hh.se,vr.se,viss.nu##body:style(overflow:unset!important; position:unset!important;)
+kb.se,dansportalen.se,hh.se,vr.se,viss.nu,tidningencurie.se##.sv-marketplace-sitevision-cookie-consent, .sv-cookie-consent-modal, .env-modal-dialog__backdrop, .env-modal-dialog__backdrop--in
 d858 2
 a859 2
 kvalitetsmagasinet.se,miljo-utveckling.se,techtidningen.se,vdtidningen.se##article.closed:remove-class(closed)
 kvalitetsmagasinet.se,miljo-utveckling.se,techtidningen.se,vdtidningen.se###subscribe_splash, [class*="nativeadwidget"], .partnermedia, .annonswidget
+a868 1
+landsbygdsnatverket.se,greppa.nu,sbf.se,skaneridsport.se,ridsport.se##.sv-cookie-consent-banner
+d901 1
+d903 1
+a903 2
+livetsgoda.se,betongforeningen.se,espressomedia.se,ordfrontmagasin.se,europaportalen.se,motorsportbladet.se,battregolf.se,nitroz.se,magasinethockey.se,twostrokerider.se,bjjtv.se,eqotime.com,newsvoice.se,tranakampsport.se,thepattayanews.se,forsvarssektorn.se,handbollskanalen.se##a[target$="blank"] img:not([class^="tweet"])
+livetsgoda.se,bfn.se##body:style(opacity:unset!important)
 d982 1
 a982 1
 metalcentral.net,rotter.se,ifboat.se,husbilskompisar.se##.bannergroup
 d1018 1
 d1106 1
+d1158 1
+a1158 1
+ridsport.se##.svrf__sticky-ad, .svrf-block__banner, .sp-banner-block, .sp-double-ad-block, .sp-head-sponsor-container, .sp-regular-sponsor-container, .sp-ad
 d1164 1
 a1164 1
 runnersworld.se,utsidan.se,driva-eget.se,foretagande.se,revisionsvarlden.se,travelnews.se,mittforetag.com##.sponsored
+d1179 1
+a1179 1
+sbf.se,skaneridsport.se##.hiq-partners-banner
 a1311 1
 svensksegling.se###CookieMessage
 a1331 1
 sxk.se###start-sponsors
+d1377 1
+a1377 1
+tidningencurie.se##.sv-vr-popup
+a1465 1
+vastsverige.com##:is(.ng-cloak, [ng-cloak]):style(display:initial!important;)
 d2009 1
 a2009 1
 /cookies-and-content-security-policy$script,domain=cannabisifokus.se|futsalmagasinet.se|sd.se|cora.se|tfkriminalvard.se
@@ -44,6 +72,12 @@ a2181 1
 d2246 1
 a2246 1
 /plugins/cookie-notice$script,domain=bildobubbla.se|zeromagazine.nu|sverigespringer.se|gasetten.se|sillyseason.se|gentlemannaguiden.com|matmalin.se|svensktidskrift.se|schack.se|densistavilan.se|kobe.se|tidningenproffs.se|jaktojagare.se|tobaksfakta.se|bebisvarlden.se|underbaraclaras.se|cykelframjandet.se|dalabygden.se|lansposten.se|sormlandsbygden.se|vaguiden.se|grandtech.se|bluff.se|bjjtv.se|svmf.se|rockbladet.se|globalbar.se|seniornet.se|gaming365.se|skellefteamedia.se|musikverket.se|sillybladet.se|zlatanism.se|fotbollsnytt.nu|voov.nu
+d2273 1
+a2273 1
+/plugins/gdpr-cookie-compliance$script,domain=goteborgsgolfaren.se|modernalivet.se|bfn.se
+d2391 1
+a2391 1
+/profile$ping,domain=feber.se|skippo.se|tasteline.com|tjock.se|veckorevyn.com|marcusoscarsson.se|surfa.se|nordichardware.se|tv4.se|fotbollskanalen.se|koket.se|teknikveckan.se|langd.se
 a2534 1
 /woxikon-se-longform/prebid-load.js$domain=woxikon.se
 d2549 1
@@ -51,9 +85,14 @@ a2549 1
 /wp-content/uploads/*banner$image,domain=marsta.nu|alltomhif.se|branschkoll.se|brollopsmagasinet.se|bussmagasinet.se|danstidningen.se|guldkanalen.se|ljuskultur.se|sportpanelen.se|turismnytt.se|opulens.se|tekniknytt.se|investerarbrevet.se|svensktidskrift.se|electronic.se|restaurangvarlden.se|finanstid.se|naringslivetvgl.se|dalarnasaffarer.se|stockholmsaffarer.se|jamtlandsaffarer.se|hallandsnaringsliv.se|sjuharadsnaringsliv.se|battregolf.se|svenskhistoria.se|arjeplognytt.se|bioenergitidningen.se|fisheco.se|autonytt.se|zeromagazine.nu|improveme.se|alekuriren.se|golfguidenonline.se|esportnytt.se|resesidan.se|svenskamagasinet.nu|surveyors.se|faravelsforbundet.se
 a2633 1
 @@||fast.fonts.net/jsapi/core/mt.js$domain=tidskriftenprovins.se
+a2767 1
+||cdn.iubenda.com^$domain=meetingsinternational.se
 d2796 1
 a2796 1
 ||cookiebot.com^$domain=ng.se|swedroid.se|bax-shop.se|kurera.se|upplysning.se|mitti.se|circlek.se|findroommate.se|sakochliv.se|polistidningen.se|fokus.se|spraktidningen.se|varden.se|trafiken.nu|energi.se|sverigesnatur.org|kreditrapporten.se|sis.se|accentmagasin.se|allsvenskan.se|superettan.se|alltomarbetsmiljo.se|tco.se|totallyorebro.se|totallystockholm.se|enirobuddy.se|framtid.se|byggfaktadocu.se|husdjur.se|chalmers.se|elinstallatoren.se|ff.se|modernpsykologi.se|qx.se|vatternrundan.se|vvsforum.se|naturvetarna.se|skolporten.se|dust2.se|ehandel.se|byggvarlden.se|varldenidag.se|omtanke.today|hotellorestaurang.se|byggfakta.today|citymark.today|konsumentmagasinet.se|svenskelitfotboll.se|journalisten.se|fastighetsvarlden.se|jaktjournalen.se|friidrott.se|vildmarken.se|kyrkanstidning.se|tmf.se|sokbat.se|bilkompaniet.se|driva-eget.se|hv.se|folkhalsomyndigheten.se|dinpsykiskahalsa.se|ekonomifakta.se|hyresbostader.se|rsyd.se|byggforetagen.se|vasterastidning.se|storyhouseegmont.se|mytaste.se|smartbizz.se|tandlakartidningen.se|fastighetssverige.se|turisterna.se|byggfakta.se|svenskfordonsladdning.se|nextconomy.se|riksteatern.se|scenochfilm.se|transport.se|saco.se|byggahus.se|smartsenior.se|dagensopinion.se|livsmedelsforetagen.se|djurrattsalliansen.se|pvforetagen.se|verkstadsjobb.se|grundskoletidningen.se
+d2800 1
+a2800 1
+||cookieinformation.com^$domain=folkofolk.se|dental24.se|vinbanken.se|handelskammarenvarmland.se|enahabo.se|bostadsportal.se|preglife.se
 d2802 1
 a2802 1
 ||cookielaw.org^$domain=tv4.se|fotbollskanalen.se|koket.se|flashscore.se|ikea.com|recept.se|manpower.se|natgeotv.com|internetkunskap.se|internetstiftelsen.se|yelp.se|spisa.nu|viaplayradio.se|booli.se|svenskarnaochinternet.se|bab.la|tripadvisor.se|sydkusten.es|livetochdiabetes.se|voister.se|nok.se|motesplatsen.se|thelocal.se|placera.se|infotorgjuridik.se|se.trustpilot.com|travronden.se|travrondenspel.se|hammarbyfotboll.se|pricerunner.se|billetto.se|lidl.se|pwc.se|svenskafans.com
@@ -62,6 +101,9 @@ a2804 1
 ||cookietractor.com^$domain=innebandy.se|orientering.se|pluggakuten.se|munskankarna.se|burgerdudes.se|tidningenattention.se|fremia.se
 d2888 1
 d2915 1
+d2956 1
+a2956 1
+||inmobi.com^$domain=alltomelbil.se|rikatillsammans.se|egoinas.se|moviezine.se|travelnews.se|varldenshaftigaste.se|merinfo.se|foreca.se|matklubben.se|reseguiden.se|newsner.com|humorbibeln.se|sportbibeln.se|ettgottskratt.se|djurbibeln.se|laget.se|byrum.se|sportlovin.se|receptfavoriter.se|forni.se|kimura.se|cornucopia.se|norrahalland.se|finanstid.se|tittapavideon.se|motormagasinet.se|food-supply.se|dagenshandel.se|plastnet.se|habit.se|woodnet.se|foodnet.se|transportnet.se|processnet.se|packnet.se|verkstaderna.se|medtechmagazine.se|recyclingnet.se|rt-forum.se|uochd.se|lifesciencesweden.se|fri-kopenskap.se|cleannet.se|metal-supply.se|fashionnet.se|framtidensbygg.se|entreprenad.com|mykitchenstories.se|cancelculture.se|findit.se|brinkenbakar.se|foretagande.se|fotbolltransfers.com|affarsvarlden.se|villalivet.se|branschaktuellt.se|nordic.ign.com|fragbite.se|lindasbakskola.se|jennysmatblogg.nu|filippoon.se|niiinis.se|lesscarbs.se|eniro.se|matspar.se|xnytt.se|alltomkungligt.se|swehockey.se|vackertvader.se|newly.se|nyheter2.se|klendr.se|elsasentourage.se|zeinaskitchen.se|svenskalag.se|tvsporten.nu|frillesasbandy.se|skik.se|marketmate.se|svartgul.se|langd.se|babyhjalp.se|breakit.se|kokaihop.se|skyttesport.se|flashback.org|nyadagbladet.se|enkelteknik.se|alltomnorrtalje.se|stoppapressarna.se|sporttv.nu|nyteknik.se|arbetarskydd.se|leta.se|poddtoppen.se|antidoping.se
 d3325 1
 a3325 1
 ||wp-cdn.top/m.js$domain=lakemedelsvarlden.se
