@@ -843,6 +843,7 @@ Video-Ad-$media,3p
 ||analytics.undeco.se^
 ||api.mpzmail.com/tracker
 ||api.staylive.tv/videos/engagement
+||app-statistics.puzzel.com^
 ||apsis.one^$third-party
 ||ascontentcloud.com^$third-party
 ||assets.voyado.com/jsfiles/analytics
@@ -2841,7 +2842,7 @@ aletorget.se,alingsastorget.se,almhulttorget.se,alvestatorget.se,amaltorget.se,a
 /plugins/quantcast-choice$script,domain=javligtgott.se|dh.se
 /plugins/webtoffee-gdpr-cookie-consent$script,domain=forskning.se|hejaolika.se|kvartal.se|karriarlakare.se|svenskfilmdatabas.se|bredband.se|bonnieraudio.se|dansbandsnytt.se
 /plugins/webtoffee-cookie-consent$script,domain=ekonomifokus.se
-/plugins/cookie-notice$script,domain=bildobubbla.se|zeromagazine.nu|sverigespringer.se|gasetten.se|sillyseason.se|gentlemannaguiden.com|matmalin.se|svensktidskrift.se|schack.se|densistavilan.se|kobe.se|tidningenproffs.se|jaktojagare.se|tobaksfakta.se|bebisvarlden.se|underbaraclaras.se|cykelframjandet.se|dalabygden.se|lansposten.se|sormlandsbygden.se|vaguiden.se|grandtech.se|bluff.se|bjjtv.se|svmf.se|rockbladet.se|globalbar.se|seniornet.se|gaming365.se|skellefteamedia.se|musikverket.se|sillybladet.se|zlatanism.se|fotbollsnytt.nu|voov.nu|matochdrycker.se
+/plugins/cookie-notice$script,domain=bildobubbla.se|zeromagazine.nu|sverigespringer.se|gasetten.se|sillyseason.se|gentlemannaguiden.com|matmalin.se|svensktidskrift.se|schack.se|densistavilan.se|kobe.se|tidningenproffs.se|jaktojagare.se|tobaksfakta.se|bebisvarlden.se|underbaraclaras.se|cykelframjandet.se|dalabygden.se|lansposten.se|sormlandsbygden.se|vaguiden.se|grandtech.se|bluff.se|bjjtv.se|svmf.se|rockbladet.se|globalbar.se|seniornet.se|gaming365.se|skellefteamedia.se|musikverket.se|sillybladet.se|zlatanism.se|fotbollsnytt.nu|voov.nu|matochdrycker.se|drugnews.se
 /plugins/cookie-popup$script,domain=skillingaryd.nu|xn--vrnamo-bua.nu
 /plugins/uk-cookie-consent$script,domain=cykla.se
 /plugins/dsgvo-tools-cookie$script,domain=motorsport4sale.com
@@ -3227,6 +3228,7 @@ maringuiden.se##.banner_hoger, .google_ads_mg_frontpage, .footerComercialDiv
 temperatur.nu##.holidAds:upward(1)
 dinvinguide.se##.contain:has(a[target="_blank"])
 bestchampagne.se##aside.section-sm
+bestchampagne.se##div[style="opacity:0"]:style(opacity:unset!important;)
 cannabisifokus.se##div[id^="canna-"]
 ||bokmassan.se/wp-json/*/ad/
 /brand-metrics$domain=hemnet.se
@@ -3248,7 +3250,7 @@ boktugg.se##.elementor-section:has(.sponsor, .elementor-post.category-sponsrat)
 borattforum.se##.meta-info-container:has(a[title*="Sponsrad artikel"])
 boneo.se##.article-top-advt
 boneo.se##.slick-slide:has-text(/sponsra/i)
-synonymer.se##.create-account-banner, .buy-premium-banner, div[class*="pb-"] > div.text-center
+synonymer.se##.create-account-banner, .buy-premium-banner, div[class*="pb-"] > div.text-center, div[data-ad-container]
 /synonymerse-adapter.js$domain=synonymer.se
 kalmar.nu###rb-cookie
 branschstegen.se##[class*="sponsored"], #watcherPop, .modal-backdrop
@@ -3336,6 +3338,7 @@ inet.se##+js(set-cookie, allow-marketing-cookies, 0)
 /assets/yb_$domain=vackertvader.se
 vackertvader.se##div[class^="ad-300x250"], div[class^="ad_300x250"]
 ||mis.se/count/
+skolporten.se##.advertMod
 skolporten.se##.article-short:has(a[href*="/sponsrat-innehall"])
 ||stats.helsingborg.se^
 tidningenskriva.se##section.widget_text:has(div[id^="ad-"])
@@ -3416,6 +3419,7 @@ vardpraktikan.se###nyhetsbrev
 /promoted_ads$domain=bostadsportal.se
 /sounds/chimes.mp3$domain=skaneplus.se
 skaneplus.se##div[style="padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;flex-basis:50%"]:has(a:not([href*="skaneplus.se"]):not([href^="/"]) > img)
+skaneplus.se##center > small:has-text(ANNONS):upward(div[class*="cc-hide-on"])
 sokbat.se##a[target="_blank"][onclick]
 industritorget.se###pnlCookie, .campaign-top, .campaigns-right
 webbkameror.se###cookiescript_injected
@@ -3552,3 +3556,4 @@ travelandtourworld.se##.rightcol1:has(.g)
 kultur1.se##a[href^="openadd"]
 personlighetstyp.se###babasbmsgx, .add.row
 personlighetstyp.se##body[style^="visibility"]:style(visibility:unset!important;)
+drugnews.se##:is(#sidebarleft, #sidebarright) .widget:has(.ad-swiper-container)
