@@ -1,10 +1,10 @@
-diff name:swefilter lines:232 checksum:d07ce14317
+diff name:swefilter lines:245 checksum:8070a1f815
 d2 1
 a2 1
-! Last updated: Tue, 11 Feb 2025 04:42:50 +0000
+! Last updated: Wed, 12 Feb 2025 04:08:43 +0000
 d4 1
 a4 1
-! Diff-Path: patches/2025.2.11.282.patch#swefilter
+! Diff-Path: patches/2025.2.12.248.patch#swefilter
 a36 1
 .se/annonser/$image
 a95 1
@@ -17,6 +17,8 @@ aktavara.org##.banner-start
 d188 1
 a188 1
 assistanskoll.se##.aannons
+a223 1
+bestchampagne.se##div[style="opacity:0"]:style(opacity:unset!important;)
 d299 1
 a299 1
 byggahus.se,expressen.se,filmtopp.se,destination.se,spokbloggen.nu,folkhalsasverige.se,foretagsverige.se,forskningsverige.se,motorbibeln.se,hallbarhetsverige.se,tillvaxtsverige.se,grillbibeln.se,kampenmotcancer.se,bolagsfakta.se,affarsvarlden.se,affarerinorr.se,viivilla.se,dinordbok.se##.ad-container
@@ -25,6 +27,8 @@ bytesverket.se###cookies-policy
 d376 1
 a376 1
 dagens.se##.item:has(.prebid, div[data-ad-unit-id], a[href*="casino"], a[href="/sponsrat-innehall"])
+a432 1
+drugnews.se##:is(#sidebarleft, #sidebarright) .widget:has(.ad-swiper-container)
 a453 1
 elprisetjustnu.se##.container:has(.btn-sponsor)
 d461 1
@@ -110,6 +114,10 @@ samefolket.se##.elementor-widget-image:has(a[href*="Annons"], img[src*="Banner"]
 d1167 1
 a1167 1
 sbf.se,skaneridsport.se##.hiq-partners-banner
+a1199 1
+skaneplus.se##center > small:has-text(ANNONS):upward(div[class*="cc-hide-on"])
+a1216 1
+skolporten.se##.advertMod
 d1257 1
 a1257 1
 sportsnews.se,xn--sporthnt-5za.se,killsteal.se,samnytt.se,samnytt.nu,obsid.se,senses.se,teknologiexperten.se,sverige.nu,enterprisemagazine.se##a[href*="casino"]
@@ -117,6 +125,9 @@ a1299 1
 svensksegling.se###CookieMessage
 a1319 1
 sxk.se###start-sponsors
+d1325 1
+a1325 1
+synonymer.se##.create-account-banner, .buy-premium-banner, div[class*="pb-"] > div.text-center, div[data-ad-container]
 d1365 1
 a1365 1
 tidningencurie.se##.sv-vr-popup
@@ -171,7 +182,7 @@ a2230 1
 /plugins/complianz-gdpr$script,domain=iconmagazine.se|signprint.se|vilaser.se|arjeplognytt.se|tidningenglobal.se|tidningensyre.se|landetsfria.nu|fempers.se|macken.xyz|brollopsmagasinet.se|megafonen.se|radiotreby.se|kyrka.se|tlnt.se|sjofartstidningen.se|pensionarsliv.se|aktuellsakerhet.se|maklarvarlden.se|sjomannen.se|home2tiny.se|marketplace.se|livsmedelsnyheter.se|dovastidning.se|vgrfokus.se|samefolket.se
 d2235 1
 a2235 1
-/plugins/cookie-notice$script,domain=bildobubbla.se|zeromagazine.nu|sverigespringer.se|gasetten.se|sillyseason.se|gentlemannaguiden.com|matmalin.se|svensktidskrift.se|schack.se|densistavilan.se|kobe.se|tidningenproffs.se|jaktojagare.se|tobaksfakta.se|bebisvarlden.se|underbaraclaras.se|cykelframjandet.se|dalabygden.se|lansposten.se|sormlandsbygden.se|vaguiden.se|grandtech.se|bluff.se|bjjtv.se|svmf.se|rockbladet.se|globalbar.se|seniornet.se|gaming365.se|skellefteamedia.se|musikverket.se|sillybladet.se|zlatanism.se|fotbollsnytt.nu|voov.nu|matochdrycker.se
+/plugins/cookie-notice$script,domain=bildobubbla.se|zeromagazine.nu|sverigespringer.se|gasetten.se|sillyseason.se|gentlemannaguiden.com|matmalin.se|svensktidskrift.se|schack.se|densistavilan.se|kobe.se|tidningenproffs.se|jaktojagare.se|tobaksfakta.se|bebisvarlden.se|underbaraclaras.se|cykelframjandet.se|dalabygden.se|lansposten.se|sormlandsbygden.se|vaguiden.se|grandtech.se|bluff.se|bjjtv.se|svmf.se|rockbladet.se|globalbar.se|seniornet.se|gaming365.se|skellefteamedia.se|musikverket.se|sillybladet.se|zlatanism.se|fotbollsnytt.nu|voov.nu|matochdrycker.se|drugnews.se
 d2262 1
 a2262 1
 /plugins/gdpr-cookie-compliance$script,domain=goteborgsgolfaren.se|modernalivet.se|bfn.se
@@ -189,6 +200,8 @@ a2536 1
 /wp-content/uploads/*banner$image,domain=marsta.nu|alltomhif.se|branschkoll.se|brollopsmagasinet.se|bussmagasinet.se|danstidningen.se|guldkanalen.se|ljuskultur.se|sportpanelen.se|turismnytt.se|opulens.se|tekniknytt.se|investerarbrevet.se|svensktidskrift.se|electronic.se|restaurangvarlden.se|finanstid.se|naringslivetvgl.se|dalarnasaffarer.se|stockholmsaffarer.se|jamtlandsaffarer.se|hallandsnaringsliv.se|sjuharadsnaringsliv.se|battregolf.se|svenskhistoria.se|arjeplognytt.se|bioenergitidningen.se|fisheco.se|autonytt.se|zeromagazine.nu|improveme.se|alekuriren.se|golfguidenonline.se|esportnytt.se|resesidan.se|svenskamagasinet.nu|surveyors.se|faravelsforbundet.se|travelandtourworld.se
 a2620 1
 @@||fast.fonts.net/jsapi/core/mt.js$domain=tidskriftenprovins.se
+a2690 1
+||app-statistics.puzzel.com^
 d2699 1
 d2729 1
 d2751 1
