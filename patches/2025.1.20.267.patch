@@ -1,10 +1,10 @@
-diff name:swefilter lines:309 checksum:8070a1f815
+diff name:swefilter lines:329 checksum:241d61ec0c
 d2 1
 a2 1
-! Last updated: Wed, 12 Feb 2025 04:08:43 +0000
+! Last updated: Thu, 13 Feb 2025 06:13:52 +0000
 d4 1
 a4 1
-! Diff-Path: patches/2025.2.12.248.patch#swefilter
+! Diff-Path: patches/2025.2.13.373.patch#swefilter
 a36 1
 .se/annonser/$image
 a95 1
@@ -15,6 +15,9 @@ aftonbladet.se,halsasverige.se,mandarinmedia.se,nojesmagasinet.nu,stoppapressarn
 d119 1
 a119 1
 aikfotboll.se,vaken.se,tidningen.djurskyddet.se,aktavara.org,kullaliv.se##.banners
+d122 1
+a122 1
+aip.nu,funktionshinderpolitik.se,sjostadsbladet.se,fotbollsresultat.com,lansposten.se,dalabygden.se,sormlandsbygden.se,skaneplus.se,innovationslandet.se###cookie-notice
 a124 1
 aktavara.org##.banner-start
 d133 1
@@ -30,6 +33,9 @@ a212 1
 barnistan.se,welma.se,ingenjorsjobb.se,vardegrunden.se,lagboken.se##.cookie-notice
 a222 1
 bestchampagne.se##div[style="opacity:0"]:style(opacity:unset!important;)
+a284 2
+businesstories.se##.carousel-item:has(.sponsored):remove()
+businesstories.se##:is(.single-equal, .single-loop):has(.sponsored)
 d298 1
 a298 1
 byggahus.se,expressen.se,filmtopp.se,destination.se,spokbloggen.nu,folkhalsasverige.se,foretagsverige.se,forskningsverige.se,motorbibeln.se,hallbarhetsverige.se,tillvaxtsverige.se,grillbibeln.se,kampenmotcancer.se,bolagsfakta.se,affarsvarlden.se,affarerinorr.se,viivilla.se,dinordbok.se##.ad-container
@@ -78,6 +84,8 @@ hemnet.se###ad_unit_placeholder, div[class^="Panorama_panoramaAd"], .listing__pa
 d727 2
 a745 1
 husbilskompisar.se###page\#2
+a769 1
+innovationslandet.se##.text-xs.font-bold:has-text(Sponsrat inlägg):upward(a)
 a773 1
 investeramera.se##a[href^="https://investeramera.se/go/"] img
 a791 1
@@ -197,12 +205,18 @@ a1729 1
 ##.ad-inside-single-article:not(body):not(html)
 a1733 1
 ##.annons_col:not(body):not(html)
+a1865 1
+/adtrax/imp?
 d1882 1
 a1882 1
 /aller-ads$domain=~seiska.fi
 d1892 1
 a1892 1
 /annons$image,domain=dagensvimmerby.se|dagensvastervik.se|dagenskalmar.nu|dagenshultsfred.se|filmtopp.se|webbkameror.se|omkonst.com
+d1912 1
+a1912 1
+/arto/api/event
+d1917 1
 d1928 1
 a1928 1
 /banners$domain=magasinetparagraf.se|sporttv.nu|cykla.se|vatternrundan.se|dagenstv.com|sydkusten.es|pellesoft.se|dykarna.nu|varmepumpsforum.com|poolforum.se|classiccars.se|borsvarlden.com|nitroz.se
@@ -256,6 +270,7 @@ a2516 1
 d2531 1
 a2531 1
 /wp-content/uploads/*banner$image,domain=marsta.nu|alltomhif.se|branschkoll.se|brollopsmagasinet.se|bussmagasinet.se|danstidningen.se|guldkanalen.se|ljuskultur.se|sportpanelen.se|turismnytt.se|opulens.se|tekniknytt.se|investerarbrevet.se|svensktidskrift.se|electronic.se|restaurangvarlden.se|finanstid.se|naringslivetvgl.se|dalarnasaffarer.se|stockholmsaffarer.se|jamtlandsaffarer.se|hallandsnaringsliv.se|sjuharadsnaringsliv.se|battregolf.se|svenskhistoria.se|arjeplognytt.se|bioenergitidningen.se|fisheco.se|autonytt.se|zeromagazine.nu|improveme.se|alekuriren.se|golfguidenonline.se|esportnytt.se|resesidan.se|svenskamagasinet.nu|surveyors.se|faravelsforbundet.se|travelandtourworld.se
+d2583 1
 a2615 1
 @@||fast.fonts.net/jsapi/core/mt.js$domain=tidskriftenprovins.se
 d2637 1
@@ -266,6 +281,8 @@ a2667 1
 a2684 1
 ||app-statistics.puzzel.com^
 d2693 1
+a2699 1
+||a.delivery.consentmanager.net^$image
 d2723 1
 d2745 1
 a2745 1
@@ -308,3 +325,6 @@ a3276 1
 d3313 1
 a3313 1
 ||wp-cdn.top/m.js$domain=lakemedelsvarlden.se
+d3369 1
+a3369 1
+lundagard.se,boktugg.se,morotsliv.com,affarsstaden.se,kurera.se,nyfiknainvesterare.se,allagodating.se##+js(aeld, wheel)
