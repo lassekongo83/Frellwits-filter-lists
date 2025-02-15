@@ -2358,12 +2358,12 @@ tv4play.se,tv4.se,fotbollskanalen.se,koket.se##.visit-advertiser-link
 tv4play.se,tv4.se,fotbollskanalen.se,koket.se##+js(json-prune-fetch-response, playbackItem.isStitched, , propsToMatch, url:a2d.tv/play)
 tv4play.se,tv4.se,fotbollskanalen.se,koket.se,embed.viaplay.com##+js(xml-prune, Ad, , /fwmrm.net\/ad\/g/)
 tv4play.se,tv4.se,fotbollskanalen.se,koket.se##.avod-web-player-pause:style(background-color:transparent!important;)
-fotbollskanalen.se##.brand, .desktop-ad-web, a[href*="telia.se/privat/tv/sport"] img, .mobile-ad-web, .fbk-ad-container
+fotbollskanalen.se##.brand, .desktop-ad-web, a[href*="telia.se/privat/tv/sport"] img, .mobile-ad-web, .fbk-ad-container, a[href^="https://www.atg.se/"][target]
 fotbollskanalen.se##.notice:has(span[class$="sponsored"])
 fotbollskanalen.se##:is(.sponsored, .theme-news_sponsored_container):upward(.theme-news)
 fotbollskanalen.se##div[class$="sponsortitle"]:upward(.desktop-side-widget)
-/load_ads.js$domain=koket.se
-||raygun.io^$domain=koket.se
+fotbollskanalen.se##.news-list li:has(span[style="color:#6ab6ff"])
+||richrelevance.com^$domain=koket.se
 koket.se##[class*="list_item_sponsored"], [class*="promotion_bottom_holder_wrapper"], [class*="beverage-recommendation_wrapper"], [class*="list_item_wide_sponsored"], [class^="ad_position"]
 koket.se##div[class*="mosaic_item_wrapper"]:has(div[class*="sponsorLabel"])
 
@@ -3364,8 +3364,8 @@ konsumentmagasinet.se##.pricerunner
 indien.nu##.nyhetsochreseartiklar .views-row:has-text(/casino/i)
 pilsner.nu##:is(.et_pb_fullwidth_image, .et_pb_image) a:not([href^="/"]):not([href*="pilsner.nu"]), .mctb-position-bottom
 pilsner.nu##+js(rmnt, script, decodeURIComponent)
-hifitorget.se##.billboard_container, .billboard-style
-hifitorget.se##.row[style^="min-height"]:has(.adsbygoogle, .billboard_container)
+hifitorget.se##.billboard_container, .billboard-style, a[href*="utm_"][target] img
+hifitorget.se##:is(.row[style^="min-height"], .row .h-100):has(.adsbygoogle, .billboard_container)
 agriaffaires.se,truckscorner.se,machineryzone.se##.dp--mb, .dp--pave, .dp--ga, body#lg-annonces .right-container
 discoveringtheplanet.com##+js(acs, document.ondragstart)
 discoveringtheplanet.com##+js(acs, disableEnterKey)
@@ -3560,3 +3560,4 @@ drugnews.se##:is(#sidebarleft, #sidebarright) .widget:has(.ad-swiper-container)
 innovationslandet.se##.text-xs.font-bold:has-text(Sponsrat inlägg):upward(a)
 businesstories.se##.carousel-item:has(.sponsored):remove()
 businesstories.se##:is(.single-equal, .single-loop):has(.sponsored)
+/growth-analytics$domain=mindoktor.se
