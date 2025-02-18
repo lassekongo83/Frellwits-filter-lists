@@ -1229,6 +1229,7 @@ utm_$document,removeparam=/^utm_/,domain=tv.nu|booli.se|expressen.se|aftonbladet
 /raven$script,domain=mitti.se|travnet.se|nyheter24.se|tyda.se|devote.se|egoinas.se|hemtrevligt.se|alltforforaldrar.se|familjeliv.se|brollopstorget.se|blogg.se|nouw.com|lchfarkivet.se|fotbolltransfers.com|norrahalland.se|svenskgolf.se|vimedbarn.se|modette.se|vf.se|hjotidning.se|kt.se|kt-kuriren.se|sla.se|mariestadstidningen.se|filipstadstidning.se|fryksdalsbygden.se|nwt.se|arvikanyheter.se|nkp.se|saffletidningen.se|provinstidningen.se|dalslanningen.se|nlt.se|skaraborgsbygden.se|alltomnorrtalje.se|fragbite.se|ljudochbild.se
 /script.js$3p,domain=spelkritik.se
 /ga.js$domain=helgon.se|gamemonetize.com
+/brand-metrics$domain=hemnet.se|corren.se|folkbladet.se|mvt.se|nt.se|vt.se|vimmerbytidning.se|kuriren.nu|nsd.se|norran.se|pt.se|ekuriren.se|strengnastidning.se|kkuriren.se|sn.se|eposten.se|unt.se|helagotland.se|fastighetsvarlden.se
 ! Websites with no obvious or visible facebook login. Will just assume it's used for tracking.
 ||connect.facebook.net^$domain=friatider.se|fotosidan.se|ng.se|psykologiguiden.se|lektionsbanken.se|lajvo.se|kvinnatillkvinna.se|epochtimes.se|newsner.com|humorbibeln.se|sportbibeln.se|ettgottskratt.se|djurbibeln.se|sillyseason.se|loppi.se|kyrkanstidning.se|tn.se
 ! Scriptlets
@@ -1378,7 +1379,7 @@ haften.se##.loader
 thatsup.se##+js(set, canShowAds, true)
 mobilanyheter.net##+js(set, ai_run_scripts, noopFunc)
 forexgruppen.se,kattannonser.se##+js(noeval-if, adbEnableForPage)
-kritiker.se,bio-link.se,web-tools.se,medibok.se##+js(prevent-xhr, adsbygoogle)
+kritiker.se,bio-link.se,web-tools.se##+js(prevent-xhr, adsbygoogle)
 
 ! Fake walls
 ||piano.io^$domain=illvet.se|iform.se|varldenshistoria.se|popularhistoria.se|gds.se|slakthistoria.se|digitalfotoforalla.se|pctidningen.se
@@ -1427,7 +1428,6 @@ amelia.expressen.se##.max-w-\[980px\]:has(.slick-slider a[target="_blank"])
 amelia.expressen.se##article p.uppercase.tracking-wide:has-text(Inlägget innehåller annonslänkar):upward(article)
 ! Annoyances / misc
 ?autoPlay$frame,removeparam=autoPlay,domain=expressen.se
-?autoplay=true$frame,removeparam=autoplay,domain=expressen.se
 &autoplay$frame,removeparam=autoplay,domain=di.se|expressen.se
 expressen.se##.video-player[data-ad-config]:remove-attr(data-ad-config)
 expressen.se##video[autoplay]:remove-attr(autoplay)
@@ -1574,6 +1574,8 @@ lwcdn.com,alingsastidning.se,bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stro
 ! -- NTM
 @@/assets/ads-dm.js$~third-party,domain=corren.se|folkbladet.se|mvt.se|nt.se|vt.se|vimmerbytidning.se|kuriren.nu|nsd.se|norran.se|pt.se|ekuriren.se|strengnastidning.se|kkuriren.se|sn.se|eposten.se|unt.se|helagotland.se
 /event-tracker$domain=corren.se|folkbladet.se|mvt.se|nt.se|vt.se|vimmerbytidning.se|kuriren.nu|nsd.se|norran.se|pt.se|ekuriren.se|strengnastidning.se|kkuriren.se|sn.se|eposten.se|unt.se|helagotland.se|fastighetsvarlden.se
+analytics$domain=corren.se|folkbladet.se|mvt.se|nt.se|vt.se|vimmerbytidning.se|kuriren.nu|nsd.se|norran.se|pt.se|ekuriren.se|strengnastidning.se|kkuriren.se|sn.se|eposten.se|unt.se|helagotland.se|fastighetsvarlden.se
+/sifo$domain=corren.se|folkbladet.se|mvt.se|nt.se|vt.se|vimmerbytidning.se|kuriren.nu|nsd.se|norran.se|pt.se|ekuriren.se|strengnastidning.se|kkuriren.se|sn.se|eposten.se|unt.se|helagotland.se|fastighetsvarlden.se
 corren.se,folkbladet.se,mvt.se,nt.se,vt.se,vimmerbytidning.se,kuriren.nu,nsd.se,norran.se,pt.se,ekuriren.se,strengnastidning.se,kkuriren.se,sn.se,eposten.se,unt.se,helagotland.se##ad-iris-sunt-ad-wrapper, ad-block, .native, ad-full-page-block, a[href^="/native"], widget-family, widget-memorial, widget-marknadsguiden, widget-jobb-plus, a.puff-primary-link[href*="/erbjudande/"], .ad-hidden, iris-puff-native, iris-subscribe-footer
 corren.se,folkbladet.se,mvt.se,nt.se,vt.se,vimmerbytidning.se,kuriren.nu,nsd.se,norran.se,pt.se,ekuriren.se,strengnastidning.se,kkuriren.se,sn.se,eposten.se,unt.se,helagotland.se,tv.nu,klart.se##.sp-message-open body:style(overflow:unset!important;position:unset!important;)
 
@@ -3211,8 +3213,6 @@ aktuellsakerhet.se##a[href*="reklamsamarbete"]:upward(.td_block_wrap)
 aktuellsakerhet.se##.block-title:has-text(Reklamsamarbete):upward(.td_block_wrap)
 aktuellsakerhet.se##.block-title:has-text(Reklamsamarbete):upward(.td_block_wrap) + rs-module-wrap:remove()
 medibok.se##.annonsmellandiv, .annonssidadiv
-medibok.se##+js(rmnt, script, show_msg)
-medibok.se##+js(rmnt, script, eval(function(h,u,n,t,e,r))
 medibok.se##style:has-text(body * :not):remove()
 medibok.se##noscript:has-text(mdp-deblocker-js-disabled):remove()
 /cookie.min.js$domain=assistanskoll.se
@@ -3232,7 +3232,6 @@ bestchampagne.se##aside.section-sm
 bestchampagne.se##div[style="opacity:0"]:style(opacity:unset!important;)
 cannabisifokus.se##div[id^="canna-"]
 ||bokmassan.se/wp-json/*/ad/
-/brand-metrics$domain=hemnet.se
 /google-tag-manager$domain=hemnet.se
 /high-impact$domain=hemnet.se
 hemnet.se###ad_unit_placeholder, div[class^="Panorama_panoramaAd"], .listing__panorama-banner, .broker-banner, div[class^="BrokerBanner"], div[class^="PanoramaMobile"], div[class^="SBUBanner_container"], div[data-testid="broker-tip"]
