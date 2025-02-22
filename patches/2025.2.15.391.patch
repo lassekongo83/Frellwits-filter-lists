@@ -1,10 +1,10 @@
-diff name:swefilter lines:72 checksum:79a0b8a7c2
+diff name:swefilter lines:92 checksum:d174e29581
 d2 1
 a2 1
-! Last updated: Thu, 20 Feb 2025 06:29:47 +0000
+! Last updated: Sat, 22 Feb 2025 06:23:50 +0000
 d4 1
 a4 1
-! Diff-Path: patches/2025.2.20.389.patch#swefilter
+! Diff-Path: patches/2025.2.22.383.patch#swefilter
 d37 1
 a37 1
 .se/annonser$image
@@ -18,6 +18,12 @@ analytics$domain=corren.se|folkbladet.se|mvt.se|nt.se|vt.se|vimmerbytidning.se|k
 d431 1
 a431 1
 dn.se##.article--native, .teaser-card--native, .ds-teaser--native, #dnse-popup, .bad
+a439 1
+driva-eget.se##:is(.articles-swiper-item, .article-content, .articles-masonry-item):has(.bgcolor-ad-card)
+d470 1
+a470 2
+enterprisemagazine.se##.text-ads
+enterprisemagazine.se,driva-eget.se###ew-cookiebar-full, #ew-cookiebar-manage
 d515 1
 a515 1
 expressen.se,di.se,nsk.se,skd.se,nvp.se,nuiosteraker.se,barometern.se,blt.se,bt.se,kristianstadsbladet.se,olandsbladet.se,smp.se,sydostran.se,trelleborgsallehanda.se,ut.se,ystadsallehanda.se,corren.se,folkbladet.se,mvt.se,nt.se,vt.se,klt.nu,vimmerbytidning.se,kuriren.nu,nsd.se,norran.se,pt.se,ekuriren.se,strengnastidning.se,kkuriren.se,sn.se,eposten.se,unt.se,helagotland.se,folkbladet.nu,vasterastidning.se,mitti.se,thelocal.se,byrum.se,sverigespringer.se,recept.se,viivilla.se,automotorsport.se,babyhjalp.se,fragbite.se,ibnytt.se,realtid.se,cafe.se,kingmagazine.se,vaxjobladet.se,alekuriren.se,nyheter24.se,svenskgolf.se,golfing.se,familjeliv.se,praktisktbatagande.se,norrahalland.se,lokalti.se,lchfarkivet.se,alltforforaldrar.se,idrottensaffarer.se,vf.se,hjotidning.se,kt.se,kt-kuriren.se,sla.se,mariestadstidningen.se,filipstadstidning.se,fryksdalsbygden.se,nwt.se,arvikanyheter.se,nkp.se,saffletidningen.se,provinstidningen.se,dalslanningen.se,nlt.se,skaraborgsbygden.se##+js(json-prune, autoplay)
@@ -40,6 +46,9 @@ d1115 2
 d1138 1
 a1138 1
 pressbladet.se,svenskpress.se,foretagsbladet.se,gestrikemagasinet.se,cfanytt.se,lasarnas.se,hembostad.nu,sportidrott.se,nojesmagasinet.nu,halsasverige.se,mandarinmedia.se,svenskmusik.nu,reklamedia.se,motormagasinet.nu,konstmagasinet.nu,allpressen.se,seniorpressen.se##.isax, #cookiebar
+d1150 1
+a1150 1
+qx.se##.qxa-container, .leaky-popup-banner, .qxasection
 a1171 1
 rikatillsammans.se##div[class^="livewrapped-ad"], .tag-reklam
 d1205 1
@@ -48,10 +57,21 @@ shortcut.se##div[class^="baner"], a[target="_blank"] img, .banner-wrap
 d1284 1
 a1284 1
 sportsnews.se,xn--sporthnt-5za.se,killsteal.se,samnytt.se,samnytt.nu,obsid.se,senses.se,teknologiexperten.se,sverige.nu,enterprisemagazine.se,haboportalen.se##a[href*="casino"]
+a1717 1
+##div.top-advert-wrapper
 a1735 1
 ##div[id^="advads-"]
+a1740 1
+##dynamic-ad
+a1746 1
+##section.bgcolor-ad
+d1850 1
+a1850 1
+/CookieBar$script,domain=morningstar.se|driva-eget.se
 a1928 1
 /annonser$frame,domain=grisportalen.se
+a1931 1
+/annons$xhr,domain=driva-eget.se
 d1997 1
 a1997 1
 /brand-metrics$domain=hemnet.se|corren.se|folkbladet.se|mvt.se|nt.se|vt.se|vimmerbytidning.se|kuriren.nu|nsd.se|norran.se|pt.se|ekuriren.se|strengnastidning.se|kkuriren.se|sn.se|eposten.se|unt.se|helagotland.se|fastighetsvarlden.se
