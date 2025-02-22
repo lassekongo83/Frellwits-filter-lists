@@ -592,6 +592,7 @@ Video-Ad-$media,3p
 ##div.td-banner-bg
 ##div.topmost-banner
 ##div.toppannons
+##div.top-advert-wrapper
 ##div.top-annons
 ##div.tower-annonser
 ##div.uder-tags-ad
@@ -619,11 +620,13 @@ Video-Ad-$media,3p
 ##div#toppannons
 ##div#topreklam
 ##div#zox-lead-bot
+##dynamic-ad
 ##gwd-google-ad
 ##iframe#compricer_iframe
 ##img[alt="Leovegas"]
 ##img[alt="Spela på Betsson"]
 ##img[src*="/track.adtraction"]
+##section.bgcolor-ad
 ##td#reklam
 ##ul.adsmodern
 ##footer .sponsors-area
@@ -1157,6 +1160,7 @@ google.se##div.g:has(a[href*=".com.se/"]):has-text(/återförsäljare|rea|garant
 /wp-content/uploads/*kasino$image,domain=improveme.se|sjostadsbladet.se
 /wp-content/uploads/*reklam$image,domain=hockeyettan.se
 /annons$image,domain=dagensvimmerby.se|dagensvastervik.se|dagenskalmar.nu|dagenshultsfred.se|filmtopp.se|webbkameror.se|omkonst.com
+/annons$xhr,domain=driva-eget.se
 /banner$domain=assistanskoll.se|thepattayanews.se|hrnytt.se|lokalguiden.se|nyaboendet.se|ljudoljus.net
 /banners$domain=magasinetparagraf.se|sporttv.nu|cykla.se|vatternrundan.se|dagenstv.com|sydkusten.es|pellesoft.se|dykarna.nu|varmepumpsforum.com|poolforum.se|classiccars.se|borsvarlden.com|nitroz.se
 /bilder/*annons$domain=sfft.se
@@ -1335,6 +1339,7 @@ landsbygdsnatverket.se,greppa.nu,sbf.se,skaneridsport.se,ridsport.se##.sv-cookie
 kb.se,dansportalen.se,hh.se,vr.se,viss.nu,tidningencurie.se##.sv-marketplace-sitevision-cookie-consent, .sv-cookie-consent-modal, .env-modal-dialog__backdrop, .env-modal-dialog__backdrop--in
 bytesverket.se###cookies-policy
 filmparadiset.se,spiritsnews.se##.jnews-cookie-law-policy
+enterprisemagazine.se,driva-eget.se###ew-cookiebar-full, #ew-cookiebar-manage
 ! CSS to fix annoyances
 kb.se,dansportalen.se,hh.se,vr.se,viss.nu##body:style(overflow:unset!important; position:unset!important;)
 biostock.se,tobaksfakta.se##.pum-open:style(overflow:auto!important)
@@ -3004,7 +3009,7 @@ sjofart.ax##section.huvudsektion:style(margin-top:unset!important)
 /QXA.$script,domain=qx.se|qruiser.com
 /QA.js$domain=qruiser.com
 ||qx.se/view.php$image
-qx.se##.qxa-container
+qx.se##.qxa-container, .leaky-popup-banner, .qxasection
 ||flashback.org/rlog.php
 flashback.org###top-banner-container, #top-banner-wrapper
 flashback.org##+js(nostif, #top-banner-container)
@@ -3154,7 +3159,7 @@ pussad.se##html.g1-popup-visible:style(overflow: initial !important;)
 ||sv.picmix.com^$csp=worker-src 'none'
 se.azrhymes.com##div[id^="azrhymes_com_between_content"]
 /evidon*.js$domain=morningstar.se
-/CookieBar$script,domain=morningstar.se
+/CookieBar$script,domain=morningstar.se|driva-eget.se
 /AudienceTarget$script,domain=morningstar.se
 /DynamicGAFunctions$script,domain=morningstar.se
 /EUModalDialog$script,domain=morningstar.se
@@ -3424,6 +3429,7 @@ sokbat.se##a[target="_blank"][onclick]
 industritorget.se###pnlCookie, .campaign-top, .campaigns-right
 webbkameror.se###cookiescript_injected
 driva-eget.se##.sponsored_content
+driva-eget.se##:is(.articles-swiper-item, .article-content, .articles-masonry-item):has(.bgcolor-ad-card)
 handelsnytt.com##.headerannons, .sidebarannonsseg, .footerannons
 grandtech.se##aside#secondary:has(.adsbygoogle)
 tlnt.se##div[id^="ad-block"]
@@ -3447,7 +3453,7 @@ siljanskok.se##a[target="_blank"][rel="nofollow"]:upward(1)
 temaarkiv.se##.md\:mt-\[100px\]:has(script[data-adfscript])
 tinyurl.se##+js(set, adblock, false)
 synonyma.se##amp-user-notification.cookie
-enterprisemagazine.se###ew-cookiebar-full, #ew-cookiebar-manage, .text-ads
+enterprisemagazine.se##.text-ads
 kultmagasin.se##a[href*="/annonsering"]
 kodboken.se##.CookieConsent
 studeravidare.se##.premium-carousel-wrapper
