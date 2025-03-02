@@ -14,6 +14,7 @@
 .nu/files/banner/
 .nu/prebid$script
 .nu/gfx/banner/
+.nu/images/banners/
 .php?annonsid=$image
 .se/advertisement_script
 .se/assets/scripts/prebid
@@ -1202,7 +1203,7 @@ livetsgoda.se,betongforeningen.se,espressomedia.se,ordfrontmagasin.se,europaport
 aktiespararna.se,alekuriren.se,tidningen.se,kurera.se,vinbanken.se##.native
 existenz.se,funfunfun.se,elektronikforumet.com##a[href*="bannerid"]
 autonytt.se,sv.picmix.com,tekniknytt.se##.leaderboard
-aktuellsakerhet.se,borattforum.se,sjostadsbladet.se,fotbollsnytt.nu,zlatanism.se##.td-a-rec
+aktuellsakerhet.se,borattforum.se,sjostadsbladet.se,fotbollsnytt.nu,zlatanism.se,sillyseason.se##.td-a-rec
 doktorn.com##.js-banner-wrapper
 lindasbakskola.se,skk.se,viivilla.se,ungdomsfotboll.se##a[href*="/bit.ly/"]
 metalcentral.net,egoinas.se###tm-top-a
@@ -1217,7 +1218,7 @@ lakartidningen.se,canariajournalen.se##.advertisement
 chef.se,fokus.se##.Blurb--native
 vilarare.se,tidningenridsport.se##.adcontainer
 tv4.se,skippo.se##.maxetise
-sportsnews.se,xn--sporthnt-5za.se,killsteal.se,samnytt.se,samnytt.nu,obsid.se,senses.se,teknologiexperten.se,sverige.nu,enterprisemagazine.se,haboportalen.se##a[href*="casino"]
+sportsnews.se,xn--sporthnt-5za.se,killsteal.se,samnytt.se,samnytt.nu,obsid.se,senses.se,teknologiexperten.se,sverige.nu,enterprisemagazine.se,haboportalen.se,bike.se##a[href*="casino"]
 autolife.se###Banners
 
 ! -- Specific tracking, analytics, etc
@@ -2170,10 +2171,8 @@ sverigespringer.se##.cd-card-bar:has-text(/annons/i):upward(.cd-sidebar-item, .c
 vibilagare.se##a[href^="/partnermaterial/"]
 ||walls.io^$domain=svensktgolfforum.se
 svensktgolfforum.se##[data-ad-id], .darkenwrapper
-/revive.js$domain=skidspar.se
-/html5videovastplugin.js$domain=skidspar.se
-eu-cookie$domain=skidspar.se
-skidspar.se###videoad
+skidspar.se##div[id^="div-gpt-ad"]:upward(1)
+skidspar.se##.MuiChip-label:has-text(Sponsrat):upward(article)
 vm-fotboll.se##a[href*="/go/"][target], .category-kampanjer
 vm-fotboll.se##.fusion-text:has-text(Online casino)
 innebandy.se##[class*="banner-container"], .sponsorsswipeblock
@@ -2205,6 +2204,7 @@ fotbollsresultat.com##.fusion-flex-container:has(a[href*="casino"])
 sillyseason.se###text-41, #leader-wrapper, a[href^="/till/"]
 sillyseason.se##:is(.sidebar-widget, .archive-list li):has(a[href*=".se/odds/"], a[href*="/betting/"], a[href*="kasino"], a[href*="/promomen/"])
 sillyseason.se##.sidebar-widget > .textwidget strong:has-text(casino):upward(li.sidebar-widget)
+sillyseason.se##.block-title:has-text(Våra annonsörer och partners):upward(1)
 ljungbysporten.se##section.widget_media_image, a[target="_blank"]:not([href*="ljungbysporten.se"])
 golflivet.se##a[href*="/annonssamarbete/"], .deals_block_wrapper, .ai-close-fit
 padelfeber.se##.pfm-partners, .pff-partners, .c-widget-ad, .c-teaser--native, #toBanner
@@ -2249,6 +2249,7 @@ svartgul.se##li.embedded, footer li.long
 motorsportbladet.se##:is(article, li):has(a[href*="casino"], a[href*="kasino"])
 svenskfotboll.se##.news-multi-link--sponsor
 luleahockeyforum.com##main > div:first-child:has(.banniere)
+bike.se##button[data-cc]
 bike.se##.post-block-style:has(a[href*="/annons"])
 ||tally.so^$domain=tranakampsport.se
 tranakampsport.se##a[class*="annons"], .annonser-sektion
@@ -2853,7 +2854,7 @@ aletorget.se,alingsastorget.se,almhulttorget.se,alvestatorget.se,amaltorget.se,a
 /wp-content/uploads/*/public/assets/js/advanced.js$script
 /soledad/js/detector.js
 ! Specific wordpress cookie annoyances
-/plugins/complianz-gdpr$script,domain=iconmagazine.se|signprint.se|vilaser.se|arjeplognytt.se|tidningenglobal.se|tidningensyre.se|landetsfria.nu|fempers.se|macken.xyz|brollopsmagasinet.se|megafonen.se|radiotreby.se|kyrka.se|tlnt.se|sjofartstidningen.se|pensionarsliv.se|aktuellsakerhet.se|maklarvarlden.se|sjomannen.se|home2tiny.se|marketplace.se|livsmedelsnyheter.se|dovastidning.se|vgrfokus.se|samefolket.se|cirkusvenues.se
+/plugins/complianz-gdpr$script,domain=iconmagazine.se|signprint.se|vilaser.se|arjeplognytt.se|tidningenglobal.se|tidningensyre.se|landetsfria.nu|fempers.se|macken.xyz|brollopsmagasinet.se|megafonen.se|radiotreby.se|kyrka.se|tlnt.se|sjofartstidningen.se|pensionarsliv.se|aktuellsakerhet.se|maklarvarlden.se|sjomannen.se|home2tiny.se|marketplace.se|livsmedelsnyheter.se|dovastidning.se|vgrfokus.se|samefolket.se|cirkusvenues.se|surfzone.se
 /plugins/consent-magic-pro$script,domain=namnmarkning.se|bluum.se|gobokhandeln.se
 /cookie-law-info$script,domain=gilla.se|startaochdriva.se|sverige.nu|conpot.se|firstclassmagazine.se|magasinetkonkret.se|kvalitetsmagasinet.se|miljo-utveckling.se|techtidningen.se|vdtidningen.se|gullislastips.se|nyfiknainvesterare.se|discoveringtheplanet.com|bussmagasinet.se|torbjornstips.se|affarsstaden.se|automation.se|dinbyggare.se|aktieskolan.se|insikt24.se|skogen.se|sulkysport.se|bitzmagasin.se|battrestadsdel.se|automatos.se|80-talet.se|goteborgnyheter.se|elitepadel.se|vetenskaphalsa.se|rakapuckar.com|konstperspektiv.nu|56kilo.se|surveyors.se|maximumsports.se|rucksack.se|ingridochmaria.se|frihetsnytt.se|globalportalen.org|juligen.se|svenskbotanik.se|sakerhund.se
 /cookies-and-content-security-policy$script,domain=cannabisifokus.se|futsalmagasinet.se|sd.se|cora.se|tfkriminalvard.se
@@ -3584,3 +3585,4 @@ sweatybusiness.se##.hcc-sponsors-horizontal, .hcc-sponsors-vertical
 sailguide.com##p.annons:upward(1)
 utbildning.se##.wide-page_ads
 kryssakuten.se##.ad-spacer
+vittsjobjarnum.nu###yt_spotlight1
