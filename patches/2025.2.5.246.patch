@@ -1,10 +1,12 @@
-diff name:swefilter lines:297 checksum:cfe75497ec
+diff name:swefilter lines:315 checksum:61dc796b04
 d2 1
 a2 1
-! Last updated: Sat, 01 Mar 2025 06:00:28 +0000
+! Last updated: Sun, 02 Mar 2025 04:31:22 +0000
 d4 1
 a4 1
-! Diff-Path: patches/2025.3.1.360.patch#swefilter
+! Diff-Path: patches/2025.3.2.271.patch#swefilter
+a22 1
+.nu/images/banners/
 a36 1
 .se/annonser$image
 a50 1
@@ -15,6 +17,9 @@ aftonbladet.se,stoppapressarna.se,langd.se,computersweden.se,thatsup.se,arbetare
 d123 1
 a123 1
 aip.nu,funktionshinderpolitik.se,sjostadsbladet.se,fotbollsresultat.com,lansposten.se,dalabygden.se,sormlandsbygden.se,skaneplus.se,innovationslandet.se###cookie-notice
+d135 1
+a135 1
+aktuellsakerhet.se,borattforum.se,sjostadsbladet.se,fotbollsnytt.nu,zlatanism.se,sillyseason.se##.td-a-rec
 a175 1
 analytics$domain=corren.se|folkbladet.se|mvt.se|nt.se|vt.se|vimmerbytidning.se|kuriren.nu|nsd.se|norran.se|pt.se|ekuriren.se|strengnastidning.se|kkuriren.se|sn.se|eposten.se|unt.se|helagotland.se|fastighetsvarlden.se
 a195 1
@@ -24,6 +29,8 @@ a203 1
 autopower.se##.startsidancontainer > .row > .col:has(.adsbygoogle)
 a225 1
 bestchampagne.se##div[style="opacity:0"]:style(opacity:unset!important;)
+a229 1
+bike.se##button[data-cc]
 a255 1
 borasweekly.se##.article-item:has(.article-item--sponsored, .article-label--sponsored)
 d284 1
@@ -55,6 +62,7 @@ d463 1
 a463 2
 enterprisemagazine.se##.text-ads
 enterprisemagazine.se,driva-eget.se###ew-cookiebar-full, #ew-cookiebar-manage
+d479 1
 d508 1
 a508 1
 expressen.se,di.se,nsk.se,skd.se,nvp.se,nuiosteraker.se,barometern.se,blt.se,bt.se,kristianstadsbladet.se,olandsbladet.se,smp.se,sydostran.se,trelleborgsallehanda.se,ut.se,ystadsallehanda.se,corren.se,folkbladet.se,mvt.se,nt.se,vt.se,klt.nu,vimmerbytidning.se,kuriren.nu,nsd.se,norran.se,pt.se,ekuriren.se,strengnastidning.se,kkuriren.se,sn.se,eposten.se,unt.se,helagotland.se,folkbladet.nu,vasterastidning.se,mitti.se,thelocal.se,byrum.se,sverigespringer.se,recept.se,viivilla.se,automotorsport.se,babyhjalp.se,fragbite.se,ibnytt.se,realtid.se,cafe.se,kingmagazine.se,vaxjobladet.se,alekuriren.se,nyheter24.se,svenskgolf.se,golfing.se,familjeliv.se,praktisktbatagande.se,norrahalland.se,lokalti.se,lchfarkivet.se,alltforforaldrar.se,idrottensaffarer.se,vf.se,hjotidning.se,kt.se,kt-kuriren.se,sla.se,mariestadstidningen.se,filipstadstidning.se,fryksdalsbygden.se,nwt.se,arvikanyheter.se,nkp.se,saffletidningen.se,provinstidningen.se,dalslanningen.se,nlt.se,skaraborgsbygden.se##+js(json-prune, autoplay)
@@ -149,13 +157,19 @@ d1167 2
 d1191 1
 a1191 1
 shortcut.se##div[class^="baner"], a[target="_blank"] img, .banner-wrap
+a1199 1
+sillyseason.se##.block-title:has-text(Våra annonsörer och partners):upward(1)
 a1210 1
 skaneplus.se##center > small:has-text(ANNONS):upward(div[class*="cc-hide-on"])
+d1218 1
+a1218 2
+skidspar.se##div[id^="div-gpt-ad"]:upward(1)
+skidspar.se##.MuiChip-label:has-text(Sponsrat):upward(article)
 a1227 1
 skolporten.se##.advertMod
 d1268 1
 a1268 1
-sportsnews.se,xn--sporthnt-5za.se,killsteal.se,samnytt.se,samnytt.nu,obsid.se,senses.se,teknologiexperten.se,sverige.nu,enterprisemagazine.se,haboportalen.se##a[href*="casino"]
+sportsnews.se,xn--sporthnt-5za.se,killsteal.se,samnytt.se,samnytt.nu,obsid.se,senses.se,teknologiexperten.se,sverige.nu,enterprisemagazine.se,haboportalen.se,bike.se##a[href*="casino"]
 a1322 1
 sweatybusiness.se##.hcc-sponsors-horizontal, .hcc-sponsors-vertical
 d1338 1
@@ -171,6 +185,8 @@ a1399 1
 travelandtourworld.se##.rightcol1:has(.g)
 a1441 1
 utbildning.se##.wide-page_ads
+a1494 1
+vittsjobjarnum.nu###yt_spotlight1
 a1499 1
 vmhockey.se##div[id^="vmhockey_se_billboard"]
 a1608 1
@@ -223,16 +239,18 @@ a2050 1
 /eu-cookie-law$script,domain=matsaklart.se
 a2099 1
 /growth-analytics$domain=mindoktor.se
+d2110 1
 d2156 1
 d2246 1
 a2246 1
-/plugins/complianz-gdpr$script,domain=iconmagazine.se|signprint.se|vilaser.se|arjeplognytt.se|tidningenglobal.se|tidningensyre.se|landetsfria.nu|fempers.se|macken.xyz|brollopsmagasinet.se|megafonen.se|radiotreby.se|kyrka.se|tlnt.se|sjofartstidningen.se|pensionarsliv.se|aktuellsakerhet.se|maklarvarlden.se|sjomannen.se|home2tiny.se|marketplace.se|livsmedelsnyheter.se|dovastidning.se|vgrfokus.se|samefolket.se|cirkusvenues.se
+/plugins/complianz-gdpr$script,domain=iconmagazine.se|signprint.se|vilaser.se|arjeplognytt.se|tidningenglobal.se|tidningensyre.se|landetsfria.nu|fempers.se|macken.xyz|brollopsmagasinet.se|megafonen.se|radiotreby.se|kyrka.se|tlnt.se|sjofartstidningen.se|pensionarsliv.se|aktuellsakerhet.se|maklarvarlden.se|sjomannen.se|home2tiny.se|marketplace.se|livsmedelsnyheter.se|dovastidning.se|vgrfokus.se|samefolket.se|cirkusvenues.se|surfzone.se
 d2251 1
 a2251 1
 /plugins/cookie-notice$script,domain=bildobubbla.se|zeromagazine.nu|sverigespringer.se|gasetten.se|sillyseason.se|gentlemannaguiden.com|matmalin.se|svensktidskrift.se|schack.se|densistavilan.se|kobe.se|tidningenproffs.se|jaktojagare.se|tobaksfakta.se|bebisvarlden.se|underbaraclaras.se|cykelframjandet.se|dalabygden.se|lansposten.se|sormlandsbygden.se|vaguiden.se|grandtech.se|bluff.se|bjjtv.se|svmf.se|rockbladet.se|globalbar.se|seniornet.se|gaming365.se|skellefteamedia.se|musikverket.se|sillybladet.se|zlatanism.se|fotbollsnytt.nu|voov.nu|matochdrycker.se|drugnews.se|ladiesabroad.se
 d2408 1
 a2408 1
 /raven$script,domain=mitti.se|travnet.se|nyheter24.se|tyda.se|devote.se|egoinas.se|hemtrevligt.se|alltforforaldrar.se|familjeliv.se|brollopstorget.se|blogg.se|nouw.com|lchfarkivet.se|fotbolltransfers.com|norrahalland.se|svenskgolf.se|vimedbarn.se|modette.se|vf.se|hjotidning.se|kt.se|kt-kuriren.se|sla.se|mariestadstidningen.se|filipstadstidning.se|fryksdalsbygden.se|nwt.se|arvikanyheter.se|nkp.se|saffletidningen.se|provinstidningen.se|dalslanningen.se|nlt.se|skaraborgsbygden.se|alltomnorrtalje.se|fragbite.se|ljudochbild.se|vk.se|folkbladet.nu|nordsverige.se|mellanbygden.nu|vasterbottningen.se|lokaltidningen.nu
+d2414 1
 a2436 1
 /sifo$domain=corren.se|folkbladet.se|mvt.se|nt.se|vt.se|vimmerbytidning.se|kuriren.nu|nsd.se|norran.se|pt.se|ekuriren.se|strengnastidning.se|kkuriren.se|sn.se|eposten.se|unt.se|helagotland.se|fastighetsvarlden.se
 d2555 1
