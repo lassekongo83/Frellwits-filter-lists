@@ -1,10 +1,10 @@
-diff name:swefilter lines:107 checksum:570b29480f
+diff name:swefilter lines:126 checksum:d3f5078adf
 d2 1
 a2 1
-! Last updated: Tue, 04 Mar 2025 04:50:07 +0000
+! Last updated: Wed, 05 Mar 2025 06:23:02 +0000
 d4 1
 a4 1
-! Diff-Path: patches/2025.3.4.290.patch#swefilter
+! Diff-Path: patches/2025.3.5.383.patch#swefilter
 a22 1
 .nu/images/banners/
 d100 1
@@ -14,6 +14,9 @@ accentmagasin.se###modal-newsletter-signup, .modal-backdrop
 d108 1
 a108 1
 aftonbladet.se##article[class^="article-wrapper"] ~ div[class^="hyperion"]:has(a[href*="/t?a="], a[href*="/click"], a[href^="http"][nofollow], a[href^="http"][rel*="nofollow"], iframe[src*="pricerunner"], iframe[src*="/ads/"])
+d119 1
+a119 1
+aftonbladet.se,livsstil.se,godare.se,byggahus.se,expressen.se,elle.se,femina.se,svenskdam.se,galamagasin.se,rodeo.net,familjeliv.se,vitaestilo.se,veckorevyn.com##+js(href-sanitizer, a[href*="/t?a="], ?url)
 d137 1
 a137 1
 aktuellsakerhet.se,borattforum.se,sjostadsbladet.se,fotbollsnytt.nu,zlatanism.se,sillyseason.se##.td-a-rec
@@ -42,12 +45,18 @@ a873 1
 kryssakuten.se##.ad-spacer
 a887 1
 lagenhetsbyte.se##.cookie-modal-wrapper
+d893 1
+a893 1
+landsbygdsnatverket.se,greppa.nu,sbf.se,skaneridsport.se,ridsport.se,biljardforbundet.se##.sv-cookie-consent-banner
 d946 2
 a947 2
 ljuskultur.se,bettips.se,spelo.se,skogsaktuellt.se,entreprenadaktuellt.se,ja.se,husbilhusvagn.se,klassiker.nu,mopedgaraget.se,vibilagare.se,caroftheyear.se,automobil.se,endurobloggen.se,riksettan.net,frillesasbandy.se,dh.se,djungeltrumman.se,skik.se,omni.se,campingsverige.se,eniro.se,restaurangvarlden.se,naringslivetvgl.se,dalarnasaffarer.se,stockholmsaffarer.se,jamtlandsaffarer.se,hallandsnaringsliv.se,sjuharadsnaringsliv.se,nyheteridag.se,alekuriren.se,omniekonomi.se,sverigesindustri.se,onkologiisverige.se,svenskalag.se,borasweekly.se##.banner
 ljuskultur.se,hrnytt.se,aapl.se,inredningsarkitektur.se,inblick.se##.cookies
 a989 1
 matklubben.se###recommended-products
+d1102 1
+a1102 1
+nyhetsbyranjarva.se,nyan.ax,tv-kanal.se,golfguidenonline.se,rockbladet.se,vildmarken.se,nyhetersto.se,dagenslogistik.se,turismnytt.se##.g
 a1187 1
 sailguide.com##p.annons:upward(1)
 a1221 1
@@ -77,13 +86,18 @@ a2051 1
 d2149 1
 d2284 1
 a2284 1
-/plugins/complianz-gdpr$script,domain=iconmagazine.se|signprint.se|vilaser.se|arjeplognytt.se|tidningenglobal.se|tidningensyre.se|landetsfria.nu|fempers.se|macken.xyz|brollopsmagasinet.se|megafonen.se|radiotreby.se|kyrka.se|tlnt.se|sjofartstidningen.se|pensionarsliv.se|aktuellsakerhet.se|maklarvarlden.se|sjomannen.se|home2tiny.se|marketplace.se|livsmedelsnyheter.se|dovastidning.se|vgrfokus.se|samefolket.se|cirkusvenues.se|surfzone.se|magasinetkonkret.se
+/plugins/complianz-gdpr$script,domain=iconmagazine.se|signprint.se|vilaser.se|arjeplognytt.se|tidningenglobal.se|tidningensyre.se|landetsfria.nu|fempers.se|macken.xyz|brollopsmagasinet.se|megafonen.se|radiotreby.se|kyrka.se|tlnt.se|sjofartstidningen.se|pensionarsliv.se|aktuellsakerhet.se|maklarvarlden.se|sjomannen.se|home2tiny.se|marketplace.se|livsmedelsnyheter.se|dovastidning.se|vgrfokus.se|samefolket.se|cirkusvenues.se|surfzone.se|magasinetkonkret.se|samerna.se
 d2442 1
 a2442 1
 /pum/*$domain=flm.nu|dagenslogistik.se|battrestadsdel.se|skaneplus.se|globalbar.se|magasinetkonkret.se
 d2452 1
 d2699 1
+a2816 1
+||cdn.pji.nu/g/sp.gif$important
 d2826 1
+d2835 1
+a2835 1
+||connect.facebook.net^$domain=friatider.se|fotosidan.se|ng.se|psykologiguiden.se|lektionsbanken.se|lajvo.se|kvinnatillkvinna.se|epochtimes.se|newsner.com|humorbibeln.se|sportbibeln.se|ettgottskratt.se|djurbibeln.se|sillyseason.se|loppi.se|kyrkanstidning.se|tn.se|experimentarkivet.se
 d2838 1
 a2838 1
 ||consentmanager.net^$domain=allastudier.se|gbgfotboll.se|stff.se|svenskfotboll.se|coop.se|dagens.se|mobil.se|kamerabild.se|prevent.se|utsidan.se|inpress.com|studentum.se|utbildning.se|vision.se|byggnads.se|teksajten.se|thelocal.se
@@ -103,6 +117,11 @@ d3095 1
 d3129 1
 a3129 1
 ||onesignal.com^$domain=samnytt.se|battrestadsdel.se|beernews.se|ungdomsfotboll.se|rabattsok.se|1x2.se|cannabis.se|dackavisen.se|driva-eget.se|skogsaktuellt.se|entreprenadaktuellt.se|ja.se|newsner.com|humorbibeln.se|sportbibeln.se|ettgottskratt.se|djurbibeln.se|finanstid.se|fokus.se|gasetten.se|fotbollsthlm.se|macken.xyz|naringslivetvgl.se|dalarnasaffarer.se|stockholmsaffarer.se|jamtlandsaffarer.se|hallandsnaringsliv.se|sjuharadsnaringsliv.se|netflixguiden.se|nyadagbladet.se|oskarshamns-nytt.se|swebbtv.se|thepattayanews.se|vaken.se|aktieskolan.se|fastighetsvarlden.se|mcparken.se|gaffa.se|alltomnorrtalje.se|morotsliv.com|it-finans.se|it-halsa.se|it-kanalen.se|it-pedagogen.se|it-retail.se|skaneplus.se|mittforetag.com|studeravidare.se|thephuketexpress.se|ibnytt.se|garaget.org|marketmate.se|rakapuckar.com|svegot.se
+d3150 1
+a3150 1
+||pji.nu^$third-party,~image,domain=minhembio.com|ljudochbild.se|gp.se
+a3216 1
+||rum.cronitor.io/script.js
 a3221 1
 ||samnytt.se/ads/
 d3373 1
