@@ -1269,7 +1269,7 @@ aftonbladet.se,livsstil.se,godare.se,byggahus.se,expressen.se,elle.se,femina.se,
 ||mailmunch.co^$third-party,domain=affarsstaden.se|enkelteknik.se
 ||onetrust.com^$third-party,domain=lantmannen.se
 ||privacy-mgmt.com^$domain=radio.se|dagenstv.com|kolla.tv|computersweden.se|woxikon.se|dagen.se|filmtopp.se|upday.com|gaffa.se|handbollskanalen.se|stayfriends.se
-||privacy-center.org^$domain=180.se|agriaffaires.se|truckscorner.se|machineryzone.se|stegforhalsa.se|netdoktor.se|netdoktorpro.se|news55.se|hastnet.se|kvd.se|dagensps.se|realtid.se|kpwebben.se|sportbibeln.se
+||privacy-center.org^$domain=180.se|agriaffaires.se|truckscorner.se|machineryzone.se|stegforhalsa.se|netdoktor.se|netdoktorpro.se|news55.se|hastnet.se|kvd.se|dagensps.se|realtid.se|kpwebben.se|sportbibeln.se|booli.se
 ||privacypolicies.com^$domain=fl-net.se
 ||cdn-cookieyes.com^$domain=lokalti.se|jarnvagar.nu|senses.se|norrmejerier.se|temadagar.se|tekniknytt.se|nordigt.se|autonytt.se|vm-fotboll.se|kak.se|smhi.se|borattforum.se|mis.se|universitetslararen.se|em-fotboll.se|lakemedelsvarlden.se|samfalligheterna.se|husbilsplats.se|katerinamagasin.se|dagenslogistik.se|biostock.se|skellefteaworks.se|datormagazin.se|travnet.se|malarbok.nu|barn-filmer.se|matmenyer.se|sunnenytt.se|kristendate.se|hockeynews.se|swe3.se|spelbloggen.se|matinspo.se|trendenser.se|kattannonser.se|56kilo.se|horisontmagasin.se|automobilly.com|nordicmanufacturing.net|nationalekonomi.se|storynews.se|alltomhobby.se|upptackrattvik.se
 ||gravito.net^$domain=hitta.se|gp.se|bohuslaningen.se|stromstadstidning.se|markposten.se|harrydaposten.se|partilletidning.se|sttidningen.se|molndalsposten.se|kungalvsposten.se|kungsbackaposten.se|alingsastidning.se|ttela.se|hallandsposten.se|hn.se|mellerudsnyheter.se
@@ -3032,7 +3032,10 @@ flashback.org##+js(nostif, #top-banner-container)
 allabolag.se##.topbanner-wrapper
 allabolag.se##div[style*="min-height"]:has(div[id^="adwrapper"])
 /log|$domain=booli.se
-booli.se###outer
+booli.se###outer, .property-page-ad-wrapper--active
+booli.se##:is(#property-calculator, .sticky.top-24 li, .sticky.top-24 div:last-of-type:not([class])):has(.ad-label--bound)
+booli.se##:is(.article-teaser, .article-teaser-section__list-item):has(.article-teaser__sponsor)
+booli.se##.search-page__content .tag:has-text(Sponsrad):upward(li)
 /vestigo$domain=momondo.se
 ||momondo.se/*gtm/
 ||kolozzeum.com/forum/kollos$script
