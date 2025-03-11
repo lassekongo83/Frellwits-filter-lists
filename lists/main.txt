@@ -1357,7 +1357,7 @@ livetsgoda.se,bfn.se##body:style(opacity:unset!important)
 ! Scriptlets for annoyances
 expressen.se,di.se,nsk.se,skd.se,nvp.se,nuiosteraker.se,barometern.se,blt.se,bt.se,kristianstadsbladet.se,olandsbladet.se,smp.se,sydostran.se,trelleborgsallehanda.se,ut.se,ystadsallehanda.se,corren.se,folkbladet.se,mvt.se,nt.se,vt.se,klt.nu,vimmerbytidning.se,kuriren.nu,nsd.se,norran.se,pt.se,ekuriren.se,strengnastidning.se,kkuriren.se,sn.se,eposten.se,unt.se,helagotland.se,folkbladet.nu,vasterastidning.se,mitti.se,thelocal.se,byrum.se,sverigespringer.se,recept.se,viivilla.se,automotorsport.se,babyhjalp.se,fragbite.se,ibnytt.se,realtid.se,cafe.se,kingmagazine.se,vaxjobladet.se,alekuriren.se,nyheter24.se,svenskgolf.se,golfing.se,familjeliv.se,praktisktbatagande.se,norrahalland.se,lokalti.se,lchfarkivet.se,alltforforaldrar.se,idrottensaffarer.se,vf.se,hjotidning.se,kt.se,kt-kuriren.se,sla.se,mariestadstidningen.se,filipstadstidning.se,fryksdalsbygden.se,nwt.se,arvikanyheter.se,nkp.se,saffletidningen.se,provinstidningen.se,dalslanningen.se,nlt.se,skaraborgsbygden.se##+js(json-prune, autoplay)
 streamio.com,nyan.ax,spelhubben.se,illvet.se,varldenshistoria.se##+js(aeld, contextmenu)
-spelhubben.se,husbilsplats.se##+js(acs, document.oncontextmenu)
+spelhubben.se,husbilsplats.se,kandisvarlden.com##+js(acs, document.oncontextmenu)
 mitti.se,cafe.se,praktisktbatagande.se##+js(aeld, scroll, helpers.scroll(id))
 vk.se,folkbladet.nu,nordsverige.se,mellanbygden.nu,vasterbottningen.se,lokaltidningen.nu##+js(set, manualAutoplay_, noopFunc)
 internetodontologi.se,skrattsajten.com,norpan.se##+js(rmnt, script, e.preventDefault)
@@ -1534,14 +1534,14 @@ aftonbladet.se,godare.se,livsstil.se,omni.se,omniekonomi.se,svd.se##.sp-message-
 ! SVD
 ||svd.se/api/live-ads/
 ||svd.se/api/dr-edition-teasers
-svd.se###mega-ad-wrapper, #svd-top-ad, div[class*="advertory"], div[data-custom-ad-handled="true"], span[data-id="bottom-sticker-offer"], div[data-context-pageview*="native-svd"]
+svd.se###mega-ad-wrapper, #svd-top-ad, div[class*="advertory"], div[data-custom-ad-handled="true"], div[data-engage-entity-id="sales-banner-bottom-bar"], div[data-context-pageview*="native-svd"]
 svd.se##body:style(visibility:visible!important;)
 svd.se##article:has(div[class^="NativeBarWrapper"])
 ! Omni
 omni.se,omniekonomi.se##div[class^="TopPanoramaAd"], div[class^="StickySideAd"], div[class*="_native"], div[class^="Ad_placement"], div[class*="PanoramaAd_"]
 ! Klart
-klart.se##div[id^="sp_message_container"]
-klart.se###overlay, a[rel*="sponsored"], .-panorama-ad-wrapper
+klart.se##div[id^="sp_message_container"], #overlay, a[rel*="sponsored"], .-panorama-ad-wrapper
+klart.se##.ad-text:has-text(/annons/i):upward(.content-box-list__item)
 klart.se##body.mega-loading:remove-class(mega-loading)
 ! Bytbil
 ||bytbil.com/bundles/js/tracking
@@ -2567,6 +2567,7 @@ vegomagasinet.se##.vego-ad
 /?agg_url=/*/artiklar/blogg$domain=nyheter24.se|alltforforaldrar.se|modette.se|devote.se|familjeliv.se|brollopstorget.se|blogg.se|rodeo.net|vimedbarn.se|loppi.se
 nyheter24.se,alltforforaldrar.se,modette.se,devote.se,familjeliv.se,brollopstorget.se,blogg.se,rodeo.net,vimedbarn.se,loppi.se##div[class^="panorama"], a[href^="/samarbete"], a[href*="annons"], a[href*="casino"], a[href*="kasino"], a[href*="spel"][href*="licens"], a[href*="utan"][href*="licens"], a[href*="extrapengar"], a[href*="matchfixning"], a[href*="upplevelser"], a[href*="-vegas"], a[href*="buda"][href*="auktion"], a[href*="investera"], a[href^="/artiklar/info/"], a[href*="/kampanj/"], a[href*="betting"]
 nyheter24.se,alltforforaldrar.se,modette.se,devote.se,familjeliv.se,brollopstorget.se,blogg.se,rodeo.net,vimedbarn.se,loppi.se##article:has-text(/annons:/i)
+nyheter24.se##.uppercase:has-text(/annons/i):upward(1)
 familjeliv.se##.familjeliv_nestle
 selectAdvertiserElement$domain=bebisvarlden.se
 /plugins/sandviks-weblog$script,domain=bebisvarlden.se
@@ -2789,6 +2790,7 @@ aletorget.se,alingsastorget.se,almhulttorget.se,alvestatorget.se,amaltorget.se,a
 /plugins/yuzo/public/assets/js/pixel-geo
 /plugins/fisher/core/js/generated/analytics.js
 /plugins/wp-sentry$domain=cafe.se|kingmagazine.se|vagabond.se|svenskgolf.se|husohem.se|tidningenhalsa.se|praktisktbatagande.se|akaskidor.se|utemagasinet.se|husvagnochcamping.se|classicmotor.se|hemtrevligt.se
+/uploads/burst/js/burst.min.js
 ! annoyances / bloat
 /plugins/ad-blocking-advisor
 /plugins/add-to-any$script
@@ -3596,3 +3598,7 @@ sailguide.com##p.annons:upward(1)
 utbildning.se##.wide-page_ads
 kryssakuten.se##.ad-spacer
 vittsjobjarnum.nu###yt_spotlight1
+kandisvarlden.com##+js(acs, disableEnterKey)
+kandisvarlden.com##.unselectable:style(-moz-user-select:unset!important; -webkit-user-select:unset!important; cursor:unset!important;)
+kandisvarlden.com##html:style(-webkit-touch-callout:unset!important; -webkit-user-select:unset!important; -khtml-user-select:unset!important; -moz-user-select:unset!important; -ms-user-select:unset!important; user-select:unset!important; -webkit-tap-highlight-color:unset!important;)
+kandisvarlden.com##body[unselectable]:remove-attr(unselectable)
