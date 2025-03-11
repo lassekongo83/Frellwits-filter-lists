@@ -1,10 +1,10 @@
-diff name:swefilter lines:78 checksum:b1fbe326f1
+diff name:swefilter lines:97 checksum:ed07f16880
 d2 1
 a2 1
-! Last updated: Mon, 10 Mar 2025 06:26:03 +0000
+! Last updated: Tue, 11 Mar 2025 04:33:57 +0000
 d4 1
 a4 1
-! Diff-Path: patches/2025.3.10.386.patch#swefilter
+! Diff-Path: patches/2025.3.11.273.patch#swefilter
 a87 1
 ~continente.pt##a[href*="utm_content=banner"] img
 d121 1
@@ -27,18 +27,35 @@ d643 1
 a643 2
 fria.nu,stockholmsfria.se##.holidAds:upward(1)
 fria.nu,stockholmsfria.se##[class*="annonser"], #cboxOverlay, #cboxWrapper, a[href*="banner"][target]
+a827 4
+kandisvarlden.com##body[unselectable]:remove-attr(unselectable)
+kandisvarlden.com##html:style(-webkit-touch-callout:unset!important; -webkit-user-select:unset!important; -khtml-user-select:unset!important; -moz-user-select:unset!important; -ms-user-select:unset!important; user-select:unset!important; -webkit-tap-highlight-color:unset!important;)
+kandisvarlden.com##+js(acs, disableEnterKey)
+kandisvarlden.com##.unselectable:style(-moz-user-select:unset!important; -webkit-user-select:unset!important; cursor:unset!important;)
 d833 1
 a833 1
 karriarlakare.se,livinguppsala.se,battrestadsdel.se,butikstrender.se,forskning.se,vardfokus.se,varvat.se,smaspararguiden.se,sjostadsbladet.se,tidningenridsport.se,cookaholic.se,vinliv.se,raa.se,svenskfilmdatabas.se,hockeybladet.nu,frihetsnytt.se,alltomhusbilen.se###cookie-law-info-bar
+d848 2
+a849 2
+klart.se##div[id^="sp_message_container"], #overlay, a[rel*="sponsored"], .-panorama-ad-wrapper
+klart.se##.ad-text:has-text(/annons/i):upward(.content-box-list__item)
 d897 1
 a897 1
 landsbygdsnatverket.se,greppa.nu,sbf.se,skaneridsport.se,ridsport.se,biljardforbundet.se##.sv-cookie-consent-banner
 d1068 1
 a1068 1
 newsvoice.se##.sponsrad, .sponsradcol1, .newsv-widget, article[class*="sponsored"]
+a1095 1
+nyheter24.se##.uppercase:has-text(/annons/i):upward(1)
 d1107 1
 a1107 1
 nyhetsbyranjarva.se,nyan.ax,tv-kanal.se,golfguidenonline.se,rockbladet.se,vildmarken.se,nyhetersto.se,dagenslogistik.se,turismnytt.se,radiosol.se##.g
+d1280 1
+a1280 1
+spelhubben.se,husbilsplats.se,kandisvarlden.com##+js(acs, document.oncontextmenu)
+d1321 1
+a1321 1
+svd.se###mega-ad-wrapper, #svd-top-ad, div[class*="advertory"], div[data-custom-ad-handled="true"], div[data-engage-entity-id="sales-banner-bottom-bar"], div[data-context-pageview*="native-svd"]
 a1400 1
 thelocal.se##html[data-smartbanner-original-margin-top]:style(margin-top:unset!important;)
 d1402 1
@@ -63,6 +80,8 @@ d2456 1
 a2456 1
 /raven$script,domain=mitti.se|travnet.se|nyheter24.se|tyda.se|devote.se|egoinas.se|hemtrevligt.se|alltforforaldrar.se|familjeliv.se|brollopstorget.se|blogg.se|nouw.com|lchfarkivet.se|fotbolltransfers.com|norrahalland.se|svenskgolf.se|vimedbarn.se|modette.se|vf.se|hjotidning.se|kt.se|kt-kuriren.se|sla.se|mariestadstidningen.se|filipstadstidning.se|fryksdalsbygden.se|nwt.se|arvikanyheter.se|nkp.se|saffletidningen.se|provinstidningen.se|dalslanningen.se|nlt.se|skaraborgsbygden.se|alltomnorrtalje.se|fragbite.se|ljudochbild.se|vk.se|folkbladet.nu|nordsverige.se|mellanbygden.nu|vasterbottningen.se|lokaltidningen.nu|svenskafans.com
 d2469 1
+a2567 1
+/uploads/burst/js/burst.min.js
 a2824 2
 ||cdn.pji.nu/g/sp.gif$important
 ||cdn.segment.com/v1/projects/$xhr,redirect=noop.json,important,domain=dagen.se

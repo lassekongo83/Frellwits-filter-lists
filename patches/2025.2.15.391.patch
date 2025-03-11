@@ -1,10 +1,10 @@
-diff name:swefilter lines:296 checksum:b1fbe326f1
+diff name:swefilter lines:315 checksum:ed07f16880
 d2 1
 a2 1
-! Last updated: Mon, 10 Mar 2025 06:26:03 +0000
+! Last updated: Tue, 11 Mar 2025 04:33:57 +0000
 d4 1
 a4 1
-! Diff-Path: patches/2025.3.10.386.patch#swefilter
+! Diff-Path: patches/2025.3.11.273.patch#swefilter
 a22 1
 .nu/images/banners/
 d37 1
@@ -106,9 +106,18 @@ d685 1
 d753 1
 a753 1
 hrsvepet.se,cfosvepet.se##:is(.recent-post-item, .w-dyn-item):has(a[href="#"]:not(.w-condition-invisible))
+a811 4
+kandisvarlden.com##body[unselectable]:remove-attr(unselectable)
+kandisvarlden.com##html:style(-webkit-touch-callout:unset!important; -webkit-user-select:unset!important; -khtml-user-select:unset!important; -moz-user-select:unset!important; -ms-user-select:unset!important; user-select:unset!important; -webkit-tap-highlight-color:unset!important;)
+kandisvarlden.com##+js(acs, disableEnterKey)
+kandisvarlden.com##.unselectable:style(-moz-user-select:unset!important; -webkit-user-select:unset!important; cursor:unset!important;)
 d817 1
 a817 1
 karriarlakare.se,livinguppsala.se,battrestadsdel.se,butikstrender.se,forskning.se,vardfokus.se,varvat.se,smaspararguiden.se,sjostadsbladet.se,tidningenridsport.se,cookaholic.se,vinliv.se,raa.se,svenskfilmdatabas.se,hockeybladet.nu,frihetsnytt.se,alltomhusbilen.se###cookie-law-info-bar
+d832 2
+a833 2
+klart.se##div[id^="sp_message_container"], #overlay, a[rel*="sponsored"], .-panorama-ad-wrapper
+klart.se##.ad-text:has-text(/annons/i):upward(.content-box-list__item)
 d856 1
 a856 1
 kritiker.se,bio-link.se,web-tools.se##+js(prevent-xhr, adsbygoogle)
@@ -142,6 +151,8 @@ nyadagbladet.se,ff.se,rocknytt.net,magasink.se,evergreengarden.se,butikstrender.
 d1074 1
 a1074 1
 nyan.ax##a[onclick*="banner"], .ad-follower, .own-ads
+a1079 1
+nyheter24.se##.uppercase:has-text(/annons/i):upward(1)
 d1091 1
 a1091 1
 nyhetsbyranjarva.se,nyan.ax,tv-kanal.se,golfguidenonline.se,rockbladet.se,vildmarken.se,nyhetersto.se,dagenslogistik.se,turismnytt.se,radiosol.se##.g
@@ -166,9 +177,15 @@ d1233 1
 a1233 2
 skidspar.se##div[id^="div-gpt-ad"]:upward(1)
 skidspar.se##.MuiChip-label:has-text(Sponsrat):upward(article)
+d1264 1
+a1264 1
+spelhubben.se,husbilsplats.se,kandisvarlden.com##+js(acs, document.oncontextmenu)
 d1284 1
 a1284 1
 sportsnews.se,xn--sporthnt-5za.se,killsteal.se,samnytt.se,samnytt.nu,obsid.se,senses.se,teknologiexperten.se,sverige.nu,enterprisemagazine.se,haboportalen.se,bike.se##a[href*="casino"]
+d1305 1
+a1305 1
+svd.se###mega-ad-wrapper, #svd-top-ad, div[class*="advertory"], div[data-custom-ad-handled="true"], div[data-engage-entity-id="sales-banner-bottom-bar"], div[data-context-pageview*="native-svd"]
 a1338 1
 sweatybusiness.se##.hcc-sponsors-horizontal, .hcc-sponsors-vertical
 a1383 1
@@ -244,6 +261,8 @@ d2432 1
 d2440 1
 a2454 1
 /sifo$domain=corren.se|folkbladet.se|mvt.se|nt.se|vt.se|vimmerbytidning.se|kuriren.nu|nsd.se|norran.se|pt.se|ekuriren.se|strengnastidning.se|kkuriren.se|sn.se|eposten.se|unt.se|helagotland.se|fastighetsvarlden.se
+a2537 1
+/uploads/burst/js/burst.min.js
 d2573 1
 a2573 1
 /wp-content/uploads/*banner$image,domain=marsta.nu|alltomhif.se|branschkoll.se|brollopsmagasinet.se|bussmagasinet.se|danstidningen.se|guldkanalen.se|ljuskultur.se|sportpanelen.se|turismnytt.se|opulens.se|tekniknytt.se|investerarbrevet.se|svensktidskrift.se|electronic.se|restaurangvarlden.se|finanstid.se|naringslivetvgl.se|dalarnasaffarer.se|stockholmsaffarer.se|jamtlandsaffarer.se|hallandsnaringsliv.se|sjuharadsnaringsliv.se|battregolf.se|svenskhistoria.se|arjeplognytt.se|bioenergitidningen.se|fisheco.se|autonytt.se|zeromagazine.nu|improveme.se|alekuriren.se|golfguidenonline.se|esportnytt.se|resesidan.se|svenskamagasinet.nu|surveyors.se|faravelsforbundet.se|travelandtourworld.se|samfalligheterna.se
