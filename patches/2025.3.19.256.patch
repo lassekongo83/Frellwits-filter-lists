@@ -1,30 +1,41 @@
-diff name:swefilter lines:45 checksum:f3d54d7c81
+diff name:swefilter lines:67 checksum:3426922670
 d2 1
 a2 1
-! Last updated: Fri, 21 Mar 2025 05:28:49 +0000
+! Last updated: Sat, 22 Mar 2025 06:43:08 +0000
 d4 1
 a4 1
-! Diff-Path: patches/2025.3.21.328.patch#swefilter
+! Diff-Path: patches/2025.3.22.403.patch#swefilter
+d140 1
+a140 1
+aktuellsakerhet.se,borattforum.se,sjostadsbladet.se,fotbollsnytt.nu,zlatanism.se,sillyseason.se,sweatybusiness.se,finanstid.se##.td-a-rec
 d300 1
 a300 1
-bulletin.nu,inredningsarkitektur.se,fof.se,allas.se,elle.se,femina.se,hant.se,mabra.com,residencemagazine.se,svenskdam.se,motherhood.se,aftonbladet.se,lchfarkivet.se,kollega.se,folkofolk.se,skyscanner.se,dagensarena.se,bokadirekt.se,barometern.se,blt.se,bt.se,kristianstadsbladet.se,olandsbladet.se,smp.se,sydostran.se,trelleborgsallehanda.se,ut.se,ystadsallehanda.se,vaxjobladet.se,nsk.se,klt.nu,samnytt.se,sjofartstidningen.se,mytaste.se##body:style(overflow:initial!important)
+bulletin.nu,inredningsarkitektur.se,fof.se,allas.se,elle.se,femina.se,hant.se,mabra.com,residencemagazine.se,svenskdam.se,motherhood.se,aftonbladet.se,lchfarkivet.se,kollega.se,folkofolk.se,skyscanner.se,dagensarena.se,bokadirekt.se,barometern.se,blt.se,bt.se,kristianstadsbladet.se,olandsbladet.se,smp.se,sydostran.se,trelleborgsallehanda.se,ut.se,ystadsallehanda.se,vaxjobladet.se,nsk.se,klt.nu,samnytt.se,sjofartstidningen.se,mytaste.se,matklubben.se##body:style(overflow:initial!important)
 d371 1
 a371 1
-dagensarena.se,mytaste.se##.popup
+dagensarena.se,mytaste.se,matklubben.se##.popup
 d877 1
 a877 1
 konsumentmagasinet.se##.pricerunner, #Conzent, .conzent-modal
 d953 1
 a953 1
 ljudochbild.se##.adremark, .coofad, .hidead, .phoneads, .pricecomp, .offerz, .type-articleadvertorial, .adblock, .lbplussinfo, .popup-overlayx, a[href*="/advertorial"], a[href*="/advertorial"] + .textbox, .prisjakt, #stickleft, #stickright, .adbox, .mainbanner
-d1060 1
-a1060 1
-mytaste.se##section[data-enter="load_recommended_products"], aside.plug[data-enter="reach_add"]
+d1003 1
+d1058 3
+a1060 3
+mytaste.se,matklubben.se##div[style^="max-width"]:has(div[id^="ad-"])
+mytaste.se,matklubben.se##section.ball:has(a[href*="systembolaget.se"])
+mytaste.se,matklubben.se##section[data-enter="load_recommended_products"], aside.plug[data-enter="reach_add"], #recommended-products
+a1164 2
+pricerunner.se##p[class^="pr-"]:has-text(Sponsrat):upward(div[class$="Container-root"])
+pricerunner.se##span[class^="pr-"]:has-text(ANNONS):upward(a)
 d1390 1
 a1391 1
-tasteline.com,mytaste.se,ljudochbild.se##.popup-overlay
+tasteline.com,mytaste.se,matklubben.se,ljudochbild.se##.popup-overlay
 a1601 1
 ##article[data-section="annons"]
+a2240 1
+/monitoring$domain=samnytt.se|ekonomifakta.se|travronden.se|spelvarde.se
 a2310 1
 /plugins/conzent$script,domain=konsumentmagasinet.se
 d2469 1
@@ -33,14 +44,25 @@ a2469 1
 d2691 1
 a2691 1
 @@/viralize_player_content$script,xhr,domain=nyheter24.se|modette.se|familjeliv.se|alltforforaldrar.se|loppi.se|devote.se|vimedbarn.se|brollopstorget.se|rodeo.net|travnet.se|fragbite.se|vk.se|folkbladet.nu|nordsverige.se|mellanbygden.nu|vasterbottningen.se|lokaltidningen.nu|hemtrevligt.se|innebandymagazinet.se|jaktjournalen.se
+a2861 1
+||content.livesportmedia.eu^$third-party
 d2867 1
 a2867 1
 ||cookiebot.com^$domain=ng.se|swedroid.se|bax-shop.se|kurera.se|upplysning.se|findroommate.se|polistidningen.se|fokus.se|spraktidningen.se|varden.se|trafiken.nu|energi.se|sverigesnatur.org|sis.se|alltomarbetsmiljo.se|tco.se|totallyorebro.se|totallystockholm.se|enirobuddy.se|framtid.se|byggfaktadocu.se|husdjur.se|chalmers.se|elinstallatoren.se|ff.se|modernpsykologi.se|qx.se|vatternrundan.se|vvsforum.se|naturvetarna.se|skolporten.se|dust2.se|ehandel.se|byggvarlden.se|varldenidag.se|omtanke.today|hotellorestaurang.se|byggfakta.today|byggfakta.se|citymark.today|journalisten.se|fastighetsvarlden.se|friidrott.se|friidrottsstatistik.se|vildmarken.se|kyrkanstidning.se|tmf.se|sokbat.se|bilkompaniet.se|hv.se|folkhalsomyndigheten.se|dinpsykiskahalsa.se|hyresbostader.se|rsyd.se|byggforetagen.se|vasterastidning.se|storyhouseegmont.se|mytaste.se|smartbizz.se|tandlakartidningen.se|fastighetssverige.se|turisterna.se|svenskfordonsladdning.se|nextconomy.se|riksteatern.se|scenochfilm.se|transport.se|saco.se|byggahus.se|smartsenior.se|dagensopinion.se|livsmedelsforetagen.se|djurrattsalliansen.se|pvforetagen.se|verkstadsjobb.se|grundskoletidningen.se|svenskakyrkan.se|traguiden.se|cirkusvenues.se|sweatybusiness.se|matklubben.se|finanstid.se|swehockey.se|skanetrafiken.se
+d2873 1
+a2873 1
+||cookielaw.org^$domain=tv4.se|fotbollskanalen.se|koket.se|flashscore.se|ikea.com|recept.se|manpower.se|natgeotv.com|internetkunskap.se|internetstiftelsen.se|yelp.se|spisa.nu|viaplayradio.se|svenskarnaochinternet.se|bab.la|tripadvisor.se|sydkusten.es|livetochdiabetes.se|voister.se|nok.se|motesplatsen.se|placera.se|se.trustpilot.com|travronden.se|travrondenspel.se|jokersystemet.se|spelvarde.se|overodds.se|hammarbyfotboll.se|pricerunner.se|billetto.se|lidl.se|pwc.se|svenskafans.com|vinted.se
 d2877 1
 a2877 1
 ||cookie-script.com^$domain=axess.se|dagensjuridik.se|foodfolder.se|arkitektur.se|internetlankar.se|friluftsframjandet.se|bakasockerfritt.se|handelsradet.se|cirkulation.se|arkitekt.se|webb-tv.nu|eurocampings.se|transportforetagen.se
+d2925 1
 d3042 1
 a3042 1
 ||js.monitor.azure.com^$domain=akademiskahus.se|energi.se|skanetrafiken.se|forex.se|stenafastigheter.se|transportforetagen.se
+d3192 1
+a3192 1
+||privacy-mgmt.com^$domain=radio.se|dagenstv.com|kolla.tv|computersweden.se|woxikon.se|dagen.se|filmtopp.se|upday.com|gaffa.se|handbollskanalen.se|stayfriends.se|spisa.nu
+d3245 1
 a3262 1
 ||signals.tt.se/collect
+d3333 1
