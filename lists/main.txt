@@ -1237,7 +1237,7 @@ autolife.se###Banners
 ||g.ezodn.com/cmp/$domain=temadagar.se
 ||js.monitor.azure.com^$domain=akademiskahus.se|energi.se|skanetrafiken.se|forex.se|stenafastigheter.se|transportforetagen.se|lantmannen.se|stff.se|gbgfotboll.se|svenskfotboll.se
 utm_$document,removeparam=/^utm_/,domain=tv.nu|booli.se|expressen.se|aftonbladet.se|bostad.blocket.se|dagensps.se|prisjakt.nu|vinborsen.se
-/analytics$domain=gbgfotboll.se|stff.se|svenskfotboll.se|di.se|etc.se|vackertvader.se|skogsforum.se|skolporten.se|sjf.se|se.azrhymes.com
+/analytics$domain=gbgfotboll.se|stff.se|svenskfotboll.se|di.se|etc.se|vackertvader.se|skogsforum.se|skolporten.se|sjf.se|se.azrhymes.com|alandsradio.ax
 /firebase-analytics.js$domain=stoppapressarna.se|zeinaskitchen.se|jennysmatblogg.nu|filippoon.se|lindasbakskola.se
 /glimr$script,domain=aftonbladet.se|blocket.se|livsstil.se|godare.se
 /profile$ping,domain=feber.se|skippo.se|tasteline.com|tjock.se|veckorevyn.com|marcusoscarsson.se|surfa.se|nordichardware.se|tv4.se|fotbollskanalen.se|koket.se|teknikveckan.se|langd.se
@@ -1300,7 +1300,7 @@ aftonbladet.se,livsstil.se,godare.se,byggahus.se,expressen.se,elle.se,femina.se,
 
 ! -- Specific annoying elements
 adecco.se,ica.se,apotekhjartat.se,tele2.se###onetrust-consent-sdk
-plastikoperationsforum.se,riksettan.net,automobil.se,endurobloggen.se,vibilagare.se,mopedgaraget.se,caroftheyear.se,klassiker.nu,alandsradio.ax,svjt.se,so-rummet.se,skatter.se###sliding-popup
+plastikoperationsforum.se,riksettan.net,automobil.se,endurobloggen.se,mopedgaraget.se,caroftheyear.se,svjt.se,so-rummet.se,skatter.se###sliding-popup
 cannabis.se,biostock.se,snowmobile.se,tobaksfakta.se,dagenslogistik.se,magasinetkonkret.se,skaneplus.se,battrestadsdel.se##.pum-overlay
 forum.robsoft.nu##.cookie-box
 ljuskultur.se,hrnytt.se,aapl.se,inredningsarkitektur.se,inblick.se##.cookies
@@ -1327,7 +1327,7 @@ bioenergitidningen.se###cookieinfo
 lifeofsvea.se,quizza.nu##.cookie-info
 lira.se###cookies-accept
 doktorn.com##.js-cookie-disclaimer
-bio-link.se,web-tools.se,evertiq.se###cc-main
+bio-link.se,web-tools.se,evertiq.se,alandsradio.ax###cc-main
 vackertvader.se,tidningenskriva.se,eventeffect.se,executiveeffect.se,saleseffect.se,kemisamfundet.se,knep.se,ledarsidorna.se,lexbase.se##.cc-window
 lektionsbanken.se,runnersworld.se##.footer-newsletter
 itseniorerna.se###redim-cookiehint-modal
@@ -1633,10 +1633,13 @@ vk.se,folkbladet.nu,nordsverige.se,mellanbygden.nu,vasterbottningen.se,lokaltidn
 /native-ads$domain=atl.nu|landlantbruk.se|land.se
 @@/adx.js$~third-party,domain=atl.nu|landlantbruk.se|land.se
 ||atl.nu/api/mnews
-atl.nu,landlantbruk.se,land.se##a[href*="/atl-tv-annons/"], [class^="Ad_"], div[class^="WidgetCTASticky"], a[class^="CTA_ctaWrapperCampaignBase"]
-atl.nu,landlantbruk.se,land.se#@#.ad-unit:not(.text-ad):not(.textads)
+@@||atl.nu^$ghide
+@@||landlantbruk.se^$ghide
+@@||land.se^$ghide
+atl.nu,landlantbruk.se,land.se##a[href*="/atl-tv-annons/"], [class^="Ad_"], div[class^="WidgetCTASticky"], a[class^="CTA_ctaWrapperCampaignBase"], section[class*="NativeAdArticlePage"]
+atl.nu,landlantbruk.se,land.se##div[class^="Message_messageSticky"]:has(a[href*="/kampanj."])
 ||lantbruksnytt.se/includes/$subdocument
-lantbruksnytt.se###startpage-top-right, .ads_text + a, div[class*="square_rotate"], a[target="_blank"][rel="nofollow"], #ouibounce-modal, iframe[src*="iframebanner"], .widget_maskinstationer_widget
+lantbruksnytt.se###startpage-top-right, .ads_text + a, div[class*="square_rotate"], a[target="_blank"][rel="nofollow"], #ouibounce-modal, iframe[src*="iframebanner"], .widget_maskinstationer_widget, .ads_text + #articles-top
 lantbruksnytt.se##article:has(.ads_text)
 lantbruksnytt.se##aside.enhanced-text-widget:has(div[class^="square_rotate"])
 lantbruksnytt.se##aside.side-box:has(.adsbygoogle)
@@ -2404,7 +2407,7 @@ koket.se##div[class*="mosaic_item_wrapper"]:has(div[class*="sponsorLabel"])
 jaktplay.se##.jaktplay-ad
 ||embed.viaplay.com/*autoplay=true$frame,removeparam=autoplay
 ||freewheel-mtgx-tv.akamaized.net^$media
-||imasdk.googleapis.com/js/sdkloader/ima3.js$script,redirect=google-ima.js,important,domain=screen9.com|atl.nu
+||imasdk.googleapis.com/js/sdkloader/ima3.js$script,redirect-rule=google-ima.js,important,domain=screen9.com|atl.nu
 
 ! Flowplayer
 ||lwcdn.com/vendor/ima.min.js$script
@@ -2912,7 +2915,7 @@ whowhatwear.co.uk#@#a[href*="/click.linksynergy"] img
 ||cision.com^$badfilter
 ||cision.com^$third-party
 ! https://github.com/lassekongo83/Frellwits-filter-lists/issues/98#issuecomment-1048079485
-||k5a.io^$script,redirect=noop.js,domain=tv2.no
+||k5a.io^$script,redirect-rule=noop.js,domain=tv2.no
 ! https://github.com/lassekongo83/Frellwits-filter-lists/issues/128
 @@||klaviyo.com/media/js/public/klaviyo_subscribe.js$domain=solostove.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/130391
@@ -3379,8 +3382,8 @@ skolporten.se##.advertMod
 skolporten.se##.article-short:has(a[href*="/sponsrat-innehall"])
 ||stats.helsingborg.se^
 tidningenskriva.se##section.widget_text:has(div[id^="ad-"])
-||ads.holid.io^$script,redirect=noop.js,domain=elevspel.se
-||inmobi.com^$script,redirect=noop.js,domain=elevspel.se
+||ads.holid.io^$script,redirect-rule=noop.js,domain=elevspel.se
+||analytics.elevspel.se^$script,important,redirect=noop.js,domain=elevspel.se
 @@$script,1p,domain=elevspel.se
 elevspel.se###cookie_wrapper, a[href*="medlem"] > div, .ryk-top
 elevspel.se##:is(div.Block, div[style^="display: table"], h1[itemprop="name"] ~ div:not([style="display:none;"]):not([class^="content"][class$="content"])):has(a[href*="medlem"], [onclick*="medlem"], .adsbygoogle)
