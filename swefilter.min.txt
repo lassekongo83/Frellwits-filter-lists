@@ -1,7 +1,7 @@
 ! Title: Frellwit's Swedish Filter
-! Last updated: Thu, 27 Mar 2025 06:29:09 +0000
+! Last updated: Fri, 28 Mar 2025 04:49:54 +0000
 ! Expires: 5 days
-! Diff-Path: patches/2025.3.27.389.patch#swefilter
+! Diff-Path: patches/2025.3.28.289.patch#swefilter
 ! Diff-Expires: 24 hours
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
@@ -194,8 +194,8 @@ arkitektur.se##article:has(.Entry-sponsored)
 arkitektur.se##[class*="panorama"]
 artbannersplus&task=show
 assistanskoll.se##.aannons
-atl.nu,landlantbruk.se,land.se##a[href*="/atl-tv-annons/"], [class^="Ad_"], div[class^="WidgetCTASticky"], a[class^="CTA_ctaWrapperCampaignBase"]
-atl.nu,landlantbruk.se,land.se#@#.ad-unit:not(.text-ad):not(.textads)
+atl.nu,landlantbruk.se,land.se##a[href*="/atl-tv-annons/"], [class^="Ad_"], div[class^="WidgetCTASticky"], a[class^="CTA_ctaWrapperCampaignBase"], section[class*="NativeAdArticlePage"]
+atl.nu,landlantbruk.se,land.se##div[class^="Message_messageSticky"]:has(a[href*="/kampanj."])
 atl.nu,landlantbruk.se,land.se,di.se,expressen.se,dn.se###didomi-host
 aurumforum.se##.bottom-liner span:has-text(Annons):upward(2)
 aurumforum.se##.top-add
@@ -249,7 +249,7 @@ bioenergitidningen.se##.flowad, .nativepuff
 biostock.se,hejauppsala.com,svenskfilmdatabas.se,bredband.se##.wt-cli-cookie-bar-container
 biostock.se,tobaksfakta.se##.pum-open:style(overflow:auto!important)
 bio-link.se,web-tools.se##.d-print-none > div:has(a[target="_blank"])
-bio-link.se,web-tools.se,evertiq.se###cc-main
+bio-link.se,web-tools.se,evertiq.se,alandsradio.ax###cc-main
 birthday.se##.datax
 bjuvsweek.se##.carouselbanner-wrp
 blocket.se##.placement_panorama, .blocket-placement, div[style="height: 240px;"], [class*="offering-info-box"], [data-id="placement_panorama"], div[class*="BannerLink"], div[class*="GamBannerContainer"]
@@ -913,7 +913,7 @@ langd.se##.single-entry__ads
 lantbruksnytt.se##article:has(.ads_text)
 lantbruksnytt.se##aside.enhanced-text-widget:has(div[class^="square_rotate"])
 lantbruksnytt.se##aside.side-box:has(.adsbygoogle)
-lantbruksnytt.se###startpage-top-right, .ads_text + a, div[class*="square_rotate"], a[target="_blank"][rel="nofollow"], #ouibounce-modal, iframe[src*="iframebanner"], .widget_maskinstationer_widget
+lantbruksnytt.se###startpage-top-right, .ads_text + a, div[class*="square_rotate"], a[target="_blank"][rel="nofollow"], #ouibounce-modal, iframe[src*="iframebanner"], .widget_maskinstationer_widget, .ads_text + #articles-top
 laromedia.se##img[alt="Annons"] + .img-flipper
 lawline.se##[class^="CookiesModal"]
 lchfarkivet.se##.modal-wrapper, div#beskrivning[style="font-size: 10px; text-align: center; color: #8E8C8C; max-width: 700px;"], .recipe-ads
@@ -1156,7 +1156,7 @@ piraja.se##:is(.intro, #hero, #featholder):has(.spons)
 pirkt.se##aside#below-header, aside.sidebar-right img, aside.sidebar-left img, aside#above-main, aside#after-first-post, h1 + .wp-block-video, h2 + .wp-block-image img[src$=".gif"]
 placera.se##.noMarginAd, .cq-ad-reference
 placera.se##.vignette.XLText :is(a[href*="/externa-tjanster"], a[href*="promoted"]):upward(.section)
-plastikoperationsforum.se,riksettan.net,automobil.se,endurobloggen.se,vibilagare.se,mopedgaraget.se,caroftheyear.se,klassiker.nu,alandsradio.ax,svjt.se,so-rummet.se,skatter.se###sliding-popup
+plastikoperationsforum.se,riksettan.net,automobil.se,endurobloggen.se,mopedgaraget.se,caroftheyear.se,svjt.se,so-rummet.se,skatter.se###sliding-popup
 playradio.se##.sidealtcol
 podcasts.nu##.sponsor-list, .cookie-law-wrapper, .big-ad-placeholder, .affiliate-wrapper
 poddtoppen.se##.txs-a
@@ -1965,7 +1965,7 @@ zeromagazine.nu##div[id^="ads"]
 /ajax/ads.php$domain=garaget.org
 /ajax/docu_stats.jsp
 /aller-ads$domain=~seiska.fi
-/analytics$domain=gbgfotboll.se|stff.se|svenskfotboll.se|di.se|etc.se|vackertvader.se|skogsforum.se|skolporten.se|sjf.se|se.azrhymes.com
+/analytics$domain=gbgfotboll.se|stff.se|svenskfotboll.se|di.se|etc.se|vackertvader.se|skogsforum.se|skolporten.se|sjf.se|se.azrhymes.com|alandsradio.ax
 /analytics-bmb
 /analytics/cts.min.js
 /analytics/gallup
@@ -2700,6 +2700,7 @@ zeromagazine.nu##div[id^="ads"]
 @@/scripts/advert_$~third-party,domain=di.se
 @@/viralize_player_content$script,xhr,domain=nyheter24.se|modette.se|familjeliv.se|alltforforaldrar.se|loppi.se|devote.se|vimedbarn.se|brollopstorget.se|rodeo.net|travnet.se|fragbite.se|vk.se|folkbladet.nu|nordsverige.se|mellanbygden.nu|vasterbottningen.se|lokaltidningen.nu|hemtrevligt.se|innebandymagazinet.se|jaktjournalen.se
 @@_advert.$domain=e-pages.dk
+@@||atl.nu^$ghide
 @@||cargodisplayads.com/till_minne/
 @@||cdn.play.showheroes.com/part/partimage$image
 @@||cdn.play.showheroes.com/part/rendered$media
@@ -2715,6 +2716,8 @@ zeromagazine.nu##div[id^="ads"]
 @@||js.driftt.com^$domain=sanity.io
 @@||klaviyo.com/media/js/public/klaviyo_subscribe.js$domain=solostove.com
 @@||kritiker.se^$generichide
+@@||landlantbruk.se^$ghide
+@@||land.se^$ghide
 @@||nuthymia-llc.ck.page/*/index.js$domain=nickwignall.com
 @@||pages.upsales.com^
 @@||www.googletagmanager.com/gtm.js$script,domain=elgiganten.se
@@ -2738,7 +2741,7 @@ zeromagazine.nu##div[id^="ads"]
 ||adonsales.com^$third-party
 ||adonstudio.com^$third-party
 ||ads.google.com^$third-party
-||ads.holid.io^$script,redirect=noop.js,domain=elevspel.se
+||ads.holid.io^$script,redirect-rule=noop.js,domain=elevspel.se
 ||adviral.s3.amazonaws.com/sponsored/
 ||advisa.se^$third-party
 ||advisible.com^$third-party
@@ -2762,6 +2765,7 @@ zeromagazine.nu##div[id^="ads"]
 ||analytics-smhise.smhi.se^
 ||analytics.ahrefs.com^
 ||analytics.ciseway.se^$third-party
+||analytics.elevspel.se^$script,important,redirect=noop.js,domain=elevspel.se
 ||analytics.gen.shield.monitoringservice.co^
 ||analytics.ozzi.io^$third-party
 ||analytics.teknikveckan.se^
@@ -3026,7 +3030,7 @@ zeromagazine.nu##div[id^="ads"]
 ||ifragasatt.se/stats/
 ||images-ads.aland.com^
 ||images.woo.a2d.tv/creative_assets$image,domain=tv4play.se|tv4.se|fotbollskanalen.se|koket.se
-||imasdk.googleapis.com/js/sdkloader/ima3.js$script,redirect=google-ima.js,important,domain=screen9.com|atl.nu
+||imasdk.googleapis.com/js/sdkloader/ima3.js$script,redirect-rule=google-ima.js,important,domain=screen9.com|atl.nu
 ||imgix.net^*/analytics.$script
 ||imgsct.cookiebot.com/1.gif
 ||img.upsales.com/*/visit$script,important
@@ -3034,7 +3038,6 @@ zeromagazine.nu##div[id^="ads"]
 ||inboxads.com^$third-party
 ||ingest.analytics.nation.dev^
 ||inmobi.com^$domain=alltomelbil.se|rikatillsammans.se|egoinas.se|moviezine.se|travelnews.se|varldenshaftigaste.se|merinfo.se|foreca.se|laget.se|byrum.se|sportlovin.se|receptfavoriter.se|forni.se|cornucopia.se|norrahalland.se|tittapavideon.se|motormagasinet.se|food-supply.se|dagenshandel.se|plastnet.se|habit.se|woodnet.se|foodnet.se|transportnet.se|processnet.se|packnet.se|verkstaderna.se|medtechmagazine.se|recyclingnet.se|rt-forum.se|uochd.se|lifesciencesweden.se|fri-kopenskap.se|cleannet.se|metal-supply.se|fashionnet.se|framtidensbygg.se|entreprenad.com|mykitchenstories.se|cancelculture.se|findit.se|brinkenbakar.se|foretagande.se|fotbolltransfers.com|affarsvarlden.se|villalivet.se|branschaktuellt.se|nordic.ign.com|fragbite.se|lindasbakskola.se|jennysmatblogg.nu|filippoon.se|niiinis.se|eniro.se|alltomkungligt.se|vackertvader.se|klendr.se|zeinaskitchen.se|tvsporten.nu|frillesasbandy.se|skik.se|marketmate.se|svartgul.se|langd.se|babyhjalp.se|skyttesport.se|flashback.org|nyadagbladet.se|enkelteknik.se|alltomnorrtalje.se|stoppapressarna.se|sporttv.nu|nyteknik.se|lag-avtal.se|arbetarskydd.se|leta.se|poddtoppen.se|antidoping.se|garaget.org|newsner.com|humorbibeln.se|ettgottskratt.se|djurbibeln.se|ordparken.se|undertian.com|samnytt.se|motivation.se|nouw.com
-||inmobi.com^$script,redirect=noop.js,domain=elevspel.se
 ||insertcoin.se^$third-party
 ||insights.tv4.a2d.tv^
 ||insplanet.com^$third-party
@@ -3057,7 +3060,7 @@ zeromagazine.nu##div[id^="ads"]
 ||jwpcdn.com/player/plugins/inference/
 ||jwpcdn.com/player/*/bidding.js$domain=allas.se|elle.se|femina.se|hant.se|mabra.com|residencemagazine.se|svenskdam.se|motherhood.se|recept.se
 ||jwplayer.com/*/advertising$domain=allas.se|elle.se|femina.se|hant.se|mabra.com|residencemagazine.se|svenskdam.se|motherhood.se
-||k5a.io^$script,redirect=noop.js,domain=tv2.no
+||k5a.io^$script,redirect-rule=noop.js,domain=tv2.no
 ||kalender.se/analytics
 ||kamrat.com/js/cookiescript
 ||kingsizemag.se/content/

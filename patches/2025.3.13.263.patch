@@ -1,10 +1,10 @@
-diff name:swefilter lines:198 checksum:ebc56a72ae
+diff name:swefilter lines:227 checksum:43d4256187
 d2 1
 a2 1
-! Last updated: Thu, 27 Mar 2025 06:29:09 +0000
+! Last updated: Fri, 28 Mar 2025 04:49:54 +0000
 d4 1
 a4 1
-! Diff-Path: patches/2025.3.27.389.patch#swefilter
+! Diff-Path: patches/2025.3.28.289.patch#swefilter
 d91 1
 a91 1
 56kilo.se##.code-block:has(.shop-page-wp-grid, a[href*="trendrehab"])
@@ -17,6 +17,13 @@ allastudier.se,utbildning.se,studentum.se##.wide-page_ads, .lcb-AdLcb
 d156 1
 a156 1
 allas.se,elle.se,femina.se,hant.se,mabra.com,residencemagazine.se,svenskdam.se,motherhood.se##article[data-type="native"], .ag-product-wrapper, .product-carousel__container, .shop_carousel, .editorsPick, div[class^="strossle-widget-"], .ad-min-height, a.cts-impression-item[data-cts-label*="banner"], section[data-cts-label="affiliate-carousel"], .ad-row-column, section[data-cts-object-category="promotion_banner"], section[data-cts-object-category="affiliate_carousel"]
+d197 2
+a198 2
+atl.nu,landlantbruk.se,land.se##a[href*="/atl-tv-annons/"], [class^="Ad_"], div[class^="WidgetCTASticky"], a[class^="CTA_ctaWrapperCampaignBase"], section[class*="NativeAdArticlePage"]
+atl.nu,landlantbruk.se,land.se##div[class^="Message_messageSticky"]:has(a[href*="/kampanj."])
+d252 1
+a252 1
+bio-link.se,web-tools.se,evertiq.se,alandsradio.ax###cc-main
 d295 2
 a296 2
 breakit.se##div[class^="LivewrappedContainer_root"]
@@ -62,6 +69,9 @@ klendr.se##div[class^="min-h-"]:has(.adsbygoogle)
 d876 1
 a876 1
 konsumentmagasinet.se##.pricerunner, #Conzent, .conzent-modal
+d911 1
+a911 1
+lantbruksnytt.se###startpage-top-right, .ads_text + a, div[class*="square_rotate"], a[target="_blank"][rel="nofollow"], #ouibounce-modal, iframe[src*="iframebanner"], .widget_maskinstationer_widget, .ads_text + #articles-top
 d952 1
 a952 1
 ljudochbild.se##.adremark, .coofad, .hidead, .phoneads, .pricecomp, .offerz, .type-articleadvertorial, .adblock, .lbplussinfo, .popup-overlayx, a[href*="/advertorial"], a[href*="/advertorial"] + .textbox, .prisjakt, #stickleft, #stickright, .adbox, .mainbanner
@@ -82,6 +92,9 @@ mykitchenstories.se##.elementor-top-section:has(script[src^="//ads"])
 mytaste.se,matklubben.se##div[style^="max-width"]:has(div[id^="ad-"])
 mytaste.se,matklubben.se##section.ball:has(a[href*="systembolaget.se"])
 mytaste.se,matklubben.se##section[data-enter="load_recommended_products"], aside.plug[data-enter="reach_add"], #recommended-products
+d1152 1
+a1152 1
+plastikoperationsforum.se,riksettan.net,automobil.se,endurobloggen.se,mopedgaraget.se,caroftheyear.se,svjt.se,so-rummet.se,skatter.se###sliding-popup
 a1161 2
 pricerunner.se##p[class^="pr-"]:has-text(Sponsrat):upward(div[class$="Container-root"])
 pricerunner.se##span[class^="pr-"]:has-text(ANNONS):upward(a)
@@ -107,7 +120,7 @@ a1908 1
 /TopAnnons$domain=tidningenattention.se
 d1958 1
 a1958 1
-/analytics$domain=gbgfotboll.se|stff.se|svenskfotboll.se|di.se|etc.se|vackertvader.se|skogsforum.se|skolporten.se|sjf.se|se.azrhymes.com
+/analytics$domain=gbgfotboll.se|stff.se|svenskfotboll.se|di.se|etc.se|vackertvader.se|skogsforum.se|skolporten.se|sjf.se|se.azrhymes.com|alandsradio.ax
 d2064 1
 a2064 1
 /cookieconsent$script,domain=lundagard.se|kiacarclub.se|svampguiden.com|bike.se|runnersworld.se|offside.org|racemagazine.se|tidningenskriva.se|bobattre.se|hyundaiforum.se|adventist.se|exempelmeningar.se|krogen.se|fiskesnack.com|sailguide.com|statist.se
@@ -137,6 +150,16 @@ d2667 1
 d2690 1
 a2690 1
 @@/viralize_player_content$script,xhr,domain=nyheter24.se|modette.se|familjeliv.se|alltforforaldrar.se|loppi.se|devote.se|vimedbarn.se|brollopstorget.se|rodeo.net|travnet.se|fragbite.se|vk.se|folkbladet.nu|nordsverige.se|mellanbygden.nu|vasterbottningen.se|lokaltidningen.nu|hemtrevligt.se|innebandymagazinet.se|jaktjournalen.se
+a2691 1
+@@||atl.nu^$ghide
+a2706 2
+@@||landlantbruk.se^$ghide
+@@||land.se^$ghide
+d2730 1
+a2730 1
+||ads.holid.io^$script,redirect-rule=noop.js,domain=elevspel.se
+a2753 1
+||analytics.elevspel.se^$script,important,redirect=noop.js,domain=elevspel.se
 a2763 1
 ||api.livearenasports.com/marketing
 d2769 1
@@ -177,11 +200,17 @@ a2960 1
 d2968 1
 a3007 1
 ||hockeynews.se/images/sveacasino.jpg
-d3021 1
-a3021 1
+d3014 1
+a3014 1
+||imasdk.googleapis.com/js/sdkloader/ima3.js$script,redirect-rule=google-ima.js,important,domain=screen9.com|atl.nu
+d3021 2
+a3022 1
 ||inmobi.com^$domain=alltomelbil.se|rikatillsammans.se|egoinas.se|moviezine.se|travelnews.se|varldenshaftigaste.se|merinfo.se|foreca.se|laget.se|byrum.se|sportlovin.se|receptfavoriter.se|forni.se|cornucopia.se|norrahalland.se|tittapavideon.se|motormagasinet.se|food-supply.se|dagenshandel.se|plastnet.se|habit.se|woodnet.se|foodnet.se|transportnet.se|processnet.se|packnet.se|verkstaderna.se|medtechmagazine.se|recyclingnet.se|rt-forum.se|uochd.se|lifesciencesweden.se|fri-kopenskap.se|cleannet.se|metal-supply.se|fashionnet.se|framtidensbygg.se|entreprenad.com|mykitchenstories.se|cancelculture.se|findit.se|brinkenbakar.se|foretagande.se|fotbolltransfers.com|affarsvarlden.se|villalivet.se|branschaktuellt.se|nordic.ign.com|fragbite.se|lindasbakskola.se|jennysmatblogg.nu|filippoon.se|niiinis.se|eniro.se|alltomkungligt.se|vackertvader.se|klendr.se|zeinaskitchen.se|tvsporten.nu|frillesasbandy.se|skik.se|marketmate.se|svartgul.se|langd.se|babyhjalp.se|skyttesport.se|flashback.org|nyadagbladet.se|enkelteknik.se|alltomnorrtalje.se|stoppapressarna.se|sporttv.nu|nyteknik.se|lag-avtal.se|arbetarskydd.se|leta.se|poddtoppen.se|antidoping.se|garaget.org|newsner.com|humorbibeln.se|ettgottskratt.se|djurbibeln.se|ordparken.se|undertian.com|samnytt.se|motivation.se|nouw.com
 a3038 1
 ||js.monitor.azure.com^$domain=akademiskahus.se|energi.se|skanetrafiken.se|forex.se|stenafastigheter.se|transportforetagen.se|lantmannen.se|stff.se|gbgfotboll.se|svenskfotboll.se
+d3044 1
+a3044 1
+||k5a.io^$script,redirect-rule=noop.js,domain=tv2.no
 d3187 2
 a3188 2
 ||privacy-center.org^$domain=180.se|agriaffaires.se|truckscorner.se|machineryzone.se|stegforhalsa.se|netdoktor.se|netdoktorpro.se|news55.se|hastnet.se|dagensps.se|realtid.se|sportbibeln.se|booli.se
