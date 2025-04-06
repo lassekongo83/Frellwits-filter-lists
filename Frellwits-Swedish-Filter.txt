@@ -1,6 +1,6 @@
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days
-! Last modified: 2025-04-04 06:02:56 CEST
+! Last modified: 2025-04-06 07:11:55 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPL3 - https://github.com/lassekongo83/Frellwits-filter-lists/blob/master/LICENSE
@@ -417,6 +417,7 @@ designbase.se##html,body:style(overflow:unset!important;)
 designbase.se##.banner-hidden, .z-newsletter-modal, .z-newsletter-popup
 desktop-banner$image,domain=bokadirekt.se
 destination.se,sistaminuten.se##+js(set-cookie, CM_cookieConsent, 0)
+dh.se##a[onclick^="trackLinkClick"]:remove-attr(onclick)
 digitalavykort.se##.rightdiv p:has-text(/casino|kasino|lån|betting|odds|lotto/i)
 digitalfotoforalla.se,iform.se,pctidningen.se,varldenshistoria.se##.scroll-message, .gallery-banner, .horseshoe, [data-ad-type], .bcm-banner, .default-banner-size
 digitalfotoforalla.se,iform.se,pctidningen.se,varldenshistoria.se##.standard.mobile-rows:has(a[data-ad-domain])
@@ -1132,7 +1133,7 @@ nyhetersto.se,bussmagasinet.se,brollopsmagasinet.se,borattforum.se,globalpolitic
 nyheter.swebbtv.se##.recent-posts-widget-with-thumbnails:has-text(/annonssamarbete|annons/i)
 nyheter.swebbtv.se##.wp-block-image a[target]:not([href*="nyheter.swebbtv.se"]), .mh-sidebar-2 .indexlink
 nyhetsbyranjarva.se##div[style="display: flex; justify-content: center; flex-direction: column; align-items: center;"]
-nyhetsbyranjarva.se,nyan.ax,tv-kanal.se,golfguidenonline.se,rockbladet.se,vildmarken.se,nyhetersto.se,dagenslogistik.se,turismnytt.se,radiosol.se##.g
+nyhetsbyranjarva.se,nyan.ax,tv-kanal.se,golfguidenonline.se,rockbladet.se,vildmarken.se,nyhetersto.se,dagenslogistik.se,turismnytt.se,radiosol.se,cora.se##.g
 nyteknik.se,lag-avtal.se,arbetarskydd.se##article:has(a[href*="/sponsrad"])
 obosdamallsvenskan.se,elitettan.se##.iframe-section-container:has(iframe[src*="bannerflow"])
 obosdamallsvenskan.se,elitettan.se##.linked-image-section:has(a[target="_blank"])
@@ -2362,7 +2363,7 @@ zeromagazine.nu##div[id^="ads"]
 /plugins/ft-takeover-ads
 /plugins/ga-germanized/*
 /plugins/ga-in/*
-/plugins/gdpr-cookie-compliance$script,domain=goteborgsgolfaren.se|modernalivet.se|bfn.se
+/plugins/gdpr-cookie-compliance$script,domain=goteborgsgolfaren.se|bfn.se
 /plugins/genesis-simple-share$script
 /plugins/ginger/addon/analytics/*
 /plugins/google-analytics
@@ -2409,7 +2410,7 @@ zeromagazine.nu##div[id^="ads"]
 /plugins/popup$domain=ordfrontmagasin.se|snowmobile.se|forvaltarforum.se|it-finans.se|it-halsa.se|it-kanalen.se|it-pedagogen.se|it-retail.se|jobsinsweden.se
 /plugins/pressidium-cookie-consent$script,domain=undervarttak.se|radiotreby.se
 /plugins/pum-$script,domain=snowmobile.se|it-finans.se|it-halsa.se|it-kanalen.se|it-pedagogen.se|it-retail.se
-/plugins/quantcast-choice$script,domain=javligtgott.se|dh.se|villalivet.se
+/plugins/quantcast-choice$script,domain=javligtgott.se|villalivet.se
 /plugins/quick-adsense
 /plugins/r9-analytics
 /plugins/random-banner
@@ -2444,7 +2445,7 @@ zeromagazine.nu##div[id^="ads"]
 /plugins/vizzit-analytics
 /plugins/wccp-pro$domain=dinbyggare.se
 /plugins/webtoffee-cookie-consent$script,domain=ekonomifokus.se
-/plugins/webtoffee-gdpr-cookie-consent$script,domain=forskning.se|hejaolika.se|kvartal.se|karriarlakare.se|svenskfilmdatabas.se|bredband.se|bonnieraudio.se|dansbandsnytt.se
+/plugins/webtoffee-gdpr-cookie-consent$script,domain=forskning.se|karriarlakare.se|svenskfilmdatabas.se|bonnieraudio.se|dansbandsnytt.se
 /plugins/wf-cookie-consent$script,domain=spelochfilm.se
 /plugins/woocommerce-google-adwords
 /plugins/wordpress-stats-manager-pro
@@ -3217,7 +3218,7 @@ zeromagazine.nu##div[id^="ads"]
 ||prisjakt.nu^$third-party,domain=~prisjakt.no|~pricespy.co.uk|~ledenicheur.fr|~prisjagt.dk|~pricespy.co.nz|~hintaopas.fi
 ||prismic.io/prismic-toolbar$domain=alltomarbetsmiljo.se
 ||privacypolicies.com^$domain=fl-net.se
-||privacy-center.org^$domain=180.se|agriaffaires.se|truckscorner.se|machineryzone.se|stegforhalsa.se|netdoktor.se|netdoktorpro.se|news55.se|hastnet.se|dagensps.se|realtid.se|sportbibeln.se|booli.se
+||privacy-center.org^$domain=180.se|agriaffaires.se|truckscorner.se|machineryzone.se|stegforhalsa.se|netdoktor.se|netdoktorpro.se|news55.se|hastnet.se|dagensps.se|realtid.se|sportbibeln.se|booli.se|dh.se
 ||privacy-mgmt.com^$domain=radio.se|dagenstv.com|kolla.tv|computersweden.se|woxikon.se|dagen.se|filmtopp.se|upday.com|gaffa.se|handbollskanalen.se|stayfriends.se|spisa.nu
 ||proxyas.com^$third-party
 ||prylguiden.expressen.se^
