@@ -1,6 +1,6 @@
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days
-! Last modified: 2025-04-06 07:11:55 CEST
+! Last modified: 2025-04-07 05:17:18 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPL3 - https://github.com/lassekongo83/Frellwits-filter-lists/blob/master/LICENSE
@@ -204,6 +204,7 @@ atl.nu,landlantbruk.se,land.se##div[class^="Message_messageSticky"]:has(a[href*=
 atl.nu,landlantbruk.se,land.se,di.se,expressen.se,dn.se###didomi-host
 aurumforum.se##.bottom-liner span:has-text(Annons):upward(2)
 aurumforum.se##.top-add
+automation.se,verkstadstidningen.se,transportnytt.se,datormagazin.se##.a-wrap
 automobilly.com,nordicmanufacturing.net##.headerannons, .sidebarannonsseg, .footerannons
 automotorsport.se##a[href*="/partner/"]
 autonytt.se###main > .col-links
@@ -453,6 +454,7 @@ doktorn.com##.js-cookie-disclaimer
 doon.se##.doon-promotion, a.link[target="_blank"]
 driva-eget.se##.sponsored_content
 driva-eget.se##:is(.articles-swiper-item, .article-content, .articles-masonry-item):has(.bgcolor-ad-card)
+drugnews.se##.ad-swiper-container
 drugnews.se##:is(#sidebarleft, #sidebarright) .widget:has(.ad-swiper-container)
 dust2.se##html[data-impression-tracking-endpoint]:remove-attr(data-impression-tracking-endpoint)
 dust2.se##.main-page-content:style(background-image:none!important;)
@@ -953,7 +955,7 @@ litteraturmagazinet.se###pageContainer > div:first-child:not([id]), #topContaine
 livesport.expressen.se##[class^="BauProvider"]
 livetochdiabetes.se###text-3
 livetsgoda.se##.penci-rlt-popup
-livetsgoda.se,betongforeningen.se,espressomedia.se,ordfrontmagasin.se,europaportalen.se,motorsportbladet.se,battregolf.se,nitroz.se,magasinethockey.se,twostrokerider.se,bjjtv.se,eqotime.com,newsvoice.se,tranakampsport.se,thepattayanews.se,forsvarssektorn.se,handbollskanalen.se##a[target$="blank"] img:not([class^="tweet"])
+livetsgoda.se,betongforeningen.se,espressomedia.se,ordfrontmagasin.se,europaportalen.se,motorsportbladet.se,battregolf.se,nitroz.se,magasinethockey.se,twostrokerider.se,eqotime.com,newsvoice.se,tranakampsport.se,thepattayanews.se,forsvarssektorn.se,handbollskanalen.se##a[target$="blank"] img:not([class^="tweet"])
 livetsgoda.se,bfn.se##body:style(opacity:unset!important)
 livinguppsala.se##.fusion-post-content-container:has-text(/^annons/i):upward(article)
 livsmedelsnyheter.se##div[class*="elementor-widget-text-editor"][data-widget_type="text-editor.default"] > .elementor-widget-container > p:has-text(SPONSRAT):upward(.jet-listing-grid__items)
@@ -1064,6 +1066,7 @@ morotsliv.com##.et_bloom .et_bloom_flyin_center, a[href*="/?utm_medium=affiliate
 motivation.se##.card:has(.sponsored)
 motivation.se##.sponsored-item, [class*="banner"], .outsider
 motormagasinet.se,dagenshandel.se,food-supply.se,plastnet.se,habit.se,woodnet.se,foodnet.se,transportnet.se,processnet.se,packnet.se,verkstaderna.se,medtechmagazine.se,recyclingnet.se,rt-forum.se,uochd.se,lifesciencesweden.se,fri-kopenskap.se,cleannet.se,framtidensbygg.se,entreprenad.com,metal-supply.se##.box-of-announcement, a[href*="campaign"][target="_blank"], div[class*="rotating-"], #bottombanner, #promoPopup, .modal-backdrop, .newsletterPopUp
+motorsport4sale.com##aside.widget_text a[target="_blank"] img
 motorsportbladet.se##:is(article, li):has(a[href*="casino"], a[href*="kasino"])
 moviezine.se###secondary .bg-white:has(div[id^="moviezine_outsider"])
 moviezine.se###tilt-ad-top-stay-away
@@ -1257,7 +1260,7 @@ siljannews.se##a[target="_blank"]:upward(2)
 siljannews.se##p > a:not([href*="siljannews.se"]):not([href^="/"]) img
 siljanskok.se##a[target="_blank"][rel="nofollow"]:upward(1)
 siljanskok.se###app > div[data-reactroot] > div:first-child:has(a[target])
-sillyseason.se###text-41, #leader-wrapper, a[href^="/till/"]
+sillyseason.se###text-41, #leader-wrapper, a[href^="/till/"], .td-header-sp-rec
 sillyseason.se##.block-title:has-text(Våra annonsörer och partners):upward(1)
 sillyseason.se##.sidebar-widget > .textwidget strong:has-text(casino):upward(li.sidebar-widget)
 sillyseason.se##:is(.sidebar-widget, .archive-list li):has(a[href*=".se/odds/"], a[href*="/betting/"], a[href*="kasino"], a[href*="/promomen/"])
@@ -1446,6 +1449,7 @@ tidningencurie.se##+js(nostif, .showModal)
 tidningencurie.se##.sv-vr-popup
 tidningenglobal.se,tidningensyre.se,landetsfria.nu,fempers.se##.revive-box
 tidningennara.se##.cookie-bar
+tidningenproffs.se##div[id^="proff-"]
 tidningenridsport.se##body.cli-barmodal-open:remove-class(cli-barmodal-open)
 tidningenridsport.se##.entry-content:style(display: initial !important;)
 tidningenridsport.se##.subscribe_now_popup, .type-native, #captive, div[class^="hldr_takeover"], div[id^="ad-welcome"]
@@ -1540,7 +1544,6 @@ veckorevyn.com##.annons-block, #plansamarbete
 veckorevyn.com##.g1-mosaic-item:has(.category-annonssamarbete)
 veckorevyn.com##.widget_media_image:has(a[href*="utm_campaign"])
 vegomagasinet.se##.vego-ad
-verkstadstidningen.se,transportnytt.se,datormagazin.se##.a-wrap
 veterinarmagazinet.se##.nyhet-ad, .vm-ad-wrap, .adtop__mobile
 vf.se,hjotidning.se,kt.se,kt-kuriren.se,sla.se,mariestadstidningen.se,filipstadstidning.se,fryksdalsbygden.se,nwt.se,arvikanyheter.se,nkp.se,saffletidningen.se,provinstidningen.se,dalslanningen.se,nlt.se,skaraborgsbygden.se##div.hidden:has(figure[data-testid="ad-area"])
 vf.se,hjotidning.se,kt.se,kt-kuriren.se,sla.se,mariestadstidningen.se,filipstadstidning.se,fryksdalsbygden.se,nwt.se,arvikanyheter.se,nkp.se,saffletidningen.se,provinstidningen.se,dalslanningen.se,nlt.se,skaraborgsbygden.se##[data-testid="ad-area"], footer + div.shadow-lg.fixed
@@ -2096,7 +2099,7 @@ zeromagazine.nu##div[id^="ads"]
 /cookies-and-content$script,domain=freedomtravel.se
 /cookies-and-content-security-policy$script,domain=cannabisifokus.se|futsalmagasinet.se|sd.se|cora.se|tfkriminalvard.se
 /cookie-consent$script,domain=minhembio.com|sjf.se|gais.se
-/cookie-law-info$script,domain=startaochdriva.se|sverige.nu|conpot.se|firstclassmagazine.se|kvalitetsmagasinet.se|miljo-utveckling.se|techtidningen.se|vdtidningen.se|gullislastips.se|nyfiknainvesterare.se|discoveringtheplanet.com|bussmagasinet.se|torbjornstips.se|dinbyggare.se|aktieskolan.se|insikt24.se|sulkysport.se|bitzmagasin.se|battrestadsdel.se|automatos.se|80-talet.se|goteborgnyheter.se|elitepadel.se|vetenskaphalsa.se|rakapuckar.com|konstperspektiv.nu|56kilo.se|surveyors.se|maximumsports.se|rucksack.se|ingridochmaria.se|frihetsnytt.se|globalportalen.org|juligen.se|svenskbotanik.se|sakerhund.se|radiosol.se
+/cookie-law-info$script,domain=startaochdriva.se|sverige.nu|conpot.se|firstclassmagazine.se|kvalitetsmagasinet.se|miljo-utveckling.se|techtidningen.se|vdtidningen.se|gullislastips.se|nyfiknainvesterare.se|discoveringtheplanet.com|bussmagasinet.se|torbjornstips.se|dinbyggare.se|aktieskolan.se|insikt24.se|sulkysport.se|bitzmagasin.se|battrestadsdel.se|automatos.se|80-talet.se|goteborgnyheter.se|elitepadel.se|vetenskaphalsa.se|rakapuckar.com|konstperspektiv.nu|56kilo.se|surveyors.se|maximumsports.se|rucksack.se|ingridochmaria.se|frihetsnytt.se|globalportalen.org|juligen.se|svenskbotanik.se|sakerhund.se|radiosol.se|automation.se
 /cookie.min.js$domain=assistanskoll.se
 /cookie_consent.js$domain=djungeltrumman.se
 /cookie_popup$script,domain=trafikradion.com
@@ -2167,6 +2170,7 @@ zeromagazine.nu##div[id^="ads"]
 /ga.js$domain=helgon.se|gamemonetize.com|sjf.se
 /ga_cookie_track.js
 /gdprlock$third-party
+/gdpr-cookie-consent$script,domain=statensmusikverk.se
 /gdpr/*$domain=visitlulea.se|rotter.se|arkeologikonsult.se
 /getAdById.php?
 /getadd$domain=bovision.se
@@ -2322,7 +2326,7 @@ zeromagazine.nu##div[id^="ads"]
 /plugins/bfp-popup$script,domain=omtanke.today
 /plugins/blog-analytics
 /plugins/bmb-dfp-plugin
-/plugins/borlabs-cookie$script,domain=alltombrollop.com|digiteket.se
+/plugins/borlabs-cookie$script,domain=digiteket.se
 /plugins/boxzilla$script,domain=dialasen.com|arbetaren.se
 /plugins/bravepopup$script,domain=matkasse.se|tidningenglobal.se|fempers.se
 /plugins/bsa-plugin-pro-scripteo
@@ -2338,13 +2342,12 @@ zeromagazine.nu##div[id^="ads"]
 /plugins/convertplug
 /plugins/convertpro
 /plugins/conzent$script,domain=konsumentmagasinet.se
-/plugins/cookie-notice$script,domain=bildobubbla.se|zeromagazine.nu|sverigespringer.se|gasetten.se|sillyseason.se|gentlemannaguiden.com|matmalin.se|svensktidskrift.se|schack.se|densistavilan.se|kobe.se|tidningenproffs.se|jaktojagare.se|tobaksfakta.se|bebisvarlden.se|underbaraclaras.se|cykelframjandet.se|dalabygden.se|lansposten.se|sormlandsbygden.se|vaguiden.se|grandtech.se|bluff.se|bjjtv.se|svmf.se|rockbladet.se|globalbar.se|seniornet.se|gaming365.se|skellefteamedia.se|musikverket.se|sillybladet.se|zlatanism.se|fotbollsnytt.nu|voov.nu|matochdrycker.se|drugnews.se|ladiesabroad.se
+/plugins/cookie-notice$script,domain=bildobubbla.se|zeromagazine.nu|sverigespringer.se|gasetten.se|sillyseason.se|gentlemannaguiden.com|matmalin.se|svensktidskrift.se|schack.se|kobe.se|tidningenproffs.se|jaktojagare.se|tobaksfakta.se|bebisvarlden.se|underbaraclaras.se|cykelframjandet.se|dalabygden.se|lansposten.se|sormlandsbygden.se|vaguiden.se|grandtech.se|bluff.se|svmf.se|rockbladet.se|globalbar.se|seniornet.se|gaming365.se|skellefteamedia.se|sillybladet.se|zlatanism.se|fotbollsnytt.nu|voov.nu|matochdrycker.se|drugnews.se|ladiesabroad.se
 /plugins/cookie-popup$script,domain=skillingaryd.nu|xn--vrnamo-bua.nu
 /plugins/cresta-social-share-counter
 /plugins/daftplug-instantify$domain=se.moyens.net
 /plugins/deblocker/js/deblocker$script,domain=~filecr.com
 /plugins/doubleclick-wp
-/plugins/dsgvo-tools-cookie$script,domain=motorsport4sale.com
 /plugins/duracelltomi-google-tag-manager
 /plugins/easy-adsense
 /plugins/easy-affiliate-links
@@ -2460,7 +2463,7 @@ zeromagazine.nu##div[id^="ads"]
 /plugins/wp-copy-protect
 /plugins/wp-evolve-gpt
 /plugins/wp-facebook-pixel
-/plugins/wp-gdpr-compliance$script,domain=pussad.se|nyhetersto.se
+/plugins/wp-gdpr-compliance$script,domain=pussad.se
 /plugins/wp-lrf-paywall
 /plugins/wp-plugin-cookie-consent$script,domain=vegomagasinet.se
 /plugins/wp-popups-lite$domain=grillbaronen.se|spelochfilm.se|sameforeningen-stockholm.se|norrkopingshistoria.se
@@ -3041,6 +3044,7 @@ zeromagazine.nu##div[id^="ads"]
 ||hockeynews.se/images/sveacasino.jpg
 ||hockeysnack.com/pagespeed_static/1.$image
 ||humorbrevet.se/externa_bilder
+||hu-manity.co^$domain=densistavilan.se
 ||iconosquare.com^$third-party
 ||ifragasatt.se/stats/
 ||images-ads.aland.com^
@@ -3452,9 +3456,9 @@ tv.nu##header + div[class]:has(a[href*="play.google.com"])
 ##div#mobileTopAd
 !#endif
 !#if !env_chromium
-alekuriren.se,branschkoll.se,rocknytt.net,upphandling24.se,datormagazin.se,villalivet.se,classicmotor.se,tidningenhalsa.se,husohem.se,guiden.se,nyadagbladet.se,enkelteknik.se,stoppapressarna.se,vadhanderisverige.se,passioneffect.se,livsmedelsnyheter.se##^script[id^="advanced-ads"]
-alekuriren.se,branschkoll.se,rocknytt.net,upphandling24.se,datormagazin.se,villalivet.se,classicmotor.se,tidningenhalsa.se,husohem.se,guiden.se,nyadagbladet.se,enkelteknik.se,vadhanderisverige.se,passioneffect.se,livsmedelsnyheter.se##^script[id^="advanced_ads"]
-alekuriren.se,branschkoll.se,rocknytt.net,upphandling24.se,datormagazin.se,villalivet.se,classicmotor.se,tidningenhalsa.se,husohem.se,guiden.se,nyadagbladet.se,enkelteknik.se,vadhanderisverige.se,passioneffect.se,livsmedelsnyheter.se##^script[id^="advads"]
+alekuriren.se,branschkoll.se,rocknytt.net,upphandling24.se,datormagazin.se,villalivet.se,classicmotor.se,tidningenhalsa.se,husohem.se,guiden.se,nyadagbladet.se,enkelteknik.se,stoppapressarna.se,vadhanderisverige.se,passioneffect.se,livsmedelsnyheter.se,automation.se,verkstadstidningen.se##^script[id^="advanced-ads"]
+alekuriren.se,branschkoll.se,rocknytt.net,upphandling24.se,datormagazin.se,villalivet.se,classicmotor.se,tidningenhalsa.se,husohem.se,guiden.se,nyadagbladet.se,enkelteknik.se,vadhanderisverige.se,passioneffect.se,livsmedelsnyheter.se,automation.se,verkstadstidningen.se##^script[id^="advanced_ads"]
+alekuriren.se,branschkoll.se,rocknytt.net,upphandling24.se,datormagazin.se,villalivet.se,classicmotor.se,tidningenhalsa.se,husohem.se,guiden.se,nyadagbladet.se,enkelteknik.se,vadhanderisverige.se,passioneffect.se,livsmedelsnyheter.se,automation.se,verkstadstidningen.se##^script[id^="advads"]
 alekuriren.se,branschkoll.se,rocknytt.net,upphandling24.se,datormagazin.se,villalivet.se,polistidningen.se,densistavilan.se,classicmotor.se,tidningenhalsa.se,husohem.se,guiden.se,nyadagbladet.se,enkelteknik.se,vadhanderisverige.se,passioneffect.se,livsmedelsnyheter.se##^script:has-text(advanced_ads)
 alekuriren.se,branschkoll.se,rocknytt.net,upphandling24.se,datormagazin.se,villalivet.se,polistidningen.se,densistavilan.se,classicmotor.se,tidningenhalsa.se,husohem.se,guiden.se,nyadagbladet.se,enkelteknik.se,vadhanderisverige.se,passioneffect.se,livsmedelsnyheter.se##^script:has-text(advads)
 stoppapressarna.se##^script[data-src*="advads"]
