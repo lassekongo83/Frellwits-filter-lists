@@ -1,10 +1,10 @@
-diff name:swefilter lines:130 checksum:2d5505a238
+diff name:swefilter lines:152 checksum:c44939af34
 d2 1
 a2 1
-! Last updated: Mon, 07 Apr 2025 03:17:32 +0000
+! Last updated: Tue, 08 Apr 2025 03:33:04 +0000
 d4 1
 a4 1
-! Diff-Path: patches/2025.4.7.197.patch#swefilter
+! Diff-Path: patches/2025.4.8.213.patch#swefilter
 a136 1
 aktuellsakerhet.se###newsletter
 d212 1
@@ -46,6 +46,9 @@ a819 1
 jaktjournalen.se##.activate-notifications-container.shown, [class*="ai-viewport"], .placeholder
 a893 1
 kurera.se##.newsletter-popup
+a930 2
+linux.se##h5[style^="text-transform"]:has-text(annons):upward(1)
+linux.se##.post:has(a[href*="/annons"])
 d942 1
 a942 1
 livetsgoda.se,betongforeningen.se,espressomedia.se,ordfrontmagasin.se,europaportalen.se,motorsportbladet.se,battregolf.se,nitroz.se,magasinethockey.se,twostrokerider.se,eqotime.com,newsvoice.se,tranakampsport.se,thepattayanews.se,forsvarssektorn.se,handbollskanalen.se##a[target$="blank"] img:not([class^="tweet"])
@@ -59,6 +62,10 @@ nyhetersto.se,bussmagasinet.se,brollopsmagasinet.se,borattforum.se,globalpolitic
 d1121 1
 a1121 1
 nyhetsbyranjarva.se,nyan.ax,tv-kanal.se,golfguidenonline.se,rockbladet.se,vildmarken.se,nyhetersto.se,dagenslogistik.se,turismnytt.se,radiosol.se,cora.se##.g
+d1155 2
+a1156 2
+placera.se##div.justify-center[style*="min-height"]:has(div[id^="placera_panorama"], div[id^="placera_mobil"])
+placera.se##h5.font-medium:has-text(Annons):upward(1)
 d1229 1
 a1239 1
 signprint.se##.elementor-top-section p:has-text(/sponsr/i):upward(.jet-listing-grid__item)
@@ -69,6 +76,10 @@ a1433 1
 tidningenproffs.se##div[id^="proff-"]
 a1876 1
 *$3p,script,denyallow=jit.si|googleapis.com|telenor.se,domain=startaochdriva.se
+d1991 1
+d2074 1
+a2074 1
+/cookieconsent$script,domain=lundagard.se|kiacarclub.se|svampguiden.com|bike.se|runnersworld.se|offside.org|racemagazine.se|tidningenskriva.se|bobattre.se|hyundaiforum.se|adventist.se|exempelmeningar.se|krogen.se|fiskesnack.com|sailguide.com|statist.se|sporthoj.com
 d2082 1
 a2082 1
 /cookie-law-info$script,domain=startaochdriva.se|sverige.nu|conpot.se|firstclassmagazine.se|kvalitetsmagasinet.se|miljo-utveckling.se|techtidningen.se|vdtidningen.se|gullislastips.se|nyfiknainvesterare.se|discoveringtheplanet.com|bussmagasinet.se|torbjornstips.se|dinbyggare.se|aktieskolan.se|insikt24.se|sulkysport.se|bitzmagasin.se|battrestadsdel.se|automatos.se|80-talet.se|goteborgnyheter.se|elitepadel.se|vetenskaphalsa.se|rakapuckar.com|konstperspektiv.nu|56kilo.se|surveyors.se|maximumsports.se|rucksack.se|ingridochmaria.se|frihetsnytt.se|globalportalen.org|juligen.se|svenskbotanik.se|sakerhund.se|radiosol.se|automation.se
@@ -79,6 +90,9 @@ a2171 2
 /gtm.*/g/collect?
 a2191 1
 /impression-tracker-service
+d2228 2
+a2229 1
+/log|$domain=vk.se|folkbladet.nu|nordsverige.se|mellanbygden.nu|vasterbottningen.se|lokaltidningen.nu|bohuslaningen.se|stromstadstidning.se|markposten.se|harrydaposten.se|partilletidning.se|sttidningen.se|molndalsposten.se|kungalvsposten.se|kungsbackaposten.se|alingsastidning.se|ttela.se|gp.se|hallandsposten.se|hn.se|mellerudsnyheter.se|booli.se|placera.se
 a2292 1
 /plugins/analyticswp
 d2299 1
@@ -115,10 +129,18 @@ a2501 1
 /sifomedia.
 a2536 1
 /stat.$domain=alltforforaldrar.se|modette.se|devote.se|familjeliv.se|brollopstorget.se|blogg.se|rodeo.net|vimedbarn.se|loppi.se
+d2601 1
 d2644 1
 a2644 1
 /wp-content\/uploads\/[0-9]+/$script,domain=skanesport.se|dackavisen.se|tidningenproffs.se|densistavilan.se|universitetslararen.se|alekuriren.se|branschaktuellt.se
 d2677 6
+d2700 1
+d2885 1
+a2885 1
+||cookieinformation.com^$domain=folkofolk.se|dental24.se|vinbanken.se|handelskammarenvarmland.se|enahabo.se|bostadsportal.se|preglife.se|placera.se
+d2887 1
+a2887 1
+||cookielaw.org^$domain=tv4.se|fotbollskanalen.se|koket.se|flashscore.se|ikea.com|recept.se|manpower.se|natgeotv.com|internetkunskap.se|internetstiftelsen.se|yelp.se|spisa.nu|viaplayradio.se|svenskarnaochinternet.se|bab.la|tripadvisor.se|sydkusten.es|livetochdiabetes.se|voister.se|nok.se|motesplatsen.se|se.trustpilot.com|travronden.se|travrondenspel.se|jokersystemet.se|spelvarde.se|overodds.se|hammarbyfotboll.se|pricerunner.se|billetto.se|lidl.se|pwc.se|svenskafans.com|vinted.se
 a3025 1
 ||hu-manity.co^$domain=densistavilan.se
 d3203 1
