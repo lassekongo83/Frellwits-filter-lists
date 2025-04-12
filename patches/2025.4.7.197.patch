@@ -1,10 +1,10 @@
-diff name:swefilter lines:100 checksum:e70000fc91
+diff name:swefilter lines:120 checksum:2bbdc64e02
 d2 1
 a2 1
-! Last updated: Fri, 11 Apr 2025 03:32:04 +0000
+! Last updated: Sat, 12 Apr 2025 07:48:21 +0000
 d4 1
 a4 1
-! Diff-Path: patches/2025.4.11.212.patch#swefilter
+! Diff-Path: patches/2025.4.12.468.patch#swefilter
 d234 1
 a234 1
 bettips.se##.bettips-am, .mobile-banner
@@ -51,6 +51,12 @@ placera.se##h5.font-medium:has-text(Annons):upward(1)
 d1195 1
 a1195 1
 qx.se##.qxa-container, .leaky-popup-banner, .qxasection, a[href^="https://www.qx.se/native/"]
+d1231 1
+a1231 3
+samnytt.se,samnytt.nu##a[target="_blank"] img:not([class^="tweet-"]), a img[src^="/butik"], main > section + div + div img, div[class^="samnytt-widget"] + .sticky img, .sticky > div.fixed[class*="bg-opacity"]
+samnytt.se,samnytt.nu##img[src*="/ads/"]:upward(1)
+samnytt.se,samnytt.nu##.min-h-\[300px\]:has(img[src*="/b/"])
+d1233 1
 d1286 1
 d1288 1
 a1288 1
@@ -71,6 +77,8 @@ a1637 2
 ##a[href*="media.snabbare.com/tracking.php"]
 a1873 1
 ##.revive-ad-container:not(body):not(html)
+a1895 1
+*$script,redirect-rule=noop.js,domain=elevspel.se
 d1927 2
 a1928 1
 /QXA.$script,domain=qx.se
@@ -78,14 +86,25 @@ d2008 1
 d2091 1
 a2091 1
 /cookieconsent$script,domain=lundagard.se|kiacarclub.se|svampguiden.com|bike.se|runnersworld.se|offside.org|racemagazine.se|tidningenskriva.se|bobattre.se|hyundaiforum.se|adventist.se|exempelmeningar.se|krogen.se|fiskesnack.com|sailguide.com|statist.se|sporthoj.com
+d2180 1
+a2180 1
+/google-analytics-premium$important,script
 d2249 2
 a2250 1
 /log|$domain=vk.se|folkbladet.nu|nordsverige.se|mellanbygden.nu|vasterbottningen.se|lokaltidningen.nu|bohuslaningen.se|stromstadstidning.se|markposten.se|harrydaposten.se|partilletidning.se|sttidningen.se|molndalsposten.se|kungalvsposten.se|kungsbackaposten.se|alingsastidning.se|ttela.se|gp.se|hallandsposten.se|hn.se|mellerudsnyheter.se|booli.se|placera.se
 d2625 1
 a2703 1
 ?bannerid$domain=existenz.se
-d2718 1
+d2706 1
+a2706 1
+@@*$ghide,domain=atl.nu|landlantbruk.se|land.se|fodertipset.se|citattorget.se|citiboard.se|kritiker.se
+d2718 2
+d2723 2
+d2728 1
+d2734 3
 d2739 1
+d2760 1
+d2784 1
 d2899 1
 a2899 1
 ||cookiebot.com^$domain=ng.se|swedroid.se|bax-shop.se|kurera.se|upplysning.se|findroommate.se|polistidningen.se|fokus.se|spraktidningen.se|varden.se|trafiken.nu|energi.se|sverigesnatur.org|sis.se|alltomarbetsmiljo.se|tco.se|totallyorebro.se|totallystockholm.se|enirobuddy.se|framtid.se|yhguiden.se|fragasyv.se|gymnasieguiden.se|studier.se|byggfaktadocu.se|husdjur.se|chalmers.se|elinstallatoren.se|ff.se|modernpsykologi.se|qx.se|vatternrundan.se|vvsforum.se|naturvetarna.se|skolporten.se|dust2.se|ehandel.se|byggvarlden.se|varldenidag.se|omtanke.today|hotellorestaurang.se|byggfakta.today|byggfakta.se|citymark.today|journalisten.se|fastighetsvarlden.se|friidrott.se|friidrottsstatistik.se|vildmarken.se|kyrkanstidning.se|tmf.se|sokbat.se|bilkompaniet.se|hv.se|folkhalsomyndigheten.se|dinpsykiskahalsa.se|hyresbostader.se|rsyd.se|byggforetagen.se|vasterastidning.se|storyhouseegmont.se|mytaste.se|smartbizz.se|tandlakartidningen.se|fastighetssverige.se|turisterna.se|svenskfordonsladdning.se|nextconomy.se|riksteatern.se|scenochfilm.se|transport.se|saco.se|byggahus.se|smartsenior.se|dagensopinion.se|livsmedelsforetagen.se|djurrattsalliansen.se|pvforetagen.se|verkstadsjobb.se|grundskoletidningen.se|svenskakyrkan.se|traguiden.se|cirkusvenues.se|sweatybusiness.se|matklubben.se|vivavinomat.se|finanstid.se|swehockey.se|skanetrafiken.se|norrmejerier.se|biblioteksforeningen.se|anslagstavlan.se|veganskarecept.se
@@ -98,4 +117,5 @@ a2905 1
 d3073 1
 a3073 1
 ||js.monitor.azure.com^$domain=akademiskahus.se|energi.se|skanetrafiken.se|forex.se|stenafastigheter.se|transportforetagen.se|lantmannen.se|stff.se|gbgfotboll.se|svenskfotboll.se|skk.se
+d3207 1
 d3294 1

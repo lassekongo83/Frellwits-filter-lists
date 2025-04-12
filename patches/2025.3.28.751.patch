@@ -1,10 +1,10 @@
-diff name:swefilter lines:294 checksum:e70000fc91
+diff name:swefilter lines:313 checksum:2bbdc64e02
 d2 1
 a2 1
-! Last updated: Fri, 11 Apr 2025 03:32:04 +0000
+! Last updated: Sat, 12 Apr 2025 07:48:21 +0000
 d4 1
 a4 1
-! Diff-Path: patches/2025.4.11.212.patch#swefilter
+! Diff-Path: patches/2025.4.12.468.patch#swefilter
 d126 2
 a127 2
 aikhockey.se,almtuna.com,bikkarlskoga.se,bjorkloven.com,brynas.se,difhockey.se,frolundahockey.com,farjestadbk.se,hockeyallsvenskan.se,hv71.se,ikoskarshamn.se,kalmarhockey.com,leksandsif.se,luleahockey.se,malmoredhawks.com,modohockey.se,moraik.se,nybrovikings.com,orebrohockey.se,roglebk.se,skellefteaaik.se,sodertaljesk.se,taif.nu,timraik.se,vaxjolakers.se,vik.se,ostersundik.com,fbclerum.se,shl.se##a[href*="svenskaspel.se"][target], .sponsor-img, .topheader-sponsor-img
@@ -144,6 +144,12 @@ d1183 1
 a1183 2
 qx.se##.qxa-container, .leaky-popup-banner, .qxasection, a[href^="https://www.qx.se/native/"]
 rabattsok.se###cookie-bar
+d1218 1
+a1218 3
+samnytt.se,samnytt.nu##a[target="_blank"] img:not([class^="tweet-"]), a img[src^="/butik"], main > section + div + div img, div[class^="samnytt-widget"] + .sticky img, .sticky > div.fixed[class*="bg-opacity"]
+samnytt.se,samnytt.nu##img[src*="/ads/"]:upward(1)
+samnytt.se,samnytt.nu##.min-h-\[300px\]:has(img[src*="/b/"])
+d1220 1
 d1231 1
 a1241 1
 signprint.se##.elementor-top-section p:has-text(/sponsr/i):upward(.jet-listing-grid__item)
@@ -184,6 +190,8 @@ a1857 1
 ##.revive-ad-container:not(body):not(html)
 a1876 1
 *$3p,script,denyallow=jit.si|googleapis.com|telenor.se,domain=startaochdriva.se
+a1878 1
+*$script,redirect-rule=noop.js,domain=elevspel.se
 d1910 2
 a1911 1
 /QXA.$script,domain=qx.se
@@ -199,6 +207,9 @@ a2082 1
 /cookie-law-info$script,domain=startaochdriva.se|sverige.nu|conpot.se|firstclassmagazine.se|kvalitetsmagasinet.se|miljo-utveckling.se|techtidningen.se|vdtidningen.se|gullislastips.se|nyfiknainvesterare.se|discoveringtheplanet.com|bussmagasinet.se|torbjornstips.se|dinbyggare.se|aktieskolan.se|insikt24.se|sulkysport.se|bitzmagasin.se|battrestadsdel.se|automatos.se|80-talet.se|goteborgnyheter.se|elitepadel.se|vetenskaphalsa.se|rakapuckar.com|konstperspektiv.nu|56kilo.se|surveyors.se|maximumsports.se|rucksack.se|ingridochmaria.se|frihetsnytt.se|globalportalen.org|juligen.se|svenskbotanik.se|sakerhund.se|radiosol.se|automation.se
 a2152 1
 /gdpr-cookie-consent$script,domain=statensmusikverk.se
+d2162 1
+a2162 1
+/google-analytics-premium$important,script
 a2171 2
 /gtm.*.js?id=GTM
 /gtm.*/g/collect?
@@ -254,11 +265,18 @@ a2646 1
 d2679 6
 a2687 1
 ?bannerid$domain=existenz.se
-d2702 1
-d2721 1
+d2690 1
+a2690 1
+@@*$ghide,domain=atl.nu|landlantbruk.se|land.se|fodertipset.se|citattorget.se|citiboard.se|kritiker.se
+d2702 2
+d2707 2
+d2712 1
+d2718 4
 a2721 1
 @@||nuthymia-llc.kit.com/*/index.js$domain=nickwignall.com
 d2723 1
+d2744 1
+d2768 1
 d2801 1
 d2844 1
 a2844 1
@@ -283,6 +301,7 @@ a3057 1
 a3068 1
 ||kit.com^$third-party
 d3159 1
+d3191 1
 d3206 1
 a3206 1
 ||privacy-center.org^$domain=180.se|agriaffaires.se|truckscorner.se|machineryzone.se|stegforhalsa.se|netdoktor.se|netdoktorpro.se|news55.se|hastnet.se|dagensps.se|realtid.se|sportbibeln.se|booli.se|dh.se

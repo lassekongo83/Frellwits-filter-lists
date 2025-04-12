@@ -1,7 +1,7 @@
 ! Title: Frellwit's Swedish Filter
-! Last updated: Fri, 11 Apr 2025 03:32:04 +0000
+! Last updated: Sat, 12 Apr 2025 07:48:21 +0000
 ! Expires: 5 days
-! Diff-Path: patches/2025.4.11.212.patch#swefilter
+! Diff-Path: patches/2025.4.12.468.patch#swefilter
 ! Diff-Expires: 24 hours
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
@@ -1235,9 +1235,10 @@ samefolket.se##.elementor-widget-image:has(a[href*="Annons"], img[src*="Banner"]
 samfalligheterna.se##.tdm-popup-modal-wrap
 samfalligheterna.se##.td-cpt-post:has(a[href*="/sponsra"])
 samfalligheterna.se##.td_block_wrap:has-text(Annons)
-samnytt.se,samnytt.nu##a[target="_blank"] img:not([class^="tweet-"]), a img[src^="/butik"], main > section + div + div img, div[class^="samnytt-widget"] + .sticky img
+samnytt.se,samnytt.nu##a[target="_blank"] img:not([class^="tweet-"]), a img[src^="/butik"], main > section + div + div img, div[class^="samnytt-widget"] + .sticky img, .sticky > div.fixed[class*="bg-opacity"]
+samnytt.se,samnytt.nu##img[src*="/ads/"]:upward(1)
+samnytt.se,samnytt.nu##.min-h-\[300px\]:has(img[src*="/b/"])
 samnytt.se,samnytt.nu##.samnytt-card:has(a[href*="jackpot"], a[href*="casino"][href*="bonus"])
-samnytt.se,samnytt.nu##.sticky > div.fixed[class*="bg-opacity"]
 samnytt.se,samnytt.nu##.sticky > div:has(img[src^="/butik"])
 samtiden.nu##.iscu_hometop_wrap, .iscu_homeside_wrap, .iscu_singletop_wrap
 sanghafte.se##.widget_cooperations, .dfrcs
@@ -1902,6 +1903,7 @@ zeromagazine.nu##div[id^="ads"]
 *$3p,script,denyallow=jit.si|googleapis.com|telenor.se,domain=startaochdriva.se
 *$3p,script,denyallow=kit.fontawesome.com|cloudflare.net|use.typekit.net|akamai.net,domain=lakemedelsvarlden.se
 *$ping,domain=fiskejournalen.se
+*$script,redirect-rule=noop.js,domain=elevspel.se
 -popup-analytics
 -samarbete$image,domain=hockeyettan.se
 -tracking.js$domain=aftonbladet.se|godare.se|livsstil.se|svd.se
@@ -2184,7 +2186,7 @@ zeromagazine.nu##div[id^="ads"]
 /googleanalytics.js$domain=fria.nu|stockholmsfria.se
 /google-analytics$domain=teknikveckan.se
 /google-analytics-for-wordpress$important,script,xmlhttprequest
-/google-analytics-premium$important,script,domain=~elevspel.se
+/google-analytics-premium$important,script
 /google-gpt.js$domain=alekuriren.se
 /google-tag-manager$domain=hemnet.se
 /google-universal-analytics$script
@@ -2709,7 +2711,7 @@ zeromagazine.nu##div[id^="ads"]
 ?bannerid$domain=existenz.se
 ?t=$xhr,empty,domain=kyrkanstidning.se
 ?url=*impse.tradedoubler.com$image
-@@$script,1p,domain=elevspel.se
+@@*$ghide,domain=atl.nu|landlantbruk.se|land.se|fodertipset.se|citattorget.se|citiboard.se|kritiker.se
 @@/adserver.$script,~third-party,domain=fotosidan.se|utsidan.se
 @@/adx.js$~third-party,domain=atl.nu|landlantbruk.se|land.se
 @@/ad-block-detection-script$domain=blocket.se
@@ -2721,24 +2723,17 @@ zeromagazine.nu##div[id^="ads"]
 @@/plugins/convertplug/modules/modal/*/cross.png$image,~third-party
 @@/scripts/advert_$~third-party,domain=di.se
 @@/viralize_player_content$script,xhr,domain=nyheter24.se|modette.se|familjeliv.se|alltforforaldrar.se|loppi.se|devote.se|vimedbarn.se|brollopstorget.se|rodeo.net|travnet.se|fragbite.se|vk.se|folkbladet.nu|nordsverige.se|mellanbygden.nu|vasterbottningen.se|lokaltidningen.nu|hemtrevligt.se|innebandymagazinet.se|jaktjournalen.se
-@@||atl.nu^$ghide
 @@||cargodisplayads.com/till_minne/
 @@||cdn.play.showheroes.com/part/partimage$image
 @@||cdn.play.showheroes.com/part/rendered$media
-@@||citattorget.se^$ghide
-@@||citiboard.se^$ghide
 @@||createsend1.com/css/
 @@||fast.fonts.net/jsapi/core/mt.js$domain=tidskriftenprovins.se
 @@||feed.meltwater.com^$subdocument
-@@||fodertipset.se^$ghide
 @@||fwmrm.net/ad/g/$xhr,domain=tv4play.se|tv4.se|fotbollskanalen.se|koket.se|embed.viaplay.com
 @@||img.upsales.com^
 @@||js.createsend1.com/js/jquery
 @@||js.driftt.com^$domain=sanity.io
 @@||klaviyo.com/media/js/public/klaviyo_subscribe.js$domain=solostove.com
-@@||kritiker.se^$generichide
-@@||landlantbruk.se^$ghide
-@@||land.se^$ghide
 @@||nuthymia-llc.kit.com/*/index.js$domain=nickwignall.com
 @@||pages.upsales.com^
 ||1terms.com^
@@ -2761,7 +2756,6 @@ zeromagazine.nu##div[id^="ads"]
 ||adonsales.com^$third-party
 ||adonstudio.com^$third-party
 ||ads.google.com^$third-party
-||ads.holid.io^$script,redirect-rule=noop.js,domain=elevspel.se
 ||adviral.s3.amazonaws.com/sponsored/
 ||advisa.se^$third-party
 ||advisible.com^$third-party
@@ -2785,7 +2779,6 @@ zeromagazine.nu##div[id^="ads"]
 ||analytics-smhise.smhi.se^
 ||analytics.ahrefs.com^
 ||analytics.ciseway.se^$third-party
-||analytics.elevspel.se^$script,important,redirect=noop.js,domain=elevspel.se
 ||analytics.gen.shield.monitoringservice.co^
 ||analytics.ozzi.io^$third-party
 ||analytics.teknikveckan.se^
@@ -3208,7 +3201,6 @@ zeromagazine.nu##div[id^="ads"]
 ||platssajten.se^$third-party
 ||plausible.io^$script,redirect-rule=noop.js,domain=feber.se|tjock.se
 ||plausible.webfokus.no^$third-party
-||player.vimeo.com^$frame,redirect=click2load.html,domain=breakit.se
 ||pliing.com^$third-party
 ||plowking.mecenat.com^
 ||pm.azerioncircle.com^
