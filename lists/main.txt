@@ -1407,6 +1407,7 @@ vardegrunden.se###loader
 .se/scripts/google-funding-choices.js
 @@/adserver.$script,~third-party,domain=fotosidan.se|utsidan.se
 @@/scripts/advert_$~third-party,domain=di.se
+@@*$ghide,domain=atl.nu|landlantbruk.se|land.se|fodertipset.se|citattorget.se|citiboard.se|kritiker.se
 thatsup.se##+js(set, canShowAds, true)
 mobilanyheter.net##+js(set, ai_run_scripts, noopFunc)
 forexgruppen.se,kattannonser.se##+js(noeval-if, adbEnableForPage)
@@ -1503,7 +1504,6 @@ netdoktor.se,netdoktorpro.se##.article-list__item:has(.bam-ad-slot, .article-lis
 ||breakit.se/js/google-analytics
 ||breakit.se/js/inmobi
 ||collect.breakit.se^
-||player.vimeo.com^$frame,redirect=click2load.html,domain=breakit.se
 breakit.se##div[class^="LivewrappedContainer_root"]
 breakit.se##:is(section[class*="Article_layout"], article):has(div[class*="Sponsored"])
 /Scripts/ads/*$domain=osterbottenstidning.fi|sydin.fi|vasabladet.fi
@@ -1643,9 +1643,6 @@ vk.se,folkbladet.nu,nordsverige.se,mellanbygden.nu,vasterbottningen.se,lokaltidn
 /native-ads$domain=atl.nu|landlantbruk.se|land.se
 @@/adx.js$~third-party,domain=atl.nu|landlantbruk.se|land.se
 ||atl.nu/api/mnews
-@@||atl.nu^$ghide
-@@||landlantbruk.se^$ghide
-@@||land.se^$ghide
 atl.nu,landlantbruk.se,land.se##a[href*="/atl-tv-annons/"], [class^="Ad_"], div[class^="WidgetCTASticky"], a[class^="CTA_ctaWrapperCampaignBase"], section[class*="NativeAdArticlePage"]
 atl.nu,landlantbruk.se,land.se##div[class^="Message_messageSticky"]:has(a[href*="/kampanj."])
 ||lantbruksnytt.se/includes/$subdocument
@@ -2343,7 +2340,6 @@ gaffa.se##.link-list:has(a[href*="casino"])
 radio.se###always-visible-banner-desktop-banner
 radio.se##:is(.md\:min-h-\[90px\], .lg\:min-h-\[250px\], .h-\[250px\], .justify-between.md\:mx-10):has(div[id^="RAD_D"], div[id^="RAD_M"])
 radio.se##:is(a[data-testid="region-tag"], a[data-testid^="taglist-item"]):style(background-image:none!important; background:rgb(2,114,140)!important;)
-@@||kritiker.se^$generichide
 ||kritiker.se/js/gdpr.js
 ||youtube.com/embed/*autoplay$subdocument,removeparam=autoplay,domain=kritiker.se
 kritiker.se##div.recad, div.adhor, div.stickyad
@@ -2639,10 +2635,11 @@ sidebanner$image,domain=samnytt.se|samnytt.nu
 casinoguiden$image,domain=samnytt.se|samnytt.nu
 ||samnytt.se/b/$image
 ||samnytt.se/ads/
-samnytt.se,samnytt.nu##a[target="_blank"] img:not([class^="tweet-"]), a img[src^="/butik"], main > section + div + div img, div[class^="samnytt-widget"] + .sticky img
-samnytt.se,samnytt.nu##.sticky > div.fixed[class*="bg-opacity"]
+samnytt.se,samnytt.nu##a[target="_blank"] img:not([class^="tweet-"]), a img[src^="/butik"], main > section + div + div img, div[class^="samnytt-widget"] + .sticky img, .sticky > div.fixed[class*="bg-opacity"]
 samnytt.se,samnytt.nu##.sticky > div:has(img[src^="/butik"])
 samnytt.se,samnytt.nu##.samnytt-card:has(a[href*="jackpot"], a[href*="casino"][href*="bonus"])
+samnytt.se,samnytt.nu##img[src*="/ads/"]:upward(1)
+samnytt.se,samnytt.nu##.min-h-\[300px\]:has(img[src*="/b/"])
 ||nyheteridag.se/ads/
 nyheteridag.se##.widget.facebook, .content > div:not([class]) img, a[href*="www.casino"], a[href="/karnkraft.php"]
 nyheteridag.se##.teaser:has(a[href*="casino"])
@@ -2946,7 +2943,7 @@ alghundklubben.com#@#.category-annons:not(body):not(html)
 
 ! -- Override EasyList/EasyPrivacy whitelists
 /google-analytics-for-wordpress$important,script,xmlhttprequest
-/google-analytics-premium$important,script,domain=~elevspel.se
+/google-analytics-premium$important,script
 /plugins/google-analytics-dashboard$important,script
 ||google-analytics.com^$important,domain=aftonbladet.se|tradera.com|xxl.se
 ||googletagmanager.com^$important,domain=tradera.com|xxl.se|prisjakt.nu
@@ -3361,7 +3358,6 @@ kobe.se###footer #block-7
 uppsatser.se##.results li[style^="margin"]:not(.result), .spahotels
 cafekartan.se,restaurangkartan.se,hotellkartan.se,pizzakartan.se,sushikartan.se,badkartan.se,campingkartan.se,vandrarhemskartan.se,slottskartan.se,kyrkokartan.se,vintagekartan.se,wifikartan.se##[id^="google_ad"]
 ||fodertipset.se/cookie-info
-@@||fodertipset.se^$ghide
 fodertipset.se##.fodertipset-org-banner
 thepattayanews.se##a.td_single_image_bg:not([href*="thepattayanews.se"]), #tnp-modal, .desktop-contents
 thepattayanews.se##:is(.widget_media_image, .wp-block-image) a:not([href*="thepattayanews.se"])
@@ -3389,9 +3385,7 @@ skolporten.se##.advertMod
 skolporten.se##.article-short:has(a[href*="/sponsrat-innehall"])
 ||stats.helsingborg.se^
 tidningenskriva.se##section.widget_text:has(div[id^="ad-"])
-||ads.holid.io^$script,redirect-rule=noop.js,domain=elevspel.se
-||analytics.elevspel.se^$script,important,redirect=noop.js,domain=elevspel.se
-@@$script,1p,domain=elevspel.se
+*$script,redirect-rule=noop.js,domain=elevspel.se
 elevspel.se###cookie_wrapper, a[href*="medlem"] > div, .ryk-top
 elevspel.se##:is(div.Block, div[style^="display: table"], h1[itemprop="name"] ~ div:not([style="display:none;"]):not([class^="content"][class$="content"])):has(a[href*="medlem"], [onclick*="medlem"], .adsbygoogle)
 vilaser.se##.Internal-ad
@@ -3527,9 +3521,7 @@ marketmate.se##div[id^="marke-"]
 /t/gtm$domain=lidl.se
 /APTrackingService$domain=lidl.se
 /ATrackingGA$domain=lidl.se
-@@||citattorget.se^$ghide
 citattorget.se##.adsense-main
-@@||citiboard.se^$ghide
 citiboard.se##div[adunit]
 haaf.se##.stream-item:has(.adsbygoogle)
 listaroo.se##.ct-link[target="_blank"], a[href*="casino"], a[href*="spellicens"]
