@@ -1,7 +1,7 @@
 ! Title: Frellwit's Swedish Filter
-! Last updated: Tue, 15 Apr 2025 03:10:01 +0000
+! Last updated: Wed, 16 Apr 2025 02:06:02 +0000
 ! Expires: 5 days
-! Diff-Path: patches/2025.4.15.190.patch#swefilter
+! Diff-Path: patches/2025.4.16.126.patch#swefilter
 ! Diff-Expires: 24 hours
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
@@ -822,7 +822,7 @@ inredningsvis.se##+js(set-cookie, cmplz_marketing, deny)
 inredningsvis.se##+js(set-cookie, cmplz_preferences, deny)
 inredningsvis.se##+js(set-cookie, cmplz_statistics, deny)
 internetmedicin.se##[itemtype="https://schema.org/WPAdBlock"]
-internetodontologi.se##.overlay
+internetodontologi.se,prv.se##.overlay
 internetodontologi.se,skrattsajten.com,norpan.se##+js(rmnt, script, e.preventDefault)
 investeramera.se##a[href^="https://investeramera.se/go/"] img
 investeramera.se###dialog-locked
@@ -1202,7 +1202,7 @@ qasa.se##div[data-state="open"]:empty
 qasa.se##+js(aeld, wheel)
 quizza.nu,elbilen.se###takeover
 qx.se##.qxa-container, .leaky-popup-banner, .qxasection, a[href^="https://www.qx.se/native/"]
-rabattsok.se###cookie-bar
+rabattsok.se,prv.se###cookie-bar
 racemagazine.se##article + div.bg-white:has(.ad-inner)
 racemagazine.se###sidebar > .h-full:has(#asideAD)
 racemagazine.se##.landing-ad
