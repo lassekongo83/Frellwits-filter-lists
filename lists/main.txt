@@ -1414,7 +1414,7 @@ vardegrunden.se###loader
 .se/scripts/google-funding-choices.js
 @@/adserver.$script,~third-party,domain=fotosidan.se|utsidan.se
 @@/scripts/advert_$~third-party,domain=di.se
-@@*$ghide,domain=atl.nu|landlantbruk.se|land.se|fodertipset.se|citattorget.se|citiboard.se|kritiker.se
+@@*$ghide,domain=atl.nu|landlantbruk.se|land.se|fodertipset.se|citattorget.se|citiboard.se|kritiker.se|akaviaaspekt.se
 thatsup.se##+js(set, canShowAds, true)
 mobilanyheter.net##+js(set, ai_run_scripts, noopFunc)
 forexgruppen.se,kattannonser.se##+js(noeval-if, adbEnableForPage)
@@ -3213,7 +3213,6 @@ se.azrhymes.com##div[id^="azrhymes_com_between_content"]
 cannabis.se###block-8
 ravarumarknaden.se###header > div > div.last, #block-4, #mvp-leader-wrap
 birthday.se##.datax
-glassakademin.se##[class^="adverts-"]
 ||laromedia.se/Annonssystem/
 laromedia.se##img[alt="Annons"] + .img-flipper
 ||hastnet.se/adtech
@@ -3240,19 +3239,21 @@ varden.se##.carousel-slide:has(.sponsored-label)
 /public/log$domain=kalender.se
 ||kalender.se/analytics
 kalender.se##.day-nav ~ a:not([href*="kalender.se"]), a:not([href*="kalender.se"]) img, div[style^="height:340px"], div[style^="height:110px"]
+kalender.se##.shadow-sm.items-center:has(#above-main-calendar, #below-main-calendar)
 klendr.se##div[class^="min-h-"]:has(.adsbygoogle)
 /Annons$domain=internetlankar.se
-/detroitchicago$domain=temadagar.se|svenskaorduttryck.se|wernamaten.se
+/detroitchicago$domain=temadagar.se|wernamaten.se
 /ezoic$domain=temadagar.se
 temadagar.se##.ez-sidebar-wall, a[href*="/partykungen"]
 temadagar.se##+js(acs, chp_adblock_browser)
 tidningen.djurskyddet.se##.ai-track
 sverigesnatur.org##div[id^="sverigesNaturPopup"]
 livetochdiabetes.se###text-3
+ehandelstips.se##div[class*="block-wrap-ad-"]
 ehandelstips.se##:is(li, article):has([href*="/sponsradeartiklar/"])
 /adtracker$domain=beernews.se
 beernews.se##.cookie-consent-wrapper, #takeover-outer
-akaviaaspekt.se##.article-list-item--native, a.article-topic__list-item[href^="/annons"]
+akaviaaspekt.se##.article-list-item--native, a.article-topic__list-item[href^="/annons"], .advertisement--banner > div[class=""]
 webbkryss.nu##.skyad-wrapper
 ordguru.se##.visible-lg, .hidden-lg
 aktuellsakerhet.se##.front-slider-reklamsamarbete, .category-gastkronika-reklamsamarbete, .front-top-reklamsamarbete
