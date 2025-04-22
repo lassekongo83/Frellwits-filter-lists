@@ -1,6 +1,6 @@
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days
-! Last modified: 2025-04-21 04:39:07 CEST
+! Last modified: 2025-04-22 05:08:26 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPL3 - https://github.com/lassekongo83/Frellwits-filter-lists/blob/master/LICENSE
@@ -180,7 +180,6 @@ altinget.se##a[href^="/sponsrade"]
 amelia.expressen.se##article p.uppercase.tracking-wide:has-text(Inlägget innehåller annonslänkar):upward(article)
 amelia.expressen.se##.max-w-\[980px\]:has(.slick-slider a[target="_blank"])
 analytics$domain=corren.se|folkbladet.se|mvt.se|nt.se|vt.se|vimmerbytidning.se|kuriren.nu|nsd.se|norran.se|pt.se|ekuriren.se|strengnastidning.se|kkuriren.se|sn.se|eposten.se|unt.se|helagotland.se|fastighetsvarlden.se
-antagning.se,universityadmissions.se###cookiebanner
 arbetaren.se##.text-sm:has-text(/annons/i):upward(.border-b, a[target])
 arbetet.se##.Container:not(.ContentItem-content):has([data-controller="ad"])
 arbetet.se##.Teaser--native, .o-native, [data-controller="ad"], div[id^="consent-"]
@@ -199,7 +198,6 @@ atl.nu,landlantbruk.se,land.se##a[href*="/atl-tv-annons/"], [class^="Ad_"], div[
 atl.nu,landlantbruk.se,land.se##div[class^="Message_messageSticky"]:has(a[href*="/kampanj."])
 atl.nu,landlantbruk.se,land.se,di.se,expressen.se,dn.se###didomi-host
 aurumforum.se##.bottom-liner span:has-text(Annons):upward(2)
-aurumforum.se##.top-add
 automation.se,verkstadstidningen.se,transportnytt.se,datormagazin.se##.a-wrap
 automobilly.com,nordicmanufacturing.net##.headerannons, .sidebarannonsseg, .footerannons
 automotorsport.se##a[href*="/partner/"]
@@ -893,7 +891,7 @@ kolozzeum.com##td[width="305"], br + a[href*="/casino"]
 kompanjoner.se##.site-loader
 komponentkoll.se##.gdpr-wide
 konsten.net##div[id^="konst-"]
-konsumentmagasinet.se##.pricerunner, #Conzent, .conzent-modal
+konsumentmagasinet.se##.pricerunner, #Conzent, .conzent-modal, .price-part
 kristendate.se##div[id^="adv"], #site-right-col-wrapper a[target] img
 kritiker.se##div.recad, div.adhor, div.stickyad
 kritiker.se##iframe[allow]:remove-attr(allow)
@@ -1153,7 +1151,7 @@ omni.se,omniekonomi.se##div[class^="TopPanoramaAd"], div[class^="StickySideAd"],
 omtanke.today##.featured
 opulens.se##.mailpoet_form, #secondary
 ordbokpro.se##+js(set, ab_disp, noopFunc)
-ordfrontmagasin.se##.oc_cb_wrapper, .simple-image a:not([href^="/"]):not([href*="ordfrontmagasin.se"])
+ordfrontmagasin.se##.oc_cb_wrapper, :is(.simple-image, .widget_media_image) a:not([href^="/"]):not([href*="ordfrontmagasin.se"])
 ordguru.se##.visible-lg, .hidden-lg
 ordparken.se##div[style="text-align:center;padding:8px;margin:30px 0;min-height:340px"]
 orebronyheter.com###top-wrapper
@@ -2196,7 +2194,6 @@ zeromagazine.nu##div[id^="ads"]
 /gplus.php$script,domain=fria.nu|stockholmsfria.se
 /growth-analytics$domain=mindoktor.se
 /gtagEventTracker.js
-/gtm-sokande.js$domain=antagning.se|universityadmissions.se
 /gtm-*.appspot.com
 /gtm.*.js?id=GTM
 /gtm.*/g/collect?
@@ -3353,6 +3350,7 @@ zeromagazine.nu##div[id^="ads"]
 ||tracking.bonnier.news^
 ||tracking.fasab6f.se^
 ||track.intersport.se^
+||track.yetric.net^
 ||tradehouse.media^$third-party
 ||travellink.se/marketing-channel
 ||travnet.se/sulkysport$frame
