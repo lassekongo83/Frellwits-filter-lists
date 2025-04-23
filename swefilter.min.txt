@@ -1,7 +1,7 @@
 ! Title: Frellwit's Swedish Filter
-! Last updated: Tue, 22 Apr 2025 03:08:39 +0000
+! Last updated: Wed, 23 Apr 2025 03:29:35 +0000
 ! Expires: 5 days
-! Diff-Path: patches/2025.4.22.188.patch#swefilter
+! Diff-Path: patches/2025.4.23.209.patch#swefilter
 ! Diff-Expires: 24 hours
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
@@ -130,7 +130,7 @@ aip.nu,funktionshinderpolitik.se,sjostadsbladet.se,fotbollsresultat.com,lanspost
 aip.nu,lansposten.se,dalabygden.se,sormlandsbygden.se##body.cookies-not-set:style(overflow:unset!important)
 akaviaaspekt.se##.article-list-item--native, a.article-topic__list-item[href^="/annons"], .advertisement--banner > div[class=""]
 aktavara.org##.banner-start
-aktieskolan.se##section.elementor-section:has-text(Huvudsponsorer & partners)
+aktieskolan.se##.ast-container > .elementor > section.elementor-section:has(a[href*="betting"])
 aktiespararna.se,alekuriren.se,tidningen.se,kurera.se,vinbanken.se##.native
 aktuellhallbarhet.se,byggindustrin.se,dagensmedia.se,dagensmedicin.se,fastighetsnytt.se,resume.se,dagenssamhalle.se,market.se,dagligvarunytt.se,privataaffarer.se##.outsider, .module, .articlemodule, .mob, [data-bad-fullpage-container], a[href^="/native"]
 aktuellsakerhet.se###newsletter
@@ -241,7 +241,7 @@ bioenergitidningen.se##article.closed:remove-class(closed)
 bioenergitidningen.se###cookieinfo
 bioenergitidningen.se,skogen.se##.nativepuff
 biostock.se,snowmobile.se,tobaksfakta.se,dagenslogistik.se,magasinetkonkret.se,skaneplus.se,battrestadsdel.se##.pum-overlay
-biostock.se,tobaksfakta.se##.pum-open:style(overflow:auto!important)
+biostock.se,tobaksfakta.se,dagenslogistik.se##.pum-open:style(overflow:auto!important)
 bio-link.se,web-tools.se##.d-print-none > div:has(a[target="_blank"])
 bio-link.se,web-tools.se,evertiq.se,alandsradio.ax###cc-main
 birthday.se##.datax
@@ -802,8 +802,6 @@ indien.nu##.nyhetsochreseartiklar .views-row:has-text(/casino/i)
 industrinyheter.se,dagensnaringsliv.se,infrastrukturnyheter.se,sportochfritidsnyheter.se,inredningsnyheter.se,byggnyheter.se,dagensfastigheter.se,stockholmsbyggnyheter.se,energinyheter.se,vindkraftsnyheter.se,solenerginyheter.se,jarnvagsnyheter.se,transportochlogistik.se,metallerochgruvor.se,papperochmassa.se,miningmetalnews.com##.insider-ads, [id^="mainadvertorial"], [id^="dfptag"], .block-advertorial, .block-views-blockconventus-info-articles-info-article-block, #dfp-tag-before_artikel, #dfp-tag-mobile_before_artikel, #block-views-block-leader-article
 industritorget.se###pnlCookie, .campaign-top, .campaigns-right
 inet.se##+js(set-cookie, allow-marketing-cookies, 0)
-ingenjorsjobb.se##body.advert-take-over-active:remove-class(advert-take-over-active)
-ingenjorsjobb.se##.advert-take-over
 ingenjorsjobb.se,vardegrunden.se,lagboken.se##.cookie-notice
 inkopsradet.se##div[id^="inkop-"]
 innebandy.se##[class*="banner-container"], .sponsorsswipeblock
@@ -1194,7 +1192,7 @@ pussad.se##.g1-popup-newsletter, .g1-slideup-wrap
 qasa.se##body[data-scroll-locked="1"]:remove-attr(data-scroll-locked)
 qasa.se##div[data-state="open"]:empty
 qasa.se##+js(aeld, wheel)
-quizza.nu,elbilen.se###takeover
+quizza.nu,elbilen.se,ingenjorsjobb.se###takeover
 qx.se##.qxa-container, .leaky-popup-banner, .qxasection, a[href^="https://www.qx.se/native/"]
 rabattsok.se,prv.se###cookie-bar
 racemagazine.se##article + div.bg-white:has(.ad-inner)
@@ -1600,8 +1598,8 @@ xn--lgenhet-5wa.nu###block-7, a[href*="lana-pengar"]
 xn--lnforum-exa.se##.LFRBox
 yogafordig.nu##.popup-large, .popup-bottom, .square-banner-wrapper
 ysektionen.se##.yweb-news-paper-banner
-zeinaskitchen.se,trafiksakerhet.se,boktugg.se,lakartidningen.se,villalivet.se,matsafari.nu,forexgruppen.se,fastighetsvarlden.se##+js(acs, monsterinsights_frontend)
-zeinaskitchen.se,trafiksakerhet.se,boktugg.se,lakartidningen.se,villalivet.se,matsafari.nu,forexgruppen.se,fastighetsvarlden.se##+js(set, mi_track_user, false)
+zeinaskitchen.se,trafiksakerhet.se,boktugg.se,lakartidningen.se,villalivet.se,matsafari.nu,forexgruppen.se,fastighetsvarlden.se,aktieskolan.se##+js(acs, monsterinsights_frontend)
+zeinaskitchen.se,trafiksakerhet.se,boktugg.se,lakartidningen.se,villalivet.se,matsafari.nu,forexgruppen.se,fastighetsvarlden.se,aktieskolan.se##+js(set, mi_track_user, false)
 zeromagazine.nu##div[id^="ads"]
 ##.lazyb.panorama
 ##adsaga-banner
@@ -1757,6 +1755,7 @@ zeromagazine.nu##div[id^="ads"]
 ##div.panorama-ad
 ##div.panorama-ad-standard
 ##div.panorama-annonser
+##div.panorama-banner
 ##div.partnership-ads
 ##div.phpbb-ads-center
 ##div.prebid-ad-slot
@@ -1790,6 +1789,7 @@ zeromagazine.nu##div[id^="ads"]
 ##div[class^="borka-widescreen"]
 ##div[class^="holid_desktop"]
 ##div[data-adk-container]
+##div[data-ad-unit-id]
 ##div[data-losjs^="borka-insider"]
 ##div[data-losjs^="borka-panorama"]
 ##div[data-losjs^="borka-widescreen"]
@@ -1894,6 +1894,7 @@ zeromagazine.nu##div[id^="ads"]
 ##[class*="advads_ad_widget"]:not(body):not(html)
 ##[id^="adace_ads"]
 &autoplay$frame,removeparam=autoplay,domain=di.se|expressen.se
+*$3p,script,denyallow=gstatic.com,domain=karlskogavaxer.se
 *$3p,script,denyallow=jit.si|googleapis.com|telenor.se,domain=startaochdriva.se
 *$3p,script,denyallow=kit.fontawesome.com|cloudflare.net|use.typekit.net|akamai.net,domain=lakemedelsvarlden.se
 *$ping,domain=fiskejournalen.se
@@ -2267,6 +2268,7 @@ zeromagazine.nu##div[id^="ads"]
 /metrics$domain=swebbtv.se
 /metrics/bambuser
 /minbostadstatic/js/partner/*
+/min.t.$domain=aktieskolan.se
 /mod_carousel_banner$domain=bjuvsweek.se
 /monetization/ads-module/*
 /monetization/pixel-sdk/*
