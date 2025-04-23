@@ -508,6 +508,7 @@ Video-Ad-$media,3p
 ##div[id^="borka-widescreen"]
 ##div[id^="borka-insider"]
 ##div[data-adk-container]
+##div[data-ad-unit-id]
 ##div.ad.container
 ##div.ad.panorama
 ##div.ad-after-header
@@ -568,6 +569,7 @@ Video-Ad-$media,3p
 ##div.NativeAd
 ##div.outsider-ads
 ##div.panoramaAd
+##div.panorama-banner
 ##div.l-footer__adtext
 ##div.landscape-ad-space
 ##div.leeads-wrapper-desktop
@@ -1159,9 +1161,10 @@ google.se##div.g:has(a[href*=".com.se/"]):has-text(/återförsäljare|rea|garant
 ||mogenromantik.com^
 ||flirtmatch.se^
 ||distansarbete.com^
-! Suspicious connection to a very slow loading and random generated "wp-cdn.top" domain.
+! Suspicious connection to a very slow loading and random generated 3rd party script. Maybe hacked.
 *$3p,script,denyallow=kit.fontawesome.com|cloudflare.net|use.typekit.net|akamai.net,domain=lakemedelsvarlden.se
 *$3p,script,denyallow=jit.si|googleapis.com|telenor.se,domain=startaochdriva.se
+*$3p,script,denyallow=gstatic.com,domain=karlskogavaxer.se
 
 ! ==== SPECIFIC FILTERS ==== !
 
@@ -1236,6 +1239,7 @@ vilarare.se,tidningenridsport.se##.adcontainer
 tv4.se,skippo.se##.maxetise
 sportsnews.se,xn--sporthnt-5za.se,killsteal.se,samnytt.se,samnytt.nu,obsid.se,senses.se,teknologiexperten.se,sverige.nu,enterprisemagazine.se,haboportalen.se,bike.se##a[href*="casino"]
 gamereactor.se,hitta.se##a[rel="sponsored"]
+quizza.nu,elbilen.se,ingenjorsjobb.se###takeover
 
 ! -- Specific tracking, analytics, etc
 ||rek.ai^$third-party,domain=ng.se
@@ -1258,8 +1262,8 @@ utm_$document,removeparam=/^utm_/,domain=tv.nu|booli.se|expressen.se|aftonbladet
 ! Websites with no obvious or visible facebook login. Will just assume it's used for tracking.
 ||connect.facebook.net^$domain=friatider.se|fotosidan.se|ng.se|lektionsbanken.se|lajvo.se|kvinnatillkvinna.se|epochtimes.se|newsner.com|humorbibeln.se|sportbibeln.se|ettgottskratt.se|djurbibeln.se|sillyseason.se|loppi.se|kyrkanstidning.se|tn.se|experimentarkivet.se
 ! Scriptlets
-zeinaskitchen.se,trafiksakerhet.se,boktugg.se,lakartidningen.se,villalivet.se,matsafari.nu,forexgruppen.se,fastighetsvarlden.se##+js(set, mi_track_user, false)
-zeinaskitchen.se,trafiksakerhet.se,boktugg.se,lakartidningen.se,villalivet.se,matsafari.nu,forexgruppen.se,fastighetsvarlden.se##+js(acs, monsterinsights_frontend)
+zeinaskitchen.se,trafiksakerhet.se,boktugg.se,lakartidningen.se,villalivet.se,matsafari.nu,forexgruppen.se,fastighetsvarlden.se,aktieskolan.se##+js(set, mi_track_user, false)
+zeinaskitchen.se,trafiksakerhet.se,boktugg.se,lakartidningen.se,villalivet.se,matsafari.nu,forexgruppen.se,fastighetsvarlden.se,aktieskolan.se##+js(acs, monsterinsights_frontend)
 utslappsratt.se,heleneholmsif.se,trafikskola.se,melodifestivalklubben.se,morotsliv.com,nyadagbladet.se##+js(set, em_track_user, false)
 utslappsratt.se,heleneholmsif.se,trafikskola.se,melodifestivalklubben.se,morotsliv.com,nyadagbladet.se##+js(set, exactmetrics_frontend, undefined)
 aftonbladet.se,livsstil.se,godare.se,byggahus.se,expressen.se,elle.se,femina.se,svenskdam.se,galamagasin.se,rodeo.net,familjeliv.se,vitaestilo.se,veckorevyn.com##+js(href-sanitizer, a[href*="/t?a="], ?url)
@@ -1372,7 +1376,7 @@ ottar.se##.c-newsletter-form__popup
 internetodontologi.se,prv.se##.overlay
 ! CSS to fix annoyances
 kb.se,dansportalen.se,hh.se,vr.se,viss.nu##body:style(overflow:unset!important; position:unset!important;)
-biostock.se,tobaksfakta.se##.pum-open:style(overflow:auto!important)
+biostock.se,tobaksfakta.se,dagenslogistik.se##.pum-open:style(overflow:auto!important)
 oru.se##.no-scroll:style(overflow: initial !important;)
 bulletin.nu,inredningsarkitektur.se,fof.se,allas.se,elle.se,femina.se,hant.se,mabra.com,residencemagazine.se,svenskdam.se,motherhood.se,aftonbladet.se,lchfarkivet.se,kollega.se,folkofolk.se,skyscanner.se,dagensarena.se,bokadirekt.se,barometern.se,blt.se,bt.se,kristianstadsbladet.se,olandsbladet.se,smp.se,sydostran.se,trelleborgsallehanda.se,ut.se,ystadsallehanda.se,vaxjobladet.se,nsk.se,klt.nu,samnytt.se,sjofartstidningen.se,mytaste.se,matklubben.se,vivavinomat.se,aktuellsakerhet.se##body:style(overflow:initial!important)
 runnersworld.se,motormagasinet.se,dagenshandel.se,food-supply.se,plastnet.se,habit.se,woodnet.se,foodnet.se,transportnet.se,processnet.se,packnet.se,verkstaderna.se,medtechmagazine.se,recyclingnet.se,rt-forum.se,uochd.se,lifesciencesweden.se,fri-kopenskap.se,cleannet.se,metal-supply.se,framtidensbygg.se,entreprenad.com,branschstegen.se,skogsforum.se,bio.se,svenskahousegruppen.se,hembygd.se##.modal-open:style(overflow:initial!important)
@@ -3303,7 +3307,6 @@ branschstegen.se##.container:has(a[href*="casino"])
 branschaktuellt.se##.popup-signup, .takeover
 branschaktuellt.se##.article__properties-breadcrumbs span:has-text(/Sponsrad|annons/i):upward(.article)
 svenskarnaochinternet.se,internetstiftelsen.se###newsletter-sliding
-quizza.nu,elbilen.se###takeover
 helgon.se##[id*="banner"], a[href^="https://ad."], a[href^="https://ad2."]
 dykarna.nu###rightbanners
 ||ysektionen.se/media/uploads/*banner$image
@@ -3405,13 +3408,12 @@ discoveringtheplanet.com##+js(acs, disableEnterKey)
 discoveringtheplanet.com##body.unselectable:remove-class(unselectable)
 discoveringtheplanet.com##html:style(user-select:unset!important; -moz-user-select:unset!important; -webkit-user-select:unset!important;)
 discoveringtheplanet.com##.widget-title:has-text(/annons/i) + .textwidget
-aktieskolan.se##section.elementor-section:has-text(Huvudsponsorer & partners)
+/min.t.$domain=aktieskolan.se
+aktieskolan.se##.ast-container > .elementor > section.elementor-section:has(a[href*="betting"])
 dagens.se##.item:has(.prebid, div[data-ad-unit-id], a[href*="casino"], a[href="/sponsrat-innehall"])
 karlskogavaxer.se##.elementor-heading-title:has-text(/annons/i):upward(.elementor-column)
 dagenslogistik.se##small:has-text(/annons/i):upward(.elementor-column)
 funktionshinderpolitik.se##.topp-banner, .annons-mark
-ingenjorsjobb.se##.advert-take-over
-ingenjorsjobb.se##body.advert-take-over-active:remove-class(advert-take-over-active)
 ||jobtip.se^$domain=shortcut.se
 shortcut.se##div[class^="baner"], a[target="_blank"] img, .banner-wrap
 shortcut.se##.category-tag:has-text(/annons/i):upward(.ArticleListItem)
