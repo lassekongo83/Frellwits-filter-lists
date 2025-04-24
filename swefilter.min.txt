@@ -1,7 +1,7 @@
 ! Title: Frellwit's Swedish Filter
-! Last updated: Wed, 23 Apr 2025 03:29:35 +0000
+! Last updated: Thu, 24 Apr 2025 03:18:29 +0000
 ! Expires: 5 days
-! Diff-Path: patches/2025.4.23.209.patch#swefilter
+! Diff-Path: patches/2025.4.24.198.patch#swefilter
 ! Diff-Expires: 24 hours
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
@@ -1097,6 +1097,7 @@ ng.se###nativendo-mainfeed:upward(1):remove()
 ng.se##.secondary-sidebar > .panel-pane:last-child
 ng.se##.views-row:has(.sponsored-article)
 ng.se##.view-partner-articles, [class*="sponsored-article"], .tertiary-bottom, div[class*="nojesguidenads"]
+nogg.se##td[width="200"] a img
 nogg.se##:is(td[rowspan="2"][align="left"], table[width="640"][cellpadding="7"]):has(a[href*="casino"])
 nordfront.se##span:not(.post-content):has-text(/annons/i):upward(.post)
 nordfront.se###campaign_area
@@ -1183,8 +1184,9 @@ pressbladet.se,svenskpress.se,foretagsbladet.se,gestrikemagasinet.se,cfanytt.se,
 pricerunner.se##p[class^="pr-"]:has-text(Sponsrat):upward(div[class$="Container-root"])
 pricerunner.se##span[class^="pr-"]:has-text(ANNONS):upward(a)
 prisjakt.nu##.pjra-relative, .outsider-ads, div[class^="AdPlacementWrapper"]
-proshop.se##body:style(background-image: none !important;)
+proshop.se##.container.hasTopBanner:remove-class(hasTopBanner)
 proshop.se##.site-background-banner
+proshop.se##:is(body, .site-container-fullwidth):style(background-image: none !important;)
 psykoterapicentrum.se###omtag p[style^="margin-top"]:not([class]):has(a[target="_blank"])
 psykoterapicentrum.se##.textmenyspalt:has(img[src^="bilder/annons"])
 pussad.se##html.g1-popup-visible:style(overflow: initial !important;)
@@ -1398,6 +1400,7 @@ sxk.se###start-sponsors
 sydasien.se##.thb-cookie-bar
 sydnarkenytt.se##.toppbanner-outer, .reklamplats_hspalt, .egenbanner
 synonyma.se##amp-user-notification.cookie
+synonyma.se##.full-bleed:has(.adsbygoogle)
 synonymer.se##+js(cookie-remover, /^ev_did|ev_sid/)
 synonymer.se##+js(set-local-storage-item, /^ev_did|ev_sid/, $remove$)
 synonymer.se##.create-account-banner, .buy-premium-banner, div[class*="pb-"] > div.text-center, div[data-ad-container]
@@ -1961,6 +1964,7 @@ zeromagazine.nu##div[id^="ads"]
 /ads.article.js
 /adsense.index.js$domain=husvagn.se|husbil.se
 /adsm.macro$script
+/ads$domain=allastudier.se|cirkulation.se|ordmedzcxy.se|se.azrhymes.com
 /ads-countdown.js$domain=aftonbladet.se|livsstil.se|godare.se
 /ads-dm.js
 /ads.for.me/jsa?$script
@@ -1969,7 +1973,6 @@ zeromagazine.nu##div[id^="ads"]
 /ads/global-conf.js
 /ads/load-dm.js
 /ads/*?track_this=1
-/ads?$domain=cirkulation.se
 /adtracker$domain=beernews.se
 /adtrax/imp?
 /advertisement-dfp$script
@@ -2200,7 +2203,6 @@ zeromagazine.nu##div[id^="ads"]
 /helios/multiad_jquery
 /hemmafixbloggen/includes/events-tracker
 /high-impact$domain=hemnet.se
-/home/ads$domain=allastudier.se
 /hotjar/hotjar.script.js
 /iab/iab.js
 /idle.min.js$domain=180.se
@@ -2293,7 +2295,6 @@ zeromagazine.nu##div[id^="ads"]
 /omniture/s_code.js
 /one-signal$domain=swebbtv.se
 /opus-analytics
-/ordmedzcxy_files/ads$domain=ordmedzcxy.se
 /pageView$xhr,domain=altinget.se
 /pagead$domain=vilaser.se|horoskoptid.se|eniro.se
 /pageviews$domain=vk.se|folkbladet.nu|nordsverige.se|mellanbygden.nu|vasterbottningen.se|lokaltidningen.nu
@@ -2489,7 +2490,6 @@ zeromagazine.nu##div[id^="ads"]
 /private-browsing.js$domain=thelocal.se
 /prod/adform
 /profile$ping,domain=feber.se|skippo.se|tasteline.com|tjock.se|veckorevyn.com|marcusoscarsson.se|surfa.se|nordichardware.se|tv4.se|fotbollskanalen.se|koket.se|teknikveckan.se|langd.se|shl.se
-/promoted_ads$domain=bostadsportal.se
 /ps-partner$xmlhttprequest,domain=dagensps.se
 /public/log$domain=kalender.se
 /public/t/*$domain=tvmatchen.nu
@@ -2556,7 +2556,6 @@ zeromagazine.nu##div[id^="ads"]
 /spotlight-ad_$image
 /ss_foundation/combined_li_tracking
 /static.marklar.se/*-tracker
-/static/images/ads$domain=se.azrhymes.com
 /static/js/loada.js
 /static/media/*casino$domain=dagenstv.com|kolla.tv
 /statistics/statistics.js
@@ -3019,7 +3018,6 @@ zeromagazine.nu##div[id^="ads"]
 ||grillbloggen.nu/media/com_rstbox/js/engagebox.js
 ||growthbook.io^$domain=allas.se|elle.se|femina.se|hant.se|mabra.com|residencemagazine.se|svenskdam.se|motherhood.se|lokalguiden.se
 ||gstatic.com/partners/badge$subdocument
-||gtm.ekonomifakta.se^
 ||gtm.findroommate.dk^
 ||guv-bounce.eniro.com^
 ||gymshark-sweden.com.se^
