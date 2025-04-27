@@ -1,7 +1,7 @@
 ! Title: Frellwit's Swedish Filter
-! Last updated: Fri, 25 Apr 2025 03:35:15 +0000
+! Last updated: Sun, 27 Apr 2025 03:27:19 +0000
 ! Expires: 5 days
-! Diff-Path: patches/2025.4.25.215.patch#swefilter
+! Diff-Path: patches/2025.4.27.207.patch#swefilter
 ! Diff-Expires: 24 hours
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
@@ -276,7 +276,8 @@ borssnack.di.se##.bn_advertisement__panorama, .bn_advertisement__container
 borsvarlden.com##article:has(.border-sponsored)
 borsvarlden.com##.label:has-text(/annons/i):upward(.highlighted-article-block)
 borsvarlden.com##.sponsored-articles-container, .nav-sep-blink, .annons-label, .index-side-banner-wrapper, .index-top-banners-wrapper, .fullwidthbanner-container, .banner-wrapper
-bostadsrattsnytt.se##div[data-widget_type="image.default"] a:not([href^="/"], [href*="bostadsrattsnytt.se"]) img
+bostadsrattsnytt.se##div[data-widget_type="image.default"]:has(a:not([href^="/"], [href*="bostadsrattsnytt.se"]))
+bostadsrattsnytt.se##div[data-widget_type="image.default"]:has(img[src*="banner"])
 bovision.se##.banner-image, .bvads-container, .a-full-width, .ads-container
 bovision.se##.blog-article-card:has(.sponsor-mark)
 brafiler.se###header-banner, #cboxOverlay, #colorbox, .adv-inner, #sidebar-banner
@@ -815,9 +816,10 @@ inredningsvis.se##+js(set-cookie, cmplz_statistics, deny)
 internetmedicin.se##[itemtype="https://schema.org/WPAdBlock"]
 internetodontologi.se,prv.se##.overlay
 internetodontologi.se,skrattsajten.com,norpan.se##+js(rmnt, script, e.preventDefault)
-investeramera.se##a[href^="https://investeramera.se/go/"] img
+investeramera.se##a[href^="https://go."]
 investeramera.se###dialog-locked
 investeramera.se##.post-single-content p em:has-text(Annons:)
+investeramera.se##.rich-text:has(a[target="_blank"], img[width="320"][height="320"])
 ipo.se##.tag-sponsrad
 itseniorerna.se###astroid-preloader
 itseniorerna.se###redim-cookiehint-modal
@@ -1186,6 +1188,7 @@ prisjakt.nu##.pjra-relative, .outsider-ads, div[class^="AdPlacementWrapper"]
 proshop.se##.container.hasTopBanner:remove-class(hasTopBanner)
 proshop.se##.site-background-banner
 proshop.se##:is(body, .site-container-fullwidth):style(background-image: none !important;)
+psykoterapicentrum.se##span[style="background-color: #FFFF00"]:has-text(/annons/i):upward(1)
 psykoterapicentrum.se###omtag p[style^="margin-top"]:not([class]):has(a[target="_blank"])
 psykoterapicentrum.se##.textmenyspalt:has(img[src^="bilder/annons"])
 pussad.se##html.g1-popup-visible:style(overflow: initial !important;)
@@ -1329,7 +1332,7 @@ sporthalsa.se##.textwidget:has(a[href*="casino"])
 sportlovin.se##div[style*="min-height"]:has(div[id^="sportlovin_"])
 sportpanelen.se##.textwidget:has(a[href*="casino"])
 sportsnews.se,xn--sporthnt-5za.se###secondary:has(a[href*="casino"])
-sportsnews.se,xn--sporthnt-5za.se,killsteal.se,samnytt.se,samnytt.nu,obsid.se,senses.se,teknologiexperten.se,sverige.nu,enterprisemagazine.se,haboportalen.se,bike.se##a[href*="casino"]
+sportsnews.se,xn--sporthnt-5za.se,killsteal.se,samnytt.se,samnytt.nu,obsid.se,senses.se,teknologiexperten.se,sverige.nu,enterprisemagazine.se,haboportalen.se,bike.se,xn--lgenhet-5wa.nu##a[href*="casino"]
 sporttv.nu##a[onclick*="bannerClick"], #linkus, .details-bet-banner
 sporttv.nu##.progams-list-xs .text-center:has(.banner):remove()
 stallet.se##.pnlAdTop
@@ -2483,7 +2486,6 @@ zeromagazine.nu##div[id^="ads"]
 /popup-overlay$script,domain=sistersinlaw.se
 /popup-subscribe.js$domain=borsvarlden.com
 /popup/follow-us-fb
-/prebid-ads.js$domain=svenskadating.com
 /prebid_rtb_call
 /prisjakt$xmlhttprequest,domain=fz.se
 /prisjakt-ad-carousel$frame
