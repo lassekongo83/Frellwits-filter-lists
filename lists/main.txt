@@ -575,7 +575,6 @@ Video-Ad-$media,3p
 ##div.leeads-wrapper-desktop
 ##div.holidAds
 ##div.CMACG_AdChangerWidget
-##div.elementor-widget-wp-widget-advads_ad_widget
 ##div.feed_ad
 ##div.mgp-ads
 ##div.mobile-ad-format
@@ -1202,7 +1201,7 @@ fotosidan.se,merinfo.se,allsvenskan.se,tasteline.com,jaktojagare.se,chefstidning
 lira.se,danstidningen.se,slangopedia.se,tidningen.se###ads
 fotbolldirekt.se,hockeysverige.se,innebandymagazinet.se,motivation.se,fiskejournalen.se,alba.nu,padeldirekt.se,formeldirekt.se,dagensopinion.se,golfing.se##.annons
 evertiq.se,fz.se##.bnr
-nyhetsbyranjarva.se,nyan.ax,tv-kanal.se,golfguidenonline.se,rockbladet.se,vildmarken.se,nyhetersto.se,dagenslogistik.se,turismnytt.se,radiosol.se,cora.se##.g
+nyhetsbyranjarva.se,nyan.ax,tv-kanal.se,golfguidenonline.se,rockbladet.se,vildmarken.se,nyhetersto.se,dagenslogistik.se,turismnytt.se,radiosol.se,cora.se,travelandtourworld.se##.g
 freeride.se,gamereactor.se,happyride.se,hockeyettan.se##.sponsor
 battrestadsdel.se,flashback.se,leta.se###top-banner
 recepten.se,foreca.se###topBanner
@@ -1248,7 +1247,7 @@ quizza.nu,elbilen.se,ingenjorsjobb.se###takeover
 ||go.ezodn.com/hb/$domain=temadagar.se|wernamaten.se|sanghafte.se|xn--gtboken-exa.se
 ||g.ezodn.com/cmp/$domain=temadagar.se
 ||growthbook.io^$domain=allas.se|elle.se|femina.se|hant.se|mabra.com|residencemagazine.se|svenskdam.se|motherhood.se|lokalguiden.se
-||js.monitor.azure.com^$domain=akademiskahus.se|energi.se|skanetrafiken.se|forex.se|stenafastigheter.se|transportforetagen.se|lantmannen.se|stff.se|gbgfotboll.se|svenskfotboll.se|skk.se|objektvision.se
+||js.monitor.azure.com^$domain=akademiskahus.se|energi.se|skanetrafiken.se|forex.se|stenafastigheter.se|transportforetagen.se|lantmannen.se|stff.se|gbgfotboll.se|svenskfotboll.se|skk.se|objektvision.se|skogsindustrierna.se
 utm_$document,removeparam=/^utm_/,domain=tv.nu|booli.se|expressen.se|aftonbladet.se|bostad.blocket.se|dagensps.se|prisjakt.nu|vinborsen.se
 /analytics$domain=gbgfotboll.se|stff.se|svenskfotboll.se|di.se|etc.se|vackertvader.se|skogsforum.se|skolporten.se|sjf.se|se.azrhymes.com|alandsradio.ax
 /firebase-analytics.js$domain=stoppapressarna.se|zeinaskitchen.se|jennysmatblogg.nu|filippoon.se|lindasbakskola.se
@@ -3570,6 +3569,7 @@ livsmedelsnyheter.se##div[class*="elementor-widget-text-editor"][data-widget_typ
 automobilly.com,nordicmanufacturing.net##.headerannons, .sidebarannonsseg, .footerannons
 konsten.net##div[id^="konst-"]
 globalportalen.org##.card__advertisment, .ays-survey-popup-survey-window
+/eaModule.js$domain=aktavara.org
 aktavara.org##.banner-start
 omkonst.com##.annonser-vit
 krogen.se##.newsletter-notice-container
@@ -3586,7 +3586,7 @@ Samarbetspartners$image,domain=svensksegling.se
 vastsverige.com##:is(.ng-cloak, [ng-cloak]):style(display:initial!important;)
 ordparken.se##div[style="text-align:center;padding:8px;margin:30px 0;min-height:340px"]
 magasindagg.se##.thb-page-transition-on:style(opacity:unset!important;)
-travelandtourworld.se##.rightcol1:has(.g)
+travelandtourworld.se##div[class^="rightcol"]:has(.g, .adsbygoogle)
 kultur1.se##a[href^="openadd"]
 personlighetstyp.se###babasbmsgx, .add.row
 personlighetstyp.se##body[style^="visibility"]:style(visibility:unset!important;)
@@ -3610,7 +3610,7 @@ kandisvarlden.com##body[unselectable]:remove-attr(unselectable)
 ||signals.tt.se/collect
 pricerunner.se##p[class^="pr-"]:has-text(Sponsrat):upward(div[class$="Container-root"])
 pricerunner.se##span[class^="pr-"]:has-text(ANNONS):upward(a)
-coop.se##a[href="/butiker-erbjudanden/"]:has(source[srcset*="annons"])
+coop.se##:is(a[href="/butiker-erbjudanden/"], a[href^="/handla"]):has(source[srcset*="annons"], img[alt*="Annons"])
 husbilsskolan.se##.elementor-image a[target="_blank"]
 inredningsvis.se##+js(set-cookie, cmplz_banner-status, dismissed)
 inredningsvis.se##+js(set-cookie, cmplz_functional, allow)
