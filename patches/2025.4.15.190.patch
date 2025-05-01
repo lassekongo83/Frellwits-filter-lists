@@ -1,10 +1,19 @@
-diff name:swefilter lines:197 checksum:595baff252
+diff name:swefilter lines:242 checksum:edc9efba3b
 d2 1
 a2 1
-! Last updated: Wed, 30 Apr 2025 02:52:12 +0000
+! Last updated: Thu, 01 May 2025 02:41:30 +0000
 d4 1
 a4 1
-! Diff-Path: patches/2025.4.30.172.patch#swefilter
+! Diff-Path: patches/2025.5.1.161.patch#swefilter
+d116 1
+a116 1
+aftonbladet.se##:is(main > section a[data-test-tag="internal-link"], #main > section a[data-test-tag="internal-link"], main > section a[href*="godare.se"], #main > section a[href*="godare.se"], main > aside a[data-test-tag="internal-link"]):has-text(innehåller annonslänkar)
+d119 4
+a122 4
+aftonbladet.se,godare.se##div[style*="min-height:240px"]:has(iframe[src*="/widgets/ads/"])
+aftonbladet.se,godare.se##[data-test-tag="prisjakt-carousel"], a[href*="/brandstudio"], a[href*="/brand-studio"], div[class^="advertory-"]:not(.advertory-header-anchor)
+aftonbladet.se,godare.se,byggahus.se,expressen.se,elle.se,femina.se,svenskdam.se,galamagasin.se,rodeo.net,familjeliv.se,vitaestilo.se,veckorevyn.com##+js(href-sanitizer, a[href*="/t?a="], ?url)
+aftonbladet.se,godare.se,omni.se,omniekonomi.se,svd.se##.sp-message-open body:style(overflow:initial!important; position:unset!important; margin-top:unset!important;)
 d131 1
 a131 1
 akaviaaspekt.se##.article-list-item--native, a.article-topic__list-item[href^="/annons"], .advertisement--banner > div[class=""]
@@ -13,6 +22,7 @@ a133 1
 aktieskolan.se##.ast-container > .elementor > section.elementor-section:has(a[href*="betting"])
 d136 1
 d138 4
+d146 1
 d177 1
 a177 2
 alltomnorrtalje.se##aside.widget_text:has(a[href*="betting"], a[href*="casino"])
@@ -43,8 +53,15 @@ a462 1
 ehandelstips.se##div[class*="block-wrap-ad-"]
 a471 1
 elbilen.se##.font-sans.rounded-full:has-text(Annons):upward(article)
+d571 1
 d643 1
 d687 1
+a691 1
+godare.se##div[style="min-height:350px"]:has(iframe[title="Annons"])
+a693 1
+godare.se##[id^="adPlacement"]:upward(1)
+a739 1
+helahisingen.se,sportsnews.se,xn--sporthnt-5za.se,stockholmblaljus.se###af-preloader
 d811 2
 d825 1
 a825 1
@@ -63,6 +80,7 @@ d962 2
 a963 2
 livetsgoda.se,betongforeningen.se,espressomedia.se,ordfrontmagasin.se,europaportalen.se,motorsportbladet.se,battregolf.se,nitroz.se,magasinethockey.se,twostrokerider.se,eqotime.com,newsvoice.se,tranakampsport.se,thepattayanewsse.com,forsvarssektorn.se,handbollskanalen.se##a[target$="blank"] img:not([class^="tweet"])
 livetsgoda.se,bfn.se,biblioteksforeningen.se##body:style(opacity:unset!important)
+d968 5
 d1062 1
 a1062 1
 mobil.se,kamerabild.se##a[href*="/partner"], iframe[name^="PJWidget"]
@@ -127,8 +145,14 @@ a1799 1
 ##div[data-ad-unit-id]
 a1903 1
 *$3p,script,denyallow=gstatic.com,domain=karlskogavaxer.se
-a1969 1
+d1905 1
+d1910 1
+a1910 1
+-tracking.js$domain=aftonbladet.se|godare.se|svd.se
+d1970 1
+a1970 2
 /ads$domain=allastudier.se|cirkulation.se|ordmedzcxy.se|se.azrhymes.com
+/ads-countdown.js$domain=aftonbladet.se|godare.se
 d1978 1
 d2049 1
 a2049 1
@@ -138,8 +162,14 @@ a2123 1
 /detroitchicago$domain=temadagar.se|wernamaten.se|ninjateknik.com
 a2135 1
 /eaModule.js$domain=aktavara.org
+d2188 1
+a2188 1
+/glimr$script,domain=aftonbladet.se|blocket.se|godare.se
 d2201 1
 d2210 1
+d2247 1
+a2247 1
+/jwpsrv.js$domain=aftonbladet.se|svd.se|tv.nu|axess.se|freeride.se|happyride.se|embed.futuresportsmedia.com|streamio.com|laget.se|moviezine.se|fasttrack.webstream.dk|cdn.jwplayer.com|allas.se|elle.se|femina.se|hant.se|mabra.com|residencemagazine.se|svenskdam.se|motherhood.se|godare.se|recept.se|hastnet.se|skippo.se
 a2277 1
 /min.t.$domain=aktieskolan.se
 d2302 1
@@ -154,11 +184,16 @@ d2493 1
 a2493 1
 /prisjakt$xmlhttprequest,domain=fz.se|mobil.se
 d2498 1
+a2498 1
+/prylguiden-expressen$all
 d2509 1
 a2509 1
 /raven$script,domain=mitti.se|travnet.se|nyheter24.se|tyda.se|devote.se|egoinas.se|hemtrevligt.se|alltforforaldrar.se|familjeliv.se|brollopstorget.se|blogg.se|nouw.com|lchfarkivet.se|fotbolltransfers.com|norrahalland.se|svenskgolf.se|vimedbarn.se|modette.se|vf.se|hjotidning.se|kt.se|kt-kuriren.se|sla.se|mariestadstidningen.se|filipstadstidning.se|fryksdalsbygden.se|nwt.se|arvikanyheter.se|nkp.se|saffletidningen.se|provinstidningen.se|dalslanningen.se|nlt.se|skaraborgsbygden.se|alltomnorrtalje.se|fragbite.se|ljudochbild.se|vk.se|folkbladet.nu|nordsverige.se|mellanbygden.nu|vasterbottningen.se|lokaltidningen.nu|svenskafans.com|sportlovin.se|innebandymagazinet.se|jaktjournalen.se|akaskidor.se
 d2565 1
 d2590 1
+d2609 1
+a2609 1
+/track-view$domain=aftonbladet.se|godare.se
 d2720 1
 a2720 1
 @@*$ghide,domain=atl.nu|landlantbruk.se|land.se|fodertipset.se|citattorget.se|citiboard.se|kritiker.se|akaviaaspekt.se|annonsborsen.se
@@ -171,6 +206,7 @@ a2903 1
 d2909 1
 a2909 1
 ||cookielaw.org^$domain=tv4.se|fotbollskanalen.se|koket.se|flashscore.se|ikea.com|recept.se|manpower.se|natgeotv.com|internetkunskap.se|internetstiftelsen.se|yelp.se|spisa.nu|viaplayradio.se|svenskarnaochinternet.se|bredbandskollen.se|internetmuseum.se|internetdagarna.se|digitalalektioner.se|goto10.se|bab.la|tripadvisor.se|sydkusten.es|livetochdiabetes.se|voister.se|nok.se|motesplatsen.se|se.trustpilot.com|travronden.se|travrondenspel.se|jokersystemet.se|spelvarde.se|overodds.se|hammarbyfotboll.se|pricerunner.se|billetto.se|lidl.se|pwc.se|svenskafans.com|vinted.se
+d2987 1
 d3015 1
 a3015 1
 ||gatekeeperconsent.com^$domain=hemmanytt.se|wernamaten.se|sanghafte.se|xn--gtboken-exa.se|ninjateknik.com
@@ -186,13 +222,22 @@ d3185 1
 a3185 1
 ||onesignal.com^$domain=samnytt.se|battrestadsdel.se|beernews.se|ungdomsfotboll.se|rabattsok.se|1x2.se|cannabis.se|dackavisen.se|driva-eget.se|skogsaktuellt.se|entreprenadaktuellt.se|ja.se|newsner.com|humorbibeln.se|sportbibeln.se|ettgottskratt.se|djurbibeln.se|finanstid.se|fokus.se|gasetten.se|fotbollsthlm.se|macken.xyz|naringslivetvgl.se|dalarnasaffarer.se|stockholmsaffarer.se|jamtlandsaffarer.se|hallandsnaringsliv.se|sjuharadsnaringsliv.se|netflixguiden.se|nyadagbladet.se|oskarshamns-nytt.se|swebbtv.se|vaken.se|aktieskolan.se|fastighetsvarlden.se|mcparken.se|gaffa.se|alltomnorrtalje.se|morotsliv.com|it-finans.se|it-halsa.se|it-kanalen.se|it-pedagogen.se|it-retail.se|skaneplus.se|mittforetag.com|studeravidare.se|thephuketexpress.se|ibnytt.se|garaget.org|marketmate.se|rakapuckar.com|svegot.se|thepattayanewsse.com|svenskgolf.se
 d3187 1
+d3204 1
 d3206 1
 a3206 1
 ||pji.nu^$third-party,~image,domain=minhembio.com|ljudochbild.se|gp.se|mobil.se
+d3284 2
+a3285 2
+||sdkconfig.pulse.schibsted.io^$domain=aftonbladet.se|omni.se|omniekonomi.se|svd.se|prisjakt.nu|bytbil.com|godare.se|klart.se
+||sdk.pulse.schibsted.com^$script,domain=aftonbladet.se|omni.se|omniekonomi.se|svd.se|prisjakt.nu|bytbil.com|godare.se
+d3358 1
 a3360 1
 ||track.yetric.net^
 a3405 1
 ||wb-analytics.onecruiter.com^
+d3429 1
+a3429 1
+||youbora.com^*/sp.min.js$important,domain=aftonbladet.se|svd.se|godare.se|tv.nu
 d3464 1
 a3464 1
 temadagar.se,sanghafte.se,xn--gtboken-exa.se,ninjateknik.com##^script:has-text(__ez)
