@@ -1,6 +1,6 @@
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days
-! Last modified: 2025-05-05 19:00:16 CEST
+! Last modified: 2025-05-06 04:54:06 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPL3 - https://github.com/lassekongo83/Frellwits-filter-lists/blob/master/LICENSE
@@ -737,7 +737,7 @@ helahisingen.se,sportsnews.se,xn--sporthnt-5za.se,stockholmblaljus.se###af-prelo
 helgon.se##[id*="banner"], a[href^="https://ad."], a[href^="https://ad2."]
 hellofresh.se##a[data-test-id^="top-banner-ad"], div[data-test-id="exit-intent-banner"], div[data-test-id="urgency-banner-modal"], a[data-test-id="side-banner-ad-link"]
 hembygd.se##bs-modal-backdrop
-hemhyra.se##.pageCookies, #ad-insider1, #ad-insider2, #ad-mobil-1, #ad-mobil-2, #ad-mobil-3, #ad, #ad1, #ad2, #adform-outstream, .ad__text, .entry__ad, .entry__related__sponsored, .module__sponsored
+hemhyra.se##.maxetise-wrapper
 hemmafixbloggen.se##.post-item:has(.sponsor-summary)
 hemmanytt.se###sa_slider_shortcode
 hemmanytt.se##.annonsnotis + span + span + div.td-pb-row:has(a[href*="adtr.co"])
@@ -2350,7 +2350,7 @@ zeromagazine.nu##div[id^="ads"]
 /plugins/convertplug
 /plugins/convertpro
 /plugins/conzent$script,domain=konsumentmagasinet.se
-/plugins/cookie-notice$script,domain=bildobubbla.se|zeromagazine.nu|sverigespringer.se|gasetten.se|sillyseason.se|gentlemannaguiden.com|matmalin.se|svensktidskrift.se|schack.se|kobe.se|tidningenproffs.se|jaktojagare.se|tobaksfakta.se|bebisvarlden.se|underbaraclaras.se|cykelframjandet.se|dalabygden.se|lansposten.se|sormlandsbygden.se|vaguiden.se|grandtech.se|bluff.se|svmf.se|rockbladet.se|globalbar.se|seniornet.se|gaming365.se|skellefteamedia.se|sillybladet.se|zlatanism.se|fotbollsnytt.nu|voov.nu|matochdrycker.se|drugnews.se|ladiesabroad.se|ninjateknik.com|reportrarutangranser.se
+/plugins/cookie-notice$script,domain=bildobubbla.se|zeromagazine.nu|sverigespringer.se|gasetten.se|sillyseason.se|gentlemannaguiden.com|matmalin.se|svensktidskrift.se|schack.se|kobe.se|tidningenproffs.se|jaktojagare.se|tobaksfakta.se|bebisvarlden.se|underbaraclaras.se|cykelframjandet.se|dalabygden.se|lansposten.se|sormlandsbygden.se|vaguiden.se|grandtech.se|bluff.se|svmf.se|rockbladet.se|globalbar.se|seniornet.se|gaming365.se|skellefteamedia.se|sillybladet.se|zlatanism.se|fotbollsnytt.nu|voov.nu|matochdrycker.se|drugnews.se|ladiesabroad.se|ninjateknik.com|reportrarutangranser.se|villatidningen.se
 /plugins/cookie-popup$script,domain=skillingaryd.nu|xn--vrnamo-bua.nu
 /plugins/cresta-social-share-counter
 /plugins/daftplug-instantify$domain=se.moyens.net
@@ -2492,7 +2492,7 @@ zeromagazine.nu##div[id^="ads"]
 /prisjakt-ad-carousel$frame
 /private-browsing.js$domain=thelocal.se
 /prod/adform
-/profile$ping,domain=feber.se|skippo.se|tasteline.com|tjock.se|veckorevyn.com|marcusoscarsson.se|surfa.se|nordichardware.se|tv4.se|fotbollskanalen.se|koket.se|teknikveckan.se|langd.se|shl.se
+/profile$ping,domain=feber.se|skippo.se|tasteline.com|tjock.se|veckorevyn.com|marcusoscarsson.se|surfa.se|nordichardware.se|tv4.se|fotbollskanalen.se|koket.se|teknikveckan.se|langd.se|shl.se|hemhyra.se
 /prylguiden-expressen$all
 /ps-partner$xmlhttprequest,domain=dagensps.se
 /public/log$domain=kalender.se
@@ -3456,6 +3456,8 @@ tabyallehanda.se##^script[src$="adsbygoogle.js"]
 woxikon.se##^script[src^="https://html-load.com/"]
 woxikon.se##^script:has-text(googletag)
 woxikon.se##^script:has-text(window._sp_)
+tv4play.se##.infinite-scroll-component > div > div:first-child .swiper-slide > div[style] > div > div:first-child:style(mask-image:unset!important; mask-size:unset!important; mask-composite:unset!important;)
+tv4play.se##.swiper-slide > div[style] > a > div:style(mask-image:unset!important;)
 !#endif
 !#if !env_mobile
 /assets/js/modules/plugins/smoothPageScroll
