@@ -1,7 +1,7 @@
 ! Title: Frellwit's Swedish Filter
-! Last updated: Wed, 07 May 2025 02:34:57 +0000
+! Last updated: Thu, 08 May 2025 02:44:44 +0000
 ! Expires: 5 days
-! Diff-Path: patches/2025.5.7.154.patch#swefilter
+! Diff-Path: patches/2025.5.8.164.patch#swefilter
 ! Diff-Expires: 24 hours
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
@@ -403,7 +403,7 @@ deliquate.se##[id^="ads300"], [id^="linkcat-"]
 densistavilan.se##footer .x-bar:has(div[id^="densi-"])
 densistavilan.se##h3.h-custom-headline:has-text(Advertorial):upward(1)
 densistavilan.se###fancybox-wrap, div[id^="densi-"]
-dental24.se##.fp_banners, .cypress-popup_newsletter
+dental24.se##.fp_banners, .cypress-popup_newsletter, .cypress-ads, .cypress-insperation
 dental24.se##.post-box:has(.sponsored)
 designbase.se##html,body:style(overflow:unset!important;)
 designbase.se##.banner-hidden, .z-newsletter-modal, .z-newsletter-popup
@@ -730,6 +730,7 @@ hejauppsala.com,bredband.se##.cli-barmodal-open:style(overflow:auto!important)
 hejauppsala.com,svenskfilmdatabas.se##.wt-cli-cookie-bar-container
 helahisingen.se###custom_html-15, .code-block img, .banner-promotions-wrapper, article[class*="tag-ad-"]
 helahisingen.se##.latest-posts-grid:has(a[href*="/annons/"])
+helahisingen.se##.post-excerpt:has-text(ANNONS):upward(.post)
 helahisingen.se,sportsnews.se,xn--sporthnt-5za.se,stockholmblaljus.se###af-preloader
 helgon.se##[id*="banner"], a[href^="https://ad."], a[href^="https://ad2."]
 hellofresh.se##a[data-test-id^="top-banner-ad"], div[data-test-id="exit-intent-banner"], div[data-test-id="urgency-banner-modal"], a[data-test-id="side-banner-ad-link"]
@@ -774,7 +775,7 @@ horisontmagasin.se##.small:has-text(/Annons/i):upward(1)
 hotellorestaurang.se,citymark.today,byggfakta.today###bannnerContainer, #pop_overlay, .banner-s, div.featured
 hrnytt.se##article:has(.sponsored-article)
 hrnytt.se##.banner-box
-hrsvepet.se,cfosvepet.se##.cookie-banner, .desktopbanner
+hrsvepet.se,cfosvepet.se##.cookie-banner, .desktopbanner, .mobilbanner-section
 hrsvepet.se,cfosvepet.se##:is(.recent-post-item, .w-dyn-item):has(a[href="#"]:not(.w-condition-invisible))
 humorbibeln.se,newsner.com,sportbibeln.se,ettgottskratt.se,djurbibeln.se,matbibeln.se##.inline-share-buttons
 hungrig.nu##.ui-widget-overlay, .ui-dialog
@@ -1441,7 +1442,7 @@ thelocal.se##.ad-container-section, .article-sponsored, div[data-hasbanner="yes"
 thelocal.se##.ra-widget-article-tag:has-text(/partner/i):upward(.ra-widget-panel)
 thepattayanewsse.com##a.td_single_image_bg:not([href*="thepattayanewsse.com"]), #tnp-modal, .desktop-contents
 thepattayanewsse.com##:is(.widget_media_image, .wp-block-image) a:not([href*="thepattayanewsse.com"])
-tidningenbalans.se##div[style*="z-index: 999; background-color: rgba(0, 0, 0, 0.5)"], .bg-grey.hideOnPrint, .bg-adYellow
+tidningenbalans.se##div[style*="z-index: 999; background-color: rgba(0, 0, 0, 0.5)"], .bg-grey.hideOnPrint, .bg-adYellow, article[data-is-ad="true"]
 tidningenbalans.se##p.uppercase:has-text(/i annonssamarbete med/i):upward(.flex.overflow-hidden)
 tidningencurie.se##body[style*="hidden"]:style(overflow:unset!important;position:unset!important;top:unset!important;)
 tidningencurie.se##html.sv-no-touch:remove-class(sv-no-touch)
@@ -1517,7 +1518,7 @@ utsidan.se##.clamzone, .component-adzone
 utslappsratt.se,heleneholmsif.se,trafikskola.se,melodifestivalklubben.se,morotsliv.com,nyadagbladet.se##+js(set, em_track_user, false)
 utslappsratt.se,heleneholmsif.se,trafikskola.se,melodifestivalklubben.se,morotsliv.com,nyadagbladet.se##+js(set, exactmetrics_frontend, undefined)
 vackertvader.se##div[class^="ad-300x250"], div[class^="ad_300x250"]
-vackertvader.se,kemisamfundet.se,knep.se,ledarsidorna.se,lexbase.se,verkstadstidningen.se##.cc-window
+vackertvader.se,kemisamfundet.se,knep.se,ledarsidorna.se,lexbase.se,verkstadstidningen.se,svenskverkstad.se##.cc-window
 vadvivet.se##html.has-intro-popup:remove-class(has-intro-popup)
 vadvivet.se##html.show-intro-popup:remove-class(show-intro-popup)
 vadvivet.se##.intro-popup, div[class*="subscribeDialog"], div[class^="_background"][style*="opacity"]
@@ -1901,7 +1902,7 @@ zeromagazine.nu##div[id^="ads"]
 *$3p,script,denyallow=gstatic.com,domain=karlskogavaxer.se
 *$3p,script,denyallow=jit.si|googleapis.com|telenor.se,domain=startaochdriva.se
 *$all,domain=jobba-hemifran.com|mogenromantik.com|flirtmatch.se|distansarbete.com
-*$all,domain=rentia.se|rentler.se|bostad24.se|hyrio.se|rentify.se
+*$all,domain=rentia.se|rentler.se|bostad24.se|hyrio.se|rentify.se|bostadsportal.se|bostadslistan.se
 *$ping,domain=fiskejournalen.se
 *$script,redirect-rule=noop.js,domain=elevspel.se
 -popup-analytics
@@ -2100,7 +2101,7 @@ zeromagazine.nu##div[id^="ads"]
 /conversions/tracking.js$third-party
 /cookieControl$domain=akademiskahus.se
 /cookiebot$domain=riksteatern.se
-/cookieconsent$script,domain=lundagard.se|kiacarclub.se|svampguiden.com|bike.se|runnersworld.se|offside.org|racemagazine.se|tidningenskriva.se|bobattre.se|hyundaiforum.se|adventist.se|exempelmeningar.se|krogen.se|fiskesnack.com|sailguide.com|statist.se|sporthoj.com
+/cookieconsent$script,domain=lundagard.se|kiacarclub.se|svampguiden.com|bike.se|runnersworld.se|offside.org|racemagazine.se|tidningenskriva.se|bobattre.se|hyundaiforum.se|adventist.se|exempelmeningar.se|krogen.se|fiskesnack.com|sailguide.com|statist.se|sporthoj.com|svenskverkstad.se
 /cookiepolicy$script,domain=superstart.se
 /cookiesCon.js$domain=sydnarkenytt.se
 /cookiesjsr$domain=naringsliv.ax
