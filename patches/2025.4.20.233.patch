@@ -1,10 +1,10 @@
-diff name:swefilter lines:331 checksum:767758c023
+diff name:swefilter lines:339 checksum:f7bcf45734
 d2 1
 a2 1
-! Last updated: Sat, 10 May 2025 02:14:38 +0000
+! Last updated: Mon, 12 May 2025 02:52:30 +0000
 d4 1
 a4 1
-! Diff-Path: patches/2025.5.10.134.patch#swefilter
+! Diff-Path: patches/2025.5.12.172.patch#swefilter
 d116 1
 a116 1
 aftonbladet.se##:is(main > section a[data-test-tag="internal-link"], #main > section a[data-test-tag="internal-link"], main > section a[href*="godare.se"], #main > section a[href*="godare.se"], main > aside a[data-test-tag="internal-link"]):has-text(innehåller annonslänkar)
@@ -40,6 +40,8 @@ d281 1
 a281 2
 bostadsrattsnytt.se##div[data-widget_type="image.default"]:has(a:not([href^="/"], [href*="bostadsrattsnytt.se"]))
 bostadsrattsnytt.se##div[data-widget_type="image.default"]:has(img[src*="banner"])
+a294 1
+brukshunden.se##.cm-ad
 d314 1
 a314 1
 byggahus.se,expressen.se,filmtopp.se,destination.se,spokbloggen.nu,folkhalsasverige.se,foretagsverige.se,forskningsverige.se,motorbibeln.se,hallbarhetsverige.se,tillvaxtsverige.se,grillbibeln.se,kampenmotcancer.se,bolagsfakta.se,affarsvarlden.se,affarerinorr.se,viivilla.se,dinordbok.se,motorbranschen.mrf.se##.ad-container
@@ -51,7 +53,7 @@ a360 1
 coop.se##:is(a[href="/butiker-erbjudanden/"], a[href^="/handla"]):has(source[srcset*="annons"], img[alt*="Annons"])
 d401 1
 a401 1
-datormagazin.se,skogen.se,studeravidare.se,automation.se##.cky-consent-container
+datormagazin.se,skogen.se,studeravidare.se,automation.se,frontkick.online##.cky-consent-container
 d408 1
 a408 1
 dental24.se##.fp_banners, .cypress-popup_newsletter, .cypress-ads, .cypress-insperation
@@ -93,7 +95,7 @@ a777 1
 hrsvepet.se,cfosvepet.se##.cookie-banner, .desktopbanner, .mobilbanner-section
 d779 1
 a779 1
-humorbibeln.se,newsner.com,sportbibeln.se,ettgottskratt.se,djurbibeln.se,matbibeln.se##.inline-share-buttons
+humorbibeln.se,newsner.com,sportbibeln.se,ettgottskratt.se,djurbibeln.se,matbibeln.se,nojeslivet.se##.inline-share-buttons
 d806 2
 d822 1
 a822 1
@@ -117,8 +119,8 @@ mobil.se,kamerabild.se##a[href*="/partner"], iframe[name^="PJWidget"]
 d1090 1
 d1096 2
 a1097 2
-newsner.com,humorbibeln.se,sportbibeln.se,ettgottskratt.se,djurbibeln.se,matbibeln.se###wsfb-container, .share-buttons, .ad-space, div[id^="ad-"]
-newsner.com,humorbibeln.se,sportbibeln.se,ettgottskratt.se,djurbibeln.se,matbibeln.se##.ssp_divider:has(.sponsored-bar)
+newsner.com,humorbibeln.se,sportbibeln.se,ettgottskratt.se,djurbibeln.se,matbibeln.se,nojeslivet.se###wsfb-container, .share-buttons, .ad-space, div[id^="ad-"]
+newsner.com,humorbibeln.se,sportbibeln.se,ettgottskratt.se,djurbibeln.se,matbibeln.se,nojeslivet.se##.ssp_divider:has(.sponsored-bar)
 a1103 1
 nogg.se##td[width="200"] a img
 d1139 1
@@ -195,11 +197,17 @@ a1901 2
 d1906 1
 a1906 1
 -tracking.js$domain=aftonbladet.se|godare.se|svd.se
+d1920 1
+a1920 1
+/CookieBar$script,domain=morningstar.se|driva-eget.se|brukshunden.se
 d1966 1
 a1966 2
 /ads$domain=allastudier.se|cirkulation.se|ordmedzcxy.se|se.azrhymes.com
 /ads-countdown.js$domain=aftonbladet.se|godare.se
 d1974 1
+d2006 1
+a2006 1
+/annons$xhr,domain=driva-eget.se|brukshunden.se
 d2045 1
 a2045 1
 /banner$domain=assistanskoll.se|hrnytt.se|lokalguiden.se|nyaboendet.se|ljudoljus.net|poloniainfo.se|alltombostad.se|thepattayanewsse.com
@@ -266,12 +274,12 @@ a2716 1
 d2727 1
 d2858 1
 a2858 1
-||cdn-cookieyes.com^$domain=lokalti.se|jarnvagar.nu|senses.se|temadagar.se|tekniknytt.se|nordigt.se|autonytt.se|kak.se|smhi.se|borattforum.se|mis.se|universitetslararen.se|lakemedelsvarlden.se|samfalligheterna.se|husbilsplats.se|katerinamagasin.se|dagenslogistik.se|biostock.se|skellefteaworks.se|datormagazin.se|travnet.se|malarbok.nu|barn-filmer.se|matmenyer.se|sunnenytt.se|hockeynews.se|swe3.se|spelbloggen.se|matinspo.se|trendenser.se|kattannonser.se|56kilo.se|horisontmagasin.se|automobilly.com|nordicmanufacturing.net|nationalekonomi.se|storynews.se|alltomhobby.se|upptackrattvik.se|alltomhusbilen.se|macken.xyz|fnissfest.se
+||cdn-cookieyes.com^$domain=lokalti.se|jarnvagar.nu|senses.se|temadagar.se|tekniknytt.se|nordigt.se|autonytt.se|kak.se|smhi.se|borattforum.se|mis.se|universitetslararen.se|lakemedelsvarlden.se|samfalligheterna.se|husbilsplats.se|katerinamagasin.se|dagenslogistik.se|biostock.se|skellefteaworks.se|datormagazin.se|travnet.se|malarbok.nu|barn-filmer.se|matmenyer.se|sunnenytt.se|hockeynews.se|swe3.se|spelbloggen.se|matinspo.se|trendenser.se|kattannonser.se|56kilo.se|horisontmagasin.se|automobilly.com|nordicmanufacturing.net|nationalekonomi.se|storynews.se|alltomhobby.se|upptackrattvik.se|alltomhusbilen.se|macken.xyz|fnissfest.se|baraboras.se
 a2876 1
 ||cmp.bonniernews.se/api/events
 d2888 1
 a2888 1
-||connect.facebook.net^$domain=friatider.se|fotosidan.se|ng.se|lektionsbanken.se|lajvo.se|kvinnatillkvinna.se|epochtimes.se|newsner.com|humorbibeln.se|sportbibeln.se|matbibeln.se|ettgottskratt.se|djurbibeln.se|sillyseason.se|loppi.se|kyrkanstidning.se|tn.se|experimentarkivet.se
+||connect.facebook.net^$domain=friatider.se|fotosidan.se|ng.se|lektionsbanken.se|lajvo.se|kvinnatillkvinna.se|epochtimes.se|newsner.com|humorbibeln.se|sportbibeln.se|matbibeln.se|ettgottskratt.se|djurbibeln.se|nojeslivet.se|sillyseason.se|loppi.se|kyrkanstidning.se|tn.se|experimentarkivet.se
 d2899 1
 a2899 1
 ||cookiebot.com^$domain=ng.se|swedroid.se|bax-shop.se|kurera.se|upplysning.se|findroommate.se|polistidningen.se|fokus.se|spraktidningen.se|varden.se|trafiken.nu|energi.se|sverigesnatur.org|sis.se|alltomarbetsmiljo.se|tco.se|totallyorebro.se|totallystockholm.se|enirobuddy.se|framtid.se|yhguiden.se|fragasyv.se|gymnasieguiden.se|studier.se|byggfaktadocu.se|husdjur.se|chalmers.se|elinstallatoren.se|ff.se|modernpsykologi.se|qx.se|vatternrundan.se|vvsforum.se|naturvetarna.se|skolporten.se|dust2.se|ehandel.se|byggvarlden.se|varldenidag.se|omtanke.today|hotellorestaurang.se|byggfakta.today|byggfakta.se|citymark.today|journalisten.se|fastighetsvarlden.se|friidrott.se|friidrottsstatistik.se|vildmarken.se|kyrkanstidning.se|tmf.se|sokbat.se|bilkompaniet.se|hv.se|folkhalsomyndigheten.se|dinpsykiskahalsa.se|hyresbostader.se|rsyd.se|byggforetagen.se|vasterastidning.se|storyhouseegmont.se|mytaste.se|smartbizz.se|tandlakartidningen.se|fastighetssverige.se|turisterna.se|svenskfordonsladdning.se|nextconomy.se|riksteatern.se|scenochfilm.se|transport.se|saco.se|byggahus.se|smartsenior.se|dagensopinion.se|livsmedelsforetagen.se|djurrattsalliansen.se|pvforetagen.se|verkstadsjobb.se|grundskoletidningen.se|traguiden.se|cirkusvenues.se|sweatybusiness.se|matklubben.se|vivavinomat.se|finanstid.se|swehockey.se|skanetrafiken.se|norrmejerier.se|biblioteksforeningen.se|anslagstavlan.se|veganskarecept.se|lokalnytt.se|alltombostad.se|gekas.se|alltforhalsan.se
@@ -299,14 +307,14 @@ d3154 1
 d3162 1
 d3181 1
 a3181 1
-||onesignal.com^$domain=samnytt.se|battrestadsdel.se|beernews.se|ungdomsfotboll.se|rabattsok.se|1x2.se|cannabis.se|dackavisen.se|driva-eget.se|skogsaktuellt.se|entreprenadaktuellt.se|ja.se|newsner.com|humorbibeln.se|sportbibeln.se|matbibeln.se|ettgottskratt.se|djurbibeln.se|finanstid.se|fokus.se|gasetten.se|fotbollsthlm.se|macken.xyz|naringslivetvgl.se|dalarnasaffarer.se|stockholmsaffarer.se|jamtlandsaffarer.se|hallandsnaringsliv.se|sjuharadsnaringsliv.se|netflixguiden.se|nyadagbladet.se|oskarshamns-nytt.se|swebbtv.se|vaken.se|aktieskolan.se|fastighetsvarlden.se|mcparken.se|gaffa.se|alltomnorrtalje.se|morotsliv.com|it-finans.se|it-halsa.se|it-kanalen.se|it-pedagogen.se|it-retail.se|skaneplus.se|mittforetag.com|studeravidare.se|thephuketexpress.se|ibnytt.se|garaget.org|marketmate.se|rakapuckar.com|svegot.se|thepattayanewsse.com|svenskgolf.se
+||onesignal.com^$domain=samnytt.se|battrestadsdel.se|beernews.se|ungdomsfotboll.se|rabattsok.se|1x2.se|cannabis.se|dackavisen.se|driva-eget.se|skogsaktuellt.se|entreprenadaktuellt.se|ja.se|newsner.com|humorbibeln.se|sportbibeln.se|matbibeln.se|ettgottskratt.se|djurbibeln.se|nojeslivet.se|finanstid.se|fokus.se|gasetten.se|fotbollsthlm.se|macken.xyz|naringslivetvgl.se|dalarnasaffarer.se|stockholmsaffarer.se|jamtlandsaffarer.se|hallandsnaringsliv.se|sjuharadsnaringsliv.se|netflixguiden.se|nyadagbladet.se|oskarshamns-nytt.se|swebbtv.se|vaken.se|aktieskolan.se|fastighetsvarlden.se|mcparken.se|gaffa.se|alltomnorrtalje.se|morotsliv.com|it-finans.se|it-halsa.se|it-kanalen.se|it-pedagogen.se|it-retail.se|skaneplus.se|mittforetag.com|studeravidare.se|thephuketexpress.se|ibnytt.se|garaget.org|marketmate.se|rakapuckar.com|svegot.se|thepattayanewsse.com|svenskgolf.se
 d3199 1
 d3201 1
 a3201 1
 ||pji.nu^$third-party,~image,domain=minhembio.com|ljudochbild.se|gp.se|mobil.se
 d3221 1
 a3221 1
-||privacy-center.org^$domain=180.se|agriaffaires.se|truckscorner.se|machineryzone.se|stegforhalsa.se|netdoktor.se|netdoktorpro.se|news55.se|hastnet.se|dagensps.se|realtid.se|sportbibeln.se|matbibeln.se|booli.se|dh.se
+||privacy-center.org^$domain=180.se|agriaffaires.se|truckscorner.se|machineryzone.se|stegforhalsa.se|netdoktor.se|netdoktorpro.se|news55.se|hastnet.se|dagensps.se|realtid.se|sportbibeln.se|matbibeln.se|nojeslivet.se|booli.se|dh.se
 d3279 2
 a3280 2
 ||sdkconfig.pulse.schibsted.io^$domain=aftonbladet.se|omni.se|omniekonomi.se|svd.se|prisjakt.nu|bytbil.com|godare.se|klart.se
