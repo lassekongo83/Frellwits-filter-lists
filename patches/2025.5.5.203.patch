@@ -1,10 +1,10 @@
-diff name:swefilter lines:117 checksum:f7bcf45734
+diff name:swefilter lines:128 checksum:b6f0b345bd
 d2 1
 a2 1
-! Last updated: Mon, 12 May 2025 02:52:30 +0000
+! Last updated: Tue, 13 May 2025 02:30:36 +0000
 d4 1
 a4 1
-! Diff-Path: patches/2025.5.12.172.patch#swefilter
+! Diff-Path: patches/2025.5.13.150.patch#swefilter
 d168 1
 a168 1
 alltomkungligt.se##div[id*="banner-holder"]
@@ -22,17 +22,24 @@ datormagazin.se,skogen.se,studeravidare.se,automation.se,frontkick.online##.cky-
 d406 1
 a406 1
 dental24.se##.fp_banners, .cypress-popup_newsletter, .cypress-ads, .cypress-insperation
+a471 1
+elle.se##+js(href-sanitizer, a[href*="/click"], ?url)
 d608 1
 a608 1
 fotbolldirekt.se,innebandymagazinet.se,padeldirekt.se,formeldirekt.se##.Odds_Widget_Ad, .c-partners, div[class*="_panorama"], div[class*="_insider"], .LiveWrapped-mobile_in_article
 d630 1
 a630 1
 fotosidan.se,merinfo.se,allsvenskan.se,tasteline.com,jaktojagare.se,chefstidningen.se,norpan.se,jaktjournalen.se,byggvarlden.se,omtanke.today,akademikern.se,socionomen.se,culturezone.se,lchfarkivet.se,stoppapressarna.se##.ads
+d666 1
+a666 1
+gais.se##.landing-page-main-partners, .hero-banner
 a732 1
 helahisingen.se##.post-excerpt:has-text(ANNONS):upward(.post)
 d737 1
 a737 1
 hemhyra.se##.maxetise-wrapper
+a741 1
+hemnet.se##a[class^="ArticleCard"]:has-text(/sponsrad av/i)
 d755 1
 a755 1
 hitta.se##a[data-trackimp][target], .hitta-map .integration-txt, .section-details--alb, [class*="dummyAd"], [class*="StyledAdSlot"], [data-bind*="Ad"], div[class^="GraphicAd_"], [class*="adContainer"], [id*="_panorama"], [id*="_skyscraper"], div[style="min-height: 250px;"], div[data-track="displayplacering-customer"], a[data-test="boostAdLink"], div[class^="style_bannerContainer"], [data-track="click-promotion-banner"], div[class*="adWrapper"], div[class*="hittaAdContainer"], div[class*="partnerBox"], a[class*="promotion"]
@@ -72,8 +79,9 @@ a2009 1
 d2103 1
 a2103 1
 /cookieconsent$script,domain=lundagard.se|kiacarclub.se|svampguiden.com|bike.se|runnersworld.se|offside.org|racemagazine.se|tidningenskriva.se|bobattre.se|hyundaiforum.se|adventist.se|exempelmeningar.se|krogen.se|fiskesnack.com|sailguide.com|statist.se|sporthoj.com|svenskverkstad.se
-d2111 1
-a2111 1
+d2110 2
+a2111 2
+/cookie-consent$script,domain=minhembio.com|sjf.se
 /cookie-law-info$script,domain=startaochdriva.se|sverige.nu|conpot.se|firstclassmagazine.se|kvalitetsmagasinet.se|miljo-utveckling.se|techtidningen.se|vdtidningen.se|gullislastips.se|nyfiknainvesterare.se|discoveringtheplanet.com|bussmagasinet.se|torbjornstips.se|dinbyggare.se|aktieskolan.se|insikt24.se|sulkysport.se|bitzmagasin.se|battrestadsdel.se|automatos.se|80-talet.se|goteborgnyheter.se|elitepadel.se|vetenskaphalsa.se|rakapuckar.com|konstperspektiv.nu|56kilo.se|surveyors.se|maximumsports.se|rucksack.se|ingridochmaria.se|frihetsnytt.se|globalportalen.org|juligen.se|svenskbotanik.se|sakerhund.se|radiosol.se|norrkopingsguiden.se
 d2164 1
 a2164 1
@@ -113,6 +121,9 @@ a3305 1
 ||static.fastcmp.com^$domain=lchfarkivet.se|stoppapressarna.se|alltomkungligt.se
 a3362 1
 ||t.fastcmp.com^
+d3373 1
+a3373 1
+||usercentrics.eu^$domain=hemnet.se|kantarsifo.se|foretagarna.se|svenskhandel.se|gais.se
 a3456 2
 tv4play.se##.infinite-scroll-component > div > div:first-child .swiper-slide > div[style] > div > div:first-child:style(mask-image:unset!important; mask-size:unset!important; mask-composite:unset!important;)
 tv4play.se##.swiper-slide > div[style] > a > div:style(mask-image:unset!important;)
