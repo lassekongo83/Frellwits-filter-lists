@@ -1260,10 +1260,11 @@ zeinaskitchen.se,trafiksakerhet.se,boktugg.se,lakartidningen.se,villalivet.se,ma
 utslappsratt.se,heleneholmsif.se,trafikskola.se,melodifestivalklubben.se,morotsliv.com,nyadagbladet.se##+js(set, em_track_user, false)
 utslappsratt.se,heleneholmsif.se,trafikskola.se,melodifestivalklubben.se,morotsliv.com,nyadagbladet.se##+js(set, exactmetrics_frontend, undefined)
 aftonbladet.se,godare.se,byggahus.se,expressen.se,elle.se,femina.se,svenskdam.se,galamagasin.se,rodeo.net,familjeliv.se,vitaestilo.se,veckorevyn.com##+js(href-sanitizer, a[href*="/t?a="], ?url)
+elle.se##+js(href-sanitizer, a[href*="/click"], ?url)
 
 ! -- Specific annoyances and bloat
 /addtoany$domain=sjf.se
-/cookie-consent$script,domain=minhembio.com|sjf.se|gais.se
+/cookie-consent$script,domain=minhembio.com|sjf.se
 /cookieconsent$script,domain=lundagard.se|kiacarclub.se|svampguiden.com|bike.se|runnersworld.se|offside.org|racemagazine.se|tidningenskriva.se|bobattre.se|hyundaiforum.se|adventist.se|exempelmeningar.se|krogen.se|fiskesnack.com|sailguide.com|statist.se|sporthoj.com|svenskverkstad.se
 /cookiepolicy$script,domain=superstart.se
 /eu_cookie_compliance$script,domain=industrinyheter.se|dagensnaringsliv.se|infrastrukturnyheter.se|sportochfritidsnyheter.se|inredningsnyheter.se|byggnyheter.se|dagensfastigheter.se|stockholmsbyggnyheter.se|energinyheter.se|vindkraftsnyheter.se|solenerginyheter.se|jarnvagsnyheter.se|transportochlogistik.se|metallerochgruvor.se|papperochmassa.se|miningmetalnews.com|visitskane.com|ergo.nu|ki.se|sxk.se|europaportalen.se
@@ -1295,7 +1296,7 @@ aftonbladet.se,godare.se,byggahus.se,expressen.se,elle.se,femina.se,svenskdam.se
 ||cookiehub.eu^$domain=kommunal.se|adapt.se
 ||cookie-script.com^$domain=axess.se|dagensjuridik.se|foodfolder.se|arkitektur.se|friluftsframjandet.se|bakasockerfritt.se|handelsradet.se|cirkulation.se|arkitekt.se|webb-tv.nu|eurocampings.se|transportforetagen.se
 ||cmp.setupcmp.com^$domain=se.azrhymes.com|dagensnamn.nu
-||usercentrics.eu^$domain=hemnet.se|kantarsifo.se|foretagarna.se|svenskhandel.se
+||usercentrics.eu^$domain=hemnet.se|kantarsifo.se|foretagarna.se|svenskhandel.se|gais.se
 ||cookieinfoscript.com^$domain=webbkryss.nu
 ||app.termly.io^$domain=soderkopingsposten.se
 ||sleeknote.com^$domain=gaffa.se
@@ -1350,7 +1351,7 @@ kurera.se##.newsletter-popup
 aktuellsakerhet.se###newsletter
 lundgiants.se,hallbyhandboll.se,skiljebosk.nu##.cookieAlert
 dagensinnovation.se,nyheter.swebbtv.se,modernalivet.se,nyhetersto.se###moove_gdpr_cookie_info_bar
-gais.se##.cookie--wrapper, .landing-page-main-partners, .hero-banner
+gais.se##.landing-page-main-partners, .hero-banner
 fof.se###CybotCookiebotDialog, #CybotCookiebotDialogBodyUnderlay
 knulla.se,kulturama.se###cookie-popup
 si.se,sweden.se###cookie-manager
@@ -3285,6 +3286,7 @@ hemnet.se##article[class^="ArticleCard"]:has-text(/sponsrad/i)
 hemnet.se##:is(div[class^="Carousel"], #top_listing):has(div[class^="PaidPlacementLabel"])
 hemnet.se##div[data-testid="living-cost-logos-section"]:has(span[aria-label="annons"])
 hemnet.se##span[class^="ArticleContent_articleDateBox"]:has-text(/annons från/i):upward(div[class^="ArticleContent_articlePage"])
+hemnet.se##a[class^="ArticleCard"]:has-text(/sponsrad av/i)
 hemnet.se##body:style(overflow:unset!important)
 ||boktugg.se/wp-content/cache/min/1/pa-
 boktugg.se##[id^="boktu-"]
