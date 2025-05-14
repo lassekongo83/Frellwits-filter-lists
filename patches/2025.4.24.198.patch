@@ -1,10 +1,10 @@
-diff name:swefilter lines:285 checksum:b6f0b345bd
+diff name:swefilter lines:302 checksum:85e3dcd716
 d2 1
 a2 1
-! Last updated: Tue, 13 May 2025 02:30:36 +0000
+! Last updated: Wed, 14 May 2025 03:03:21 +0000
 d4 1
 a4 1
-! Diff-Path: patches/2025.5.13.150.patch#swefilter
+! Diff-Path: patches/2025.5.14.183.patch#swefilter
 d116 1
 a116 1
 aftonbladet.se##:is(main > section a[data-test-tag="internal-link"], #main > section a[data-test-tag="internal-link"], main > section a[href*="godare.se"], #main > section a[href*="godare.se"], main > aside a[data-test-tag="internal-link"]):has-text(innehåller annonslänkar)
@@ -58,6 +58,8 @@ d631 1
 a631 1
 fotosidan.se,merinfo.se,allsvenskan.se,tasteline.com,jaktojagare.se,chefstidningen.se,norpan.se,jaktjournalen.se,byggvarlden.se,omtanke.today,akademikern.se,socionomen.se,culturezone.se,lchfarkivet.se,stoppapressarna.se##.ads
 d638 1
+a650 1
+frilanstidningen.se##.bs-blog-post:has(a[href*="/sponsrad/"])
 d668 1
 a668 1
 gais.se##.landing-page-main-partners, .hero-banner
@@ -105,24 +107,31 @@ d1092 2
 a1093 2
 newsner.com,humorbibeln.se,sportbibeln.se,ettgottskratt.se,djurbibeln.se,matbibeln.se,nojeslivet.se###wsfb-container, .share-buttons, .ad-space, div[id^="ad-"]
 newsner.com,humorbibeln.se,sportbibeln.se,ettgottskratt.se,djurbibeln.se,matbibeln.se,nojeslivet.se##.ssp_divider:has(.sponsored-bar)
+a1094 1
+newweather.se##.cookie-banner-mount-point
 d1136 1
 a1136 1
 nyhetsbyranjarva.se,nyan.ax,tv-kanal.se,golfguidenonline.se,rockbladet.se,vildmarken.se,nyhetersto.se,dagenslogistik.se,turismnytt.se,radiosol.se,cora.se,travelandtourworld.se##.g
 a1153 2
 orkesterjournalen.com###oj_cookies
 orkesterjournalen.com##.oj_ads_marker:upward(1)
+a1186 1
+proletaren.se##.brxe-div:empty
 a1189 1
 psykoterapicentrum.se##span[style="background-color: #FFFF00"]:has-text(/annons/i):upward(1)
 d1218 1
 a1218 1
 res.se##.res-display, .promotion
+d1279 1
+a1279 1
+skargarden.se##article:has([title^="Annons" i], a[href*="/annons"])
 d1333 1
 a1333 1
 sportsnews.se,xn--sporthnt-5za.se,killsteal.se,samnytt.se,samnytt.nu,obsid.se,senses.se,teknologiexperten.se,sverige.nu,enterprisemagazine.se,haboportalen.se,bike.se,xn--lgenhet-5wa.nu##a[href*="casino"]
 a1339 1
 statsskuld.se###our-mission
 a1364 1
-svenskamagasinet.nu##.hip-popup, div[id^="svm-"]
+svenskamagasinet.nu##.hip-popup, div[id^="svm-"], .et_pb_image a[target]:not([href*="svenskamagasinet.nu"]):not([href^="/"])
 d1372 1
 a1372 1
 svenskgolf.se##.card:has(a[href*="/partner/"])
@@ -199,6 +208,9 @@ a2343 1
 d2349 1
 a2349 1
 /plugins/cookie-notice$script,domain=bildobubbla.se|zeromagazine.nu|sverigespringer.se|gasetten.se|sillyseason.se|gentlemannaguiden.com|matmalin.se|svensktidskrift.se|schack.se|kobe.se|tidningenproffs.se|jaktojagare.se|tobaksfakta.se|bebisvarlden.se|underbaraclaras.se|cykelframjandet.se|dalabygden.se|lansposten.se|sormlandsbygden.se|vaguiden.se|grandtech.se|bluff.se|svmf.se|rockbladet.se|globalbar.se|seniornet.se|gaming365.se|skellefteamedia.se|sillybladet.se|zlatanism.se|fotbollsnytt.nu|voov.nu|matochdrycker.se|drugnews.se|ladiesabroad.se|ninjateknik.com|reportrarutangranser.se|villatidningen.se
+d2373 1
+a2373 1
+/plugins/gdpr-cookie-compliance$script,domain=goteborgsgolfaren.se|bfn.se|frilanstidningen.se
 d2486 1
 d2488 1
 a2488 1
@@ -215,6 +227,9 @@ a2555 1
 d2601 1
 a2601 1
 /track-view$domain=aftonbladet.se|godare.se
+d2672 1
+a2672 1
+/wp-content\/uploads\/[0-9]+/$script,domain=skanesport.se|dackavisen.se|tidningenproffs.se|densistavilan.se|universitetslararen.se|alekuriren.se|branschaktuellt.se|svenskamagasinet.nu
 d2712 1
 a2712 1
 @@*$ghide,domain=atl.nu|landlantbruk.se|land.se|fodertipset.se|citattorget.se|citiboard.se|kritiker.se|akaviaaspekt.se|annonsborsen.se
@@ -245,6 +260,8 @@ a3016 1
 d3052 1
 a3052 1
 ||inmobi.com^$domain=alltomelbil.se|rikatillsammans.se|egoinas.se|moviezine.se|travelnews.se|varldenshaftigaste.se|merinfo.se|foreca.se|laget.se|byrum.se|sportlovin.se|receptfavoriter.se|forni.se|cornucopia.se|norrahalland.se|tittapavideon.se|motormagasinet.se|food-supply.se|dagenshandel.se|plastnet.se|habit.se|woodnet.se|foodnet.se|transportnet.se|processnet.se|packnet.se|verkstaderna.se|medtechmagazine.se|recyclingnet.se|rt-forum.se|uochd.se|lifesciencesweden.se|fri-kopenskap.se|cleannet.se|metal-supply.se|fashionnet.se|framtidensbygg.se|entreprenad.com|mykitchenstories.se|cancelculture.se|findit.se|brinkenbakar.se|foretagande.se|fotbolltransfers.com|affarsvarlden.se|villalivet.se|branschaktuellt.se|nordic.ign.com|fragbite.se|lindasbakskola.se|jennysmatblogg.nu|filippoon.se|niiinis.se|eniro.se|vackertvader.se|klendr.se|zeinaskitchen.se|tvsporten.nu|frillesasbandy.se|skik.se|marketmate.se|svartgul.se|langd.se|babyhjalp.se|skyttesport.se|flashback.org|nyadagbladet.se|enkelteknik.se|alltomnorrtalje.se|sporttv.nu|nyteknik.se|lag-avtal.se|arbetarskydd.se|leta.se|poddtoppen.se|antidoping.se|garaget.org|newsner.com|humorbibeln.se|ettgottskratt.se|djurbibeln.se|ordparken.se|undertian.com|samnytt.se|motivation.se|nouw.com
+a3057 1
+||interlaced.in^$third-party
 d3064 1
 d3069 1
 a3069 1
