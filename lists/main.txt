@@ -2992,7 +2992,7 @@ tabyallehanda.se##^script[src$="adsbygoogle.js"]
 woxikon.se##^script[src^="https://html-load.com/"]
 woxikon.se##^script:has-text(googletag)
 woxikon.se##^script:has-text(window._sp_)
-tv4play.se##.infinite-scroll-component > div > div:first-child .swiper-slide > div[style] > div > div:first-child:style(mask-image:unset!important; mask-size:unset!important; mask-composite:unset!important;)
+tv4play.se##:is(.infinite-scroll-component > div > div:first-child .swiper-slide > div[style] > div > div:first-child, div[data-testid="cdp-promo"] > div:first-child, .infinite-scroll-component div[style="width: 100%; height: 100%;"] > div[style="width: 100%;"] > div > div[class^="sc"]:first-child):style(mask-image:unset!important; mask-size:unset!important; mask-composite:unset!important;)
 tv4play.se##.swiper-slide > div[style] > a > div:style(mask-image:unset!important;)
 !#endif
 ! Mobile
@@ -3011,6 +3011,10 @@ tv.nu##header + div[class]:has(a[href*="play.google.com"])
 ##div.big-mobile-ads
 ##div#topBannerMobile
 ##div#mobileTopAd
+!#endif
+! MV3
+!#if env_mv3
+?adType$xmlhttprequest,removeparam=adType,domain=tv4play.se
 !#endif
 
 ! === Various unsorted websites
