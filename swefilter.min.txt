@@ -1,7 +1,7 @@
 ! Title: Frellwit's Swedish Filter
-! Last updated: Wed, 14 May 2025 03:03:21 +0000
+! Last updated: Wed, 14 May 2025 19:02:10 +0000
 ! Expires: 5 days
-! Diff-Path: patches/2025.5.14.183.patch#swefilter
+! Diff-Path: patches/2025.5.14.1142.patch#swefilter
 ! Diff-Expires: 24 hours
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
@@ -3463,7 +3463,7 @@ tabyallehanda.se##^script[src$="adsbygoogle.js"]
 woxikon.se##^script[src^="https://html-load.com/"]
 woxikon.se##^script:has-text(googletag)
 woxikon.se##^script:has-text(window._sp_)
-tv4play.se##.infinite-scroll-component > div > div:first-child .swiper-slide > div[style] > div > div:first-child:style(mask-image:unset!important; mask-size:unset!important; mask-composite:unset!important;)
+tv4play.se##:is(.infinite-scroll-component > div > div:first-child .swiper-slide > div[style] > div > div:first-child, div[data-testid="cdp-promo"] > div:first-child, .infinite-scroll-component div[style="width: 100%; height: 100%;"] > div[style="width: 100%;"] > div > div[class^="sc"]:first-child):style(mask-image:unset!important; mask-size:unset!important; mask-composite:unset!important;)
 tv4play.se##.swiper-slide > div[style] > a > div:style(mask-image:unset!important;)
 !#endif
 !#if !env_mobile
@@ -3478,4 +3478,7 @@ tv4play.se##.swiper-slide > div[style] > a > div:style(mask-image:unset!importan
 lundagard.se,boktugg.se,morotsliv.com,affarsstaden.se,kurera.se,nyfiknainvesterare.se,allagodating.se##+js(aeld, wheel)
 home2tiny.se##+js(aeld, /mousewheel|DOMMouseScroll/, smoothScrollEvent)
 veterinarmagazinet.se##.banner-spacer
+!#endif
+!#if env_mv3
+?adType$xmlhttprequest,removeparam=adType,domain=tv4play.se
 !#endif
