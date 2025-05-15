@@ -1,10 +1,10 @@
-diff name:swefilter lines:303 checksum:d8f4cbfb53
+diff name:swefilter lines:310 checksum:d3bb81b523
 d2 1
 a2 1
-! Last updated: Wed, 14 May 2025 19:02:10 +0000
+! Last updated: Thu, 15 May 2025 03:17:56 +0000
 d4 1
 a4 1
-! Diff-Path: patches/2025.5.14.1142.patch#swefilter
+! Diff-Path: patches/2025.5.15.197.patch#swefilter
 d116 1
 a116 1
 aftonbladet.se##:is(main > section a[data-test-tag="internal-link"], #main > section a[data-test-tag="internal-link"], main > section a[href*="godare.se"], #main > section a[href*="godare.se"], main > aside a[data-test-tag="internal-link"]):has-text(innehåller annonslänkar)
@@ -99,6 +99,9 @@ d960 5
 d974 1
 a974 1
 ljuskultur.se,bettips.se,spelo.se,skogsaktuellt.se,entreprenadaktuellt.se,ja.se,husbilhusvagn.se,klassiker.nu,mopedgaraget.se,vibilagare.se,caroftheyear.se,automobil.se,endurobloggen.se,riksettan.net,frillesasbandy.se,dh.se,djungeltrumman.se,skik.se,omni.se,campingsverige.se,eniro.se,restaurangvarlden.se,naringslivetvgl.se,dalarnasaffarer.se,stockholmsaffarer.se,jamtlandsaffarer.se,hallandsnaringsliv.se,sjuharadsnaringsliv.se,nyheteridag.se,alekuriren.se,omniekonomi.se,sverigesindustri.se,onkologiisverige.se,svenskalag.se,borasweekly.se,hitta.se##.banner
+a1020 1
+matspar.se##div[id^="gpt-ad"]:upward(1)
+d1022 1
 d1054 1
 a1054 1
 mobil.se,kamerabild.se##a[href*="/partner"], iframe[name^="PJWidget"]
@@ -221,8 +224,9 @@ a2503 1
 /raven$script,domain=mitti.se|travnet.se|nyheter24.se|tyda.se|devote.se|egoinas.se|hemtrevligt.se|alltforforaldrar.se|familjeliv.se|brollopstorget.se|blogg.se|nouw.com|lchfarkivet.se|fotbolltransfers.com|norrahalland.se|svenskgolf.se|vimedbarn.se|modette.se|vf.se|hjotidning.se|kt.se|kt-kuriren.se|sla.se|mariestadstidningen.se|filipstadstidning.se|fryksdalsbygden.se|nwt.se|arvikanyheter.se|nkp.se|saffletidningen.se|provinstidningen.se|dalslanningen.se|nlt.se|skaraborgsbygden.se|alltomnorrtalje.se|fragbite.se|ljudochbild.se|vk.se|folkbladet.nu|nordsverige.se|mellanbygden.nu|vasterbottningen.se|lokaltidningen.nu|svenskafans.com|sportlovin.se|innebandymagazinet.se|jaktjournalen.se|akaskidor.se|hockeysverige.se
 a2555 1
 /sponsrade$xhr,domain=hockeysverige.se
-d2601 1
-a2601 1
+d2600 2
+a2601 2
+/track$ping,xhr,domain=epochtimes.se|dagen.se
 /track-view$domain=aftonbladet.se|godare.se
 d2672 1
 a2672 1
@@ -298,7 +302,10 @@ temadagar.se,sanghafte.se,xn--gtboken-exa.se,ninjateknik.com##^script:has-text(_
 a3459 2
 tv4play.se##:is(.infinite-scroll-component > div > div:first-child .swiper-slide > div[style] > div > div:first-child, div[data-testid="cdp-promo"] > div:first-child, .infinite-scroll-component div[style="width: 100%; height: 100%;"] > div[style="width: 100%;"] > div > div[class^="sc"]:first-child):style(mask-image:unset!important; mask-size:unset!important; mask-composite:unset!important;)
 tv4play.se##.swiper-slide > div[style] > a > div:style(mask-image:unset!important;)
-a3472 3
+a3472 6
 !#endif
 !#if env_mv3
 ?adType$xmlhttprequest,removeparam=adType,domain=tv4play.se
+web-tools.se##+js(rmnt, script, request_ads_to_display)
+kritiker.se##div.ui.page.dimmer:has(#adblocker)
+kritiker.se##body.dimmed:style(overflow:unset!important;)

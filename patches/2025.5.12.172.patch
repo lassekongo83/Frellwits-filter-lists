@@ -1,10 +1,10 @@
-diff name:swefilter lines:46 checksum:d8f4cbfb53
+diff name:swefilter lines:55 checksum:d3bb81b523
 d2 1
 a2 1
-! Last updated: Wed, 14 May 2025 19:02:10 +0000
+! Last updated: Thu, 15 May 2025 03:17:56 +0000
 d4 1
 a4 1
-! Diff-Path: patches/2025.5.14.1142.patch#swefilter
+! Diff-Path: patches/2025.5.15.197.patch#swefilter
 a472 1
 elle.se##+js(href-sanitizer, a[href*="/click"], ?url)
 a649 1
@@ -14,6 +14,9 @@ a667 1
 gais.se##.landing-page-main-partners, .hero-banner
 a743 1
 hemnet.se##a[class^="ArticleCard"]:has-text(/sponsrad av/i)
+a1020 1
+matspar.se##div[id^="gpt-ad"]:upward(1)
+d1022 1
 a1093 1
 newweather.se##.cookie-banner-mount-point
 a1187 1
@@ -30,6 +33,9 @@ a2112 1
 d2377 1
 a2377 1
 /plugins/gdpr-cookie-compliance$script,domain=goteborgsgolfaren.se|bfn.se|frilanstidningen.se
+d2605 1
+a2605 1
+/track$ping,xhr,domain=epochtimes.se|dagen.se
 d2677 1
 a2677 1
 /wp-content\/uploads\/[0-9]+/$script,domain=skanesport.se|dackavisen.se|tidningenproffs.se|densistavilan.se|universitetslararen.se|alekuriren.se|branschaktuellt.se|svenskamagasinet.nu
@@ -41,7 +47,10 @@ a3376 1
 d3460 1
 a3460 1
 tv4play.se##:is(.infinite-scroll-component > div > div:first-child .swiper-slide > div[style] > div > div:first-child, div[data-testid="cdp-promo"] > div:first-child, .infinite-scroll-component div[style="width: 100%; height: 100%;"] > div[style="width: 100%;"] > div > div[class^="sc"]:first-child):style(mask-image:unset!important; mask-size:unset!important; mask-composite:unset!important;)
-a3474 3
+a3474 6
 !#endif
 !#if env_mv3
 ?adType$xmlhttprequest,removeparam=adType,domain=tv4play.se
+web-tools.se##+js(rmnt, script, request_ads_to_display)
+kritiker.se##div.ui.page.dimmer:has(#adblocker)
+kritiker.se##body.dimmed:style(overflow:unset!important;)
