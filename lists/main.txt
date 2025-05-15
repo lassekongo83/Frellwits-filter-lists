@@ -1421,6 +1421,7 @@ thatsup.se##+js(set, canShowAds, true)
 mobilanyheter.net##+js(set, ai_run_scripts, noopFunc)
 forexgruppen.se,kattannonser.se##+js(noeval-if, adbEnableForPage)
 kritiker.se,bio-link.se,web-tools.se##+js(prevent-xhr, adsbygoogle)
+pilsner.nu,medibok.se,kandisvarlden.com##+js(rmnt, script, decodeURIComponent)
 
 ! Fake walls
 ||piano.io^$domain=illvet.se|iform.se|varldenshistoria.se|popularhistoria.se|gds.se|slakthistoria.se|digitalfotoforalla.se|pctidningen.se
@@ -2429,7 +2430,7 @@ koket.se##div[class*="mosaic_item_wrapper"]:has(div[class*="sponsorLabel"])
 jaktplay.se##.jaktplay-ad
 ||embed.viaplay.com/*autoplay=true$frame,removeparam=autoplay
 ||freewheel-mtgx-tv.akamaized.net^$media
-||imasdk.googleapis.com/js/sdkloader/ima3.js$script,redirect-rule=google-ima.js,important,domain=screen9.com|atl.nu
+||imasdk.googleapis.com/js/sdkloader/ima3.js$script,redirect=google-ima.js,important,domain=screen9.com|atl.nu
 
 ! Flowplayer
 ||lwcdn.com/vendor/ima.min.js$script
@@ -3018,6 +3019,7 @@ tv.nu##header + div[class]:has(a[href*="play.google.com"])
 web-tools.se##+js(rmnt, script, request_ads_to_display)
 kritiker.se##div.ui.page.dimmer:has(#adblocker)
 kritiker.se##body.dimmed:style(overflow:unset!important;)
+spelhubben.se##+js(rmnt, script, event.target.tagName)
 !#endif
 
 ! === Various unsorted websites
@@ -3405,7 +3407,6 @@ fasting.nu##body:style(display:unset!important)
 konsumentmagasinet.se##.pricerunner, #Conzent, .conzent-modal, .price-part
 indien.nu##.nyhetsochreseartiklar .views-row:has-text(/casino/i)
 pilsner.nu##:is(.et_pb_fullwidth_image, .et_pb_image) a:not([href^="/"]):not([href*="pilsner.nu"]), .mctb-position-bottom
-pilsner.nu##+js(rmnt, script, decodeURIComponent)
 hifitorget.se##.billboard_container, .billboard-style, a[href*="utm_"][target] img
 hifitorget.se##:is(.row[style^="min-height"], .row .h-100):has(.adsbygoogle, .billboard_container)
 agriaffaires.se,truckscorner.se,machineryzone.se##.dp--mb, .dp--pave, .dp--ga, body#lg-annonces .right-container
