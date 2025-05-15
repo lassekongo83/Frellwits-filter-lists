@@ -1253,6 +1253,7 @@ utm_$document,removeparam=/^utm_/,domain=tv.nu|booli.se|expressen.se|aftonbladet
 /ga.js$domain=helgon.se|gamemonetize.com|sjf.se
 /brand-metrics$domain=hemnet.se|corren.se|folkbladet.se|mvt.se|nt.se|vt.se|vimmerbytidning.se|kuriren.nu|nsd.se|norran.se|pt.se|ekuriren.se|strengnastidning.se|kkuriren.se|sn.se|eposten.se|unt.se|helagotland.se|fastighetsvarlden.se
 /log|$domain=vk.se|folkbladet.nu|nordsverige.se|mellanbygden.nu|vasterbottningen.se|lokaltidningen.nu|bohuslaningen.se|stromstadstidning.se|markposten.se|harrydaposten.se|partilletidning.se|sttidningen.se|molndalsposten.se|kungalvsposten.se|kungsbackaposten.se|alingsastidning.se|ttela.se|gp.se|hallandsposten.se|hn.se|mellerudsnyheter.se|booli.se|placera.se
+/track$ping,xhr,domain=epochtimes.se|dagen.se
 ! Websites with no obvious or visible facebook login. Will just assume it's used for tracking.
 ||connect.facebook.net^$domain=friatider.se|fotosidan.se|ng.se|lektionsbanken.se|lajvo.se|kvinnatillkvinna.se|epochtimes.se|newsner.com|humorbibeln.se|sportbibeln.se|matbibeln.se|ettgottskratt.se|djurbibeln.se|nojeslivet.se|sillyseason.se|loppi.se|kyrkanstidning.se|tn.se|experimentarkivet.se
 ! Scriptlets
@@ -2667,7 +2668,6 @@ dagen.se##.video-annons, .native-box, .arcad-block-container, #ribbon
 inblick.se##div[class^="ads"]
 /videojs-preroll$domain=himlentv7.se
 ?t=$xhr,empty,domain=kyrkanstidning.se
-/track$ping,xhr,domain=epochtimes.se
 /nyheter/native.json$domain=epochtimes.se
 epochtimes.se##.fixed.bottom-0, a[target="_blank"][href*="utm_campaign"]
 nyatider.nu##.elementor-popup-modal:has(a[href="/integritetspolicy"])
@@ -3015,6 +3015,9 @@ tv.nu##header + div[class]:has(a[href*="play.google.com"])
 ! MV3
 !#if env_mv3
 ?adType$xmlhttprequest,removeparam=adType,domain=tv4play.se
+web-tools.se##+js(rmnt, script, request_ads_to_display)
+kritiker.se##div.ui.page.dimmer:has(#adblocker)
+kritiker.se##body.dimmed:style(overflow:unset!important;)
 !#endif
 
 ! === Various unsorted websites
@@ -3232,7 +3235,7 @@ darkside.se##a[href*="?aktion=bannerclick"]
 svampguiden.com##.label-sponsor:upward(.panel)
 matspar.se##.overflow-hidden:style(overflow-y: initial !important;)
 matspar.se##div[style="z-index: 2000;"],div[style="z-index: 2000;"] + div
-matspar.se###ad-panorama-category:upward(1)
+matspar.se##div[id^="gpt-ad"]:upward(1)
 matspar.se##+js(json-prune, payload.ads campaigns.*)
 forum.robsoft.nu##td[valign="middle"] > a[target="_blank"]
 brafiler.se###header-banner, #cboxOverlay, #colorbox, .adv-inner, #sidebar-banner
