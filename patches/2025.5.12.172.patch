@@ -1,10 +1,10 @@
-diff name:swefilter lines:120 checksum:66988acecb
+diff name:swefilter lines:136 checksum:96213d92f6
 d2 1
 a2 1
-! Last updated: Mon, 19 May 2025 03:06:55 +0000
+! Last updated: Tue, 20 May 2025 03:16:28 +0000
 d4 1
 a4 1
-! Diff-Path: patches/2025.5.19.186.patch#swefilter
+! Diff-Path: patches/2025.5.20.196.patch#swefilter
 d137 1
 a472 1
 elle.se##+js(href-sanitizer, a[href*="/click"], ?url)
@@ -18,6 +18,10 @@ a724 1
 hd.se,sydsvenskan.se,allehanda.se,tidningenangermanland.se,arbetarbladet.se,avestatidning.com,bblat.se,dalademokraten.se,fagersta-posten.se,gd.se,lt.se,ltz.se,na.se,norrteljetidning.se,nynashamnsposten.se,op.se,salaallehanda.com,st.nu,tidningenharjedalen.se,vlt.se,falkopingstidning.se,jp.se,skaraborgslanstidning.se,skovdenyheter.se,smalandsdagblad.se,smalanningen.se,smt.se,tranastidning.se,vastgotabladet.se,vetlandaposten.se,vn.se,bandypuls.se,ljusdalsposten.se,ljusnan.se,soderhamnskuriren.se,ht.se,moratidning.se,borlangetidning.se,falukuriren.se,sodran.se,nyaludvikatidning.se,skd.se,nvp.se,nuiosteraker.se,hbl.fi,vastranyland.fi,bbl.fi,vaxjobladet.se,nsk.se,klt.nu,ystadsallehanda.se,trelleborgsallehanda.se,kristianstadsbladet.se,folkracepuls.se,barometern.se,blt.se,bt.se,olandsbladet.se,smp.se,sydostran.se,ut.se##[class*="teaser-native"], lcl-ad, .ad-welcome, .affiliate-links__container, .x-bonnier-news-links__container, .tapet-container
 a743 1
 hemnet.se##a[class^="ArticleCard"]:has-text(/sponsrad av/i)
+d779 1
+a779 2
+hrsvepet.se,cfosvepet.se##body:style(overflow:unset!important; opacity:unset!important;)
+hrsvepet.se,cfosvepet.se##.cookie-banner, .desktopbanner, .mobilbanner-section, #takeover-banner
 d822 1
 a822 1
 investeramera.se##a[href^="https://go."], a[href*="/go/"], img[width="320"][height="320"]
@@ -43,6 +47,9 @@ a1169 1
 pilsner.nu,medibok.se,kandisvarlden.com##+js(rmnt, script, decodeURIComponent)
 a1187 1
 proletaren.se##.brxe-div:empty
+d1216 1
+a1216 1
+recept.se##div[class*="ad-wrapper"], button#cookiePreferences, .c-modal-backdrop--active, div[data-cts-object-group="product_boxes"]
 a1230 1
 saltvattensguiden.se##li a img
 d1281 1
@@ -57,6 +64,9 @@ teknikveckan.se,di.se,dn.se,skillingaryd.nu,xn--vrnamo-bua.nu,tripadvisor.se,swe
 d1432 1
 a1432 1
 telgenytt.se##.tn-ad, #popup
+d1452 1
+a1452 1
+tidningenglobal.se,tidningensyre.se,landetsfria.nu,fempers.se##.revive-box, .paloma-ad
 d1536 1
 a1536 1
 varmepumpsforum.com,poolforum.se,lindenytt.com,autopower.se,arjeplognytt.se,jaktsidan.se,frihetsnytt.se,edgeflyfishing.com,investeramera.se,saltvattensguiden.se##a[target="_blank"] img[alt]
@@ -74,6 +84,9 @@ a2112 1
 /cookie-consent$script,domain=minhembio.com|sjf.se
 a2232 1
 /js.adsaga
+d2339 1
+a2339 1
+/plugins/bravepopup$script,domain=matkasse.se|tidningenglobal.se|fempers.se|tidningensyre.se
 d2377 1
 a2377 1
 /plugins/gdpr-cookie-compliance$script,domain=goteborgsgolfaren.se|bfn.se|frilanstidningen.se
@@ -102,6 +115,9 @@ a3046 1
 ||imasdk.googleapis.com/js/sdkloader/ima3.js$script,redirect=google-ima.js,important,domain=screen9.com|atl.nu
 a3059 1
 ||interlaced.in^$third-party
+d3070 1
+a3070 1
+||js.monitor.azure.com^$domain=akademiskahus.se|energi.se|skanetrafiken.se|forex.se|stenafastigheter.se|transportforetagen.se|lantmannen.se|stff.se|gbgfotboll.se|svenskfotboll.se|skk.se|objektvision.se|skogsindustrierna.se|svenskakyrkan.se|borsvarlden.com
 d3175 1
 a3175 1
 ||onesignal.com^$domain=samnytt.se|battrestadsdel.se|beernews.se|ungdomsfotboll.se|rabattsok.se|1x2.se|cannabis.se|dackavisen.se|driva-eget.se|skogsaktuellt.se|entreprenadaktuellt.se|ja.se|newsner.com|humorbibeln.se|sportbibeln.se|matbibeln.se|ettgottskratt.se|djurbibeln.se|nojeslivet.se|finanstid.se|fokus.se|gasetten.se|fotbollsthlm.se|macken.xyz|naringslivetvgl.se|dalarnasaffarer.se|stockholmsaffarer.se|jamtlandsaffarer.se|hallandsnaringsliv.se|sjuharadsnaringsliv.se|netflixguiden.se|nyadagbladet.se|oskarshamns-nytt.se|swebbtv.se|vaken.se|aktieskolan.se|fastighetsvarlden.se|mcparken.se|gaffa.se|alltomnorrtalje.se|morotsliv.com|it-finans.se|it-halsa.se|it-kanalen.se|it-pedagogen.se|it-retail.se|skaneplus.se|mittforetag.com|studeravidare.se|thephuketexpress.se|ibnytt.se|garaget.org|marketmate.se|rakapuckar.com|svegot.se|thepattayanewsse.com|svenskgolf.se|cafe.se|praktisktbatagande.se
