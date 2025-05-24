@@ -1003,6 +1003,7 @@ Video-Ad-$media,3p
 ||stats.jibber.social^
 ||stats.playoncenter.com^
 ||stayfriends.de/metatag
+||streamio.com/assets/a-dx$script
 ||streamio.com/api/*/stats$xmlhttprequest
 ||t.atmng.io^
 ||t.elasticsuite.io^$third-party
@@ -1261,7 +1262,7 @@ zeinaskitchen.se,trafiksakerhet.se,boktugg.se,lakartidningen.se,villalivet.se,ma
 zeinaskitchen.se,trafiksakerhet.se,boktugg.se,lakartidningen.se,villalivet.se,matsafari.nu,forexgruppen.se,fastighetsvarlden.se,aktieskolan.se##+js(acs, monsterinsights_frontend)
 utslappsratt.se,heleneholmsif.se,trafikskola.se,melodifestivalklubben.se,morotsliv.com,nyadagbladet.se##+js(set, em_track_user, false)
 utslappsratt.se,heleneholmsif.se,trafikskola.se,melodifestivalklubben.se,morotsliv.com,nyadagbladet.se##+js(set, exactmetrics_frontend, undefined)
-aftonbladet.se,godare.se,byggahus.se,expressen.se,elle.se,femina.se,svenskdam.se,galamagasin.se,rodeo.net,familjeliv.se,vitaestilo.se,veckorevyn.com##+js(href-sanitizer, a[href*="/t?a="], ?url)
+aftonbladet.se,godare.se,byggahus.se,expressen.se,elle.se,femina.se,svenskdam.se,galamagasin.se,rodeo.net,familjeliv.se,vitaestilo.se,veckorevyn.com,golflivet.se##+js(href-sanitizer, a[href*="/t?a="], ?url)
 elle.se##+js(href-sanitizer, a[href*="/click"], ?url)
 
 ! -- Specific annoyances and bloat
@@ -1296,7 +1297,7 @@ elle.se##+js(href-sanitizer, a[href*="/click"], ?url)
 ||gatekeeperconsent.com^$domain=hemmanytt.se|wernamaten.se|sanghafte.se|xn--gtboken-exa.se|ninjateknik.com
 ||cookiehub.net^$domain=da.se|elongroup.se|adoptionscentrum.se|rappne.se
 ||cookiehub.eu^$domain=kommunal.se|adapt.se
-||cookie-script.com^$domain=axess.se|dagensjuridik.se|foodfolder.se|arkitektur.se|friluftsframjandet.se|bakasockerfritt.se|handelsradet.se|cirkulation.se|arkitekt.se|webb-tv.nu|eurocampings.se|transportforetagen.se
+||cookie-script.com^$domain=axess.se|dagensjuridik.se|foodfolder.se|arkitektur.se|friluftsframjandet.se|bakasockerfritt.se|handelsradet.se|cirkulation.se|arkitekt.se|webb-tv.nu|eurocampings.se|transportforetagen.se|usabil.nu
 ||cmp.setupcmp.com^$domain=se.azrhymes.com|dagensnamn.nu
 ||usercentrics.eu^$domain=hemnet.se|kantarsifo.se|foretagarna.se|svenskhandel.se|gais.se
 ||cookieinfoscript.com^$domain=webbkryss.nu
@@ -2259,19 +2260,20 @@ travronden.se##main div[id]:not([id^="checkout"]):empty:upward(2)
 travrondenspel.se###root div[id]:not([id^="checkout"]):empty:upward(2)
 utsidan.se##.clamzone, .component-adzone
 utsidan.se##.betart-marker:matches-css(after, content: /Annons/i):upward(.documentpush-group)
-alltomsallskapsspel.se##.bannersRight
+*$frame,3p,redirect=click2load.html,domain=alltomsallskapsspel.se
+alltomsallskapsspel.se##.bannersRight, a.img[target="_blank"]
 ungdomsfotboll.se##div[id^="ungdo-"]
-battregolf.se##.elementor-element[data-widget_type="image.default"], .aeywhae-single
-battregolf.se##article.elementor-post:has(a[href*="casino"], a[href*="bonus"], a[href*="betting"], a[href*="/noje/"])
+battregolf.se##.aeywhae-single
+battregolf.se##article.elementor-post:has(a[href*="casino"], a[href*="bonus"], a[href*="betting"])
 ||rejsa.nu/ann$image
 rejsa.nu###adsblock, #adsblockfoot, .fpright, div[onclick*="window.open"]
 lundgiants.se###annonsPelareMobil
 lundgiants.se###LoggaDiv:style(position:unset!important;)
-golf.se##.partner-area
+golf.se##astro-island[props*="mainPartners"]
 ||topbar.svenskelitfotboll.se/top-bar-script
 svenskelitfotboll.se##custom-ad, sponsors
-unicoach.se##sponsor-block
 svenskelitfotboll.se##.image-block:has(a[class*="sponsor"])
+unicoach.se##sponsor-block
 hammarbyfotboll.se###seasonalTakeover, div[class*="sponsorBarContainer"], div[class*="footerSponsors"], .slick-slide a[target="_blank"]
 hammarbyfotboll.se##body[data-modal-open]:style(overflow-y:unset!important;)
 sponsor$image,domain=obosdamallsvenskan.se|elitettan.se
