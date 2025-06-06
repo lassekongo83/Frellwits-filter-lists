@@ -945,6 +945,7 @@ Video-Ad-$media,3p
 ||logs.sesamy.com/events
 ||logsnag.com^$third-party
 ||lookaside.fbsbx.com/lookaside/crawler/
+||lorempixel.com^$third-party
 ||m1.analytics.sitevision-cloud.se^
 ||marfeelcache.com^$third-party
 ||mcgtrack.herokuapp.com^$third-party
@@ -1187,7 +1188,7 @@ byggahus.se,expressen.se,filmtopp.se,destination.se,spokbloggen.nu,folkhalsasver
 da.se##.Advert
 aikfotboll.se,vaken.se,tidningen.djurskyddet.se,aktavara.org,kullaliv.se##.banners
 ljuskultur.se,bettips.se,spelo.se,skogsaktuellt.se,entreprenadaktuellt.se,ja.se,husbilhusvagn.se,klassiker.nu,mopedgaraget.se,vibilagare.se,caroftheyear.se,automobil.se,endurobloggen.se,riksettan.net,frillesasbandy.se,dh.se,djungeltrumman.se,skik.se,omni.se,campingsverige.se,eniro.se,restaurangvarlden.se,naringslivetvgl.se,dalarnasaffarer.se,stockholmsaffarer.se,jamtlandsaffarer.se,hallandsnaringsliv.se,sjuharadsnaringsliv.se,nyheteridag.se,alekuriren.se,omniekonomi.se,sverigesindustri.se,onkologiisverige.se,svenskalag.se,borasweekly.se,hitta.se##.banner
-etn.se,uppsalanyheter.se,rotter.se##.banneritem
+etn.se,uppsalanyheter.se,rotter.se,borskollen.se##.banneritem
 spelo.se,lokalguiden.se,svenskverkstad.se##.banner-container
 metalcentral.net,rotter.se,ifboat.se,husbilskompisar.se##.bannergroup
 alltforforaldrar.se,di.se,upphandling24.se,bytbil.com,sverigesnatur.org,tv24.se,nyan.ax,passioneffect.se,aktuellhallbarhet.se,byggindustrin.se,dagensmedia.se,dagensmedicin.se,fastighetsnytt.se,resume.se,dagenssamhalle.se,market.se,dagligvarunytt.se,privataaffarer.se,shl.se##.panorama
@@ -1791,17 +1792,10 @@ expo.se##.ad-image, .bottom-popup, .conversion
 expo.se##p.has-text-align-center:has-text(Annons:)
 /api/a/b$domain=borskollen.se
 /featured/promotion$domain=borskollen.se
-borskollen.se##[id^="borskollen_small"], [id^="borskollen_large"], .featured-link, .app-store-box, #borskollen_desktop-side, #borskollen_desktop-panorama, div[id^="borskollen_mobile-detaljsida"]
-borskollen.se##.sponsored-chip:matches-css(display: block):upward(a)
-borskollen.se##.colorized:has-text(/annons/i):upward(a)
-borskollen.se##.sponsored:upward(a)
-borskollen.se##.elevated-button:has-text(/^Cookie/):upward(.container)
-borskollen.se##.outer:has(img[src$="ad_label.png"])
-borskollen.se##img[src*="/borskollen_newsletter"]:upward(1)
-borskollen.se##.label:has-text(/annons/i):upward(1)
-borskollen.se##.main > div[class^="jsx-"]:last-of-type:has(img[src*="borskollen_appen"])
-borskollen.se##.wrapper > div[class^="jsx-"] > .outer:has(a[href*="casino"])
-borskollen.se##.adlabel:upward(1)
+borskollen.se##.cell.rp, .promobox, .app-store-box
+borskollen.se##:is(.flow-container, .wrapper):has(div[id*="panorama"])
+borskollen.se##.banneritem:upward(1)
+borskollen.se##.stodlinjen:upward(.outer)
 motivation.se##.sponsored-item, [class*="banner"], .outsider
 motivation.se##.card:has(.sponsored)
 /ad_in_article$script,domain=affarsvarlden.se
