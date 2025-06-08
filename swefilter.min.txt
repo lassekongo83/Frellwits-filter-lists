@@ -1,7 +1,7 @@
 ! Title: Frellwit's Swedish Filter
-! Last updated: Fri, 06 Jun 2025 09:37:37 +0000
+! Last updated: Sun, 08 Jun 2025 03:29:14 +0000
 ! Expires: 5 days
-! Diff-Path: patches/2025.6.6.577.patch#swefilter
+! Diff-Path: patches/2025.6.8.209.patch#swefilter
 ! Diff-Expires: 24 hours
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
@@ -1499,7 +1499,7 @@ ungdomsfotboll.se##div[id^="ungdo-"]
 unicoach.se##sponsor-block
 universitetslararen.se##div[id^="unive-"]
 universitetsmedia.se##.discounts-container
-upphandling24.se##.type-partnerartikel
+upphandling24.se##.type-partnerartikel, div[id^="uppha-"]
 upplysning.se##.buy-items, div[style*="min-height"]:has(#topbanner, script[data-pbid], [id^="nativendo"], div[id^="upplysning_outstream"])
 uppsalanyheter.se###banner-top-block
 uppsatser.se##.results li[style^="margin"]:not(.result), .spahotels
@@ -2493,6 +2493,7 @@ zeromagazine.nu##div[id^="ads"]
 /prebid_rtb_call
 /prisjakt$xmlhttprequest,domain=fz.se|mobil.se
 /prisjakt-ad-carousel$frame
+/prismic-toolbar$domain=alltomarbetsmiljo.se
 /private-browsing.js$domain=thelocal.se
 /prod/adform
 /profile$ping,domain=feber.se|skippo.se|tasteline.com|tjock.se|veckorevyn.com|marcusoscarsson.se|surfa.se|nordichardware.se|tv4.se|fotbollskanalen.se|koket.se|teknikveckan.se|langd.se|shl.se|hemhyra.se
@@ -2624,7 +2625,7 @@ zeromagazine.nu##div[id^="ads"]
 /uploads/bilder/Banner/*
 /uploads/bilder/Samarbetspartners
 /uploads/burst/js/burst.min.js
-/upload/puff/*$domain=bergsmannen.se|tidningenbyggmaterial.se|tidningendacksnack.se|taxiidag.se
+/upload/puff$domain=bergsmannen.se|tidningenbyggmaterial.se|tidningendacksnack.se|taxiidag.se
 /usabilla$script
 /users/2401/*$image,domain=ng.se
 /user_behaviour_data$domain=skyscanner.se
@@ -3212,7 +3213,6 @@ zeromagazine.nu##div[id^="ads"]
 ||pricerunner.com/publisher-widgets$third-party
 ||prisjakt-a.$third-party,domain=~prisjakt.nu|~prisjakt.no|~pricespy.co.uk|~ledenicheur.fr|~prisjagt.dk|~pricespy.co.nz|~hintaopas.fi
 ||prisjakt.nu^$third-party,domain=~prisjakt.no|~pricespy.co.uk|~ledenicheur.fr|~prisjagt.dk|~pricespy.co.nz|~hintaopas.fi
-||prismic.io/prismic-toolbar$domain=alltomarbetsmiljo.se
 ||privacypolicies.com^$domain=fl-net.se
 ||privacy-center.org^$domain=180.se|agriaffaires.se|truckscorner.se|machineryzone.se|stegforhalsa.se|netdoktor.se|netdoktorpro.se|news55.se|hastnet.se|dagensps.se|realtid.se|sportbibeln.se|matbibeln.se|nojeslivet.se|booli.se|dh.se|fotbolltransfers.com|foretagsverige.se|forskningsverige.se|motorbibeln.se|hallbarhetsverige.se|tillvaxtsverige.se|grillbibeln.se|kampenmotcancer.se|folkhalsasverige.se
 ||privacy-mgmt.com^$domain=radio.se|dagenstv.com|kolla.tv|computersweden.se|woxikon.se|dagen.se|filmtopp.se|upday.com|gaffa.se|handbollskanalen.se|stayfriends.se|spisa.nu|tv24.se
