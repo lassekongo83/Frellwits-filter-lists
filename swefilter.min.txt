@@ -1,7 +1,7 @@
 ! Title: Frellwit's Swedish Filter
-! Last updated: Mon, 09 Jun 2025 03:02:56 +0000
+! Last updated: Tue, 10 Jun 2025 02:44:01 +0000
 ! Expires: 5 days
-! Diff-Path: patches/2025.6.9.182.patch#swefilter
+! Diff-Path: patches/2025.6.10.163.patch#swefilter
 ! Diff-Expires: 24 hours
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
@@ -653,7 +653,7 @@ gaffa.se##.article-overview__col:has(.gpt--loaded)
 gaffa.se##.link-list:has(a[href*="casino"])
 gais.se##.landing-page-main-partners, .hero-banner
 gamereactor.se##video[data-autoplay]:remove-attr(data-autoplay)
-gamereactor.se###cookielawwarning, #eventad, [id^="sky"], [id^="ad_lead"], .external_div_bigVideoAd, #mpu, #leftToLogo, .itsanad, div[class^="ad_Bumper"], div[style="min-height: 600px; margin-bottom: 20px;"], div[id^="ad_"], div[class^="preAd_"], div[class^="ad_smartphbig"], .adMobileBig, div[class^="preMobileBig"], .external_div_videoAd, .ad_mobilebigwrap
+gamereactor.se###cookielawwarning, #eventad, [id^="sky"], [id^="ad_lead"], .external_div_bigVideoAd, #mpu, #leftToLogo, .itsanad, div[class^="ad_Bumper"], div[style="min-height: 600px; margin-bottom: 20px;"], div[id^="ad_"], div[class^="preAd_"], div[class^="ad_smartphbig"], .adMobileBig, div[class^="preMobileBig"], .external_div_videoAd, .ad_mobilebigwrap, #mobileLeftMainLogo
 gamereactor.se##+js(set, adblockEnabled, falseFunc)
 gamereactor.se##.ad_interscroller:upward(.wrapper)
 gamereactor.se##.colHomePlayer:has([data-slotads="videoad"]):remove()
@@ -2211,6 +2211,7 @@ zeromagazine.nu##div[id^="ads"]
 /high-impact$domain=hemnet.se
 /hotjar/hotjar.script.js
 /iab/iab.js
+/identify/guest$domain=godare.se|tv.nu
 /idle.min.js$domain=180.se
 /iframeadvloader.$script
 /illustrationer/annons_
@@ -2550,7 +2551,7 @@ zeromagazine.nu##div[id^="ads"]
 /snowday262.js
 /snowfall.jquery.min.js
 /snowfall.min.jquery.js
-/snowplow$script,domain=~rossmann.pl|~prolific.co|~nrk.no
+/snowplow$script,domain=~rossmann.pl|~prolific.co|~nrk.no|~tv2.no
 /snow-effect$domain=juligen.se
 /soledad/js/detector.js
 /sounds/chimes.mp3$domain=skaneplus.se
@@ -2630,6 +2631,7 @@ zeromagazine.nu##div[id^="ads"]
 /users/2401/*$image,domain=ng.se
 /user_behaviour_data$domain=skyscanner.se
 /utag/aller-media
+/vast.js$domain=aftonbladet.se|svd.se|godare.se|tv.nu
 /vestigo$domain=momondo.se
 /vgc/cdn/js/libs/ast/*$script,domain=aftonbladet.se
 /videojs-preroll$domain=himlentv7.se
@@ -3272,6 +3274,7 @@ zeromagazine.nu##div[id^="ads"]
 ||schibsted.com/pulse$domain=aftonbladet.se
 ||script.e-space.se^$third-party
 ||sdkconfig.pulse.m10s.io^$domain=blocket.se
+||sdkconfig.pulse.schibsted.io/js/config.json$xhr,redirect=noop.json,domain=tv.nu
 ||sdkconfig.pulse.schibsted.io^$domain=aftonbladet.se|omni.se|omniekonomi.se|svd.se|prisjakt.nu|bytbil.com|godare.se|klart.se
 ||sdk.pulse.schibsted.com^$script,domain=aftonbladet.se|omni.se|omniekonomi.se|svd.se|prisjakt.nu|bytbil.com|godare.se
 ||seenthis.se^$third-party
