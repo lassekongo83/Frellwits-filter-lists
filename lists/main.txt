@@ -815,7 +815,7 @@ Video-Ad-$media,3p
 /siforesponsivemeasure
 /Smile_ElasticsuiteTracker/*$script
 /snowday262.js
-/snowplow$script,domain=~rossmann.pl|~prolific.co|~nrk.no
+/snowplow$script,domain=~rossmann.pl|~prolific.co|~nrk.no|~tv2.no
 /ss_foundation/combined_li_tracking
 /static.marklar.se/*-tracker
 /statistics/statistics.js
@@ -1549,6 +1549,7 @@ curateContext=affiliate$domain=aftonbladet.se
 /ab_stats_params$domain=aftonbladet.se
 /ads-countdown.js$domain=aftonbladet.se|godare.se
 /casinokollen$all,domain=aftonbladet.se
+/identify/guest$domain=godare.se|tv.nu
 /player-plugin-tracking$domain=tv.aftonbladet.se
 /player-plugin-ad$domain=tv.aftonbladet.se
 /player-plugin-sponsor$domain=tv.aftonbladet.se
@@ -1587,6 +1588,7 @@ bytbil.com##.listpage-banner, .available-services
 bytbil.com##html,body:style(overflow:auto!important;)
 bytbil.com##.newcars-widget:has(a[href*="bit.ly"], a[href*="content-ad"])
 ! tv.nu
+||sdkconfig.pulse.schibsted.io/js/config.json$xhr,redirect=noop.json,domain=tv.nu
 tv.nu##a[href*="adform.net"], .ad-fullscreenWallpaper__container
 tv.nu###tv-schedule section:has-text(ANNONS)
 tv.nu##body.takeover-loading:remove-class(takeover-loading)
@@ -1600,10 +1602,6 @@ blocket.se##.placement_panorama, .blocket-placement, div[style="height: 240px;"]
 ! Övrigt
 godare.se##[id^="adPlacement"]:upward(1)
 godare.se##div[style="min-height:350px"]:has(iframe[title="Annons"])
-||wurfl.io^$domain=vinochmatguiden.se
-/ad.html$domain=vinochmatguiden.se
-vinochmatguiden.se##.popup_missa-inget
-vinochmatguiden.se##+js(set, window.WURFL, 1)
 godare.se##.godare-ad-element, a[href*="/brand-studio"], a[href*="/brandstudio"], .recipe-ad, a[href*="utm_campaign"][data-test-tag="external-link"]
 godare.se##:is(p[class^="teasersmall-sectionLabel"], p[class^="teasermedium-sectionLabel"]):has-text(/annons/i):upward(a.internal-link, li)
 prisjakt.nu##.pjra-relative, .outsider-ads, div[class^="AdPlacementWrapper"]
@@ -1957,7 +1955,7 @@ m3.se,pcforalla.se,macworld.se##+js(href-sanitizer, a[href*="/idg.digidip.net/"]
 ! Gamereactor
 ||gamereactor.se/ads/
 ||gamereactor.se/exclusive.json
-gamereactor.se###cookielawwarning, #eventad, [id^="sky"], [id^="ad_lead"], .external_div_bigVideoAd, #mpu, #leftToLogo, .itsanad, div[class^="ad_Bumper"], div[style="min-height: 600px; margin-bottom: 20px;"], div[id^="ad_"], div[class^="preAd_"], div[class^="ad_smartphbig"], .adMobileBig, div[class^="preMobileBig"], .external_div_videoAd, .ad_mobilebigwrap
+gamereactor.se###cookielawwarning, #eventad, [id^="sky"], [id^="ad_lead"], .external_div_bigVideoAd, #mpu, #leftToLogo, .itsanad, div[class^="ad_Bumper"], div[style="min-height: 600px; margin-bottom: 20px;"], div[id^="ad_"], div[class^="preAd_"], div[class^="ad_smartphbig"], .adMobileBig, div[class^="preMobileBig"], .external_div_videoAd, .ad_mobilebigwrap, #mobileLeftMainLogo
 gamereactor.se##.colHomePlayer:has([data-slotads="videoad"]):remove()
 gamereactor.se##video[data-autoplay]:remove-attr(data-autoplay)
 gamereactor.se##.rightbox:has(#grtvbelt_Sponsored)
@@ -2438,6 +2436,7 @@ lwcdn.com##+js(aeld, /^(?:adBlocker|contextmenu)$/)
 
 ! Jwplayer
 /jwpsrv.js$domain=aftonbladet.se|svd.se|tv.nu|axess.se|freeride.se|happyride.se|embed.futuresportsmedia.com|streamio.com|laget.se|moviezine.se|fasttrack.webstream.dk|cdn.jwplayer.com|allas.se|elle.se|femina.se|hant.se|mabra.com|residencemagazine.se|svenskdam.se|motherhood.se|godare.se|recept.se|hastnet.se|skippo.se
+/vast.js$domain=aftonbladet.se|svd.se|godare.se|tv.nu
 ||jwpcdn.com/player/*/bidding.js$domain=allas.se|elle.se|femina.se|hant.se|mabra.com|residencemagazine.se|svenskdam.se|motherhood.se|recept.se
 ||jwplayer.com/*/advertising$domain=allas.se|elle.se|femina.se|hant.se|mabra.com|residencemagazine.se|svenskdam.se|motherhood.se
 
@@ -2577,6 +2576,10 @@ vegomagasinet.se##.vego-ad
 mykitchenstories.se##.elementor-top-section:has(script[src^="//ads"])
 mykitchenstories.se##.elementor-heading-title:has-text(Annons):upward(section.elementor-top-section:not(.elementor-section-items-middle))
 billigarecept.se##aside.widget_text:has(.adsbygoogle)
+||wurfl.io^$domain=vinochmatguiden.se
+/ad.html$domain=vinochmatguiden.se
+vinochmatguiden.se##.popup_missa-inget
+vinochmatguiden.se##+js(set, window.WURFL, 1)
 
 ! Life of svea / adhype / sandviks
 @@/aff/images/*$image,domain=alltforforaldrar.se
