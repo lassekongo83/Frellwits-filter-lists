@@ -1184,10 +1184,13 @@ com.se,~www.com.se,~pagalnew.com.se##html::before:style(content: "OBS! VARNING! 
 /publisher/asjs?$domain=bredband.se
 /ads$domain=allastudier.se|cirkulation.se|ordmedzcxy.se|se.azrhymes.com
 ||pji.nu^$third-party,~image,domain=minhembio.com|ljudochbild.se|gp.se|mobil.se|nordichardware.se|surfa.se
+! Maybe there's a reason for this not being in the default filters, but surely not needed on these websites
+||www3.doubleclick.net^$domain=fotbolltransfers.com
+! Cosmetics
 byggahus.se,expressen.se,filmtopp.se,destination.se,spokbloggen.nu,folkhalsasverige.se,foretagsverige.se,forskningsverige.se,motorbibeln.se,hallbarhetsverige.se,tillvaxtsverige.se,grillbibeln.se,kampenmotcancer.se,bolagsfakta.se,affarsvarlden.se,affarerinorr.se,viivilla.se,dinordbok.se,motorbranschen.mrf.se,rakapuckar.com##.ad-container
 da.se##.Advert
 aikfotboll.se,vaken.se,tidningen.djurskyddet.se,aktavara.org,kullaliv.se##.banners
-ljuskultur.se,bettips.se,spelo.se,skogsaktuellt.se,entreprenadaktuellt.se,ja.se,husbilhusvagn.se,klassiker.nu,mopedgaraget.se,vibilagare.se,caroftheyear.se,automobil.se,endurobloggen.se,riksettan.net,frillesasbandy.se,dh.se,djungeltrumman.se,skik.se,omni.se,campingsverige.se,eniro.se,restaurangvarlden.se,naringslivetvgl.se,dalarnasaffarer.se,stockholmsaffarer.se,jamtlandsaffarer.se,hallandsnaringsliv.se,sjuharadsnaringsliv.se,nyheteridag.se,alekuriren.se,omniekonomi.se,sverigesindustri.se,onkologiisverige.se,svenskalag.se,borasweekly.se,hitta.se##.banner
+ljuskultur.se,bettips.se,spelo.se,skogsaktuellt.se,entreprenadaktuellt.se,ja.se,husbilhusvagn.se,klassiker.nu,mopedgaraget.se,vibilagare.se,caroftheyear.se,automobil.se,endurobloggen.se,riksettan.net,frillesasbandy.se,dh.se,djungeltrumman.se,skik.se,omni.se,campingsverige.se,eniro.se,restaurangvarlden.se,naringslivetvgl.se,dalarnasaffarer.se,stockholmsaffarer.se,jamtlandsaffarer.se,hallandsnaringsliv.se,sjuharadsnaringsliv.se,nyheteridag.se,alekuriren.se,omniekonomi.se,sverigesindustri.se,onkologiisverige.se,svenskalag.se,borasweekly.se,hitta.se,sporttv.nu##.banner
 etn.se,uppsalanyheter.se,rotter.se,borskollen.se##.banneritem
 spelo.se,lokalguiden.se,svenskverkstad.se##.banner-container
 metalcentral.net,rotter.se,ifboat.se,husbilskompisar.se##.bannergroup
@@ -2083,12 +2086,14 @@ golfing.se##.c-partners__item
 /braze$domain=tvmatchen.nu
 /smartbanner$domain=tvmatchen.nu
 /splash-redirector$domain=tvmatchen.nu
-tvmatchen.nu##.bet365, .panorama-wrapper, .tvg-manager-box, .tv102945, .tv102987, #event_banner, .go-to-partner, .odds, #text-13
-||sporttv.nu/images/sponsor/
-||sporttv.nu/images/BetLogos
-||sporttv.nu/js/partners
+tvmatchen.nu##.bet365, .panorama-wrapper, .tvg-manager-box, .tv102945, .tv102987, #event_banner, .go-to-partner, .odds, #text-13, .left-skyscraper-wrapper, .right-skyscraper-wrapper, .sticky-top-wrapper
+/images/sponsor$domain=sporttv.nu
+/images/BetLogos$domain=sporttv.nu
+/js/partners$domain=sporttv.nu
+/images/banner$domain=sporttv.nu
 sporttv.nu##a[onclick*="bannerClick"], #linkus, .details-bet-banner
 sporttv.nu##.progams-list-xs .text-center:has(.banner):remove()
+sporttv.nu##.visible-xs:has(a[href*="betting"], a[href*="casino"])
 /partners?$domain=hockeynews.se
 ||hockeynews.se/images/sveacasino.jpg
 hockeynews.se##a[rel*="sponsored"]
@@ -2097,7 +2102,7 @@ hockeynews.se##:is(.sticky, .hidden.lg\:block):has([id^="hockeynews_"])
 hockeynews.se##.text-center:has-text(ANNONS):upward(1)
 hockeynews.se##.fixed.z-50:has(a[href="/plus"])
 hockeynews.se##.h-\[152px\]:has(iframe)
-hockeynews.se##:is(.min-h-\[200px\], .min-h-\[350px\]):has([data-adk-container])
+hockeynews.se##:is(.min-h-\[200px\], .min-h-\[350px\], .min-h-\[245px\]):has([data-adk-container], script[src*="/ads."])
 hockeynews.se##html.overflow-hidden:style(overflow:unset!important;)
 hockeynews.se##a.bg-yellow\/30:has-text(/spons/i):upward(1)
 /sponsrade$xhr,domain=hockeysverige.se
