@@ -1,7 +1,7 @@
 ! Title: Frellwit's Swedish Filter
-! Last updated: Fri, 13 Jun 2025 03:42:18 +0000
+! Last updated: Sat, 14 Jun 2025 03:03:00 +0000
 ! Expires: 5 days
-! Diff-Path: patches/2025.6.13.222.patch#swefilter
+! Diff-Path: patches/2025.6.14.182.patch#swefilter
 ! Diff-Expires: 24 hours
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
@@ -156,6 +156,7 @@ allas.se,elle.se,femina.se,hant.se,mabra.com,residencemagazine.se,svenskdam.se,m
 allas.se,elle.se,femina.se,hant.se,mabra.com,residencemagazine.se,svenskdam.se,motherhood.se##+js(href-sanitizer, a[href*=".io/c/"], ?u)
 allatvkanaler.se##.gda, .cookie-notification, .iy.first
 allsvenskan.se##a[href*="track.adform"]
+allsvenskan.se,svenskafutsalligan.se,superettan.se##.footer-sponsors
 alltforforaldrar.se,di.se,upphandling24.se,bytbil.com,sverigesnatur.org,tv24.se,nyan.ax,passioneffect.se,aktuellhallbarhet.se,byggindustrin.se,dagensmedia.se,dagensmedicin.se,fastighetsnytt.se,resume.se,dagenssamhalle.se,market.se,dagligvarunytt.se,privataaffarer.se,shl.se##.panorama
 alltomarbetsmiljo.se##main > div:not([id]):not([class]):has(a[href$="nyhetsbrevet"])
 alltomarbetsmiljo.se##.bg-native
@@ -2493,6 +2494,7 @@ zeromagazine.nu##div[id^="ads"]
 /plugins/yeloni-free-exit-popup
 /plugins/yuzo/public/assets/js/pixel-geo
 /pogoadkit.js$domain=nordic.ign.com
+/popup$domain=fiskejournalen.se
 /popup-overlay$script,domain=sistersinlaw.se
 /popup-subscribe.js$domain=borsvarlden.com
 /popup/follow-us-fb
@@ -2537,7 +2539,6 @@ zeromagazine.nu##div[id^="ads"]
 /sh404sefsocial$script
 /sharedaddy/sharing.$script
 /shared/crm-campaign-handler.js$script
-/sharethis.js$domain=allsvenskan.se|superettan.se
 /shopifycloud/media-analytics
 /showads.js$domain=familjehemsbanken.se
 /sidebar-ads
@@ -2783,7 +2784,6 @@ zeromagazine.nu##div[id^="ads"]
 ||allaaktier.se/ads/
 ||allastudier.se/TrackingSearch
 ||allastudier.se/search-sponsor
-||allsvenskan.se/allsvenskan-script-min.js
 ||alphalete.com.se^
 ||amazonaws.com/adn-tag
 ||amazonaws.com/adsfallback/
@@ -3046,7 +3046,6 @@ zeromagazine.nu##div[id^="ads"]
 ||herokuapp.com/visit?$image
 ||hittahem.se^$third-party
 ||hockeynews.se/images/sveacasino.jpg
-||hockeysnack.com/pagespeed_static/1.$image
 ||humorbrevet.se/externa_bilder
 ||hu-manity.co^$domain=densistavilan.se
 ||iconosquare.com^$third-party
@@ -3085,6 +3084,7 @@ zeromagazine.nu##div[id^="ads"]
 ||jwpcdn.com/player/*/bidding.js$domain=allas.se|elle.se|femina.se|hant.se|mabra.com|residencemagazine.se|svenskdam.se|motherhood.se|recept.se
 ||jwplayer.com/*/advertising$domain=allas.se|elle.se|femina.se|hant.se|mabra.com|residencemagazine.se|svenskdam.se|motherhood.se
 ||k5a.io^$script,redirect-rule=noop.js,domain=tv2.no
+||k5a.io^$third-party
 ||kalender.se/analytics
 ||kamrat.com/js/cookiescript
 ||kingsizemag.se/content/
