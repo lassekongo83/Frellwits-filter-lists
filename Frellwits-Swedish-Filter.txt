@@ -1,6 +1,6 @@
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days
-! Last modified: 2025-06-14 05:02:46 CEST
+! Last modified: 2025-06-15 05:15:53 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPL3 - https://github.com/lassekongo83/Frellwits-filter-lists/blob/master/LICENSE
@@ -213,6 +213,7 @@ bandyfeber.com##article:has(a[href*="/annons-"])
 bandyfeber.com##.slide-entry-excerpt:has-text(/annons:/i):upward(.avia-content-slider)
 bandyfeber.com##.widget_sp_image, a[title^="ANNONS"], .inner_sidebar .widget_text, .entry-content a[href*="utm_campaign"]
 banners$image,domain=travsport.se|gavletravet.se
+banner$image,domain=golfbladet.se
 baraenkakatill.se##.post-item__tag:has-text(/spons/i):upward(li.post-item)
 barnistan.se,welma.se##.featured-teaser:has(a[onclick*="adClick"])
 barnistan.se,welma.se##.newsletter, a[onclick*="adClick"], .gpt-slot
@@ -457,6 +458,7 @@ ekonominyheter.se,autonytt.se,undervarttak.se,aftonbladet.se,lesscarbs.se,hockey
 eksjoco.se##.container:has(.ad)
 elbilen.se##a[id^="sidebar-banner"]
 elbilen.se##.font-sans.rounded-full:has-text(Annons):upward(article)
+elbilen.se##.wrapper-large > .justify-center:has(.banner-holder)
 electronic.se##.content aside.column-narrow:last-of-type
 elektronikforumet.com##td > a[target="_blank"] img
 elevspel.se###cookie_wrapper, a[href*="medlem"] > div, .ryk-top
@@ -912,7 +914,7 @@ lajvo.se##.postCard:has-text(/bonusar|casino|betting|spelbranschen|spelupplevels
 lakartidningen.se##.screen-sm, .screen-md
 lakartidningen.se,canariajournalen.se##.advertisement
 landleyskok.se##.inpostbanner, .banner-leaderboard
-landsbygdsnatverket.se,greppa.nu,sbf.se,skaneridsport.se,ridsport.se,biljardforbundet.se,rfsisu.se##.sv-cookie-consent-banner
+landsbygdsnatverket.se,greppa.nu,sbf.se,skaneridsport.se,ridsport.se,biljardforbundet.se,rfsisu.se,skidor.com##.sv-cookie-consent-banner
 landskronadirekt.com###companies-slider, #ads-nyhetsbanner
 langd.se##.single-entry__ads
 lantbruksnytt.se##article:has(.ads_text)
@@ -1271,6 +1273,7 @@ skargarden.se##article:has([title^="Annons" i], a[href*="/annons"])
 skargarden.se###topbanner, #mittbanner, #topbannerm, #mittbannerm
 skargarden.se##.textwidget:has(.adtext)
 skellefteamedia.se###tdi_51, .td-content-more-articles-box
+skidor.com##.idr-sponsors__item
 skidspar.se##div[id^="div-gpt-ad"]:upward(1)
 skidspar.se##.MuiChip-label:has-text(Sponsrat):upward(article)
 skidspar.se##.MuiDialog-root
@@ -3149,7 +3152,6 @@ zeromagazine.nu##div[id^="ads"]
 ||mediaserver.gvcaffiliates.com.cdn.cloudflare.net^
 ||media.arto.se/*annons$image,domain=natursidan.se
 ||media.dagensps.se/*banner$image
-||media.golfbladet.se/*banner
 ||media.jw-it.se/b/$image
 ||media.jw-it.se/getip.php
 ||mediekompaniet.com^$third-party
