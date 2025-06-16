@@ -1,7 +1,7 @@
 ! Title: Frellwit's Swedish Filter
-! Last updated: Sun, 15 Jun 2025 03:16:08 +0000
+! Last updated: Mon, 16 Jun 2025 03:13:30 +0000
 ! Expires: 5 days
-! Diff-Path: patches/2025.6.15.196.patch#swefilter
+! Diff-Path: patches/2025.6.16.193.patch#swefilter
 ! Diff-Expires: 24 hours
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
@@ -157,7 +157,7 @@ allas.se,elle.se,femina.se,hant.se,mabra.com,residencemagazine.se,svenskdam.se,m
 allatvkanaler.se##.gda, .cookie-notification, .iy.first
 allsvenskan.se##a[href*="track.adform"]
 allsvenskan.se,svenskafutsalligan.se,superettan.se##.footer-sponsors
-alltforforaldrar.se,di.se,upphandling24.se,bytbil.com,sverigesnatur.org,tv24.se,nyan.ax,passioneffect.se,aktuellhallbarhet.se,byggindustrin.se,dagensmedia.se,dagensmedicin.se,fastighetsnytt.se,resume.se,dagenssamhalle.se,market.se,dagligvarunytt.se,privataaffarer.se,shl.se##.panorama
+alltforforaldrar.se,di.se,upphandling24.se,bytbil.com,sverigesnatur.org,tv24.se,nyan.ax,passioneffect.se,aktuellhallbarhet.se,byggindustrin.se,dagensmedia.se,dagensmedicin.se,fastighetsnytt.se,resume.se,dagenssamhalle.se,market.se,dagligvarunytt.se,privataaffarer.se,shl.se,hockeyallsvenskan.se##.panorama
 alltomarbetsmiljo.se##main > div:not([id]):not([class]):has(a[href$="nyhetsbrevet"])
 alltomarbetsmiljo.se##.bg-native
 alltomburgare.se##.newscolumn:has(a[href$="/sponsrat/"])
@@ -227,7 +227,7 @@ bestchampagne.se##aside.section-sm
 bestchampagne.se##div[style="opacity:0"]:style(opacity:unset!important;)
 bettips.se##.bettips-am, .mobile-banner
 bettips.se,borskollen.se,se.azrhymes.com,bostadsrattsnytt.se,dagenslogistik.se##.top-banner
-bike.se##button[data-cc]
+bike.se##button[data-cc], .tranding-bar
 bike.se##.post-block-style:has(a[href*="/annons"])
 bildobubbla.se##.annonser
 billigarecept.se##aside.widget_text:has(.adsbygoogle)
@@ -550,7 +550,7 @@ findit.se##+js(set, testPrebid, noopFunc)
 findit.se##.banner-wrapper, .col-banner, .banner_middle
 firstclassmagazine.se###leader-wrap, #rpwe_widget-2, .side-widget .textwidget
 firstclassmagazine.se##.feat-cat:has-text(/annons/i):upward(a)
-fisheco.se###page-section-2, #page-section-24, .add-special-banner, .g-single
+fisheco.se###page-section-2, #page-section-24, .g-single
 fiskesnack.com##.axd-widget, #widget_314
 flamman.se###scrollup
 flashback.org###top-banner-container, #top-banner-wrapper
@@ -1119,7 +1119,7 @@ nyhetersto.se,bussmagasinet.se,brollopsmagasinet.se,borattforum.se,globalpolitic
 nyheter.swebbtv.se##.recent-posts-widget-with-thumbnails:has-text(/annonssamarbete|annons/i)
 nyheter.swebbtv.se##.wp-block-image a[target]:not([href*="nyheter.swebbtv.se"]), .mh-sidebar-2 .indexlink
 nyhetsbyranjarva.se##div[style="display: flex; justify-content: center; flex-direction: column; align-items: center;"]
-nyhetsbyranjarva.se,nyan.ax,tv-kanal.se,golfguidenonline.se,rockbladet.se,vildmarken.se,nyhetersto.se,dagenslogistik.se,turismnytt.se,radiosol.se,cora.se,travelandtourworld.se,mallorcanyheter.com,it-finans.se,it-halsa.se,it-kanalen.se,it-pedagogen.se,it-retail.se,it-hallbarhet.se##.g
+nyhetsbyranjarva.se,nyan.ax,tv-kanal.se,golfguidenonline.se,rockbladet.se,vildmarken.se,nyhetersto.se,dagenslogistik.se,turismnytt.se,radiosol.se,cora.se,travelandtourworld.se,mallorcanyheter.com,it-finans.se,it-halsa.se,it-kanalen.se,it-pedagogen.se,it-retail.se,it-hallbarhet.se,fisheco.se##.g
 nyteknik.se,lag-avtal.se,arbetarskydd.se##article:has(a[href*="/sponsrad"])
 obosdamallsvenskan.se,elitettan.se##.iframe-section-container:has(iframe[src*="bannerflow"])
 obosdamallsvenskan.se,elitettan.se##.linked-image-section:has(a[target="_blank"])
@@ -2399,6 +2399,7 @@ zeromagazine.nu##div[id^="ads"]
 /plugins/interscroller-ads
 /plugins/interstitial-ads
 /plugins/itc-consent-mode$script,domain=publicistklubben.se
+/plugins/jetpack/modules/subscriptions/subscribe-modal$script
 /plugins/jet-popup$domain=javligtgott.se
 /plugins/jnews-social-share/*$script
 /plugins/koko-analytics
