@@ -1,7 +1,7 @@
 ! Title: Frellwit's Swedish Filter
-! Last updated: Thu, 19 Jun 2025 05:15:15 +0000
+! Last updated: Fri, 20 Jun 2025 05:28:12 +0000
 ! Expires: 5 days
-! Diff-Path: patches/2025.6.19.315.patch#swefilter
+! Diff-Path: patches/2025.6.20.328.patch#swefilter
 ! Diff-Expires: 24 hours
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
@@ -1564,6 +1564,8 @@ villatidningen.se##.wppsac-post-carousel:has(a[href*="/spons"])
 vinbanken.se##.fancybox-lock:style(overflow-y: auto !important;)
 vinbanken.se##.push-to-newsletter, .fancybox-overlay
 vinbanken.se##.top-add, .sidebar-adds, .spons-content
+vinborsen.se##html.cdk-global-scrollblock:remove-class(cdk-global-scrollblock)
+vinborsen.se##.cdk-overlay-container
 vinliv.se##.product_banner_wrapper
 vinochmatguiden.se##+js(set, window.WURFL, 1)
 vinochmatguiden.se##.popup_missa-inget
@@ -2580,6 +2582,7 @@ zeromagazine.nu##div[id^="ads"]
 /ss_foundation/combined_li_tracking
 /static/js/loada.js
 /static/media/*casino$domain=dagenstv.com|kolla.tv
+/statistics$domain=visitskane.com
 /statistics/statistics.js
 /statistics/statistics.php
 /stats$domain=ehandel.se
@@ -2882,7 +2885,7 @@ zeromagazine.nu##div[id^="ads"]
 ||cdn.iubenda.com^$domain=meetingsinternational.se
 ||cdn.livechatinc.com/tracking$domain=~box.co.uk
 ||cdn.pji.nu/g/sp.gif$important
-||cdn.segment.com/v1/projects/$xhr,redirect=noop.json,important,domain=dagen.se
+||cdn.segment.com/v1/projects/$xhr,redirect=noop.json,important,domain=dagen.se|vinborsen.se
 ||cdn.stroeerdigitalgroup.de^
 ||cdn.svenskalag.se/img/sponsors$image
 ||cdn.ungpd.com^$domain=odla.nu
@@ -3226,6 +3229,7 @@ zeromagazine.nu##div[id^="ads"]
 ||privacypolicies.com^$domain=fl-net.se
 ||privacy-center.org^$domain=180.se|agriaffaires.se|truckscorner.se|machineryzone.se|stegforhalsa.se|netdoktor.se|netdoktorpro.se|news55.se|hastnet.se|dagensps.se|realtid.se|sportbibeln.se|matbibeln.se|nojeslivet.se|booli.se|dh.se|fotbolltransfers.com|foretagsverige.se|forskningsverige.se|motorbibeln.se|hallbarhetsverige.se|tillvaxtsverige.se|grillbibeln.se|kampenmotcancer.se|folkhalsasverige.se
 ||privacy-mgmt.com^$domain=radio.se|dagenstv.com|kolla.tv|computersweden.se|woxikon.se|dagen.se|filmtopp.se|upday.com|gaffa.se|handbollskanalen.se|stayfriends.se|spisa.nu|tv24.se
+||privalytic.com^$third-party
 ||proxyas.com^$third-party
 ||prylguiden.expressen.se^
 ||ptm.flowplayer.com^*/display$xmlhttprequest
