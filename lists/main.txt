@@ -973,6 +973,7 @@ Video-Ad-$media,3p
 ||pipedrive.com^*/statistics/seen
 ||pixel.playbuzz.com^
 ||pm.azerioncircle.com^
+||privalytic.com^$third-party
 ||pt.dwcdn.net/*/datawrapper.gif
 ||pxl.host^$third-party
 ||r.stripe.com/b$ping
@@ -1260,6 +1261,7 @@ utm_$document,removeparam=/^utm_/,domain=tv.nu|booli.se|expressen.se|aftonbladet
 /trace$xhr,domain=netflixguiden.se|radio.se|downdetector.se
 /track$ping,xhr,domain=epochtimes.se|dagen.se
 /googleanalytics.js$domain=fria.nu|stockholmsfria.se|bio.se
+/statistics$domain=visitskane.com
 ! Websites with no obvious or visible facebook login. Will just assume it's used for tracking.
 ||connect.facebook.net^$domain=friatider.se|fotosidan.se|ng.se|lektionsbanken.se|lajvo.se|kvinnatillkvinna.se|epochtimes.se|newsner.com|humorbibeln.se|sportbibeln.se|matbibeln.se|ettgottskratt.se|djurbibeln.se|nojeslivet.se|sillyseason.se|loppi.se|kyrkanstidning.se|tn.se|experimentarkivet.se
 ! Scriptlets
@@ -2960,7 +2962,7 @@ alghundklubben.com#@#.category-annons:not(body):not(html)
 /plugins/google-analytics-dashboard$important,script
 ||google-analytics.com^$important,domain=aftonbladet.se|tradera.com|xxl.se
 ||googletagmanager.com^$important,domain=tradera.com|xxl.se|prisjakt.nu
-||cdn.segment.com/v1/projects/$xhr,redirect=noop.json,important,domain=dagen.se
+||cdn.segment.com/v1/projects/$xhr,redirect=noop.json,important,domain=dagen.se|vinborsen.se
 
 ! -- Browser / device specific
 ! Not mobile
@@ -3646,3 +3648,5 @@ mallorcanyheter.com##section[data-settings*="element_pack_wrapper"]:has(.a-singl
 maskinteknik.org##.annonssegmenthead, .sidebarannonsseg, .footerannons
 maskinteknik.org###headroom > .hstat:has(.annonssegmenthead)
 maskinteknik.org###headroom:style(min-height:unset!important;)
+vinborsen.se##.cdk-overlay-container
+vinborsen.se##html.cdk-global-scrollblock:remove-class(cdk-global-scrollblock)
