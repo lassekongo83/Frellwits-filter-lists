@@ -356,6 +356,7 @@ Video-Ad-$media,3p
 ||js.adsaga.se^$third-party
 ||kingsumo.com^$third-party
 ||kortio.se^$third-party
+||kvikr.se/ads/
 ||laget.se^*/retarget.js
 ||leadenhancer.com^$third-party
 ||lendo.se^$third-party
@@ -1141,6 +1142,7 @@ Video-Ad-$media,3p
 ||digitaliseringsinitiativet.se^
 ||toppmarkensverige.com^
 ||fraagesport.com^
+||kyrkavgift.se^
 ! Warn users about suspicious websites starting with .com.se
 com.se,~www.com.se,~pagalnew.com.se##html::before:style(content: "OBS! VARNING! Om denna sida är en butik så är det förmodligen en bluffbutik. Detta är ett meddelande från den svenska listan i din annonsblockerare." !important; font-size: 18px !important; font-family: sans !important; background-color: red !important; color: white !important; padding: 6px !important; width: 100% !important; display: block !important; text-align: center !important;)
 ! https://www.fotosidan.se/forum/showthread.php?threadid=172681
@@ -1233,7 +1235,7 @@ hrnytt.se##.banner-box
 ratsit.se##.promo
 futsalmagasinet.se,newsvoice.se,obsid.se##aside.widget:has(a[href*="casino"])
 automation.se,verkstadstidningen.se,transportnytt.se,datormagazin.se,cykelmagasinet.se##.a-wrap
-lakartidningen.se,canariajournalen.se##.advertisement
+lakartidningen.se,canariajournalen.se,familjeliv.se,brollopstorget.se,rodeo.net##.advertisement
 chef.se,fokus.se##.Blurb--native
 vilarare.se,tidningenridsport.se##.adcontainer
 tv4.se,skippo.se,koket.se##.maxetise
@@ -1253,6 +1255,7 @@ utm_$document,removeparam=/^utm_/,domain=tv.nu|booli.se|expressen.se|aftonbladet
 /analytics$domain=gbgfotboll.se|stff.se|svenskfotboll.se|di.se|etc.se|vackertvader.se|skogsforum.se|skolporten.se|sjf.se|se.azrhymes.com|alandsradio.ax|dagen.se
 /firebase-analytics.js$domain=stoppapressarna.se|alltomkungligt.se|zeinaskitchen.se|jennysmatblogg.nu|filippoon.se|lindasbakskola.se
 /glimr$script,domain=aftonbladet.se|blocket.se|godare.se
+/pageView$xhr,domain=altinget.se|ifokus.se
 /profile$ping,domain=feber.se|skippo.se|tasteline.com|tjock.se|veckorevyn.com|marcusoscarsson.se|surfa.se|nordichardware.se|tv4.se|fotbollskanalen.se|koket.se|teknikveckan.se|langd.se|shl.se|hemhyra.se
 /raven$script,domain=mitti.se|travnet.se|nyheter24.se|tyda.se|devote.se|egoinas.se|hemtrevligt.se|alltforforaldrar.se|familjeliv.se|brollopstorget.se|blogg.se|nouw.com|lchfarkivet.se|fotbolltransfers.com|norrahalland.se|svenskgolf.se|vimedbarn.se|modette.se|vf.se|hjotidning.se|kt.se|kt-kuriren.se|sla.se|mariestadstidningen.se|filipstadstidning.se|fryksdalsbygden.se|nwt.se|arvikanyheter.se|nkp.se|saffletidningen.se|provinstidningen.se|dalslanningen.se|nlt.se|skaraborgsbygden.se|alltomnorrtalje.se|fragbite.se|ljudochbild.se|vk.se|folkbladet.nu|nordsverige.se|mellanbygden.nu|vasterbottningen.se|lokaltidningen.nu|svenskafans.com|sportlovin.se|innebandymagazinet.se|jaktjournalen.se|akaskidor.se|hockeysverige.se|kingmagazine.se|cafe.se|hockeynews.se|mmanytt.se|idrottensaffarer.se|veckorevyn.com
 /ga.js$domain=helgon.se|gamemonetize.com|sjf.se
@@ -1926,7 +1929,6 @@ svenskverkstad.se##app-exposure-small
 svenskverkstad.se##svv-short-news-widget:has(.native-news-link)
 svenskverkstad.se##svv-wide-news-widget:has(.annons)
 svenskverkstad.se##block-3x3-news-widget:has-text(Sponsrat innehåll)
-/pageView$xhr,domain=altinget.se
 altinget.se##a[href^="/sponsrade"]
 ||samfalligheterna.se^$ping
 samfalligheterna.se##.tdm-popup-modal-wrap
@@ -2509,7 +2511,6 @@ vinbanken.se##.push-to-newsletter, .fancybox-overlay
 vinbanken.se##.fancybox-lock:style(overflow-y: auto !important;)
 mygatemagazine.se##.textwidget:has-text(Annons)
 /maps.sponsored-pill.$script,domain=tripadvisor.se
-||tripadvisor.se^$csp=worker-src 'none'
 ||tripadvisor.se/PVLog
 ||tripadvisor.se/data/*/rum
 tripadvisor.se##[class$="banner_ad"]
@@ -2604,6 +2605,7 @@ vinochmatguiden.se##+js(set, window.WURFL, 1)
 nyheter24.se,alltforforaldrar.se,modette.se,devote.se,familjeliv.se,brollopstorget.se,blogg.se,rodeo.net,vimedbarn.se,loppi.se##div[class^="panorama"], a[href^="/samarbete"], a[href*="annons"], a[href*="casino"], a[href*="kasino"], a[href*="spel"][href*="licens"], a[href*="utan"][href*="licens"], a[href*="extrapengar"], a[href*="matchfixning"], a[href*="upplevelser"], a[href*="-vegas"], a[href*="buda"][href*="auktion"], a[href*="investera"], a[href^="/artiklar/info/"], a[href*="/kampanj/"], a[href*="betting"]
 nyheter24.se,alltforforaldrar.se,modette.se,devote.se,familjeliv.se,brollopstorget.se,blogg.se,rodeo.net,vimedbarn.se,loppi.se##article:has-text(/annons:/i)
 nyheter24.se##.uppercase:has-text(/annons/i):upward(1)
+vimedbarn.se##.article-object:has(img[src*="ett samarbete"])
 familjeliv.se##.familjeliv_nestle
 selectAdvertiserElement$domain=bebisvarlden.se
 /plugins/sandviks-weblog$script,domain=bebisvarlden.se
