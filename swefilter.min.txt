@@ -1,7 +1,7 @@
 ! Title: Frellwit's Swedish Filter
-! Last updated: Fri, 04 Jul 2025 04:07:21 +0000
+! Last updated: Sat, 05 Jul 2025 02:43:59 +0000
 ! Expires: 5 days
-! Diff-Path: patches/2025.7.4.247.patch#swefilter
+! Diff-Path: patches/2025.7.5.163.patch#swefilter
 ! Diff-Expires: 24 hours
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
@@ -1079,7 +1079,7 @@ naringslivetvgl.se,dalarnasaffarer.se,stockholmsaffarer.se,jamtlandsaffarer.se,h
 naringslivetvgl.se,dalarnasaffarer.se,stockholmsaffarer.se,jamtlandsaffarer.se,sverigesindustri.se,hallandsnaringsliv.se,sjuharadsnaringsliv.se,onkologiisverige.se,borasweekly.se##.cookies-popup
 naringsliv.ax##.banner-block
 naturvetarna.se##.Advertisement
-netdoktor.se,netdoktorpro.se##.article-list__item:has(.bam-ad-slot, .article-list__item__box--sponsored)
+netdoktor.se,netdoktorpro.se##.article-list__item:has(.bam-ad-slot, .article-list__item__box--sponsored, b-a-d)
 netdoktor.se,netdoktorpro.se##.article-list__item__link--sponsored, .ispanorama, #Popup, .ElementAdvertisement
 netflixguiden.se##div.lboard, div.instream-dynamic, #top-area-promo, div.sidebar div.sticky, .promo, .lboard-desktop, .lboard-mobile, #bottom-sticky-promo
 news55.se##div.container:has(a[href="/author/news55-partner/"])
@@ -1204,7 +1204,7 @@ radio-sveriges.se###original_taboola, #optimize_experiment
 radio.se##div[data-testid="detail-player"] .hidden:has(.transition-colors)
 radio.se###always-visible-banner-desktop-banner, #sticky-reklame-header
 radio.se##:is(a[data-testid="region-tag"], a[data-testid^="taglist-item"]):style(background-image:none!important; background:rgb(2,114,140)!important;)
-radio.se##:is(.md\:min-h-\[90px\], .lg\:min-h-\[250px\], .h-\[250px\], .md\:h-\[250px\], .justify-between.md\:mx-10):has(div[id^="RAD_D"], div[id^="RAD_M"])
+radio.se##:is(.md\:min-h-\[90px\], .lg\:min-h-\[250px\], .h-\[250px\], .md\:h-\[250px\], .justify-between.md\:mx-10):has(div[id^="RAD_D"], div[id^="RAD_M"], .super-reklame-header-holder)
 raggningsboken.se,minip.nu,snapsvisor.eu##div[style^="min-height"]:has(.adsbygoogle)
 rakapuckar.com##.sidead_border
 ratio.se###consent-portal
@@ -2813,6 +2813,7 @@ zeromagazine.nu##div[id^="ads"]
 ||analytics.ozzi.io^$third-party
 ||analytics.teknikveckan.se^
 ||analytics.undeco.se^
+||annons.dagen.se^
 ||apis.google.com/js/plusone.js$third-party
 ||api-sa.rikatillsammans.se^
 ||api.hitta.se/creepy
@@ -3236,7 +3237,7 @@ zeromagazine.nu##div[id^="ads"]
 ||prisjakt.nu^$third-party,domain=~prisjakt.no|~pricespy.co.uk|~ledenicheur.fr|~prisjagt.dk|~pricespy.co.nz|~hintaopas.fi
 ||privacypolicies.com^$domain=fl-net.se
 ||privacy-center.org^$domain=180.se|agriaffaires.se|truckscorner.se|machineryzone.se|stegforhalsa.se|netdoktor.se|netdoktorpro.se|news55.se|hastnet.se|dagensps.se|realtid.se|newsner.com|humorbibeln.se|sportbibeln.se|ettgottskratt.se|matbibeln.se|djurbibeln.se|nojeslivet.se|booli.se|dh.se|fotbolltransfers.com|foretagsverige.se|forskningsverige.se|motorbibeln.se|hallbarhetsverige.se|tillvaxtsverige.se|grillbibeln.se|kampenmotcancer.se|folkhalsasverige.se
-||privacy-mgmt.com^$domain=radio.se|dagenstv.com|kolla.tv|computersweden.se|woxikon.se|dagen.se|filmtopp.se|upday.com|gaffa.se|handbollskanalen.se|stayfriends.se|spisa.nu|tv24.se|homeq.se
+||privacy-mgmt.com^$domain=radio.se|dagenstv.com|kolla.tv|computersweden.se|woxikon.se|dagen.se|filmtopp.se|gaffa.se|handbollskanalen.se|spisa.nu|tv24.se|homeq.se
 ||privalytic.com^$third-party
 ||proxyas.com^$third-party
 ||prylguiden.expressen.se^
@@ -3343,6 +3344,7 @@ zeromagazine.nu##div[id^="ads"]
 ||stm.eniro.se^
 ||storage.googleapis.com/didna$third-party
 ||storymedia.se^$third-party
+||stp.gaffa.se^
 ||streamio.com/api/*/stats$xmlhttprequest
 ||streamio.com/assets/a-dx$script
 ||suntana.se^$third-party
@@ -3475,7 +3477,7 @@ stoppapressarna.se##^script[data-src*="advads"]
 temadagar.se,sanghafte.se,xn--gtboken-exa.se,ninjateknik.com##^script:has-text(__ez)
 di.se##^script:has-text(Di.initAds)
 tabyallehanda.se##^script[src$="adsbygoogle.js"]
-woxikon.se,tyda.se,bab.la##^script[src^="https://html-load.com/"]
+tyda.se,bab.la##^script[src^="https://html-load.com/"]
 woxikon.se##^script:has-text(googletag)
 woxikon.se##^script:has-text(window._sp_)
 tyda.se##^script:has-text(error-report.com)
