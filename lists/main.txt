@@ -688,6 +688,7 @@ Video-Ad-$media,3p
 ##.leeads-advert:not(body):not(html)
 ##.loop-mobile-leeads:not(body):not(html)
 ##.mittenannons:not(body):not(html)
+##.mobile_ad:not(body):not(html)
 ##.node-sponsored-article:not(body):not(html)
 ##.nyhet_wrapper_annons:not(body):not(html)
 ##.o-grid__ad-column:not(body):not(html)
@@ -993,6 +994,7 @@ Video-Ad-$media,3p
 ||rudderstack.com^$third-party
 ||rum.cronitor.io/script.js
 ||sannsyn.com^$third-party
+||scout.data.funkedigital.de/liteblower.js
 ||script.e-space.se^$third-party
 ||sellingsimplified.net^$third-party
 ||seonify.com^$third-party
@@ -1302,9 +1304,9 @@ elle.se,expressen.se##+js(href-sanitizer, a[href*="/click"], ?url)
 ||privacy-center.org^$domain=180.se|agriaffaires.se|truckscorner.se|machineryzone.se|stegforhalsa.se|netdoktor.se|netdoktorpro.se|news55.se|hastnet.se|dagensps.se|realtid.se|newsner.com|humorbibeln.se|sportbibeln.se|ettgottskratt.se|matbibeln.se|djurbibeln.se|nojeslivet.se|booli.se|dh.se|fotbolltransfers.com|foretagsverige.se|forskningsverige.se|motorbibeln.se|hallbarhetsverige.se|tillvaxtsverige.se|grillbibeln.se|kampenmotcancer.se|folkhalsasverige.se
 ||privacypolicies.com^$domain=fl-net.se
 ||cmp.bonniernews.se^$domain=kpwebben.se
-||cdn-cookieyes.com^$domain=lokalti.se|jarnvagar.nu|senses.se|temadagar.se|tekniknytt.se|nordigt.se|autonytt.se|kak.se|smhi.se|borattforum.se|mis.se|universitetslararen.se|lakemedelsvarlden.se|samfalligheterna.se|husbilsplats.se|katerinamagasin.se|dagenslogistik.se|biostock.se|skellefteaworks.se|datormagazin.se|travnet.se|malarbok.nu|barn-filmer.se|matmenyer.se|sunnenytt.se|hockeynews.se|swe3.se|spelbloggen.se|matinspo.se|trendenser.se|kattannonser.se|56kilo.se|horisontmagasin.se|automobilly.com|nordicmanufacturing.net|nationalekonomi.se|storynews.se|alltomhobby.se|upptackrattvik.se|alltomhusbilen.se|fnissfest.se|baraboras.se|oresundspotlight.com|maskinteknik.org|stadshem.se|bostadspolitik.se|marketmate.se
+||cdn-cookieyes.com^$domain=lokalti.se|jarnvagar.nu|senses.se|temadagar.se|tekniknytt.se|nordigt.se|autonytt.se|kak.se|smhi.se|mis.se|universitetslararen.se|lakemedelsvarlden.se|samfalligheterna.se|husbilsplats.se|katerinamagasin.se|dagenslogistik.se|biostock.se|skellefteaworks.se|datormagazin.se|travnet.se|malarbok.nu|barn-filmer.se|matmenyer.se|sunnenytt.se|hockeynews.se|swe3.se|spelbloggen.se|trendenser.se|kattannonser.se|56kilo.se|horisontmagasin.se|automobilly.com|nordicmanufacturing.net|nationalekonomi.se|storynews.se|alltomhobby.se|upptackrattvik.se|alltomhusbilen.se|fnissfest.se|baraboras.se|oresundspotlight.com|maskinteknik.org|stadshem.se|bostadspolitik.se|marketmate.se
 ||gravito.net^$domain=hitta.se|gp.se|bohuslaningen.se|stromstadstidning.se|markposten.se|harrydaposten.se|partilletidning.se|sttidningen.se|molndalsposten.se|kungalvsposten.se|kungsbackaposten.se|alingsastidning.se|ttela.se|hallandsposten.se|hn.se|mellerudsnyheter.se|moviezine.se
-||consentmanager.net^$domain=allastudier.se|gbgfotboll.se|stff.se|svenskfotboll.se|coop.se|dagens.se|prevent.se|utsidan.se|studentum.se|utbildning.se|vision.se|byggnads.se|teksajten.se|thelocal.se
+||consentmanager.net^$domain=allastudier.se|gbgfotboll.se|stff.se|svenskfotboll.se|coop.se|dagens.se|prevent.se|utsidan.se|studentum.se|utbildning.se|vision.se|teksajten.se|thelocal.se
 ||gatekeeperconsent.com^$domain=hemmanytt.se|wernamaten.se|sanghafte.se|xn--gtboken-exa.se|ninjateknik.com
 ||cookiehub.net^$domain=da.se|elongroup.se|adoptionscentrum.se|rappne.se
 ||cookiehub.eu^$domain=kommunal.se|adapt.se
@@ -3627,6 +3629,7 @@ kandisvarlden.com##body[unselectable]:remove-attr(unselectable)
 ||signals.tt.se/collect
 pricerunner.se##p[class^="pr-"]:has-text(Sponsrat):upward(div[class$="Container-root"])
 pricerunner.se##span[class^="pr-"]:has-text(ANNONS):upward(a)
+/GoogleAnalytics$domain=coop.se
 coop.se##:is(a[href="/butiker-erbjudanden/"], a[href^="/handla"]):has(source[srcset*="annons"], img[alt*="Annons"])
 husbilsskolan.se##.elementor-image a[target="_blank"]
 inredningsvis.se##+js(set-cookie, cmplz_banner-status, dismissed)
@@ -3658,3 +3661,4 @@ vinborsen.se##.cdk-overlay-container
 vinborsen.se##html.cdk-global-scrollblock:remove-class(cdk-global-scrollblock)
 bostadspolitik.se##.sidebar-banner
 sv.bab.la##.promoBox
+byggnads.se##section[aria-labelledby="cookie-consent-heading"]
