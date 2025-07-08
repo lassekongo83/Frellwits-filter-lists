@@ -1,7 +1,7 @@
 ! Title: Frellwit's Swedish Filter
-! Last updated: Mon, 07 Jul 2025 03:14:37 +0000
+! Last updated: Tue, 08 Jul 2025 02:56:17 +0000
 ! Expires: 5 days
-! Diff-Path: patches/2025.7.7.194.patch#swefilter
+! Diff-Path: patches/2025.7.8.176.patch#swefilter
 ! Diff-Expires: 24 hours
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
@@ -205,6 +205,7 @@ autonytt.se,sv.picmix.com,tekniknytt.se##.leaderboard
 autopower.se##.startsidancontainer > .row > .col:has(.adsbygoogle)
 avanza.se#@#a[title="LeoVegas"]
 aventyrsresor.se##._form-wrapper
+axess.se##dialog:has(a[href*="order.flowy.se"]):remove()
 babyhjalp.se##.elementor-widget[data-settings*="sticky_"], div[id^="babyhjalp_panorama"], div[id^="babyhjalp_mobil"], div[id^="stagi"]
 bakasockerfritt.se###cookiescript_injected_wrapper
 bandyfeber.com##article:has(a[href*="/annons-"])
@@ -1239,9 +1240,9 @@ samnytt.se,samnytt.nu##.min-h-\[300px\]:has(img[src*="/b/"])
 samnytt.se,samnytt.nu##.samnytt-card:has(a[href*="jackpot"], a[href*="casino"][href*="bonus"])
 samnytt.se,samnytt.nu##.sticky > div:has(img[src^="/butik"])
 samtiden.nu##.iscu_hometop_wrap, .iscu_homeside_wrap, .iscu_singletop_wrap
-sanghafte.se##.widget_cooperations, .dfrcs, .category-tips, .widget_linked_image_with_banner
+sanghafte.se##.widget_cooperations, .dfrcs, .category-tips, .widget_linked_image_with_banner, #nav-below a[href*="casino"]
 sanghafte.se##.wp-show-posts-entry-summary:has-text(/annons|reklam/i):upward(.post)
-sanghafte.se##:is(aside.widget_text_widget_startpage_only, .site-main .post):has(a[href*="casino"], a[href*="kasino"], a[href*="betting"])
+sanghafte.se##:is(aside.widget_text_widget_startpage_only, .entry-content .has-post-thumbnail):has(a[href*="casino"], a[href*="kasino"], a[href*="betting"])
 sbf.se,skaneridsport.se##.hiq-partners-banner
 schack.se##.schac-widget
 schoolido.se##.so-cookie__area
@@ -2944,6 +2945,7 @@ zeromagazine.nu##div[id^="ads"]
 ||covatic.io^$third-party
 ||createsend1.com^$third-party,~image
 ||createsend.com^$third-party
+||creativeconsortiuminspired.com^
 ||ctm.bonnier.cloud^$domain=digitalfotoforalla.se|iform.se|pctidningen.se|varldenshistoria.se
 ||curemedia.se^$third-party
 ||custosgroup.com^$third-party
@@ -3235,6 +3237,7 @@ zeromagazine.nu##div[id^="ads"]
 ||pomu.se/games/visit/
 ||popupsmart.com^$third-party
 ||portalhc.com^$third-party
+||premium.analys.cloud^$third-party
 ||pricerunner.com/publisher-widgets$third-party
 ||prisjakt-a.$third-party,domain=~prisjakt.nu|~prisjakt.no|~pricespy.co.uk|~ledenicheur.fr|~prisjagt.dk|~pricespy.co.nz|~hintaopas.fi
 ||prisjakt.nu^$third-party,domain=~prisjakt.no|~pricespy.co.uk|~ledenicheur.fr|~prisjagt.dk|~pricespy.co.nz|~hintaopas.fi
