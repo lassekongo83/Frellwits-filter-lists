@@ -1,7 +1,7 @@
 ! Title: Frellwit's Swedish Filter
-! Last updated: Fri, 11 Jul 2025 03:14:37 +0000
+! Last updated: Sat, 12 Jul 2025 02:31:24 +0000
 ! Expires: 5 days
-! Diff-Path: patches/2025.7.11.194.patch#swefilter
+! Diff-Path: patches/2025.7.12.151.patch#swefilter
 ! Diff-Expires: 24 hours
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
@@ -484,6 +484,8 @@ esportnytt.se###text-2
 esportsacademy.se###preloader
 espressomedia.se##div[id^="espre-"], .category-native
 espressomedia.se##.penci-block-vc:has([href*="casino"])
+espressomedia.se##.penci-heading-slider:has-text(Annonsreportage)
+espressomedia.se##.penci-heading-slider:has-text(Annonsreportage) + .penci-owl-carousel-slider
 etc.se##[data-controller="ad-container"], .bg-gradient-white
 etfmarknaden.se##.mvp-side-widget a[_blank\"]
 etn.se,uppsalanyheter.se,rotter.se,borskollen.se##.banneritem
@@ -1373,7 +1375,6 @@ svenskalag.se##.cookie-overlay, .overlay:empty
 svenskamagasinet.nu##legend:has-text(Annons)
 svenskamagasinet.nu##.et_pb_code_inner:has(.svm-target)
 svenskamagasinet.nu##.hip-popup, div[id^="svm-"], .et_pb_image a[target]:not([href*="svenskamagasinet.nu"]):not([href^="/"])
-svenskamassan.se##.cookie-law
 svenskanomader.se###ajax-loading-screen
 svenskarnaochinternet.se,internetstiftelsen.se###newsletter-sliding
 svenskelitfotboll.se##custom-ad, sponsors
@@ -1895,7 +1896,6 @@ zeromagazine.nu##div[id^="ads"]
 ##.node-sponsored-article:not(body):not(html)
 ##.nyhet_wrapper_annons:not(body):not(html)
 ##.o-grid__ad-column:not(body):not(html)
-##.penci-adsense-below-slider:not(body):not(html)
 ##.penci-infeed-fullwidth-ads:not(body):not(html)
 ##.plista_widget_outstream:not(body):not(html)
 ##.react-ad:not(body):not(html)
