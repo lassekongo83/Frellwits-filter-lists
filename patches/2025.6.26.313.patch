@@ -1,10 +1,10 @@
-diff name:swefilter lines:220 checksum:580c1106d0
+diff name:swefilter lines:242 checksum:5b554b3d26
 d2 1
 a2 1
-! Last updated: Tue, 15 Jul 2025 04:35:02 +0000
+! Last updated: Wed, 16 Jul 2025 02:56:19 +0000
 d4 1
 a4 1
-! Diff-Path: patches/2025.7.15.274.patch#swefilter
+! Diff-Path: patches/2025.7.16.176.patch#swefilter
 a15 1
 .io/tracking/widgets/$script
 d103 1
@@ -38,6 +38,7 @@ a590 1
 forum.robsoft.nu,svenskalag.se##.cookie-box
 a635 1
 frihetsnytt.se##.tdm_block_inline_image:has(a[target])
+d721 1
 a791 1
 ica.se,apotekhjartat.se,tele2.se###onetrust-consent-sdk
 d803 1
@@ -47,6 +48,11 @@ inputmag.se,ordfrontmagasin.se,milansverige.se##.oc_cb_wrapper
 d852 1
 a852 1
 karriarlakare.se,livinguppsala.se,battrestadsdel.se,butikstrender.se,forskning.se,vardfokus.se,varvat.se,smaspararguiden.se,sjostadsbladet.se,tidningenridsport.se,vinliv.se,raa.se,svenskfilmdatabas.se,hockeybladet.nu,frihetsnytt.se###cookie-law-info-bar
+d928 1
+a928 1
+lektionsbanken.se##.footer-newsletter
+a933 1
+lexbase.se##.consent-banner
 a990 1
 magasinetkonkret.se##.td_mod_wrap a[target]
 a1025 1
@@ -61,6 +67,9 @@ morotsliv.com##.et_bloom .et_bloom_flyin_center, a[href*="/?utm_medium=affiliate
 d1079 1
 a1079 1
 netdoktor.se,netdoktorpro.se##.article-list__item:has(.bam-ad-slot, .article-list__item__box--sponsored, b-a-d)
+d1120 1
+a1121 1
+nyheteridag.se,ledarsidorna.se##.teaser:has(a[href*="casino"])
 d1142 1
 a1142 1
 ordfrontmagasin.se##:is(.simple-image, .widget_media_image) a:not([href^="/"]):not([href*="ordfrontmagasin.se"])
@@ -89,6 +98,8 @@ d1366 1
 a1366 1
 svenskalag.se##.cookie-overlay, .overlay:empty
 d1370 1
+a1375 1
+svenskfilmdatabas.se##.wt-cli-cookie-bar-container
 a1393 1
 sv.bab.la##.promoBox
 a1469 1
@@ -98,6 +109,9 @@ a1501 1
 tvsporten.nu##div[class*="odds_container"], .sidebar a[target], .fixture-ad-wrapper, #tower-1
 a1508 1
 undertian.com###cookieNotification
+d1526 1
+a1526 1
+vackertvader.se,ledarsidorna.se,verkstadstidningen.se,svenskverkstad.se,macken.xyz##.cc-window
 a1531 1
 vardegrunden.se,lagboken.se##.cookie-notice
 a1591 1
@@ -121,6 +135,9 @@ a1993 1
 d2011 1
 a2011 1
 /analytics$domain=gbgfotboll.se|stff.se|svenskfotboll.se|di.se|etc.se|vackertvader.se|skogsforum.se|skolporten.se|sjf.se|se.azrhymes.com|alandsradio.ax|dagen.se|global.morningstar.com
+d2119 1
+a2119 1
+/cookieconsent$script,domain=lundagard.se|kiacarclub.se|svampguiden.com|bike.se|runnersworld.se|offside.org|racemagazine.se|tidningenskriva.se|bobattre.se|hyundaiforum.se|adventist.se|exempelmeningar.se|krogen.se|fiskesnack.com|sailguide.com|statist.se|sporthoj.com|svenskverkstad.se|kemisamfundet.se|knep.se
 d2125 1
 a2125 1
 /cookies-and-content-security-policy$script,domain=cannabisifokus.se|futsalmagasinet.se|sd.se|cora.se|tfkriminalvard.se|sportbilen.se|fisheco.se|sparadkrona.se
@@ -138,6 +155,9 @@ a2372 1
 d2378 1
 a2378 1
 /plugins/cookie-notice$script,domain=bildobubbla.se|zeromagazine.nu|sverigespringer.se|gasetten.se|sillyseason.se|gentlemannaguiden.com|matmalin.se|svensktidskrift.se|schack.se|kobe.se|tidningenproffs.se|jaktojagare.se|tobaksfakta.se|bebisvarlden.se|underbaraclaras.se|cykelframjandet.se|dalabygden.se|lansposten.se|sormlandsbygden.se|vaguiden.se|grandtech.se|bluff.se|svmf.se|rockbladet.se|globalbar.se|seniornet.se|gaming365.se|skellefteamedia.se|sillybladet.se|zlatanism.se|fotbollsnytt.nu|voov.nu|matochdrycker.se|drugnews.se|ladiesabroad.se|ninjateknik.com|reportrarutangranser.se|villatidningen.se|itgurun.se|aip.nu
+d2486 1
+a2486 1
+/plugins/webtoffee-cookie-consent$script,domain=ekonomifokus.se|hejauppsala.com
 d2533 1
 a2533 1
 /pum/*$domain=dagenslogistik.se|battrestadsdel.se|skaneplus.se|magasinetkonkret.se
@@ -164,6 +184,8 @@ a2817 1
 ||annons.dagen.se^
 a2827 1
 ||api.zmashsolutions.com/dialog/collect
+a2872 1
+||bredband.se/*/|$script
 d2887 1
 a2887 1
 ||cdn-cookieyes.com^$domain=lokalti.se|jarnvagar.nu|senses.se|temadagar.se|tekniknytt.se|nordigt.se|autonytt.se|kak.se|smhi.se|mis.se|universitetslararen.se|lakemedelsvarlden.se|samfalligheterna.se|husbilsplats.se|katerinamagasin.se|dagenslogistik.se|biostock.se|skellefteaworks.se|datormagazin.se|travnet.se|malarbok.nu|barn-filmer.se|matmenyer.se|sunnenytt.se|hockeynews.se|swe3.se|spelbloggen.se|trendenser.se|kattannonser.se|56kilo.se|horisontmagasin.se|automobilly.com|nordicmanufacturing.net|nationalekonomi.se|storynews.se|alltomhobby.se|upptackrattvik.se|alltomhusbilen.se|fnissfest.se|baraboras.se|oresundspotlight.com|maskinteknik.org|stadshem.se|bostadspolitik.se|marketmate.se|katrina.ax
