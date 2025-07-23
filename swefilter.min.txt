@@ -1,7 +1,7 @@
 ! Title: Frellwit's Swedish Filter
-! Last updated: Tue, 22 Jul 2025 02:31:05 +0000
+! Last updated: Wed, 23 Jul 2025 03:03:38 +0000
 ! Expires: 5 days
-! Diff-Path: patches/2025.7.22.151.patch#swefilter
+! Diff-Path: patches/2025.7.23.183.patch#swefilter
 ! Diff-Expires: 24 hours
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
@@ -571,8 +571,8 @@ fn.se###cookie
 fodertipset.se##.fodertipset-org-banner
 fof.se###CybotCookiebotDialog, #CybotCookiebotDialogBodyUnderlay
 fof.se##.mediaconnect-protected-content .Carousel:style(opacity:unset!important;)
-fof.se,elinstallatoren.se,spraktidningen.se,modernpsykologi.se,vvsforum.se##.mediaconnect-protected-content, .mediaconnect-protected-content--show:style(max-height: unset !important; overflow: unset !important;)
-fof.se,elinstallatoren.se,spraktidningen.se,modernpsykologi.se,vvsforum.se##.mediaconnect-protected-content::after:style(background: unset !important;)
+fof.se,elinstallatoren.se,vvsforum.se##.mediaconnect-protected-content, .mediaconnect-protected-content--show:style(max-height: unset !important; overflow: unset !important;)
+fof.se,elinstallatoren.se,vvsforum.se##.mediaconnect-protected-content::after:style(background: unset !important;)
 fokus.se##.sesamy-protected-content.active::after:style(background:unset!important;)
 fokus.se##.sesamy-protected-content:style(max-height:unset!important;overflow:unset!important;)
 folkofolk.se##div[class^="MuiDialog-root"]
@@ -966,7 +966,6 @@ ljudochbild.se##.thecontent, .entry-content:style(max-height: unset !important; 
 ljudochbild.se##.wp-caption:style(display:initial!important)
 ljudochbild.se##:is(div[class^="col-md"][style*="border-radius"], .maincol):has(a[href*="/advertorial"])
 ljungbysporten.se##section.widget_media_image, a[target="_blank"]:not([href*="ljungbysporten.se"])
-ljuskultur.se##body.private:remove-class(private)
 ljuskultur.se,aapl.se,inredningsarkitektur.se,inblick.se,forfattarforbundet.se##.cookies
 ljuskultur.se,bettips.se,spelo.se,skogsaktuellt.se,entreprenadaktuellt.se,ja.se,husbilhusvagn.se,klassiker.nu,mopedgaraget.se,vibilagare.se,caroftheyear.se,automobil.se,endurobloggen.se,riksettan.net,frillesasbandy.se,dh.se,djungeltrumman.se,skik.se,omni.se,campingsverige.se,eniro.se,restaurangvarlden.se,naringslivetvgl.se,dalarnasaffarer.se,stockholmsaffarer.se,jamtlandsaffarer.se,hallandsnaringsliv.se,sjuharadsnaringsliv.se,nyheteridag.se,alekuriren.se,omniekonomi.se,sverigesindustri.se,onkologiisverige.se,svenskalag.se,borasweekly.se,hitta.se,sporttv.nu,bostadspolitik.se##.banner
 lokalfotboll.se###topbar, .really_simple_image_widget:empty
@@ -1051,7 +1050,7 @@ modernalivet.se##body.modal-active:style(overflow:unset!important)
 modernalivet.se##.excerpt:has-text(/annons/i):upward(article)
 modernalivet.se##.modal-wrap, .slide-in-box, span[data-title-next*="casino"] + .post-wrap
 modernalivet.se##.sidebar-widget h3:has-text(/annons/i):upward(.sidebar-widget)
-modernpsykologi.se##.ads-container
+modernpsykologi.se##div.sesamy-protected-content:remove-class(sesamy-protected-content)
 morotsliv.com##.et_bloom .et_bloom_flyin_center, a[href*="/?utm_medium=affiliate"], a.bigblue[target], a[href^="https://go.adt"]
 motivation.se##.card:has(.sponsored)
 motivation.se##.sponsored-item, [class*="banner"], .outsider
@@ -1443,6 +1442,7 @@ testfakta.se##.row-uppdragstest
 thatsup.se##+js(set, canShowAds, true)
 thelocal.se##html[data-smartbanner-original-margin-top]:style(margin-top:unset!important;)
 thelocal.se###articleBody > .ml-manual-widget-container:has(iframe[id^="offer"])
+thelocal.se###articleBody:style(display:unset!important;)
 thelocal.se##.ad-container-section, .article-sponsored, div[data-hasbanner="yes"], .thelocal-here-be-magic, #articleBody > .ml-manual-widget-container:empty, .article--commercial, .hp-new__article--commercial
 thelocal.se##.ra-widget-article-tag:has-text(/partner/i):upward(.ra-widget-panel)
 thepattayanewsse.com##a.td_single_image_bg:not([href*="thepattayanewsse.com"]), #tnp-modal, .desktop-contents
@@ -2432,7 +2432,7 @@ zeromagazine.nu##div[id^="ads"]
 /plugins/mailpoet/*$script,domain=~sameforeningen-stockholm.se
 /plugins/mashshare
 /plugins/material-admin/visitor-stats$script
-/plugins/mediaconnect$domain=fof.se|spraktidningen.se|elinstallatoren.se|modernpsykologi.se|vvsforum.se
+/plugins/mediaconnect$domain=fof.se|elinstallatoren.se|vvsforum.se
 /plugins/metro-affiliate
 /plugins/mitti-adform
 /plugins/ml-adverts
@@ -3486,11 +3486,11 @@ tv.nu##header + div[class]:has(a[href*="play.google.com"])
 ##div#mobileTopAd
 !#endif
 !#if !env_chromium
-alekuriren.se,rocknytt.net,upphandling24.se,datormagazin.se,villalivet.se,classicmotor.se,tidningenhalsa.se,husohem.se,guiden.se,nyadagbladet.se,enkelteknik.se,stoppapressarna.se,vadhanderisverige.se,passioneffect.se,livsmedelsnyheter.se,automation.se,verkstadstidningen.se##^script[id^="advanced-ads"]
-alekuriren.se,rocknytt.net,upphandling24.se,datormagazin.se,villalivet.se,classicmotor.se,tidningenhalsa.se,husohem.se,guiden.se,nyadagbladet.se,enkelteknik.se,vadhanderisverige.se,passioneffect.se,livsmedelsnyheter.se,automation.se,verkstadstidningen.se##^script[id^="advanced_ads"]
-alekuriren.se,rocknytt.net,upphandling24.se,datormagazin.se,villalivet.se,classicmotor.se,tidningenhalsa.se,husohem.se,guiden.se,nyadagbladet.se,enkelteknik.se,vadhanderisverige.se,passioneffect.se,livsmedelsnyheter.se,automation.se,verkstadstidningen.se##^script[id^="advads"]
-alekuriren.se,rocknytt.net,upphandling24.se,datormagazin.se,villalivet.se,polistidningen.se,densistavilan.se,classicmotor.se,tidningenhalsa.se,husohem.se,guiden.se,nyadagbladet.se,enkelteknik.se,vadhanderisverige.se,passioneffect.se,livsmedelsnyheter.se##^script:has-text(advanced_ads)
-alekuriren.se,rocknytt.net,upphandling24.se,datormagazin.se,villalivet.se,polistidningen.se,densistavilan.se,classicmotor.se,tidningenhalsa.se,husohem.se,guiden.se,nyadagbladet.se,enkelteknik.se,vadhanderisverige.se,passioneffect.se,livsmedelsnyheter.se##^script:has-text(advads)
+alekuriren.se,rocknytt.net,upphandling24.se,datormagazin.se,villalivet.se,classicmotor.se,tidningenhalsa.se,husohem.se,guiden.se,nyadagbladet.se,enkelteknik.se,stoppapressarna.se,vadhanderisverige.se,passioneffect.se,livsmedelsnyheter.se,automation.se,verkstadstidningen.se,modernpsykologi.se##^script[id^="advanced-ads"]
+alekuriren.se,rocknytt.net,upphandling24.se,datormagazin.se,villalivet.se,classicmotor.se,tidningenhalsa.se,husohem.se,guiden.se,nyadagbladet.se,enkelteknik.se,vadhanderisverige.se,passioneffect.se,livsmedelsnyheter.se,automation.se,verkstadstidningen.se,modernpsykologi.se,modernpsykologi.se##^script[id^="advanced_ads"]
+alekuriren.se,rocknytt.net,upphandling24.se,datormagazin.se,villalivet.se,classicmotor.se,tidningenhalsa.se,husohem.se,guiden.se,nyadagbladet.se,enkelteknik.se,vadhanderisverige.se,passioneffect.se,livsmedelsnyheter.se,automation.se,verkstadstidningen.se,modernpsykologi.se##^script[id^="advads"]
+alekuriren.se,rocknytt.net,upphandling24.se,datormagazin.se,villalivet.se,polistidningen.se,densistavilan.se,classicmotor.se,tidningenhalsa.se,husohem.se,guiden.se,nyadagbladet.se,enkelteknik.se,vadhanderisverige.se,passioneffect.se,livsmedelsnyheter.se,modernpsykologi.se##^script:has-text(advanced_ads)
+alekuriren.se,rocknytt.net,upphandling24.se,datormagazin.se,villalivet.se,polistidningen.se,densistavilan.se,classicmotor.se,tidningenhalsa.se,husohem.se,guiden.se,nyadagbladet.se,enkelteknik.se,vadhanderisverige.se,passioneffect.se,livsmedelsnyheter.se,modernpsykologi.se##^script:has-text(advads)
 stoppapressarna.se##^script[data-src*="advads"]
 temadagar.se,sanghafte.se,xn--gtboken-exa.se,ninjateknik.com##^script:has-text(__ez)
 di.se##^script:has-text(Di.initAds)

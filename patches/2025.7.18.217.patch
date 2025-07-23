@@ -1,10 +1,10 @@
-diff name:swefilter lines:62 checksum:a1c1e314f5
+diff name:swefilter lines:82 checksum:f33feb8bdf
 d2 1
 a2 1
-! Last updated: Tue, 22 Jul 2025 02:31:05 +0000
+! Last updated: Wed, 23 Jul 2025 03:03:38 +0000
 d4 1
 a4 1
-! Diff-Path: patches/2025.7.22.151.patch#swefilter
+! Diff-Path: patches/2025.7.23.183.patch#swefilter
 d131 1
 d148 1
 a148 1
@@ -20,6 +20,10 @@ digitalfotoforalla.se,iform.se,pctidningen.se,varldenshistoria.se,illvet.se##.te
 d515 1
 a520 1
 expressen.se,atl.nu,landlantbruk.se,land.se##video[autoplay]:remove-attr(autoplay)
+d575 2
+a576 2
+fof.se,elinstallatoren.se,vvsforum.se##.mediaconnect-protected-content, .mediaconnect-protected-content--show:style(max-height: unset !important; overflow: unset !important;)
+fof.se,elinstallatoren.se,vvsforum.se##.mediaconnect-protected-content::after:style(background: unset !important;)
 d721 1
 a721 1
 hd.se,sydsvenskan.se,allehanda.se,tidningenangermanland.se,arbetarbladet.se,avestatidning.com,bblat.se,dalademokraten.se,fagersta-posten.se,gd.se,lt.se,ltz.se,na.se,norrteljetidning.se,nynashamnsposten.se,op.se,salaallehanda.com,st.nu,tidningenharjedalen.se,vlt.se,falkopingstidning.se,jp.se,skaraborgslanstidning.se,skovdenyheter.se,smalandsdagblad.se,smalanningen.se,smt.se,tranastidning.se,vastgotabladet.se,vetlandaposten.se,vn.se,bandypuls.se,ljusdalsposten.se,ljusnan.se,soderhamnskuriren.se,ht.se,moratidning.se,borlangetidning.se,falukuriren.se,sodran.se,nyaludvikatidning.se,skd.se,nvp.se,nuiosteraker.se,hbl.fi,vastranyland.fi,bbl.fi,vaxjobladet.se,nsk.se,klt.nu,ystadsallehanda.se,trelleborgsallehanda.se,kristianstadsbladet.se,folkracepuls.se,barometern.se,blt.se,bt.se,olandsbladet.se,smp.se,sydostran.se,ut.se##a[class*="-native"], lcl-ad, .ad-welcome, .affiliate-links__container, .x-bonnier-news-links__container, .tapet-container, .shelf--panorama, .article__panorama, .article__outsider
@@ -31,10 +35,16 @@ d906 1
 d957 1
 a957 1
 livetsgoda.se##.penci-rlt-popup, a[href*="systembolaget.se"] img
+d972 1
 d1031 1
+d1058 1
+a1058 1
+modernpsykologi.se##div.sesamy-protected-content:remove-class(sesamy-protected-content)
 d1087 1
 a1087 1
 netdoktor.se,netdoktorpro.se##.article-list__item__link--sponsored, .ispanorama, #Popup, .ElementAdvertisement, #temporary-ad-take-over-container
+a1449 1
+thelocal.se###articleBody:style(display:unset!important;)
 d1478 1
 a1478 1
 tonyhatefnejad.se,lyckasmedbakning.nu,brl.se,naturnaraskogsbruk.se,folket.se##.preloader
@@ -45,6 +55,9 @@ a1998 1
 d2171 1
 a2171 1
 /eu-cookie-law$script,domain=matsaklart.se|lyckasmedbakning.nu
+d2437 1
+a2437 1
+/plugins/mediaconnect$domain=fof.se|elinstallatoren.se|vvsforum.se
 a2561 1
 /sentry-browser$domain=hd.se|sydsvenskan.se|allehanda.se|tidningenangermanland.se|arbetarbladet.se|avestatidning.com|bblat.se|dalademokraten.se|fagersta-posten.se|gd.se|lt.se|ltz.se|na.se|norrteljetidning.se|nynashamnsposten.se|op.se|salaallehanda.com|st.nu|tidningenharjedalen.se|vlt.se|falkopingstidning.se|jp.se|skaraborgslanstidning.se|skovdenyheter.se|smalandsdagblad.se|smalanningen.se|smt.se|tranastidning.se|vastgotabladet.se|vetlandaposten.se|vn.se|bandypuls.se|ljusdalsposten.se|ljusnan.se|soderhamnskuriren.se|ht.se|moratidning.se|borlangetidning.se|falukuriren.se|sodran.se|nyaludvikatidning.se|skd.se|nvp.se|nuiosteraker.se|hbl.fi|vastranyland.fi|bbl.fi|vaxjobladet.se|nsk.se|klt.nu|ystadsallehanda.se|trelleborgsallehanda.se|kristianstadsbladet.se|folkracepuls.se|barometern.se|blt.se|bt.se|olandsbladet.se|smp.se|sydostran.se|ut.se
 d2756 1
@@ -59,5 +72,12 @@ a3315 1
 d3418 1
 a3418 1
 ||usercentrics.eu^$domain=hemnet.se|kantarsifo.se|foretagarna.se|svenskhandel.se|gais.se|matpriskollen.se
+d3490 5
+a3494 5
+alekuriren.se,rocknytt.net,upphandling24.se,datormagazin.se,villalivet.se,classicmotor.se,tidningenhalsa.se,husohem.se,guiden.se,nyadagbladet.se,enkelteknik.se,stoppapressarna.se,vadhanderisverige.se,passioneffect.se,livsmedelsnyheter.se,automation.se,verkstadstidningen.se,modernpsykologi.se##^script[id^="advanced-ads"]
+alekuriren.se,rocknytt.net,upphandling24.se,datormagazin.se,villalivet.se,classicmotor.se,tidningenhalsa.se,husohem.se,guiden.se,nyadagbladet.se,enkelteknik.se,vadhanderisverige.se,passioneffect.se,livsmedelsnyheter.se,automation.se,verkstadstidningen.se,modernpsykologi.se,modernpsykologi.se##^script[id^="advanced_ads"]
+alekuriren.se,rocknytt.net,upphandling24.se,datormagazin.se,villalivet.se,classicmotor.se,tidningenhalsa.se,husohem.se,guiden.se,nyadagbladet.se,enkelteknik.se,vadhanderisverige.se,passioneffect.se,livsmedelsnyheter.se,automation.se,verkstadstidningen.se,modernpsykologi.se##^script[id^="advads"]
+alekuriren.se,rocknytt.net,upphandling24.se,datormagazin.se,villalivet.se,polistidningen.se,densistavilan.se,classicmotor.se,tidningenhalsa.se,husohem.se,guiden.se,nyadagbladet.se,enkelteknik.se,vadhanderisverige.se,passioneffect.se,livsmedelsnyheter.se,modernpsykologi.se##^script:has-text(advanced_ads)
+alekuriren.se,rocknytt.net,upphandling24.se,datormagazin.se,villalivet.se,polistidningen.se,densistavilan.se,classicmotor.se,tidningenhalsa.se,husohem.se,guiden.se,nyadagbladet.se,enkelteknik.se,vadhanderisverige.se,passioneffect.se,livsmedelsnyheter.se,modernpsykologi.se##^script:has-text(advads)
 a3504 1
 expressen.se##^script:has-text(seenthisTracking)
