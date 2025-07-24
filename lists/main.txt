@@ -1134,30 +1134,18 @@ Video-Ad-$media,3p
 ||pushnice.com^
 ||pushwhy.com^
 ||pheegoab.click^
-||look.utndln.com^$all
-||best-prizes-now.$all
+||look.utndln.com^$all,reason=Scams and/or badware
+||best-prizes-now.$all,reason=Scams and/or badware
 /www.swedbank-*/telegram$all
 ! Fake stores and scams. Information collected partly from reviews on trustpilot.
-||valentinosverige.com^
-||longchampstockholm.com.se^
-||alkemi.com.se^
-||footjoygolfskorrea.com.se^
-||gymshark-sweden.com.se^
-||alphalete.com.se^
-||championsverige.com.se^
-||dinbilgaranti.se^
-||rpofsweden.com^
-||rpofsweden.se^
-||digitaliseringsinitiativet.se^
-||toppmarkensverige.com^
-||fraagesport.com^
-||kyrkavgift.se^
+*$all,reason=🇸🇪 Falsk butik / 🇬🇧 Scam shop,domain=valentinosverige.com|longchampstockholm.com.se|alkemi.com.se|footjoygolfskorrea.com.se|gymshark-sweden.com.se|alphalete.com.se|championsverige.com.se|rpofsweden.com|rpofsweden.se
+*$all,reason=🇸🇪 Bedrägeri / 🇬🇧 Scam,domain=digitaliseringsinitiativet.se|toppmarkensverige.com|fraagesport.com|kyrkavgift.se|dinbilgaranti.se
 ! Warn users about suspicious websites starting with .com.se
 com.se,~www.com.se,~pagalnew.com.se##html::before:style(content: "OBS! VARNING! Om denna sida är en butik så är det förmodligen en bluffbutik. Detta är ett meddelande från den svenska listan i din annonsblockerare." !important; font-size: 18px !important; font-family: sans !important; background-color: red !important; color: white !important; padding: 6px !important; width: 100% !important; display: block !important; text-align: center !important;)
 ! https://www.fotosidan.se/forum/showthread.php?threadid=172681
-||s.arclk.net/tr?$all
+||s.arclk.net/tr?$all,reason=Scams - https://www.fotosidan.se/forum/showthread.php?threadid=172681
 ! https://www.svt.se/nyheter/konsument/biljettsajt-saljer-dyra-och-falska-biljetter
-||viagogo.se^
+||viagogo.se^$all,reason=🇸🇪 Säljer falska biljetter - https://www.svt.se/nyheter/konsument/biljettsajt-saljer-dyra-och-falska-biljetter / 🇬🇧 Selling fake tickets
 ! https://www.reddit.com/r/sweden/comments/at4l9e/bedragarna_börjar_bli_vassa/
 ||accesslnk.com^
 ||1terms.com^
@@ -1169,9 +1157,9 @@ com.se,~www.com.se,~pagalnew.com.se##html::before:style(content: "OBS! VARNING! 
 /aftonbladet/crypt/?lpkey$all
 /expressen/crypt/?lpkey$all
 ! Bedrägeri - https://www.reddit.com/r/sweden/comments/gqw43v/upplysning_om_jobbahemifrancom/ | https://se.trustpilot.com/review/www.mogenromantik.com
-*$all,domain=jobba-hemifran.com|mogenromantik.com|flirtmatch.se|distansarbete.com
+*$all,reason=🇸🇪 Bedrägeri / 🇬🇧 Scam,domain=jobba-hemifran.com|mogenromantik.com|flirtmatch.se|distansarbete.com
 ! https://www.reddit.com/r/sweden/comments/1ke3di4/vad_%C3%A4r_det_som_p%C3%A5g%C3%A5r/
-*$all,domain=rentia.se|rentler.se|bostad24.se|hyrio.se|rentify.se|bostadsportal.se|bostadslistan.se
+*$all,reason=🇸🇪 Bedrägeri / 🇬🇧 Scam,domain=rentia.se|rentler.se|bostad24.se|hyrio.se|rentify.se|bostadsportal.se|bostadslistan.se
 ! Suspicious connection to a very slow loading and random generated 3rd party script. Maybe hacked.
 *$3p,script,denyallow=gstatic.com,domain=karlskogavaxer.se|molndalvaxer.se
 
@@ -1602,6 +1590,9 @@ bytbil.com##.listpage-banner, .available-services
 bytbil.com##html,body:style(overflow:auto!important;)
 bytbil.com##.newcars-widget:has(a[href*="bit.ly"], a[href*="content-ad"])
 ! tv.nu
+/adsCountdown$domain=tv.nu
+/_glimr$domain=tv.nu
+||logger.tv.nu^
 ||sdkconfig.pulse.schibsted.io/js/config.json$xhr,redirect=noop.json,domain=tv.nu
 tv.nu##a[href*="adform.net"], .ad-fullscreenWallpaper__container
 tv.nu###tv-schedule section:has-text(ANNONS)
@@ -1619,6 +1610,7 @@ godare.se##div[style="min-height:350px"]:has(iframe[title="Annons"])
 godare.se##.godare-ad-element, a[href*="/brand-studio"], a[href*="/brandstudio"], .recipe-ad, a[href*="utm_campaign"][data-test-tag="external-link"]
 godare.se##:is(p[class^="teasersmall-sectionLabel"], p[class^="teasermedium-sectionLabel"]):has-text(/annons/i):upward(a.internal-link, li)
 prisjakt.nu##.pjra-relative, .outsider-ads, div[class^="AdPlacementWrapper"]
+||go.qasa.se^$ping
 qasa.se##body[data-scroll-locked="1"]:remove-attr(data-scroll-locked)
 qasa.se##div[data-state="open"]:empty
 qasa.se##+js(aeld, wheel)
