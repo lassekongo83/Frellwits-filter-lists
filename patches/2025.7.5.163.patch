@@ -1,10 +1,10 @@
-diff name:swefilter lines:241 checksum:07fbc0067e
+diff name:swefilter lines:278 checksum:c2c0a83261
 d2 1
 a2 1
-! Last updated: Wed, 23 Jul 2025 03:06:51 +0000
+! Last updated: Thu, 24 Jul 2025 05:07:00 +0000
 d4 1
 a4 1
-! Diff-Path: patches/2025.7.23.186.patch#swefilter
+! Diff-Path: patches/2025.7.24.306.patch#swefilter
 d104 1
 d130 1
 a130 1
@@ -144,8 +144,16 @@ xn--sporthnt-5za.se,filmextra.se##.wp-block-image:has(a[href*="betting"], a[href
 a1888 1
 ##.mobile_ad:not(body):not(html)
 d1892 1
+d1917 2
+a1918 4
+*$all,reason=🇸🇪 Bedrägeri / 🇬🇧 Scam,domain=digitaliseringsinitiativet.se|toppmarkensverige.com|fraagesport.com|kyrkavgift.se|dinbilgaranti.se
+*$all,reason=🇸🇪 Bedrägeri / 🇬🇧 Scam,domain=jobba-hemifran.com|mogenromantik.com|flirtmatch.se|distansarbete.com
+*$all,reason=🇸🇪 Bedrägeri / 🇬🇧 Scam,domain=rentia.se|rentler.se|bostad24.se|hyrio.se|rentify.se|bostadsportal.se|bostadslistan.se
+*$all,reason=🇸🇪 Falsk butik / 🇬🇧 Scam shop,domain=valentinosverige.com|longchampstockholm.com.se|alkemi.com.se|footjoygolfskorrea.com.se|gymshark-sweden.com.se|alphalete.com.se|championsverige.com.se|rpofsweden.com|rpofsweden.se
 a1941 1
 /GoogleAnalytics$domain=coop.se
+a1976 1
+/adsCountdown$domain=tv.nu
 a1991 1
 /ad-handler.js$domain=osterbottenstidning.fi|sydin.fi|vasabladet.fi
 a1992 1
@@ -183,6 +191,8 @@ a2551 1
 d2685 1
 a2685 1
 /wp-content/uploads/*banner$image,domain=marsta.nu|alltomhif.se|branschkoll.se|brollopsmagasinet.se|bussmagasinet.se|danstidningen.se|guldkanalen.se|ljuskultur.se|sportpanelen.se|turismnytt.se|opulens.se|tekniknytt.se|investerarbrevet.se|svensktidskrift.se|electronic.se|restaurangvarlden.se|finanstid.se|naringslivetvgl.se|dalarnasaffarer.se|stockholmsaffarer.se|jamtlandsaffarer.se|hallandsnaringsliv.se|sjuharadsnaringsliv.se|battregolf.se|svenskhistoria.se|arjeplognytt.se|bioenergitidningen.se|fisheco.se|autonytt.se|zeromagazine.nu|improveme.se|alekuriren.se|golfguidenonline.se|esportnytt.se|resesidan.se|svenskamagasinet.nu|surveyors.se|faravelsforbundet.se|travelandtourworld.se|samfalligheterna.se|macken.xyz|veterinarmagazinet.se|samtiden.nu
+a2735 1
+/_glimr$domain=tv.nu
 d2746 1
 a2746 1
 @@*$ghide,domain=atl.nu|landlantbruk.se|land.se|fodertipset.se|citattorget.se|citiboard.se|kritiker.se
@@ -190,13 +200,19 @@ d2756 1
 d2763 1
 a2769 1
 @@||v.fwmrm.net/ad/g/$xmlhttprequest,domain=tv4play.se|tv4.se|fotbollskanalen.se|koket.se|embed.viaplay.com
+d2799 1
+d2803 1
 a2810 1
 ||analytics.alandpost.com^
+d2849 1
+a2849 1
+||best-prizes-now.$all,reason=Scams and/or badware
 a2872 1
 ||bredband.se/*/|$script
 d2887 1
 a2887 1
 ||cdn-cookieyes.com^$domain=lokalti.se|jarnvagar.nu|senses.se|temadagar.se|tekniknytt.se|nordigt.se|autonytt.se|kak.se|smhi.se|mis.se|universitetslararen.se|lakemedelsvarlden.se|samfalligheterna.se|husbilsplats.se|katerinamagasin.se|dagenslogistik.se|biostock.se|skellefteaworks.se|datormagazin.se|travnet.se|malarbok.nu|barn-filmer.se|matmenyer.se|sunnenytt.se|hockeynews.se|swe3.se|spelbloggen.se|trendenser.se|kattannonser.se|56kilo.se|horisontmagasin.se|automobilly.com|nordicmanufacturing.net|nationalekonomi.se|storynews.se|alltomhobby.se|upptackrattvik.se|alltomhusbilen.se|fnissfest.se|baraboras.se|oresundspotlight.com|maskinteknik.org|stadshem.se|bostadspolitik.se|marketmate.se|katrina.ax
+d2903 1
 d2922 1
 a2922 1
 ||consentmanager.net^$domain=allastudier.se|gbgfotboll.se|stff.se|svenskfotboll.se|coop.se|dagens.se|prevent.se|utsidan.se|studentum.se|utbildning.se|vision.se|teksajten.se|thelocal.se
@@ -208,13 +224,27 @@ a2936 1
 ||cookielaw.org^$domain=tv4.se|fotbollskanalen.se|koket.se|flashscore.se|ikea.com|recept.se|manpower.se|natgeotv.com|internetkunskap.se|internetstiftelsen.se|yelp.se|spisa.nu|viaplayradio.se|svenskarnaochinternet.se|bredbandskollen.se|internetmuseum.se|internetdagarna.se|digitalalektioner.se|goto10.se|bab.la|tripadvisor.se|sydkusten.es|livetochdiabetes.se|voister.se|nok.se|motesplatsen.se|se.trustpilot.com|travronden.se|travrondenspel.se|jokersystemet.se|spelvarde.se|overodds.se|hammarbyfotboll.se|pricerunner.se|billetto.se|lidl.se|pwc.se|svenskafans.com|vinted.se|adecco.com
 a2943 1
 ||creativeconsortiuminspired.com^
+d2976 1
+d2978 1
+d3024 1
+d3028 1
+a3047 1
+||go.qasa.se^$ping
+d3053 1
 d3097 1
 a3097 1
 ||js.monitor.azure.com^$domain=akademiskahus.se|energi.se|skanetrafiken.se|forex.se|stenafastigheter.se|transportforetagen.se|lantmannen.se|stff.se|gbgfotboll.se|svenskfotboll.se|skk.se|objektvision.se|skogsindustrierna.se|svenskakyrkan.se|borsvarlden.com|travsport.se|gavletravet.se|supporterklubben.se|svenskttra.se|svensktvatten.se|apoteket.se|hyresgastforeningen.se|tmf.se|saco.se|pvforetagen.se|havet.nu|friluftsframjandet.se|icagruppen.se|akavia.se
-a3138 1
+d3119 1
+a3138 2
 ||load.lite.lchfarkivet.se^$script
+||logger.tv.nu^
+d3142 1
+d3145 1
+a3145 1
+||look.utndln.com^$all,reason=Scams and/or badware
 a3234 1
 ||premium.analys.cloud^$third-party
+d3281 2
 a3294 1
 ||scout.data.funkedigital.de/liteblower.js
 a3299 2
@@ -224,9 +254,16 @@ a3303 1
 ||se-aller-cdn.allersweden.allermedia.io^$script
 a3329 1
 ||stape.net^$third-party
+d3356 1
+a3356 1
+||s.arclk.net/tr?$all,reason=Scams - https://www.fotosidan.se/forum/showthread.php?threadid=172681
+d3366 1
 d3399 1
 a3399 1
 ||usercentrics.eu^$domain=hemnet.se|kantarsifo.se|foretagarna.se|svenskhandel.se|gais.se|matpriskollen.se
+d3401 2
+a3402 1
+||viagogo.se^$all,reason=🇸🇪 Säljer falska biljetter - https://www.svt.se/nyheter/konsument/biljettsajt-saljer-dyra-och-falska-biljetter / 🇬🇧 Selling fake tickets
 d3451 2
 a3452 2
 alekuriren.se,rocknytt.net,upphandling24.se,datormagazin.se,villalivet.se,polistidningen.se,densistavilan.se,classicmotor.se,tidningenhalsa.se,husohem.se,guiden.se,nyadagbladet.se,enkelteknik.se,vadhanderisverige.se,passioneffect.se,livsmedelsnyheter.se,modernpsykologi.se##+js(acs, advads)
