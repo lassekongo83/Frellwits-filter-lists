@@ -1138,30 +1138,27 @@ Video-Ad-$media,3p
 ||best-prizes-now.$all,reason=Scams and/or badware
 /www.swedbank-*/telegram$all
 ! Fake stores and scams. Information collected partly from reviews on trustpilot.
-*$all,reason=🇸🇪 Falsk butik / 🇬🇧 Scam shop,domain=valentinosverige.com|longchampstockholm.com.se|alkemi.com.se|footjoygolfskorrea.com.se|gymshark-sweden.com.se|alphalete.com.se|championsverige.com.se|rpofsweden.com|rpofsweden.se
-*$all,reason=🇸🇪 Bedrägeri / 🇬🇧 Scam,domain=digitaliseringsinitiativet.se|toppmarkensverige.com|fraagesport.com|kyrkavgift.se|dinbilgaranti.se
+$all,reason=🇸🇪 Falsk butik / 🇬🇧 Scam shop,domain=valentinosverige.com|longchampstockholm.com.se|alkemi.com.se|footjoygolfskorrea.com.se|gymshark-sweden.com.se|alphalete.com.se|championsverige.com.se|rpofsweden.com|rpofsweden.se
+$all,reason=🇸🇪 Bedrägeri / 🇬🇧 Scam,domain=digitaliseringsinitiativet.se|toppmarkensverige.com|fraagesport.com|kyrkavgift.se|dinbilgaranti.se|accesslnk.com|1terms.com
 ! Warn users about suspicious websites starting with .com.se
 com.se,~www.com.se,~pagalnew.com.se##html::before:style(content: "OBS! VARNING! Om denna sida är en butik så är det förmodligen en bluffbutik. Detta är ett meddelande från den svenska listan i din annonsblockerare." !important; font-size: 18px !important; font-family: sans !important; background-color: red !important; color: white !important; padding: 6px !important; width: 100% !important; display: block !important; text-align: center !important;)
 ! https://www.fotosidan.se/forum/showthread.php?threadid=172681
 ||s.arclk.net/tr?$all,reason=Scams - https://www.fotosidan.se/forum/showthread.php?threadid=172681
 ! https://www.svt.se/nyheter/konsument/biljettsajt-saljer-dyra-och-falska-biljetter
 ||viagogo.se^$all,reason=🇸🇪 Säljer falska biljetter - https://www.svt.se/nyheter/konsument/biljettsajt-saljer-dyra-och-falska-biljetter / 🇬🇧 Selling fake tickets
-! https://www.reddit.com/r/sweden/comments/at4l9e/bedragarna_börjar_bli_vassa/
-||accesslnk.com^
-||1terms.com^
 ! https://www.sweclockers.com/forum/trad/1557277-swedbank-sms-scam-eller-akta
-||online.swedbank.se.swedd.$document
+||online.swedbank.se.swedd.$all,reason=🇸🇪 Bedrägeri / 🇬🇧 Scam
 ! https://www.reddit.com/r/sweden/comments/bxxyko/kan_man_på_något_sätt_anmäla_dessa_fejkade/
 ||aftonbladet.se.*.$document
 ! https://www.reddit.com/r/sweden/comments/dy8he2/förnuftiga_jävlar_har_skapat_en_fake_artikel_från/
 /aftonbladet/crypt/?lpkey$all
 /expressen/crypt/?lpkey$all
 ! Bedrägeri - https://www.reddit.com/r/sweden/comments/gqw43v/upplysning_om_jobbahemifrancom/ | https://se.trustpilot.com/review/www.mogenromantik.com
-*$all,reason=🇸🇪 Bedrägeri / 🇬🇧 Scam,domain=jobba-hemifran.com|mogenromantik.com|flirtmatch.se|distansarbete.com
+$all,reason=🇸🇪 Bedrägeri / 🇬🇧 Scam,domain=jobba-hemifran.com|mogenromantik.com|flirtmatch.se|distansarbete.com
 ! https://www.reddit.com/r/sweden/comments/1ke3di4/vad_%C3%A4r_det_som_p%C3%A5g%C3%A5r/
-*$all,reason=🇸🇪 Bedrägeri / 🇬🇧 Scam,domain=rentia.se|rentler.se|bostad24.se|hyrio.se|rentify.se|bostadsportal.se|bostadslistan.se
+$all,reason=🇸🇪 Bedrägeri / 🇬🇧 Scam,domain=rentia.se|rentler.se|bostad24.se|hyrio.se|rentify.se|bostadsportal.se|bostadslistan.se
 ! Suspicious connection to a very slow loading and random generated 3rd party script. Maybe hacked.
-*$3p,script,denyallow=gstatic.com,domain=karlskogavaxer.se|molndalvaxer.se
+$3p,script,denyallow=gstatic.com,domain=karlskogavaxer.se|molndalvaxer.se
 
 ! ==== SPECIFIC FILTERS ==== !
 
@@ -1817,7 +1814,7 @@ fria.nu,stockholmsfria.se##[class*="annonser"], #cboxOverlay, #cboxWrapper, a[hr
 fria.nu,stockholmsfria.se##.holidAds:upward(1)
 tidningenglobal.se,tidningensyre.se,landetsfria.nu,fempers.se##.revive-box, .paloma-ad
 hrnytt.se##article:has(.sponsored-article)
-hrsvepet.se,cfosvepet.se##.cookie-banner, .desktopbanner, .mobilbanner-section, #takeover-banner
+hrsvepet.se,cfosvepet.se##.cookie-banner, .desktopbanner, .mobilbanner-section, #takeover-banner, .top-banner-wrapper, .toppbanner-under-header
 hrsvepet.se,cfosvepet.se##:is(.recent-post-item, .w-dyn-item):has(a[href="#"]:not(.w-condition-invisible))
 hrsvepet.se,cfosvepet.se##body:style(overflow:unset!important; opacity:unset!important;)
 arbetaren.se##.text-sm:has-text(/annons/i):upward(.border-b, a[target])
@@ -3669,3 +3666,4 @@ alandpost.ax##span.opacity-35:empty
 alandpost.ax##button.bg-blue-500:has-text(/cookies/i):upward(.fixed.bottom-0)
 ||bredband.se/*/|$script
 allamassor.se##.tribe-events-before-html
+bilkoparguiden.nu##.puff:has(.sponsored)
