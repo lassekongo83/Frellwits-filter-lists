@@ -1,10 +1,10 @@
-diff name:swefilter lines:253 checksum:6c27360607
+diff name:swefilter lines:287 checksum:d9677f98a2
 d2 1
 a2 1
-! Last updated: Sun, 27 Jul 2025 03:46:03 +0000
+! Last updated: Mon, 28 Jul 2025 03:22:46 +0000
 d4 1
 a4 1
-! Diff-Path: patches/2025.7.27.226.patch#swefilter
+! Diff-Path: patches/2025.7.28.202.patch#swefilter
 d129 1
 a129 1
 aip.nu,funktionshinderpolitik.se,sjostadsbladet.se,fotbollsresultat.com,lansposten.se,dalabygden.se,sormlandsbygden.se,skaneplus.se,tradgardstrollet.se###cookie-notice
@@ -15,6 +15,10 @@ alandpost.ax##span.opacity-35:empty
 d146 1
 a146 1
 allamassor.se##.tribe-events-before-html
+a178 1
+ansposten.se,dalabygden.se,sormlandsbygden.se##.sgm-ad-articles-front-page-wrapper
+a191 1
+artnotes.se##.yui-popup-container-node
 a233 1
 bilkoparguiden.nu##.puff:has(.sponsored)
 d289 1
@@ -41,6 +45,10 @@ d571 2
 a572 2
 fof.se,elinstallatoren.se,vvsforum.se##.mediaconnect-protected-content, .mediaconnect-protected-content--show:style(max-height: unset !important; overflow: unset !important;)
 fof.se,elinstallatoren.se,vvsforum.se##.mediaconnect-protected-content::after:style(background: unset !important;)
+d580 2
+a581 2
+foretagsverige.se,forskningsverige.se,motorbibeln.se,hallbarhetsverige.se,tillvaxtsverige.se,grillbibeln.se,kampenmotcancer.se,folkhalsasverige.se,dinlivsstil.nu##.whitebox-container:has-text(/sponsra/i)
+foretagsverige.se,forskningsverige.se,motorbibeln.se,hallbarhetsverige.se,tillvaxtsverige.se,grillbibeln.se,kampenmotcancer.se,folkhalsasverige.se,dinlivsstil.nu##:is(div[class*="vicky-whitebox"], .vicky-category-label, .vicky-video-infobox-label, .vicky-post-headline-container__category__inner):has-text(/spons/i):upward(a, .carousel-caption, .featurette, article)
 a586 1
 forskoletidningen.se##div[id^="block-adrevive"]
 d597 1
@@ -53,6 +61,8 @@ d722 2
 d727 1
 a727 1
 helahisingen.se,sportsnews.se,xn--sporthnt-5za.se,stockholmblaljus.se,filmextra.se###af-preloader
+a768 1
+hojen.nu###sidebar .block.smaller:has(a[target="0"])
 d776 1
 a776 1
 hrsvepet.se,cfosvepet.se##.cookie-banner, .desktopbanner, .mobilbanner-section, #takeover-banner, .top-banner-wrapper, .toppbanner-under-header
@@ -102,6 +112,14 @@ ordfrontmagasin.se##:is(.simple-image, .widget_media_image) a:not([href^="/"]):n
 d1173 1
 a1173 1
 plastikoperationsforum.se,riksettan.net,automobil.se,endurobloggen.se,mopedgaraget.se,caroftheyear.se,so-rummet.se,skatter.se,arkivet.ax###sliding-popup
+a1174 1
+plural.nu##div[style="min-height:300px;text-align:center"]
+a1178 1
+pokerforum.nu##.ipsBox:has(div[onclick="changeSubTab(\"casino\")"])
+d1182 1
+a1182 2
+pressbladet.se,svenskpress.se,foretagsbladet.se,gestrikemagasinet.se,cfanytt.se,lasarnas.se,hembostad.nu,sportidrott.se,nojesmagasinet.nu,halsasverige.se,mandarinmedia.se,svenskmusik.nu,reklamedia.se,motormagasinet.nu,konstmagasinet.nu,allpressen.se,seniorpressen.se##.isax
+pressbladet.se,svenskpress.se,foretagsbladet.se,gestrikemagasinet.se,cfanytt.se,lasarnas.se,hembostad.nu,sportidrott.se,nojesmagasinet.nu,halsasverige.se,mandarinmedia.se,svenskmusik.nu,reklamedia.se,motormagasinet.nu,konstmagasinet.nu,allpressen.se,seniorpressen.se,biblioteksbladet.se###cookiebar
 d1271 1
 a1277 1
 sjostadsbladet.se##.td-excerpt:has-text(/casino|spelbolag|spelande|betting/i):upward(.td-cpt-post)
@@ -122,8 +140,13 @@ a1533 1
 vackertvader.se,ledarsidorna.se,verkstadstidningen.se,svenskverkstad.se,macken.xyz##.cc-window
 a1538 1
 vardegrunden.se,lagboken.se##.cookie-notice
+d1570 1
+a1570 1
+vilarare.se,tidningenridsport.se,sulkysport.se##.adcontainer
 a1621 1
 xn--sporthnt-5za.se,filmextra.se##.wp-block-image:has(a[href*="betting"], a[href*="casino"], a[href*="x3000"], a[href*="paf.se"])
+a1693 1
+##div#adv_rightColumn
 d1896 1
 a1918 6
 $3p,script,denyallow=gstatic.com,domain=karlskogavaxer.se|molndalvaxer.se
@@ -139,6 +162,12 @@ a1996 1
 /ad-handler.js$domain=osterbottenstidning.fi|sydin.fi|vasabladet.fi
 a1997 1
 /ad-slider.js$domain=samtiden.nu
+d2053 1
+a2053 1
+/async-gdpr$domain=matochpyssel.nu|artnotes.se
+d2056 1
+a2056 1
+/atomic-blocks$script,domain=foretagsverige.se|forskningsverige.se|motorbibeln.se|hallbarhetsverige.se|tillvaxtsverige.se|grillbibeln.se|kampenmotcancer.se|folkhalsasverige.se|dinlivsstil.nu
 d2123 1
 a2123 1
 /cookieconsent$script,domain=lundagard.se|kiacarclub.se|svampguiden.com|bike.se|runnersworld.se|offside.org|racemagazine.se|tidningenskriva.se|bobattre.se|hyundaiforum.se|adventist.se|exempelmeningar.se|krogen.se|fiskesnack.com|sailguide.com|statist.se|sporthoj.com|svenskverkstad.se|kemisamfundet.se|knep.se
@@ -187,6 +216,8 @@ d2805 1
 d2809 1
 a2816 1
 ||analytics.alandpost.com^
+a2821 1
+||annonser.snoap.no^$third-party
 d2855 1
 a2855 1
 ||best-prizes-now.$all,reason=Scams and/or badware
@@ -220,6 +251,9 @@ d3211 1
 a3211 1
 ||online.swedbank.se.swedd.$all,reason=🇸🇪 Bedrägeri / 🇬🇧 Scam
 d3224 1
+d3248 1
+a3248 1
+||privacy-center.org^$domain=180.se|agriaffaires.se|truckscorner.se|machineryzone.se|stegforhalsa.se|netdoktor.se|netdoktorpro.se|news55.se|hastnet.se|dagensps.se|realtid.se|newsner.com|humorbibeln.se|sportbibeln.se|ettgottskratt.se|matbibeln.se|djurbibeln.se|nojeslivet.se|booli.se|dh.se|fotbolltransfers.com|foretagsverige.se|forskningsverige.se|motorbibeln.se|hallbarhetsverige.se|tillvaxtsverige.se|grillbibeln.se|kampenmotcancer.se|folkhalsasverige.se|dinlivsstil.nu
 d3258 1
 d3260 1
 d3290 2
