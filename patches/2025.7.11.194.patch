@@ -1,10 +1,10 @@
-diff name:swefilter lines:286 checksum:bd50484886
+diff name:swefilter lines:298 checksum:b1cbe8055a
 d2 1
 a2 1
-! Last updated: Tue, 29 Jul 2025 03:25:10 +0000
+! Last updated: Wed, 30 Jul 2025 03:14:07 +0000
 d4 1
 a4 1
-! Diff-Path: patches/2025.7.29.205.patch#swefilter
+! Diff-Path: patches/2025.7.30.194.patch#swefilter
 d129 1
 a129 1
 aip.nu,funktionshinderpolitik.se,sjostadsbladet.se,fotbollsresultat.com,lansposten.se,dalabygden.se,sormlandsbygden.se,skaneplus.se,tradgardstrollet.se###cookie-notice
@@ -54,6 +54,9 @@ foretagsverige.se,forskningsverige.se,motorbibeln.se,hallbarhetsverige.se,tillva
 d598 1
 a598 1
 fotbolldirekt.se,innebandymagazinet.se,padeldirekt.se,formeldirekt.se##.Odds_Widget_Ad, .c-partners, div[class*="_panorama"], div[class*="_insider"], .LiveWrapped-mobile_in_article, div[class*="LiveWrapped-desktop"]
+a690 2
+gratis.se##.article-summary:has(a[href*="casino"])
+gratis.se##.article-summary:has-text(/spelmarknad|casino/i)
 d717 1
 a717 1
 hd.se,sydsvenskan.se,allehanda.se,tidningenangermanland.se,arbetarbladet.se,avestatidning.com,bblat.se,dalademokraten.se,fagersta-posten.se,gd.se,lt.se,ltz.se,na.se,norrteljetidning.se,nynashamnsposten.se,op.se,salaallehanda.com,st.nu,tidningenharjedalen.se,vlt.se,falkopingstidning.se,jp.se,skaraborgslanstidning.se,skovdenyheter.se,smalandsdagblad.se,smalanningen.se,smt.se,tranastidning.se,vastgotabladet.se,vetlandaposten.se,vn.se,bandypuls.se,ljusdalsposten.se,ljusnan.se,soderhamnskuriren.se,ht.se,moratidning.se,borlangetidning.se,falukuriren.se,sodran.se,nyaludvikatidning.se,skd.se,nvp.se,nuiosteraker.se,hbl.fi,vastranyland.fi,bbl.fi,vaxjobladet.se,nsk.se,klt.nu,ystadsallehanda.se,trelleborgsallehanda.se,kristianstadsbladet.se,folkracepuls.se,barometern.se,blt.se,bt.se,olandsbladet.se,smp.se,sydostran.se,ut.se##a[class*="-native"], lcl-ad, .ad-welcome, .affiliate-links__container, .x-bonnier-news-links__container, .tapet-container, .shelf--panorama, .article__panorama, .article__outsider
@@ -224,6 +227,8 @@ d2895 1
 a2895 1
 ||cdn-cookieyes.com^$domain=lokalti.se|jarnvagar.nu|senses.se|temadagar.se|tekniknytt.se|nordigt.se|autonytt.se|kak.se|smhi.se|mis.se|universitetslararen.se|lakemedelsvarlden.se|samfalligheterna.se|husbilsplats.se|katerinamagasin.se|dagenslogistik.se|biostock.se|skellefteaworks.se|datormagazin.se|travnet.se|malarbok.nu|barn-filmer.se|matmenyer.se|sunnenytt.se|hockeynews.se|swe3.se|spelbloggen.se|trendenser.se|kattannonser.se|56kilo.se|horisontmagasin.se|automobilly.com|nordicmanufacturing.net|nationalekonomi.se|storynews.se|alltomhobby.se|upptackrattvik.se|alltomhusbilen.se|fnissfest.se|baraboras.se|oresundspotlight.com|maskinteknik.org|stadshem.se|bostadspolitik.se|marketmate.se|katrina.ax|real.se
 d2911 1
+a2931 1
+||consent.trustarc.com^$domain=alltomibd.se
 d2985 1
 d2987 1
 a3009 1
@@ -235,6 +240,8 @@ a3056 1
 d3062 1
 a3067 1
 ||hasher.schibsted.com^
+a3074 1
+||hq.volomedia.com^$domain=gratis.se
 d3089 1
 a3089 1
 ||inmobi.com^$domain=alltomelbil.se|rikatillsammans.se|travelnews.se|varldenshaftigaste.se|merinfo.se|foreca.se|laget.se|byrum.se|sportlovin.se|receptfavoriter.se|forni.se|cornucopia.se|tittapavideon.se|motormagasinet.se|food-supply.se|dagenshandel.se|plastnet.se|habit.se|woodnet.se|foodnet.se|transportnet.se|processnet.se|packnet.se|verkstaderna.se|medtechmagazine.se|recyclingnet.se|rt-forum.se|uochd.se|lifesciencesweden.se|fri-kopenskap.se|cleannet.se|metal-supply.se|fashionnet.se|framtidensbygg.se|entreprenad.com|mykitchenstories.se|cancelculture.se|findit.se|foretagande.se|affarsvarlden.se|branschaktuellt.se|nordic.ign.com|fragbite.se|lindasbakskola.se|jennysmatblogg.nu|filippoon.se|niiinis.se|eniro.se|vackertvader.se|klendr.se|zeinaskitchen.se|frillesasbandy.se|skik.se|marketmate.se|svartgul.se|langd.se|babyhjalp.se|skyttesport.se|flashback.org|nyadagbladet.se|enkelteknik.se|alltomnorrtalje.se|sporttv.nu|nyteknik.se|lag-avtal.se|arbetarskydd.se|leta.se|poddtoppen.se|antidoping.se|garaget.org|ordparken.se|undertian.com|samnytt.se|motivation.se|nouw.com|sweclockers.com|fz.se|elevspel.se|helenalyth.se
@@ -246,6 +253,9 @@ a3148 1
 ||logger.tv.nu^
 d3152 1
 d3154 2
+d3211 1
+a3211 1
+||onesignal.com^$domain=samnytt.se|battrestadsdel.se|beernews.se|ungdomsfotboll.se|rabattsok.se|1x2.se|cannabis.se|dackavisen.se|driva-eget.se|skogsaktuellt.se|entreprenadaktuellt.se|ja.se|newsner.com|humorbibeln.se|sportbibeln.se|matbibeln.se|ettgottskratt.se|djurbibeln.se|nojeslivet.se|finanstid.se|fokus.se|gasetten.se|fotbollsthlm.se|macken.xyz|naringslivetvgl.se|dalarnasaffarer.se|stockholmsaffarer.se|jamtlandsaffarer.se|hallandsnaringsliv.se|sjuharadsnaringsliv.se|netflixguiden.se|nyadagbladet.se|oskarshamns-nytt.se|swebbtv.se|vaken.se|aktieskolan.se|fastighetsvarlden.se|mcparken.se|gaffa.se|alltomnorrtalje.se|morotsliv.com|it-finans.se|it-halsa.se|it-kanalen.se|it-pedagogen.se|it-retail.se|skaneplus.se|mittforetag.com|studeravidare.se|thephuketexpress.se|ibnytt.se|garaget.org|marketmate.se|rakapuckar.com|svegot.se|thepattayanewsse.com|svenskgolf.se|cafe.se|praktisktbatagande.se|classicmotor.se|vagabond.se
 d3213 1
 a3213 1
 ||online.swedbank.se.swedd.$all,reason=🇸🇪 Bedrägeri / 🇬🇧 Scam
@@ -257,6 +267,8 @@ d3260 1
 d3262 1
 d3292 2
 d3296 1
+a3307 1
+||script.unseald.com/antenna
 a3311 2
 ||seenthis.co^$third-party
 ||seenthis.io^$third-party
