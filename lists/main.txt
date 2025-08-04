@@ -473,7 +473,6 @@ Video-Ad-$media,3p
 ##a[onclick*="artikelbanner"]
 ##a[onclick*="AdRotatePro"]
 ##a[title="LeoVegas"]
-##a.adv-link
 ##a.card.-sponsored
 ##a.is-native-ad
 ##a.Teaser[data-content-item-category="Annons"]
@@ -658,6 +657,7 @@ Video-Ad-$media,3p
 ##.annons_mitten:not(body):not(html)
 ##.annons_panorama:not(body):not(html)
 ##.annonseArticle:not(body):not(html)
+##.annonssegmenthead:not(body):not(html)
 ##.bannerclick:not(body):not(html)
 ##.b-ad__wrapper:not(body):not(html)
 ##.c-ad__floating:not(body):not(html)
@@ -687,6 +687,8 @@ Video-Ad-$media,3p
 ##.favethemes-content-ad-inline:not(body):not(html)
 ##.favethemes-content-ad-top:not(body):not(html)
 ##.footer-ad-wrap:not(body):not(html)
+##.footerannons:not(body):not(html)
+##.headerannons:not(body):not(html)
 ##.layerAdContainer:not(body):not(html)
 ##.lazyb.panorama
 ##.leeads-advert:not(body):not(html)
@@ -701,6 +703,7 @@ Video-Ad-$media,3p
 ##.react-ad:not(body):not(html)
 ##.revive-ad-container:not(body):not(html)
 ##.rmss_main-ad:not(body):not(html)
+##.sidebarannonsseg:not(body):not(html)
 ##.sponsorBanner:not(body):not(html)
 ##.sponsrad-artikel:not(body):not(html)
 ##.sw-popular__article--ad:not(body):not(html)
@@ -1290,7 +1293,7 @@ elle.se,expressen.se##+js(href-sanitizer, a[href*="/click"], ?url)
 ||privacy-center.org^$domain=180.se|agriaffaires.se|truckscorner.se|machineryzone.se|stegforhalsa.se|netdoktor.se|netdoktorpro.se|news55.se|hastnet.se|dagensps.se|realtid.se|newsner.com|humorbibeln.se|sportbibeln.se|ettgottskratt.se|matbibeln.se|djurbibeln.se|nojeslivet.se|booli.se|dh.se|fotbolltransfers.com|foretagsverige.se|forskningsverige.se|motorbibeln.se|hallbarhetsverige.se|tillvaxtsverige.se|grillbibeln.se|kampenmotcancer.se|folkhalsasverige.se|dinlivsstil.nu
 ||privacypolicies.com^$domain=fl-net.se
 ||cmp.bonniernews.se^$domain=kpwebben.se
-||cdn-cookieyes.com^$domain=lokalti.se|jarnvagar.nu|senses.se|temadagar.se|tekniknytt.se|nordigt.se|autonytt.se|kak.se|smhi.se|mis.se|universitetslararen.se|lakemedelsvarlden.se|samfalligheterna.se|husbilsplats.se|katerinamagasin.se|dagenslogistik.se|biostock.se|skellefteaworks.se|datormagazin.se|travnet.se|malarbok.nu|barn-filmer.se|matmenyer.se|sunnenytt.se|hockeynews.se|swe3.se|spelbloggen.se|trendenser.se|kattannonser.se|56kilo.se|horisontmagasin.se|automobilly.com|nordicmanufacturing.net|nationalekonomi.se|storynews.se|alltomhobby.se|upptackrattvik.se|alltomhusbilen.se|fnissfest.se|baraboras.se|oresundspotlight.com|maskinteknik.org|stadshem.se|bostadspolitik.se|marketmate.se|katrina.ax|real.se|jagvillhabostad.nu
+||cdn-cookieyes.com^$domain=lokalti.se|jarnvagar.nu|senses.se|temadagar.se|tekniknytt.se|nordigt.se|autonytt.se|kak.se|smhi.se|mis.se|universitetslararen.se|lakemedelsvarlden.se|samfalligheterna.se|husbilsplats.se|katerinamagasin.se|dagenslogistik.se|biostock.se|skellefteaworks.se|datormagazin.se|travnet.se|malarbok.nu|barn-filmer.se|matmenyer.se|sunnenytt.se|hockeynews.se|swe3.se|spelbloggen.se|trendenser.se|kattannonser.se|56kilo.se|horisontmagasin.se|automobilly.com|nordicmanufacturing.net|nationalekonomi.se|storynews.se|alltomhobby.se|upptackrattvik.se|alltomhusbilen.se|fnissfest.se|baraboras.se|oresundspotlight.com|maskinteknik.org|stadshem.se|bostadspolitik.se|marketmate.se|katrina.ax|real.se|jagvillhabostad.nu|sttf.org|byggteknik.org|forestindustry.org
 ||gravito.net^$domain=hitta.se|gp.se|bohuslaningen.se|stromstadstidning.se|markposten.se|harrydaposten.se|partilletidning.se|sttidningen.se|molndalsposten.se|kungalvsposten.se|kungsbackaposten.se|alingsastidning.se|ttela.se|hallandsposten.se|hn.se|mellerudsnyheter.se|moviezine.se
 ||consentmanager.net^$domain=allastudier.se|gbgfotboll.se|stff.se|svenskfotboll.se|coop.se|dagens.se|prevent.se|utsidan.se|studentum.se|utbildning.se|vision.se|teksajten.se|thelocal.se
 ||gatekeeperconsent.com^$domain=hemmanytt.se|wernamaten.se|sanghafte.se|xn--gtboken-exa.se|ninjateknik.com
@@ -3470,7 +3473,6 @@ industritorget.se###pnlCookie, .campaign-top, .campaigns-right
 webbkameror.se###cookiescript_injected
 driva-eget.se##.sponsored_content
 driva-eget.se##:is(.articles-swiper-item, .article-content, .articles-masonry-item):has(.bgcolor-ad-card)
-handelsnytt.com##.headerannons, .sidebarannonsseg, .footerannons
 grandtech.se##aside#secondary:has(.adsbygoogle)
 tlnt.se##div[id^="ad-block"]
 tlnt.se##h2.elementor-heading-title:has-text(/annons/i):upward(.e-con-boxed[data-settings^="{\"background"])
@@ -3573,7 +3575,6 @@ landskronadirekt.com###companies-slider, #ads-nyhetsbanner
 skogsindustrierna.se###cookieOverlay
 /tarteaucitron.js$domain=sv.geneanet.org
 livsmedelsnyheter.se##div[class*="elementor-widget-text-editor"][data-widget_type="text-editor.default"] > .elementor-widget-container > p:has-text(SPONSRAT):upward(.jet-listing-grid__items)
-automobilly.com,nordicmanufacturing.net##.headerannons, .sidebarannonsseg, .footerannons
 konsten.net##div[id^="konst-"]
 globalportalen.org##.card__advertisment, .ays-survey-popup-survey-window
 /eaModule.js$domain=aktavara.org
@@ -3641,7 +3642,6 @@ proletaren.se##.brxe-div:empty
 saltvattensguiden.se##li a img
 ordklasser.se###coltre li:has(a[target])
 mallorcanyheter.com##section[data-settings*="element_pack_wrapper"]:has(.a-single)
-maskinteknik.org##.annonssegmenthead, .sidebarannonsseg, .footerannons
 maskinteknik.org###headroom > .hstat:has(.annonssegmenthead)
 maskinteknik.org###headroom:style(min-height:unset!important;)
 vinborsen.se##.cdk-overlay-container
