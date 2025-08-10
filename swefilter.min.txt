@@ -1,7 +1,7 @@
 ! Title: Frellwit's Swedish Filter
-! Last updated: Sat, 09 Aug 2025 03:34:04 +0000
+! Last updated: Sun, 10 Aug 2025 02:55:52 +0000
 ! Expires: 5 days
-! Diff-Path: patches/2025.8.9.214.patch#swefilter
+! Diff-Path: patches/2025.8.10.175.patch#swefilter
 ! Diff-Expires: 24 hours
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
@@ -180,6 +180,7 @@ altinget.se##a[href^="/sponsrade"]
 amelia.expressen.se##article p.uppercase.tracking-wide:has-text(Inlägget innehåller annonslänkar):upward(article)
 amelia.expressen.se##.max-w-\[980px\]:has(.slick-slider a[target="_blank"])
 analytics$domain=corren.se|folkbladet.se|mvt.se|nt.se|vt.se|vimmerbytidning.se|kuriren.nu|nsd.se|norran.se|pt.se|ekuriren.se|strengnastidning.se|kkuriren.se|sn.se|eposten.se|unt.se|helagotland.se|fastighetsvarlden.se
+annonsbanner$image,domain=kiacarclub.se
 arbetaren.se##.text-sm:has-text(/annons/i):upward(.border-b, a[target])
 arbetet.se##.Container:not(.ContentItem-content):has([data-controller="ad"])
 arbetet.se##.Teaser--native, .o-native, [data-controller="ad"], div[id^="consent-"]
@@ -559,7 +560,8 @@ fiskesnack.com##.axd-widget, #widget_314
 flamman.se###scrollup
 flashback.org###top-banner-container, #top-banner-wrapper
 flashback.org##+js(nostif, #top-banner-container)
-flashscore.se##.boxOverContent--a, .otPlaceholder, .seoAdWrapper, .adsbackground-wrapper, .prematchOddsBonus__bonus, .prematchLink[target], .detailLeaderboardSkeleton
+flashscore.se##span[class^="wcl-overline"] div:has-text(Annons):upward(article[class^="wcl-article"])
+flashscore.se##.boxOverContent--a, .otPlaceholder, .seoAdWrapper, .adsbackground-wrapper, .prematchOddsBonus__bonus, .prematchLink[target], .detailLeaderboardSkeleton, .ui-media__placeholder:empty
 flm.nu##.spons
 flygtorget.se##.CookieConsent
 flygtorget.se##header > div.mx-auto:has(img[alt$="ad logo"])
@@ -894,7 +896,7 @@ konsumentmagasinet.se##.pricerunner, #Conzent, .conzent-modal, .price-part
 kristendate.se##div[id^="adv"], #site-right-col-wrapper a[target] img
 kritiker.se##div.recad, div.adhor, div.stickyad
 kritiker.se##iframe[allow]:remove-attr(allow)
-kritiker.se,bio-link.se,web-tools.se##+js(prevent-xhr, adsbygoogle)
+kritiker.se##+js(prevent-xhr, adsbygoogle)
 krogen.se##a.article-link:has-text(Annons:):upward(.sp-article-content)
 krogen.se##div.mark:matches-css(after, content: "ANNONS")
 krogen.se##.newsletter-notice-container
@@ -1512,7 +1514,7 @@ tv4play.se,tv4.se,fotbollskanalen.se,koket.se,embed.viaplay.com##+js(xml-prune, 
 tv4.se,skippo.se,koket.se##.maxetise
 tv24.se##li[id^="infeed"], div.presented-by
 tvmatchen.nu##.bet365, .panorama-wrapper, .tvg-manager-box, .tv102945, .tv102987, #event_banner, .go-to-partner, .odds, #text-13, .left-skyscraper-wrapper, .right-skyscraper-wrapper, .sticky-top-wrapper
-tvsporten.nu##div[class*="odds_container"], .sidebar a[target], .fixture-ad-wrapper, #tower-1
+tvsporten.nu##div[class*="odds_container"], .sidebar a[target], .fixture-ad-wrapper, #tower-1, div[class*="-ads"]
 tv.nu##a[href*="adform.net"], .ad-fullscreenWallpaper__container
 tv.nu##body.takeover-loading:remove-class(takeover-loading)
 tv.nu###modal div[itemtype][itemscope] > div[class]:has(a[href*="doubleclick"])
