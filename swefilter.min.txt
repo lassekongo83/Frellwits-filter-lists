@@ -1,7 +1,7 @@
 ! Title: Frellwit's Swedish Filter
-! Last updated: Mon, 11 Aug 2025 03:26:37 +0000
+! Last updated: Mon, 11 Aug 2025 10:28:50 +0000
 ! Expires: 5 days
-! Diff-Path: patches/2025.8.11.206.patch#swefilter
+! Diff-Path: patches/2025.8.11.628.patch#swefilter
 ! Diff-Expires: 24 hours
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
@@ -84,7 +84,7 @@
 .se/*/gillkom?$xmlhttprequest
 .se/*/nativeadvertising/
 .se/*/postkoll?$xmlhttprequest
-.se/*/|$script,domain=bredband.se|stick.se
+.se/*/|$script,domain=stick.se|bredband.se|telepriskollen.se|kontantkort.se|simkort.se
 .se/_Banners/
 ~continente.pt##a[href*="utm_content=banner"] img
 7an.se##.field--name-field-ad-banner-image
@@ -287,8 +287,8 @@ branschstegen.se##.container:has(a[href*="casino"])
 branschstegen.se##[class*="sponsored"], #watcherPop, .modal-backdrop
 breakit.se##div[class^="LivewrappedContainer_root"]
 breakit.se##:is(section[class*="Article_layout"], article):has(div[class*="Sponsored"])
-bredband.se##.wcc-overlay, .wcc-consent-container
-bredband.se##.wcc-popup-overflow:style(overflow:unset!important;)
+bredband.se,telepriskollen.se,kontantkort.se,simkort.se##.wcc-overlay, .wcc-consent-container
+bredband.se,telepriskollen.se,kontantkort.se,simkort.se##.wcc-popup-overflow:style(overflow:unset!important;)
 brollopsguiden.se##div[class^="cookie-banner"]:upward(div[data-portal="true"])
 brukshunden.se##.cm-ad
 bukefalos.se,thaisnack.se,rollspel.nu,husbilsklubben.se,friaordet.org,xn--lnforum-exa.se,ihusbil.se,ham.se##.u-bottomFixer

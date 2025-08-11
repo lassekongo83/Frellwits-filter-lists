@@ -1,10 +1,13 @@
-diff name:swefilter lines:30 checksum:dd01ddedf9
+diff name:swefilter lines:37 checksum:c9fa400a4c
 d2 1
 a2 1
-! Last updated: Mon, 11 Aug 2025 03:26:37 +0000
+! Last updated: Mon, 11 Aug 2025 10:28:50 +0000
 d4 1
 a4 1
-! Diff-Path: patches/2025.8.11.206.patch#swefilter
+! Diff-Path: patches/2025.8.11.628.patch#swefilter
+d87 1
+a87 1
+.se/*/|$script,domain=stick.se|bredband.se|telepriskollen.se|kontantkort.se|simkort.se
 a182 1
 annonsbanner$image,domain=kiacarclub.se
 d269 1
@@ -12,6 +15,10 @@ a269 1
 borskollen.se##.cell.rp, .promobox, .app-store-box, div[id^="borskollen_desktop"]
 a272 1
 borsvarlden.com##.big-block.article:has(img[alt="ANNONS" i])
+d288 2
+a289 2
+bredband.se,telepriskollen.se,kontantkort.se,simkort.se##.wcc-overlay, .wcc-consent-container
+bredband.se,telepriskollen.se,kontantkort.se,simkort.se##.wcc-popup-overflow:style(overflow:unset!important;)
 d562 1
 a562 2
 flashscore.se##span[class^="wcl-overline"] div:has-text(Annons):upward(article[class^="wcl-article"])
