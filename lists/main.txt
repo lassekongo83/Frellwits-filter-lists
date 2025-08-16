@@ -1275,6 +1275,7 @@ aftonbladet.se,godare.se,byggahus.se,expressen.se,elle.se,femina.se,svenskdam.se
 elle.se,expressen.se##+js(href-sanitizer, a[href*="/click"], ?url)
 ! First party GTM
 .se/*/|$script,domain=stick.se|bredband.se|telepriskollen.se|kontantkort.se|simkort.se
+||prisjakt.nu/*/|$script
 
 ! -- Specific annoyances and bloat
 /addtoany$domain=sjf.se
@@ -1298,7 +1299,7 @@ elle.se,expressen.se##+js(href-sanitizer, a[href*="/click"], ?url)
 ||consentframework.com^$domain=luleahockeyforum.com
 ||evidon.com^$third-party,domain=fasting.nu
 ||onetrust.com^$third-party,domain=lantmannen.se
-||privacy-mgmt.com^$domain=radio.se|dagenstv.com|kolla.tv|computersweden.se|woxikon.se|dagen.se|filmtopp.se|gaffa.se|handbollskanalen.se|spisa.nu|tv24.se|homeq.se
+||privacy-mgmt.com^$domain=radio.se|dagenstv.com|kolla.tv|computersweden.se|woxikon.se|dagen.se|filmtopp.se|gaffa.se|handbollskanalen.se|spisa.nu|tv24.se|homeq.se|prisjakt.nu
 ||privacy-center.org^$domain=180.se|agriaffaires.se|truckscorner.se|machineryzone.se|stegforhalsa.se|netdoktor.se|netdoktorpro.se|news55.se|hastnet.se|dagensps.se|realtid.se|newsner.com|humorbibeln.se|sportbibeln.se|ettgottskratt.se|matbibeln.se|djurbibeln.se|nojeslivet.se|booli.se|dh.se|fotbolltransfers.com|foretagsverige.se|forskningsverige.se|motorbibeln.se|hallbarhetsverige.se|tillvaxtsverige.se|grillbibeln.se|kampenmotcancer.se|folkhalsasverige.se|dinlivsstil.nu
 ||privacypolicies.com^$domain=fl-net.se
 ||cmp.bonniernews.se^$domain=kpwebben.se
@@ -3630,7 +3631,7 @@ kandisvarlden.com##.unselectable:style(-moz-user-select:unset!important; -webkit
 kandisvarlden.com##html:style(-webkit-touch-callout:unset!important; -webkit-user-select:unset!important; -khtml-user-select:unset!important; -moz-user-select:unset!important; -ms-user-select:unset!important; user-select:unset!important; -webkit-tap-highlight-color:unset!important;)
 kandisvarlden.com##body[unselectable]:remove-attr(unselectable)
 ||signals.tt.se/collect
-pricerunner.se##p[class^="pr-"]:has-text(Sponsrat):upward(div[class$="Container-root"])
+pricerunner.se##div[class$="ProductList-grid"] > div[class^="pr-"]:has(a[href*="/gotostore"][target="_blank"])
 pricerunner.se##span[class^="pr-"]:has-text(ANNONS):upward(a)
 /GoogleAnalytics$domain=coop.se
 coop.se##:is(a[href="/butiker-erbjudanden/"], a[href^="/handla"]):has(source[srcset*="annons"], img[alt*="Annons"])
