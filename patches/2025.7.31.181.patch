@@ -1,10 +1,10 @@
-diff name:swefilter lines:229 checksum:4ea13f6e52
+diff name:swefilter lines:245 checksum:55b02a6ab3
 d2 1
 a2 1
-! Last updated: Sat, 16 Aug 2025 03:24:15 +0000
+! Last updated: Sun, 17 Aug 2025 03:52:23 +0000
 d4 1
 a4 1
-! Diff-Path: patches/2025.8.16.204.patch#swefilter
+! Diff-Path: patches/2025.8.17.232.patch#swefilter
 a86 1
 .se/*/|$script,domain=stick.se|bredband.se|telepriskollen.se|kontantkort.se|simkort.se
 d129 1
@@ -58,6 +58,10 @@ d583 2
 d599 1
 a599 1
 fotbolldirekt.se,innebandymagazinet.se,padeldirekt.se,formeldirekt.se##.Odds_Widget_Ad, .c-partners, div[class*="_panorama"], div[class*="_insider"], .LiveWrapped-mobile_in_article, div[class*="LiveWrapped-desktop"], .endast-desktop, .endast-mobil
+a625 1
+fragbite.se##.forumObject div[id*="viralize"]:remove()
+a626 1
+fragbite.se##.module:has(a[href*="casino"])
 d668 1
 a668 1
 gamereactor.se,hitta.se,voff-voff.se##a[rel="sponsored"]
@@ -91,6 +95,11 @@ maskinisten.net##.randomads-footer, .ads-footer-icon
 d1013 1
 a1013 1
 massasport.se##.post:has(a[href*="spelbolag"], a[href*="casino"], a[href*="spelplattform"])
+d1047 1
+a1047 1
+mobil.se,kamerabild.se##a[href*="/partner"], iframe[name^="PJWidget"], .google-ad
+a1099 1
+nordichardware.se##.td-block-title:has-text(/sponsrat/i):upward(.td_block_wrap)
 d1165 2
 d1184 1
 a1184 1
@@ -110,6 +119,8 @@ sportpanelen.se,sportnyheter.nu,sporthalsa.se,sport24.nu##.textwidget:has(a[href
 d1341 1
 a1341 1
 sportsnews.se,xn--sporthnt-5za.se,killsteal.se,samnytt.se,samnytt.nu,obsid.se,senses.se,teknologiexperten.se,sverige.nu,enterprisemagazine.se,haboportalen.se,bike.se,xn--lgenhet-5wa.nu,samtiden.nu##a[href*="casino"]
+a1343 1
+sporttv.nu##.text-center:has(.banner_tag)
 a1364 1
 svenskaevenemang.com##td[width="130"]:has(a[href*="annons"])
 a1400 1
@@ -119,8 +130,9 @@ tidningenmikroskop.se##.widget_block:has(a[href^="https://addrevenue.io"])
 d1479 1
 a1479 1
 tonyhatefnejad.se,lyckasmedbakning.nu,brl.se,naturnaraskogsbruk.se,folket.se,signalnoi.se,livet.se##.preloader
-d1510 1
-a1510 1
+d1509 2
+a1510 2
+tvmatchen.nu##.bet365, .panorama-wrapper, .tvg-manager-box, .tv102945, .tv102987, #event_banner, .go-to-partner, .odds, #text-13, .left-skyscraper-wrapper, .right-skyscraper-wrapper, .sticky-top-wrapper, div[class*="-ads"]
 tvsporten.nu##div[class*="odds_container"], .sidebar a[target], .fixture-ad-wrapper, #tower-1, div[class*="-ads"]
 a1529 1
 utkiken.net##.friends-module
@@ -174,6 +186,8 @@ a2139 1
 d2176 1
 a2176 1
 /eu-cookie-law$script,domain=matsaklart.se|lyckasmedbakning.nu|dikko.nu
+a2178 1
+/event-odds-banner$domain=tvmatchen.nu
 a2181 1
 /exp-analytics$domain=expressen.se
 a2207 1
@@ -192,6 +206,8 @@ a2538 1
 /privacy-consent$domain=utkiken.net
 a2683 1
 /web-stats$domain=softonic.se
+a2786 1
+_banner.php?$domain=tvmatchen.nu
 d2841 1
 a2843 1
 ||app.nocodelytics.com^$third-party
