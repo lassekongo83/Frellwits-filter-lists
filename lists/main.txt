@@ -2002,13 +2002,14 @@ fz.se,fssweden.se##+js(set, adblock, false)
 sweclockers.com###prisjakt-popular, .ad:not(.adPanorama), .adForumSticker, .dark-mode__sponsor
 sweclockers.com##div[class^="card-info"]:has-text(/spons/i):upward(.card)
 sweclockers.com##.bbSize:has-text(Sponsormeddelande):upward(.bbRelatedBox)
-mobil.se,kamerabild.se##a[href*="/partner"], iframe[name^="PJWidget"]
+mobil.se,kamerabild.se##a[href*="/partner"], iframe[name^="PJWidget"], .google-ad
 mobil.se,kamerabild.se##article:has(a[href*="/partner"], a[href*="casino"])
 mobil.se,kamerabild.se##.markupbox:has(a[href*="casino"], .holidAds)
 nordichardware.se##.pspy_info, [class^="prisjakt-"]
 nordichardware.se##:is(.td-big-grid-post, .td_block_inner):has(a[href*="/sponsrat/"], a[href$="/sponsor/"])
 nordichardware.se##.su-label:has-text(/sponsra/i):upward(.wpb_text_column, .td_block_text_with_title)
 nordichardware.se##.td-excerpt:has-text(/sponsra/i):upward(.meta-info-container)
+nordichardware.se##.td-block-title:has-text(/sponsrat/i):upward(.td_block_wrap)
 surfa.se##div[class*="-promo"], div[class*="prisjakt-"], .td-banner-wrap-full
 fuska.se##.alert-success
 ||analytics.teknikveckan.se^
@@ -2054,6 +2055,8 @@ voister.se##div[class*="articles_campaign"]:upward(.col-sm-12)
 fragbite.se##.tn, .zooKeeper, #scraper, .subHeadSponsors
 fragbite.se##.category:has-text(/spons/i):upward(article)
 fragbite.se##.messageHolder ~ div[id*="viralize"][class*="brand-showheroes"]:remove()
+fragbite.se##.module:has(a[href*="casino"])
+fragbite.se##.forumObject div[id*="viralize"]:remove()
 tekniknytt.se##.label:has-text(/samarbete|annons|reklam|presenteras av/i):upward(a)
 tekniknytt.se##:is(.article_widget_preview, .article_widget_listing):has(a[href*="casino"], a[href*="kasino"])
 tekniknytt.se##:is(.top-news, .big_article):has(img[src*="casino"], img[src*="surfeo"])
@@ -2099,13 +2102,16 @@ golfing.se##.c-partners__item
 /braze$domain=tvmatchen.nu
 /smartbanner$domain=tvmatchen.nu
 /splash-redirector$domain=tvmatchen.nu
-tvmatchen.nu##.bet365, .panorama-wrapper, .tvg-manager-box, .tv102945, .tv102987, #event_banner, .go-to-partner, .odds, #text-13, .left-skyscraper-wrapper, .right-skyscraper-wrapper, .sticky-top-wrapper
+/event-odds-banner$domain=tvmatchen.nu
+_banner.php?$domain=tvmatchen.nu
+tvmatchen.nu##.bet365, .panorama-wrapper, .tvg-manager-box, .tv102945, .tv102987, #event_banner, .go-to-partner, .odds, #text-13, .left-skyscraper-wrapper, .right-skyscraper-wrapper, .sticky-top-wrapper, div[class*="-ads"]
 /images/sponsor$domain=sporttv.nu
 /images/BetLogos$domain=sporttv.nu
 /js/partners$domain=sporttv.nu
 /images/banner$domain=sporttv.nu
 sporttv.nu##a[onclick*="bannerClick"], #linkus, .details-bet-banner
 sporttv.nu##.progams-list-xs .text-center:has(.banner):remove()
+sporttv.nu##.text-center:has(.banner_tag)
 sporttv.nu##.visible-xs:has(a[href*="betting"], a[href*="casino"])
 /partners?$domain=hockeynews.se
 ||hockeynews.se/images/sveacasino.jpg
