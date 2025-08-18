@@ -1,14 +1,17 @@
-diff name:swefilter lines:129 checksum:55b02a6ab3
+diff name:swefilter lines:150 checksum:99008c7496
 d2 1
 a2 1
-! Last updated: Sun, 17 Aug 2025 03:52:23 +0000
+! Last updated: Mon, 18 Aug 2025 03:11:52 +0000
 d4 1
 a4 1
-! Diff-Path: patches/2025.8.17.232.patch#swefilter
+! Diff-Path: patches/2025.8.18.191.patch#swefilter
 a86 1
 .se/*/|$script,domain=stick.se|bredband.se|telepriskollen.se|kontantkort.se|simkort.se
 a181 1
 annonsbanner$image,domain=kiacarclub.se
+d205 1
+a205 1
+autonytt.se##:is(.sidebar_content, .article_widget_preview):has(a[href*="casino"])
 d268 1
 a268 1
 borskollen.se##.cell.rp, .promobox, .app-store-box, div[id^="borskollen_desktop"]
@@ -25,6 +28,8 @@ flashscore.se##.boxOverContent--a, .otPlaceholder, .seoAdWrapper, .adsbackground
 d598 1
 a598 1
 fotbolldirekt.se,innebandymagazinet.se,padeldirekt.se,formeldirekt.se##.Odds_Widget_Ad, .c-partners, div[class*="_panorama"], div[class*="_insider"], .LiveWrapped-mobile_in_article, div[class*="LiveWrapped-desktop"], .endast-desktop, .endast-mobil
+a621 1
+fotosidan.se##.subArticle:has(.sponsored-wrapper)
 a624 1
 fragbite.se##.forumObject div[id*="viralize"]:remove()
 a625 1
@@ -34,6 +39,11 @@ a752 1
 hitta.se##a[data-trackimp][target], .hitta-map .integration-txt, .section-details--alb, [class*="dummyAd"], [class*="StyledAdSlot"], [data-bind*="Ad"], div[class^="GraphicAd_"], [class*="adContainer"], [id*="_panorama"], [id*="_skyscraper"], div[style="min-height: 250px;"], div[data-track="displayplacering-customer"], a[data-test="boostAdLink"], div[class^="style_bannerContainer"], [data-track="click-promotion-banner"], div[class*="adWrapper"], div[class*="hittaAdContainer"], div[class*="partnerBox"], a[class*="promotion"], div[class*="adsContainer"], a[rel*="sponsored"]
 a754 1
 hitta.se##.pointer-events-auto.items-center:has(div[id*="panorama"])
+d769 1
+a769 1
+hockeysverige.se##.Odds_Widget_Ad, div[class*="_panorama"], .category-sponsrade:not(body), div[class*="_in_article"], div[class*="desktop_sidebar"], div[class*="mobile_square"], figure a[target="_blank"] img, #seo-text-wrapper
+a844 1
+kampsportnews.se##.widget_media_image:has(a[href]:not([href^="/"]):not([href*="kampsportnews.se"]))
 d896 1
 a896 1
 kritiker.se##+js(prevent-xhr, adsbygoogle)
@@ -50,6 +60,8 @@ nordichardware.se##.td-block-title:has-text(/sponsrat/i):upward(.td_block_wrap)
 d1184 1
 a1184 1
 pricerunner.se##div[class$="ProductList-grid"] > div[class^="pr-"]:has(a[href*="/gotostore"][target="_blank"])
+a1226 1
+runnersworld.se##.content-wrapper > .container:has(.post-card-sponsored)
 a1238 1
 samnytt.se,samnytt.nu##.fixed.bottom-0:has(a[href$="/prenumerera"])
 a1241 1
@@ -65,6 +77,9 @@ a1342 1
 sportsnews.se,xn--sporthnt-5za.se,killsteal.se,samnytt.se,samnytt.nu,obsid.se,senses.se,teknologiexperten.se,sverige.nu,enterprisemagazine.se,haboportalen.se,bike.se,xn--lgenhet-5wa.nu,samtiden.nu##a[href*="casino"]
 a1344 1
 sporttv.nu##.text-center:has(.banner_tag)
+d1367 1
+a1368 1
+svenskafans.com##:is(.h-52, .h-40):has(iframe[srcdoc*="ad_div"])
 a1465 1
 tidningenmikroskop.se##.widget_block:has(a[href^="https://addrevenue.io"])
 d1482 1
@@ -91,6 +106,9 @@ a2190 1
 a2216 1
 /ga-$script,domain=expressen.se
 d2245 1
+d2263 1
+a2263 1
+/images/*casino$domain=festivalinfo.se|hockeynews.se
 d2284 1
 a2353 1
 /parsely$script,domain=expressen.se
@@ -100,6 +118,8 @@ a2397 1
 d2403 1
 a2403 1
 /plugins/cookie-notice$script,domain=bildobubbla.se|zeromagazine.nu|sverigespringer.se|gasetten.se|sillyseason.se|gentlemannaguiden.com|matmalin.se|svensktidskrift.se|schack.se|kobe.se|tidningenproffs.se|jaktojagare.se|tobaksfakta.se|bebisvarlden.se|underbaraclaras.se|cykelframjandet.se|dalabygden.se|lansposten.se|sormlandsbygden.se|vaguiden.se|grandtech.se|bluff.se|svmf.se|rockbladet.se|globalbar.se|seniornet.se|gaming365.se|skellefteamedia.se|sillybladet.se|zlatanism.se|fotbollsnytt.nu|voov.nu|matochdrycker.se|drugnews.se|ladiesabroad.se|ninjateknik.com|reportrarutangranser.se|villatidningen.se|itgurun.se|aip.nu|fotbollscuper.se|riktpunkt.nu|matnytt.com|serieframjandet.se|sportposten.se
+a2515 1
+/plugins/wpconsent-cookies-banner$script,domain=kampsportnews.se
 a2797 1
 _banner.php?$domain=tvmatchen.nu
 a2853 1
@@ -120,6 +140,7 @@ a3019 1
 ||engine.groweo.com^
 a3077 1
 ||guv*.eniro.com^
+d3090 1
 a3259 1
 ||prisjakt.nu/*/|$script
 d3263 1
