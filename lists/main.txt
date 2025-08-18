@@ -1182,6 +1182,7 @@ com.se,~www.com.se,~pagalnew.com.se##html::before:style(content: "OBS! VARNING! 
 /ads.js$domain=flashback.org|onkologiisverige.se|sjofartstidningen.se
 /publisher/asjs?$domain=bredband.se
 /ads$domain=allastudier.se|cirkulation.se|ordmedzcxy.se|se.azrhymes.com
+/images/*casino$domain=festivalinfo.se|hockeynews.se
 ||pji.nu^$third-party,~image,domain=minhembio.com|ljudochbild.se|gp.se|mobil.se|nordichardware.se|surfa.se
 ! Cosmetics
 byggahus.se,expressen.se,filmtopp.se,destination.se,spokbloggen.nu,folkhalsasverige.se,foretagsverige.se,forskningsverige.se,motorbibeln.se,hallbarhetsverige.se,tillvaxtsverige.se,grillbibeln.se,kampenmotcancer.se,bolagsfakta.se,affarsvarlden.se,affarerinorr.se,dinordbok.se,motorbranschen.mrf.se,rakapuckar.com##.ad-container
@@ -2114,7 +2115,6 @@ sporttv.nu##.progams-list-xs .text-center:has(.banner):remove()
 sporttv.nu##.text-center:has(.banner_tag)
 sporttv.nu##.visible-xs:has(a[href*="betting"], a[href*="casino"])
 /partners?$domain=hockeynews.se
-||hockeynews.se/images/sveacasino.jpg
 hockeynews.se##a[rel*="sponsored"]
 hockeynews.se##.items-center:has(a[target="_blank"])
 hockeynews.se##:is(.sticky, .hidden.lg\:block):has([id^="hockeynews_"])
@@ -2125,12 +2125,12 @@ hockeynews.se##:is(.min-h-\[200px\], .min-h-\[350px\], .min-h-\[245px\]):has([da
 hockeynews.se##html.overflow-hidden:style(overflow:unset!important;)
 hockeynews.se##a.bg-yellow\/30:has-text(/spons/i):upward(1)
 /sponsrade$xhr,domain=hockeysverige.se
-hockeysverige.se##.Odds_Widget_Ad, div[class*="_panorama"], .category-sponsrade:not(body), div[class*="_in_article"], div[class*="desktop_sidebar"], div[class*="mobile_square"], figure a[target="_blank"] img
+hockeysverige.se##.Odds_Widget_Ad, div[class*="_panorama"], .category-sponsrade:not(body), div[class*="_in_article"], div[class*="desktop_sidebar"], div[class*="mobile_square"], figure a[target="_blank"] img, #seo-text-wrapper
 hockeysverige.se##div[style*="min-height"]:has(.annons)
 svenskafans.com##.puff__ad-heading, ad-skyscraper__wrapper, iframe[title*="Bet 365"], iframe[srcdoc*="ad_div"]
 svenskafans.com##:is(.min-h-\[400px\], .min-h-96, .hidden.min-h-60):has(.ad-slot)
 svenskafans.com##:is(.min-h-80, .w-64.absolute):has(div[id^="svenskafans_"])
-svenskafans.com##.h-52:has(iframe[srcdoc*="ad_div"])
+svenskafans.com##:is(.h-52, .h-40):has(iframe[srcdoc*="ad_div"])
 sportlovin.se##div[style*="min-height"]:has(div[id^="sportlovin_"])
 ||www-kittad-se.filesusr.com^$frame
 kittad.se###header-top, div[data-hook="consent-banner-root"]
@@ -2142,18 +2142,20 @@ freeride.se##.mark:has-text(/spons/i):upward(.post)
 freeride.se##img[src*="/sponsor/"] + br + .boxlogo, .sidebar-front .boxen
 freeride.se##.visible-xs:has(a[href*="casino"])
 runnersworld.se##.post-card-sponsored, .modal-plus, .modal-backdrop
+runnersworld.se##.content-wrapper > .container:has(.post-card-sponsored)
 /ajax/ads.php$domain=garaget.org
 garaget.org##.gorgad, .gorgad-footer-wrap
 garaget.org##.gorg-content-side .mt-3:has(a[href*="casino"])
 autonytt.se###main > .col-links
 autonytt.se##.label:has-text(/sponsrad/i):upward(a)
-autonytt.se##.sidebar_content:has(a[href*="casino"])
+autonytt.se##:is(.sidebar_content, .article_widget_preview):has(a[href*="casino"])
 bilsport.se##fl-gdpr, fl-panorama-top, fl-newsletter-popup, fl-ad, div[id^="takeover"]
 bilsport.se##.includingFeaturedSliderArticle:has(.native-mark)
 -samarbete$image,domain=hockeyettan.se
 hockeyettan.se##.club-ad-item, .banner-row
 ||obj.fotosidan.se/obj/pa/$image
 fotosidan.se##.subArticlesponsored, div[style="width:300px;float:right;"], div[style="float:right;width:300px;"], #partner-box, .adbox-label, .banner-panorama-wmn
+fotosidan.se##.subArticle:has(.sponsored-wrapper)
 fotosidan.se##+js(aeld, contextmenu, , showCopyrightBox)
 /ping$domain=kimura.se
 kimura.se##a[href*="unibet.com"], a[href*="/kampanjer."], a[href*="utm_campaign"], div[class^="yw-"], a[data-wpel-link="external"][target="_blank"]
@@ -2187,6 +2189,7 @@ bandyfeber.com##article:has(a[href*="/annons-"])
 bandyfeber.com##.slide-entry-excerpt:has-text(/annons:/i):upward(.avia-content-slider)
 fightermag.se##a[href*="/sponsra"], #partners
 fightermag.se##article:has(a[href*="betting"], a[href*="casino"], a[href*="kasino"], a[href*="/gastskribent/"])
+kampsportnews.se##.widget_media_image:has(a[href]:not([href^="/"]):not([href*="kampsportnews.se"]))
 snowmobile.se##div[itemtype="https://schema.org/WPAdBlock"], .bs-wrap-gdpr-law
 ||svenskalag.se/img/sponsors
 ||sa.svenskalag.se/*/__tm.gif
@@ -2400,7 +2403,6 @@ spelochfilm.se##.mh-sidebar .textwidget
 filmtipset.se##.outer.noprint
 filmtipset.se##.container > div[style="padding:10px"]:has(a[href*="casino"])
 filmtipset.se##:is(img[src="../images/sponsrade.png"], a[href="https://stodlinjen.se/"]):upward(.row)
-/images/*casino$domain=festivalinfo.se
 festivalinfo.se##a[title*="Casino"], #top-content
 festivalinfo.se##.node-news:has(a[href*="casino"])
 filmtopp.se##.cooperation-banner__container, .takeover-desktop, .takeover-mobile, #discover-banner
@@ -2941,6 +2943,7 @@ aletorget.se,alingsastorget.se,almhulttorget.se,alvestatorget.se,amaltorget.se,a
 /plugins/machete/inc/cookies$script,domain=falskacitat.com
 /plugins/montania-cookies$script,domain=electronic.se
 /plugins/pressidium-cookie-consent$script,domain=undervarttak.se|radiotreby.se
+/plugins/wpconsent-cookies-banner$script,domain=kampsportnews.se
 /plugins/wp-plugin-cookie-consent$script,domain=vegomagasinet.se
 /plugins/conzent$script,domain=konsumentmagasinet.se
 /plugins/itc-consent-mode$script,domain=publicistklubben.se
