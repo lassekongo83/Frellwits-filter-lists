@@ -1,10 +1,10 @@
-diff name:swefilter lines:150 checksum:99008c7496
+diff name:swefilter lines:170 checksum:78d39cd7ca
 d2 1
 a2 1
-! Last updated: Mon, 18 Aug 2025 03:11:52 +0000
+! Last updated: Tue, 19 Aug 2025 03:13:45 +0000
 d4 1
 a4 1
-! Diff-Path: patches/2025.8.18.191.patch#swefilter
+! Diff-Path: patches/2025.8.19.193.patch#swefilter
 a86 1
 .se/*/|$script,domain=stick.se|bredband.se|telepriskollen.se|kontantkort.se|simkort.se
 a181 1
@@ -57,6 +57,8 @@ a1049 1
 mobil.se,kamerabild.se##a[href*="/partner"], iframe[name^="PJWidget"], .google-ad
 a1101 1
 nordichardware.se##.td-block-title:has-text(/sponsrat/i):upward(.td_block_wrap)
+a1106 1
+norrortssporten.se##.vc_column_container:has(.td-adspot-title)
 d1184 1
 a1184 1
 pricerunner.se##div[class$="ProductList-grid"] > div[class^="pr-"]:has(a[href*="/gotostore"][target="_blank"])
@@ -92,6 +94,9 @@ tvsporten.nu##div[class*="odds_container"], .sidebar a[target], .fixture-ad-wrap
 d1545 1
 a1546 1
 vardegrunden.se,sportstravelnews.se###loader
+d1603 1
+a1603 1
+vm-fotboll.se##a[href*="/go/"][target], .category-kampanjer, div[id^="vm-fotboll_se"]
 d2031 1
 a2031 1
 /analytics$domain=gbgfotboll.se|stff.se|svenskfotboll.se|di.se|etc.se|vackertvader.se|skogsforum.se|skolporten.se|sjf.se|se.azrhymes.com|alandsradio.ax|dagen.se|global.morningstar.com|vidzflow.com
@@ -99,6 +104,11 @@ d2056 1
 d2113 4
 a2134 1
 /comscore$domain=expressen.se
+a2176 1
+/elasticsuite-tracker
+d2186 1
+a2186 1
+/eu_cookie_compliance$script,domain=industrinyheter.se|dagensnaringsliv.se|infrastrukturnyheter.se|sportochfritidsnyheter.se|inredningsnyheter.se|byggnyheter.se|dagensfastigheter.se|stockholmsbyggnyheter.se|energinyheter.se|vindkraftsnyheter.se|solenerginyheter.se|jarnvagsnyheter.se|transportochlogistik.se|metallerochgruvor.se|papperochmassa.se|miningmetalnews.com|visitskane.com|ergo.nu|ki.se|sxk.se|europaportalen.se|vibilagare.se
 a2187 1
 /event-odds-banner$domain=tvmatchen.nu
 a2190 1
@@ -110,6 +120,9 @@ d2263 1
 a2263 1
 /images/*casino$domain=festivalinfo.se|hockeynews.se
 d2284 1
+d2316 1
+a2316 1
+/mb-admanager.js
 a2353 1
 /parsely$script,domain=expressen.se
 d2397 1
@@ -118,8 +131,13 @@ a2397 1
 d2403 1
 a2403 1
 /plugins/cookie-notice$script,domain=bildobubbla.se|zeromagazine.nu|sverigespringer.se|gasetten.se|sillyseason.se|gentlemannaguiden.com|matmalin.se|svensktidskrift.se|schack.se|kobe.se|tidningenproffs.se|jaktojagare.se|tobaksfakta.se|bebisvarlden.se|underbaraclaras.se|cykelframjandet.se|dalabygden.se|lansposten.se|sormlandsbygden.se|vaguiden.se|grandtech.se|bluff.se|svmf.se|rockbladet.se|globalbar.se|seniornet.se|gaming365.se|skellefteamedia.se|sillybladet.se|zlatanism.se|fotbollsnytt.nu|voov.nu|matochdrycker.se|drugnews.se|ladiesabroad.se|ninjateknik.com|reportrarutangranser.se|villatidningen.se|itgurun.se|aip.nu|fotbollscuper.se|riktpunkt.nu|matnytt.com|serieframjandet.se|sportposten.se
+a2484 1
+/plugins/setupad/*
 a2515 1
 /plugins/wpconsent-cookies-banner$script,domain=kampsportnews.se
+d2721 1
+a2721 1
+/wp-content/uploads/*casino$image,domain=nyadagbladet.se|kulturbloggen.com|newsvoice.se|svenskhistoria.se|battrestadsdel.se|zeromagazine.nu|totallyorebro.se|totallystockholm.se|djungeltrumman.se|vaken.se|tekniknytt.se|kingsizemag.se|spelochfilm.se|macken.xyz|improveme.se|bandyfeber.com|stoppapressarna.se|sjostadsbladet.se|autonytt.se|hockeybladet.nu|tv-kanal.se|esportnytt.se|sillyseason.se|rakapuckar.com|norrortssporten.se
 a2797 1
 _banner.php?$domain=tvmatchen.nu
 a2853 1
@@ -141,6 +159,8 @@ a3019 1
 a3077 1
 ||guv*.eniro.com^
 d3090 1
+a3169 1
+||ls.dycdn.net^$third-party
 a3259 1
 ||prisjakt.nu/*/|$script
 d3263 1
