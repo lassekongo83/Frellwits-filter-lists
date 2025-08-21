@@ -1,24 +1,24 @@
-diff name:swefilter lines:195 checksum:9cdf4c0604
+diff name:swefilter lines:210 checksum:10db8142ae
 d2 1
 a2 1
-! Last updated: Wed, 20 Aug 2025 16:20:04 +0000
+! Last updated: Thu, 21 Aug 2025 03:13:49 +0000
 d4 1
 a4 1
-! Diff-Path: patches/2025.8.20.980.patch#swefilter
+! Diff-Path: patches/2025.8.21.193.patch#swefilter
 a86 1
 .se/*/|$script,domain=stick.se|bredband.se|telepriskollen.se|kontantkort.se|simkort.se
 d133 1
 a133 1
 aktiespararna.se,alekuriren.se,tidningen.se,kurera.se,vinbanken.se,utsidan.se##.native
 a181 2
-annonsbanner$image,domain=kiacarclub.se
+annonsbanner$image,domain=kiacarclub.se|hyundaiforum.se
 annons$image,domain=kiacarclub.se
 d205 1
 a205 1
 autonytt.se##:is(.sidebar_content, .article_widget_preview):has(a[href*="casino"])
 d217 1
 a217 1
-banner$image,domain=golfbladet.se|kiacarclub.se
+banner$image,domain=golfbladet.se|kiacarclub.se|hyundaiforum.se
 d268 1
 a268 1
 borskollen.se##.cell.rp, .promobox, .app-store-box, div[id^="borskollen_desktop"]
@@ -52,6 +52,9 @@ hitta.se##.pointer-events-auto.items-center:has(div[id*="panorama"])
 d769 1
 a769 1
 hockeysverige.se##.Odds_Widget_Ad, div[class*="_panorama"], .category-sponsrade:not(body), div[class*="_in_article"], div[class*="desktop_sidebar"], div[class*="mobile_square"], figure a[target="_blank"] img, #seo-text-wrapper
+d790 1
+a790 1
+hyundaiforum.se##.sidebar-block:has(.adsbygoogle, a[title*="Annons"])
 a844 1
 kampsportnews.se##.widget_media_image:has(a[href]:not([href^="/"]):not([href*="kampsportnews.se"]))
 d896 1
@@ -72,6 +75,9 @@ norrortssporten.se##.vc_column_container:has(.td-adspot-title)
 d1184 1
 a1184 1
 pricerunner.se##div[class$="ProductList-grid"] > div[class^="pr-"]:has(a[href*="/gotostore"][target="_blank"])
+d1209 1
+a1209 1
+radio.se##:is(.md\:min-h-\[90px\], .lg\:min-h-\[250px\], .h-\[250px\], .md\:h-\[250px\], .justify-between.md\:mx-10, .items-center):has(div[id^="RAD_D"], div[id^="RAD_M"], .super-reklame-header-holder)
 a1215 2
 receptguiden.com##.h-48:has(.adsbygoogle)
 receptskatt.se###overlay, .modal-wrapper
@@ -96,6 +102,7 @@ sporttv.nu##.text-center:has(.banner_tag)
 d1367 1
 a1368 1
 svenskafans.com##:is(.h-52, .h-40):has(iframe[srcdoc*="ad_div"])
+d1371 1
 a1465 1
 tidningenmikroskop.se##.widget_block:has(a[href^="https://addrevenue.io"])
 d1482 1
@@ -120,6 +127,7 @@ d2056 1
 d2113 4
 a2134 1
 /comscore$domain=expressen.se
+d2144 1
 a2176 1
 /elasticsuite-tracker
 d2186 1
@@ -155,6 +163,8 @@ a2484 1
 /plugins/setupad/*
 a2515 1
 /plugins/wpconsent-cookies-banner$script,domain=kampsportnews.se
+a2609 1
+/spelbolag-$xhr,domain=travnet.se
 d2721 1
 a2721 1
 /wp-content/uploads/*casino$image,domain=nyadagbladet.se|kulturbloggen.com|newsvoice.se|svenskhistoria.se|battrestadsdel.se|zeromagazine.nu|totallyorebro.se|totallystockholm.se|djungeltrumman.se|vaken.se|tekniknytt.se|kingsizemag.se|spelochfilm.se|macken.xyz|improveme.se|bandyfeber.com|stoppapressarna.se|sjostadsbladet.se|autonytt.se|hockeybladet.nu|tv-kanal.se|esportnytt.se|sillyseason.se|rakapuckar.com|norrortssporten.se
@@ -178,6 +188,8 @@ a2966 1
 ||cookie-script.com^$domain=axess.se|dagensjuridik.se|foodfolder.se|arkitektur.se|friluftsframjandet.se|bakasockerfritt.se|handelsradet.se|cirkulation.se|arkitekt.se|webb-tv.nu|eurocampings.se|transportforetagen.se|usabil.nu|timbro.se
 a3019 1
 ||engine.groweo.com^
+a3070 1
+||go.affiliationcloud.com^$third-party
 a3077 1
 ||guv*.eniro.com^
 d3090 1
@@ -192,5 +204,8 @@ d3355 1
 a3355 1
 ||static.fastcmp.com^$domain=lchfarkivet.se|stoppapressarna.se|alltomkungligt.se|lesscarbs.se|brinkenbakar.se|receptskatt.se
 d3369 1
+d3401 1
+a3401 1
+||travnet.se/till/$xhr
 a3510 1
 skargardsradion.se##^script[id^="real-cookie-banner"]

@@ -1,21 +1,23 @@
-diff name:swefilter lines:99 checksum:9cdf4c0604
+diff name:swefilter lines:116 checksum:10db8142ae
 d2 1
 a2 1
-! Last updated: Wed, 20 Aug 2025 16:20:04 +0000
+! Last updated: Thu, 21 Aug 2025 03:13:49 +0000
 d4 1
 a4 1
-! Diff-Path: patches/2025.8.20.980.patch#swefilter
+! Diff-Path: patches/2025.8.21.193.patch#swefilter
 d134 1
 a134 1
 aktiespararna.se,alekuriren.se,tidningen.se,kurera.se,vinbanken.se,utsidan.se##.native
-a183 1
+d183 1
+a183 2
+annonsbanner$image,domain=kiacarclub.se|hyundaiforum.se
 annons$image,domain=kiacarclub.se
 d207 1
 a207 1
 autonytt.se##:is(.sidebar_content, .article_widget_preview):has(a[href*="casino"])
 d219 1
 a219 1
-banner$image,domain=golfbladet.se|kiacarclub.se
+banner$image,domain=golfbladet.se|kiacarclub.se|hyundaiforum.se
 d462 3
 d626 1
 a626 2
@@ -28,6 +30,9 @@ fragbite.se##.module:has(a[href*="casino"])
 d774 1
 a774 1
 hockeysverige.se##.Odds_Widget_Ad, div[class*="_panorama"], .category-sponsrade:not(body), div[class*="_in_article"], div[class*="desktop_sidebar"], div[class*="mobile_square"], figure a[target="_blank"] img, #seo-text-wrapper
+d795 1
+a795 1
+hyundaiforum.se##.sidebar-block:has(.adsbygoogle, a[title*="Annons"])
 a849 1
 kampsportnews.se##.widget_media_image:has(a[href]:not([href^="/"]):not([href*="kampsportnews.se"]))
 d1055 1
@@ -40,6 +45,9 @@ norrortssporten.se##.vc_column_container:has(.td-adspot-title)
 d1190 1
 a1190 1
 pricerunner.se##div[class$="ProductList-grid"] > div[class^="pr-"]:has(a[href*="/gotostore"][target="_blank"])
+d1215 1
+a1215 1
+radio.se##:is(.md\:min-h-\[90px\], .lg\:min-h-\[250px\], .h-\[250px\], .md\:h-\[250px\], .justify-between.md\:mx-10, .items-center):has(div[id^="RAD_D"], div[id^="RAD_M"], .super-reklame-header-holder)
 a1221 2
 receptguiden.com##.h-48:has(.adsbygoogle)
 receptskatt.se###overlay, .modal-wrapper
@@ -51,6 +59,7 @@ sporttv.nu##.text-center:has(.banner_tag)
 d1375 1
 a1376 1
 svenskafans.com##:is(.h-52, .h-40):has(iframe[srcdoc*="ad_div"])
+d1379 1
 d1521 1
 a1521 1
 tvmatchen.nu##.bet365, .panorama-wrapper, .tvg-manager-box, .tv102945, .tv102987, #event_banner, .go-to-partner, .odds, #text-13, .left-skyscraper-wrapper, .right-skyscraper-wrapper, .sticky-top-wrapper, div[class*="-ads"]
@@ -59,6 +68,7 @@ d1612 1
 a1612 1
 vm-fotboll.se##a[href*="/go/"][target], .category-kampanjer, div[id^="vm-fotboll_se"]
 d1980 1
+d2149 1
 a2181 1
 /elasticsuite-tracker
 d2191 1
@@ -80,6 +90,8 @@ a2490 1
 /plugins/setupad/*
 a2521 1
 /plugins/wpconsent-cookies-banner$script,domain=kampsportnews.se
+a2615 1
+/spelbolag-$xhr,domain=travnet.se
 d2727 1
 a2727 1
 /wp-content/uploads/*casino$image,domain=nyadagbladet.se|kulturbloggen.com|newsvoice.se|svenskhistoria.se|battrestadsdel.se|zeromagazine.nu|totallyorebro.se|totallystockholm.se|djungeltrumman.se|vaken.se|tekniknytt.se|kingsizemag.se|spelochfilm.se|macken.xyz|improveme.se|bandyfeber.com|stoppapressarna.se|sjostadsbladet.se|autonytt.se|hockeybladet.nu|tv-kanal.se|esportnytt.se|sillyseason.se|rakapuckar.com|norrortssporten.se
@@ -87,6 +99,8 @@ a2803 1
 _banner.php?$domain=tvmatchen.nu
 a2841 1
 ||analytics.citreamedia.com^
+a3078 1
+||go.affiliationcloud.com^$third-party
 d3099 1
 a3178 1
 ||ls.dycdn.net^$third-party
@@ -98,3 +112,6 @@ a3272 1
 d3364 1
 a3364 1
 ||static.fastcmp.com^$domain=lchfarkivet.se|stoppapressarna.se|alltomkungligt.se|lesscarbs.se|brinkenbakar.se|receptskatt.se
+d3409 1
+a3409 1
+||travnet.se/till/$xhr
