@@ -1,10 +1,10 @@
-diff name:swefilter lines:218 checksum:b1da5e9fa9
+diff name:swefilter lines:247 checksum:94e38dfa8d
 d2 1
 a2 1
-! Last updated: Fri, 22 Aug 2025 03:47:48 +0000
+! Last updated: Sat, 23 Aug 2025 03:39:42 +0000
 d4 1
 a4 1
-! Diff-Path: patches/2025.8.22.227.patch#swefilter
+! Diff-Path: patches/2025.8.23.219.patch#swefilter
 a86 1
 .se/*/|$script,domain=stick.se|bredband.se|telepriskollen.se|kontantkort.se|simkort.se
 d133 1
@@ -20,6 +20,7 @@ autonytt.se##:is(.sidebar_content, .article_widget_preview):has(a[href*="casino"
 d217 1
 a217 1
 banner$image,domain=golfbladet.se|kiacarclub.se|hyundaiforum.se
+d221 1
 d268 1
 a268 1
 borskollen.se##.cell.rp, .promobox, .app-store-box, div[id^="borskollen_desktop"]
@@ -29,7 +30,11 @@ d287 2
 a288 2
 bredband.se,telepriskollen.se,kontantkort.se,simkort.se##.wcc-overlay, .wcc-consent-container
 bredband.se,telepriskollen.se,kontantkort.se,simkort.se##.wcc-popup-overflow:style(overflow:unset!important;)
+d293 1
+a293 1
+bulletin.nu,inredningsarkitektur.se,fof.se,allas.se,elle.se,femina.se,hant.se,mabra.com,residencemagazine.se,svenskdam.se,motherhood.se,aftonbladet.se,lchfarkivet.se,kollega.se,folkofolk.se,skyscanner.se,dagensarena.se,bokadirekt.se,samnytt.se,sjofartstidningen.se,mytaste.se,matklubben.se,vivavinomat.se,aktuellsakerhet.se,skidspar.se,hellofresh.se##body:style(overflow:initial!important)
 d459 3
+d500 1
 d561 1
 a561 2
 flashscore.se##span[class^="wcl-overline"] div:has-text(Annons):upward(article[class^="wcl-article"])
@@ -66,13 +71,22 @@ a966 1
 ljudochbild.se##.adremark, .coofad, .hidead, .phoneads, .pricecomp, .offerz, .type-articleadvertorial, .adblock, .lbplussinfo, .popup-overlayx, a[href*="/advertorial"], a[href*="/advertorial"] + .textbox, .prisjakt, #stickleft, #stickright, .adbox, .mainbanner, .egenannonse
 a1015 1
 massasport.se##.post:has(a[href*="spelbolag"], a[href*="casino"], a[href*="spelplattform"])
+d1017 1
 d1049 1
 a1049 1
 mobil.se,kamerabild.se##a[href*="/partner"], iframe[name^="PJWidget"], .google-ad
+d1055 1
+a1055 3
+modernpsykologi.se,vegomagasinet.se##div.sesamy-protected-content:remove-class(sesamy-protected-content)
+moneycowboy.net##.widget_custom_html:has(a[href*="casino"], a[href*="spelbolag"])
+moneycowboy.net,spelochfilm.se##.mh-sidebar .mh-widget-title:has-text(/annons|casino/i):upward(div[id^="custom_html"])
 a1101 1
 nordichardware.se##.td-block-title:has-text(/sponsrat/i):upward(.td_block_wrap)
 a1106 1
 norrortssporten.se##.vc_column_container:has(.td-adspot-title)
+d1111 1
+a1111 1
+nyadagbladet.se,ff.se,rocknytt.net,magasink.se,butikstrender.se,mykitchenstories.se,transportnytt.se,inpress.com,lalinda.se,travelmore.se##.elementor-popup-modal
 d1184 1
 a1184 1
 pricerunner.se##div[class$="ProductList-grid"] > div[class^="pr-"]:has(a[href*="/gotostore"][target="_blank"])
@@ -121,6 +135,8 @@ d1535 2
 d1545 1
 a1546 1
 vardegrunden.se,sportstravelnews.se###loader
+a1566 1
+vegomagasinet.se##.Single__content-paywall
 d1603 1
 a1603 1
 vm-fotboll.se##a[href*="/go/"][target], .category-kampanjer, div[id^="vm-fotboll_se"]
@@ -150,6 +166,8 @@ d2245 1
 d2263 1
 a2263 1
 /images/*casino$domain=festivalinfo.se|hockeynews.se
+a2275 1
+/jetpack/*/subscribe-overlay
 d2284 1
 d2316 1
 a2316 1
@@ -168,10 +186,21 @@ a2403 1
 /plugins/cookie-notice$script,domain=bildobubbla.se|zeromagazine.nu|sverigespringer.se|gasetten.se|sillyseason.se|gentlemannaguiden.com|matmalin.se|svensktidskrift.se|schack.se|kobe.se|tidningenproffs.se|jaktojagare.se|tobaksfakta.se|bebisvarlden.se|underbaraclaras.se|cykelframjandet.se|dalabygden.se|lansposten.se|sormlandsbygden.se|vaguiden.se|grandtech.se|bluff.se|svmf.se|rockbladet.se|globalbar.se|seniornet.se|gaming365.se|skellefteamedia.se|sillybladet.se|zlatanism.se|fotbollsnytt.nu|voov.nu|matochdrycker.se|drugnews.se|ladiesabroad.se|ninjateknik.com|reportrarutangranser.se|villatidningen.se|itgurun.se|aip.nu|fotbollscuper.se|riktpunkt.nu|matnytt.com|serieframjandet.se|sportposten.se
 a2484 1
 /plugins/setupad/*
+a2501 1
+/plugins/thirstyaffiliates-pro
 a2515 1
 /plugins/wpconsent-cookies-banner$script,domain=kampsportnews.se
+a2563 1
+/recb.js$domain=hemmanytt.se
+a2571 1
+/rgstr?k$domain=hellofresh.se
 a2609 1
 /spelbolag-$xhr,domain=travnet.se
+a2640 1
+/t.hellofresh.se
+d2660 1
+a2660 1
+/track$ping,xhr,domain=epochtimes.se|dagen.se|vinliv.se
 d2721 1
 a2721 1
 /wp-content/uploads/*casino$image,domain=nyadagbladet.se|kulturbloggen.com|newsvoice.se|svenskhistoria.se|battrestadsdel.se|zeromagazine.nu|totallyorebro.se|totallystockholm.se|djungeltrumman.se|vaken.se|tekniknytt.se|kingsizemag.se|spelochfilm.se|macken.xyz|improveme.se|bandyfeber.com|stoppapressarna.se|sjostadsbladet.se|autonytt.se|hockeybladet.nu|tv-kanal.se|esportnytt.se|sillyseason.se|rakapuckar.com|norrortssporten.se
