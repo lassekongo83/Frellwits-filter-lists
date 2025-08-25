@@ -1511,6 +1511,7 @@ amelia.expressen.se##article p.uppercase.tracking-wide:has-text(InlÃ¤gget innehÃ
 expressen.se##.campaign, .html-widget > div[style^="text-align: center; font-size: 10px;"]
 ! scriptlets
 expressen.se,di.se##+js(aeld, contextmenu, .disabled)
+expressen.se##+js(aeld, click, e.preventDefault, elements, a.js-ct)
 ! DN
 dn.se,di.se##.teaser-native
 dn.se##.article--native, .teaser-card--native, .ds-teaser--native, #dnse-popup, .bad, .campaign-holder
@@ -1761,7 +1762,7 @@ ekonominyheter.se###lblock-ads
 ekonominyheter.se##.td-fix-index:has(a[href*="casino"])
 veterinarmagazinet.se##.nyhet-ad, .vm-ad-wrap, .adtop__mobile, .vm-ad-wrap__mobile
 /Toppbanner$domain=forvaltarforum.se
-forvaltarforum.se##.ff_sponsored_articles, .widget_sow-image a:not([href^="/"]):not([href*="forvaltarforum.se"]), .ff_banners_widget_widget
+forvaltarforum.se##.ff_sponsored_articles, .widget_sow-image, .ff_banners_widget_widget
 forvaltarforum.se##.ticker-title:has-text(/partner/i)
 forvaltarforum.se##.ticker-title:has-text(/partner/i) + .mh-section
 forvaltarforum.se##:is(.topwidget, .video-banner):remove()
@@ -1790,6 +1791,7 @@ nyhetersto.se##.metaslider:has(a[href*="ica.se"])
 orebronyheter.com###top-wrapper
 svenskhistoria.se##.widget_et_ads, .module-etads, #text-13, #block-4, a[target="_blank"][rel="noopener noreferrer"], a > img[width="300"][height="250"], a > img[width="800"][height="175"], a[href*="casino"], a[href*="poker"], a[href*="kasino"], a img[width="1000"][height="300"]
 svenskhistoria.se##.widget_text:has(a[href*="casino"])
+svenskhistoria.se##.et_pb_column:has(.module-etads, a[href*="tradedoubler"])
 eventeffect.se,executiveeffect.se,saleseffect.se##.partnerartikel, #sidebar-ads-right, #nyhetsbrev-pp-wrapper__container
 eventeffect.se,executiveeffect.se,saleseffect.se##.post-teaser:has(a[href$="/annons/"])
 eventeffect.se###secondary > .widget:nth-child(2)
@@ -2732,13 +2734,14 @@ underbaraclaras.se##.jet-listing-dynamic-field__content:has-text(/annonssamarbet
 minimalisterna.se##p.has-text-align-center:has-text(/i samarbete med/i):upward(.post)
 deliquate.se##[id^="ads300"], [id^="linkcat-"]
 teknifik.se##.post:has(.sponsor)
-||grillbloggen.nu/media/com_rstbox/js/engagebox.js
+/engagebox.js$domain=grillbloggen.nu
 morotsliv.com##.et_bloom .et_bloom_flyin_center, a[href*="/?utm_medium=affiliate"], a.bigblue[target], a[href^="https://go.adt"]
+morotsliv.com##.et_pb_section:has(a[href^="https://go.adt"])
 ||matorama.se^$csp=img-src 'self' *.wordpress.com *.wp.com *.gravatar.com
 /hemmafixbloggen/includes/events-tracker
 hemmafixbloggen.se##.post-item:has(.sponsor-summary)
 trendenser.se##.post_feed_post:has(.sponsor-info)
-trendenser.se##.featured-post:has(a[href*="/category/reklam"], a[href*="/annons"])
+trendenser.se##.featured-post:has(a[href*="/category/reklam"], a[href*="annons"])
 trendenser.se##a[href=""].uppercase:has-text(REKLAM):upward(.popular-post)
 56kilo.se##.featured-area, .awac-wrapper
 56kilo.se##.code-block:has(.shop-page-wp-grid, a[href*="trendrehab"])
@@ -2746,8 +2749,8 @@ trendenser.se##a[href=""].uppercase:has-text(REKLAM):upward(.popular-post)
 56kilo.se##.standard-article:has(a[href*="/adtr.co"], .post-entry > div[style^="background-color: #f5f5f5; font-size: 12px; padding: 10px;"])
 karinrahm.se##.thb-page-transition-on:style(opacity:1!important)
 obsid.se##aside .textwidget:has(a[href*="casino"], a[href*="betting"], a[href*="spel"])
+||admin.bloggplatsen.se/status/$image
 /?trafikkalla$image,domain=bloggplatsen.se
-##body[data-site-namespace="tailsweep"] #premiumAdWrapper
 forni.se##.section-sidebar-shop
 forni.se##:is(article, .recent-articles):has(.collaboration-brand)
 /async-gdpr-cookie$script,domain=sistersinlaw.se
