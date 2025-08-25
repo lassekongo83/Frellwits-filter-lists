@@ -1,10 +1,10 @@
-diff name:swefilter lines:279 checksum:1eb8cd117e
+diff name:swefilter lines:296 checksum:f5739f3934
 d2 1
 a2 1
-! Last updated: Sun, 24 Aug 2025 03:38:06 +0000
+! Last updated: Mon, 25 Aug 2025 09:43:18 +0000
 d4 1
 a4 1
-! Diff-Path: patches/2025.8.24.218.patch#swefilter
+! Diff-Path: patches/2025.8.25.583.patch#swefilter
 a86 1
 .se/*/|$script,domain=stick.se|bredband.se|telepriskollen.se|kontantkort.se|simkort.se
 d133 1
@@ -48,10 +48,15 @@ a327 1
 cafe.se,automotorsport.se##article:has(a[href*="/partner/"])
 d457 3
 d498 1
+a510 1
+expressen.se##+js(aeld, click, e.preventDefault, elements, a.js-ct)
 d559 1
 a559 2
 flashscore.se##span[class^="wcl-overline"] div:has-text(Annons):upward(article[class^="wcl-article"])
 flashscore.se##.boxOverContent--a, .otPlaceholder, .seoAdWrapper, .adsbackground-wrapper, .prematchOddsBonus__bonus, .prematchLink[target], .detailLeaderboardSkeleton, .ui-media__placeholder:empty
+d591 1
+a591 1
+forvaltarforum.se##.ff_sponsored_articles, .widget_sow-image, .ff_banners_widget_widget
 d596 1
 a596 1
 fotbolldirekt.se,innebandymagazinet.se,padeldirekt.se,formeldirekt.se##.Odds_Widget_Ad, .c-partners, div[class*="_panorama"], div[class*="_insider"], .LiveWrapped-mobile_in_article, div[class*="LiveWrapped-desktop"], .endast-desktop, .endast-mobil
@@ -96,6 +101,8 @@ a1053 3
 modernpsykologi.se,vegomagasinet.se##div.sesamy-protected-content:remove-class(sesamy-protected-content)
 moneycowboy.net##.widget_custom_html:has(a[href*="casino"], a[href*="spelbolag"])
 moneycowboy.net,spelochfilm.se##.mh-sidebar .mh-widget-title:has-text(/annons|casino/i):upward(div[id^="custom_html"])
+a1054 1
+morotsliv.com##.et_pb_section:has(a[href^="https://go.adt"])
 a1099 1
 nordichardware.se##.td-block-title:has-text(/sponsrat/i):upward(.td_block_wrap)
 a1104 1
@@ -139,13 +146,17 @@ a1366 1
 svenskafans.com##:is(.h-52, .h-40):has(iframe[srcdoc*="ad_div"])
 d1369 1
 d1383 1
-a1383 1
+a1383 2
 svenskgolf.se,husohem.se,tidningenhalsa.se,vagabond.se,praktisktbatagande.se,akaskidor.se,utemagasinet.se,sportfack.se##.partnerCard, .partnerContent, .entry-content figure.wp-block-image, .category-partner, .ams-playad-injected, .partner, .streamline-ads-inside-sticky-wrapper, .panorama-container, .panorama-mobile-wrapper, .singleAdsBottom
+svenskhistoria.se##.et_pb_column:has(.module-etads, a[href*="tradedoubler"])
 a1463 1
 tidningenmikroskop.se##.widget_block:has(a[href^="https://addrevenue.io"])
 d1480 1
 a1480 1
 tonyhatefnejad.se,lyckasmedbakning.nu,brl.se,naturnaraskogsbruk.se,folket.se,signalnoi.se,livet.se##.preloader
+d1498 1
+a1498 1
+trendenser.se##.featured-post:has(a[href*="/category/reklam"], a[href*="annons"])
 d1510 2
 a1511 2
 tvmatchen.nu##.bet365, .panorama-wrapper, .tvg-manager-box, .tv102945, .tv102987, #event_banner, .go-to-partner, .odds, #text-13, .left-skyscraper-wrapper, .right-skyscraper-wrapper, .sticky-top-wrapper, div[class*="-ads"]
@@ -159,6 +170,7 @@ vegomagasinet.se##.Single__content-paywall
 d1601 1
 a1601 1
 vm-fotboll.se##a[href*="/go/"][target], .category-kampanjer, div[id^="vm-fotboll_se"]
+d1681 1
 d1969 1
 d2029 1
 a2029 1
@@ -172,6 +184,8 @@ a2136 1
 d2142 1
 a2174 1
 /elasticsuite-tracker
+a2177 1
+/engagebox.js$domain=grillbloggen.nu
 d2184 1
 a2184 1
 /eu_cookie_compliance$script,domain=industrinyheter.se|dagensnaringsliv.se|infrastrukturnyheter.se|sportochfritidsnyheter.se|inredningsnyheter.se|byggnyheter.se|dagensfastigheter.se|stockholmsbyggnyheter.se|energinyheter.se|vindkraftsnyheter.se|solenerginyheter.se|jarnvagsnyheter.se|transportochlogistik.se|metallerochgruvor.se|papperochmassa.se|miningmetalnews.com|visitskane.com|ergo.nu|ki.se|sxk.se|europaportalen.se|vibilagare.se
@@ -229,6 +243,8 @@ a2719 1
 /wp-content/uploads/*casino$image,domain=nyadagbladet.se|kulturbloggen.com|newsvoice.se|svenskhistoria.se|battrestadsdel.se|zeromagazine.nu|totallyorebro.se|totallystockholm.se|djungeltrumman.se|vaken.se|tekniknytt.se|kingsizemag.se|spelochfilm.se|macken.xyz|improveme.se|bandyfeber.com|stoppapressarna.se|sjostadsbladet.se|autonytt.se|hockeybladet.nu|tv-kanal.se|esportnytt.se|sillyseason.se|rakapuckar.com|norrortssporten.se
 a2795 1
 _banner.php?$domain=tvmatchen.nu
+a2808 1
+||admin.bloggplatsen.se/status/$image
 a2833 1
 ||analytics.citreamedia.com^
 a2851 1
@@ -252,6 +268,7 @@ a3016 1
 d3052 1
 a3067 1
 ||go.affiliationcloud.com^$third-party
+d3071 1
 a3074 1
 ||guv*.eniro.com^
 d3087 1

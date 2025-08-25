@@ -1,10 +1,10 @@
-diff name:swefilter lines:242 checksum:1eb8cd117e
+diff name:swefilter lines:259 checksum:f5739f3934
 d2 1
 a2 1
-! Last updated: Sun, 24 Aug 2025 03:38:06 +0000
+! Last updated: Mon, 25 Aug 2025 09:43:18 +0000
 d4 1
 a4 1
-! Diff-Path: patches/2025.8.24.218.patch#swefilter
+! Diff-Path: patches/2025.8.25.583.patch#swefilter
 d87 1
 a87 1
 .se/*/|$script,domain=stick.se|bredband.se|telepriskollen.se|kontantkort.se|simkort.se
@@ -40,6 +40,11 @@ a331 1
 cafe.se,automotorsport.se##article:has(a[href*="/partner/"])
 d461 3
 d502 1
+a514 1
+expressen.se##+js(aeld, click, e.preventDefault, elements, a.js-ct)
+d596 1
+a596 1
+forvaltarforum.se##.ff_sponsored_articles, .widget_sow-image, .ff_banners_widget_widget
 d601 1
 a601 1
 fotbolldirekt.se,innebandymagazinet.se,padeldirekt.se,formeldirekt.se##.Odds_Widget_Ad, .c-partners, div[class*="_panorama"], div[class*="_insider"], .LiveWrapped-mobile_in_article, div[class*="LiveWrapped-desktop"], .endast-desktop, .endast-mobil
@@ -79,6 +84,8 @@ a1059 3
 modernpsykologi.se,vegomagasinet.se##div.sesamy-protected-content:remove-class(sesamy-protected-content)
 moneycowboy.net##.widget_custom_html:has(a[href*="casino"], a[href*="spelbolag"])
 moneycowboy.net,spelochfilm.se##.mh-sidebar .mh-widget-title:has-text(/annons|casino/i):upward(div[id^="custom_html"])
+a1060 1
+morotsliv.com##.et_pb_section:has(a[href^="https://go.adt"])
 a1105 1
 nordichardware.se##.td-block-title:has-text(/sponsrat/i):upward(.td_block_wrap)
 a1110 1
@@ -116,13 +123,17 @@ a1372 1
 svenskafans.com##:is(.h-52, .h-40):has(iframe[srcdoc*="ad_div"])
 d1375 1
 d1389 1
-a1389 1
+a1389 2
 svenskgolf.se,husohem.se,tidningenhalsa.se,vagabond.se,praktisktbatagande.se,akaskidor.se,utemagasinet.se,sportfack.se##.partnerCard, .partnerContent, .entry-content figure.wp-block-image, .category-partner, .ams-playad-injected, .partner, .streamline-ads-inside-sticky-wrapper, .panorama-container, .panorama-mobile-wrapper, .singleAdsBottom
+svenskhistoria.se##.et_pb_column:has(.module-etads, a[href*="tradedoubler"])
 a1469 1
 tidningenmikroskop.se##.widget_block:has(a[href^="https://addrevenue.io"])
 d1486 1
 a1486 1
 tonyhatefnejad.se,lyckasmedbakning.nu,brl.se,naturnaraskogsbruk.se,folket.se,signalnoi.se,livet.se##.preloader
+d1504 1
+a1504 1
+trendenser.se##.featured-post:has(a[href*="/category/reklam"], a[href*="annons"])
 d1516 1
 a1516 1
 tvmatchen.nu##.bet365, .panorama-wrapper, .tvg-manager-box, .tv102945, .tv102987, #event_banner, .go-to-partner, .odds, #text-13, .left-skyscraper-wrapper, .right-skyscraper-wrapper, .sticky-top-wrapper, div[class*="-ads"]
@@ -132,6 +143,7 @@ vegomagasinet.se##.Single__content-paywall
 d1607 1
 a1607 1
 vm-fotboll.se##a[href*="/go/"][target], .category-kampanjer, div[id^="vm-fotboll_se"]
+d1687 1
 d1975 1
 d2035 1
 a2035 1
@@ -145,6 +157,8 @@ a2142 1
 d2148 1
 a2180 1
 /elasticsuite-tracker
+a2183 1
+/engagebox.js$domain=grillbloggen.nu
 d2190 1
 a2190 1
 /eu_cookie_compliance$script,domain=industrinyheter.se|dagensnaringsliv.se|infrastrukturnyheter.se|sportochfritidsnyheter.se|inredningsnyheter.se|byggnyheter.se|dagensfastigheter.se|stockholmsbyggnyheter.se|energinyheter.se|vindkraftsnyheter.se|solenerginyheter.se|jarnvagsnyheter.se|transportochlogistik.se|metallerochgruvor.se|papperochmassa.se|miningmetalnews.com|visitskane.com|ergo.nu|ki.se|sxk.se|europaportalen.se|vibilagare.se
@@ -202,6 +216,8 @@ a2725 1
 /wp-content/uploads/*casino$image,domain=nyadagbladet.se|kulturbloggen.com|newsvoice.se|svenskhistoria.se|battrestadsdel.se|zeromagazine.nu|totallyorebro.se|totallystockholm.se|djungeltrumman.se|vaken.se|tekniknytt.se|kingsizemag.se|spelochfilm.se|macken.xyz|improveme.se|bandyfeber.com|stoppapressarna.se|sjostadsbladet.se|autonytt.se|hockeybladet.nu|tv-kanal.se|esportnytt.se|sillyseason.se|rakapuckar.com|norrortssporten.se
 a2801 1
 _banner.php?$domain=tvmatchen.nu
+a2814 1
+||admin.bloggplatsen.se/status/$image
 a2839 1
 ||analytics.citreamedia.com^
 a2857 1
@@ -220,6 +236,7 @@ a2969 1
 d3059 1
 a3074 1
 ||go.affiliationcloud.com^$third-party
+d3078 1
 a3081 1
 ||guv*.eniro.com^
 d3094 1
