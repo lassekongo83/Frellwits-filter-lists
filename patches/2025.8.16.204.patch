@@ -1,14 +1,16 @@
-diff name:swefilter lines:184 checksum:f5739f3934
+diff name:swefilter lines:210 checksum:7487c023b1
 d2 1
 a2 1
-! Last updated: Mon, 25 Aug 2025 09:43:18 +0000
+! Last updated: Tue, 26 Aug 2025 03:35:17 +0000
 d4 1
 a4 1
-! Diff-Path: patches/2025.8.25.583.patch#swefilter
+! Diff-Path: patches/2025.8.26.215.patch#swefilter
 d134 1
 a134 1
 aktiespararna.se,alekuriren.se,tidningen.se,kurera.se,vinbanken.se,utsidan.se##.native
 d178 1
+a181 1
+amerikanare.se##.text-center:has(.adsbygoogle)
 d183 1
 a183 2
 annonsbanner$image,domain=kiacarclub.se|hyundaiforum.se
@@ -18,7 +20,7 @@ a207 1
 autonytt.se##:is(.sidebar_content, .article_widget_preview):has(a[href*="casino"])
 d219 1
 a219 1
-banner$image,domain=golfbladet.se|kiacarclub.se|hyundaiforum.se
+banner$image,domain=golfbladet.se|kiacarclub.se|hyundaiforum.se|schafertidningen.se
 d223 1
 d296 1
 a296 1
@@ -45,10 +47,14 @@ d774 1
 a774 1
 hockeysverige.se##.Odds_Widget_Ad, div[class*="_panorama"], .category-sponsrade:not(body), div[class*="_in_article"], div[class*="desktop_sidebar"], div[class*="mobile_square"], figure a[target="_blank"] img, #seo-text-wrapper
 d795 1
-a795 1
+a795 2
+huvudvarksforbundet.se###felix-ad-section, #felix-ad-button
 hyundaiforum.se##.sidebar-block:has(.adsbygoogle, a[title*="Annons"])
 a849 1
 kampsportnews.se##.widget_media_image:has(a[href]:not([href^="/"]):not([href*="kampsportnews.se"]))
+a904 2
+krogguiden.se###newsletter-notice
+krogguiden.se##.sp-article-container.small-image:has(a[target="_blank"]):remove()
 d924 1
 a924 1
 lakartidningen.se,canariajournalen.se,familjeliv.se,brollopstorget.se,rodeo.net,modette.se##.advertisement
@@ -82,7 +88,12 @@ d1264 1
 a1264 2
 shoegazing.se###main-sidebar .widget_media_image, #post-sidebar .widget_media_image, #content > .code-block, img[alt*="banner"]
 shoegazing.se##.widget_text:has(.adsbygoogle)
+d1335 1
+a1335 1
+spelo.se,lokalguiden.se,svenskverkstad.se,krogguiden.se##.banner-container
 d1340 1
+a1347 1
+sportnik.com##.index-footer-section:has(.make-money-partners)
 a1352 1
 sporttv.nu##.text-center:has(.banner_tag)
 d1375 1
@@ -109,7 +120,12 @@ d1692 1
 d1980 1
 a2143 1
 /cookiealert$domain=fritiden.se
+d2145 1
+a2145 1
+/cookieconsent$script,domain=lundagard.se|kiacarclub.se|svampguiden.com|bike.se|runnersworld.se|offside.org|racemagazine.se|tidningenskriva.se|bobattre.se|hyundaiforum.se|adventist.se|exempelmeningar.se|krogen.se|fiskesnack.com|sailguide.com|statist.se|sporthoj.com|svenskverkstad.se|kemisamfundet.se|knep.se|nordisksocialrattslig.se|bryggforum.nu|forum.m.nu|usabilforum.se|amerikanare.se|krogguiden.se
 d2149 1
+a2151 1
+/cookie-bar$script,domain=allergia.se
 a2181 1
 /elasticsuite-tracker
 a2184 1
@@ -133,7 +149,7 @@ a2379 1
 /plugins/ai-for-seo
 d2409 1
 a2409 1
-/plugins/cookie-notice$script,domain=bildobubbla.se|zeromagazine.nu|sverigespringer.se|gasetten.se|sillyseason.se|gentlemannaguiden.com|matmalin.se|svensktidskrift.se|schack.se|kobe.se|tidningenproffs.se|jaktojagare.se|tobaksfakta.se|underbaraclaras.se|cykelframjandet.se|dalabygden.se|lansposten.se|sormlandsbygden.se|vaguiden.se|grandtech.se|bluff.se|svmf.se|rockbladet.se|globalbar.se|seniornet.se|gaming365.se|skellefteamedia.se|sillybladet.se|zlatanism.se|fotbollsnytt.nu|voov.nu|matochdrycker.se|drugnews.se|ladiesabroad.se|ninjateknik.com|reportrarutangranser.se|villatidningen.se|itgurun.se|aip.nu|fotbollscuper.se|riktpunkt.nu|matnytt.com|serieframjandet.se|sportposten.se
+/plugins/cookie-notice$script,domain=bildobubbla.se|zeromagazine.nu|sverigespringer.se|gasetten.se|sillyseason.se|gentlemannaguiden.com|matmalin.se|svensktidskrift.se|schack.se|kobe.se|tidningenproffs.se|jaktojagare.se|tobaksfakta.se|underbaraclaras.se|cykelframjandet.se|dalabygden.se|lansposten.se|sormlandsbygden.se|vaguiden.se|grandtech.se|bluff.se|svmf.se|rockbladet.se|globalbar.se|seniornet.se|gaming365.se|skellefteamedia.se|sillybladet.se|zlatanism.se|fotbollsnytt.nu|voov.nu|matochdrycker.se|drugnews.se|ladiesabroad.se|ninjateknik.com|reportrarutangranser.se|villatidningen.se|itgurun.se|aip.nu|fotbollscuper.se|riktpunkt.nu|matnytt.com|serieframjandet.se|sportposten.se|teknikhandboken.se
 a2486 1
 /plugins/real-cookie-banner$domain=bebisvarlden.se
 a2490 1
@@ -158,20 +174,30 @@ a2666 1
 d2727 1
 a2727 1
 /wp-content/uploads/*casino$image,domain=nyadagbladet.se|kulturbloggen.com|newsvoice.se|svenskhistoria.se|battrestadsdel.se|zeromagazine.nu|totallyorebro.se|totallystockholm.se|djungeltrumman.se|vaken.se|tekniknytt.se|kingsizemag.se|spelochfilm.se|macken.xyz|improveme.se|bandyfeber.com|stoppapressarna.se|sjostadsbladet.se|autonytt.se|hockeybladet.nu|tv-kanal.se|esportnytt.se|sillyseason.se|rakapuckar.com|norrortssporten.se
+a2750 1
+/yield-ad-loader
 a2803 1
 _banner.php?$domain=tvmatchen.nu
 a2816 1
 ||admin.bloggplatsen.se/status/$image
 a2841 1
 ||analytics.citreamedia.com^
+d2861 1
+a2861 1
+||app.termly.io^$domain=soderkopingsposten.se|huvudvarksforbundet.se
 d2920 1
 a2920 1
-||cdn-cookieyes.com^$domain=lokalti.se|jarnvagar.nu|senses.se|temadagar.se|tekniknytt.se|nordigt.se|autonytt.se|kak.se|smhi.se|mis.se|universitetslararen.se|lakemedelsvarlden.se|samfalligheterna.se|husbilsplats.se|katerinamagasin.se|dagenslogistik.se|biostock.se|skellefteaworks.se|datormagazin.se|travnet.se|malarbok.nu|barn-filmer.se|matmenyer.se|sunnenytt.se|hockeynews.se|swe3.se|spelbloggen.se|trendenser.se|kattannonser.se|56kilo.se|horisontmagasin.se|automobilly.com|nordicinformer.com|nordicmanufacturing.net|nationalekonomi.se|storynews.se|alltomhobby.se|upptackrattvik.se|alltomhusbilen.se|fnissfest.se|baraboras.se|oresundspotlight.com|maskinteknik.org|stadshem.se|bostadspolitik.se|marketmate.se|katrina.ax|real.se|jagvillhabostad.nu|sttf.org|byggteknik.org|forestindustry.org|fordonsteknik.net|tidningenmikroskop.se|jaktplay.se
+||cdn-cookieyes.com^$domain=lokalti.se|jarnvagar.nu|senses.se|temadagar.se|tekniknytt.se|nordigt.se|autonytt.se|kak.se|smhi.se|mis.se|universitetslararen.se|lakemedelsvarlden.se|samfalligheterna.se|husbilsplats.se|katerinamagasin.se|dagenslogistik.se|biostock.se|skellefteaworks.se|datormagazin.se|travnet.se|malarbok.nu|barn-filmer.se|matmenyer.se|sunnenytt.se|hockeynews.se|swe3.se|spelbloggen.se|trendenser.se|kattannonser.se|56kilo.se|horisontmagasin.se|automobilly.com|nordicinformer.com|nordicmanufacturing.net|nationalekonomi.se|storynews.se|alltomhobby.se|upptackrattvik.se|alltomhusbilen.se|fnissfest.se|baraboras.se|oresundspotlight.com|maskinteknik.org|stadshem.se|bostadspolitik.se|marketmate.se|katrina.ax|real.se|jagvillhabostad.nu|sttf.org|byggteknik.org|forestindustry.org|fordonsteknik.net|tidningenmikroskop.se|jaktplay.se|xn--alltommigrn-u8a.se
+d3036 1
+a3036 1
+||evidon.com^$third-party,domain=fasting.nu|migranmonstret.se
 d3063 1
 a3078 1
 ||go.affiliationcloud.com^$third-party
 d3082 1
 d3099 1
+a3141 1
+||kiacarclub.se/images/*banner$third-party
 a3178 1
 ||ls.dycdn.net^$third-party
 d3233 1
