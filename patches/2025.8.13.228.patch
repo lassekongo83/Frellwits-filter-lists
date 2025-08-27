@@ -1,10 +1,10 @@
-diff name:swefilter lines:247 checksum:7487c023b1
+diff name:swefilter lines:262 checksum:ad8c06f399
 d2 1
 a2 1
-! Last updated: Tue, 26 Aug 2025 03:35:17 +0000
+! Last updated: Wed, 27 Aug 2025 02:49:36 +0000
 d4 1
 a4 1
-! Diff-Path: patches/2025.8.26.215.patch#swefilter
+! Diff-Path: patches/2025.8.27.169.patch#swefilter
 d134 1
 a134 1
 aktiespararna.se,alekuriren.se,tidningen.se,kurera.se,vinbanken.se,utsidan.se##.native
@@ -22,6 +22,8 @@ d219 1
 a219 1
 banner$image,domain=golfbladet.se|kiacarclub.se|hyundaiforum.se|schafertidningen.se
 d223 1
+a254 1
+bodennytt.se###secondary .widget:has(a[target="_blank"], a[href*="track.ad"])
 d296 1
 a296 1
 bulletin.nu,inredningsarkitektur.se,fof.se,allas.se,elle.se,femina.se,hant.se,mabra.com,residencemagazine.se,svenskdam.se,motherhood.se,aftonbladet.se,lchfarkivet.se,kollega.se,folkofolk.se,skyscanner.se,dagensarena.se,bokadirekt.se,samnytt.se,sjofartstidningen.se,mytaste.se,matklubben.se,vivavinomat.se,aktuellsakerhet.se,skidspar.se,hellofresh.se##body:style(overflow:initial!important)
@@ -58,6 +60,10 @@ krogguiden.se##.sp-article-container.small-image:has(a[target="_blank"]):remove(
 d924 1
 a924 1
 lakartidningen.se,canariajournalen.se,familjeliv.se,brollopstorget.se,rodeo.net,modette.se##.advertisement
+d1013 1
+a1013 2
+marketplace.se##div[id^="feature_"]
+marketplace.se##:is(.td-cpt-post, .flex-post):has(a[href*="/annons"])
 d1023 1
 d1055 1
 a1055 1
@@ -95,6 +101,9 @@ d1262 1
 a1262 2
 shoegazing.se###main-sidebar .widget_media_image, #post-sidebar .widget_media_image, #content > .code-block, img[alt*="banner"]
 shoegazing.se##.widget_text:has(.adsbygoogle)
+d1321 1
+a1321 1
+spanaren.se,horisontmagasin.se,shoegazing.se,ekonomifokus.se,surfzone.se##.textwidget a[target*="blank"] img
 d1333 1
 a1333 1
 spelo.se,lokalguiden.se,svenskverkstad.se,krogguiden.se##.banner-container
@@ -129,6 +138,9 @@ d1609 1
 a1609 1
 vm-fotboll.se##a[href*="/go/"][target], .category-kampanjer, div[id^="vm-fotboll_se"]
 d1689 1
+a1796 2
+##div.portrait-ad
+##div.postcard-ad
 d1977 1
 d2037 1
 a2037 1
@@ -171,11 +183,14 @@ a2356 1
 /parsely$script,domain=expressen.se
 a2376 1
 /plugins/ai-for-seo
+d2401 1
+a2401 1
+/plugins/consent-magic-pro$script,domain=namnmarkning.se|gobokhandeln.se
 d2406 1
 a2406 1
 /plugins/cookie-notice$script,domain=bildobubbla.se|zeromagazine.nu|sverigespringer.se|gasetten.se|sillyseason.se|gentlemannaguiden.com|matmalin.se|svensktidskrift.se|schack.se|kobe.se|tidningenproffs.se|jaktojagare.se|tobaksfakta.se|underbaraclaras.se|cykelframjandet.se|dalabygden.se|lansposten.se|sormlandsbygden.se|vaguiden.se|grandtech.se|bluff.se|svmf.se|rockbladet.se|globalbar.se|seniornet.se|gaming365.se|skellefteamedia.se|sillybladet.se|zlatanism.se|fotbollsnytt.nu|voov.nu|matochdrycker.se|drugnews.se|ladiesabroad.se|ninjateknik.com|reportrarutangranser.se|villatidningen.se|itgurun.se|aip.nu|fotbollscuper.se|riktpunkt.nu|matnytt.com|serieframjandet.se|sportposten.se|teknikhandboken.se
 a2483 1
-/plugins/real-cookie-banner$domain=bebisvarlden.se
+/plugins/real-cookie-banner$domain=bebisvarlden.se|bluum.se
 a2487 1
 /plugins/setupad/*
 a2504 1

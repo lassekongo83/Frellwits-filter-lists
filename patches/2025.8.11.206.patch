@@ -1,10 +1,10 @@
-diff name:swefilter lines:272 checksum:7487c023b1
+diff name:swefilter lines:285 checksum:ad8c06f399
 d2 1
 a2 1
-! Last updated: Tue, 26 Aug 2025 03:35:17 +0000
+! Last updated: Wed, 27 Aug 2025 02:49:36 +0000
 d4 1
 a4 1
-! Diff-Path: patches/2025.8.26.215.patch#swefilter
+! Diff-Path: patches/2025.8.27.169.patch#swefilter
 d87 1
 a87 1
 .se/*/|$script,domain=stick.se|bredband.se|telepriskollen.se|kontantkort.se|simkort.se
@@ -25,6 +25,8 @@ d219 1
 a219 1
 banner$image,domain=golfbladet.se|kiacarclub.se|hyundaiforum.se|schafertidningen.se
 d223 1
+a254 1
+bodennytt.se###secondary .widget:has(a[target="_blank"], a[href*="track.ad"])
 d290 2
 a291 2
 bredband.se,telepriskollen.se,kontantkort.se,simkort.se##.wcc-overlay, .wcc-consent-container
@@ -70,6 +72,10 @@ krogguiden.se##.sp-article-container.small-image:has(a[target="_blank"]):remove(
 d923 1
 a923 1
 lakartidningen.se,canariajournalen.se,familjeliv.se,brollopstorget.se,rodeo.net,modette.se##.advertisement
+d1012 1
+a1012 2
+marketplace.se##div[id^="feature_"]
+marketplace.se##:is(.td-cpt-post, .flex-post):has(a[href*="/annons"])
 d1022 1
 d1054 1
 a1054 1
@@ -107,6 +113,9 @@ d1261 1
 a1261 2
 shoegazing.se###main-sidebar .widget_media_image, #post-sidebar .widget_media_image, #content > .code-block, img[alt*="banner"]
 shoegazing.se##.widget_text:has(.adsbygoogle)
+d1320 1
+a1320 1
+spanaren.se,horisontmagasin.se,shoegazing.se,ekonomifokus.se,surfzone.se##.textwidget a[target*="blank"] img
 d1332 1
 a1332 1
 spelo.se,lokalguiden.se,svenskverkstad.se,krogguiden.se##.banner-container
@@ -144,6 +153,9 @@ d1608 1
 a1608 1
 vm-fotboll.se##a[href*="/go/"][target], .category-kampanjer, div[id^="vm-fotboll_se"]
 d1688 1
+a1795 2
+##div.portrait-ad
+##div.postcard-ad
 d1976 1
 d2036 1
 a2036 1
@@ -188,14 +200,15 @@ a2357 1
 /parsely$script,domain=expressen.se
 a2377 1
 /plugins/ai-for-seo
-d2401 1
-a2401 1
+d2401 2
+a2402 2
 /plugins/complianz-gdpr$script,domain=iconmagazine.se|signprint.se|vilaser.se|arjeplognytt.se|tidningenglobal.se|tidningensyre.se|landetsfria.nu|fempers.se|brollopsmagasinet.se|megafonen.se|kyrka.se|tlnt.se|sjofartstidningen.se|pensionarsliv.se|aktuellsakerhet.se|maklarvarlden.se|sjomannen.se|home2tiny.se|marketplace.se|livsmedelsnyheter.se|dovastidning.se|vgrfokus.se|samefolket.se|cirkusvenues.se|surfzone.se|magasinetkonkret.se|samerna.se|affarsstaden.se|economy.se|livsmedelifokus.se|bodennytt.se|dialasen.com|aftonkuriren.com|samtiden.nu|alltomhallbarhet.se|luleapride.se
+/plugins/consent-magic-pro$script,domain=namnmarkning.se|gobokhandeln.se
 d2407 1
 a2407 1
 /plugins/cookie-notice$script,domain=bildobubbla.se|zeromagazine.nu|sverigespringer.se|gasetten.se|sillyseason.se|gentlemannaguiden.com|matmalin.se|svensktidskrift.se|schack.se|kobe.se|tidningenproffs.se|jaktojagare.se|tobaksfakta.se|underbaraclaras.se|cykelframjandet.se|dalabygden.se|lansposten.se|sormlandsbygden.se|vaguiden.se|grandtech.se|bluff.se|svmf.se|rockbladet.se|globalbar.se|seniornet.se|gaming365.se|skellefteamedia.se|sillybladet.se|zlatanism.se|fotbollsnytt.nu|voov.nu|matochdrycker.se|drugnews.se|ladiesabroad.se|ninjateknik.com|reportrarutangranser.se|villatidningen.se|itgurun.se|aip.nu|fotbollscuper.se|riktpunkt.nu|matnytt.com|serieframjandet.se|sportposten.se|teknikhandboken.se
 a2484 1
-/plugins/real-cookie-banner$domain=bebisvarlden.se
+/plugins/real-cookie-banner$domain=bebisvarlden.se|bluum.se
 a2488 1
 /plugins/setupad/*
 a2505 1
