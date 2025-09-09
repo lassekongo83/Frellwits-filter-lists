@@ -1,10 +1,13 @@
-diff name:swefilter lines:196 checksum:a727080683
+diff name:swefilter lines:226 checksum:d8993612fd
 d2 1
 a2 1
-! Last updated: Mon, 08 Sep 2025 03:55:09 +0000
+! Last updated: Tue, 09 Sep 2025 03:02:54 +0000
 d4 1
 a4 1
-! Diff-Path: patches/2025.9.8.235.patch#swefilter
+! Diff-Path: patches/2025.9.9.182.patch#swefilter
+d91 1
+a91 1
+8sidor.se,livsmedelsverket.se###cookie-banner
 d100 1
 d113 1
 a113 3
@@ -19,6 +22,9 @@ aftonbladet.se##:matches-path(/sportbladet$/) section[class^="twocolumnlayout-ma
 d139 1
 a139 1
 alandstidningen.ax##.row:has(div[class^="strossle-widget"], a[href^="/annons"])
+d176 1
+a176 1
+alltomnorrtalje.se##.allto-widget, .allto-before-content, .allto-after-content, article[class*="sponsrad"], div[id^="allto-"], .below_header_front_page, .wrapper-top-post-widget a img, .below-content a img
 a180 1
 amerikanare.se##.text-center:has(.adsbygoogle)
 d219 1
@@ -51,6 +57,10 @@ a592 1
 forvaltarforum.se##.ff_sponsored_articles, .widget_sow-image, .ff_banners_widget_widget
 a630 1
 freedomtravel.se##.startpage-post:has(.has-sp)
+d718 1
+a718 2
+hastnet.se##.listings-search-ads, .right_panel, #pmg-widget-root, div[class*="adSlotPlaceholder"]
+hastnet.se,aurumforum.se##.add-wrap
 a792 1
 huvudvarksforbundet.se###felix-ad-section, #felix-ad-button
 d808 1
@@ -68,12 +78,15 @@ a925 1
 landsbygdsnatverket.se,greppa.nu,sbf.se,skaneridsport.se,ridsport.se,biljardforbundet.se,rfsisu.se,skidor.com,rf.se,svenskkonstakning.se##.sv-cookie-consent-banner
 a941 1
 leta.se##+js(href-sanitizer, a[href*="&cpdir"], ?cpdir)
+d965 2
 a1004 1
 maipenrai.se##:is(li.ipsDataItem, .ipsSpacer_both):has(a > img)
 d1012 1
 a1012 2
 marketplace.se##div[id^="feature_"]
 marketplace.se##:is(.td-cpt-post, .flex-post):has(a[href*="/annons"])
+a1045 1
+mkse.com##.mcforms-wrapper, .textwidget a[href*="bit.ly"]
 a1062 1
 morotsliv.com##.et_pb_section:has(a[href^="https://go.adt"])
 a1141 1
@@ -92,6 +105,8 @@ a1352 1
 sportnik.com##.index-footer-section:has(.make-money-partners)
 a1398 1
 svenskhistoria.se##.et_pb_column:has(.module-etads, a[href*="tradedoubler"])
+a1504 1
+travelgrip.se##.post p:has-text(ANNONS:)
 d1514 1
 a1514 1
 trendenser.se##.featured-post:has(a[href*="/category/reklam"], a[href*="annons"])
@@ -123,6 +138,8 @@ a2031 1
 a2075 1
 /ar.js$domain=woxikon.se
 d2086 1
+a2125 1
+/bx-abd.js$domain=stallet.se
 d2129 1
 d2149 1
 a2149 1
@@ -132,6 +149,7 @@ a2154 1
 d2156 1
 a2156 1
 /cookie-law-info$script,domain=startaochdriva.se|sverige.nu|conpot.se|firstclassmagazine.se|kvalitetsmagasinet.se|miljo-utveckling.se|techtidningen.se|vdtidningen.se|gullislastips.se|nyfiknainvesterare.se|discoveringtheplanet.com|bussmagasinet.se|torbjornstips.se|dinbyggare.se|aktieskolan.se|insikt24.se|sulkysport.se|bitzmagasin.se|battrestadsdel.se|automatos.se|80-talet.se|goteborgnyheter.se|elitepadel.se|vetenskaphalsa.se|rakapuckar.com|konstperspektiv.nu|56kilo.se|surveyors.se|maximumsports.se|rucksack.se|frihetsnytt.se|globalportalen.org|juligen.se|sakerhund.se|radiosol.se|norrkopingsguiden.se|mustangclubsweden.org|mallorcanyheter.com|viivilla.se|teknikhype.se|kalmarposten.se
+d2167 1
 a2188 1
 /engagebox.js$domain=grillbloggen.nu
 d2195 1
@@ -152,6 +170,8 @@ a2489 1
 d2495 1
 a2495 1
 /plugins/real-cookie-banner$domain=bebisvarlden.se|bluum.se
+a2568 1
+/prod/collect$domain=mkse.com
 a2585 2
 /reklam.
 /reklan$image,domain=lantbruksnet.se
@@ -184,10 +204,15 @@ d3100 1
 d3132 1
 a3132 1
 ||inmobi.com^$domain=alltomelbil.se|rikatillsammans.se|travelnews.se|varldenshaftigaste.se|merinfo.se|foreca.se|laget.se|byrum.se|sportlovin.se|receptfavoriter.se|forni.se|cornucopia.se|tittapavideon.se|motormagasinet.se|food-supply.se|dagenshandel.se|plastnet.se|habit.se|woodnet.se|foodnet.se|transportnet.se|processnet.se|packnet.se|verkstaderna.se|medtechmagazine.se|recyclingnet.se|rt-forum.se|uochd.se|lifesciencesweden.se|fri-kopenskap.se|cleannet.se|metal-supply.se|fashionnet.se|framtidensbygg.se|entreprenad.com|mykitchenstories.se|cancelculture.se|findit.se|foretagande.se|affarsvarlden.se|branschaktuellt.se|nordic.ign.com|fragbite.se|lindasbakskola.se|jennysmatblogg.nu|filippoon.se|niiinis.se|eniro.se|vackertvader.se|klendr.se|zeinaskitchen.se|frillesasbandy.se|skik.se|marketmate.se|svartgul.se|langd.se|babyhjalp.se|skyttesport.se|flashback.org|nyadagbladet.se|enkelteknik.se|alltomnorrtalje.se|sporttv.nu|nyteknik.se|lag-avtal.se|arbetarskydd.se|leta.se|poddtoppen.se|antidoping.se|garaget.org|ordparken.se|undertian.com|samnytt.se|motivation.se|nouw.com|sweclockers.com|fz.se|elevspel.se|helenalyth.se|villalivet.se
+d3149 1
+a3149 1
+||js.monitor.azure.com^$domain=akademiskahus.se|energi.se|skanetrafiken.se|forex.se|stenafastigheter.se|transportforetagen.se|lantmannen.se|stff.se|gbgfotboll.se|svenskfotboll.se|skk.se|objektvision.se|skogsindustrierna.se|svenskakyrkan.se|borsvarlden.com|travsport.se|gavletravet.se|supporterklubben.se|svenskttra.se|svensktvatten.se|apoteket.se|hyresgastforeningen.se|tmf.se|saco.se|pvforetagen.se|havet.nu|friluftsframjandet.se|icagruppen.se|akavia.se|villaagarna.se|livsmedelsverket.se
 a3158 1
 ||kiacarclub.se/images/*banner$third-party
 d3174 1
 d3176 1
+a3182 1
+||lifeinside.io^$third-party
 a3254 1
 ||openreplay.com^$third-party
 d3292 1
@@ -195,3 +220,8 @@ a3294 1
 ||psi3.aftonbladet.se/ab.js
 a3371 1
 ||spcmp.woxikon.se^
+d3381 1
+d3494 1
+d3549 1
+a3549 1
+lundagard.se,boktugg.se,morotsliv.com,affarsstaden.se,kurera.se,allagodating.se##+js(aeld, wheel)

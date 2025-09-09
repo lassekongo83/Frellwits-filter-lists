@@ -1,10 +1,13 @@
-diff name:swefilter lines:113 checksum:a727080683
+diff name:swefilter lines:143 checksum:d8993612fd
 d2 1
 a2 1
-! Last updated: Mon, 08 Sep 2025 03:55:09 +0000
+! Last updated: Tue, 09 Sep 2025 03:02:54 +0000
 d4 1
 a4 1
-! Diff-Path: patches/2025.9.8.235.patch#swefilter
+! Diff-Path: patches/2025.9.9.182.patch#swefilter
+d91 1
+a91 1
+8sidor.se,livsmedelsverket.se###cookie-banner
 d100 1
 d113 1
 a113 3
@@ -19,6 +22,9 @@ aftonbladet.se##:matches-path(/sportbladet$/) section[class^="twocolumnlayout-ma
 d139 1
 a139 1
 alandstidningen.ax##.row:has(div[class^="strossle-widget"], a[href^="/annons"])
+d176 1
+a176 1
+alltomnorrtalje.se##.allto-widget, .allto-before-content, .allto-after-content, article[class*="sponsrad"], div[id^="allto-"], .below_header_front_page, .wrapper-top-post-widget a img, .below-content a img
 a228 1
 bebisvarlden.se##.tdc-row:has(a[href*="/annons"])
 d314 1
@@ -39,6 +45,10 @@ d525 1
 d561 1
 a633 1
 freedomtravel.se##.startpage-post:has(.has-sp)
+d721 1
+a721 2
+hastnet.se##.listings-search-ads, .right_panel, #pmg-widget-root, div[class*="adSlotPlaceholder"]
+hastnet.se,aurumforum.se##.add-wrap
 d812 1
 a812 1
 industrinyheter.se,dagensnaringsliv.se,infrastrukturnyheter.se,sportochfritidsnyheter.se,inredningsnyheter.se,byggnyheter.se,dagensfastigheter.se,energinyheter.se,vindkraftsnyheter.se,solenerginyheter.se,jarnvagsnyheter.se,transportochlogistik.se,metallerochgruvor.se,papperochmassa.se,miningmetalnews.com##.insider-ads, [id^="mainadvertorial"], [id^="dfptag"], .block-advertorial, .block-views-blockconventus-info-articles-info-article-block, #dfp-tag-before_artikel, #dfp-tag-mobile_before_artikel, #block-views-block-leader-article
@@ -48,14 +58,19 @@ a930 1
 landsbygdsnatverket.se,greppa.nu,sbf.se,skaneridsport.se,ridsport.se,biljardforbundet.se,rfsisu.se,skidor.com,rf.se,svenskkonstakning.se##.sv-cookie-consent-banner
 a946 1
 leta.se##+js(href-sanitizer, a[href*="&cpdir"], ?cpdir)
+d970 2
 a1009 1
 maipenrai.se##:is(li.ipsDataItem, .ipsSpacer_both):has(a > img)
+a1051 1
+mkse.com##.mcforms-wrapper, .textwidget a[href*="bit.ly"]
 a1148 1
 nyteknik.se,lag-avtal.se,arbetarskydd.se##.kicker:has-text(ANNONS):upward(article)
 d1195 1
 a1195 2
 poolforum.se##div.adfit, div[style^="width:100%;max-width: 728px;"] > div[align="center"], div[style^="width:100%;max-width: 728px;"] > br
 poolforum.se,varmepumpsforum.com##.cookie_notice
+a1513 1
+travelgrip.se##.post p:has-text(ANNONS:)
 d1561 1
 a1561 1
 vackertvader.se,ledarsidorna.se,verkstadstidningen.se,svenskverkstad.se,macken.xyz,ipo.se##.cc-window
@@ -75,10 +90,13 @@ a2043 1
 a2087 1
 /ar.js$domain=woxikon.se
 d2098 1
+a2137 1
+/bx-abd.js$domain=stallet.se
 d2141 1
 d2169 1
 a2169 1
 /cookie-law-info$script,domain=startaochdriva.se|sverige.nu|conpot.se|firstclassmagazine.se|kvalitetsmagasinet.se|miljo-utveckling.se|techtidningen.se|vdtidningen.se|gullislastips.se|nyfiknainvesterare.se|discoveringtheplanet.com|bussmagasinet.se|torbjornstips.se|dinbyggare.se|aktieskolan.se|insikt24.se|sulkysport.se|bitzmagasin.se|battrestadsdel.se|automatos.se|80-talet.se|goteborgnyheter.se|elitepadel.se|vetenskaphalsa.se|rakapuckar.com|konstperspektiv.nu|56kilo.se|surveyors.se|maximumsports.se|rucksack.se|frihetsnytt.se|globalportalen.org|juligen.se|sakerhund.se|radiosol.se|norrkopingsguiden.se|mustangclubsweden.org|mallorcanyheter.com|viivilla.se|teknikhype.se|kalmarposten.se
+d2180 1
 d2209 1
 a2209 1
 /eu_cookie_compliance$script,domain=industrinyheter.se|dagensnaringsliv.se|infrastrukturnyheter.se|sportochfritidsnyheter.se|inredningsnyheter.se|byggnyheter.se|dagensfastigheter.se|energinyheter.se|vindkraftsnyheter.se|solenerginyheter.se|jarnvagsnyheter.se|transportochlogistik.se|metallerochgruvor.se|papperochmassa.se|miningmetalnews.com|visitskane.com|ergo.nu|ki.se|sxk.se|europaportalen.se|vibilagare.se
@@ -88,6 +106,8 @@ a2284 1
 d2503 1
 a2503 1
 /plugins/pressidium-cookie-consent$script,domain=undervarttak.se|paleoskafferiet.se|radiotreby.se
+a2582 1
+/prod/collect$domain=mkse.com
 a2599 2
 /reklam.
 /reklan$image,domain=lantbruksnet.se
@@ -103,8 +123,13 @@ d2954 1
 a2954 1
 ||cdn-cookieyes.com^$domain=lokalti.se|jarnvagar.nu|senses.se|temadagar.se|tekniknytt.se|nordigt.se|autonytt.se|kak.se|smhi.se|mis.se|universitetslararen.se|lakemedelsvarlden.se|samfalligheterna.se|husbilsplats.se|katerinamagasin.se|dagenslogistik.se|biostock.se|skellefteaworks.se|datormagazin.se|travnet.se|malarbok.nu|barn-filmer.se|matmenyer.se|sunnenytt.se|hockeynews.se|swe3.se|spelbloggen.se|trendenser.se|kattannonser.se|56kilo.se|horisontmagasin.se|automobilly.com|nordicinformer.com|nordicmanufacturing.net|nationalekonomi.se|storynews.se|alltomhobby.se|upptackrattvik.se|alltomhusbilen.se|fnissfest.se|baraboras.se|oresundspotlight.com|maskinteknik.org|stadshem.se|bostadspolitik.se|marketmate.se|katrina.ax|real.se|jagvillhabostad.nu|sttf.org|byggteknik.org|forestindustry.org|fordonsteknik.net|tidningenmikroskop.se|jaktplay.se|xn--alltommigrn-u8a.se|borattforum.se
 d3088 1
+d3164 1
+a3164 1
+||js.monitor.azure.com^$domain=akademiskahus.se|energi.se|skanetrafiken.se|forex.se|stenafastigheter.se|transportforetagen.se|lantmannen.se|stff.se|gbgfotboll.se|svenskfotboll.se|skk.se|objektvision.se|skogsindustrierna.se|svenskakyrkan.se|borsvarlden.com|travsport.se|gavletravet.se|supporterklubben.se|svenskttra.se|svensktvatten.se|apoteket.se|hyresgastforeningen.se|tmf.se|saco.se|pvforetagen.se|havet.nu|friluftsframjandet.se|icagruppen.se|akavia.se|villaagarna.se|livsmedelsverket.se
 d3190 1
 d3192 1
+a3198 1
+||lifeinside.io^$third-party
 a3270 1
 ||openreplay.com^$third-party
 d3308 1
@@ -112,3 +137,8 @@ a3310 1
 ||psi3.aftonbladet.se/ab.js
 a3387 1
 ||spcmp.woxikon.se^
+d3397 1
+d3510 1
+d3565 1
+a3565 1
+lundagard.se,boktugg.se,morotsliv.com,affarsstaden.se,kurera.se,allagodating.se##+js(aeld, wheel)
