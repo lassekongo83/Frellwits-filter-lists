@@ -1,6 +1,6 @@
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days
-! Last modified: 2025-09-10 05:05:57 CEST
+! Last modified: 2025-09-11 05:39:30 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPL3 - https://github.com/lassekongo83/Frellwits-filter-lists/blob/master/LICENSE
@@ -664,7 +664,7 @@ futsalmagasinet.se,newsvoice.se,obsid.se##aside.widget:has(a[href*="casino"])
 fz.se##.article-facebook
 fz.se##.card:has(.article-sponsored, a[href*="/sponsrat"])
 fz.se##.fp-carousel .fpci-kicker:has-text(/^sponsr/i):upward(.fpc-item)
-fz.se,fssweden.se##+js(set, adblock, false)
+fz.se,fssweden.se,tinyurl.se##+js(set, adblock, false)
 gaffa.se##a[href*="/annonser/"], a[href*="/sponsrat-"], div[id^="cncpt-"]
 gaffa.se##.article-overview__col:has(.gpt--loaded)
 gaffa.se##.link-list:has(a[href*="casino"])
@@ -1402,7 +1402,7 @@ svenskafans.com##:is(.min-h-80, .w-64.absolute):has(div[id^="svenskafans_"])
 svenskafans.com##:is(.min-h-\[400px\], .min-h-96, .hidden.min-h-60):has(.ad-slot)
 svenskalag.se##.cookie-overlay, .overlay:empty
 svenskamagasinet.nu##legend:has-text(Annons)
-svenskamagasinet.nu##.et_pb_code_inner:has(.svm-target)
+svenskamagasinet.nu##.et_pb_code:has(.svm-target)
 svenskamagasinet.nu##.hip-popup, div[id^="svm-"], .et_pb_image a[target]:not([href*="svenskamagasinet.nu"]):not([href^="/"])
 svenskanomader.se###ajax-loading-screen
 svenskarnaochinternet.se,internetstiftelsen.se###newsletter-sliding
@@ -1507,7 +1507,6 @@ tidningensyre.se,landetsfria.nu,fempers.se,tidningenglobal.se##+js(remove-cookie
 tidningen.djurskyddet.se##.ai-track
 tidningen.se##.sidebar .widget_widget_code, .casino
 tillnyktrad.se,triartplay.se##.cookie-consent
-tinyurl.se##+js(set, adblock, false)
 tlnt.se##div[id^="ad-block"]
 tlnt.se##h2.elementor-heading-title:has-text(/annons/i):upward(.e-con-boxed[data-settings^="{\"background"])
 tobaksfakta.se,dagenslogistik.se##.pum-open:style(overflow:auto!important)
@@ -3492,6 +3491,7 @@ _banner.php?$domain=tvmatchen.nu
 ||viralize.tv/t-bid
 ||viralize.tv^$domain=tyda.se
 ||visbymaklarna.se^$third-party
+||vk.com^$domain=ungdomar.se
 ||vovve.net/i/sponsorer
 ||voyager-widgets.aftonbladet.se/widgets/sports
 ||walls.io^$domain=svensktgolfforum.se
