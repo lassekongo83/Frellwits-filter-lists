@@ -1,10 +1,10 @@
-diff name:swefilter lines:192 checksum:06aa172495
+diff name:swefilter lines:214 checksum:56a1596e3b
 d2 1
 a2 1
-! Last updated: Sat, 13 Sep 2025 02:23:18 +0000
+! Last updated: Sun, 14 Sep 2025 02:36:58 +0000
 d4 1
 a4 1
-! Diff-Path: patches/2025.9.13.143.patch#swefilter
+! Diff-Path: patches/2025.9.14.156.patch#swefilter
 d91 1
 a91 1
 8sidor.se,livsmedelsverket.se###cookie-banner
@@ -19,6 +19,9 @@ a116 1
 aftonbladet.se###superright-side, a[href*="/casinoguide"], [id^="adPlacement"], a[href*="/rabattkod"][data-test-tag="internal-link"], #takeover-container, div[class^="stickylogin"]
 a118 1
 aftonbladet.se##:matches-path(/sportbladet$/) section[class^="twocolumnlayout-main"] > div[class^="hyperion"]:has(a[href*="/speltips/"])
+d122 1
+a122 1
+aftonbladet.se,godare.se,byggahus.se,expressen.se,elle.se,femina.se,svenskdam.se,galamagasin.se,rodeo.net,familjeliv.se,vitaestilo.se,veckorevyn.com,golflivet.se,inredningsvis.se##+js(href-sanitizer, a[href*="/t?a="], ?url)
 d139 1
 a139 1
 alandstidningen.ax##.row:has(div[class^="strossle-widget"], a[href^="/annons"])
@@ -29,6 +32,11 @@ a228 1
 bebisvarlden.se##.tdc-row:has(a[href*="/annons"])
 a254 1
 bobattre.se##img[alt*="banner"]
+d294 1
+a294 2
+brukshunden.se##.article-content:has(.bgcolor-ad-card)
+brukshunden.se##.cm-ad, .bgcolor-ad-card
+d298 2
 d314 1
 a314 1
 byggfaktadocu.se##.pop_box, .contact-supplier.show
@@ -92,12 +100,19 @@ a1195 2
 poolforum.se##div.adfit, div[style^="width:100%;max-width: 728px;"] > div[align="center"], div[style^="width:100%;max-width: 728px;"] > br
 poolforum.se,varmepumpsforum.com##.cookie_notice
 d1251 1
-a1251 1
+a1251 2
+saltvattensguiden.se##.cWidgetContainer--isWidget:has(img[src*="/Annons"])
 samefolket.se##.elementor-top-column .elementor-widget-image:has(a[href]:not([href^="/"]):not([href*="samefolket.se"]))
+d1372 1
+a1372 1
+statsskuld.se###our-mission, .ads-widescreen
 d1395 1
 a1395 1
 svenskamagasinet.nu##.et_pb_code:has(.svm-target)
 d1419 1
+d1463 1
+a1463 1
+teknikveckan.se,di.se,dn.se,skillingaryd.nu,xn--vrnamo-bua.nu,tripadvisor.se,swedroid.se,bettingstugan.se,expressen.se,driva-eget.se,ifokus.se,sv.picmix.com,ifragasatt.se,sportbloggare.com,bovision.se,familjeliv.se,tidningenridsport.se,golflivet.se,vemringde.se,brollopstorget.se,fastighetsvarlden.se,borskollen.se,aktiespararna.se,receptfavoriter.se,tyda.se,mittforetag.com,lajvo.se,magazin24.se,aktuellsakerhet.se,itmag.se,affarerinorr.se,electronic.se,brukshunden.se##.ad
 d1501 1
 a1513 1
 travelgrip.se##.post p:has-text(ANNONS:)
@@ -143,8 +158,12 @@ d2209 1
 a2209 1
 /eu_cookie_compliance$script,domain=industrinyheter.se|dagensnaringsliv.se|infrastrukturnyheter.se|sportochfritidsnyheter.se|inredningsnyheter.se|byggnyheter.se|dagensfastigheter.se|energinyheter.se|vindkraftsnyheter.se|solenerginyheter.se|jarnvagsnyheter.se|transportochlogistik.se|metallerochgruvor.se|papperochmassa.se|miningmetalnews.com|visitskane.com|ergo.nu|ki.se|sxk.se|europaportalen.se|vibilagare.se
 d2230 1
+a2276 1
+/holid.js$domain=statsskuld.se
 a2284 1
 /images/banners$domain=alghundklubben.com
+a2293 1
+/impressions$xhr,domain=homeq.se
 d2503 1
 a2503 1
 /plugins/pressidium-cookie-consent$script,domain=undervarttak.se|paleoskafferiet.se|radiotreby.se
@@ -169,9 +188,12 @@ d2954 1
 a2954 1
 ||cdn-cookieyes.com^$domain=lokalti.se|jarnvagar.nu|senses.se|temadagar.se|tekniknytt.se|nordigt.se|autonytt.se|kak.se|smhi.se|mis.se|universitetslararen.se|lakemedelsvarlden.se|samfalligheterna.se|husbilsplats.se|katerinamagasin.se|dagenslogistik.se|biostock.se|skellefteaworks.se|datormagazin.se|travnet.se|malarbok.nu|barn-filmer.se|matmenyer.se|sunnenytt.se|hockeynews.se|swe3.se|spelbloggen.se|trendenser.se|kattannonser.se|56kilo.se|horisontmagasin.se|automobilly.com|nordicinformer.com|nordicmanufacturing.net|nationalekonomi.se|storynews.se|alltomhobby.se|upptackrattvik.se|alltomhusbilen.se|fnissfest.se|baraboras.se|oresundspotlight.com|maskinteknik.org|stadshem.se|bostadspolitik.se|marketmate.se|katrina.ax|real.se|jagvillhabostad.nu|sttf.org|byggteknik.org|forestindustry.org|fordonsteknik.net|tidningenmikroskop.se|jaktplay.se|xn--alltommigrn-u8a.se|borattforum.se
 d3088 1
+d3147 1
+a3147 1
+||inmobi.com^$domain=alltomelbil.se|rikatillsammans.se|travelnews.se|varldenshaftigaste.se|merinfo.se|foreca.se|laget.se|byrum.se|sportlovin.se|receptfavoriter.se|forni.se|cornucopia.se|tittapavideon.se|motormagasinet.se|food-supply.se|dagenshandel.se|plastnet.se|habit.se|woodnet.se|foodnet.se|transportnet.se|processnet.se|packnet.se|verkstaderna.se|medtechmagazine.se|recyclingnet.se|rt-forum.se|uochd.se|lifesciencesweden.se|fri-kopenskap.se|cleannet.se|metal-supply.se|fashionnet.se|framtidensbygg.se|entreprenad.com|mykitchenstories.se|cancelculture.se|findit.se|foretagande.se|affarsvarlden.se|branschaktuellt.se|nordic.ign.com|fragbite.se|lindasbakskola.se|jennysmatblogg.nu|filippoon.se|niiinis.se|eniro.se|vackertvader.se|klendr.se|zeinaskitchen.se|frillesasbandy.se|skik.se|marketmate.se|svartgul.se|langd.se|babyhjalp.se|skyttesport.se|flashback.org|nyadagbladet.se|enkelteknik.se|alltomnorrtalje.se|sporttv.nu|nyteknik.se|lag-avtal.se|arbetarskydd.se|leta.se|poddtoppen.se|antidoping.se|garaget.org|ordparken.se|undertian.com|samnytt.se|motivation.se|nouw.com|sweclockers.com|fz.se|elevspel.se|helenalyth.se|villalivet.se|statsskuld.se
 d3164 1
 a3164 1
-||js.monitor.azure.com^$domain=akademiskahus.se|energi.se|skanetrafiken.se|forex.se|stenafastigheter.se|transportforetagen.se|lantmannen.se|stff.se|gbgfotboll.se|svenskfotboll.se|skk.se|objektvision.se|skogsindustrierna.se|svenskakyrkan.se|borsvarlden.com|travsport.se|gavletravet.se|supporterklubben.se|svenskttra.se|svensktvatten.se|apoteket.se|hyresgastforeningen.se|tmf.se|saco.se|pvforetagen.se|havet.nu|friluftsframjandet.se|icagruppen.se|akavia.se|villaagarna.se|livsmedelsverket.se|allaaktier.se
+||js.monitor.azure.com^$domain=akademiskahus.se|energi.se|skanetrafiken.se|forex.se|stenafastigheter.se|transportforetagen.se|lantmannen.se|stff.se|gbgfotboll.se|svenskfotboll.se|skk.se|objektvision.se|skogsindustrierna.se|svenskakyrkan.se|borsvarlden.com|travsport.se|gavletravet.se|supporterklubben.se|svenskttra.se|svensktvatten.se|apoteket.se|hyresgastforeningen.se|tmf.se|saco.se|pvforetagen.se|havet.nu|friluftsframjandet.se|icagruppen.se|akavia.se|villaagarna.se|livsmedelsverket.se|allaaktier.se|kryssakuten.se
 d3190 1
 d3192 2
 a3198 1
