@@ -1,7 +1,7 @@
 ! Title: Frellwit's Swedish Filter
-! Last updated: Fri, 26 Sep 2025 03:36:39 +0000
+! Last updated: Sun, 28 Sep 2025 02:42:37 +0000
 ! Expires: 5 days
-! Diff-Path: patches/2025.9.26.216.patch#swefilter
+! Diff-Path: patches/2025.9.28.162.patch#swefilter
 ! Diff-Expires: 24 hours
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
@@ -2178,7 +2178,7 @@ zeromagazine.nu##div[id^="ads"]
 /collect?v$domain=thelocal.se
 /comscore$domain=expressen.se
 /com_adagency$domain=fastbikes.se
-/consent$script,domain=rodeo.net
+/consent$script,domain=rodeo.net|tyda.se
 /content_images/*casino$image,domain=ng.se
 /conversions/tracking.js$third-party
 /cookieControl$domain=akademiskahus.se
@@ -2916,6 +2916,7 @@ _banner.php?$domain=tvmatchen.nu
 ||analytics.undeco.se^
 ||annonser.snoap.no^$third-party
 ||annons.dagen.se^
+||apester.com^$third-party
 ||apis.google.com/js/plusone.js$third-party
 ||api-sa.rikatillsammans.se^
 ||api.hitta.se/creepy
