@@ -1161,8 +1161,6 @@ com.se,~www.com.se,~pagalnew.com.se##html::before:style(content: "OBS! VARNING! 
 *$all,reason=🇸🇪 Bedrägeri / 🇬🇧 Scam,domain=jobba-hemifran.com|mogenromantik.com|flirtmatch.se|distansarbete.com
 ! https://www.reddit.com/r/sweden/comments/1ke3di4/vad_%C3%A4r_det_som_p%C3%A5g%C3%A5r/
 *$all,reason=🇸🇪 Bedrägeri / 🇬🇧 Scam,domain=rentia.se|rentler.se|bostad24.se|hyrio.se|rentify.se|bostadsportal.se|bostadslistan.se
-! Suspicious connection to a very slow loading and random generated 3rd party script. Maybe hacked.
-*$3p,script,denyallow=gstatic.com,domain=karlskogavaxer.se|molndalvaxer.se
 
 ! ==== SPECIFIC FILTERS ==== !
 
@@ -1859,7 +1857,7 @@ espressomedia.se##.penci-block-vc:has([href*="casino"])
 espressomedia.se##.penci-heading-slider:has-text(Annonsreportage)
 espressomedia.se##.penci-heading-slider:has-text(Annonsreportage) + .penci-owl-carousel-slider
 /upload/puff$domain=bergsmannen.se|tidningenbyggmaterial.se|tidningendacksnack.se|taxiidag.se
-bergsmannen.se,tidningenbyggmaterial.se,taxiidag.se,tidningendacksnack.se##.ann-puff, .headerLinks, .cookiesInfo
+bergsmannen.se,tidningenbyggmaterial.se,taxiidag.se,tidningendacksnack.se##.ann-puff, .headerLinks, .cookiesInfo, #newsletterSubLink
 taxiidag.se##.fancybox-container, #newsletterSubLink
 taxiidag.se##body.compensate-for-scrollbar:style(overflow:unset!important;)
 helahisingen.se###custom_html-15, .code-block img, .banner-promotions-wrapper, article[class*="tag-ad-"]
@@ -2392,10 +2390,11 @@ voodoofilm.org##.page-panorama
 voodoofilm.org##.content-news:has(span[id*="Sponsored"])
 voodoofilm.org##.card-header:has-text(Annons):upward(.card)
 /gravito$script,domain=moviezine.se
-moviezine.se###tilt-ad-top-stay-away
+moviezine.se###tilt-ad-top-stay-away, #front-page-gtm
 moviezine.se##.md\:pb-4:has(.inner_advertisement)
 moviezine.se###secondary .bg-white:has(div[id^="moviezine_outsider"])
 moviezine.se##.container > .perfmatters-lazy-element:has(a[href*="casino"])
+moviezine.se##.listing-container:has(a.block[href*="/advertorial/"])
 allatvkanaler.se##.gda, .cookie-notification, .iy.first
 /static/media/*casino$domain=dagenstv.com|kolla.tv
 dagenstv.com,kolla.tv##.grid-add-container
