@@ -1,7 +1,7 @@
 ! Title: Frellwit's Swedish Filter
-! Last updated: Thu, 16 Oct 2025 18:15:46 +0000
+! Last updated: Fri, 17 Oct 2025 03:38:16 +0000
 ! Expires: 5 days
-! Diff-Path: patches/2025.10.16.1095.patch#swefilter
+! Diff-Path: patches/2025.10.17.218.patch#swefilter
 ! Diff-Expires: 24 hours
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
@@ -473,6 +473,7 @@ ekonominyheter.se##.td-fix-index:has(a[href*="casino"])
 ekonominyheter.se,autonytt.se,undervarttak.se,aftonbladet.se,lesscarbs.se,hockeybladet.nu,matinspo.se##a[href*="/track.adtraction."]
 eksjoco.se##.container:has(.ad)
 electronic.se##.content aside.column-narrow:last-of-type
+elektronikforumet.com##a[href*="bannerid"]
 elektronikforumet.com##td > a[target="_blank"] img
 elevspel.se###cookie_wrapper, a[href*="medlem"] > div, .ryk-top, .ryk-body
 elevspel.se##:is(div.Block, div[style^="display: table"], h1[itemprop="name"] ~ div:not([style="display:none;"]):not([class^="content"][class$="content"])):has(a[href*="medlem"], [onclick*="medlem"], .adsbygoogle)
@@ -517,7 +518,6 @@ everysport.com##:is(div[id^="everysport_pano"], div[id^="everysport_mobil"], div
 exakt24.se##section[data-ha-element-link*="kampanj"], .elementor-element-686a3aa6, .elementor-popup-modal
 existenz.se##.link:has(a[href*="bannerid="])
 existenz.se##.wm-nopop, #main > p[style^="color"], #slidebox
-existenz.se,funfunfun.se,elektronikforumet.com##a[href*="bannerid"]
 expo.se##div.flowy-wp-protected-content:remove-class(flowy-wp-protected-content)
 expo.se##p.has-text-align-center:has-text(Annons:)
 expo.se##.ad-image, .bottom-popup, .conversion
@@ -1788,6 +1788,7 @@ zeromagazine.nu##div[id^="ads"]
 ##div.I-artiklar-annonser
 ##div.Takeover-ad
 ##div.adform-container
+##div.adform-device-aware
 ##div.adnuntius-ad
 ##div.adsense-responsive-ad
 ##div.ads-above-post
