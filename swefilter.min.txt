@@ -1,7 +1,7 @@
 ! Title: Frellwit's Swedish Filter
-! Last updated: Sun, 26 Oct 2025 03:02:05 +0000
+! Last updated: Mon, 27 Oct 2025 05:49:00 +0000
 ! Expires: 5 days
-! Diff-Path: patches/2025.10.26.182.patch#swefilter
+! Diff-Path: patches/2025.10.27.348.patch#swefilter
 ! Diff-Expires: 24 hours
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
@@ -2000,6 +2000,7 @@ zeromagazine.nu##div[id^="ads"]
 ##[class*="advads_ad_widget"]:not(body):not(html)
 ##[id^="adace_ads"]
 &autoplay$frame,removeparam=autoplay,domain=di.se|expressen.se
+&displayMode=modal$domain=dagen.se
 *$all,reason=Scams and/or badware,domain=look.utndln.com|pheegoab.click|pushwhy.com|pushnice.com|runtnc.net|look.ufinkln.com
 *$all,reason=🇸🇪 Bedrägeri / 🇬🇧 Scam,domain=digitaliseringsinitiativet.se|toppmarkensverige.com|fraagesport.com|kyrkavgift.se|dinbilgaranti.se|accesslnk.com
 *$all,reason=🇸🇪 Bedrägeri / 🇬🇧 Scam,domain=jobba-hemifran.com|mogenromantik.com|flirtmatch.se|distansarbete.com
@@ -2353,9 +2354,6 @@ zeromagazine.nu##div[id^="ads"]
 /impression$script,domain=affarsvarlden.se
 /impression-tracker-service
 /imp?type(img)
-/integrations/adwords$important,domain=dagen.se
-/integrations/facebook-pixel$important,domain=dagen.se
-/integrations/google-$important,domain=dagen.se
 /isbanner/ib.js
 /javascript_nbenhadverts/*
 /jetpack/*/subscribe-overlay
@@ -3107,6 +3105,7 @@ _banner.php?$domain=tvmatchen.nu
 ||destination.se^$third-party
 ||detfriasverige.circle.so^$ping
 ||didomi.nwtmedia.se^
+||digitalcaramel.com^$third-party
 ||digitaloceanspaces.com/ethical.min.js
 ||directory.cookieyes.com/api/v1/ip
 ||diu127fbe6pn6.cloudfront.net^*/ga-universal.html
