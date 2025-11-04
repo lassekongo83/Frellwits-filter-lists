@@ -1,7 +1,7 @@
 ! Title: Frellwit's Swedish Filter
-! Last updated: Mon, 03 Nov 2025 02:55:25 +0000
+! Last updated: Tue, 04 Nov 2025 04:34:50 +0000
 ! Expires: 5 days
-! Diff-Path: patches/2025.11.3.175.patch#swefilter
+! Diff-Path: patches/2025.11.4.274.patch#swefilter
 ! Diff-Expires: 24 hours
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
@@ -861,6 +861,8 @@ jaktbaronen.se##.widget-sidebar:has-text(ANNONS)
 jaktjournalen.se##.activate-notifications-container.shown, [class*="ai-viewport"], .placeholder
 jaktjournalen.se##.post:has(.post__category--sponsored)
 jaktojagare.se##div.cookie-warning-container, .mb-adarea
+jakto.se###sidebar-right .bs-widget:has(a[target="_blank"])
+jakto.se###sidebar-right .bs-widget:has-text(Annonsartiklar)
 jaktplay.se##.jaktplay-ad
 jaktsidan.se,edgeflyfishing.com###ipsLayout_mainArea > iframe, div[data-role="sidebarAd"]
 jankare.se##:is(.janka-slider, .widget_media_image):has(a:not([href*="jankare.se"]))
@@ -1085,6 +1087,7 @@ mmanytt.se##.img-featured-posts-image:has(a[href$="/annons/"])
 mmanytt.se##.tablepress:has(a[href*="expekt"])
 mobilanyheter.net##a[href*="rocketpot.io"], a[href*="casino"], a[href*="betting"], .a-wrap
 mobilanyheter.net##+js(set, ai_run_scripts, noopFunc)
+mobilanyheter.net##.code-block:has(iframe[src*="/ads/"])
 mobil.se,kamerabild.se##article:has(a[href*="/partner"], a[href*="casino"], a[href*="utm_campaign"])
 mobil.se,kamerabild.se##a[href*="/partner"], iframe[name^="PJWidget"], .google-ad
 mobil.se,kamerabild.se##.markupbox:has(a[href*="casino"], .holidAds)
