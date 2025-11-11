@@ -1292,6 +1292,9 @@ utslappsratt.se,heleneholmsif.se,trafikskola.se,melodifestivalklubben.se,morotsl
 utslappsratt.se,heleneholmsif.se,trafikskola.se,melodifestivalklubben.se,morotsliv.com,nyadagbladet.se##+js(set, exactmetrics_frontend, undefined)
 aftonbladet.se,godare.se,byggahus.se,expressen.se,elle.se,femina.se,svenskdam.se,galamagasin.se,rodeo.net,familjeliv.se,vitaestilo.se,golflivet.se,inredningsvis.se##+js(href-sanitizer, a[href*="/t?a="], ?url)
 elle.se,expressen.se##+js(href-sanitizer, a[href*="/click"], ?url)
+expressen.se##+js(href-sanitizer, a[href*="&ued="], ?ued)
+expressen.se##+js(href-sanitizer, a[href*="&amp;u"], ?amp;u)
+expressen.se##+js(href-sanitizer, a[href*=".sjv.io"], ?u)
 ! First party GTM
 /gtmmeasurement$domain=altinget.se
 .se/*/|$script,domain=stick.se|bredband.se|telepriskollen.se|kontantkort.se|simkort.se
@@ -1644,6 +1647,7 @@ godare.se##[id^="adPlacement"]:upward(1)
 godare.se##div[style="min-height:350px"]:has(iframe[title="Annons"])
 godare.se##.godare-ad-element, a[href*="/brand-studio"], a[href*="/brandstudio"], .recipe-ad, a[href*="utm_campaign"][data-test-tag="external-link"]
 godare.se##:is(p[class^="teasersmall-sectionLabel"], p[class^="teasermedium-sectionLabel"]):has-text(/annons/i):upward(a.internal-link, li)
+godare.se##+js(set, advertoryFluepapir, true)
 prisjakt.nu##.pjra-relative, .outsider-ads, div[class^="AdPlacementWrapper"]
 ||go.qasa.se^$ping
 qasa.se##body[data-scroll-locked="1"]:remove-attr(data-scroll-locked)
