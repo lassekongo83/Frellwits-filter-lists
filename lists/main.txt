@@ -1757,11 +1757,12 @@ marsta.nu##.outsider, .panel--naringsliv
 /atoms/images/*banner$domain=etc.se
 ||etc.nu/ethical.min.js
 etc.se##[data-controller="ad-container"], .bg-gradient-white
-flamman.se###scrollup
+flamman.se###scrollup, .adverter
+flamman.se###popup:has(.newsletter)
 lundagard.se###bdCheckAlso.bdCheckAlsoShow, .topBanner, #sidebar .widget_media_image
-affarsstaden.se##a[href^="mailto:annons"]
-affarsstaden.se##a[target="_blank"]:has-text(/casino/i):upward(div[id].sidebar-box)
-affarsstaden.se##main > .elementor > section.elementor-section:last-child:has(a[href*="casino"])
+affarsstaden.se##a[href^="mailto:annons"], img[title="Annonsbanner"]
+affarsstaden.se##:is(.uagb-ifb-content):has(a[href*="casino"])
+affarsstaden.se##.uagb-heading-text:has-text(Aditorial):upward(3)
 hbwebben.se##.elementor-widget-container > a > img
 etunawebben.se##+js(nostif, ad)
 /stats$domain=ehandel.se
@@ -1772,7 +1773,7 @@ it-finans.se,it-halsa.se,it-kanalen.se,it-pedagogen.se,it-retail.se,it-hallbarhe
 it-finans.se,it-halsa.se,it-kanalen.se,it-pedagogen.se,it-retail.se,it-hallbarhet.se##.widget-title:has-text(/annons/i):upward(aside)
 dagensjuridik.se##.outher-sidebar, a[href*="/annons/"], .dj-inline-ad, .sticky
 /sponsored_articles$domain=fastighetssverige.se
-fastighetssverige.se##a[href*="/banner/out/"], .bnr_box, div[class^="panel"][style*="lightgoldenrodyellow"]
+fastighetssverige.se##a[href*="/banner/out/"], .bnr_box, div[class^="panel"][style*="lightgoldenrodyellow"], .ad-label-after
 fastighetssverige.se##.featured-article:has(.badge-partner-text)
 fastighetstidningen.se##.adspace, a[class*="annons"]
 /atomic-blocks$script,domain=foretagsverige.se|forskningsverige.se|motorbibeln.se|hallbarhetsverige.se|tillvaxtsverige.se|grillbibeln.se|kampenmotcancer.se|folkhalsasverige.se|dinlivsstil.nu
@@ -1861,8 +1862,9 @@ fria.nu,stockholmsfria.se##[class*="annonser"], #cboxOverlay, #cboxWrapper, a[hr
 fria.nu,stockholmsfria.se##.holidAds:upward(1)
 tidningenglobal.se,tidningensyre.se,landetsfria.nu,fempers.se##.revive-box, .paloma-ad
 hrnytt.se##div[media-slot-url]
-hrnytt.se##.spd-article-over-pic:has-text(/spons/i):upward(article)
-hrsvepet.se,cfosvepet.se,vdsvepet.se##.cookie-banner, .desktopbanner, .mobilbanner-section, #takeover-banner, .top-banner-wrapper, .toppbanner-under-header
+hrnytt.se##.spd-article-over-pic:has-text(/spons/i):upward(a)
+hrnytt.se##.spd-article-over-pic:has-text(/spons/i):upward(a) + h4
+hrsvepet.se,cfosvepet.se,vdsvepet.se##.cookie-banner, .desktopbanner, .mobilbanner-section, #takeover-banner, .top-banner-wrapper, .toppbanner-under-header, .pre-header-banner-wrapper
 hrsvepet.se,cfosvepet.se,vdsvepet.se##:is(.recent-post-item, .w-dyn-item):has(a[href="#"]:not(.w-condition-invisible))
 hrsvepet.se,cfosvepet.se,vdsvepet.se##body:style(overflow:unset!important; opacity:unset!important;)
 arbetaren.se##.text-sm:has-text(/annons/i):upward(.border-b, a[target])
