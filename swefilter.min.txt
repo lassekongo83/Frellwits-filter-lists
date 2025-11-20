@@ -1,7 +1,7 @@
 ! Title: Frellwit's Swedish Filter
-! Last updated: Wed, 19 Nov 2025 03:20:27 +0000
+! Last updated: Thu, 20 Nov 2025 19:12:00 +0000
 ! Expires: 5 days
-! Diff-Path: patches/2025.11.19.200.patch#swefilter
+! Diff-Path: patches/2025.11.20.1151.patch#swefilter
 ! Diff-Expires: 24 hours
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
@@ -757,7 +757,7 @@ hejauppsala.com##:is(div[class^="u-text"], .u-font-brand):has-text(/^Reklam$/):u
 helahisingen.se###custom_html-15, .code-block img, .banner-promotions-wrapper, article[class*="tag-ad-"]
 helahisingen.se##.latest-posts-grid:has(a[href*="/annons/"])
 helahisingen.se##.post-excerpt:has-text(ANNONS):upward(.post)
-helahisingen.se,sportsnews.se,xn--sporthnt-5za.se,stockholmblaljus.se,filmextra.se###af-preloader
+helahisingen.se,xn--sporthnt-5za.se,stockholmblaljus.se,filmextra.se###af-preloader
 helastadenuppsala.nu##.elementor-widget-image:has(a:not([href*="helastadenuppsala.nu"]))
 helgon.se##[id*="banner"], a[href^="https://ad."], a[href^="https://ad2."]
 hellofresh.se##a[data-test-id^="top-banner-ad"], div[data-test-id="exit-intent-banner"], div[data-test-id="urgency-banner-modal"], a[data-test-id="side-banner-ad-link"]
@@ -1423,8 +1423,6 @@ sportlovin.se##div[style*="min-height"]:has(div[id^="sportlovin_"])
 sportnik.com##.index-footer-section:has(.make-money-partners)
 sportpanelen.se###mvp-side-wrap .homepage-widget:has(a[href*="utanlicens"])
 sportpanelen.se,sportnyheter.nu,sporthalsa.se,sport24.nu,golfbladet.se##.textwidget:has(a[href*="casino"])
-sportsnews.se,xn--sporthnt-5za.se###secondary:has(a[href*="casino"])
-sportsnews.se,xn--sporthnt-5za.se,killsteal.se,samnytt.se,samnytt.nu,obsid.se,senses.se,teknologiexperten.se,sverige.nu,enterprisemagazine.se,haboportalen.se,bike.se,xn--lgenhet-5wa.nu,samtiden.nu##a[href*="casino"]
 sporttv.nu##a[onclick*="bannerClick"], #linkus, .details-bet-banner
 sporttv.nu##.progams-list-xs .text-center:has(.banner):remove()
 sporttv.nu##.text-center:has(.banner_tag)
@@ -1573,6 +1571,7 @@ tradevenue.se##.c-block-manager > .container:first-child:has(.gpt-ad-slot)
 tranakampsport.se##a[class*="annons"], .annonser-sektion
 tranakampsport.se##.w-dyn-item:has(.sponsrad-artikel-wrapper:not(.w-condition-invisible))
 traning40plus.se##[id^="bunyad"]
+transportnytt.se##div[id^="trans-"]
 travelandtourworld.se##div[class^="rightcol"]:has(.g, .adsbygoogle)
 travelgrip.se##.post p:has-text(ANNONS:)
 travelnews.se##.bottom-bar--animate-in, #job_ads_scroller, .header_banner
@@ -1712,7 +1711,9 @@ xn--lgenhet-5wa.nu##section.elementor-section:has(a[href*="casino"])
 xn--lgenhet-5wa.nu###block-7, a[href*="lana-pengar"]
 xn--lnforum-exa.se##.LFRBox
 xn--spelvrlden-u5a.se##:is(.ee-post, .bde-rich-text):has(a[href*="casino"])
+xn--sporthnt-5za.se###secondary:has(a[href*="casino"])
 xn--sporthnt-5za.se,filmextra.se##.wp-block-image:has(a[href*="betting"], a[href*="casino"], a[href*="x3000"], a[href*="paf.se"])
+xn--sporthnt-5za.se,killsteal.se,samnytt.se,samnytt.nu,obsid.se,senses.se,teknologiexperten.se,sverige.nu,enterprisemagazine.se,haboportalen.se,bike.se,xn--lgenhet-5wa.nu,samtiden.nu##a[href*="casino"]
 yogafordig.nu##.popup-large, .popup-bottom, .square-banner-wrapper
 ysektionen.se##.yweb-news-paper-banner, .top-sponsor-column
 zeinaskitchen.se,trafiksakerhet.se,boktugg.se,lakartidningen.se,villalivet.se,matsafari.nu,fastighetsvarlden.se,aktieskolan.se##+js(acs, monsterinsights_frontend)
@@ -2125,7 +2126,7 @@ zeromagazine.nu##div[id^="ads"]
 /ajax/ads.php$domain=garaget.org
 /ajax/docu_stats.jsp
 /aller-ads$domain=~seiska.fi
-/analytics$domain=gbgfotboll.se|stff.se|svenskfotboll.se|di.se|etc.se|vackertvader.se|skogsforum.se|skolporten.se|sjf.se|se.azrhymes.com|alandsradio.ax|dagen.se|global.morningstar.com|vidzflow.com
+/analytics$domain=gbgfotboll.se|stff.se|svenskfotboll.se|di.se|etc.se|vackertvader.se|skogsforum.se|skolporten.se|sjf.se|se.azrhymes.com|alandsradio.ax|dagen.se|global.morningstar.com|vidzflow.com|vinia.se
 /analytics-bmb
 /analytics/collect|
 /analytics/cts.min.js
