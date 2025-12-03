@@ -1,7 +1,7 @@
 ! Title: Frellwit's Swedish Filter
-! Last updated: Mon, 01 Dec 2025 04:57:34 +0000
+! Last updated: Wed, 03 Dec 2025 04:25:56 +0000
 ! Expires: 5 days
-! Diff-Path: patches/2025.12.1.297.patch#swefilter
+! Diff-Path: patches/2025.12.3.265.patch#swefilter
 ! Diff-Expires: 24 hours
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
@@ -556,7 +556,7 @@ feber.se,tjock.se##a[onclick^="plausible"]:remove-attr(onclick)
 feber.se,tjock.se##f-internallink:has(a[href="#"])
 feber.se,tjock.se##+js(nosiif, checkGDPRInt)
 feber.se,tjock.se##+js(set, dovideostuffAD, noopFunc)
-feber.se,tjock.se##.burt-unit, .art_ad, adline, f-panorama, f-deals, #rpPopular, #maxetiseFull, #outsider, [data-ad="true"], f-internallink[adid], f-automatos-promo
+feber.se,tjock.se##.burt-unit, .art_ad, adline, f-panorama, f-deals, #rpPopular, #maxetiseFull, #outsider, [data-ad="true"], f-internallink[adid], f-automatos-promo, f-native
 festivalinfo.se##a[title*="Casino"], #top-content
 festivalinfo.se##.node-news:has(a[href*="casino"])
 fightermag.se##article:has(a[href*="betting"], a[href*="casino"], a[href*="kasino"], a[href*="/gastskribent/"])
@@ -1047,6 +1047,7 @@ lwcdn.com,alingsastidning.se,bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stro
 lysekilsposten.se###archiveAdContainer, .casino-wrapper
 m3.se,pcforalla.se,macworld.se##+js(href-sanitizer, a[href*="/idg.digidip.net/"], ?url)
 macken.xyz##a[target="_blank"]:not([href^="/"]):not([href*="/macken.xyz"])
+macken.xyz###snowflakes
 macken.xyz##.et_pb_slider:has(a[target="_blank"])
 magasindagg.se##.thb-page-transition-on:style(opacity:unset!important;)
 magasinetkonkret.se##.td_mod_wrap a[target]
@@ -1501,7 +1502,8 @@ swedroid.se##a[target="_blank"]:upward(li.Notice):remove()
 swedroid.se##div[id$="_ad"], div[id$="_ad_mobile"], .externalTopMobile, #externalTopMobile, #nativendo-mainfeed + aside > .article, .article-footer > h3, .article-footer > .aeChart, #newExternal, div[onclick*="prisjakt.nu/produkt"], a[href*="prisjakt.nu/produkt"], .article-footer a[href*="/vb/"][target]
 swedroid.se##+js(set, checkAdsBlocked, noopFunc)
 swedroid.se##.mostReadMobile:has-text(/annons/i)
-swedroid.se##.puff:has(script[src*="lwadm.com"], .pjSidebar, div[onclick*="prisjakt.nu/produkt"], .phdname)
+swedroid.se##.puff:has(script[data-pbid])
+swedroid.se##.puff:has-text(/Aktuellt på Prisjakt/i)
 swehockey.se##[class*="-reklam"], .sif-sponsorer, .teaserblock, .commonblock a:not([href^="/"], [href*="/swehockey.se"])
 sxk.se###start-sponsors
 sydasien.se##.thb-cookie-bar
@@ -2534,6 +2536,7 @@ zeromagazine.nu##div[id^="ads"]
 /plugins/fisher/core/js/generated/fixed-panorama
 /plugins/fisher/core/js/generated/infinite-ads
 /plugins/ft-takeover-ads
+/plugins/funnel-builder/assets/live/js/tracks
 /plugins/ga-germanized/*
 /plugins/ga-in/*
 /plugins/gdpr-cookie-compliance$script,domain=goteborgsgolfaren.se|bfn.se|frilanstidningen.se|hbgcity.se
@@ -2642,6 +2645,7 @@ zeromagazine.nu##div[id^="ads"]
 /plugins/wp-facebook-pixel
 /plugins/wp-gdpr-compliance$script,domain=pussad.se
 /plugins/wp-lrf-paywall
+/plugins/wp-marketing-automations
 /plugins/wp-parsely$domain=moviezine.se
 /plugins/wp-plugin-cookie-consent$script,domain=vegomagasinet.se
 /plugins/wp-popups-lite$domain=grillbaronen.se|spelochfilm.se|sameforeningen-stockholm.se|norrkopingshistoria.se|pirkt.se
