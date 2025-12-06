@@ -1,7 +1,7 @@
 ! Title: Frellwit's Swedish Filter
-! Last updated: Fri, 05 Dec 2025 05:58:12 +0000
+! Last updated: Sat, 06 Dec 2025 07:14:57 +0000
 ! Expires: 5 days
-! Diff-Path: patches/2025.12.5.358.patch#swefilter
+! Diff-Path: patches/2025.12.6.434.patch#swefilter
 ! Diff-Expires: 24 hours
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
@@ -137,6 +137,7 @@ aip.nu,lansposten.se,dalabygden.se,sormlandsbygden.se##body.cookies-not-set:styl
 aktavara.org##.banner-start
 aktieskolan.se##.ast-container > .elementor > section.elementor-section:has(a[href*="betting"])
 aktiespararna.se,alekuriren.se,tidningen.se,kurera.se,vinbanken.se,utsidan.se##.native
+aktivtfamiljeliv.se##.post_content:has-text(/ANNONSSAMARBETE/i):upward(article)
 aktuellhallbarhet.se,byggindustrin.se,dagensmedia.se,dagensmedicin.se,fastighetsnytt.se,resume.se,dagenssamhalle.se,market.se,dagligvarunytt.se,privataaffarer.se##.outsider, .module, .articlemodule, .mob, [data-bad-fullpage-container], a[href^="/native"]
 aktuellsakerhet.se###newsletter
 alandpost.ax##button.bg-blue-500:has-text(/cookies/i):upward(.fixed.bottom-0)
@@ -3057,6 +3058,7 @@ _banner.php?$domain=tvmatchen.nu
 ||cdn.aller.se/cts/
 ||cdn.iubenda.com^$domain=meetingsinternational.se
 ||cdn.livechatinc.com/tracking$domain=~box.co.uk
+||cdn.mentormedier.no/analytics
 ||cdn.pji.nu/g/sp.gif$important
 ||cdn.segment.com/v1/projects/$xhr,redirect=noop.json,important,domain=dagen.se|vinborsen.se
 ||cdn.stroeerdigitalgroup.de^
@@ -3568,7 +3570,6 @@ _banner.php?$domain=tvmatchen.nu
 ||vk.com^$domain=ungdomar.se
 ||vovve.net/i/sponsorer
 ||voyager-widgets.aftonbladet.se/widgets/sports
-||walls.io^$domain=svensktgolfforum.se
 ||wayke.se^$third-party,domain=siljannews.se
 ||wb-analytics.onecruiter.com^
 ||wct-1.com^$third-party
