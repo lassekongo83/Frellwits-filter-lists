@@ -1,7 +1,7 @@
 ! Title: Frellwit's Swedish Filter
-! Last updated: Wed, 10 Dec 2025 05:16:21 +0000
+! Last updated: Fri, 12 Dec 2025 02:41:12 +0000
 ! Expires: 5 days
-! Diff-Path: patches/2025.12.10.316.patch#swefilter
+! Diff-Path: patches/2025.12.12.161.patch#swefilter
 ! Diff-Expires: 24 hours
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
@@ -539,7 +539,6 @@ expressen.se##+js(href-sanitizer, a[href*="&ued="], ?ued)
 expressen.se##+js(href-sanitizer, a[href*=".pxf.io"], ?u)
 expressen.se##+js(href-sanitizer, a[href*=".sjv.io"], ?u)
 expressen.se##.campaign, .html-widget > div[style^="text-align: center; font-size: 10px;"]
-expressen.se##.html-widget[data-vendor]:has(script[data-vendor])
 expressen.se##.tapet-popup-js-no-scroll, .tapet-no-scroll:style(overflow-y:initial!important; position:unset!important;)
 expressen.se##.teaser:has(a[href*="/annons"], a[href*="/brandstudio"], a[href*="/brand-studio"], a[href*="/kampanj."], a[href*="/lanapengar."], a[href*="/rabattkoder."], a[href*="/spel.expressen.se"], .vignette--svg + a[href*="teknikensvarld."], .teaser__bottom--ad-marker)
 expressen.se##.widget-area.article__after-widgets:has-text(/annons/i)
