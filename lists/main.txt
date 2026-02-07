@@ -1593,44 +1593,33 @@ osterbottenstidning.fi,sydin.fi,vasabladet.fi##.online-teaser--advertorial, .onl
 ||sdk.pulse.schibsted.com^$script,domain=aftonbladet.se|~tv.aftonbladet.se|omni.se|omniekonomi.se|svd.se|prisjakt.nu|bytbil.com|godare.se
 ||sdkconfig.pulse.schibsted.io^$domain=aftonbladet.se|omni.se|omniekonomi.se|svd.se|prisjakt.nu|bytbil.com|godare.se|klart.se
 ! Aftonbladet
-||voyager-widgets.aftonbladet.se/widgets/sports
-||shopi.tize.no/afton$3p
-||psi3.aftonbladet.se/ab.js
-curateContext=affiliate$domain=aftonbladet.se
 /ab_tracking$domain=aftonbladet.se
 /ab_stats_params$domain=aftonbladet.se
 /ads-countdown.js$domain=aftonbladet.se|godare.se
-/casinokollen$all,domain=aftonbladet.se
 /identify/guest$domain=godare.se|tv.nu
 /player-plugin-tracking$domain=tv.aftonbladet.se
 /player-plugin-ad$domain=tv.aftonbladet.se
 /player-plugin-sponsor$domain=tv.aftonbladet.se
 /vgc/cdn/js/libs/ast/*$script,domain=aftonbladet.se
 /track-view$domain=aftonbladet.se|godare.se
-! Cosmetic filters
-aftonbladet.se###superright-side, a[href*="/casinoguide"], [id^="adPlacement"], a[href*="/rabattkod"][data-test-tag="internal-link"], #takeover-container, div[class^="stickylogin"], a[href*=".snabbare.com"]
-aftonbladet.se,godare.se##[data-test-tag="prisjakt-carousel"], a[href*="/brandstudio"], a[href*="/brand-studio"], div[class^="advertory-"]:not(.advertory-header-anchor)
-aftonbladet.se,godare.se##div[style*="min-height:240px"]:has(iframe[src*="/widgets/ads/"])
-aftonbladet.se##[data-ad-subtype]:upward(1):matches-css(min-height:/[0-9]+/)
-aftonbladet.se##:is(main > section a[data-test-tag="internal-link"], #main > section a[data-test-tag="internal-link"], main > section a[href*="godare.se"], #main > section a[href*="godare.se"], main > aside a[data-test-tag="internal-link"]):has-text(innehåller annonslänkar)
-aftonbladet.se##:is(main > section > div[class^="hyperion"], #main > section > div[class^="hyperion"]):has(a[href*="/brandstudio"], a[href*="/brand-studio"], a[href*="/rabattkod/"], a[href*="/casinoguide/"], iframe[src*="compricer"])
-aftonbladet.se##aside > div[class^="hyperion"]:has(a[href*="/rabattkod"], a[href*="casino"], a[href*="/brandstudio"], a[href*="/brand-studio"])
-aftonbladet.se##article[class^="article-wrapper"] ~ div[class^="hyperion"]:has(a[href*="/t?a="], a[href*="/click"], a[href^="http"][nofollow], a[href^="http"][rel*="nofollow"], iframe[src*="pricerunner"], iframe[src*="/ads/"])
-aftonbladet.se##main > section > div:first-child:matches-css(box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 24px 0px)
-aftonbladet.se##section[class*="layout-main"] > div[class^="hyperion-css"]:has(a[href*="/produkt/"]:not(a[href^="/"]), a[href*="/varumarken/"]:not(a[href^="/"]), a[href*="/prisjakt.nu"])
-aftonbladet.se##body.default section[class^="twocolumnlayout-main"] > div[class^="hyperion"]:has(a[href*="/speltips/"])
-aftonbladet.se##:matches-path(/sportbladet$/) section[class^="twocolumnlayout-main"] > div[class^="hyperion"]:has(a[href*="/speltips/"])
-aftonbladet.se##article[class^="article-wrapper"] strong:has-text(/annons:/i):upward(1)
-aftonbladet.se##h2[data-test-tag="paragraph-header"]:has(a[aria-label*="ANNONS"])
+||tv.aftonbladet.se/static/js/brandmetrics
+||tv.aftonbladet.se/static/js/codigo
+||tv.aftonbladet.se/static/js/mbl
 ! new layout 2026
 /_astro/initTracking$domain=aftonbladet.se
 /_astro/InitializeAdverts$domain=aftonbladet.se
 /_astro/Sifo$domain=aftonbladet.se
-aftonbladet.se##div[data-edition-name^="ab-native-premium"]
+/@sentry$script,domain=aftonbladet.se
+aftonbladet.se,godare.se##div[data-edition-name^="ab-native-premium"], div[class^="advertory-"]:not(.advertory-header-anchor), a[href*="/brandstudio"], a[href*="/brand-studio"],  a[href*="/casinoguide"]
 aftonbladet.se##aside > div[class^="_wrapper"]:has(div[class^="_adLabel"])
 aftonbladet.se##div[class^="_adLabel"]:upward(1)
 aftonbladet.se##.label-medium:has-text(/annonslänkar/i):upward(astro-island[component-url])
 aftonbladet.se##track-element:remove-attr(/data-track/)
+aftonbladet.se##h2[data-test-tag="paragraph-header"]:has(a[aria-label*="ANNONS"])
+! remnants of the old site
+aftonbladet.se##div[class^="stickylogin"]
+aftonbladet.se##article[class^="article-wrapper"] ~ div[class^="hyperion"]:has(a[href*="/t?a="], a[href*="/click"], a[href^="http"][nofollow], a[href^="http"][rel*="nofollow"], iframe[src*="pricerunner"], iframe[src*="/ads/"])
+aftonbladet.se##article[class^="article-wrapper"] strong:has-text(/annons/i):upward(1)
 ! scriptlets
 www.aftonbladet.se##+js(nostif, TAKEOVER)
 ! css
@@ -1667,6 +1656,7 @@ tracking-island.js$domain=blocket.se
 blocket.se##.badge--info:has-text(Betald placering):upward(.sf-search-ad)
 blocket.se#@#div[data-ad-id]
 ! Övrigt
+godare.se##div[style*="min-height:240px"]:has(iframe[src*="/widgets/ads/"])
 godare.se##[id^="adPlacement"]:upward(1)
 godare.se##div[style="min-height:350px"]:has(iframe[title="Annons"])
 godare.se##.godare-ad-element, a[href*="/brand-studio"], a[href*="/brandstudio"], .recipe-ad, a[href*="utm_campaign"][data-test-tag="external-link"], div[class^="styles-imagesWrapper"] a[data-test-tag="external-link"]
@@ -3136,7 +3126,7 @@ dagensarbetsmiljo.se##+js(aeld, wheel, e.defaultPrevented)
 !#endif
 ! Chromium
 !#if env_chromium
-?adType$xmlhttprequest,removeparam=adType,domain=tv4play.se
+adType$xmlhttprequest,removeparam=adType,domain=tv4play.se
 rocknytt.net,upphandling24.se,datormagazin.se,villalivet.se,polistidningen.se,densistavilan.se,classicmotor.se,tidningenhalsa.se,husohem.se,guiden.se,nyadagbladet.se,enkelteknik.se,vadhanderisverige.se,passioneffect.se,livsmedelsnyheter.se,modernpsykologi.se##+js(acs, advads)
 rocknytt.net,upphandling24.se,datormagazin.se,villalivet.se,polistidningen.se,densistavilan.se,classicmotor.se,tidningenhalsa.se,husohem.se,guiden.se,nyadagbladet.se,enkelteknik.se,vadhanderisverige.se,passioneffect.se,livsmedelsnyheter.se,modernpsykologi.se##+js(acs, advanced_ads)
 !#endif
