@@ -1,32 +1,35 @@
-diff name:swefilter lines:128 checksum:8dd6f54247
+diff name:swefilter lines:142 checksum:3230edf675
 d2 1
 a2 1
-! Last updated: Fri, 06 Feb 2026 09:53:58 +0000
+! Last updated: Sat, 07 Feb 2026 06:45:28 +0000
 d4 1
 a4 1
-! Diff-Path: patches/2026.2.6.593.patch#swefilter
+! Diff-Path: patches/2026.2.7.405.patch#swefilter
 d88 1
 a88 1
 .se/*/|$script,domain=bredband.se|telepriskollen.se|kontantkort.se|simkort.se
-a116 1
+d115 12
+a126 8
+aftonbladet.se##article[class^="article-wrapper"] strong:has-text(/annons/i):upward(1)
 aftonbladet.se##aside > div[class^="_wrapper"]:has(div[class^="_adLabel"])
-a117 3
+aftonbladet.se##div[class^="stickylogin"]
 aftonbladet.se##div[class^="_adLabel"]:upward(1)
-aftonbladet.se##div[data-edition-name^="ab-native-premium"]
 aftonbladet.se##h2[data-test-tag="paragraph-header"]:has(a[aria-label*="ANNONS"])
-a119 1
 aftonbladet.se##track-element:remove-attr(/data-track/)
-a120 1
 aftonbladet.se##.label-medium:has-text(/annonslänkar/i):upward(astro-island[component-url])
+aftonbladet.se,godare.se##div[data-edition-name^="ab-native-premium"], div[class^="advertory-"]:not(.advertory-header-anchor), a[href*="/brandstudio"], a[href*="/brand-studio"],  a[href*="/casinoguide"]
 d191 1
 a191 1
 annons$image,domain=kiacarclub.se|pvmagasinet.se
+d385 1
 d556 1
 a556 1
 extrakt.se,ordmedzcxy.se,gamingtips.se,veckansnyheter.se,aventyrsresor.se,nyhetskartan.se,aldreicentrum.se###cmplz-cookiebanner-container
 d656 1
 a656 1
 fotosidan.se,merinfo.se,allsvenskan.se,tasteline.com,jaktojagare.se,chefstidningen.se,norpan.se,jaktjournalen.se,byggvarlden.se,omtanke.today,akademikern.se,socionomen.se,culturezone.se,lchfarkivet.se,stoppapressarna.se,metromode.se,lesscarbs.se,flygtorget.se,receptskatt.se,varldenom.com##.ads
+a714 1
+godare.se##div[style*="min-height:240px"]:has(iframe[src*="/widgets/ads/"])
 d725 1
 a725 1
 goteborgfilmfestival.se##.text-gray:has-text(/Annons/i):upward(1)
@@ -73,6 +76,7 @@ a2165 1
 /annons$image,domain=dagensvimmerby.se|dagensvastervik.se|dagenskalmar.nu|dagenshultsfred.se|filmtopp.se|omkonst.com|saltvattensguiden.se|motorsportivarmland.nu|utstallningskritik.se
 a2169 1
 /annons?key=
+d2237 1
 a2254 1
 /consent_banner$script,domain=skogsentreprenorerna.se
 d2260 1
@@ -95,6 +99,8 @@ a2715 1
 /rostesweha.$script,domain=tidningenskriva.se|offside.org
 a2834 1
 /vego-statistics$domain=vegomagasinet.se
+a2917 1
+/@sentry$script,domain=aftonbladet.se
 a2918 3
 /_astro/InitializeAdverts$domain=aftonbladet.se
 /_astro/Sifo$domain=aftonbladet.se
@@ -117,11 +123,19 @@ a3252 1
 ||hu-manity.co^$domain=densistavilan.se|naturochtradgard.se
 a3290 1
 ||kaptenkryss.se^$third-party
+d3424 1
+d3487 1
+a3562 3
+||tv.aftonbladet.se/static/js/brandmetrics
+||tv.aftonbladet.se/static/js/codigo
+||tv.aftonbladet.se/static/js/mbl
 d3568 1
 a3571 1
 ||um.merinfo.se^
-d3626 2
-a3627 2
+d3591 1
+d3625 3
+a3627 3
+adType$xmlhttprequest,removeparam=adType,domain=tv4play.se
 rocknytt.net,upphandling24.se,datormagazin.se,villalivet.se,polistidningen.se,densistavilan.se,classicmotor.se,tidningenhalsa.se,husohem.se,guiden.se,nyadagbladet.se,enkelteknik.se,vadhanderisverige.se,passioneffect.se,livsmedelsnyheter.se,modernpsykologi.se##+js(acs, advads)
 rocknytt.net,upphandling24.se,datormagazin.se,villalivet.se,polistidningen.se,densistavilan.se,classicmotor.se,tidningenhalsa.se,husohem.se,guiden.se,nyadagbladet.se,enkelteknik.se,vadhanderisverige.se,passioneffect.se,livsmedelsnyheter.se,modernpsykologi.se##+js(acs, advanced_ads)
 d3665 1

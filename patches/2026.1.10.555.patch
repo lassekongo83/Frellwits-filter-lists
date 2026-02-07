@@ -1,23 +1,23 @@
-diff name:swefilter lines:195 checksum:8dd6f54247
+diff name:swefilter lines:209 checksum:3230edf675
 d2 1
 a2 1
-! Last updated: Fri, 06 Feb 2026 09:53:58 +0000
+! Last updated: Sat, 07 Feb 2026 06:45:28 +0000
 d4 1
 a4 1
-! Diff-Path: patches/2026.2.6.593.patch#swefilter
+! Diff-Path: patches/2026.2.7.405.patch#swefilter
 d88 1
 a88 1
 .se/*/|$script,domain=bredband.se|telepriskollen.se|kontantkort.se|simkort.se
-a116 1
+d115 12
+a126 8
+aftonbladet.se##article[class^="article-wrapper"] strong:has-text(/annons/i):upward(1)
 aftonbladet.se##aside > div[class^="_wrapper"]:has(div[class^="_adLabel"])
-a117 3
+aftonbladet.se##div[class^="stickylogin"]
 aftonbladet.se##div[class^="_adLabel"]:upward(1)
-aftonbladet.se##div[data-edition-name^="ab-native-premium"]
 aftonbladet.se##h2[data-test-tag="paragraph-header"]:has(a[aria-label*="ANNONS"])
-a119 1
 aftonbladet.se##track-element:remove-attr(/data-track/)
-a120 1
 aftonbladet.se##.label-medium:has-text(/annonslänkar/i):upward(astro-island[component-url])
+aftonbladet.se,godare.se##div[data-edition-name^="ab-native-premium"], div[class^="advertory-"]:not(.advertory-header-anchor), a[href*="/brandstudio"], a[href*="/brand-studio"],  a[href*="/casinoguide"]
 d191 1
 a191 1
 annons$image,domain=kiacarclub.se|pvmagasinet.se
@@ -25,6 +25,7 @@ a236 1
 battrestadsdel.se##.apds_main + div[style^="margin"]:has-text(/casino/i)
 a265 1
 bjarenu.se##:is(.smalltopnyhed, .topnyhed):has(a[href^="/native/"])
+d383 1
 a391 1
 dagensmuslim.se##.stream-item-top, .theiaStickySidebar a[target="_blank"]
 d423 1
@@ -45,6 +46,8 @@ extrakt.se,ordmedzcxy.se,gamingtips.se,veckansnyheter.se,aventyrsresor.se,nyhets
 d653 1
 a653 1
 fotosidan.se,merinfo.se,allsvenskan.se,tasteline.com,jaktojagare.se,chefstidningen.se,norpan.se,jaktjournalen.se,byggvarlden.se,omtanke.today,akademikern.se,socionomen.se,culturezone.se,lchfarkivet.se,stoppapressarna.se,metromode.se,lesscarbs.se,flygtorget.se,receptskatt.se,varldenom.com##.ads
+a711 1
+godare.se##div[style*="min-height:240px"]:has(iframe[src*="/widgets/ads/"])
 d722 1
 a722 1
 goteborgfilmfestival.se##.text-gray:has-text(/Annons/i):upward(1)
@@ -108,6 +111,7 @@ a2161 1
 /annons$image,domain=dagensvimmerby.se|dagensvastervik.se|dagenskalmar.nu|dagenshultsfred.se|filmtopp.se|omkonst.com|saltvattensguiden.se|motorsportivarmland.nu|utstallningskritik.se
 a2165 1
 /annons?key=
+d2233 1
 a2250 1
 /consent_banner$script,domain=skogsentreprenorerna.se
 d2256 1
@@ -135,6 +139,8 @@ a2710 1
 /rostesweha.$script,domain=tidningenskriva.se|offside.org
 a2829 1
 /vego-statistics$domain=vegomagasinet.se
+a2912 1
+/@sentry$script,domain=aftonbladet.se
 a2913 3
 /_astro/InitializeAdverts$domain=aftonbladet.se
 /_astro/Sifo$domain=aftonbladet.se
@@ -180,13 +186,21 @@ a3281 1
 d3411 1
 a3411 1
 ||privacy-center.org^$domain=180.se|agriaffaires.se|truckscorner.se|machineryzone.se|netdoktor.se|netdoktorpro.se|news55.se|hastnet.se|dagensps.se|realtid.se|newsner.com|humorbibeln.se|sportbibeln.se|ettgottskratt.se|matbibeln.se|djurbibeln.se|nojeslivet.se|booli.se|fotbolltransfers.com|foretagsverige.se|forskningsverige.se|motorbibeln.se|hallbarhetsverige.se|tillvaxtsverige.se|grillbibeln.se|kampenmotcancer.se|folkhalsasverige.se|dinlivsstil.nu|gds.se
+d3415 1
+d3478 1
+a3553 3
+||tv.aftonbladet.se/static/js/brandmetrics
+||tv.aftonbladet.se/static/js/codigo
+||tv.aftonbladet.se/static/js/mbl
 d3559 1
 a3562 1
 ||um.merinfo.se^
+d3582 1
 a3589 1
 ||webstat.abf.se^
-d3616 2
-a3617 2
+d3615 3
+a3617 3
+adType$xmlhttprequest,removeparam=adType,domain=tv4play.se
 rocknytt.net,upphandling24.se,datormagazin.se,villalivet.se,polistidningen.se,densistavilan.se,classicmotor.se,tidningenhalsa.se,husohem.se,guiden.se,nyadagbladet.se,enkelteknik.se,vadhanderisverige.se,passioneffect.se,livsmedelsnyheter.se,modernpsykologi.se##+js(acs, advads)
 rocknytt.net,upphandling24.se,datormagazin.se,villalivet.se,polistidningen.se,densistavilan.se,classicmotor.se,tidningenhalsa.se,husohem.se,guiden.se,nyadagbladet.se,enkelteknik.se,vadhanderisverige.se,passioneffect.se,livsmedelsnyheter.se,modernpsykologi.se##+js(acs, advanced_ads)
 d3655 1
