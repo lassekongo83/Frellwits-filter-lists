@@ -1,12 +1,12 @@
-diff name:swefilter lines:38 checksum:3230edf675
+diff name:swefilter lines:50 checksum:b9d9a60db2
 d2 1
 a2 1
-! Last updated: Sat, 07 Feb 2026 06:45:28 +0000
+! Last updated: Mon, 09 Feb 2026 06:47:02 +0000
 d4 1
 a4 1
-! Diff-Path: patches/2026.2.7.405.patch#swefilter
+! Diff-Path: patches/2026.2.9.406.patch#swefilter
 d115 12
-a126 8
+a126 9
 aftonbladet.se##article[class^="article-wrapper"] strong:has-text(/annons/i):upward(1)
 aftonbladet.se##aside > div[class^="_wrapper"]:has(div[class^="_adLabel"])
 aftonbladet.se##div[class^="stickylogin"]
@@ -14,10 +14,22 @@ aftonbladet.se##div[class^="_adLabel"]:upward(1)
 aftonbladet.se##h2[data-test-tag="paragraph-header"]:has(a[aria-label*="ANNONS"])
 aftonbladet.se##track-element:remove-attr(/data-track/)
 aftonbladet.se##.label-medium:has-text(/annonslänkar/i):upward(astro-island[component-url])
+aftonbladet.se##:is(aside[class^="twocolumnlayout-aside"], section[class^="twocolumnlayout-main"]) a[data-test-tag="internal-link"]:has-text(/annonslänkar/i)
 aftonbladet.se,godare.se##div[data-edition-name^="ab-native-premium"], div[class^="advertory-"]:not(.advertory-header-anchor), a[href*="/brandstudio"], a[href*="/brand-studio"],  a[href*="/casinoguide"]
 d385 1
 a714 1
 godare.se##div[style*="min-height:240px"]:has(iframe[src*="/widgets/ads/"])
+d716 1
+a719 1
+godare.se,klart.se##+js(set, advertoryFluepapir, true)
+a1676 1
+vasterastidning.se##h2.headline:has-text(ANNONS:):upward(article)
+a1714 1
+vk.se,folkbladet.nu,nordsverige.se,mellanbygden.nu,vasterbottningen.se,lokaltidningen.nu##+js(json-prune, uesUrlFallback)
+d1716 1
+a1716 2
+vk.se,folkbladet.nu,nordsverige.se,mellanbygden.nu,vasterbottningen.se,lokaltidningen.nu##.vkmui-Text--grey, [class^="adContainer"], div[class^="bordersAndShadows"] > div[style^="min-height"]:only-child, div[data-track-id="family.Familjeannonser"], div[class*="adElement"], div[id*="_panorama"], div[data-track-id*="panoramaAd"], div[data-track-id$=".native"], div[data-track-id$=".blockAd"], div[data-track-id^="adnuntius-ad"], div[id^="fb_widescreen"]
+vk.se,folkbladet.nu,nordsverige.se,mellanbygden.nu,vasterbottningen.se,lokaltidningen.nu##:is(div[class^="stickyContainer"], div[class^="header_"]):has(span[data-ad-report-label="true"])
 d2245 1
 a2928 1
 /@sentry$script,domain=aftonbladet.se

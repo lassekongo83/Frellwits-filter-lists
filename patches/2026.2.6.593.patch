@@ -1,10 +1,10 @@
-diff name:swefilter lines:34 checksum:3230edf675
+diff name:swefilter lines:46 checksum:b9d9a60db2
 d2 1
 a2 1
-! Last updated: Sat, 07 Feb 2026 06:45:28 +0000
+! Last updated: Mon, 09 Feb 2026 06:47:02 +0000
 d4 1
 a4 1
-! Diff-Path: patches/2026.2.7.405.patch#swefilter
+! Diff-Path: patches/2026.2.9.406.patch#swefilter
 d115 2
 a116 1
 aftonbladet.se##article[class^="article-wrapper"] strong:has-text(/annons/i):upward(1)
@@ -15,11 +15,23 @@ d120 1
 d122 2
 d125 1
 d127 6
-a132 1
+a132 2
+aftonbladet.se##:is(aside[class^="twocolumnlayout-aside"], section[class^="twocolumnlayout-main"]) a[data-test-tag="internal-link"]:has-text(/annonslänkar/i)
 aftonbladet.se,godare.se##div[data-edition-name^="ab-native-premium"], div[class^="advertory-"]:not(.advertory-header-anchor), a[href*="/brandstudio"], a[href*="/brand-studio"],  a[href*="/casinoguide"]
 d391 1
 a720 1
 godare.se##div[style*="min-height:240px"]:has(iframe[src*="/widgets/ads/"])
+d722 1
+a725 1
+godare.se,klart.se##+js(set, advertoryFluepapir, true)
+a1682 1
+vasterastidning.se##h2.headline:has-text(ANNONS:):upward(article)
+a1720 1
+vk.se,folkbladet.nu,nordsverige.se,mellanbygden.nu,vasterbottningen.se,lokaltidningen.nu##+js(json-prune, uesUrlFallback)
+d1722 1
+a1722 2
+vk.se,folkbladet.nu,nordsverige.se,mellanbygden.nu,vasterbottningen.se,lokaltidningen.nu##.vkmui-Text--grey, [class^="adContainer"], div[class^="bordersAndShadows"] > div[style^="min-height"]:only-child, div[data-track-id="family.Familjeannonser"], div[class*="adElement"], div[id*="_panorama"], div[data-track-id*="panoramaAd"], div[data-track-id$=".native"], div[data-track-id$=".blockAd"], div[data-track-id^="adnuntius-ad"], div[id^="fb_widescreen"]
+vk.se,folkbladet.nu,nordsverige.se,mellanbygden.nu,vasterbottningen.se,lokaltidningen.nu##:is(div[class^="stickyContainer"], div[class^="header_"]):has(span[data-ad-report-label="true"])
 d2251 1
 a2934 1
 /@sentry$script,domain=aftonbladet.se

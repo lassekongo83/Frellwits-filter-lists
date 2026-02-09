@@ -1,15 +1,15 @@
-diff name:swefilter lines:201 checksum:3230edf675
+diff name:swefilter lines:213 checksum:b9d9a60db2
 d2 1
 a2 1
-! Last updated: Sat, 07 Feb 2026 06:45:28 +0000
+! Last updated: Mon, 09 Feb 2026 06:47:02 +0000
 d4 1
 a4 1
-! Diff-Path: patches/2026.2.7.405.patch#swefilter
+! Diff-Path: patches/2026.2.9.406.patch#swefilter
 d88 1
 a88 1
 .se/*/|$script,domain=bredband.se|telepriskollen.se|kontantkort.se|simkort.se
 d115 12
-a126 8
+a126 9
 aftonbladet.se##article[class^="article-wrapper"] strong:has-text(/annons/i):upward(1)
 aftonbladet.se##aside > div[class^="_wrapper"]:has(div[class^="_adLabel"])
 aftonbladet.se##div[class^="stickylogin"]
@@ -17,6 +17,7 @@ aftonbladet.se##div[class^="_adLabel"]:upward(1)
 aftonbladet.se##h2[data-test-tag="paragraph-header"]:has(a[aria-label*="ANNONS"])
 aftonbladet.se##track-element:remove-attr(/data-track/)
 aftonbladet.se##.label-medium:has-text(/annonslänkar/i):upward(astro-island[component-url])
+aftonbladet.se##:is(aside[class^="twocolumnlayout-aside"], section[class^="twocolumnlayout-main"]) a[data-test-tag="internal-link"]:has-text(/annonslänkar/i)
 aftonbladet.se,godare.se##div[data-edition-name^="ab-native-premium"], div[class^="advertory-"]:not(.advertory-header-anchor), a[href*="/brandstudio"], a[href*="/brand-studio"],  a[href*="/casinoguide"]
 d191 1
 a191 1
@@ -48,6 +49,9 @@ a653 1
 fotosidan.se,merinfo.se,allsvenskan.se,tasteline.com,jaktojagare.se,chefstidningen.se,norpan.se,jaktjournalen.se,byggvarlden.se,omtanke.today,akademikern.se,socionomen.se,culturezone.se,lchfarkivet.se,stoppapressarna.se,metromode.se,lesscarbs.se,flygtorget.se,receptskatt.se,varldenom.com##.ads
 a711 1
 godare.se##div[style*="min-height:240px"]:has(iframe[src*="/widgets/ads/"])
+d713 1
+a716 1
+godare.se,klart.se##+js(set, advertoryFluepapir, true)
 d722 1
 a722 1
 goteborgfilmfestival.se##.text-gray:has-text(/Annons/i):upward(1)
@@ -93,6 +97,14 @@ trailer.se,trucking.se###gdpr
 d1634 1
 a1645 1
 utstallningskritik.se##.widget-title:has-text(Annonsörer):upward(.widget_media_gallery)
+a1667 1
+vasterastidning.se##h2.headline:has-text(ANNONS:):upward(article)
+a1705 1
+vk.se,folkbladet.nu,nordsverige.se,mellanbygden.nu,vasterbottningen.se,lokaltidningen.nu##+js(json-prune, uesUrlFallback)
+d1707 1
+a1707 2
+vk.se,folkbladet.nu,nordsverige.se,mellanbygden.nu,vasterbottningen.se,lokaltidningen.nu##.vkmui-Text--grey, [class^="adContainer"], div[class^="bordersAndShadows"] > div[style^="min-height"]:only-child, div[data-track-id="family.Familjeannonser"], div[class*="adElement"], div[id*="_panorama"], div[data-track-id*="panoramaAd"], div[data-track-id$=".native"], div[data-track-id$=".blockAd"], div[data-track-id^="adnuntius-ad"], div[id^="fb_widescreen"]
+vk.se,folkbladet.nu,nordsverige.se,mellanbygden.nu,vasterbottningen.se,lokaltidningen.nu##:is(div[class^="stickyContainer"], div[class^="header_"]):has(span[data-ad-report-label="true"])
 a2035 1
 ##.vo-adform:not(body):not(html)
 a2052 1
