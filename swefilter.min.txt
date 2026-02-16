@@ -1,7 +1,7 @@
 ! Title: Frellwit's Swedish Filter
-! Last updated: Sat, 14 Feb 2026 06:16:47 +0000
+! Last updated: Mon, 16 Feb 2026 06:13:28 +0000
 ! Expires: 5 days
-! Diff-Path: patches/2026.2.14.376.patch#swefilter
+! Diff-Path: patches/2026.2.16.373.patch#swefilter
 ! Diff-Expires: 24 hours
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
@@ -192,7 +192,7 @@ arbetaren.se##.text-sm:has-text(/annons/i):upward(.border-b, a[target])
 arbetet.se##.Container:not(.ContentItem-content):has([data-controller="ad"])
 arbetet.se##.Teaser--native, .o-native, [data-controller="ad"], div[id^="consent-"]
 arbetsvarlden.se##.nl_popup
-arjeplognytt.se##.metaslider
+arjeplognytt.se##.metaslider, img[alt*="Annons"]
 arkitekten.se##div[data-native-ad-position]:has(.Ad)
 arkitekten.se##div[id^="consent-"]
 arkitekten.se##html:style(--scrollbar-width:initial!important)
@@ -2255,6 +2255,7 @@ zeromagazine.nu##div[id^="ads"]
 /cmp.js$domain=praktisktbatagande.se|hemtrevligt.se|vagabond.se|tidningenhalsa.se|utemagasinet.se|svenskgolf.se|sportfack.se|husohem.se|minhast.se|kalleanka.se|halge.se|bamse.se|akaskidor.se|husvagnochcamping.se|classicmotor.se|scandinavianretro.com
 /cm-ad-changer-server
 /cm-cc.js$domain=culturezone.se
+/codigo$domain=expressen.se
 /collect?v$domain=thelocal.se
 /comscore$domain=expressen.se
 /com_adagency$domain=fastbikes.se
