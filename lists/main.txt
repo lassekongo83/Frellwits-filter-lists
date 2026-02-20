@@ -1277,6 +1277,7 @@ utm_$document,removeparam=/^utm_/,domain=tv.nu|booli.se|expressen.se|aftonbladet
 /firebase-analytics.js$domain=stoppapressarna.se|alltomkungligt.se|zeinaskitchen.se|jennysmatblogg.nu|filippoon.se|lindasbakskola.se|niiinis.se
 /glimr$script,domain=aftonbladet.se|blocket.se|godare.se
 /pageView$xhr,domain=altinget.se|ifokus.se
+/ping$domain=kimura.se|feber.se|tjock.se
 /profile$ping,domain=feber.se|skippo.se|tasteline.com|tjock.se|marcusoscarsson.se|surfa.se|nordichardware.se|tv4.se|fotbollskanalen.se|koket.se|teknikveckan.se|langd.se|shl.se|hemhyra.se|qx.se
 /raven$script,domain=mitti.se|travnet.se|nyheter24.se|tyda.se|devote.se|hemtrevligt.se|alltforforaldrar.se|familjeliv.se|brollopstorget.se|blogg.se|nouw.com|lchfarkivet.se|fotbolltransfers.com|norrahalland.se|svenskgolf.se|vimedbarn.se|modette.se|vf.se|hjotidning.se|kt.se|kt-kuriren.se|sla.se|mariestadstidningen.se|filipstadstidning.se|fryksdalsbygden.se|nwt.se|arvikanyheter.se|nkp.se|saffletidningen.se|provinstidningen.se|dalslanningen.se|nlt.se|skaraborgsbygden.se|alltomnorrtalje.se|fragbite.se|ljudochbild.se|vk.se|folkbladet.nu|nordsverige.se|mellanbygden.nu|vasterbottningen.se|lokaltidningen.nu|svenskafans.com|sportlovin.se|innebandymagazinet.se|jaktjournalen.se|akaskidor.se|hockeysverige.se|kingmagazine.se|cafe.se|hockeynews.se|mmanytt.se|idrottensaffarer.se|fotbolldirekt.se|automotorsport.se|hockeyettan.se
 /ga.js$domain=helgon.se|gamemonetize.com|sjf.se
@@ -2052,7 +2053,8 @@ m3.se,pcforalla.se,macworld.se##+js(href-sanitizer, a[href*="/idg.digidip.net/"]
 ! Gamereactor
 ||gamereactor.se/ads/
 ||gamereactor.se/exclusive.json
-gamereactor.se###cookielawwarning, #eventad, [id^="sky"], [id^="ad_lead"], .external_div_bigVideoAd, #mpu, #leftToLogo, .itsanad, div[class^="ad_Bumper"], div[style="min-height: 600px; margin-bottom: 20px;"], div[id^="ad_"], div[class^="preAd_"], div[class^="ad_smartphbig"], .adMobileBig, div[class^="preMobileBig"], .external_div_videoAd, .ad_mobilebigwrap, #mobileLeftMainLogo
+/prebid*.$script,domain=gamereactor.se
+gamereactor.se###cookielawwarning, #eventad, [id^="sky"], [id^="ad_lead"], .external_div_bigVideoAd, #mpu, #leftToLogo, .itsanad, div[class^="ad_Bumper"], div[style="min-height: 600px; margin-bottom: 20px;"], div[id^="ad_"], div[class^="preAd_"], div[class^="ad_smartphbig"], .adMobileBig, div[class^="preMobileBig"], .external_div_videoAd, .ad_mobilebigwrap, #mobileLeftMainLogo, a[href*="/app.youform.com"][title*="ads"]
 gamereactor.se##.colHomePlayer:has([data-slotads="videoad"]):remove()
 gamereactor.se##video[data-autoplay]:remove-attr(data-autoplay)
 gamereactor.se##.rightbox:has(#grtvbelt_Sponsored)
@@ -2064,7 +2066,7 @@ gamereactor.se##+js(set, adblockEnabled, falseFunc)
 ||plausible.io^$script,redirect-rule=noop.js,domain=feber.se|tjock.se
 /count?$xhr,domain=feber.se|tjock.se
 /plausible$domain=feber.se|tjock.se
-feber.se,tjock.se##.burt-unit, .art_ad, adline, f-panorama, f-deals, #rpPopular, #maxetiseFull, #outsider, [data-ad="true"], f-internallink[adid], f-automatos-promo, f-native
+feber.se,tjock.se##.burt-unit, .art_ad, adline, f-panorama, f-deals, #rpPopular, #maxetiseFull, #outsider, [data-ad="true"], f-internallink[adid], f-automatos-promo, f-native, .readpeak-puff-content, .readpeak-puff-item
 feber.se,tjock.se##f-internallink:has(a[href="#"])
 feber.se,tjock.se##a[onclick^="plausible"]:remove-attr(onclick)
 feber.se,tjock.se##+js(set, dovideostuffAD, noopFunc)
@@ -2083,6 +2085,10 @@ fz.se##.card:has(.article-sponsored, a[href*="/sponsrat"])
 sweclockers.com###prisjakt-popular, .ad:not(.adPanorama), .adForumSticker, .dark-mode__sponsor
 sweclockers.com##div[class^="card-info"]:has-text(/spons/i):upward(.card)
 sweclockers.com##.bbSize:has-text(Sponsormeddelande):upward(.bbRelatedBox)
+mobil.se##.mm-popup-wrapper
+mobil.se##.content article:has(a:not([href*="mobil.se"], [href^="/"]))
+mobil.se##html.mm-popup-disable-scroll:remove-class(mm-popup-disable-scroll)
+mobil.se##.text_singleline:has-text(/annonsinnehåll/i)
 mobil.se,kamerabild.se##a[href*="/partner"], iframe[name^="PJWidget"], .google-ad
 mobil.se,kamerabild.se##article:has(a[href*="/partner"], a[href*="casino"], a[href*="utm_campaign"])
 mobil.se,kamerabild.se##.markupbox:has(a[href*="casino"], .holidAds)
@@ -2249,7 +2255,6 @@ hockeyettan.se##.club-ad-item, .banner-row
 fotosidan.se##.subArticlesponsored, div[style="width:300px;float:right;"], div[style="float:right;width:300px;"], #partner-box, .adbox-label, .banner-panorama-wmn
 fotosidan.se##.subArticle:has(.sponsored-wrapper)
 fotosidan.se##+js(aeld, contextmenu, , showCopyrightBox)
-/ping$domain=kimura.se
 kimura.se##a[href*="unibet.com"], a[href*="/kampanjer."], div[class^="yw-"], a[data-wpel-link="external"][target="_blank"]
 kimura.se##.post:not([data-elementor-type="single-post"]):has(div[class$="annonser"])
 mmanytt.se##.front-banner, .front-banner-cover, #text-2, [class*="sponsrat-inlagg"], a[href*="://kampanjer."], .ohmbet_link, a[href*="adsrv.eacdn.com"], .jeg_postblock + .wpb_content_element, .spelbolag-text, .adbox, .fight-odds-aggressive
