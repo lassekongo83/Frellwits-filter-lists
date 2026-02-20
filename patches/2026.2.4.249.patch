@@ -1,10 +1,10 @@
-diff name:swefilter lines:127 checksum:bc6476e263
+diff name:swefilter lines:143 checksum:9a499779bf
 d2 1
 a2 1
-! Last updated: Wed, 18 Feb 2026 19:38:16 +0000
+! Last updated: Fri, 20 Feb 2026 06:14:49 +0000
 d4 1
 a4 1
-! Diff-Path: patches/2026.2.18.1178.patch#swefilter
+! Diff-Path: patches/2026.2.20.374.patch#swefilter
 d115 2
 a116 1
 aftonbladet.se##article[class^="article-wrapper"] strong:has-text(/annons/i):upward(1)
@@ -45,6 +45,12 @@ eventeffect.se,executiveeffect.se,saleseffect.se###secondary .textwidget a:not([
 d566 1
 a566 1
 fastighetssverige.se##a[href*="/banner/out/"], .bnr_box, div[class^="panel"][style*="lightgoldenrodyellow"], .ad-label-after, div[id^="ads_"]
+d575 1
+a575 1
+feber.se,tjock.se##.burt-unit, .art_ad, adline, f-panorama, f-deals, #rpPopular, #maxetiseFull, #outsider, [data-ad="true"], f-internallink[adid], f-automatos-promo, f-native, .readpeak-puff-content, .readpeak-puff-item
+d705 1
+a705 1
+gamereactor.se###cookielawwarning, #eventad, [id^="sky"], [id^="ad_lead"], .external_div_bigVideoAd, #mpu, #leftToLogo, .itsanad, div[class^="ad_Bumper"], div[style="min-height: 600px; margin-bottom: 20px;"], div[id^="ad_"], div[class^="preAd_"], div[class^="ad_smartphbig"], .adMobileBig, div[class^="preMobileBig"], .external_div_videoAd, .ad_mobilebigwrap, #mobileLeftMainLogo, a[href*="/app.youform.com"][title*="ads"]
 a720 1
 godare.se##div[style*="min-height:240px"]:has(iframe[src*="/widgets/ads/"])
 d722 1
@@ -62,6 +68,11 @@ lidingonyheter.se##.moban, #secondary .lidin-widget, #sidebar-secondary .widget_
 d1074 1
 a1074 1
 magazin24.se##.ad-pad, .takeover_annons
+a1127 4
+mobil.se##html.mm-popup-disable-scroll:remove-class(mm-popup-disable-scroll)
+mobil.se##.content article:has(a:not([href*="mobil.se"], [href^="/"]))
+mobil.se##.mm-popup-wrapper
+mobil.se##.text_singleline:has-text(/annonsinnehåll/i)
 a1235 1
 opulens.se##div[class^="secondary"] .widget_custom_html:has(a[href*="casino"])
 d1394 1
@@ -93,12 +104,17 @@ a2167 1
 d2251 1
 a2264 1
 /codigo$domain=expressen.se
+d2499 1
+a2499 1
+/ping$domain=kimura.se|feber.se|tjock.se
 d2513 1
 a2513 1
 /plugins/advanced-ads$script,domain=newsner.com|humorbibeln.se|sportbibeln.se|matbibeln.se|ettgottskratt.se|djurbibeln.se|nojeslivet.se|vegomagasinet.se|inkopsradet.se
 d2541 1
 a2541 1
 /plugins/complianz-gdpr$script,domain=iconmagazine.se|signprint.se|vilaser.se|arjeplognytt.se|tidningenglobal.se|tidningensyre.se|landetsfria.nu|fempers.se|brollopsmagasinet.se|megafonen.se|kyrka.se|sjofartstidningen.se|pensionarsliv.se|aktuellsakerhet.se|maklarvarlden.se|sjomannen.se|home2tiny.se|marketplace.se|livsmedelsnyheter.se|dovastidning.se|vgrfokus.se|samefolket.se|cirkusvenues.se|surfzone.se|magasinetkonkret.se|samerna.se|affarsstaden.se|livsmedelifokus.se|bodennytt.se|dialasen.com|aftonkuriren.com|samtiden.nu|alltomhallbarhet.se|luleapride.se|onkologiisverige.se|epilepsi.se|nyhetersto.se|opulens.se
+a2696 1
+/prebid*.$script,domain=gamereactor.se
 d2828 1
 a2828 1
 /track$ping,xhr,domain=epochtimes.se|dagen.se|vinliv.se|maipenrai.se|korsordx.se|hrsvepet.se|cfosvepet.se|vdsvepet.se
