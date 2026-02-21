@@ -951,6 +951,7 @@ Video-Ad-$media,3p
 ||hapyak.com^$third-party
 ||herokuapp.com/visit?$image
 ||holid.io^$third-party
+||i.posthog.com/*/?retry_count
 ||iconosquare.com^$third-party
 ||ifragasatt.se/stats/
 ||ingest.analytics.nation.dev^
@@ -2064,6 +2065,7 @@ gamereactor.se##+js(set, adblockEnabled, falseFunc)
 ! Misc
 ||maxetise.net^$script,redirect-rule=noop.js,domain=feber.se|tjock.se
 ||plausible.io^$script,redirect-rule=noop.js,domain=feber.se|tjock.se
+||feber.se/native/$third-party
 /count?$xhr,domain=feber.se|tjock.se
 /plausible$domain=feber.se|tjock.se
 feber.se,tjock.se##.burt-unit, .art_ad, adline, f-panorama, f-deals, #rpPopular, #maxetiseFull, #outsider, [data-ad="true"], f-internallink[adid], f-automatos-promo, f-native, .readpeak-puff-content, .readpeak-puff-item
@@ -2114,7 +2116,7 @@ datormagazin.se##div[id^="dator-"]
 datormagazin.se##.td_module_wrap:has(a[href*="/annons/"])
 datormagazin.se##.td-big-grid-post:has(a[href*="/samarbete/"])
 datormagazin.se##.heading:has-text(/samarbete/i):upward(.elementor-widget-smartmag-featgrid)
-tekniksmart.se##.elementor-widget-container:has(a[href*="casino"])
+tekniksmart.se##:is(.elementor-widget-container, .elementor-widget-html):has(a[href*="casino"])
 minhembio.com##div[style="height: 120px;"]:not([id]):not([class])
 komponentkoll.se##.gdpr-wide
 /?template=prisjakt$domain=ljudochbild.se
@@ -2133,7 +2135,7 @@ macken.xyz##.et_pb_slider:has(a[target="_blank"])
 /pogoadkit.js$domain=nordic.ign.com
 esportare.se##p[style^="text-align: center;"] em:has-text(Annonser):upward(2)
 ||spelhubben.se/?_dnembed$script
-spelhubben.se###slideout
+spelhubben.se###slideout, .PartnerLinker-ad-wrap
 spelhubben.se##html, .unselectable:style(-moz-user-select:initial!important; -webkit-user-select:initial!important; -webkit-touch-callout:initial!important; user-select:initial!important; -webkit-tap-highlight-color:initial!important; cursor:initial!important;)
 spelhubben.se###loadfade:style(animation:unset!important; -moz-animation:unset!important; -webkit-animation:unset!important;)
 /ws-tracking$domain=voister.se
@@ -2907,6 +2909,7 @@ aletorget.se,alingsastorget.se,almhulttorget.se,alvestatorget.se,amaltorget.se,a
 /plugins/mitti-adform
 /plugins/ml-adverts
 /plugins/notificationx$script
+/plugins/pixel-review-partnerlinker-addon
 /plugins/quick-adsense
 /plugins/random-banner
 /plugins/se-wordpress-affiliatehelper
