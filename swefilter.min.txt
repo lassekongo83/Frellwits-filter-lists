@@ -1,7 +1,7 @@
 ! Title: Frellwit's Swedish Filter
-! Last updated: Sun, 22 Feb 2026 14:39:11 +0000
+! Last updated: Tue, 24 Feb 2026 06:09:34 +0000
 ! Expires: 5 days
-! Diff-Path: patches/2026.2.22.879.patch#swefilter
+! Diff-Path: patches/2026.2.24.369.patch#swefilter
 ! Diff-Expires: 24 hours
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
@@ -380,6 +380,8 @@ coop.se##:is(a[href="/butiker-erbjudanden/"], a[href^="/handla"]):has(source[src
 corren.se,folkbladet.se,mvt.se,nt.se,vt.se,vimmerbytidning.se,kuriren.nu,nsd.se,norran.se,pt.se,ekuriren.se,strengnastidning.se,kkuriren.se,sn.se,eposten.se,unt.se,helagotland.se##ad-iris-sunt-ad-wrapper, ad-block, .native, ad-full-page-block, a[href^="/native"], widget-family, widget-memorial, widget-marknadsguiden, widget-jobb-plus, a.puff-primary-link[href*="/erbjudande/"], .ad-hidden, iris-puff-native, iris-subscribe-footer
 corren.se,folkbladet.se,mvt.se,nt.se,vt.se,vimmerbytidning.se,kuriren.nu,nsd.se,norran.se,pt.se,ekuriren.se,strengnastidning.se,kkuriren.se,sn.se,eposten.se,unt.se,helagotland.se,tv.nu,klart.se##.sp-message-open body:style(overflow:unset!important;position:unset!important;)
 crazygames.se##div[class*="seasonBannerWrap"], a[class*="SeasonalBanner"], div[class*="GameInfo_rightColumn"], div[class*="GameInfo_leaderboard"]
+cyclistsbest.se##.Partners
+cyclistsbest.se##section.pos-relative:has(.FeaturedCard--spot)
 cykla.se##.featured-post--sponsored, .grid-item--sponsored, #advert-once-banner-fullskarm
 cykla.se#@#.advertisment
 dackavisen.se##.dacka-widget, div[id^="dacka-"]
@@ -1211,7 +1213,7 @@ nyheteridag.se,ledarsidorna.se##.teaser:has(a[href*="casino"])
 nyhetersto.se##.metaslider:has(a[href*="ica.se"], a[href*="IcaSupermarket"])
 nyhetersto.se##.site-branding a ~ p, .wp-block-jetpack-slideshow, .metaslider_image_link[href*="IcaSupermarket"], .widget_media_image a[target="_blank"], .widget_custom_html a[target="_blank"]
 nyhetersto.se,bussmagasinet.se,brollopsmagasinet.se,borattforum.se,globalpolitics.se,batliv.se,em-fotboll.se,elinor.se,fotbollsresultat.com,vm-fotboll.se,vildmarken.se,fisheco.se,nyhetsbyranjarva.se,it-finans.se,it-halsa.se,it-kanalen.se,it-pedagogen.se,it-retail.se,it-hallbarhet.se,battregolf.se,sporthalsa.se,revisionsvarlden.se##a.gofollow[data-track]
-nyheter.fiskejournalen.se,jaktjournalen.se##.kicker.below:has-text(/annons/i):upward(article)
+nyheter.fiskejournalen.se,jaktjournalen.se##.kicker:is(.below, .above):has-text(/annons/i):upward(article)
 nyheter.swebbtv.se##.recent-posts-widget-with-thumbnails:has-text(/annonssamarbete|annons/i)
 nyheter.swebbtv.se##.wp-block-image a[target]:not([href*="nyheter.swebbtv.se"]), .mh-sidebar-2 .indexlink
 nyhetsbyranjarva.se##div[style="display: flex; justify-content: center; flex-direction: column; align-items: center;"]
@@ -2889,7 +2891,7 @@ zeromagazine.nu##div[id^="ads"]
 /wp-content/uploads/*bettingstugan$image
 /wp-content/uploads/*betting$image,domain=nyadagbladet.se|kulturbloggen.com|hockeybladet.nu|newsvoice.se|spelochfilm.se|bandyfeber.com|battrestadsdel.se|sillyseason.se
 /wp-content/uploads/*casinoutan$image
-/wp-content/uploads/*casino$image,domain=nyadagbladet.se|kulturbloggen.com|newsvoice.se|svenskhistoria.se|battrestadsdel.se|zeromagazine.nu|totallyorebro.se|totallystockholm.se|djungeltrumman.se|vaken.se|tekniknytt.se|kingsizemag.se|spelochfilm.se|macken.xyz|improveme.se|bandyfeber.com|stoppapressarna.se|sjostadsbladet.se|autonytt.se|hockeybladet.nu|tv-kanal.se|esportnytt.se|sillyseason.se|rakapuckar.com|norrortssporten.se
+/wp-content/uploads/*casino$image,domain=nyadagbladet.se|kulturbloggen.com|newsvoice.se|svenskhistoria.se|battrestadsdel.se|zeromagazine.nu|totallyorebro.se|totallystockholm.se|djungeltrumman.se|vaken.se|tekniknytt.se|kingsizemag.se|spelochfilm.se|macken.xyz|improveme.se|bandyfeber.com|stoppapressarna.se|sjostadsbladet.se|autonytt.se|hockeybladet.nu|tv-kanal.se|esportnytt.se|sillyseason.se|rakapuckar.com|norrortssporten.se|handbollskanalen.se
 /wp-content/uploads/*casumo$image
 /wp-content/uploads/*kasino$image,domain=improveme.se|sjostadsbladet.se
 /wp-content/uploads/*mrgreen$image
