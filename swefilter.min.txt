@@ -1,7 +1,7 @@
 ! Title: Frellwit's Swedish Filter
-! Last updated: Sun, 01 Mar 2026 07:13:02 +0000
+! Last updated: Mon, 02 Mar 2026 16:57:31 +0000
 ! Expires: 5 days
-! Diff-Path: patches/2026.3.1.432.patch#swefilter
+! Diff-Path: patches/2026.3.2.1017.patch#swefilter
 ! Diff-Expires: 24 hours
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
@@ -926,7 +926,7 @@ kimura.se##a[href*="unibet.com"], a[href*="/kampanjer."], div[class^="yw-"], a[d
 kimura.se##.post:not([data-elementor-type="single-post"]):has(div[class$="annonser"])
 kingmagazine.se##.card-partner, .partner
 kingmagazine.se##.card-partner:upward(1)
-kingsizemag.se##div#video-overlay, div.sidebar_frame, #affiliates, #affiliates + .text, #popup-interstitial-overlay, .cu_banner, #interstitial-overlay, .kingsize-native
+kingsizemag.se##div#video-overlay, div.sidebar_frame, #affiliates, #affiliates + .text, #popup-interstitial-overlay, .cu_banner, #interstitial-overlay, .kingsize-native, .kingsize-native-article
 kittad.se###header-top, div[data-hook="consent-banner-root"]
 klart.se##body.mega-loading:remove-class(mega-loading)
 klart.se##div[id^="sp_message_container"], #overlay, .-panorama-ad-wrapper
@@ -2305,6 +2305,7 @@ zeromagazine.nu##div[id^="ads"]
 /emediate-responsive-wp-plugin
 /empty.html$subdocument,domain=hotellorestaurang.se|byggfakta.today|omtanke.today|citymark.today
 /engagebox.js$domain=grillbloggen.nu
+/engagement$xhr,domain=poddtoppen.se
 /enklare-banners/enklare-torgetgruppen
 /entag.$script,domain=leta.se
 /entryclick;_
@@ -3170,6 +3171,7 @@ _banner.php?$domain=tvmatchen.nu
 ||d31djwpx7pcvsr.cloudfront.net/production/*/js/segment.js
 ||d2189b0dij3l7v.cloudfront.net/p/$domain=tv4play.se|tv4.se|fotbollskanalen.se|koket.se
 ||dackpartner-web.s3.amazonaws.com^$third-party
+||daffyhazan.com^$third-party
 ||data.nation.dev/script.js
 ||deals.innocode.no^$third-party
 ||delivery.youplay.se/api/player_metrics?
