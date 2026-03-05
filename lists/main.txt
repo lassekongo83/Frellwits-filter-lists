@@ -1605,6 +1605,8 @@ osterbottenstidning.fi,sydin.fi,vasabladet.fi##.online-teaser--advertorial, .onl
 /player-plugin-sponsor$domain=tv.aftonbladet.se
 /vgc/cdn/js/libs/ast/*$script,domain=aftonbladet.se
 /track-view$domain=aftonbladet.se|godare.se
+/betting-link$frame,domain=aftonbladet.se
+/svenska-spel-coupon$frame,domain=aftonbladet.se
 ||tv.aftonbladet.se/static/js/brandmetrics
 ||tv.aftonbladet.se/static/js/codigo
 ||tv.aftonbladet.se/static/js/mbl
@@ -1620,6 +1622,7 @@ aftonbladet.se##.label-medium:has-text(/annonslänkar/i):upward(astro-island[com
 aftonbladet.se##track-element:remove-attr(/data-track/)
 aftonbladet.se##h2[data-test-tag="paragraph-header"]:has(a[aria-label*="ANNONS"])
 aftonbladet.se##section[class^="twocolumnlayout-main"] > div[class^="usermsgtoast-root"]:has(iframe)
+aftonbladet.se##.cd-title:has-text(Annons):upward(.countdown__main)
 ! remnants of the old site
 aftonbladet.se##div[class^="stickylogin"]
 aftonbladet.se##article[class^="article-wrapper"] ~ div[class^="hyperion"]:has(a[href*="/t?a="], a[href*="/click"], a[href^="http"][nofollow], a[href^="http"][rel*="nofollow"], iframe[src*="pricerunner"], iframe[src*="/ads/"])
@@ -2067,7 +2070,7 @@ gamereactor.se##+js(set, adblockEnabled, falseFunc)
 ||feber.se/native/$third-party
 /count?$xhr,domain=feber.se|tjock.se
 /plausible$domain=feber.se|tjock.se
-feber.se,tjock.se##.burt-unit, .art_ad, adline, f-panorama, f-deals, #rpPopular, #maxetiseFull, #outsider, [data-ad="true"], f-internallink[adid], f-automatos-promo, f-native, .readpeak-puff-content, .readpeak-puff-item
+feber.se,tjock.se##.burt-unit, .art_ad, adline, f-panorama, f-deals, #rpPopular, #maxetiseFull, #outsider, [data-ad="true"], f-internallink[adid], f-automatos-promo, f-native, .readpeak-puff-content, .readpeak-puff-item, f-veckansprylar-container, f-readpeak-pre-article
 feber.se,tjock.se##f-internallink:has(a[href="#"])
 feber.se,tjock.se##a[onclick^="plausible"]:remove-attr(onclick)
 feber.se,tjock.se##+js(set, dovideostuffAD, noopFunc)
