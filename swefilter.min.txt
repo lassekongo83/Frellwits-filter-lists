@@ -1,7 +1,7 @@
 ! Title: Frellwit's Swedish Filter
-! Last updated: Fri, 06 Mar 2026 12:15:34 +0000
+! Last updated: Sat, 07 Mar 2026 02:34:36 +0000
 ! Expires: 5 days
-! Diff-Path: patches/2026.3.6.735.patch#swefilter
+! Diff-Path: patches/2026.3.7.154.patch#swefilter
 ! Diff-Expires: 24 hours
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
@@ -894,7 +894,6 @@ jaktsidan.se,edgeflyfishing.com###ipsLayout_mainArea > iframe, div[data-role="si
 jankare.se##:is(.janka-slider, .widget_media_image):has(a:not([href*="jankare.se"]))
 jarnvagar.nu##.et_pb_module:matches-css(before, content: "Annons:")
 javligtgott.se##div[id^="ad-panorama"]:upward(.elementor-section)
-javligtgott.se##.jet-popup
 jobsinsweden.se##+js(set, eazy_ad_unblocker, null)
 journalisten.se##.o-blockCarousel--placementAd, .o-blockArea__item--block-ad, .m-blockAd
 juligen.se##.juligen-ads-box-widget
@@ -2584,7 +2583,6 @@ zeromagazine.nu##div[id^="ads"]
 /plugins/interstitial-ads
 /plugins/itc-consent-mode$script,domain=publicistklubben.se
 /plugins/jetpack/modules/subscriptions/subscribe-modal$script
-/plugins/jet-popup$domain=javligtgott.se
 /plugins/jnews-social-share/*$script
 /plugins/koko-analytics
 /plugins/lbg-audio8-html5-radio_ads
