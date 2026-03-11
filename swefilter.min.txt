@@ -1,7 +1,7 @@
 ! Title: Frellwit's Swedish Filter
-! Last updated: Tue, 10 Mar 2026 14:26:36 +0000
+! Last updated: Wed, 11 Mar 2026 19:35:56 +0000
 ! Expires: 5 days
-! Diff-Path: patches/2026.3.10.866.patch#swefilter
+! Diff-Path: patches/2026.3.11.1175.patch#swefilter
 ! Diff-Expires: 24 hours
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
@@ -823,8 +823,10 @@ hrsvepet.se,cfosvepet.se,vdsvepet.se##.cookie-banner, .desktopbanner, .mobilbann
 hrsvepet.se,cfosvepet.se,vdsvepet.se##:is(.recent-post-item, .w-dyn-item):has(a[href="#"]:not(.w-condition-invisible))
 humorbibeln.se,newsner.com,sportbibeln.se,ettgottskratt.se,djurbibeln.se,matbibeln.se,nojeslivet.se##.inline-share-buttons
 husbilhusvagn.se,vibilagare.se##.article-native
-husbilskompisar.se##.uk-text-center:has-text(Annonser:):upward(.uk-width-large\@m)
-husbilskompisar.se##.uk-text-left:has-text(Annonser:):upward(.uk-section)
+husbilskompisar.se##body > div + div:has(.mantine-Button-label)
+husbilskompisar.se##body[data-scroll-locked="1"]:remove-attr(data-scroll-locked)
+husbilskompisar.se##main > div:first-child:has(a[rel*="sponsored"])
+husbilskompisar.se##.mantine-Modal-root, a[rel^="sponsored"]
 husbilsplats.se##div[id^="husbi-"]
 husbilsskolan.se##.elementor-image a[target="_blank"]
 husbil.se##.articleintroduction strong:has-text(/samarbete/i):upward(li.item)
