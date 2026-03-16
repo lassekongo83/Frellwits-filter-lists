@@ -1,7 +1,7 @@
 ! Title: Frellwit's Swedish Filter
-! Last updated: Sun, 15 Mar 2026 15:46:22 +0000
+! Last updated: Mon, 16 Mar 2026 19:19:54 +0000
 ! Expires: 5 days
-! Diff-Path: patches/2026.3.15.946.patch#swefilter
+! Diff-Path: patches/2026.3.16.1159.patch#swefilter
 ! Diff-Expires: 24 hours
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
@@ -1087,7 +1087,7 @@ medibok.se##noscript:has-text(mdp-deblocker-js-disabled):remove()
 medibok.se##style:has-text(body * :not):remove()
 medibok.se##.annonsmellandiv, .annonssidadiv
 megafonen.se##[data-article-sponsored="true"], .content-main-adwrapper, .campaign-sidebar
-merinfo.se##article[data-customer]
+merinfo.se##article[data-customer], div[style="min-height: 240px;"]
 metalcentral.net###tm-top-a
 metalcentral.net##.bannergroupno-padding
 metalcentral.net##.bannergroup:upward(.uk-panel-box)
@@ -2460,6 +2460,7 @@ zeromagazine.nu##div[id^="ads"]
 /monetization/pixel-sdk/*
 /mp_emediate/inc/annons.html
 /mrbet_banner
+/n24metrics
 /natives?$xhr,domain=aktuellhallbarhet.se|byggindustrin.se|dagensmedia.se|dagensmedicin.se|fastighetsnytt.se|resume.se|dagenssamhalle.se|market.se|dagligvarunytt.se|privataaffarer.se
 /native$domain=sydnarkenytt.se
 /native$xhr,domain=aktuellhallbarhet.se|byggindustrin.se|dagensmedia.se|dagensmedicin.se|fastighetsnytt.se|resume.se|dagenssamhalle.se|market.se|dagligvarunytt.se|privataaffarer.se
