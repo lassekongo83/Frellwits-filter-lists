@@ -1,7 +1,7 @@
 ! Title: Frellwit's Swedish Filter
-! Last updated: Sun, 22 Mar 2026 10:42:08 +0000
+! Last updated: Tue, 24 Mar 2026 12:24:31 +0000
 ! Expires: 5 days
-! Diff-Path: patches/2026.3.22.642.patch#swefilter
+! Diff-Path: patches/2026.3.24.744.patch#swefilter
 ! Diff-Expires: 24 hours
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
@@ -909,6 +909,7 @@ kandisvarlden.com##+js(acs, disableEnterKey)
 kandisvarlden.com##.unselectable:style(-moz-user-select:unset!important; -webkit-user-select:unset!important; cursor:unset!important;)
 kardemummagumman.se###custom_html-2
 karinrahm.se##.thb-page-transition-on:style(opacity:1!important)
+karinrahm.se,sydasien.se##.thb-cookie-bar
 karlskogavaxer.se,molndalvaxer.se##.elementor-heading-title:has-text(/annons/i):upward(.elementor-column)
 karriarlakare.se##a[target][onclick], #cliSettingsPopup
 karriarlakare.se##.annons-label:upward(a)
@@ -1515,7 +1516,6 @@ swedroid.se##.puff:has(script[data-pbid])
 swedroid.se##.puff:has-text(/Aktuellt på Prisjakt/i)
 swehockey.se##[class*="-reklam"], .sif-sponsorer, .teaserblock, .commonblock a:not([href^="/"], [href*="/swehockey.se"])
 sxk.se###start-sponsors
-sydasien.se##.thb-cookie-bar
 sydnarkenytt.se##.toppbanner-outer, .reklamplats_hspalt, .egenbanner, .hspalt
 synonyma.se##amp-user-notification.cookie
 synonyma.se##.full-bleed:has(.adsbygoogle)
@@ -2923,7 +2923,6 @@ zeromagazine.nu##div[id^="ads"]
 /?news=ajaxrequest&bannerzone
 /?news=ajaxrequest&blok=sliderBanner
 /?template=prisjakt$domain=ljudochbild.se
-/?trafikkalla$image,domain=bloggplatsen.se
 /@sentry$script,domain=aftonbladet.se
 /_adsmodern/*$image
 /_astro/InitializeAdverts$domain=aftonbladet.se
@@ -2975,7 +2974,6 @@ _banner.php?$domain=tvmatchen.nu
 ||adhype-assets.com/images/*betting
 ||adhype-assets.com/images/*casino
 ||adhype.se/js/native
-||admin.bloggplatsen.se/status/$image
 ||adnordics.com^$third-party
 ||adonsales.com^$third-party
 ||adonstudio.com^$third-party
