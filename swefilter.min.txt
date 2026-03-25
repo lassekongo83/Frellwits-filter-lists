@@ -1,7 +1,7 @@
 ! Title: Frellwit's Swedish Filter
-! Last updated: Tue, 24 Mar 2026 12:24:31 +0000
+! Last updated: Wed, 25 Mar 2026 02:26:50 +0000
 ! Expires: 5 days
-! Diff-Path: patches/2026.3.24.744.patch#swefilter
+! Diff-Path: patches/2026.3.25.146.patch#swefilter
 ! Diff-Expires: 24 hours
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
@@ -1077,6 +1077,9 @@ maskinteknik.org###headroom > .hstat:has(.annonssegmenthead)
 maskinteknik.org###headroom:style(min-height:unset!important;)
 massasport.se##.post:has(a[href*="spelbolag"], a[href*="casino"], a[href*="spelplattform"])
 matinspo.se##div.with-ads:remove-class(with-ads)
+matkasse.se##body.overflow-hidden:remove-class(overflow-hidden)
+matkasse.se##div.fixed.bg-black\/80:empty
+matkasse.se##div.fixed.bg-black\/80:empty + div.fixed:has(button[aria-controls*="consent"])
 matochpyssel.nu##.loading:style(opacity:1!important)
 matpriskollen.se###kd-preloader
 matspar.se##div[id^="gpt-ad"]:upward(1)
@@ -3292,6 +3295,7 @@ _banner.php?$domain=tvmatchen.nu
 ||jenkler.se^$domain=uex.se
 ||jitsu.com/p.js
 ||jobtip.se^$domain=shortcut.se
+||jsc.native.azerion.com^$third-party
 ||jst.ai^$third-party
 ||js.adsaga.se^$third-party
 ||js.evtr.nordiskemedier.dk^
