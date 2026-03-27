@@ -1,6 +1,6 @@
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days
-! Last modified: 2026-03-25 03:26:38 CET
+! Last modified: 2026-03-27 07:09:06 CET
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPL3 - https://github.com/lassekongo83/Frellwits-filter-lists/blob/master/LICENSE
@@ -820,6 +820,7 @@ hrnytt.se##.spd-article-over-pic:has-text(/spons/i):upward(a)
 hrnytt.se##.spd-article-over-pic:has-text(/spons/i):upward(a) + h4
 hrsvepet.se,cfosvepet.se,vdsvepet.se##body:style(overflow:unset!important; opacity:unset!important;)
 hrsvepet.se,cfosvepet.se,vdsvepet.se##.cookie-banner, .desktopbanner, .mobilbanner-section, #takeover-banner, .top-banner-wrapper, .toppbanner-under-header, .pre-header-banner-wrapper, div[data-leadflow-host], .banner-host-pro, .take-over-banner
+hrsvepet.se,cfosvepet.se,vdsvepet.se##.w-dyn-item:has(a[href="/katergori/employer-branding"])
 hrsvepet.se,cfosvepet.se,vdsvepet.se##:is(.recent-post-item, .w-dyn-item):has(a[href="#"]:not(.w-condition-invisible))
 humorbibeln.se,newsner.com,sportbibeln.se,ettgottskratt.se,djurbibeln.se,matbibeln.se,nojeslivet.se##.inline-share-buttons
 husbilhusvagn.se,vibilagare.se##.article-native
@@ -2064,6 +2065,7 @@ zeromagazine.nu##div[id^="ads"]
 *$all,reason=🇸🇪 Säljer falska biljetter - https://www.svt.se/nyheter/konsument/biljettsajt-saljer-dyra-och-falska-biljetter / 🇬🇧 Selling fake tickets,domain=viagogo.se
 *$frame,3p,redirect=click2load.html,domain=alltomsallskapsspel.se
 *$ping,domain=nordicinformer.com|fiskejournalen.se|fordonsteknik.net|byggteknik.org|forestindustry.org|autoteknik.net|entreprenoren.net|byggforum.net
+*$script,1p,domain=hrsvepet.se|cfosvepet.se|vdsvepet.se
 *$script,redirect-rule=noop.js,domain=elevspel.se
 -VideoAD$domain=alekuriren.se
 -banner$image,domain=bokadirekt.se
@@ -2617,7 +2619,7 @@ zeromagazine.nu##div[id^="ads"]
 /plugins/pixel-review-partnerlinker-addon
 /plugins/popups/*$script,domain=svenskhistoria.se|bugburger.se
 /plugins/popup$domain=ordfrontmagasin.se|snowmobile.se|forvaltarforum.se|it-finans.se|it-halsa.se|it-kanalen.se|it-pedagogen.se|it-retail.se|jobsinsweden.se
-/plugins/pressidium-cookie-consent$script,domain=undervarttak.se|paleoskafferiet.se|radiotreby.se
+/plugins/pressidium-cookie-consent$script,domain=undervarttak.se|radiotreby.se
 /plugins/pum-$script,domain=snowmobile.se|it-finans.se|it-halsa.se|it-kanalen.se|it-pedagogen.se|it-retail.se
 /plugins/quantcast-choice$script,domain=javligtgott.se|villalivet.se
 /plugins/quick-adsense
