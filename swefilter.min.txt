@@ -1,7 +1,7 @@
 ! Title: Frellwit's Swedish Filter
-! Last updated: Fri, 27 Mar 2026 06:09:21 +0000
+! Last updated: Sun, 29 Mar 2026 15:24:05 +0000
 ! Expires: 5 days
-! Diff-Path: patches/2026.3.27.369.patch#swefilter
+! Diff-Path: patches/2026.3.29.924.patch#swefilter
 ! Diff-Expires: 24 hours
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
@@ -560,7 +560,7 @@ feber.se,tjock.se##a[onclick^="plausible"]:remove-attr(onclick)
 feber.se,tjock.se##f-internallink:has(a[href="#"])
 feber.se,tjock.se##+js(nosiif, checkGDPRInt)
 feber.se,tjock.se##+js(set, dovideostuffAD, noopFunc)
-feber.se,tjock.se##.burt-unit, .art_ad, adline, f-panorama, f-deals, #rpPopular, #maxetiseFull, #outsider, [data-ad="true"], f-internallink[adid], f-automatos-promo, f-native, .readpeak-puff-content, .readpeak-puff-item, f-veckansprylar-container, f-readpeak-pre-article
+feber.se,tjock.se##.burt-unit, .art_ad, adline, f-panorama, f-deals, #rpPopular, #maxetiseFull, #outsider, [data-ad="true"], f-internallink[adid], f-automatos-promo, f-native, .readpeak-puff-content, .readpeak-puff-item, f-veckansprylar-container, f-readpeak-pre-article, a[href*="/go?u="]
 fightermag.se##article:has(a[href*="betting"], a[href*="casino"], a[href*="kasino"], a[href*="/gastskribent/"])
 fightermag.se##a[href*="/sponsra"], #partners
 filatelisten.se##:is(a[target="_blank"]:not([href^="/"], [href*="filatelisten.se"])):upward(section)
