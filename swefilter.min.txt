@@ -1,7 +1,7 @@
 ! Title: Frellwit's Swedish Filter
-! Last updated: Tue, 31 Mar 2026 05:14:24 +0000
+! Last updated: Wed, 01 Apr 2026 15:01:17 +0000
 ! Expires: 5 days
-! Diff-Path: patches/2026.3.31.314.patch#swefilter
+! Diff-Path: patches/2026.4.1.901.patch#swefilter
 ! Diff-Expires: 24 hours
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
@@ -1002,8 +1002,8 @@ levandehistoria.se##div[class^="CookieBar"]
 lexbase.se##.consent-banner
 lidingonyheter.se##.moban, #secondary .lidin-widget, #sidebar-secondary .widget_media_image
 lifeofsvea.se,quizza.nu##.cookie-info
-lindasbakskola.se,jennysmatblogg.nu,filippoon.se,niiinis.se,helenalyth.se,zeinaskitchen.se##.content-wrap:has(.panorama-sticky)
-lindasbakskola.se,jennysmatblogg.nu,filippoon.se,niiinis.se,helenalyth.se,zeinaskitchen.se##.panorama-sticky, .sticky-wrapper, #ad-outofpage_dynamic, .proad-intext
+lindasbakskola.se,jennysmatblogg.nu,filippoon.se,niiinis.se,zeinaskitchen.se##.content-wrap:has(.panorama-sticky)
+lindasbakskola.se,jennysmatblogg.nu,filippoon.se,niiinis.se,zeinaskitchen.se##.panorama-sticky, .sticky-wrapper, #ad-outofpage_dynamic, .proad-intext
 lindasbakskola.se,skk.se,viivilla.se,ungdomsfotboll.se##a[href*="/bit.ly/"]
 linguee.se##div[class*="ad_container"], div[class*="_ads_"]
 linux.se##h5[style^="text-transform"]:has-text(annons):upward(1)
@@ -1572,7 +1572,6 @@ tidningencurie.se##+js(nostif, .showModal)
 tidningencurie.se##.sv-vr-popup
 tidningenglobal.se,tidningensyre.se,landetsfria.nu,fempers.se##.revive-box, .paloma-ad
 tidningenmikroskop.se##:is(.widget_block, .code-block):has(a[href^="https://addrevenue.io"])
-tidningennara.se##.cookie-bar
 tidningenproffs.se##div[id^="proff-"]
 tidningenridsport.se##body.cli-barmodal-open:remove-class(cli-barmodal-open)
 tidningenridsport.se##.entry-content:style(display: initial !important;)
@@ -2055,10 +2054,10 @@ zeromagazine.nu##div[id^="ads"]
 &autoplay$frame,removeparam=autoplay,domain=di.se|expressen.se
 &displayMode=modal$domain=dagen.se
 *$all,reason=Scams and/or badware,domain=look.utndln.com|pheegoab.click|runtnc.net|look.ufinkln.com
-*$all,reason=🇸🇪 Bedrägeri / 🇬🇧 Scam,domain=digitaliseringsinitiativet.se|toppmarkensverige.com|fraagesport.com|kyrkavgift.se|dinbilgaranti.se
+*$all,reason=🇸🇪 Bedrägeri / 🇬🇧 Scam,domain=digitaliseringsinitiativet.se|toppmarkensverige.com|fraagesport.com|kyrkavgift.se
 *$all,reason=🇸🇪 Bedrägeri / 🇬🇧 Scam,domain=jobba-hemifran.com|mogenromantik.com|flirtmatch.se|distansarbete.com
 *$all,reason=🇸🇪 Bedrägeri / 🇬🇧 Scam,domain=rentia.se|rentler.se|bostad24.se|hyrio.se|rentify.se|bostadsportal.se|bostadslistan.se
-*$all,reason=🇸🇪 Falsk butik / 🇬🇧 Scam shop,domain=valentinosverige.com|longchampstockholm.com.se|alkemi.com.se|footjoygolfskorrea.com.se|alphalete.com.se|championsverige.com.se|rpofsweden.com|rpofsweden.se
+*$all,reason=🇸🇪 Falsk butik / 🇬🇧 Scam shop,domain=valentinosverige.com|longchampstockholm.com.se|alkemi.com.se|alphalete.com.se|championsverige.com.se|rpofsweden.com|rpofsweden.se
 *$all,reason=🇸🇪 Säljer falska biljetter - https://www.svt.se/nyheter/konsument/biljettsajt-saljer-dyra-och-falska-biljetter / 🇬🇧 Selling fake tickets,domain=viagogo.se
 *$frame,3p,redirect=click2load.html,domain=alltomsallskapsspel.se
 *$ping,domain=nordicinformer.com|fiskejournalen.se|fordonsteknik.net|byggteknik.org|forestindustry.org|autoteknik.net|entreprenoren.net|byggforum.net
@@ -3099,7 +3098,6 @@ _banner.php?$domain=tvmatchen.nu
 ||cdn.stroeerdigitalgroup.de^
 ||cdn.svenskalag.se/img/sponsors$image
 ||cdn.svmc.se/uncached/ads/
-||cdn.ungpd.com^$domain=odla.nu
 ||centotag.io^$third-party
 ||cervera.se/t/t?
 ||cision.com^$badfilter
@@ -3232,7 +3230,6 @@ _banner.php?$domain=tvmatchen.nu
 ||fotboll.com/*casino$image
 ||freeprivacypolicy.com^$domain=golvtilltak.nu
 ||freewheel-mtgx-tv.akamaized.net^$media
-||freyanews.com^*/tracker$script
 ||gamblersrules.com^$third-party
 ||gamblingsyndication.com^$third-party
 ||gamedistribution.com/libs/gd/analytics
@@ -3282,7 +3279,7 @@ _banner.php?$domain=tvmatchen.nu
 ||inboxads.com^$third-party
 ||indol.se^$third-party
 ||ingest.analytics.nation.dev^
-||inmobi.com^$domain=alltomelbil.se|travelnews.se|varldenshaftigaste.se|merinfo.se|foreca.se|laget.se|byrum.se|sportlovin.se|receptfavoriter.se|forni.se|cornucopia.se|tittapavideon.se|motormagasinet.se|food-supply.se|dagenshandel.se|plastnet.se|habit.se|woodnet.se|foodnet.se|processnet.se|packnet.se|medtechmagazine.se|recyclingnet.se|rt-forum.se|lifesciencesweden.se|fri-kopenskap.se|cleannet.se|metal-supply.se|fashionnet.se|framtidensbygg.se|entreprenad.com|mykitchenstories.se|cancelculture.se|findit.se|foretagande.se|affarsvarlden.se|branschaktuellt.se|nordic.ign.com|fragbite.se|lindasbakskola.se|jennysmatblogg.nu|filippoon.se|niiinis.se|eniro.se|vackertvader.se|klendr.se|zeinaskitchen.se|frillesasbandy.se|skik.se|marketmate.se|svartgul.se|langd.se|babyhjalp.se|skyttesport.se|flashback.org|nyadagbladet.se|enkelteknik.se|alltomnorrtalje.se|sporttv.nu|nyteknik.se|lag-avtal.se|arbetarskydd.se|leta.se|poddtoppen.se|antidoping.se|garaget.org|ordparken.se|undertian.com|samnytt.se|motivation.se|nouw.com|sweclockers.com|fz.se|helenalyth.se|villalivet.se|bjarenu.se|expo.se
+||inmobi.com^$domain=alltomelbil.se|travelnews.se|varldenshaftigaste.se|merinfo.se|foreca.se|laget.se|byrum.se|sportlovin.se|receptfavoriter.se|forni.se|cornucopia.se|tittapavideon.se|motormagasinet.se|food-supply.se|dagenshandel.se|plastnet.se|habit.se|woodnet.se|foodnet.se|processnet.se|packnet.se|medtechmagazine.se|recyclingnet.se|rt-forum.se|lifesciencesweden.se|fri-kopenskap.se|cleannet.se|metal-supply.se|fashionnet.se|framtidensbygg.se|entreprenad.com|mykitchenstories.se|cancelculture.se|findit.se|foretagande.se|affarsvarlden.se|branschaktuellt.se|nordic.ign.com|fragbite.se|lindasbakskola.se|jennysmatblogg.nu|filippoon.se|niiinis.se|eniro.se|vackertvader.se|klendr.se|zeinaskitchen.se|frillesasbandy.se|skik.se|marketmate.se|svartgul.se|langd.se|babyhjalp.se|skyttesport.se|flashback.org|nyadagbladet.se|enkelteknik.se|alltomnorrtalje.se|sporttv.nu|nyteknik.se|lag-avtal.se|arbetarskydd.se|leta.se|poddtoppen.se|antidoping.se|garaget.org|ordparken.se|undertian.com|samnytt.se|motivation.se|nouw.com|sweclockers.com|fz.se|villalivet.se|bjarenu.se|expo.se
 ||insertcoin.se^$third-party
 ||insights.hemnet.se^
 ||insights.tv4.a2d.tv^
@@ -3649,7 +3646,6 @@ _banner.php?$domain=tvmatchen.nu
 ||ysektionen.se/media/uploads/*banner$image
 ||znaptag-tags-se.s3.amazonaws.com^$script
 ||zoho.com/hub/js/WebsiteAutomation.js$third-party
-||zummycloud.com^$third-party
 !#if env_chromium
 adType$xmlhttprequest,removeparam=adType,domain=tv4play.se
 rocknytt.net,upphandling24.se,datormagazin.se,villalivet.se,polistidningen.se,densistavilan.se,classicmotor.se,guiden.se,nyadagbladet.se,enkelteknik.se,vadhanderisverige.se,passioneffect.se,livsmedelsnyheter.se,modernpsykologi.se##+js(acs, advads)
