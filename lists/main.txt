@@ -575,6 +575,7 @@ Video-Ad-$media,3p
 ##div.I-artiklar-annonser
 ##div.in-post-ad-wrap
 ##div.in-feed-ad
+##div.infeed-ad-card
 ##div.inner_advertisement
 ##div.jeg_ad
 ##div.js-top-banner-container
@@ -3525,9 +3526,6 @@ stallet.se##+js(alert-buster)
 hejauppsala.com##:is(div[class^="u-text"], .u-font-brand):has-text(/^Reklam$/):upward(section)
 ordfrontmagasin.se##:is(.simple-image, .widget_media_image) a:not([href^="/"]):not([href*="ordfrontmagasin.se"])
 webhallen.com##.takeover-link
-webhallen.com##+js(set-local-storage-item, necessaryConsent, true)
-webhallen.com##+js(set-local-storage-item, marketingConsent, false)
-webhallen.com##+js(set-local-storage-item, personalisationConsent, false)
 inet.se##+js(set-cookie, allow-marketing-cookies, 0)
 /assets/yb_$domain=vackertvader.se
 vackertvader.se##div[class^="ad-300x250"], div[class^="ad_300x250"]
@@ -3544,7 +3542,7 @@ doon.se##.doon-promotion, a.link[target="_blank"]
 /bnrimg$domain=nordiskskog.se
 /serve.php$domain=nordiskskog.se
 nordiskskog.se##.templateHelannonsBOX
-svenskfarmaci.se##.Dialog[data-dialog-skip-auto-open-for-utm-source-value="Newsletter"]
+svenskfarmaci.se##.Dialog[data-dialog-skip-auto-open-for-utm-source-value="Newsletter"], .Dialog--ad
 ||media.arto.se/*annons$image,domain=natursidan.se
 carup.se##div[id^="carup-"]
 fasting.nu##body:style(display:unset!important)
@@ -3552,7 +3550,7 @@ konsumentmagasinet.se##.pricerunner, #Conzent, .conzent-modal, .price-part
 indien.nu##.nyhetsochreseartiklar .views-row:has-text(/casino/i)
 pilsner.nu##:is(.et_pb_fullwidth_image, .et_pb_image) a:not([href^="/"]):not([href*="pilsner.nu"]), .mctb-position-bottom
 hifitorget.se##.billboard_container, .billboard-style, a[href*="utm_"][target] img, .listing-ad-row
-hifitorget.se##:is(.row[style^="min-height"], .row .h-100):has(.adsbygoogle, .billboard_container)
+hifitorget.se##:is(.row div[style^="min-height"], .row .h-100):has(.adsbygoogle, .billboard_container, div[id^="div-gpt-ad"])
 agriaffaires.se,truckscorner.se,machineryzone.se##.dp--mb, .dp--pave, .dp--ga, body#lg-annonces .right-container
 discoveringtheplanet.com##+js(acs, document.ondragstart)
 discoveringtheplanet.com##+js(acs, disableEnterKey)
