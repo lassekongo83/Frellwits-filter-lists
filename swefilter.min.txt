@@ -1,7 +1,7 @@
 ! Title: Frellwit's Swedish Filter
-! Last updated: Sun, 19 Apr 2026 05:18:17 +0000
+! Last updated: Mon, 20 Apr 2026 05:16:12 +0000
 ! Expires: 5 days
-! Diff-Path: patches/2026.4.19.318.patch#swefilter
+! Diff-Path: patches/2026.4.20.316.patch#swefilter
 ! Diff-Expires: 24 hours
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
@@ -1514,8 +1514,7 @@ swedroid.se##.puff:has-text(/Aktuellt på Prisjakt/i)
 swehockey.se##[class*="-reklam"], .sif-sponsorer, .teaserblock, .commonblock a:not([href^="/"], [href*="/swehockey.se"])
 sxk.se###start-sponsors
 sydnarkenytt.se##.toppbanner-outer, .reklamplats_hspalt, .egenbanner, .hspalt
-synonyma.se##amp-user-notification.cookie
-synonyma.se##.full-bleed:has(.adsbygoogle)
+synonyma.se##.iy
 synonymer.se##+js(cookie-remover, /^ev_did|ev_sid/)
 synonymer.se##+js(set-local-storage-item, /^ev_did|ev_sid/, $remove$)
 synonymer.se##.create-account-banner, .buy-premium-banner, div[class*="pb-"] > div.text-center, div[data-ad-container]
@@ -2494,7 +2493,7 @@ zeromagazine.nu##div[id^="ads"]
 /plugins/adlounge
 /plugins/adsanity
 /plugins/adsense%20click%20proctect
-/plugins/advanced-ads$script,domain=newsner.com|humorbibeln.se|sportbibeln.se|matbibeln.se|ettgottskratt.se|djurbibeln.se|nojeslivet.se|vegomagasinet.se|inkopsradet.se|orkesterjournalen.se
+/plugins/advanced-ads$script,domain=newsner.com|humorbibeln.se|sportbibeln.se|matbibeln.se|ettgottskratt.se|djurbibeln.se|nojeslivet.se|vegomagasinet.se|inkopsradet.se|orkesterjournalen.se|hallbartbyggande.com
 /plugins/ad-ace
 /plugins/ad-blocking-advisor
 /plugins/afp-default-pricetable/js/ga-tracking
@@ -2999,6 +2998,7 @@ _banner.php?$domain=tvmatchen.nu
 ||analytics.ozzi.io^$third-party
 ||analytics.teknikveckan.se^
 ||analytics.undeco.se^
+||analytics.webfokus.no^$third-party
 ||annonser.snoap.no^$third-party
 ||annons.dagen.se^
 ||apester.com^$third-party
