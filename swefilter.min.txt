@@ -1,7 +1,7 @@
 ! Title: Frellwit's Swedish Filter
-! Last updated: Mon, 20 Apr 2026 05:16:12 +0000
+! Last updated: Tue, 21 Apr 2026 05:06:11 +0000
 ! Expires: 5 days
-! Diff-Path: patches/2026.4.20.316.patch#swefilter
+! Diff-Path: patches/2026.4.21.306.patch#swefilter
 ! Diff-Expires: 24 hours
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
@@ -87,6 +87,7 @@
 .se/*/|$script,domain=bredband.se|telepriskollen.se|kontantkort.se|simkort.se|emocore.se
 .se/_Banners/
 ~continente.pt##a[href*="utm_content=banner"] img
+~nyemissioner.se##.category-sponsrad:not(body):not(html)
 7an.se##.field--name-field-ad-banner-image
 8sidor.se,livsmedelsverket.se,bandfinder.se###cookie-banner
 56kilo.se##.code-block:has(.shop-page-wp-grid, a[href*="trendrehab"])
@@ -384,6 +385,7 @@ dagenslogistik.se##small:has-text(/annons/i):upward(.elementor-column)
 dagensmuslim.se##.breaking-title-text:has-text(ANNONS:):upward(.breaking.controls-is-active)
 dagensmuslim.se##.stream-item-top, .theiaStickySidebar a[target="_blank"]
 dagensnamn.nu##div[id^="dagensnamn_"], .dagensnamn_nu_billboard_middle, a[href*="kohantering"]
+dagensnamn.nu##.card:has(a[href*="adrecord.com"])
 dagensopinion.se##.post-block:has(a[href*="/annons/"])
 dagensps.se##.container:has(.dagensps_ad)
 dagensps.se,news55.se,realtid.se##a[href*="-partner/"], .ad-links-module, .dagensps_ad, a[href*="ut.dagensps.se"][target], .bottom_banner, .leftsidebanner, .c-external-notice, a[href*="/affiliate/"], a[href*="/native-article/"]
@@ -651,7 +653,7 @@ fragbite.se##.tn, .zooKeeper, #scraper, .subHeadSponsors
 framtid.se###siteflash, #customer-link-container
 fraser.nu##div[aria-label="Annonser"]
 freedomtravel.se##.startpage-post:has(.has-sp)
-freedomtravel.se##.takeover-container
+freedomtravel.se##.takeover-container, .ad-placement-group
 freeride.se##img[src*="/sponsor/"] + br + .boxlogo, .sidebar-front .boxen
 freeride.se##.mark:has-text(/spons/i):upward(.post)
 freeride.se##.sidebar-front .widget_text.dark ~ p
@@ -1009,7 +1011,7 @@ listor.se##:is(a[href*="casino"], a[href*="betting"], a[href*="poker"]):upward(.
 litteraturmagazinet.se###pageContainer > div:first-child:not([id]), #topContainer a:not([href="/"], a[href="/sitesearch"])
 livetochdiabetes.se###text-3
 livetsgoda.se##.penci-rlt-popup, a[href*="systembolaget.se"] img
-livetsgoda.se,betongforeningen.se,espressomedia.se,ordfrontmagasin.se,europaportalen.se,motorsportbladet.se,battregolf.se,nitroz.se,magasinethockey.se,twostrokerider.se,eqotime.com,newsvoice.se,tranakampsport.se,thepattayanewsse.com,handbollskanalen.se,infobladet.com##a[target$="blank"] img:not([class^="tweet"])
+livetsgoda.se,betongforeningen.se,espressomedia.se,ordfrontmagasin.se,europaportalen.se,motorsportbladet.se,battregolf.se,nitroz.se,magasinethockey.se,twostrokerider.se,eqotime.com,newsvoice.se,tranakampsport.se,thepattayanewsse.com,handbollskanalen.se,infobladet.com,svenskamagasinet.nu##a[target$="blank"] img:not([class^="tweet"])
 livetsgoda.se,bfn.se,biblioteksforeningen.se##body:style(opacity:unset!important)
 livinguppsala.se##.fusion-post-content-container:has-text(/^annons/i):upward(article)
 livsmedelsnyheter.se##div[class*="elementor-widget-text-editor"][data-widget_type="text-editor.default"] > .elementor-widget-container > p:has-text(SPONSRAT):upward(.jet-listing-grid__items)
@@ -1188,7 +1190,7 @@ nyan.ax##a[onclick*="banner"], .ad-follower, .own-ads, .own-ads-mobile
 nyatider.nu##section.dce-visibility-event:has(a[href*="casino"])
 nyatider.nu##.elementor-popup-modal:has(a[href="/integritetspolicy"])
 nyatider.nu,autonytt.se##[href*="casino"][target]
-nyemissioner.se##.jet-listing-grid__item[data-post-id]:has-text(/sponsrad artikel/i)
+nyemissioner.se##div[id^="nyemi-"]
 nyfiknainvesterare.se##article.post:has-text(/annons från/i)
 nyheter24.se##.uppercase:has-text(/annons/i):upward(1)
 nyheter24.se,alltforforaldrar.se,modette.se,devote.se,familjeliv.se,brollopstorget.se,blogg.se,rodeo.net,vimedbarn.se,loppi.se##article:has-text(/annons:/i)
@@ -1471,9 +1473,6 @@ svenskafans.com##:is(.min-h-\[300px\], .w-\[300px\]):has([class*="Annons"])
 svenskafans.com##:is(.min-h-\[400px\], .min-h-96, .hidden.min-h-60, .min-h-40):has(.ad-slot)
 svenskalag.se##.cookie-box
 svenskalag.se##.cookie-overlay, .overlay:empty
-svenskamagasinet.nu##legend:has-text(Annons)
-svenskamagasinet.nu##.et_pb_code:has(.svm-target)
-svenskamagasinet.nu##.hip-popup, div[id^="svm-"], .et_pb_image a[target]:not([href*="svenskamagasinet.nu"]):not([href^="/"])
 svenskanomader.se###ajax-loading-screen
 svenskarnaochinternet.se,internetstiftelsen.se###newsletter-sliding
 svenskbotanik.se###cookieModal
@@ -1987,7 +1986,6 @@ zeromagazine.nu##div[id^="ads"]
 ##.category-sponsrade-inlagg:not(body):not(html)
 ##.category-sponsrade-reklaminlagg:not(body):not(html)
 ##.category-sponsrad-artikel:not(body):not(html)
-##.category-sponsrad:not(body):not(html)
 ##.category-sponsrat-content:not(body):not(html)
 ##.category-sponsrat-inlagg:not(body):not(html)
 ##.category-sponsrat-innehall:not(body):not(html)
@@ -3129,7 +3127,7 @@ _banner.php?$domain=tvmatchen.nu
 ||cookiepro.com^$domain=djurskyddet.se|havet.nu|upplysning.se
 ||cookietractor.com^$domain=innebandy.se|orientering.se|pluggakuten.se|munskankarna.se|burgerdudes.se|tidningenattention.se|fremia.se|sprintchallenge.se|fondbolagen.se|hjart-lung.se|tidningenrevansch.se|abf.se|svmc.se
 ||cookie-script.com/analytics
-||cookie-script.com^$domain=axess.se|dagensjuridik.se|foodfolder.se|arkitektur.se|friluftsframjandet.se|handelsradet.se|cirkulation.se|arkitekt.se|webb-tv.nu|eurocampings.se|transportforetagen.se|usabil.nu|timbro.se|auris.nu
+||cookie-script.com^$domain=axess.se|dagensjuridik.se|foodfolder.se|arkitektur.se|friluftsframjandet.se|handelsradet.se|cirkulation.se|arkitekt.se|webb-tv.nu|eurocampings.se|transportforetagen.se|usabil.nu|timbro.se|auris.nu|upplysning.se
 ||covatic.io^$third-party
 ||createsend1.com^$third-party,~image
 ||createsend.com^$third-party
