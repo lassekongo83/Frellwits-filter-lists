@@ -1,7 +1,7 @@
 ! Title: Frellwit's Swedish Filter
-! Last updated: Fri, 24 Apr 2026 12:54:47 +0000
+! Last updated: Sun, 26 Apr 2026 12:34:55 +0000
 ! Expires: 5 days
-! Diff-Path: patches/2026.4.24.774.patch#swefilter
+! Diff-Path: patches/2026.4.26.754.patch#swefilter
 ! Diff-Expires: 24 hours
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
@@ -866,11 +866,7 @@ inredningsvis.se##+js(set-cookie, cmplz_statistics, deny)
 internetmedicin.se##[itemtype="https://schema.org/WPAdBlock"]
 internetodontologi.se,prv.se##.overlay
 internetodontologi.se,skrattsajten.com,norpan.se##+js(rmnt, script, e.preventDefault)
-investeramera.se##a[href^="https://go."], a[href*="/go/"], img[width="320"][height="320"]
-investeramera.se##main > .section:has(a[href*="spelcash"])
 investeramera.se###dialog-locked
-investeramera.se##.post-single-content p em:has-text(Annons:)
-investeramera.se##.rounded-lg:has(a[href^="https://go."], a[href*="/go/"])
 ipo.se##.tag-sponsrad
 itseniorerna.se###astroid-preloader
 itseniorerna.se###redim-cookiehint-modal
@@ -2167,10 +2163,13 @@ zeromagazine.nu##div[id^="ads"]
 /annons_ver.
 /antiblock$domain=vmj.se|viseniorer.se|danskaspraket.se|digitalavykort.se
 /apester-javascript-sdk.min.js
+/api/ads$xhr,domain=investeramera.se
 /api/a/b$domain=borskollen.se
 /api/event$domain=feber.se|tjock.se|fastighetsvarlden.se
 /api/exposure$domain=svenskverkstad.se
 /api/partners$domain=familjehemsbanken.se
+/api/popup-block$xhr,domain=investeramera.se
+/api/promo-block$xhr,domain=investeramera.se
 /api/sponsors$domain=aikhockey.se|almtuna.com|bikkarlskoga.se|bjorkloven.com|brynas.se|difhockey.se|frolundahockey.com|farjestadbk.se|hockeyallsvenskan.se|hv71.se|ikoskarshamn.se|kalmarhockey.com|leksandsif.se|luleahockey.se|malmoredhawks.com|modohockey.se|moraik.se|nybrovikings.com|orebrohockey.se|roglebk.se|shl.se|skellefteaaik.se|sodertaljesk.se|taif.nu|timraik.se|vaxjolakers.se|vik.se|ostersundik.com
 /api/tracker?$image
 /appinsights/*/track
@@ -2205,6 +2204,7 @@ zeromagazine.nu##div[id^="ads"]
 /bilder-for-annonser$image
 /bilder/ads/*
 /bilder/annonser/*
+/bilder/annons*$image,domain=psykoterapicentrum.se
 /bilder/betalannonser
 /bilder/logotyper/partners
 /bilder/samarbeten$domain=hojen.nu
