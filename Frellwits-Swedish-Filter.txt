@@ -1,6 +1,6 @@
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days
-! Last modified: 2026-05-01 08:25:09 CEST
+! Last modified: 2026-05-03 09:19:01 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPL3 - https://github.com/lassekongo83/Frellwits-filter-lists/blob/master/LICENSE
@@ -2046,7 +2046,7 @@ zeromagazine.nu##div[id^="ads"]
 *$all,reason=🇸🇪 Falsk butik / 🇬🇧 Scam shop,domain=valentinosverige.com|longchampstockholm.com.se|alkemi.com.se|alphalete.com.se|championsverige.com.se|rpofsweden.com|rpofsweden.se
 *$all,reason=🇸🇪 Säljer falska biljetter - https://www.svt.se/nyheter/konsument/biljettsajt-saljer-dyra-och-falska-biljetter / 🇬🇧 Selling fake tickets,domain=viagogo.se
 *$frame,3p,redirect=click2load.html,domain=alltomsallskapsspel.se
-*$ping,domain=nordicinformer.com|fiskejournalen.se|fordonsteknik.net|byggteknik.org|forestindustry.org|autoteknik.net|entreprenoren.net|byggforum.net
+*$ping,domain=nordicinformer.com|fiskejournalen.se|fordonsteknik.net|byggteknik.org|forestindustry.org|autoteknik.net|entreprenoren.net|byggforum.net|feber.se|tjock.se
 *$script,1p,domain=hrsvepet.se|cfosvepet.se|vdsvepet.se
 *$script,redirect-rule=noop.js,domain=elevspel.se
 -VideoAD$domain=alekuriren.se
@@ -2168,7 +2168,7 @@ zeromagazine.nu##div[id^="ads"]
 /apester-javascript-sdk.min.js
 /api/ads$xhr,domain=investeramera.se
 /api/a/b$domain=borskollen.se
-/api/event$domain=feber.se|tjock.se|fastighetsvarlden.se
+/api/event$domain=fastighetsvarlden.se
 /api/exposure$domain=svenskverkstad.se
 /api/partners$domain=familjehemsbanken.se
 /api/popup-block$xhr,domain=investeramera.se
@@ -2480,7 +2480,7 @@ zeromagazine.nu##div[id^="ads"]
 /permutive-async.js
 /pfizer_analytics
 /phaser-ads.min.js$script
-/ping$domain=kimura.se|feber.se|tjock.se
+/ping$domain=kimura.se
 /pixel/impression$image
 /plausible$domain=feber.se|tjock.se
 /playbuzz-ads-core
@@ -3670,6 +3670,8 @@ tabyallehanda.se##^script[src$="adsbygoogle.js"]
 bab.la##^script[src^="https://html-load.com/"]
 woxikon.se##^script:has-text(googletag)
 woxikon.se##^script:has-text(window._sp_)
+woxikon.se##^script:has-text(=>eval)
+woxikon.se##^script[onload*="There was a problem"]
 tv4play.se##:is(section[aria-hidden="false"][aria-label] > div[class^="sc"]:first-child, .swiper):style(mask-image:unset!important; mask-size:unset!important; mask-composite:unset!important;)
 tv4play.se##.swiper-slide > div[style] > a > div:style(mask-image:unset!important;)
 expressen.se##^script:has-text(seenthisTracking)
