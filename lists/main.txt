@@ -1279,12 +1279,12 @@ sceffect.se##.a-single
 ||tags.tiqcdn.com^$domain=allabolag.se
 utm_$document,removeparam=/^utm_/,domain=tv.nu|booli.se|expressen.se|aftonbladet.se|dagensps.se|prisjakt.nu|vinborsen.se
 /analytics$domain=gbgfotboll.se|stff.se|svenskfotboll.se|di.se|etc.se|vackertvader.se|skogsforum.se|skolporten.se|sjf.se|rimlab.se|alandsradio.ax|dagen.se|global.morningstar.com|vidzflow.com|vinia.se|kvartal.se|shortcut.se
-/api/event$domain=feber.se|tjock.se|fastighetsvarlden.se
+/api/event$domain=fastighetsvarlden.se
 /event$ping,domain=lokalti.se
 /firebase-analytics.js$domain=stoppapressarna.se|alltomkungligt.se|zeinaskitchen.se|jennysmatblogg.nu|filippoon.se|lindasbakskola.se|niiinis.se
 /glimr$script,domain=aftonbladet.se|blocket.se|godare.se
 /pageView$xhr,domain=altinget.se|ifokus.se
-/ping$domain=kimura.se|feber.se|tjock.se
+/ping$domain=kimura.se
 /profile$ping,domain=feber.se|skippo.se|tasteline.com|tjock.se|marcusoscarsson.se|surfa.se|nordichardware.se|tv4.se|fotbollskanalen.se|koket.se|teknikveckan.se|langd.se|shl.se|hemhyra.se|qx.se
 /raven$script,domain=mitti.se|travnet.se|nyheter24.se|tyda.se|devote.se|hemtrevligt.se|alltforforaldrar.se|familjeliv.se|brollopstorget.se|blogg.se|nouw.com|lchfarkivet.se|fotbolltransfers.com|norrahalland.se|svenskgolf.se|vimedbarn.se|modette.se|vf.se|hjotidning.se|kt.se|kt-kuriren.se|sla.se|mariestadstidningen.se|filipstadstidning.se|fryksdalsbygden.se|nwt.se|arvikanyheter.se|nkp.se|saffletidningen.se|provinstidningen.se|dalslanningen.se|nlt.se|skaraborgsbygden.se|alltomnorrtalje.se|fragbite.se|ljudochbild.se|vk.se|folkbladet.nu|nordsverige.se|mellanbygden.nu|vasterbottningen.se|lokaltidningen.nu|svenskafans.com|sportlovin.se|innebandymagazinet.se|jaktjournalen.se|akaskidor.se|hockeysverige.se|kingmagazine.se|cafe.se|hockeynews.se|mmanytt.se|idrottensaffarer.se|fotbolldirekt.se|automotorsport.se|hockeyettan.se|speakpipe.com
 /ga.js$domain=helgon.se|gamemonetize.com|sjf.se
@@ -1298,7 +1298,7 @@ utm_$document,removeparam=/^utm_/,domain=tv.nu|booli.se|expressen.se|aftonbladet
 /statistics$domain=visitskane.com
 /gtm$domain=lidl.se|global.morningstar.com
 ?t=$xhr,empty,domain=kyrkanstidning.se|grundskoletidningen.se
-*$ping,domain=nordicinformer.com|fiskejournalen.se|fordonsteknik.net|byggteknik.org|forestindustry.org|autoteknik.net|entreprenoren.net|byggforum.net
+*$ping,domain=nordicinformer.com|fiskejournalen.se|fordonsteknik.net|byggteknik.org|forestindustry.org|autoteknik.net|entreprenoren.net|byggforum.net|feber.se|tjock.se
 ! Websites with no obvious or visible facebook login. Will just assume it's used for tracking.
 ||connect.facebook.net^$domain=friatider.se|fotosidan.se|ng.se|lektionsbanken.se|lajvo.se|kvinnatillkvinna.se|epochtimes.se|newsner.com|humorbibeln.se|sportbibeln.se|matbibeln.se|ettgottskratt.se|djurbibeln.se|nojeslivet.se|sillyseason.se|loppi.se|kyrkanstidning.se|tn.se|experimentarkivet.se
 ! Scriptlets
@@ -3161,6 +3161,8 @@ tabyallehanda.se##^script[src$="adsbygoogle.js"]
 bab.la##^script[src^="https://html-load.com/"]
 woxikon.se##^script:has-text(googletag)
 woxikon.se##^script:has-text(window._sp_)
+woxikon.se##^script:has-text(=>eval)
+woxikon.se##^script[onload*="There was a problem"]
 tv4play.se##:is(section[aria-hidden="false"][aria-label] > div[class^="sc"]:first-child, .swiper):style(mask-image:unset!important; mask-size:unset!important; mask-composite:unset!important;)
 tv4play.se##.swiper-slide > div[style] > a > div:style(mask-image:unset!important;)
 expressen.se##^script:has-text(seenthisTracking)
