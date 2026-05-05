@@ -1,7 +1,7 @@
 ! Title: Frellwit's Swedish Filter
-! Last updated: Mon, 04 May 2026 05:10:39 +0000
+! Last updated: Tue, 05 May 2026 14:56:12 +0000
 ! Expires: 5 days
-! Diff-Path: patches/2026.5.4.310.patch#swefilter
+! Diff-Path: patches/2026.5.5.896.patch#swefilter
 ! Diff-Expires: 24 hours
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
@@ -298,6 +298,7 @@ breakit.se##:is(section[class*="Article_layout"], article):has(div[class*="Spons
 bredband.se,telepriskollen.se,kontantkort.se,simkort.se,xn--fackfrbund-icb.com##.wcc-overlay, .wcc-consent-container
 bredband.se,telepriskollen.se,kontantkort.se,simkort.se,xn--fackfrbund-icb.com##.wcc-popup-overflow:style(overflow:unset!important;)
 brollopsguiden.se##div[class^="cookie-banner"]:upward(div[data-portal="true"])
+brollopsguiden.se###cookiescript_injected_wrapper
 brukshunden.se##.article-content:has(.bgcolor-ad-card)
 brukshunden.se##.cm-ad, .bgcolor-ad-card
 bucketlistmagazine.se##.elementor-heading-title:has-text(Annons):upward(a)
@@ -753,7 +754,8 @@ helahisingen.se###custom_html-15, .code-block img, .banner-promotions-wrapper, a
 helahisingen.se##.latest-posts-grid:has(a[href*="/annons/"])
 helahisingen.se##.post-excerpt:has-text(ANNONS):upward(.post)
 helahisingen.se,xn--sporthnt-5za.se,stockholmblaljus.se,filmextra.se,halmstadsport.se###af-preloader
-helastadenuppsala.nu##.elementor-widget-image:has(a:not([href*="helastadenuppsala.nu"]))
+helastadenuppsala.nu##.below_header_front_page
+helastadenuppsala.nu##:is(.elementor-widget-image, .widget_media_image):has(a:not([href*="helastadenuppsala.nu"]))
 helgon.se##[id*="banner"], a[href^="https://ad."], a[href^="https://ad2."]
 hellofresh.se##a[data-test-id^="top-banner-ad"], div[data-test-id="exit-intent-banner"], div[data-test-id="urgency-banner-modal"], a[data-test-id="side-banner-ad-link"]
 hembygd.se##bs-modal-backdrop
@@ -2603,6 +2605,7 @@ zeromagazine.nu##div[id^="ads"]
 /plugins/popup$domain=ordfrontmagasin.se|snowmobile.se|forvaltarforum.se|it-finans.se|it-halsa.se|it-kanalen.se|it-pedagogen.se|it-retail.se|jobsinsweden.se
 /plugins/pressidium-cookie-consent$script,domain=undervarttak.se|radiotreby.se
 /plugins/pum-$script,domain=snowmobile.se|it-finans.se|it-halsa.se|it-kanalen.se|it-pedagogen.se|it-retail.se
+/plugins/qte-native-ads$script
 /plugins/quantcast-choice$script,domain=javligtgott.se|villalivet.se
 /plugins/quick-adsense
 /plugins/r9-analytics
