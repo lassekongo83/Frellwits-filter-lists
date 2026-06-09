@@ -1,7 +1,7 @@
 ! Title: Frellwit's Swedish Filter
-! Last updated: Mon, 08 Jun 2026 14:26:43 +0000
+! Last updated: Tue, 09 Jun 2026 10:22:08 +0000
 ! Expires: 5 days
-! Diff-Path: patches/2026.6.8.866.patch#swefilter
+! Diff-Path: patches/2026.6.9.622.patch#swefilter
 ! Diff-Expires: 24 hours
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
@@ -603,7 +603,7 @@ folkofolk.se##div[class^="MuiDialog-root"]
 foodfolder.se###myModal, .adImage
 foretagande.se##article:has(.sponsored-text)
 foretagande.se##div.article:has(a[href$="artiklar-i-samarbete"])
-foretagande.se##div[id*="panorama"], .panorama-pos
+foretagande.se##div[id*="panorama"], .panorama-pos, #premiumPopupWrapper, .modal-backdrop
 foretagsverige.se,forskningsverige.se,motorbibeln.se,hallbarhetsverige.se,tillvaxtsverige.se,grillbibeln.se,kampenmotcancer.se,folkhalsasverige.se,dinlivsstil.nu##.client-logos
 foretagsverige.se,forskningsverige.se,motorbibeln.se,hallbarhetsverige.se,tillvaxtsverige.se,grillbibeln.se,kampenmotcancer.se,folkhalsasverige.se,dinlivsstil.nu##.whitebox-container:has-text(/sponsra/i)
 foretagsverige.se,forskningsverige.se,motorbibeln.se,hallbarhetsverige.se,tillvaxtsverige.se,grillbibeln.se,kampenmotcancer.se,folkhalsasverige.se,dinlivsstil.nu##:is(div[class*="vicky-whitebox"], .vicky-category-label, .vicky-video-infobox-label, .vicky-post-headline-container__category__inner):has-text(/spons/i):upward(a, .carousel-caption, .featurette, article)
@@ -613,6 +613,7 @@ forskning.se##.cli-modal
 forskoletidningen.se##div[id^="block-adrevive"]
 forstasidorna.se##body.tingle-enabled:remove-class(tingle-enabled)
 forstasidorna.se##.tingle-modal--visible
+forsvarstidningen.se##.text-muted-foreground:has-text(/annons/i):upward(1)
 forum.mustangclubsweden.org##a[href*="&do=advertisement&ad=1"]
 forum.robsoft.nu##td[valign="middle"] > a[target="_blank"]
 forvaltarforum.se##.ff_sponsored_articles, .widget_sow-image, .ff_banners_widget_widget
@@ -1164,6 +1165,7 @@ netflixguiden.se##div.lboard, div.instream-dynamic, #top-area-promo, div.sidebar
 news55.se##div.container:has(a[href="/author/news55-partner/"])
 newsner.com,humorbibeln.se,sportbibeln.se,ettgottskratt.se,djurbibeln.se,matbibeln.se,nojeslivet.se###wsfb-container, .share-buttons, .ad-space, div[id^="ad-"], div[id*="banner"], div[id^="tower"], div[id^="box_"], div[id^="intext_"]
 newsner.com,humorbibeln.se,sportbibeln.se,ettgottskratt.se,djurbibeln.se,matbibeln.se,nojeslivet.se##.ssp_divider:has(.sponsored-bar)
+newsvoice.se##aside.widget_text:has-text(ANNONSER)
 newsvoice.se##.sponsrad, .sponsradcol1, .newsv-widget, article[class*="sponsored"]
 newweather.se##.cookie-banner-mount-point
 nextconomy.se##.list-item:has(.news-spot-medium__ad-title)
@@ -1544,6 +1546,7 @@ teknologiexperten.se##.item:has(img[src*=".se-www"])
 telgenytt.se##.tn-ad, .tn-ad-notice, #popup
 temaarkiv.se##.md\:mt-\[100px\]:has(script[data-adfscript])
 temadagar.se##a[href*="/partykungen"]
+tennis.se##.fusion-text:has-text(/^ANNONS/i):upward(1)
 terrariedjur.se###slider-wrapper-wrapper
 testfakta.se##.row-uppdragstest
 thatsup.se##+js(set, canShowAds, true)
@@ -2101,6 +2104,7 @@ zeromagazine.nu##div[id^="ads"]
 /ab_appnexus_ads
 /ab_stats_params$domain=aftonbladet.se
 /ab_tracking$domain=aftonbladet.se
+/active_ads?select=
 /addtoany$domain=sjf.se
 /add-ads.js$domain=fria.nu|stockholmsfria.se
 /add-page-view$domain=cykla.se
@@ -2150,7 +2154,7 @@ zeromagazine.nu##div[id^="ads"]
 /ajax/ads.php$domain=garaget.org
 /ajax/docu_stats.jsp
 /aller-ads$domain=~seiska.fi
-/analytics$domain=gbgfotboll.se|stff.se|svenskfotboll.se|di.se|etc.se|vackertvader.se|skogsforum.se|skolporten.se|sjf.se|rimlab.se|alandsradio.ax|dagen.se|global.morningstar.com|vidzflow.com|vinia.se|kvartal.se|shortcut.se|inredningsvis.se|kottchark.se
+/analytics$domain=gbgfotboll.se|stff.se|svenskfotboll.se|di.se|etc.se|vackertvader.se|skogsforum.se|skolporten.se|sjf.se|rimlab.se|alandsradio.ax|dagen.se|global.morningstar.com|vidzflow.com|vinia.se|kvartal.se|shortcut.se|inredningsvis.se|kottchark.se|forsvarstidningen.se
 /analytics-bmb
 /analytics/collect|
 /analytics/cts.min.js
@@ -2309,6 +2313,7 @@ zeromagazine.nu##div[id^="ads"]
 /eu_cookie_compliance$script,domain=visitskane.com|sxk.se|europaportalen.se|vibilagare.se
 /eu_cookie_notice$domain=yelp.se
 /events$domain=fastighetsvarlden.se
+/events.js$domain=forsvarstidningen.se
 /event$ping,domain=lokalti.se
 /event-odds-banner$domain=tvmatchen.nu
 /event-tracker$domain=corren.se|folkbladet.se|mvt.se|nt.se|vt.se|vimmerbytidning.se|kuriren.nu|nsd.se|norran.se|pt.se|ekuriren.se|strengnastidning.se|kkuriren.se|sn.se|eposten.se|unt.se|helagotland.se|fastighetsvarlden.se
