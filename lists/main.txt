@@ -78,6 +78,7 @@
 /_papers_media/banners
 /_sites_media/*/uploads/Banners
 /a?callback=pfmod.saveadsettings
+/active_ads?select=
 /ad.aspx?
 /ad/getNouw.$script
 /ad_acknowledgment$xmlhttprequest
@@ -1282,7 +1283,7 @@ lokalguiden.se,speltips.se##.banner-item
 ||js.monitor.azure.com^$domain=akademiskahus.se|energi.se|skanetrafiken.se|forex.se|stenafastigheter.se|transportforetagen.se|lantmannen.se|stff.se|gbgfotboll.se|svenskfotboll.se|skk.se|objektvision.se|skogsindustrierna.se|svenskakyrkan.se|borsvarlden.com|travsport.se|gavletravet.se|supporterklubben.se|svenskttra.se|svensktvatten.se|apoteket.se|hyresgastforeningen.se|tmf.se|saco.se|pvforetagen.se|havet.nu|friluftsframjandet.se|icagruppen.se|akavia.se|villaagarna.se|livsmedelsverket.se|allaaktier.se|kryssakuten.se|kopahund.se|hjart-lung.se|spfseniorerna.se|svenskhandel.se
 ||tags.tiqcdn.com^$domain=allabolag.se
 utm_$document,removeparam=/^utm_/,domain=tv.nu|booli.se|expressen.se|aftonbladet.se|dagensps.se|prisjakt.nu|vinborsen.se
-/analytics$domain=gbgfotboll.se|stff.se|svenskfotboll.se|di.se|etc.se|vackertvader.se|skogsforum.se|skolporten.se|sjf.se|rimlab.se|alandsradio.ax|dagen.se|global.morningstar.com|vidzflow.com|vinia.se|kvartal.se|shortcut.se|inredningsvis.se|kottchark.se
+/analytics$domain=gbgfotboll.se|stff.se|svenskfotboll.se|di.se|etc.se|vackertvader.se|skogsforum.se|skolporten.se|sjf.se|rimlab.se|alandsradio.ax|dagen.se|global.morningstar.com|vidzflow.com|vinia.se|kvartal.se|shortcut.se|inredningsvis.se|kottchark.se|forsvarstidningen.se
 /events$domain=fastighetsvarlden.se
 /event$ping,domain=lokalti.se
 /firebase-analytics.js$domain=stoppapressarna.se|alltomkungligt.se|zeinaskitchen.se|jennysmatblogg.nu|filippoon.se|lindasbakskola.se|niiinis.se
@@ -1767,7 +1768,7 @@ dagensps.se,news55.se,realtid.se##sub:has-text(ANNONS):upward(p) + script + ifra
 dagensps.se,news55.se,realtid.se##span.uppercase:has-text(/partner/i):upward(a)
 dagensps.se##.container:has(.dagensps_ad)
 news55.se##div.container:has(a[href="/author/news55-partner/"])
-foretagande.se##div[id*="panorama"], .panorama-pos
+foretagande.se##div[id*="panorama"], .panorama-pos, #premiumPopupWrapper, .modal-backdrop
 foretagande.se##article:has(.sponsored-text)
 foretagande.se##div.article:has(a[href$="artiklar-i-samarbete"])
 /newsner-ad
@@ -2476,6 +2477,7 @@ sportnik.com##.index-footer-section:has(.make-money-partners)
 jankare.se##:is(.janka-slider, .widget_media_image):has(a:not([href*="jankare.se"]))
 motorsportivarmland.nu##table[width="690"] > tbody > tr > td[height="0"] .Boxen > tbody:has(img[src*="/Spons/"])
 motorsportivarmland.nu##td[width="153"]:has(img[src*="/Annons"])
+tennis.se##.fusion-text:has-text(/^ANNONS/i):upward(1)
 
 ! === Musik, Radio, Film och TV
 voodoofilm.org##.page-panorama
@@ -2794,6 +2796,7 @@ automotorsport.se##a[href*="/partner/"]
 ! Foliehattar, hobbytyckare, kvacksalvare, körsbärsplockare, sekter, byfånar, en ding ding värld osv
 2000tv.se###bannerbox
 newsvoice.se##.sponsrad, .sponsradcol1, .newsv-widget, article[class*="sponsored"]
+newsvoice.se##aside.widget_text:has-text(ANNONSER)
 nyadagbladet.se##.third-col, article[class*="sponsrad"], div[id^="nyd-"], .below_header_front_page, div[data-aeon-news-trackbid="1"], .aeon-news-widget, div[id^="aeon-news"]
 nyadagbladet.se##.widget_media_image:has-text(/annons/i)
 nyadagbladet.se##.site-main > div.widget_custom_html p[style^="text-align: center;"]:has-text(/annonssamarbete/i):upward(div.widget_custom_html)
@@ -3863,3 +3866,5 @@ hundnytt.se##html.g1-popup-visible:style(overflow:initial!important;)
 100.se##div[id^="100_desktop"]:upward(.hidden)
 /page_views$domain=kottchark.se
 thefork.se###download-app-modal
+/events.js$domain=forsvarstidningen.se
+forsvarstidningen.se##.text-muted-foreground:has-text(/annons/i):upward(1)
