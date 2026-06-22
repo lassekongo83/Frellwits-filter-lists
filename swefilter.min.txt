@@ -1,7 +1,7 @@
 ! Title: Frellwit's Swedish Filter
-! Last updated: Sat, 20 Jun 2026 03:46:38 +0000
+! Last updated: Mon, 22 Jun 2026 04:01:04 +0000
 ! Expires: 5 days
-! Diff-Path: patches/2026.6.20.226.patch#swefilter
+! Diff-Path: patches/2026.6.22.241.patch#swefilter
 ! Diff-Expires: 24 hours
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
@@ -626,6 +626,7 @@ fotbolldirekt.se,hockeysverige.se,innebandymagazinet.se,motivation.se,fiskejourn
 fotbollskanalen.se##a.pr-side:has-text(/sponsra/i)
 fotbollskanalen.se##div[class$="sponsortitle"]:upward(.desktop-side-widget)
 fotbollskanalen.se##section.w-full-content:has(a[href*="europatipset"])
+fotbollskanalen.se###main-content > div.w-full-content > div:not([class]):has(a[href*="/betmgm/"])
 fotbollskanalen.se##.brand, .desktop-ad-web, a[href*="telia.se/privat/tv/sport"] img, .mobile-ad-web, .fbk-ad-container, a[href^="https://www.atg.se/"][target], .fk-advertory-ad-wrapper
 fotbollskanalen.se##.news-list li:has(span[style="color:#6ab6ff"])
 fotbollskanalen.se##.notice:has(span[class$="sponsored"])
@@ -943,7 +944,7 @@ kokaihop.se##body:style(overflow-y: auto !important;)
 kokaihop.se##.ads-wrapper-main, .InterstitialModal
 kokaihop.se##.cookieBarWrapper:remove()
 koket.se##div[class*="mosaic_item_wrapper"]:has(div[class*="sponsorLabel"])
-koket.se##[class*="list_item_sponsored"], [class*="promotion_bottom_holder_wrapper"], [class*="beverage-recommendation_wrapper"], [class*="list_item_wide_sponsored"], [class^="ad_position"], div[class^="wave_ad"]
+koket.se##[class*="list_item_sponsored"], [class*="promotion_bottom_holder_wrapper"], [class*="beverage-recommendation_wrapper"], [class*="list_item_wide_sponsored"], [class^="ad_position"], div[class^="wave_ad"], div[class*="promotion-module"]
 kolla.tv##div[style^="position: fixed; left: 0px; top: 0px; width: 100%; height: 100%; z-index: 999;"]
 kollega.se##.block--gamw, #popup-notification
 kolozzeum.com##td[width="305"], br + a[href*="/casino"]
@@ -3125,6 +3126,7 @@ _banner.php?$domain=tvmatchen.nu
 ||cncpt-central.com^$third-party
 ||cncpt.dk^$third-party
 ||collect.breakit.se^
+||commercial-cms-prod.aller.se^
 ||comms.omnichannelengagementhub.com/*&telemetry=true
 ||compado.com^$third-party
 ||compricer.se^$third-party
