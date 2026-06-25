@@ -1,10 +1,10 @@
-diff name:swefilter lines:252 checksum:ff5ca92443
+diff name:swefilter lines:260 checksum:b7c5694e6e
 d2 1
 a2 1
-! Last updated: Tue, 23 Jun 2026 06:47:26 +0000
+! Last updated: Thu, 25 Jun 2026 03:02:40 +0000
 d4 1
 a4 1
-! Diff-Path: patches/2026.6.23.407.patch#swefilter
+! Diff-Path: patches/2026.6.25.182.patch#swefilter
 d87 1
 d92 1
 a92 1
@@ -62,7 +62,9 @@ a876 3
 investeramera.se##div.fixed:has(a[href="/integritetspolicy"])
 investeramera.se##div.sticky:has(.button--newsletter)
 investeramera.se##div[aria-labelledby="paywall-title"], div[class*="backdrop-blur-sm"]
-a932 1
+d932 1
+a932 2
+klart.se##div[id^="sp_message_container"], #overlay, .-panorama-ad-wrapper, div[id^="ad-wrapper"]
 klart.se##+js(set, advertoryFluepapir, true)
 d934 1
 a934 1
@@ -94,7 +96,8 @@ omni.se##div[class^="TopPanoramaAd"], div[class^="StickySideAd"], div[class*="_n
 d1246 1
 d1276 1
 a1276 1
-prisjakt.nu##.pjra-relative, .outsider-ads, div[class^="AdPlacementWrapper"], .pjra\:w-\[980px\].pjra\:h-\[240px\]
+prisjakt.nu##.pjra-relative, .outsider-ads, div[class^="AdPlacementWrapper"], .pjra\:w-\[980px\].pjra\:h-\[240px\], .max-skyscraper-ads\:hidden
+d1284 3
 d1395 4
 a1398 2
 skillingaryd.nu##div[id$="banner-wrap"], div[class*="premium-banners"], .sidebar__ads
@@ -146,6 +149,8 @@ a2125 3
 /ads$xhr,domain=stromsundsgratistidning.se
 /ads-countdown.js$domain=aftonbladet.se
 d2137 1
+a2137 1
+/advertising-podlet$domain=blocket.se
 d2157 1
 a2157 1
 /analytics$domain=gbgfotboll.se|stff.se|svenskfotboll.se|di.se|etc.se|vackertvader.se|skogsforum.se|skolporten.se|sjf.se|rimlab.se|alandsradio.ax|dagen.se|global.morningstar.com|vidzflow.com|vinia.se|kvartal.se|shortcut.se|inredningsvis.se|kottchark.se|forsvarstidningen.se|stromsundsgratistidning.se|sverigerunt.se
@@ -188,6 +193,8 @@ d2702 2
 a2703 2
 /prod/collect$domain=mkse.com|dietisten.net|ergo.nu
 /profile$ping,domain=skippo.se|tasteline.com|marcusoscarsson.se|shl.se|hemhyra.se|qx.se|hockeynews.se|hockeyettan.se|tvsporten.nu
+a2711 1
+/pulse-event-listener$domain=blocket.se
 d2718 1
 a2718 1
 /raven$script,domain=mitti.se|travnet.se|nyheter24.se|tyda.se|devote.se|hemtrevligt.se|alltforforaldrar.se|familjeliv.se|brollopstorget.se|blogg.se|nouw.com|lchfarkivet.se|fotbolltransfers.com|norrahalland.se|svenskgolf.se|vimedbarn.se|modette.se|alltomnorrtalje.se|fragbite.se|ljudochbild.se|vk.se|folkbladet.nu|nordsverige.se|mellanbygden.nu|vasterbottningen.se|lokaltidningen.nu|svenskafans.com|sportlovin.se|innebandymagazinet.se|jaktjournalen.se|akaskidor.se|hockeysverige.se|kingmagazine.se|cafe.se|hockeynews.se|mmanytt.se|idrottensaffarer.se|fotbolldirekt.se|automotorsport.se|hockeyettan.se|speakpipe.com
@@ -228,6 +235,7 @@ d3149 1
 a3149 1
 ||cookie-script.com^$domain=axess.se|dagensjuridik.se|foodfolder.se|arkitektur.se|friluftsframjandet.se|handelsradet.se|cirkulation.se|arkitekt.se|webb-tv.nu|eurocampings.se|transportforetagen.se|timbro.se|auris.nu|upplysning.se
 d3185 1
+d3259 1
 d3291 1
 a3291 1
 ||inmobi.com^$domain=alltomelbil.se|travelnews.se|varldenshaftigaste.se|merinfo.se|foreca.se|laget.se|byrum.se|sportlovin.se|receptfavoriter.se|forni.se|cornucopia.se|tittapavideon.se|motormagasinet.se|food-supply.se|dagenshandel.se|plastnet.se|habit.se|woodnet.se|foodnet.se|processnet.se|packnet.se|medtechmagazine.se|recyclingnet.se|rt-forum.se|lifesciencesweden.se|fri-kopenskap.se|cleannet.se|metal-supply.se|fashionnet.se|framtidensbygg.se|entreprenad.com|mykitchenstories.se|cancelculture.se|findit.se|foretagande.se|affarsvarlden.se|branschaktuellt.se|nordic.ign.com|fragbite.se|lindasbakskola.se|jennysmatblogg.nu|filippoon.se|niiinis.se|eniro.se|vackertvader.se|klendr.se|zeinaskitchen.se|marketmate.se|svartgul.se|langd.se|babyhjalp.se|skyttesport.se|flashback.org|nyadagbladet.se|enkelteknik.se|alltomnorrtalje.se|sporttv.nu|nyteknik.se|lag-avtal.se|arbetarskydd.se|poddtoppen.se|antidoping.se|garaget.org|ordparken.se|undertian.com|samnytt.se|motivation.se|nouw.com|sweclockers.com|fz.se|villalivet.se|bjarenu.se|expo.se|temperatur.nu|rikatillsammans.se|mmanytt.se|thelocal.se|thatsup.se
@@ -240,10 +248,10 @@ a3401 1
 d3448 1
 d3503 1
 a3503 1
-||sdkconfig.pulse.schibsted.io^$domain=aftonbladet.se|omni.se|svd.se|prisjakt.nu|bytbil.com|klart.se|tv4.se|koket.se
+||sdkconfig.pulse.schibsted.io^$domain=aftonbladet.se|omni.se|svd.se|klart.se|tv4.se|koket.se
 d3505 1
 a3505 1
-||sdk.pulse.schibsted.com^$script,domain=aftonbladet.se|~tv.aftonbladet.se|omni.se|svd.se|prisjakt.nu|bytbil.com
+||sdk.pulse.schibsted.com^$script,domain=aftonbladet.se|~tv.aftonbladet.se|omni.se|svd.se
 d3587 1
 d3612 1
 a3612 1
