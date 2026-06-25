@@ -1603,8 +1603,8 @@ breakit.se##:is(section[class*="Article_layout"], article):has(div[class*="Spons
 ||hasher.schibsted.com^
 ||youbora.com^*/sp.min.js$important,domain=aftonbladet.se|svd.se|tv.nu
 ||schibsted.com/pulse$domain=aftonbladet.se
-||sdk.pulse.schibsted.com^$script,domain=aftonbladet.se|~tv.aftonbladet.se|omni.se|svd.se|prisjakt.nu|bytbil.com
-||sdkconfig.pulse.schibsted.io^$domain=aftonbladet.se|omni.se|svd.se|prisjakt.nu|bytbil.com|klart.se|tv4.se|koket.se
+||sdk.pulse.schibsted.com^$script,domain=aftonbladet.se|~tv.aftonbladet.se|omni.se|svd.se
+||sdkconfig.pulse.schibsted.io^$domain=aftonbladet.se|omni.se|svd.se|klart.se|tv4.se|koket.se
 ! Aftonbladet
 /ab_tracking$domain=aftonbladet.se
 /ab_stats_params$domain=aftonbladet.se
@@ -1653,14 +1653,10 @@ svd.se##article:has(div[class^="NativeBarWrapper"])
 ! Omni
 omni.se##div[class^="TopPanoramaAd"], div[class^="StickySideAd"], div[class*="_native"], div[class^="Ad_placement"], div[class*="PanoramaAd_"], div[class*="adContainer"]
 ! Klart
-klart.se##div[id^="sp_message_container"], #overlay, .-panorama-ad-wrapper
+klart.se##div[id^="sp_message_container"], #overlay, .-panorama-ad-wrapper, div[id^="ad-wrapper"]
 klart.se##.ad-text:has-text(/annons/i):upward(.content-box-list__item)
 klart.se##body.mega-loading:remove-class(mega-loading)
-! Bytbil
-||bytbil.com/bundles/js/tracking
-bytbil.com##.listpage-banner, .available-services
-bytbil.com##html,body:style(overflow:auto!important;)
-bytbil.com##.newcars-widget:has(a[href*="bit.ly"], a[href*="content-ad"])
+klart.se##+js(set, advertoryFluepapir, true)
 ! tv.nu
 /adsCountdown$domain=tv.nu
 /_glimr$domain=tv.nu
@@ -1670,18 +1666,6 @@ tv.nu##a[href*="adform.net"], .ad-fullscreenWallpaper__container, div[data-adver
 tv.nu###tv-schedule section:has-text(ANNONS)
 tv.nu##body.takeover-loading:remove-class(takeover-loading)
 tv.nu###modal div[itemtype][itemscope] > div[class]:has(a[href*="doubleclick"])
-! Blocket
-tracking-island.js$domain=blocket.se
-||sdk-cdn.pulse.m10s.io^$domain=blocket.se
-blocket.se##.badge--info:has-text(Betald placering):upward(.sf-search-ad)
-blocket.se#@#div[data-ad-id]
-! Övrigt
-klart.se##+js(set, advertoryFluepapir, true)
-prisjakt.nu##.pjra-relative, .outsider-ads, div[class^="AdPlacementWrapper"], .pjra\:w-\[980px\].pjra\:h-\[240px\]
-||go.qasa.se^$ping
-qasa.se##body[data-scroll-locked="1"]:remove-attr(data-scroll-locked)
-qasa.se##div[data-state="open"]:empty
-qasa.se##+js(aeld, wheel)
 
 ! -- Stampen
 /adform.js$domain=bohuslaningen.se|stromstadstidning.se|markposten.se|harrydaposten.se|partilletidning.se|sttidningen.se|molndalsposten.se|kungalvsposten.se|kungsbackaposten.se|alingsastidning.se|ttela.se|gp.se|hallandsposten.se|hn.se|mellerudsnyheter.se
@@ -3870,3 +3854,14 @@ forsvarstidningen.se##.text-muted-foreground:has-text(/annons/i):upward(1)
 stromsundsgratistidning.se##[data-slot-id], div[aria-label="Cookie-samtycke"]
 sverigerunt.se##div[aria-label="Annons"]
 alltomforetagande.se##.csamt-root
+||bytbil.com/bundles/js/tracking
+bytbil.com##.listpage-banner, .available-services
+bytbil.com##html,body:style(overflow:auto!important;)
+bytbil.com##.newcars-widget:has(a[href*="bit.ly"], a[href*="content-ad"])
+tracking-island.js$domain=blocket.se
+||sdk-cdn.pulse.m10s.io^$domain=blocket.se
+/advertising-podlet$domain=blocket.se
+/pulse-event-listener$domain=blocket.se
+blocket.se##.badge--info:has-text(Betald placering):upward(.sf-search-ad)
+blocket.se#@#div[data-ad-id]
+prisjakt.nu##.pjra-relative, .outsider-ads, div[class^="AdPlacementWrapper"], .pjra\:w-\[980px\].pjra\:h-\[240px\], .max-skyscraper-ads\:hidden
