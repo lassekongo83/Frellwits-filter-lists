@@ -1625,8 +1625,10 @@ breakit.se##:is(section[class*="Article_layout"], article):has(div[class*="Spons
 /_astro/InitializeAdverts$domain=aftonbladet.se|svd.se
 /_astro/Sifo$domain=aftonbladet.se|svd.se
 /_astro/getPulseTracker$domain=aftonbladet.se|svd.se
+/sps-pulse-helpers$domain=aftonbladet.se|svd.se
+/getAdsConfig$domain=aftonbladet.se|svd.se
 /@sentry$script,domain=aftonbladet.se|svd.se
-aftonbladet.se##div[data-edition-name^="ab-native-premium"], a[href*="/brandstudio"], a[href*="/brand-studio"],  a[href*="/casinoguide"], div[class*="panorama-wrapper"], div[class*="insider-wrapper"]
+aftonbladet.se##div[data-edition-name^="ab-native-premium"], a[href*="/brandstudio"], a[href*="/brand-studio"],  a[href*="/casinoguide"], div[class*="panorama-wrapper"], div[class*="insider-wrapper"], #sps-bottombar-poster
 aftonbladet.se##aside > div[class^="_wrapper"]:has(div[class^="_adLabel"])
 aftonbladet.se##div[class^="_adLabel"]:upward(1)
 aftonbladet.se##.label-medium:has-text(/annonslänkar/i):upward(astro-island[component-url])
@@ -1656,7 +1658,7 @@ omni.se##div[class^="TopPanoramaAd"], div[class^="StickySideAd"], div[class*="_n
 klart.se##div[id^="sp_message_container"], #overlay, .-panorama-ad-wrapper, div[id^="ad-wrapper"]
 klart.se##.ad-text:has-text(/annons/i):upward(.content-box-list__item)
 klart.se##body.mega-loading:remove-class(mega-loading)
-klart.se##+js(set, advertoryFluepapir, true)
+aftonbladet.se,klart.se##+js(set, advertoryFluepapir, true)
 ! tv.nu
 /adsCountdown$domain=tv.nu
 /_glimr$domain=tv.nu
