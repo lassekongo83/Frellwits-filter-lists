@@ -1,7 +1,7 @@
 ! Title: Frellwit's Swedish Filter
-! Last updated: Sun, 28 Jun 2026 12:14:51 +0000
+! Last updated: Mon, 29 Jun 2026 04:19:19 +0000
 ! Expires: 5 days
-! Diff-Path: patches/2026.6.28.734.patch#swefilter
+! Diff-Path: patches/2026.6.29.259.patch#swefilter
 ! Diff-Expires: 24 hours
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
@@ -667,8 +667,6 @@ freeride.se##.mark:has-text(/spons/i):upward(.post)
 freeride.se##.sidebar-front .widget_text.dark ~ p
 freeride.se##:is(.visible-xs, div[class^="sidebar"] div[style]):has(a[href*="casino"], a[target="_blank"])
 freeride.se,gamereactor.se,happyride.se,hockeyettan.se##.sponsor
-fria.nu,stockholmsfria.se##.holidAds:upward(1)
-fria.nu,stockholmsfria.se##[class*="annonser"], #cboxOverlay, #cboxWrapper, a[href*="banner"][target]
 frihetsnytt.se##a[href^="https://frihetsnytt.se/annonsera"]
 frihetsnytt.se##.tdm_block_inline_image:has(a[target])
 frihetsnytt.se##.td-block-title-wrap:has-text(/annons/i):upward(1)
@@ -2059,6 +2057,7 @@ zeromagazine.nu##div[id^="ads"]
 *$ping,domain=nordicinformer.com|fiskejournalen.se|fordonsteknik.net|byggteknik.org|forestindustry.org|autoteknik.net|entreprenoren.net|byggforum.net|feber.se|tjock.se
 *$script,1p,domain=hrsvepet.se|cfosvepet.se|vdsvepet.se
 *$script,redirect-rule=noop.js,domain=elevspel.se
+*$xhr,3p,domain=skargarden.se
 -VideoAD$domain=alekuriren.se
 -popup-analytics
 -samarbete$image,domain=hockeyettan.se
@@ -2106,7 +2105,6 @@ zeromagazine.nu##div[id^="ads"]
 /ab_tracking$domain=aftonbladet.se
 /active_ads?select=
 /addtoany$domain=sjf.se
-/add-ads.js$domain=fria.nu|stockholmsfria.se
 /add-page-view$domain=cykla.se
 /adform.js$domain=bohuslaningen.se|stromstadstidning.se|markposten.se|harrydaposten.se|partilletidning.se|sttidningen.se|molndalsposten.se|kungalvsposten.se|kungsbackaposten.se|alingsastidning.se|ttela.se|gp.se|hallandsposten.se|hn.se|mellerudsnyheter.se
 /adimg$image,domain=poloniainfo.se
@@ -2327,7 +2325,6 @@ zeromagazine.nu##div[id^="ads"]
 /fb_pixel.js
 /featured/promotion$domain=borskollen.se
 /filarkiv/bilderbanner/*
-/files/annonser$domain=fria.nu|stockholmsfria.se
 /firebase-analytics.js$domain=stoppapressarna.se|alltomkungligt.se|zeinaskitchen.se|jennysmatblogg.nu|filippoon.se|lindasbakskola.se|niiinis.se
 /firehose/batch
 /flex-mag/js/dfp.js
@@ -2357,7 +2354,7 @@ zeromagazine.nu##div[id^="ads"]
 /glimr$script,domain=aftonbladet.se|blocket.se
 /glimr-static$domain=~klart.se
 /gmetrics$domain=reseguiden.se
-/googleanalytics.js$domain=fria.nu|stockholmsfria.se|bio.se
+/googleanalytics.js$domain=bio.se
 /google-analytics$domain=teknikveckan.se
 /google-analytics-for-wordpress$important,script,xmlhttprequest
 /google-analytics-premium$important,script
@@ -2365,7 +2362,6 @@ zeromagazine.nu##div[id^="ads"]
 /google-tag-manager$domain=hemnet.se
 /google-universal-analytics$script
 /gpAnalytics$script
-/gplus.php$script,domain=fria.nu|stockholmsfria.se
 /gravito$script,domain=moviezine.se
 /growth-analytics$domain=mindoktor.se
 /gtagEventTracker.js
@@ -2845,7 +2841,6 @@ zeromagazine.nu##div[id^="ads"]
 /tv/annons$domain=expressen.se
 /tv/brand-studio$domain=expressen.se
 /tv/sponsrat$domain=expressen.se
-/twitter_count.php$domain=fria.nu|stockholmsfria.se
 /ub-ads/*$script
 /unica/html-banners
 /uploads/annonser
