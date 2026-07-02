@@ -1,7 +1,7 @@
 ! Title: Frellwit's Swedish Filter
-! Last updated: Wed, 01 Jul 2026 01:54:54 +0000
+! Last updated: Thu, 02 Jul 2026 03:45:04 +0000
 ! Expires: 5 days
-! Diff-Path: patches/2026.7.1.114.patch#swefilter
+! Diff-Path: patches/2026.7.2.225.patch#swefilter
 ! Diff-Expires: 24 hours
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
@@ -574,6 +574,7 @@ filmtipset.se##.container > div[style="padding:10px"]:has(a[href*="casino"])
 filmtipset.se##:is(img[src="../images/sponsrade.png"], a[href="https://stodlinjen.se/"]):upward(.row)
 filmtopp.se##body:style(overflow:initial!important)
 filmtopp.se##.cooperation-banner__container, .takeover-desktop, .takeover-mobile, #discover-banner
+finanstid.se##div[aria-label^="Ad "]
 finanstid.se##.fixed:has(.rulemailer-disclaimer)
 findit.se##+js(set, testPrebid, noopFunc)
 findit.se##.banner-wrapper, .col-banner, .banner_middle
@@ -2504,7 +2505,7 @@ zeromagazine.nu##div[id^="ads"]
 /plugins/adlounge
 /plugins/adsanity
 /plugins/adsense%20click%20proctect
-/plugins/advanced-ads$script,domain=newsner.com|humorbibeln.se|sportbibeln.se|matbibeln.se|ettgottskratt.se|djurbibeln.se|nojeslivet.se|vegomagasinet.se|inkopsradet.se|orkesterjournalen.se|hallbartbyggande.com|marketmate.se|villatidningen.se
+/plugins/advanced-ads$script,domain=newsner.com|humorbibeln.se|sportbibeln.se|matbibeln.se|ettgottskratt.se|djurbibeln.se|nojeslivet.se|vegomagasinet.se|inkopsradet.se|orkesterjournalen.se|hallbartbyggande.com|marketmate.se|villatidningen.se|upphandling24.se
 /plugins/ad-ace
 /plugins/ad-blocking-advisor
 /plugins/afp-default-pricetable/js/ga-tracking
@@ -3357,6 +3358,7 @@ _banner.php?$domain=tvmatchen.nu
 ||lookaside.fbsbx.com/lookaside/crawler/
 ||lorempixel.com^$third-party
 ||ls.dycdn.net^$third-party
+||lupper.se^$third-party
 ||lwcdn.com/vendor/ima.min.js$script
 ||lystra.se^$third-party
 ||m1.analytics.sitevision-cloud.se^
