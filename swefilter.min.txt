@@ -1,7 +1,7 @@
 ! Title: Frellwit's Swedish Filter
-! Last updated: Wed, 15 Jul 2026 02:31:23 +0000
+! Last updated: Thu, 16 Jul 2026 06:49:18 +0000
 ! Expires: 5 days
-! Diff-Path: patches/2026.7.15.151.patch#swefilter
+! Diff-Path: patches/2026.7.16.409.patch#swefilter
 ! Diff-Expires: 24 hours
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
@@ -887,7 +887,6 @@ jakto.se###sidebar-right .bs-widget:has(a[target="_blank"])
 jakto.se###sidebar-right .bs-widget:has-text(Annonsartiklar)
 jaktplay.se##.jaktplay-ad
 jaktsidan.se,edgeflyfishing.com###ipsLayout_mainArea > iframe, div[data-role="sidebarAd"]
-jankare.se##:is(.janka-slider, .widget_media_image):has(a:not([href*="jankare.se"]))
 jarnvagar.nu##.et_pb_module:matches-css(before, content: "Annons:")
 javligtgott.se##div[id^="ad-panorama"]:upward(.elementor-section)
 jobsinsweden.se###subscriptionPopup
@@ -950,7 +949,7 @@ konsten.net##div[id^="konst-"]
 konsumentmagasinet.se##.pricerunner, #Conzent, .conzent-modal, .price-part
 korledare.myclub.se##.sponsors
 kristendate.se##div[id^="adv"], #site-right-col-wrapper a[target] img
-kritiker.se##div.recad, div.adhor, div.stickyad
+kritiker.se##div.recad, div.adhor, div.stickyad, div[data-ad-slot-wrapper]
 kritiker.se##iframe[allow]:remove-attr(allow)
 kritiker.se##+js(prevent-xhr, adsbygoogle)
 krogen.se##a.article-link:has-text(Annons:):upward(.sp-article-content)
@@ -2265,7 +2264,7 @@ zeromagazine.nu##div[id^="ads"]
 /cookies-and-content-security-policy$script,domain=cannabisifokus.se|futsalmagasinet.se|sd.se|cora.se|tfkriminalvard.se|sportbilen.se|fisheco.se|sparadkrona.se|handelskammaren.com
 /cookie-bar$script,domain=allergia.se|fl-net.se
 /cookie-consent$script,domain=minhembio.com|sjf.se|varldenom.com|fuska.se
-/cookie-law-info$script,domain=startaochdriva.se|sverige.nu|conpot.se|firstclassmagazine.se|kvalitetsmagasinet.se|miljo-utveckling.se|techtidningen.se|vdtidningen.se|gullislastips.se|nyfiknainvesterare.se|discoveringtheplanet.com|bussmagasinet.se|torbjornstips.se|dinbyggare.se|aktieskolan.se|insikt24.se|sulkysport.se|bitzmagasin.se|battrestadsdel.se|automatos.se|80-talet.se|goteborgnyheter.se|elitepadel.se|vetenskaphalsa.se|rakapuckar.com|konstperspektiv.nu|56kilo.se|surveyors.se|maximumsports.se|rucksack.se|frihetsnytt.se|globalportalen.org|juligen.se|sakerhund.se|radiosol.se|norrkopingsguiden.se|mustangclubsweden.org|mallorcanyheter.com|viivilla.se|teknikhype.se|kalmarposten.se|travelandtourworld.se|jankare.se|idrottsbranschen.se|bostadspolitik.se|hundguiden.com|hemslojd.se|utstallningskritik.se
+/cookie-law-info$script,domain=startaochdriva.se|sverige.nu|conpot.se|firstclassmagazine.se|kvalitetsmagasinet.se|miljo-utveckling.se|techtidningen.se|vdtidningen.se|gullislastips.se|nyfiknainvesterare.se|discoveringtheplanet.com|bussmagasinet.se|torbjornstips.se|dinbyggare.se|aktieskolan.se|insikt24.se|sulkysport.se|bitzmagasin.se|battrestadsdel.se|automatos.se|80-talet.se|goteborgnyheter.se|elitepadel.se|vetenskaphalsa.se|rakapuckar.com|konstperspektiv.nu|56kilo.se|surveyors.se|maximumsports.se|rucksack.se|frihetsnytt.se|globalportalen.org|juligen.se|sakerhund.se|radiosol.se|norrkopingsguiden.se|mustangclubsweden.org|mallorcanyheter.com|viivilla.se|teknikhype.se|kalmarposten.se|travelandtourworld.se|idrottsbranschen.se|bostadspolitik.se|hundguiden.com|hemslojd.se|utstallningskritik.se
 /cookie-manager$script,domain=si.se|sweden.se
 /cookie.min.js$domain=assistanskoll.se
 /cookie_consent.js$domain=djungeltrumman.se
@@ -3310,6 +3309,7 @@ _banner.php?$domain=tvmatchen.nu
 ||iphonecasinon.com^$third-party
 ||i.posthog.com/*/?retry_count
 ||jajja.com^$third-party
+||jamforbesiktning.se^$third-party
 ||jenkler.se^$domain=uex.se
 ||jitsu.com/p.js
 ||jsc.native.azerion.com^$third-party
