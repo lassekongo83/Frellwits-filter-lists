@@ -1316,7 +1316,7 @@ utm_$document,removeparam=/^utm_/,domain=tv.nu|booli.se|expressen.se|aftonbladet
 /gtm$domain=lidl.se|global.morningstar.com
 /view$xhr,domain=atl.nu|land.se
 ?t=$xhr,empty,domain=kyrkanstidning.se|grundskoletidningen.se
-*$ping,domain=nordicinformer.com|fiskejournalen.se|fordonsteknik.net|byggteknik.org|forestindustry.org|autoteknik.net|entreprenoren.net|byggforum.net|feber.se|tjock.se
+*$ping,domain=nordicinformer.com|fiskejournalen.se|fordonsteknik.net|byggteknik.org|forestindustry.org|autoteknik.net|entreprenoren.net|byggforum.net|feber.se|tjock.se|guldkanalen.se
 ! Websites with no obvious or visible facebook login. Will just assume it's used for tracking.
 ||connect.facebook.net^$domain=friatider.se|fotosidan.se|ng.se|lektionsbanken.se|lajvo.se|kvinnatillkvinna.se|epochtimes.se|newsner.com|humorbibeln.se|sportbibeln.se|matbibeln.se|ettgottskratt.se|djurbibeln.se|nojeslivet.se|sillyseason.se|loppi.se|kyrkanstidning.se|tn.se|experimentarkivet.se
 ! Scriptlets
@@ -2499,7 +2499,8 @@ radio.se##div[data-testid="page-holder"] > section.content-visibility-auto:not([
 ||youtube.com/embed/*autoplay$subdocument,removeparam=autoplay,domain=kritiker.se
 kritiker.se##div.recad, div.adhor, div.stickyad, div[data-ad-slot-wrapper]
 kritiker.se##iframe[allow]:remove-attr(allow)
-netflixguiden.se##div.lboard, div.instream-dynamic, #top-area-promo, div.sidebar div.sticky, .promo, .lboard-desktop, .lboard-mobile, #bottom-sticky-promo
+/images/aff$domain=netflixguiden.se
+netflixguiden.se##div.lboard, div.instream-dynamic, #top-area-promo, div.sidebar div.sticky, .promo, .lboard-desktop, .lboard-mobile, #bottom-sticky-promo, .section.thanks
 ||metalcentral.net/images/*banner
 metalcentral.net##.bannergroupno-padding
 metalcentral.net##.bannergroup:upward(.uk-panel-box)
@@ -2523,6 +2524,7 @@ cineasten.se##.widget_text:has-text(casino)
 podtail.se##.item-list__item:has-text(/annons från/i)
 podtail.se##aside a[href*="utm_campaign"], a[title*="casino"]
 ||podcasts.nu/adbg.svg
+||img.podcast24.org^$domain=podcasts.nu
 podcasts.nu##.sponsor-list, .sponsor-type, .cookie-law-wrapper, .big-ad-placeholder, .affiliate-wrapper, .overlay, .modal
 guldkanalen.se##div.grid_container[style*="height:240px;"]
 ||cmp.radioplay.se^
@@ -2531,7 +2533,7 @@ tv24.se##li[id^="infeed"], div.presented-by
 filmparadiset.se##a[href*="casino"], .custom-html-widget a[target="_blank"]
 filmparadiset.se##.widget_text:has(a[href*="casino"])
 /ad?platform$domain=viaplayradio.se
-radio-sveriges.se###original_taboola, #optimize_experiment
+radio-sveriges.se###original_taboola, #optimize_experiment, #appDownloadAd, .right-sidebar__ad, .radio-detail-mobile-mrec
 dansbandsnytt.se##.ai-rotate, .two-ads-wide-container
 ||amazonaws.com/*banner$domain=goteborgfilmfestival.se
 goteborgfilmfestival.se##.text-gray:has-text(/Annons/i):upward(1)
@@ -2540,6 +2542,7 @@ orkesterjournalen.se##div[id^="orkes-"]
 opusmagasin.se##.adgroup
 filmextra.se##:is(article.category-okategoriserade, .widget_recent_entries li):has(a[href*="casino"])
 filmextra.se##aside .widget_media_image:has(a[href*="&utm"])
+tidskriftenopera.se##div[id^="P_"]
 tidskriftenopera.se##.master-slider-parent:has(.ad-track)
 frizon.se##.maintop
 
@@ -3169,6 +3172,7 @@ tv4play.se##.swiper-slide > div[style] > a > div:style(mask-image:unset!importan
 expressen.se##^script:has-text(seenthisTracking)
 skargardsradion.se##^script[id^="real-cookie-banner"]
 skargarden.se##^script[data-c]
+radio-sveriges.se##^script:has-text(adshield)
 !#endif
 ! Mobile
 !#if env_mobile
