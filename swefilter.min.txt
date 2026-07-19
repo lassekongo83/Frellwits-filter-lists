@@ -1,7 +1,7 @@
 ! Title: Frellwit's Swedish Filter
-! Last updated: Sun, 19 Jul 2026 05:18:26 +0000
+! Last updated: Sun, 19 Jul 2026 12:12:59 +0000
 ! Expires: 5 days
-! Diff-Path: patches/2026.7.19.318.patch#swefilter
+! Diff-Path: patches/2026.7.19.732.patch#swefilter
 ! Diff-Expires: 24 hours
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
@@ -116,7 +116,7 @@ aftonbladet.se##article[class^="article-wrapper"] strong:has-text(/annons/i):upw
 aftonbladet.se##aside > div[class^="_wrapper"]:has(div[class^="_adLabel"])
 aftonbladet.se##div[class^="stickylogin"]
 aftonbladet.se##div[class^="_adLabel"]:upward(1)
-aftonbladet.se##div[data-edition-name^="ab-native-premium"], a[href*="/brandstudio"], a[href*="/brand-studio"],  a[href*="/casinoguide"], div[class*="panorama-wrapper"], div[class*="insider-wrapper"], #sps-bottombar-poster
+aftonbladet.se##div[data-edition-name^="ab-native-premium"], a[href*="/brandstudio"], a[href*="/brand-studio"],  a[href*="/casinoguide"], div[class*="panorama-wrapper"], div[class*="insider-wrapper"], #sps-bottombar-poster, astro-island[component-export="AffiliateAd"]
 aftonbladet.se##h2[data-test-tag="paragraph-header"]:has(a[aria-label*="ANNONS"])
 aftonbladet.se##section[class^="twocolumnlayout-main"] > div[class^="usermsgtoast-root"]:has(iframe)
 aftonbladet.se##track-element:remove-attr(/data-track/)
