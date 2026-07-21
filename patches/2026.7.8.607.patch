@@ -1,10 +1,10 @@
-diff name:swefilter lines:128 checksum:9e2a56bb2b
+diff name:swefilter lines:146 checksum:81ab6a60ba
 d2 1
 a2 1
-! Last updated: Mon, 20 Jul 2026 05:06:31 +0000
+! Last updated: Tue, 21 Jul 2026 03:37:59 +0000
 d4 1
 a4 1
-! Diff-Path: patches/2026.7.20.306.patch#swefilter
+! Diff-Path: patches/2026.7.21.217.patch#swefilter
 d119 1
 a119 1
 aftonbladet.se##div[data-edition-name^="ab-native-premium"], a[href*="/brandstudio"], a[href*="/brand-studio"],  a[href*="/casinoguide"], div[class*="panorama-wrapper"], div[class*="insider-wrapper"], #sps-bottombar-poster, astro-island[component-export="AffiliateAd"]
@@ -31,13 +31,22 @@ d734 1
 d739 1
 a739 1
 happyride.se##:is(.col-sm-4 > div[class], .col-sm-4 > div[style^="padding-bottom"]):has(a[href*="casino"], a[target="_blank"])
+d822 3
+a824 3
+husbilskompisar.se##+js(json-prune, props.initialAds)
+husbilskompisar.se##+js(nostif, ad_location)
+husbilskompisar.se##+js(set-local-storage-item, cookie_consent, denied)
+d826 1
+a826 2
+husbilskompisar.se##:is(main > div:first-child, div[style*="max-width: 300px"]):has(a[rel*="sponsored"])
+husbilsplats.se##div[id^="husbi-"], .mysticky-welcomebar-fixed
 d885 1
 a885 1
 jaktojagare.se##div.cookie-warning-container, .mb-adarea, #jj-takeover-overlay
 d890 1
 d932 1
 a932 1
-klart.se,hockeynews.se,fotbolltransfers.com,hitta.se,sverigerunt.se,tvmatchen.nu##a[rel*="sponsored"]
+klart.se,hockeynews.se,fotbolltransfers.com,hitta.se,sverigerunt.se,tvmatchen.nu,husbilskompisar.se##a[rel*="sponsored"]
 d953 1
 a953 1
 kritiker.se##div.recad, div.adhor, div.stickyad, div[data-ad-slot-wrapper]
@@ -80,6 +89,9 @@ d2047 1
 a2047 1
 *$ping,domain=nordicinformer.com|fiskejournalen.se|fordonsteknik.net|byggteknik.org|forestindustry.org|autoteknik.net|entreprenoren.net|byggforum.net|feber.se|tjock.se|guldkanalen.se
 d2060 1
+d2112 1
+a2112 1
+/ads$domain=allastudier.se|cirkulation.se|ordmedzcxy.se|rimlab.se|allaaktier.se|varldenom.com|kottchark.se|epochtimes.se|skippo.se|inblick.se|magazin24.se|husbilskompisar.se
 d2140 1
 d2266 1
 a2266 1
@@ -93,9 +105,12 @@ a2395 1
 d2464 1
 a2467 1
 /nexa.min.js$domain=hockeysverige.se
+d2504 1
+a2504 1
+/plugins/advanced-ads$script,domain=newsner.com|humorbibeln.se|sportbibeln.se|matbibeln.se|ettgottskratt.se|djurbibeln.se|nojeslivet.se|vegomagasinet.se|inkopsradet.se|orkesterjournalen.se|hallbartbyggande.com|marketmate.se|villatidningen.se|upphandling24.se|freedomtravel.se
 d2533 1
 a2533 1
-/plugins/complianz-gdpr$script,domain=iconmagazine.se|signprint.se|vilaser.se|arjeplognytt.se|tidningenglobal.se|tidningensyre.se|landetsfria.nu|fempers.se|brollopsmagasinet.se|megafonen.se|kyrka.se|sjofartstidningen.se|pensionarsliv.se|aktuellsakerhet.se|maklarvarlden.se|sjomannen.se|livsmedelsnyheter.se|dovastidning.se|vgrfokus.se|samefolket.se|cirkusvenues.se|surfzone.se|magasinetkonkret.se|samerna.se|affarsstaden.se|livsmedelifokus.se|bodennytt.se|dialasen.com|aftonkuriren.com|samtiden.nu|alltomhallbarhet.se|luleapride.se|onkologiisverige.se|epilepsi.se|nyhetersto.se|opulens.se|orkesterjournalen.se|brafiler.se|funktionshinderpolitik.se|sjomatsframjandet.se|fastighetssverige.se|hotellorestaurang.se|citymark.today|byggvarlden.se|kurera.se
+/plugins/complianz-gdpr$script,domain=iconmagazine.se|signprint.se|vilaser.se|arjeplognytt.se|tidningenglobal.se|tidningensyre.se|landetsfria.nu|fempers.se|brollopsmagasinet.se|megafonen.se|kyrka.se|sjofartstidningen.se|pensionarsliv.se|aktuellsakerhet.se|maklarvarlden.se|sjomannen.se|livsmedelsnyheter.se|dovastidning.se|vgrfokus.se|samefolket.se|cirkusvenues.se|surfzone.se|magasinetkonkret.se|samerna.se|affarsstaden.se|livsmedelifokus.se|bodennytt.se|dialasen.com|aftonkuriren.com|samtiden.nu|alltomhallbarhet.se|luleapride.se|onkologiisverige.se|epilepsi.se|nyhetersto.se|opulens.se|orkesterjournalen.se|brafiler.se|funktionshinderpolitik.se|sjomatsframjandet.se|fastighetssverige.se|hotellorestaurang.se|citymark.today|byggvarlden.se|kurera.se|daisybeauty.com
 d2702 1
 a2702 1
 /profile$ping,domain=skippo.se|tasteline.com|marcusoscarsson.se|shl.se|hemhyra.se|qx.se|hockeynews.se|hockeyettan.se|tvsporten.nu|tvmatchen.nu
@@ -103,10 +118,13 @@ a2732 1
 /rt/poolbetting$domain=tvmatchen.nu
 d2745 1
 d2763 1
+d2808 1
 d2834 1
 a2834 2
 /track.js$domain=destination.se|sistaminuten.se|idrottensaffarer.se
 /track/t.php$frame
+a2841 1
+/t-live.hellofresh.com
 a2974 1
 @@||payway-cdn-stage.adeprimo.se^
 a3060 1

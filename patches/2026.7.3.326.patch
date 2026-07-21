@@ -1,10 +1,10 @@
-diff name:swefilter lines:162 checksum:9e2a56bb2b
+diff name:swefilter lines:177 checksum:81ab6a60ba
 d2 1
 a2 1
-! Last updated: Mon, 20 Jul 2026 05:06:31 +0000
+! Last updated: Tue, 21 Jul 2026 03:37:59 +0000
 d4 1
 a4 1
-! Diff-Path: patches/2026.7.20.306.patch#swefilter
+! Diff-Path: patches/2026.7.21.217.patch#swefilter
 d119 1
 a119 1
 aftonbladet.se##div[data-edition-name^="ab-native-premium"], a[href*="/brandstudio"], a[href*="/brand-studio"],  a[href*="/casinoguide"], div[class*="panorama-wrapper"], div[class*="insider-wrapper"], #sps-bottombar-poster, astro-island[component-export="AffiliateAd"]
@@ -37,6 +37,15 @@ happyride.se##:is(.col-sm-4 > div[class], .col-sm-4 > div[style^="padding-bottom
 d777 1
 a777 1
 hippson.se##.my-8:empty, .ad-banner
+d822 3
+a824 3
+husbilskompisar.se##+js(json-prune, props.initialAds)
+husbilskompisar.se##+js(nostif, ad_location)
+husbilskompisar.se##+js(set-local-storage-item, cookie_consent, denied)
+d826 1
+a826 2
+husbilskompisar.se##:is(main > div:first-child, div[style*="max-width: 300px"]):has(a[rel*="sponsored"])
+husbilsplats.se##div[id^="husbi-"], .mysticky-welcomebar-fixed
 d831 1
 a831 1
 husbyggaren.se##div[id^="nordi-"], .c-native, .mobileoutsider
@@ -46,7 +55,7 @@ jaktojagare.se##div.cookie-warning-container, .mb-adarea, #jj-takeover-overlay
 d890 1
 d932 1
 a932 1
-klart.se,hockeynews.se,fotbolltransfers.com,hitta.se,sverigerunt.se,tvmatchen.nu##a[rel*="sponsored"]
+klart.se,hockeynews.se,fotbolltransfers.com,hitta.se,sverigerunt.se,tvmatchen.nu,husbilskompisar.se##a[rel*="sponsored"]
 d953 1
 a953 1
 kritiker.se##div.recad, div.adhor, div.stickyad, div[data-ad-slot-wrapper]
@@ -97,7 +106,7 @@ a2048 1
 d2061 1
 d2113 1
 a2113 1
-/ads$domain=allastudier.se|cirkulation.se|ordmedzcxy.se|rimlab.se|allaaktier.se|varldenom.com|kottchark.se|epochtimes.se|skippo.se|inblick.se|magazin24.se
+/ads$domain=allastudier.se|cirkulation.se|ordmedzcxy.se|rimlab.se|allaaktier.se|varldenom.com|kottchark.se|epochtimes.se|skippo.se|inblick.se|magazin24.se|husbilskompisar.se
 d2141 1
 a2190 1
 /atmng.js$domain=telgenytt.se
@@ -118,9 +127,12 @@ a2446 1
 d2462 1
 a2465 1
 /nexa.min.js$domain=hockeysverige.se
+d2502 1
+a2502 1
+/plugins/advanced-ads$script,domain=newsner.com|humorbibeln.se|sportbibeln.se|matbibeln.se|ettgottskratt.se|djurbibeln.se|nojeslivet.se|vegomagasinet.se|inkopsradet.se|orkesterjournalen.se|hallbartbyggande.com|marketmate.se|villatidningen.se|upphandling24.se|freedomtravel.se
 d2531 1
 a2531 1
-/plugins/complianz-gdpr$script,domain=iconmagazine.se|signprint.se|vilaser.se|arjeplognytt.se|tidningenglobal.se|tidningensyre.se|landetsfria.nu|fempers.se|brollopsmagasinet.se|megafonen.se|kyrka.se|sjofartstidningen.se|pensionarsliv.se|aktuellsakerhet.se|maklarvarlden.se|sjomannen.se|livsmedelsnyheter.se|dovastidning.se|vgrfokus.se|samefolket.se|cirkusvenues.se|surfzone.se|magasinetkonkret.se|samerna.se|affarsstaden.se|livsmedelifokus.se|bodennytt.se|dialasen.com|aftonkuriren.com|samtiden.nu|alltomhallbarhet.se|luleapride.se|onkologiisverige.se|epilepsi.se|nyhetersto.se|opulens.se|orkesterjournalen.se|brafiler.se|funktionshinderpolitik.se|sjomatsframjandet.se|fastighetssverige.se|hotellorestaurang.se|citymark.today|byggvarlden.se|kurera.se
+/plugins/complianz-gdpr$script,domain=iconmagazine.se|signprint.se|vilaser.se|arjeplognytt.se|tidningenglobal.se|tidningensyre.se|landetsfria.nu|fempers.se|brollopsmagasinet.se|megafonen.se|kyrka.se|sjofartstidningen.se|pensionarsliv.se|aktuellsakerhet.se|maklarvarlden.se|sjomannen.se|livsmedelsnyheter.se|dovastidning.se|vgrfokus.se|samefolket.se|cirkusvenues.se|surfzone.se|magasinetkonkret.se|samerna.se|affarsstaden.se|livsmedelifokus.se|bodennytt.se|dialasen.com|aftonkuriren.com|samtiden.nu|alltomhallbarhet.se|luleapride.se|onkologiisverige.se|epilepsi.se|nyhetersto.se|opulens.se|orkesterjournalen.se|brafiler.se|funktionshinderpolitik.se|sjomatsframjandet.se|fastighetssverige.se|hotellorestaurang.se|citymark.today|byggvarlden.se|kurera.se|daisybeauty.com
 a2613 1
 /plugins/proposition-cookie-consent$script,domain=samfalligheterna.se
 d2689 1
@@ -133,10 +145,13 @@ a2729 1
 /rt/poolbetting$domain=tvmatchen.nu
 d2742 1
 d2760 1
+d2805 1
 d2831 1
 a2831 2
 /track.js$domain=destination.se|sistaminuten.se|idrottensaffarer.se
 /track/t.php$frame
+a2838 1
+/t-live.hellofresh.com
 d2908 1
 d2911 1
 a2911 1

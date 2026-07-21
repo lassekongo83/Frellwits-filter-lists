@@ -1,10 +1,10 @@
-diff name:swefilter lines:251 checksum:9e2a56bb2b
+diff name:swefilter lines:262 checksum:81ab6a60ba
 d2 1
 a2 1
-! Last updated: Mon, 20 Jul 2026 05:06:31 +0000
+! Last updated: Tue, 21 Jul 2026 03:37:59 +0000
 d4 1
 a4 1
-! Diff-Path: patches/2026.7.20.306.patch#swefilter
+! Diff-Path: patches/2026.7.21.217.patch#swefilter
 d119 1
 a119 1
 aftonbladet.se##div[data-edition-name^="ab-native-premium"], a[href*="/brandstudio"], a[href*="/brand-studio"],  a[href*="/casinoguide"], div[class*="panorama-wrapper"], div[class*="insider-wrapper"], #sps-bottombar-poster, astro-island[component-export="AffiliateAd"]
@@ -47,7 +47,15 @@ happyride.se##:is(.col-sm-4 > div[class], .col-sm-4 > div[style^="padding-bottom
 d783 1
 a783 1
 hippson.se##.my-8:empty, .ad-banner
-a832 1
+d828 3
+a830 3
+husbilskompisar.se##+js(json-prune, props.initialAds)
+husbilskompisar.se##+js(nostif, ad_location)
+husbilskompisar.se##+js(set-local-storage-item, cookie_consent, denied)
+d832 1
+a832 3
+husbilskompisar.se##:is(main > div:first-child, div[style*="max-width: 300px"]):has(a[rel*="sponsored"])
+husbilsplats.se##div[id^="husbi-"], .mysticky-welcomebar-fixed
 husbilsplats.se,kandisvarlden.com##+js(acs, document.oncontextmenu)
 d836 1
 a836 1
@@ -58,7 +66,7 @@ jaktojagare.se##div.cookie-warning-container, .mb-adarea, #jj-takeover-overlay
 d895 1
 d937 1
 a937 1
-klart.se,hockeynews.se,fotbolltransfers.com,hitta.se,sverigerunt.se,tvmatchen.nu##a[rel*="sponsored"]
+klart.se,hockeynews.se,fotbolltransfers.com,hitta.se,sverigerunt.se,tvmatchen.nu,husbilskompisar.se##a[rel*="sponsored"]
 d958 1
 a958 1
 kritiker.se##div.recad, div.adhor, div.stickyad, div[data-ad-slot-wrapper]
@@ -139,7 +147,7 @@ d2071 1
 d2109 1
 d2124 1
 a2124 1
-/ads$domain=allastudier.se|cirkulation.se|ordmedzcxy.se|rimlab.se|allaaktier.se|varldenom.com|kottchark.se|epochtimes.se|skippo.se|inblick.se|magazin24.se
+/ads$domain=allastudier.se|cirkulation.se|ordmedzcxy.se|rimlab.se|allaaktier.se|varldenom.com|kottchark.se|epochtimes.se|skippo.se|inblick.se|magazin24.se|husbilskompisar.se
 a2137 1
 /advertisement_impression$domain=lumirinav.se
 d2151 1
@@ -183,10 +191,10 @@ a2483 1
 /optimization-detective/*/url-metrics$xhr
 d2511 1
 a2511 1
-/plugins/advanced-ads$script,domain=newsner.com|humorbibeln.se|sportbibeln.se|matbibeln.se|ettgottskratt.se|djurbibeln.se|nojeslivet.se|vegomagasinet.se|inkopsradet.se|orkesterjournalen.se|hallbartbyggande.com|marketmate.se|villatidningen.se|upphandling24.se
+/plugins/advanced-ads$script,domain=newsner.com|humorbibeln.se|sportbibeln.se|matbibeln.se|ettgottskratt.se|djurbibeln.se|nojeslivet.se|vegomagasinet.se|inkopsradet.se|orkesterjournalen.se|hallbartbyggande.com|marketmate.se|villatidningen.se|upphandling24.se|freedomtravel.se
 d2540 1
 a2540 1
-/plugins/complianz-gdpr$script,domain=iconmagazine.se|signprint.se|vilaser.se|arjeplognytt.se|tidningenglobal.se|tidningensyre.se|landetsfria.nu|fempers.se|brollopsmagasinet.se|megafonen.se|kyrka.se|sjofartstidningen.se|pensionarsliv.se|aktuellsakerhet.se|maklarvarlden.se|sjomannen.se|livsmedelsnyheter.se|dovastidning.se|vgrfokus.se|samefolket.se|cirkusvenues.se|surfzone.se|magasinetkonkret.se|samerna.se|affarsstaden.se|livsmedelifokus.se|bodennytt.se|dialasen.com|aftonkuriren.com|samtiden.nu|alltomhallbarhet.se|luleapride.se|onkologiisverige.se|epilepsi.se|nyhetersto.se|opulens.se|orkesterjournalen.se|brafiler.se|funktionshinderpolitik.se|sjomatsframjandet.se|fastighetssverige.se|hotellorestaurang.se|citymark.today|byggvarlden.se|kurera.se
+/plugins/complianz-gdpr$script,domain=iconmagazine.se|signprint.se|vilaser.se|arjeplognytt.se|tidningenglobal.se|tidningensyre.se|landetsfria.nu|fempers.se|brollopsmagasinet.se|megafonen.se|kyrka.se|sjofartstidningen.se|pensionarsliv.se|aktuellsakerhet.se|maklarvarlden.se|sjomannen.se|livsmedelsnyheter.se|dovastidning.se|vgrfokus.se|samefolket.se|cirkusvenues.se|surfzone.se|magasinetkonkret.se|samerna.se|affarsstaden.se|livsmedelifokus.se|bodennytt.se|dialasen.com|aftonkuriren.com|samtiden.nu|alltomhallbarhet.se|luleapride.se|onkologiisverige.se|epilepsi.se|nyhetersto.se|opulens.se|orkesterjournalen.se|brafiler.se|funktionshinderpolitik.se|sjomatsframjandet.se|fastighetssverige.se|hotellorestaurang.se|citymark.today|byggvarlden.se|kurera.se|daisybeauty.com
 d2547 1
 a2547 1
 /plugins/cookie-notice$script,domain=bildobubbla.se|zeromagazine.nu|sverigespringer.se|gasetten.se|sillyseason.se|gentlemannaguiden.com|svensktidskrift.se|schack.se|kobe.se|tidningenproffs.se|jaktojagare.se|tobaksfakta.se|underbaraclaras.se|cykelframjandet.se|dalabygden.se|lansposten.se|sormlandsbygden.se|vaguiden.se|bluff.se|svmf.se|rockbladet.se|globalbar.se|seniornet.se|gaming365.se|skellefteamedia.se|sillybladet.se|zlatanism.se|fotbollsnytt.nu|voov.nu|matochdrycker.se|drugnews.se|ladiesabroad.se|reportrarutangranser.se|villatidningen.se|itgurun.se|aip.nu|fotbollscuper.se|riktpunkt.nu|matnytt.com|serieframjandet.se|teknikhandboken.se|skanesfolkblad.se|doku.nu|sandaren.se|dagensmuslim.se
@@ -202,11 +210,14 @@ a2738 1
 /rt/poolbetting$domain=tvmatchen.nu
 d2751 1
 d2769 1
+d2814 1
 d2840 1
 a2840 2
 /track.js$domain=destination.se|sistaminuten.se|idrottensaffarer.se
 /track/t.php$frame
 d2848 1
+a2848 1
+/t-live.hellofresh.com
 d2899 1
 a2899 1
 /wp-content/uploads/*betting$image,domain=nyadagbladet.se|kulturbloggen.com|hockeybladet.nu|newsvoice.se|spelochfilm.se|battrestadsdel.se|sillyseason.se
