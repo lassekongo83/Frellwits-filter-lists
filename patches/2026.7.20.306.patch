@@ -1,10 +1,10 @@
-diff name:swefilter lines:77 checksum:af843b66da
+diff name:swefilter lines:98 checksum:8bde5f6d29
 d2 1
 a2 1
-! Last updated: Wed, 29 Jul 2026 03:09:09 +0000
+! Last updated: Fri, 31 Jul 2026 03:21:35 +0000
 d4 1
 a4 1
-! Diff-Path: patches/2026.7.29.189.patch#swefilter
+! Diff-Path: patches/2026.7.31.201.patch#swefilter
 d119 1
 a119 1
 aftonbladet.se##div[data-edition-name^="ab-native-premium"], a[href*="/brandstudio"], a[href*="/brand-studio"],  a[href*="/casinoguide"], div[class*="panorama-wrapper"], div[class*="insider-wrapper"], #sps-bottombar-poster, astro-island[component-export^="AffiliateAd"]
@@ -23,6 +23,8 @@ husbilsplats.se##div[id^="husbi-"], .mysticky-welcomebar-fixed
 d929 1
 a929 1
 klart.se,hockeynews.se,fotbolltransfers.com,hitta.se,sverigerunt.se,tvmatchen.nu,husbilskompisar.se##a[rel*="sponsored"]
+a946 1
+konstperspektiv.nu##a[target="_blank"][rel]
 d969 1
 a969 1
 kwiss.me##div[class^="qz-main-slider-item"]:has(.qz-quiz-sponsored)
@@ -38,6 +40,8 @@ nyheter24.se,alltforforaldrar.se,modette.se,devote.se,familjeliv.se,brollopstorg
 d1213 1
 a1213 1
 nyheter.swebbtv.se##.wp-block-image a[target]:not([href*="nyheter.swebbtv.se"]), .mh-sidebar-2 .indexlink, .mh-slider-widget
+a1293 1
+rakapuckar.com##a[href="https://rakapuckar.com/author/rakapuckar/"]:upward(.td-cpt-post)
 a1335 2
 samtiden.nu##footer a:has-text(/casino/i)
 samtiden.nu##.above-article-widget:has(.aeon-news-target)
@@ -53,17 +57,30 @@ tyda.se,kwiss.me##.frontpage_article:has(a[href*="casino"], a[href*="kasino"], a
 d2112 1
 a2112 1
 /ads$domain=allastudier.se|cirkulation.se|ordmedzcxy.se|rimlab.se|allaaktier.se|varldenom.com|kottchark.se|epochtimes.se|skippo.se|inblick.se|magazin24.se|husbilskompisar.se
+a2193 3
+/baibai-banners
+/baibai-external-tracker
+/baibai/external.jsp
 d2250 1
 a2250 1
 /consent$script,domain=rodeo.net|tyda.se|kwiss.me
+d2265 1
+a2265 1
+/cookie-law-info$script,domain=startaochdriva.se|sverige.nu|conpot.se|firstclassmagazine.se|kvalitetsmagasinet.se|miljo-utveckling.se|techtidningen.se|vdtidningen.se|gullislastips.se|nyfiknainvesterare.se|bussmagasinet.se|torbjornstips.se|dinbyggare.se|aktieskolan.se|insikt24.se|sulkysport.se|battrestadsdel.se|automatos.se|80-talet.se|goteborgnyheter.se|elitepadel.se|vetenskaphalsa.se|rakapuckar.com|surveyors.se|maximumsports.se|globalportalen.org|juligen.se|sakerhund.se|radiosol.se|norrkopingsguiden.se|mustangclubsweden.org|mallorcanyheter.com|viivilla.se|kalmarposten.se|travelandtourworld.se|bostadspolitik.se|hundguiden.com|hemslojd.se|utstallningskritik.se
 d2506 1
 a2506 1
 /plugins/advanced-ads$script,domain=newsner.com|humorbibeln.se|sportbibeln.se|matbibeln.se|ettgottskratt.se|djurbibeln.se|nojeslivet.se|vegomagasinet.se|inkopsradet.se|orkesterjournalen.se|hallbartbyggande.com|marketmate.se|villatidningen.se|upphandling24.se|freedomtravel.se
 d2535 1
 a2535 1
 /plugins/complianz-gdpr$script,domain=iconmagazine.se|vilaser.se|arjeplognytt.se|tidningenglobal.se|tidningensyre.se|landetsfria.nu|fempers.se|brollopsmagasinet.se|megafonen.se|kyrka.se|sjofartstidningen.se|pensionarsliv.se|aktuellsakerhet.se|maklarvarlden.se|sjomannen.se|livsmedelsnyheter.se|dovastidning.se|vgrfokus.se|samefolket.se|surfzone.se|magasinetkonkret.se|samerna.se|affarsstaden.se|livsmedelifokus.se|bodennytt.se|dialasen.com|aftonkuriren.com|samtiden.nu|alltomhallbarhet.se|luleapride.se|onkologiisverige.se|epilepsi.se|nyhetersto.se|opulens.se|orkesterjournalen.se|brafiler.se|funktionshinderpolitik.se|sjomatsframjandet.se|fastighetssverige.se|hotellorestaurang.se|citymark.today|byggvarlden.se|kurera.se|daisybeauty.com
+d2618 1
+a2618 1
+/plugins/proposition-cookie-consent$script,domain=samfalligheterna.se|idrottsbranschen.se
 a2627 1
 /plugins/sdep-annons$script
+d2664 1
+a2664 1
+/plugins/wpconsent-cookies-banner$script,domain=kampsportnews.se|teknikhype.se
 d2809 1
 a2843 1
 /t-live.hellofresh.com
@@ -72,7 +89,11 @@ a2888 1
 /wp-content/uploads/*banner$image,domain=marsta.nu|brollopsmagasinet.se|bussmagasinet.se|danstidningen.se|guldkanalen.se|ljuskultur.se|sportpanelen.se|turismnytt.se|opulens.se|tekniknytt.se|svensktidskrift.se|electronic.se|restaurangvarlden.se|naringslivetvgl.se|dalarnasaffarer.se|stockholmsaffarer.se|jamtlandsaffarer.se|hallandsnaringsliv.se|sjuharadsnaringsliv.se|battregolf.se|svenskhistoria.se|arjeplognytt.se|bioenergitidningen.se|fisheco.se|autonytt.se|zeromagazine.nu|improveme.se|alekuriren.se|golfguidenonline.se|esportnytt.se|resesidan.se|svenskamagasinet.nu|surveyors.se|faravelsforbundet.se|travelandtourworld.se|samfalligheterna.se|macken.xyz|veterinarmagazinet.se|samtiden.nu|dovastidning.se
 a2997 1
 ||ads.samnytt.se^
+a3128 1
+||codedrink.com^$third-party
 a3378 1
 ||mediaintelliview.com^$third-party
 a3528 1
 ||sleeknote.com/production/package-tracker.js
+a3628 1
+||visitors.now^$third-party

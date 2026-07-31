@@ -1,10 +1,10 @@
-diff name:swefilter lines:115 checksum:af843b66da
+diff name:swefilter lines:136 checksum:8bde5f6d29
 d2 1
 a2 1
-! Last updated: Wed, 29 Jul 2026 03:09:09 +0000
+! Last updated: Fri, 31 Jul 2026 03:21:35 +0000
 d4 1
 a4 1
-! Diff-Path: patches/2026.7.29.189.patch#swefilter
+! Diff-Path: patches/2026.7.31.201.patch#swefilter
 d119 1
 a119 1
 aftonbladet.se##div[data-edition-name^="ab-native-premium"], a[href*="/brandstudio"], a[href*="/brand-studio"],  a[href*="/casinoguide"], div[class*="panorama-wrapper"], div[class*="insider-wrapper"], #sps-bottombar-poster, astro-island[component-export^="AffiliateAd"]
@@ -31,6 +31,8 @@ husbilsplats.se##div[id^="husbi-"], .mysticky-welcomebar-fixed
 d931 1
 a931 1
 klart.se,hockeynews.se,fotbolltransfers.com,hitta.se,sverigerunt.se,tvmatchen.nu,husbilskompisar.se##a[rel*="sponsored"]
+a948 1
+konstperspektiv.nu##a[target="_blank"][rel]
 d971 1
 a971 1
 kwiss.me##div[class^="qz-main-slider-item"]:has(.qz-quiz-sponsored)
@@ -53,6 +55,8 @@ nyheter.swebbtv.se##.wp-block-image a[target]:not([href*="nyheter.swebbtv.se"]),
 d1289 1
 a1289 1
 radio-sveriges.se###original_taboola, #optimize_experiment, #appDownloadAd, .right-sidebar__ad, .radio-detail-mobile-mrec
+a1295 1
+rakapuckar.com##a[href="https://rakapuckar.com/author/rakapuckar/"]:upward(.td-cpt-post)
 a1309 1
 res.se##.text-uppercase:has-text(/promotion/i):upward(.card)
 a1336 2
@@ -77,9 +81,16 @@ d2113 1
 a2113 1
 /ads$domain=allastudier.se|cirkulation.se|ordmedzcxy.se|rimlab.se|allaaktier.se|varldenom.com|kottchark.se|epochtimes.se|skippo.se|inblick.se|magazin24.se|husbilskompisar.se
 d2141 1
+a2195 3
+/baibai-banners
+/baibai-external-tracker
+/baibai/external.jsp
 d2252 1
 a2252 1
 /consent$script,domain=rodeo.net|tyda.se|kwiss.me
+d2267 1
+a2267 1
+/cookie-law-info$script,domain=startaochdriva.se|sverige.nu|conpot.se|firstclassmagazine.se|kvalitetsmagasinet.se|miljo-utveckling.se|techtidningen.se|vdtidningen.se|gullislastips.se|nyfiknainvesterare.se|bussmagasinet.se|torbjornstips.se|dinbyggare.se|aktieskolan.se|insikt24.se|sulkysport.se|battrestadsdel.se|automatos.se|80-talet.se|goteborgnyheter.se|elitepadel.se|vetenskaphalsa.se|rakapuckar.com|surveyors.se|maximumsports.se|globalportalen.org|juligen.se|sakerhund.se|radiosol.se|norrkopingsguiden.se|mustangclubsweden.org|mallorcanyheter.com|viivilla.se|kalmarposten.se|travelandtourworld.se|bostadspolitik.se|hundguiden.com|hemslojd.se|utstallningskritik.se
 a2381 1
 /images/aff$domain=netflixguiden.se
 d2467 1
@@ -89,8 +100,14 @@ a2508 1
 d2537 1
 a2537 1
 /plugins/complianz-gdpr$script,domain=iconmagazine.se|vilaser.se|arjeplognytt.se|tidningenglobal.se|tidningensyre.se|landetsfria.nu|fempers.se|brollopsmagasinet.se|megafonen.se|kyrka.se|sjofartstidningen.se|pensionarsliv.se|aktuellsakerhet.se|maklarvarlden.se|sjomannen.se|livsmedelsnyheter.se|dovastidning.se|vgrfokus.se|samefolket.se|surfzone.se|magasinetkonkret.se|samerna.se|affarsstaden.se|livsmedelifokus.se|bodennytt.se|dialasen.com|aftonkuriren.com|samtiden.nu|alltomhallbarhet.se|luleapride.se|onkologiisverige.se|epilepsi.se|nyhetersto.se|opulens.se|orkesterjournalen.se|brafiler.se|funktionshinderpolitik.se|sjomatsframjandet.se|fastighetssverige.se|hotellorestaurang.se|citymark.today|byggvarlden.se|kurera.se|daisybeauty.com
+d2620 1
+a2620 1
+/plugins/proposition-cookie-consent$script,domain=samfalligheterna.se|idrottsbranschen.se
 a2629 1
 /plugins/sdep-annons$script
+d2666 1
+a2666 1
+/plugins/wpconsent-cookies-banner$script,domain=kampsportnews.se|teknikhype.se
 d2750 1
 d2768 1
 d2813 1
@@ -101,6 +118,8 @@ a2892 1
 /wp-content/uploads/*banner$image,domain=marsta.nu|brollopsmagasinet.se|bussmagasinet.se|danstidningen.se|guldkanalen.se|ljuskultur.se|sportpanelen.se|turismnytt.se|opulens.se|tekniknytt.se|svensktidskrift.se|electronic.se|restaurangvarlden.se|naringslivetvgl.se|dalarnasaffarer.se|stockholmsaffarer.se|jamtlandsaffarer.se|hallandsnaringsliv.se|sjuharadsnaringsliv.se|battregolf.se|svenskhistoria.se|arjeplognytt.se|bioenergitidningen.se|fisheco.se|autonytt.se|zeromagazine.nu|improveme.se|alekuriren.se|golfguidenonline.se|esportnytt.se|resesidan.se|svenskamagasinet.nu|surveyors.se|faravelsforbundet.se|travelandtourworld.se|samfalligheterna.se|macken.xyz|veterinarmagazinet.se|samtiden.nu|dovastidning.se
 a3001 1
 ||ads.samnytt.se^
+a3132 1
+||codedrink.com^$third-party
 d3151 1
 a3151 1
 ||cookiebot.com^$domain=ng.se|swedroid.se|bax-shop.se|upplysning.se|findroommate.se|polistidningen.se|fokus.se|spraktidningen.se|trafiken.nu|energi.se|sis.se|alltomarbetsmiljo.se|tco.se|totallyorebro.se|totallystockholm.se|enirobuddy.se|framtid.se|yhguiden.se|fragasyv.se|gymnasieguiden.se|studier.se|husdjur.se|chalmers.se|elinstallatoren.se|ff.se|modernpsykologi.se|qx.se|vatternrundan.se|vvsforum.se|skolporten.se|ehandel.se|varldenidag.se|omtanke.today|byggfakta.today|journalisten.se|fastighetsvarlden.se|friidrott.se|friidrottsstatistik.se|vildmarken.se|kyrkanstidning.se|tmf.se|sokbat.se|bilkompaniet.se|hv.se|folkhalsomyndigheten.se|dinpsykiskahalsa.se|rsyd.se|byggforetagen.se|vasterastidning.se|mytaste.se|smartbizz.se|tandlakartidningen.se|turisterna.se|nextconomy.se|riksteatern.se|scenochfilm.se|saco.se|byggahus.se|smartsenior.se|dagensopinion.se|livsmedelsforetagen.se|djurrattsalliansen.se|pvforetagen.se|verkstadsjobb.se|grundskoletidningen.se|traguiden.se|matklubben.se|vivavinomat.se|swehockey.se|skanetrafiken.se|biblioteksforeningen.se|anslagstavlan.se|veganskarecept.se|alltombostad.se|gekas.se|alltforhalsan.se|forskoletidningen.se|abounderrattelser.fi|xn--tnktech-5wa.se|bredbandsval.se|westmagazine.se|fcsverige.se|tradepartnerssweden.se|stockholmfashiondistrict.se|filmstockholm.se|filmivast.se|vett-och-etikett.com|raddningsmissionen.se|neuro.se|arbetsterapeuterna.se|officersforbundet.se|sjobefalsforeningen.se|sverigesskolledare.se|tidning.akeri.se|tidningennotkott.se|hammarbyfotboll.se|hemtrevligt.se|lawline.se|leta.se|lysekilsposten.se|sjofartstidningen.se
@@ -112,5 +131,7 @@ a3522 1
 ||se-recommendation-microservice.labrador.allermedia.io^
 a3530 1
 ||sleeknote.com/production/package-tracker.js
+a3630 1
+||visitors.now^$third-party
 a3704 1
 radio-sveriges.se##^script:has-text(adshield)
