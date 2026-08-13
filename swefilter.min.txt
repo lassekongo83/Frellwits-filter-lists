@@ -1,7 +1,7 @@
 ! Title: Frellwit's Swedish Filter
-! Last updated: Wed, 12 Aug 2026 02:22:17 +0000
+! Last updated: Thu, 13 Aug 2026 04:12:17 +0000
 ! Expires: 5 days
-! Diff-Path: patches/2026.8.12.142.patch#swefilter
+! Diff-Path: patches/2026.8.13.252.patch#swefilter
 ! Diff-Expires: 24 hours
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
@@ -22,7 +22,7 @@
 .nu/images/banners/
 .nu/prebid$script
 .php?annonsid=$image
-.php?p=$xhr,domain=skogsforum.se
+.php?$xhr,domain=skogsforum.se
 .se/AdPlugins/
 .se/Banners/
 .se/Logger?
@@ -1399,7 +1399,8 @@ skillingaryd.nu##div[id$="banner-wrap"], div[class*="premium-banners"], .sidebar
 skippo.se##a[href*="/sponsra"], div[data-post-url^="/sponsrat"]
 skogen.se##.jobslider.up
 skogsforum.se###hqModal:remove()
-skogsforum.se##.masthead, .col-right, a[href^="https://goo.gl/"], a[href*="//bit.ly/"], a[target="_blank"][onclick], #ap1, .modal, .modal-backdrop, div[style^="height"]:empty, .b1a, .col-left + div
+skogsforum.se##+js(acs, AB_AP1)
+skogsforum.se##.masthead, .col-right, a[href^="https://goo.gl/"], a[href*="//bit.ly/"], a[target="_blank"][onclick], #ap1, .modal, .modal-backdrop, div[style^="height"]:empty, .b1a, .col-left + div, div[id][class]:empty, a[href*="=pslot"]
 skogsindustrierna.se###cookieOverlay
 skolporten.se##.advertMod
 skolporten.se##.article-short:has(a[href*="/sponsrat-innehall"])
@@ -2716,7 +2717,6 @@ zeromagazine.nu##div[id^="ads"]
 /prod/collect$domain=mkse.com|dietisten.net|ergo.nu
 /profile$ping,domain=skippo.se|tasteline.com|marcusoscarsson.se|shl.se|hemhyra.se|qx.se|hockeynews.se|hockeyettan.se|tvsporten.nu|tvmatchen.nu
 /prylguiden-expressen$all
-/pslot$domain=skogsforum.se
 /ps-partner$xmlhttprequest,domain=dagensps.se
 /public/log$domain=kalender.se
 /public/t/*$domain=tvmatchen.nu
