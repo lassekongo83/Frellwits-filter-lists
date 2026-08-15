@@ -1,7 +1,7 @@
 ! Title: Frellwit's Swedish Filter
-! Last updated: Thu, 13 Aug 2026 04:12:17 +0000
+! Last updated: Sat, 15 Aug 2026 07:23:06 +0000
 ! Expires: 5 days
-! Diff-Path: patches/2026.8.13.252.patch#swefilter
+! Diff-Path: patches/2026.8.15.443.patch#swefilter
 ! Diff-Expires: 24 hours
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
@@ -1063,8 +1063,6 @@ magazin24.se##.ad-pad, .takeover_annons
 magazin24.se##.special_ad_video:remove()
 magazin24.se##.widget_custom_html:has(.ad-pad, a[href*="casino"], a[href*="filmtopp.se"])
 magazin24.se##.widget_text:has(.dagens-lunch, .widg-ad)
-maipenrai.se##.cWidgetContainer > ul > li:first-child, div[style*="border: 1px solid"] a[target="_blank"], div[data-role="sidebarAd"], a[href*="&ad="]
-maipenrai.se##:is(li.ipsDataItem, .ipsSpacer_both):has(a > img)
 maklarvarlden.se##article:has(.sponsored-inlist)
 maklarvarlden.se##div[data-td-block-uid]:has(a[href*="/kategori/sponsra"])
 maklarvarlden.se##.hustle-popup, div[class$="-sponsrat"]
@@ -2926,6 +2924,7 @@ zeromagazine.nu##div[id^="ads"]
 /www.swedbank-*/telegram$all
 /www/delivery/asyncspc$xhr
 /www/delivery/lg.php?bannerid
+/www/delivery/*.php?zoneid
 /www/images/*$domain=elektronikforumet.com
 /xhr-ads.min.js
 /xhr/b/s$domain=skyscanner.se
