@@ -1,7 +1,7 @@
 ! Title: Frellwit's Swedish Filter
-! Last updated: Mon, 17 Aug 2026 03:38:34 +0000
+! Last updated: Tue, 18 Aug 2026 05:35:37 +0000
 ! Expires: 5 days
-! Diff-Path: patches/2026.8.17.218.patch#swefilter
+! Diff-Path: patches/2026.8.18.335.patch#swefilter
 ! Diff-Expires: 24 hours
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
@@ -988,7 +988,7 @@ lantbruksnytt.se##article:has(.ads_text)
 lantbruksnytt.se##aside.enhanced-text-widget:has(div[class^="square_rotate"])
 lantbruksnytt.se##aside.side-box:has(.adsbygoogle)
 lantbruksnytt.se###startpage-top-right, .ads_text + a, div[class*="square_rotate"], a[target="_blank"][rel="nofollow"], #ouibounce-modal, iframe[src*="iframebanner"], .widget_maskinstationer_widget, .ads_text + #articles-top
-laromedia.se##img[alt="Annons"] + .img-flipper
+laromedia.se##img[alt="Annons"] + .img-flipper, #banner-area
 lchfarkivet.se##.modal-wrapper, div#beskrivning[style="font-size: 10px; text-align: center; color: #8E8C8C; max-width: 700px;"], .recipe-ads
 lektionsbanken.se###partners_inside, #partners_right, #partners_top
 lektionsbanken.se##.footer-newsletter
@@ -1463,7 +1463,6 @@ styrelseguiden.se##.homeNoticeboxes:has(#linkToAdvertise)
 surfa.se##div[class*="-promo"], div[class*="prisjakt-"], .td-banner-wrap-full
 surfa.se,teknikfreak.se###loader-wrapper
 surveyors.se###custom_html-3
-svampguiden.com##.label-sponsor:upward(.panel)
 svartgul.se##li.embedded, footer li.long
 svartgul.se,eventeffect.se,executiveeffect.se,saleseffect.se###panorama
 svd.se##article:has(div[class^="NativeBarWrapper"])
@@ -2226,6 +2225,7 @@ zeromagazine.nu##div[id^="ads"]
 /bilder/samarbeten$domain=hojen.nu
 /bilder/sponsorer
 /bilder/*annons$domain=sfft.se
+/bildvaxlaren$domain=laromedia.se
 /bitcsys/js/bit.js
 /blekinge.min.js$domain=rakapuckar.com
 /block/samarbetspartners$image
@@ -2759,7 +2759,6 @@ zeromagazine.nu##div[id^="ads"]
 /se-ads-microservice
 /se-calico/bundle.js
 /se-ocelot/bundle.js
-/sg_reklam$domain=svampguiden.com
 /sh404sefsocial$script
 /sharedaddy/sharing.$script
 /shared/crm-campaign-handler.js$script
@@ -3344,6 +3343,7 @@ _banner.php?$domain=tvmatchen.nu
 ||kingsumo.com^$third-party
 ||kit.com^$third-party
 ||klaviyo.com^$third-party,domain=~kmail-lists.com|~myklpages.com
+||klirly.io^$third-party
 ||kolozzeum.com/forum/kollos$script
 ||konzilo.com/mtc.js
 ||konzilo.net/mtc.js
