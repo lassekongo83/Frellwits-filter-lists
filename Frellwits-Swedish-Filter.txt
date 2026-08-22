@@ -1,6 +1,6 @@
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days
-! Last modified: 2026-08-21 16:40:59 CEST
+! Last modified: 2026-08-22 16:30:26 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPL3 - https://github.com/lassekongo83/Frellwits-filter-lists/blob/master/LICENSE
@@ -1192,8 +1192,9 @@ nordiskradio.se###cookieWindow
 nordiskskog.se##.templateHelannonsBOX
 norrahalland.se,bjarenu.se##.bannercontent
 norrortssporten.se##.vc_column_container:has(.td-adspot-title)
-nouw.com##.content > div[style^="text-align: center"]:has(a[href="https://nouw.com"])
+nouw.com##+js(nosiif, iframe.space-frame)
 nouw.com##.post-grid-item:has(a[href*="poker"], a[href*="betting"], a[href*="casino"], a[href*="spelplat"])
+nouw.com##:is(.content-width, .content) div[style^="text-align: center"]:has(a[href="https://nouw.com"], iframe[title="Ad"], div[id*="panorama"], div[id*="nouw_mobil"])
 nyadagbladet.se##.site-main > div.widget_custom_html p[style^="text-align: center;"]:has-text(/annonssamarbete/i):upward(div.widget_custom_html)
 nyadagbladet.se##.third-col, article[class*="sponsrad"], div[id^="nyd-"], .below_header_front_page, div[data-aeon-news-trackbid="1"], .aeon-news-widget, div[id^="aeon-news"]
 nyadagbladet.se##.widget_media_image:has-text(/annons/i)
@@ -2059,7 +2060,7 @@ zeromagazine.nu##div[id^="ads"]
 *$all,reason=🇸🇪 Falsk butik / 🇬🇧 Scam shop,domain=valentinosverige.com|alkemi.com.se|alphalete.com.se|rpofsweden.com|rpofsweden.se
 *$all,reason=🇸🇪 Säljer falska biljetter - https://www.svt.se/nyheter/konsument/biljettsajt-saljer-dyra-och-falska-biljetter / 🇬🇧 Selling fake tickets,domain=viagogo.se
 *$frame,3p,redirect=click2load.html,domain=alltomsallskapsspel.se
-*$ping,domain=nordicinformer.com|fiskejournalen.se|fordonsteknik.net|byggteknik.org|forestindustry.org|autoteknik.net|entreprenoren.net|byggforum.net|feber.se|tjock.se|guldkanalen.se
+*$ping,domain=nordicinformer.com|fiskejournalen.se|fordonsteknik.net|byggteknik.org|forestindustry.org|autoteknik.net|entreprenoren.net|byggforum.net|feber.se|tjock.se|guldkanalen.se|butikstrender.se
 *$script,1p,domain=hrsvepet.se|cfosvepet.se|vdsvepet.se
 *$script,redirect-rule=noop.js,domain=elevspel.se
 *$xhr,3p,domain=skargarden.se
@@ -2521,7 +2522,7 @@ zeromagazine.nu##div[id^="ads"]
 /plugins/adlounge
 /plugins/adsanity
 /plugins/adsense%20click%20proctect
-/plugins/advanced-ads$script,domain=newsner.com|humorbibeln.se|sportbibeln.se|matbibeln.se|ettgottskratt.se|djurbibeln.se|nojeslivet.se|vegomagasinet.se|inkopsradet.se|orkesterjournalen.se|hallbartbyggande.com|marketmate.se|villatidningen.se|upphandling24.se|freedomtravel.se
+/plugins/advanced-ads$script,domain=newsner.com|humorbibeln.se|sportbibeln.se|matbibeln.se|ettgottskratt.se|djurbibeln.se|nojeslivet.se|vegomagasinet.se|inkopsradet.se|orkesterjournalen.se|hallbartbyggande.com|marketmate.se|villatidningen.se|upphandling24.se|freedomtravel.se|butikstrender.se
 /plugins/ad-ace
 /plugins/ad-blocking-advisor
 /plugins/afp-default-pricetable/js/ga-tracking
