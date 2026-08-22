@@ -1326,7 +1326,7 @@ utm_$document,removeparam=/^utm_/,domain=tv.nu|booli.se|expressen.se|aftonbladet
 /gtm$domain=lidl.se|global.morningstar.com
 /view$xhr,domain=atl.nu|land.se
 ?t=$xhr,empty,domain=kyrkanstidning.se|grundskoletidningen.se
-*$ping,domain=nordicinformer.com|fiskejournalen.se|fordonsteknik.net|byggteknik.org|forestindustry.org|autoteknik.net|entreprenoren.net|byggforum.net|feber.se|tjock.se|guldkanalen.se
+*$ping,domain=nordicinformer.com|fiskejournalen.se|fordonsteknik.net|byggteknik.org|forestindustry.org|autoteknik.net|entreprenoren.net|byggforum.net|feber.se|tjock.se|guldkanalen.se|butikstrender.se
 ! Websites with no obvious or visible facebook login. Will just assume it's used for tracking.
 ||connect.facebook.net^$domain=friatider.se|fotosidan.se|ng.se|lektionsbanken.se|lajvo.se|kvinnatillkvinna.se|epochtimes.se|newsner.com|humorbibeln.se|sportbibeln.se|matbibeln.se|ettgottskratt.se|djurbibeln.se|nojeslivet.se|sillyseason.se|loppi.se|kyrkanstidning.se|tn.se|experimentarkivet.se
 ! Scriptlets
@@ -2851,8 +2851,9 @@ dagensmuslim.se##.breaking-title-text:has-text(ANNONS:):upward(.breaking.control
 /blogpoststatistic/view
 /blogpoststatistic/events
 ||viralize.tv/display/$domain=nouw.com
-nouw.com##.content > div[style^="text-align: center"]:has(a[href="https://nouw.com"])
+nouw.com##:is(.content-width, .content) div[style^="text-align: center"]:has(a[href="https://nouw.com"], iframe[title="Ad"], div[id*="panorama"], div[id*="nouw_mobil"])
 nouw.com##.post-grid-item:has(a[href*="poker"], a[href*="betting"], a[href*="casino"], a[href*="spelplat"])
+nouw.com##+js(nosiif, iframe.space-frame)
 gynning.net##.sponsored-notification:upward([id^="post-"])
 underbaraclaras.se##.jet-listing-dynamic-field__content:has-text(/annonssamarbete|reklamsamarbete/i):upward(.jet-listing-grid__item)
 minimalisterna.se##p.has-text-align-center:has-text(/i samarbete med/i):upward(.post)
@@ -2895,7 +2896,7 @@ aletorget.se,alingsastorget.se,almhulttorget.se,alvestatorget.se,amaltorget.se,a
 @@/plugins/ad-ace/*/adblock-detector
 /plugins/adlounge
 /plugins/adsense%20click%20proctect
-/plugins/advanced-ads$script,domain=newsner.com|humorbibeln.se|sportbibeln.se|matbibeln.se|ettgottskratt.se|djurbibeln.se|nojeslivet.se|vegomagasinet.se|inkopsradet.se|orkesterjournalen.se|hallbartbyggande.com|marketmate.se|villatidningen.se|upphandling24.se|freedomtravel.se
+/plugins/advanced-ads$script,domain=newsner.com|humorbibeln.se|sportbibeln.se|matbibeln.se|ettgottskratt.se|djurbibeln.se|nojeslivet.se|vegomagasinet.se|inkopsradet.se|orkesterjournalen.se|hallbartbyggande.com|marketmate.se|villatidningen.se|upphandling24.se|freedomtravel.se|butikstrender.se
 /plugins/sw-ad-inserter
 /plugins/adsanity
 /plugins/angwp
