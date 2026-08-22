@@ -1,10 +1,10 @@
-diff name:swefilter lines:171 checksum:e1ec296c16
+diff name:swefilter lines:179 checksum:54170cd08e
 d2 1
 a2 1
-! Last updated: Fri, 21 Aug 2026 14:41:16 +0000
+! Last updated: Sat, 22 Aug 2026 14:30:44 +0000
 d4 1
 a4 1
-! Diff-Path: patches/2026.8.21.881.patch#swefilter
+! Diff-Path: patches/2026.8.22.870.patch#swefilter
 d25 1
 a25 1
 .php?$xhr,domain=skogsforum.se
@@ -51,7 +51,9 @@ a1175 1
 ng.se##.source_sponsrat-frontpage
 d1189 1
 a1189 1
-nouw.com##.content > div[style^="text-align: center"]:has(a[href="https://nouw.com"])
+nouw.com##+js(nosiif, iframe.space-frame)
+a1190 1
+nouw.com##:is(.content-width, .content) div[style^="text-align: center"]:has(a[href="https://nouw.com"], iframe[title="Ad"], div[id*="panorama"], div[id*="nouw_mobil"])
 a1196 1
 nyan.ax##.interscroller-wrapper:has(.followad)
 d1264 1
@@ -82,6 +84,9 @@ d1458 1
 d1566 1
 a1566 1
 tidningenproffs.se##div[id^="proff-"], div[class*="fullwidth-ad"]
+d2051 1
+a2051 1
+*$ping,domain=nordicinformer.com|fiskejournalen.se|fordonsteknik.net|byggteknik.org|forestindustry.org|autoteknik.net|entreprenoren.net|byggforum.net|feber.se|tjock.se|guldkanalen.se|butikstrender.se
 d2149 1
 a2149 1
 /analytics$domain=gbgfotboll.se|stff.se|svenskfotboll.se|di.se|etc.se|vackertvader.se|skogsforum.se|skolporten.se|sjf.se|rimlab.se|alandsradio.ax|dagen.se|global.morningstar.com|vidzflow.com|vinia.se|kvartal.se|shortcut.se|inredningsvis.se|kottchark.se|forsvarstidningen.se|stromsundsgratistidning.se|sverigerunt.se|skargardsradion.se|lovable.app|skanesfolkblad.se|skillingaryd.nu
@@ -109,6 +114,9 @@ a2365 1
 d2475 1
 a2475 1
 /noview.$script,domain=trafikradion.se
+d2509 1
+a2509 1
+/plugins/advanced-ads$script,domain=newsner.com|humorbibeln.se|sportbibeln.se|matbibeln.se|ettgottskratt.se|djurbibeln.se|nojeslivet.se|vegomagasinet.se|inkopsradet.se|orkesterjournalen.se|hallbartbyggande.com|marketmate.se|villatidningen.se|upphandling24.se|freedomtravel.se|butikstrender.se
 a2519 1
 /plugins/ap-advertising$script
 d2538 1

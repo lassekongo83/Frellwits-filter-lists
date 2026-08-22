@@ -1,10 +1,10 @@
-diff name:swefilter lines:30 checksum:e1ec296c16
+diff name:swefilter lines:38 checksum:54170cd08e
 d2 1
 a2 1
-! Last updated: Fri, 21 Aug 2026 14:41:16 +0000
+! Last updated: Sat, 22 Aug 2026 14:30:44 +0000
 d4 1
 a4 1
-! Diff-Path: patches/2026.8.21.881.patch#swefilter
+! Diff-Path: patches/2026.8.22.870.patch#swefilter
 a474 1
 dykarna.nu##.mobileShow:has(span[onclick])
 d716 1
@@ -12,15 +12,23 @@ a716 1
 goteborg.com##.cookie-popup, .cookie-popup-backdrop
 d1191 1
 a1191 1
-nouw.com##.content > div[style^="text-align: center"]:has(a[href="https://nouw.com"])
+nouw.com##+js(nosiif, iframe.space-frame)
+a1192 1
+nouw.com##:is(.content-width, .content) div[style^="text-align: center"]:has(a[href="https://nouw.com"], iframe[title="Ad"], div[id*="panorama"], div[id*="nouw_mobil"])
 d1412 1
 a1412 1
 skyscanner.se###modal-container:has(#consentBannerTitle)
+d2058 1
+a2058 1
+*$ping,domain=nordicinformer.com|fiskejournalen.se|fordonsteknik.net|byggteknik.org|forestindustry.org|autoteknik.net|entreprenoren.net|byggforum.net|feber.se|tjock.se|guldkanalen.se|butikstrender.se
 d2321 1
 a2321 1
 /event$ping,xhr,domain=lokalti.se|skyscanner.se
 a2375 1
 /gtm-$domain=varden.se
+d2519 1
+a2519 1
+/plugins/advanced-ads$script,domain=newsner.com|humorbibeln.se|sportbibeln.se|matbibeln.se|ettgottskratt.se|djurbibeln.se|nojeslivet.se|vegomagasinet.se|inkopsradet.se|orkesterjournalen.se|hallbartbyggande.com|marketmate.se|villatidningen.se|upphandling24.se|freedomtravel.se|butikstrender.se
 d2679 1
 a2679 1
 /plugins/wpconsent-cookies-banner$script,domain=kampsportnews.se|teknikhype.se|densistavilan.se

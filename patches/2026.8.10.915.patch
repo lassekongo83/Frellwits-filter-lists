@@ -1,10 +1,10 @@
-diff name:swefilter lines:69 checksum:e1ec296c16
+diff name:swefilter lines:77 checksum:54170cd08e
 d2 1
 a2 1
-! Last updated: Fri, 21 Aug 2026 14:41:16 +0000
+! Last updated: Sat, 22 Aug 2026 14:30:44 +0000
 d4 1
 a4 1
-! Diff-Path: patches/2026.8.21.881.patch#swefilter
+! Diff-Path: patches/2026.8.22.870.patch#swefilter
 d25 1
 a25 1
 .php?$xhr,domain=skogsforum.se
@@ -27,7 +27,9 @@ listor.se##.category-spel-betting
 d1064 2
 d1190 1
 a1190 1
-nouw.com##.content > div[style^="text-align: center"]:has(a[href="https://nouw.com"])
+nouw.com##+js(nosiif, iframe.space-frame)
+a1191 1
+nouw.com##:is(.content-width, .content) div[style^="text-align: center"]:has(a[href="https://nouw.com"], iframe[title="Ad"], div[id*="panorama"], div[id*="nouw_mobil"])
 d1284 1
 a1284 1
 qx.se##.qxa-container, .leaky-popup-banner, .qxasection, a[href^="https://www.qx.se/native/"], .native-anons-widget
@@ -44,6 +46,9 @@ d1408 1
 a1408 1
 skyscanner.se###modal-container:has(#consentBannerTitle)
 d1462 1
+d2055 1
+a2055 1
+*$ping,domain=nordicinformer.com|fiskejournalen.se|fordonsteknik.net|byggteknik.org|forestindustry.org|autoteknik.net|entreprenoren.net|byggforum.net|feber.se|tjock.se|guldkanalen.se|butikstrender.se
 a2224 1
 /bildvaxlaren$domain=laromedia.se
 d2317 1
@@ -54,6 +59,9 @@ a2371 1
 d2481 1
 a2481 1
 /noview.$script,domain=trafikradion.se
+d2515 1
+a2515 1
+/plugins/advanced-ads$script,domain=newsner.com|humorbibeln.se|sportbibeln.se|matbibeln.se|ettgottskratt.se|djurbibeln.se|nojeslivet.se|vegomagasinet.se|inkopsradet.se|orkesterjournalen.se|hallbartbyggande.com|marketmate.se|villatidningen.se|upphandling24.se|freedomtravel.se|butikstrender.se
 d2675 1
 a2675 1
 /plugins/wpconsent-cookies-banner$script,domain=kampsportnews.se|teknikhype.se|densistavilan.se
