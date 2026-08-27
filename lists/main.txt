@@ -1326,7 +1326,7 @@ utm_$document,removeparam=/^utm_/,domain=tv.nu|booli.se|expressen.se|aftonbladet
 /statistics$domain=visitskane.com
 /gtm$domain=lidl.se|global.morningstar.com
 /tracker$xhr,domain=kimbino.se
-/view$xhr,domain=atl.nu|land.se
+/view$xhr,ping,domain=atl.nu|land.se|fraser.nu
 ?t=$xhr,empty,domain=kyrkanstidning.se|grundskoletidningen.se
 *$ping,domain=nordicinformer.com|fiskejournalen.se|fordonsteknik.net|byggteknik.org|forestindustry.org|autoteknik.net|entreprenoren.net|byggforum.net|feber.se|tjock.se|guldkanalen.se|butikstrender.se
 ! Websites with no obvious or visible facebook login. Will just assume it's used for tracking.
@@ -3572,7 +3572,7 @@ fasting.nu##body:style(display:unset!important)
 konsumentmagasinet.se##.pricerunner, #Conzent, .conzent-modal, .price-part
 indien.nu##.nyhetsochreseartiklar .views-row:has-text(/casino/i)
 pilsner.nu##:is(.et_pb_fullwidth_image, .et_pb_image) a:not([href^="/"]):not([href*="pilsner.nu"]), .mctb-position-bottom
-hifitorget.se##.billboard_container, .billboard-style, a[href*="utm_"][target] img, .listing-ad-row
+hifitorget.se##div[data-sponsored-label], .ht-ad-divider, .anchor-ad-spacer, aside[aria-label="Annons"]
 hifitorget.se##:is(.row div[style^="min-height"], .row .h-100):has(.adsbygoogle, .billboard_container, div[id^="div-gpt-ad"])
 agriaffaires.se,truckscorner.se,machineryzone.se##.dp--mb, .dp--pave, .dp--ga, body#lg-annonces .right-container
 discoveringtheplanet.com##+js(acs, document.ondragstart)
@@ -3580,7 +3580,7 @@ discoveringtheplanet.com##+js(acs, disableEnterKey)
 discoveringtheplanet.com##body.unselectable:remove-class(unselectable)
 discoveringtheplanet.com##html:style(user-select:unset!important; -moz-user-select:unset!important; -webkit-user-select:unset!important;)
 discoveringtheplanet.com##.widget-title:has-text(/annons/i) + .textwidget
-/min.t.$domain=aktieskolan.se
+||aktieskolan.se/?*=1&ver=$script
 aktieskolan.se##.ast-container > .elementor > section.elementor-section:has(a[href*="betting"])
 dagens.se##.item:has(.prebid, div[data-ad-unit-id], a[href*="casino"], a[href="/sponsrat-innehall"])
 karlskogavaxer.se,molndalvaxer.se##.elementor-heading-title:has-text(/annons/i):upward(.elementor-column)
@@ -3591,7 +3591,7 @@ shortcut.se##div[class^="baner"], a[target="_blank"] img, .banner-wrap
 shortcut.se##.category-tag:has-text(/annons/i):upward(a)
 jobsinsweden.se###subscriptionPopup
 jobsinsweden.se##+js(set, eazy_ad_unblocker, null)
-fraser.nu##div[aria-label="Annonser"]
+fraser.nu##div[aria-label="Annonser"], .ad-reserved
 sxk.se###start-sponsors
 universitetslararen.se##div[id^="unive-"]
 dinbyggare.se##article.category-leverantorer, div[style^="\[banner-style\]"]
