@@ -1483,7 +1483,7 @@ mkse.com,voov.nu##.mcforms-wrapper
 kb.se,dansportalen.se,hh.se,vr.se,viss.nu,skogssallskapet.se,formas.se,rf.se,naturvetarna.se,skyscanner.se##body:style(overflow:unset!important; position:unset!important;)
 tobaksfakta.se,dagenslogistik.se,magasinetkonkret.se##.pum-open:style(overflow:auto!important)
 oru.se,proletaren.se##.no-scroll:style(overflow: initial !important;)
-bulletin.nu,inredningsarkitektur.se,fof.se,allas.se,elle.se,femina.se,hant.se,mabra.com,residencemagazine.se,svenskdam.se,motherhood.se,aftonbladet.se,lchfarkivet.se,kollega.se,folkofolk.se,dagensarena.se,bokadirekt.se,samnytt.se,sjofartstidningen.se,mytaste.se,matklubben.se,vivavinomat.se,aktuellsakerhet.se,skidspar.se,hellofresh.se,goteborgco.se,maklarvarlden.se,utsidan.se,skogsforum.se,ratio.se,thefork.se##body:style(overflow:initial!important)
+bulletin.nu,inredningsarkitektur.se,fof.se,allas.se,elle.se,femina.se,hant.se,mabra.com,residencemagazine.se,svenskdam.se,motherhood.se,aftonbladet.se,lchfarkivet.se,kollega.se,folkofolk.se,dagensarena.se,bokadirekt.se,samnytt.se,sjofartstidningen.se,mytaste.se,matklubben.se,vivavinomat.se,aktuellsakerhet.se,skidspar.se,hellofresh.se,goteborgco.se,maklarvarlden.se,utsidan.se,skogsforum.se,ratio.se,thefork.se,masterskapssidan.se##body:style(overflow:initial!important)
 runnersworld.se,motormagasinet.se,dagenshandel.se,food-supply.se,plastnet.se,habit.se,woodnet.se,foodnet.se,processnet.se,packnet.se,medtechmagazine.se,recyclingnet.se,rt-forum.se,lifesciencesweden.se,fri-kopenskap.se,cleannet.se,metal-supply.se,framtidensbygg.se,entreprenad.com,branschstegen.se,bio.se,svenskahousegruppen.se,hembygd.se##.modal-open:style(overflow:initial!important)
 dn.se,di.se,expressen.se,atl.nu,land.se,hd.se,sydsvenskan.se,allehanda.se,tidningenangermanland.se,arbetarbladet.se,avestatidning.com,bblat.se,dalademokraten.se,fagersta-posten.se,gd.se,lt.se,ltz.se,na.se,norrteljetidning.se,nynashamnsposten.se,op.se,salaallehanda.com,st.nu,tidningenharjedalen.se,vlt.se,falkopingstidning.se,jp.se,skaraborgslanstidning.se,skovdenyheter.se,smalandsdagblad.se,smalanningen.se,smt.se,tranastidning.se,vastgotabladet.se,vetlandaposten.se,vn.se,bandypuls.se,ljusdalsposten.se,ljusnan.se,soderhamnskuriren.se,ht.se,moratidning.se,borlangetidning.se,falukuriren.se,sodran.se,nyaludvikatidning.se,skd.se,nvp.se,nuosteraker.se,netdoktorpro.se,popularhistoria.se,aktuellhallbarhet.se,byggindustrin.se,dagensmedia.se,dagensmedicin.se,fastighetsnytt.se,resume.se,dagenssamhalle.se,market.se,dagligvarunytt.se,privataaffarer.se,barometern.se,blt.se,bt.se,kristianstadsbladet.se,olandsbladet.se,smp.se,sydostran.se,trelleborgsallehanda.se,ut.se,ystadsallehanda.se,vaxjobladet.se,nsk.se,klt.nu,illvet.se,pctidningen.se,digitalfotoforalla.se,iform.se,varldenshistoria.se,slakthistoria.se,vk.se,folkbladet.nu,nordsverige.se,mellanbygden.nu,vasterbottningen.se,lokaltidningen.nu,osterbottenstidning.fi,sydin.fi,vasabladet.fi,tradera.com,nyheter24.se,alltforforaldrar.se,modette.se,devote.se,familjeliv.se,brollopstorget.se,blogg.se,rodeo.net,vimedbarn.se,loppi.se##body[class*="didomi-popup-open"]:style(overflow:unset!important; position:unset!important;)
 livetsgoda.se,bfn.se,biblioteksforeningen.se##body:style(opacity:unset!important)
@@ -2476,6 +2476,8 @@ motorsportivarmland.nu##table[width="690"] > tbody > tr > td[height="0"] .Boxen 
 motorsportivarmland.nu##td[width="153"]:has(img[src*="/Annons"])
 tennis.se##.fusion-text:has-text(/^ANNONS/i):upward(1)
 powerbike.nu##.uppercase:has-text(Annons):upward(1)
+masterskapssidan.se##.cc
+masterskapssidan.se##[inert]:remove-attr(inert)
 
 ! === Musik, Radio, Film och TV
 voodoofilm.org##.page-panorama
@@ -3869,12 +3871,13 @@ matkasse.se##body.overflow-hidden:remove-class(overflow-hidden)
 prisbot.se###hv-gdpr
 hundnytt.se##.g1-popup-newsletter
 hundnytt.se##html.g1-popup-visible:style(overflow:initial!important;)
-100.se##div[id^="100_desktop"]:upward(.hidden)
+100.se##:is(div[id^="100_desktop"], div[id^="100_mobil"]):upward(.hidden, .lg\:hidden)
 /page_views$domain=kottchark.se
 thefork.se###download-app-modal
 forsvarstidningen.se##.text-muted-foreground:has-text(/annons/i):upward(1)
 /ads$xhr,domain=stromsundsgratistidning.se
 stromsundsgratistidning.se##[data-slot-id], div[aria-label="Cookie-samtycke"]
+stromsundsgratistidning.se##aside[class*="min-h-"]:has-text(Annons)
 sverigerunt.se##div[aria-label="Annons"]
 alltomforetagande.se##.csamt-root
 ||bytbil.com/bundles/js/tracking
