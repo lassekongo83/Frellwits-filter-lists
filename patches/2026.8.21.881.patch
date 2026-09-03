@@ -1,10 +1,10 @@
-diff name:swefilter lines:108 checksum:36e78fb32d
+diff name:swefilter lines:139 checksum:2acbcef7b2
 d2 1
 a2 1
-! Last updated: Thu, 03 Sep 2026 02:45:35 +0000
+! Last updated: Thu, 03 Sep 2026 07:45:21 +0000
 d4 1
 a4 1
-! Diff-Path: patches/2026.9.3.165.patch#swefilter
+! Diff-Path: patches/2026.9.3.465.patch#swefilter
 d98 1
 a98 1
 100.se##:is(div[id^="100_desktop"], div[id^="100_mobil"]):upward(.hidden, .lg\:hidden)
@@ -15,6 +15,9 @@ a122 1
 aftonbladet.se##.advertory-aftonbladet-integration:matches-css(before, content: "ANNONS"):upward(track-element)
 a125 1
 aftonbladet.se##:is(track-element, footer):remove-attr(/data-track/)
+d128 1
+a128 1
+aftonbladet.se,stoppapressarna.se,langd.se,computersweden.se,thatsup.se,arbetaren.se,sjofartstidningen.se,restaurangvarlden.se,pressbladet.se,svenskpress.se,foretagsbladet.se,gestrikemagasinet.se,cfanytt.se,lasarnas.se,hembostad.nu,nojesmagasinet.nu,halsasverige.se,mandarinmedia.se,svenskmusik.nu,motormagasinet.nu,konstmagasinet.nu,allpressen.se,seniorpressen.se##.advert
 d309 1
 a309 1
 bulletin.nu,inredningsarkitektur.se,fof.se,allas.se,elle.se,femina.se,hant.se,mabra.com,residencemagazine.se,svenskdam.se,motherhood.se,aftonbladet.se,lchfarkivet.se,kollega.se,folkofolk.se,dagensarena.se,bokadirekt.se,samnytt.se,sjofartstidningen.se,mytaste.se,matklubben.se,vivavinomat.se,aktuellsakerhet.se,skidspar.se,hellofresh.se,goteborgco.se,maklarvarlden.se,utsidan.se,skogsforum.se,ratio.se,thefork.se,masterskapssidan.se##body:style(overflow:initial!important)
@@ -24,6 +27,9 @@ etfmarknaden.se##.mvp-side-widget a[_blank\"], #mvp-soc-mob-wrap
 d662 1
 a662 1
 fraser.nu##div[aria-label="Annonser"], .ad-reserved
+a704 2
+gavletravet.se##.banner-component, .partners
+gavletravet.se##.main-content__item:has(.banner-component)
 d776 1
 a776 1
 hifitorget.se##div[data-sponsored-label], .ht-ad-divider, .anchor-ad-spacer, aside[aria-label="Annons"]
@@ -35,9 +41,14 @@ listaroo.se##.ct-link[target="_blank"], a[href*="casino"], a[href*="spellicens"]
 d1020 1
 a1020 1
 livetsgoda.se,betongforeningen.se,espressomedia.se,ordfrontmagasin.se,europaportalen.se,motorsportbladet.se,battregolf.se,nitroz.se,magasinethockey.se,twostrokerider.se,eqotime.com,newsvoice.se,tranakampsport.se,thepattayanewsse.com,handbollskanalen.se,infobladet.com,svenskamagasinet.nu,krogguiden.se,nyemissioner.se##a[target$="blank"] img:not([class^="tweet"])
+d1081 1
 a1081 2
 masterskapssidan.se##.cc
 masterskapssidan.se##[inert]:remove-attr(inert)
+d1139 2
+a1140 2
+motormagasinet.se,dagenshandel.se,food-supply.se,plastnet.se,habit.se,woodnet.se,foodnet.se,processnet.se,packnet.se,medtechmagazine.se,recyclingnet.se,rt-forum.se,lifesciencenordic.com,fri-kopenskap.se,cleannet.se,framtidensbygg.se,entreprenad.com,metal-supply.se###front-page-app > .row > .col-12:has(.advertorialClass)
+motormagasinet.se,dagenshandel.se,food-supply.se,plastnet.se,habit.se,woodnet.se,foodnet.se,processnet.se,packnet.se,medtechmagazine.se,recyclingnet.se,rt-forum.se,lifesciencenordic.com,fri-kopenskap.se,cleannet.se,framtidensbygg.se,entreprenad.com,metal-supply.se##.box-of-announcement, a[href*="campaign"][target="_blank"], div[class*="rotating-"], #bottombanner, #promoPopup, .modal-backdrop, .newsletterPopUp, .fp-announcement-container
 d1192 1
 a1192 1
 nouw.com##+js(nosiif, iframe.space-frame)
@@ -49,9 +60,16 @@ nyemissioner.se##div[aria-labelledby="cookie-banner-title"]
 nyemissioner.se##.rounded-full:has-text(Sponsrad):upward(a)
 a1270 1
 powerbike.nu##.uppercase:has-text(Annons):upward(1)
+d1272 2
+a1273 2
+pressbladet.se,svenskpress.se,foretagsbladet.se,gestrikemagasinet.se,cfanytt.se,lasarnas.se,hembostad.nu,nojesmagasinet.nu,halsasverige.se,mandarinmedia.se,svenskmusik.nu,motormagasinet.nu,konstmagasinet.nu,allpressen.se,seniorpressen.se##.isax
+pressbladet.se,svenskpress.se,foretagsbladet.se,gestrikemagasinet.se,cfanytt.se,lasarnas.se,hembostad.nu,nojesmagasinet.nu,halsasverige.se,mandarinmedia.se,svenskmusik.nu,motormagasinet.nu,konstmagasinet.nu,allpressen.se,seniorpressen.se,biblioteksbladet.se###cookiebar
 d1315 1
 a1315 1
 rikatillsammans.se##div[class^="livewrapped-ad"], .tag-reklam, .rt-ad-section
+d1325 1
+a1325 1
+runnersworld.se,motormagasinet.se,dagenshandel.se,food-supply.se,plastnet.se,habit.se,woodnet.se,foodnet.se,processnet.se,packnet.se,medtechmagazine.se,recyclingnet.se,rt-forum.se,lifesciencenordic.com,fri-kopenskap.se,cleannet.se,metal-supply.se,framtidensbygg.se,entreprenad.com,branschstegen.se,bio.se,svenskahousegruppen.se,hembygd.se##.modal-open:style(overflow:initial!important)
 a1388 1
 skaneplus.se##.skaneplus-annonser-block
 d1411 1
@@ -65,6 +83,12 @@ teknikveckan.se,di.se,dn.se,tripadvisor.se,swedroid.se,bettingstugan.se,expresse
 d1551 1
 a1551 1
 temaarkiv.se##:is(.md\:mt-\[100px\], .mt-\[100px\]):has(script[data-adfscript])
+d1612 2
+a1613 1
+travsport.se##div[data-id*="CampaignPuffBlock"]
+d2053 1
+a2053 1
+*$all,reason=🇸🇪 Bedrägeri / 🇬🇧 Scam,domain=digitaliseringsinitiativet.se|toppmarkensverige.com|kyrkavgift.se
 d2059 1
 a2059 1
 *$ping,domain=nordicinformer.com|fiskejournalen.se|fordonsteknik.net|byggteknik.org|forestindustry.org|autoteknik.net|entreprenoren.net|byggforum.net|feber.se|tjock.se|guldkanalen.se|butikstrender.se
@@ -78,6 +102,9 @@ d2320 1
 a2320 1
 /events$domain=fastighetsvarlden.se|marketplace.se
 d2468 1
+d2499 1
+a2499 1
+/page-event$domain=motormagasinet.se|food-supply.se|dagenshandel.se|plastnet.se|habit.se|woodnet.se|foodnet.se|processnet.se|packnet.se|medtechmagazine.se|recyclingnet.se|rt-forum.se|lifesciencenordic.com|fri-kopenskap.se|cleannet.se|framtidensbygg.se|entreprenad.com|metal-supply.se
 d2521 1
 a2521 1
 /plugins/advanced-ads$script,domain=newsner.com|humorbibeln.se|sportbibeln.se|matbibeln.se|ettgottskratt.se|djurbibeln.se|nojeslivet.se|vegomagasinet.se|inkopsradet.se|orkesterjournalen.se|hallbartbyggande.com|marketmate.se|villatidningen.se|upphandling24.se|freedomtravel.se|butikstrender.se
@@ -96,8 +123,12 @@ a3021 1
 d3117 1
 a3117 1
 ||cdn-cookieyes.com^$domain=lokalti.se|jarnvagar.nu|senses.se|temadagar.se|tekniknytt.se|nordigt.se|autonytt.se|kak.se|mis.se|universitetslararen.se|lakemedelsvarlden.se|samfalligheterna.se|husbilsplats.se|katerinamagasin.se|dagenslogistik.se|biostock.se|skellefteaworks.se|datormagazin.se|travnet.se|malarbok.nu|barn-filmer.se|matmenyer.se|sunnenytt.se|hockeynews.se|swe3.se|spelbloggen.se|trendenser.se|kattannonser.se|horisontmagasin.se|automobilly.com|nordicinformer.com|nordicmanufacturing.net|nationalekonomi.se|storynews.se|alltomhobby.se|upptackrattvik.se|alltomhusbilen.se|fnissfest.se|baraboras.se|oresundspotlight.com|maskinteknik.org|stadshem.se|marketmate.se|katrina.ax|real.se|jagvillhabostad.nu|sttf.org|byggteknik.org|forestindustry.org|fordonsteknik.net|tidningenmikroskop.se|jaktplay.se|xn--alltommigrn-u8a.se|borattforum.se|industrifakta.com|siljansbygden.se|svensktorv.se|bucketlistmagazine.se|plastikoperationsforum.se|bageri.se|koloni.org|officerstidningen.se|stadsbyggnad.org|svenskveterinartidning.se|alekuriren.se|tidningen.se|lokalnytt.se|f1news.se|abonnemangkoll.se|vaguiden.se|allaaktier.se
+d3235 1
 a3244 1
 ||ezojs.com/ezoic/ezorca
+d3315 1
+a3315 1
+||inmobi.com^$domain=alltomelbil.se|travelnews.se|varldenshaftigaste.se|merinfo.se|foreca.se|laget.se|byrum.se|sportlovin.se|receptfavoriter.se|forni.se|cornucopia.se|tittapavideon.se|motormagasinet.se|food-supply.se|dagenshandel.se|plastnet.se|habit.se|woodnet.se|foodnet.se|processnet.se|packnet.se|medtechmagazine.se|recyclingnet.se|rt-forum.se|lifesciencenordic.com|fri-kopenskap.se|cleannet.se|metal-supply.se|fashionnet.se|framtidensbygg.se|entreprenad.com|mykitchenstories.se|cancelculture.se|findit.se|foretagande.se|affarsvarlden.se|branschaktuellt.se|nordic.ign.com|fragbite.se|lindasbakskola.se|jennysmatblogg.nu|filippoon.se|vackertvader.se|klendr.se|zeinaskitchen.se|marketmate.se|svartgul.se|langd.se|babyhjalp.se|skyttesport.se|flashback.org|nyadagbladet.se|enkelteknik.se|alltomnorrtalje.se|sporttv.nu|nyteknik.se|lag-avtal.se|arbetarskydd.se|poddtoppen.se|antidoping.se|garaget.org|ordparken.se|undertian.com|samnytt.se|motivation.se|nouw.com|sweclockers.com|fz.se|villalivet.se|bjarenu.se|expo.se|temperatur.nu|rikatillsammans.se|mmanytt.se|thelocal.se|thatsup.se
 d3345 1
 a3345 1
 ||klaviyo.com^$third-party,domain=~kmail-lists.com|~myklpages.com|~gerbergear.com
