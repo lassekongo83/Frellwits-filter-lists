@@ -1003,6 +1003,7 @@ Video-Ad-$media,3p
 ||mailmojo.no/*/track/view/
 ||marfeelcache.com^$third-party
 ||mcgtrack.herokuapp.com^$third-party
+||media.api-domain-compado.com/null
 ||mediacreeper.com/image$image,redirect=32x32.png
 ||mediacreeper.se/image$image,redirect=32x32.png
 ||mediaintelliview.com^$third-party
@@ -1323,7 +1324,7 @@ utm_$document,removeparam=/^utm_/,domain=tv.nu|booli.se|expressen.se|aftonbladet
 /trace$xhr,domain=netflixguiden.se|radio.se
 /track$ping,xhr,domain=epochtimes.se|dagen.se|vinliv.se|maipenrai.se|korsordx.se|hrsvepet.se|cfosvepet.se|vdsvepet.se|bodennytt.se|inblick.se|it-nyheter.se
 /track.js$domain=destination.se|sistaminuten.se|idrottensaffarer.se
-/tracking$script,domain=neuro.se
+/tracking$script,domain=bytbil.com|neuro.se
 /tracking$xhr,domain=thefork.se
 /googleanalytics.js$domain=bio.se
 /statistics$domain=visitskane.com
@@ -1483,6 +1484,7 @@ mobil.se,travelnews.se##html.mm-popup-disable-scroll:remove-class(mm-popup-disab
 bluff.se###cc-banner
 mkse.com,voov.nu##.mcforms-wrapper
 dinstartsida.se,raggningsboken.se,minip.nu,snapsvisor.eu###cookies-eu-banner
+stromsundsgratistidning.se,forsvarstidningen.se##div[aria-label="Cookie-samtycke"]
 ! CSS to fix annoyances
 kb.se,dansportalen.se,hh.se,vr.se,viss.nu,skogssallskapet.se,formas.se,rf.se,naturvetarna.se,skyscanner.se##body:style(overflow:unset!important; position:unset!important;)
 tobaksfakta.se,dagenslogistik.se,magasinetkonkret.se##.pum-open:style(overflow:auto!important)
@@ -3876,6 +3878,11 @@ westmagazine.se##.post:has-text(ANNONS)
 utstallningskritik.se##.widget-title:has-text(Annonsörer):upward(.widget_media_gallery)
 styrelseguiden.se##.homeNoticeboxes:has(#linkToAdvertise)
 utsidan.se###member-cta, .offcanvas-backdrop
+/metrics$script,domain=matkasse.se
+/logging$script,domain=matkasse.se
+/session_trace$script,domain=matkasse.se
+/generic_events$script,domain=matkasse.se
+/page_view$script,domain=matkasse.se
 matkasse.se##div.fixed.bg-black\/80:empty
 matkasse.se##div.fixed.bg-black\/80:empty + div.fixed:has(button[aria-controls*="consent"])
 matkasse.se##body.overflow-hidden:remove-class(overflow-hidden)
@@ -3887,18 +3894,21 @@ hundnytt.se##html.g1-popup-visible:style(overflow:initial!important;)
 thefork.se###download-app-modal
 forsvarstidningen.se##.text-muted-foreground:has-text(/annons/i):upward(1)
 /ads$xhr,domain=stromsundsgratistidning.se
-stromsundsgratistidning.se##[data-slot-id], div[aria-label="Cookie-samtycke"]
+stromsundsgratistidning.se##[data-slot-id]
 stromsundsgratistidning.se##aside[class*="min-h-"]:has-text(Annons)
 sverigerunt.se##div[aria-label="Annons"]
 alltomforetagande.se##.csamt-root
-||bytbil.com/bundles/js/tracking
+/adloader$script,domain=bytbil.com
+||sdkconfig.pulse.m10s.io^$domain=bytbil.com
 bytbil.com##.listpage-banner, .available-services
 bytbil.com##html,body:style(overflow:auto!important;)
 bytbil.com##.newcars-widget:has(a[href*="bit.ly"], a[href*="content-ad"])
 tracking-island.js$domain=blocket.se
-||sdk-cdn.pulse.m10s.io^$domain=blocket.se
+||sdk-cdn.pulse.m10s.io^$domain=blocket.se|bytbil.com
+/finn-pulse-init$domain=blocket.se
 /advertising-podlet$domain=blocket.se
-/pulse-event-listener$domain=blocket.se
+/pulse-$domain=blocket.se
+blocket.se##.retail-media-ad-wrapper
 blocket.se##.badge--info:has-text(Betald placering):upward(.sf-search-ad)
 blocket.se#@#div[data-ad-id]
 prisjakt.nu##.pjra-relative, .outsider-ads, div[class^="AdPlacementWrapper"], .pjra\:w-\[980px\].pjra\:h-\[240px\], .max-skyscraper-ads\:hidden
