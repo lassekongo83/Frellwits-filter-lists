@@ -1,13 +1,15 @@
-diff name:swefilter lines:79 checksum:ad1b8fe3f8
+diff name:swefilter lines:113 checksum:4e0f1027fa
 d2 1
 a2 1
-! Last updated: Fri, 11 Sep 2026 05:00:03 +0000
+! Last updated: Sat, 12 Sep 2026 05:54:07 +0000
 d4 1
 a4 1
-! Diff-Path: patches/2026.9.11.299.patch#swefilter
+! Diff-Path: patches/2026.9.12.354.patch#swefilter
 d130 1
 a130 1
 aftonbladet.se,stoppapressarna.se,langd.se,computersweden.se,thatsup.se,arbetaren.se,sjofartstidningen.se,restaurangvarlden.se,pressbladet.se,svenskpress.se,foretagsbladet.se,gestrikemagasinet.se,cfanytt.se,lasarnas.se,hembostad.nu,nojesmagasinet.nu,halsasverige.se,mandarinmedia.se,svenskmusik.nu,motormagasinet.nu,konstmagasinet.nu,allpressen.se,seniorpressen.se##.advert
+a264 1
+blocket.se##.retail-media-ad-wrapper
 a706 2
 gavletravet.se##.banner-component, .partners
 gavletravet.se##.main-content__item:has(.banner-component)
@@ -35,6 +37,10 @@ d1333 1
 a1333 1
 runnersworld.se,motormagasinet.se,dagenshandel.se,food-supply.se,plastnet.se,habit.se,woodnet.se,foodnet.se,processnet.se,packnet.se,medtechmagazine.se,recyclingnet.se,rt-forum.se,lifesciencenordic.com,fri-kopenskap.se,cleannet.se,metal-supply.se,framtidensbygg.se,entreprenad.com,branschstegen.se,bio.se,svenskahousegruppen.se,hembygd.se##.modal-open:style(overflow:initial!important)
 d1357 1
+d1470 1
+a1470 2
+stromsundsgratistidning.se##[data-slot-id]
+stromsundsgratistidning.se,forsvarstidningen.se##div[aria-label="Cookie-samtycke"]
 d1622 2
 a1623 1
 travsport.se##div[data-id*="CampaignPuffBlock"]
@@ -52,18 +58,39 @@ a2063 1
 d2069 1
 a2069 1
 *$ping,domain=nordicinformer.com|fiskejournalen.se|fordonsteknik.net|byggteknik.org|forestindustry.org|autoteknik.net|entreprenoren.net|byggforum.net|feber.se|tjock.se|guldkanalen.se|butikstrender.se|pepperdeals.se
+a2121 1
+/adloader$script,domain=bytbil.com
 d2225 1
 a2225 1
 /banner$domain=assistanskoll.se|hrnytt.se|lokalguiden.se|nyaboendet.se|ljudoljus.net|poloniainfo.se|alltombostad.se|thepattayanewsse.com|kullaliv.se
 a2287 1
 /cookies-message$script,domain=pepperdeals.se
+a2344 1
+/finn-pulse-init$domain=blocket.se
+a2364 1
+/generic_events$script,domain=matkasse.se
+a2456 1
+/logging$script,domain=matkasse.se
+a2476 1
+/metrics$script,domain=matkasse.se
 d2508 1
 a2508 1
 /page-event$domain=motormagasinet.se|food-supply.se|dagenshandel.se|plastnet.se|habit.se|woodnet.se|foodnet.se|processnet.se|packnet.se|medtechmagazine.se|recyclingnet.se|rt-forum.se|lifesciencenordic.com|fri-kopenskap.se|cleannet.se|framtidensbygg.se|entreprenad.com|metal-supply.se
+a2509 1
+/page_view$script,domain=matkasse.se
 a2525 1
 /plugins/Partner%20Banner$script,domain=travelandtourworld.se
+d2737 1
+a2738 1
+/pulse-$domain=blocket.se
+a2768 1
+/session_trace$script,domain=matkasse.se
 a2813 1
 /stats$ping,domain=tradera.com
+d2849 1
+a2849 1
+/tracking$script,domain=bytbil.com|neuro.se
+d3119 1
 d3181 1
 a3181 1
 ||cookielaw.org^$domain=flashscore.se|ikea.com|recept.se|manpower.se|natgeotv.com|internetkunskap.se|internetstiftelsen.se|yelp.se|spisa.nu|viaplayradio.se|svenskarnaochinternet.se|bredbandskollen.se|internetmuseum.se|internetdagarna.se|digitalalektioner.se|goto10.se|tripadvisor.se|sydkusten.es|livetochdiabetes.se|cioanalytics.se|nok.se|motesplatsen.se|se.trustpilot.com|pricerunner.se|lidl.se|pwc.se|svenskafans.com|vinted.se|adecco.com|migranmonstret.se|global.morningstar.com|fotbolldirekt.se|hockeysverige.se
@@ -71,10 +98,17 @@ d3247 1
 d3328 1
 a3328 1
 ||inmobi.com^$domain=alltomelbil.se|travelnews.se|varldenshaftigaste.se|merinfo.se|foreca.se|laget.se|byrum.se|sportlovin.se|receptfavoriter.se|forni.se|cornucopia.se|tittapavideon.se|motormagasinet.se|food-supply.se|dagenshandel.se|plastnet.se|habit.se|woodnet.se|foodnet.se|processnet.se|packnet.se|medtechmagazine.se|recyclingnet.se|rt-forum.se|lifesciencenordic.com|fri-kopenskap.se|cleannet.se|metal-supply.se|fashionnet.se|framtidensbygg.se|entreprenad.com|mykitchenstories.se|cancelculture.se|findit.se|foretagande.se|affarsvarlden.se|branschaktuellt.se|nordic.ign.com|fragbite.se|lindasbakskola.se|jennysmatblogg.nu|filippoon.se|vackertvader.se|klendr.se|zeinaskitchen.se|marketmate.se|svartgul.se|langd.se|babyhjalp.se|skyttesport.se|flashback.org|nyadagbladet.se|enkelteknik.se|alltomnorrtalje.se|sporttv.nu|nyteknik.se|lag-avtal.se|arbetarskydd.se|poddtoppen.se|antidoping.se|garaget.org|ordparken.se|undertian.com|samnytt.se|motivation.se|nouw.com|sweclockers.com|fz.se|villalivet.se|bjarenu.se|expo.se|temperatur.nu|rikatillsammans.se|mmanytt.se|thelocal.se|thatsup.se
+a3411 1
+||media.api-domain-compado.com/null
 d3486 1
 a3486 1
 ||privacy-center.org^$domain=180.se|agriaffaires.se|truckscorner.se|machineryzone.se|netdoktor.se|netdoktorpro.se|news55.se|hastnet.se|dagensps.se|realtid.se|newsner.com|humorbibeln.se|sportbibeln.se|ettgottskratt.se|matbibeln.se|djurbibeln.se|nojeslivet.se|booli.se|fotbolltransfers.com|foretagsverige.se|forskningsverige.se|motorbibeln.se|hallbarhetsverige.se|tillvaxtsverige.se|grillbibeln.se|kampenmotcancer.se|folkhalsasverige.se|dinlivsstil.nu|gds.se|kimbino.se|bab.la
 a3493 1
 ||public.flourish.studio/resources/embed.js
+a3536 1
+||sdkconfig.pulse.m10s.io^$domain=bytbil.com
+d3539 1
+a3539 1
+||sdk-cdn.pulse.m10s.io^$domain=blocket.se|bytbil.com
 a3657 1
 ||visibilitykit.ai^$third-party

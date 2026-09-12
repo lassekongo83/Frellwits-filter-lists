@@ -1,10 +1,10 @@
-diff name:swefilter lines:186 checksum:ad1b8fe3f8
+diff name:swefilter lines:219 checksum:4e0f1027fa
 d2 1
 a2 1
-! Last updated: Fri, 11 Sep 2026 05:00:03 +0000
+! Last updated: Sat, 12 Sep 2026 05:54:07 +0000
 d4 1
 a4 1
-! Diff-Path: patches/2026.9.11.299.patch#swefilter
+! Diff-Path: patches/2026.9.12.354.patch#swefilter
 d98 1
 a98 1
 100.se##:is(div[id^="100_desktop"], div[id^="100_mobil"]):upward(.hidden, .lg\:hidden)
@@ -18,6 +18,8 @@ aftonbladet.se##:is(track-element, footer):remove-attr(/data-track/)
 d128 1
 a128 1
 aftonbladet.se,stoppapressarna.se,langd.se,computersweden.se,thatsup.se,arbetaren.se,sjofartstidningen.se,restaurangvarlden.se,pressbladet.se,svenskpress.se,foretagsbladet.se,gestrikemagasinet.se,cfanytt.se,lasarnas.se,hembostad.nu,nojesmagasinet.nu,halsasverige.se,mandarinmedia.se,svenskmusik.nu,motormagasinet.nu,konstmagasinet.nu,allpressen.se,seniorpressen.se##.advert
+a262 1
+blocket.se##.retail-media-ad-wrapper
 d309 1
 a309 1
 bulletin.nu,inredningsarkitektur.se,fof.se,allas.se,elle.se,femina.se,hant.se,mabra.com,residencemagazine.se,svenskdam.se,motherhood.se,aftonbladet.se,lchfarkivet.se,kollega.se,folkofolk.se,dagensarena.se,bokadirekt.se,samnytt.se,sjofartstidningen.se,mytaste.se,matklubben.se,vivavinomat.se,aktuellsakerhet.se,skidspar.se,hellofresh.se,goteborgco.se,maklarvarlden.se,utsidan.se,skogsforum.se,ratio.se,thefork.se,masterskapssidan.se##body:style(overflow:initial!important)
@@ -90,8 +92,11 @@ d1348 1
 a1387 1
 skaneplus.se##.skaneplus-annonser-block
 d1410 1
-a1459 1
+d1460 1
+a1460 3
 stromsundsgratistidning.se##aside[class*="min-h-"]:has-text(Annons)
+stromsundsgratistidning.se##[data-slot-id]
+stromsundsgratistidning.se,forsvarstidningen.se##div[aria-label="Cookie-samtycke"]
 a1538 1
 teknikgeek.se##.article-content-style-exempt:has(.adsbygoogle)
 d1547 1
@@ -117,6 +122,8 @@ a2052 1
 d2058 1
 a2058 1
 *$ping,domain=nordicinformer.com|fiskejournalen.se|fordonsteknik.net|byggteknik.org|forestindustry.org|autoteknik.net|entreprenoren.net|byggforum.net|feber.se|tjock.se|guldkanalen.se|butikstrender.se|pepperdeals.se
+a2110 1
+/adloader$script,domain=bytbil.com
 d2122 1
 a2122 1
 /ads$domain=allastudier.se|cirkulation.se|ordmedzcxy.se|rimlab.se|allaaktier.se|varldenom.com|kottchark.se|epochtimes.se|skippo.se|inblick.se|magazin24.se|husbilskompisar.se|powerbike.nu
@@ -131,10 +138,20 @@ a2276 1
 d2319 1
 a2319 1
 /events$domain=fastighetsvarlden.se|marketplace.se
+a2333 1
+/finn-pulse-init$domain=blocket.se
+a2353 1
+/generic_events$script,domain=matkasse.se
+a2445 1
+/logging$script,domain=matkasse.se
+a2465 1
+/metrics$script,domain=matkasse.se
 d2467 1
 d2498 1
 a2498 1
 /page-event$domain=motormagasinet.se|food-supply.se|dagenshandel.se|plastnet.se|habit.se|woodnet.se|foodnet.se|processnet.se|packnet.se|medtechmagazine.se|recyclingnet.se|rt-forum.se|lifesciencenordic.com|fri-kopenskap.se|cleannet.se|framtidensbygg.se|entreprenad.com|metal-supply.se
+a2499 1
+/page_view$script,domain=matkasse.se
 a2515 1
 /plugins/Partner%20Banner$script,domain=travelandtourworld.se
 d2520 1
@@ -143,10 +160,18 @@ a2520 1
 d2680 1
 a2680 1
 /plugins/wpconsent-cookies-banner$script,domain=kampsportnews.se|teknikhype.se|densistavilan.se
+d2727 1
+a2728 1
+/pulse-$domain=blocket.se
+a2758 1
+/session_trace$script,domain=matkasse.se
 a2803 1
 /stats$ping,domain=tradera.com
 a2835 1
 /tracker$xhr,domain=kimbino.se
+d2838 1
+a2838 1
+/tracking$script,domain=bytbil.com|neuro.se
 d2845 1
 a2845 1
 /track$ping,xhr,domain=epochtimes.se|dagen.se|vinliv.se|maipenrai.se|korsordx.se|hrsvepet.se|cfosvepet.se|vdsvepet.se|bodennytt.se|inblick.se|it-nyheter.se
@@ -157,6 +182,7 @@ a3018 1
 ||ahody.com/insight
 a3020 1
 ||aktieskolan.se/?*=1&ver=$script
+d3106 1
 d3116 1
 a3116 1
 ||cdn-cookieyes.com^$domain=lokalti.se|jarnvagar.nu|senses.se|temadagar.se|tekniknytt.se|nordigt.se|autonytt.se|kak.se|mis.se|universitetslararen.se|lakemedelsvarlden.se|samfalligheterna.se|husbilsplats.se|katerinamagasin.se|dagenslogistik.se|biostock.se|skellefteaworks.se|datormagazin.se|travnet.se|malarbok.nu|barn-filmer.se|matmenyer.se|sunnenytt.se|hockeynews.se|swe3.se|spelbloggen.se|trendenser.se|kattannonser.se|horisontmagasin.se|automobilly.com|nordicinformer.com|nordicmanufacturing.net|nationalekonomi.se|storynews.se|alltomhobby.se|upptackrattvik.se|alltomhusbilen.se|fnissfest.se|baraboras.se|oresundspotlight.com|maskinteknik.org|stadshem.se|marketmate.se|katrina.ax|real.se|jagvillhabostad.nu|sttf.org|byggteknik.org|forestindustry.org|fordonsteknik.net|tidningenmikroskop.se|jaktplay.se|xn--alltommigrn-u8a.se|borattforum.se|industrifakta.com|siljansbygden.se|svensktorv.se|bucketlistmagazine.se|plastikoperationsforum.se|bageri.se|koloni.org|officerstidningen.se|stadsbyggnad.org|svenskveterinartidning.se|alekuriren.se|tidningen.se|lokalnytt.se|f1news.se|abonnemangkoll.se|vaguiden.se|allaaktier.se
@@ -175,6 +201,8 @@ a3314 1
 d3344 1
 a3344 1
 ||klaviyo.com^$third-party,domain=~kmail-lists.com|~myklpages.com|~gerbergear.com
+a3397 1
+||media.api-domain-compado.com/null
 d3434 1
 a3434 1
 ||onesignal.com^$domain=samnytt.se|battrestadsdel.se|beernews.se|ungdomsfotboll.se|rabattsok.se|1x2.se|cannabis.se|dackavisen.se|driva-eget.se|skogsaktuellt.se|entreprenadaktuellt.se|ja.se|newsner.com|humorbibeln.se|sportbibeln.se|matbibeln.se|ettgottskratt.se|djurbibeln.se|nojeslivet.se|finanstid.se|fokus.se|gasetten.se|fotbollsthlm.se|macken.xyz|naringslivetvgl.se|dalarnasaffarer.se|stockholmsaffarer.se|jamtlandsaffarer.se|hallandsnaringsliv.se|sjuharadsnaringsliv.se|netflixguiden.se|nyadagbladet.se|oskarshamns-nytt.se|swebbtv.se|vaken.se|aktieskolan.se|fastighetsvarlden.se|mcparken.se|gaffa.se|alltomnorrtalje.se|morotsliv.com|it-finans.se|it-halsa.se|it-kanalen.se|it-pedagogen.se|it-retail.se|skaneplus.se|mittforetag.com|studeravidare.se|ibnytt.se|garaget.org|marketmate.se|rakapuckar.com|svegot.se|thepattayanewsse.com|svenskgolf.se|cafe.se|praktisktbatagande.se|classicmotor.se|vagabond.se|automotorsport.se|mmanytt.se|teknikgeek.se
@@ -183,5 +211,10 @@ a3472 1
 ||privacy-center.org^$domain=180.se|agriaffaires.se|truckscorner.se|machineryzone.se|netdoktor.se|netdoktorpro.se|news55.se|hastnet.se|dagensps.se|realtid.se|newsner.com|humorbibeln.se|sportbibeln.se|ettgottskratt.se|matbibeln.se|djurbibeln.se|nojeslivet.se|booli.se|fotbolltransfers.com|foretagsverige.se|forskningsverige.se|motorbibeln.se|hallbarhetsverige.se|tillvaxtsverige.se|grillbibeln.se|kampenmotcancer.se|folkhalsasverige.se|dinlivsstil.nu|gds.se|kimbino.se|bab.la
 a3479 1
 ||public.flourish.studio/resources/embed.js
+a3522 1
+||sdkconfig.pulse.m10s.io^$domain=bytbil.com
+d3525 1
+a3525 1
+||sdk-cdn.pulse.m10s.io^$domain=blocket.se|bytbil.com
 a3643 1
 ||visibilitykit.ai^$third-party
