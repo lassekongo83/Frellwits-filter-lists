@@ -387,6 +387,7 @@ Video-Ad-$media,3p
 ||manatee.dk^$third-party
 ||manatee.io^$third-party
 ||matchads.net^$third-party
+||mechmind.app^$third-party
 ||media.jw-it.se/b/$image
 ||mediekompaniet.com^$third-party
 ||mediakraft.se^$third-party
@@ -1403,14 +1404,12 @@ expressen.se##+js(href-sanitizer, a[href*=".pxf.io"], ?u)
 ||sleeknote.com^$domain=gaffa.se
 ||termsfeed.com^$domain=travsport.se|gavletravet.se|breedly.com
 ||static.fastcmp.com^$domain=lchfarkivet.se|stoppapressarna.se|alltomkungligt.se|lesscarbs.se|brinkenbakar.se|receptskatt.se|matinspo.se|matmalin.se
-||cdn.iubenda.com^$domain=meetingsinternational.se|siljannews.se
-||hu-manity.co^$domain=naturochtradgard.se|tobaksfakta.se|alltforhalsan.se
+||iubenda.com^$domain=meetingsinternational.se|siljannews.se
+||hu-manity.co^$domain=tobaksfakta.se|alltforhalsan.se
 ||consent.trustarc.com^$domain=alltomibd.se
 ||onetrust.eu^$domain=dinbil.se
-||freeprivacypolicy.com^$domain=golvtilltak.nu
-||cdn.kiprotect.com^$domain=hallbyhandboll.se|lundgiants.se|skiljebosk.nu|molndalfotboll.com
+||cdn.kiprotect.com^$domain=hallbyhandboll.se|lundgiants.se|skiljebosk.nu|molndalfotboll.com|arono.se
 ||cookies.dizparchstd.se^$domain=usabil.nu
-||cdn.kiprotect.com^$domain=arono.se
 /CookieBar$script,domain=driva-eget.se|brukshunden.se|aktavara.org|dietisten.net
 /cookie-manager$script,domain=si.se|sweden.se
 /consent_banner$script,domain=skogsentreprenorerna.se
@@ -1986,8 +1985,10 @@ tidningenbalans.se##.bg-ad-dark-yellow
 karriarlakare.se##a[target][onclick], #cliSettingsPopup
 karriarlakare.se##.annons-label:upward(a)
 ||wayke.se^$third-party,domain=siljannews.se
+/script.js$domain=siljannews.se
 siljannews.se##article:has(a[href^="/annons"])
 siljannews.se##a[target="_blank"]:upward(2)
+siljannews.se##div[class^="styles_adHead"]:upward(1)
 siljannews.se##p > a:not([href*="siljannews.se"]):not([href^="/"]) img
 siljannews.se##div[class*="widget-wrapper_cardAppearance"]:has(a[href*="/annons/"])
 dagensopinion.se##.post-block:has(a[href*="/annons/"])
@@ -2339,7 +2340,7 @@ svenskalag.se,frillesasbandy.se,skik.se##.cookie-overlay, .overlay:empty
 sdhl.se,ssl.se,storvretaibk.se##.rmss_module-block-linked_image, a[href*="svenskaspel.se"]
 siriusbandy.se,vetlandabk.se##[id$="-ad"]
 /Ad/*$domain=hallbyhandboll.se|skiljebosk.nu
-hallbyhandboll.se,skiljebosk.nu##.cookiePush, .stickyFollow, .sponsorGroup__item
+hallbyhandboll.se,skiljebosk.nu,molndalfotboll.com##.cookiePush, .stickyFollow, .sponsorGroup__item, .sa-ad-sidebar
 tidningenridsport.se##.subscribe_now_popup, .type-native, #captive, div[class^="hldr_takeover"], div[id^="ad-welcome"], .adhld
 tidningenridsport.se##.entry-content:style(display: initial !important;)
 tidningenridsport.se##body.cli-barmodal-open:remove-class(cli-barmodal-open)
@@ -2887,9 +2888,9 @@ dagensmuslim.se##.breaking-title-text:has-text(ANNONS:):upward(.breaking.control
 /blogpoststatistic/view
 /blogpoststatistic/events
 ||viralize.tv/display/$domain=nouw.com
+nouw.com##div[class^="_siblingFallback"]
 nouw.com##:is(.content-width, .content) div[style^="text-align: center"]:has(a[href="https://nouw.com"], iframe[title="Ad"], div[id*="panorama"], div[id*="nouw_mobil"])
 nouw.com##.post-grid-item:has(a[href*="poker"], a[href*="betting"], a[href*="casino"], a[href*="spelplat"])
-nouw.com##+js(nosiif, iframe.space-frame)
 gynning.net##.sponsored-notification:upward([id^="post-"])
 underbaraclaras.se##.jet-listing-dynamic-field__content:has-text(/annonssamarbete|reklamsamarbete/i):upward(.jet-listing-grid__item)
 minimalisterna.se##p.has-text-align-center:has-text(/i samarbete med/i):upward(.post)
@@ -3952,3 +3953,5 @@ biostock.se##.cover-img:has(a[target="_blank"])
 /AnnonsBild$domain=matpriskollen.se
 /updateWebAdCarouselViewCount$domain=matpriskollen.se
 matpriskollen.se##.image-slider-hero:has([style*="/AnnonsBild"])
+aa-server-select$domain=meetingsinternational.se
+meetingsinternational.se##.mi_ad
