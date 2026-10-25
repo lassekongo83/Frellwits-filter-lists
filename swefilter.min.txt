@@ -1,7 +1,7 @@
 ! Title: Frellwit's Swedish Filter
-! Last updated: Sat, 24 Oct 2026 05:16:44 +0000
+! Last updated: Sun, 25 Oct 2026 15:48:29 +0000
 ! Expires: 5 days
-! Diff-Path: patches/2026.10.24.316.patch#swefilter
+! Diff-Path: patches/2026.10.25.948.patch#swefilter
 ! Diff-Expires: 24 hours
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
@@ -779,7 +779,7 @@ hemnet.se##body:style(overflow:unset!important)
 hemnet.se##div[class^="ArticleCard_"] small:has-text(/sponsrad/i):upward(article, li, a)
 hemnet.se##div[data-testid="living-cost-logos-section"]:has(span[aria-label="annons"])
 hemnet.se##span[class^="ArticleContent_articleDateBox"]:has-text(/annons från/i):upward(div[class^="ArticleContent_articlePage"])
-hemnet.se###ad_unit_placeholder, div[class^="Panorama_panoramaAd"], .listing__panorama-banner, .broker-banner, div[class^="BrokerBanner"], div[class^="PanoramaMobile"], div[class^="SBUBanner_container"], div[data-testid="broker-tip"], div[class*="wallpaperAd"]
+hemnet.se###ad_unit_placeholder, div[class$="panoramaAd"], .listing__panorama-banner, .broker-banner, div[class^="BrokerBanner"], div[class^="PanoramaMobile"], div[data-testid="broker-tip"], div[class*="wallpaperAd"], #sbu-banner
 hemnet.se##:is(article, li):has([class*="SponsoredLabel"], .article-card__sponsored-text)
 hemnet.se##:is(div[class^="Carousel"], #top_listing):has(div[class^="PaidPlacementLabel"])
 hemtrevligt.se##article[data-section="Partner"]
