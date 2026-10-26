@@ -1321,7 +1321,7 @@ utm_$document,removeparam=/^utm_/,domain=tv.nu|booli.se|expressen.se|aftonbladet
 /analytics$domain=gbgfotboll.se|stff.se|svenskfotboll.se|di.se|etc.se|vackertvader.se|skogsforum.se|skolporten.se|sjf.se|rimlab.se|alandsradio.ax|dagen.se|global.morningstar.com|vidzflow.com|vinia.se|kvartal.se|shortcut.se|inredningsvis.se|kottchark.se|forsvarstidningen.se|stromsundsgratistidning.se|sverigerunt.se|skargardsradion.se|lovable.app|skanesfolkblad.se|skillingaryd.nu|listaroo.se|vaardkasen.se|prisgeek.se
 /events$domain=marketplace.se
 /events.js$domain=forsvarstidningen.se|stromsundsgratistidning.se|sverigerunt.se|skargardsradion.se
-/event$ping,xhr,domain=lokalti.se|skyscanner.se
+/event$ping,xhr,domain=lokalti.se|skyscanner.se|feber.se|tjock.se
 /firebase-analytics.js$domain=stoppapressarna.se|alltomkungligt.se|zeinaskitchen.se|jennysmatblogg.nu|filippoon.se|lindasbakskola.se
 /glimr$script,domain=aftonbladet.se|blocket.se
 /pageView$xhr,domain=altinget.se|ifokus.se
@@ -1341,6 +1341,7 @@ utm_$document,removeparam=/^utm_/,domain=tv.nu|booli.se|expressen.se|aftonbladet
 /tracking$script,domain=bytbil.com|neuro.se
 /tracking$xhr,domain=thefork.se
 /googleanalytics.js$domain=bio.se
+/script.js$domain=siljannews.se|feber.se|tjock.se
 /statistics$domain=visitskane.com
 /gtm$domain=lidl.se|global.morningstar.com
 /tracker$xhr,domain=kimbino.se
@@ -1988,7 +1989,6 @@ tidningenbalans.se##.bg-ad-dark-yellow
 karriarlakare.se##a[target][onclick], #cliSettingsPopup
 karriarlakare.se##.annons-label:upward(a)
 ||wayke.se^$third-party,domain=siljannews.se
-/script.js$domain=siljannews.se
 siljannews.se##article:has(a[href^="/annons"])
 siljannews.se##a[target="_blank"]:upward(2)
 siljannews.se##div[class^="styles_adHead"]:upward(1)
@@ -2110,16 +2110,14 @@ gamereactor.se##+js(set, adblockEnabled, falseFunc)
 ||maxetise.net^$script,redirect-rule=noop.js,domain=feber.se|tjock.se
 ||plausible.io^$script,redirect-rule=noop.js,domain=feber.se|tjock.se
 ||feber.se/native/$third-party
-/count?$xhr,domain=feber.se|tjock.se
-/plausible$domain=feber.se|tjock.se
-/p/rp$xhr,domain=feber.se|tjock.se
-/p/js/pa-$domain=feber.se|tjock.se
-feber.se,tjock.se##.burt-unit, .art_ad, adline, f-panorama, f-deals, #rpPopular, #maxetiseFull, #outsider, [data-ad="true"], f-internallink[adid], f-automatos-promo, f-native, .readpeak-puff-content, .readpeak-puff-item, f-veckansprylar-container, f-readpeak-pre-article, a[href*="/go?u="]
-feber.se,tjock.se##f-internallink:has(a[href="#"])
+/p/s/*.js$domain=feber.se|tjock.se
+/maxapi.js$domain=feber.se|tjock.se
+||img.feber.se/k/$image,domain=feber.se|tjock.se
+feber.se,tjock.se##div[role="dialog"][aria-label="Annons"], div[data-slot], div[data-native-slot="1"]
+feber.se,tjock.se##.column:has(> div > a > picture > img[src*="//img.feber.se/k/"])
 feber.se,tjock.se##a[onclick^="plausible"]:remove-attr(onclick)
+feber.se,tjock.se##+js(set-session-storage-item, fs, 1)
 feber.se,tjock.se##+js(set, dovideostuffAD, noopFunc)
-feber.se,tjock.se##+js(nosiif, checkGDPRInt)
-feber.se,tjock.se##+js(acs, addtonativesFrontPageOne)
 /DAC.js$domain=swedroid.se
 swedroid.se##div[id$="_ad"], div[id$="_ad_mobile"], .externalTopMobile, #externalTopMobile, #nativendo-mainfeed + aside > .article, .article-footer > h3, .article-footer > .aeChart, #newExternal, div[onclick*="prisjakt.nu/produkt"], a[href*="prisjakt.nu/produkt"], .article-footer a[href*="/vb/"][target]
 swedroid.se##a[target="_blank"]:upward(li.Notice):remove()
