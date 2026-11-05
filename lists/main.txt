@@ -1342,7 +1342,7 @@ utm_$document,removeparam=/^utm_/,domain=tv.nu|booli.se|expressen.se|aftonbladet
 /tracking$script,domain=bytbil.com|neuro.se
 /tracking$xhr,domain=thefork.se
 /googleanalytics.js$domain=bio.se
-/script.js$domain=siljannews.se|feber.se|tjock.se
+/script.js$domain=siljannews.se|feber.se|tjock.se|atl.nu|land.se
 /statistics$domain=visitskane.com
 /gtm$domain=lidl.se|global.morningstar.com
 /tracker$xhr,domain=kimbino.se
@@ -1762,9 +1762,10 @@ vk.se,folkbladet.nu,nordsverige.se,mellanbygden.nu,vasterbottningen.se,lokaltidn
 vk.se,folkbladet.nu,nordsverige.se,mellanbygden.nu,vasterbottningen.se,lokaltidningen.nu##:is(div[class^="stickyContainer"], div[class^="header_"]):has(span[data-ad-report-label="true"])
 vk.se,folkbladet.nu,nordsverige.se,mellanbygden.nu,vasterbottningen.se,lokaltidningen.nu##+js(json-prune, uesUrlFallback)
 /native-ads$domain=atl.nu|land.se
+/natives$domain=atl.nu|land.se
 @@/adx.js$~third-party,domain=atl.nu|land.se
 ||atl.nu/api/mnews
-atl.nu,land.se##a[href*="/atl-tv-annons/"], [class^="Ad_"], div[class^="WidgetCTASticky"], a[class^="CTA_ctaWrapperCampaignBase"], section[class*="NativeAdArticlePage"], .ad-desktop, div[class^="Ad-module"], a[href^="/native"]
+atl.nu,land.se##a[href*="/atl-tv-annons/"], [class^="Ad_"], div[class^="WidgetCTASticky"], a[class^="CTA_ctaWrapperCampaignBase"], section[class*="NativeAdArticlePage"], .ad-desktop, div[class^="Ad-module"], a[href^="/native"], div[class*="_banner"], div[data-native-slot]
 atl.nu,land.se##div[class^="Message-module"]:has(a[href*="/kampanj."], img[src*="kampanj"])
 ||lantbruksnytt.se/includes/$subdocument
 lantbruksnytt.se###startpage-top-right, .ads_text + a, div[class*="square_rotate"], a[target="_blank"][rel="nofollow"], #ouibounce-modal, iframe[src*="iframebanner"], .widget_maskinstationer_widget, .ads_text + #articles-top
@@ -2603,6 +2604,7 @@ frizon.se##.maintop
 ||images.woo.a2d.tv/creative_assets$image,domain=tv4play.se|tv4.se|fotbollskanalen.se|koket.se
 ||d2189b0dij3l7v.cloudfront.net/p/$domain=tv4play.se|tv4.se|fotbollskanalen.se|koket.se
 ||insights.tv4.a2d.tv^
+||gnsnpaw.com^$domain=tv4play.se|tv4.se|fotbollskanalen.se|koket.se
 tv4.se##div[class*="advertory-"]
 tv4play.se,tv4.se,fotbollskanalen.se,koket.se##.visit-advertiser-link
 tv4play.se,tv4.se,fotbollskanalen.se,koket.se##+js(json-prune-fetch-response, playbackItem.isStitched, , propsToMatch, url:a2d.tv/play)
@@ -2614,7 +2616,7 @@ fotbollskanalen.se##.notice:has(span[class$="sponsored"])
 fotbollskanalen.se##:is(.sponsored, .theme-news_sponsored_container):upward(.theme-news)
 fotbollskanalen.se##div[class$="sponsortitle"]:upward(.desktop-side-widget)
 fotbollskanalen.se##.news-list li:has(span[style="color:#6ab6ff"])
-fotbollskanalen.se##section.w-full-content:has(a[href*="europatipset"])
+fotbollskanalen.se##li.border-subtle:has(a[href*="europatipset"])
 fotbollskanalen.se##a.pr-side:has-text(/sponsra/i)
 fotbollskanalen.se###main-content > div.w-full-content > div:not([class]):has(a[href*="/betmgm/"], .widget-container-bettingSlipWidget)
 ||richrelevance.com^$domain=koket.se
