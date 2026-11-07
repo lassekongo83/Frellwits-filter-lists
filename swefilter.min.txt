@@ -1,7 +1,7 @@
 ! Title: Frellwit's Swedish Filter
-! Last updated: Fri, 06 Nov 2026 06:44:53 +0000
+! Last updated: Sat, 07 Nov 2026 06:19:48 +0000
 ! Expires: 5 days
-! Diff-Path: patches/2026.11.6.404.patch#swefilter
+! Diff-Path: patches/2026.11.7.379.patch#swefilter
 ! Diff-Expires: 24 hours
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
@@ -395,6 +395,7 @@ dagensmuslim.se##.breaking-title-text:has-text(ANNONS:):upward(.breaking.control
 dagensmuslim.se##.stream-item-top, .theiaStickySidebar a[target="_blank"]
 dagensnamn.nu##div[id^="dagensnamn_"], .dagensnamn_nu_billboard_middle, a[href*="kohantering"]
 dagensnamn.nu##.card:has(a[href*="adrecord.com"])
+dagensopinion.se##.panorama-ad-container
 dagensopinion.se##.post-block:has(a[href*="/annons/"])
 dagensps.se##.container:has(.dagensps_ad)
 dagensps.se,news55.se,realtid.se##a[href*="-partner/"], .ad-links-module, .dagensps_ad, a[href*="ut.dagensps.se"][target], .bottom_banner, .leftsidebanner, .c-external-notice, a[href*="/affiliate/"], a[href*="/native-article/"], .h-\[600px\]:empty
@@ -1720,7 +1721,7 @@ vietnamportalen.se##br ~ a[target="_blank"]
 vilarare.se,tidningenridsport.se,sulkysport.se##.adcontainer
 vilaser.se##.Internal-ad
 vildmarken.se##.ad-background-container-desktop, .ad-background-container-mobile
-villalivet.se##.mtsnb, .villalivet-target, a[href*="/sponsrat-innehall/"], div[data-td-block-uid="tdi_85"], a[href*="utm_campaign"][target="_blank"], div[data-td-block-uid="tdi_87"], #hb-consent-banner
+villalivet.se##.mtsnb, .villalivet-target, a[href*="/sponsrat-innehall/"], div[data-td-block-uid="tdi_85"], a[href*="utm_campaign"][target="_blank"], div[data-td-block-uid="tdi_87"], #hb-consent-banner, .vlan
 villalivet.se##.td-block-title span:has-text(/sponsr/i):upward(3)
 villatidningen.se##div[data-villa-trackbid]
 villatidningen.se##.fusion-title-heading:has-text(SPONSRAT):upward(.fusion-row)
@@ -2558,7 +2559,7 @@ zeromagazine.nu##div[id^="ads"]
 /phaser-ads.min.js$script
 /ping$domain=kimura.se
 /pixel/impression$image
-/plausible$script,domain=kurera.se
+/plausible$script,domain=kurera.se|aip.nu
 /playbuzz-ads-core
 /player-plugin-ad$domain=tv.aftonbladet.se
 /player-plugin-sponsor$domain=tv.aftonbladet.se
@@ -2942,7 +2943,9 @@ zeromagazine.nu##div[id^="ads"]
 /view$xhr,ping,domain=atl.nu|land.se|fraser.nu|recipify.com
 /view_count/view.php
 /view_count/view$domain=byggahus.se
+/villalivet-annonsplatser$domain=villalivet.se
 /visit/v.js
+/vl-filer$script,domain=villalivet.se
 /wdg/iab-active
 /wds_nyhetsbrev_popup
 /webbresurser/banner/*
@@ -3471,6 +3474,7 @@ _banner.php?$domain=tvmatchen.nu
 ||mechmind.app^$third-party
 ||mediacreeper.com/image$image,redirect=32x32.png
 ||mediacreeper.se/image$image,redirect=32x32.png
+||mediadelivery.net/embed/*?autoplay=true$frame,removeparam=autoplay,domain=feber.se|tjock.se
 ||mediaintelliview.com^$third-party
 ||mediakraft.se^$third-party
 ||mediaserver.gvcaffiliates.com.cdn.cloudflare.net^

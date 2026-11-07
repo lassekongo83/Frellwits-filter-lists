@@ -1,10 +1,10 @@
-diff name:swefilter lines:179 checksum:020c91a689
+diff name:swefilter lines:190 checksum:071e0c2669
 d2 1
 a2 1
-! Last updated: Fri, 06 Nov 2026 06:44:53 +0000
+! Last updated: Sat, 07 Nov 2026 06:19:48 +0000
 d4 1
 a4 1
-! Diff-Path: patches/2026.11.6.404.patch#swefilter
+! Diff-Path: patches/2026.11.7.379.patch#swefilter
 a102 1
 aa-server-select$domain=meetingsinternational.se
 d129 1
@@ -20,6 +20,8 @@ bio-link.se,evertiq.se,alandsradio.ax###cc-main
 a272 1
 bokbesatt.se##[id^="ads300"], [id^="linkcat-"]
 d367 1
+a396 1
+dagensopinion.se##.panorama-ad-container
 d427 1
 a427 1
 datormagazin.se,skogen.se,studeravidare.se,automation.se,fojo.se,sverigestidskrifter.se##.cky-consent-container
@@ -85,6 +87,9 @@ a1643 2
 trivsio.se##html,body:style(scrollbar-width:initial!important;)
 trivsio.se##[data-slumpad-dekor]
 d1669 1
+d1719 1
+a1719 1
+villalivet.se##.mtsnb, .villalivet-target, a[href*="/sponsrat-innehall/"], div[data-td-block-uid="tdi_85"], a[href*="utm_campaign"][target="_blank"], div[data-td-block-uid="tdi_87"], #hb-consent-banner, .vlan
 a1905 1
 ##div.holid-slot
 a2077 1
@@ -127,7 +132,7 @@ a2540 1
 /pa-$script,domain=kurera.se
 d2547 1
 a2547 1
-/plausible$script,domain=kurera.se
+/plausible$script,domain=kurera.se|aip.nu
 d2762 1
 a2762 1
 /profile$ping,domain=skippo.se|tasteline.com|marcusoscarsson.se|shl.se|hemhyra.se|qx.se|hockeynews.se|hockeyettan.se|tvsporten.nu|tvmatchen.nu|hurbra.se
@@ -138,6 +143,10 @@ a2800 1
 /script.js$domain=siljannews.se|feber.se|tjock.se|atl.nu|land.se
 a2826 1
 /smartocto$script,domain=arbetet.se
+a2929 1
+/villalivet-annonsplatser$domain=villalivet.se
+a2930 1
+/vl-filer$script,domain=villalivet.se
 d3025 1
 a3025 1
 @@*$ghide,domain=atl.nu|land.se|fodertipset.se|citiboard.se|kritiker.se|trivsio.se
@@ -170,6 +179,8 @@ a3382 1
 ||iubenda.com^$domain=meetingsinternational.se|siljannews.se
 a3453 1
 ||mechmind.app^$third-party
+a3455 1
+||mediadelivery.net/embed/*?autoplay=true$frame,removeparam=autoplay,domain=feber.se|tjock.se
 d3515 1
 a3729 1
 ||wireboard.io^$third-party
