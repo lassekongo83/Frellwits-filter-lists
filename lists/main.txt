@@ -1350,7 +1350,7 @@ utm_$document,removeparam=/^utm_/,domain=tv.nu|booli.se|expressen.se|aftonbladet
 /tracker$xhr,domain=kimbino.se
 /view$xhr,ping,domain=atl.nu|land.se|fraser.nu|recipify.com
 ?t=$xhr,empty,domain=kyrkanstidning.se|grundskoletidningen.se|forskoletidningen.se
-*$ping,domain=nordicinformer.com|fiskejournalen.se|fordonsteknik.net|byggteknik.org|forestindustry.org|autoteknik.net|entreprenoren.net|byggforum.net|feber.se|tjock.se|guldkanalen.se|butikstrender.se|pepperdeals.se|recipify.com|inkopsradet.se|upphandling24.se
+*$ping,domain=nordicinformer.com|fiskejournalen.se|fordonsteknik.net|byggteknik.org|forestindustry.org|autoteknik.net|entreprenoren.net|byggforum.net|feber.se|tjock.se|guldkanalen.se|butikstrender.se|pepperdeals.se|recipify.com|inkopsradet.se|upphandling24.se|svenskverkstad.se|samfalligheterna.se
 ! Websites with no obvious or visible facebook login. Will just assume it's used for tracking.
 ||connect.facebook.net^$domain=friatider.se|fotosidan.se|ng.se|lektionsbanken.se|lajvo.se|kvinnatillkvinna.se|epochtimes.se|newsner.com|humorbibeln.se|sportbibeln.se|matbibeln.se|ettgottskratt.se|djurbibeln.se|nojeslivet.se|sillyseason.se|loppi.se|kyrkanstidning.se|tn.se|experimentarkivet.se
 ! Scriptlets
@@ -2051,10 +2051,9 @@ svenskverkstad.se##svv-short-news-widget:has(.native-news-link)
 svenskverkstad.se##svv-wide-news-widget:has(.annons)
 svenskverkstad.se##block-3x3-news-widget:has-text(Sponsrat innehåll)
 altinget.se##a[href^="/sponsrade"]
-||samfalligheterna.se^$ping
-samfalligheterna.se##.tdm-popup-modal-wrap
-samfalligheterna.se##.td_block_wrap:has-text(Annons)
-samfalligheterna.se##.td-cpt-post:has(a[href*="/sponsra"])
+/_astro/AdSlot$domain=samfalligheterna.se
+/_astro/ConsentBanner$domain=samfalligheterna.se
+samfalligheterna.se##.sf-annons, .sf-samtycke, .sf-start-sponsrat
 lidingonyheter.se##.moban, #secondary .lidin-widget, #sidebar-secondary .widget_media_image
 affarerinorr.se##a[href^="/nyheter/native-artiklar/"]
 sjofartstidningen.se###newsletter-overlay, #newsletter-modal
