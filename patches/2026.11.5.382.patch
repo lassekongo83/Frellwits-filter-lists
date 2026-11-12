@@ -1,10 +1,10 @@
-diff name:swefilter lines:126 checksum:d9516b917d
+diff name:swefilter lines:139 checksum:e1061ef212
 d2 1
 a2 1
-! Last updated: Tue, 10 Nov 2026 06:07:38 +0000
+! Last updated: Thu, 12 Nov 2026 06:13:42 +0000
 d4 1
 a4 1
-! Diff-Path: patches/2026.11.10.367.patch#swefilter
+! Diff-Path: patches/2026.11.12.373.patch#swefilter
 d108 1
 d170 1
 a170 1
@@ -22,6 +22,8 @@ dagensopinion.se##.panorama-ad-container
 d530 1
 a530 1
 europaportalen.se##.view-multiply-top, .frontpage-multiply-main, .right-column-multiply-container, .eup-newsletter-popup
+a564 1
+feber.se,tjock.se##article:has([data-feed-section="sponsored"])
 d786 1
 a786 1
 hifitorget.se##div[data-sponsored-label], .ht-ad-divider, .anchor-ad-spacer
@@ -31,9 +33,15 @@ d844 1
 a844 1
 husbyggaren.se##div[id^="nordi-"], .b-native, .mobileoutsider
 d867 2
-a868 2
+a868 3
 inkopsradet.se##div[id^="inkop-"], #u24s-banner
 inkopsradet.se##.brxe-shortcode:has(div[id^="inkop-"])
+innebandymagazinet.se##.entry-content > div > section > div:has(a[href*="/sponsrat"], a[href*="utm_campaign"])
+d1038 2
+a1039 1
+ljudochbild.se##.adremark, .coofad, .hidead, .phoneads, .pricecomp, .offerz, .type-articleadvertorial, .adblock, .lbplussinfo, .popup-overlayx, a[href*="/advertorial"], a[href*="/advertorial"] + .textbox, .prisjakt, #stickleft, #stickright, .adbox, .mainbanner, .egenannonse, section[aria-label="Annonse"]
+a1042 1
+ljudochbild.se##:is(.Annonsinnehåll, .Annonsørinnhold):upward(.maincol, a)
 d1051 3
 a1053 1
 lokalti.se##:is(.topnyhed, .fokustopnyhed):has(a[href*="extramaterial"])
@@ -114,8 +122,13 @@ a3017 2
 d3034 1
 a3034 1
 @@*$ghide,domain=atl.nu|land.se|fodertipset.se|citiboard.se|kritiker.se|trivsio.se
+a3043 1
+@@||content.viralize.tv/display/$domain=innebandymagazinet.se
 a3054 1
 @@||trivsio.se/ads.bundle.js
+d3236 1
+a3236 1
+||cookielaw.org^$domain=flashscore.se|ikea.com|manpower.se|natgeotv.com|internetkunskap.se|internetstiftelsen.se|yelp.se|viaplayradio.se|svenskarnaochinternet.se|bredbandskollen.se|internetmuseum.se|internetdagarna.se|digitalalektioner.se|goto10.se|tripadvisor.se|sydkusten.es|livetochdiabetes.se|cioanalytics.se|se.trustpilot.com|pricerunner.se|lidl.se|pwc.se|svenskafans.com|vinted.se|global.morningstar.com|fotbolldirekt.se|hockeysverige.se|koket.se|innebandymagazinet.se
 a3466 1
 ||mediadelivery.net/embed/*?autoplay=true$frame,removeparam=autoplay,domain=feber.se|tjock.se
 d3585 1

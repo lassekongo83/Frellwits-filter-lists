@@ -1,10 +1,10 @@
-diff name:swefilter lines:220 checksum:d9516b917d
+diff name:swefilter lines:231 checksum:e1061ef212
 d2 1
 a2 1
-! Last updated: Tue, 10 Nov 2026 06:07:38 +0000
+! Last updated: Thu, 12 Nov 2026 06:13:42 +0000
 d4 1
 a4 1
-! Diff-Path: patches/2026.11.10.367.patch#swefilter
+! Diff-Path: patches/2026.11.12.373.patch#swefilter
 d108 1
 d130 1
 a130 1
@@ -39,6 +39,8 @@ d431 1
 d531 1
 a531 1
 europaportalen.se##.view-multiply-top, .frontpage-multiply-main, .right-column-multiply-container, .eup-newsletter-popup
+a565 1
+feber.se,tjock.se##article:has([data-feed-section="sponsored"])
 d567 3
 a569 2
 feber.se,tjock.se##div[role="dialog"][aria-label="Annons"], div[data-slot], div[data-native-slot="1"], article[data-feed-section="promotion"]
@@ -61,10 +63,16 @@ d844 1
 a844 1
 husbyggaren.se##div[id^="nordi-"], .b-native, .mobileoutsider
 d867 2
-a868 2
+a868 3
 inkopsradet.se##div[id^="inkop-"], #u24s-banner
 inkopsradet.se##.brxe-shortcode:has(div[id^="inkop-"])
+innebandymagazinet.se##.entry-content > div > section > div:has(a[href*="/sponsrat"], a[href*="utm_campaign"])
 d953 3
+d1041 2
+a1042 1
+ljudochbild.se##.adremark, .coofad, .hidead, .phoneads, .pricecomp, .offerz, .type-articleadvertorial, .adblock, .lbplussinfo, .popup-overlayx, a[href*="/advertorial"], a[href*="/advertorial"] + .textbox, .prisjakt, #stickleft, #stickright, .adbox, .mainbanner, .egenannonse, section[aria-label="Annonse"]
+a1045 1
+ljudochbild.se##:is(.Annonsinnehåll, .Annonsørinnhold):upward(.maincol, a)
 d1054 3
 a1056 1
 lokalti.se##:is(.topnyhed, .fokustopnyhed):has(a[href*="extramaterial"])
@@ -189,11 +197,14 @@ a3016 2
 d3033 1
 a3033 1
 @@*$ghide,domain=atl.nu|land.se|fodertipset.se|citiboard.se|kritiker.se|trivsio.se
+a3042 1
+@@||content.viralize.tv/display/$domain=innebandymagazinet.se
 a3053 1
 @@||trivsio.se/ads.bundle.js
-d3234 1
-a3234 1
+d3234 2
+a3235 2
 ||cookieinformation.com^$domain=dental24.se|vinbanken.se|handelskammarenvarmland.se|enahabo.se|placera.se|skk.se|hyresgastforeningen.se|kopahund.se|arstiderna.com
+||cookielaw.org^$domain=flashscore.se|ikea.com|manpower.se|natgeotv.com|internetkunskap.se|internetstiftelsen.se|yelp.se|viaplayradio.se|svenskarnaochinternet.se|bredbandskollen.se|internetmuseum.se|internetdagarna.se|digitalalektioner.se|goto10.se|tripadvisor.se|sydkusten.es|livetochdiabetes.se|cioanalytics.se|se.trustpilot.com|pricerunner.se|lidl.se|pwc.se|svenskafans.com|vinted.se|global.morningstar.com|fotbolldirekt.se|hockeysverige.se|koket.se|innebandymagazinet.se
 d3327 1
 a3340 1
 ||gnsnpaw.com^$domain=tv4play.se|tv4.se|fotbollskanalen.se|koket.se
