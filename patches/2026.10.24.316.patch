@@ -1,10 +1,10 @@
-diff name:swefilter lines:234 checksum:e1061ef212
+diff name:swefilter lines:244 checksum:026b76db80
 d2 1
 a2 1
-! Last updated: Thu, 12 Nov 2026 06:13:42 +0000
+! Last updated: Fri, 13 Nov 2026 12:27:39 +0000
 d4 1
 a4 1
-! Diff-Path: patches/2026.11.12.373.patch#swefilter
+! Diff-Path: patches/2026.11.13.747.patch#swefilter
 d108 1
 d130 1
 a130 1
@@ -28,6 +28,9 @@ bulletin.nu,inredningsarkitektur.se,fof.se,allas.se,elle.se,femina.se,hant.se,ma
 d330 1
 a330 1
 byggahus.se,expressen.se,filmtopp.se,destination.se,folkhalsasverige.se,foretagsverige.se,motorbibeln.se,grillbibeln.se,kampenmotcancer.se,bolagsfakta.se,dinordbok.se,motorbranschen.mrf.se,rakapuckar.com,ordspel.nu,hockeysverige.se##.ad-container
+d343 1
+a345 1
+bytbil.com,hockeynews.se##html,body:style(overflow:auto!important;)
 d368 1
 d378 1
 a397 1
@@ -39,11 +42,10 @@ d431 1
 d531 1
 a531 1
 europaportalen.se##.view-multiply-top, .frontpage-multiply-main, .right-column-multiply-container, .eup-newsletter-popup
-a565 1
-feber.se,tjock.se##article:has([data-feed-section="sponsored"])
 d567 3
-a569 2
+a569 3
 feber.se,tjock.se##div[role="dialog"][aria-label="Annons"], div[data-slot], div[data-native-slot="1"], article[data-feed-section="promotion"]
+feber.se,tjock.se##main > div[data-page="1"] > div:not([class]):has([data-feed-section="sponsored"])
 feber.se,tjock.se##+js(set, B.ab, false)
 d571 1
 a571 2
@@ -62,6 +64,9 @@ a786 1
 hifitorget.se##div[data-sponsored-label], .ht-ad-divider, .anchor-ad-spacer
 a787 1
 hifitorget.se,synonymer.se##aside[aria-label="Annons"]
+d802 1
+a802 1
+hockeynews.se##a[href*="/speltips"], .readPeak-container-frontpage, .readPeak-container-article, dialog[aria-labelledby="campaign-takeover-title"]
 d844 1
 a844 1
 husbyggaren.se##div[id^="nordi-"], .b-native, .mobileoutsider
@@ -101,6 +106,9 @@ samfalligheterna.se##.sf-annons, .sf-samtycke, .sf-start-sponsrat
 d1429 1
 a1429 1
 skogen.se##.jobslider.up, #panhldr
+d1479 1
+a1479 1
+sporttv.nu##:is(.visible-xs, .hidden-xs):has(a[href*="betting"], a[href*="casino"])
 d1534 1
 d1556 3
 a1558 1
@@ -161,6 +169,8 @@ a2403 1
 /gofo_revive$domain=grundskoletidningen.se
 a2428 1
 /https?:\/\/(www\.)?teknikgeek\.se\/[A-Za-z0-9]+\.js/$script,domain=teknikgeek.se
+a2441 1
+/images/*casino$domain=sporttv.nu
 a2496 1
 /maxapi.js$domain=feber.se|tjock.se
 a2515 2

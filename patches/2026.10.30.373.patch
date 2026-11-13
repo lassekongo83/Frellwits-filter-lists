@@ -1,10 +1,10 @@
-diff name:swefilter lines:202 checksum:e1061ef212
+diff name:swefilter lines:213 checksum:026b76db80
 d2 1
 a2 1
-! Last updated: Thu, 12 Nov 2026 06:13:42 +0000
+! Last updated: Fri, 13 Nov 2026 12:27:39 +0000
 d4 1
 a4 1
-! Diff-Path: patches/2026.11.12.373.patch#swefilter
+! Diff-Path: patches/2026.11.13.747.patch#swefilter
 d108 1
 d130 1
 a130 1
@@ -28,6 +28,9 @@ bulletin.nu,inredningsarkitektur.se,fof.se,allas.se,elle.se,femina.se,hant.se,ma
 d330 1
 a330 1
 byggahus.se,expressen.se,filmtopp.se,destination.se,folkhalsasverige.se,foretagsverige.se,motorbibeln.se,grillbibeln.se,kampenmotcancer.se,bolagsfakta.se,dinordbok.se,motorbranschen.mrf.se,rakapuckar.com,ordspel.nu,hockeysverige.se##.ad-container
+d343 1
+a345 1
+bytbil.com,hockeynews.se##html,body:style(overflow:auto!important;)
 d368 1
 d378 1
 a397 1
@@ -39,8 +42,8 @@ d431 1
 d531 1
 a531 1
 europaportalen.se##.view-multiply-top, .frontpage-multiply-main, .right-column-multiply-container, .eup-newsletter-popup
-a565 1
-feber.se,tjock.se##article:has([data-feed-section="sponsored"])
+a567 1
+feber.se,tjock.se##main > div[data-page="1"] > div:not([class]):has([data-feed-section="sponsored"])
 d639 1
 a639 1
 fotbollskanalen.se##li.border-subtle:has(a[href*="europatipset"])
@@ -51,6 +54,9 @@ a786 1
 hifitorget.se##div[data-sponsored-label], .ht-ad-divider, .anchor-ad-spacer
 a787 1
 hifitorget.se,synonymer.se##aside[aria-label="Annons"]
+d802 1
+a802 1
+hockeynews.se##a[href*="/speltips"], .readPeak-container-frontpage, .readPeak-container-article, dialog[aria-labelledby="campaign-takeover-title"]
 d844 1
 a844 1
 husbyggaren.se##div[id^="nordi-"], .b-native, .mobileoutsider
@@ -90,6 +96,9 @@ samfalligheterna.se##.sf-annons, .sf-samtycke, .sf-start-sponsrat
 d1429 1
 a1429 1
 skogen.se##.jobslider.up, #panhldr
+d1479 1
+a1479 1
+sporttv.nu##:is(.visible-xs, .hidden-xs):has(a[href*="betting"], a[href*="casino"])
 d1534 1
 d1556 3
 a1558 1
@@ -140,6 +149,8 @@ a2405 1
 /gofo_revive$domain=grundskoletidningen.se
 a2430 1
 /https?:\/\/(www\.)?teknikgeek\.se\/[A-Za-z0-9]+\.js/$script,domain=teknikgeek.se
+a2443 1
+/images/*casino$domain=sporttv.nu
 a2518 2
 /m/script$domain=fastighetsvarlden.se
 /natives$domain=atl.nu|land.se
