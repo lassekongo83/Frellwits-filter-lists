@@ -2356,7 +2356,9 @@ hallbyhandboll.se,skiljebosk.nu,molndalfotboll.com##.cookiePush, .stickyFollow, 
 tidningenridsport.se##.subscribe_now_popup, .type-native, #captive, div[class^="hldr_takeover"], div[id^="ad-welcome"], .adhld
 tidningenridsport.se##.entry-content:style(display: initial !important;)
 tidningenridsport.se##body.cli-barmodal-open:remove-class(cli-barmodal-open)
+/banner-ads$domain=nyheter.fiskejournalen.se|jaktjournalen.se
 /popup$domain=fiskejournalen.se
+nyheter.fiskejournalen.se##article[data-tag*="nativeads"]
 nyheter.fiskejournalen.se,jaktjournalen.se##.kicker:is(.below, .above):has-text(/annons/i):upward(article)
 jaktjournalen.se##.activate-notifications-container.shown, [class*="ai-viewport"], .placeholder
 jaktjournalen.se##.post:has(.post__category--sponsored)
@@ -3220,6 +3222,7 @@ dagensarbetsmiljo.se##+js(aeld, wheel, e.defaultPrevented)
 adType$xmlhttprequest,removeparam=adType,domain=tv4play.se
 rocknytt.net,upphandling24.se,datormagazin.se,villalivet.se,polistidningen.se,densistavilan.se,classicmotor.se,guiden.se,nyadagbladet.se,enkelteknik.se,vadhanderisverige.se,passioneffect.se,livsmedelsnyheter.se,modernpsykologi.se##+js(acs, advads)
 rocknytt.net,upphandling24.se,datormagazin.se,villalivet.se,polistidningen.se,densistavilan.se,classicmotor.se,guiden.se,nyadagbladet.se,enkelteknik.se,vadhanderisverige.se,passioneffect.se,livsmedelsnyheter.se,modernpsykologi.se##+js(acs, advanced_ads)
+fiskejournalen.se##+js(rmnt, script, gtm.start)
 !#endif
 ! Not Chromium
 !#if !env_chromium
@@ -3242,6 +3245,7 @@ expressen.se##^script:has-text(seenthisTracking)
 skargardsradion.se##^script[id^="real-cookie-banner"]
 skargarden.se##^script[data-c]
 radio-sveriges.se##^script:has-text(adshield)
+fiskejournalen.se##^script:has-text(gtm.start)
 !#endif
 ! Mobile
 !#if env_mobile
