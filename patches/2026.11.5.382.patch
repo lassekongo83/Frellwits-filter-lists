@@ -1,10 +1,10 @@
-diff name:swefilter lines:158 checksum:17e1fb5431
+diff name:swefilter lines:166 checksum:3e524fa9e7
 d2 1
 a2 1
-! Last updated: Sat, 14 Nov 2026 06:16:58 +0000
+! Last updated: Sun, 15 Nov 2026 06:17:31 +0000
 d4 1
 a4 1
-! Diff-Path: patches/2026.11.14.376.patch#swefilter
+! Diff-Path: patches/2026.11.15.377.patch#swefilter
 d108 1
 d169 2
 a170 2
@@ -56,6 +56,8 @@ d1051 3
 a1053 1
 lokalti.se##:is(.topnyhed, .fokustopnyhed):has(a[href*="extramaterial"])
 d1182 1
+a1233 1
+nyheter.fiskejournalen.se##article[data-tag*="nativeads"]
 d1355 3
 a1357 1
 samfalligheterna.se##.sf-annons, .sf-samtycke, .sf-start-sponsrat
@@ -100,6 +102,8 @@ a2166 1
 d2187 1
 a2187 1
 /analytics$domain=gbgfotboll.se|stff.se|svenskfotboll.se|di.se|etc.se|vackertvader.se|skogsforum.se|skolporten.se|sjf.se|rimlab.se|alandsradio.ax|dagen.se|global.morningstar.com|vidzflow.com|vinia.se|kvartal.se|shortcut.se|inredningsvis.se|kottchark.se|forsvarstidningen.se|stromsundsgratistidning.se|sverigerunt.se|skargardsradion.se|lovable.app|skanesfolkblad.se|skillingaryd.nu|listaroo.se|vaardkasen.se|prisgeek.se|teknikguiden.se|thaimassageguiden.se
+a2248 1
+/banner-ads$domain=nyheter.fiskejournalen.se|jaktjournalen.se
 a2303 1
 /content-broker/native$domain=hd.se|sydsvenskan.se|allehanda.se|tidningenangermanland.se|arbetarbladet.se|avestatidning.com|bblat.se|dalademokraten.se|fagersta-posten.se|gd.se|lt.se|ltz.se|na.se|norrteljetidning.se|nynashamnsposten.se|op.se|salaallehanda.com|st.nu|tidningenharjedalen.se|vlt.se|falkopingstidning.se|jp.se|skaraborgslanstidning.se|skovdenyheter.se|smalandsdagblad.se|smalanningen.se|smt.se|tranastidning.se|vastgotabladet.se|vetlandaposten.se|vn.se|bandypuls.se|ljusdalsposten.se|ljusnan.se|soderhamnskuriren.se|ht.se|moratidning.se|borlangetidning.se|falukuriren.se|sodran.se|nyaludvikatidning.se|skd.se|nvp.se|nuosteraker.se|hbl.fi|vastranyland.fi|bbl.fi|vaxjobladet.se|nsk.se|klt.nu|ystadsallehanda.se|trelleborgsallehanda.se|kristianstadsbladet.se|folkracepuls.se|barometern.se|blt.se|bt.se|olandsbladet.se|smp.se|sydostran.se|ut.se|kt-kuriren.se|sla.se|mariestadstidningen.se|arvikanyheter.se|nkp.se|saffletidningen.se|provinstidningen.se|dalslanningen.se|nlt.se|skaraborgsbygden.se|vf.se|filipstadstidning.se|fryksdalsbygden.se|nwt.se|osterbottenstidning.fi|sydin.fi|vasabladet.fi
 d2316 1
@@ -151,9 +155,13 @@ a3466 1
 ||mediadelivery.net/embed/*?autoplay=true$frame,removeparam=autoplay,domain=feber.se|tjock.se
 d3585 1
 d3746 1
+a3760 1
+fiskejournalen.se##+js(rmnt, script, gtm.start)
 d3779 3
 a3781 3
 alekuriren.se,rocknytt.net,upphandling24.se,datormagazin.se,villalivet.se,classicmotor.se,guiden.se,nyadagbladet.se,enkelteknik.se,stoppapressarna.se,vadhanderisverige.se,passioneffect.se,livsmedelsnyheter.se,automation.se,verkstadstidningen.se,modernpsykologi.se,transportnytt.se,polistidningen.se##^script[id^="advanced-ads"]
 alekuriren.se,rocknytt.net,upphandling24.se,datormagazin.se,villalivet.se,classicmotor.se,guiden.se,nyadagbladet.se,enkelteknik.se,vadhanderisverige.se,passioneffect.se,livsmedelsnyheter.se,automation.se,verkstadstidningen.se,modernpsykologi.se,transportnytt.se,polistidningen.se##^script[id^="advanced_ads"]
 alekuriren.se,rocknytt.net,upphandling24.se,datormagazin.se,villalivet.se,classicmotor.se,guiden.se,nyadagbladet.se,enkelteknik.se,vadhanderisverige.se,passioneffect.se,livsmedelsnyheter.se,automation.se,verkstadstidningen.se,modernpsykologi.se,transportnytt.se,polistidningen.se##^script[id^="advads"]
 d3787 1
+a3798 1
+fiskejournalen.se##^script:has-text(gtm.start)

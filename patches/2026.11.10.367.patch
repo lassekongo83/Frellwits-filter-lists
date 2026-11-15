@@ -1,10 +1,10 @@
-diff name:swefilter lines:41 checksum:17e1fb5431
+diff name:swefilter lines:49 checksum:3e524fa9e7
 d2 1
 a2 1
-! Last updated: Sat, 14 Nov 2026 06:16:58 +0000
+! Last updated: Sun, 15 Nov 2026 06:17:31 +0000
 d4 1
 a4 1
-! Diff-Path: patches/2026.11.14.376.patch#swefilter
+! Diff-Path: patches/2026.11.15.377.patch#swefilter
 d168 1
 a168 1
 allsvenskan.se,svenskafutsalligan.se,superettan.se##.footer-sponsors, .puff-block
@@ -26,9 +26,13 @@ a1038 1
 ljudochbild.se##.adremark, .coofad, .hidead, .phoneads, .pricecomp, .offerz, .type-articleadvertorial, .adblock, .lbplussinfo, .popup-overlayx, a[href*="/advertorial"], a[href*="/advertorial"] + .textbox, .prisjakt, #stickleft, #stickright, .adbox, .mainbanner, .egenannonse, section[aria-label="Annonse"]
 a1041 1
 ljudochbild.se##:is(.Annonsinnehåll, .Annonsørinnhold):upward(.maincol, a)
+a1229 1
+nyheter.fiskejournalen.se##article[data-tag*="nativeads"]
 d1470 1
 a1470 1
 sporttv.nu##:is(.visible-xs, .hidden-xs):has(a[href*="betting"], a[href*="casino"])
+a2247 1
+/banner-ads$domain=nyheter.fiskejournalen.se|jaktjournalen.se
 a2441 1
 /images/*casino$domain=sporttv.nu
 a3048 1
@@ -40,3 +44,7 @@ d3242 1
 a3242 1
 ||cookielaw.org^$domain=flashscore.se|ikea.com|manpower.se|natgeotv.com|internetkunskap.se|internetstiftelsen.se|yelp.se|viaplayradio.se|svenskarnaochinternet.se|bredbandskollen.se|internetmuseum.se|internetdagarna.se|digitalalektioner.se|goto10.se|tripadvisor.se|sydkusten.es|livetochdiabetes.se|cioanalytics.se|se.trustpilot.com|pricerunner.se|lidl.se|pwc.se|svenskafans.com|vinted.se|global.morningstar.com|fotbolldirekt.se|hockeysverige.se|koket.se|innebandymagazinet.se
 d3752 1
+a3766 1
+fiskejournalen.se##+js(rmnt, script, gtm.start)
+a3803 1
+fiskejournalen.se##^script:has-text(gtm.start)

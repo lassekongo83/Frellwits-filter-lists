@@ -1,10 +1,10 @@
-diff name:swefilter lines:123 checksum:17e1fb5431
+diff name:swefilter lines:131 checksum:3e524fa9e7
 d2 1
 a2 1
-! Last updated: Sat, 14 Nov 2026 06:16:58 +0000
+! Last updated: Sun, 15 Nov 2026 06:17:31 +0000
 d4 1
 a4 1
-! Diff-Path: patches/2026.11.14.376.patch#swefilter
+! Diff-Path: patches/2026.11.15.377.patch#swefilter
 d108 1
 d169 2
 a170 2
@@ -51,6 +51,8 @@ d1052 3
 a1054 1
 lokalti.se##:is(.topnyhed, .fokustopnyhed):has(a[href*="extramaterial"])
 d1183 1
+a1234 1
+nyheter.fiskejournalen.se##article[data-tag*="nativeads"]
 d1356 3
 a1358 1
 samfalligheterna.se##.sf-annons, .sf-samtycke, .sf-start-sponsrat
@@ -81,6 +83,8 @@ a2093 1
 *$ping,domain=nordicinformer.com|fiskejournalen.se|fordonsteknik.net|byggteknik.org|forestindustry.org|autoteknik.net|entreprenoren.net|byggforum.net|feber.se|tjock.se|guldkanalen.se|butikstrender.se|pepperdeals.se|recipify.com|inkopsradet.se|upphandling24.se|svenskverkstad.se|samfalligheterna.se|transportnytt.se
 a2171 1
 /advanced-ads/*/track/impression$ping
+a2253 1
+/banner-ads$domain=nyheter.fiskejournalen.se|jaktjournalen.se
 a2407 1
 /gofo_revive$domain=grundskoletidningen.se
 a2446 1
@@ -116,9 +120,13 @@ a3473 1
 ||mediadelivery.net/embed/*?autoplay=true$frame,removeparam=autoplay,domain=feber.se|tjock.se
 d3592 1
 d3753 1
+a3767 1
+fiskejournalen.se##+js(rmnt, script, gtm.start)
 d3786 3
 a3788 3
 alekuriren.se,rocknytt.net,upphandling24.se,datormagazin.se,villalivet.se,classicmotor.se,guiden.se,nyadagbladet.se,enkelteknik.se,stoppapressarna.se,vadhanderisverige.se,passioneffect.se,livsmedelsnyheter.se,automation.se,verkstadstidningen.se,modernpsykologi.se,transportnytt.se,polistidningen.se##^script[id^="advanced-ads"]
 alekuriren.se,rocknytt.net,upphandling24.se,datormagazin.se,villalivet.se,classicmotor.se,guiden.se,nyadagbladet.se,enkelteknik.se,vadhanderisverige.se,passioneffect.se,livsmedelsnyheter.se,automation.se,verkstadstidningen.se,modernpsykologi.se,transportnytt.se,polistidningen.se##^script[id^="advanced_ads"]
 alekuriren.se,rocknytt.net,upphandling24.se,datormagazin.se,villalivet.se,classicmotor.se,guiden.se,nyadagbladet.se,enkelteknik.se,vadhanderisverige.se,passioneffect.se,livsmedelsnyheter.se,automation.se,verkstadstidningen.se,modernpsykologi.se,transportnytt.se,polistidningen.se##^script[id^="advads"]
 d3794 1
+a3805 1
+fiskejournalen.se##^script:has-text(gtm.start)
