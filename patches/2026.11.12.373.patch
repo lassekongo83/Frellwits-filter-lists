@@ -1,10 +1,10 @@
-diff name:swefilter lines:81 checksum:36b70589ef
+diff name:swefilter lines:102 checksum:3f105f8ba3
 d2 1
 a2 1
-! Last updated: Thu, 19 Nov 2026 06:21:46 +0000
+! Last updated: Fri, 20 Nov 2026 06:14:07 +0000
 d4 1
 a4 1
-! Diff-Path: patches/2026.11.19.381.patch#swefilter
+! Diff-Path: patches/2026.11.20.374.patch#swefilter
 d168 1
 a168 1
 allsvenskan.se,svenskafutsalligan.se,superettan.se##.footer-sponsors, .puff-block
@@ -17,6 +17,8 @@ feber.se,tjock.se##main > div[data-page="1"] > div:not([class]):has([data-feed-s
 d591 1
 a591 1
 fisheco.se##div[data-advanced-ads-id]:upward(1)
+a795 1
+hockeyallsvenskan.se##button:has-text(/liveodds/i):upward(div[class*="rounded-\[10px\]"])
 d802 1
 a802 1
 hockeynews.se##a[href*="/speltips"], .readPeak-container-frontpage, .readPeak-container-article, dialog[aria-labelledby="campaign-takeover-title"]
@@ -26,8 +28,14 @@ idrottensaffarer.se##.bg-card:has(a[rel*="sponsored"])
 a858 1
 ifkgoteborg.se##.ifk-3-ads, .site-footer__partners
 d943 1
+d1032 1
+a1032 1
+livetsgoda.se,betongforeningen.se,espressomedia.se,ordfrontmagasin.se,europaportalen.se,battregolf.se,nitroz.se,magasinethockey.se,twostrokerider.se,eqotime.com,newsvoice.se,tranakampsport.se,thepattayanewsse.com,handbollskanalen.se,infobladet.com,svenskamagasinet.nu,krogguiden.se,nyemissioner.se##a[target$="blank"] img:not([class^="tweet"])
+d1156 1
 a1231 1
 nyheter.fiskejournalen.se##article[data-tag*="nativeads"]
+a1267 1
+partners$image,domain=svenskfotboll.se
 d1329 1
 a1329 1
 rejsa.nu###adsblock, #adsblockfoot, .fpright, div[onclick*="window.open"], .fp-annonser
@@ -36,14 +44,24 @@ d1462 1
 d1472 1
 a1472 1
 sporttv.nu##:is(.visible-xs, .hidden-xs):has(a[href*="betting"], a[href*="casino"])
+d1512 1
+a1512 1
+svenskfotboll.se##.news-multi-link--sponsor, .backers
+a1628 1
+travnet.se##div.fixed:has(button[aria-label="Stäng"])
+a1629 1
+travnet.se##html.overflow-hidden:remove-class(overflow-hidden)
 a1965 1
 ##div[data-advanced-ads-id]
 d2099 1
+d2126 1
 a2249 1
 /banner-ads$domain=nyheter.fiskejournalen.se|jaktjournalen.se
 d2358 1
 a2358 1
 /events$domain=marketplace.se|teknikguiden.se|vk.se|folkbladet.nu|nordsverige.se|mellanbygden.nu|vasterbottningen.se|lokaltidningen.nu|idrottensaffarer.se
+a2430 1
+/https?:\/\/(www\.)?tranakampsport\.se\/[^\/]+\/[^\/]+\/?$/$script,domain=tranakampsport.se
 a2443 1
 /images/*casino$domain=sporttv.nu
 d2552 1
@@ -75,6 +93,9 @@ a3541 1
 ||plaus.alltomelbil.se^
 a3677 1
 ||tfw.bz^$domain=fotboll-tv.se
+d3716 1
+a3716 1
+||usercentrics.eu^$domain=hemnet.se|foretagarna.se|svenskhandel.se|matpriskollen.se|hockeyallsvenskan.se
 d3755 1
 a3769 1
 fiskejournalen.se##+js(rmnt, script, gtm.start)

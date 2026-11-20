@@ -1,10 +1,10 @@
-diff name:swefilter lines:209 checksum:36b70589ef
+diff name:swefilter lines:230 checksum:3f105f8ba3
 d2 1
 a2 1
-! Last updated: Thu, 19 Nov 2026 06:21:46 +0000
+! Last updated: Fri, 20 Nov 2026 06:14:07 +0000
 d4 1
 a4 1
-! Diff-Path: patches/2026.11.19.381.patch#swefilter
+! Diff-Path: patches/2026.11.20.374.patch#swefilter
 d108 1
 d169 2
 a170 2
@@ -42,6 +42,8 @@ a786 1
 hifitorget.se##div[data-sponsored-label], .ht-ad-divider, .anchor-ad-spacer
 a787 1
 hifitorget.se,synonymer.se##aside[aria-label="Annons"]
+a795 1
+hockeyallsvenskan.se##button:has-text(/liveodds/i):upward(div[class*="rounded-\[10px\]"])
 d802 1
 a802 1
 hockeynews.se##a[href*="/speltips"], .readPeak-container-frontpage, .readPeak-container-article, dialog[aria-labelledby="campaign-takeover-title"]
@@ -59,6 +61,9 @@ inkopsradet.se##div[id^="inkop-"], #u24s-banner
 inkopsradet.se##.brxe-shortcode:has(div[id^="inkop-"])
 innebandymagazinet.se##.entry-content > div > section > div:has(a[href*="/sponsrat"], a[href*="utm_campaign"])
 d942 1
+d1031 1
+a1031 1
+livetsgoda.se,betongforeningen.se,espressomedia.se,ordfrontmagasin.se,europaportalen.se,battregolf.se,nitroz.se,magasinethockey.se,twostrokerider.se,eqotime.com,newsvoice.se,tranakampsport.se,thepattayanewsse.com,handbollskanalen.se,infobladet.com,svenskamagasinet.nu,krogguiden.se,nyemissioner.se##a[target$="blank"] img:not([class^="tweet"])
 d1038 2
 a1039 1
 ljudochbild.se##.adremark, .coofad, .hidead, .phoneads, .pricecomp, .offerz, .type-articleadvertorial, .adblock, .lbplussinfo, .popup-overlayx, a[href*="/advertorial"], a[href*="/advertorial"] + .textbox, .prisjakt, #stickleft, #stickright, .adbox, .mainbanner, .egenannonse, section[aria-label="Annonse"]
@@ -67,9 +72,12 @@ ljudochbild.se##:is(.Annonsinnehåll, .Annonsørinnhold):upward(.maincol, a)
 d1051 3
 a1053 1
 lokalti.se##:is(.topnyhed, .fokustopnyhed):has(a[href*="extramaterial"])
+d1157 1
 d1182 1
 a1233 1
 nyheter.fiskejournalen.se##article[data-tag*="nativeads"]
+a1269 1
+partners$image,domain=svenskfotboll.se
 d1331 1
 a1331 1
 rejsa.nu###adsblock, #adsblockfoot, .fpright, div[onclick*="window.open"], .fp-annonser
@@ -84,6 +92,9 @@ d1466 1
 d1476 1
 a1476 1
 sporttv.nu##:is(.visible-xs, .hidden-xs):has(a[href*="betting"], a[href*="casino"])
+d1516 1
+a1516 1
+svenskfotboll.se##.news-multi-link--sponsor, .backers
 d1552 3
 a1554 1
 synonymer.se##.create-account-banner, .buy-premium-banner, div[class*="pb-"] > div.text-center, div[data-ad-container], .bg-ad-bg
@@ -93,6 +104,10 @@ teknikveckan.se,di.se,dn.se,tripadvisor.se,swedroid.se,bettingstugan.se,expresse
 a1581 2
 thaimassageguiden.se##div[data-section*="home_hero"]
 thaimassageguiden.se##.w-\[300px\]:has(a[href*="/ads/"])
+a1632 1
+travnet.se##div.fixed:has(button[aria-label="Stäng"])
+a1633 1
+travnet.se##html.overflow-hidden:remove-class(overflow-hidden)
 a1643 2
 trivsio.se##html,body:style(scrollbar-width:initial!important;)
 trivsio.se##[data-slumpad-dekor]
@@ -114,6 +129,7 @@ d2088 1
 a2088 1
 *$ping,domain=nordicinformer.com|fiskejournalen.se|fordonsteknik.net|byggteknik.org|forestindustry.org|autoteknik.net|entreprenoren.net|byggforum.net|feber.se|tjock.se|guldkanalen.se|butikstrender.se|pepperdeals.se|recipify.com|inkopsradet.se|upphandling24.se|svenskverkstad.se|samfalligheterna.se|transportnytt.se
 d2099 1
+d2126 1
 d2154 1
 a2154 1
 /ads$domain=allastudier.se|cirkulation.se|ordmedzcxy.se|rimlab.se|allaaktier.se|varldenom.com|kottchark.se|epochtimes.se|skippo.se|inblick.se|magazin24.se|husbilskompisar.se|powerbike.nu|thaimassageguiden.se
@@ -134,6 +150,8 @@ a2356 1
 /events$domain=marketplace.se|teknikguiden.se|vk.se|folkbladet.nu|nordsverige.se|mellanbygden.nu|vasterbottningen.se|lokaltidningen.nu|idrottensaffarer.se
 a2401 1
 /gofo_revive$domain=grundskoletidningen.se
+a2427 1
+/https?:\/\/(www\.)?tranakampsport\.se\/[^\/]+\/[^\/]+\/?$/$script,domain=tranakampsport.se
 a2440 1
 /images/*casino$domain=sporttv.nu
 a2515 2
@@ -197,6 +215,9 @@ a3529 1
 d3583 1
 a3666 1
 ||tfw.bz^$domain=fotboll-tv.se
+d3705 1
+a3705 1
+||usercentrics.eu^$domain=hemnet.se|foretagarna.se|svenskhandel.se|matpriskollen.se|hockeyallsvenskan.se
 d3744 1
 a3758 1
 fiskejournalen.se##+js(rmnt, script, gtm.start)

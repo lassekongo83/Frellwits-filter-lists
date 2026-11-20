@@ -1,10 +1,10 @@
-diff name:swefilter lines:260 checksum:36b70589ef
+diff name:swefilter lines:280 checksum:3f105f8ba3
 d2 1
 a2 1
-! Last updated: Thu, 19 Nov 2026 06:21:46 +0000
+! Last updated: Fri, 20 Nov 2026 06:14:07 +0000
 d4 1
 a4 1
-! Diff-Path: patches/2026.11.19.381.patch#swefilter
+! Diff-Path: patches/2026.11.20.374.patch#swefilter
 d108 1
 d130 1
 a130 1
@@ -58,6 +58,8 @@ a786 1
 hifitorget.se##div[data-sponsored-label], .ht-ad-divider, .anchor-ad-spacer
 a787 1
 hifitorget.se,synonymer.se##aside[aria-label="Annons"]
+a795 1
+hockeyallsvenskan.se##button:has-text(/liveodds/i):upward(div[class*="rounded-\[10px\]"])
 d802 1
 a802 1
 hockeynews.se##a[href*="/speltips"], .readPeak-container-frontpage, .readPeak-container-article, dialog[aria-labelledby="campaign-takeover-title"]
@@ -76,6 +78,9 @@ inkopsradet.se##.brxe-shortcode:has(div[id^="inkop-"])
 innebandymagazinet.se##.entry-content > div > section > div:has(a[href*="/sponsrat"], a[href*="utm_campaign"])
 d942 1
 d953 3
+d1034 1
+a1034 1
+livetsgoda.se,betongforeningen.se,espressomedia.se,ordfrontmagasin.se,europaportalen.se,battregolf.se,nitroz.se,magasinethockey.se,twostrokerider.se,eqotime.com,newsvoice.se,tranakampsport.se,thepattayanewsse.com,handbollskanalen.se,infobladet.com,svenskamagasinet.nu,krogguiden.se,nyemissioner.se##a[target$="blank"] img:not([class^="tweet"])
 d1041 2
 a1042 1
 ljudochbild.se##.adremark, .coofad, .hidead, .phoneads, .pricecomp, .offerz, .type-articleadvertorial, .adblock, .lbplussinfo, .popup-overlayx, a[href*="/advertorial"], a[href*="/advertorial"] + .textbox, .prisjakt, #stickleft, #stickright, .adbox, .mainbanner, .egenannonse, section[aria-label="Annonse"]
@@ -96,9 +101,12 @@ d1157 2
 a1158 2
 motormagasinet.se,dagenshandel.se,food-supply.se,plastnet.se,habit.se,woodnet.se,foodnet.se,processnet.se,packnet.se,medtechmagazine.se,recyclingnet.se,rt-forum.se,fri-kopenskap.se,cleannet.se,framtidensbygg.se,entreprenad.com,metal-supply.se###front-page-app > .row > .col-12:has(.advertorialClass)
 motormagasinet.se,dagenshandel.se,food-supply.se,plastnet.se,habit.se,woodnet.se,foodnet.se,processnet.se,packnet.se,medtechmagazine.se,recyclingnet.se,rt-forum.se,fri-kopenskap.se,cleannet.se,framtidensbygg.se,entreprenad.com,metal-supply.se##.box-of-announcement, a[href*="campaign"][target="_blank"], div[class*="rotating-"], #bottombanner, #promoPopup, .modal-backdrop, .newsletterPopUp, .fp-announcement-container
+d1160 1
 d1185 1
 a1236 1
 nyheter.fiskejournalen.se##article[data-tag*="nativeads"]
+a1272 1
+partners$image,domain=svenskfotboll.se
 d1334 1
 a1334 1
 rejsa.nu###adsblock, #adsblockfoot, .fpright, div[onclick*="window.open"], .fp-annonser
@@ -116,6 +124,9 @@ d1469 1
 d1479 1
 a1479 1
 sporttv.nu##:is(.visible-xs, .hidden-xs):has(a[href*="betting"], a[href*="casino"])
+d1519 1
+a1519 1
+svenskfotboll.se##.news-multi-link--sponsor, .backers
 d1534 1
 d1556 3
 a1558 1
@@ -126,6 +137,10 @@ teknikveckan.se,di.se,dn.se,tripadvisor.se,swedroid.se,bettingstugan.se,expresse
 a1585 2
 thaimassageguiden.se##div[data-section*="home_hero"]
 thaimassageguiden.se##.w-\[300px\]:has(a[href*="/ads/"])
+a1636 1
+travnet.se##div.fixed:has(button[aria-label="Stäng"])
+a1637 1
+travnet.se##html.overflow-hidden:remove-class(overflow-hidden)
 a1647 2
 trivsio.se##html,body:style(scrollbar-width:initial!important;)
 trivsio.se##[data-slumpad-dekor]
@@ -149,6 +164,7 @@ d2092 1
 a2092 1
 *$ping,domain=nordicinformer.com|fiskejournalen.se|fordonsteknik.net|byggteknik.org|forestindustry.org|autoteknik.net|entreprenoren.net|byggforum.net|feber.se|tjock.se|guldkanalen.se|butikstrender.se|pepperdeals.se|recipify.com|inkopsradet.se|upphandling24.se|svenskverkstad.se|samfalligheterna.se|transportnytt.se
 d2103 1
+d2130 1
 d2158 1
 a2158 1
 /ads$domain=allastudier.se|cirkulation.se|ordmedzcxy.se|rimlab.se|allaaktier.se|varldenom.com|kottchark.se|epochtimes.se|skippo.se|inblick.se|magazin24.se|husbilskompisar.se|powerbike.nu|thaimassageguiden.se
@@ -169,8 +185,9 @@ a2360 1
 /events$domain=marketplace.se|teknikguiden.se|vk.se|folkbladet.nu|nordsverige.se|mellanbygden.nu|vasterbottningen.se|lokaltidningen.nu|idrottensaffarer.se
 a2405 1
 /gofo_revive$domain=grundskoletidningen.se
-a2430 1
+a2430 2
 /https?:\/\/(www\.)?teknikgeek\.se\/[A-Za-z0-9]+\.js/$script,domain=teknikgeek.se
+/https?:\/\/(www\.)?tranakampsport\.se\/[^\/]+\/[^\/]+\/?$/$script,domain=tranakampsport.se
 a2443 1
 /images/*casino$domain=sporttv.nu
 a2518 2
@@ -243,6 +260,9 @@ a3534 1
 d3588 1
 a3671 1
 ||tfw.bz^$domain=fotboll-tv.se
+d3710 1
+a3710 1
+||usercentrics.eu^$domain=hemnet.se|foretagarna.se|svenskhandel.se|matpriskollen.se|hockeyallsvenskan.se
 a3742 1
 ||wireboard.io^$third-party
 d3748 1

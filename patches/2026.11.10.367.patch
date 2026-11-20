@@ -1,10 +1,10 @@
-diff name:swefilter lines:89 checksum:36b70589ef
+diff name:swefilter lines:110 checksum:3f105f8ba3
 d2 1
 a2 1
-! Last updated: Thu, 19 Nov 2026 06:21:46 +0000
+! Last updated: Fri, 20 Nov 2026 06:14:07 +0000
 d4 1
 a4 1
-! Diff-Path: patches/2026.11.19.381.patch#swefilter
+! Diff-Path: patches/2026.11.20.374.patch#swefilter
 d168 1
 a168 1
 allsvenskan.se,svenskafutsalligan.se,superettan.se##.footer-sponsors, .puff-block
@@ -16,6 +16,8 @@ feber.se,tjock.se##main > div[data-page="1"] > div:not([class]):has([data-feed-s
 d590 1
 a590 1
 fisheco.se##div[data-advanced-ads-id]:upward(1)
+a794 1
+hockeyallsvenskan.se##button:has-text(/liveodds/i):upward(div[class*="rounded-\[10px\]"])
 d801 1
 a801 1
 hockeynews.se##a[href*="/speltips"], .readPeak-container-frontpage, .readPeak-container-article, dialog[aria-labelledby="campaign-takeover-title"]
@@ -27,13 +29,19 @@ ifkgoteborg.se##.ifk-3-ads, .site-footer__partners
 a867 1
 innebandymagazinet.se##.entry-content > div > section > div:has(a[href*="/sponsrat"], a[href*="utm_campaign"])
 d941 1
+d1030 1
+a1030 1
+livetsgoda.se,betongforeningen.se,espressomedia.se,ordfrontmagasin.se,europaportalen.se,battregolf.se,nitroz.se,magasinethockey.se,twostrokerider.se,eqotime.com,newsvoice.se,tranakampsport.se,thepattayanewsse.com,handbollskanalen.se,infobladet.com,svenskamagasinet.nu,krogguiden.se,nyemissioner.se##a[target$="blank"] img:not([class^="tweet"])
 d1037 2
 a1038 1
 ljudochbild.se##.adremark, .coofad, .hidead, .phoneads, .pricecomp, .offerz, .type-articleadvertorial, .adblock, .lbplussinfo, .popup-overlayx, a[href*="/advertorial"], a[href*="/advertorial"] + .textbox, .prisjakt, #stickleft, #stickright, .adbox, .mainbanner, .egenannonse, section[aria-label="Annonse"]
 a1041 1
 ljudochbild.se##:is(.Annonsinnehåll, .Annonsørinnhold):upward(.maincol, a)
+d1154 1
 a1229 1
 nyheter.fiskejournalen.se##article[data-tag*="nativeads"]
+a1265 1
+partners$image,domain=svenskfotboll.se
 d1327 1
 a1327 1
 rejsa.nu###adsblock, #adsblockfoot, .fpright, div[onclick*="window.open"], .fp-annonser
@@ -42,14 +50,24 @@ d1460 1
 d1470 1
 a1470 1
 sporttv.nu##:is(.visible-xs, .hidden-xs):has(a[href*="betting"], a[href*="casino"])
+d1510 1
+a1510 1
+svenskfotboll.se##.news-multi-link--sponsor, .backers
+a1626 1
+travnet.se##div.fixed:has(button[aria-label="Stäng"])
+a1627 1
+travnet.se##html.overflow-hidden:remove-class(overflow-hidden)
 a1963 1
 ##div[data-advanced-ads-id]
 d2097 1
+d2124 1
 a2247 1
 /banner-ads$domain=nyheter.fiskejournalen.se|jaktjournalen.se
 d2356 1
 a2356 1
 /events$domain=marketplace.se|teknikguiden.se|vk.se|folkbladet.nu|nordsverige.se|mellanbygden.nu|vasterbottningen.se|lokaltidningen.nu|idrottensaffarer.se
+a2428 1
+/https?:\/\/(www\.)?tranakampsport\.se\/[^\/]+\/[^\/]+\/?$/$script,domain=tranakampsport.se
 a2441 1
 /images/*casino$domain=sporttv.nu
 d2550 1
@@ -83,6 +101,9 @@ a3538 1
 ||plaus.alltomelbil.se^
 a3674 1
 ||tfw.bz^$domain=fotboll-tv.se
+d3713 1
+a3713 1
+||usercentrics.eu^$domain=hemnet.se|foretagarna.se|svenskhandel.se|matpriskollen.se|hockeyallsvenskan.se
 d3752 1
 a3766 1
 fiskejournalen.se##+js(rmnt, script, gtm.start)
