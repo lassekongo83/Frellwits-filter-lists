@@ -1,10 +1,10 @@
-diff name:swefilter lines:175 checksum:3f105f8ba3
+diff name:swefilter lines:188 checksum:7f99e2de85
 d2 1
 a2 1
-! Last updated: Fri, 20 Nov 2026 06:14:07 +0000
+! Last updated: Sat, 21 Nov 2026 06:16:20 +0000
 d4 1
 a4 1
-! Diff-Path: patches/2026.11.20.374.patch#swefilter
+! Diff-Path: patches/2026.11.21.376.patch#swefilter
 d108 1
 d169 2
 a170 2
@@ -29,6 +29,9 @@ feber.se,tjock.se##main > div[data-page="1"] > div:not([class]):has([data-feed-s
 d593 1
 a593 1
 fisheco.se##div[data-advanced-ads-id]:upward(1)
+d741 1
+a741 1
+halmstadsport.se##section[aria-label="Huvudpartners"], #partners
 a797 1
 hockeyallsvenskan.se##button:has-text(/liveodds/i):upward(div[class*="rounded-\[10px\]"])
 d804 1
@@ -63,6 +66,9 @@ d1159 1
 d1184 1
 a1235 1
 nyheter.fiskejournalen.se##article[data-tag*="nativeads"]
+d1240 1
+a1240 1
+nyhetsbyranjarva.se,nyan.ax,tv-kanal.se,golfguidenonline.se,rockbladet.se,vildmarken.se,nyhetersto.se,dagenslogistik.se,turismnytt.se,radiosol.se,cora.se,travelandtourworld.se,mallorcanyheter.com,it-finans.se,it-halsa.se,it-kanalen.se,it-pedagogen.se,it-retail.se,it-hallbarhet.se,fisheco.se,opusmagasin.se,samefolket.se,vmhockey.se##.g
 a1271 1
 partners$image,domain=svenskfotboll.se
 d1333 1
@@ -76,6 +82,7 @@ a1428 1
 skogen.se##.jobslider.up, #panhldr
 d1465 2
 d1468 1
+d1471 1
 d1478 1
 a1478 1
 sporttv.nu##:is(.visible-xs, .hidden-xs):has(a[href*="betting"], a[href*="casino"])
@@ -90,6 +97,12 @@ a1636 1
 travnet.se##div.fixed:has(button[aria-label="Stäng"])
 a1637 1
 travnet.se##html.overflow-hidden:remove-class(overflow-hidden)
+d1660 1
+a1660 4
+tvsporten.nu##div[class*="EventListInsert_insert"]:has(div[class*="ResponsiveAd"])
+tvsporten.nu##div[class*="Layout_panoramaContent"]:style(padding-top:unset!important;)
+tvsporten.nu##div[class*="ResponsiveAd"], div[class*="Layout_panoramaBanner"], div[class*="Layout_panoramaSpacer"]
+tvsporten.nu##.tvs-cta-box:has(a[rel*="sponsored"])
 d1675 1
 a1675 2
 upphandling24.se##.brxe-shortcode:has(div[id^="uppha-"])
