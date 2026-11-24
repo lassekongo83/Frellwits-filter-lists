@@ -1555,7 +1555,6 @@ resenaren.se##.dipi_preloader_wrapper_outer
 thatsup.se##+js(set, canShowAds, true)
 mobilanyheter.net##+js(set, ai_run_scripts, noopFunc)
 kattannonser.se##+js(noeval-if, adbEnableForPage)
-kritiker.se##+js(prevent-xhr, adsbygoogle)
 pilsner.nu,medibok.se,kandisvarlden.com##+js(rmnt, script, decodeURIComponent)
 fz.se,fssweden.se,tinyurl.se##+js(set, adblock, false)
 
@@ -2553,10 +2552,10 @@ radio.se##:is(.md\:min-h-\[90px\], .lg\:min-h-\[250px\], .h-\[250px\], .md\:h-\[
 radio.se##:is(a[data-testid="region-tag"], a[data-testid^="taglist-item"]):style(background-image:none!important; background:rgb(2,114,140)!important;)
 radio.se##div[data-testid="detail-player"] .hidden:has(.transition-colors)
 radio.se##div[data-testid="page-holder"] > section.content-visibility-auto:not([id]):has(.ad-container)
-||kritiker.se/js/gdpr.js
 ||youtube.com/embed/*autoplay$subdocument,removeparam=autoplay,domain=kritiker.se
 kritiker.se##div.recad, div.adhor, div.stickyad, div[data-ad-slot-wrapper]
 kritiker.se##iframe[allow]:remove-attr(allow)
+kritiker.se##+js(set, initAdblockModalFlow, noopFunc)
 /images/aff$domain=netflixguiden.se
 netflixguiden.se##div.lboard, div.instream-dynamic, #top-area-promo, div.sidebar div.sticky, .promo, .lboard-desktop, .lboard-mobile, #bottom-sticky-promo, .section.thanks
 ||metalcentral.net/images/*banner
@@ -2581,10 +2580,9 @@ cineasten.se###text-6, .theiaStickySidebar .category-uncategorized
 cineasten.se##.widget_text:has-text(casino)
 podtail.se##.item-list__item:has-text(/annons från/i)
 podtail.se##aside a[href*="utm_campaign"], a[title*="casino"]
-||podcasts.nu/adbg.svg
-||img.podcast24.org^$domain=podcasts.nu
-podcasts.nu##.sponsor-list, .sponsor-type, .cookie-law-wrapper, .big-ad-placeholder, .affiliate-wrapper, .overlay, .modal
+podcasts.nu##.pn-ad-card, .pn-consent
 guldkanalen.se##div.grid_container[style*="height:240px;"]
+guldkanalen.se##.cff-item:has-text(/reklam/i)
 ||cmp.radioplay.se^
 zeromagazine.nu##div[id^="ads"]
 tv24.se##li[id^="infeed"], div.presented-by
